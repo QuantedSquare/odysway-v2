@@ -109,6 +109,7 @@ const createCheckoutSession = async (order) => {
     paidAmount += +order.amount
   }
   else if (order.paymentType === 'full') {
+    const reductionValue = +deal.promoValue > 0 ? +deal.promoValue : 0
     paidAmount += +deal.value
     lineItems.push(
       {
@@ -120,7 +121,7 @@ const createCheckoutSession = async (order) => {
             images: [imageUrl],
             description: 'Tarif Adulte ',
           },
-          unit_amount: baseTravelerPrice,
+          unit_amount: baseTravelerPrice - reductionValue,
         },
         quantity: +deal.nbAdults,
       })
@@ -135,7 +136,7 @@ const createCheckoutSession = async (order) => {
               images: [imageUrl],
               description: 'Tarif Enfant ',
             },
-            unit_amount: baseTravelerPrice - +deal.promoChildren,
+            unit_amount: baseTravelerPrice - +deal.promoChildren - reductionValue,
           },
           quantity: +deal.nbUnderAge,
         })
@@ -151,7 +152,7 @@ const createCheckoutSession = async (order) => {
               images: [imageUrl],
               description: 'Tarif Adolescent ',
             },
-            unit_amount: baseTravelerPrice - +deal.promoTeen,
+            unit_amount: baseTravelerPrice - +deal.promoTeen - reductionValue,
           },
           quantity: +deal.nbTeen,
         })
