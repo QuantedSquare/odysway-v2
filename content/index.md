@@ -56,7 +56,7 @@ navigation:
   description: "Odysway : première agence de voyage en immersion en France et à
     l’étranger. Vivez des expériences uniques, en petits groupes, au plus près
     des habitants et de leurs traditions."
-  icon: /favicon.icon
+  icon: /favicon.ico
 ---
 
 ::home-hero-section
