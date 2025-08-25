@@ -87,7 +87,7 @@
     },
     "includeFlightBadge": {
       "text": "**Vol** compris",
-      "visible": true
+      "visible": false
     },
     "housingBadge": {
       "text": "Hôtel, bivouac",
@@ -172,7 +172,8 @@
       "Les activités ou soins non compris dans la section \"le prix comprend\"",
       "L'assurance annulation ou multirisques",
       "Les dépenses personnelles et pourboires",
-      "Un duvet / Sac à viande"
+      "Un duvet / Sac à viande",
+      "Les vols internationaux"
     ]
   },
   "pricing": {
