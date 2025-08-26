@@ -6,9 +6,9 @@
       "name": "Algérie"
     }
   ],
-  "groupeAvailable": true,
+  "groupeAvailable": false,
   "privatisationAvailable": true,
-  "customAvailable": false,
+  "customAvailable": true,
   "experienceType": "Explorer à pied",
   "level": "1",
   "categories": [
