@@ -1,31 +1,49 @@
 ---
-title: "Le vin ou comment découvrir la France à travers son patrimoine viticole"
-description: "De la Bourgogne au Bordelais en passant par l'Alsace et le Rhône, la France recèle des vignobles de renom, chacun avec leur propre identité. Et c'est ce qui fait la richesse de ce patrimoine. Certains grands vins sont mêmes classés au Patrimoine mondial de l'Unesco comme le Saint-Emilion ou les Climats de Bourgogne. Nombreux sont les voyageurs, de France et d'ailleurs, qui viennent s'adonner aux plaisirs de l'œnotourisme dans nos belles régions. Nichés au cœur de paysages bucoliques et historiques, nos vignobles sont l'occasion de découvrir un fabuleux patrimoine viticole. Un voyage à savourer avec modération."
+title: Le vin ou comment découvrir la France à travers son patrimoine viticole
+description: De la Bourgogne au Bordelais en passant par l'Alsace et le Rhône,
+  la France recèle des vignobles de renom, chacun avec leur propre identité. Et
+  c'est ce qui fait la richesse de ce patrimoine. Certains grands vins sont
+  mêmes classés au Patrimoine mondial de l'Unesco comme le Saint-Emilion ou les
+  Climats de Bourgogne. Nombreux sont les voyageurs, de France et d'ailleurs,
+  qui viennent s'adonner aux plaisirs de l'œnotourisme dans nos belles régions.
+  Nichés au cœur de paysages bucoliques et historiques, nos vignobles sont
+  l'occasion de découvrir un fabuleux patrimoine viticole. Un voyage à savourer
+  avec modération.
 seo:
-  title: "Le vin ou comment découvrir la France à travers son patrimoine viticole"
-  description: "Le vin ou comment découvrir la France à travers son patrimoine viticole ? Quelques pistes pour redécouvrir la France à travers la route des vins."
+  title: Le vin ou comment découvrir la France à travers son patrimoine viticole
+  description: Le vin ou comment découvrir la France à travers son patrimoine
+    viticole ? Quelques pistes pour redécouvrir la France à travers la route des
+    vins.
 navigation:
-  title: "Le vin ou comment découvrir la France à travers son patrimoine viticole"
-  description: "De la Bourgogne au Bordelais en passant par l'Alsace et le Rhône, la France recèle des vignobles de renom, chacun avec leur propre identité. Et c'est ce qui fait la richesse de ce patrimoine. Certains grands vins sont mêmes classés au Patrimoine mondial de l'Unesco comme le Saint-Emilion ou les Climats de Bourgogne. Nombreux sont les voyageurs, de France et d'ailleurs, qui viennent s'adonner aux plaisirs de l'œnotourisme dans nos belles régions. Nichés au cœur de paysages bucoliques et historiques, nos vignobles sont l'occasion de découvrir un fabuleux patrimoine viticole. Un voyage à savourer avec modération."
-author: "Linda Tran"
+  title: Le vin ou comment découvrir la France à travers son patrimoine viticole
+  description: De la Bourgogne au Bordelais en passant par l'Alsace et le Rhône,
+    la France recèle des vignobles de renom, chacun avec leur propre identité.
+    Et c'est ce qui fait la richesse de ce patrimoine. Certains grands vins sont
+    mêmes classés au Patrimoine mondial de l'Unesco comme le Saint-Emilion ou
+    les Climats de Bourgogne. Nombreux sont les voyageurs, de France et
+    d'ailleurs, qui viennent s'adonner aux plaisirs de l'œnotourisme dans nos
+    belles régions. Nichés au cœur de paysages bucoliques et historiques, nos
+    vignobles sont l'occasion de découvrir un fabuleux patrimoine viticole. Un
+    voyage à savourer avec modération.
+author: Linda Tran
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
 published: true
-publishedAt: "2020-07-15 10:35:00+00:00"
-tags: "France, Made in France"
-categories: "Nature et grands espaces, Culture et decouverte, Blog"
-displayedImg: "/images/blogs/vin-ou-comment-decouvrir-france-patrimoine-viticole/UpVYom2QRtWwdnhBBbWT.jpg"
-blogType: "Actu"
-badgeColor: "secondary"
+publishedAt: 2020-07-15 10:35:00+00:00
+tags: France, Made in France
+categories: Nature et grands espaces, Culture et decouverte, Blog
+displayedImg: /images/blogs/vin-ou-comment-decouvrir-france-patrimoine-viticole/UpVYom2QRtWwdnhBBbWT.jpg
+blogType: Actu
+badgeColor: secondary
 readingTime: "3"
 ---
 
 ::blog-hero-section
 ---
+avatar-size: "60"
 background-color: soft-blush
-title-color: primary
 introduction-color: grey
-avatar-size: '60'
+title-color: primary
 ---
 #title
 Le vin ou comment découvrir la France à travers son patrimoine viticole
@@ -42,22 +60,22 @@ De la Bourgogne au Bordelais en passant par l'Alsace et le Rhône, la France rec
 
 ## Bienvenue dans le Bordelais, capitale du vin et haut lieu de notre patrimoine viticole
 
-::image-container
----
-image-src: "/images/blogs/vin-ou-comment-decouvrir-france-patrimoine-viticole/cv26sHQuTUS3LctoeWQ8.jpg"
-alt: undefined
----
-::
+  :::image-container
+  ---
+  alt: undefined
+  image-src: /images/blogs/vin-ou-comment-decouvrir-france-patrimoine-viticole/cv26sHQuTUS3LctoeWQ8.jpg
+  ---
+  :::
 
 S'il y a bien une région viticole à ne manquer sous aucun prétexte, c'est bien **le Bordelais**. Avec ses **vignes à perte de vue et ses villages de charme**, il séduit tous les voyageurs. Ici, vins rouges, blancs et rosés sont à l'honneur au milieu de somptueux domaines viticoles comme le château Margaux ou bien le château Cheval Blanc. Accordons une mention spéciale pour **le Saint-Emilion et son village médiéval** dont le vignoble se découvre aisément à vélo.
 
 **Il existe par ailleurs cinq grandes routes des vins** dans le Bordelais :
 
-*   la route des Châteaux dans le Médoc,
-*   celle des Coteaux, située le long de l'estuaire de la Garonne,
-*   la route du Patrimoine où se trouvent notamment Pomerol et Saint-Emilion,
-*   la route des Bastides, ponctuée de châteaux et d'édifices romans,
-*   et la route des Graves où est produit le Sauternes.
+- la route des Châteaux dans le Médoc,
+- celle des Coteaux, située le long de l'estuaire de la Garonne,
+- la route du Patrimoine où se trouvent notamment Pomerol et Saint-Emilion,
+- la route des Bastides, ponctuée de châteaux et d'édifices romans,
+- et la route des Graves où est produit le Sauternes.
 
 ### **Le patrimoine viticole autour du Bordelais**
 
@@ -69,12 +87,12 @@ Dans le département du Gers, **Sarragachies est le village viticole où se trou
 
 ## A la découverte d'un très beau patrimoine viticole du côté du centre de la France
 
-### ::image-container
----
-image-src: "/images/blogs/vin-ou-comment-decouvrir-france-patrimoine-viticole/tgjv61ONRf6sehVVIXoP.jpg"
-alt: undefined
----
-::
+  :::image-container
+  ---
+  alt: undefined
+  image-src: /images/blogs/vin-ou-comment-decouvrir-france-patrimoine-viticole/tgjv61ONRf6sehVVIXoP.jpg
+  ---
+  :::
 
 ### La Bourgogne : l'un des plus prestigieux vignobles de France
 
@@ -88,12 +106,12 @@ Bien que les châteaux fassent la renommée de la Vallée de la Loire, son patri
 
 ## Entre terre et mer, les vignobles du sud fleurent bon le soleil
 
-### ::image-container
----
-image-src: "/images/blogs/vin-ou-comment-decouvrir-france-patrimoine-viticole/NVnQBihxTv6aMGdeZrdQ.jpg"
-alt: undefined
----
-::
+  :::image-container
+  ---
+  alt: undefined
+  image-src: /images/blogs/vin-ou-comment-decouvrir-france-patrimoine-viticole/NVnQBihxTv6aMGdeZrdQ.jpg
+  ---
+  :::
 
 ### De Lyon à la Provence, partez à la découverte du patrimoine viticole du Rhône
 
@@ -107,12 +125,12 @@ Avec un vignoble de près de 200 000 hectares, de la Méditerranée jusqu'aux Py
 
 ## L'est de notre territoire n'est pas en reste avec trois sites viticoles réputés
 
-### ::image-container
----
-image-src: "/images/blogs/vin-ou-comment-decouvrir-france-patrimoine-viticole/meaonj4uSdiCbDUHB8Lr.jpg"
-alt: undefined
----
-::
+  :::image-container
+  ---
+  alt: undefined
+  image-src: /images/blogs/vin-ou-comment-decouvrir-france-patrimoine-viticole/meaonj4uSdiCbDUHB8Lr.jpg
+  ---
+  :::
 
 ### Le vin de Champagne
 
@@ -132,47 +150,46 @@ Pour terminer ce tour de France des vignobles, arrêtons-nous dans **le Jura**. 
 
 Un voyage culturel immersif est une façon de voyager de manière solidaire, écologiquement responsable et éthique, dans le respect des autres et de la terre tout en découvrant les différentes cultures des autres pays : c'est un véritable enrichissement personnel. Voici les meilleures expériences de [voyages culturels](https://odysway.com/thematiques/voyage-culturel) proposés par Odysway.
 ::
-::color-container
----
-color: soft-blush
----
-  ::info-container
+
+::color-container{color="soft-blush"}
+  :::info-container
   #title
   Découvrir les voyages coups de coeur
+  
   #description
   Partez à la découverte de destinations qui nous ont conquis.
+  
   #bottom
-  ::cta-button
-  ---
-  link: /
-  color: secondary
-  ---
-  #text
-  Découvrir
-  ::
-  ::
+    ::::cta-button
+    ---
+    color: secondary
+    link: /
+    ---
+    #text
+    Découvrir
+    ::::
+  :::
 ::
 
-::color-container
----
-color: grey-light-2
----
-  ::blog-cards-container
+::color-container{color="grey-light-2"}
+  :::blog-cards-container
   ---
-  blogCardSlug1: '/blog/sejour-arts-martiaux' 
-  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
-  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  blogCardSlug1: /blog/sejour-arts-martiaux
+  blogCardSlug2: /blog/vin-ou-comment-decouvrir-france-patrimoine-viticole
+  blogCardSlug3: /blog/voyage-insolite-nos-idees-devasion-pour-tous
   ---
   #title
   Ça devrait vous plaire
+  
   #cta-button
-    ::cta-button
+    ::::cta-button
     ---
     color: white
+    link: /blog
     textColor: primary
-    link: '/blog'
     ---
     #text
-    Tous les  articles
-    ::
-  ::
+    Tous les articles
+    ::::
+  :::
+::
