@@ -113,8 +113,8 @@
     },
     {
       "title": "AU VILLAGE KYZYL OY",
-      "badgeText": "JOURS 2 ET 3",
-      "description": "Début de l'aventure ! Vous filez à travers routes sinueuses et cols vertigineux jusqu'aux vastes étendues de la vallée de Suussamyr, ponctuée de yourtes de nomades. A votre arrivée au village, vous participez à la préparation du pain beignet traditionnel. Profitez de votre journée libre le lendemain pour découvrir les alentours à pied, à cheval, ou à la nage dans la rivière Kokomeren. ",
+      "badgeText": "JOUR 2",
+      "description": "Après un copieux petit-déjeuner, cap vers les grands espaces kirghizes ! Vous franchissez le col de Too Achou (3 500 m) avant de vous diriger vallée de Soussamyr, véritable paradis des nomades. Déjeuner en chemin puis poursuite le long de la rivière Kokomeren jusqu’au village de montagne de Kyzyl Oy (1 800 m). Entre paysages grandioses et immersion dans la vie locale, vous profiterez d’un dîner convivial et d’une nuit en maison d’hôtes pour une première expérience authentique.",
       "photo": "/images/1.voyages/immersion-steppes-kirghizistan/JqOOdFxPSJSD4PKa6BF5.jpg",
       "denivellation": "",
       "road": "",
@@ -173,7 +173,8 @@
       "denivellation": "",
       "road": "",
       "night": ""
-    }
+    },
+    {}
   ],
   "pricingDetailsBlock": {
     "include": [
