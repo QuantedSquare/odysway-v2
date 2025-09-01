@@ -23,6 +23,7 @@
     <v-spacer />
     <div class="d-flex align-center ga-4">
       <v-btn
+        v-if="header.button1.visible"
         height="45"
         color="primary"
         rounded="default"
@@ -32,6 +33,7 @@
         {{ header.button1.text }}
       </v-btn>
       <v-btn
+        v-if="header.button2.visible"
         color="primary"
         height="45"
         class="text-caption text-md-body-1 d-none d-md-inline"
@@ -40,6 +42,7 @@
         {{ header.button2.text }}
       </v-btn>
       <v-btn
+        v-if="header.button3.visible"
         color="primary"
         height="45"
         class="text-caption text-md-body-1 d-none d-md-inline"
@@ -48,6 +51,7 @@
         {{ header.button3.text }}
       </v-btn>
       <v-btn
+        v-if="header.button4.visible"
         href="tel: +33184807975"
         color="primary"
         height="45"
@@ -59,6 +63,7 @@
         <span class="mt-2">{{ header.button4.text }}</span>
       </v-btn>
       <v-btn
+        v-if="header.button5.visible"
         height="45"
         color="white"
         rounded="default"
@@ -110,6 +115,7 @@
     <v-spacer />
     <div class="d-flex align-center ga-4">
       <v-btn
+        v-if="header.button1.visible"
         height="45"
         color="primary"
         rounded="default"
@@ -119,6 +125,7 @@
         {{ header.button1.text }}
       </v-btn>
       <v-btn
+        v-if="header.button2.visible"
         color="primary"
         height="45"
         class="text-caption text-md-body-1 d-none d-md-inline"
@@ -127,6 +134,7 @@
         {{ header.button2.text }}
       </v-btn>
       <v-btn
+        v-if="header.button3.visible"
         color="primary"
         height="45"
         class="text-caption text-md-body-1 d-none d-md-inline"
@@ -135,6 +143,7 @@
         {{ header.button3.text }}
       </v-btn>
       <v-btn
+        v-if="header.button4.visible"
         href="tel: +33184807975"
         color="primary"
         height="45"
@@ -146,6 +155,7 @@
         <span class="mt-2">{{ header.button4.text }}</span>
       </v-btn>
       <v-btn
+        v-if="header.button5.visible"
         height="45"
         color="white"
         rounded="default"

@@ -8,22 +8,27 @@
   "search": true,
   "button1": {
     "text": "Voyages",
-    "link": "/search"
+    "link": "/search",
+    "visible": true
   },
   "button2": {
     "text": "L'esprit Odysway",
-    "link": "/vision-voyage-odysway"
+    "link": "/vision-voyage-odysway",
+    "visible": true
   },
   "button3": {
     "text": "Chèques vacances",
-    "link": "/cheques-vacances"
+    "link": "/cheques-vacances",
+    "visible": false
   },
   "button4": {
     "text": "+33 1 84 80 79 75",
-    "link": "tel:+33184807975"
+    "link": "tel:+33184807975",
+    "visible": true
   },
   "button5": {
     "text": "Prendre RDV 👋",
-    "link": "/calendly"
+    "link": "/calendly",
+    "visible": true
   }
 }

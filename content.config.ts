@@ -1108,22 +1108,27 @@ export default defineContentConfig({
         button1: z.object({
           text: z.string().describe('Texte du bouton'),
           link: z.string().describe('URL de redirection'),
+          visible: z.boolean().describe('Indique si le bouton est visible'),
         }).describe('Bouton 1'),
         button2: z.object({
           text: z.string().describe('Texte du bouton'),
           link: z.string().describe('URL de redirection'),
+          visible: z.boolean().describe('Indique si le bouton est visible'),
         }).describe('Bouton 2'),
         button3: z.object({
           text: z.string().describe('Texte du bouton'),
           link: z.string().describe('URL de redirection'),
+          visible: z.boolean().describe('Indique si le bouton est visible'),
         }).describe('Bouton 3'),
         button4: z.object({
           text: z.string().describe('Texte du bouton'),
           link: z.string().describe('URL de redirection'),
+          visible: z.boolean().describe('Indique si le bouton est visible'),
         }).describe('Bouton 4'),
         button5: z.object({
           text: z.string().describe('Texte du bouton'),
           link: z.string().describe('URL de redirection'),
+          visible: z.boolean().describe('Indique si le bouton est visible'),
         }).describe('Bouton 5'),
       }).describe('Configuration du Header'),
     }),
