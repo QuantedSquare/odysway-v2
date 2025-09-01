@@ -77,7 +77,7 @@
   "experiencesBlock": [
     "Les discussions avec les astronomes et astrophysiciens, autour d'un repas",
     "Mener à bien de véritables missions d'observation scientifique",
-    "Pouvoir manœuvrer[](http://www.synonymo.fr/synonyme/manoeuvrer \"consulter les synonymes de manoeuvrer\") seul la coupole de l'observatoire",
+    "Pouvoir manœuvrer[http://www.synonymo.fr/synonyme/manoeuvrer] \"consulter les synonymes de manoeuvrer\") seul la coupole de l'observatoire",
     "Garder ses propres photos du ciel, qui vous seront transmises par e-mail",
     "La validation du passeport officiel en astronomie, niveau 1"
   ],
@@ -107,7 +107,71 @@
       "visible": true
     }
   },
-  "programmeBlock": [],
+  "programmeBlock": [
+    {
+      "title": "ARRIVÉE À L'OBSERVATOIRE",
+      "badgeText": "JOUR 1",
+      "description": "Arrivée libre à l'observatoire astronomique dans l'après midi. Accueil, visite du site et installation dans les chambres d'hôtes. Vous prendrez votre premier dîner en compagnie des membres de l'équipe et ferez connaissance avec les autres participants du séjour.",
+      "photo": "/images/1.voyages/immersion-observatoire-astronomique/wAuHGGLhQmioeMOJmNUh.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "COMPRENDRE LE CIEL",
+      "badgeText": "JOUR 2",
+      "description": "Cette première journée d'immersion est consacrée à la compréhension du ciel étoilé. Vous apprendrez à reconnaître les planètes, étoiles, nébuleuses et galaxies. À la nuit tombée, vous participerez à une première observation astronomique avec un télescope T400.",
+      "photo": "/images/1.voyages/immersion-observatoire-astronomique/0CkJEb5SIWny0DaMSuUP.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "SE REPÉRER DANS LE CIEL",
+      "badgeText": "JOUR 3",
+      "description": "Maintenant que vous comprenez le ciel étoilé, il s'agit de s'y repérer. Vous apprendrez au cours de la journée à manier les magnitudes et coordonnées du ciel. La nuit venue, vous  vous repérerez les constellations, reconnaîtrez les étoiles et planètes au télescope. ",
+      "photo": "/images/1.voyages/immersion-observatoire-astronomique/6xyzINy9TjOS6XIloLe0.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "S'INITIER AUX INSTRUMENTS",
+      "badgeText": "JOUR 4",
+      "description": "Cette journée est consacrée à la compréhension du matériel d'un astronome. Après une partie théorique avec l'équipe, place à la pratique ! Vous mettrez vous même en station un télescope (faire les réglages), puis l'utiliserez pour trouver des objets du ciel profond.",
+      "photo": "/images/1.voyages/immersion-observatoire-astronomique/FGyr95QnSWyaEDn0nNoH.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "VOTRE MISSION D'ASTRONOME",
+      "badgeText": "JOUR 5",
+      "description": "C'est le grand jour ! Aujourd'hui le staff de l'observatoire vous confiera une mission (détection d'exoplanète, suivi d'astéroïde, ...). Avec l'aide de votre équipe, vous mènerez la mission de bout en bout, en immersion sous la coupole du grand télescope T820.",
+      "photo": "/images/1.voyages/immersion-observatoire-astronomique/45kIi6WpSkmCRjNvRjj4.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DERNIÈRE NUIT SOUS LES ÉTOILES",
+      "badgeText": "JOUR 6",
+      "description": "Pour cette dernière journée, avec votre équipe, vous allez revoir toute la chaîne que vous apprise au cours de la semaine. Montage de télescope, repérage dans le ciel, observations et analyse des données. Vous repartirez avec votre passeport en astronomie niveau 1 !",
+      "photo": "/images/1.voyages/immersion-observatoire-astronomique/AlhoWV2nQL6r63cNX6qY.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DERNIER JOUR À L'OBSERVATOIRE",
+      "badgeText": "JOUR 7",
+      "description": "Votre semaine en tant qu'astronome touche à sa fin et il est temps de repartir. Vous ne partez cependant pas les mains vides : vous avez maintenant votre passeport en astronomie niveau 1, et vos magnifiques clichés du ciel qui vous seront transmis par e-mail !",
+      "photo": "/images/1.voyages/immersion-observatoire-astronomique/KxLbWWfXRMuHgO7XuFrf.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
   "pricingDetailsBlock": {
     "include": [
       "6 nuitées en chambre d'hôte au sein de l'observatoire astronomique",
