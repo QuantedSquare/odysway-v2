@@ -2,11 +2,15 @@ import { defineEventHandler, readBody } from 'h3'
 import supabase from '~/server/utils/supabase'
 import activecampaign from '~/server/utils/activecampaign'
 
+// When Assigning an activecampaign deal to a booked_date, we need to update the deal with the paiementLink, slug and redirection to date in the bms.
+// Also update the booked_dates table with the booked_places, is_option and expiracy_date. depending if it's an option or not.
+
 export default defineEventHandler(async (event) => {
   const { dateId } = event.context.params
   const { dealId, booked_places, is_option, expiracy_date } = await readBody(event)
   if (!dealId) return { error: 'dealId requis' }
-
+  const config = useRuntimeConfig()
+  const origin = config.public.siteURL
   // Fetch deal from ActiveCampaign
   let deal
   try {
@@ -26,7 +30,7 @@ export default defineEventHandler(async (event) => {
   // If user placed an option or already paid, he is counted as a booked traveler, otherwise he is just assigned to the deal temporarily
   const bookedPlaceCount = (alreadyPaid > 0 || is_option === true) ? (booked_places || Number(nbTravelers)) : 0
   // Insert into booked_dates
-  const { data, error } = await supabase
+  const { data: bookedDate, error } = await supabase
     .from('booked_dates')
     .insert([{
       travel_date_id: dateId,
@@ -37,7 +41,7 @@ export default defineEventHandler(async (event) => {
     }])
     .select('*')
     .single()
-  console.log('=======data inserted=======', data)
+  console.log('=======data inserted=======', bookedDate)
   console.log('=======error=======', error)
   const alreadyAssigned = error && error.message.includes('duplicate key value violates unique constraint')
   if (alreadyAssigned) {
@@ -62,5 +66,25 @@ export default defineEventHandler(async (event) => {
     .update({ booked_seat: totalBooked })
     .eq('id', dateId)
 
-  return data
+  const { data: travel_date, error: slugError } = await supabase
+    .from('travel_dates')
+    .select('*')
+    .eq('id', dateId)
+    .single()
+  console.log('=======travel_slug=======', travel_date)
+  if (slugError) return { error: slugError.message }
+
+  const data_to_update = {
+    slug: travel_date.travel_slug,
+    linkBms: `${origin}/booking-management/${travel_date.travel_slug}/${dateId}`,
+  }
+  if (deal.group === '2') {
+    Object.assign(data_to_update, { paiementLink: `https://odysway.com/checkout?type=balance&booked_id=${bookedDate.id}` })
+  }
+  else {
+    Object.assign(data_to_update, { paiementLink: `https://odysway.com/checkout?type=balance&booked_id=${bookedDate.id}` })
+  }
+  const travel_slug_updated = await activecampaign.updateDeal(dealId, data_to_update)
+  console.log('=======travel_slug updated=======', travel_slug_updated)
+  return bookedDate
 })
