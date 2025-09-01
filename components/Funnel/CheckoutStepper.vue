@@ -454,15 +454,14 @@ const showInsuranceStep = computed(() => {
   .funnel-stepper{
     min-height: 50vh!important;
     width:100%;
-
   }
   .no-margin-window {
     max-width: 1440px;
   }
   .no-margin-window .v-stepper-window {
- margin-left:0!important;
- margin-right:0!important;
-}
+  margin-left:0!important;
+  margin-right:0!important;
+  }
 }
 .fade-enter-active {
   transition: all 0.3s ease-out;

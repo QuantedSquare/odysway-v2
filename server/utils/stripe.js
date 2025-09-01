@@ -171,7 +171,7 @@ const createCheckoutSession = async (order) => {
         quantity: +deal.nbTravelers,
       })
     }
-    if (+deal.indivRoom === 'Oui' && +deal.indivRoomPrice > 0) {
+    if (deal.indivRoom === 'Oui' && +deal.indivRoomPrice > 0) {
       lineItems.push({
         // Insurances Fees
         price_data: {
@@ -185,7 +185,7 @@ const createCheckoutSession = async (order) => {
         quantity: +deal.nbTravelers,
       })
     }
-    if (deal.extensionPrice > 0) {
+    if (+deal.extensionPrice > 0) {
       lineItems.push({
         // Insurances Fees
         price_data: {
@@ -199,7 +199,7 @@ const createCheckoutSession = async (order) => {
         quantity: +deal.nbTravelers,
       })
     }
-    if (deal.alreadyPaid > 0) {
+    if (+deal.alreadyPaid > 0) {
       coupon = await stripeCLI.coupons.create({
         amount_off: deal.alreadyPaid, // in cents
         currency: 'eur',
