@@ -99,7 +99,7 @@ La commande d’un séjour Odysway s’effectue selon le processus suivant :
 
 **Options de réservation :**
 
-Lorsqu’une option est posée, elle ne constitue pas une réservation ferme. Sauf mention contraire, le tarif aérien n’est pas garanti au moment de la pose de l’option et reste susceptible de varier jusqu’à la confirmation définitive du voyage. En cas d’évolution tarifaire, le Voyageur en est informé avant validation.
+Lorsqu’une option est posée, elle ne constitue pas une réservation ferme. Sauf mention contraire, le tarif aérien n’est pas garanti au moment de la pose de l’option et reste susceptible de varier jusqu’à la confirmation définitive du voyage. En cas d’évolution tarifaire, le voyageur en est informé avant validation.
 
 ## **3. Prix**
 
