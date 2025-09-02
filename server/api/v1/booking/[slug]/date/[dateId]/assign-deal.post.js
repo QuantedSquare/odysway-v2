@@ -14,7 +14,12 @@ export default defineEventHandler(async (event) => {
   // Fetch deal from ActiveCampaign
   let deal
   try {
-    deal = await activecampaign.getDealCustomFields(dealId)
+    const [fetchedDeal, customFields] = await Promise.all([
+      activecampaign.getDealById(dealId),
+      activecampaign.getDealCustomFields(dealId),
+    ])
+    deal = { ...fetchedDeal.deal, ...customFields }
+
     console.log('=======deal RETRIEVED=======', deal)
   }
   catch {
