@@ -224,7 +224,7 @@
   "pricing": {
     "startingPrice": 1885,
     "lastMinuteAvailable": false,
-    "lastMinuteReduction": 80,
+    "lastMinuteReduction": 100,
     "earlyBirdAvailable": false,
     "earlyBirdReduction": 80,
     "maxTravelers": 12,
