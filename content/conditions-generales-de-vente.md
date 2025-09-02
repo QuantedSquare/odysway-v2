@@ -97,6 +97,10 @@ La commande d’un séjour Odysway s’effectue selon le processus suivant :
 
 10\. En cas de difficulté lors de la réservation, le Client peut contacter le service client d’Odysway à <voyageurs@odysway.com> ou au +33 (0)1 84 80 79 75 pour être assisté à distance.
 
+**Options de réservation :**
+
+Lorsqu’une option est posée, elle ne constitue pas une réservation ferme. Sauf mention contraire, le tarif aérien n’est pas garanti au moment de la pose de l’option et reste susceptible de varier jusqu’à la confirmation définitive du voyage. En cas d’évolution tarifaire, le Voyageur en est informé avant validation.
+
 ## **3. Prix**
 
 Les prix affichés sur le site [www.odysway.com](http://www.odysway.com) sont exprimés en euros, toutes taxes comprises (TTC). Ils sont calculés à partir des données économiques disponibles au moment de leur publication (tarifs de transport, taxes, taux de change, etc.).
@@ -107,8 +111,6 @@ Ces prix peuvent varier selon :
 - le nombre de participants inscrits,
 - les options choisies (assurance, chambre individuelle, transport, etc.),
 - ou toute évolution des coûts extérieurs (taxes, carburant, devises).
-
-/line
 
 ### **Ce que le prix comprend**
 
