@@ -1,0 +1,17 @@
+{
+  "title": "Tanzanie",
+  "regions": [
+    {
+      "nom": "Afrique"
+    }
+  ],
+  "slug": "tanzanie",
+  "interjection": "en",
+  "metaDescription": "Découvrez nos voyages en immersion en Tanzanie",
+  "chapka": "2",
+  "iso": "TZA",
+  "published": true,
+  "image": {
+    "src": "/images/1.voyages/voyage-tanzanie-safari-immersion-communaute-locale/azyTXWhLQBmGd7tgjmxQ.jpg"
+  }
+}
