@@ -20,7 +20,7 @@ sitemap:
 #error
 # Une erreur est survenue… 😕
 
-Merci d'essayer à nouveau ou de prendre contact avec nous par téléphone au +33 1 84 80 79 75 ou par email : voyageurs\@odysway.com.
+Merci d'essayer à nouveau ou de prendre contact avec nous par téléphone au +33 1 84 80 79 75 ou par email : <voyageurs@odysway.com>.
 
 #accroche_option
 Votre place est désormais réservée pour une durée de sept jours. Passé ce délai, un acompte sera nécessaire pour confirmer définitivement votre participation au voyage.

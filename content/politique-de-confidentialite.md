@@ -7,7 +7,7 @@
 #content
 ## **Article 1 : préambule**
 
-La présente politique s’applique au site https\://odysway.com. Elle vise à expliquer comment sont collectées, utilisées, conservées et partagées vos données personnelles, ainsi que vos droits.
+La présente politique s’applique au site <https://odysway.com>. Elle vise à expliquer comment sont collectées, utilisées, conservées et partagées vos données personnelles, ainsi que vos droits.
 
 ## **Article 2 : principes de traitement**
 
@@ -46,7 +46,7 @@ Le site est hébergé par Google App Engine (2 rue Kellermann, 59100 Roubaix, Fr
 
 ## **Article 7 : responsable du traitement**
 
-Romain Masina – contact\@odysway.com
+Romain Masina – <contact@odysway.com>
 
 Il est également Délégué à la Protection des Données (DPO).
 
@@ -58,7 +58,7 @@ Vous disposez à tout moment des droits suivants :
 - portabilité
 - limitation ou opposition au traitement
 - directives post-mortem
-- réclamation auprès de la CNILPour exercer ces droits : contact\@odysway.com ou courrier à Odysway – 27 avenue Nicolas Boileau, 94420 Le Plessis-Trévise, avec copie d’une pièce d’identité.
+- réclamation auprès de la CNILPour exercer ces droits : <contact@odysway.com> ou courrier à Odysway – 61 rue de Lyon - 75012 Paris, avec copie d’une pièce d’identité.
 
 ## **Article 9 : données des mineurs**
 
