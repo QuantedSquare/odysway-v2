@@ -148,14 +148,14 @@ function formatDate(date) {
   height: 100%;
 }
 .custom-hero-height {
-  height: 682px;
+  height:  800px;
 }
 .hero-img-wrapper {
 
   height: 100%;
   width: 100%;
   min-height: 220px;
-  max-height: 682px;
+  max-height: 800px;
   overflow: hidden;
   display: flex;
 }
