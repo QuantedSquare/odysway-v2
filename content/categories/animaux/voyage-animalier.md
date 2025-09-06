@@ -20,7 +20,7 @@ published: true
 publishedAt: 2020-11-24 12:24:00+00:00
 tags: ""
 categories: Culture et decouverte
-displayedImg: ""
+displayedImg: "/images/blogs/voyage-animalier/rUuF9gYfTB6Z0iAzrd6n.jpg"
 blogType: Actu
 badgeColor: secondary
 readingTime: "3"

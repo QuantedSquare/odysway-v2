@@ -40,12 +40,15 @@ const selectedCategory = computed(() => {
   return categories.value.find(c => c.slug === slug.value) || null
 })
 
-const { data: categorieContent, status: categorieContentStatus } = useAsyncData('categorieContent', () => {
-  return queryCollection('categoriesContent').where('stem', 'LIKE', `categories/${slug.value}/%`).where('published', '=', true).first()
+const { data: categorieContent, status: categorieContentStatus } = useAsyncData('categorieContent', async () => {
+  const categJSON = await queryCollection('categories').where('slug', '=', slug.value).first()
+  const pathParts = categJSON.stem.split('/')
+  const categoryPath = pathParts.slice(0, 2).join('/')
+  const result = await queryCollection('categoriesContent').where('stem', 'LIKE', `${categoryPath}/%`).where('published', '=', true).first()
+  return result
 }, {
   watch: [slug],
 })
-console.log(categorieContent.value)
 
 provide('page', categorieContent)
 // #TODO OPTI THE LE CALL EN FAISANT UN SELECT DES PROPS NECESSAIRES

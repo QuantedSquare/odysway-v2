@@ -55,8 +55,11 @@ const destinationsInRegion = computed(() => {
   ) || []
 })
 
-const { data: destinationContent, status: destinationContentStatus } = useAsyncData('destinationContent', () => {
-  return queryCollection('destinationsContent').where('stem', 'LIKE', `destinations/${slug.value}/%`).where('published', '=', true).first()
+const { data: destinationContent, status: destinationContentStatus } = useAsyncData('destinationContent', async () => {
+  const destinationJSON = await queryCollection('destinations').where('slug', '=', slug.value).first()
+  const pathParts = destinationJSON.stem.split('/')
+  const destinationPath = pathParts.slice(0, 2).join('/')
+  return queryCollection('destinationsContent').where('stem', 'LIKE', `${destinationPath}/%`).where('published', '=', true).first()
 }, {
   watch: [slug],
 })
