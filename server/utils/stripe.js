@@ -163,7 +163,7 @@ const createCheckoutSession = async (order) => {
         price_data: {
           currency: 'eur',
           product_data: {
-            name: deal.insurance,
+            name: 'Assurance ' + deal.insurance,
             images: [order.insuranceImg],
           },
           unit_amount: +deal.insuranceCommissionPrice,
