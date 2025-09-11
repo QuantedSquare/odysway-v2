@@ -31,7 +31,7 @@
   "duration": 13,
   "nights": 12,
   "includeFlight": false,
-  "housingType": "Havelis, chez l'habitant",
+  "housingType": "Havelis, glamping, hôtel de charme, chez l'habitant, hôtels",
   "idealPeriods": {
     "toutePeriodes": false,
     "janvier": true,
@@ -199,30 +199,32 @@
   ],
   "pricingDetailsBlock": {
     "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "L’assistance de notre équipe 24h/24 et 7j/7, ainsi que l’accompagnement d’un guide francophone durant tout le séjour.",
       "L'accueil par votre guide ou de notre représentant à votre arrivée à l'aéroport.",
-      "Les taxes gouvernementales et les taxes de services.",
-      "Hébergement dans les hôtels spécifiés ou similaires en chambre double avec petit-déjeuner et dîner.",
-      "Tous les transferts, visites et excursions en véhicule climatisé. La location du véhicule comprend les péages, les frais de stationnement, le carburant et la taxe sur les intrants dans chaque État traversé.",
-      "Les frais d'hébergement et de repas du chauffeur.",
-      "Toutes les entrées des monuments selon l'itinéraire.",
+      "Les taxes gouvernementales et de services.",
+      "L’hébergement dans les établissements mentionnés (ou similaires) en chambre double, avec petit-déjeuner et dîner.",
+      "ous les transferts, visites et excursions en véhicule climatisé (incluant péages, stationnement, carburant et taxes locales).",
+      "Les frais d’hébergement et de repas du chauffeur.",
+      "Toutes les entrées des monuments indiqués au programme.",
       "La promenade en jeep jusqu'au Fort d'Amber, Jaipur.",
-      "Déjeuners dans des restaurants pendant les visites ou les excursions.",
-      "Promenade en chameau et en jeep dans le désert de Thar, Jaisalmer.",
-      "Promenade dans les villages de Jodhpur",
-      "Cours de cuisine à Udaipur"
+      "Les déjeuners, pris en cours de route, dans des restaurants locaux ou chez l’habitant selon les étapes.",
+      "Les expériences culturelles incluses : atelier de peinture miniature à Bundi, balade en rickshaw écologique à Jaipur (conduits par des femmes issues d’un programme social), repas avec une famille locale, dîner de bienvenue et dîner d’au revoir.",
+      "La compensation carbone de votre voyage.",
+      "Votre fiche programme et destination."
     ],
     "exclude": [
       "Les vols internationaux pour vous rendre à New Delhi (possibilité de devis avec vols inclus sur demande)",
-      "L'assurance annulation ou multirisques",
-      "La demande d'e-visa à faire sur internet",
-      "Les dépenses personnelles sur place et les boissons",
-      "Les pourboires. Ils font partie de la culture indienne, les locaux eux-mêmes sont habitués à en donner.",
-      "Les frais d'entrées, excursions et activités proposées en option"
+      "L'assurance annulation, multirisque, ou assistance",
+      "Les boissons et dépenses personnelles.",
+      "Les activités, visites ou entrées proposées en option.",
+      "Les pourboires (fortement ancrés dans la culture locale).",
+      "Les frais supplémentaires éventuels liés à une arrivée de nuit à Delhi.",
+      "Tout ce qui n’est pas mentionné dans la rubrique “Le prix comprend”.",
+      "Le visa"
     ]
   },
   "pricing": {
-    "startingPrice": 1885,
+    "startingPrice": 1880,
     "lastMinuteAvailable": false,
     "lastMinuteReduction": 100,
     "earlyBirdAvailable": false,
@@ -303,11 +305,11 @@
     "faqList": [
       {
         "question": "Où vais-je loger ?",
-        "answer": "Tous les hébergements sont compris dans le prix du voyage. Vous logerez le plus souvent dans des havelis, qui ont plus de charme que les hôtels traditionnels ou chaînes classiques. Les hôtels ci-dessous pourront être remplacés par des hébergements similaires, selon leurs disponibilités.\n\n*   **Nuit du jour 1** : Nuit à l'hôtel Home@F37.\n*   **Nuit du jour 2** : Nuit à l'hôtel Mandawa Haveli.\n*   **Nuit du jour 3 :** Nuit à l'hôtel Harasar Haveli.\n*   **Nuit du jour 4 :** Nuit en bivouac sous tente avec matelas.\n*   **Nuit du jour 5 :** Nuit à l'hôtel Jasmin Home.\n*   **Nuit du jour 6** : Nuit à l'hôtel Devi Bhawan.\n*   **Nuit du jour 7 et jour 8 :** Nuit chez l'habitant (Lavania).\n*   **Nuit du jour 9 :** Nuit à l'hôtel Bundi Haveli.\n*   **Nuit du jour 10 et jour 11 :** Nuit à l'hôtel Arya Niwas.\n*   **Nuit du jour 12 :** Nuit à l'hôtel Grand Imperial."
+        "answer": "Tous les hébergements sont compris dans le prix du voyage. Vous logerez le plus souvent dans des havelis ou des maisons de charme, qui offrent plus d’authenticité que les hôtels traditionnels ou chaînes classiques. Certains hébergements pourront être remplacés par des établissements similaires, selon leurs disponibilités.  Nuit du jour 1 : Nuit dans un haveli à Mandawa.  Nuit du jour 2 : Nuit dans un campement aménagé dans le désert, proche de Bikaner.  Nuit du jour 3 et jour 4 : Nuit dans un hôtel de charme à Jaisalmer.  Nuit du jour 5 : Nuit dans un hôtel patrimonial à Jodhpur.  Nuit du jour 6 et jour 7 : Nuit dans un haveli traditionnel à Udaipur.  Nuit du jour 8 : Nuit dans un hôtel de style patrimonial à Bundi.  Nuit du jour 9 et jour 10 : Nuit dans une maison d’hôtes familiale de charme à Jaipur.  Nuit du jour 11 : Nuit dans un hôtel patrimonial à Agra.  Nuit du jour 12 : Nuit dans un hôtel boutique à Delhi."
       },
       {
         "question": "Que vais-je manger ?",
-        "answer": "Le séjour est proposé en pension complète !  Les petits-déjeuners seront pris à l'hébergement, le repas du midi sur la route ou lors des visites selon les étapes, et les dîners dans des restaurants en ville ou directement à votre hôtel. Vous aurez également l'occasion de déguster des plats traditionnels chez l'habitant directement, notamment ceux que vous apprendrez à préparer lors d'un cours de cuisine sur le jour 8.\n\n#### Un mot sur la cuisine du Radjasthan :\n\nLa cuisine est aussi riche et variée que sa culture et son histoire. Influencée par son climat aride et la rareté de l'eau, la gastronomie rajasthani a développé des techniques uniques pour conserver les aliments plus longtemps et utiliser des ingrédients locaux qui nécessitent peu d'eau.\n\nL'un des plats emblématiques est le \"dal baati churma\". Le baati est une boule de pâte dure cuite sur du charbon, traditionnellement accompagnée d'un dal épicé (soupe de lentilles) et de churma, une préparation sucrée à base de semoule. Le ghee (beurre clarifié) est généreusement versé sur le plat, lui donnant sa saveur caractéristique.\n\nLes épices, omniprésentes, rehaussent chaque plat. Les currys rajasthanis, comme le \"laal maas\" (curry d'agneau épicé) ou le \"gatte ki sabzi\" (curry de boulettes de farine de pois chiche), sont particulièrement savoureux.\n\nLes pickles et les chutneys, préparés avec des légumes et fruits locaux, complètent souvent le repas. Le \"ker sangri\" est un pickle typique réalisé avec des baies et des haricots du désert.\n\nEnfin, n'oublions pas les desserts. Le \"ghewar\", un gâteau frit trempé dans du sirop, est incontournable lors des fêtes.\n\nVoyageurs, en visitant le Rajasthan, laissez-vous tenter par cette cuisine authentique et parfumée, qui reflète l'âme de cette région magnifique."
+        "answer": "Le séjour est proposé en pension complète ! Les petits-déjeuners seront pris à l’hébergement, les déjeuners le plus souvent en route ou chez l’habitant selon les étapes, et les dîners dans vos hôtels ou lors de repas festifs organisés pour le groupe. Dès le premier soir, un dîner de bienvenue vous sera proposé, et vous terminerez le séjour par un dîner d’au revoir partagé avec votre guide. Vous aurez également l’occasion de vivre des moments gourmands particuliers : un déjeuner avec une famille locale près de Jodhpur, ou encore un atelier de cuisine à Udaipur, où vous apprendrez à préparer quelques recettes emblématiques avant de les déguster. La cuisine du Rajasthan est à l’image de la région : riche, colorée et profondément marquée par l’histoire et le climat aride du désert. Elle s’est développée autour d’ingrédients locaux qui se conservent longtemps et demandent peu d’eau, tout en utilisant un éventail d’épices qui relèvent chaque plat.  Parmi les mets incontournables, on retrouve le dal baati churma : des boules de pâte cuite accompagnées de lentilles épicées et d’une préparation sucrée à base de semoule. Autre spécialité, le laal maas, un curry d’agneau rouge vif et très parfumé. Les légumes secs, comme dans le gatte ki sabzi (curry de boulettes de pois chiche), occupent aussi une place importante. Le ker sangri, un plat de haricots du désert et de petites baies, témoigne de l’ingéniosité de cette cuisine née de la contrainte climatique.  Les repas sont souvent complétés par des pickles et chutneys, et se terminent par des douceurs typiques : le ghewar, gâteau frit imbibé de sirop, est particulièrement associé aux grandes fêtes.  En voyageant au Rajasthan, vous découvrirez une gastronomie généreuse et parfumée, véritable reflet de l’âme de cette région."
       },
       {
         "question": "Qu’est ce que l’esprit Odysway ?",
@@ -342,7 +344,7 @@
         "answer": "Une fois votre voyage réservé et l'acompte réglé, vous recevrez un email de confirmation. Si votre voyage comprend un vol ou si celui-ci est inclus dans votre devis, vos billets vous parviendront dans les 7 jours suivant votre réservation.\n\nVous recevrez également votre carnet de voyage, une ressource complète contenant toutes les informations nécessaires pour préparer votre voyage, comprenant par exemple les vêtements à emporter et le programme du séjour en détail.\n\nDurant toute la phase de préparation, ainsi que pendant votre voyage, vous resterez en contact avec un conseiller dédié. Vous pourrez le joindre par email, téléphone ou WhatsApp, selon ce qui vous convient le mieux, du lundi au vendredi de 9h à 18h. En cas d'urgence le week-end ou en dehors des heures de travail, nous sommes disponibles au [+33 1 84 80 79 75](tel:+33184807975) ou au [+33 7 80 91 95 40](tel:+33 7 80 91 95 40)"
       },
       {
-        "question": "Spécificité de la date de Novembre 2024 - Foire de Pushkar",
+        "question": "Spécificité de la date de Novembre 2026 - Foire de Pushkar",
         "answer": "**Itinéraire adapté : Udaipur - Pushkar (300 km), puis Pushkar - Jaipur (160km).**\n\nLe Pushkar Camel Festival est considéré comme l’un des plus grands festivals de chameaux au monde, où l’achat et la vente de bétail ont lieu de manière importante. En dehors de cela, les principales attractions touristiques sont les compétitions telles que la « course de chameaux », le « matka phod », la « plus longue moustache » et la « compétition de la mariée ». C'est pendant cette période que la ville est recouverte de couleurs, bercée par la musique et les danses folkloriques, notamment la Danse des charmeurs de serpents. Vous profitez également d'expositions d'artisanat, de vêtements traditionnels, de peintures et de spectacles de marionnettes toujours très divertissants."
       }
     ]
