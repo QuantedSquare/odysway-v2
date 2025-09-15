@@ -47,7 +47,7 @@
       name="list"
     >
       <v-col
-        v-for="voyage in limitedVoyages"
+        v-for="voyage in displayedVoyages"
         :key="voyage.id"
         cols="12"
         sm="6"
@@ -124,7 +124,7 @@
       <CtaCardSheet />
     </v-col>
   </v-row>
-  <v-row
+  <!-- <v-row
     v-if="voyages && voyages.length > 9 && (selectedCategory || selectedExperience || isSearch)"
     justify="center"
     align="center"
@@ -134,13 +134,13 @@
     <BouncingBtn
       v-model="isExpanded"
     />
-  </v-row>
+  </v-row> -->
   <!---------------------------------------------------------------------->
 </template>
 
 <script setup>
 const route = useRoute()
-const isExpanded = ref(false)
+// const isExpanded = ref(false)
 
 const props = defineProps({
   selectedCategory: {
@@ -185,9 +185,10 @@ const voyagesWithCta = computed(() => {
   return result
 })
 
-const limitedVoyages = computed(() => {
+const displayedVoyages = computed(() => {
   if (!voyagesWithCta.value || !Array.isArray(voyagesWithCta.value)) return []
-  return voyagesWithCta.value.slice(0, isExpanded.value ? voyagesWithCta.value.length : 9)
+  // return voyagesWithCta.value.slice(0, isExpanded.value ? voyagesWithCta.value.length : 9)
+  return voyagesWithCta.value
 })
 
 const noVoyagesFoundCategoryText = computed(() => {
@@ -204,12 +205,12 @@ const noVoyagesFoundExperienceText = computed(() => {
   return `Aucun voyage trouvé pour l'expérience "${props.selectedExperience?.title || ''}"`
 })
 
-const expandButtonText = computed(() => {
-  if (isExpanded.value) {
-    return props.pageContent?.common?.expandButton?.showLess || 'Voir moins de voyages'
-  }
-  return props.pageContent?.common?.expandButton?.showMore || 'Voir plus de voyages'
-})
+// const expandButtonText = computed(() => {
+//   if (isExpanded.value) {
+//     return props.pageContent?.common?.expandButton?.showLess || 'Voir moins de voyages'
+//   }
+//   return props.pageContent?.common?.expandButton?.showMore || 'Voir plus de voyages'
+// })
 </script>
 
 <style scoped>
