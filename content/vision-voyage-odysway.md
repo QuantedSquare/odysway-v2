@@ -152,40 +152,40 @@ Nous travaillons de manière artisanale, avec sérieux. Nous allons sur le terra
 
 ::title-container-h3
 #subtitle
-**Immersion**
+**Transparence**
 ::
 
 ::text-container
 #text
-Nous croyons au pouvoir du voyage en immersion. Prendre le temps de s’imprégner d’un lieu, de vivre le quotidien d’un territoire, de créer du lien avec celles et ceux qui y habitent. Pour nous, c’est ça, voyager autrement : s’ouvrir à une culture, à un rythme, à une réalité qui n’est pas la sienne, et en ressortir un peu transformé.
+Un voyage réussi commence par de la clarté. Nous présentons nos voyages tels qu’ils sont, expliquons nos choix, nos engagements et nos tarifs. Tout est formulé simplement pour que chacun parte l’esprit libre et puisse s’immerger pleinement dans l’expérience. Cette transparence est aussi notre manière de travailler en interne et de collaborer avec nos partenaires locaux.
 ::
 
 ::title-container-h3
 #subtitle
-**Fiabilité**
+**Confiance**
 ::
 
 ::text-container
 #text
-Votre sérénité est essentielle. Nous sommes présents à chaque étape, avant, pendant et après le voyage. Nous vous accompagnons de manière claire et attentive, avec des séjours bien organisés, des partenaires de confiance, et une équipe disponible qui vous connaît et vous répond vraiment.
+Voyager, c’est confier une part de soi. Nous méritons cette confiance en tenant nos engagements, en accompagnant chaque étape et en restant présents avant, pendant et après le séjour. Cette fiabilité rassure et permet à chacun de se consacrer pleinement à l’expérience vécue.
 ::
 
 ::title-container-h3
 #subtitle
-**Passion**
+**Chaleur**
 ::
 
 ::text-container
 #text
-Nous sommes des passionnés de voyage, de rencontres et d’aventure. Chaque séjour est imaginé avec soin, testé sur le terrain, ajusté jusque dans les détails. Ce qui nous anime, c’est de vous faire vivre des moments uniques, forts et simples à la fois, à travers des expériences qui ont du sens.
+Pour Odysway, Voyager est synonyme de rencontrer. Nous cultivons cette chaleur humaine à chaque étape : dans l’accueil des voyageurs, dans la manière de collaborer entre nous et avec les locaux qui accueillent nos voyageurs. Cette bienveillance ouvre la porte à une immersion réelle et respectueuse.
 ::
 
 ::title-container-h3
 #subtitle
-**Responsabilité**
+**Justesse**
 ::
 
 ::text-container
 #text
-Voyager, c’est aussi un engagement. Nous faisons le choix d’un tourisme plus respectueux : respectueux des lieux, des personnes, des équilibres. Nous travaillons en direct avec les acteurs locaux, nous veillons à limiter notre impact, et nous défendons un tourisme plus équitable et plus conscient.
+La justesse est notre boussole. Elle guide la conception des séjours : rythme adapté, rencontres sincères, respect des habitants, mais aussi notre manière de travailler : des choix cohérents, équilibrés et respectueux pour que chaque voyage soit harmonieux, vrai et au juste prix pour le voyageur, les locaux et Odysway.
 ::
