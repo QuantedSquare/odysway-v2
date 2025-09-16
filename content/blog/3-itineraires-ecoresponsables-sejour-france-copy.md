@@ -116,11 +116,11 @@ Le voyage immersif n’est pas une simple tendance. C’est un tournant. Une fa�
 
 Chez Odysway, nous croyons à cette révolution douce. Et nous t’invitons à y prendre part. Non pas pour faire plus, mais pour vivre mieux. Le voyage n’est pas une fuite. C’est un retour. Et ce retour peut tout changer.
 
-Découvrir les immersions : https\://odysway.com/search
+Découvrir les immersions : <https://odysway.com/search>
 
-Nous contacter : https\://odysway.com/contact
+Nous contacter : <https://odysway.com/contact>
 
-Prendre RDV avec un conseiller : https\://odysway.com/calendly
+Prendre RDV avec un conseiller : <https://odysway.com/calendly>
 
 Parfait. Voici une **FAQ optimisée SEO** à intégrer en bas de ton article *“Voyage immersif : redonner du sens à l’aventure avec Odysway”*. Elle est construite à la fois pour :
 
