@@ -1,8 +1,12 @@
+import { getQuery, eventHandler } from 'h3'
+
 export default eventHandler(async (event) => {
   const query = getQuery(event)
-  const searchTerm = query.keyword
+  const searchTerm = query.keyword?.trim()
 
-  if (searchTerm && typeof searchTerm === 'string' && searchTerm.length > 0) {
+  if (searchTerm && searchTerm.length > 0) {
+    const lowerCaseSearchTerm = searchTerm.toLowerCase()
+
     const [destinations, regions, voyages] = await Promise.all([
       queryCollection(event, 'destinations')
         .select('title', 'slug')
@@ -17,34 +21,37 @@ export default eventHandler(async (event) => {
         .all(),
     ])
 
-    function filterAndMapData(data, dataSource) {
-      const lowerCaseSearchTerm = searchTerm.toLowerCase()
-
+    const filterAndMapData = (data, nameKey, dataSource) => {
       return data
         .filter((item) => {
-          const name = item.title || item.nom
-          return name.toLowerCase().includes(lowerCaseSearchTerm) || item.slug.includes(lowerCaseSearchTerm)
+          const name = item[nameKey] || ''
+          return name.toLowerCase().includes(lowerCaseSearchTerm) || item.slug.includes(lowerCaseSearchTerm)
         })
         .map(item => ({
-          title: item.title || item.nom,
+          title: item[nameKey],
           slug: item.slug,
           dataSource,
         }))
     }
 
     const searchResults = [
-      ...filterAndMapData(destinations, 'destinations'),
-      ...filterAndMapData(regions, 'regions'),
-      ...filterAndMapData(voyages, 'voyages'),
+      ...filterAndMapData(destinations, 'title', 'destinations'),
+      ...filterAndMapData(regions, 'nom', 'regions'),
+      ...filterAndMapData(voyages, 'title', 'voyages'),
     ]
 
     return searchResults
   }
   else {
-    const destinations = await queryCollection(event, 'destinations')
-      .select('title', 'slug', 'isTopDestination')
-      .where('published', '=', true)
-      .all()
+    const [destinations, regions] = await Promise.all([
+      queryCollection(event, 'destinations')
+        .select('title', 'slug', 'isTopDestination')
+        .where('published', '=', true)
+        .all(),
+      queryCollection(event, 'regions')
+        .select('nom', 'slug')
+        .all(),
+    ])
 
     const topDestinations = destinations
       .filter(destination => destination.isTopDestination)
@@ -54,6 +61,12 @@ export default eventHandler(async (event) => {
         dataSource: 'destinations',
       }))
 
-    return topDestinations
+    const regionsMap = regions.map(region => ({
+      title: region.nom,
+      slug: region.slug,
+      dataSource: 'regions',
+    }))
+
+    return [...topDestinations, ...regionsMap]
   }
 })

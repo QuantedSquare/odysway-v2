@@ -12,7 +12,7 @@
         class="border-circle"
       >
         <v-img
-          :src="img('/icons/Search.svg', { format: 'webp', quality: 70, width: 640, height: 640 })"
+          :src="img('/icons/Search.svg', { format: 'webp', quality: 70, width: 320, height: 320 })"
           alt="Search icon"
           width="24"
           height="24"
@@ -21,77 +21,73 @@
     </template>
 
     <template #default="{ isActive }">
-      <v-container
-        class="bg-white rounded-sm d-flex flex-column"
-        min-height="300"
-        max-height="500"
-        max-width="900"
+      <v-sheet
+        class="pa-10 rounded-sm d-flex flex-column mx-auto custom-size"
+        position="relative"
       >
-        <v-row justify="center">
-          <v-col
-            cols="12"
-            class="d-flex justify-end"
-          >
-            <v-btn
-              :icon="mdiClose"
-              size="36"
-              rounded="circle"
-              @click="isActive.value = false"
-            />
-          </v-col>
-          <v-col
-            cols="10"
-            class="text-h5 text-md-h3 text-primary"
-          >
-            {{ nbVoyageIdeas }}
-          </v-col>
-          <v-col cols="10">
-            <v-text-field
-              v-model="searchText"
-              placeholder="Saisir une envie de voyage..."
-              rounded="sm"
-              hide-details
-              @input="getDestinations()"
-            >
-              <template #prepend-inner>
-                <v-img
-                  :src="img('/icons/Search.svg', { format: 'webp', quality: 70, width: 320, height: 320 })"
-                  alt="Team icon"
-                  width="24"
-                  height="24"
-                />
-              </template>
-            </v-text-field>
-          </v-col>
-        </v-row>
+        <v-btn
+          :icon="mdiClose"
+          size="36"
+          rounded="circle"
+          position="absolute"
+          class="right-0 top-0 mr-3 mt-3"
+          @click="isActive.value = false"
+        />
         <v-row
-          justify="center"
-          class="overflow-auto"
+          no-gutters
+          class="flex-grow-0 mb-4"
         >
           <v-col
-            v-if="destinations && destinations.length > 0"
-            cols="10"
-            class="d-flex ga-3 flex-wrap"
+            class="text-h5 text-md-h3 text-primary d-flex flex-column ga-6"
           >
-            <v-chip
-              v-for="(destination, index) in destinations"
-              :key="index"
-              variant="outlined"
-              class="pb-1"
-              @click="navigate(destination); isActive.value = false"
-            >
-              {{ destination.title }}
-            </v-chip>
-          </v-col>
-          <v-col
-            v-else-if="!loading && searchText && destinations.length === 0"
-            cols="10"
-            class="text-center text-grey"
-          >
-            Aucun résultat trouvé pour votre recherche.
+            <div>{{ searchText ? nbVoyageIdeas : 'Commencez votre recherche !' }}</div>
+            <div>
+              <v-text-field
+                v-model="searchText"
+                variant="outlined"
+                placeholder="Saisir une envie de voyage..."
+                rounded="sm"
+                hide-details
+                @input="getDestinations()"
+              >
+                <template #prepend-inner>
+                  <v-img
+                    :src="img('/icons/Search.svg', { format: 'webp', quality: 70, width: 320, height: 320 })"
+                    alt="Search icon"
+                    width="24"
+                    height="24"
+                  />
+                </template>
+              </v-text-field>
+            </div>
           </v-col>
         </v-row>
-      </v-container>
+
+        <v-row class="overflow-auto flex-grow-1">
+          <v-col>
+            <div
+              v-if="destinations && destinations.length > 0"
+              class="d-flex ga-3 flex-wrap"
+            >
+              <v-chip
+                v-for="(destination, index) in destinations"
+                :key="index"
+                variant="outlined"
+                class="pb-1"
+                @click="navigate(destination); isActive.value = false"
+              >
+                {{ destination.title }}
+              </v-chip>
+            </div>
+            <div
+              v-else-if="!loading && searchText && destinations.length === 0"
+              class="text-center text-grey"
+            >
+              Aucun résultat trouvé pour votre recherche.
+            </div>
+          </v-col>
+        </v-row>
+      </v-sheet>
     </template>
   </v-dialog>
 </template>
@@ -106,7 +102,7 @@ const searchText = ref('')
 const loading = ref(true)
 const destinations = ref([])
 
-const fetchTopDestinations = async () => {
+async function fetchTopDestinations() {
   const result = await apiRequest(`/search/voyages`)
   destinations.value = result
   loading.value = false
@@ -116,30 +112,24 @@ onMounted(() => {
   fetchTopDestinations()
 })
 
-const getDestinations = async () => {
+async function getDestinations() {
   const result = await apiRequest(`/search/voyages?keyword=${searchText.value}`)
   destinations.value = result
-  console.log(destinations.value)
 }
 
 const nbVoyageIdeas = computed(() => {
-  if (!searchText.value) {
-    return `Commencez votre recherche !`
-  }
   return destinations.value.length > 1 ? `${destinations.value.length} idées de voyage` : '1 idée de voyage'
 })
 
 function navigate(destination) {
   if (destination.dataSource === 'destinations' || destination.dataSource === 'regions') {
     navigateTo(`/search?destination=${destination.slug}`)
-    searchText.value = ''
-    destinations.value = fetchTopDestinations()
   }
   else if (destination.dataSource === 'voyages') {
     navigateTo(`/voyages/${destination.slug}`)
-    searchText.value = ''
-    destinations.value = fetchTopDestinations()
   }
+  searchText.value = ''
+  destinations.value = fetchTopDestinations()
 }
 </script>
 
@@ -149,6 +139,30 @@ function navigate(destination) {
 }
 .blur{
   backdrop-filter: blur(10px);
+}
+
+.custom-size {
+  width: 900px !important;
+  min-height: 500px !important;
+  max-height: 500px !important;
+}
+
+@media screen and (max-width: 600px) {
+  .custom-size {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .custom-size {
+    width: 90% !important;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .custom-size {
+    max-width: 900px !important;
+  }
 }
 
 ::-webkit-scrollbar {
