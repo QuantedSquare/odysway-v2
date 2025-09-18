@@ -48,7 +48,7 @@
                 placeholder="Saisir une envie de voyage..."
                 rounded="sm"
                 hide-details
-                @input="handleSearch(searchText)"
+                @input="debouncedHandleSearch"
               >
                 <template #prepend-inner>
                   <v-img
@@ -95,6 +95,7 @@
 <script setup>
 import { mdiClose } from '@mdi/js'
 import { ref, computed } from 'vue'
+import _ from 'lodash'
 import { useImage } from '#imports'
 import { useTravelsSearch } from '~/composables/useTravelsSearch'
 
@@ -102,6 +103,10 @@ const img = useImage()
 const searchText = ref('')
 
 const { destinations, loading, handleSearch } = useTravelsSearch()
+
+const debouncedHandleSearch = _.debounce(() => {
+  handleSearch(searchText.value)
+}, 300)
 
 const nbVoyageIdeas = computed(() => {
   const count = destinations.value?.length
