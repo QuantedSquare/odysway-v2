@@ -48,7 +48,7 @@
                 placeholder="Saisir une envie de voyage..."
                 rounded="sm"
                 hide-details
-                @input="debouncedGetDestinations"
+                @input="handleSearch(searchText)"
               >
                 <template #prepend-inner>
                   <v-img
@@ -66,17 +66,17 @@
         <v-row class="overflow-auto flex-grow-1">
           <v-col>
             <div
-              v-if="destinations && destinations.length > 0"
+              v-if="!loading && destinations && destinations.length > 0"
               class="d-flex ga-3 flex-wrap"
             >
               <v-chip
-                v-for="(destination, index) in destinations"
+                v-for="(travel, index) in destinations"
                 :key="index"
                 variant="outlined"
                 class="pb-1"
-                @click="navigate(destination); isActive.value = false"
+                @click="navigate(travel); isActive.value = false"
               >
-                {{ destination.title }}
+                {{ travel.title }}
               </v-chip>
             </div>
             <div
@@ -94,34 +94,18 @@
 
 <script setup>
 import { mdiClose } from '@mdi/js'
-import _ from 'lodash'
+import { ref, computed } from 'vue'
 import { useImage } from '#imports'
+import { useTravelsSearch } from '~/composables/useTravelsSearch'
 
 const img = useImage()
-
 const searchText = ref('')
-const loading = ref(true)
-const destinations = ref([])
 
-async function fetchTopDestinations() {
-  const result = await apiRequest(`/search/voyages`)
-  destinations.value = result
-  loading.value = false
-}
-
-onMounted(() => {
-  fetchTopDestinations()
-})
-
-async function getDestinations() {
-  const result = await apiRequest(`/search/voyages?keyword=${searchText.value}`)
-  destinations.value = result
-}
-
-const debouncedGetDestinations = _.debounce(getDestinations, 500)
+const { destinations, loading, handleSearch } = useTravelsSearch()
 
 const nbVoyageIdeas = computed(() => {
-  return destinations.value.length > 1 ? `${destinations.value.length} idées de voyage` : '1 idée de voyage'
+  const count = destinations.value?.length
+  return count > 1 ? `${count} idées de voyage` : `${count} idée de voyage`
 })
 
 function navigate(destination) {
@@ -132,42 +116,36 @@ function navigate(destination) {
     navigateTo(`/voyages/${destination.slug}`)
   }
   searchText.value = ''
-  destinations.value = fetchTopDestinations()
 }
 </script>
 
 <style scoped>
-.border-circle{
+.border-circle {
   border-radius: 50% !important;
 }
-.blur{
+.blur {
   backdrop-filter: blur(10px);
 }
-
 .custom-size {
   width: 900px !important;
   min-height: 500px !important;
   max-height: 500px !important;
 }
-
 @media screen and (max-width: 600px) {
   .custom-size {
     width: 100% !important;
   }
 }
-
 @media screen and (max-width: 960px) {
   .custom-size {
     width: 90% !important;
   }
 }
-
 @media screen and (min-width: 1280px) {
   .custom-size {
     max-width: 900px !important;
   }
 }
-
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -178,13 +156,12 @@ function navigate(destination) {
   height: 10px;
   border-radius: 9px;
 }
-
 /* Handle */
 ::-webkit-scrollbar-thumb {
   border: 6px solid rgba(var(--v-theme-primary));
   border-radius: 9px;
   background-clip: content-box;
-  height:10px;
-  width:10px;
-  }
+  height: 10px;
+  width: 10px;
+}
 </style>

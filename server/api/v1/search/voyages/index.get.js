@@ -8,49 +8,36 @@ export default eventHandler(async (event) => {
     const lowerCaseSearchTerm = searchTerm.toLowerCase()
 
     const [destinations, regions, voyages] = await Promise.all([
-      queryCollection(event, 'destinations')
-        .select('title', 'slug')
-        .where('published', '=', true)
-        .all(),
-      queryCollection(event, 'regions')
-        .select('nom', 'slug')
-        .all(),
-      queryCollection(event, 'voyages')
-        .select('title', 'slug')
-        .where('published', '=', true)
-        .all(),
+      queryCollection(event, 'destinations').select('title', 'slug').where('published', '=', true).all(),
+      queryCollection(event, 'regions').select('nom', 'slug').all(),
+      queryCollection(event, 'voyages').select('title', 'slug').where('published', '=', true).all(),
     ])
 
-    const filterAndMapData = (data, nameKey, dataSource) => {
+    function filterAndMapData(data, dataSource) {
       return data
         .filter((item) => {
-          const name = item[nameKey] || ''
+          const name = item.title || item.nom
           return name.toLowerCase().includes(lowerCaseSearchTerm) || item.slug.includes(lowerCaseSearchTerm)
         })
         .map(item => ({
-          title: item[nameKey],
+          title: item.title || item.nom,
           slug: item.slug,
           dataSource,
         }))
     }
 
     const searchResults = [
-      ...filterAndMapData(destinations, 'title', 'destinations'),
-      ...filterAndMapData(regions, 'nom', 'regions'),
-      ...filterAndMapData(voyages, 'title', 'voyages'),
+      ...filterAndMapData(destinations, 'destinations'),
+      ...filterAndMapData(regions, 'regions'),
+      ...filterAndMapData(voyages, 'voyages'),
     ]
 
     return searchResults
   }
   else {
     const [destinations, regions] = await Promise.all([
-      queryCollection(event, 'destinations')
-        .select('title', 'slug', 'isTopDestination')
-        .where('published', '=', true)
-        .all(),
-      queryCollection(event, 'regions')
-        .select('nom', 'slug')
-        .all(),
+      queryCollection(event, 'destinations').select('title', 'slug', 'isTopDestination').where('published', '=', true).all(),
+      queryCollection(event, 'regions').select('nom', 'slug').all(),
     ])
 
     const topDestinations = destinations
