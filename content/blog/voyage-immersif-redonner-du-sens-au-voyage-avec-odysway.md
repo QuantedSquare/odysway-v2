@@ -33,9 +33,12 @@ authorPhoto: /images/team/romain.webp
 authorRole: Fondateur
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
+avatarSize: "60"
+backgroundColor: soft-blush
 image-src: /images/blogs/3-itineraires-ecoresponsables-sejour-france/cqEPkzG1RoqQZKzJ3uu8.jpg
+introductionColor: grey
 ---
 #publication-date
 15 septembre 2025
@@ -78,7 +81,7 @@ Les retours des voyageurs sont unanimes : cette taille humaine permet une libert
   :::image-container
   ---
   alt: undefined
-  image-src: /images/blogs/3-itineraires-ecoresponsables-sejour-france/gQOHulCSAueZAzc0jXCA.jpg
+  link: /images/1.voyages/immersion-culturelle-sud-benin/k8MsNpPMSjiNPeGtDTUF.jpg
   ---
   :::
 
