@@ -48,7 +48,7 @@
                 placeholder="Saisir une envie de voyage..."
                 rounded="sm"
                 hide-details
-                @input="getDestinations()"
+                @input="debouncedGetDestinations"
               >
                 <template #prepend-inner>
                   <v-img
@@ -112,10 +112,20 @@ onMounted(() => {
   fetchTopDestinations()
 })
 
+function debounce(func, delay) {
+  let timeoutId
+  return function (...args) {
+    clearTimeout(timeoutId)
+    timeoutId = setTimeout(() => func(...args), delay)
+  }
+}
+
 async function getDestinations() {
   const result = await apiRequest(`/search/voyages?keyword=${searchText.value}`)
   destinations.value = result
 }
+
+const debouncedGetDestinations = debounce(getDestinations, 500)
 
 const nbVoyageIdeas = computed(() => {
   return destinations.value.length > 1 ? `${destinations.value.length} idées de voyage` : '1 idée de voyage'
