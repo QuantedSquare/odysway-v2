@@ -130,12 +130,7 @@ const nbVoyageIdeas = computed(() => {
 })
 
 function navigate(destination) {
-  if (destination.dataSource === 'destinations') {
-    navigateTo(`/search?destination=${destination.slug}`)
-    searchText.value = ''
-    destinations.value = fetchTopDestinations()
-  }
-  else if (destination.dataSource === 'regions') {
+  if (destination.dataSource === 'destinations' || destination.dataSource === 'regions') {
     navigateTo(`/search?destination=${destination.slug}`)
     searchText.value = ''
     destinations.value = fetchTopDestinations()
