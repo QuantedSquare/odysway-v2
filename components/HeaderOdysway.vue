@@ -22,6 +22,7 @@
 
     <v-spacer />
     <div class="d-flex align-center ga-4">
+      <SearchDialog />
       <v-btn
         v-if="header.button1.visible"
         height="45"
@@ -114,6 +115,7 @@
 
     <v-spacer />
     <div class="d-flex align-center ga-4">
+      <SearchDialog />
       <v-btn
         v-if="header.button1.visible"
         height="45"
