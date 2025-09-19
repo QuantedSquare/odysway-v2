@@ -7,14 +7,14 @@
       <v-btn
         v-bind="activatorProps"
         variant="outlined"
-        :size="smAndDown ? 'x-small' : 'small'"
+        :size="smAndDown ? 24 : 36"
         icon
         class="border-circle"
       >
         <v-img
           :src="img('/icons/Search.svg', { format: 'webp', quality: 70, width: 320, height: 320 })"
           alt="Search icon"
-          :width="smAndDown ? 18 : 24"
+          :width="smAndDown ? 16 : 20"
         />
       </v-btn>
     </template>
