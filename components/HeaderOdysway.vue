@@ -121,7 +121,7 @@
         height="45"
         color="primary"
         rounded="default"
-        class="text-caption text-md-body-1 d-none d-md-inline"
+        class="text-caption text-md-body-1 d-none d-md-inline ml-5"
         @click="() => { router.push(header.button1.link); captureOutboundLink(header.button1.text) }"
       >
         {{ header.button1.text }}

@@ -9,7 +9,7 @@
         variant="outlined"
         :size="smAndDown ? 24 : 36"
         icon
-        class="border-circle"
+        class="border-circle stronger-hover"
       >
         <v-img
           :src="img('/icons/Search.svg', { format: 'webp', quality: 70, width: 320, height: 320 })"
@@ -132,6 +132,10 @@ function navigate(destination) {
 }
 .blur {
   backdrop-filter: blur(10px);
+}
+
+.stronger-hover:hover{
+  background-color: #E1E5E7;
 }
 .custom-size {
   width: 900px !important;
