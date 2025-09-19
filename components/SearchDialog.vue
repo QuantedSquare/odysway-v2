@@ -114,12 +114,10 @@ const nbVoyageIdeas = computed(() => {
 })
 
 function navigate(destination) {
-  if (destination.dataSource === 'destinations' || destination.dataSource === 'regions') {
-    navigateTo(`/search?destination=${destination.slug}`)
-  }
-  else if (destination.dataSource === 'voyages') {
-    navigateTo(`/voyages/${destination.slug}`)
-  }
+  const page = destination.dataSource === 'destinations' || destination.dataSource === 'regions'
+    ? `/search?destination=${destination.slug}`
+    : `/voyages/${destination.slug}`
+  navigateTo(page)
   searchText.value = ''
 }
 </script>
