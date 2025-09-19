@@ -37,7 +37,7 @@ sitemap:
   lastmod: 2025-08-13
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
 image-src: /images/blogs/3-itineraires-ecoresponsables-sejour-france/cqEPkzG1RoqQZKzJ3uu8.jpg
 ---

@@ -33,9 +33,12 @@ authorPhoto: /images/team/romain.webp
 authorRole: Fondateur
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
+avatarSize: "60"
+backgroundColor: soft-blush
 image-src: /images/blogs/3-itineraires-ecoresponsables-sejour-france/cqEPkzG1RoqQZKzJ3uu8.jpg
+introductionColor: grey
 ---
 #publication-date
 15 septembre 2025
@@ -65,7 +68,7 @@ Chez Odysway, cette lenteur est une condition de la rencontre. Une cabane de ber
   :::image-container
   ---
   alt: undefined
-  image-src: /images/blogs/3-itineraires-ecoresponsables-sejour-france/v7DnHl04QgWNWewnUW9W.jpg
+  image-src: /images/1.voyages/sejour-berger-bearn/photo-berger-france-odysway.jpg
   ---
   :::
 
@@ -78,7 +81,7 @@ Les retours des voyageurs sont unanimes : cette taille humaine permet une libert
   :::image-container
   ---
   alt: undefined
-  image-src: /images/blogs/3-itineraires-ecoresponsables-sejour-france/gQOHulCSAueZAzc0jXCA.jpg
+  link: /images/blogs/sejours-immersifs-odysway-rencontrez-explorez-et-apprenez/FvfEBxuJSTe2ZPanzzrn.jpg
   ---
   :::
 
@@ -121,12 +124,6 @@ Découvrir les immersions : <https://odysway.com/search>
 Nous contacter : <https://odysway.com/contact>
 
 Prendre RDV avec un conseiller : <https://odysway.com/calendly>
-
-Parfait. Voici une **FAQ optimisée SEO** à intégrer en bas de ton article *“Voyage immersif : redonner du sens à l’aventure avec Odysway”*. Elle est construite à la fois pour :
-
-- **renforcer le référencement naturel** (reprise du mot-clé “voyage immersif” dans les questions/réponses)
-- **rassurer le lecteur** en répondant à ses objections ou hésitations
-- **valoriser la singularité d’Odysway** avec un ton clair, direct, et incarné
 
 ## **Foire aux questions (FAQ) sur le voyage immersif avec Odysway**
 
