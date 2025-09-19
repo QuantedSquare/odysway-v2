@@ -109,7 +109,7 @@
       "title": "DEBUT DU VOYAGE",
       "badgeText": "JOUR 1",
       "description": "Début de votre aventure à Paris CDG, embarquement pour votre vol aller pour l'Inde avec Air India en vol direct. Vol de nuit pour une arrivée le lendemain matin à New Delhi, la capitale indienne. Premières sensations et découvertes.",
-      "photo": "/images/1.voyages/retraite-yoga-sikkim-inde/UAia8YBYSNOyOzR24ts4.jpg",
+      "photo": "",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -249,7 +249,7 @@
     ]
   },
   "pricing": {
-    "startingPrice": 3550,
+    "startingPrice": 4690,
     "lastMinuteAvailable": false,
     "lastMinuteReduction": 80,
     "earlyBirdAvailable": false,
