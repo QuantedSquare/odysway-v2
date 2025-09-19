@@ -109,7 +109,7 @@
       "title": "DEBUT DU VOYAGE",
       "badgeText": "JOUR 1",
       "description": "Début de votre aventure à Paris CDG, embarquement pour votre vol aller pour l'Inde avec Air India en vol direct. Vol de nuit pour une arrivée le lendemain matin à New Delhi, la capitale indienne. Premières sensations et découvertes.",
-      "photo": "",
+      "photo": "/images/destinations/Sikkim/sikkim-jour-1.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -118,7 +118,7 @@
       "title": "VOL ET ARRIVEE A SILIGURI",
       "badgeText": "JOUR 2",
       "description": "Arrivée le matin de votre vol international. Passage à l'immigration avant un vol domestique à destination de Bagdogra dans l'après-midi (durée de 2h). Dîner et nuit dans un hôtel 4* à Siliguri. Vous êtes dans l'État indien du Bengale-Occidental, carrefour de plusieurs routes vers le Sikkim, le Népal et le Boutan. C'est déja une \"autre\" Inde dans laquelle vous vous trouvez, avec une langue, culture et nourriture différente.",
-      "photo": "/images/1.voyages/retraite-yoga-sikkim-inde/fL7ObLMWQRarzaQqDo7H.jpg",
+      "photo": "/images/destinations/Sikkim/sikkim-jour-2.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -172,7 +172,7 @@
       "title": "LES GROTTES DE GURU RINPOCHE ET LE TEMPLE DE HANUMAN",
       "badgeText": "JOUR 8",
       "description": "Départ après le petit-déjeuner pour Legship où se trouve un lieu sacré, tant pour les bouddhistes que pour les hindous. Nous visiterons d'abord le temple de Hanuman, le dieu à tête de singe, situé au-delà d'un pont qui traverse la rivière Rangeet, à la lisière de la jungle. Il est occupé par des prêtres et très souvent aussi par des singes. Nous visiterons ensuite les grottes de Guru Rinpoché dans lesquelles il a médité plusieurs années.",
-      "photo": "",
+      "photo": "/images/destinations/Sikkim/sikkim-jour-3.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -225,7 +225,8 @@
     {
       "title": "FIN DE VOTRE RETRAITE ET RETOUR",
       "badgeText": "JOURS 14 ET 15",
-      "description": "La retraite arrive à son terme. Tôt le matin, vous quitterez le Sikkim pour rejoindre l’aéroport de Bagdogra, d’où vous prendrez un vol domestique à destination de Delhi. À votre arrivée, un transfert vous conduira vers votre hôtel pour une dernière nuit de repos et de confort avant le vol retour.  Le lendemain matin (jour 15), vous embarquerez pour votre vol Delhi–Paris. Vous atterrirez à Paris dans l’après-midi, marquant la fin de cette belle aventure mémorable."
+      "description": "La retraite arrive à son terme. Tôt le matin, vous quitterez le Sikkim pour rejoindre l’aéroport de Bagdogra, d’où vous prendrez un vol domestique à destination de Delhi. À votre arrivée, un transfert vous conduira vers votre hôtel pour une dernière nuit de repos et de confort avant le vol retour.  Le lendemain matin (jour 15), vous embarquerez pour votre vol Delhi–Paris. Vous atterrirez à Paris dans l’après-midi, marquant la fin de cette belle aventure mémorable.",
+      "photo": "/images/destinations/Sikkim/sikkim-jour-14.jpg"
     }
   ],
   "pricingDetailsBlock": {
