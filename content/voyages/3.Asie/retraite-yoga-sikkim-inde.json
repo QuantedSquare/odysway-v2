@@ -28,9 +28,9 @@
       "name": "voyage-initiatique"
     }
   ],
-  "duration": 16,
-  "nights": 14,
-  "includeFlight": false,
+  "duration": 15,
+  "nights": 13,
+  "includeFlight": true,
   "housingType": "Hôtel et Maison",
   "idealPeriods": {
     "toutePeriodes": false,
@@ -88,7 +88,7 @@
       "visible": true
     },
     "durationBadge": {
-      "text": "**14 nuits sur place**",
+      "text": "**13 nuits sur place**",
       "visible": true
     },
     "includeFlightBadge": {
@@ -133,7 +133,7 @@
       "night": ""
     },
     {
-      "title": "DEBUT DE VOTRE RETRAITE",
+      "title": "DEBUT DE VOTRE RETRAITE ",
       "badgeText": "JOUR 4",
       "description": "Début du séjour au Sikkim par 5 jours de pratique de yoga couplés à des visites et rencontres. Les séances seront le matin et en fin de journée et les excursions et rencontres l'après-midi ((programme en FAQ) . Ce jour 4, rencontre avec les femmes moines du monastère Ani Gumpa, une des rares écoles de moniales bouddhistes au Sikkim. Participation à un de leur rituel.\r\n",
       "photo": "/images/1.voyages/retraite-yoga-sikkim-inde/sBEjMxtxQJGqt1NzRnwx.jpg",
@@ -142,7 +142,7 @@
       "night": ""
     },
     {
-      "title": "A LA RENCONTRE DE BOUDDHA",
+      "title": "A LA RENCONTRE DE BOUDDHA (Ravangla et Tathagata Tsal)",
       "badgeText": "JOUR 5",
       "description": "Après la pratique du yoga du matin, puis balade à pied vers la ville de Ravangla. Visite du lieu de pèlerinage Tathagata Tsal plus connu sous le nom de Buddha Park en raison de sa statue de 87 mètres de haut qui surplombe la vallée. Redescente ensuite sur la ville où une petite visite libre est prévue.",
       "photo": "/images/1.voyages/retraite-yoga-sikkim-inde/wPrg3AXtTkWy2yXWK2CO.jpg",
@@ -151,7 +151,7 @@
       "night": ""
     },
     {
-      "title": "VISITE D'UNE ECOLE SIKKIMAISE",
+      "title": "Immersion au Monastère (de Ralong)",
       "badgeText": "JOUR 6",
       "description": "Après votre séance matinale, découverte de la « Demazong English School ». Cette charmante école de village des vallées de l'Himalaya se trouve en face du centre. Elle participe à un projet qui permet aux enfants défavorisés d'être scolarisés, grâce à des dons provenant de l'étranger. Rencontre avec les enfants, découverte de leur quotidien, échanges et jeux. Pour terminer cette journée, vous pourrez profiter d'une agréable promenade pour découvrir le village de Lingdam et son petit Temple Doling Gumpa.",
       "photo": "/images/1.voyages/retraite-yoga-sikkim-inde/x9Do1AlFSWaP1mDXjDlx.jpg",
@@ -412,6 +412,10 @@
       {
         "question": "Comment se passe votre réservation avec Odysway ?",
         "answer": "Une fois votre voyage réservé et l'acompte réglé, vous recevrez un email de confirmation. Si votre voyage comprend un vol ou si celui-ci est inclus dans votre devis, vos billets vous parviendront dans les 7 jours suivant votre réservation.\n\nVous recevrez également votre carnet de voyage, une ressource complète contenant toutes les informations nécessaires pour préparer votre voyage, comprenant par exemple les vêtements à emporter et le programme du séjour en détail.\n\nDurant toute la phase de préparation, ainsi que pendant votre voyage, vous resterez en contact avec un conseiller dédié. Vous pourrez le joindre par email, téléphone ou WhatsApp, selon ce qui vous convient le mieux, du lundi au vendredi de 9h à 18h. En cas d'urgence le week-end ou en dehors des heures de travail, nous sommes disponibles au [+33 1 84 80 79 75](tel:+33184807975) ou au [+33 7 80 91 95 40](tel:+33 7 80 91 95 40)"
+      },
+      {
+        "question": "Quel est le thème de mon voyage ?",
+        "answer": "Mars avec le Lama Zeupa: méditation et Qi Gong Octobre avec Karma Chookela: Yoga Novembre avec Maxime: Yoga"
       }
     ]
   },
