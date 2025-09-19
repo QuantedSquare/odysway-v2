@@ -7,15 +7,14 @@
       <v-btn
         v-bind="activatorProps"
         variant="outlined"
-        size="small"
+        :size="smAndDown ? 'x-small' : 'small'"
         icon
         class="border-circle"
       >
         <v-img
           :src="img('/icons/Search.svg', { format: 'webp', quality: 70, width: 320, height: 320 })"
           alt="Search icon"
-          width="24"
-          height="24"
+          :width="smAndDown ? 18 : 24"
         />
       </v-btn>
     </template>
@@ -96,17 +95,23 @@
 import { mdiClose } from '@mdi/js'
 import { ref, computed } from 'vue'
 import _ from 'lodash'
+import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 import { useTravelsSearch } from '~/composables/useTravelsSearch'
 
 const img = useImage()
-const searchText = ref('')
+const searchText = ref('') // TODO use route params by default
 
+const { smAndDown } = useDisplay()
 const { destinations, loading, handleSearch } = useTravelsSearch()
 
 const debouncedHandleSearch = _.debounce(() => {
   handleSearch(searchText.value)
-}, 300)
+}, 200)
+
+onMounted(() => {
+  handleSearch(searchText.value)
+})
 
 const nbVoyageIdeas = computed(() => {
   const count = destinations.value?.length
@@ -118,7 +123,6 @@ function navigate(destination) {
     ? `/search?destination=${destination.slug}`
     : `/voyages/${destination.slug}`
   navigateTo(page)
-  searchText.value = ''
 }
 </script>
 
