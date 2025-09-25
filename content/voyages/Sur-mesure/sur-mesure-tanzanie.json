@@ -3,7 +3,7 @@
   "title": "Voyage culturel et bien-être en Tanzanie",
   "destinations": [
     {
-      "name": "Japon"
+      "name": "Tanzanie"
     }
   ],
   "groupeAvailable": false,
@@ -103,7 +103,7 @@
     "minTravelersToConfirm": 0,
     "indivRoom": true,
     "forcedIndivRoom": false,
-    "indivRoomPrice": 300,
+    "indivRoomPrice": 400,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
