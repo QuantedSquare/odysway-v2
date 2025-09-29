@@ -1,0 +1,20 @@
+{
+  "title": "Israël",
+  "chapka": "2",
+  "iso": "ISR",
+  "interjection": "en",
+  "metaDescription": "Découvrez nos séjours immersifs en Israël !",
+  "published": true,
+  "showOnHome": false,
+  "slug": "israel",
+  "regions": [
+    {
+      "nom": "Asie"
+    }
+  ],
+  "image": {
+    "src": "/images/categories/voyage-sans-avion.jpeg",
+    "alt": "Image de la destination \"Israël\""
+  },
+  "isTopDestination": false
+}
