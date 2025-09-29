@@ -1,0 +1,57 @@
+{
+  "title": "Sur-mesure en Israël",
+  "faqBlock": {
+    "faqList": []
+  },
+  "videoLinks": [],
+  "photosList": [],
+  "housingBlock": [],
+  "accompanistsList": [],
+  "pricing": {
+    "airportCode": [],
+    "startingPrice": 1440,
+    "maxTravelers": 2,
+    "minTravelersToConfirm": 2
+  },
+  "pricingDetailsBlock": {
+    "exclude": [
+      "les activités, les dépenses personnelles, les pourboires, les taxes de séjours, et toutes les prestations non mentionnées dans le devis"
+    ],
+    "include": [
+      "Hôtel, vols internationaux, assistance Odysway, frais de gestions"
+    ]
+  },
+  "programmeBlock": [],
+  "experiencesBlock": [
+    ""
+  ],
+  "categories": [
+    {}
+  ],
+  "destinations": [
+    {
+      "name": "Cambodge"
+    }
+  ],
+  "slug": "hotels-vols-telaviv",
+  "customAvailable": true,
+  "experienceType": "S'éveiller ailleurs",
+  "level": "1",
+  "duration": 10,
+  "nights": 9,
+  "includeFlight": true,
+  "housingType": "Hôtel",
+  "idealPeriods": {
+    "aout": true
+  },
+  "monthlyAvailability": {
+    "aout": true
+  },
+  "badgeSection": {
+    "includeFlightBadge": {
+      "visible": true
+    }
+  },
+  "groupeAvailable": false,
+  "privatisationAvailable": true
+}
