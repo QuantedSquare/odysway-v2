@@ -1,5 +1,5 @@
 {
-  "title": "Sur-mesure en Israël",
+  "title": "Sur-mesure Israël",
   "faqBlock": {
     "faqList": []
   },
@@ -29,11 +29,9 @@
     {}
   ],
   "destinations": [
-    {
-      "name": "Algérie"
-    }
+    {}
   ],
-  "slug": "hotels-vols-telaviv",
+  "slug": "sur-mesure-israel",
   "customAvailable": true,
   "experienceType": "S'éveiller ailleurs",
   "level": "1",
