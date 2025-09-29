@@ -9,9 +9,9 @@
   "accompanistsList": [],
   "pricing": {
     "airportCode": [],
-    "startingPrice": 1440,
-    "maxTravelers": 2,
-    "minTravelersToConfirm": 2
+    "startingPrice": 817,
+    "maxTravelers": 4,
+    "minTravelersToConfirm": 4
   },
   "pricingDetailsBlock": {
     "exclude": [
@@ -26,24 +26,30 @@
     ""
   ],
   "categories": [
-    {}
+    {
+      "name": "voyage-en-famille"
+    }
   ],
   "destinations": [
-    {}
+    {
+      "name": "Israël"
+    }
   ],
   "slug": "sur-mesure-israel",
   "customAvailable": true,
   "experienceType": "S'éveiller ailleurs",
   "level": "1",
-  "duration": 10,
-  "nights": 9,
+  "duration": 5,
+  "nights": 4,
   "includeFlight": true,
   "housingType": "Hôtel",
   "idealPeriods": {
-    "aout": true
+    "aout": false,
+    "novembre": true
   },
   "monthlyAvailability": {
-    "aout": true
+    "aout": false,
+    "novembre": true
   },
   "badgeSection": {
     "includeFlightBadge": {
