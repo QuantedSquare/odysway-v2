@@ -40,16 +40,18 @@
   "experienceType": "S'éveiller ailleurs",
   "level": "1",
   "duration": 0,
-  "nights": 4,
+  "nights": 7,
   "includeFlight": true,
   "housingType": "Hôtel",
   "idealPeriods": {
     "aout": false,
-    "novembre": false
+    "novembre": false,
+    "mars": true
   },
   "monthlyAvailability": {
     "aout": false,
-    "novembre": true
+    "novembre": false,
+    "mars": true
   },
   "badgeSection": {
     "includeFlightBadge": {
