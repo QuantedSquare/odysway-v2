@@ -1,0 +1,61 @@
+{
+  "title": "Sur-mesure Egypte",
+  "faqBlock": {
+    "faqList": []
+  },
+  "videoLinks": [],
+  "photosList": [],
+  "housingBlock": [],
+  "accompanistsList": [],
+  "pricing": {
+    "airportCode": [],
+    "startingPrice": 2340,
+    "maxTravelers": 3,
+    "minTravelersToConfirm": 3
+  },
+  "pricingDetailsBlock": {
+    "exclude": [
+      " Les vols internationaux et domestiques  • Les dîners au Caire et Fayoum  • Les dépenses personnelles  • Les entrées aux sites mentionnés 145 €  • Les excursions optionnelles  • Les services d’obtention du visa 30 €  • Les assurances-voyage et les éventuelles surcharges aériennes et de carburant  • Les pourboires 40 € par personne  • Supplément single – chambre individuelle à 680€  • L’assurance facultative annulation et/ou rapatriement "
+    ],
+    "include": [
+      "• Les nuits en hôtel en chambre double/ twin  • Les petits déjeuners et déjeuners au Caire lors des visites  • Tous les transferts pendant le séjour  • Un guide égyptologue francophone au Caire  • Excursion à Fayoum  • L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider  en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage. "
+    ]
+  },
+  "programmeBlock": [],
+  "experiencesBlock": [
+    ""
+  ],
+  "categories": [
+    {
+      "name": "voyage-en-famille"
+    }
+  ],
+  "destinations": [
+    {
+      "name": "Égypte"
+    }
+  ],
+  "slug": "sur-mesure-egypte",
+  "customAvailable": true,
+  "experienceType": "S'éveiller ailleurs",
+  "level": "1",
+  "duration": 0,
+  "nights": 4,
+  "includeFlight": true,
+  "housingType": "Hôtel",
+  "idealPeriods": {
+    "aout": false,
+    "novembre": false
+  },
+  "monthlyAvailability": {
+    "aout": false,
+    "novembre": true
+  },
+  "badgeSection": {
+    "includeFlightBadge": {
+      "visible": true
+    }
+  },
+  "groupeAvailable": false,
+  "privatisationAvailable": true
+}
