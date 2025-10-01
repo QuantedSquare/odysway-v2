@@ -134,7 +134,7 @@ const notify = async (paymentSession, insuranceItem, dealCustomFields, client) =
     devise: 'EUR',
   }
 
-  const indivPrice = (+dealCustomFields.pricePerTraveler)
+  const indivPrice = (+dealCustomFields.pricePerTraveler) / 100
 
   for (let index = 1; index < 9; index++) {
     const traveler = dealCustomFields[`traveler${index}`]
