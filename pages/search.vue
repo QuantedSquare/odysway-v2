@@ -106,7 +106,7 @@ const { data: searchContent } = await useAsyncData('search-content', () =>
 
 const { data: fetchedDestination } = useAsyncData('fetchedDestination', () => {
   if (route.query.destination) {
-    return queryCollection('destinations').where('stem', '=', `destinations/${route.query.destination}/${route.query.destination}`).where('published', '=', true).select('title', 'interjection', 'image').first()
+    return queryCollection('destinations').where('slug', '=', `${route.query.destination}`).where('published', '=', true).select('title', 'interjection', 'image').first()
   }
   return null
 }, {
