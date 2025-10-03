@@ -8,6 +8,7 @@ import {teamMemberType} from './teamMemberType'
 import {partnerType} from './partnerType'
 import {voyageType} from './voyageType'
 import {reviewType} from './reviewType'
+import {topsType} from './topsType'
 import {blockContent} from './blockContent'
 
 export const schemaTypes = [
@@ -21,5 +22,6 @@ export const schemaTypes = [
   partnerType,
   voyageType,
   reviewType,
+  topsType,
   blockContent,
 ]

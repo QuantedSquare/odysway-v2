@@ -3,11 +3,13 @@ import {createClient} from '@sanity/client'
 import dotenv from 'dotenv'
 import process from 'node:process'
 import {log, error} from 'node:console'
+import migrateRegions from './migrateContinents.js'
+import migrateTops from './migrateTops.js'
 dotenv.config()
 
 const projectId = process.env.SANITY_PROJECT_ID || 'nu6yntji'
 const dataset = process.env.SANITY_DATASET || 'production'
-const token = process.env.SANITY_WRITE_TOKEN
+const token = process.env.SANITY_WRITE_TOKEN || 'skLIfsupvfVK9iykipPHW9SAOiWqahQSbZURboI05Yk7p92KPeSIhRn8KXiFhk68hpdiQ5VhkH5eeZHRwq3INKbb4GU3kr8hxygJKIBnsfsYbEG2ZydQRHL1Cr3Pzsww6RScAxmgzVyoGRVNUxOM1Tp3xDyY79mqH3OxuOUJYMPzi12suevZ'
 
 if (!token) {
   error('Missing SANITY_WRITE_TOKEN environment variable. Create a token with write access in the Sanity project settings and set it before running the seed.')
@@ -17,13 +19,21 @@ if (!token) {
 const client = createClient({
   projectId,
   dataset,
-  apiVersion: '2025-01-01',
+  apiVersion: '2025-02-19',
   token,
   useCdn: false,
 })
 log('client', client)
 
 async function run() {
+
+  log('🔄 Migrating tops from JSON files...')
+  await migrateTops(client)
+
+  log('🔄 Migrating regions from JSON files...')
+  await migrateRegions(client)
+  
+  log('🔄 Creating demo data...')
   const tx = client.transaction()
 
   const userId = 'demoUser'
@@ -39,7 +49,7 @@ async function run() {
   tx.createOrReplace({_id: catAdventureId, _type: 'category', title: 'Aventure', slug: {current: 'aventure'}})
 
   const regionId = 'regionEurope'
-  tx.createOrReplace({_id: regionId, _type: 'region', nom: 'Europe', slug: {current: 'europe'}})
+  //tx.createOrReplace({_id: regionId, _type: 'region', nom: 'Europe', slug: {current: 'europe'}})
 
   const destId = 'destIceland'
   tx.createOrReplace({_id: destId, _type: 'destination', title: 'Islande', slug: {current: 'islande'}, regions: [{_type: 'reference', _ref: regionId}]})
