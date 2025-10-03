@@ -4,6 +4,7 @@ import dotenv from 'dotenv'
 import process from 'node:process'
 import {log, error} from 'node:console'
 import migrateRegions from './migrateContinents.js'
+import migrateTops from './migrateTops.js'
 dotenv.config()
 
 const projectId = process.env.SANITY_PROJECT_ID || 'nu6yntji'
@@ -25,6 +26,9 @@ const client = createClient({
 log('client', client)
 
 async function run() {
+
+  log('🔄 Migrating tops from JSON files...')
+  await migrateTops(client)
 
   log('🔄 Migrating regions from JSON files...')
   await migrateRegions(client)
