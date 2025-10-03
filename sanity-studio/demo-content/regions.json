@@ -1,0 +1,29 @@
+[
+  {
+    "_type": "region",
+    "nom": "Europe",
+    "meta_description": "Découvrez les merveilles de l'Europe",
+    "slug": {
+      "current": "europe"
+    },
+    "interjection": "Oh là là !"
+  },
+  {
+    "_type": "region",
+    "nom": "Asie",
+    "meta_description": "Explorez les mystères de l'Asie",
+    "slug": {
+      "current": "asie"
+    },
+    "interjection": "Wow !"
+  },
+  {
+    "_type": "region",
+    "nom": "Amérique du Sud",
+    "meta_description": "Aventurez-vous en Amérique du Sud",
+    "slug": {
+      "current": "amerique-du-sud"
+    },
+    "interjection": "¡Increíble!"
+  }
+]

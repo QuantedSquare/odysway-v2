@@ -1,0 +1,326 @@
+[
+  {
+    "_type": "voyage",
+    "published": true,
+    "title": "Islande Aventure",
+    "slug": {
+      "current": "islande-aventure"
+    },
+    "destinations": [
+      {
+        "_type": "reference",
+        "_ref": "destination-islande"
+      }
+    ],
+    "groupeAvailable": true,
+    "privatisationAvailable": true,
+    "customAvailable": false,
+    "experienceType": {
+      "_type": "reference",
+      "_ref": "experience-trek"
+    },
+    "level": "2",
+    "categories": [
+      {
+        "_type": "reference",
+        "_ref": "category-aventure"
+      }
+    ],
+    "duration": 8,
+    "nights": 7,
+    "includeFlight": false,
+    "housingType": "Hôtels et refuges",
+    "minAge": 12,
+    "rating": 4.8,
+    "comments": 15,
+    "miniatureDisplay": "Nouveau",
+    "authorNote": {
+      "text": "Une aventure inoubliable entre glaciers et sources chaudes",
+      "author": {
+        "_type": "reference",
+        "_ref": "team-member-alex"
+      },
+      "affixeAuthor": "et amoureux de la nature islandaise"
+    },
+    "experiencesBlock": [
+      "**7 nuits** sur place",
+      "Découverte des glaciers",
+      "Baignade dans les sources chaudes",
+      "Observation des aurores boréales"
+    ],
+    "description": "Découvrez l'Islande, terre de contrastes entre feu et glace",
+    "emailDescription": "Voyage aventure en Islande - 8 jours",
+    "metaDescription": "Voyage aventure en Islande avec glaciers, sources chaudes et aurores boréales",
+    "badgeSection": {
+      "groupeBadge": {
+        "text": "Groupe 8-12 personnes",
+        "visible": true
+      },
+      "durationBadge": {
+        "text": "8 jours",
+        "visible": true
+      },
+      "includeFlightBadge": {
+        "text": "Vol non inclus",
+        "visible": true
+      },
+      "housingBadge": {
+        "text": "Hôtels et refuges",
+        "visible": true
+      },
+      "periodBadge": {
+        "text": "Juin à Septembre",
+        "visible": true
+      }
+    },
+    "programmeBlock": [
+      {
+        "title": "Arrivée à Reykjavik",
+        "badgeText": "Jour 1",
+        "description": "Accueil et briefing du voyage",
+        "denivellation": "0m",
+        "road": "Transfert depuis l'aéroport",
+        "night": "Hôtel à Reykjavik"
+      },
+      {
+        "title": "Route vers le sud",
+        "badgeText": "Jour 2",
+        "description": "Découverte de la côte sud et des cascades",
+        "denivellation": "200m",
+        "road": "3h de route",
+        "night": "Refuge de montagne"
+      }
+    ],
+    "pricingDetailsBlock": {
+      "include": [
+        "Hébergement en demi-pension",
+        "Guide francophone",
+        "Transport sur place",
+        "Activités mentionnées"
+      ],
+      "exclude": [
+        "Vol international",
+        "Repas non mentionnés",
+        "Assurances",
+        "Dépenses personnelles"
+      ]
+    },
+    "pricing": {
+      "startingPrice": 1890,
+      "lastMinuteAvailable": true,
+      "lastMinuteReduction": 200,
+      "earlyBirdAvailable": true,
+      "earlyBirdReduction": 150,
+      "maxTravelers": 12,
+      "minTravelersToConfirm": 6,
+      "indivRoom": true,
+      "forcedIndivRoom": false,
+      "indivRoomPrice": 350,
+      "cseReduction": 100,
+      "cseAvailable": true,
+      "childrenPromo": 200,
+      "childrenAge": 12,
+      "airportCode": ["KEF"]
+    },
+    "accompanistsDescription": "Nos guides experts vous accompagnent tout au long du voyage",
+    "accompanistsList": [
+      {
+        "name": "Alex",
+        "description": "Guide francophone avec 10 ans d'expérience en Islande",
+        "role": "Guide principal"
+      }
+    ],
+    "housingBlock": [
+      {
+        "title": "Hébergement varié",
+        "housingType": "Hôtels et refuges",
+        "housingMood": "Authentique et confortable"
+      }
+    ],
+    "videoLinks": [
+      "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    ],
+    "faqBlock": {
+      "faqList": [
+        {
+          "question": "Quel est le niveau requis ?",
+          "answer": "Niveau intermédiaire, bonne condition physique nécessaire"
+        },
+        {
+          "question": "Quand partir ?",
+          "answer": "De juin à septembre pour les meilleures conditions"
+        }
+      ]
+    },
+    "seoSection": {
+      "metaTitle": "Voyage Islande Aventure - 8 jours",
+      "canonicalUrl": "https://example.com/voyages/islande-aventure",
+      "ogTitle": "Islande Aventure - Voyage 8 jours",
+      "ogDescription": "Découvrez l'Islande entre glaciers et sources chaudes"
+    }
+  },
+  {
+    "_type": "voyage",
+    "published": true,
+    "title": "Népal Himalaya",
+    "slug": {
+      "current": "nepal-himalaya"
+    },
+    "destinations": [
+      {
+        "_type": "reference",
+        "_ref": "destination-nepal"
+      }
+    ],
+    "groupeAvailable": true,
+    "privatisationAvailable": true,
+    "customAvailable": true,
+    "experienceType": {
+      "_type": "reference",
+      "_ref": "experience-trek"
+    },
+    "level": "3",
+    "categories": [
+      {
+        "_type": "reference",
+        "_ref": "category-aventure"
+      },
+      {
+        "_type": "reference",
+        "_ref": "category-culture"
+      }
+    ],
+    "duration": 15,
+    "nights": 14,
+    "includeFlight": false,
+    "housingType": "Tea houses et lodges",
+    "minAge": 16,
+    "rating": 4.9,
+    "comments": 23,
+    "miniatureDisplay": "Note moyenne",
+    "authorNote": {
+      "text": "Un trek inoubliable au cœur de l'Himalaya",
+      "author": {
+        "_type": "reference",
+        "_ref": "team-member-pierre"
+      },
+      "affixeAuthor": "guide de montagne expérimenté"
+    },
+    "experiencesBlock": [
+      "**14 nuits** en altitude",
+      "Trek dans l'Himalaya",
+      "Découverte de la culture sherpa",
+      "Vue sur l'Everest"
+    ],
+    "description": "Trek au cœur de l'Himalaya avec vue sur l'Everest",
+    "emailDescription": "Trek Népal Himalaya - 15 jours",
+    "metaDescription": "Trek de 15 jours au Népal avec vue sur l'Everest et découverte de la culture sherpa",
+    "badgeSection": {
+      "groupeBadge": {
+        "text": "Groupe 6-8 personnes",
+        "visible": true
+      },
+      "durationBadge": {
+        "text": "15 jours",
+        "visible": true
+      },
+      "includeFlightBadge": {
+        "text": "Vol non inclus",
+        "visible": true
+      },
+      "housingBadge": {
+        "text": "Tea houses",
+        "visible": true
+      },
+      "periodBadge": {
+        "text": "Mars-Mai et Sept-Nov",
+        "visible": true
+      }
+    },
+    "programmeBlock": [
+      {
+        "title": "Arrivée à Katmandou",
+        "badgeText": "Jour 1",
+        "description": "Accueil et préparation du trek",
+        "denivellation": "1400m",
+        "road": "Transfert depuis l'aéroport",
+        "night": "Hôtel à Katmandou"
+      },
+      {
+        "title": "Vol vers Lukla",
+        "badgeText": "Jour 2",
+        "description": "Début du trek vers Namche Bazaar",
+        "denivellation": "800m",
+        "road": "6h de marche",
+        "night": "Tea house à Namche"
+      }
+    ],
+    "pricingDetailsBlock": {
+      "include": [
+        "Hébergement en demi-pension",
+        "Guide sherpa francophone",
+        "Permis de trek",
+        "Transport interne"
+      ],
+      "exclude": [
+        "Vol international",
+        "Repas non mentionnés",
+        "Assurances",
+        "Équipement personnel"
+      ]
+    },
+    "pricing": {
+      "startingPrice": 2890,
+      "lastMinuteAvailable": false,
+      "lastMinuteReduction": 0,
+      "earlyBirdAvailable": true,
+      "earlyBirdReduction": 300,
+      "maxTravelers": 8,
+      "minTravelersToConfirm": 4,
+      "indivRoom": false,
+      "forcedIndivRoom": false,
+      "indivRoomPrice": 0,
+      "cseReduction": 150,
+      "cseAvailable": true,
+      "childrenPromo": 0,
+      "childrenAge": 16,
+      "airportCode": ["KTM"]
+    },
+    "accompanistsDescription": "Nos guides sherpas expérimentés vous accompagnent",
+    "accompanistsList": [
+      {
+        "name": "Pierre",
+        "description": "Guide de montagne avec 15 ans d'expérience",
+        "role": "Guide principal"
+      }
+    ],
+    "housingBlock": [
+      {
+        "title": "Tea houses traditionnelles",
+        "housingType": "Tea houses et lodges",
+        "housingMood": "Authentique et chaleureux"
+      }
+    ],
+    "videoLinks": [
+      "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    ],
+    "faqBlock": {
+      "faqList": [
+        {
+          "question": "Quel est le niveau requis ?",
+          "answer": "Niveau confirmé, excellente condition physique nécessaire"
+        },
+        {
+          "question": "Quand partir ?",
+          "answer": "Mars-Mai et Septembre-Novembre pour éviter la mousson"
+        }
+      ]
+    },
+    "seoSection": {
+      "metaTitle": "Trek Népal Himalaya - 15 jours",
+      "canonicalUrl": "https://example.com/voyages/nepal-himalaya",
+      "ogTitle": "Népal Himalaya - Trek 15 jours",
+      "ogDescription": "Trek au cœur de l'Himalaya avec vue sur l'Everest"
+    }
+  }
+]

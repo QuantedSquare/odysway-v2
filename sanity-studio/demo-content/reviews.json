@@ -1,0 +1,44 @@
+[
+  {
+    "_type": "review",
+    "author": "Marc Dubois",
+    "authorAge": "35",
+    "date": "2024-08-15",
+    "rating": 5,
+    "text": "Voyage exceptionnel ! L'Islande est magnifique et notre guide Alex était parfait. Les glaciers et les sources chaudes sont à couper le souffle. Je recommande vivement !",
+    "voyage": {
+      "_type": "reference",
+      "_ref": "voyage-islande-aventure"
+    },
+    "voyageTitle": "Islande Aventure",
+    "isOnHome": true
+  },
+  {
+    "_type": "review",
+    "author": "Sophie Martin",
+    "authorAge": "28",
+    "date": "2024-07-22",
+    "rating": 5,
+    "text": "Un trek inoubliable au Népal ! Pierre est un guide exceptionnel qui nous a fait découvrir la culture sherpa. La vue sur l'Everest est indescriptible.",
+    "voyage": {
+      "_type": "reference",
+      "_ref": "voyage-nepal-himalaya"
+    },
+    "voyageTitle": "Népal Himalaya",
+    "isOnHome": true
+  },
+  {
+    "_type": "review",
+    "author": "Thomas Leroy",
+    "authorAge": "42",
+    "date": "2024-06-10",
+    "rating": 4,
+    "text": "Très bon voyage en Islande. Le programme était bien équilibré entre aventure et découverte. Seul bémol : la météo capricieuse, mais c'est l'Islande !",
+    "voyage": {
+      "_type": "reference",
+      "_ref": "voyage-islande-aventure"
+    },
+    "voyageTitle": "Islande Aventure",
+    "isOnHome": false
+  }
+]

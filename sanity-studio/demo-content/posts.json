@@ -1,0 +1,84 @@
+[
+  {
+    "_type": "post",
+    "title": "Bienvenue en Islande",
+    "slug": {
+      "current": "bienvenue-islande"
+    },
+    "author": {
+      "_type": "reference",
+      "_ref": "user-jane"
+    },
+    "categories": [
+      {
+        "_type": "reference",
+        "_ref": "category-aventure"
+      }
+    ],
+    "excerpt": "Découvrez pourquoi l'Islande est devenue une destination incontournable pour les amateurs d'aventure",
+    "publishedAt": "2024-09-01T10:00:00.000Z",
+    "body": [
+      {
+        "_type": "block",
+        "children": [
+          {
+            "_type": "span",
+            "text": "L'Islande, terre de contrastes entre feu et glace, offre des expériences uniques pour tous les voyageurs. De ses glaciers majestueux à ses sources chaudes naturelles, en passant par ses aurores boréales, ce pays nordique ne cesse de nous émerveiller."
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "children": [
+          {
+            "_type": "span",
+            "text": "Notre voyage de 8 jours vous permettra de découvrir les plus beaux sites de l'île, accompagnés par nos guides experts qui partagent leur passion pour cette terre extraordinaire."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_type": "post",
+    "title": "Trek au Népal : Guide complet",
+    "slug": {
+      "current": "trek-nepal-guide"
+    },
+    "author": {
+      "_type": "reference",
+      "_ref": "user-john"
+    },
+    "categories": [
+      {
+        "_type": "reference",
+        "_ref": "category-aventure"
+      },
+      {
+        "_type": "reference",
+        "_ref": "category-culture"
+      }
+    ],
+    "excerpt": "Tout ce que vous devez savoir pour préparer votre trek dans l'Himalaya",
+    "publishedAt": "2024-08-15T14:30:00.000Z",
+    "body": [
+      {
+        "_type": "block",
+        "children": [
+          {
+            "_type": "span",
+            "text": "Le Népal, berceau de l'Himalaya, offre des possibilités de trekking exceptionnelles. De la vallée de Katmandou aux sommets enneigés, chaque pas vous rapproche de la culture sherpa et de paysages à couper le souffle."
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "children": [
+          {
+            "_type": "span",
+            "text": "Notre guide Pierre, expert de la montagne, vous accompagne dans cette aventure de 15 jours qui vous mènera au cœur de l'Himalaya avec une vue imprenable sur l'Everest."
+          }
+        ]
+      }
+    ]
+  }
+]

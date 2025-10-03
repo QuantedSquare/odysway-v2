@@ -1,0 +1,29 @@
+[
+  {
+    "_type": "teamMember",
+    "slug": {
+      "current": "alex"
+    },
+    "name": "Alex",
+    "description": "Expert voyage avec 10 ans d'expérience",
+    "position": "Expert voyage"
+  },
+  {
+    "_type": "teamMember",
+    "slug": {
+      "current": "marie"
+    },
+    "name": "Marie",
+    "description": "Spécialiste des destinations asiatiques",
+    "position": "Responsable Asie"
+  },
+  {
+    "_type": "teamMember",
+    "slug": {
+      "current": "pierre"
+    },
+    "name": "Pierre",
+    "description": "Guide de montagne et expert trek",
+    "position": "Guide montagne"
+  }
+]

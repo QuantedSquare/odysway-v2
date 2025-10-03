@@ -1,0 +1,62 @@
+[
+  {
+    "_type": "destination",
+    "title": "Islande",
+    "slug": {
+      "current": "islande"
+    },
+    "chapka": "Terre de feu et de glace",
+    "iso": "IS",
+    "interjection": "Fantastique !",
+    "metaDescription": "Découvrez l'Islande, une terre de contrastes entre glaciers et volcans",
+    "published": true,
+    "showOnHome": true,
+    "regions": [
+      {
+        "_type": "reference",
+        "_ref": "region-europe"
+      }
+    ],
+    "isTopDestination": true
+  },
+  {
+    "_type": "destination",
+    "title": "Népal",
+    "slug": {
+      "current": "nepal"
+    },
+    "chapka": "Toit du monde",
+    "iso": "NP",
+    "interjection": "Namaste !",
+    "metaDescription": "Explorez le Népal et ses sommets himalayens",
+    "published": true,
+    "showOnHome": true,
+    "regions": [
+      {
+        "_type": "reference",
+        "_ref": "region-asie"
+      }
+    ],
+    "isTopDestination": true
+  },
+  {
+    "_type": "destination",
+    "title": "Pérou",
+    "slug": {
+      "current": "perou"
+    },
+    "chapka": "Terre des Incas",
+    "iso": "PE",
+    "interjection": "¡Que maravilloso!",
+    "metaDescription": "Découvrez le Pérou et ses trésors archéologiques",
+    "published": true,
+    "showOnHome": false,
+    "regions": [
+      {
+        "_type": "reference",
+        "_ref": "region-amerique-du-sud"
+      }
+    ],
+    "isTopDestination": false
+  }
+]
