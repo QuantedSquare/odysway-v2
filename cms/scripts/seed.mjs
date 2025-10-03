@@ -6,6 +6,7 @@ import {log, error} from 'node:console'
 import migrateRegions from './migrateContinents.js'
 import migrateTops from './migrateTops.js'
 import migrateDestinations from './migrateDestinations.js'
+import migrateCategories from './migrateCategories.js'
 dotenv.config()
 
 const projectId = process.env.SANITY_PROJECT_ID || 'nu6yntji'
@@ -37,8 +38,12 @@ async function run() {
   log('🔄 Migrating destinations from JSON files...')
   await migrateDestinations(client)
   
+
+  log('🔄 Migrating categories from JSON files...')
+  await migrateCategories(client)
+
   log('🔄 Creating demo data...')
-  const tx = client.transaction()
+  const tx = client.transaction() 
 
   const userId = 'demoUser'
   tx.createOrReplace({
@@ -50,7 +55,7 @@ async function run() {
   })
 
   const catAdventureId = 'catAdventure'
-  tx.createOrReplace({_id: catAdventureId, _type: 'category', title: 'Aventure', slug: {current: 'aventure'}})
+  // tx.createOrReplace({_id: catAdventureId, _type: 'category', title: 'Aventure', slug: {current: 'aventure'}})
 
   // const regionId = 'regionEurope'
   //tx.createOrReplace({_id: regionId, _type: 'region', nom: 'Europe', slug: {current: 'europe'}})
