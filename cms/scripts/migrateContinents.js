@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import {log, error} from 'node:console'
 import path from 'node:path'
 import process from 'node:process'
+import { createId } from './utils/createId.js'
 
 const continentsFolderPath = '../content/continents'
 
@@ -24,7 +25,7 @@ export default async function migrateRegions(client) {
       const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
       
       // Generate a unique ID from the filename (without extension)
-      const regionId = `region-${data.nom.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase().replace(/[^a-z0-9]+/g, '-')}`
+      const regionId = createId('region', data.nom)
       
       // Prepare the region document for Sanity
       const regionDoc = {
@@ -39,7 +40,7 @@ export default async function migrateRegions(client) {
       }
       
       // Handle image if it exists and has a src
-      if (data.image && data.image.src && data.image.src.trim() !== '') {
+      if (data?.image?.src && data.image.src.trim() !== '') {
         regionDoc.image = {
           _type: 'image',
           asset: {
@@ -49,7 +50,7 @@ export default async function migrateRegions(client) {
           alt: data.image.alt || data.nom
         }
         log(`  📷 Image: ${data.image.src}`)
-      } else if (data.image && data.image.alt) {
+      } else if (data?.image?.alt) {
         // Store alt text even if no image src
         regionDoc.image = {
           _type: 'image',

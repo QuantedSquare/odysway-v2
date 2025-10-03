@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import {log, error} from 'node:console'
 import path from 'node:path'
 import process from 'node:process'
+import { createId } from './utils/createId.js'
 
 const topsFolderPath = '../content/tops'
 
@@ -23,7 +24,7 @@ export default async function migrateTops(client) {
       const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
       
       // Generate a unique ID from the filename (without extension)
-      const topID = `tops-${data.title.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase().replace(/[^a-z0-9]+/g, '-')}`
+      const topID = createId('tops', data.title)
       
       // Process contenuOnglet
       const processedContenuOnglet = data.contenuOnglet.map((tab, index) => {
