@@ -6,6 +6,7 @@ import process from 'node:process'
 const continentsFolderPath = '../content/continents'
 
 export default async function migrateRegions(client) {
+  
   try {
     log(`Starting region migration...`)
     
@@ -72,10 +73,3 @@ export default async function migrateRegions(client) {
   }
 }
 
-// Run the migration only when this script is executed directly
-if (import.meta.url === `file://${process.argv[1]}`) {
-  migrateRegions().catch((e) => {
-    error('Migration failed:', e)
-    process.exit(1)
-  })
-}
