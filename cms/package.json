@@ -17,10 +17,10 @@
   ],
   "dependencies": {
     "@sanity/client": "^7.11.0",
-    "@sanity/vision": "^4.10.1",
+    "@sanity/vision": "^4.10.2",
     "react": "^19.1",
     "react-dom": "^19.1",
-    "sanity": "^4.10.1",
+    "sanity": "^4.10.2",
     "sanity-plugin-media": "^4.0.0",
     "styled-components": "^6.1.18"
   },

@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     'nuxt-calendly',
     'nuxt-gtag',
+    '@nuxtjs/sanity',
     'nuxt-meta-pixel',
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
