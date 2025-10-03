@@ -102,8 +102,12 @@ async function run() {
   const publicDir = join(process.cwd(), '..', 'public')
   const imagesDir = join(publicDir, 'images')
 
-  log(`📁 Scanning for images in: ${imagesDir}`)
-  const imageFiles = getImageFiles(imagesDir)
+  // TODO: Remove this filter after testing - only upload destinations for now
+  const testSubfolder = 'destinations' // Set to null to upload all images
+  const scanDir = testSubfolder ? join(imagesDir, testSubfolder) : imagesDir
+
+  log(`📁 Scanning for images in: ${scanDir}`)
+  const imageFiles = getImageFiles(scanDir)
 
   log(`🖼️  Found ${imageFiles.length} images to upload`)
 

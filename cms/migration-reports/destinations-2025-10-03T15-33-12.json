@@ -1,0 +1,110 @@
+{
+  "migrationType": "destinations",
+  "timestamp": "2025-10-03T15:33:12.488Z",
+  "duration": "1.87s",
+  "summary": {
+    "totalDocuments": 62,
+    "successful": 61,
+    "failed": 0,
+    "imagesReferenced": 48,
+    "imagesMissing": 11,
+    "warnings": 3
+  },
+  "missingImages": [
+    {
+      "path": "/images/destinations/ep07kBZURmfcxnq56UiH.jpg",
+      "referencedIn": [
+        "destination-cambodge"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/destinations/ApNAsaUpRwmUa7eDFE3g.jpg",
+      "referencedIn": [
+        "destination-etats-unis"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/destinations/pQsXQdPwS560EtOqei1G.jpg",
+      "referencedIn": [
+        "destination-ethiopie"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/1.voyages/voyage-immersion-culturelle-bali/9ElqH6ahQUuaoHPLoBFB.jpg",
+      "referencedIn": [
+        "destination-indonesie"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/destinations/AwSyUH38Spqlx24YOEPC.jpg",
+      "referencedIn": [
+        "destination-normandie"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/destinations/xMb8nNGxQKS1TgiBZe93.jpg",
+      "referencedIn": [
+        "destination-pays-de-la-loire"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/destinations/Mqz97cvbT5qFYdluW99n.jpg",
+      "referencedIn": [
+        "destination-bourgogne"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/destinations/Lq5ZhJwdSg6saVQy4ez6.jpg",
+      "referencedIn": [
+        "destination-bretagne"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/categories/voyage-sans-avion.jpeg",
+      "referencedIn": [
+        "destination-israel"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/1.voyages/ecosse-photo-automne/2yzDH0pzTpa4kyTaMJtR.jpg",
+      "referencedIn": [
+        "destination-ecosse"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/1.voyages/voyage-tanzanie-safari-immersion-communaute-locale/azyTXWhLQBmGd7tgjmxQ.jpg",
+      "referencedIn": [
+        "destination-tanzanie"
+      ],
+      "count": 1
+    }
+  ],
+  "failedDocuments": [],
+  "warnings": [
+    {
+      "document": "22.Europe",
+      "warning": "No JSON files found in directory",
+      "timestamp": "2025-10-03T15:33:12.653Z"
+    },
+    {
+      "document": "destination-senegal",
+      "warning": "No image provided",
+      "timestamp": "2025-10-03T15:33:12.659Z"
+    },
+    {
+      "document": "destination-maldives",
+      "warning": "No image provided",
+      "timestamp": "2025-10-03T15:33:12.659Z"
+    }
+  ]
+}

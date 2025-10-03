@@ -1,9 +1,10 @@
 import fs from 'node:fs';
-import {log, error} from 'node:console'
+import { log, error } from 'node:console'
 import path from 'node:path'
 import process from 'node:process'
-import {buildImageAssetMapping, convertImageReference} from './imageAssetHelper.js'
-import {MigrationReporter} from './migrationReporter.js'
+import { buildImageAssetMapping, convertImageReference } from './imageAssetHelper.js'
+import { MigrationReporter } from './migrationReporter.js'
+import { createId } from './utils/createId.js'
 
 const continentsFolderPath = '../content/continents'
 
@@ -13,19 +14,19 @@ export default async function migrateRegions(client) {
 
   // Build image asset mapping once at the start
   const assetMapping = await buildImageAssetMapping(client)
-  
+
   try {
     log(`Starting region migration...`)
-    
+
     // Read all continent files
     const folderContent = fs.readdirSync(continentsFolderPath);
     const jsonFiles = folderContent.filter(file => file.endsWith('.json'))
-    
+
     log(`Found ${jsonFiles.length} region files to migrate`)
-    
+
     // Start a transaction for batch operations
-    const tx =  client.transaction()
-    
+    const tx = client.transaction()
+
     for (const file of jsonFiles) {
       reporter.incrementTotal()
 
@@ -34,7 +35,7 @@ export default async function migrateRegions(client) {
         const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 
         // Generate a unique ID from the filename (without extension)
-        const regionId = `region-${data.nom.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase().replace(/[^a-z0-9]+/g, '-')}`
+        const regionId = createId('region', data.nom)
 
         // Prepare the region document for Sanity
         const regionDoc = {
@@ -71,13 +72,14 @@ export default async function migrateRegions(client) {
         // Add to transaction
         tx.createOrReplace(regionDoc)
         reporter.recordSuccess()
-        log(`${ '✅ Prepared'} region: ${data.nom} (ID: ${regionId})`)
+        log(`${'✅ Prepared'} region: ${data.nom} (ID: ${regionId})`)
+
       } catch (err) {
         reporter.recordFailure(file, err.message)
         error(`❌ Failed to process ${file}:`, err.message)
       }
     }
-    
+
     // Commit the transaction
     await tx.commit()
     log(`✅ Successfully migrated ${jsonFiles.length} regions to Sanity!`)
