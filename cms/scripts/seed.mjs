@@ -32,14 +32,14 @@ async function run() {
   // log('🔄 Migrating tops from JSON files...')
   // await migrateTops(client)
 
-  log('🔄 Migrating regions from JSON files...')
-  await migrateRegions(client)
+  // log('🔄 Migrating regions from JSON files...')
+  // await migrateRegions(client)
 
-  log('🔄 Migrating destinations from JSON files...')
-  await migrateDestinations(client)
+ // log('🔄 Migrating destinations from JSON files...')
+ // await migrateDestinations(client)
   
-  // log('🔄 Migrating categories from JSON files...')
-  // await migrateCategories(client)
+   log('🔄 Migrating categories from JSON files...')
+   await migrateCategories(client)
 
   log('Seed completed')
 }

@@ -103,7 +103,7 @@ async function run() {
   const imagesDir = join(publicDir, 'images')
 
   // TODO: Remove this filter after testing - only upload destinations for now
-  const testSubfolder = 'destinations' // Set to null to upload all images
+  const testSubfolder = 'blogs/voyage-animalier' // Set to null to upload all images
   const scanDir = testSubfolder ? join(imagesDir, testSubfolder) : imagesDir
 
   log(`📁 Scanning for images in: ${scanDir}`)
