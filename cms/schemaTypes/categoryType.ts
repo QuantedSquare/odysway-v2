@@ -43,11 +43,11 @@ export const categoryType = defineType({
       type: 'boolean',
     }),
   ],
-  preview: {
-    select: {
-      title: 'title',
-      subtitle: 'slug.current',
-    },
-  },
+  // preview: {
+  //   select: {
+  //     title: 'title',
+  //     subtitle: 'slug.current',
+  //   },
+  // },
 })
 

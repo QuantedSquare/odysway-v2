@@ -1,0 +1,199 @@
+{
+  "migrationType": "categories",
+  "timestamp": "2025-10-06T09:47:13.798Z",
+  "duration": "1.78s",
+  "summary": {
+    "totalDocuments": 26,
+    "successful": 0,
+    "failed": 0,
+    "imagesReferenced": 0,
+    "imagesMissing": 26,
+    "warnings": 0
+  },
+  "missingImages": [
+    {
+      "path": "/images/categories/JuFmcHjSTl6ar1uY8pUc.jpg",
+      "referencedIn": [
+        "category-animaux"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/blogs/sejour-astronomie/0CkJEb5SIWny0DaMSuUP.jpg",
+      "referencedIn": [
+        "category-astronomie"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/categories/XxWW05S3WZgsQBUCOufA.jpg",
+      "referencedIn": [
+        "category-au-printemps"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/categories/KldlNGGxTxep3G0bHNQT.jpg",
+      "referencedIn": [
+        "category-sentiers-d-aventure"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/categories/wn39B2U4QYSlrXxIcW6e.jpg",
+      "referencedIn": [
+        "category--ecotourisme"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/categories/xdFuasCrT1aoI91NTL2y.jpg",
+      "referencedIn": [
+        "category-en-automne"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/categories/GHZdT0PNT9i9POJ0adxn.jpg",
+      "referencedIn": [
+        "category-nature"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/1.voyages/voyage-dauphins-baleines-espagne/gGQOtr2TQg28vgyJDN1u.jpg",
+      "referencedIn": [
+        "category-en-ete"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/categories/ZEjg5WNOQgSyrDSMbNNQ.jpg",
+      "referencedIn": [
+        "category-en-hiver"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/categories/sejour-photo.jpg",
+      "referencedIn": [
+        "category-photographie"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/categories/xPv8ono8ToKBgiwWIL53.jpg",
+      "referencedIn": [
+        "category-road-trip"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/categories/voyage-sans-avion.jpeg",
+      "referencedIn": [
+        "category-sans-avion"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/categories/3NkKStL1QbK1GHDoorMY.jpg",
+      "referencedIn": [
+        "category-sejour-a-la-ferme"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/categories/EtmCexLgQf6CX9WgdS48.jpg",
+      "referencedIn": [
+        "category-nuits-chez-l-habitant"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/categories/vSjqrIfSuml1U1714jqF.jpg",
+      "referencedIn": [
+        "category-sport"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/categories/hrDEw05nRiF5gf0fo9jh.jpg",
+      "referencedIn": [
+        "category-survie"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/categories/3WxkfEuVSe2aX16R4lsk.jpg",
+      "referencedIn": [
+        "category-transports-insolites"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/categories/szM3yRahRD6w4EaFS4OV.jpg",
+      "referencedIn": [
+        "category-randonnee"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/categories/SzWMmWrhR7aTfLjePuT1.jpg",
+      "referencedIn": [
+        "category-voyage-arts-martiaux"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/categories/TMDs5ihqSuabZD5sWfzg.jpg",
+      "referencedIn": [
+        "category-sejour-culturel"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/categories/q8AmJLtoTrCb2MgCF84e.jpg",
+      "referencedIn": [
+        "category-en-couple"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/categories/qdvyf8TIR7uZ8DOGJWh4.jpg",
+      "referencedIn": [
+        "category-en-famille"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/blogs/pourquoi-choisir-un-voyage-en-petit-groupe-pour-vivre-une-experience-authentique/g6TMRZHFQfmS7WBGzITg.jpg",
+      "referencedIn": [
+        "category-en-groupe"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/categories/UGbEQh2vSUWIB8XW18D7.jpg",
+      "referencedIn": [
+        "category-chemins-vers-soi"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/categories/O2tp6uJ3SWGhMHag7yLQ.jpg",
+      "referencedIn": [
+        "category-insolite"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/categories/oc8MJq0wSGieXa9WNA6t.jpg",
+      "referencedIn": [
+        "category-solidaire"
+      ],
+      "count": 1
+    }
+  ],
+  "failedDocuments": [],
+  "warnings": []
+}

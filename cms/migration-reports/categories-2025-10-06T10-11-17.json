@@ -1,0 +1,38 @@
+{
+  "migrationType": "categories",
+  "timestamp": "2025-10-06T10:11:17.481Z",
+  "duration": "1.03s",
+  "summary": {
+    "totalDocuments": 26,
+    "successful": 0,
+    "failed": 0,
+    "imagesReferenced": 23,
+    "imagesMissing": 3,
+    "warnings": 0
+  },
+  "missingImages": [
+    {
+      "path": "/images/blogs/sejour-astronomie/0CkJEb5SIWny0DaMSuUP.jpg",
+      "referencedIn": [
+        "category-astronomie"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/1.voyages/voyage-dauphins-baleines-espagne/gGQOtr2TQg28vgyJDN1u.jpg",
+      "referencedIn": [
+        "category-en-ete"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/blogs/pourquoi-choisir-un-voyage-en-petit-groupe-pour-vivre-une-experience-authentique/g6TMRZHFQfmS7WBGzITg.jpg",
+      "referencedIn": [
+        "category-en-groupe"
+      ],
+      "count": 1
+    }
+  ],
+  "failedDocuments": [],
+  "warnings": []
+}
