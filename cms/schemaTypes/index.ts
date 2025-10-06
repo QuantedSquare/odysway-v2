@@ -1,27 +1,29 @@
-import {postType} from './postType'
-import {userType} from './userType'
+import {blockContent} from './blockContent'
 import {categoryType} from './categoryType'
-import {regionType} from './regionType'
 import {destinationType} from './destinationType'
 import {experienceType} from './experienceType'
-import {teamMemberType} from './teamMemberType'
+import {footerType} from './footerType'
 import {partnerType} from './partnerType'
-import {voyageType} from './voyageType'
+import {postType} from './postType'
+import {regionType} from './regionType'
 import {reviewType} from './reviewType'
+import {teamMemberType} from './teamMemberType'
 import {topsType} from './topsType'
-import {blockContent} from './blockContent'
+import {userType} from './userType'
+import {voyageType} from './voyageType'
 
 export const schemaTypes = [
-  postType,
-  userType,
+  blockContent,
   categoryType,
-  regionType,
   destinationType,
   experienceType,
-  teamMemberType,
+  footerType,
   partnerType,
-  voyageType,
+  postType,
+  regionType,
   reviewType,
+  teamMemberType,
   topsType,
-  blockContent,
+  userType,
+  voyageType,
 ]
