@@ -7,11 +7,12 @@ import migrateRegions from './migrateContinents.js'
 import migrateTops from './migrateTops.js'
 import migrateDestinations from './migrateDestinations.js'
 import migrateCategories from './migrateCategories.js'
+import migrateExperiences from './migrateExperiences.js'
 dotenv.config()
 
 const projectId = process.env.SANITY_PROJECT_ID || 'nu6yntji'
 const dataset = process.env.SANITY_DATASET || 'production'
-const token = process.env.SANITY_WRITE_TOKEN
+const token = process.env.SANITY_WRITE_TOKEN 
 
 if (!token) {
   error('Missing SANITY_WRITE_TOKEN environment variable. Create a token with write access in the Sanity project settings and set it before running the seed.')
@@ -35,11 +36,14 @@ async function run() {
   // log('🔄 Migrating regions from JSON files...')
   // await migrateRegions(client)
 
-  log('🔄 Migrating destinations from JSON files...')
-  await migrateDestinations(client)
+  // log('🔄 Migrating destinations from JSON files...')
+  // await migrateDestinations(client)
   
-  log('🔄 Migrating categories from JSON files...')
-  await migrateCategories(client)
+  //   log('🔄 Migrating categories from JSON files...')
+  //   await migrateCategories(client)
+
+  log('🔄 Migrating experiences from JSON files...')
+  await migrateExperiences(client)
 
   log('Seed completed')
 }
