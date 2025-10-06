@@ -34,14 +34,14 @@
   "duration": 5,
   "nights": 4,
   "includeFlight": false,
-  "housingType": "Gite et bivouac",
+  "housingType": "Gite et tente",
   "idealPeriods": {
     "toutePeriodes": false,
     "janvier": false,
     "fevrier": false,
     "mars": false,
     "avril": false,
-    "mai": false,
+    "mai": true,
     "juin": true,
     "juillet": true,
     "aout": true,
@@ -110,9 +110,9 @@
   },
   "programmeBlock": [
     {
-      "title": "ARRIVEE EN VALLEE D'ASPE ",
+      "title": "ARRIVÉE DANS LA VALLÉE D’ASPE",
       "badgeText": "JOUR 1",
-      "description": "Cap vers l’intérieur des Pyrénées, rejoignez la sublime vallée d'Aspe, située au coeur du Béarn. Territoire empreint d'une forte culture liée au pastoralisme, c'est aussi une vallée où vit encore l'ours brun. Entre terroir et nature majestueuse, profitez de ces premiers instants découverte. Rencontre avec vos hôtes du séjour, Claire et Sandrine !",
+      "description": "Bienvenue dans la vallée d’Aspe, l’une des plus belles vallées des Pyrénées. Sauvage, préservée, fière de ses traditions pastorales, elle sera votre terrain d’exploration et de rencontre pour les jours à venir. Vous arrivez dans l’après-midi à Accous et vous installez dans un gîte tout confort, niché au pied des sentiers de randonnée. Claire et Sandrine, vos hôtes, vous accueillent avec chaleur. Le soir, vous partagez un dîner fait maison à base de produits locaux et faites connaissance avec le groupe.",
       "photo": "/images/1.voyages/sejour-berger-bearn/mvx58lw1RDSN108MJDQh.jpg",
       "denivellation": "",
       "road": "",
@@ -121,34 +121,34 @@
     {
       "title": "RANDONNÉE DANS LA VALLÉE",
       "badgeText": "JOUR 2",
-      "description": "Petit-déjeuner puis rencontre avec votre accompagnateur du séjour, avant un départ pour une randonnée sur les hauteurs de la vallée d'aspe à la journée. Première rencontre avec les bergers en estive et découverte des paysages sublimes de la vallée.",
+      "description": "Vous partez pour une journée de randonnée avec votre accompagnateur en montagne, fin connaisseur des lieux. Au fil du sentier, vous découvrez les paysages emblématiques de la vallée d’Aspe : forêts profondes, estives ouvertes, torrents d’altitude et panoramas à couper le souffle. L’occasion aussi d’évoquer les équilibres fragiles entre nature et activités humaines, et de tisser des liens avec le groupe dans un cadre inspirant. Retour au gîte dans l’après-midi. Dîner et nuit au gîte.",
       "photo": "/images/1.voyages/sejour-berger-bearn/8d1vULa4SSqSQsex8Ow9.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
     },
     {
-      "title": "UNE NUIT EN ESTIVE",
+      "title": "MONTÉE EN ESTIVE ET NUIT EN BIVOUAC",
       "badgeText": "JOUR 3",
-      "description": "Partez pour 2 jours de randonnée sur le lieu de l'estive, aux côtés du berger et de son troupeau et passez la nuit en cabane ou en bivouac ! Une occasion rare et unique de plonger dans le quotidien de berger, comme un air du bout du monde... La cabane du berger se trouve dans une zone peu fréquentée. Au programme : marche avec le berger et son troupeau, traite du lait, fabrication du fromage, soin porté aux brebis...",
+      "description": "Cap vers l’estive : vous quittez la vallée pour rejoindre les hauteurs, là où les troupeaux passent l’été en liberté. Accompagné de votre guide, vous vous installez en bivouac à proximité d’une cabane de berger, dans un décor sauvage et paisible. L’après-midi est consacrée à la découverte de ce mode de vie montagnard : balades autour du bivouac, observation du paysage pastoral, temps calmes. Le soir venu, vous dînez sur place et passez la nuit en bivouac. Une expérience simple, au plus près des éléments.",
       "photo": "/images/1.voyages/sejour-berger-bearn/GU9frFNRDyBhXErJFx1t.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
     },
     {
-      "title": "COMME UN BERGER",
+      "title": "VIE EN ALTITUDE ET RETOUR AU GÎTE",
       "badgeText": "JOUR 4",
-      "description": "Réveil mémorable en montagne au rythme du berger, petit-déjeuner puis puis partage de ses activités sur la matinée. Derniers moments en sa compagnie, avant de redescendre en fin de matinée pour rejoindre la vallée dans l'après-midi. Pique-nique sur la route. Fin d'après-midi libre, profitez en pour aller vous explorer les villages de la vallée ou grimper jusqu'au Poey, pour avoir une vue unique sur la vallée d'Aspe. Nuit en gîte à Accous le soir.",
+      "description": "Le réveil se fait en douceur au cœur de l’estive. Vous profitez d’une matinée sans contrainte pour vous imprégner encore un peu de cette atmosphère hors du temps. Selon les conditions et les rencontres, une discussion informelle avec un berger ou une bergère de passage peut ponctuer cette parenthèse. Dans l’après-midi, vous redescendez vers la vallée. Retour au gîte pour une bonne douche, un dîner chaleureux et une dernière nuit confortable.",
       "photo": "/images/1.voyages/sejour-berger-bearn/tu5kNEGXQ06ViY6GpBji.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
     },
     {
-      "title": "DERNIER JOUR DANS LES PYRÉNÉES",
+      "title": "RENCONTRE AVEC CAMILLE, BERGÈRE EN VALLÉE",
       "badgeText": "JOUR 5",
-      "description": "Pour ce dernier jour dans le Béarn, la journée est libre. Partez pour une randonnée autour du lac d'Estaens ou allez explorer le village de Lescun, au cadre enchanteur. Vous pourrez aussi vous détendre sur le plateau de Lhers situé non loin. Sur votre retour dans la vallée, vous pourrez aller acheter du fromage à ramener chez vous, comme un souvenir de cette immersion dans les montagnes.",
+      "description": "Pour clore le séjour, vous partez à la rencontre de Camille, bergère installée en vallée. Elle vous accueille dans sa ferme pour vous faire découvrir son quotidien : soins aux animaux, fabrication artisanale de fromage, engagement pour une agriculture paysanne et vivante. Un échange authentique, humain et concret pour mettre en perspective ce que vous avez vécu en montagne. Fin du séjour en fin de matinée.",
       "photo": "/images/1.voyages/sejour-berger-bearn/cIv1uTbpTsyKAX5fhKMt.jpg",
       "denivellation": "",
       "road": "",
@@ -164,7 +164,7 @@
       "Les repas avec le berger, une partie du prix de votre séjour pour le berger",
       "Les services d'un accompagnateur en moyenne montagne sur 3 jours",
       "Le matériel pour la nuit près du berger (matelas, tente)",
-      "La participation financière pour le berger"
+      "La participation du groupe pour Camille, bergère"
     ],
     "exclude": [
       "Les activités non comprises dans la section \"le prix comprend\"",
