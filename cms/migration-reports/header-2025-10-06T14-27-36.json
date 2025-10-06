@@ -1,0 +1,24 @@
+{
+  "migrationType": "header",
+  "timestamp": "2025-10-06T14:27:36.823Z",
+  "duration": "1.68s",
+  "summary": {
+    "totalDocuments": 1,
+    "successful": 1,
+    "failed": 0,
+    "imagesReferenced": 0,
+    "imagesMissing": 2,
+    "warnings": 0
+  },
+  "missingImages": [
+    {
+      "path": "/logos/Logo-Odysway-Bleu.png",
+      "referencedIn": [
+        "header-configuration"
+      ],
+      "count": 1
+    }
+  ],
+  "failedDocuments": [],
+  "warnings": []
+}
