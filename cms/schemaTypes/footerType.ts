@@ -5,9 +5,6 @@ export const footerType = defineType({
   title: 'Footer',
   type: 'document',
   preview: {
-    select: {
-      title: 'logo.description',
-    },
     prepare() {
       return {
         title:  'Footer Configuration',

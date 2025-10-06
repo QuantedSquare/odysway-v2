@@ -65,6 +65,7 @@ export default defineConfig({
             S.documentTypeListItem('partner').title('Partners'),
             S.documentTypeListItem('review').title('Reviews'),
             S.documentTypeListItem('tops').title('Tops'),
+            S.documentTypeListItem('header').title('Header'),
             S.documentTypeListItem('footer').title('Footer'),
             S.divider(),
             S.listItem()
