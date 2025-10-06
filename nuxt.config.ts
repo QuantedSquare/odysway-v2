@@ -21,6 +21,9 @@ export default defineNuxtConfig({
       })
     },
   ],
+  sanity: {
+    projectId: 'nu6yntji'
+  },
   components: [
     '~/components',
     { path: '~/components/content', pathPrefix: false },
@@ -107,7 +110,7 @@ export default defineNuxtConfig({
       template: {
         transformAssetUrls,
       },
-    },
+    }
   },
   calendly: {
     isEnabled: true,

@@ -42,9 +42,6 @@ async function run() {
   // log('🔄 Migrating destinations from JSON files...')
   // await migrateDestinations(client)
   
-  //   log('🔄 Migrating categories from JSON files...')
-  //   await migrateCategories(client)
-
   // log('🔄 Migrating experiences from JSON files...')
   // await migrateExperiences(client)
 
@@ -54,8 +51,13 @@ async function run() {
   // log('🔄 Migrating footer configuration...')
   // await migrateFooter(client)
 
-  log('🔄 Migrating header configuration...')
-  await migrateHeader(client)
+  // log('🔄 Migrating header configuration...')
+  // await migrateHeader(client)
+ // log('🔄 Migrating destinations from JSON files...')
+ // await migrateDestinations(client)
+  
+   log('🔄 Migrating categories from JSON files...')
+   await migrateCategories(client)
 
   log('Seed completed')
 }
