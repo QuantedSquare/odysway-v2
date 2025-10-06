@@ -1,0 +1,16 @@
+{
+  "migrationType": "team",
+  "timestamp": "2025-10-06T12:57:28.064Z",
+  "duration": "0.94s",
+  "summary": {
+    "totalDocuments": 7,
+    "successful": 7,
+    "failed": 0,
+    "imagesReferenced": 7,
+    "imagesMissing": 0,
+    "warnings": 0
+  },
+  "missingImages": [],
+  "failedDocuments": [],
+  "warnings": []
+}
