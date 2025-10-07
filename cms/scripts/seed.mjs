@@ -9,6 +9,7 @@ import migrateDestinations from './migrateDestinations.js'
 import migrateCategories from './migrateCategories.js'
 import migrateBlogs from './migrateBlogs.js'
 import linkBlogsToCategories from './linkBlogsToCategories.js'
+import linkBlogsToDestinations from './linkBlogsToDestinations.js'
 dotenv.config()
 
 const projectId = process.env.SANITY_PROJECT_ID || 'nu6yntji'
@@ -48,6 +49,9 @@ async function run() {
 
   log('🔄 Linking blogs to categories...')
   await linkBlogsToCategories(client)
+
+  log('🔄 Linking blogs to destinations...')
+  await linkBlogsToDestinations(client)
 
   log('Seed completed')
 }

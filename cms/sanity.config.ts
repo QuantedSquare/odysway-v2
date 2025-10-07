@@ -54,14 +54,48 @@ export default defineConfig({
                   ]),
               ),
             S.divider(),
+            S.listItem()
+              .title('Blog Posts')
+              .child(
+                S.list()
+                  .title('Blog Posts')
+                  .items([
+                    S.listItem()
+                      .title('All Blog Posts')
+                      .child(
+                        S.documentList()
+                          .title('All Blog Posts')
+                          .filter('_type == "blog"')
+                      ),
+                    S.listItem()
+                      .title('Category Blog Posts')
+                      .child(
+                        S.documentList()
+                          .title('Category Blog Posts')
+                          .filter('_type == "blog" && _id in *[_type == "category"].blog._ref')
+                      ),
+                    S.listItem()
+                      .title('Destination Blog Posts')
+                      .child(
+                        S.documentList()
+                          .title('Destination Blog Posts')
+                          .filter('_type == "blog" && _id in *[_type == "destination"].blog._ref')
+                      ),
+                    S.listItem()
+                      .title('Standalone Blog Posts')
+                      .child(
+                        S.documentList()
+                          .title('Standalone Blog Posts')
+                          .filter('_type == "blog" && !(_id in *[_type == "category"].blog._ref) && !(_id in *[_type == "destination"].blog._ref)')
+                      ),
+                  ]),
+              ),
+            S.divider(),
             S.documentTypeListItem('destination').title('Destinations'),
             S.documentTypeListItem('experience').title('Experiences'),
             S.documentTypeListItem('category').title('Categories'),
-            S.documentTypeListItem('blog').title('Blog Posts'),
             S.documentTypeListItem('region').title('Regions'),
             S.divider(),
-            S.documentTypeListItem('post').title('Posts'),
-            S.documentTypeListItem('user').title('Users'),
             S.documentTypeListItem('teamMember').title('Team Members'),
             S.documentTypeListItem('partner').title('Partners'),
             S.documentTypeListItem('review').title('Reviews'),

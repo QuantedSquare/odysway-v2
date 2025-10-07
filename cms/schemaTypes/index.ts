@@ -1,5 +1,3 @@
-import {postType} from './postType'
-import {userType} from './userType'
 import {categoryType} from './categoryType'
 import {blogType} from './blogType'
 import {regionType} from './regionType'
@@ -13,8 +11,6 @@ import {topsType} from './topsType'
 import {blockContent} from './blockContent'
 
 export const schemaTypes = [
-  postType,
-  userType,
   categoryType,
   blogType,
   regionType,
