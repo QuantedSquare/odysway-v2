@@ -67,8 +67,21 @@ export const blogType = defineType({
               {
                 name: 'link',
                 type: 'object',
-                title: 'Link',
+                title: 'External Link',
                 fields: [{name: 'href', type: 'url', title: 'URL'}],
+              },
+              {
+                name: 'internalLink',
+                type: 'object',
+                title: 'Internal Link / Anchor',
+                fields: [
+                  {
+                    name: 'href',
+                    type: 'string',
+                    title: 'Path or Anchor',
+                    description: 'E.g. /voyages/sri-lanka or #section-name',
+                  },
+                ],
               },
             ],
           },
