@@ -11,11 +11,18 @@ export const footerType = defineType({
       }
     }
   },
+  groups: [
+    {name: 'main', title: 'Main'},
+    {name: 'contact', title: 'Contact information'},
+    {name: 'social', title: 'Social media'},
+    {name: 'linksList', title: 'Links List'},
+  ],
   fields: [
     defineField({
       name: 'logo',
       title: 'Section Logo et description',
       type: 'object',
+      group: 'main',
       fields: [
         defineField({
           name: 'image',
@@ -34,6 +41,7 @@ export const footerType = defineType({
       name: 'team',
       title: 'Team Section',
       type: 'object',
+      group: 'main',
       fields: [
         defineField({
           name: 'image',
@@ -47,6 +55,7 @@ export const footerType = defineType({
       name: 'contact',
       title: 'Contact Information',
       type: 'object',
+      group: 'contact',
       fields: [
         defineField({
           name: 'ctaText',
@@ -86,37 +95,39 @@ export const footerType = defineType({
       name: 'social',
       title: 'Social Media Links',
       type: 'object',
-      fields: [
-        defineField({
-          name: 'facebook',
-          title: 'Lien Facebook',
-          type: 'url',
-          validation: Rule => Rule.uri({
-            scheme: ['https']
-          })
-        }),
-        defineField({
-          name: 'instagram',
-          title: 'Lien Instagram',
-          type: 'url',
-          validation: Rule => Rule.uri({
-            scheme: ['https']
-          })
-        }),
-        defineField({
-          name: 'tiktok',
-          title: 'Lien TikTok',
-          type: 'url',
-          validation: Rule => Rule.uri({
-            scheme: ['https']
-          })
-        })
-      ]
+      group: 'social',
+          fields: [
+            defineField({
+              name: 'facebook',
+              title: 'Lien Facebook',
+              type: 'url',
+              validation: Rule => Rule.uri({
+                scheme: ['https']
+              })
+            }),
+            defineField({
+              name: 'instagram',
+              title: 'Lien Instagram',
+              type: 'url',
+              validation: Rule => Rule.uri({
+                scheme: ['https']
+              })
+            }),
+            defineField({
+              name: 'tiktok',
+              title: 'Lien TikTok',
+              type: 'url',
+              validation: Rule => Rule.uri({
+                scheme: ['https']
+              })
+            })
+          ]
     }),
     defineField({
       name: 'linksList',
       title: 'Links List',
       type: 'object',
+      group: 'linksList',
       fields: [
         defineField({
           name: 'colonne1',
