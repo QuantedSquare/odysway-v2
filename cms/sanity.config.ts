@@ -57,6 +57,7 @@ export default defineConfig({
             S.documentTypeListItem('destination').title('Destinations'),
             S.documentTypeListItem('experience').title('Experiences'),
             S.documentTypeListItem('category').title('Categories'),
+            S.documentTypeListItem('blog').title('Blog Posts'),
             S.documentTypeListItem('region').title('Regions'),
             S.divider(),
             S.documentTypeListItem('post').title('Posts'),

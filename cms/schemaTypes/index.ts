@@ -1,6 +1,7 @@
 import {postType} from './postType'
 import {userType} from './userType'
 import {categoryType} from './categoryType'
+import {blogType} from './blogType'
 import {regionType} from './regionType'
 import {destinationType} from './destinationType'
 import {experienceType} from './experienceType'
@@ -15,6 +16,7 @@ export const schemaTypes = [
   postType,
   userType,
   categoryType,
+  blogType,
   regionType,
   destinationType,
   experienceType,

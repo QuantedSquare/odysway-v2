@@ -10,7 +10,7 @@ export const categoryType = defineType({
     {name: 'settings', title: 'Settings'},
   ],
   fields: [
-    // Basic Info
+    // Basic Info (from JSON)
     defineField({
       name: 'title',
       type: 'string',
@@ -31,95 +31,6 @@ export const categoryType = defineType({
       group: 'content',
     }),
     defineField({
-      name: 'description',
-      type: 'text',
-      rows: 3,
-      description: 'Short description for listings',
-      group: 'content',
-    }),
-    defineField({
-      name: 'image',
-      type: 'image',
-      options: {hotspot: true},
-      fields: [
-        {name: 'alt', type: 'string', title: 'Alt Text'} as any,
-      ],
-      group: 'content',
-    }),
-
-    // Rich Content (from MD)
-    defineField({
-      name: 'body',
-      title: 'Page Content',
-      type: 'array',
-      description: 'Rich content for the category landing page',
-      of: [
-        {
-          type: 'block',
-          styles: [
-            {title: 'Normal', value: 'normal'},
-            {title: 'H2', value: 'h2'},
-            {title: 'H3', value: 'h3'},
-            {title: 'H4', value: 'h4'},
-            {title: 'Quote', value: 'blockquote'},
-          ],
-          marks: {
-            decorators: [
-              {title: 'Strong', value: 'strong'},
-              {title: 'Emphasis', value: 'em'},
-            ],
-            annotations: [
-              {
-                name: 'link',
-                type: 'object',
-                title: 'Link',
-                fields: [
-                  {name: 'href', type: 'url', title: 'URL'},
-                ],
-              },
-            ],
-          },
-        },
-        {
-          type: 'image',
-          options: {hotspot: true},
-          fields: [
-            {name: 'alt', type: 'string', title: 'Alt Text'},
-            {name: 'caption', type: 'string', title: 'Caption'},
-          ],
-        },
-      ],
-      group: 'content',
-    }),
-
-    // Author & Publishing
-    defineField({
-      name: 'author',
-      type: 'reference',
-      to: [{type: 'teamMember'}],
-      description: 'Author of the category page content',
-      group: 'content',
-    }),
-    defineField({
-      name: 'published',
-      type: 'boolean',
-      initialValue: false,
-      group: 'settings',
-    }),
-    defineField({
-      name: 'publishedAt',
-      type: 'datetime',
-      group: 'settings',
-    }),
-    defineField({
-      name: 'showOnHome',
-      type: 'boolean',
-      initialValue: false,
-      group: 'settings',
-    }),
-
-    // SEO
-    defineField({
       name: 'seoTitle',
       type: 'string',
       title: 'SEO Title',
@@ -128,30 +39,26 @@ export const categoryType = defineType({
       group: 'seo',
     }),
     defineField({
-      name: 'seoDescription',
-      type: 'text',
-      title: 'SEO Description',
-      description: 'Description for search engines (max 160 chars)',
-      rows: 3,
-      validation: (rule) => rule.max(160),
-      group: 'seo',
+      name: 'image',
+      type: 'image',
+      options: {hotspot: true},
+      fields: [{name: 'alt', type: 'string', title: 'Alt Text'} as any],
+      group: 'content',
     }),
     defineField({
-      name: 'tags',
-      type: 'array',
-      of: [{type: 'string'}],
-      options: {
-        layout: 'tags',
-      },
-      group: 'seo',
-    }),
-
-    // Legacy fields (can be removed after migration if not needed)
-    defineField({
-      name: 'readingTime',
-      type: 'string',
-      description: 'Estimated reading time (e.g., "3 min")',
+      name: 'showOnHome',
+      type: 'boolean',
+      initialValue: false,
+      description: 'Display this category on the homepage',
       group: 'settings',
+    }),
+    defineField({
+      name: 'blog',
+      type: 'reference',
+      title: 'Blog Post',
+      description: 'The blog post associated with this category',
+      to: [{type: 'blog'}],
+      group: 'content',
     }),
   ],
   preview: {
@@ -162,4 +69,3 @@ export const categoryType = defineType({
     },
   },
 })
-
