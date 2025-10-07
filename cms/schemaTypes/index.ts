@@ -1,6 +1,7 @@
 import {blockContent} from './blockContent'
 import {categoryType} from './categoryType'
 import {checkoutType} from './checkoutType'
+import {ctasType} from './ctasType'
 import {destinationType} from './destinationType'
 import {experienceType} from './experienceType'
 import {footerType} from './footerType'
@@ -20,6 +21,7 @@ export const schemaTypes = [
   blockContent,
   categoryType,
   checkoutType,
+  ctasType,
   destinationType,
   experienceType,
   footerType,
