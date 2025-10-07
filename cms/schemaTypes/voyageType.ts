@@ -4,39 +4,53 @@ export const voyageType = defineType({
   name: 'voyage',
   title: 'Voyage',
   type: 'document',
+  groups: [
+    {name: 'basic', title: 'Informations de Base'},
+    {name: 'content', title: 'Contenu'},
+    {name: 'programme', title: 'Programme'},
+    {name: 'pricing', title: 'Tarifs'},
+    {name: 'housing', title: 'Hébergement'},
+    {name: 'media', title: 'Médias'},
+    {name: 'faq', title: 'FAQ'},
+    {name: 'seo', title: 'SEO'},
+  ],
   fields: [
-    defineField({name: 'published', type: 'boolean'}),
-    defineField({name: 'title', type: 'string', validation: (r) => r.required()}),
-    defineField({name: 'slug', type: 'slug', options: {source: 'title'}, validation: (r) => r.required()}),
+    defineField({name: 'published', type: 'boolean', group: 'basic'}),
+    defineField({name: 'title', type: 'string', validation: (r) => r.required(), group: 'basic'}),
+    defineField({name: 'slug', type: 'slug', options: {source: 'title'}, validation: (r) => r.required(), group: 'basic'}),
     defineField({
       name: 'destinations',
       title: 'Destinations',
       type: 'array',
       of: [{type: 'reference', to: [{type: 'destination'}]}],
       validation: (r) => r.min(1),
+      group: 'basic'
     }),
-    defineField({name: 'groupeAvailable', type: 'boolean'}),
-    defineField({name: 'privatisationAvailable', type: 'boolean'}),
-    defineField({name: 'customAvailable', type: 'boolean'}),
+    defineField({name: 'groupeAvailable', type: 'boolean', group: 'basic'}),
+    defineField({name: 'privatisationAvailable', type: 'boolean', group: 'basic'}),
+    defineField({name: 'customAvailable', type: 'boolean', group: 'basic'}),
     defineField({
       name: 'experienceType',
       title: 'Experience',
       type: 'reference',
       to: [{type: 'experience'}],
+      group: 'basic'
     }),
-    defineField({name: 'level', type: 'string'}),
+    defineField({name: 'level', type: 'string', group: 'basic'}),
     defineField({
       name: 'categories',
       type: 'array',
       of: [{type: 'reference', to: [{type: 'category'}]}],
+      group: 'basic'
     }),
-    defineField({name: 'duration', type: 'number'}),
-    defineField({name: 'nights', type: 'number'}),
-    defineField({name: 'includeFlight', type: 'boolean'}),
-    defineField({name: 'housingType', type: 'string'}),
+    defineField({name: 'duration', type: 'number', group: 'basic'}),
+    defineField({name: 'nights', type: 'number', group: 'basic'}),
+    defineField({name: 'includeFlight', type: 'boolean', group: 'basic'}),
+    defineField({name: 'housingType', type: 'string', group: 'basic'}),
     defineField({
       name: 'idealPeriods',
       type: 'object',
+      group: 'basic',
       fields: [
         {name: 'toutePeriodes', type: 'boolean'} as any,
         {name: 'janvier', type: 'boolean'} as any,
@@ -56,6 +70,7 @@ export const voyageType = defineType({
     defineField({
       name: 'monthlyAvailability',
       type: 'object',
+      group: 'basic',
       fields: [
         {name: 'toutePeriodes', type: 'boolean'} as any,
         {name: 'janvier', type: 'boolean'} as any,
@@ -72,30 +87,33 @@ export const voyageType = defineType({
         {name: 'decembre', type: 'boolean'} as any,
       ],
     }),
-    defineField({name: 'minAge', type: 'number', initialValue: 8}),
-    defineField({name: 'rating', type: 'number'}),
-    defineField({name: 'comments', type: 'number'}),
-    defineField({name: 'miniatureDisplay', type: 'string'}),
+    defineField({name: 'minAge', type: 'number', initialValue: 8, group: 'basic'}),
+    defineField({name: 'rating', type: 'number', group: 'basic'}),
+    defineField({name: 'comments', type: 'number', group: 'basic'}),
+    defineField({name: 'miniatureDisplay', type: 'string', group: 'basic'}),
     defineField({
       name: 'authorNote',
       type: 'object',
+      group: 'content',
       fields: [
-        {name: 'text', type: 'array', of: [{type: 'block'}]} as any,
-        {name: 'author', type: 'reference', to: [{type: 'teamMember'}]} as any,
-        {name: 'affixeAuthor', type: 'string'} as any,
+        {name: 'text', type: 'text'},
+        {name: 'author', type: 'reference', to: [{type: 'teamMember'}]},
+        {name: 'affixeAuthor', type: 'string'},
       ],
     }),
     defineField({
       name: 'experiencesBlock',
       type: 'array',
       of: [{type: 'string'}],
+      group: 'content'
     }),
-    defineField({name: 'description', type: 'array', of: [{type: 'block'}]}),
-    defineField({name: 'emailDescription', type: 'text'}),
-    defineField({name: 'metaDescription', type: 'text'}),
+    defineField({name: 'description', type: 'text', group: 'content'}),
+    defineField({name: 'emailDescription', type: 'text', group: 'content'}),
+    defineField({name: 'metaDescription', type: 'text', group: 'content'}),
     defineField({
       name: 'badgeSection',
       type: 'object',
+      group: 'content',
       fields: [
         {name: 'groupeBadge', type: 'object', fields: [
           {name: 'text', type: 'string'} as any,
@@ -122,12 +140,13 @@ export const voyageType = defineType({
     defineField({
       name: 'programmeBlock',
       type: 'array',
+      group: 'programme',
       of: [{
         type: 'object',
         fields: [
           {name: 'title', type: 'string'} as any,
           {name: 'badgeText', type: 'string'} as any,
-          {name: 'description', type: 'array', of: [{type: 'block'}]} as any,
+          {name: 'description', type: 'text'} as any,
           {name: 'photo', type: 'image', options: {hotspot: true}} as any,
           {name: 'denivellation', type: 'string'} as any,
           {name: 'road', type: 'string'} as any,
@@ -138,6 +157,7 @@ export const voyageType = defineType({
     defineField({
       name: 'pricingDetailsBlock',
       type: 'object',
+      group: 'pricing',
       fields: [
         {name: 'include', type: 'array', of: [{type: 'string'}]} as any,
         {name: 'exclude', type: 'array', of: [{type: 'string'}]} as any,
@@ -146,6 +166,7 @@ export const voyageType = defineType({
     defineField({
       name: 'pricing',
       type: 'object',
+      group: 'pricing',
       fields: [
         {name: 'startingPrice', type: 'number'} as any,
         {name: 'lastMinuteAvailable', type: 'boolean'} as any,
@@ -164,15 +185,16 @@ export const voyageType = defineType({
         {name: 'airportCode', type: 'array', of: [{type: 'string'}]} as any,
       ],
     }),
-    defineField({name: 'accompanistsDescription', type: 'string'}),
+    defineField({name: 'accompanistsDescription', type: 'string', group: 'housing'}),
     defineField({
       name: 'accompanistsList',
       type: 'array',
+      group: 'housing',
       of: [{
         type: 'object',
         fields: [
           {name: 'name', type: 'string'} as any,
-          {name: 'description', type: 'array', of: [{type: 'block'}]} as any,
+          {name: 'description', type: 'text'} as any,
           {name: 'role', type: 'string'} as any,
           {name: 'image', type: 'image', options: {hotspot: true}} as any,
         ],
@@ -181,19 +203,14 @@ export const voyageType = defineType({
     defineField({
       name: 'housingBlock',
       type: 'array',
+      group: 'housing',
       of: [{
         type: 'object',
         fields: [
           {name: 'title', type: 'string'} as any,
           {name: 'housingType', type: 'string'} as any,
           {name: 'housingMood', type: 'string'} as any,
-          {name: 'image', type: 'array', of: [{
-            type: 'object',
-            fields: [
-              {name: 'src', type: 'image', options: {hotspot: true}} as any,
-              {name: 'alt', type: 'string'} as any,
-            ],
-          }]} as any,
+          {name: 'image', type: 'array', of: [{type: 'image', options: {hotspot: true}, fields: [{name: 'alt', type: 'string'} as any]}]} as any,
         ],
       }],
     }),
@@ -201,29 +218,33 @@ export const voyageType = defineType({
       name: 'image',
       type: 'image',
       options: {hotspot: true},
+      group: 'media',
       fields: [{name: 'alt', type: 'string'} as any],
     }),
     defineField({
       name: 'imageSecondary',
       type: 'image',
       options: {hotspot: true},
+      group: 'media',
       fields: [{name: 'alt', type: 'string'} as any],
     }),
     defineField({
       name: 'photosList',
       type: 'array',
-      of: [{type: 'image', options: {hotspot: true}}],
+      group: 'media',
+      of: [{type: 'image', options: {hotspot: true}, fields: [{name: 'alt', type: 'string'} as any]}],
     }),
-    defineField({name: 'videoLinks', type: 'array', of: [{type: 'url'}]}),
+    defineField({name: 'videoLinks', type: 'array', of: [{type: 'url'}], group: 'media'}),
     defineField({
       name: 'faqBlock',
       type: 'object',
+      group: 'faq',
       fields: [
         {name: 'faqList', type: 'array', of: [{
           type: 'object',
           fields: [
             {name: 'question', type: 'string'} as any,
-            {name: 'answer', type: 'array', of: [{type: 'block'}]} as any,
+            {name: 'answer', type: 'text'} as any,
           ],
         }]} as any,
       ],
@@ -231,14 +252,15 @@ export const voyageType = defineType({
     defineField({
       name: 'seoSection',
       type: 'object',
+      group: 'seo',
       fields: [
         {name: 'metaTitle', type: 'string'} as any,
         {name: 'canonicalUrl', type: 'url'} as any,
         {name: 'ogTitle', type: 'string'} as any,
-        {name: 'ogDescription', type: 'array', of: [{type: 'block'}]} as any,
+        {name: 'ogDescription', type: 'text'} as any,
         {name: 'ogImage', type: 'image', options: {hotspot: true}, fields: [{name: 'alt', type: 'string'} as any]} as any,
         {name: 'twitterTitle', type: 'string'} as any,
-        {name: 'twitterDescription', type: 'array', of: [{type: 'block'}]} as any,
+        {name: 'twitterDescription', type: 'text'} as any,
         {name: 'twitterImage', type: 'image', options: {hotspot: true}, fields: [{name: 'alt', type: 'string'} as any]} as any,
         {name: 'twitterCard', type: 'string'} as any,
       ],
