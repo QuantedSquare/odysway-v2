@@ -18,13 +18,9 @@ export const checkoutType = defineType({
     {name: 'navigation', title: 'Navigation'},
   ],
   preview: {
-    select: {
-      title: 'first_step.title'
-    },
-    prepare(selection) {
-      const {title} = selection
+    prepare() {
       return {
-        title: title || 'Checkout',
+        title: 'Checkout',
         subtitle: 'Textes pour le processus de checkout'
       }
     }
