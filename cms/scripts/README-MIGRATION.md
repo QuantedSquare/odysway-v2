@@ -202,3 +202,13 @@ Check `failedDocuments` in the report for error details.
 - Image asset mapping is cached in memory (fast lookups)
 - Use transactions for batch operations
 - Add delays between API calls if hitting rate limits
+
+
+### List of entities to update manually
+
+- page_thematiques ->thematiques.json
+- voyage_card -> voyageCard.json
+- search -> search.json and searchField.json
+- newsletter -> newsletter.json
+- partner -> partner.json
+- blog -> blog.json
