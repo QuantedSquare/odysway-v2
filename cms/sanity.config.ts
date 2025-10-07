@@ -60,8 +60,6 @@ export default defineConfig({
             S.documentTypeListItem('blog').title('Blog Posts'),
             S.documentTypeListItem('region').title('Regions'),
             S.divider(),
-            S.documentTypeListItem('post').title('Posts'),
-            S.documentTypeListItem('user').title('Users'),
             S.documentTypeListItem('teamMember').title('Team Members'),
             S.documentTypeListItem('partner').title('Partners'),
             S.documentTypeListItem('review').title('Reviews'),

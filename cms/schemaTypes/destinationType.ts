@@ -27,6 +27,13 @@ export const destinationType = defineType({
       ],
     }),
     defineField({name: 'isTopDestination', type: 'boolean', initialValue: false}),
+    defineField({
+      name: 'blog',
+      type: 'reference',
+      title: 'Blog Post',
+      description: 'The blog post associated with this destination',
+      to: [{type: 'blog'}],
+    }),
   ],
 })
 
