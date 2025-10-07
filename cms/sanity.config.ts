@@ -79,6 +79,7 @@ export default defineConfig({
                  S.documentTypeListItem('checkout').title('Checkout'),
                  S.documentTypeListItem('page_contact').title('Page Contact'),
                  S.documentTypeListItem('ctas').title('CTAs'),
+                 S.documentTypeListItem('devis').title('Devis'),
                      // S.documentTypeListItem('page_voyage_fr').title('Page Voyage'),
                     // S.documentTypeListItem('page_search').title('Page Recherche'),
                     // S.documentTypeListItem('page_contact').title('Page Contact'),

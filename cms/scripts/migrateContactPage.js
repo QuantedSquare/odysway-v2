@@ -1,9 +1,7 @@
 import fs from 'node:fs';
 import {log, error} from 'node:console'
-import path from 'node:path'
 import process from 'node:process'
 import { createId } from './utils/createId.js'
-import { buildImageAssetMapping, convertImageReference } from './imageAssetHelper.js'
 import { MigrationReporter } from './migrationReporter.js'
 
 const contactFilePath = '../content/textes/fr/contact.json'
@@ -11,9 +9,6 @@ const contactFilePath = '../content/textes/fr/contact.json'
 export default async function migrateContactPage(client) {
   // Create reporter
   const reporter = new MigrationReporter('contact-page')
-
-  // Build image asset mapping once at the start
-  const assetMapping = await buildImageAssetMapping(client)
 
   try {
     log(`Starting contact page migration...`)

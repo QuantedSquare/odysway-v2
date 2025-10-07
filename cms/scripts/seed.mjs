@@ -14,11 +14,12 @@ import migrateHeader from './migrateHeader.js'
 import migrateCheckoutPage from './migrateCheckoutPage.js'
 import migrateContactPage from './migrateContactPage.js'
 import migrateCtas from './migrateCtas.js'
+import migrateDevisPage from './migrateDevisPage.js'
 dotenv.config()
 
 const projectId = process.env.SANITY_PROJECT_ID || 'nu6yntji'
 const dataset = process.env.SANITY_DATASET || 'production'
-const token = process.env.SANITY_WRITE_TOKEN
+const token = process.env.SANITY_WRITE_TOKEN 
 
 if (!token) {
   error('Missing SANITY_WRITE_TOKEN environment variable. Create a token with write access in the Sanity project settings and set it before running the seed.')
@@ -68,8 +69,11 @@ async function run() {
   // log('🔄 Migrating contact page configuration...')
   // await migrateContactPage(client)
 
-  log('🔄 Migrating CTAs configuration...')
-  await migrateCtas(client)
+  // log('🔄 Migrating CTAs configuration...')
+  // await migrateCtas(client)
+
+  log('🔄 Migrating devis page configuration...')
+  await migrateDevisPage(client)
 
   log('Seed completed')
 }
