@@ -61,12 +61,34 @@ export default defineConfig({
             S.divider(),
             S.documentTypeListItem('post').title('Posts'),
             S.documentTypeListItem('user').title('Users'),
-            S.documentTypeListItem('teamMember').title('Team Members'),
-            S.documentTypeListItem('partner').title('Partners'),
             S.documentTypeListItem('review').title('Reviews'),
-            S.documentTypeListItem('tops').title('Tops'),
-            S.documentTypeListItem('header').title('Header'),
-            S.documentTypeListItem('footer').title('Footer'),
+            S.divider(),
+            S.documentTypeListItem('teamMember').title('Team Members'),
+            S.listItem()
+            .title('Textes')
+            .icon(() => '📝')
+            .child(
+              S.list()
+              .title('Textes')
+              .items([
+                S.documentTypeListItem('header').title('Header'),
+                S.documentTypeListItem('footer').title('Footer'),
+                S.documentTypeListItem('tops').title('Tops'),
+                S.documentTypeListItem('partner').title('Partners'),
+                S.documentTypeListItem('page_blog').title('Page Blog'),
+                    // S.documentTypeListItem('page_voyage_fr').title('Page Voyage'),
+                    // S.documentTypeListItem('page_search').title('Page Recherche'),
+                    // S.documentTypeListItem('page_contact').title('Page Contact'),
+                    // S.documentTypeListItem('page_experiences').title('Page Expériences'),
+                    // S.documentTypeListItem('page_thematiques').title('Page Thématiques'),
+                    // S.documentTypeListItem('ctas').title('CTAs'),
+                    // S.documentTypeListItem('checkout').title('Checkout'),
+                    // S.documentTypeListItem('devis').title('Devis'),
+                    // S.documentTypeListItem('search_field').title('Champ de Recherche'),
+                    // S.documentTypeListItem('voyage_card').title('Carte Voyage'),
+                    // S.documentTypeListItem('newsletter').title('Newsletter'),
+                  ]),
+              ),
             S.divider(),
             S.listItem()
               .title('Assets')
