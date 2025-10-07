@@ -1,0 +1,16 @@
+{
+  "migrationType": "contact-page",
+  "timestamp": "2025-10-07T08:32:51.240Z",
+  "duration": "1.97s",
+  "summary": {
+    "totalDocuments": 1,
+    "successful": 1,
+    "failed": 0,
+    "imagesReferenced": 0,
+    "imagesMissing": 0,
+    "warnings": 0
+  },
+  "missingImages": [],
+  "failedDocuments": [],
+  "warnings": []
+}

@@ -6,6 +6,7 @@ import {experienceType} from './experienceType'
 import {footerType} from './footerType'
 import {headerType} from './headerType'
 import {pageBlogType} from './pageBlogType'
+import {pageContactType} from './pageContactType'
 import {partnerType} from './partnerType'
 import {postType} from './postType'
 import {regionType} from './regionType'
@@ -24,6 +25,7 @@ export const schemaTypes = [
   footerType,
   headerType,
   pageBlogType,
+  pageContactType,
   partnerType,
   postType,
   regionType,
