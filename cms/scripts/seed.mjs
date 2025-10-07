@@ -11,6 +11,7 @@ import migrateExperiences from './migrateExperiences.js'
 import migrateTeam from './migrateTeam.js'
 import migrateFooter from './migrateFooter.js'
 import migrateHeader from './migrateHeader.js'
+import migrateCheckoutPage from './migrateCheckoutPage.js'
 dotenv.config()
 
 const projectId = process.env.SANITY_PROJECT_ID || 'nu6yntji'
@@ -56,8 +57,11 @@ async function run() {
  // log('🔄 Migrating destinations from JSON files...')
  // await migrateDestinations(client)
   
-   log('🔄 Migrating categories from JSON files...')
-   await migrateCategories(client)
+    // log('🔄 Migrating categories from JSON files...')
+    // await migrateCategories(client)
+
+  log('🔄 Migrating checkout page configuration...')
+  await migrateCheckoutPage(client)
 
   log('Seed completed')
 }
