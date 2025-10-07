@@ -9,6 +9,7 @@ import {footerType} from './footerType'
 import {headerType} from './headerType'
 import {pageBlogType} from './pageBlogType'
 import {pageContactType} from './pageContactType'
+import {pageExperiencesType} from './pageExperiencesType'
 import {partnerType} from './partnerType'
 import {postType} from './postType'
 import {regionType} from './regionType'
@@ -30,6 +31,7 @@ export const schemaTypes = [
   headerType,
   pageBlogType,
   pageContactType,
+  pageExperiencesType,
   partnerType,
   postType,
   regionType,

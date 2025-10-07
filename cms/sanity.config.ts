@@ -78,6 +78,7 @@ export default defineConfig({
                  S.documentTypeListItem('page_blog').title('Page Blog'),
                  S.documentTypeListItem('checkout').title('Checkout'),
                  S.documentTypeListItem('page_contact').title('Page Contact'),
+                 S.documentTypeListItem('page_experiences').title('Page Expériences'),
                  S.documentTypeListItem('ctas').title('CTAs'),
                  S.documentTypeListItem('devis').title('Devis'),
                      // S.documentTypeListItem('page_voyage_fr').title('Page Voyage'),

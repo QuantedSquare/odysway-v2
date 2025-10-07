@@ -15,6 +15,7 @@ import migrateCheckoutPage from './migrateCheckoutPage.js'
 import migrateContactPage from './migrateContactPage.js'
 import migrateCtas from './migrateCtas.js'
 import migrateDevisPage from './migrateDevisPage.js'
+import migrateExperiencesPage from './migrateExperiencesPage.js'
 dotenv.config()
 
 const projectId = process.env.SANITY_PROJECT_ID || 'nu6yntji'
@@ -72,8 +73,11 @@ async function run() {
   // log('🔄 Migrating CTAs configuration...')
   // await migrateCtas(client)
 
-  log('🔄 Migrating devis page configuration...')
-  await migrateDevisPage(client)
+  // log('🔄 Migrating devis page configuration...')
+  // await migrateDevisPage(client)
+
+  log('🔄 Migrating experiences page configuration...')
+  await migrateExperiencesPage(client)
 
   log('Seed completed')
 }
