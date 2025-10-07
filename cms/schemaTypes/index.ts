@@ -15,6 +15,7 @@ import {partnerType} from './partnerType'
 import {postType} from './postType'
 import {regionType} from './regionType'
 import {reviewType} from './reviewType'
+import {searchFieldType} from './searchFieldType'
 import {teamMemberType} from './teamMemberType'
 import {topsType} from './topsType'
 import {userType} from './userType'
@@ -38,6 +39,7 @@ export const schemaTypes = [
   postType,
   regionType,
   reviewType,
+  searchFieldType,
   teamMemberType,
   topsType,
   userType,
