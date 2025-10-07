@@ -10,6 +10,7 @@ import {headerType} from './headerType'
 import {pageBlogType} from './pageBlogType'
 import {pageContactType} from './pageContactType'
 import {pageExperiencesType} from './pageExperiencesType'
+import {pageThematiquesType} from './pageThematiquesType'
 import {newsletterType} from './newsletterType'
 import {partnerType} from './partnerType'
 import {postType} from './postType'
@@ -19,6 +20,7 @@ import {searchPageType} from './searchPageType'
 import {teamMemberType} from './teamMemberType'
 import {topsType} from './topsType'
 import {userType} from './userType'
+import {voyageCardType} from './voyageCardType'
 import {voyageType} from './voyageType'
 
 export const schemaTypes = [
@@ -34,6 +36,7 @@ export const schemaTypes = [
   pageBlogType,
   pageContactType,
   pageExperiencesType,
+  pageThematiquesType,
   newsletterType,
   partnerType,
   postType,
@@ -43,5 +46,6 @@ export const schemaTypes = [
   teamMemberType,
   topsType,
   userType,
+  voyageCardType,
   voyageType,
 ]
