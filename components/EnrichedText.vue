@@ -61,7 +61,6 @@ const components = {
     link: (props: { value?: { href?: string, openInNewTab?: boolean }, text?: unknown }) => {
       const target = props.value?.openInNewTab ? '_blank' : undefined
       const rel = props.value?.openInNewTab ? 'noopener noreferrer' : undefined
-      console.log(props)
       return h('a', {
         href: props.value?.href,
         target,

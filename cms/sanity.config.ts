@@ -3,6 +3,7 @@ import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemaTypes'
 import {media} from 'sanity-plugin-media'
+import {orderableDocumentListDeskItem} from '@sanity/orderable-document-list'
 
 export default defineConfig({
   name: 'default',
@@ -16,7 +17,7 @@ export default defineConfig({
   plugins: [
    
     structureTool({
-      structure: (S) =>
+      structure: (S, context) =>
         S.list()
           .title('Content')
           .items([
@@ -99,7 +100,13 @@ export default defineConfig({
             S.documentTypeListItem('teamMember').title('Team Members'),
             S.documentTypeListItem('partner').title('Partners'),
             S.documentTypeListItem('review').title('Reviews'),
-            S.documentTypeListItem('tops').title('Tops'),
+            orderableDocumentListDeskItem({
+              type: 'tops',
+              title: 'Tops',
+              icon: () => '★',
+              S,
+              context,
+            }),
             S.divider(),
             S.listItem()
               .title('Assets')

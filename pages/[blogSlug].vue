@@ -83,11 +83,12 @@ const {
   errorSanity,
   pending,
 } = await useAsyncData(
-  `category-${slug.value}`,
+  `blog-${slug.value}`,
   async () => {
     const { data } = await useSanityQuery(blogQuery, {
       slug: slug.value,
     })
+    console.log(data.value)
     return data.value
   },
   {
@@ -101,18 +102,18 @@ const {
 console.log(blogSanity.value)
 
 const dataToPage = reactive({
-  title: blogSanity.value.title,
-  displayedImg: blogSanity.value.displayedImg.asset.url,
-  author: blogSanity.value.author.name,
-  authorPhoto: blogSanity.value.author.image.asset.url,
-  authorRole: blogSanity.value.author.position,
-  published: blogSanity.value.published,
-  publishedAt: blogSanity.value.publishedAt,
-  tags: blogSanity.value.tags,
-  categories: blogSanity.value.legacyCategories,
-  blogType: blogSanity.value.blogType,
-  badgeColor: blogSanity.value.badgeColor,
-  readingTime: blogSanity.value.readingTime,
+  title: blogSanity.value?.title,
+  displayedImg: blogSanity.value?.displayedImg?.asset?.url,
+  author: blogSanity.value?.author?.name,
+  authorPhoto: blogSanity.value?.author?.image?.asset?.url,
+  authorRole: blogSanity.value?.author?.position,
+  published: blogSanity.value?.published,
+  publishedAt: blogSanity.value?.publishedAt,
+  tags: blogSanity.value?.tags,
+  categories: blogSanity.value?.legacyCategories,
+  blogType: blogSanity.value?.blogType,
+  badgeColor: blogSanity.value?.badgeColor,
+  readingTime: blogSanity.value?.readingTime,
 })
 
 console.log('dataToPage', dataToPage)

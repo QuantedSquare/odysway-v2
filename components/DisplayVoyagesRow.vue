@@ -47,8 +47,8 @@
       name="list"
     >
       <v-col
-        v-for="voyage in displayedVoyages"
-        :key="voyage.id"
+        v-for="voyage, index in displayedVoyages"
+        :key="index"
         cols="12"
         sm="6"
         lg="4"
@@ -124,18 +124,6 @@
       <CtaCardSheet />
     </v-col>
   </v-row>
-  <!-- <v-row
-    v-if="voyages && voyages.length > 9 && (selectedCategory || selectedExperience || isSearch)"
-    justify="center"
-    align="center"
-    class="flex-column my-4 mb-md-6 mt-md-16"
-  >
-    <span class="text-h5 text-md-h4 font-weight-bold ">{{ expandButtonText }}</span>
-    <BouncingBtn
-      v-model="isExpanded"
-    />
-  </v-row> -->
-  <!---------------------------------------------------------------------->
 </template>
 
 <script setup>
@@ -190,7 +178,7 @@ const displayedVoyages = computed(() => {
   // return voyagesWithCta.value.slice(0, isExpanded.value ? voyagesWithCta.value.length : 9)
   return voyagesWithCta.value
 })
-
+console.log('displayedVoyages', displayedVoyages.value)
 const noVoyagesFoundCategoryText = computed(() => {
   if (props.pageContent?.slug?.noVoyagesFound && props.selectedCategory?.title) {
     return props.pageContent.slug.noVoyagesFound.replace('{{title}}', props.selectedCategory.title)

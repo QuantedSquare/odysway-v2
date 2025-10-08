@@ -27,7 +27,6 @@ export default defineNuxtConfig({
   ],
   devtools: {
     enabled: false, // to avoid build problem "Pre-transform error: spawn EBADF"
-
     timeline: {
       enabled: true,
     },
@@ -90,6 +89,9 @@ export default defineNuxtConfig({
   // ot sure this improve a lot.
   features: {
     inlineStyles: false,
+  },
+  experimental: {
+    payloadExtraction: true,
   },
   compatibilityDate: '2024-11-01',
   nitro: {

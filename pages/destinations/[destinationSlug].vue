@@ -1,25 +1,44 @@
 <template>
   <ContentLayout
     :is-destination="true"
-    :selected-destination="selectedDestination"
+    :selected-destination="destinationSanity"
     :display-divider="true"
   >
     <template #content>
       <div>
         <DisplayVoyagesRow
           :is-search="true"
-          :voyages="voyages"
+          :voyages="destinationSanity.voyages"
         />
       </div>
-      <template
-        v-if="destinationContentStatus === 'success' && destinationContent"
+      <BlogHeroSection
+        v-if="destinationSanity.blog"
+        :title="destinationSanity.blog.title"
+        :description="destinationSanity.blog.description"
+        :image="destinationSanity.blog.displayedImg"
+        :background-color="'soft-blush'"
+        introduction-color="grey"
+        title-color="primary"
+        avatar-size="60"
       >
-        <ContentRenderer
-          v-if="
-            destinationContent"
-          :value="destinationContent"
-        />
-      </template>
+        <template #title>
+          {{ destinationSanity.blog.title }}
+        </template>
+        <template #introduction>
+          {{ destinationSanity.blog.description }}
+        </template>
+      </BlogHeroSection>
+      <SectionContainer
+        v-if="destinationSanity.blog"
+        :title="'categorySanity.blog.title'"
+        :subtitle="'categorySanity.blog.excerpt'"
+      >
+        <template #content>
+          <EnrichedText
+            :value="destinationSanity.blog.body"
+          />
+        </template>
+      </SectionContainer>
     </template>
   </ContentLayout>
 </template>
@@ -30,60 +49,84 @@ import _ from 'lodash'
 const route = useRoute()
 const slug = computed(() => route.params.destinationSlug)
 
-const { data: destinations } = useAsyncData('destinations', () => {
-  return queryCollection('destinations').where('published', '=', true).all()
-})
-const { data: regions } = useAsyncData('regions', () => {
-  return queryCollection('regions').all()
-})
-
-const selectedDestination = computed(() => {
-  return destinations.value?.find(d => d.slug === slug.value)
-})
-
-const selectedRegion = computed(() => {
-  return regions.value?.find(r => r.slug === slug.value)
-})
-
-const isRegion = computed(() => !!selectedRegion.value)
-const isDestination = computed(() => !!selectedDestination.value)
-
-const destinationsInRegion = computed(() => {
-  if (!isRegion.value) return []
-  return destinations.value?.filter(dest =>
-    dest.regions && dest.regions.some(r => r.nom === selectedRegion.value?.nom),
-  ) || []
-})
-
-const { data: destinationContent, status: destinationContentStatus } = useAsyncData('destinationContent', async () => {
-  const destinationJSON = await queryCollection('destinations').where('slug', '=', slug.value).first()
-  const pathParts = destinationJSON.stem.split('/')
-  const destinationPath = pathParts.slice(0, 2).join('/')
-  return queryCollection('destinationsContent').where('stem', 'LIKE', `${destinationPath}/%`).where('published', '=', true).first()
+const destinationQuery = `
+  *[_type == "destination" && slug.current == $slug][0]{
+    ...,
+    "voyages": *[_type == "voyage" && references(^._id)]{
+      ...,
+      image{
+        asset->{
+          url
+        }
+      }
+    },
+    blog->{
+      ...,
+      displayedImg{
+        asset->{
+          url
+        }
+      },
+      author->{
+        _id,
+        name,
+        image{
+          asset->{
+            url
+          }
+        },
+        position
+      },
+      body[]{
+        ...,
+        _type == "image" => {
+          ...,
+          asset->{
+            _id,
+            url,
+            metadata
+          }
+        }
+      }
+    }
+  }
+`
+const { data: destinationSanity } = await useAsyncData('destinationSanity', async () => {
+  const { data } = await useSanityQuery(destinationQuery, {
+    slug: slug.value,
+  })
+  return data.value
 }, {
   watch: [slug],
+  server: true,
+  getCachedData: (key) => {
+    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
+  },
+  transform: (data) => {
+    console.log('DATA DESTINATION  SANITY', data)
+    const transformedData = { ...data, voyages: data.voyages?.map(voyage => ({ ...voyage, image: { src: voyage.image?.asset?.url, alt: voyage.image?.alt } })) }
+    console.log('TRANSFORMED DATA', transformedData)
+    return transformedData
+  },
 })
-provide('page', destinationContent)
+console.log('DATA DESTINATION  SANITY', destinationSanity.value)
 
-const { data: voyages } = useAsyncData(`voyages-${slug.value}`, async () => {
-  const travelList = await queryCollection('voyages').where('published', '=', true).all()
-  let filtered = []
-  if (isDestination.value) {
-    const destinationName = selectedDestination.value?.title
-    filtered = travelList.filter(v => v.destinations?.some(d => d.name.includes(destinationName)))
-  }
-  else if (isRegion.value) {
-    const destinationNames = destinationsInRegion.value?.map(d => d.title) || []
-
-    filtered = travelList.filter(v =>
-      v.destinations?.some(d => destinationNames.includes(d.name)),
-    )
-  }
-  return _.uniqBy(filtered, 'slug')
-}, {
-  watch: [slug, isDestination, isRegion, destinationsInRegion, selectedDestination, selectedRegion],
+const dataToBlog = reactive({
+  title: destinationSanity.value?.blog?.title,
+  displayedImg: destinationSanity.value?.blog?.displayedImg?.asset?.url,
+  author: destinationSanity.value?.blog?.author?.name,
+  authorPhoto: destinationSanity.value?.blog?.author?.image?.asset?.url,
+  authorRole: destinationSanity.value?.blog?.author?.position,
+  published: destinationSanity.value?.blog?.published,
+  publishedAt: destinationSanity.value?.blog?.publishedAt,
+  tags: destinationSanity.value?.blog?.tags,
+  categories: destinationSanity.value?.blog?.legacyCategories,
+  blogType: destinationSanity.value?.blog?.blogType,
+  badgeColor: destinationSanity.value?.blog?.badgeColor,
+  readingTime: destinationSanity.value?.blog?.readingTime,
 })
 
+provide('page', dataToBlog)
 useHead({
   htmlAttrs: {
     lang: 'fr',

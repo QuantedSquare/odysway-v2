@@ -1,10 +1,39 @@
 <template>
+  <!-- Loading State -->
   <v-container
+    v-if="pending"
+    fluid
+    class="rounded-lg px-md-12 py-md-8 mt-4 mt-md-8 bg-primary max-container-width d-flex justify-center align-center"
+    style="min-height: 300px;"
+  >
+    <v-progress-circular
+      indeterminate
+      color="white"
+      size="48"
+    />
+  </v-container>
+
+  <!-- Error State -->
+  <v-container
+    v-else-if="error"
+    fluid
+    class="rounded-lg px-md-12 py-md-8 mt-4 mt-md-8 bg-primary max-container-width"
+  >
+    <v-alert
+      type="error"
+      variant="tonal"
+    >
+      Impossible de charger les idées de voyages. Veuillez réessayer plus tard.
+    </v-alert>
+  </v-container>
+
+  <!-- Content State -->
+  <v-container
+    v-else-if="data && data.length > 0"
     fluid
     class="rounded-lg px-md-12 py-md-8 mt-4 mt-md-8 bg-primary max-container-width "
   >
     <div class="text-h3 font-weight-bold my-4">
-      <!-- #TODO: add title from NUXT -->
       Des idées pour vos prochains voyages
     </div>
 
@@ -17,7 +46,7 @@
         :aria-label="`Navigation des idées de voyages`"
       >
         <v-tab
-          v-for="top, index in tops"
+          v-for="top, index in data"
           :id="`tab-${index}`"
           :key="index"
           :value="index"
@@ -55,7 +84,7 @@
       >
         <v-row class=" mb-4 mb-md-10  flex-nowrap overflow-auto hidden-scroll">
           <v-col
-            v-for="section, index in tops[currentTab].contenuOnglet"
+            v-for="section, index in data[currentTab].contenuOnglet"
             :key="`${section.title}-${index}`"
             md="2"
           >
@@ -85,7 +114,35 @@
 <script setup>
 const currentTab = ref(0)
 
-const tops = await queryCollection('tops').all()
+// Optimized GROQ query - fetch only required fields
+const topsQuery = `
+  *[_type == "tops"] {
+    _id,
+    title,
+    contenuOnglet[]{
+      title,
+      linksList[]{
+        title,
+        slug
+      }
+    }
+  }
+`
+
+// Fetch tops data with SSR support
+const { data, error, pending } = await useAsyncData(
+  'tops',
+  async () => {
+    const { data } = await useSanityQuery(topsQuery)
+    return data.value
+  },
+  {
+    // Reuse cached data on client-side navigation
+    getCachedData: (key) => {
+      return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
+    },
+  },
+)
 </script>
 
 <style scoped>
