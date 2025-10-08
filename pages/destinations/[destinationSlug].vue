@@ -103,9 +103,7 @@ const { data: destinationSanity } = await useAsyncData('destinationSanity', asyn
     return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
   },
   transform: (data) => {
-    console.log('DATA DESTINATION  SANITY', data)
     const transformedData = { ...data, voyages: data.voyages?.map(voyage => ({ ...voyage, image: { src: voyage.image?.asset?.url, alt: voyage.image?.alt } })) }
-    console.log('TRANSFORMED DATA', transformedData)
     return transformedData
   },
 })

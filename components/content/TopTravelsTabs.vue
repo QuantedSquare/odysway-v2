@@ -116,7 +116,7 @@ const currentTab = ref(0)
 
 // Optimized GROQ query - fetch only required fields
 const topsQuery = `
-  *[_type == "tops"] {
+  *[_type == "tops"]|order(orderRank) {
     _id,
     title,
     contenuOnglet[]{
