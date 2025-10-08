@@ -124,6 +124,15 @@ export default defineConfig({
                 S.documentTypeListItem('voyage_card').title('Carte Voyage'),
                 ]),
               ),
+              S.listItem()
+              .title('Autres pages')
+              .child(
+                S.list()
+                  .title('Autres pages')
+                  .items([
+                S.documentTypeListItem('privacyPolicy').title('Politique de confidentialité'),
+              ]),
+            ),
             S.divider(),
             S.listItem()
               .title('Assets')

@@ -1,0 +1,16 @@
+{
+  "migrationType": "privacy-policy",
+  "timestamp": "2025-10-08T14:01:05.990Z",
+  "duration": "2.19s",
+  "summary": {
+    "totalDocuments": 1,
+    "successful": 1,
+    "failed": 0,
+    "imagesReferenced": 0,
+    "imagesMissing": 0,
+    "warnings": 0
+  },
+  "missingImages": [],
+  "failedDocuments": [],
+  "warnings": []
+}
