@@ -17,6 +17,7 @@ import migrateCtas from './migrateCtas.js'
 import migrateDevisPage from './migrateDevisPage.js'
 import migrateExperiencesPage from './migrateExperiencesPage.js'
 import migrateVoyages from './migrateVoyages.js'
+import migrateReviews from './migrateReviews.js'
 import migrateBlogs from './migrateBlogs.js'
 import linkBlogsToCategories from './linkBlogsToCategories.js'
 import linkBlogsToDestinations from './linkBlogsToDestinations.js'
@@ -84,8 +85,11 @@ async function run() {
   // log('🔄 Migrating experiences page configuration...')
   // await migrateExperiencesPage(client)
 
-  log('🔄 Migrating voyages...')
-  await migrateVoyages(client)
+  // log('🔄 Migrating voyages...')
+  // await migrateVoyages(client)
+
+  log('🔄 Migrating reviews...')
+  await migrateReviews(client)
 
   // log('🔄 Migrating categories from JSON files...')
   // await migrateCategories(client)

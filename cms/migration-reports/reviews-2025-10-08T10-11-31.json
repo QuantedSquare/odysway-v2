@@ -1,0 +1,16 @@
+{
+  "migrationType": "reviews",
+  "timestamp": "2025-10-08T10:11:31.788Z",
+  "duration": "213.30s",
+  "summary": {
+    "totalDocuments": 207,
+    "successful": 207,
+    "failed": 0,
+    "imagesReferenced": 0,
+    "imagesMissing": 0,
+    "warnings": 0
+  },
+  "missingImages": [],
+  "failedDocuments": [],
+  "warnings": []
+}

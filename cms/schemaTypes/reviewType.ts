@@ -8,7 +8,7 @@ export const reviewType = defineType({
     defineField({name: 'author', type: 'string'}),
     defineField({name: 'authorAge', type: 'string'}),
     defineField({name: 'date', type: 'date'}),
-    defineField({name: 'photo', type: 'image', options: {hotspot: true}}),
+    defineField({name: 'photo', type: 'image', options: {hotspot: true} }),
     defineField({name: 'rating', type: 'number'}),
     defineField({name: 'text', type: 'text'}),
     defineField({
