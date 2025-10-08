@@ -84,20 +84,20 @@ async function run() {
   // log('🔄 Migrating experiences page configuration...')
   // await migrateExperiencesPage(client)
 
-  // log('🔄 Migrating voyages...')
-  // await migrateVoyages(client)
+  log('🔄 Migrating voyages...')
+  await migrateVoyages(client)
 
-  log('🔄 Migrating categories from JSON files...')
-  await migrateCategories(client)
+  // log('🔄 Migrating categories from JSON files...')
+  // await migrateCategories(client)
 
-  log('🔄 Migrating blogs from MD files...')
-  await migrateBlogs(client)
+  // log('🔄 Migrating blogs from MD files...')
+  // await migrateBlogs(client)
 
-  log('🔄 Linking blogs to categories...')
-  await linkBlogsToCategories(client)
+  // log('🔄 Linking blogs to categories...')
+  // await linkBlogsToCategories(client)
 
-  log('🔄 Linking blogs to destinations...')
-  await linkBlogsToDestinations(client)
+  // log('🔄 Linking blogs to destinations...')
+  // await linkBlogsToDestinations(client)
 
   log('Seed completed')
 }

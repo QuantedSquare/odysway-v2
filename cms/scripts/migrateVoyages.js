@@ -7,7 +7,7 @@ import {buildImageAssetMapping, convertImageReference} from './imageAssetHelper.
 import {MigrationReporter} from './migrationReporter.js'
 
 // Configuration: Set to either a specific file path or the voyages directory
-const voyagesBasePath = '../content/voyages/1. France/sejour-berger-bearn.json'
+const voyagesBasePath = '../content/voyages/1. France'
 
 export default async function migrateVoyages(client) {
   // Create reporter
@@ -58,41 +58,29 @@ async function processSingleVoyageFile(filePath, client, assetMapping, reporter)
 
 // Function to process all voyages in a directory
 async function processVoyagesDirectory(basePath, client, assetMapping, reporter) {
-  // Get all voyage directories (excluding .md files)
-  const voyageDirs = fs
-    .readdirSync(basePath, {withFileTypes: true})
-    .filter((dirent) => dirent.isDirectory())
-    .map((dirent) => dirent.name)
+  // Get all JSON files directly in the directory (excluding .md files)
+  const jsonFiles = fs
+    .readdirSync(basePath)
+    .filter((file) => file.endsWith('.json'))
 
-  log(`Found ${voyageDirs.length} voyage directories: ${voyageDirs.join(', ')}`)
+  log(`Found ${jsonFiles.length} JSON files in ${basePath}: ${jsonFiles.join(', ')}`)
 
-  // Process each directory
-  for (const dirName of voyageDirs) {
-    const dirPath = path.join(basePath, dirName)
-    log(`Processing directory: ${dirName}`)
+  // Process each JSON file
+  for (const jsonFile of jsonFiles) {
+    try {
+      const filePath = path.join(basePath, jsonFile)
+      const voyage = JSON.parse(fs.readFileSync(filePath, 'utf8'))
+      reporter.incrementTotal()
 
-    // Get all JSON files in the directory
-    const jsonFiles = fs.readdirSync(dirPath).filter((file) => file.endsWith('.json'))
+      const voyageID = createId('voyage', voyage.slug || jsonFile.replace('.json', ''))
+      const voyageDoc = await prepareVoyageDocument(voyage, voyageID, assetMapping, client)
 
-    log(`Found ${jsonFiles.length} JSON files in ${dirName}`)
-
-    // Process each JSON file
-    for (const jsonFile of jsonFiles) {
-      try {
-        const filePath = path.join(dirPath, jsonFile)
-        const voyage = JSON.parse(fs.readFileSync(filePath, 'utf8'))
-        reporter.incrementTotal()
-
-        const voyageID = createId('voyage', voyage.slug || jsonFile.replace('.json', ''))
-        const voyageDoc = await prepareVoyageDocument(voyage, voyageID, assetMapping, client)
-
-        await client.createOrReplace(voyageDoc)
-        reporter.recordSuccess()
-        log(`✅ Successfully migrated voyage: ${voyage.title} (ID: ${voyageID})`)
-      } catch (fileErr) {
-        error(`Error processing file ${jsonFile}:`, fileErr.message)
-        reporter.recordFailure('file_processing', fileErr.message)
-      }
+      await client.createOrReplace(voyageDoc)
+      reporter.recordSuccess()
+      log(`✅ Successfully migrated voyage: ${voyage.title} (ID: ${voyageID})`)
+    } catch (fileErr) {
+      error(`Error processing file ${jsonFile}:`, fileErr.message)
+      reporter.recordFailure('file_processing', fileErr.message)
     }
   }
 }

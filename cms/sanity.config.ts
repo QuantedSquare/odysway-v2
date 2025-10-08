@@ -100,7 +100,6 @@ export default defineConfig({
             S.documentTypeListItem('partner').title('Partners'),
             S.documentTypeListItem('review').title('Reviews'),
             S.divider(),
-            S.documentTypeListItem('teamMember').title('Team Members'),
             S.listItem()
             .title('Textes')
             .icon(() => '📝')

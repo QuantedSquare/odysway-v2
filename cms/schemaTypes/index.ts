@@ -15,7 +15,6 @@ import {pageThematiquesType} from './pageThematiquesType'
 import {pageVoyageType} from './pageVoyageType'
 import {newsletterType} from './newsletterType'
 import {partnerType} from './partnerType'
-import {postType} from './postType'
 import {regionType} from './regionType'
 import {reviewType} from './reviewType'
 import {searchPageType} from './searchPageType'
@@ -42,7 +41,6 @@ export const schemaTypes = [
   pageVoyageType,
   newsletterType,
   partnerType,
-  postType,
   regionType,
   reviewType,
   searchPageType,
