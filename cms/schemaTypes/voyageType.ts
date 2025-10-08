@@ -6,18 +6,50 @@ export const voyageType = defineType({
   type: 'document',
   groups: [
     {name: 'basic', title: 'Informations de Base'},
-    {name: 'content', title: 'Contenu'},
+    {name: 'photoGallery', title: 'Galerie de Photos'},
+    {name: 'voyageDescription', title: 'Déscriptions du voyage'},
+    {name: 'badges', title: 'Badges'},
+    {name: 'availability', title: 'Disponibilités par Mois'},
+    {name: 'perfectPeriods', title: 'Périodes Idéales'},
+    {name: 'pricing', title: 'Informations sur le prix'},
+    {name: 'accompanists', title: 'Accompagnants'},
     {name: 'programme', title: 'Programme'},
-    {name: 'pricing', title: 'Tarifs'},
     {name: 'housing', title: 'Hébergement'},
-    {name: 'media', title: 'Médias'},
     {name: 'faq', title: 'FAQ'},
     {name: 'seo', title: 'SEO'},
   ],
   fields: [
-    defineField({name: 'published', type: 'boolean', group: 'basic'}),
-    defineField({name: 'title', type: 'string', validation: (r) => r.required(), group: 'basic'}),
-    defineField({name: 'slug', type: 'slug', options: {source: 'title'}, validation: (r) => r.required(), group: 'basic'}),
+    defineField({name: 'published', type: 'boolean', group: 'basic', title: 'Voyage publié'}),
+    defineField({name: 'title', type: 'string', validation: (r) => r.required(), group: 'basic', title: 'Titre du voyage'}),
+    defineField({name: 'slug', type: 'slug', options: {source: 'title'}, validation: (r) => r.required(), group: 'basic', title: 'Slug du voyage'}),
+    defineField({name: 'groupeAvailable', type: 'boolean', group: 'basic', title: 'Voyage disponible en groupe'}),
+    defineField({name: 'privatisationAvailable', type: 'boolean', group: 'basic', title: 'Voyage disponible en privatisation'}),
+    defineField({name: 'customAvailable', type: 'boolean', group: 'basic', title: 'Voyage disponible en sur-mesure'}),
+    defineField({name: 'level', type: 'string', group: 'basic', title: 'Niveau de difficulté'}),
+    defineField({name: 'duration', type: 'number', group: 'basic', title: 'Durée du voyage'}),
+    defineField({name: 'nights', type: 'number', group: 'basic', title: 'Nombre de nuits'}),
+    defineField({name: 'includeFlight', type: 'boolean', group: 'basic', title: 'Voyage inclut un vol'}),
+    defineField({name: 'housingType', type: 'string', group: 'basic', title: 'Type de logement'}),
+    defineField({name: 'minAge', type: 'number', initialValue: 8, group: 'basic', title: 'Age minimum'}),
+    defineField({name: 'rating', type: 'number', group: 'basic', title: 'Note moyenne'}),
+    defineField({name: 'comments', type: 'number', group: 'basic', title: 'Nombre de commentaires'}),
+    defineField({name: 'miniatureDisplay', type: 'string', group: 'basic', title: 'Miniature affichée'}),
+    defineField({
+      name: 'image',
+      type: 'image',
+      options: {hotspot: true},
+      group: 'basic',
+      fields: [{name: 'alt', type: 'string'} as any],
+      title: 'Image principale',
+    }),
+    defineField({
+      name: 'imageSecondary',
+      type: 'image',
+      options: {hotspot: true},
+      group: 'basic',
+      fields: [{name: 'alt', type: 'string'} as any],
+      title: 'Image secondaire',
+    }),
     defineField({
       name: 'destinations',
       title: 'Destinations',
@@ -26,9 +58,6 @@ export const voyageType = defineType({
       validation: (r) => r.min(1),
       group: 'basic'
     }),
-    defineField({name: 'groupeAvailable', type: 'boolean', group: 'basic'}),
-    defineField({name: 'privatisationAvailable', type: 'boolean', group: 'basic'}),
-    defineField({name: 'customAvailable', type: 'boolean', group: 'basic'}),
     defineField({
       name: 'experienceType',
       title: 'Experience',
@@ -36,21 +65,17 @@ export const voyageType = defineType({
       to: [{type: 'experience'}],
       group: 'basic'
     }),
-    defineField({name: 'level', type: 'string', group: 'basic'}),
     defineField({
       name: 'categories',
       type: 'array',
       of: [{type: 'reference', to: [{type: 'category'}]}],
       group: 'basic'
     }),
-    defineField({name: 'duration', type: 'number', group: 'basic'}),
-    defineField({name: 'nights', type: 'number', group: 'basic'}),
-    defineField({name: 'includeFlight', type: 'boolean', group: 'basic'}),
-    defineField({name: 'housingType', type: 'string', group: 'basic'}),
     defineField({
       name: 'idealPeriods',
       type: 'object',
-      group: 'basic',
+      title: 'Périodes idéales',
+      group: 'perfectPeriods',
       fields: [
         {name: 'toutePeriodes', type: 'boolean'} as any,
         {name: 'janvier', type: 'boolean'} as any,
@@ -70,7 +95,8 @@ export const voyageType = defineType({
     defineField({
       name: 'monthlyAvailability',
       type: 'object',
-      group: 'basic',
+      title: 'Disponibilités par mois',
+      group: 'availability',
       fields: [
         {name: 'toutePeriodes', type: 'boolean'} as any,
         {name: 'janvier', type: 'boolean'} as any,
@@ -87,14 +113,11 @@ export const voyageType = defineType({
         {name: 'decembre', type: 'boolean'} as any,
       ],
     }),
-    defineField({name: 'minAge', type: 'number', initialValue: 8, group: 'basic'}),
-    defineField({name: 'rating', type: 'number', group: 'basic'}),
-    defineField({name: 'comments', type: 'number', group: 'basic'}),
-    defineField({name: 'miniatureDisplay', type: 'string', group: 'basic'}),
     defineField({
       name: 'authorNote',
       type: 'object',
-      group: 'content',
+      title: 'Note de l\'auteur',
+      group: 'voyageDescription',
       fields: [
         {name: 'text', type: 'text'},
         {name: 'author', type: 'reference', to: [{type: 'teamMember'}]},
@@ -105,33 +128,35 @@ export const voyageType = defineType({
       name: 'experiencesBlock',
       type: 'array',
       of: [{type: 'string'}],
-      group: 'content'
+      group: 'voyageDescription',
+      title: 'Bloc expériences',
     }),
-    defineField({name: 'description', type: 'text', group: 'content'}),
-    defineField({name: 'emailDescription', type: 'text', group: 'content'}),
-    defineField({name: 'metaDescription', type: 'text', group: 'content'}),
+    defineField({name: 'description', type: 'text', group: 'voyageDescription', title: 'Description du voyage'}),
+    defineField({name: 'emailDescription', type: 'text', group: 'voyageDescription', title: 'Description email'}),
+    defineField({name: 'metaDescription', type: 'text', group: 'voyageDescription', title: 'Description méta'}),
     defineField({
       name: 'badgeSection',
       type: 'object',
-      group: 'content',
+      group: 'badges',
+      title: 'Badges',
       fields: [
-        {name: 'groupeBadge', type: 'object', fields: [
+        {name: 'groupeBadge', type: 'object', title: 'Badge groupe', fields: [
           {name: 'text', type: 'string'} as any,
           {name: 'visible', type: 'boolean'} as any,
         ]} as any,
-        {name: 'durationBadge', type: 'object', fields: [
+        {name: 'durationBadge', type: 'object', title: 'Badge durée', fields: [
           {name: 'text', type: 'string'} as any,
           {name: 'visible', type: 'boolean'} as any,
         ]} as any,
-        {name: 'includeFlightBadge', type: 'object', fields: [
+        {name: 'includeFlightBadge', type: 'object', title: 'Badge vol', fields: [
           {name: 'text', type: 'string'} as any,
           {name: 'visible', type: 'boolean'} as any,
         ]} as any,
-        {name: 'housingBadge', type: 'object', fields: [
+        {name: 'housingBadge', type: 'object', title: 'Badge logement', fields: [
           {name: 'text', type: 'string'} as any,
           {name: 'visible', type: 'boolean'} as any,
         ]} as any,
-        {name: 'periodBadge', type: 'object', fields: [
+        {name: 'periodBadge', type: 'object', title: 'Badge période', fields: [
           {name: 'text', type: 'string'} as any,
           {name: 'visible', type: 'boolean'} as any,
         ]} as any,
@@ -141,6 +166,7 @@ export const voyageType = defineType({
       name: 'programmeBlock',
       type: 'array',
       group: 'programme',
+      title: 'Bloc programme',
       of: [{
         type: 'object',
         fields: [
@@ -158,6 +184,7 @@ export const voyageType = defineType({
       name: 'pricingDetailsBlock',
       type: 'object',
       group: 'pricing',
+      title: 'Détails du prix',
       fields: [
         {name: 'include', type: 'array', of: [{type: 'string'}]} as any,
         {name: 'exclude', type: 'array', of: [{type: 'string'}]} as any,
@@ -167,6 +194,7 @@ export const voyageType = defineType({
       name: 'pricing',
       type: 'object',
       group: 'pricing',
+      title: 'Prix',
       fields: [
         {name: 'startingPrice', type: 'number'} as any,
         {name: 'lastMinuteAvailable', type: 'boolean'} as any,
@@ -185,11 +213,12 @@ export const voyageType = defineType({
         {name: 'airportCode', type: 'array', of: [{type: 'string'}]} as any,
       ],
     }),
-    defineField({name: 'accompanistsDescription', type: 'string', group: 'housing'}),
+    defineField({name: 'accompanistsDescription', type: 'string', group: 'accompanists', title: 'Description accompagnants'}),
     defineField({
       name: 'accompanistsList',
       type: 'array',
-      group: 'housing',
+      group: 'accompanists',
+      title: 'Liste accompagnants',
       of: [{
         type: 'object',
         fields: [
@@ -204,6 +233,7 @@ export const voyageType = defineType({
       name: 'housingBlock',
       type: 'array',
       group: 'housing',
+      title: 'Bloc logement',
       of: [{
         type: 'object',
         fields: [
@@ -215,30 +245,18 @@ export const voyageType = defineType({
       }],
     }),
     defineField({
-      name: 'image',
-      type: 'image',
-      options: {hotspot: true},
-      group: 'media',
-      fields: [{name: 'alt', type: 'string'} as any],
-    }),
-    defineField({
-      name: 'imageSecondary',
-      type: 'image',
-      options: {hotspot: true},
-      group: 'media',
-      fields: [{name: 'alt', type: 'string'} as any],
-    }),
-    defineField({
       name: 'photosList',
       type: 'array',
-      group: 'media',
+      group: 'photoGallery',
       of: [{type: 'image', options: {hotspot: true}, fields: [{name: 'alt', type: 'string'} as any]}],
+      title: 'Liste de photos dans la galerie',
     }),
-    defineField({name: 'videoLinks', type: 'array', of: [{type: 'url'}], group: 'media'}),
+    defineField({name: 'videoLinks', type: 'array', of: [{type: 'url'}], group: 'basic', title: 'Liens de videos'}),
     defineField({
       name: 'faqBlock',
       type: 'array',
       group: 'faq',
+      title: 'Bloc FAQ',
       of: [{
         type: 'object',
         fields: [
@@ -251,6 +269,7 @@ export const voyageType = defineType({
       name: 'seoSection',
       type: 'object',
       group: 'seo',
+      title: 'SEO',
       fields: [
         {name: 'metaTitle', type: 'string'} as any,
         {name: 'canonicalUrl', type: 'url'} as any,
