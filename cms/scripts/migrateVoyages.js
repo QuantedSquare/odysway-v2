@@ -1,13 +1,13 @@
-import fs from 'node:fs';
+import fs from 'node:fs'
 import {log, error} from 'node:console'
 import path from 'node:path'
 import process from 'node:process'
-import { createId } from './utils/createId.js'
-import { buildImageAssetMapping, convertImageReference } from './imageAssetHelper.js'
-import { MigrationReporter } from './migrationReporter.js'
+import {createId} from './utils/createId.js'
+import {buildImageAssetMapping, convertImageReference} from './imageAssetHelper.js'
+import {MigrationReporter} from './migrationReporter.js'
 
 // Configuration: Set to either a specific file path or the voyages directory
-const voyagesBasePath = '../content/voyages/1. France/sejour-berger-bearn.json' 
+const voyagesBasePath = '../content/voyages/1. France/sejour-berger-bearn.json'
 
 export default async function migrateVoyages(client) {
   // Create reporter
@@ -19,7 +19,7 @@ export default async function migrateVoyages(client) {
   try {
     // Check if the path is a file or directory
     const isFile = voyagesBasePath.endsWith('.json')
-    
+
     if (isFile) {
       log(`Starting single voyage migration: ${path.basename(voyagesBasePath)}`)
       await processSingleVoyageFile(voyagesBasePath, client, assetMapping, reporter)
@@ -30,10 +30,9 @@ export default async function migrateVoyages(client) {
 
     // Generate and save report
     reporter.finish()
-
   } catch (err) {
-    error('Error during voyages migration:', err.message);
-    reporter.recordFailure('migration', err.message) 
+    error('Error during voyages migration:', err.message)
+    reporter.recordFailure('migration', err.message)
     reporter.finish()
     process.exit(1)
   }
@@ -44,14 +43,13 @@ async function processSingleVoyageFile(filePath, client, assetMapping, reporter)
   try {
     const voyage = JSON.parse(fs.readFileSync(filePath, 'utf8'))
     reporter.incrementTotal()
-    
+
     const voyageID = createId('voyage', voyage.slug || path.basename(filePath, '.json'))
     const voyageDoc = await prepareVoyageDocument(voyage, voyageID, assetMapping, client)
-    
+
     await client.createOrReplace(voyageDoc)
     reporter.recordSuccess()
     log(`✅ Successfully migrated voyage: ${voyage.title} (ID: ${voyageID})`)
-
   } catch (fileErr) {
     error(`Error processing file ${path.basename(filePath)}:`, fileErr.message)
     reporter.recordFailure('file_processing', fileErr.message)
@@ -61,9 +59,10 @@ async function processSingleVoyageFile(filePath, client, assetMapping, reporter)
 // Function to process all voyages in a directory
 async function processVoyagesDirectory(basePath, client, assetMapping, reporter) {
   // Get all voyage directories (excluding .md files)
-  const voyageDirs = fs.readdirSync(basePath, { withFileTypes: true })
-    .filter(dirent => dirent.isDirectory())
-    .map(dirent => dirent.name)
+  const voyageDirs = fs
+    .readdirSync(basePath, {withFileTypes: true})
+    .filter((dirent) => dirent.isDirectory())
+    .map((dirent) => dirent.name)
 
   log(`Found ${voyageDirs.length} voyage directories: ${voyageDirs.join(', ')}`)
 
@@ -73,8 +72,7 @@ async function processVoyagesDirectory(basePath, client, assetMapping, reporter)
     log(`Processing directory: ${dirName}`)
 
     // Get all JSON files in the directory
-    const jsonFiles = fs.readdirSync(dirPath)
-      .filter(file => file.endsWith('.json'))
+    const jsonFiles = fs.readdirSync(dirPath).filter((file) => file.endsWith('.json'))
 
     log(`Found ${jsonFiles.length} JSON files in ${dirName}`)
 
@@ -91,7 +89,6 @@ async function processVoyagesDirectory(basePath, client, assetMapping, reporter)
         await client.createOrReplace(voyageDoc)
         reporter.recordSuccess()
         log(`✅ Successfully migrated voyage: ${voyage.title} (ID: ${voyageID})`)
-
       } catch (fileErr) {
         error(`Error processing file ${jsonFile}:`, fileErr.message)
         reporter.recordFailure('file_processing', fileErr.message)
@@ -100,11 +97,11 @@ async function processVoyagesDirectory(basePath, client, assetMapping, reporter)
   }
 }
 
-// Helper function to create document reference using the same ID pattern as migrations
+// Helper function to create document reference
 function createDocumentReference(type, identifier) {
   return {
     _type: 'reference',
-    _ref: createId(type, identifier)
+    _ref: createId(type, identifier),
   }
 }
 
@@ -116,16 +113,79 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
   let photosListRefs = []
 
   if (voyage.image?.src) {
-    mainImageRef = convertImageReference(voyage.image.src, assetMapping, voyage.image.alt, reporter, voyageID)
+    mainImageRef = convertImageReference(
+      voyage.image.src,
+      assetMapping,
+      voyage.image.alt || '',
+      reporter,
+      voyageID,
+    )
   }
   if (voyage.imageSecondary?.src) {
-    secondaryImageRef = convertImageReference(voyage.imageSecondary.src, assetMapping, voyage.imageSecondary.alt, reporter, voyageID)
+    secondaryImageRef = convertImageReference(
+      voyage.imageSecondary.src,
+      assetMapping,
+      voyage.imageSecondary.alt || '',
+      reporter,
+      voyageID,
+    )
   }
-  // Photolist
+
+  // Convert destinations to references
+  let destinationsRefs = []
+  if (voyage.destinations && Array.isArray(voyage.destinations)) {
+    // Fetch existing destinations
+    const existingDestinations = await client.fetch('*[_type == "destination"]{_id, title, name}')
+    destinationsRefs = voyage.destinations.map((dest, index) => {
+      const destId = createId('destination', dest.name)
+      const existingDest = existingDestinations.find((d) => d._id === destId)
+      log(
+        `  🎯 Destination "${dest.name}" -> ID: ${destId} ${existingDest ? '✅ EXISTS' : '❌ NOT FOUND'}`,
+      )
+      return {
+        _key: `destination-${index}`,
+        _type: 'reference',
+        _ref: destId,
+      }
+    })
+  }
+
+  // Convert categories to references
+  let categoriesRefs = []
+  if (voyage.categories && Array.isArray(voyage.categories)) {
+    // Fetch existing categories
+    const existingCategories = await client.fetch('*[_type == "category"]{_id, title, slug}')
+    categoriesRefs = voyage.categories.map((cat, index) => {
+      const existingCat = existingCategories.find((c) => c.slug.current === cat.name)
+      log(
+        `  🎯 Category "${cat.name}" -> ID: ${existingCat._id} ${existingCat ? '✅ EXISTS' : '❌ NOT FOUND'}`,
+      )
+      return {
+        _key: `category-${index}`,
+        _type: 'reference',
+        _ref: existingCat._id,
+      }
+    })
+  }
+
+  // Convert experience type to reference
+  let experienceTypeRef = null
+  if (voyage.experienceType) {
+    experienceTypeRef = createDocumentReference('experience', voyage.experienceType)
+  }
+
+  // Convert author to team member reference
+  let authorRef = null
+  if (voyage.authorNote?.author) {
+    const authorSlug = voyage.authorNote.author.toLowerCase().replace(/\s+/g, '-')
+    authorRef = createDocumentReference('teamMember', authorSlug)
+  }
+
+  // Convert photos list images
   if (voyage.photosList && Array.isArray(voyage.photosList)) {
     photosListRefs = voyage.photosList.map((photo, index) => ({
       _key: `photo-${index}`,
-      ...convertImageReference(photo.src, assetMapping, photo.alt, reporter, voyageID)
+      ...convertImageReference(photo.src, assetMapping, photo.alt || '', reporter, voyageID),
     }))
   }
 
@@ -135,7 +195,9 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
     programmeBlockWithImages = voyage.programmeBlock.map((day, index) => ({
       _key: `programme-${index}`,
       ...day,
-      photo: day.photo ? convertImageReference(day.photo, assetMapping, '', reporter, voyageID) : null
+      photo: day.photo
+        ? convertImageReference(day.photo, assetMapping, '', reporter, voyageID)
+        : null,
     }))
   }
 
@@ -145,12 +207,13 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
     housingBlockWithImages = voyage.housingBlock.map((housing, index) => ({
       _key: `housing-${index}`,
       ...housing,
-      image: housing.image && Array.isArray(housing.image) 
-        ? housing.image.map((img, imgIndex) => ({
-            _key: `housing-image-${index}-${imgIndex}`,
-            ...convertImageReference(img.src, assetMapping, img.alt || '', reporter, voyageID)
-          }))
-        : []
+      image:
+        housing.image && Array.isArray(housing.image)
+          ? housing.image.map((img, imgIndex) => ({
+              _key: `housing-image-${index}-${imgIndex}`,
+              ...convertImageReference(img.src, assetMapping, img.alt || '', reporter, voyageID),
+            }))
+          : [],
     }))
   }
 
@@ -160,7 +223,9 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
     accompanistsWithImages = voyage.accompanistsList.map((accompanist, index) => ({
       _key: `accompanist-${index}`,
       ...accompanist,
-      image: accompanist.image ? convertImageReference(accompanist.image, assetMapping, '', reporter, voyageID) : null
+      image: accompanist.image
+        ? convertImageReference(accompanist.image, assetMapping, '', reporter, voyageID)
+        : null,
     }))
   }
 
@@ -169,55 +234,25 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
   if (voyage.seoSection) {
     seoSectionWithImages = {
       ...voyage.seoSection,
-      ogImage: voyage.seoSection.ogImage?.src 
-        ? convertImageReference(voyage.seoSection.ogImage.src, assetMapping, voyage.seoSection.ogImage.alt || '', reporter, voyageID)
+      ogImage: voyage.seoSection.ogImage?.src
+        ? convertImageReference(
+            voyage.seoSection.ogImage.src,
+            assetMapping,
+            voyage.seoSection.ogImage.alt || '',
+            reporter,
+            voyageID,
+          )
         : voyage.seoSection.ogImage,
       twitterImage: voyage.seoSection.twitterImage?.src
-        ? convertImageReference(voyage.seoSection.twitterImage.src, assetMapping, voyage.seoSection.twitterImage.alt || '', reporter, voyageID)
-        : voyage.seoSection.twitterImage
+        ? convertImageReference(
+            voyage.seoSection.twitterImage.src,
+            assetMapping,
+            voyage.seoSection.twitterImage.alt || '',
+            reporter,
+            voyageID,
+          )
+        : voyage.seoSection.twitterImage,
     }
-  }
-
-  // Fetch and log existing destinations
-  const existingDestinations = await client.fetch('*[_type == "destination"]{_id, title, name}')
-
-  // Fetch and log existing categories  
-  const existingCategories = await client.fetch('*[_type == "category"]{_id, title, slug}')
-
-  // Convert destinations to references (using same ID pattern as migrateDestinations.js)
-  const destinationsRefs = voyage.destinations ? voyage.destinations.map((dest, index) => {
-    const destId = createId('destination', dest.name)
-    const existingDest = existingDestinations.find(d => d._id === destId)
-    log(`  🎯 Destination "${dest.name}" -> ID: ${destId} ${existingDest ? '✅ EXISTS' : '❌ NOT FOUND'}`)
-    return {
-      _key: `destination-${index}`,
-      _type: 'reference',
-      _ref: destId
-    }
-  }) : []
-
-  // Convert categories to references (using same ID pattern as migrateCategories.js)
-  const categoriesRefs = voyage.categories ? voyage.categories.map((cat, index) => {
-    const existingCat = existingCategories.find(c => c.slug.current === cat.name)
-    log(`  🎯 Category "${cat.name}" -> ID: ${existingCat._id} ${existingCat ? '✅ EXISTS' : '❌ NOT FOUND'}`)
-    return {
-      _key: `category-${index}`,
-      _type: 'reference',
-      _ref: existingCat._id
-    }
-  }) : []
-
-  // Convert experience type to reference (using same ID pattern as migrateExperiences.js)
-  let experienceTypeRef = null
-  if (voyage.experienceType) {
-    experienceTypeRef = createDocumentReference('experience', voyage.experienceType)
-  }
-
-  // Convert author to team member reference (using same ID pattern as migrateTeam.js)
-  let authorRef = null
-  if (voyage.authorNote?.author) {
-    const authorSlug = voyage.authorNote.author.toLowerCase().replace(/\s+/g, '-')
-    authorRef = createDocumentReference('teamMember', authorSlug)
   }
 
   // Prepare the voyage document for Sanity
@@ -227,7 +262,7 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
     published: voyage.published || false,
     title: voyage.title || '',
     slug: {
-      current: voyage.slug || voyageID.replace('voyage-', '')
+      current: voyage.slug || voyageID.replace('voyage-', ''),
     },
     destinations: destinationsRefs,
     groupeAvailable: voyage.groupeAvailable || false,
@@ -247,7 +282,7 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
     authorNote: {
       text: voyage.authorNote?.text || '',
       author: authorRef,
-      affixeAuthor: voyage.authorNote?.affixeAuthor || ''
+      affixeAuthor: voyage.authorNote?.affixeAuthor || '',
     },
     experiencesBlock: voyage.experiencesBlock || [],
     description: voyage.description || '',
@@ -264,15 +299,14 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
     imageSecondary: secondaryImageRef,
     photosList: photosListRefs,
     videoLinks: voyage.videoLinks || [],
-    faqBlock: voyage.faqBlock ? {
-      ...voyage.faqBlock,
-      faqList: voyage.faqBlock.faqList ? voyage.faqBlock.faqList.map((faq, index) => ({
-        _key: `faq-${index}`,
-        ...faq
-      })) : []
-    } : {},
+    faqBlock: voyage.faqBlock?.faqList
+      ? voyage.faqBlock.faqList.map((faq, index) => ({
+          _key: `faq-${index}`,
+          ...faq,
+        }))
+      : [],
     seoSection: seoSectionWithImages,
     idealPeriods: voyage.idealPeriods || {},
-    monthlyAvailability: voyage.monthlyAvailability || {}
+    monthlyAvailability: voyage.monthlyAvailability || {},
   }
 }

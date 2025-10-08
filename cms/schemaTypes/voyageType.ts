@@ -237,17 +237,15 @@ export const voyageType = defineType({
     defineField({name: 'videoLinks', type: 'array', of: [{type: 'url'}], group: 'media'}),
     defineField({
       name: 'faqBlock',
-      type: 'object',
+      type: 'array',
       group: 'faq',
-      fields: [
-        {name: 'faqList', type: 'array', of: [{
-          type: 'object',
-          fields: [
+      of: [{
+        type: 'object',
+        fields: [
             {name: 'question', type: 'string'} as any,
             {name: 'answer', type: 'text'} as any,
           ],
-        }]} as any,
-      ],
+        }] as any,
     }),
     defineField({
       name: 'seoSection',
