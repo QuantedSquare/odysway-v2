@@ -214,3 +214,4 @@ Check `failedDocuments` in the report for error details.
 - blog -> blog.json
 - privacyPolicy partial (title and bullet points are updated manually) -> politique-de-confidentialite.md
 - recruitment -> nous-recrutons.md
+- legalMentions (bullet points are updated manually) -> mentions-legales.md

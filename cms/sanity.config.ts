@@ -129,6 +129,7 @@ export default defineConfig({
                   .items([
                     S.documentTypeListItem('privacyPolicy').title('Page Politique de confidentialité'),
                     S.documentTypeListItem('recruitment').title('Page Recruitement'),
+                    S.documentTypeListItem('legalMentions').title('Page Mentions légales'),
                   ]),
               ),
             S.divider(),
