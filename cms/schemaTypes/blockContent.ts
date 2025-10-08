@@ -31,7 +31,7 @@ export const blockContent = defineType({
           {
             name: 'link',
             type: 'object',
-            title: 'Lien',
+            title: 'Lien externe',
             fields: [
               {
                 name: 'href',
@@ -44,6 +44,20 @@ export const blockContent = defineType({
                 type: 'boolean',
                 title: 'Ouvrir dans un nouvel onglet',
                 initialValue: false,
+              },
+            ],
+          },
+          {
+            name: 'internalLink',
+            type: 'object',
+            title: 'Lien interne / Ancre',
+            fields: [
+              {
+                name: 'href',
+                type: 'string',
+                title: 'Chemin ou ancre',
+                description: 'Ex: /voyages/sri-lanka ou #section-name',
+                validation: (rule) => rule.required(),
               },
             ],
           },

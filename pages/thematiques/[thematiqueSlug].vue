@@ -1,26 +1,40 @@
 <template>
-  <ContentLayout
-    :is-category="true"
-    :selected-category="selectedCategory"
-    :page-content="pageContent"
-  >
-    <template #content>
-      <DisplayVoyagesRow
-        :selected-category="selectedCategory"
-        :voyages="voyages"
-        :page-content="pageContent"
-      />
-      <template
-        v-if="categorieContentStatus === 'success' && categorieContent"
-      >
-        <ContentRenderer
-          v-if="categorieContent"
-          :value="categorieContent"
-          class="mt-8"
+  <div>
+    <ContentLayout
+      :is-category="true"
+      :selected-category="selectedCategory"
+      :page-content="pageContent"
+    >
+      <template #content>
+        <DisplayVoyagesRow
+          :selected-category="selectedCategory"
+          :voyages="voyages"
+          :page-content="pageContent"
+        />
+        <template
+          v-if="categorieContentStatus === 'success' && categorieContent"
+        >
+          <ContentRenderer
+            v-if="categorieContent"
+            :value="categorieContent"
+            class="mt-8"
+          />
+        </template>
+      </template>
+    </ContentLayout>
+    <!-- <SectionContainer
+      v-if="categorySanity"
+      :title="'categorySanity.blog.title'"
+      :subtitle="'categorySanity.blog.excerpt'"
+    >
+      <template #content>
+        <EnrichedText
+
+          :value="categorySanity.blog.body"
         />
       </template>
-    </template>
-  </ContentLayout>
+    </SectionContainer> -->
+  </div>
 </template>
 
 <script setup>
@@ -67,5 +81,51 @@ useHead({
   htmlAttrs: {
     lang: 'fr',
   },
+})
+
+// Fetch the category with its linked blog post
+const categoryQuery = `
+  *[_type == "category" && slug.current == $slug][0]{
+    ...,
+    blog->{
+      ...,
+      body[]{
+        ...,
+        _type == "image" => {
+          ...,
+          asset->{
+            _id,
+            url,
+            metadata
+          }
+        }
+      },
+      author->{
+        name,
+        image,
+        position
+      }
+    }
+  }
+`
+
+const { data: categorySanity } = await useSanityQuery(categoryQuery, {
+  slug: slug.value,
+  throwOnError: true,
+})
+
+// Fetch voyages filtered by category
+const voyagesQuery = `
+  *[_type == "voyage" && published == true && count((categories[]->slug.current)[@ == $slug]) > 0]{
+    ...,
+    categories[]->{
+      ...
+    }
+  }
+`
+
+const { data: voyagesSanity } = await useSanityQuery(voyagesQuery, {
+  slug: slug.value,
+  throwOnError: true,
 })
 </script>

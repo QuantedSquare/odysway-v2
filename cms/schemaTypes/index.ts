@@ -1,8 +1,9 @@
 import {blockContent} from './blockContent'
-import {categoryType} from './categoryType'
 import {checkoutType} from './checkoutType'
 import {ctasType} from './ctasType'
 import {devisType} from './devisType'
+import {categoryType} from './categoryType'
+import {blogType} from './blogType'
 import {destinationType} from './destinationType'
 import {experienceType} from './experienceType'
 import {footerType} from './footerType'
@@ -20,12 +21,12 @@ import {reviewType} from './reviewType'
 import {searchPageType} from './searchPageType'
 import {teamMemberType} from './teamMemberType'
 import {topsType} from './topsType'
-import {userType} from './userType'
 import {voyageCardType} from './voyageCardType'
 import {voyageType} from './voyageType'
 
 export const schemaTypes = [
   blockContent,
+  blogType,
   categoryType,
   checkoutType,
   ctasType,
@@ -47,7 +48,6 @@ export const schemaTypes = [
   searchPageType,
   teamMemberType,
   topsType,
-  userType,
   voyageCardType,
   voyageType,
 ]

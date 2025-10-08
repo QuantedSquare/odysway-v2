@@ -17,13 +17,18 @@ import migrateCtas from './migrateCtas.js'
 import migrateDevisPage from './migrateDevisPage.js'
 import migrateExperiencesPage from './migrateExperiencesPage.js'
 import migrateVoyages from './migrateVoyages.js'
+import migrateBlogs from './migrateBlogs.js'
+import linkBlogsToCategories from './linkBlogsToCategories.js'
+import linkBlogsToDestinations from './linkBlogsToDestinations.js'
 dotenv.config()
 
 const projectId = process.env.SANITY_PROJECT_ID || 'nu6yntji'
 const dataset = process.env.SANITY_DATASET || 'production'
 const token = process.env.SANITY_WRITE_TOKEN
 if (!token) {
-  error('Missing SANITY_WRITE_TOKEN environment variable. Create a token with write access in the Sanity project settings and set it before running the seed.')
+  error(
+    'Missing SANITY_WRITE_TOKEN environment variable. Create a token with write access in the Sanity project settings and set it before running the seed.',
+  )
   process.exit(1)
 }
 
@@ -37,7 +42,6 @@ const client = createClient({
 log('client', client)
 
 async function run() {
-
   // log('🔄 Migrating tops from JSON files...')
   // await migrateTops(client)
 
@@ -46,7 +50,7 @@ async function run() {
 
   // log('🔄 Migrating destinations from JSON files...')
   // await migrateDestinations(client)
-  
+
   // log('🔄 Migrating experiences from JSON files...')
   // await migrateExperiences(client)
 
@@ -58,11 +62,12 @@ async function run() {
 
   // log('🔄 Migrating header configuration...')
   // await migrateHeader(client)
- // log('🔄 Migrating destinations from JSON files...')
- // await migrateDestinations(client)
-  
-    // log('🔄 Migrating categories from JSON files...')
-    // await migrateCategories(client)
+
+  // log('🔄 Migrating destinations from JSON files...')
+  // await migrateDestinations(client)
+
+  // log('🔄 Migrating categories from JSON files...')
+  // await migrateCategories(client)
 
   // log('🔄 Migrating checkout page configuration...')
   // await migrateCheckoutPage(client)
@@ -79,8 +84,20 @@ async function run() {
   // log('🔄 Migrating experiences page configuration...')
   // await migrateExperiencesPage(client)
 
-  log('🔄 Migrating voyages...')
-  await migrateVoyages(client)
+  // log('🔄 Migrating voyages...')
+  // await migrateVoyages(client)
+
+  log('🔄 Migrating categories from JSON files...')
+  await migrateCategories(client)
+
+  log('🔄 Migrating blogs from MD files...')
+  await migrateBlogs(client)
+
+  log('🔄 Linking blogs to categories...')
+  await linkBlogsToCategories(client)
+
+  log('🔄 Linking blogs to destinations...')
+  await linkBlogsToDestinations(client)
 
   log('Seed completed')
 }
@@ -89,4 +106,3 @@ run().catch((e) => {
   error(e)
   process.exit(1)
 })
-
