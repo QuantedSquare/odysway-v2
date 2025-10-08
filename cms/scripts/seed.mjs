@@ -85,11 +85,14 @@ async function run() {
   // log('🔄 Migrating experiences page configuration...')
   // await migrateExperiencesPage(client)
 
-  // log('🔄 Migrating voyages...')
-  // await migrateVoyages(client)
+  log('🔄 Migrating voyages...')
+  await migrateVoyages(client)
 
-  log('🔄 Migrating reviews...')
-  await migrateReviews(client)
+  // log('🔄 Migrating reviews...')
+  // await migrateReviews(client)
+
+  // log('🔄 Migrating politique de confidentialité...')
+  // await migratePolitiqueConfidentialite(client)
 
   // log('🔄 Migrating categories from JSON files...')
   // await migrateCategories(client)

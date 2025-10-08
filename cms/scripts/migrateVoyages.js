@@ -1,6 +1,6 @@
 import fs from 'node:fs'
 import {log, error} from 'node:console'
-import path from 'node:path'
+import path, { basename } from 'node:path'
 import process from 'node:process'
 import {createId} from './utils/createId.js'
 import {buildImageAssetMapping, convertImageReference} from './imageAssetHelper.js'
@@ -102,7 +102,7 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
 
   if (voyage.image?.src) {
     mainImageRef = convertImageReference(
-      voyage.image.src,
+      basename(voyage.image.src),
       assetMapping,
       voyage.image.alt || '',
       reporter,
@@ -111,7 +111,7 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
   }
   if (voyage.imageSecondary?.src) {
     secondaryImageRef = convertImageReference(
-      voyage.imageSecondary.src,
+      basename(voyage.imageSecondary.src),
       assetMapping,
       voyage.imageSecondary.alt || '',
       reporter,
@@ -173,7 +173,7 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
   if (voyage.photosList && Array.isArray(voyage.photosList)) {
     photosListRefs = voyage.photosList.map((photo, index) => ({
       _key: `photo-${index}`,
-      ...convertImageReference(photo.src, assetMapping, photo.alt || '', reporter, voyageID),
+      ...convertImageReference(basename(photo.src), assetMapping, photo.alt || '', reporter, voyageID),
     }))
   }
 
@@ -184,7 +184,7 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
       _key: `programme-${index}`,
       ...day,
       photo: day.photo
-        ? convertImageReference(day.photo, assetMapping, '', reporter, voyageID)
+        ? convertImageReference(basename(day.photo), assetMapping, '', reporter, voyageID)
         : null,
     }))
   }
@@ -199,7 +199,7 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
         housing.image && Array.isArray(housing.image)
           ? housing.image.map((img, imgIndex) => ({
               _key: `housing-image-${index}-${imgIndex}`,
-              ...convertImageReference(img.src, assetMapping, img.alt || '', reporter, voyageID),
+              ...convertImageReference(basename(img.src), assetMapping, img.alt || '', reporter, voyageID),
             }))
           : [],
     }))
@@ -212,7 +212,7 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
       _key: `accompanist-${index}`,
       ...accompanist,
       image: accompanist.image
-        ? convertImageReference(accompanist.image, assetMapping, '', reporter, voyageID)
+        ? convertImageReference(basename(accompanist.image), assetMapping, '', reporter, voyageID)
         : null,
     }))
   }
@@ -224,7 +224,7 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
       ...voyage.seoSection,
       ogImage: voyage.seoSection.ogImage?.src
         ? convertImageReference(
-            voyage.seoSection.ogImage.src,
+            basename(voyage.seoSection.ogImage.src),
             assetMapping,
             voyage.seoSection.ogImage.alt || '',
             reporter,
@@ -233,7 +233,7 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
         : voyage.seoSection.ogImage,
       twitterImage: voyage.seoSection.twitterImage?.src
         ? convertImageReference(
-            voyage.seoSection.twitterImage.src,
+            basename(voyage.seoSection.twitterImage.src),
             assetMapping,
             voyage.seoSection.twitterImage.alt || '',
             reporter,
