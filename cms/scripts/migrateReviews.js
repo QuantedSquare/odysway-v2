@@ -138,17 +138,23 @@ async function prepareReviewDocument(review, reviewID, assetMapping, client) {
   }
 
   // Prepare the review document for Sanity
-  return {
+  const reviewDoc = {
     _id: reviewID,
     _type: 'review',
     author: review.author || '',
     authorAge: review.authorAge || '',
     date: formattedDate,
-    photo: photoRef,
     rating: review.rating || 0,
     text: review.text || '',
     voyage: voyageRef,
     voyageTitle: review.voyageTitle || '',
     isOnHome: review.isOnHome || false,
   }
+
+  // Only add photo field if it exists
+  if (photoRef) {
+    reviewDoc.photo = photoRef
+  }
+
+  return reviewDoc
 }
