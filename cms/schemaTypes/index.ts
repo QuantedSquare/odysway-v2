@@ -16,6 +16,7 @@ import {pageVoyageType} from './pageVoyageType'
 import {newsletterType} from './newsletterType'
 import {partnerType} from './partnerType'
 import {privacyPolicyType} from './privacyPolicyType'
+import {recruitmentType} from './recruitmentType'
 import {regionType} from './regionType'
 import {reviewType} from './reviewType'
 import {searchPageType} from './searchPageType'
@@ -43,6 +44,7 @@ export const schemaTypes = [
   newsletterType,
   partnerType,
   privacyPolicyType,
+  recruitmentType,
   regionType,
   reviewType,
   searchPageType,

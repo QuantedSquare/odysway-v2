@@ -212,3 +212,5 @@ Check `failedDocuments` in the report for error details.
 - newsletter -> newsletter.json
 - partner -> partner.json
 - blog -> blog.json
+- privacyPolicy partial (title and bullet points are updated manually) -> politique-de-confidentialite.md
+- recruitment -> nous-recrutons.md

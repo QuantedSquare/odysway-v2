@@ -21,7 +21,7 @@ import migrateReviews from './migrateReviews.js'
 import migrateBlogs from './migrateBlogs.js'
 import linkBlogsToCategories from './linkBlogsToCategories.js'
 import linkBlogsToDestinations from './linkBlogsToDestinations.js'
-import migratePolitiqueConfidentialite from './migratePolitiqueConfidentialite.js'
+
 dotenv.config()
 
 const projectId = process.env.SANITY_PROJECT_ID || 'nu6yntji'
@@ -91,9 +91,6 @@ async function run() {
 
   // log('🔄 Migrating reviews...')
   // await migrateReviews(client)
-
-  log('🔄 Migrating politique de confidentialité...')
-  await migratePolitiqueConfidentialite(client)
 
   // log('🔄 Migrating categories from JSON files...')
   // await migrateCategories(client)
