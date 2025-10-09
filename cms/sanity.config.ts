@@ -101,7 +101,6 @@ export default defineConfig({
               S,
               context,
             }),
-            S.documentTypeListItem('teamMember').title('Team Members'),            S.documentTypeListItem('partner').title('Partners'),
             S.documentTypeListItem('review').title('Reviews'),
             S.divider(),
             S.listItem()
