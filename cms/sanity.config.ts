@@ -101,7 +101,8 @@ export default defineConfig({
               S,
               context,
             }),
-            S.documentTypeListItem('teamMember').title('Team Members'),            S.documentTypeListItem('partner').title('Partners'),
+            S.documentTypeListItem('teamMember').title('Team Members'),
+            S.documentTypeListItem('partner').title('Partners'),
             S.documentTypeListItem('review').title('Reviews'),
             S.divider(),
             S.listItem()
@@ -134,13 +135,18 @@ export default defineConfig({
                 S.list()
                   .title('Autres pages')
                   .items([
-                    S.documentTypeListItem('privacyPolicy').title('Page Politique de confidentialité'),
+                    S.documentTypeListItem('privacyPolicy').title(
+                      'Page Politique de confidentialité',
+                    ),
                     S.documentTypeListItem('recruitment').title('Page Recruitement'),
                     S.documentTypeListItem('legalMentions').title('Page Mentions légales'),
                     S.documentTypeListItem('chequesVacances').title('Page Chèques-Vacances'),
-                    S.documentTypeListItem('conditionsGeneralesVente').title('Page Conditions Générales de Vente'),
+                    S.documentTypeListItem('conditionsGeneralesVente').title(
+                      'Page Conditions Générales de Vente',
+                    ),
                     S.documentTypeListItem('confirmation').title('Page Confirmation'),
                     S.documentTypeListItem('offreCadeau').title('Page Offre Cadeau'),
+                    S.documentTypeListItem('surMesure').title('Page Sur Mesure'),
                   ]),
               ),
             orderableDocumentListDeskItem({

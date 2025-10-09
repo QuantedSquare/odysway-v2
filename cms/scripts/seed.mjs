@@ -26,6 +26,7 @@ import migrateChequesVacances from './migrateChequesVacances.js'
 import migrateConditionsGeneralesVente from './migrateConditionsGeneralesVente.js'
 import migrateConfirmation from './migrateConfirmation.js'
 import migrateOffreCadeau from './migrateOffreCadeau.js'
+import migrateSurMesure from './migrateSurMesure.js'
 
 dotenv.config()
 
