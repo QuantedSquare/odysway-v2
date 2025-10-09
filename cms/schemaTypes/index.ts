@@ -23,6 +23,7 @@ import {conditionsGeneralesVenteType} from './conditionsGeneralesVenteType'
 import {confirmationType} from './confirmationType'
 import {offreCadeauType} from './offreCadeauType'
 import {surMesureType} from './surMesureType'
+import {visionVoyageOdyswayType} from './visionVoyageOdyswayType'
 import {regionType} from './regionType'
 import {reviewType} from './reviewType'
 import {searchPageType} from './searchPageType'
@@ -62,6 +63,7 @@ export const schemaTypes = [
   surMesureType,
   teamMemberType,
   topsType,
+  visionVoyageOdyswayType,
   voyageCardType,
   voyageType,
 ]

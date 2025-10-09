@@ -27,6 +27,7 @@ import migrateConditionsGeneralesVente from './migrateConditionsGeneralesVente.j
 import migrateConfirmation from './migrateConfirmation.js'
 import migrateOffreCadeau from './migrateOffreCadeau.js'
 import migrateSurMesure from './migrateSurMesure.js'
+import migrateVisionVoyageOdysway from './migrateVisionVoyageOdysway.js'
 
 dotenv.config()
 

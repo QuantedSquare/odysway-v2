@@ -1,0 +1,24 @@
+{
+  "migrationType": "vision-voyage-odysway",
+  "timestamp": "2025-10-09T13:43:18.842Z",
+  "duration": "2.10s",
+  "summary": {
+    "totalDocuments": 1,
+    "successful": 1,
+    "failed": 0,
+    "imagesReferenced": 2,
+    "imagesMissing": 1,
+    "warnings": 0
+  },
+  "missingImages": [
+    {
+      "path": "photo Romain.webp",
+      "referencedIn": [
+        "vision-founder"
+      ],
+      "count": 1
+    }
+  ],
+  "failedDocuments": [],
+  "warnings": []
+}

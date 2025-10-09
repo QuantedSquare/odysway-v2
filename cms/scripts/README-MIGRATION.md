@@ -218,4 +218,5 @@ Check `failedDocuments` in the report for error details.
 - chequesVacances (in text bullet points, :br are updated manually) -> cheques-vacances.md
 - conditionsGeneralesVente (all bullet points) -> conditions-generales-de-vente.md
 - offre-cadeau (integrate capcadeau widget and remove style="color:#30aeae;" from title) -> offre-cadeau.md
+- visionVoyageOdysway (founder image is updated manually, schemaOrg is not migrated -> should be done manually in code) -> vision-voyage-odysway.md
 
