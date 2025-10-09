@@ -31,3 +31,5 @@ mcp.json
 cursor/
 
 .vscode/
+
+cms/migration-reports

@@ -90,8 +90,22 @@ async function uploadImage(filePath, publicDir, existingAssets) {
       },
     })
 
-    log(`✅ Uploaded: ${relativePath} -> ${asset._id}`)
-    return {success: true, filePath, relativePath, assetId: asset._id, skipped: false}
+    // CRITICAL: Wait for Sanity to persist the upload
+    await new Promise((resolve) => setTimeout(resolve, 1500))
+
+    // Verify it was actually saved
+    const verification = await client.fetch(
+      `*[_type == "sanity.imageAsset" && _id == $id][0]._id`,
+      {id: asset._id}
+    )
+
+    if (verification) {
+      log(`✅ Uploaded: ${relativePath} -> ${asset._id}`)
+      return {success: true, filePath, relativePath, assetId: asset._id, skipped: false}
+    } else {
+      error(`⚠️ Uploaded but NOT verified: ${relativePath}`)
+      return {success: false, filePath, relativePath, error: 'Upload not verified'}
+    }
   } catch (err) {
     error(`❌ Failed to upload ${filePath}:`, err.message)
     return {success: false, filePath, error: err.message}
@@ -103,7 +117,7 @@ async function run() {
   const imagesDir = join(publicDir, 'images')
 
   // TODO: Remove this filter after testing - only upload destinations for now
-  const testSubfolder = 'blogs/voyage-animalier' // Set to null to upload all images
+  const testSubfolder = null // Set to null to upload all images
   const scanDir = testSubfolder ? join(imagesDir, testSubfolder) : imagesDir
 
   log(`📁 Scanning for images in: ${scanDir}`)
@@ -117,11 +131,24 @@ async function run() {
   log(`📦 Found ${existingAssets.length} existing assets`)
 
   const results = []
+  const totalImages = imageFiles.length
+  let uploadedCount = 0
+  let skippedCount = 0
 
   // Upload images sequentially to avoid rate limiting
-  for (const filePath of imageFiles) {
+  for (let i = 0; i < imageFiles.length; i++) {
+    const filePath = imageFiles[i]
+    log(`\n[${i + 1}/${totalImages}] (✅ ${uploadedCount} uploaded | ⏭️  ${skippedCount} skipped) Processing: ${relative(publicDir, filePath)}`)
+
     const result = await uploadImage(filePath, publicDir, existingAssets)
     results.push(result)
+
+    // Update counters
+    if (result.success && result.skipped) {
+      skippedCount++
+    } else if (result.success) {
+      uploadedCount++
+    }
 
     // Add a small delay between uploads
     await new Promise((resolve) => setTimeout(resolve, 100))

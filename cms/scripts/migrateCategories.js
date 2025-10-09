@@ -75,7 +75,7 @@ export default async function migrateCategories(client) {
             reporter,
             categoryID
           )
-
+          log("imageRef: ", imageRef)
           if (imageRef) {
             categoryDoc.image = imageRef
             log(`  ✓ Image: ${data.image.src}`)
@@ -85,6 +85,14 @@ export default async function migrateCategories(client) {
           }
         } else {
           reporter.recordWarning(categoryID, 'No image provided')
+        }
+
+        // Debug: Log what we're about to commit
+        log(`  🔍 DEBUG - Document keys: ${Object.keys(categoryDoc).join(', ')}`)
+        log(`  🔍 DEBUG - Slug value: ${categoryDoc.slug?.current}`)
+        log(`  🔍 DEBUG - Image defined: ${categoryDoc.image ? 'YES' : 'NO'}`)
+        if (categoryDoc.image) {
+          log(`  🔍 DEBUG - Image._ref: ${categoryDoc.image.asset?._ref}`)
         }
 
         // Add to transaction
@@ -101,6 +109,26 @@ export default async function migrateCategories(client) {
     log(`\n⏳ Committing all categories to Sanity...`)
     await tx.commit()
     log(`✅ Successfully migrated ${categoryDirs.length} categories to Sanity!`)
+
+    // Verify what was actually saved for problematic categories
+    log(`\n🔍 Verifying problematic categories...`)
+    const problematicSlugs = ['voyage-aventure', 'photographie', 'sans-avion', 'transports-insolites']
+
+    for (const slug of problematicSlugs) {
+      const result = await client.fetch(
+        `*[_type == "category" && slug.current == $slug][0]{title, "slugCurrent": slug.current, "hasImage": defined(image), "imageRef": image.asset._ref}`,
+        { slug }
+      )
+
+      if (result) {
+        log(`  📋 ${result.title}:`)
+        log(`     Slug: ${result.slugCurrent}`)
+        log(`     Has image: ${result.hasImage}`)
+        log(`     Image ref: ${result.imageRef || 'NULL'}`)
+      } else {
+        log(`  ⚠️  No category found with slug: ${slug}`)
+      }
+    }
 
     // Generate and save report
     reporter.finish()

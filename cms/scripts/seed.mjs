@@ -38,20 +38,20 @@ async function run() {
   // log('🔄 Migrating regions from JSON files...')
   // await migrateRegions(client)
 
- // log('🔄 Migrating destinations from JSON files...')
- // await migrateDestinations(client)
+  log('🔄 Migrating destinations from JSON files...')
+  //await migrateDestinations(client)
   
   log('🔄 Migrating categories from JSON files...')
   await migrateCategories(client)
 
   log('🔄 Migrating blogs from MD files...')
-  await migrateBlogs(client)
+  //await migrateBlogs(client)
 
   log('🔄 Linking blogs to categories...')
-  await linkBlogsToCategories(client)
+// await linkBlogsToCategories(client)
 
   log('🔄 Linking blogs to destinations...')
-  await linkBlogsToDestinations(client)
+  //await linkBlogsToDestinations(client)
 
   log('Seed completed')
 }
