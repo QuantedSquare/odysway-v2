@@ -15,7 +15,6 @@ export default defineConfig({
     enabled: true,
   },
   plugins: [
-   
     structureTool({
       structure: (S, context) =>
         S.list()
@@ -63,31 +62,29 @@ export default defineConfig({
                   .items([
                     S.listItem()
                       .title('All Blog Posts')
-                      .child(
-                        S.documentList()
-                          .title('All Blog Posts')
-                          .filter('_type == "blog"')
-                      ),
+                      .child(S.documentList().title('All Blog Posts').filter('_type == "blog"')),
                     S.listItem()
                       .title('Category Blog Posts')
                       .child(
                         S.documentList()
                           .title('Category Blog Posts')
-                          .filter('_type == "blog" && _id in *[_type == "category"].blog._ref')
+                          .filter('_type == "blog" && _id in *[_type == "category"].blog._ref'),
                       ),
                     S.listItem()
                       .title('Destination Blog Posts')
                       .child(
                         S.documentList()
                           .title('Destination Blog Posts')
-                          .filter('_type == "blog" && _id in *[_type == "destination"].blog._ref')
+                          .filter('_type == "blog" && _id in *[_type == "destination"].blog._ref'),
                       ),
                     S.listItem()
                       .title('Standalone Blog Posts')
                       .child(
                         S.documentList()
                           .title('Standalone Blog Posts')
-                          .filter('_type == "blog" && !(_id in *[_type == "category"].blog._ref) && !(_id in *[_type == "destination"].blog._ref)')
+                          .filter(
+                            '_type == "blog" && !(_id in *[_type == "category"].blog._ref) && !(_id in *[_type == "destination"].blog._ref)',
+                          ),
                       ),
                   ]),
               ),
@@ -106,6 +103,46 @@ export default defineConfig({
             }),
             S.documentTypeListItem('teamMember').title('Team Members'),            S.documentTypeListItem('partner').title('Partners'),
             S.documentTypeListItem('review').title('Reviews'),
+            S.divider(),
+            S.listItem()
+              .title('Textes')
+              .icon(() => '📝')
+              .child(
+                S.list()
+                  .title('Textes')
+                  .items([
+                    S.documentTypeListItem('header').title('Header'),
+                    S.documentTypeListItem('footer').title('Footer'),
+                    S.documentTypeListItem('tops').title('Tops'),
+                    S.documentTypeListItem('partner').title('Partners'),
+                    S.documentTypeListItem('page_blog').title('Page Blog'),
+                    S.documentTypeListItem('checkout').title('Checkout'),
+                    S.documentTypeListItem('page_contact').title('Page Contact'),
+                    S.documentTypeListItem('page_experiences').title('Page Expériences'),
+                    S.documentTypeListItem('page_thematiques').title('Page Thématiques'),
+                    S.documentTypeListItem('newsletter').title('Newsletter'),
+                    S.documentTypeListItem('search').title('Page Recherche'),
+                    S.documentTypeListItem('ctas').title('CTAs'),
+                    S.documentTypeListItem('devis').title('Devis'),
+                    S.documentTypeListItem('page_voyage').title('Page Voyage'),
+                    S.documentTypeListItem('voyage_card').title('Carte Voyage'),
+                  ]),
+              ),
+            S.listItem()
+              .title('Autres pages')
+              .child(
+                S.list()
+                  .title('Autres pages')
+                  .items([
+                    S.documentTypeListItem('privacyPolicy').title('Page Politique de confidentialité'),
+                    S.documentTypeListItem('recruitment').title('Page Recruitement'),
+                    S.documentTypeListItem('legalMentions').title('Page Mentions légales'),
+                    S.documentTypeListItem('chequesVacances').title('Page Chèques-Vacances'),
+                    S.documentTypeListItem('conditionsGeneralesVente').title('Page Conditions Générales de Vente'),
+                    S.documentTypeListItem('confirmation').title('Page Confirmation'),
+                    S.documentTypeListItem('offreCadeau').title('Page Offre Cadeau'),
+                  ]),
+              ),
             orderableDocumentListDeskItem({
               type: 'tops',
               title: 'Tops',

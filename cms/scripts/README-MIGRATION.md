@@ -202,3 +202,20 @@ Check `failedDocuments` in the report for error details.
 - Image asset mapping is cached in memory (fast lookups)
 - Use transactions for batch operations
 - Add delays between API calls if hitting rate limits
+
+
+### List of entities to update manually
+
+- page_thematiques ->thematiques.json
+- voyage_card -> voyageCard.json
+- search -> search.json and searchField.json
+- newsletter -> newsletter.json
+- partner -> partner.json
+- blog -> blog.json
+- privacyPolicy partial (title and bullet points are updated manually) -> politique-de-confidentialite.md
+- recruitment -> nous-recrutons.md
+- legalMentions (bullet points are updated manually) -> mentions-legales.md
+- chequesVacances (in text bullet points, :br are updated manually) -> cheques-vacances.md
+- conditionsGeneralesVente (all bullet points) -> conditions-generales-de-vente.md
+- offre-cadeau (integrate capcadeau widget and remove style="color:#30aeae;" from title) -> offre-cadeau.md
+

@@ -1,0 +1,16 @@
+{
+  "migrationType": "voyages",
+  "timestamp": "2025-10-08T08:58:38.973Z",
+  "duration": "2.21s",
+  "summary": {
+    "totalDocuments": 1,
+    "successful": 1,
+    "failed": 0,
+    "imagesReferenced": 0,
+    "imagesMissing": 0,
+    "warnings": 0
+  },
+  "missingImages": [],
+  "failedDocuments": [],
+  "warnings": []
+}

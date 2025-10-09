@@ -1,5 +1,6 @@
 /* eslint-env node */
 import {log, error} from 'node:console'
+import { basename } from 'node:path'
 
 /**
  * Fetch all image assets from Sanity and create a path-to-ID mapping
@@ -48,6 +49,7 @@ export async function buildImageAssetMapping(client) {
     for (const asset of allAssets) {
       if (asset.path) {
         mapping.set(asset.path, asset._id)
+        mapping.set(basename(asset.path), asset._id)
         assetsWithPath++
       } else {
         assetsWithoutPath++
@@ -68,26 +70,26 @@ export async function buildImageAssetMapping(client) {
 
 /**
  * Convert an image path to a Sanity image reference object
- * @param {string} imagePath - The image path from JSON (e.g., "/images/destinations/file.jpg")
+ * @param {string} image - The image path or filename from JSON (e.g., "/images/destinations/file.jpg" or "file.jpg")
  * @param {Map<string, string>} assetMapping - The path-to-ID mapping
  * @param {string} [alt] - Optional alt text for the image
  * @param {object} [reporter] - Optional MigrationReporter instance
  * @param {string} [documentId] - Optional document ID for tracking
  * @returns {object|null} Sanity image object or null if not found
  */
-export function convertImageReference(imagePath, assetMapping, alt = '', reporter = null, documentId = null) {
-  if (!imagePath) {
+export function convertImageReference(image, assetMapping, alt = '', reporter = null, documentId = null) {
+  if (!image) {
     return null
   }
 
-  const assetId = assetMapping.get(imagePath)
+  const assetId = assetMapping.get(image)
 
   if (!assetId) {
-    error(`⚠️  Image not found in assets: ${imagePath}`)
+    error(`⚠️  Image not found in assets: ${image}`)
 
     // Track missing image in reporter
     if (reporter && documentId) {
-      reporter.recordMissingImage(imagePath, documentId)
+      reporter.recordMissingImage(image, documentId)
     }
 
     return null
@@ -95,7 +97,7 @@ export function convertImageReference(imagePath, assetMapping, alt = '', reporte
 
   // Track successful image reference
   if (reporter) {
-    reporter.recordImageReference(imagePath)
+    reporter.recordImageReference(image)
   }
 
   const imageObj = {

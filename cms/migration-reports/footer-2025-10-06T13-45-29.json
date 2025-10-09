@@ -1,0 +1,31 @@
+{
+  "migrationType": "footer",
+  "timestamp": "2025-10-06T13:45:29.300Z",
+  "duration": "2.34s",
+  "summary": {
+    "totalDocuments": 1,
+    "successful": 1,
+    "failed": 0,
+    "imagesReferenced": 0,
+    "imagesMissing": 2,
+    "warnings": 0
+  },
+  "missingImages": [
+    {
+      "path": "/logos/Logo-Odysway-Bleu.png",
+      "referencedIn": [
+        "footer-configuration"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/team-photo.webp",
+      "referencedIn": [
+        "footer-configuration"
+      ],
+      "count": 1
+    }
+  ],
+  "failedDocuments": [],
+  "warnings": []
+}

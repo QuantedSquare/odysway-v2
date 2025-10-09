@@ -11,7 +11,6 @@ const categoriesFolderPath = '../content/categories'
 export default async function migrateCategories(client) {
   // Create reporter
   const reporter = new MigrationReporter('categories')
-
   // Build image asset mapping once at the start
   const assetMapping = await buildImageAssetMapping(client)
 
