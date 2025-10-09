@@ -1,3 +1,4 @@
+import {avisVoyageursType} from './avisVoyageursType'
 import {blockContent} from './blockContent'
 import {checkoutType} from './checkoutType'
 import {ctasType} from './ctasType'
@@ -33,6 +34,7 @@ import {voyageCardType} from './voyageCardType'
 import {voyageType} from './voyageType'
 
 export const schemaTypes = [
+  avisVoyageursType,
   blockContent,
   blogType,
   categoryType,

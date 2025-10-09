@@ -127,6 +127,7 @@ export default defineConfig({
                     S.documentTypeListItem('devis').title('Devis'),
                     S.documentTypeListItem('page_voyage').title('Page Voyage'),
                     S.documentTypeListItem('voyage_card').title('Carte Voyage'),
+                    S.documentTypeListItem('avisVoyageurs').title('Page Avis Voyageurs'),
                   ]),
               ),
             S.listItem()
