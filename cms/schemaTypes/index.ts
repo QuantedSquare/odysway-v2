@@ -21,6 +21,7 @@ import {legalMentionsType} from './legalMentionsType'
 import {chequesVacancesType} from './chequesVacancesType'
 import {conditionsGeneralesVenteType} from './conditionsGeneralesVenteType'
 import {confirmationType} from './confirmationType'
+import {offreCadeauType} from './offreCadeauType'
 import {regionType} from './regionType'
 import {reviewType} from './reviewType'
 import {searchPageType} from './searchPageType'
@@ -45,6 +46,7 @@ export const schemaTypes = [
   legalMentionsType,
   headerType,
   newsletterType,
+  offreCadeauType,
   pageBlogType,
   pageContactType,
   pageExperiencesType,

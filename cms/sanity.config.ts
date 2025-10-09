@@ -133,6 +133,7 @@ export default defineConfig({
                     S.documentTypeListItem('chequesVacances').title('Page Chèques-Vacances'),
                     S.documentTypeListItem('conditionsGeneralesVente').title('Page Conditions Générales de Vente'),
                     S.documentTypeListItem('confirmation').title('Page Confirmation'),
+                    S.documentTypeListItem('offreCadeau').title('Page Offre Cadeau'),
                   ]),
               ),
             S.divider(),

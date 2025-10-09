@@ -1,0 +1,16 @@
+{
+  "migrationType": "offre-cadeau",
+  "timestamp": "2025-10-09T10:02:58.586Z",
+  "duration": "1.74s",
+  "summary": {
+    "totalDocuments": 1,
+    "successful": 1,
+    "failed": 0,
+    "imagesReferenced": 5,
+    "imagesMissing": 0,
+    "warnings": 0
+  },
+  "missingImages": [],
+  "failedDocuments": [],
+  "warnings": []
+}

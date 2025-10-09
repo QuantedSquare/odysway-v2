@@ -217,3 +217,5 @@ Check `failedDocuments` in the report for error details.
 - legalMentions (bullet points are updated manually) -> mentions-legales.md
 - chequesVacances (in text bullet points, :br are updated manually) -> cheques-vacances.md
 - conditionsGeneralesVente (all bullet points) -> conditions-generales-de-vente.md
+- offre-cadeau (integrate capcadeau widget and remove style="color:#30aeae;" from title) -> offre-cadeau.md
+
