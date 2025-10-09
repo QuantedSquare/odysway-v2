@@ -67,7 +67,7 @@
 
 <script setup>
 const route = useRoute()
-const { data: reviewsToDisplay } = await useAsyncData(`reviewsToDisplay-${route.name}`, () => {
+const { data: reviewsToDisplay } = useAsyncData(`reviewsToDisplay-${route.name}`, () => {
   return queryCollection('reviews').where('isOnHome', '=', true).limit(3).all()
 })
 // console.log('reviewsToDisplay', reviewsToDisplay.value)

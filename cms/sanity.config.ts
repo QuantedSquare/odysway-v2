@@ -97,8 +97,14 @@ export default defineConfig({
             S.documentTypeListItem('category').title('Categories'),
             S.documentTypeListItem('region').title('Regions'),
             S.divider(),
-            S.documentTypeListItem('teamMember').title('Team Members'),
-            S.documentTypeListItem('partner').title('Partners'),
+            orderableDocumentListDeskItem({
+              type: 'teamMember',
+              title: 'Team Members',
+              icon: () => '👫',
+              S,
+              context,
+            }),
+            S.documentTypeListItem('teamMember').title('Team Members'),            S.documentTypeListItem('partner').title('Partners'),
             S.documentTypeListItem('review').title('Reviews'),
             orderableDocumentListDeskItem({
               type: 'tops',

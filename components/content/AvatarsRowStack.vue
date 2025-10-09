@@ -1,82 +1,108 @@
 <template>
-  <v-row
-    v-if="avatars && avatars.length > 0 && avatarsStatus === 'success'"
-    justify="center"
-  >
-    <v-lazy
-      class="avatar-min-height-lazy"
-      :options="{ threshold: 0.5 }"
-      transition="fade-transition"
+  <ClientOnly>
+    <v-row
+      justify="center"
+    >
+      <v-lazy
+        v-if="avatars && avatars.length > 0"
+        class="avatar-min-height-lazy"
+        :options="{ threshold: 0.5 }"
+        transition="fade-transition"
+      >
+        <div
+          class="avatar-stack d-flex justify-center"
+          :style="{
+            width: `${(avatars.length - 1) * 60 + 100}px`,
+          }"
+        >
+          <v-avatar
+            v-for="(avatar, index) in avatars"
+            :key="index"
+
+            :class="`avatar-${index + 1} avatar-size-responsive`"
+            :style="{
+              zIndex: hoveredIndex === index ? 1000 : avatars.length - index,
+            }"
+            @mouseenter="hoveredIndex = index"
+            @mouseleave="hoveredIndex = null"
+          >
+            <v-img
+              :src="img(avatar.image.asset?.url, { format: 'webp', quality: 70, width: 320 })"
+              :lazy-src="img(avatar.image.asset?.url, { format: 'webp', quality: 10, width: 320 })"
+              :srcset="`${img(avatar.image.asset?.url, { format: 'webp', quality: 70, width: 320 })} 70w, ${img(avatar.image.asset?.url, { format: 'webp', quality: 70, width: 320 })} 100w`"
+              sizes="(max-width: 600px) 70px, 100px"
+              rounded="circle"
+              loading="lazy"
+              :alt="avatar.name || 'Avatar de l\'équipe'"
+            />
+          </v-avatar>
+        </div>
+      </v-lazy>
+    </v-row>
+    <div
+      v-if="avatars && avatars.length > 0"
+      class="avatar-info-wrapper"
     >
       <div
-        class="avatar-stack d-flex justify-center"
-        :style="{
-          width: `${(avatars.length - 1) * 60 + 100}px`,
-        }"
+        ref="infoAnim"
+        class="avatar-info-anim"
+        :style="infoAnimStyle"
       >
-        <v-avatar
-          v-for="(avatar, index) in avatars"
-          :key="index"
-
-          :class="`avatar-${index + 1} avatar-size-responsive`"
-          :style="{
-            zIndex: hoveredIndex === index ? 1000 : avatars.length - index,
-          }"
-          @mouseenter="hoveredIndex = index"
-          @mouseleave="hoveredIndex = null"
+        <transition
+          name="avatar-info-fade"
         >
-          <v-img
-            :src="img(avatar.image, { format: 'webp', quality: 70, width: 320 })"
-            :lazy-src="img(avatar.image, { format: 'webp', quality: 10, width: 320 })"
-            :srcset="`${img(avatar.image, { format: 'webp', quality: 70, width: 320 })} 70w, ${img(avatar.image, { format: 'webp', quality: 70, width: 320 })} 100w`"
-            sizes="(max-width: 600px) 70px, 100px"
-            rounded="circle"
-            loading="lazy"
-            :alt="avatar.name || 'Avatar de l\'équipe'"
-          />
-        </v-avatar>
-      </div>
-    </v-lazy>
-  </v-row>
-  <div class="avatar-info-wrapper">
-    <div
-      ref="infoAnim"
-      class="avatar-info-anim"
-      :style="infoAnimStyle"
-    >
-      <transition
-        name="avatar-info-fade"
-      >
-        <div
-          v-if="showText && hoveredIndex !== null"
-          key="info"
-          class="avatar-info text-center"
-        >
-          <div class="avatar-name">
-            {{ avatars[hoveredIndex]?.name }}
+          <div
+            v-if="showText && hoveredIndex !== null"
+            key="info"
+            class="avatar-info text-center"
+          >
+            <div class="avatar-name">
+              {{ avatars[hoveredIndex]?.name }}
+            </div>
+            <div
+              v-if="avatars[hoveredIndex]?.description"
+              class="avatar-description mt-1"
+            >
+              {{ avatars[hoveredIndex]?.description }}
+            </div>
           </div>
           <div
-            v-if="avatars[hoveredIndex]?.description"
-            class="avatar-description mt-1"
-          >
-            {{ avatars[hoveredIndex]?.description }}
-          </div>
-        </div>
-        <div
-          v-else
-          key="empty"
-          class="avatar-info-empty"
-        />
-      </transition>
+            v-else
+            key="empty"
+            class="avatar-info-empty"
+          />
+        </transition>
+      </div>
     </div>
-  </div>
+  </ClientOnly>
 </template>
 
 <script setup>
 import { ref, watch, nextTick } from 'vue'
 import { useImage } from '#imports'
 
-const { data: avatars, status: avatarsStatus } = useAsyncData('avatars-team', () => queryCollection('team').all())
+// const { data: avatars, status: avatarsStatus } = useAsyncData('avatars-team', () => queryCollection('team').all())
+const sanityQuery = `
+  *[_type == "teamMember"]|order(orderRank) {
+    ...,
+    image {
+      asset->{
+        url
+      }
+    }
+  }
+`
+const { data: avatars } = useSanityQuery(
+  sanityQuery,
+  {},
+  {
+    key: 'avatars-team-sanity',
+    getCachedData: (key) => {
+      return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
+    },
+  },
+)
+
 const img = useImage()
 const hoveredIndex = ref(null)
 
@@ -171,7 +197,7 @@ watch(hoveredIndex, async (val) => {
 @for $i from 1 through 10 {
   .avatar-#{$i} {
     --avatar-index: #{$i - 1};
-    --total-avatars: v-bind(avatars.length); /* Update this number based on max possible avatars */
+    --total-avatars: v-bind(avatars?.length); /* Update this number based on max possible avatars */
   }
 }
 
