@@ -1,0 +1,16 @@
+{
+  "migrationType": "confirmation",
+  "timestamp": "2025-10-09T08:54:54.534Z",
+  "duration": "1.16s",
+  "summary": {
+    "totalDocuments": 1,
+    "successful": 1,
+    "failed": 0,
+    "imagesReferenced": 0,
+    "imagesMissing": 0,
+    "warnings": 0
+  },
+  "missingImages": [],
+  "failedDocuments": [],
+  "warnings": []
+}
