@@ -22,12 +22,13 @@ import migrateBlogs from './migrateBlogs.js'
 import linkBlogsToCategories from './linkBlogsToCategories.js'
 import linkBlogsToDestinations from './linkBlogsToDestinations.js'
 import migrateLegalMentions from './migrateLegalMentions.js'
+import migrateChequesVacances from './migrateChequesVacances.js'
 
 dotenv.config()
 
 const projectId = process.env.SANITY_PROJECT_ID || 'nu6yntji'
 const dataset = process.env.SANITY_DATASET || 'production'
-const token = process.env.SANITY_WRITE_TOKEN 
+const token = process.env.SANITY_WRITE_TOKEN
 if (!token) {
   error(
     'Missing SANITY_WRITE_TOKEN environment variable. Create a token with write access in the Sanity project settings and set it before running the seed.',
@@ -105,8 +106,11 @@ async function run() {
   // log('🔄 Linking blogs to destinations...')
   // await linkBlogsToDestinations(client)
 
-  log('🔄 Migrating legal mentions...')
-  await migrateLegalMentions(client)
+  // log('🔄 Migrating legal mentions...')
+  // await migrateLegalMentions(client)
+
+  log('🔄 Migrating chèques-vacances...')
+  await migrateChequesVacances(client)
 
   log('Seed completed')
 }

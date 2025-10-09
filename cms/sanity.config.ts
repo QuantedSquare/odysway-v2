@@ -130,6 +130,7 @@ export default defineConfig({
                     S.documentTypeListItem('privacyPolicy').title('Page Politique de confidentialité'),
                     S.documentTypeListItem('recruitment').title('Page Recruitement'),
                     S.documentTypeListItem('legalMentions').title('Page Mentions légales'),
+                    S.documentTypeListItem('chequesVacances').title('Page Chèques-Vacances'),
                   ]),
               ),
             S.divider(),

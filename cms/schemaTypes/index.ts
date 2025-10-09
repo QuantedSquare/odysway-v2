@@ -18,6 +18,7 @@ import {partnerType} from './partnerType'
 import {privacyPolicyType} from './privacyPolicyType'
 import {recruitmentType} from './recruitmentType'
 import {legalMentionsType} from './legalMentionsType'
+import {chequesVacancesType} from './chequesVacancesType'
 import {regionType} from './regionType'
 import {reviewType} from './reviewType'
 import {searchPageType} from './searchPageType'
@@ -31,22 +32,23 @@ export const schemaTypes = [
   blogType,
   categoryType,
   checkoutType,
+  chequesVacancesType,
   ctasType,
   devisType,
   destinationType,
   experienceType,
   footerType,
+  legalMentionsType,
   headerType,
+  newsletterType,
   pageBlogType,
   pageContactType,
   pageExperiencesType,
   pageThematiquesType,
   pageVoyageType,
-  newsletterType,
   partnerType,
   privacyPolicyType,
   recruitmentType,
-  legalMentionsType,
   regionType,
   reviewType,
   searchPageType,
