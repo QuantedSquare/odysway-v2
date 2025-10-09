@@ -17,29 +17,32 @@ Vos proches ne savent jamais quoi vous offrir ? Si, comme nous, vous ne tenez pa
 
 # Nos cartes cadeau avec message personnalisé
 
-:integration-capcadeau
+::integration-capcadeau
+::
 
 # Comment ça marche ?
 
-## :br :br :row \[ :::picto-col
-
-## img-src: /images/offre-cadeau/selectionner (1).png
-
-\#text
+:::picto-col
+---
+img-src: /images/offre-cadeau/selectionner (1).png
+---
+#text
 Sélectionnez le montant de votre choix OU une carte cadeau d'un montant libre
-\::: :::picto-col
------------------
+:::
 
-## img-src: /images/offre-cadeau/pen.png
-
-\#text
+:::picto-col
+---
+img-src: /images/offre-cadeau/pen.png
+---
+#text
 Ajoutez votre touche personnelle en écrivant un message d'accompagnement
-\::: :::picto-col
------------------
+:::
+:::picto-col
+---
+img-src: /images/offre-cadeau/gift-box.png
+---
 
-## img-src: /images/offre-cadeau/gift-box.png
-
-\#text
+#text
 Recevez votre bon par mail ou imprimé par courrier (+5€) et offrez-le à l'heureux·se élu·e
-\:::]
+:::
 ::
