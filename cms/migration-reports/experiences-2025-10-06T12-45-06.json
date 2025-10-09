@@ -1,0 +1,45 @@
+{
+  "migrationType": "experiences",
+  "timestamp": "2025-10-06T12:45:06.667Z",
+  "duration": "0.98s",
+  "summary": {
+    "totalDocuments": 6,
+    "successful": 6,
+    "failed": 0,
+    "imagesReferenced": 2,
+    "imagesMissing": 4,
+    "warnings": 0
+  },
+  "missingImages": [
+    {
+      "path": "/images/1.voyages/sejour-astronomie-corse/87HHN1ZT5yzUZ0Ufsxo9.jpg",
+      "referencedIn": [
+        "experience-apprendre-en-voyage"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/blogs/sejour-hiver-laponie-2024/KldlNGGxTxep3G0bHNQT.jpg",
+      "referencedIn": [
+        "experience-partir-a-l-aventure"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/1.voyages/voyage-chamanique-perou/IXFb7uTQ6OIjc1dOnkOn.jpg",
+      "referencedIn": [
+        "experience-plonger-dans-la-culture"
+      ],
+      "count": 1
+    },
+    {
+      "path": "/images/1.voyages/retraite-yoga-sikkim-inde/QIXoVqShTQ342s0dnnsl.jpg",
+      "referencedIn": [
+        "experience-s-eveiller-ailleurs"
+      ],
+      "count": 1
+    }
+  ],
+  "failedDocuments": [],
+  "warnings": []
+}

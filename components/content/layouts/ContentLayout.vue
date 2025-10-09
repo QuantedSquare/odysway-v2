@@ -127,12 +127,25 @@ const { data: experiences } = useAsyncData('experiences-on-content-layout', () =
   return null
 }, { watch: [isComputedCategory, isComputedExperience] })
 
-const { data: destinations } = useAsyncData('destinations-on-content-layout', () => {
+const destinationQuery = `
+  *[_type == "destination" && published == true]{
+    ...,
+    image{
+      asset->{
+        url,
+        alt
+      }
+    }
+  }
+`
+const { data: destinations } = useAsyncData('destinations-on-content-layout', async () => {
   if (props.isDestination) {
-    return queryCollection('destinations').where('published', '=', true).select('id', 'title', 'slug', 'metaDescription', 'image').all()
+    const { data } = await useSanityQuery(destinationQuery)
+    return data.value
   }
   return null
 })
+console.log('destinations', destinations.value)
 
 const displayedData = computed(() => {
   if (props.isCategory) {
@@ -155,11 +168,24 @@ const displayedData = computed(() => {
   }
   if (props.isDestination) {
     const destinationData = {
-      items: destinations.value,
+      items: destinations.value?.map((destination) => {
+        return {
+          id: destination._id,
+          title: destination.title,
+          slug: destination.slug.current,
+          image: {
+            src: destination.image?.asset?.url,
+            alt: destination.image?.alt || '',
+          },
+          type: 'destinations',
+          description: destination.metaDescription || '',
+        }
+      }),
       selectedItem: props.selectedDestination,
       pageTitle: props.pageContent?.index?.pageTitle || 'Toutes nos destinations',
       showOnBottom: Object.keys(route.params).length > 0,
     }
+    console.log('destinationData', destinationData)
     return destinationData
   }
   return null

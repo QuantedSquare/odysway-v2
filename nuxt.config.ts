@@ -21,16 +21,12 @@ export default defineNuxtConfig({
       })
     },
   ],
-  sanity: {
-    projectId: 'nu6yntji'
-  },
   components: [
     '~/components',
     { path: '~/components/content', pathPrefix: false },
   ],
   devtools: {
     enabled: false, // to avoid build problem "Pre-transform error: spawn EBADF"
-
     timeline: {
       enabled: true,
     },
@@ -94,6 +90,9 @@ export default defineNuxtConfig({
   features: {
     inlineStyles: false,
   },
+  experimental: {
+    payloadExtraction: true,
+  },
   compatibilityDate: '2024-11-01',
   nitro: {
     imports: {
@@ -110,7 +109,7 @@ export default defineNuxtConfig({
       template: {
         transformAssetUrls,
       },
-    }
+    },
   },
   calendly: {
     isEnabled: true,
@@ -147,6 +146,18 @@ export default defineNuxtConfig({
       1280: 1280,
       1536: 1536,
       3072: 3072,
+    },
+  },
+  sanity: {
+    projectId: process.env.SANITY_PROJECT_ID,
+    dataset: process.env.SANITY_DATASET,
+    apiVersion: '2024-12-01',
+    useCdn: true,
+    withCredentials: false,
+    visualEditing: {
+      token: process.env.SANITY_VIEWER_TOKEN,
+      studioUrl: process.env.SANITY_STUDIO_URL,
+      stega: true,
     },
   },
   schemaOrg: {

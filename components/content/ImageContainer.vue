@@ -33,7 +33,7 @@
 <script setup>
 import { useImage } from '#imports'
 
-defineProps({
+const props = defineProps({
   imageSrc: {
     type: String,
     default: '',

@@ -1,0 +1,16 @@
+{
+  "migrationType": "ctas",
+  "timestamp": "2025-10-07T08:39:02.231Z",
+  "duration": "1.71s",
+  "summary": {
+    "totalDocuments": 1,
+    "successful": 1,
+    "failed": 0,
+    "imagesReferenced": 1,
+    "imagesMissing": 0,
+    "warnings": 0
+  },
+  "missingImages": [],
+  "failedDocuments": [],
+  "warnings": []
+}

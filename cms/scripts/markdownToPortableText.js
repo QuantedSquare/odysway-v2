@@ -52,6 +52,9 @@ function stripCustomWrappers(markdown) {
   // Pattern: ::section-container\n#content\n... content ...\n::
   content = content.replace(/::section-container\s*\n#content\s*\n/g, '')
 
+  // Remove ::policies-container blocks entirely
+  content = content.replace(/::policies-container[\s\S]*?::/g, '')
+
   // Remove ::color-container blocks manually by tracking nesting depth
   content = removeColorContainers(content)
 

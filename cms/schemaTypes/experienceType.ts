@@ -6,7 +6,7 @@ export const experienceType = defineType({
   type: 'document',
   fields: [
     defineField({name: 'title', type: 'string', validation: (r) => r.required()}),
-    defineField({name: 'badgeTitle', type: 'string'}),
+    defineField({name: 'badgeTitle', type: 'string', validation: (r) => r.required()}),
     defineField({name: 'slug', type: 'slug', options: {source: 'title'}, validation: (r) => r.required()}),
     defineField({name: 'discoveryTitle', type: 'string'}),
     defineField({name: 'seoTitle', type: 'string'}),
@@ -16,7 +16,7 @@ export const experienceType = defineType({
       options: {hotspot: true},
       fields: [{name: 'alt', type: 'string'} as any],
     }),
-    defineField({name: 'showOnHome', type: 'boolean'}),
+    defineField({name: 'showOnHome', type: 'boolean', initialValue: false}),
   ],
 })
 

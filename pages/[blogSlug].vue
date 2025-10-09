@@ -3,10 +3,36 @@
     class="pt-4 py-md-0 my-0"
     fluid
   >
-    <ContentRenderer
+    <!-- <ContentRenderer
       v-if="data"
       :value="data"
-    />
+    /> -->
+    <BlogHeroSection
+      v-if="blogSanity"
+      :title="blogSanity.title"
+      :description="blogSanity.description"
+      :image="blogSanity.displayedImg"
+      :background-color="'soft-blush'"
+      introduction-color="grey"
+      title-color="primary"
+      avatar-size="60"
+    >
+      <template #title>
+        {{ blogSanity.title }}
+      </template>
+      <template #introduction>
+        {{ blogSanity.description }}
+      </template>
+    </BlogHeroSection>
+    <SectionContainer
+      v-if="blogSanity"
+    >
+      <template #content>
+        <EnrichedText
+          :value="blogSanity.body"
+        />
+      </template>
+    </SectionContainer>
   </v-container>
 </template>
 
@@ -18,6 +44,79 @@ const { gtag } = useGtag()
 const { data } = await useAsyncData(route.path, () => {
   return queryCollection('blog').path('/blog' + route.path).where('published', '=', true).first()
 })
+
+const slug = computed(() => route.params.blogSlug)
+
+const blogQuery = `
+  *[_type == "blog" && slug.current == $slug][0]{
+    ...,
+    displayedImg{
+      asset->{
+        url
+      }
+    },
+    author->{
+      _id,
+      name,
+      image{
+        asset->{
+          url
+        }
+      },
+      position
+    },
+    body[]{
+      ...,
+      _type == "image" => {
+        ...,
+        asset->{
+          _id,
+          url,
+          metadata
+        }
+      }
+    }
+  }
+`
+const {
+  data: blogSanity,
+  errorSanity,
+  pending,
+} = await useAsyncData(
+  `blog-${slug.value}`,
+  async () => {
+    const { data } = await useSanityQuery(blogQuery, {
+      slug: slug.value,
+    })
+    console.log(data.value)
+    return data.value
+  },
+  {
+    watch: [slug],
+    server: true,
+    getCachedData: (key) => {
+      return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
+    },
+  },
+)
+console.log(blogSanity.value)
+
+const dataToPage = reactive({
+  title: blogSanity.value?.title,
+  displayedImg: blogSanity.value?.displayedImg?.asset?.url,
+  author: blogSanity.value?.author?.name,
+  authorPhoto: blogSanity.value?.author?.image?.asset?.url,
+  authorRole: blogSanity.value?.author?.position,
+  published: blogSanity.value?.published,
+  publishedAt: blogSanity.value?.publishedAt,
+  tags: blogSanity.value?.tags,
+  categories: blogSanity.value?.legacyCategories,
+  blogType: blogSanity.value?.blogType,
+  badgeColor: blogSanity.value?.badgeColor,
+  readingTime: blogSanity.value?.readingTime,
+})
+
+console.log('dataToPage', dataToPage)
 
 onMounted(() => {
   trackPixel('trackCustom', 'BlogView', { titre: data.value.title })
@@ -108,5 +207,5 @@ watchEffect(() => {
   })
 })
 
-provide('page', data)
+provide('page', dataToPage)
 </script>

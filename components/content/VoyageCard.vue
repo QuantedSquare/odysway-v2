@@ -11,15 +11,15 @@
       class="custom-card-width"
     >
       <NuxtLink
-        :to="`/voyages/${voyage.slug}`"
+        :to="`/voyages/${voyage.slug.current}`"
         class="text-decoration-none position-relative text-white"
       >
         <v-img
-          v-if="voyage.image?.src"
-          :src="img(voyage.image.src, { format: 'webp', quality: 90, height: 228, width: 640 })"
-          :lazy-src="img(voyage.image.src, { format: 'webp', quality: 10, height: 228, width: 640 })"
+          v-if="voyage.image"
+          :src="img(voyage.image.src || voyage.image.asset.url, { format: 'webp', quality: 90, height: 228, width: 640 })"
+          :lazy-src="img(voyage.image.src || voyage.image.asset.url, { format: 'webp', quality: 10, height: 228, width: 640 })"
           :alt="voyage.image.alt || `Paysage de destination pour le voyage ${voyage.title}`"
-          :srcset="`${img(voyage.image.src, { format: 'webp', quality: 90, width: 640 })} 640w, ${img(voyage.image.src, { format: 'webp', quality: 90, width: 1024 })} 1024w`"
+          :srcset="`${img(voyage.image.src || voyage.image.asset.url, { format: 'webp', quality: 90, width: 640 })} 640w, ${img(voyage.image.src, { format: 'webp', quality: 90, width: 1024 })} 1024w`"
           sizes="(max-width: 600px) 480px, 1024px"
           class="img-height"
           cover
@@ -38,7 +38,7 @@
       <!--  BOTTOM TEXT -->
       <div>
         <NuxtLink
-          :to="`/voyages/${voyage.slug}`"
+          :to="`/voyages/${voyage.slug.current}`"
           class="text-decoration-none"
         >
           <v-card-text class="py-1">
@@ -55,10 +55,10 @@
                     >
                       <template #activator="{ props }">
                         <div
-                          :id="`tooltip-${voyage.slug}`"
+                          :id="`tooltip-${voyage.slug.current}`"
                           ref="titleRef"
                           class="line-clamp-2"
-                          :aria-describedby="voyage.title.length > 50 ? `tooltip-${voyage.slug}` : undefined"
+                          :aria-describedby="voyage.title.length > 50 ? `tooltip-${voyage.slug.current}` : undefined"
                           role="tooltip"
                           :aria-label="`Titre complet du voyage: ${voyage.title}`"
                           v-bind="props"
