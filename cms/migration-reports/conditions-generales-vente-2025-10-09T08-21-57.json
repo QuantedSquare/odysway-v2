@@ -1,0 +1,16 @@
+{
+  "migrationType": "conditions-generales-vente",
+  "timestamp": "2025-10-09T08:21:57.379Z",
+  "duration": "2.42s",
+  "summary": {
+    "totalDocuments": 1,
+    "successful": 1,
+    "failed": 0,
+    "imagesReferenced": 0,
+    "imagesMissing": 0,
+    "warnings": 0
+  },
+  "missingImages": [],
+  "failedDocuments": [],
+  "warnings": []
+}

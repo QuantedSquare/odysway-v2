@@ -215,3 +215,5 @@ Check `failedDocuments` in the report for error details.
 - privacyPolicy partial (title and bullet points are updated manually) -> politique-de-confidentialite.md
 - recruitment -> nous-recrutons.md
 - legalMentions (bullet points are updated manually) -> mentions-legales.md
+- chequesVacances (in text bullet points, :br are updated manually) -> cheques-vacances.md
+- conditionsGeneralesVente (all bullet points) -> conditions-generales-de-vente.md

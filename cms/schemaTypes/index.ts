@@ -19,6 +19,7 @@ import {privacyPolicyType} from './privacyPolicyType'
 import {recruitmentType} from './recruitmentType'
 import {legalMentionsType} from './legalMentionsType'
 import {chequesVacancesType} from './chequesVacancesType'
+import {conditionsGeneralesVenteType} from './conditionsGeneralesVenteType'
 import {regionType} from './regionType'
 import {reviewType} from './reviewType'
 import {searchPageType} from './searchPageType'
@@ -33,6 +34,7 @@ export const schemaTypes = [
   categoryType,
   checkoutType,
   chequesVacancesType,
+  conditionsGeneralesVenteType,
   ctasType,
   devisType,
   destinationType,

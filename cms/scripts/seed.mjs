@@ -23,6 +23,7 @@ import linkBlogsToCategories from './linkBlogsToCategories.js'
 import linkBlogsToDestinations from './linkBlogsToDestinations.js'
 import migrateLegalMentions from './migrateLegalMentions.js'
 import migrateChequesVacances from './migrateChequesVacances.js'
+import migrateConditionsGeneralesVente from './migrateConditionsGeneralesVente.js'
 
 dotenv.config()
 
@@ -106,11 +107,8 @@ async function run() {
   // log('🔄 Linking blogs to destinations...')
   // await linkBlogsToDestinations(client)
 
-  // log('🔄 Migrating legal mentions...')
-  // await migrateLegalMentions(client)
-
-  log('🔄 Migrating chèques-vacances...')
-  await migrateChequesVacances(client)
+  log('🔄 Migrating conditions générales de vente...')
+  await migrateConditionsGeneralesVente(client)
 
   log('Seed completed')
 }
