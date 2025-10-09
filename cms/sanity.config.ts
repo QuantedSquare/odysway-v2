@@ -136,6 +136,7 @@ export default defineConfig({
                 S.list()
                   .title('Autres pages')
                   .items([
+                    S.documentTypeListItem('homePage').title('Page Accueil'),
                     S.documentTypeListItem('privacyPolicy').title(
                       'Page Politique de confidentialité',
                     ),

@@ -28,6 +28,7 @@ import migrateConfirmation from './migrateConfirmation.js'
 import migrateOffreCadeau from './migrateOffreCadeau.js'
 import migrateSurMesure from './migrateSurMesure.js'
 import migrateVisionVoyageOdysway from './migrateVisionVoyageOdysway.js'
+import migrateHomePage from './migrateHomePage.js'
 
 dotenv.config()
 
@@ -110,6 +111,9 @@ async function run() {
 
   // log('🔄 Linking blogs to destinations...')
   // await linkBlogsToDestinations(client)
+
+  log('🔄 Migrating home page...')
+  await migrateHomePage(client)
 
   log('Seed completed')
 }
