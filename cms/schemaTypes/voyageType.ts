@@ -210,7 +210,7 @@ export const voyageType = defineType({
       title: "Note de l'auteur",
       group: 'voyageDescription',
       fields: [
-        {name: 'text', type: 'text'},
+        {name: 'text', type: 'array', of: [richTextBlock]},
         {name: 'author', type: 'reference', to: [{type: 'teamMember'}]},
         {name: 'affixeAuthor', type: 'string'},
       ],

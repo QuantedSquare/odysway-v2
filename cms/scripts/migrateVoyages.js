@@ -269,7 +269,7 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
     comments: voyage.comments || 0,
     miniatureDisplay: voyage.miniatureDisplay || '',
     authorNote: {
-      text: voyage.authorNote?.text || '',
+      text: await convertMarkdownToPortableText(voyage.authorNote?.text || '', assetMapping),
       author: authorRef,
       affixeAuthor: voyage.authorNote?.affixeAuthor || '',
     },
