@@ -29,7 +29,7 @@
             wrapper-class="mt-4 my-md-2 text-grey text-subtitle-2 text-md-body-2 font-weight-regular"
             button-class="text-h5 text-decoration-underline"
           >
-            {{ description }}
+            <EnrichedText :value="description" />
           </ExpandableText>
         </v-col>
       </v-row>
@@ -48,7 +48,7 @@ defineProps({
     default: '',
   },
   description: {
-    type: String,
+    type: Array,
     default: '',
   },
   role: {

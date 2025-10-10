@@ -46,7 +46,7 @@
             :clamp-lines="4"
             :line-height="30"
           >
-            <span v-if="description">{{ description }}</span>
+            <span v-if="description"><EnrichedText :value="description" /></span>
             <div class="d-flex flex-column px-8 mt-4">
               <div v-if="denivellation">
                 <span class="font-weight-bold">Dénivelé:&nbsp;</span>
@@ -86,7 +86,7 @@ defineProps({
     required: true,
   },
   description: {
-    type: String,
+    type: Array,
     required: true,
   },
   denivellation: {

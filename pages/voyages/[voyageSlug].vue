@@ -21,15 +21,15 @@
 
         <StickyContainer>
           <template #left-side>
-            <!-- <AuthorNote
+            <AuthorNote
               :author-note="voyage.authorNote"
               :page="page"
-            /> -->
+            />
 
-            <!-- <LazyHighlightsContainer
+            <LazyHighlightsContainer
               :experiences-block="voyage.experiencesBlock"
               :page="page.experiencesBlock"
-            /> -->
+            />
 
             <LazyProgrammeContainer
               :programme-block="voyage.programmeBlock"
@@ -76,10 +76,10 @@
             :reviews-section="page.reviewsSection"
           />
 
-          <!-- <LazyFaqVoyagesContainer
+          <LazyFaqVoyagesContainer
             :background-image="voyage.image.src"
             :faq-block="voyage.faqBlock"
-          /> -->
+          />
 
           <LazyWhySection :why-section="page.whySection" />
 

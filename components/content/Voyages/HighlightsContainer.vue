@@ -31,12 +31,10 @@
               role="list"
               :aria-label="`Points forts de ${page.title}`"
             >
-            <!-- #TODO: Add highlights, from sanity -->
-              <!-- <HighlightListItem
-                v-for="highlight in experiencesBlock"
-                :key="highlight"
-                :highlight="highlight"
-              /> -->
+              <EnrichedText
+                class="custom-list-item"
+                :value="experiencesBlock"
+              />
             </v-list>
           </v-col>
         </v-row>
@@ -59,3 +57,21 @@ defineProps({
   },
 })
 </script>
+
+<style scoped>
+.custom-list-item:deep(ul) {
+    position: relative;
+    list-style: none!important;
+    margin-left: 0;
+    padding-left: 1.2em;
+}
+.custom-list-item:deep(ul li:before) {
+    content: url('/assets/done.svg') !important;
+    position: absolute;
+    left: 0;
+    margin-top: 0.2em!important;
+}
+.custom-list-item:deep(ul li) {
+  margin-left: 0.8em;
+}
+</style>

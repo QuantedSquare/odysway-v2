@@ -12,19 +12,19 @@
         class="text-caption text-sm-subtitle-2 font-weight-bold text-md-h6 "
         :class="'text-'+ questionColor"
       >
-        <!-- {{ item.question }} -->
         <div v-if="question">
-          <MDCRenderer
+          <!-- <MDCRenderer
             :body="question.body"
             :data="question.data"
-          />
+          /> -->
+          {{ item.question }}
         </div>
-        <div v-if="!item">
+        <!-- <div v-if="!item">
           <MDCSlot
             unwrap="p"
             name="question"
           />
-        </div>
+        </div> -->
         <template #actions="{ expanded }">
           <v-icon
             color="secondary"
@@ -36,21 +36,13 @@
         eager
         class="text-subtitle-2 text-md-subtitle-1 text-grey pl-md-6 bg-white"
       >
-        <MDCRenderer
+        <!-- <MDCRenderer
           v-if="answer"
           class="custom-font-size"
           :body="answer.body"
           :data="answer.data"
-        />
-        <div
-          v-if="!item"
-          class="text-subtitle-2 text-md-subtitle-1"
-        >
-          <MDCSlot
-            unwrap="p"
-            name="answer"
-          />
-        </div>
+        /> -->
+        <EnrichedText :value="item.answer" />
       </v-expansion-panel-text>
     </v-expansion-panel>
   </v-expansion-panels>
@@ -58,7 +50,6 @@
 
 <script setup>
 import { mdiMinus, mdiPlus } from '@mdi/js'
-import { parseMarkdown } from '@nuxtjs/mdc/runtime'
 
 const route = useRoute()
 const { item } = defineProps({
@@ -82,8 +73,8 @@ const { item } = defineProps({
 const question = ref(null)
 const answer = ref(null)
 if (item) {
-  question.value = await parseMarkdown(item.question)
-  answer.value = await parseMarkdown(item.answer)
+  question.value = (item.question)
+  answer.value = (item.answer)
 }
 </script>
 

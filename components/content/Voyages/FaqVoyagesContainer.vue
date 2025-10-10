@@ -29,7 +29,7 @@
             class="max-height-with-overflow"
           >
             <QuestionPanel
-              v-for="item, index in faqBlock.faqList"
+              v-for="item, index in faqBlock"
               :key="index"
               :item="item"
             />
@@ -51,7 +51,7 @@
 import { useImage } from '#imports'
 
 const img = useImage()
-defineProps({
+const { faqBlock } = defineProps({
   backgroundImage: {
     type: String,
     default: '/images/b27a23f333a8c96567d46c123d1efb15.jpeg',
@@ -69,6 +69,7 @@ defineProps({
     required: true,
   },
 })
+console.log('faqBlock ', faqBlock)
 </script>
 
 <style scoped>
