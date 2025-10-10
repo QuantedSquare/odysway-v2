@@ -1,0 +1,62 @@
+{
+  "title": "Séjour à Majorque",
+  "faqBlock": {
+    "faqList": []
+  },
+  "videoLinks": [],
+  "photosList": [],
+  "housingBlock": [],
+  "accompanistsList": [],
+  "pricing": {
+    "airportCode": [],
+    "startingPrice": 860,
+    "maxTravelers": 2,
+    "minTravelersToConfirm": 2
+  },
+  "pricingDetailsBlock": {
+    "exclude": [],
+    "include": []
+  },
+  "programmeBlock": [],
+  "experiencesBlock": [
+    ""
+  ],
+  "categories": [],
+  "destinations": [],
+  "slug": "majorque-printemps-famille",
+  "customAvailable": true,
+  "experienceType": "Explorer à pied",
+  "level": "1",
+  "duration": 8,
+  "nights": 7,
+  "includeFlight": true,
+  "housingType": "Hôtel",
+  "idealPeriods": {
+    "aout": false,
+    "octobre": false,
+    "mai": true
+  },
+  "monthlyAvailability": {
+    "aout": false,
+    "octobre": false,
+    "mai": true
+  },
+  "badgeSection": {
+    "includeFlightBadge": {
+      "visible": false
+    }
+  },
+  "groupeAvailable": false,
+  "privatisationAvailable": true,
+  "image": {
+    "src": "/images/1.voyages/sur-mesure Montréal/montreal-4113307-1280.jpg"
+  },
+  "imageSecondary": {
+    "src": "/images/1.voyages/sur-mesure Montréal/montreal-272629-1280.jpg"
+  },
+  "seoSection": {
+    "ogImage": {
+      "src": "/images/1.voyages/sur-mesure Montréal/montreal-4113307-1280.jpg"
+    }
+  }
+}
