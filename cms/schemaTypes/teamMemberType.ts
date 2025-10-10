@@ -8,6 +8,7 @@ export const teamMemberType = defineType({
   orderings: [orderRankOrdering],
   fields: [
     orderRankField({type: 'teamMember'}),
+    defineField({name: 'name', type: 'string'}),
     defineField({name: 'slug', type: 'slug', options: {source: 'name'}}),
     defineField({name: 'image', type: 'image', options: {hotspot: true}}),
     defineField({name: 'description', type: 'text'}),

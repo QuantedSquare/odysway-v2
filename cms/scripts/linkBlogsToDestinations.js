@@ -2,7 +2,7 @@ import {log, error} from 'node:console'
 
 /**
  * Link each destination to its corresponding blog post (one-to-one relationship)
- * Matches destination slug with blog slug to find the correct blog
+ * Uses the destinationSlug field stored during migration to match blogs to destinations
  */
 export default async function linkBlogsToDestinations(client) {
   try {
@@ -12,9 +12,17 @@ export default async function linkBlogsToDestinations(client) {
     const destinations = await client.fetch('*[_type == "destination"]{ _id, title, slug }')
     log(`Found ${destinations.length} destinations`)
 
-    // Fetch all blogs
-    const blogs = await client.fetch('*[_type == "blog"]{ _id, title, slug }')
-    log(`Found ${blogs.length} blogs\n`)
+    // Fetch all destination blogs (those with destinationSlug field)
+    const blogs = await client.fetch('*[_type == "blog" && defined(destinationSlug)]{ _id, title, destinationSlug }')
+    log(`Found ${blogs.length} destination blogs\n`)
+
+    // Create a map of blogs by their destinationSlug for quick lookup
+    const blogsByDestinationSlug = {}
+    blogs.forEach((blog) => {
+      if (blog.destinationSlug) {
+        blogsByDestinationSlug[blog.destinationSlug] = blog
+      }
+    })
 
     // Update each destination with its matching blog
     const tx = client.transaction()
@@ -29,20 +37,16 @@ export default async function linkBlogsToDestinations(client) {
         continue
       }
 
-      // Find blog with matching slug in the destination folder
-      // We'll use a query to find blogs created from files in this destination's directory
-      const destinationBlog = await client.fetch(
-        `*[_type == "blog" && slug.current match $pattern][0]{ _id, title }`,
-        {pattern: `${destinationSlug}*`}
-      )
+      // Find the blog that has this destination's slug stored in destinationSlug field
+      const matchingBlog = blogsByDestinationSlug[destinationSlug]
 
-      if (destinationBlog) {
-        log(`📁 ${destination.title} → ${destinationBlog.title}`)
+      if (matchingBlog) {
+        log(`📁 ${destination.title} → ${matchingBlog.title}`)
         tx.patch(destination._id, {
           set: {
             blog: {
               _type: 'reference',
-              _ref: destinationBlog._id,
+              _ref: matchingBlog._id,
             },
           },
         })

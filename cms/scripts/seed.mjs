@@ -59,6 +59,22 @@ async function run() {
   // log('🔄 Migrating regions from JSON files...')
   // await migrateRegions(client)
 
+<<<<<<< HEAD
+  log('🔄 Migrating destinations from JSON files...')
+  //await migrateDestinations(client)
+  
+  log('🔄 Migrating categories from JSON files...')
+  await migrateCategories(client)
+
+  log('🔄 Migrating blogs from MD files...')
+  //await migrateBlogs(client)
+
+  log('🔄 Linking blogs to categories...')
+// await linkBlogsToCategories(client)
+
+  log('🔄 Linking blogs to destinations...')
+  //await linkBlogsToDestinations(client)
+=======
   // log('🔄 Migrating destinations from JSON files...')
   // await migrateDestinations(client)
 
@@ -112,6 +128,7 @@ async function run() {
 
   // log('🔄 Linking blogs to destinations...')
   // await linkBlogsToDestinations(client)
+>>>>>>> 164cc2af754616ff51ec6e3a107ba9576476a680
 
   // log('🔄 Migrating home page...')
   // await migrateHomePage(client)

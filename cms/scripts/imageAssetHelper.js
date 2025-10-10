@@ -43,6 +43,7 @@ export async function buildImageAssetMapping(client) {
 
     // Build the mapping
     const mapping = new Map()
+    const filenameMapping = new Map() // Fallback: map filename -> asset ID for duplicates
     let assetsWithPath = 0
     let assetsWithoutPath = 0
 
@@ -51,6 +52,19 @@ export async function buildImageAssetMapping(client) {
         mapping.set(asset.path, asset._id)
         mapping.set(basename(asset.path), asset._id)
         assetsWithPath++
+
+        // Also store by filename for duplicate detection
+        const filename = asset.path.split('/').pop()
+        if (filename) {
+          // Store multiple assets with same filename
+          if (!filenameMapping.has(filename)) {
+            filenameMapping.set(filename, [])
+          }
+          filenameMapping.get(filename).push({
+            id: asset._id,
+            path: asset.path
+          })
+        }
       } else {
         assetsWithoutPath++
       }
@@ -60,6 +74,9 @@ export async function buildImageAssetMapping(client) {
     if (assetsWithoutPath > 0) {
       log(`⚠️  ${assetsWithoutPath} assets have no source.id path (likely not from migration)`)
     }
+
+    // Store filename mapping as a property for fallback
+    mapping.filenameMapping = filenameMapping
 
     return mapping
   } catch (err) {
@@ -82,7 +99,30 @@ export function convertImageReference(image, assetMapping, alt = '', reporter = 
     return null
   }
 
-  const assetId = assetMapping.get(image)
+  log(`🔍 convertImageReference called:`)
+  log(`   imagePath: "${imagePath}"`)
+  log(`   mapping has ${assetMapping.size} entries`)
+
+  // Try exact path match first
+  let assetId = assetMapping.get(imagePath)
+  log(`   assetId from mapping: ${assetId || 'NULL'}`)
+
+  // If not found, try fallback by filename (for deduplicated images)
+  if (!assetId && assetMapping.filenameMapping) {
+    const filename = imagePath.split('/').pop()
+    const duplicates = assetMapping.filenameMapping.get(filename)
+
+    if (duplicates && duplicates.length > 0) {
+      // Use the first occurrence (they're all the same image content)
+      assetId = duplicates[0].id
+      log(`🔄 Using deduplicated image: ${imagePath} -> ${duplicates[0].path}`)
+
+      // Track that this is a duplicate
+      if (reporter) {
+        reporter.recordWarning(documentId, `Image deduplicated: ${imagePath} -> ${duplicates[0].path}`)
+      }
+    }
+  }
 
   if (!assetId) {
     error(`⚠️  Image not found in assets: ${image}`)
