@@ -112,7 +112,8 @@ export const blogType = defineType({
     defineField({
       name: 'published',
       type: 'boolean',
-      initialValue: false,
+      initialValue: true,
+      hidden: true,
       group: 'metadata',
     }),
     defineField({

@@ -243,11 +243,13 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
     }
   }
 
+  // Use draft prefix if not published
+  const finalVoyageID = voyage.published === false ? `drafts.${voyageID}` : voyageID
+
   // Prepare the voyage document for Sanity
   return {
-    _id: voyageID,
+    _id: finalVoyageID,
     _type: 'voyage',
-    published: voyage.published || false,
     title: voyage.title || '',
     slug: {
       current: voyage.slug || voyageID.replace('voyage-', ''),

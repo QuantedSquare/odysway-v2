@@ -55,22 +55,6 @@ async function run() {
   // log('🔄 Migrating regions from JSON files...')
   // await migrateRegions(client)
 
-<<<<<<< HEAD
-  log('🔄 Migrating destinations from JSON files...')
-  //await migrateDestinations(client)
-  
-  log('🔄 Migrating categories from JSON files...')
-  await migrateCategories(client)
-
-  log('🔄 Migrating blogs from MD files...')
-  //await migrateBlogs(client)
-
-  log('🔄 Linking blogs to categories...')
-// await linkBlogsToCategories(client)
-
-  log('🔄 Linking blogs to destinations...')
-  //await linkBlogsToDestinations(client)
-=======
   // log('🔄 Migrating destinations from JSON files...')
   // await migrateDestinations(client)
 
@@ -87,10 +71,10 @@ async function run() {
   // await migrateHeader(client)
 
   // log('🔄 Migrating destinations from JSON files...')
-  // await migrateDestinations(client)
+   await migrateDestinations(client)
 
   // log('🔄 Migrating categories from JSON files...')
-  // await migrateCategories(client)
+   await migrateCategories(client)
 
   // log('🔄 Migrating checkout page configuration...')
   // await migrateCheckoutPage(client)
@@ -113,18 +97,14 @@ async function run() {
   // log('🔄 Migrating reviews...')
   // await migrateReviews(client)
 
-  // log('🔄 Migrating categories from JSON files...')
-  // await migrateCategories(client)
-
   // log('🔄 Migrating blogs from MD files...')
-  // await migrateBlogs(client)
+   await migrateBlogs(client)
 
   // log('🔄 Linking blogs to categories...')
-  // await linkBlogsToCategories(client)
+  await linkBlogsToCategories(client)
 
   // log('🔄 Linking blogs to destinations...')
-  // await linkBlogsToDestinations(client)
->>>>>>> 164cc2af754616ff51ec6e3a107ba9576476a680
+   await linkBlogsToDestinations(client)
 
   log('Seed completed')
 }

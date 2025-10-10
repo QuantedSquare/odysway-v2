@@ -198,12 +198,6 @@ async function processBlogFile(mdFile, dirPath, contextFolder, client, assetMapp
       return null
     }
 
-    // Skip unpublished blogs to avoid duplicate "Lorem ipsum" errors
-    if (frontmatter.published === false) {
-      log(`  ⏭️  Skipping unpublished: ${frontmatter.title}`)
-      return null
-    }
-
     // Generate a unique ID from the title
     const blogID = createId('blog', frontmatter.title)
 
@@ -334,7 +328,7 @@ export default async function migrateBlogs(client) {
           if (blogDoc) {
             const blogDocCopy = {...blogDoc}
             currentBatch.push(blogDocCopy)
-            processedBlogIds.add(blogDoc._id) // Track this ID
+            processedBlogIds.add(blogDoc._id)
             log(`    ✓ Added ID to processedBlogIds: ${blogDoc._id} (total: ${processedBlogIds.size})`)
 
             // Debug: verify slug was preserved after spread operator
@@ -377,7 +371,7 @@ export default async function migrateBlogs(client) {
 
           if (blogDoc) {
             currentBatch.push({...blogDoc})
-            processedBlogIds.add(blogDoc._id) // Track this ID
+            processedBlogIds.add(blogDoc._id)
             log(`    ✓ Added ID to processedBlogIds: ${blogDoc._id} (total: ${processedBlogIds.size})`)
 
             // Commit batch if it reaches the limit

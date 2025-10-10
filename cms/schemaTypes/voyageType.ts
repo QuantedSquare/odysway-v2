@@ -19,7 +19,6 @@ export const voyageType = defineType({
     {name: 'seo', title: 'SEO'},
   ],
   fields: [
-    defineField({name: 'published', type: 'boolean', group: 'basic', title: 'Voyage publié'}),
     defineField({name: 'title', type: 'string', validation: (r) => r.required(), group: 'basic', title: 'Titre du voyage'}),
     defineField({name: 'slug', type: 'slug', options: {source: 'title'}, validation: (r) => r.required(), group: 'basic', title: 'Slug du voyage'}),
     defineField({name: 'groupeAvailable', type: 'boolean', group: 'basic', title: 'Voyage disponible en groupe'}),
