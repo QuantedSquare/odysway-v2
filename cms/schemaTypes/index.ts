@@ -1,5 +1,6 @@
 import {avisVoyageursType} from './avisVoyageursType'
 import {blockContent} from './blockContent'
+import {entrepriseType} from './entrepriseType'
 import {homePageType} from './homePageType'
 import {checkoutType} from './checkoutType'
 import {ctasType} from './ctasType'
@@ -46,6 +47,7 @@ export const schemaTypes = [
   ctasType,
   devisType,
   destinationType,
+  entrepriseType,
   experienceType,
   footerType,
   headerType,

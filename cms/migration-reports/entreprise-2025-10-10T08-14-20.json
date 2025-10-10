@@ -1,0 +1,16 @@
+{
+  "migrationType": "entreprise",
+  "timestamp": "2025-10-10T08:14:20.162Z",
+  "duration": "1.62s",
+  "summary": {
+    "totalDocuments": 1,
+    "successful": 1,
+    "failed": 0,
+    "imagesReferenced": 1,
+    "imagesMissing": 0,
+    "warnings": 0
+  },
+  "missingImages": [],
+  "failedDocuments": [],
+  "warnings": []
+}

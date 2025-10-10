@@ -150,6 +150,7 @@ export default defineConfig({
                     S.documentTypeListItem('offreCadeau').title('Page Offre Cadeau'),
                     S.documentTypeListItem('surMesure').title('Page Sur Mesure'),
                     S.documentTypeListItem('visionVoyageOdysway').title('Page Vision Voyage Odysway'),
+                    S.documentTypeListItem('entreprise').title('Page Entreprise'),
                   ]),
               ),
             orderableDocumentListDeskItem({
