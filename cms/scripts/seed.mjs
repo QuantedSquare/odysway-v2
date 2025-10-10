@@ -30,6 +30,7 @@ import migrateSurMesure from './migrateSurMesure.js'
 import migrateVisionVoyageOdysway from './migrateVisionVoyageOdysway.js'
 import migrateHomePage from './migrateHomePage.js'
 import migrateEntreprise from './migrateEntreprise.js'
+import migrateFaq from './migrateFaq.js'
 
 dotenv.config()
 
@@ -95,8 +96,8 @@ async function run() {
   // log('🔄 Migrating experiences page configuration...')
   // await migrateExperiencesPage(client)
 
-  log('🔄 Migrating voyages...')
-  await migrateVoyages(client)
+  // log('🔄 Migrating voyages...')
+  // await migrateVoyages(client)
 
   // log('🔄 Migrating reviews...')
   // await migrateReviews(client)
@@ -115,6 +116,9 @@ async function run() {
 
   // log('🔄 Migrating home page...')
   // await migrateHomePage(client)
+
+  log('🔄 Migrating FAQ page...')
+  await migrateFaq(client)
 
   log('Seed completed')
 }

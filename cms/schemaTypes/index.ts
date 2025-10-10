@@ -9,6 +9,7 @@ import {categoryType} from './categoryType'
 import {blogType} from './blogType'
 import {destinationType} from './destinationType'
 import {experienceType} from './experienceType'
+import {faqType} from './faqType'
 import {footerType} from './footerType'
 import {headerType} from './headerType'
 import {pageBlogType} from './pageBlogType'
@@ -49,6 +50,7 @@ export const schemaTypes = [
   destinationType,
   entrepriseType,
   experienceType,
+  faqType,
   footerType,
   headerType,
   homePageType,
