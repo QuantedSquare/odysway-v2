@@ -19,10 +19,10 @@
           color="yellow"
         >
           <span
-            v-if="experience"
+            v-if="badgeTitle"
             class="d-flex align-center text-white text-caption text-sm-subtitle-2  px-3 mb-1 font-weight-bold"
           >
-            {{ experience.badgeTitle }}
+            {{ badgeTitle }}
           </span>
         </v-chip>
 
@@ -151,7 +151,7 @@
 <script setup>
 import { mdiSignalCellular1, mdiSignalCellular2, mdiSignalCellular3 } from '@mdi/js'
 
-const { experienceType } = defineProps({
+defineProps({
   badgeSection: {
     type: Object,
     required: true,
@@ -160,13 +160,11 @@ const { experienceType } = defineProps({
     type: String,
     required: true,
   },
-  experienceType: {
+  badgeTitle: {
     type: String,
     required: true,
   },
 })
-
-const experience = await queryCollection('experiences').where('title', '=', experienceType).select(['badgeTitle']).first()
 </script>
 
 <style scoped>

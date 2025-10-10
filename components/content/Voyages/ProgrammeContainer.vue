@@ -24,10 +24,11 @@
 </template>
 
 <script setup>
-defineProps({
+const props = defineProps({
   programmeBlock: {
     type: Array,
     required: true,
   },
 })
+console.log('props ', props)
 </script>

@@ -78,38 +78,62 @@
         cols="12"
         sm="9"
       >
-        <v-img
+        <SanityImage
           v-if="voyage.image"
-          :src="img(voyage.image.src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
-          :lazy-src="img(voyage.image.src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-          :alt="voyage.image.alt || `Image principale du voyage ${voyage.title}`"
-          cover
-          class="custom-height"
-          rounded="lg"
-        />
+          :asset-id="voyage.image.asset._ref"
+          auto="format"
+        >
+          <template #default="{ src }">
+            <v-img
+              v-if="src"
+              :src="src"
+              :lazy-src="img(src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+              :alt="voyage.image.alt || `Image principale du voyage ${voyage.title}`"
+              cover
+              class="custom-height"
+              rounded="lg"
+            />
+          </template>
+        </SanityImage>
       </v-col>
       <v-col
         cols="3"
         class="d-none d-sm-flex flex-column ga-7"
       >
-        <v-img
+        <SanityImage
           v-if="voyage.imageSecondary"
-          :src="img(voyage.imageSecondary.src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
-          :lazy-src="img(voyage.imageSecondary.src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-          :alt="voyage.imageSecondary.alt || `Image secondaire du voyage ${voyage.title}`"
-          cover
-          height="214"
-          rounded="lg"
-        />
-        <v-img
+          :asset-id="voyage.imageSecondary.asset._ref"
+          auto="format"
+        >
+          <template #default="{ src }">
+            <v-img
+              v-if="src"
+              :src="src"
+              :lazy-src="img(src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+              :alt="voyage.imageSecondary.alt || `Image secondaire du voyage ${voyage.title}`"
+              cover
+              height="214"
+              rounded="lg"
+            />
+          </template>
+        </SanityImage>
+        <SanityImage
           v-if="voyage.photosList?.length > 0"
-          :src="img(voyage.photosList[0].src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
-          :lazy-src="img(voyage.photosList[0].src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-          :alt="voyage.photosList[0].alt || `Photo du voyage ${voyage.title}`"
-          cover
-          height="214"
-          rounded="lg"
-        />
+          :asset-id="voyage.photosList[0].asset._ref"
+          auto="format"
+        >
+          <template #default="{ src }">
+            <v-img
+              v-if="src"
+              :src="src"
+              :lazy-src="img(src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+              :alt="voyage.photosList[0].alt || `Photo du voyage ${voyage.title}`"
+              cover
+              height="214"
+              rounded="lg"
+            />
+          </template>
+        </SanityImage>
       </v-col>
     </v-row>
     <v-row class="media-btns-position">

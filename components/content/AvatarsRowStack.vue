@@ -26,15 +26,22 @@
             @mouseenter="hoveredIndex = index"
             @mouseleave="hoveredIndex = null"
           >
-            <v-img
-              :src="img(avatar.image.asset?.url, { format: 'webp', quality: 70, width: 320 })"
-              :lazy-src="img(avatar.image.asset?.url, { format: 'webp', quality: 10, width: 320 })"
-              :srcset="`${img(avatar.image.asset?.url, { format: 'webp', quality: 70, width: 320 })} 70w, ${img(avatar.image.asset?.url, { format: 'webp', quality: 70, width: 320 })} 100w`"
-              sizes="(max-width: 600px) 70px, 100px"
-              rounded="circle"
-              loading="lazy"
-              :alt="avatar.name || 'Avatar de l\'équipe'"
-            />
+            <SanityImage
+              :asset-id="avatar.image.asset._ref"
+              auto="format"
+            >
+              <template #default="{ src }">
+                <v-img
+                  :src="src"
+                  :lazy-src="img(src, { format: 'webp', quality: 10, width: 320 })"
+                  :srcset="`${img(src, { format: 'webp', quality: 70, width: 320 })} 70w, ${img(src, { format: 'webp', quality: 70, width: 320 })} 100w`"
+                  sizes="(max-width: 600px) 70px, 100px"
+                  rounded="circle"
+                  loading="lazy"
+                  :alt="avatar.name || 'Avatar de l\'équipe'"
+                />
+              </template>
+            </SanityImage>
           </v-avatar>
         </div>
       </v-lazy>
@@ -80,16 +87,11 @@
 <script setup>
 import { ref, watch, nextTick } from 'vue'
 import { useImage } from '#imports'
+import { SanityImage } from '#components'
 
-// const { data: avatars, status: avatarsStatus } = useAsyncData('avatars-team', () => queryCollection('team').all())
 const sanityQuery = `
   *[_type == "teamMember"]|order(orderRank) {
-    ...,
-    image {
-      asset->{
-        url
-      }
-    }
+    ...
   }
 `
 const { data: avatars } = useSanityQuery(

@@ -11,34 +11,41 @@
       class="custom-card-width"
     >
       <NuxtLink
-        :to="`/voyages/${voyage.slug.current}`"
+        :to="`/voyages/${voyage.slug.current || voyage.slug}`"
         class="text-decoration-none position-relative text-white"
       >
-        <v-img
-          v-if="voyage.image"
-          :src="img(voyage.image.src || voyage.image.asset.url, { format: 'webp', quality: 90, height: 228, width: 640 })"
-          :lazy-src="img(voyage.image.src || voyage.image.asset.url, { format: 'webp', quality: 10, height: 228, width: 640 })"
-          :alt="voyage.image.alt || `Paysage de destination pour le voyage ${voyage.title}`"
-          :srcset="`${img(voyage.image.src || voyage.image.asset.url, { format: 'webp', quality: 90, width: 640 })} 640w, ${img(voyage.image.src, { format: 'webp', quality: 90, width: 1024 })} 1024w`"
-          sizes="(max-width: 600px) 480px, 1024px"
-          class="img-height"
-          cover
-          aspect-ratio="auto"
+        <SanityImage
+          v-if="voyage.image && voyage.image?.asset?._ref"
+          :asset-id="voyage.image.asset?._ref"
+          auto="format"
         >
-          <div class="badge-position">
-            <RatingBadge
-              :rating="voyage.rating"
-              :comments="voyage.comments"
-              no-link
-            />
-          </div>
-        </v-img>
+          <template #default="{ src }">
+            <v-img
+              :src="img(src, { format: 'webp', quality: 90, height: 228, width: 640 })"
+              :lazy-src="img(src, { format: 'webp', quality: 10, height: 228, width: 640 })"
+              :alt="voyage.image.alt || `Paysage de destination pour le voyage ${voyage.title}`"
+              :srcset="`${img(src, { format: 'webp', quality: 90, width: 640 })} 640w, ${img(src, { format: 'webp', quality: 90, width: 1024 })} 1024w`"
+              sizes="(max-width: 600px) 480px, 1024px"
+              class="img-height"
+              cover
+              aspect-ratio="auto"
+            >
+              <div class="badge-position">
+                <RatingBadge
+                  :rating="voyage.rating"
+                  :comments="voyage.comments"
+                  no-link
+                />
+              </div>
+            </v-img>
+          </template>
+        </SanityImage>
       </NuxtLink>
 
       <!--  BOTTOM TEXT -->
       <div>
         <NuxtLink
-          :to="`/voyages/${voyage.slug.current}`"
+          :to="`/voyages/${voyage.slug.current || voyage.slug}`"
           class="text-decoration-none"
         >
           <v-card-text class="py-1">
@@ -55,10 +62,10 @@
                     >
                       <template #activator="{ props }">
                         <div
-                          :id="`tooltip-${voyage.slug.current}`"
+                          :id="`tooltip-${voyage.slug.current || voyage.slug}`"
                           ref="titleRef"
                           class="line-clamp-2"
-                          :aria-describedby="voyage.title.length > 50 ? `tooltip-${voyage.slug.current}` : undefined"
+                          :aria-describedby="voyage.title.length > 50 ? `tooltip-${voyage.slug.current || voyage.slug}` : undefined"
                           role="tooltip"
                           :aria-label="`Titre complet du voyage: ${voyage.title}`"
                           v-bind="props"
@@ -156,7 +163,7 @@ const props = defineProps({
     type: Object,
   },
 })
-
+console.log('props ', props.voyage)
 const img = useImage()
 
 const { data: voyageCardContent } = await useAsyncData('voyage-card-content', () =>

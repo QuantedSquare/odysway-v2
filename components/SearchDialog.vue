@@ -6,7 +6,6 @@
     <template #activator="{ props: activatorProps }">
       <v-btn
         v-bind="activatorProps"
-        variant="outlined"
         :size="smAndDown ? 24 : 36"
         icon
         class="border-circle stronger-hover"
