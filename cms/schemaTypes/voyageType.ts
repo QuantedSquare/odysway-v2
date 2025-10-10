@@ -380,7 +380,7 @@ export const voyageType = defineType({
           fields: [
             {name: 'title', type: 'string'} as any,
             {name: 'housingType', type: 'string'} as any,
-            {name: 'housingMood', type: 'string'} as any,
+            {name: 'housingMood', type: 'array', of: [richTextBlock]} as any,
             {
               name: 'image',
               type: 'array',

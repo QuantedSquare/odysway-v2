@@ -190,20 +190,26 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
     }))
   }
 
-  // Convert housing block images
+  // Convert housing block images and housingMood to Portable Text
   let housingBlockWithImages = []
   if (voyage.housingBlock && Array.isArray(voyage.housingBlock)) {
-    housingBlockWithImages = voyage.housingBlock.map((housing, index) => ({
-      _key: `housing-${index}`,
-      ...housing,
-      image:
-        housing.image && Array.isArray(housing.image)
-          ? housing.image.map((img, imgIndex) => ({
-              _key: `housing-image-${index}-${imgIndex}`,
-              ...convertImageReference(basename(img.src), assetMapping, img.alt || '', reporter, voyageID),
-            }))
-          : [],
-    }))
+    for (let index = 0; index < voyage.housingBlock.length; index++) {
+      const housing = voyage.housingBlock[index]
+      const housingMoodPortableText = await convertMarkdownToPortableText(housing.housingMood || '', assetMapping)
+      
+      housingBlockWithImages.push({
+        _key: `housing-${index}`,
+        ...housing,
+        housingMood: housingMoodPortableText,
+        image:
+          housing.image && Array.isArray(housing.image)
+            ? housing.image.map((img, imgIndex) => ({
+                _key: `housing-image-${index}-${imgIndex}`,
+                ...convertImageReference(basename(img.src), assetMapping, img.alt || '', reporter, voyageID),
+              }))
+            : [],
+      })
+    }
   }
 
   // Convert accompanists images
