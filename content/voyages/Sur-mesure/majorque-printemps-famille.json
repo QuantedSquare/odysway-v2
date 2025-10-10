@@ -21,8 +21,16 @@
   "experiencesBlock": [
     ""
   ],
-  "categories": [],
-  "destinations": [],
+  "categories": [
+    {
+      "name": "voyage-en-famille"
+    }
+  ],
+  "destinations": [
+    {
+      "name": "Espagne"
+    }
+  ],
   "slug": "majorque-printemps-famille",
   "customAvailable": true,
   "experienceType": "Explorer à pied",
