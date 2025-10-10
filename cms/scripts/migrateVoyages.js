@@ -178,16 +178,22 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
     }))
   }
 
-  // Convert programme block images
+  // Convert programme block images and description to Portable Text
   let programmeBlockWithImages = []
   if (voyage.programmeBlock && Array.isArray(voyage.programmeBlock)) {
-    programmeBlockWithImages = voyage.programmeBlock.map((day, index) => ({
-      _key: `programme-${index}`,
-      ...day,
-      photo: day.photo
-        ? convertImageReference(basename(day.photo), assetMapping, '', reporter, voyageID)
-        : null,
-    }))
+    for (let index = 0; index < voyage.programmeBlock.length; index++) {
+      const day = voyage.programmeBlock[index]
+      const descriptionPortableText = await convertMarkdownToPortableText(day.description || '', assetMapping)
+      
+      programmeBlockWithImages.push({
+        _key: `programme-${index}`,
+        ...day,
+        description: descriptionPortableText,
+        photo: day.photo
+          ? convertImageReference(basename(day.photo), assetMapping, '', reporter, voyageID)
+          : null,
+      })
+    }
   }
 
   // Convert housing block images and housingMood to Portable Text
@@ -212,16 +218,22 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
     }
   }
 
-  // Convert accompanists images
+  // Convert accompanists images and description to Portable Text
   let accompanistsWithImages = []
   if (voyage.accompanistsList && Array.isArray(voyage.accompanistsList)) {
-    accompanistsWithImages = voyage.accompanistsList.map((accompanist, index) => ({
-      _key: `accompanist-${index}`,
-      ...accompanist,
-      image: accompanist.image
-        ? convertImageReference(basename(accompanist.image), assetMapping, '', reporter, voyageID)
-        : null,
-    }))
+    for (let index = 0; index < voyage.accompanistsList.length; index++) {
+      const accompanist = voyage.accompanistsList[index]
+      const descriptionPortableText = await convertMarkdownToPortableText(accompanist.description || '', assetMapping)
+      
+      accompanistsWithImages.push({
+        _key: `accompanist-${index}`,
+        ...accompanist,
+        description: descriptionPortableText,
+        image: accompanist.image
+          ? convertImageReference(basename(accompanist.image), assetMapping, '', reporter, voyageID)
+          : null,
+      })
+    }
   }
 
   // Convert SEO images
@@ -292,21 +304,27 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
     pricing: {
       ...voyage.pricing,
       maxTravelers: voyage.pricing?.maxTravelers || 8,
+      lastMinuteAvailable: voyage.pricing?.lastMinuteAvailable || false,
+      lastMinuteReduction: voyage.pricing?.lastMinuteReduction || 0,
+      earlyBirdAvailable: voyage.pricing?.earlyBirdAvailable || false,
+      earlyBirdReduction: voyage.pricing?.earlyBirdReduction || 0,
+      minTravelersToConfirm: voyage.pricing?.minTravelersToConfirm || 2,
+      indivRoom: voyage.pricing?.indivRoom || false,
+      forcedIndivRoom: voyage.pricing?.forcedIndivRoom || false,
+      indivRoomPrice: voyage.pricing?.indivRoomPrice || 0,
+      cseAvailable: voyage.pricing?.cseAvailable || false,
+      cseReduction: voyage.pricing?.cseReduction || 0,
+      childrenPromo: voyage.pricing?.childrenPromo || 0,
+      childrenAge: voyage.pricing?.childrenAge || 12,
     },
-    accompanistsDescription: voyage.accompanistsDescription || '',
+    accompanistsDescription: await convertMarkdownToPortableText(voyage.accompanistsDescription || '', assetMapping),
     accompanistsList: accompanistsWithImages,
     housingBlock: housingBlockWithImages,
     image: mainImageRef,
     imageSecondary: secondaryImageRef,
     photosList: photosListRefs,
     videoLinks: voyage.videoLinks || [],
-    faqBlock: voyage.faqBlock?.faqList
-      ? await Promise.all(voyage.faqBlock.faqList.map(async (faq, index) => ({
-          _key: `faq-${index}`,
-          ...faq,
-          answer: await convertMarkdownToPortableText(faq.answer || '', assetMapping),
-        })))
-      : [],
+    faqBlock: await convertFaqBlockToPortableText(voyage.faqBlock?.faqList || [], assetMapping),
     seoSection: seoSectionWithImages,
     idealPeriods: voyage.idealPeriods || {},
     monthlyAvailability: voyage.monthlyAvailability || {},
@@ -324,4 +342,25 @@ async function convertStringArrayToPortableText(stringArray, assetMapping) {
   
   // Convert markdown to Portable Text
   return await convertMarkdownToPortableText(markdownList, assetMapping)
+}
+
+// Function to convert FAQ block to Portable Text
+async function convertFaqBlockToPortableText(faqList, assetMapping) {
+  if (!faqList || faqList.length === 0) {
+    return []
+  }
+
+  const faqBlockWithPortableText = []
+  for (let index = 0; index < faqList.length; index++) {
+    const faq = faqList[index]
+    const answerPortableText = await convertMarkdownToPortableText(faq.answer || '', assetMapping)
+    
+    faqBlockWithPortableText.push({
+      _key: `faq-${index}`,
+      ...faq,
+      answer: answerPortableText,
+    })
+  }
+  
+  return faqBlockWithPortableText
 }

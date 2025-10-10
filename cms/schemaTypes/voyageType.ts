@@ -304,11 +304,11 @@ export const voyageType = defineType({
           fields: [
             {name: 'title', type: 'string'} as any,
             {name: 'badgeText', type: 'string'} as any,
-            {name: 'description', type: 'text'} as any,
+            {name: 'description', title: 'Description de la journée', type: 'array', of: [richTextBlock]} as any,
             {name: 'photo', type: 'image', options: {hotspot: true}} as any,
-            {name: 'denivellation', type: 'string'} as any,
-            {name: 'road', type: 'string'} as any,
-            {name: 'night', type: 'string'} as any,
+            {name: 'denivellation', title: 'Denivellation', type: 'string'} as any,
+            {name: 'road', title: 'Description du temps de trajet', type: 'string'} as any,
+            {name: 'night', title: 'Description de la nuitée', type: 'string'} as any,
           ],
         },
       ],
@@ -348,7 +348,8 @@ export const voyageType = defineType({
     }),
     defineField({
       name: 'accompanistsDescription',
-      type: 'string',
+      type: 'array',
+      of: [richTextBlock],
       group: 'accompanists',
       title: 'Description accompagnants',
     }),
@@ -361,9 +362,9 @@ export const voyageType = defineType({
         {
           type: 'object',
           fields: [
-            {name: 'name', type: 'string'} as any,
-            {name: 'description', type: 'text'} as any,
-            {name: 'role', type: 'string'} as any,
+            {name: 'name', title: 'Nom', type: 'string'} as any,
+            {name: 'description', title: 'Description', type: 'array', of: [richTextBlock]} as any,
+            {name: 'role', title: 'Rôle', type: 'string'} as any,
             {name: 'image', type: 'image', options: {hotspot: true}} as any,
           ],
         },
@@ -379,8 +380,8 @@ export const voyageType = defineType({
           type: 'object',
           fields: [
             {name: 'title', type: 'string'} as any,
-            {name: 'housingType', type: 'string'} as any,
-            {name: 'housingMood', type: 'array', of: [richTextBlock]} as any,
+            {name: 'housingType', title: 'Type de logement', type: 'string'} as any,
+            {name: 'housingMood', title: 'Ambiance du logement', type: 'array', of: [richTextBlock]} as any,
             {
               name: 'image',
               type: 'array',
