@@ -301,10 +301,11 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
     photosList: photosListRefs,
     videoLinks: voyage.videoLinks || [],
     faqBlock: voyage.faqBlock?.faqList
-      ? voyage.faqBlock.faqList.map((faq, index) => ({
+      ? await Promise.all(voyage.faqBlock.faqList.map(async (faq, index) => ({
           _key: `faq-${index}`,
           ...faq,
-        }))
+          answer: await convertMarkdownToPortableText(faq.answer || '', assetMapping),
+        })))
       : [],
     seoSection: seoSectionWithImages,
     idealPeriods: voyage.idealPeriods || {},

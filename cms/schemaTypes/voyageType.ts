@@ -29,7 +29,7 @@ const richTextBlock = {
             title: 'URL',
             validation: (rule: any) =>
               rule.uri({
-                scheme: ['http', 'https', 'mailto'],
+                scheme: ['http', 'https', 'mailto', 'tel'],
               }),
           },
         ],
@@ -422,7 +422,7 @@ export const voyageType = defineType({
           type: 'object',
           fields: [
             {name: 'question', type: 'string'} as any,
-            {name: 'answer', type: 'text'} as any,
+            {name: 'answer', type: 'array', of: [richTextBlock]} as any,
           ],
         },
       ] as any,
