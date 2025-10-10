@@ -79,18 +79,25 @@
                     </template>
                     <v-carousel-item
                       v-for="image, i in housing.image"
-                      :key="image.src + i"
+                      :key="image.asset._ref + i"
                       rounded="lg"
                       max-height="215"
                     >
                       <template #default>
-                        <v-img
-                          rounded="lg"
-                          cover
-                          :src="img(image.src, { format: 'webp', quality: 70, width: 640 })"
-                          :alt="image.alt"
-                          height="100%"
-                        />
+                        <SanityImage
+                          :asset-id="image.asset._ref"
+                          auto="format"
+                        >
+                          <template #default="{ src }">
+                            <v-img
+                              rounded="lg"
+                              cover
+                              :src="img(src, { format: 'webp', quality: 70, width: 640 })"
+                              :alt="image.alt"
+                              height="100%"
+                            />
+                          </template>
+                        </SanityImage>
                       </template>
                     </v-carousel-item>
                   </v-carousel>
@@ -145,7 +152,7 @@
 </template>
 
 <script setup>
-import { mdiArrowLeft, mdiArrowRight, mdiChevronLeft, mdiChevronRight } from '@mdi/js'
+import { mdiArrowLeft, mdiArrowRight } from '@mdi/js'
 import { useScroll, useElementSize } from '@vueuse/core'
 import { useDisplay } from 'vuetify'
 

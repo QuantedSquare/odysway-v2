@@ -50,20 +50,11 @@ const slug = computed(() => route.params.blogSlug)
 const blogQuery = `
   *[_type == "blog" && slug.current == $slug][0]{
     ...,
-    displayedImg{
-      asset->{
-        url
-      }
-    },
     author->{
       _id,
       name,
-      image{
-        asset->{
-          url
-        }
-      },
-      position
+      image,
+      position,
     },
     body[]{
       ...,
@@ -78,34 +69,22 @@ const blogQuery = `
     }
   }
 `
-const {
-  data: blogSanity,
-  errorSanity,
-  pending,
-} = await useAsyncData(
-  `blog-${slug.value}`,
-  async () => {
-    const { data } = await useSanityQuery(blogQuery, {
-      slug: slug.value,
-    })
-    console.log(data.value)
-    return data.value
+
+const { data: blogSanity } = await useSanityQuery(blogQuery, {
+  slug: slug.value,
+}, {
+  key: 'blog-' + slug.value,
+  watch: [slug],
+  getCachedData: (key) => {
+    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
   },
-  {
-    watch: [slug],
-    server: true,
-    getCachedData: (key) => {
-      return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-    },
-  },
-)
-console.log(blogSanity.value)
+})
 
 const dataToPage = reactive({
   title: blogSanity.value?.title,
-  displayedImg: blogSanity.value?.displayedImg?.asset?.url,
+  displayedImg: blogSanity.value?.displayedImg,
   author: blogSanity.value?.author?.name,
-  authorPhoto: blogSanity.value?.author?.image?.asset?.url,
+  authorPhoto: blogSanity.value?.author?.image,
   authorRole: blogSanity.value?.author?.position,
   published: blogSanity.value?.published,
   publishedAt: blogSanity.value?.publishedAt,

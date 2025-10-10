@@ -139,11 +139,19 @@
                 @click="trackPixel('trackCustom', 'ClicRdv', { voyage: `${voyage.title}` })"
               >
                 <div class="d-flex align-center ga-2">
-                  <v-avatar
-                    :size="mdAndDown ? 30 : 40"
-                    :image="stickyBlock.ctaCall.avatar"
-                    color="white"
-                  />
+                  <SanityImage
+                    :asset-id="stickyBlock.ctaCall.avatar.asset._ref"
+                    auto="format"
+                  >
+                    <template #default="{ src }">
+                      <v-avatar
+                        :size="mdAndDown ? 30 : 40"
+                        :image="src"
+                        color="white"
+                      />
+                    </template>
+                  </SanityImage>
+
                   <span class="text-caption text-lg-body-2 font-weight-bold text-decoration-none">
                     {{ stickyBlock.ctaCall.text }}
                   </span>
@@ -198,7 +206,7 @@
       <NuxtLink
         width="100%"
         class="text-primary text-break d-flex align-center justify-center ga-3"
-        :to="`/devis?slug=${voyage.slug}`"
+        :to="`/devis?slug=${voyage.slug.current}`"
         @click="trackPixel('trackCustom', 'ClicRdv', { voyage: `${voyage.title}` })"
       >
         <v-icon
@@ -237,27 +245,6 @@ const { stickyBlock, voyage } = defineProps({
   },
 })
 
-// watch(dates, () => {
-//   if (dates.value.length > 0) {
-//     const sortedByDates = dates.value
-//       .filter(date => dayjs(date.departure_date).isAfter(dayjs()))
-//       .sort((a, b) => dayjs(a.departure_date).diff(dayjs(b.departure_date)))
-
-//     displayedDates.value = sortedByDates.slice(0, 4).map((date) => {
-//       const in30days = dayjs().add(30, 'day')
-//       const checkoutType = dayjs(date.departure_date).isBefore(in30days) ? 'full' : 'deposit'
-//       return {
-//         departureDate: date.departure_date,
-//         returnDate: date.return_date,
-//         status: getDateStatus(date),
-//         link: `/checkout?date_id=${date.id}&type=${checkoutType}`,
-//         id: date.id,
-//         slug: voyage.slug,
-//       }
-//     })
-//   }
-// }, { immediate: true })
-
 const displayedDates = computed(() => {
   if (dates.value.length > 0) {
     const filteredDates = dates.value.filter(d => getDateStatus(d).status !== 'full')
@@ -275,7 +262,7 @@ const displayedDates = computed(() => {
         status: getDateStatus(date),
         link: `/checkout?date_id=${date.id}&type=${checkoutType}`,
         id: date.id,
-        slug: voyage.slug,
+        slug: voyage.slug.current,
       }
     })
   }

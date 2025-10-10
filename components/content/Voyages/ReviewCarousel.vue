@@ -1,50 +1,52 @@
 <template>
   <v-container
-    v-show="reviews && reviews.length > 0"
+
     id="reviews-container"
     :fluid="width < 1600"
     class="px-0 py-0 mb-4"
   >
-    <v-row
-      align="center"
-      justify="center"
-    >
-      <v-col
-        cols="12"
-        md="10"
-        class="text-h4 my-4 font-weight-bold px-5 px-md-0"
-        :class="{ 'text-md-center text-start': centerTitle }"
+    <ClientOnly>
+      <v-row
+        align="center"
+        justify="center"
       >
-        {{ reviewsSection.title }}
-      </v-col>
-      <v-spacer />
-      <v-col
-        v-if="displayButton"
-        cols="12"
-        md="auto"
-        class="d-flex ga-2"
-      >
-        <CustomChevronBtn
-          :arrived-state="arrivedState.left"
-          :color="color"
-          orientation="left"
-          @click="x -= scrollAmount"
-        />
-        <CustomChevronBtn
-          :arrived-state="arrivedState.right"
-          :color="color"
-          orientation="right"
-          @click="x += scrollAmount"
-        />
-      </v-col>
-    </v-row>
+        <v-col
+          cols="12"
+          md="10"
+          class="text-h4 my-4 font-weight-bold px-5 px-md-0"
+          :class="{ 'text-md-center text-start': centerTitle }"
+        >
+          {{ reviewsSection.title }}
+        </v-col>
+        <v-spacer />
+        <v-col
+          v-if="displayButton"
+          cols="12"
+          md="auto"
+          class="d-flex ga-2"
+        >
+          <CustomChevronBtn
+            :arrived-state="arrivedState.left"
+            :color="color"
+            orientation="left"
+            @click="x -= scrollAmount"
+          />
+          <CustomChevronBtn
+            :arrived-state="arrivedState.right"
+            :color="color"
+            orientation="right"
+            @click="x += scrollAmount"
+          />
+        </v-col>
+      </v-row>
+    </ClientOnly>
     <div ref="itemsList">
       <v-row
         v-if="smAndUp"
         ref="scrollContainer"
         class="flex-nowrap overflow-auto hidden-scroll mb-4"
       >
-        <v-col
+        <!-- <v-col
           v-for="review in reviews"
           :key="review.id"
           cols="10"
@@ -55,13 +57,13 @@
             :review="review"
             :is-travel-page="true"
           />
-        </v-col>
+        </v-col> -->
       </v-row>
       <v-row
         v-else
         class="mb-8"
       >
-        <v-col
+        <!-- <v-col
           v-for="review in reviews.slice(0, 3)"
           :key="review.id"
           cols="12"
@@ -71,7 +73,7 @@
             :review="review"
             :is-travel-page="true"
           />
-        </v-col>
+        </v-col> -->
       </v-row>
     </div>
   </v-container>
@@ -104,12 +106,34 @@ const scrollContainer = ref(null)
 const scrollElement = ref(null)
 const itemsList = ref(null)
 
-const { data: reviews } = await useAsyncData(`reviews-${route.params.voyageSlug}`, async () => {
-  const collection = await queryCollection('reviews').where('voyageSlug', '=', route.params.voyageSlug).all()
+const reviewsQuery = `
+  *[_type == "review" && voyage->slug.current == $voyageSlug]{
+    _id,
+    author,
+    authorAge,
+    date,
+    photo,
+    rating,
+    text,
+    voyage->{
+      _id,
+      title,
+      slug
+    }
+  }
+`
 
-  return _.uniqBy(collection, 'text')
+const { data: reviewsSanity } = useSanityQuery(reviewsQuery, {
+  voyageSlug: route.params.voyageSlug },
+{
+  key: 'reviews-' + route.params.voyageSlug,
+  getCachedData: (key) => {
+    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
+  },
 })
-
+const reviews = computed(() => {
+  return _.uniqBy(reviewsSanity.value, 'text') || []
+})
 // Initialize scroll setup function
 const setupScrollElement = () => {
   nextTick(() => {

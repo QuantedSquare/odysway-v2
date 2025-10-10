@@ -40,8 +40,8 @@
 <script setup>
 defineProps({
   image: {
-    type: String,
-    default: '',
+    type: Object,
+    default: null,
   },
   name: {
     type: String,

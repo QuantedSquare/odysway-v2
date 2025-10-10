@@ -11,14 +11,21 @@
         lg="auto"
         class="pb-0 pb-sm-3"
       >
-        <v-img
-          rounded="lg"
-          :src="img(photo, { format: 'webp', quality: 70, width: 640 })"
-          :alt="`Photo du jour: ${title}`"
-          cover
-          :width="imageWidth"
-          height="214"
-        />
+        <SanityImage
+          :asset-id="photo.asset._ref"
+          auto="format"
+        >
+          <template #default="{ src }">
+            <v-img
+              rounded="lg"
+              :src="img(src, { format: 'webp', quality: 70, width: 640 })"
+              :alt="`Photo du jour: ${title}`"
+              cover
+              :width="imageWidth"
+              height="214"
+            />
+          </template>
+        </SanityImage>
       </v-col>
       <v-col
         cols="12"
@@ -67,7 +74,7 @@ import { useElementSize } from '@vueuse/core'
 
 defineProps({
   photo: {
-    type: String,
+    type: Object,
     required: true,
   },
   badgeText: {

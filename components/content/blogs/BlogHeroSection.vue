@@ -35,6 +35,10 @@ defineProps({
     type: String,
     default: 'primary',
   },
+  author: {
+    type: String,
+    default: null,
+  },
   titleColor: {
     type: String,
     default: 'primary',
@@ -47,9 +51,22 @@ defineProps({
     type: String,
     default: '60',
   },
+  authorPhoto: {
+    type: Object,
+    default: null,
+  },
+  authorRole: {
+    type: String,
+    default: null,
+  },
+  displayedImg: {
+    type: String,
+    default: null,
+  },
 })
 
 const page = inject('page')
+console.log('page', page)
 </script>
 
 <style scoped>

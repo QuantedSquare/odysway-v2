@@ -231,9 +231,17 @@ const { date } = defineProps({
   },
 })
 
-const { data: texte } = useAsyncData('cta-list-dates-price-item', () =>
-  queryCollection('page_voyage_fr').select('dateSections').first(),
-)
+const datesPricesItemQuery = `
+  *[_type == "page_voyage"][0]{
+    dateSections
+  }
+`
+const { data: texte } = await useSanityQuery(datesPricesItemQuery, {}, {
+  key: 'cta-list-dates-price-item',
+  getCachedData: (key) => {
+    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
+  },
+})
 
 const enrichedDate = computed(() => {
   return {

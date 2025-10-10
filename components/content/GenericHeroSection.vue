@@ -91,13 +91,20 @@
           class="pa-0 fixed-height"
         >
           <div class="hero-img-wrapper">
-            <v-img
-              :src="img(displayedImg, { format: 'webp', quality: 70, height: 900, width: 1536 })"
-              :lazy-src="img(displayedImg, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-              cover
-              :alt="`Image principale du blog ${title || ''}`"
-              :class="smAndDown ? 'rounded-t-lg' : 'rounded-e-lg'"
-            />
+            <SanityImage
+              :asset-id="displayedImg.asset._ref"
+              auto="format"
+            >
+              <template #default="{ src }">
+                <v-img
+                  :src="src"
+                  :lazy-src="img(src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+                  cover
+                  :alt="`Image principale du blog ${title || ''}`"
+                  :class="smAndDown ? 'rounded-t-lg' : 'rounded-e-lg'"
+                />
+              </template>
+            </SanityImage>
           </div>
         </v-col>
       </v-row>
@@ -123,10 +130,10 @@ defineProps({
   publishedAt: String,
   // Author info
   author: String,
-  authorPhoto: String,
+  authorPhoto: Object,
   authorRole: String,
   // Image
-  displayedImg: String,
+  displayedImg: Object,
   // Title (for alt)
   title: String,
 })

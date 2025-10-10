@@ -1,17 +1,23 @@
 <template>
   <v-avatar
-    :image="avatarImg"
     :size="avatarSize"
     color="blue"
   >
-    <v-img
-      v-if="avatarImg.length > 0"
-      :src="img(avatarImg, { format: 'webp', quality: 70, height: 340, width: 640 })"
-      :lazy-src="img(avatarImg, { format: 'webp', quality: 10, height: 340, width: 640 })"
-      :alt="name + ' avatar'"
-      height="100%"
-      width="100%"
-    />
+    <SanityImage
+      v-if="avatarImg"
+      :asset-id="avatarImg.asset._ref"
+      auto="format"
+    >
+      <template #default="{ src }">
+        <v-img
+          :src="img(src, { format: 'webp', quality: 70, height: 340, width: 640 })"
+          :lazy-src="img(src, { format: 'webp', quality: 10, height: 340, width: 640 })"
+          :alt="name + ' avatar'"
+          height="100%"
+          width="100%"
+        />
+      </template>
+    </SanityImage>
     <span v-else> {{ name ? name[0].toUpperCase() : '' }}</span>
   </v-avatar>
 </template>
@@ -21,8 +27,8 @@ import { useImage } from '#imports'
 
 defineProps({
   avatarImg: {
-    type: String,
-    required: false,
+    type: Object,
+    default: null,
   },
   avatarSize: {
     type: String,

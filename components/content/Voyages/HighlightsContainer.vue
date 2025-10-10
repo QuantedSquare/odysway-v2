@@ -31,11 +31,12 @@
               role="list"
               :aria-label="`Points forts de ${page.title}`"
             >
-              <HighlightListItem
+            <!-- #TODO: Add highlights, from sanity -->
+              <!-- <HighlightListItem
                 v-for="highlight in experiencesBlock"
                 :key="highlight"
                 :highlight="highlight"
-              />
+              /> -->
             </v-list>
           </v-col>
         </v-row>

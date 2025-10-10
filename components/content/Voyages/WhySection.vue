@@ -20,13 +20,20 @@
           md="3"
         >
           <div class="d-flex flex-column align-center align-md-start ga-2 justify-start rounded-lg item-bg-color pa-4 py-10 fill-height">
-            <v-img
-              :src="item.icon"
-              :height="40"
-              :width="40"
-              class="mr-3 text-primary"
-              alt="icon de la section Pourquoi"
-            />
+            <SanityImage
+              :asset-id="item.icon.asset._ref"
+              auto="format"
+            >
+              <template #default="{ src }">
+                <v-img
+                  :src="src"
+                  :height="40"
+                  :width="40"
+                  class="mr-3 text-primary"
+                  alt="icon de la section Pourquoi"
+                />
+              </template>
+            </SanityImage>
             <p class="font-weight-bold text-h5 text-center text-md-start">
               {{ item.text }}
             </p>

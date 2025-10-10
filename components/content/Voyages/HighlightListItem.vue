@@ -13,10 +13,12 @@
         class="mt-1"
       />
     </template>
-    <p
-      v-dompurify-html="parseBoldText(highlight)"
+    <!-- <p
+      v-if="highlight"
+      v-dompurify-html="parsedHighlight"
       class="text-subtitle-2 font-weight-regular text-md-body-2 text-primary line-height-2"
-    />
+    /> -->
+    {}
   </v-list-item>
 </template>
 
@@ -26,8 +28,13 @@ import { mdiCheckboxMarkedCircle } from '@mdi/js'
 const { highlight } = defineProps({
   highlight: {
     type: String,
-    required: true,
+    default: '',
   },
+})
+
+const parsedHighlight = computed(() => {
+  console.log('highlight', highlight)
+  return highlight?.replace(/\*\*(.*?)\*\*/g, '<span class="font-weight-bold">$1</span>')
 })
 </script>
 

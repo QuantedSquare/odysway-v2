@@ -49,14 +49,21 @@
           >
             <v-carousel-item
               v-for="(photo, index) in photosList"
-              :key="photo.src + index"
+              :key="photo.asset._ref + index"
             >
-              <v-img
-                :src="img(photo.src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
-                :lazy-src="img(photo.src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-                :alt="photo.alt || `Photo de galerie du voyage ${index}`"
-                width="100%"
-              />
+              <SanityImage
+                :asset-id="photo.asset._ref"
+                auto="format"
+              >
+                <template #default="{ src }">
+                  <v-img
+                    :src="src"
+                    :lazy-src="img(src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+                    :alt="photo.alt || `Photo de galerie du voyage ${index}`"
+                    width="100%"
+                  />
+                </template>
+              </SanityImage>
             </v-carousel-item>
           </v-carousel>
         </v-col>

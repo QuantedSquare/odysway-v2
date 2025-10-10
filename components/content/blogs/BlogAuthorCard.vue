@@ -32,10 +32,6 @@
 
 <script setup>
 defineProps({
-  avatarAuthor: {
-    type: String,
-    default: '/images/team/romain.webp',
-  },
   avatarSize: {
     type: String,
     default: '60',
