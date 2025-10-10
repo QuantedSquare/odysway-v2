@@ -4,6 +4,7 @@ import path, { basename } from 'node:path'
 import process from 'node:process'
 import {createId} from './utils/createId.js'
 import {buildImageAssetMapping, convertImageReference} from './imageAssetHelper.js'
+import {convertMarkdownToPortableText} from './markdownToPortableText.js'
 import {MigrationReporter} from './migrationReporter.js'
 
 // Configuration: Set to either a specific file path or the voyages directory
@@ -177,44 +178,62 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
     }))
   }
 
-  // Convert programme block images
+  // Convert programme block images and description to Portable Text
   let programmeBlockWithImages = []
   if (voyage.programmeBlock && Array.isArray(voyage.programmeBlock)) {
-    programmeBlockWithImages = voyage.programmeBlock.map((day, index) => ({
-      _key: `programme-${index}`,
-      ...day,
-      photo: day.photo
-        ? convertImageReference(basename(day.photo), assetMapping, '', reporter, voyageID)
-        : null,
-    }))
+    for (let index = 0; index < voyage.programmeBlock.length; index++) {
+      const day = voyage.programmeBlock[index]
+      const descriptionPortableText = await convertMarkdownToPortableText(day.description || '', assetMapping)
+      
+      programmeBlockWithImages.push({
+        _key: `programme-${index}`,
+        ...day,
+        description: descriptionPortableText,
+        photo: day.photo
+          ? convertImageReference(basename(day.photo), assetMapping, '', reporter, voyageID)
+          : null,
+      })
+    }
   }
 
-  // Convert housing block images
+  // Convert housing block images and housingMood to Portable Text
   let housingBlockWithImages = []
   if (voyage.housingBlock && Array.isArray(voyage.housingBlock)) {
-    housingBlockWithImages = voyage.housingBlock.map((housing, index) => ({
-      _key: `housing-${index}`,
-      ...housing,
-      image:
-        housing.image && Array.isArray(housing.image)
-          ? housing.image.map((img, imgIndex) => ({
-              _key: `housing-image-${index}-${imgIndex}`,
-              ...convertImageReference(basename(img.src), assetMapping, img.alt || '', reporter, voyageID),
-            }))
-          : [],
-    }))
+    for (let index = 0; index < voyage.housingBlock.length; index++) {
+      const housing = voyage.housingBlock[index]
+      const housingMoodPortableText = await convertMarkdownToPortableText(housing.housingMood || '', assetMapping)
+      
+      housingBlockWithImages.push({
+        _key: `housing-${index}`,
+        ...housing,
+        housingMood: housingMoodPortableText,
+        image:
+          housing.image && Array.isArray(housing.image)
+            ? housing.image.map((img, imgIndex) => ({
+                _key: `housing-image-${index}-${imgIndex}`,
+                ...convertImageReference(basename(img.src), assetMapping, img.alt || '', reporter, voyageID),
+              }))
+            : [],
+      })
+    }
   }
 
-  // Convert accompanists images
+  // Convert accompanists images and description to Portable Text
   let accompanistsWithImages = []
   if (voyage.accompanistsList && Array.isArray(voyage.accompanistsList)) {
-    accompanistsWithImages = voyage.accompanistsList.map((accompanist, index) => ({
-      _key: `accompanist-${index}`,
-      ...accompanist,
-      image: accompanist.image
-        ? convertImageReference(basename(accompanist.image), assetMapping, '', reporter, voyageID)
-        : null,
-    }))
+    for (let index = 0; index < voyage.accompanistsList.length; index++) {
+      const accompanist = voyage.accompanistsList[index]
+      const descriptionPortableText = await convertMarkdownToPortableText(accompanist.description || '', assetMapping)
+      
+      accompanistsWithImages.push({
+        _key: `accompanist-${index}`,
+        ...accompanist,
+        description: descriptionPortableText,
+        image: accompanist.image
+          ? convertImageReference(basename(accompanist.image), assetMapping, '', reporter, voyageID)
+          : null,
+      })
+    }
   }
 
   // Convert SEO images
@@ -243,11 +262,13 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
     }
   }
 
+  // Use draft prefix if not published
+  const finalVoyageID = voyage.published === false ? `drafts.${voyageID}` : voyageID
+
   // Prepare the voyage document for Sanity
   return {
-    _id: voyageID,
+    _id: finalVoyageID,
     _type: 'voyage',
-    published: voyage.published || false,
     title: voyage.title || '',
     slug: {
       current: voyage.slug || voyageID.replace('voyage-', ''),
@@ -268,33 +289,80 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
     comments: voyage.comments || 0,
     miniatureDisplay: voyage.miniatureDisplay || '',
     authorNote: {
-      text: voyage.authorNote?.text || '',
+      text: await convertMarkdownToPortableText(voyage.authorNote?.text || '', assetMapping),
       author: authorRef,
       affixeAuthor: voyage.authorNote?.affixeAuthor || '',
     },
-    experiencesBlock: voyage.experiencesBlock || [],
+    experiencesBlock: await convertStringArrayToPortableText(voyage.experiencesBlock || [], assetMapping),
     description: voyage.description || '',
     emailDescription: voyage.emailDescription || '',
     metaDescription: voyage.metaDescription || '',
     badgeSection: voyage.badgeSection || {},
     programmeBlock: programmeBlockWithImages,
-    pricingDetailsBlock: voyage.pricingDetailsBlock || {},
-    pricing: voyage.pricing || {},
-    accompanistsDescription: voyage.accompanistsDescription || '',
+    pricingDetailsBlock: {
+      listInclude: await convertStringArrayToPortableText(voyage.pricingDetailsBlock?.include || [], assetMapping),
+      listExclude: await convertStringArrayToPortableText(voyage.pricingDetailsBlock?.exclude || [], assetMapping),
+    },
+    pricing: {
+      ...voyage.pricing,
+      maxTravelers: voyage.pricing?.maxTravelers || 8,
+      lastMinuteAvailable: voyage.pricing?.lastMinuteAvailable || false,
+      lastMinuteReduction: voyage.pricing?.lastMinuteReduction || 0,
+      earlyBirdAvailable: voyage.pricing?.earlyBirdAvailable || false,
+      earlyBirdReduction: voyage.pricing?.earlyBirdReduction || 0,
+      minTravelersToConfirm: voyage.pricing?.minTravelersToConfirm || 2,
+      indivRoom: voyage.pricing?.indivRoom || false,
+      forcedIndivRoom: voyage.pricing?.forcedIndivRoom || false,
+      indivRoomPrice: voyage.pricing?.indivRoomPrice || 0,
+      cseAvailable: voyage.pricing?.cseAvailable || false,
+      cseReduction: voyage.pricing?.cseReduction || 0,
+      childrenPromo: voyage.pricing?.childrenPromo || 0,
+      childrenAge: voyage.pricing?.childrenAge || 12,
+    },
+    accompanistsDescription: await convertMarkdownToPortableText(voyage.accompanistsDescription || '', assetMapping),
     accompanistsList: accompanistsWithImages,
     housingBlock: housingBlockWithImages,
     image: mainImageRef,
     imageSecondary: secondaryImageRef,
     photosList: photosListRefs,
     videoLinks: voyage.videoLinks || [],
-    faqBlock: voyage.faqBlock?.faqList
-      ? voyage.faqBlock.faqList.map((faq, index) => ({
-          _key: `faq-${index}`,
-          ...faq,
-        }))
-      : [],
+    faqBlock: await convertFaqBlockToPortableText(voyage.faqBlock?.faqList || [], assetMapping),
     seoSection: seoSectionWithImages,
     idealPeriods: voyage.idealPeriods || {},
     monthlyAvailability: voyage.monthlyAvailability || {},
   }
+}
+
+// Generic function to convert string arrays to Portable Text
+async function convertStringArrayToPortableText(stringArray, assetMapping) {
+  if (!stringArray || stringArray.length === 0) {
+    return []
+  }
+
+  // Convert array of strings to markdown list format
+  const markdownList = stringArray.map(item => `- ${item}`).join('\n')
+  
+  // Convert markdown to Portable Text
+  return await convertMarkdownToPortableText(markdownList, assetMapping)
+}
+
+// Function to convert FAQ block to Portable Text
+async function convertFaqBlockToPortableText(faqList, assetMapping) {
+  if (!faqList || faqList.length === 0) {
+    return []
+  }
+
+  const faqBlockWithPortableText = []
+  for (let index = 0; index < faqList.length; index++) {
+    const faq = faqList[index]
+    const answerPortableText = await convertMarkdownToPortableText(faq.answer || '', assetMapping)
+    
+    faqBlockWithPortableText.push({
+      _key: `faq-${index}`,
+      ...faq,
+      answer: answerPortableText,
+    })
+  }
+  
+  return faqBlockWithPortableText
 }

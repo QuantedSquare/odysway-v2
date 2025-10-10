@@ -112,7 +112,8 @@ export const blogType = defineType({
     defineField({
       name: 'published',
       type: 'boolean',
-      initialValue: false,
+      initialValue: true,
+      hidden: true,
       group: 'metadata',
     }),
     defineField({
@@ -206,6 +207,29 @@ export const blogType = defineType({
       type: 'string',
       title: 'Legacy Categories',
       description: 'Original category string from Nuxt Content frontmatter',
+      group: 'metadata',
+    }),
+
+    // Migration metadata - used to link blogs to categories/destinations
+    defineField({
+      name: 'categorySlug',
+      type: 'string',
+      title: 'Category Slug',
+      description: 'Folder name of the category this blog belongs to (for migration linking)',
+      group: 'metadata',
+    }),
+    defineField({
+      name: 'destinationSlug',
+      type: 'string',
+      title: 'Destination Slug',
+      description: 'Folder name of the destination this blog belongs to (for migration linking)',
+      group: 'metadata',
+    }),
+    defineField({
+      name: 'testMigrationField',
+      type: 'string',
+      title: 'Test Migration Field',
+      description: 'Test field to verify migration updates work',
       group: 'metadata',
     }),
   ],

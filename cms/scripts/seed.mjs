@@ -26,6 +26,11 @@ import migrateChequesVacances from './migrateChequesVacances.js'
 import migrateConditionsGeneralesVente from './migrateConditionsGeneralesVente.js'
 import migrateConfirmation from './migrateConfirmation.js'
 import migrateOffreCadeau from './migrateOffreCadeau.js'
+import migrateSurMesure from './migrateSurMesure.js'
+import migrateVisionVoyageOdysway from './migrateVisionVoyageOdysway.js'
+import migrateHomePage from './migrateHomePage.js'
+import migrateEntreprise from './migrateEntreprise.js'
+import migrateFaq from './migrateFaq.js'
 
 dotenv.config()
 
@@ -71,10 +76,10 @@ async function run() {
   // await migrateHeader(client)
 
   // log('🔄 Migrating destinations from JSON files...')
-  // await migrateDestinations(client)
+   await migrateDestinations(client)
 
   // log('🔄 Migrating categories from JSON files...')
-  // await migrateCategories(client)
+   await migrateCategories(client)
 
   // log('🔄 Migrating checkout page configuration...')
   // await migrateCheckoutPage(client)
@@ -97,17 +102,20 @@ async function run() {
   // log('🔄 Migrating reviews...')
   // await migrateReviews(client)
 
-  // log('🔄 Migrating categories from JSON files...')
-  // await migrateCategories(client)
-
   // log('🔄 Migrating blogs from MD files...')
-  // await migrateBlogs(client)
+   await migrateBlogs(client)
 
   // log('🔄 Linking blogs to categories...')
-  // await linkBlogsToCategories(client)
+  await linkBlogsToCategories(client)
 
   // log('🔄 Linking blogs to destinations...')
   // await linkBlogsToDestinations(client)
+
+  // log('🔄 Migrating home page...')
+  // await migrateHomePage(client)
+
+  log('🔄 Migrating FAQ page...')
+  await migrateFaq(client)
 
   log('Seed completed')
 }

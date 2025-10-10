@@ -1,0 +1,16 @@
+{
+  "migrationType": "home-page",
+  "timestamp": "2025-10-09T15:18:48.876Z",
+  "duration": "1.86s",
+  "summary": {
+    "totalDocuments": 1,
+    "successful": 1,
+    "failed": 0,
+    "imagesReferenced": 1,
+    "imagesMissing": 0,
+    "warnings": 0
+  },
+  "missingImages": [],
+  "failedDocuments": [],
+  "warnings": []
+}

@@ -11,7 +11,6 @@ export const destinationType = defineType({
     defineField({name: 'iso', type: 'string'}),
     defineField({name: 'interjection', type: 'string'}),
     defineField({name: 'metaDescription', type: 'text'}),
-    defineField({name: 'published', type: 'boolean', initialValue: true}),
     defineField({name: 'showOnHome', type: 'boolean', initialValue: false}),
     defineField({
       name: 'regions',

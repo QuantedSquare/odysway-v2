@@ -2,7 +2,7 @@ import {log, error} from 'node:console'
 
 /**
  * Link each category to its corresponding blog post (one-to-one relationship)
- * Matches category slug with blog slug to find the correct blog
+ * Uses the categorySlug field stored during migration to match blogs to categories
  */
 export default async function linkBlogsToCategories(client) {
   try {
@@ -12,18 +12,18 @@ export default async function linkBlogsToCategories(client) {
     const categories = await client.fetch('*[_type == "category"]{ _id, title, slug }')
     log(`Found ${categories.length} categories`)
 
-    // Fetch all blogs
-    const blogs = await client.fetch('*[_type == "blog"]{ _id, title, slug }')
-    log(`Found ${blogs.length} blogs\n`)
+    // Fetch all category blogs (those with categorySlug field)
+    const blogs = await client.fetch('*[_type == "blog" && defined(categorySlug)]{ _id, title, categorySlug }')
+    log(`Found ${blogs.length} category blogs\n`)
 
-    // Create a map of blogs by their slug for quick lookup
-    const blogsBySlug = {}
+    // Create a map of blogs by their categorySlug for quick lookup
+    const blogsByCategorySlug = {}
     blogs.forEach((blog) => {
-      if (blog.slug?.current) {
-        blogsBySlug[blog.slug.current] = blog
+      if (blog.categorySlug) {
+        blogsByCategorySlug[blog.categorySlug] = blog
       }
     })
-
+     log("blogsByCategorySlug: ", blogsByCategorySlug)
     // Update each category with its matching blog
     const tx = client.transaction()
     let linkedCount = 0
@@ -37,29 +37,16 @@ export default async function linkBlogsToCategories(client) {
         continue
       }
 
-      // Find blog with matching slug in the category folder
-      // Blog slugs are in format: category-slug/blog-slug
-      // We need to find blogs that were in this category's folder
-      const matchingBlog = blogs.find((blog) => {
-        // The blog was created from a file in the category folder
-        // Check if any blog's slug matches common patterns for this category
-        return blog.slug?.current && blog.title
-      })
-
-      // For now, match by finding the first blog file that was in this category directory
-      // We'll use a query to find blogs created from files in this category's directory
-      const categoryBlogs = await client.fetch(
-        `*[_type == "blog" && slug.current match $pattern][0]{ _id, title }`,
-        {pattern: `${categorySlug}*`}
-      )
-
-      if (categoryBlogs) {
-        log(`📁 ${category.title} → ${categoryBlogs.title}`)
+      // Find the blog that has this category's slug stored in categorySlug field
+      const matchingBlog = blogsByCategorySlug[categorySlug]
+ 
+      if (matchingBlog) {
+        log(`📁 ${category.title} → ${matchingBlog.title}`)
         tx.patch(category._id, {
           set: {
             blog: {
               _type: 'reference',
-              _ref: categoryBlogs._id,
+              _ref: matchingBlog._id,
             },
           },
         })

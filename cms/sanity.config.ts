@@ -125,6 +125,8 @@ export default defineConfig({
                     S.documentTypeListItem('devis').title('Devis'),
                     S.documentTypeListItem('page_voyage').title('Page Voyage'),
                     S.documentTypeListItem('voyage_card').title('Carte Voyage'),
+                    S.documentTypeListItem('avisVoyageurs').title('Page Avis Voyageurs'),
+                    S.documentTypeListItem('faq').title('Page FAQ'),
                   ]),
               ),
             S.listItem()
@@ -133,13 +135,21 @@ export default defineConfig({
                 S.list()
                   .title('Autres pages')
                   .items([
-                    S.documentTypeListItem('privacyPolicy').title('Page Politique de confidentialité'),
+                    S.documentTypeListItem('homePage').title('Page Accueil'),
+                    S.documentTypeListItem('privacyPolicy').title(
+                      'Page Politique de confidentialité',
+                    ),
                     S.documentTypeListItem('recruitment').title('Page Recruitement'),
                     S.documentTypeListItem('legalMentions').title('Page Mentions légales'),
                     S.documentTypeListItem('chequesVacances').title('Page Chèques-Vacances'),
-                    S.documentTypeListItem('conditionsGeneralesVente').title('Page Conditions Générales de Vente'),
+                    S.documentTypeListItem('conditionsGeneralesVente').title(
+                      'Page Conditions Générales de Vente',
+                    ),
                     S.documentTypeListItem('confirmation').title('Page Confirmation'),
                     S.documentTypeListItem('offreCadeau').title('Page Offre Cadeau'),
+                    S.documentTypeListItem('surMesure').title('Page Sur Mesure'),
+                    S.documentTypeListItem('visionVoyageOdysway').title('Page Vision Voyage Odysway'),
+                    S.documentTypeListItem('entreprise').title('Page Entreprise'),
                   ]),
               ),
             orderableDocumentListDeskItem({

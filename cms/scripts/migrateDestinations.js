@@ -48,15 +48,17 @@ export default async function migrateDestinations(client) {
         const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 
         // Generate a unique ID from the slug
-        const destinationID = createId('destination', data.title)
-      
+        const baseID = createId('destination', data.title)
+        // Use draft prefix if not published
+        const destinationID = data.published === false ? `drafts.${baseID}` : baseID
+
       // Process regions array to create proper references
       const processedRegions = data.regions ? data.regions.map((region, index) => ({
         _key: `region-${index}`,
         _type: 'reference',
         _ref: createId('region', region.nom)
       })) : []
-      
+
       // Prepare the destination document for Sanity
       const destinationDoc = {
         _id: destinationID,
@@ -69,7 +71,6 @@ export default async function migrateDestinations(client) {
         iso: data.iso,
         interjection: data.interjection,
         metaDescription: data.metaDescription,
-        published: data.published,
         showOnHome: data.showOnHome,
         regions: processedRegions,
         isTopDestination: data.isTopDestination,

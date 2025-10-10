@@ -14,11 +14,12 @@ export async function convertMarkdownToPortableText(markdown, assetMapping) {
     // Step 1: Remove frontmatter (already handled as separate fields)
     let content = removeFrontmatter(markdown)
 
-    // Step 2: Strip custom wrapper components
-    content = stripCustomWrappers(content)
-
-    // Step 3: Convert custom image-container components
+    // Step 2: Convert custom image-container components BEFORE stripping wrappers
+    // (needs the closing :: markers to be intact)
     content = await convertImageContainers(content, assetMapping)
+
+    // Step 3: Strip custom wrapper components
+    content = stripCustomWrappers(content)
 
     // Step 4: Convert remaining markdown to Portable Text
     const portableText = await convertToPortableText(content)
@@ -80,31 +81,29 @@ function removeColorContainers(markdown) {
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i]
+    const trimmed = line.trim()
 
     // Check if we're starting a color-container
-    if (line.match(/^::color-container\{[^}]*\}/)) {
+    if (trimmed.match(/^::color-container(\{[^}]*\})?$/)) {
       inColorContainer = true
       depth = 0
       continue
     }
 
     if (inColorContainer) {
-      // Track nesting depth by counting ::: and ::::
-      if (line.match(/^::::/)) {
-        // Four colons - nested component
-        if (line.includes('::::')) depth++
-      } else if (line.match(/^:::/)) {
-        // Three colons - could be opening or closing
-        if (line.trim() === ':::') {
-          if (depth > 0) depth--
-        } else {
-          depth++
-        }
-      } else if (line.trim() === '::') {
-        // Two colons - check if this closes the color-container
+      // Track nesting with :: components
+      if (trimmed.match(/^::[a-z-]+/)) {
+        // Opening a nested component (e.g., ::info-container, ::cta-button)
+        depth++
+      } else if (trimmed === '::') {
+        // Closing marker
         if (depth === 0) {
+          // This closes the color-container itself
           inColorContainer = false
           continue
+        } else {
+          // This closes a nested component
+          depth--
         }
       }
       // Skip all lines inside color-container
@@ -118,12 +117,12 @@ function removeColorContainers(markdown) {
 }
 
 /**
- * Convert :::image-container components to markdown images
+ * Convert ::image-container or :::image-container components to markdown images
  * This allows the standard MD parser to handle them
  */
 async function convertImageContainers(markdown, assetMapping) {
-  // Pattern to match image-container blocks with flexible whitespace
-  const imageContainerPattern = /:::image-container[\s\S]*?---[\s\S]*?\n([\s\S]*?)\n[\s]*---[\s\S]*?:::/g
+  // Pattern to match image-container blocks with 2 or 3 colons and flexible whitespace
+  const imageContainerPattern = /::+image-container[\s\S]*?---[\s\S]*?\n([\s\S]*?)\n[\s]*---[\s\S]*?::+/g
 
   let matchCount = 0
   const result = markdown.replace(imageContainerPattern, (_match, yamlContent) => {
@@ -139,8 +138,18 @@ async function convertImageContainers(markdown, assetMapping) {
         return ''
       }
 
-      // Look up the asset ID from the mapping
-      const assetId = assetMapping.get(imageSrc)
+      // Look up the asset ID from the mapping (with filename fallback for duplicates)
+      let assetId = assetMapping.get(imageSrc)
+
+      // Fallback: try by filename for deduplicated images
+      if (!assetId && assetMapping.filenameMapping) {
+        const filename = imageSrc.split('/').pop()
+        const duplicates = assetMapping.filenameMapping.get(filename)
+        if (duplicates && duplicates.length > 0) {
+          assetId = duplicates[0].id
+          log(`🔄 Using deduplicated image: ${imageSrc} -> ${duplicates[0].path}`)
+        }
+      }
 
       if (!assetId) {
         log(`⚠️  Image not found in assets: ${imageSrc}`)
