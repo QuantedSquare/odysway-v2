@@ -294,11 +294,39 @@ function mdastToPortableText(mdast) {
       }
 
       case 'list': {
-        // For now, convert lists to paragraphs with bullets
-        // You can enhance this later
-        node.children.forEach((item) => {
-          if (item.type === 'listItem') {
-            item.children.forEach((child) => processNode(child))
+        const listType = node.ordered ? 'number' : 'bullet'
+
+        node.children.forEach((listItem) => {
+          if (listItem.type === 'listItem') {
+            // A list item can contain multiple blocks (paragraphs, sub-lists, etc.)
+            listItem.children.forEach((child) => {
+              // We only want to handle the first paragraph/block inside the list item for the simple list structure
+              if (child.type === 'paragraph') {
+                const children = []
+                // Process the inline children of the paragraph
+                child.children.forEach((inline) => {
+                  const result = processInline(inline, marks)
+                  if (Array.isArray(result)) {
+                    children.push(...result)
+                  } else if (result) {
+                    children.push(result)
+                  }
+                })
+
+                if (children.length > 0) {
+                  // Create the Portable Text block for the list item
+                  blocks.push({
+                    _type: 'block',
+                    _key: generateKey(),
+                    style: 'normal',
+                    listItem: listType,
+                    level: 1,
+                    children,
+                    markDefs: [],
+                  })
+                }
+              }
+            })
           }
         })
         break
