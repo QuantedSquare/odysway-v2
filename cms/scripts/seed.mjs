@@ -95,8 +95,8 @@ async function run() {
   // log('🔄 Migrating experiences page configuration...')
   // await migrateExperiencesPage(client)
 
-  // log('🔄 Migrating voyages...')
-  // await migrateVoyages(client)
+  log('🔄 Migrating voyages...')
+  await migrateVoyages(client)
 
   // log('🔄 Migrating reviews...')
   // await migrateReviews(client)

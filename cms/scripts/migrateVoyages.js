@@ -4,6 +4,7 @@ import path, { basename } from 'node:path'
 import process from 'node:process'
 import {createId} from './utils/createId.js'
 import {buildImageAssetMapping, convertImageReference} from './imageAssetHelper.js'
+import {convertMarkdownToPortableText} from './markdownToPortableText.js'
 import {MigrationReporter} from './migrationReporter.js'
 
 // Configuration: Set to either a specific file path or the voyages directory
@@ -272,7 +273,7 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
       author: authorRef,
       affixeAuthor: voyage.authorNote?.affixeAuthor || '',
     },
-    experiencesBlock: voyage.experiencesBlock || [],
+    experiencesBlock: await convertExperiencesBlockToPortableText(voyage.experiencesBlock || [], assetMapping),
     description: voyage.description || '',
     emailDescription: voyage.emailDescription || '',
     metaDescription: voyage.metaDescription || '',
@@ -297,4 +298,17 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
     idealPeriods: voyage.idealPeriods || {},
     monthlyAvailability: voyage.monthlyAvailability || {},
   }
+}
+
+// Function to convert experiences block array to Portable Text
+async function convertExperiencesBlockToPortableText(experiencesArray, assetMapping) {
+  if (!experiencesArray || experiencesArray.length === 0) {
+    return []
+  }
+
+  // Convert array of strings to markdown list format
+  const markdownList = experiencesArray.map(experience => `- ${experience}`).join('\n')
+  
+  // Convert markdown to Portable Text
+  return await convertMarkdownToPortableText(markdownList, assetMapping)
 }
