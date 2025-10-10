@@ -280,7 +280,10 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
     badgeSection: voyage.badgeSection || {},
     programmeBlock: programmeBlockWithImages,
     pricingDetailsBlock: voyage.pricingDetailsBlock || {},
-    pricing: voyage.pricing || {},
+    pricing: {
+      ...voyage.pricing,
+      maxTravelers: voyage.pricing?.maxTravelers || 8,
+    },
     accompanistsDescription: voyage.accompanistsDescription || '',
     accompanistsList: accompanistsWithImages,
     housingBlock: housingBlockWithImages,
