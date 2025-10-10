@@ -100,26 +100,26 @@ export function convertImageReference(image, assetMapping, alt = '', reporter = 
   }
 
   log(`🔍 convertImageReference called:`)
-  log(`   imagePath: "${imagePath}"`)
+  log(`   imagePath: "${image}"`)
   log(`   mapping has ${assetMapping.size} entries`)
 
   // Try exact path match first
-  let assetId = assetMapping.get(imagePath)
+  let assetId = assetMapping.get(image)
   log(`   assetId from mapping: ${assetId || 'NULL'}`)
 
   // If not found, try fallback by filename (for deduplicated images)
   if (!assetId && assetMapping.filenameMapping) {
-    const filename = imagePath.split('/').pop()
+    const filename = image.split('/').pop()
     const duplicates = assetMapping.filenameMapping.get(filename)
 
     if (duplicates && duplicates.length > 0) {
       // Use the first occurrence (they're all the same image content)
       assetId = duplicates[0].id
-      log(`🔄 Using deduplicated image: ${imagePath} -> ${duplicates[0].path}`)
+      log(`🔄 Using deduplicated image: ${image} -> ${duplicates[0].path}`)
 
       // Track that this is a duplicate
       if (reporter) {
-        reporter.recordWarning(documentId, `Image deduplicated: ${imagePath} -> ${duplicates[0].path}`)
+        reporter.recordWarning(documentId, `Image deduplicated: ${image} -> ${duplicates[0].path}`)
       }
     }
   }

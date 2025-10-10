@@ -273,13 +273,16 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
       author: authorRef,
       affixeAuthor: voyage.authorNote?.affixeAuthor || '',
     },
-    experiencesBlock: await convertExperiencesBlockToPortableText(voyage.experiencesBlock || [], assetMapping),
+    experiencesBlock: await convertStringArrayToPortableText(voyage.experiencesBlock || [], assetMapping),
     description: voyage.description || '',
     emailDescription: voyage.emailDescription || '',
     metaDescription: voyage.metaDescription || '',
     badgeSection: voyage.badgeSection || {},
     programmeBlock: programmeBlockWithImages,
-    pricingDetailsBlock: voyage.pricingDetailsBlock || {},
+    pricingDetailsBlock: {
+      listInclude: await convertStringArrayToPortableText(voyage.pricingDetailsBlock?.include || [], assetMapping),
+      listExclude: await convertStringArrayToPortableText(voyage.pricingDetailsBlock?.exclude || [], assetMapping),
+    },
     pricing: {
       ...voyage.pricing,
       maxTravelers: voyage.pricing?.maxTravelers || 8,
@@ -303,14 +306,14 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
   }
 }
 
-// Function to convert experiences block array to Portable Text
-async function convertExperiencesBlockToPortableText(experiencesArray, assetMapping) {
-  if (!experiencesArray || experiencesArray.length === 0) {
+// Generic function to convert string arrays to Portable Text
+async function convertStringArrayToPortableText(stringArray, assetMapping) {
+  if (!stringArray || stringArray.length === 0) {
     return []
   }
 
   // Convert array of strings to markdown list format
-  const markdownList = experiencesArray.map(experience => `- ${experience}`).join('\n')
+  const markdownList = stringArray.map(item => `- ${item}`).join('\n')
   
   // Convert markdown to Portable Text
   return await convertMarkdownToPortableText(markdownList, assetMapping)

@@ -35,7 +35,7 @@ dotenv.config()
 
 const projectId = process.env.SANITY_PROJECT_ID || 'nu6yntji'
 const dataset = process.env.SANITY_DATASET || 'production'
-const token = process.env.SANITY_WRITE_TOKEN || 'skLIfsupvfVK9iykipPHW9SAOiWqahQSbZURboI05Yk7p92KPeSIhRn8KXiFhk68hpdiQ5VhkH5eeZHRwq3INKbb4GU3kr8hxygJKIBnsfsYbEG2ZydQRHL1Cr3Pzsww6RScAxmgzVyoGRVNUxOM1Tp3xDyY79mqH3OxuOUJYMPzi12suevZ'
+const token = process.env.SANITY_WRITE_TOKEN
 if (!token) {
   error(
     'Missing SANITY_WRITE_TOKEN environment variable. Create a token with write access in the Sanity project settings and set it before running the seed.',

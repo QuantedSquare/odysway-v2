@@ -319,8 +319,8 @@ export const voyageType = defineType({
       group: 'pricing',
       title: 'Détails du prix',
       fields: [
-        {name: 'include', type: 'array', of: [{type: 'string'}]} as any,
-        {name: 'exclude', type: 'array', of: [{type: 'string'}]} as any,
+        {name: 'listInclude', type: 'array', title: 'Ce qui est inclus', of: [richTextBlock]} as any,
+        {name: 'listExclude', type: 'array', title: 'Ce qui est exclus', of: [richTextBlock]} as any,
       ],
     }),
     defineField({
