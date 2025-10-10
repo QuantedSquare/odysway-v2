@@ -1,4 +1,7 @@
+import {avisVoyageursType} from './avisVoyageursType'
 import {blockContent} from './blockContent'
+import {entrepriseType} from './entrepriseType'
+import {homePageType} from './homePageType'
 import {checkoutType} from './checkoutType'
 import {ctasType} from './ctasType'
 import {devisType} from './devisType'
@@ -6,6 +9,7 @@ import {categoryType} from './categoryType'
 import {blogType} from './blogType'
 import {destinationType} from './destinationType'
 import {experienceType} from './experienceType'
+import {faqType} from './faqType'
 import {footerType} from './footerType'
 import {headerType} from './headerType'
 import {pageBlogType} from './pageBlogType'
@@ -22,6 +26,8 @@ import {chequesVacancesType} from './chequesVacancesType'
 import {conditionsGeneralesVenteType} from './conditionsGeneralesVenteType'
 import {confirmationType} from './confirmationType'
 import {offreCadeauType} from './offreCadeauType'
+import {surMesureType} from './surMesureType'
+import {visionVoyageOdyswayType} from './visionVoyageOdyswayType'
 import {regionType} from './regionType'
 import {reviewType} from './reviewType'
 import {searchPageType} from './searchPageType'
@@ -31,6 +37,7 @@ import {voyageCardType} from './voyageCardType'
 import {voyageType} from './voyageType'
 
 export const schemaTypes = [
+  avisVoyageursType,
   blockContent,
   blogType,
   categoryType,
@@ -41,10 +48,13 @@ export const schemaTypes = [
   ctasType,
   devisType,
   destinationType,
+  entrepriseType,
   experienceType,
+  faqType,
   footerType,
-  legalMentionsType,
   headerType,
+  homePageType,
+  legalMentionsType,
   newsletterType,
   offreCadeauType,
   pageBlogType,
@@ -58,8 +68,10 @@ export const schemaTypes = [
   regionType,
   reviewType,
   searchPageType,
+  surMesureType,
   teamMemberType,
   topsType,
+  visionVoyageOdyswayType,
   voyageCardType,
   voyageType,
 ]

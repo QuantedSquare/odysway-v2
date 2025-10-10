@@ -1,0 +1,16 @@
+{
+  "migrationType": "sur-mesure",
+  "timestamp": "2025-10-09T11:58:46.404Z",
+  "duration": "2.11s",
+  "summary": {
+    "totalDocuments": 1,
+    "successful": 1,
+    "failed": 0,
+    "imagesReferenced": 1,
+    "imagesMissing": 0,
+    "warnings": 0
+  },
+  "missingImages": [],
+  "failedDocuments": [],
+  "warnings": []
+}

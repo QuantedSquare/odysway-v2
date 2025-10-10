@@ -26,6 +26,11 @@ import migrateChequesVacances from './migrateChequesVacances.js'
 import migrateConditionsGeneralesVente from './migrateConditionsGeneralesVente.js'
 import migrateConfirmation from './migrateConfirmation.js'
 import migrateOffreCadeau from './migrateOffreCadeau.js'
+import migrateSurMesure from './migrateSurMesure.js'
+import migrateVisionVoyageOdysway from './migrateVisionVoyageOdysway.js'
+import migrateHomePage from './migrateHomePage.js'
+import migrateEntreprise from './migrateEntreprise.js'
+import migrateFaq from './migrateFaq.js'
 
 dotenv.config()
 
@@ -104,7 +109,13 @@ async function run() {
   await linkBlogsToCategories(client)
 
   // log('🔄 Linking blogs to destinations...')
-   await linkBlogsToDestinations(client)
+  // await linkBlogsToDestinations(client)
+
+  // log('🔄 Migrating home page...')
+  // await migrateHomePage(client)
+
+  log('🔄 Migrating FAQ page...')
+  await migrateFaq(client)
 
   log('Seed completed')
 }
