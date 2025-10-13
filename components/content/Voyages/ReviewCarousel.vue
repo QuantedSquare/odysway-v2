@@ -1,6 +1,5 @@
 <template>
   <v-container
-
     id="reviews-container"
     :fluid="width < 1600"
     class="px-0 py-0 mb-4"
@@ -14,7 +13,7 @@
           cols="12"
           md="10"
           class="text-h4 my-4 font-weight-bold px-5 px-md-0"
-          :class="{ 'text-md-center text-start': centerTitle }"
+          :class="{ 'text-md-center text-start': centerTitle, 'd-none': reviews.length === 0 }"
         >
           {{ reviewsSection.title }}
         </v-col>
@@ -46,7 +45,7 @@
         ref="scrollContainer"
         class="flex-nowrap overflow-auto hidden-scroll mb-4"
       >
-        <!-- <v-col
+        <v-col
           v-for="review in reviews"
           :key="review.id"
           cols="10"
@@ -57,13 +56,13 @@
             :review="review"
             :is-travel-page="true"
           />
-        </v-col> -->
+        </v-col>
       </v-row>
       <v-row
         v-else
         class="mb-8"
       >
-        <!-- <v-col
+        <v-col
           v-for="review in reviews.slice(0, 3)"
           :key="review.id"
           cols="12"
@@ -73,7 +72,7 @@
             :review="review"
             :is-travel-page="true"
           />
-        </v-col> -->
+        </v-col>
       </v-row>
     </div>
   </v-container>
@@ -134,6 +133,7 @@ const { data: reviewsSanity } = useSanityQuery(reviewsQuery, {
 const reviews = computed(() => {
   return _.uniqBy(reviewsSanity.value, 'text') || []
 })
+console.log('reviews ', reviews.value)
 // Initialize scroll setup function
 const setupScrollElement = () => {
   nextTick(() => {

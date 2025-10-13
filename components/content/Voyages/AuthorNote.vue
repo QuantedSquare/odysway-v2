@@ -18,10 +18,11 @@
           :class="{ 'truncated': shouldTruncate && !isExpanded, 'text-content': shouldTruncate }"
           :style="shouldTruncate ? contentStyle : {}"
         >
-          <MDC
+          <EnrichedText :value="authorNote.text" />
+          <!-- <MDC
             tag="article"
             :value="authorNote.text"
-          />
+          /> -->
         </div>
       </div>
 
@@ -85,6 +86,7 @@
 <script setup>
 import { mdiArrowRight } from '@mdi/js'
 import { useImage } from '#imports'
+import { shouldTruncatePortableText } from '~/utils/getPortableTextLength'
 
 const props = defineProps({
   authorNote: {
@@ -111,7 +113,7 @@ const clampLines = 4
 // Computed property to determine if text should be truncated
 // Ensure this is consistent between server and client
 const shouldTruncate = computed(() => {
-  return props.authorNote?.text && props.authorNote.text.length > 700
+  return shouldTruncatePortableText(props.authorNote?.text, 700)
 })
 
 // Initial content style - consistent between server and client

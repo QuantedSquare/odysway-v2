@@ -133,10 +133,10 @@
                         wrapper-class="housing-description"
                       >
                         <div v-if="housing.housingType">
-                          <span class="font-weight-bold text-no-wrap">{{ housingTypeTitle }}:</span> {{ housing.housingType }}
+                          <span class="font-weight-bold text-no-wrap">{{ housingTypeTitle }}:</span> <EnrichedText :value="housing.housingType" />
                         </div>
                         <div v-if="housing.housingMood">
-                          <span class="font-weight-bold text-no-wrap">{{ housingMoodTitle }}:</span> {{ housing.housingMood }}
+                          <span class="font-weight-bold text-no-wrap">{{ housingMoodTitle }}:</span> <EnrichedText :value="housing.housingMood" />
                         </div>
                       </ExpandableText>
                     </v-col>

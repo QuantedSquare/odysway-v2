@@ -18,7 +18,7 @@
           v-if="voyageRef.accompanistsDescription"
           class="mb-4 font-weight-regular text-subtitle-2 text-md-body-2 line-height-2"
         >
-          {{ voyageRef.accompanistsDescription }}
+          <EnrichedText :value="voyageRef.accompanistsDescription" />
         </div>
         <AccompanistCard
           v-for="item, index in voyageRef.accompanistsList"

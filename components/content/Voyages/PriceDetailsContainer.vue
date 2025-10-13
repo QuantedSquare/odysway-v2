@@ -34,12 +34,16 @@
             </v-chip>
           </v-list-subheader>
           <v-container class="px-md-0">
-            <PriceDetailsItem
+            <EnrichedText
+              class="custom-include-list-item"
+              :value="pricingDetailsBlock.listInclude"
+            />
+            <!-- <PriceDetailsItem
               v-for="item, index in pricingDetailsBlock.include"
               :key="index"
               is-included
               :text="item"
-            />
+            /> -->
           </v-container>
         </v-list>
       </v-col>
@@ -64,11 +68,15 @@
             </v-chip>
           </v-list-subheader>
           <v-container class="px-md-0">
-            <PriceDetailsItem
+            <EnrichedText
+              class="custom-exclude-list-item"
+              :value="pricingDetailsBlock.listExclude"
+            />
+            <!-- <PriceDetailsItem
               v-for="item, index in pricingDetailsBlock.exclude"
               :key="index"
               :text="item"
-            />
+            /> -->
           </v-container>
         </v-list>
       </v-col>
@@ -97,5 +105,30 @@ defineProps({
 <style scoped>
 .custom-padding {
   padding-inline: 0 !important;
+}
+.custom-include-list-item:deep(ul) {
+  list-style: none!important;
+  margin-left: 0;
+  padding-left: 1.2em;
+}
+.custom-exclude-list-item:deep(ul) {
+  list-style: none!important;
+  margin-left: 0.1em;
+  padding-left: 1.2em;
+}
+.custom-include-list-item:deep(ul li:before) {
+  content: url('/assets/include.svg') !important;
+  position: absolute;
+  left: 0;
+  margin-top: 0.2em!important;
+}
+.custom-exclude-list-item:deep(ul li:before) {
+  content: url('/assets/exclude.svg') !important;
+  position: absolute;
+  left: 10px;
+  margin-top: 0.2em!important;
+}
+.custom-exclude-list-item:deep(ul li), .custom-include-list-item:deep(ul li) {
+  margin-left: 0.8em;
 }
 </style>
