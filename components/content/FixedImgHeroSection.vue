@@ -1,13 +1,30 @@
 <template>
   <div>
-    <v-img
-      class="img-couv hidden-md-and-down"
-      :src="img(imgSrc, { format: 'webp', quality: 70, height: 900, width: 1536 })"
-    />
-    <v-img
-      class="img-couv hidden-md-and-up"
-      :src="img(imgSrcMobile, { format: 'webp', quality: 70, height: 900, width: 1536 })"
-    />
+    <SanityImage
+      :asset-id="imgSrc.asset._ref"
+      auto="format"
+    >
+      <template #default="{ src }">
+        <v-img
+          class="img-couv hidden-md-and-down"
+          :src="src"
+          :lazy-src="img(src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+        />
+      </template>
+    </SanityImage>
+
+    <SanityImage
+      :asset-id="imgSrcMobile.asset._ref"
+      auto="format"
+    >
+      <template #default="{ src }">
+        <v-img
+          class="img-couv hidden-md-and-up"
+          :src="src"
+          :lazy-src="img(src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+        />
+      </template>
+    </SanityImage>
   </div>
 </template>
 
@@ -16,11 +33,11 @@ import { useImage } from '#imports'
 
 defineProps({
   imgSrc: {
-    type: String,
+    type: Object,
     required: true,
   },
   imgSrcMobile: {
-    type: String,
+    type: Object,
     required: true,
   },
 })

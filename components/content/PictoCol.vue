@@ -5,11 +5,18 @@
     md="4"
     class="picto_container"
   >
-    <img
-      width="15%"
-      class="mb-4"
-      :src="imgSrc"
+    <SanityImage
+      :asset-id="imgSrc.asset._ref"
+      auto="format"
     >
+      <template #default="{ src }">
+        <img
+          width="15%"
+          class="mb-4"
+          :src="src"
+        >
+      </template>
+    </SanityImage>
     <slot name="text" />
   </v-col>
 </template>
@@ -17,7 +24,7 @@
 <script setup>
 defineProps({
   imgSrc: {
-    type: String,
+    type: Object,
     required: true,
   },
 })
