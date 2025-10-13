@@ -178,7 +178,7 @@ const displayedVoyages = computed(() => {
   // return voyagesWithCta.value.slice(0, isExpanded.value ? voyagesWithCta.value.length : 9)
   return voyagesWithCta.value
 })
-console.log('displayedVoyages', displayedVoyages.value)
+
 const noVoyagesFoundCategoryText = computed(() => {
   if (props.pageContent?.slug?.noVoyagesFound && props.selectedCategory?.title) {
     return props.pageContent.slug.noVoyagesFound.replace('{{title}}', props.selectedCategory.title)

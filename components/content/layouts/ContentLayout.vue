@@ -145,7 +145,7 @@ const { data: destinations } = useAsyncData('destinations-on-content-layout', as
   }
   return null
 })
-console.log('destinations', destinations.value)
+
 
 const displayedData = computed(() => {
   if (props.isCategory) {
@@ -185,7 +185,7 @@ const displayedData = computed(() => {
       pageTitle: props.pageContent?.index?.pageTitle || 'Toutes nos destinations',
       showOnBottom: Object.keys(route.params).length > 0,
     }
-    console.log('destinationData', destinationData)
+
     return destinationData
   }
   return null

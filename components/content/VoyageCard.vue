@@ -163,7 +163,6 @@ const props = defineProps({
     type: Object,
   },
 })
-console.log('props ', props.voyage)
 const img = useImage()
 
 const { data: voyageCardContent } = await useAsyncData('voyage-card-content', () =>
