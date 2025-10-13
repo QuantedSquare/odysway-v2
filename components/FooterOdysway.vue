@@ -53,16 +53,22 @@
               :options="{ threshold: 0.5 }"
               transition="fade-transition"
             >
-              <v-img
-                rounded="lg"
-                :src="img(footer.team.image, { format: 'webp', quality: 100, width: 320, height: 270 })"
-                :lazy-src="img(footer.team.image, { format: 'webp', quality: 10, width: 320, height: 270 })"
-                :srcset="`${img(footer.team.image, { format: 'webp', quality: 70, width: 320, height: 270 })} 320w, ${img(footer.team.image, { format: 'webp', quality: 70, width: 640, height: 270 })} 640w`"
-                sizes="(max-width: 600px) 480px, 320px"
-                loading="lazy"
-                alt="Image de l'équipe"
-                class="max-height-300"
-              />
+              <SanityImage
+                v-if="footer.team.image?.asset"
+                :asset-id="footer.team.image.asset._ref"
+                auto="format"
+              >
+                <template #default="{ src }">
+                  <v-img
+                    rounded="lg"
+                    :src="src"
+                    :lazy-src="img(src, { format: 'webp', quality: 10, width: 320, height: 270 })"
+                    loading="lazy"
+                    alt="Image de l'équipe"
+                    class="max-height-300"
+                  />
+                </template>
+              </SanityImage>
             </v-lazy>
           </v-col>
           <v-col
@@ -220,7 +226,28 @@ import OdyswayFooter from '~/assets/img/odysway-text.png'
 import OdyswayFooterBleu from '~/assets/img/Logo-Odysway-Bleu.png'
 
 const route = useRoute()
-const { data: footer } = useAsyncData('footer', () => queryCollection('footer').first())
+const sanity = useSanity()
+
+const footerQuery = groq`*[_type == "footer"][0]{
+  logo {
+    description
+  },
+  team {
+    image {
+      asset {
+        _ref
+      }
+    }
+  },
+  contact,
+  social,
+  linksList
+}`
+
+const { data: footer } = await useAsyncData('footer', () =>
+  sanity.fetch(footerQuery)
+)
+
 const img = useImage()
 
 // Add computed property to check if current route is a voyage detail page

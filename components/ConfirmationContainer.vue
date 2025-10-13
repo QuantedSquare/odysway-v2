@@ -17,23 +17,31 @@
             v-if="voyage"
             cols="12"
           >
-            <v-img
-              rounded="xl"
-              class="d-flex align-end"
-              :src="voyage.image.src"
-              :alt="voyage.image.alt"
-              :height="mdAndUp ? '348px' : '250px'"
-              cover
+            <SanityImage
+              v-if="voyage.image?.asset"
+              :asset-id="voyage.image.asset._ref"
+              auto="format"
             >
-              <div class="d-flex align-center justify-center ">
-                <h3
-                  v-if="voyage"
-                  class="text-white  text-h3 pa-10 text-shadow"
+              <template #default="{ src }">
+                <v-img
+                  rounded="xl"
+                  class="d-flex align-end"
+                  :src="src"
+                  :alt="voyage.image.alt || voyage.title"
+                  :height="mdAndUp ? '348px' : '250px'"
+                  cover
                 >
-                  {{ voyage.title }}
-                </h3>
-              </div>
-            </v-img>
+                  <div class="d-flex align-center justify-center ">
+                    <h3
+                      v-if="voyage"
+                      class="text-white  text-h3 pa-10 text-shadow"
+                    >
+                      {{ voyage.title }}
+                    </h3>
+                  </div>
+                </v-img>
+              </template>
+            </SanityImage>
           </v-col>
           <v-col
             cols="12"
@@ -120,11 +128,22 @@
 import { useDisplay } from 'vuetify'
 
 const route = useRoute()
+const sanity = useSanity()
 const isOption = ref(route.query.isoption === 'true')
 const isDevis = ref(route.query.devis === 'true')
-const { data: voyage, status } = await useAsyncData(route.query.voyage, () => {
-  return queryCollection('voyages').where('slug', '=', route.query.voyage).first()
-})
+
+const voyageQuery = groq`*[_type == "voyage" && slug.current == $slug][0]{
+  _id,
+  title,
+  "slug": slug.current,
+  image
+}`
+
+const { data: voyage, status } = await useAsyncData(
+  `voyage-${route.query.voyage}`,
+  () => sanity.fetch(voyageQuery, { slug: route.query.voyage })
+)
+
 const { mdAndUp } = useDisplay()
 onMounted(() => {
   // if (route.query.amount) {
