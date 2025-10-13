@@ -1,50 +1,59 @@
 <template>
-  <v-img
-    :src="img(imageSrc, { format: 'webp', quality: 70, height: 900, width: 1536 })"
-    :lazy-src="img(imageSrc, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-    size="(max-width: 600) 480px, 1500px"
-    :srcset="`${img(imageSrc, { format: 'webp', quality: 70, width: 640 })} 480w, ${img(imageSrc, { format: 'webp', quality: 70, width: 1024 })} 1500w`"
-    height="50vh"
-    cover
+
+
+  <SanityImage
+    :asset-id="imageSrc.asset._ref"
+    auto="format"
   >
-    <div class="h-100 d-flex align-center">
-      <v-container class="text-white text-h4 text-md-h2 font-weight-bold text-shadow text-center">
-        <v-row
-          justify="center"
-          align="center"
-        >
-          <v-col
-            cols="12"
-            md="auto"
+    <template #default="{ src }">
+    <v-img
+        :src="src"
+        :lazy-src="img(src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+        cover
+        alt="Hero image"
+        height="50vh"
+      >
+      <div class="h-100 d-flex align-center">
+        <v-container class="text-white text-h4 text-md-h2 font-weight-bold text-shadow text-center">
+          <v-row
+            justify="center"
+            align="center"
           >
-            <h1 class="text-h3 text-md-h1">
-              <slot name="title" />
-            </h1>
-            <slot name="subtitle" />
-          </v-col>
-        </v-row>
-        <v-row
-          justify="center"
-          align="center"
-        >
-          <v-col
-            cols="12"
+            <v-col
+              cols="12"
+              md="auto"
+            >
+              <h1 class="text-h3 text-md-h1">
+                <slot name="title" />
+              </h1>
+              <slot name="subtitle" />
+            </v-col>
+          </v-row>
+          <v-row
+            justify="center"
+            align="center"
           >
-            <slot
-              name="component-slot-1"
-            />
-          </v-col>
-          <v-col
-            cols="12"
-          >
-            <slot
-              name="component-slot-2"
-            />
-          </v-col>
-        </v-row>
-      </v-container>
-    </div>
-  </v-img>
+            <v-col
+              cols="12"
+            >
+              <slot
+                name="component-slot-1"
+              />
+            </v-col>
+            <v-col
+              cols="12"
+            >
+              <slot
+                name="component-slot-2"
+              />
+            </v-col>
+          </v-row>
+        </v-container>
+      </div>
+    </v-img>
+    </template>
+  </SanityImage>
+
 </template>
 
 <script setup>
@@ -52,8 +61,8 @@ import { useImage } from '#imports'
 
 defineProps({
   imageSrc: {
-    type: String,
-    default: '/images/Laponie-(1).webp',
+    type: Object
+    
   },
 })
 const img = useImage()
