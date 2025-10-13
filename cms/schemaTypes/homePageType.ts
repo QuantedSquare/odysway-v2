@@ -118,7 +118,8 @@ export const homePageType = defineType({
         defineField({
           name: 'title',
           title: 'Titre Hero',
-          type: 'string',
+          type: 'array',
+          of: [richTextBlock],
           validation: (rule) => rule.required(),
         }),
       ],
