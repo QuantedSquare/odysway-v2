@@ -1,9 +1,33 @@
 <template>
   <div>
-    <ContentRenderer
-      v-if="page && status === 'success'"
-      :value="page"
-    />
+    <HeroSection
+      v-if="page?.heroImage"
+      :image-src="page.heroImage"
+    >
+      <template #title>
+        {{ page.title }}
+      </template>
+    </HeroSection>
+
+    <SectionContainer v-if="page">
+      <template #content>
+        <EnrichedText
+          v-if="page.content"
+          :value="page.content"
+        />
+
+        <CtaButton
+          v-if="page.ctaButton"
+          :link="getButtonLink(page.ctaButton.link)"
+          class="mt-8"
+        >
+          <template #text>
+            {{ page.ctaButton.text }}
+          </template>
+        </CtaButton>
+      </template>
+    </SectionContainer>
+
     <div
       v-else-if="status === 'pending'"
       class="d-flex justify-center align-center"
@@ -18,8 +42,25 @@ definePageMeta({
   layout: 'simple-pages',
 })
 
-const route = useRoute()
-const { data: page, status } = useAsyncData(route.path, () => {
-  return queryCollection('content').path(route.path).first()
-})
+const sanity = useSanity()
+
+const query = groq`*[_type == "chequesVacances" && slug.current == "cheques-vacances"][0]{
+  title,
+  heroImage,
+  content,
+  ctaButton
+}`
+
+const { data: page, status } = await useAsyncData('cheques-vacances', () =>
+  sanity.fetch(query)
+)
+
+function getButtonLink(link) {
+  if (!link) return '/'
+  // If it's a full URL to odysway.com, extract just the path
+  if (link.startsWith('https://odysway.com')) {
+    return link.replace('https://odysway.com', '')
+  }
+  return link
+}
 </script>

@@ -1,9 +1,15 @@
 <template>
   <div>
-    <ContentRenderer
-      v-if="page"
-      :value="page"
-    />
+    
+
+        <SectionContainer>
+      <template #content>
+        <h1 v-if="page">{{ page.title }}</h1>
+        <EnrichedText
+          :value="page.body"
+        />
+      </template>
+    </SectionContainer>
   </div>
 </template>
 
@@ -12,9 +18,14 @@ definePageMeta({
   layout: 'simple-pages',
 })
 
-const route = useRoute()
+const sanity = useSanity()
 
-const { data: page } = await useAsyncData(route.path, () => {
-  return queryCollection('content').path(route.path).first()
-})
+const query = groq`*[_type == "legalMentions" && slug.current == "mentions-legales"][0]{
+  title,
+  body
+}`
+
+const { data: page } = await useAsyncData('mentions-legales', () =>
+  sanity.fetch(query)
+)
 </script>

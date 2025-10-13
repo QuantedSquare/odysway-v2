@@ -12,8 +12,18 @@ definePageMeta({
   layout: 'simple-pages',
 })
 
+const sanity = useSanity()
+
+const query = groq`*[_type == "page_contact"][0]{
+  formTitle,
+  heroSection,
+  contactForm,
+  gdprSection,
+  validationMessages
+}`
+
 const { data: contactContent } = await useAsyncData('contact-content', () =>
-  queryCollection('page_contact').first(),
+  sanity.fetch(query)
 )
 
 useHead({
