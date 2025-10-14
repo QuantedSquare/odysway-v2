@@ -1,73 +1,65 @@
 <template>
-  <div>
-    <ContentLayout
-      :is-category="true"
-      :selected-category="selectedCategory"
-      :page-content="pageContent"
-    >
-      <template #content>
+  <ContentLayout
+    :is-category="true"
+    :selected-category="categorySanity"
+    :page-content="pageContent"
+    :display-divider="true"
+  >
+    <template #content>
+      <div>
         <DisplayVoyagesRow
-          :selected-category="selectedCategory"
-          :voyages="voyages"
+          :is-search="true"
+          :voyages="categorySanity.voyages"
           :page-content="pageContent"
         />
-        <template
-          v-if="categorieContentStatus === 'success' && categorieContent"
-        >
-          <ContentRenderer
-            v-if="categorieContent"
-            :value="categorieContent"
-            class="mt-8"
+      </div>
+      <BlogHeroSection
+        v-if="categorySanity?.blog"
+        class="mt-12"
+        :title="categorySanity.blog.title"
+        :description="categorySanity.blog.description"
+        :image="categorySanity.blog.displayedImg"
+        :background-color="'soft-blush'"
+        introduction-color="grey"
+        title-color="primary"
+        avatar-size="60"
+      >
+        <template #title>
+          {{ categorySanity.blog.title }}
+        </template>
+        <template #introduction>
+          {{ categorySanity.blog.description }}
+        </template>
+      </BlogHeroSection>
+      <SectionContainer
+        v-if="categorySanity?.blog"
+        :title="categorySanity.blog.title"
+        :subtitle="categorySanity.blog.excerpt"
+      >
+        <template #content>
+          <EnrichedText
+            :value="categorySanity.blog.body"
           />
         </template>
-      </template>
-    </ContentLayout>
-  </div>
+      </SectionContainer>
+    </template>
+  </ContentLayout>
 </template>
 
 <script setup>
 const route = useRoute()
 const slug = computed(() => route.params.thematiqueSlug)
 
-const { data: pageContent } = await useAsyncData('page-thematiques', () => {
-  return queryCollection('page_thematiques').first()
-})
-
-const { data: categories } = await useAsyncData('categories', () => {
-  return queryCollection('categories').where('showOnHome', '=', true).all()
-})
-
-const selectedCategory = computed(() => {
-  if (!categories.value || !slug.value) return null
-  return categories.value.find(c => c.slug === slug.value) || null
-})
-
-const { data: categorieContent, status: categorieContentStatus } = useAsyncData('categorieContent', async () => {
-  const categJSON = await queryCollection('categories').where('slug', '=', slug.value).first()
-  const pathParts = categJSON.stem.split('/')
-  const categoryPath = pathParts.slice(0, 2).join('/')
-  const result = await queryCollection('categoriesContent').where('stem', 'LIKE', `${categoryPath}/%`).where('published', '=', true).first()
-  return result
-}, {
-  watch: [slug],
-})
-
-provide('page', categorieContent)
-// #TODO OPTI THE LE CALL EN FAISANT UN SELECT DES PROPS NECESSAIRES
-const { data: voyages } = await useAsyncData('voyages', async () => {
-  const travelList = await queryCollection('voyages')
-    .where('published', '=', true)
-    .all()
-
-  return travelList.filter(v => v.categories?.some(c => c.name?.includes(slug.value)))
-}, {
-  watch: [slug],
-  immediate: true,
-})
-
-useHead({
-  htmlAttrs: {
-    lang: 'fr',
+// Fetch page thematiques content
+const pageContentQuery = `
+  *[_type == "page_thematiques"][0]{
+    ...
+  }
+`
+const { data: pageContent } = await useSanityQuery(pageContentQuery, {}, {
+  key: 'page-thematiques',
+  getCachedData: (key) => {
+    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
   },
 })
 
@@ -75,8 +67,14 @@ useHead({
 const categoryQuery = `
   *[_type == "category" && slug.current == $slug][0]{
     ...,
+      "voyages": *[_type == "voyage" && references(^._id)]{
+      ...,
+    },
     blog->{
       ...,
+      author->{
+        ...
+      },
       body[]{
         ...,
         _type == "image" => {
@@ -87,11 +85,6 @@ const categoryQuery = `
             metadata
           }
         }
-      },
-      author->{
-        name,
-        image,
-        position
       }
     }
   }
@@ -99,21 +92,33 @@ const categoryQuery = `
 
 const { data: categorySanity } = await useSanityQuery(categoryQuery, {
   slug: slug.value,
-  throwOnError: true,
+}, {
+  key: 'category-' + slug.value,
+  getCachedData: (key) => {
+    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
+  },
 })
 
-// Fetch voyages filtered by category
-const voyagesQuery = `
-  *[_type == "voyage" && published == true && count((categories[]->slug.current)[@ == $slug]) > 0]{
-    ...,
-    categories[]->{
-      ...
-    }
-  }
-`
+const dataToBlog = reactive({
+  title: categorySanity.value?.blog?.title,
+  displayedImg: categorySanity.value?.blog?.displayedImg,
+  author: categorySanity.value?.blog?.author?.name,
+  authorPhoto: categorySanity.value?.blog?.author?.image,
+  authorRole: categorySanity.value?.blog?.author?.position,
+  published: categorySanity.value?.blog?.published,
+  publishedAt: categorySanity.value?.blog?.publishedAt,
+  tags: categorySanity.value?.blog?.tags,
+  categories: categorySanity.value?.blog?.legacyCategories,
+  blogType: categorySanity.value?.blog?.blogType,
+  badgeColor: categorySanity.value?.blog?.badgeColor,
+  readingTime: categorySanity.value?.blog?.readingTime,
+})
 
-const { data: voyagesSanity } = await useSanityQuery(voyagesQuery, {
-  slug: slug.value,
-  throwOnError: true,
+provide('page', dataToBlog)
+
+useHead({
+  htmlAttrs: {
+    lang: 'fr',
+  },
 })
 </script>

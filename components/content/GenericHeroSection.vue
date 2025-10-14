@@ -5,14 +5,15 @@
   >
     <v-container
       fluid
-      class="pa-0 custom-hero-height"
+      class="pa-0"
+      :class="displayedImg?.asset?._ref ? 'custom-hero-height' : 'py-6'"
     >
       <v-row
         class="ma-0 h-100 flex-column-reverse flex-md-row"
       >
         <v-col
           cols="12"
-          md="5"
+          :md="displayedImg?.asset?._ref ? 5 : 12"
           class="d-flex flex-column justify-center ga-6 ga-md-8 pl-md-8"
         >
           <div
@@ -86,13 +87,15 @@
         </v-col>
         <v-spacer />
         <v-col
+          v-if="displayedImg?.asset?._ref"
           cols="12"
           md="6"
           class="pa-0 fixed-height"
         >
           <div class="hero-img-wrapper">
             <SanityImage
-              :asset-id="displayedImg.asset._ref"
+
+              :asset-id="displayedImg?.asset?._ref"
               auto="format"
             >
               <template #default="{ src }">
