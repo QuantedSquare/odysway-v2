@@ -203,13 +203,36 @@ defineProps({
   },
 })
 
-const { data: header } = await useAsyncData('header', () => {
-  return queryCollection('header').first()
-})
+const sanity = useSanity()
+
+const headerQuery = groq`*[_type == "header"][0]{
+  logo,
+  search,
+  button1,
+  button2,
+  button3,
+  button4,
+  button5
+}`
+
+const { data: header } = await useAsyncData('header', () =>
+  sanity.fetch(headerQuery)
+)
 
 const logo = computed(() => {
   if (!header.value?.logo) return '/logos/Logo-Odysway-Bleu.png'
-  return sm.value ? header.value.logo.mobile : header.value.logo.desktop
+
+  const logoImage = sm.value ? header.value.logo.mobile : header.value.logo.desktop
+
+  // Handle Sanity image assets
+  if (logoImage?.asset?._ref) {
+    const imageUrlBuilder = sanity.config.stega.enabled
+      ? sanity.config.stega.client.imageUrlBuilder
+      : sanity.config.client.imageUrlBuilder
+    return imageUrlBuilder.image(logoImage).url()
+  }
+
+  return logoImage
 })
 
 const { gtag } = useGtag()
