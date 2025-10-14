@@ -16,7 +16,7 @@
           v-show="experience.showOnHome"
           :key="experience.id"
           :slug="experience.slug"
-          :image="experience.image.src"
+          :image="experience.image"
           :title="experience.title"
           :description="experience.discoveryTitle"
           type="experiences"
@@ -27,7 +27,20 @@
 </template>
 
 <script setup>
-const { data: experiences } = await useAsyncData('experiences-carousel-homepage', () => {
-  return queryCollection('experiences').select('id', 'title', 'slug', 'discoveryTitle', 'image', 'showOnHome', 'published').where('published', '=', true).all()
+const props = defineProps({
+  experiencesData: {
+    type: Array,
+    required: true,
+  },
+})
+const experiences = computed(() => {
+  return props.experiencesData.map(exp => ({
+    id: exp._id,
+    title: exp.title,
+    slug: exp.slug.current,
+    discoveryTitle: exp.discoveryTitle,
+    showOnHome: exp.showOnHome,
+    image: exp.image,
+  }))
 })
 </script>

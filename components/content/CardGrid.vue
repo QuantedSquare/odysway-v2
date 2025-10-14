@@ -16,11 +16,11 @@
         </v-col>
         <ImageTitleColCard
           v-for="category in categories"
-          :key="category.id"
+          :key="category._id"
           :title="category.title"
           :subtitle="category.discoveryTitle"
           :image="category.image"
-          :link="'/thematiques/' + category.slug"
+          :link="'/thematiques/' + category.slug.current"
         />
       </v-row>
     </v-container>
@@ -35,9 +35,9 @@
         <CategColCard
           v-for="category in categories"
           v-show="category.showOnHome"
-          :key="category.id"
-          :slug="category.slug"
-          :image="category.image.src"
+          :key="category._id"
+          :slug="category.slug.current"
+          :image="category.image"
           :title="category.title"
           :description="category.discoveryTitle"
           type="thematiques"
@@ -50,8 +50,11 @@
 <script setup>
 import { useDisplay } from 'vuetify'
 
-const { width } = useDisplay()
-const { data: categories } = await useAsyncData('categories-card-grid', () => {
-  return queryCollection('categories').select('id', 'title', 'slug', 'discoveryTitle', 'image', 'showOnHome').where('showOnHome', '=', true).all()
+defineProps({
+  categories: {
+    type: Array,
+    required: true,
+  },
 })
+const { width } = useDisplay()
 </script>

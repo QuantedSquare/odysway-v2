@@ -1,44 +1,53 @@
 <template>
   <div class="mt-8 mt-md-0">
     <div class="relative-hero-section mb-16 rounded-xl">
-      <v-img
-        :src="img(imageSrc, { format: 'webp', quality: 90, height: 900, width: 1536 })"
-        :lazy-src="img(imageSrc, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-        size="(max-width: 600) 480px, 1500px"
-        :srcset="`${img(imageSrc, { format: 'webp', quality: 80, width: 640, height: 900 })} 480w, ${img(imageSrc, { format: 'webp', quality: 80, width: 1024, height: 900 })} 1500w`"
-        height="100%"
-        alt="Image principale Hero d'Odysway"
-        class="rounded-xl hero-height"
-        cover
+      <SanityImage
+        :asset-id="image.asset._ref"
+        auto="format"
       >
-        <template #placeholder>
-          <div class="d-flex align-center justify-center fill-height">
-            <v-progress-circular
-              indeterminate
-              color="primary"
-            />
-          </div>
-        </template>
+        <template #default="{ src }">
+          <v-img
+            :src="img(src, { format: 'webp', quality: 90, height: 900, width: 1536 })"
+            :lazy-src="img(src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+            size="(max-width: 600) 480px, 1500px"
+            :srcset="`${img(src, { format: 'webp', quality: 80, width: 640, height: 900 })} 480w, ${img(src, { format: 'webp', quality: 80, width: 1024, height: 900 })} 1500w`"
+            height="100%"
+            alt="Image principale Hero d'Odysway"
+            class="rounded-xl hero-height"
+            cover
+          >
+            <template #placeholder>
+              <div class="d-flex align-center justify-center fill-height">
+                <v-progress-circular
+                  indeterminate
+                  color="primary"
+                />
+              </div>
+            </template>
 
-        <div class="h-100 d-flex align-center position-relative">
-          <v-container class="text-white text-h4 text-md-h2 font-weight-bold text-shadow text-center">
-            <v-row
-              justify="center"
-              align="center"
-            >
-              <v-col
-                cols="12"
-                md="auto"
-              >
-                <h1 class="custom-hero-title">
-                  <slot name="title" />
-                </h1>
-                <slot name="subtitle" />
-              </v-col>
-            </v-row>
-          </v-container>
-        </div>
-      </v-img>
+            <template #default>
+              <div class="h-100 d-flex align-center position-relative">
+                <v-container class="text-white text-h4 text-md-h2 font-weight-bold text-shadow text-center">
+                  <v-row
+                    justify="center"
+                    align="center"
+                  >
+                    <v-col
+                      cols="12"
+                      md="auto"
+                    >
+                      <h1 class="custom-hero-title ">
+                        <slot name="title" />
+                      </h1>
+                      <slot name="subtitle" />
+                    </v-col>
+                  </v-row>
+                </v-container>
+              </div>
+            </template>
+          </v-img>
+        </template>
+      </SanityImage>
     </div>
     <div class="searchfield-overlap">
       <SearchField />
@@ -50,22 +59,11 @@
 import { useImage } from '#imports'
 
 defineProps({
-  imageSrc: {
-    type: String,
-    default: '/images/Laponie-(1).webp',
+  image: {
+    type: Object,
+    required: true,
   },
-  primaryColor: {
-    type: String,
-    default: 'rgba(43, 76, 82, 0)',
-  },
-  secondaryColor: {
-    type: String,
-    default: 'rgba(43, 76, 82, 0)',
-  },
-  tertiaryColor: {
-    type: String,
-    default: 'rgba(43, 76, 82, 0)',
-  },
+
 })
 const img = useImage()
 </script>

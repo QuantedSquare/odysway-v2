@@ -30,13 +30,15 @@
               cover
               aspect-ratio="auto"
             >
-              <div class="badge-position">
-                <RatingBadge
-                  :rating="voyage.rating"
-                  :comments="voyage.comments"
-                  no-link
-                />
-              </div>
+              <template #default>
+                <div class="badge-position">
+                  <RatingBadge
+                    :rating="voyage.rating"
+                    :comments="voyage.comments"
+                    no-link
+                  />
+                </div>
+              </template>
             </v-img>
           </template>
         </SanityImage>
@@ -60,7 +62,7 @@
                       role="tooltip"
                       :aria-label="`Titre complet du voyage: ${voyage.title}`"
                     >
-                      <template #activator="{ props }">
+                      <template #activator="{ props: tooltipProps }">
                         <div
                           :id="`tooltip-${voyage.slug.current || voyage.slug}`"
                           ref="titleRef"
@@ -68,7 +70,7 @@
                           :aria-describedby="voyage.title.length > 50 ? `tooltip-${voyage.slug.current || voyage.slug}` : undefined"
                           role="tooltip"
                           :aria-label="`Titre complet du voyage: ${voyage.title}`"
-                          v-bind="props"
+                          v-bind="tooltipProps"
                         >{{ voyage.title }}</div>
                       </template>
                       <span>
@@ -163,12 +165,20 @@ const props = defineProps({
     type: Object,
   },
 })
-console.log('props ', props.voyage)
+
 const img = useImage()
 
-const { data: voyageCardContent } = await useAsyncData('voyage-card-content', () =>
-  queryCollection('voyage_card').first(),
-)
+const voyageCardContentQuery = `
+  *[_type == "voyage_card"][0]{
+    ...
+  }
+`
+const { data: voyageCardContent } = await useSanityQuery(voyageCardContentQuery, {}, {
+  key: 'voyage-card-content',
+  getCachedData: (key) => {
+    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
+  },
+})
 
 const actionColor = computed(() => props.voyage.groupeAvailable ? '#f7f8f8' : '#fef9f8')
 </script>

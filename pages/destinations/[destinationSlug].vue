@@ -75,17 +75,15 @@ const destinationQuery = `
     }
   }
 `
-const { data: destinationSanity } = await useAsyncData('destinationSanity', async () => {
-  const { data } = await useSanityQuery(destinationQuery, {
-    slug: slug.value,
-  })
-  return data.value
+const { data: destinationSanity } = await useSanityQuery(destinationQuery, {
+  slug: slug.value,
 }, {
-  watch: [slug],
+  key: 'destination-' + slug.value,
   getCachedData: (key) => {
     return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
   },
 })
+
 console.log('DATA DESTINATION  SANITY', destinationSanity.value)
 
 const dataToBlog = reactive({

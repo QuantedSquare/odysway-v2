@@ -57,10 +57,10 @@
           <CommonReviewContainer />
         </ColorContainer>
       </div>
-      <ContentRenderer
-        v-if="faqPage"
-        :value="faqPage"
-      />
+      <!-- Check why there's warning
+  -->
+      <FaqContainer />
+
       <div class="mx-1">
         <ColorContainer
           v-if="partenairesTextes"
@@ -92,11 +92,6 @@ import { useDisplay } from 'vuetify'
 const { width } = useDisplay()
 const drawer = ref(false)
 const route = useRoute()
-const { data: faqPage } = await useAsyncData('faq-section', () => {
-  return queryCollection('content')
-    .path('/faq')
-    .first()
-})
 
 const { data: partenairesTextes } = await useAsyncData('partenairesTextes', () => {
   return queryCollection('ctas').select('layoutInfoContainer', 'partenairesSection').first()

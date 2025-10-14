@@ -9,10 +9,10 @@
           cols="12"
           md="6"
         >
-          <h2 class="text-h2 text-center text-md-left pb-3 ">
+          <h2 class="text-h3 text-center text-md-left pb-3 ">
             <slot name="title" />
           </h2>
-          <h4 class="text-h5 text-center text-md-left ">
+          <h4 class="text-h5 text-center text-md-left text-grey">
             <slot name="subtitle" />
           </h4>
         </v-col>

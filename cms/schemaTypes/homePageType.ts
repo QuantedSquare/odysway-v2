@@ -305,11 +305,26 @@ export const homePageType = defineType({
     // Newsletter Section
     defineField({
       name: 'newsletter',
-      title: 'Texte dans la section Newsletter',
-      type: 'array',
+      title: 'Newsletter',
+      type: 'object',
       group: 'newsletter',
-      of: [richTextBlock],
+      fields: [
+        defineField({
+          name: 'title',
+          title: 'Texte dans la section Newsletter',
+          type: 'array',
+          of: [richTextBlock],
+        }),
+        defineField({
+          name: 'subtitle',
+          title: 'Sous-titre dans la section Newsletter',
+          type: 'array',
+          of: [richTextBlock],
+        }),
+      ],
     }),
+
+   
 
     // Unforgettable Travels Section
     defineField({

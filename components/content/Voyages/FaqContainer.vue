@@ -1,76 +1,85 @@
 <template>
   <v-container
+    v-if="faqSanity && faqTextes"
     id="faq-container"
     fluid
     class="rounded-lg px-1 py-0 mt-4 mt-md-8 max-container-width"
   >
-    <v-lazy
-      :min-height="415"
-      :options="{ threshold: 0.5 }"
-      transition="fade-transition"
+    <SanityImage
+      :asset-id="faqSanity?.backgroundImage?.asset._ref"
+      auto="format"
     >
-      <v-img
-        :src="img(backgroundImage, { format: 'webp', quality: 70, height: 900, width: 1536 })"
-        :lazy-src="img(backgroundImage, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-        :srcset="`${img(backgroundImage, { format: 'webp', quality: 70, width: 1536 })} 1536w, ${img(backgroundImage, { format: 'webp', quality: 70, width: 1536 })} 1536w`"
-        sizes="(max-width: 600px) 480px, 1536px"
-        loading="lazy"
-        alt="Image de fond de la section FAQ"
-        cover
-        width="100%"
-        class="rounded-lg max-img-height"
-        :gradient="`to top, ${secondaryColor}, ${primaryColor}`"
-      >
-        <h2 class="text-center text-white">
-          <TitleContainerH1>
-            <template #title>
-              <slot name="section-title" />
-            </template>
-          </TitleContainerH1>
-        </h2>
-        <v-container
-          max-width="900px"
-          class="position-relative px-4 pt-0"
+      <template #default="{ src }">
+        <v-img
+          :src="img(src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+          :lazy-src="img(src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+          :srcset="`${img(src, { format: 'webp', quality: 70, width: 1536 })} 1536w, ${img(src, { format: 'webp', quality: 70, width: 1536 })} 1536w`"
+          sizes="(max-width: 600px) 480px, 1536px"
+          loading="lazy"
+          :alt="faqSanity?.backgroundImage?.alt"
+          cover
+          width="100%"
+          class="rounded-lg max-img-height"
+          :gradient="`to top, ${secondaryColor}, ${primaryColor}`"
         >
-          <v-row>
-            <v-col
-              class="max-height-with-overflow pt-2 pt-md-3"
+          <template #default>
+            <h2 class="text-center text-white">
+              <TitleContainerH1>
+                <template #title>
+                  {{ faqSanity?.title }}
+                </template>
+              </TitleContainerH1>
+            </h2>
+            <v-container
+              max-width="900px"
+              class="position-relative px-4 pt-0"
             >
-              <slot name="faq" />
-            </v-col>
-          </v-row>
-          <v-row
-            class="mb-4 mb-md-10 text-shadow"
-            justify="center"
-          >
-            <v-col cols="7">
-              <div
-                v-if="route.path !== '/faq'"
-                class="text-center text-h6 text-md-h5 text-white font-weight-bold"
-              >
-                <span> {{ faqTextes?.faqSection?.faqHomeSubText?.question }} &nbsp; </span>
-                <SmartLink
-                  to="/faq"
-                  class="text-secondary font-weight-bold"
+              <v-row>
+                <v-col
+                  class="max-height-with-overflow pt-2 pt-md-3"
                 >
-                  {{ faqTextes?.faqSection?.faqHomeSubText?.text }}
-                </SmartLink>
-              </div>
-              <div class="text-center text-h6 text-md-h5 text-white font-weight-regular d-flex flex-column mt-md-6 mt-3">
-                <span> {{ faqTextes?.faqSection?.faqHomeSubText?.subtitle }}
-                  <SmartLink
-                    :to="faqTextes?.faqSection?.faqHomeSubText?.linkOnText2"
-                    class="text-secondary font-weight-medium"
+                  <QuestionPanel
+                    v-for="item in faqSanity?.faqItems"
+                    :key="item._key"
+                    :hide="item.hide && route.path !== '/faq'"
+                    :item="item"
+                  />
+                </v-col>
+              </v-row>
+              <v-row
+                class="mb-4 mb-md-10 text-shadow"
+                justify="center"
+              >
+                <v-col cols="7">
+                  <div
+                    v-if="route.path !== '/faq'"
+                    class="text-center text-h6 text-md-h5 text-white font-weight-bold"
                   >
-                    {{ faqTextes?.faqSection?.faqHomeSubText?.text2 }}
-                  </SmartLink>
-                </span>
-              </div>
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-img>
-    </v-lazy>
+                    <span> {{ faqTextes?.faqSection?.faqHomeSubText?.question }} &nbsp; </span>
+                    <SmartLink
+                      to="/faq"
+                      :link-class="'text-secondary font-weight-bold'"
+                    >
+                      {{ faqTextes?.faqSection?.faqHomeSubText?.text }}
+                    </SmartLink>
+                  </div>
+                  <div class="text-center text-h6 text-md-h5 text-white font-weight-regular d-flex flex-column mt-md-6 mt-3">
+                    <span> {{ faqTextes?.faqSection?.faqHomeSubText?.subtitle }}
+                      <SmartLink
+                        :to="faqTextes?.faqSection?.faqHomeSubText?.linkOnText2"
+                        :link-class="'text-secondary font-weight-medium'"
+                      >
+                        {{ faqTextes?.faqSection?.faqHomeSubText?.text2 }}
+                      </SmartLink>
+                    </span>
+                  </div>
+                </v-col>
+              </v-row>
+            </v-container>
+          </template>
+        </v-img>
+      </template>
+    </SanityImage>
   </v-container>
 </template>
 
@@ -78,25 +87,34 @@
 import { useImage } from '#imports'
 
 const img = useImage()
-defineProps({
-  backgroundImage: {
-    type: String,
-    default: '/images/b27a23f333a8c96567d46c123d1efb15.jpeg',
-  },
-  primaryColor: {
-    type: String,
-    default: 'rgba(43, 76, 82, 0)',
-  },
-  secondaryColor: {
-    type: String,
-    default: 'rgba(43, 76, 82, 0.8)',
+
+const primaryColor = 'rgba(43, 76, 82, 0)'
+const secondaryColor = 'rgba(43, 76, 82, 0.8)'
+const route = useRoute()
+
+const faqSanityQuery = `
+  *[_type == "faq"][0]{
+    ...
+    
+  }
+`
+const faqTextesQuery = `
+  *[_type == "ctas"][0]{
+    faqSection
+  }
+`
+const { data: faqSanity } = await useSanityQuery(faqSanityQuery, {}, {
+  key: 'faq-sanity',
+  getCachedData: (key) => {
+    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
   },
 })
 
-const route = useRoute()
-
-const { data: faqTextes } = await useAsyncData('faq-textes', () => {
-  return queryCollection('ctas').select('faqSection').first()
+const { data: faqTextes } = await useSanityQuery(faqTextesQuery, {}, {
+  key: 'faq-textes',
+  getCachedData: (key) => {
+    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
+  },
 })
 </script>
 
