@@ -26,7 +26,7 @@
                   <FunnelCardHeader
                     :titre="voyage.title"
                     :travel-type="'Individuel'"
-                    :image="img(voyage.image.src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+                    :image="voyage.image?.asset?._ref || '/images/default/Odysway-couverture-mongolie.jpeg'"
                     :date="null"
                     :current-step="1"
                     :step-definitions="stepperHeaderRef?.stepDefinitions"
@@ -140,16 +140,41 @@ const userInfo = ref({
 })
 const stepperHeaderRef = useTemplateRef('stepperHeaderRef')
 
+const sanity = useSanity()
+
+const voyageQuery = groq`*[_type == "voyage" && slug.current == $slug][0]{
+  title,
+  "slug": slug.current,
+  image,
+  travelType,
+  pricing,
+  destinations[]-> {
+    _id,
+    title,
+    iso,
+    chapka
+  }
+}`
+
 const { data: voyage } = await useAsyncData(`voyages-${route.query.slug}`, () =>
-  queryCollection('voyages').where('slug', '=', route.query.slug).first(),
+  sanity.fetch(voyageQuery, { slug: route.query.slug })
 )
-const { data: destinations } = await useAsyncData(`destinations-${route.query.slug}`, () => {
-  if (!voyage.value) return []
-  return queryCollection('destinations').where('title', 'IN', voyage.value.destinations.map(d => d.name)).select('iso', 'chapka', 'title').all()
-}, [voyage])
+
+const destinations = computed(() => voyage.value?.destinations || [])
+
+const devisQuery = groq`*[_type == "devis"][0]{
+  fil_dariane_devis,
+  first_step,
+  second_step,
+  third_step,
+  calendly,
+  buttons,
+  form_labels,
+  options
+}`
 
 const { data: pageTexts, status: pageStatus } = await useAsyncData('devis-texts', () =>
-  queryCollection('devis').first(),
+  sanity.fetch(devisQuery)
 )
 
 const nextStep = () => {
@@ -196,7 +221,7 @@ const submit = async () => {
     country: destinations.value.map(d => d.iso).join(','),
     iso: destinations.value.map(d => d.iso).join(','),
     zoneChapka: +destinations.value[0]?.chapka || 0,
-    image: voyage.value.image.src || '/images/default/Odysway-couverture-mongolie.jpeg',
+    image: voyage.value.image || '/images/default/Odysway-couverture-mongolie.jpeg',
     currentStep: skipperChoice.value === 'devis' ? 'Souhaite réserver/planifier un voyage individuel' : 'Souhaite des infos',
     alreadyPaid: 0,
     restToPay: 0,
