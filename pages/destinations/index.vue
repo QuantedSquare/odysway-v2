@@ -7,34 +7,25 @@
       <DisplayVoyagesRow
         :voyages="destinationsWithVoyages"
       />
-      <!-- <div class=" pt-md-16">
-        <ContentRenderer
-          v-if="page"
-          :value="page"
-        />
-      </div> -->
     </template>
   </ContentLayout>
 </template>
 
 <script setup>
-const { data: destinations } = useAsyncData('destinations', () => {
-  return queryCollection('destinations').where('published', '=', true).all()
-})
-
-// const page = await queryCollection('content').path('/destinations').first()
-const { data: voyages } = useAsyncData('voyages-on-thematiques', () => {
-  return queryCollection('voyages').where('published', '=', true).all()
-})
-
-const destinationsWithVoyages = computed(() => {
-  if (!destinations.value || voyages.value?.length === 0) return []
-  return destinations.value?.map(destination => ({
-    ...destination,
-    voyages: voyages.value?.filter(voyage =>
-      voyage.destinations && voyage.destinations?.some(d => d.name?.includes(destination.title)),
-    ),
-  }))
+const destinationQuery = `
+  *[_type == "destination"]{
+    ...,
+    "voyages": *[_type == "voyage" && references(^._id)]{
+      ...,
+    }
+    
+  }
+`
+const { data: destinationsWithVoyages } = await useSanityQuery(destinationQuery, {}, {
+  key: 'destinations-index',
+  getCachedData: (key) => {
+    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
+  },
 })
 
 useHead({
