@@ -13,16 +13,24 @@
         :to="link"
         class="image-wrapper default-expanded"
       >
-        <v-img
-          :src="img(image.src, { format: 'webp', quality: 70, width: 640 })"
-          :lazy-src="img(image.src, { format: 'webp', quality: 10, width: 640 })"
-          :srcset="`${img(image.src, { format: 'webp', quality: 70, width: 640 })} 640w, ${img(image.src, { format: 'webp', quality: 70, width: 1024 })} 1024w`"
-          :alt="`Image représentant ${title}`"
-          sizes="(max-width: 600px) 266px, 228px"
-          cover
-          height="228"
-          loading="lazy"
-        />
+        <SanityImage
+          v-if="image"
+          :asset-id="image.asset._ref"
+          auto="format"
+        >
+          <template #default="{ src }">
+            <v-img
+              :src="img(src, { format: 'webp', quality: 70, width: 640 })"
+              :lazy-src="img(src, { format: 'webp', quality: 10, width: 640 })"
+              :srcset="`${img(src, { format: 'webp', quality: 70, width: 640 })} 640w, ${img(src, { format: 'webp', quality: 70, width: 1024 })} 1024w`"
+              :alt="`Image représentant ${title}`"
+              sizes="(max-width: 600px) 266px, 228px"
+              cover
+              height="228"
+              loading="lazy"
+            />
+          </template>
+        </SanityImage>
 
         <div class="blur-overlay" />
         <div class="image-overlay" />

@@ -6,6 +6,7 @@
     <v-row
       align="center"
       class="position-relative px-0"
+      :class="`text-${textColor}`"
     >
       <v-col
         cols="12"
@@ -86,6 +87,10 @@ const props = defineProps({
   reviews: {
     type: Boolean,
     default: false,
+  },
+  textColor: {
+    type: String,
+    default: 'primary',
   },
 })
 

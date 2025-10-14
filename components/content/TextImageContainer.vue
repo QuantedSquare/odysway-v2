@@ -36,24 +36,31 @@
         cols="12"
         md="6"
       >
-        <v-lazy
+        <!-- <v-lazy
           :min-height="550"
           :options="{ threshold: 0.5 }"
           transition="fade-transition"
+        > -->
+        <SanityImage
+          :asset-id="imageSrc.asset._ref"
+          auto="format"
         >
-          <v-img
-            :src="img(imageSrc, { format: 'webp', quality: 70, height: 640, width: 640 })"
-            :lazy-src="img(imageSrc, { format: 'webp', quality: 10, height: 640, width: 640 })"
-            :srcset="`${img(imageSrc, { format: 'webp', quality: 70, width: 640 })} 640w, ${img(imageSrc, { format: 'webp', quality: 70, width: 1024 })} 1024w`"
-            sizes="(max-width: 600px) 480px, 1024px"
-            alt="Image section voyager autrement"
-            loading="lazy"
-            height="100%"
-            max-height="550"
-            cover
-            rounded="xl"
-          />
-        </v-lazy>
+          <template #default="{ src }">
+            <v-img
+              :src="img(src, { format: 'webp', quality: 70, height: 640, width: 640 })"
+              :lazy-src="img(src, { format: 'webp', quality: 10, height: 640, width: 640 })"
+              :srcset="`${img(src, { format: 'webp', quality: 70, width: 640 })} 640w, ${img(src, { format: 'webp', quality: 70, width: 1024 })} 1024w`"
+              sizes="(max-width: 600px) 480px, 1024px"
+              alt="Image section voyager autrement"
+              loading="lazy"
+              height="100%"
+              max-height="550"
+              cover
+              rounded="xl"
+            />
+          </template>
+        </SanityImage>
+        <!-- </v-lazy> -->
       </v-col>
     </v-row>
   </v-container>
@@ -65,8 +72,8 @@ import { useImage } from '#imports'
 
 defineProps({
   imageSrc: {
-    type: String,
-    default: '/images/1.voyages/bali-menjangan-sidemen/KSM0NI92R9OCsioOBCVO.jpg',
+    type: Object,
+    required: true,
   },
   imageDesktopRight: {
     type: Boolean,

@@ -29,7 +29,7 @@
             v-for="item in displayedData?.items"
             :key="item.id"
             :slug="item.slug"
-            :image="item.image?.src || ''"
+            :image="item.image"
             :title="item.title"
             :description="item.discoveryTitle"
             :type="type"
@@ -61,7 +61,7 @@
                 v-for="item in displayedData?.items"
                 :key="item.id"
                 :slug="item.slug"
-                :image="item.image?.src || ''"
+                :image="item.image"
                 :title="item.title"
                 :description="item.discoveryTitle"
                 :type="type"
@@ -128,14 +128,8 @@ const { data: experiences } = useAsyncData('experiences-on-content-layout', () =
 }, { watch: [isComputedCategory, isComputedExperience] })
 
 const destinationQuery = `
-  *[_type == "destination" && published == true]{
+  *[_type == "destination"]{
     ...,
-    image{
-      asset->{
-        url,
-        alt
-      }
-    }
   }
 `
 const { data: destinations } = useAsyncData('destinations-on-content-layout', async () => {
@@ -173,14 +167,11 @@ const displayedData = computed(() => {
           id: destination._id,
           title: destination.title,
           slug: destination.slug.current,
-          image: {
-            src: destination.image?.asset?.url,
-            alt: destination.image?.alt || '',
-          },
+          image: destination.image,
           type: 'destinations',
           description: destination.metaDescription || '',
         }
-      }),
+      }).filter(destination => destination.image?.asset?._ref),
       selectedItem: props.selectedDestination,
       pageTitle: props.pageContent?.index?.pageTitle || 'Toutes nos destinations',
       showOnBottom: Object.keys(route.params).length > 0,
