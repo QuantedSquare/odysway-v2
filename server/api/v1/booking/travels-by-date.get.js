@@ -1,14 +1,27 @@
 import { defineEventHandler } from 'h3'
 import dayjs from 'dayjs'
 import supabase from '~/server/utils/supabase'
+import { createClient } from '@sanity/client'
 
 export default defineEventHandler(async (event) => {
+  const config = useRuntimeConfig()
+
+  const sanityClient = createClient({
+    projectId: config.public.sanity.projectId,
+    dataset: config.public.sanity.dataset,
+    apiVersion: config.public.sanity.apiVersion,
+    useCdn: true,
+  })
   const { data, error } = await supabase
     .from('travel_dates')
     .select('travel_slug, booked_seat, departure_date, return_date, early_bird, last_minute, starting_price')
     .eq('published', true)
     .eq('is_custom_travel', false)
     .gte('departure_date', new Date().toISOString())
+
+  if (error) {
+    return []
+  }
 
   const parsedDatesByExtra = data.map(date => ({
     ...date,
@@ -17,11 +30,23 @@ export default defineEventHandler(async (event) => {
     last_minute: dayjs(date.departure_date).diff(dayjs(), 'day') <= 31 ? date.last_minute : false,
   }))
 
-  const travels = await queryCollection(event, 'voyages').where('published', '=', true).all()
-  const destinations = await queryCollection(event, 'destinations').where('published', '=', true).all()
-  if (error) {
-    return []
-  }
+  const travelsQuery = `*[_type == "voyage"]{
+    "slug": slug.current,
+    title,
+    image,
+    rating,
+    comments,
+    groupeAvailable,
+    "startingPrice": pricing.startingPrice,
+    duration,
+    destinations[]-> {
+      _id,
+      title,
+      iso
+    }
+  }`
+
+  const travels = await sanityClient.fetch(travelsQuery)
 
   const travelWithDates = travels.map((travel) => {
     const dates = parsedDatesByExtra.filter(date => date.travel_slug === travel.slug)
@@ -32,8 +57,8 @@ export default defineEventHandler(async (event) => {
       rating: travel.rating,
       comments: travel.comments,
       groupeAvailable: travel.groupeAvailable,
-      startingPrice: travel.pricing.startingPrice,
-      iso: travel.destinations.map(destination => destinations.find(d => d.title === destination.name)?.iso),
+      startingPrice: travel.startingPrice,
+      iso: travel.destinations?.map(destination => destination.iso).filter(Boolean) || [],
       dates,
       duration: travel.duration,
     }

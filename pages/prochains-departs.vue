@@ -1,72 +1,52 @@
 <template>
-  <v-container
-    fluid
-    class="pt-0 position-relative max-container-width"
-  >
-    <div class="mb-6">
-      <SearchHeroSection
-        :is-next-departures="true"
-        :destination="{
-          periodFilter: selectedPeriod,
-          image: {
-            src: '/images/homeHero.jpeg',
-            alt: 'Découvrez nos voyages de groupe',
-          },
-        }"
-        :no-margin-bottom="true"
-      />
-      <v-container class="bg-white rounded-md filter-wrapper">
-        <v-row
-          align="center"
-          justify="center"
+  <v-container fluid class="pt-0 position-relative max-container-width">
+    <SearchHeroSection
+      :is-next-departures="true"
+      :destination="{
+        periodFilter: selectedPeriod,
+        image: {
+          src: '/images/homeHero.jpeg',
+          alt: 'Découvrez nos voyages de groupe',
+        },
+      }"
+      :no-margin-bottom="true"
+    />
+
+    <v-row align="center" justify="center" class="bg-white rounded-md filter-wrapper pa-4">
+      <v-col cols="12" sm="7">
+        <v-btn-toggle v-model="toggledBtn" mandatory class="d-flex justify-center ga-sm-3 btn-height">
+          <v-btn
+            v-for="btn of toggleBtns"
+            :key="btn.text"
+            :value="btn.value"
+            height="100%"
+            selected-class="bg-primary"
+            class="text-decoration-none rounded-lg"
+          >
+            <span class="text-caption text-sm-subtitle-1">{{ btn.text }}</span>
+          </v-btn>
+        </v-btn-toggle>
+      </v-col>
+      <v-col cols="12" sm="4" class="pl-md-0">
+        <v-select
+          :id="periodId"
+          v-model="selectedPeriod"
+          hide-details
+          :items="sortedMonths"
+          label="Période"
+          clearable
         >
-          <v-col
-            cols="12"
-            sm="7"
-          >
-            <v-btn-toggle
-              v-model="toggledBtn"
-              mandatory
-              class="d-flex justify-center ga-sm-3 btn-height"
-            >
-              <v-btn
-                v-for="btn of toggleBtns"
-                :key="btn.text"
-                :value="btn.value"
-                height="100%"
-                selected-class="bg-primary"
-                class="text-decoration-none rounded-lg"
-              >
-                <span class="text-caption text-sm-subtitle-1"> {{ btn.text }}</span>
-              </v-btn>
-            </v-btn-toggle>
-          </v-col>
-          <v-col
-            cols="12"
-            sm="4"
-            class="pl-md-0 "
-          >
-            <v-select
-              :id="periodId"
-              v-model="selectedPeriod"
-              hide-details
-              :items="sortedMonths"
-              label="Période"
-              clearable
-            >
-              <template #prepend-inner>
-                <v-img
-                  :src="img('/icons/calendar.svg', { format: 'webp', quality: 70, width: 640 })"
-                  alt="Calendar icon"
-                  width="24"
-                  height="24"
-                />
-              </template>
-            </v-select>
-          </v-col>
-        </v-row>
-      </v-container>
-    </div>
+          <template #prepend-inner>
+            <v-img
+              :src="img('/icons/calendar.svg', { format: 'webp', quality: 70, width: 640 })"
+              alt="Calendar icon"
+              width="24"
+              height="24"
+            />
+          </template>
+        </v-select>
+      </v-col>
+    </v-row>
 
     <VoyageCardsList
       :filtered-deals="groupByMonthFiltered"
@@ -195,24 +175,34 @@ const filteredTravels = computed(() => {
 const groupByMonth = computed(() => {
   const today = dayjs()
   const unsrotedTravels = {}
+
   filteredTravels.value.forEach((travel) => {
-    travel.dates.forEach((dateInfo) => {
-      const departureDate = dayjs(dateInfo.departure_date)
-      if (departureDate.isBefore(today)) {
-        return
-      }
-      const monthYear = capitalizeFirstLetter(departureDate.locale('fr').format('MMMM YYYY'))
-      if (!unsrotedTravels[monthYear]) {
-        unsrotedTravels[monthYear] = []
-      }
-      const travelWithSingleDate = {
-        ...travel,
-        dates: [dateInfo],
-        departureDate: dateInfo.departure_date,
-      }
-      unsrotedTravels[monthYear].push(travelWithSingleDate)
+    // Find the earliest future date for this travel
+    const futureDates = travel.dates.filter(dateInfo =>
+      dayjs(dateInfo.departure_date).isAfter(today)
+    )
+
+    if (futureDates.length === 0) return
+
+    // Sort dates and get the earliest one
+    const earliestDate = futureDates.sort((a, b) =>
+      dayjs(a.departure_date).valueOf() - dayjs(b.departure_date).valueOf()
+    )[0]
+
+    const departureDate = dayjs(earliestDate.departure_date)
+    const monthYear = capitalizeFirstLetter(departureDate.locale('fr').format('MMMM YYYY'))
+
+    if (!unsrotedTravels[monthYear]) {
+      unsrotedTravels[monthYear] = []
+    }
+
+    // Add the travel once with all its dates
+    unsrotedTravels[monthYear].push({
+      ...travel,
+      departureDate: earliestDate.departure_date,
     })
   })
+
   const monthsArray = Object.keys(unsrotedTravels).map((monthYear) => {
     const date = dayjs(`01 ${monthYear.toLowerCase()}`, 'DD MMMM YYYY', 'fr')
     const sortedTravels = unsrotedTravels[monthYear].sort((a, b) => {

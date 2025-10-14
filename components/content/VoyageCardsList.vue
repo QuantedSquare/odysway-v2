@@ -1,82 +1,62 @@
 <template>
   <v-row>
-    <v-col cols="12">
-      <v-row v-if="dealsLastMinute.length > 0">
-        <v-col
-          cols="8"
-          sm="10"
-          class="font-weight-black custom-title my-4"
-        >
-          <p>
-            Profitez d'une réduction sur nos voyages de
-            <span class="text-secondary">dernière minute</span>
-          </p>
-        </v-col>
-        <v-col
-          v-for="deal in dealsLastMinute"
-          :key="`${deal.slug}-${deal.dates[0]?.departure_date}`"
-          cols="12"
-          sm="6"
-          md="4"
-        >
-          <VoyageCard :voyage="deal" />
-        </v-col>
-      </v-row>
+    <!-- Last minute deals section -->
+    <v-col v-if="dealsLastMinute.length > 0" cols="12">
+      <p class="font-weight-black custom-title my-4">
+        Profitez d'une réduction sur nos voyages de
+        <span class="text-secondary">dernière minute</span>
+      </p>
     </v-col>
-    <v-col cols="12">
-      <v-row>
-        <template
-          v-for="monthName in paginatedMonthNames"
-          :key="monthName"
-        >
-          <v-col cols="12">
-            <h3
-              v-if="selectedPeriod === 'Toutes périodes'"
-              class="custom-title font-weight-bold mt-6 mb-2"
-            >
-              {{ monthName }}
-            </h3>
-          </v-col>
-          <TransitionGroup
-            name="list"
-          >
-            <v-col
-              v-for="(deal, i) in dealsToDisplayInMonth(monthName)"
-              :key="`${deal.slug}-${deal.dates[0]?.departure_date}-${i}`"
-              cols="12"
-              sm="6"
-              md="4"
-            >
-              <VoyageCard :voyage="deal" />
-            </v-col>
-          </TransitionGroup>
-          <v-col>
-            <p v-if="dealsToDisplayInMonth(monthName).length === 0">
-              Aucun voyage disponible pour le mois de {{ monthName }}
-            </p>
-          </v-col>
-        </template>
+    <v-col
+      v-for="deal in dealsLastMinute"
+      :key="`lastminute-${deal.slug}-${deal.dates[0]?.departure_date}`"
+      cols="12"
+      sm="6"
+      md="4"
+    >
+      <VoyageCard :voyage="deal" />
+    </v-col>
 
-        <v-col
-          v-if="nbPages > 1"
-          cols="12"
-        >
-          <v-pagination
-            v-model="pagination.currentPage"
-            :length="nbPages"
-            :total-visible="5"
-            variant="flat"
-            density="comfortable"
-            rounded="circle"
-            active-color="primary"
-            elevation="3"
-            class="my-4"
-            @click="goTo(scrollTarget, { offset: -50 })"
-            @next="pagination.currentPage = pagination.currentPage++"
-            @prev="pagination.currentPage = pagination.currentPage-- "
-          />
-        </v-col>
-      </v-row>
+    <!-- Monthly deals section -->
+    <template v-for="monthName in paginatedMonthNames" :key="monthName">
+      <v-col v-if="selectedPeriod === 'Toutes périodes'" cols="12">
+        <h3 class="custom-title font-weight-bold mt-6 mb-2">
+          {{ monthName }}
+        </h3>
+      </v-col>
+
+      <v-col v-if="dealsToDisplayInMonth(monthName).length === 0" cols="12">
+        <p>Aucun voyage disponible pour le mois de {{ monthName }}</p>
+      </v-col>
+
+      <v-col
+        v-for="(deal, i) in dealsToDisplayInMonth(monthName)"
+        v-else
+        :key="`${monthName}-${deal.slug}-${i}`"
+        cols="12"
+        sm="6"
+        md="4"
+      >
+        <VoyageCard :voyage="deal" />
+      </v-col>
+    </template>
+
+    <!-- Pagination -->
+    <v-col v-if="nbPages > 1" cols="12">
+      <v-pagination
+        v-model="pagination.currentPage"
+        :length="nbPages"
+        :total-visible="5"
+        variant="flat"
+        density="comfortable"
+        rounded="circle"
+        active-color="primary"
+        elevation="3"
+        class="my-4"
+        @click="goTo(scrollTarget, { offset: -50 })"
+        @next="pagination.currentPage++"
+        @prev="pagination.currentPage--"
+      />
     </v-col>
   </v-row>
 </template>
