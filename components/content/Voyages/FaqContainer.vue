@@ -1,11 +1,12 @@
 <template>
   <v-container
-    v-if="faqSanity && faqTextes"
+
     id="faq-container"
     fluid
     class="rounded-lg px-1 py-0 mt-4 mt-md-8 max-container-width"
   >
     <SanityImage
+      v-if="faqSanity?.backgroundImage?.asset._ref"
       :asset-id="faqSanity?.backgroundImage?.asset._ref"
       auto="format"
     >
@@ -20,70 +21,73 @@
           cover
           width="100%"
           class="rounded-lg max-img-height"
-          :gradient="`to top, ${secondaryColor}, ${primaryColor}`"
+          :gradient="imageGradient"
         >
-          <template #default>
-            <h2 class="text-center text-white">
-              <TitleContainerH1>
-                <template #title>
-                  {{ faqSanity?.title }}
-                </template>
-              </TitleContainerH1>
-            </h2>
-            <v-container
-              max-width="900px"
-              class="position-relative px-4 pt-0"
-            >
-              <v-row>
-                <v-col
-                  class="max-height-with-overflow pt-2 pt-md-3"
-                >
-                  <QuestionPanel
-                    v-for="item in faqSanity?.faqItems"
-                    :key="item._key"
-                    :hide="item.hide && route.path !== '/faq'"
-                    :item="item"
-                  />
-                </v-col>
-              </v-row>
-              <v-row
-                class="mb-4 mb-md-10 text-shadow"
-                justify="center"
+          <h2 class="text-center text-white">
+            <TitleContainerH1>
+              <template #title>
+                {{ faqSanity?.title }}
+              </template>
+            </TitleContainerH1>
+          </h2>
+          <v-container
+            max-width="900px"
+            class="position-relative px-4 pt-0"
+          >
+            <v-row>
+              <v-col
+                class="max-height-with-overflow pt-2 pt-md-3"
               >
-                <v-col cols="7">
-                  <div
-                    v-if="route.path !== '/faq'"
-                    class="text-center text-h6 text-md-h5 text-white font-weight-bold"
+                <QuestionPanel
+                  v-for="item in faqSanity?.faqItems"
+                  :key="item._key"
+                  :hide="item.hide && route.path !== '/faq'"
+                  :item="item"
+                />
+              </v-col>
+            </v-row>
+            <v-row
+              class="mb-4 mb-md-10 text-shadow"
+              justify="center"
+            >
+              <v-col cols="7">
+                <div
+                  v-if="route.path !== '/faq'"
+                  class="text-center text-h6 text-md-h5 text-white font-weight-bold"
+                >
+                  <span> {{ faqTextes?.faqSection?.faqHomeSubText?.question }} &nbsp; </span>
+                  <SmartLink
+                    to="/faq"
+                    :link-class="'text-secondary font-weight-bold'"
                   >
-                    <span> {{ faqTextes?.faqSection?.faqHomeSubText?.question }} &nbsp; </span>
+                    {{ faqTextes?.faqSection?.faqHomeSubText?.text }}
+                  </SmartLink>
+                </div>
+                <div class="text-center text-h6 text-md-h5 text-white font-weight-regular d-flex flex-column mt-md-6 mt-3">
+                  <span> {{ faqTextes?.faqSection?.faqHomeSubText?.subtitle }}
                     <SmartLink
-                      to="/faq"
-                      :link-class="'text-secondary font-weight-bold'"
+                      :to="faqTextes?.faqSection?.faqHomeSubText?.linkOnText2"
+                      :link-class="'text-secondary font-weight-medium'"
                     >
-                      {{ faqTextes?.faqSection?.faqHomeSubText?.text }}
+                      {{ faqTextes?.faqSection?.faqHomeSubText?.text2 }}
                     </SmartLink>
-                  </div>
-                  <div class="text-center text-h6 text-md-h5 text-white font-weight-regular d-flex flex-column mt-md-6 mt-3">
-                    <span> {{ faqTextes?.faqSection?.faqHomeSubText?.subtitle }}
-                      <SmartLink
-                        :to="faqTextes?.faqSection?.faqHomeSubText?.linkOnText2"
-                        :link-class="'text-secondary font-weight-medium'"
-                      >
-                        {{ faqTextes?.faqSection?.faqHomeSubText?.text2 }}
-                      </SmartLink>
-                    </span>
-                  </div>
-                </v-col>
-              </v-row>
-            </v-container>
-          </template>
+                  </span>
+                </div>
+              </v-col>
+            </v-row>
+          </v-container>
         </v-img>
       </template>
     </SanityImage>
+    <v-skeleton-loader
+      v-else
+      type="card"
+    />
   </v-container>
 </template>
 
 <script setup>
+import { computed } from 'vue'
 import { useImage } from '#imports'
 
 const img = useImage()
@@ -92,10 +96,12 @@ const primaryColor = 'rgba(43, 76, 82, 0)'
 const secondaryColor = 'rgba(43, 76, 82, 0.8)'
 const route = useRoute()
 
+// Compute gradient to avoid reactivity issues during hydration
+const imageGradient = computed(() => `to top, ${secondaryColor}, ${primaryColor}`)
+
 const faqSanityQuery = `
   *[_type == "faq"][0]{
     ...
-    
   }
 `
 const faqTextesQuery = `

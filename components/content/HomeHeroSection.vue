@@ -2,6 +2,7 @@
   <div class="mt-8 mt-md-0">
     <div class="relative-hero-section mb-16 rounded-xl">
       <SanityImage
+        v-if="image"
         :asset-id="image.asset._ref"
         auto="format"
       >

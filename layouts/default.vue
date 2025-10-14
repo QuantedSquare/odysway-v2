@@ -57,9 +57,8 @@
           <CommonReviewContainer />
         </ColorContainer>
       </div>
-      <!-- Check why there's warning
-  -->
-      <FaqContainer />
+
+      <LazyFaqContainer />
 
       <div class="mx-1">
         <ColorContainer

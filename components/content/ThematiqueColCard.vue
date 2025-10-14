@@ -14,7 +14,7 @@
         class="image-wrapper default-expanded"
       >
         <SanityImage
-          v-if="image"
+          v-if="image.asset._ref"
           :asset-id="image.asset._ref"
           auto="format"
         >
