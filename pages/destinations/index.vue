@@ -3,7 +3,6 @@
     :is-destination="true"
     :display-divider="true"
   >
-  
     <template #content>
       <DisplayVoyagesRow
         :voyages="destinationsWithVoyages"
@@ -19,7 +18,6 @@ const destinationQuery = `
     "voyages": *[_type == "voyage" && references(^._id)]{
       ...,
     }
-    
   }
 `
 const { data: destinationsWithVoyages } = await useSanityQuery(destinationQuery, {}, {

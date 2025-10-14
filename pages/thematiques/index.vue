@@ -13,80 +13,33 @@
 </template>
 
 <script setup>
-const sanity = useSanity()
-
 const pageContentQuery = groq`*[_type == "page_thematiques"][0]{
   index,
   slug,
   common
 }`
-
-const categoriesQuery = groq`*[_type == "category"] | order(title asc) {
-  _id,
-  title,
-  slug,
-  discoveryTitle,
-  image
-}`
-
-const voyagesQuery = groq`*[_type == "voyage"] {
-  _id,
-  title,
-  slug,
-  image,
-  imageSecondary,
-  description,
-  duration,
-  nights,
-  level,
-  destinations[]-> {
-    _id,
-    title
+const categoriesQuery = `
+  *[_type == "category"]{
+    ...,
+    "voyages": *[_type == "voyage" && references(^._id)]{
+      ...,
+    }
+  }
+`
+const { data: pageContent } = await useSanityQuery(pageContentQuery, {}, {
+  key: 'page-thematiques',
+  getCachedData: (key) => {
+    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
   },
-  experienceType-> {
-    _id,
-    title
-  },
-  categories[]-> {
-    _id,
-    title
-  },
-  rating,
-  comments,
-  pricing,
-  groupeAvailable,
-  privatisationAvailable,
-  customAvailable,
-  badgeSection,
-  monthlyAvailability,
-  idealPeriods,
-  miniatureDisplay
-}`
-
-const { data: pageContent } = await useAsyncData('page-thematiques', () =>
-  sanity.fetch(pageContentQuery)
-)
-
-const { data: categories } = await useAsyncData('categories', () =>
-  sanity.fetch(categoriesQuery)
-)
-
-const { data: voyages } = await useAsyncData('voyages-on-thematiques', () =>
-  sanity.fetch(voyagesQuery)
-)
-
-const categoriesWithVoyages = computed(() => {
-  if (!categories.value || !voyages.value?.length) return []
-
-  return categories.value.map(category => ({
-    ...category,
-    id: category._id,
-    voyages: voyages.value.filter(voyage =>
-      voyage.categories?.some(c => c._id === category._id)
-    ),
-  }))
 })
 
+const { data: categoriesWithVoyages } = await useSanityQuery(categoriesQuery, {}, {
+  key: 'categories-with-voyages',
+  getCachedData: (key) => {
+    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
+  },
+})
+console.log('categoriesWithVoyages', categoriesWithVoyages.value)
 useHead({
   htmlAttrs: {
     lang: 'fr',

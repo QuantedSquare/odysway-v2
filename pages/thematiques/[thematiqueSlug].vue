@@ -22,18 +22,6 @@
         </template>
       </template>
     </ContentLayout>
-    <!-- <SectionContainer
-      v-if="categorySanity"
-      :title="'categorySanity.blog.title'"
-      :subtitle="'categorySanity.blog.excerpt'"
-    >
-      <template #content>
-        <EnrichedText
-
-          :value="categorySanity.blog.body"
-        />
-      </template>
-    </SectionContainer> -->
   </div>
 </template>
 
