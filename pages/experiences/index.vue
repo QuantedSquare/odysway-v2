@@ -13,26 +13,36 @@
 </template>
 
 <script setup>
-const { data: pageContent } = await useAsyncData('page-experiences', () => {
-  return queryCollection('page_experiences').first()
+const pageContentQuery = groq`*[_type == "page_experiences"][0]{
+  index,
+  slug,
+  common
+}`
+const experiencesQuery = `
+  *[_type == "experience"]{
+    ...,
+    "voyages": *[_type == "voyage" && references(^._id)]{
+      ...,
+    }
+  }
+`
+const { data: pageContent } = await useSanityQuery(pageContentQuery, {}, {
+  key: 'page-experiences',
+  getCachedData: (key) => {
+    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
+  },
 })
 
-const { data: experiences } = useAsyncData('experiences', () => {
-  return queryCollection('experiences').where('published', '=', true).all()
+const { data: experiencesWithVoyages } = await useSanityQuery(experiencesQuery, {}, {
+  key: 'experiences-with-voyages',
+  getCachedData: (key) => {
+    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
+  },
 })
 
-const { data: voyages } = useAsyncData('voyages', () => {
-  return queryCollection('voyages').where('published', '=', true).all()
-})
-
-const experiencesWithVoyages = computed(() => {
-  if (!experiences.value || !voyages.value) return []
-
-  return experiences.value.map(experience => ({
-    ...experience,
-    voyages: voyages.value.filter(voyage =>
-      voyage.experienceType.includes(experience.title),
-    ),
-  }))
+useHead({
+  htmlAttrs: {
+    lang: 'fr',
+  },
 })
 </script>

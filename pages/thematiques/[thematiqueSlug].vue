@@ -9,6 +9,7 @@
       <div>
         <DisplayVoyagesRow
           :is-search="true"
+          :selected-category="categorySanity"
           :voyages="categorySanity.voyages"
           :page-content="pageContent"
         />

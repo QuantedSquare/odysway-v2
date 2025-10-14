@@ -18,7 +18,7 @@
             width="320"
             :alt="header.logo.alt || 'Logo principale d\'Odysway'"
             class="header-logo"
-          />
+          >
         </template>
       </SanityImage>
     </NuxtLink>
@@ -115,7 +115,7 @@
             width="320"
             :alt="header.logo.alt || 'Logo principale d\'Odysway'"
             class="header-logo"
-          />
+          >
         </template>
       </SanityImage>
       <NuxtImg
@@ -234,7 +234,7 @@ const headerQuery = groq`*[_type == "header"][0]{
 }`
 
 const { data: header } = await useAsyncData('header', () =>
-  sanity.fetch(headerQuery)
+  sanity.fetch(headerQuery),
 )
 
 const logoImage = computed(() => {

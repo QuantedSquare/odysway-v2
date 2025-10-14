@@ -3,13 +3,46 @@
     :is-experience="true"
     :selected-experience="selectedExperience"
     :page-content="pageContent"
+    :display-divider="true"
   >
     <template #content>
-      <DisplayVoyagesRow
-        :selected-experience="selectedExperience"
-        :voyages="voyages"
-        :page-content="pageContent"
-      />
+      <div>
+        <DisplayVoyagesRow
+          :is-search="true"
+          :selected-experience="selectedExperience"
+          :voyages="selectedExperience.voyages"
+          :page-content="pageContent"
+        />
+        <BlogHeroSection
+          v-if="selectedExperience?.blog"
+          class="mt-12"
+          :title="selectedExperience.blog.title"
+          :description="selectedExperience.blog.description"
+          :image="selectedExperience.blog.displayedImg"
+          :background-color="'soft-blush'"
+          introduction-color="grey"
+          title-color="primary"
+          avatar-size="60"
+        >
+          <template #title>
+            {{ selectedExperience.blog.title }}
+          </template>
+          <template #introduction>
+            {{ selectedExperience.blog.description }}
+          </template>
+        </BlogHeroSection>
+        <SectionContainer
+          v-if="selectedExperience?.blog"
+          :title="selectedExperience.blog.title"
+          :subtitle="selectedExperience.blog.excerpt"
+        >
+          <template #content>
+            <EnrichedText
+              :value="selectedExperience.blog.body"
+            />
+          </template>
+        </SectionContainer>
+      </div>
     </template>
   </ContentLayout>
 </template>
@@ -18,26 +51,67 @@
 const route = useRoute()
 const slug = computed(() => route.params.experienceSlug)
 
-const { data: pageContent } = await useAsyncData('page-experiences', () => {
-  return queryCollection('page_experiences').first()
+const pageContentQuery = groq`*[_type == "page_experiences"][0]{
+  ...
+}`
+const { data: pageContent } = await useSanityQuery(pageContentQuery, {}, {
+  key: 'page-experiences',
+  getCachedData: (key) => {
+    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
+  },
 })
 
-const { data: experiences } = await useAsyncData('experiences', () => {
-  return queryCollection('experiences').where('published', '=', true).all()
-})
+const experienceQuery = `
+  *[_type == "experience" && slug.current == $slug][0]{
+    ...,
+    "voyages": *[_type == "voyage" && references(^._id)]{
+      ...,
+    },
+    blog->{
+      ...,
+      author->{
+        ...
+      },
+      body[]{
+        ...,
+        _type == "image" => {
+          ...,
+          asset->{
+            _id,
+            url,
+            metadata
+          }
+        }
+      }
+    },
+  }
+`
 
-const selectedExperience = computed(() => {
-  if (!experiences.value || !slug.value) return null
-  return experiences.value.find(e => e.slug === slug.value) || null
-})
-
-const { data: voyages } = await useAsyncData('voyages', async () => {
-  if (!selectedExperience.value?.title) return []
-  const travelList = await queryCollection('voyages').where('published', '=', true).where('experienceType', '=', selectedExperience.value.title).all()
-  return travelList
+const { data: selectedExperience } = await useSanityQuery(experienceQuery, {
+  slug: slug.value,
 }, {
-  watch: [slug],
+  key: 'experience-' + slug.value,
+  getCachedData: (key) => {
+    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
+  },
 })
+
+const dataToBlog = reactive({
+  title: selectedExperience.value?.blog?.title,
+  displayedImg: selectedExperience.value?.blog?.displayedImg,
+  author: selectedExperience.value?.blog?.author?.name,
+  authorPhoto: selectedExperience.value?.blog?.author?.image,
+  authorRole: selectedExperience.value?.blog?.author?.position,
+  published: selectedExperience.value?.blog?.published,
+  publishedAt: selectedExperience.value?.blog?.publishedAt,
+  tags: selectedExperience.value?.blog?.tags,
+  categories: selectedExperience.value?.blog?.legacyCategories,
+  blogType: selectedExperience.value?.blog?.blogType,
+  badgeColor: selectedExperience.value?.blog?.badgeColor,
+  readingTime: selectedExperience.value?.blog?.readingTime,
+})
+
+provide('page', dataToBlog)
 
 useHead({
   htmlAttrs: {

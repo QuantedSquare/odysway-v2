@@ -1,6 +1,7 @@
 <template>
   <v-container
     fluid
+
     class="px-2 px-md-4 pt-0 "
   >
     <SearchHeroSection
@@ -134,6 +135,7 @@ const experiencesQuery = `
 const { data: experiences } = useAsyncData('experiences-on-content-layout', async () => {
   if (props.isExperience) {
     const { data } = await useSanityQuery(experiencesQuery)
+    console.log('experiences', data.value)
     return data.value
   }
   return null
@@ -173,8 +175,18 @@ const displayedData = computed(() => {
   }
   if (props.isExperience) {
     const experienceData = {
-      items: experiences.value,
+      items: experiences.value?.map((experience) => {
+        return {
+          id: experience._id,
+          title: experience.title,
+          slug: experience.slug.current,
+          image: experience.image,
+          type: 'experiences',
+          description: experience.discoveryTitle || '',
+        }
+      }).filter(experience => experience.image?.asset?._ref),
       selectedItem: props.selectedExperience,
+      type: 'experiences',
       pageTitle: props.pageContent?.index?.pageTitle || 'Toutes nos expériences',
       showOnBottom: Object.keys(route.params).length > 0,
     }
