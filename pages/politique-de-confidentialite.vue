@@ -1,9 +1,7 @@
 <template>
-  <div>
-    <ContentRenderer
-      v-if="page"
-      :value="page"
-    />
+  <div v-if="page">
+    <h1>{{ page.title }}</h1>
+    <SanityContent :blocks="page.body" />
   </div>
 </template>
 
@@ -12,9 +10,14 @@ definePageMeta({
   layout: 'simple-pages',
 })
 
-const route = useRoute()
+const sanity = useSanity()
 
-const { data: page } = await useAsyncData(route.path, () => {
-  return queryCollection('content').path(route.path).first()
-})
+const privacyPolicyQuery = groq`*[_type == "privacyPolicy" && slug.current == "politique-de-confidentialite"][0]{
+  title,
+  body
+}`
+
+const { data: page } = await useAsyncData('politique-de-confidentialite', () =>
+  sanity.fetch(privacyPolicyQuery)
+)
 </script>

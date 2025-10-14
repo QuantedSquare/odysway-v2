@@ -8,16 +8,19 @@
       :to="header.logo.to || '/'"
       class="header-logo-link"
     >
-      <NuxtImg
-        preload
-        as="image"
-        format="webp"
-        quality="100"
-        :src="logo"
-        width="320"
-        :alt="header.logo.alt || 'Logo principale d\'Odysway'"
-        class="header-logo"
-      />
+      <SanityImage
+        :asset-id="logoImage.asset._ref"
+        auto="format"
+      >
+        <template #default="{ src }">
+          <img
+            :src="src"
+            width="320"
+            :alt="header.logo.alt || 'Logo principale d\'Odysway'"
+            class="header-logo"
+          />
+        </template>
+      </SanityImage>
     </NuxtLink>
 
     <v-spacer />
@@ -101,7 +104,22 @@
       :to="header.logo.to || '/'"
       class="header-logo-link"
     >
+      <SanityImage
+        v-if="logoImage?.asset"
+        :asset-id="logoImage.asset._ref"
+        auto="format"
+      >
+        <template #default="{ src }">
+          <img
+            :src="src"
+            width="320"
+            :alt="header.logo.alt || 'Logo principale d\'Odysway'"
+            class="header-logo"
+          />
+        </template>
+      </SanityImage>
       <NuxtImg
+        v-else
         preload
         as="image"
         format="webp"
@@ -219,20 +237,16 @@ const { data: header } = await useAsyncData('header', () =>
   sanity.fetch(headerQuery)
 )
 
+const logoImage = computed(() => {
+  if (!header.value?.logo) return null
+  return sm.value ? header.value.logo.mobile : header.value.logo.desktop
+})
+
 const logo = computed(() => {
   if (!header.value?.logo) return '/logos/Logo-Odysway-Bleu.png'
-
-  const logoImage = sm.value ? header.value.logo.mobile : header.value.logo.desktop
-
-  // Handle Sanity image assets
-  if (logoImage?.asset?._ref) {
-    const imageUrlBuilder = sanity.config.stega.enabled
-      ? sanity.config.stega.client.imageUrlBuilder
-      : sanity.config.client.imageUrlBuilder
-    return imageUrlBuilder.image(logoImage).url()
-  }
-
-  return logoImage
+  // Fallback for non-Sanity images (string paths)
+  const img = sm.value ? header.value.logo.mobile : header.value.logo.desktop
+  return typeof img === 'string' ? img : '/logos/Logo-Odysway-Bleu.png'
 })
 
 const { gtag } = useGtag()
