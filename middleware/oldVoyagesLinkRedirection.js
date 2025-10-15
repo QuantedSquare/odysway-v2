@@ -3,13 +3,14 @@ export default defineNuxtRouteMiddleware(async (to) => {
     const pathSegments = decodeURIComponent(to.path).split('/')
     const voyageSlug = pathSegments[pathSegments.length - 1]
     const cleanVoyageSlug = replaceFrenchAccents(voyageSlug)
-
-    const voyage = await queryCollection('voyages')
-      .where('slug', '=', cleanVoyageSlug)
-      .where('published', '=', true)
-      .first()
-    if (voyage) {
-      const targetPath = `/voyages/${voyage.slug}`
+    const sanity = useSanity()
+    const voyageQuery = groq`*[_type == "voyage" && slug.current == $slug][0]{
+      published,
+      slug
+    }`
+    const voyage = await sanity.fetch(voyageQuery, { slug: cleanVoyageSlug })
+    if (voyage?.published === true) {
+      const targetPath = `/voyages/${voyage.slug.current}`
       // Only redirect if not already on the correct path
       if (to.path !== targetPath) {
         return navigateTo(targetPath)

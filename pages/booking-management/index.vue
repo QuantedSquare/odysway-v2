@@ -93,7 +93,6 @@ import { useRouter } from 'vue-router'
 
 const search = ref(null)
 const loading = ref(false)
-// const travelesList = await queryCollection('voyages').select('slug', 'title', 'image').where('customAvailable', '=', false).all()
 const sanity = useSanity()
 const travelesListQuery = groq`*[_type == "voyage" && customAvailable == false]{
   slug,

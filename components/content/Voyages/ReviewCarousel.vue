@@ -1,10 +1,10 @@
 <template>
-  <v-container
-    id="reviews-container"
-    :fluid="width < 1600"
-    class="px-0 py-0 mb-4"
-  >
-    <ClientOnly>
+  <ClientOnly>
+    <v-container
+      id="reviews-container"
+      :fluid="width < 1600"
+      class="px-0 py-0 mb-4"
+    >
       <v-row
         align="center"
         justify="center"
@@ -38,44 +38,45 @@
           />
         </v-col>
       </v-row>
-    </ClientOnly>
-    <div ref="itemsList">
-      <v-row
-        v-if="smAndUp"
-        ref="scrollContainer"
-        class="flex-nowrap overflow-auto hidden-scroll mb-4"
-      >
-        <v-col
-          v-for="review in reviews"
-          :key="review.id"
-          cols="10"
-          sm="6"
-          md="4"
+
+      <div ref="itemsList">
+        <v-row
+          v-if="smAndUp"
+          ref="scrollContainer"
+          class="flex-nowrap overflow-auto hidden-scroll mb-4"
         >
-          <ReviewTraveller
-            :review="review"
-            :is-travel-page="true"
-          />
-        </v-col>
-      </v-row>
-      <v-row
-        v-else
-        class="mb-8"
-      >
-        <v-col
-          v-for="review in reviews.slice(0, 3)"
-          :key="review.id"
-          cols="12"
-          class="pb-0"
+          <v-col
+            v-for="review in reviews"
+            :key="review.id"
+            cols="10"
+            sm="6"
+            md="4"
+          >
+            <ReviewTraveller
+              :review="review"
+              :is-travel-page="true"
+            />
+          </v-col>
+        </v-row>
+        <v-row
+          v-else
+          class="mb-8"
         >
-          <ReviewTraveller
-            :review="review"
-            :is-travel-page="true"
-          />
-        </v-col>
-      </v-row>
-    </div>
-  </v-container>
+          <v-col
+            v-for="review in reviews.slice(0, 3)"
+            :key="review.id"
+            cols="12"
+            class="pb-0"
+          >
+            <ReviewTraveller
+              :review="review"
+              :is-travel-page="true"
+            />
+          </v-col>
+        </v-row>
+      </div>
+    </v-container>
+  </ClientOnly>
 </template>
 
 <script setup>

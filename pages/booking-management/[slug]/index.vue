@@ -138,18 +138,17 @@ const headers = [
   { title: 'Voyageurs', key: 'travelers', sortable: false },
   { title: '', key: 'actions', sortable: false },
 ]
-
+const sanity = useSanity()
+const voyageQuery = groq`*[_type == "voyage" && slug.current == $slug][0]{
+    title
+  }`
+const { data: voyageSanity } = await useAsyncData('voyage', () =>
+  sanity.fetch(voyageQuery, { slug }),
+)
 const fetchDates = async () => {
   loading.value = true
   const res = await fetch(`/api/v1/booking/${slug}/dates`)
-  const sanity = useSanity()
-  const voyageQuery = groq`*[_type == "voyage" && slug.current == $slug][0]{
-    title
-  }`
-  const { data: voyageSanity } = await useAsyncData('voyage', () =>
-    sanity.fetch(voyageQuery, { slug }),
-  )
-  console.log('voyageSanity', voyageSanity.value)
+
   voyage.value = voyageSanity.value
   const data = await res.json()
   console.log('data', data)

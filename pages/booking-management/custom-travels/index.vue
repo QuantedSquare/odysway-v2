@@ -33,7 +33,7 @@
       <v-col
         v-for="travel in filteredTravels"
         v-else-if="filteredTravels.length > 0"
-        :key="travel.travel_slug"
+        :key="travel.slug"
         cols="12"
         md="4"
       >
@@ -48,7 +48,7 @@
             cover
           />
           <v-card-title class="text-h5 py-4 text-center">
-            {{ travel.title || travel.travel_slug }}
+            {{ travel.title || travel.slug }}
           </v-card-title>
           <!-- <v-card-text>
             Nombre de dates: {{ travel.nb_dates }}
@@ -131,7 +131,6 @@ const filteredTravels = computed(() => {
   }
   return enrichedTravelsDate
 })
-console.log('filteredTravels', filteredTravels.value)
 onMounted(fetchTravels)
 </script>
 
