@@ -49,27 +49,22 @@
             md="4"
             class="rounded-lg px-md-0"
           >
-            <v-lazy
-              :options="{ threshold: 0.5 }"
-              transition="fade-transition"
+            <SanityImage
+              v-if="footer.team.image?.asset"
+              :asset-id="footer.team.image.asset._ref"
+              auto="format"
             >
-              <SanityImage
-                v-if="footer.team.image?.asset"
-                :asset-id="footer.team.image.asset._ref"
-                auto="format"
-              >
-                <template #default="{ src }">
-                  <v-img
-                    rounded="lg"
-                    :src="src"
-                    :lazy-src="img(src, { format: 'webp', quality: 10, width: 320, height: 270 })"
-                    loading="lazy"
-                    alt="Image de l'équipe"
-                    class="max-height-300"
-                  />
-                </template>
-              </SanityImage>
-            </v-lazy>
+              <template #default="{ src }">
+                <v-img
+                  rounded="lg"
+                  :src="img(src, { format: 'webp', quality: 70, width: 320, height: 270 })"
+                  :lazy-src="img(src, { format: 'webp', quality: 10, width: 320, height: 270 })"
+                  loading="lazy"
+                  alt="Image de l'équipe"
+                  class="max-height-300"
+                />
+              </template>
+            </SanityImage>
           </v-col>
           <v-col
             cols="12"
@@ -245,7 +240,7 @@ const footerQuery = groq`*[_type == "footer"][0]{
 }`
 
 const { data: footer } = await useAsyncData('footer', () =>
-  sanity.fetch(footerQuery)
+  sanity.fetch(footerQuery),
 )
 
 const img = useImage()
