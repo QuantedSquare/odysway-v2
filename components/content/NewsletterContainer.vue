@@ -45,9 +45,9 @@
           >
             <template #label>
               <!-- Vuetify classes does not work for scaling labels -->
-              <h2 class="d-none d-md-block">
+              <h3 class="d-none d-md-block">
                 {{ newsletterContent?.emailPlaceholder || 'Entrez votre adresse email' }}
-              </h2>
+              </h3>
               <h4 class="d-md-none">
                 {{ newsletterContent?.emailPlaceholder || 'Entrez votre adresse email' }}
               </h4>
@@ -110,9 +110,12 @@ defineProps({
   },
 })
 
+const sanity = useSanity()
+
 const { data: newsletterContent } = await useAsyncData('newsletter-content', () =>
-  queryCollection('newsletter').first(),
+  sanity.fetch(`*[_type == "newsletter"][0]`),
 )
+
 const { gtag } = useGtag()
 
 const { width, mdAndUp } = useDisplay()

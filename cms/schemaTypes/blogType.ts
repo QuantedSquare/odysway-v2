@@ -108,14 +108,7 @@ export const blogType = defineType({
       group: 'content',
     }),
 
-    // Publishing
-    defineField({
-      name: 'published',
-      type: 'boolean',
-      initialValue: true,
-      hidden: true,
-      group: 'metadata',
-    }),
+   
     defineField({
       name: 'publishedAt',
       type: 'datetime',

@@ -61,7 +61,6 @@ export const voyageType = defineType({
     {name: 'seo', title: 'SEO'},
   ],
   fields: [
-    defineField({name: 'published', type: 'boolean', group: 'basic', title: 'Voyage publié'}),
     defineField({
       name: 'title',
       type: 'string',
