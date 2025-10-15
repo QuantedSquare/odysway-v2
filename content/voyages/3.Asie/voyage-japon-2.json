@@ -1,0 +1,172 @@
+{
+  "title": "Immersion au Japon : entre temples, montagnes et sources chaudes",
+  "faqBlock": {
+    "faqList": []
+  },
+  "videoLinks": [],
+  "photosList": [],
+  "housingBlock": [],
+  "accompanistsList": [
+    {
+      "name": "Guide francophone"
+    }
+  ],
+  "pricing": {
+    "airportCode": [],
+    "startingPrice": 3850,
+    "lastMinuteAvailable": true,
+    "maxTravelers": 12,
+    "minTravelersToConfirm": 4,
+    "indivRoom": true,
+    "indivRoomPrice": 350
+  },
+  "pricingDetailsBlock": {
+    "exclude": [],
+    "include": []
+  },
+  "programmeBlock": [
+    {
+      "title": "Arrivée à Osaka",
+      "badgeText": "Jour 1",
+      "description": "Bienvenue au Japon. À votre arrivée, un assistant francophone vous accueille à l’aéroport et vous accompagne jusqu’à votre hôtel. Osaka vous tend les bras : grande, colorée, pleine de vie. Vous pouvez choisir de vous reposer ou de faire vos premiers pas dans le quartier animé de Dotonbori, où les néons s’allument et où la street food japonaise tient ses promesses. Okonomiyaki, takoyaki, sushi carrés… le Japon commence par une bouchée.  Dîner libre..",
+      "photo": "/images/1.voyages/voyage-immersion-culturelle-japon/5wj6lGPFTCGSIeF1TBVF.jpg",
+      "night": "Nuit à l’hôtel Intergate Osaka Umeda."
+    },
+    {
+      "title": "Osaka, entre modernité et traditions",
+      "badgeText": "Jour 2",
+      "description": "Accompagnés de votre guide, partez à la découverte du château d’Osaka, symbole de la réunification du Japon. Ses douves et ses remparts racontent des siècles d’histoire. L’après-midi, le quartier de Namba vous plonge dans un autre Japon : effervescent, lumineux, excentrique. Le soir, un dîner de bienvenue réunit le groupe autour de la gastronomie locale.  Déjeuner et dîner inclus. Nuit à Osaka.  Suggestion Odysway : devenez artisan du mochi le temps d’un atelier convivial au cœur de la ville.",
+      "photo": "/images/blogs/voyage-en-famille-le-top-10-des-destinations/V9w4YQ8YTf5kVYrROsa3.jpg"
+    },
+    {
+      "title": "Osaka - Kyoto : bambous et pavillons d’or",
+      "badgeText": "Jour 3",
+      "description": "Train vers Kyoto, l’ancienne capitale impériale. Vous découvrez la bambouseraie d’Arashiyama, un tunnel de verdure où chaque pas résonne doucement sur le bois. Puis vient la cérémonie du thé, lente et précise, avant la visite du célèbre Pavillon d’Or, le Kinkaku-ji, qui se reflète sur l’eau comme une promesse d’harmonie.  Déjeuner inclus. ",
+      "photo": "/images/1.voyages/voyage-immersion-culturelle-japon/4VSIIE5NQ16QalmcfUTy.jpg",
+      "night": "Nuit à l’hôtel Prince Kyoto Takaragaike."
+    },
+    {
+      "title": "Kyoto libre, au rythme des traditions",
+      "badgeText": "Jour 4",
+      "description": "Journée libre pour explorer Kyoto selon vos envies. Flânez dans le quartier de Gion, traversez les torii du sanctuaire Fushimi Inari, perdez-vous au marché de Nishiki, entre fruits confits et poissons séchés. Kyoto se découvre à pied, dans la lenteur. Peut-être croiserez-vous une geisha au détour d’une ruelle.  Repas libres. Nuit à Kyoto.  En option : cours de cuisine japonaise, découverte du saké ou initiation à l’art des samouraïs.",
+      "photo": "/images/1.voyages/voyage-immersion-culturelle-japon/dRggKvTiuhjjVqtzO2Ug.jpg"
+    },
+    {
+      "title": "Kyoto - Nara - Kyoto : au pays des daims",
+      "badgeText": "Jour 5",
+      "description": "Départ pour Nara, première capitale du Japon. Ici, les daims se promènent librement parmi les temples et les visiteurs. Vous découvrez le temple Todai-ji et son immense Bouddha de bronze, puis le sanctuaire Kasuga Taisha et ses milliers de lanternes. Retour à Kyoto en fin de journée.  Déjeuner inclus. Dîner libre. Nuit à Kyoto.",
+      "photo": "/images/1.voyages/voyage-immersion-culturelle-japon/CdzQaYxlQdWMb0P1Cd8V.jpg"
+    },
+    {
+      "badgeText": "Jour 6",
+      "title": "Kyoto - Takayama : l’esprit Edo",
+      "description": "Train express vers Takayama, au cœur des Alpes japonaises. Le trajet en Shinkansen offre déjà un aperçu du Japon rural, entre rizières et montagnes. Déjeuner bento à bord, comme les Japonais. À Takayama, les maisons de bois, les ruelles calmes et les échoppes artisanales vous transportent dans le Japon d’autrefois.  Déjeuner inclus. Nuit à l’hôtel Mercure Hida Takayama.",
+      "photo": "/images/1.voyages/voyage-immersif-vietnam/GKtyVbNEToK2j9S7zymt.jpg"
+    },
+    {
+      "badgeText": "Jour 7",
+      "title": "Shirakawa-go : village suspendu dans le temps",
+      "description": "Excursion dans le village classé de Shirakawa-go, célèbre pour ses toits de chaume pentus. Un décor de carte postale, figé depuis des siècles. On y sent la vie simple d’autrefois, l’hiver rude, la chaleur du foyer. Retour à Takayama pour une soirée libre.  Déjeuner inclus. Nuit à Takayama.",
+      "photo": "/images/1.voyages/voyage-immersion-culturelle-japon/5wj6lGPFTCGSIeF1TBVF.jpg"
+    },
+    {
+      "title": "Takayama - Gero Onsen : le Japon des sources chaudes",
+      "badgeText": "Jour 8",
+      "description": "Direction Gero Onsen, cité thermale légendaire. Une ville où l’eau est reine, où les vapeurs s’élèvent dans les ruelles et où le temps s’arrête. Installez-vous dans votre ryokan et goûtez au plaisir du bain japonais : le corps se détend, l’esprit aussi. Le soir, un dîner kaiseki vous attend, tout en finesse.  Déjeuner et dîner inclus. Nuit au Ryokan Suimeikan.",
+      "photo": "/images/1.voyages/voyage-immersion-culturelle-japon/jkpdvMNzQ6TH1kIbLUMw.jpg"
+    },
+    {
+      "title": "Gero Onsen - Tokyo : entre passé et futur",
+      "badgeText": "Jour 9",
+      "description": "Matinée libre, puis train vers Tokyo. Changement de décor : la capitale s’impose, vibrante et fascinante. Vous découvrez le sanctuaire Meiji-jingu, havre de paix au cœur de la ville, puis le quartier excentrique de Harajuku, théâtre du Japon moderne.  Déjeuner inclus. Nuit à l’hôtel Tokyo Intergate Kyobashi.",
+      "photo": "/images/1.voyages/voyage-immersion-culturelle-japon/CzXy6TfTTIKtOKZWB91j.jpg"
+    },
+    {
+      "title": "Tokyo : traditions et lumières",
+      "badgeText": "Jour 10",
+      "description": "Balade au jardin Hamarikyu, bulle de verdure suspendue au milieu des gratte-ciel. Puis direction Odaiba, île futuriste et joyeuse. L’après-midi, retour à l’histoire : Asakusa et le temple Senso-ji, cœur battant du vieux Tokyo. Un Japon multiple, tout en contrastes.  Déjeuner inclus. Nuit à Tokyo.",
+      "photo": "/images/1.voyages/voyage-immersion-culturelle-japon/nJQYqGHATTaF6zQToxql.jpg"
+    },
+    {
+      "description": "Excursion à Kamakura, petite ville côtière entourée de collines. Visite du temple Hachimangu, puis du Grand Bouddha de bronze de Kotoku-in. L’air marin et la douceur du lieu en font une journée paisible et inspirante. Retour à Tokyo en fin d’après-midi.  Déjeuner inclus. Nuit à Tokyo.",
+      "badgeText": "Jour 11",
+      "title": "Kamakura : entre mer et bouddhas géants",
+      "photo": "/images/1.voyages/competition-solidaire-maroc/6wozDcx4RBWtgayvKTPX.jpg"
+    },
+    {
+      "badgeText": "Jour 12",
+      "title": "Tokyo libre et dîner d’au revoir",
+      "description": "Une journée pour flâner à votre rythme : Ginza, Ueno, Shibuya ou Akihabara… Le soir, dîner d’au revoir dans un izakaya typique pour célébrer la fin du voyage autour de quelques plats à partager.  Dîner inclus. Nuit à Tokyo.",
+      "photo": "/images/1.voyages/voyage-immersion-culturelle-japon/nJQYqGHATTaF6zQToxql.jpg"
+    },
+    {
+      "title": "Départ de Tokyo",
+      "badgeText": "Jour 13",
+      "description": "Transfert à l’aéroport selon l’heure de votre vol. Le Japon s’efface doucement derrière la vitre du train. Il laisse ce sentiment unique d’avoir touché à quelque chose de rare : la simplicité dans la beauté.",
+      "photo": "/images/1.voyages/voyage-immersion-culturelle-japon/9mDo1RE7S2qFL07TJyB3.jpg"
+    }
+  ],
+  "experiencesBlock": [
+    "Un petit groupe de 4 à 12 voyageurs pour une expérience fluide et conviviale",
+    "Un guide local francophone, présent tout au long du voyage",
+    "L’équilibre parfait entre tradition et modernité, villes et nature",
+    "Une nuit en ryokan traditionnel à Gero Onsen, l’une des plus belles stations thermales du Japon",
+    "Des expériences locales : cérémonie du thé, rencontres, gastronomie, bains japonais"
+  ],
+  "categories": [],
+  "destinations": [
+    {
+      "name": "Japon"
+    }
+  ],
+  "slug": "immersion-japon-temples-montagnes-sources-chaudes",
+  "level": "1",
+  "experienceType": "Plonger dans la culture",
+  "duration": 13,
+  "nights": 12,
+  "housingType": "Hôtet et Ryokan",
+  "idealPeriods": {
+    "avril": true,
+    "mai": true,
+    "juillet": true,
+    "septembre": true,
+    "octobre": true,
+    "novembre": true
+  },
+  "monthlyAvailability": {
+    "avril": true,
+    "mai": true,
+    "juillet": true,
+    "septembre": true,
+    "octobre": true,
+    "novembre": false
+  },
+  "minAge": 18,
+  "authorNote": {
+    "author": "Linda",
+    "affixeAuthor": "Amoureuse des Alpes japonaises et Don katsu"
+  },
+  "description": "Treize jours pour ressentir l’âme du Japon. D’Osaka à Tokyo, en passant par Kyoto, Nara et les Alpes japonaises, ce voyage est une invitation à découvrir un Japon authentique, loin des clichés. Vous partirez en petit groupe, accompagnés d’un guide local francophone, entre temples séculaires, villages de montagne et sources chaudes. Au fil des jours, les contrastes se dévoilent : la frénésie lumineuse d’Osaka, la sérénité de Kyoto, la douceur d’un bain à Gero Onsen, l’élégance tranquille de Takayama… jusqu’à Tokyo, immense et vibrante.  Un voyage complet, où chaque étape révèle une facette du Japon : sa beauté, sa retenue, sa précision, et cette poésie si particulière qui naît du calme et du détail.",
+  "metaDescription": "Partez pour 13 jours d’immersion au Japon, entre Osaka, Kyoto, Takayama et Tokyo. Un voyage en petit groupe à la rencontre d’un Japon vivant et apaisé : traditions, montagnes, gastronomie et bains thermaux au fil des saisons.",
+  "badgeSection": {
+    "groupeBadge": {
+      "text": "De 4 à 12 voyageurs",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "13 jours sur place",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "Vols sur demande",
+      "visible": true
+    },
+    "housingBadge": {
+      "visible": true,
+      "text": "Hôtel et Ryokan"
+    }
+  },
+  "groupeAvailable": true,
+  "miniatureDisplay": "Nouveau",
+  "accompanistsDescription": "Votre guide local francophone vous accompagne tout au long du voyage. Fin connaisseur de son pays, il vous aidera à comprendre les codes du Japon, ses rites, sa retenue, son humour discret. Plus qu’un simple accompagnateur, c’est un passeur entre deux mondes."
+}
