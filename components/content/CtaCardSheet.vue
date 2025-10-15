@@ -4,13 +4,23 @@
     :class="route.name === 'search' || route.name.includes('thematiques') || route.name.includes('experience') ? 'h-100' : ''"
   >
     <v-avatar
+      v-if="faqTextes?.faqSection?.ctaCard?.avatar"
       size="80"
       class="mt-6"
     >
-      <v-img
-        :src="img(faqTextes?.faqSection?.ctaCard?.avatar, { format: 'webp', quality: 70, height: 640, width: 640 })"
-        :alt="faqTextes?.faqSection?.ctaCard?.avatar?.alt || 'Avatar de la carte de contact'"
-      />
+      <SanityImage
+        :asset-id="faqTextes.faqSection.ctaCard.avatar.asset._ref"
+        auto="format"
+        :w="160"
+        :h="160"
+      >
+        <template #default="{ src }">
+          <v-img
+            :src="src"
+            alt="Avatar de la carte de contact"
+          />
+        </template>
+      </SanityImage>
     </v-avatar>
 
     <span class="text-h3 text-md-h4 text-lg-h3 font-weight-bold my-6">
@@ -40,10 +50,15 @@ import { useImage } from '#imports'
 const route = useRoute()
 const router = useRouter()
 const img = useImage()
+const sanity = useSanity()
 
-const { data: faqTextes } = await useAsyncData('faq-textes', () => {
-  return queryCollection('ctas').select('faqSection').first()
-})
+const ctasQuery = groq`*[_type == "ctas"][0]{
+  faqSection
+}`
+
+const { data: faqTextes } = await useAsyncData('faq-textes', () =>
+  sanity.fetch(ctasQuery)
+)
 
 function redirectToCalendly() {
   trackPixel('trackCustom', 'ClickRDV')
