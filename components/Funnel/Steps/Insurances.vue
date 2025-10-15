@@ -15,11 +15,18 @@
         cols="12"
       >
         <h2>{{ page.insurances.title }}</h2>
-        <img
-          width="90"
-          class="ml-2"
-          :src="page.insurances.assurance_img"
+        <SanityImage
+          :asset-id="page.insurances.assurance_img.asset._ref"
+          auto="format"
         >
+          <template #default="{ src }">
+            <img
+              :src="src"
+              width="90"
+              class="ml-2"
+            >
+          </template>
+        </SanityImage>
       </v-col>
     </v-row>
     <!-- Multirisque Insurance -->
@@ -54,8 +61,8 @@
       >
         <FunnelStepsDialogLearnMore
           v-if="model"
-          :btn-text="model.iso === 'NP' || model.iso === 'PE' ? page.insurances.accroche_assurance_perou_nepal:page.insurances.accroche_assurance_medicale "
-          :dialog-text="model.iso === 'NP' || model.iso === 'PE' ? page.insurances.details_assurance_medicale_perou_nepal:page.insurances.details_assurance_medicale "
+          :btn-text="voyage.iso.includes('NP') || voyage.iso.includes('PE') ? page.insurances.accroche_assurance_perou_nepal:page.insurances.accroche_assurance_medicale "
+          :dialog-text="voyage.iso.includes('NP') || voyage.iso.includes('PE') ? page.insurances.details_assurance_medicale_perou_nepal:page.insurances.details_assurance_medicale "
           :page="page"
         />
       </v-col>
@@ -203,6 +210,7 @@ watch([model, () => currentStep, () => insurances], () => {
 const formValidation = computed(() => {
   return selectedInsurance.value
 })
+console.log('model', model.value)
 // Analytics
 const handleGAEvent = (event) => {
   const EVENTS = {

@@ -1,4 +1,6 @@
 import type { H3Event } from 'h3'
+import chapka from '~/server/utils/chapka'
+import { InsuranceSchema, type TypeInsuranceQuote } from '~/server/utils/types/insurance'
 
 export default defineEventHandler(async (event: H3Event): Promise<TypeInsuranceQuote> => {
   if (event.method !== 'POST') {
@@ -8,24 +10,20 @@ export default defineEventHandler(async (event: H3Event): Promise<TypeInsuranceQ
     })
   }
   const parsedBody = await readValidatedBody(event, body => InsuranceSchema.safeParse(body))
-  console.log('!!!!!!!!Chapka: quote parsed body!!!!!!', parsedBody)
   if (!parsedBody.success) {
-    console.log('Chapka: quote parsed body', parsedBody)
     throw createError({
       statusCode: 400,
       message: `Validation failed: ${parsedBody.error.message}`,
     })
   }
-  console.log('Chapka: quote parsed body', parsedBody.data)
   try {
     const result = await chapka.quote(parsedBody.data)
-    console.log('Chapka: quote returned', result)
     return {
       ...result,
     }
   }
   catch (err) {
-    console.log('Error Chapka quote', err)
+    console.error('Error Chapka quote:', err)
     throw createError({
       statusCode: 500,
       message: 'Error Chapka quote',

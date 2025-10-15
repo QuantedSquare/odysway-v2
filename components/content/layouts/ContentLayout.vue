@@ -1,6 +1,7 @@
 <template>
   <v-container
     fluid
+
     class="px-2 px-md-4 pt-0 "
   >
     <SearchHeroSection
@@ -113,38 +114,59 @@ const route = useRoute()
 const isComputedCategory = computed(() => !!props.isCategory)
 const isComputedExperience = computed(() => !!props.isExperience)
 
-const { data: categories } = useAsyncData('categories-on-content-layout', () => {
+const categoriesQuery = `
+  *[_type == "category"]{
+    ...,
+  }
+`
+const { data: categories } = useAsyncData('categories-on-content-layout', async () => {
   if (props.isCategory) {
-    return queryCollection('categories').where('showOnHome', '=', true).select('id', 'title', 'slug', 'discoveryTitle', 'image').all()
+    const { data } = await useSanityQuery(categoriesQuery)
+    return data.value
   }
   return null
 }, { watch: [isComputedCategory, isComputedExperience] })
 
-const { data: experiences } = useAsyncData('experiences-on-content-layout', () => {
+const experiencesQuery = `
+  *[_type == "experience"]{
+    ...,
+  }
+`
+const { data: experiences } = useAsyncData('experiences-on-content-layout', async () => {
   if (props.isExperience) {
-    return queryCollection('experiences').where('published', '=', true).all()
+    const { data } = await useSanityQuery(experiencesQuery)
+    console.log('experiences', data.value)
+    return data.value
   }
   return null
 }, { watch: [isComputedCategory, isComputedExperience] })
 
-const destinationQuery = `
+const destinationsQuery = `
   *[_type == "destination"]{
     ...,
   }
 `
 const { data: destinations } = useAsyncData('destinations-on-content-layout', async () => {
   if (props.isDestination) {
-    const { data } = await useSanityQuery(destinationQuery)
+    const { data } = await useSanityQuery(destinationsQuery)
     return data.value
   }
   return null
 })
 
-
 const displayedData = computed(() => {
   if (props.isCategory) {
     const categoriesData = {
-      items: categories.value,
+      items: categories.value?.map((category) => {
+        return {
+          id: category._id,
+          title: category.title,
+          slug: category.slug.current,
+          image: category.image,
+          type: 'thematiques',
+          description: category.discoveryTitle || '',
+        }
+      }).filter(category => category.image?.asset?._ref),
       selectedItem: props.selectedCategory,
       pageTitle: props.pageContent?.index?.pageTitle || 'Toutes nos thématiques',
       showOnBottom: Object.keys(route.params).length > 0,
@@ -153,8 +175,18 @@ const displayedData = computed(() => {
   }
   if (props.isExperience) {
     const experienceData = {
-      items: experiences.value,
+      items: experiences.value?.map((experience) => {
+        return {
+          id: experience._id,
+          title: experience.title,
+          slug: experience.slug.current,
+          image: experience.image,
+          type: 'experiences',
+          description: experience.discoveryTitle || '',
+        }
+      }).filter(experience => experience.image?.asset?._ref),
       selectedItem: props.selectedExperience,
+      type: 'experiences',
       pageTitle: props.pageContent?.index?.pageTitle || 'Toutes nos expériences',
       showOnBottom: Object.keys(route.params).length > 0,
     }

@@ -12,7 +12,6 @@
         />
       </div>
       <BlogHeroSection
-
         v-if="destinationSanity.blog"
         class="mt-12"
         :title="destinationSanity.blog.title"
