@@ -75,22 +75,24 @@
                   </template>
                 </v-hover>
 
-                <v-list-item
-                  v-for="destination, index in filteredDestinationsForRegion(item.raw, search, item)"
-                  :key="index"
-                  density="compact"
-                  class="px-0 mb-0 "
-                  :class="{ ' pb-2 border-b': index !== filteredDestinationsForRegion(item.raw, search, item).length - 1 }"
-                  nav
-                  @click="selectDestination(destination)"
-                >
-                  <v-list-item-title
-                    class="text-subtitle-2 d-flex align-center justify-start ga-2 px-3"
+                <template v-if="item.raw.destinations && item.raw.destinations.length > 0">
+                  <v-list-item
+                    v-for="(destination, index) in item.raw.destinations"
+                    :key="destination.slug || destination.title"
+                    density="compact"
+                    class="px-0 mb-0 "
+                    :class="{ ' pb-2 border-b': index !== item.raw.destinations.length - 1 }"
+                    nav
+                    @click="selectDestination(destination)"
                   >
-                    <v-icon :icon="item.raw.value === 'top-destination' ? mdiThumbUpOutline : mdiMapMarker" />
-                    {{ destination.title }}
-                  </v-list-item-title>
-                </v-list-item>
+                    <v-list-item-title
+                      class="text-subtitle-2 d-flex align-center justify-start ga-2 px-3"
+                    >
+                      <v-icon :icon="item.raw.value === 'top-destination' ? mdiThumbUpOutline : mdiMapMarker" />
+                      {{ destination.title }}
+                    </v-list-item-title>
+                  </v-list-item>
+                </template>
               </v-list>
             </template>
           </v-autocomplete>
@@ -176,9 +178,20 @@ import { useImage } from '#imports'
 const img = useImage()
 const router = useRouter()
 const route = useRoute()
+const sanity = useSanity()
+
+const searchFieldQuery = groq`*[_type == "search"][0]{
+  destination,
+  travelType,
+  period,
+  discoverTrips,
+  topDestinations,
+  allPeriods,
+  travelTypes
+}`
 
 const { data: searchFieldContent, status: searchFieldContentStatus } = useAsyncData('search-field-content', () =>
-  queryCollection('search_field').first(),
+  sanity.fetch(searchFieldQuery)
 )
 
 const isSelectionARegion = useState('isSelectionARegion', () => false)
@@ -221,12 +234,32 @@ const months = computed(() => {
   ]
 })
 
-const { data: destinations, destinationsStatus } = useAsyncData('destinations-in-search', () => {
-  return queryCollection('destinations').select('title', 'slug', 'metaDescription', 'published', 'regions', 'image', 'stem', 'isTopDestination').where('published', '=', true).all()
-})
-const { data: regions, status: regionsStatus } = useAsyncData('regions', () => {
-  return queryCollection('regions').select('nom', 'slug', 'meta_description').all()
-})
+const destinationsQuery = groq`*[_type == "destination"]{
+  title,
+  "slug": slug.current,
+  metaDescription,
+  published,
+  regions[]-> {
+    nom
+  },
+  image,
+  stem,
+  isTopDestination
+}`
+
+const { data: destinations, status: destinationsStatus } = useAsyncData('destinations-in-search', () =>
+  sanity.fetch(destinationsQuery)
+)
+
+const regionsQuery = groq`*[_type == "region"]{
+  nom,
+  "slug": slug.current,
+  meta_description
+}`
+
+const { data: regions, status: regionsStatus } = useAsyncData('regions', () =>
+  sanity.fetch(regionsQuery)
+)
 
 const mappedDestinationsToRegions = computed(() => {
   if (!regions.value || !destinations.value) return []
@@ -239,16 +272,6 @@ const mappedDestinationsToRegions = computed(() => {
     destinations: topDestinations,
   }
 
-  topRegion.destinations.push({
-    title: 'France',
-    slug: 'france',
-    metaDescription: 'France',
-    published: true,
-    regions: ['Europe'],
-    image: null,
-    isTopDestination: true,
-  })
-
   // Normal region mapping
   const regionGroups = regions.value.map((region) => {
     return {
@@ -258,12 +281,7 @@ const mappedDestinationsToRegions = computed(() => {
       destinations: destinations.value.filter(d => d.regions.some(r => r.nom === region.nom)),
     }
   })
-  // filter out the france destination in the Europe region
-  regionGroups.forEach((region) => {
-    if (region.title === 'Europe') {
-      region.destinations = region.destinations.filter(d => !d.regions.some(r => r.nom === 'France'))
-    }
-  })
+
   // Prepend Top destination region if there are any
   return topDestinations.length > 0 ? [topRegion, ...regionGroups] : regionGroups
 })
@@ -295,104 +313,33 @@ function customFilter(itemTitle, queryText, item) {
   return false
 }
 
-// Aggregate destinations by unique slug/titre, collecting all regions they belong to
-function aggregateDestinations(mappedRegions, query) {
-  const searchText = normalize(query)
-  const destinationMap = {}
-  mappedRegions.forEach((region) => {
-    region.destinations.forEach((dest) => {
-      const key = dest.slug || dest.title
-      if (!destinationMap[key]) {
-        // Only add if matches search
-        if (!query || normalize(dest.title).includes(searchText)) {
-          destinationMap[key] = {
-            ...dest,
-            regions: [region.title],
-          }
-        }
-      }
-      else {
-        // Add region to existing
-        if (!destinationMap[key].regions.includes(region.title)) {
-          destinationMap[key].regions.push(region.title)
-        }
-      }
-    })
-  })
-  // Return as array
-  return Object.values(destinationMap)
-}
-
-function filteredDestinationsForRegion(region, query, _item) {
-  // Only show destinations that match the query, deduplicated and aggregated
-  const searchText = normalize(query)
-  if (!query || normalize(region.title).includes(searchText)) {
-    // Show all destinations for region if region matches
-    return region.destinations
-  }
-  // Aggregate all destinations across regions
-  const allAggregated = aggregateDestinations([region], query)
-  return allAggregated.filter(dest =>
-    normalize(dest.title).includes(searchText),
-  )
-}
-
-// For the autocomplete dropdown, aggregate all destinations and group by their regions
+// For the autocomplete dropdown - simple filtering
 const filteredRegions = computed(() => {
   if (!search.value) return mappedDestinationsToRegions.value
+
   const searchText = normalize(search.value)
-  // Find regions whose name matches the search
-  const matchingRegions = mappedDestinationsToRegions.value.filter(region =>
-    normalize(region.title).includes(searchText),
-  )
-  // Collect all destinations from matching regions
-  let regionDestinations = []
-  matchingRegions.forEach((region) => {
-    regionDestinations = regionDestinations.concat(region.destinations)
-  })
-  // Aggregate all destinations matching by name (across all regions)
-  const nameAggregated = aggregateDestinations(mappedDestinationsToRegions.value, search.value)
-  // Combine both sets, deduplicate by slug or titre
-  const allDestinations = [...regionDestinations, ...nameAggregated]
-  const uniqDestinations = _.uniqBy(allDestinations, dest => dest.slug || dest.title)
-  // Aggregate region labels for each destination
-  const destinationMap = {}
-  uniqDestinations.forEach((dest) => {
-    const key = dest.slug || dest.title
-    if (!destinationMap[key]) {
-      destinationMap[key] = {
-        ...dest,
-        regions: dest.regions ? [...dest.regions] : [],
-      }
-    }
-    // Add all regions this destination belongs to
-    mappedDestinationsToRegions.value.forEach((region) => {
-      if (region.destinations.some(d => (d.slug || d.title) === key)) {
-        if (!destinationMap[key].regions.includes(region.title)) {
-          destinationMap[key].regions.push(region.title)
+
+  // Filter regions that match search OR have destinations that match
+  return mappedDestinationsToRegions.value
+    .map(region => {
+      // Keep region if name matches
+      const regionMatches = normalize(region.title).includes(searchText)
+
+      // Filter destinations that match search
+      const matchingDestinations = region.destinations.filter(dest =>
+        normalize(dest.title).includes(searchText)
+      )
+
+      // Include region if it matches or has matching destinations
+      if (regionMatches || matchingDestinations.length > 0) {
+        return {
+          ...region,
+          destinations: regionMatches ? region.destinations : matchingDestinations
         }
       }
+      return null
     })
-  })
-  // Group by region label
-  const regionGroups = {}
-  Object.values(destinationMap).forEach((dest) => {
-    const processedRegions = _.uniq(dest.regions.map(r => typeof r === 'string' ? r : r.nom))
-
-    const regionLabel = processedRegions.length > 1 ? processedRegions.join(' & ') : processedRegions[0]
-    if (!regionGroups[regionLabel]) regionGroups[regionLabel] = []
-    regionGroups[regionLabel].push(dest)
-  })
-  // Return as array of { title, destinations, value } - preserve the value property
-  return Object.entries(regionGroups).map(([title, destinations]) => {
-    // Find the original region object to get the value property
-    const originalRegion = mappedDestinationsToRegions.value.find(region => region.title === title)
-    return {
-      title,
-      destinations,
-      value: originalRegion ? originalRegion.value : null,
-    }
-  })
+    .filter(Boolean)
 })
 
 const selectedRegionSlug = useState('selectedRegionSlug', () => null)

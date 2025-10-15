@@ -153,8 +153,14 @@
 import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
+const sanity = useSanity()
+
+const query = groq`*[_type == "search"][0]{
+  searchHero
+}`
+
 const { data: contentText } = await useAsyncData('page-search-search-hero', () =>
-  queryCollection('page_search').first(),
+  sanity.fetch(query)
 )
 
 const img = useImage()

@@ -100,13 +100,26 @@ const router = useRouter()
 const route = useRoute()
 const routeQuery = computed(() => route.query)
 
+const sanity = useSanity()
+
+const searchContentQuery = groq`*[_type == "search"][0]{
+  oneTrip,
+  multipleTrips,
+  resetButton
+}`
+
 const { data: searchContent } = await useAsyncData('search-content', () =>
-  queryCollection('page_search').first(),
+  sanity.fetch(searchContentQuery)
 )
 
 const { data: fetchedDestination } = useAsyncData('fetchedDestination', () => {
   if (route.query.destination) {
-    return queryCollection('destinations').where('slug', '=', `${route.query.destination}`).where('published', '=', true).select('title', 'interjection', 'image').first()
+    const query = groq`*[_type == "destination" && slug.current == $slug][0]{
+      title,
+      interjection,
+      image
+    }`
+    return sanity.fetch(query, { slug: route.query.destination })
   }
   return null
 }, {
@@ -134,12 +147,16 @@ const parsedDates = computed(() => {
 
 function filterByDestination(voyages, destination) {
   if (!destination) return voyages
-  return voyages.filter(v => v.destinations?.some(d => d.name.includes(destination)))
+  return voyages.filter(v => v.destinations?.some(d => d.title.includes(destination)))
 }
 
-const { data: travelTypes } = await useAsyncData('travelTypes', () => {
-  return queryCollection('search_field').select('travelTypes').first()
-})
+const travelTypesQuery = groq`*[_type == "search"][0]{
+  travelTypes
+}`
+
+const { data: travelTypes } = await useAsyncData('travelTypes', () =>
+  sanity.fetch(travelTypesQuery)
+)
 
 const TRAVEL_TYPES = {
   GROUP: travelTypes.value?.travelTypes?.group,
@@ -180,12 +197,29 @@ function filterByDate(voyages, fromList) {
   })
 }
 
-const { data: regions } = await useAsyncData('regions', () => {
-  return queryCollection('regions').all()
-})
-const { data: destinations } = await useAsyncData('destinations', () => {
-  return queryCollection('destinations').where('published', '=', true).all()
-})
+const regionsQuery = groq`*[_type == "region"]{
+  _id,
+  nom,
+  "slug": slug.current
+}`
+
+const { data: regions } = await useAsyncData('regions', () =>
+  sanity.fetch(regionsQuery)
+)
+
+const destinationsQuery = groq`*[_type == "destination"]{
+  _id,
+  title,
+  "slug": slug.current,
+  isTopDestination,
+  regions[]-> {
+    nom
+  }
+}`
+
+const { data: destinations } = await useAsyncData('destinations', () =>
+  sanity.fetch(destinationsQuery)
+)
 
 const { data: voyages } = await useAsyncData(
   `search-${JSON.stringify(route.query)}`,
@@ -216,7 +250,21 @@ const { data: voyages } = await useAsyncData(
     const travelType = route.query.travelType || null
     const fromList = route.query.from || null
 
-    let voyages = await queryCollection('voyages').where('published', '=', true).all()
+    const voyagesQuery = groq`*[_type == "voyage"]{
+      _id,
+      title,
+      "slug": slug.current,
+      image,
+      groupeAvailable,
+      privatisationAvailable,
+      monthlyAvailability,
+      destinations[]-> {
+        _id,
+        title
+      }
+    }`
+
+    let voyages = await sanity.fetch(voyagesQuery)
 
     if (isRegionSearch) {
       let destinationList = []
@@ -233,7 +281,7 @@ const { data: voyages } = await useAsyncData(
       }
       const destinationNames = destinationList.map(d => d.title)
       voyages = voyages.filter(v =>
-        v.destinations?.some(d => destinationNames.includes(d.name)),
+        v.destinations?.some(d => destinationNames.includes(d.title)),
       )
     }
     else {
