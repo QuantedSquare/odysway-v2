@@ -1,16 +1,14 @@
 <template>
   <v-dialog
     v-model="dialog"
-    max-width="500px"
+    max-width="800px"
+
     transition="dialog-bottom-transition"
   >
     <template #activator="{ props: activatorProps } ">
       <v-row>
         <v-col cols="12">
-          <div
-            v-if="btnText"
-            v-html="btnText"
-          />
+          <EnrichedText :value="btnText" />
           <v-btn
             x-small
             variant="text"
@@ -18,13 +16,13 @@
             v-bind="activatorProps"
           >
             {{ page.dialogs.learn_more_btn }}
-          <!-- {{ $t('stepperDevisGroup.learnMore') }} -->
           </v-btn>
         </v-col>
       </v-row>
     </template>
     <v-card
       rounded="lg"
+      class="px-4 py-2"
     >
       <v-card-title class="d-flex justify-space-between align-center">
         <div>
@@ -41,8 +39,9 @@
       <v-card-text>
         <div
           style="min-height: 200px"
-          v-html="dialogText"
-        />
+        >
+          <EnrichedText :value="dialogText" />
+        </div>
       </v-card-text>
     </v-card>
   </v-dialog>

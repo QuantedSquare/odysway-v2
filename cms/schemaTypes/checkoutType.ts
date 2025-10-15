@@ -1,5 +1,46 @@
 import {defineField, defineType} from 'sanity'
 
+const richTextBlock = {
+  type: 'block',
+  title: 'Bloc de texte',
+  styles: [
+    {title: 'Normal', value: 'normal'},
+    {title: 'H2', value: 'h2'},
+    {title: 'H3', value: 'h3'},
+    {title: 'H4', value: 'h4'},
+    {title: 'Citation', value: 'blockquote'},
+  ],
+  marks: {
+    decorators: [
+      {title: 'Gras', value: 'strong'},
+      {title: 'Italique', value: 'em'},
+      {title: 'Souligné', value: 'underline'},
+      {title: 'Barré', value: 'strike-through'},
+    ],
+    annotations: [
+      {
+        name: 'link',
+        type: 'object',
+        title: 'Lien',
+        fields: [
+          {
+            name: 'href',
+            type: 'url',
+            title: 'URL',
+            validation: (rule: any) => rule.uri({
+              scheme: ['http', 'https', 'mailto']
+            })
+          },
+        ],
+      },
+    ],
+  },
+  lists: [
+    {title: 'Puces', value: 'bullet'},
+    {title: 'Numéroté', value: 'number'},
+  ],
+}
+
 export const checkoutType = defineType({
   name: 'checkout',
   title: 'Checkout',
@@ -368,25 +409,16 @@ export const checkoutType = defineType({
           validation: Rule => Rule.required()
         }),
         defineField({
-          name: 'preference_assurance_multirisque',
-          title: 'Préférence Assurance Multirisque',
-          type: 'string',
-          validation: Rule => Rule.required()
-        }),
-        defineField({
           name: 'accroche_assurance_perou_nepal',
           title: 'Accroche Assurance Pérou/Népal',
-          type: 'string'
+          type: 'array',
+          of: [richTextBlock]
         }),
         defineField({
           name: 'details_assurance_medicale_perou_nepal',
           title: 'Détails Assurance Médicale Pérou/Népal',
-          type: 'string'
-        }),
-        defineField({
-          name: 'details_assurance_medicale',
-          title: 'Détails Assurance Médicale',
-          type: 'string'
+          type: 'array',
+          of: [richTextBlock]
         }),
         defineField({
           name: 'preference_assurance_annulation',
@@ -397,17 +429,32 @@ export const checkoutType = defineType({
         defineField({
           name: 'accroche_assurance_annulation',
           title: 'Accroche Assurance Annulation',
-          type: 'text'
-        }),
-        defineField({
-          name: 'accroche_assurance_medicale',
-          title: 'Accroche Assurance Médicale',
-          type: 'text'
+          type: 'array',
+          of: [richTextBlock]
         }),
         defineField({
           name: 'details_assurance_annulation',
           title: 'Détails Assurance Annulation',
-          type: 'string'
+          type: 'array',
+          of: [richTextBlock]
+        }),
+        defineField({
+          name: 'preference_assurance_multirisque',
+          title: 'Préférence Assurance Multirisque',
+          type: 'string',
+          validation: Rule => Rule.required()
+        }),
+        defineField({
+          name: 'accroche_assurance_medicale',
+          title: 'Accroche Assurance Médicale',
+          type: 'array',
+          of: [richTextBlock]
+        }),
+        defineField({
+          name: 'details_assurance_medicale',
+          title: 'Détails Assurance Médicale',
+          type: 'array',
+          of: [richTextBlock]
         }),
         defineField({
           name: 'insurances_unavailable',
