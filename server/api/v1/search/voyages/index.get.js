@@ -1,6 +1,16 @@
 import { getQuery, eventHandler } from 'h3'
+import { createClient } from '@sanity/client'
 
 export default eventHandler(async (event) => {
+  const config = useRuntimeConfig()
+
+  const sanityClient = createClient({
+    projectId: config.public.sanity.projectId,
+    dataset: config.public.sanity.dataset,
+    apiVersion: config.public.sanity.apiVersion,
+    useCdn: true,
+  })
+
   const query = getQuery(event)
   const searchTerm = query.keyword?.trim()
 
@@ -8,9 +18,18 @@ export default eventHandler(async (event) => {
     const lowerCaseSearchTerm = searchTerm.toLowerCase()
 
     const [destinations, regions, voyages] = await Promise.all([
-      queryCollection(event, 'destinations').select('title', 'slug').where('published', '=', true).all(),
-      queryCollection(event, 'regions').select('nom', 'slug').all(),
-      queryCollection(event, 'voyages').select('title', 'slug').where('published', '=', true).all(),
+      sanityClient.fetch(`*[_type == "destination"]{
+        title,
+        "slug": slug.current
+      }`),
+      sanityClient.fetch(`*[_type == "region"]{
+        nom,
+        "slug": slug.current
+      }`),
+      sanityClient.fetch(`*[_type == "voyage"]{
+        title,
+        "slug": slug.current
+      }`)
     ])
 
     function filterAndMapData(data, dataSource) {
@@ -36,8 +55,15 @@ export default eventHandler(async (event) => {
   }
   else {
     const [destinations, regions] = await Promise.all([
-      queryCollection(event, 'destinations').select('title', 'slug', 'isTopDestination').where('published', '=', true).all(),
-      queryCollection(event, 'regions').select('nom', 'slug').all(),
+      sanityClient.fetch(`*[_type == "destination"]{
+        title,
+        "slug": slug.current,
+        isTopDestination
+      }`),
+      sanityClient.fetch(`*[_type == "region"]{
+        nom,
+        "slug": slug.current
+      }`)
     ])
 
     const topDestinations = destinations

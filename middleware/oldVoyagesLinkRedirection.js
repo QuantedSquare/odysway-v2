@@ -1,13 +1,26 @@
+import { createClient } from '@sanity/client'
+
 export default defineNuxtRouteMiddleware(async (to) => {
   try {
+    const config = useRuntimeConfig()
+
+    const sanityClient = createClient({
+      projectId: config.public.sanity.projectId,
+      dataset: config.public.sanity.dataset,
+      apiVersion: config.public.sanity.apiVersion,
+      useCdn: true,
+    })
+
     const pathSegments = decodeURIComponent(to.path).split('/')
     const voyageSlug = pathSegments[pathSegments.length - 1]
     const cleanVoyageSlug = replaceFrenchAccents(voyageSlug)
 
-    const voyage = await queryCollection('voyages')
-      .where('slug', '=', cleanVoyageSlug)
-      .where('published', '=', true)
-      .first()
+    const voyageQuery = `*[_type == "voyage" && slug.current == $slug][0]{
+      "slug": slug.current
+    }`
+
+    const voyage = await sanityClient.fetch(voyageQuery, { slug: cleanVoyageSlug })
+
     if (voyage) {
       const targetPath = `/voyages/${voyage.slug}`
       // Only redirect if not already on the correct path
