@@ -20,7 +20,10 @@
       align="center"
     >
       <ClientOnly>
-        <FunnelCheckoutStepper />
+        <FunnelCheckoutStepper
+          v-if="page"
+          :page-texts="page"
+        />
       </ClientOnly>
     </v-row>
   </v-container>
@@ -28,6 +31,25 @@
 
 <script setup>
 import { useImage } from '#imports'
+
+const query = groq`*[_type == "checkout"][0]{
+  ...
+}`
+
+const { data: page } = await useAsyncData(
+  'checkout-texts',
+  async () => {
+    const { data } = await useSanityQuery(query, {})
+    return data.value
+  },
+  {
+    server: true,
+    getCachedData: (key) => {
+      return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
+    },
+  },
+)
+console.log('page', page.value)
 
 definePageMeta({
   layout: 'funnel',

@@ -1,6 +1,6 @@
 <template>
   <v-col
-    v-if="pageStatus === 'success' && voyageStatus === 'success'"
+    v-if="pageTexts && voyage"
     cols="12"
   >
     <FunnelStepsStepperHeader
@@ -182,35 +182,53 @@
 import dayjs from 'dayjs'
 import customParseFormat from 'dayjs/plugin/customParseFormat.js'
 
+defineProps({
+  pageTexts: {
+    type: Object,
+    required: true,
+  },
+})
 dayjs.extend(customParseFormat)
 
 const route = useRoute()
-// const router = useRouter()
+
 const { step, date_id, booked_id } = route.query
 const { addSingleParam } = useParams()
+
 const stepperHeaderRef = useTemplateRef('stepperHeaderRef')
 
 const insurancesPrice = ref(null)
-
-// ================== Page Texts ==================
-const { data: pageTexts, status: pageStatus } = await useAsyncData('checkout-texts', () =>
-  queryCollection('checkout').first(),
-)
 
 const checkoutType = ref(null)
 // We use those 2 ref to compare if we need a loading between steps by comparing the values
 const dynamicDealValues = ref(null)
 
 // ================== Voyage ==================
-const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, async () => {
+const { data: voyage } = await useAsyncData(`voyage-${step}`, async () => {
   if (date_id) {
     // We fetch the date details from BMS, the price and dates
     const fetchedDate = await apiRequest(`/booking/date/${date_id}`)
     // We fetch the travel details from Nuxt, we always need to have one
-    const travel = await queryCollection('voyages').where('slug', '=', fetchedDate.travel_slug).first()
+    const travelQuery = `*[_type == "voyage" && slug.current == $slug][0]{
+      ...,
+      image {
+        asset -> {
+          url
+        }
+      },
+      destinations[]-> {
+        _id,
+        title,
+        iso,
+        chapka
+      }
+    }`
+    const { data: travelSanity } = await useSanityQuery(travelQuery, {
+      slug: fetchedDate.travel_slug,
+    })
+    console.log('travelSanity', travelSanity.value)
     // We fetch the destinations details from Nuxt, used for insurance
-    const destinations = await queryCollection('destinations').where('title', 'IN', travel.destinations.map(d => d.name)).select('iso', 'chapka', 'title').all()
-
+    const travel = travelSanity.value
     if (!travel) {
       throw new Error('Travel not found.')
     }
@@ -220,11 +238,11 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
       departureDate: fetchedDate.departure_date,
       returnDate: fetchedDate.return_date,
       title: travel.title,
-      imgSrc: travel.image.src || '/images/sur-mesure/AdobeStock_557006728.webp',
-      country: destinations.map(d => d.iso).join(','),
-      slug: travel.slug,
-      iso: destinations.map(d => d.iso).join(','),
-      zoneChapka: +destinations[0]?.chapka || 0,
+      imgSrc: travel.image?.asset?.url || '/images/sur-mesure/AdobeStock_557006728.webp',
+      country: travel.destinations.map(d => d.iso).join(','),
+      slug: travel.slug.current,
+      iso: travel.destinations.map(d => d.iso).join(','),
+      zoneChapka: +travel.destinations[0]?.chapka || 0,
       privatisation: travel.privatisationAvailable,
       startingPrice: fetchedDate.starting_price * 100,
       indivRoomPrice: travel.pricing.indivRoom && travel.pricing.indivRoomPrice > 0 ? travel.pricing.indivRoomPrice * 100 : 0,
@@ -379,7 +397,7 @@ const nextStep = () => {
     })
   }
 }
-
+console.log('voyage', voyage.value)
 const previousStep = () => {
   let previousStepValue
   if (currentStep.value === 5 && !showInsuranceStep.value) {
@@ -409,7 +427,6 @@ const fetchInsuranceQuote = async (voyage, dynamicDealValues) => {
     }
 
     const pricePerTravelerWithoutInsurance = calculatePricePerPerson(dynamicDealValues, voyage)
-    console.log('indivRoomPrice', voyage?.indivRoomPrice, dynamicDealValues.indivRoom)
     const indivRoomPrice = dynamicDealValues.indivRoom ? voyage?.indivRoomPrice : 0
     const insurance = await $fetch('/api/v1/chapka/quote', {
       method: 'POST',
