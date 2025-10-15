@@ -32,7 +32,7 @@
               />
               <div v-else>
                 <v-text-field
-                  v-model="form.travel_slug"
+                  :model-value="travelesMap[form.travel_slug]?.title"
                   label="Voyage"
                   readonly
                 />
@@ -234,20 +234,30 @@ const saveSuccess = ref(false)
 const travelesList = ref([])
 const travelesMap = ref({})
 const isCustomTravel = ref(false)
+const sanity = useSanity()
+const travelesQuery = groq`*[_type == "voyage"]{
+    slug,
+    title,
+    customAvailable,
+    pricing
+  }`
+const { data: list } = await useAsyncData('travel', () =>
+  sanity.fetch(travelesQuery),
+)
 
-const fetchTravels = async () => {
-  // Nuxt Studio queryCollection
-  const list = await queryCollection('voyages').select().all()
-  travelesList.value = list
-  travelesMap.value = Object.fromEntries(list.map(t => [t.slug, t]))
+const fetchTravels = () => {
+  console.log('list', list.value)
+  travelesList.value = list.value
+  travelesMap.value = Object.fromEntries(list.value.map(t => [t.slug.current, t]))
 }
 
 const onTravelSelect = (slug) => {
   const travel = travelesMap.value[slug]
   isCustomTravel.value = travel.customAvailable
   if (travel) {
-    form.value.min_travelers = travel.minTravelersToConfirm || 2
-    form.value.max_travelers = travel.maxTravelers || 10
+    form.value.min_travelers = travel.pricing?.minTravelersToConfirm || 2
+    form.value.max_travelers = travel.pricing?.maxTravelers || 10
+    form.value.starting_price = travel.pricing?.startingPrice || 0
   }
 }
 
@@ -299,8 +309,8 @@ watch(form.value, (newVal) => {
   }
 })
 
-onMounted(async () => {
-  await fetchTravels()
+onMounted(() => {
+  fetchTravels()
   if (slugFromQuery) onTravelSelect(slugFromQuery)
 })
 </script>

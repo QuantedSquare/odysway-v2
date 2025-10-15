@@ -1,8 +1,8 @@
 <template>
   <v-app>
-    <!-- <HeaderOdysway
+    <LazyHeaderOdysway
       v-model="drawer"
-    /> -->
+    />
     <ClientOnly>
       <LazyDrawer
         v-if="width < 960"

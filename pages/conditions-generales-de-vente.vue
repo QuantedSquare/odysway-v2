@@ -2,7 +2,9 @@
   <div>
     <SectionContainer>
       <template #content>
-        <h1 v-if="page">{{ page.title }}</h1>
+        <h1 v-if="page">
+          {{ page.title }}
+        </h1>
         <EnrichedText
           :value="page.body"
         />
@@ -24,6 +26,6 @@ const query = groq`*[_type == "conditionsGeneralesVente" && slug.current == "con
 }`
 
 const { data: page } = await useAsyncData('conditions-generales-de-vente', () =>
-  sanity.fetch(query)
+  sanity.fetch(query),
 )
 </script>

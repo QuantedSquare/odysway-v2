@@ -93,7 +93,21 @@ import { useRouter } from 'vue-router'
 
 const search = ref(null)
 const loading = ref(false)
-const travelesList = await queryCollection('voyages').select('slug', 'title', 'image').where('customAvailable', '=', false).all()
+// const travelesList = await queryCollection('voyages').select('slug', 'title', 'image').where('customAvailable', '=', false).all()
+const sanity = useSanity()
+const travelesListQuery = groq`*[_type == "voyage" && customAvailable == false]{
+  slug,
+  title,
+  image {
+    asset -> {
+      url
+    }
+  }
+}`
+const { data: travelesList } = await useAsyncData('travelesList', () =>
+  sanity.fetch(travelesListQuery),
+)
+console.log('travelesList', travelesList.value)
 useSeoMeta({
   htmlAttrs: {
     lang: 'fr',
@@ -130,12 +144,12 @@ const goToCustomTravels = () => {
 
 const filteredTravels = computed(() => {
   // Merge travelesList (all possible travels) with booking data from travels.value
-  return travelesList.map((travel) => {
-    const bookingData = travels.value.find(t => t.travel_slug === travel.slug)
+  return travelesList.value?.map((travel) => {
+    const bookingData = travels.value.find(t => t.travel_slug === travel.slug.current)
     return {
       ...bookingData,
-      travel_slug: travel.slug,
-      image: travel.image?.src,
+      travel_slug: travel.slug.current,
+      image: travel.image?.asset?.url,
       title: travel.title,
       nb_dates: bookingData?.nb_dates || 0,
       booked_seats: bookingData?.booked_seats || 0,

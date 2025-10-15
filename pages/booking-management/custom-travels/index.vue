@@ -6,7 +6,7 @@
       >
         <h1>Gestion des voyages sur-mesure</h1>
         <p>
-          Pour créer un voyage sur mesure, s'assurer de le créer dans Nuxt Studio avant et de cocher "CustomAvailable".
+          Pour créer un voyage sur mesure, s'assurer de le créer dans Sanity.
           <br>
           Laisser le voyage en "Non Publié".
         </p>
@@ -75,8 +75,19 @@ import { useRouter } from 'vue-router'
 
 const search = ref(null)
 const loading = ref(false)
-const travelesList = await queryCollection('voyages').select('slug', 'title', 'image').where('customAvailable', '=', true).all()
-console.log('travelesList', travelesList)
+const sanity = useSanity()
+const travelesListQuery = groq`*[_type == "voyage" && customAvailable == true]{
+  slug,
+  title,
+  image {
+    asset -> {
+      url
+    }
+  }
+}`
+const { data: travelesList } = await useAsyncData('travelesList', () =>
+  sanity.fetch(travelesListQuery),
+)
 
 definePageMeta({
   layout: 'booking',
@@ -90,7 +101,7 @@ const fetchTravels = async () => {
   const res = await fetch('/api/v1/booking/travels')
   const data = await res.json()
   travels.value = data.filter(travel => travel.is_custom_travel)
-  console.log('travels', travels.value)
+  console.log('travels from supabase', travels.value)
   loading.value = false
 }
 
@@ -108,11 +119,11 @@ const goToCustomTravels = () => {
 }
 
 const filteredTravels = computed(() => {
-  const enrichedTravelsDate = travelesList.map((travel) => {
+  const enrichedTravelsDate = travelesList.value.map((travel) => {
     return {
-      image: travel?.image?.src,
+      image: travel?.image?.asset?.url,
       title: travel?.title,
-      slug: travel?.slug,
+      slug: travel?.slug.current,
     }
   })
   if (search.value) {

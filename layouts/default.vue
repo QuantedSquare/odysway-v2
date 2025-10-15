@@ -91,13 +91,19 @@ import { useDisplay } from 'vuetify'
 const { width } = useDisplay()
 const drawer = ref(false)
 const route = useRoute()
+const sanity = useSanity()
 
 const { data: partenairesTextes } = await useAsyncData('partenairesTextes', () => {
-  return queryCollection('ctas').select('layoutInfoContainer', 'partenairesSection').first()
+  return sanity.fetch(groq`*[_type == "ctas"][0]{
+    layoutInfoContainer,
+    partenairesSection
+  }`)
 })
 
 const { data: searchContent } = await useAsyncData('search-content', () =>
-  queryCollection('page_search').first(),
+  sanity.fetch(groq`*[_type == "page_search"][0]{
+    infoContainer
+  }`),
 )
 </script>
 

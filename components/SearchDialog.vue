@@ -8,7 +8,7 @@
         v-bind="activatorProps"
         :size="smAndDown ? 24 : 36"
         icon
-        class="border-circle stronger-hover"
+        class="border-circle stronger-hover bg-white"
       >
         <v-img
           :src="img('/icons/Search.svg', { format: 'webp', quality: 70, width: 320, height: 320 })"
