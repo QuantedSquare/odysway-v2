@@ -149,6 +149,7 @@ import { useGoTo } from 'vuetify'
 import _ from 'lodash'
 import { mdiMagnify, mdiFilterOutline, mdiMagnifyClose } from '@mdi/js'
 import { useImage } from '#imports'
+import { getImageUrl } from '~/utils/getImageUrl'
 
 const img = useImage()
 
@@ -156,10 +157,24 @@ const searchId = useId()
 const categoryId = useId()
 const sortId = useId()
 
-const route = useRoute()
-const { data: pages, status } = useAsyncData(route.path, () => {
-  return queryCollection('blog').where('published', '=', true).all()
-})
+// Fetch all published blogs from Sanity
+const blogsQuery = `
+  *[_type == "blog"]{
+    _id,
+    title,
+    "slug": slug.current,
+    description,
+    displayedImg,
+    publishedAt,
+    tags,
+    blogType,
+    badgeColor,
+    readingTime,
+    legacyCategories
+  } | order(publishedAt desc)
+`
+
+const { data: pages, status } = await useSanityQuery(blogsQuery)
 
 const { data: blogContent } = await useAsyncData('blog-content', () =>
   queryCollection('page_blog').first(),
@@ -187,26 +202,31 @@ function normalize(str) {
 
 const parsedPages = computed(() => {
   if (!pages.value) return []
-  const parsedPages = pages.value.map((page) => {
+  return pages.value.map((page) => {
     // Parse tags and categories as arrays
-    const tags = typeof page.tags === 'string' ? page.tags.split(',').map(t => t.trim()).filter(Boolean) : (page.tags || [])
-    const categories = typeof page.categories === 'string' ? page.categories.split(',').map(c => c.trim()).filter(Boolean) : (page.categories || [])
+    const tags = Array.isArray(page.tags) ? page.tags : []
+    const categories = typeof page.legacyCategories === 'string'
+      ? page.legacyCategories.split(',').map(c => c.trim()).filter(Boolean)
+      : []
+
+    // Convert Sanity image to URL
+    const imageUrl = page.displayedImg?.asset?._ref
+      ? getImageUrl(page.displayedImg.asset._ref, `${page.slug}.jpg`)
+      : ''
+
     return {
       title: page.title,
       tags,
       publishedAt: page.publishedAt,
       categories,
-      displayedImg: page.displayedImg,
-      path: page.path.replace('/blog/', ''),
-      published: page.published,
+      displayedImg: imageUrl,
+      path: `/${page.slug}`,
+      published: true,
       blogType: page.blogType,
       badgeColor: page.badgeColor,
       readingTime: page.readingTime,
     }
-  }).sort((a, b) => {
-    return dayjs((b.publishedAt)) - dayjs((a.publishedAt))
   })
-  return parsedPages
 })
 
 // Extract all unique categories
