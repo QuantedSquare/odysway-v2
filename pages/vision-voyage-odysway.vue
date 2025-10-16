@@ -3,10 +3,29 @@
     class="pt-4 py-md-0 my-0 px-2 px-md-4"
     fluid
   >
-    <ContentRenderer
-      v-if="page"
-      :value="page"
-    />
+    <SimpleHeroSection
+      :displayed-img="visionPage.heroSection.image"
+      :title-color="'white'"
+    >
+      <template #title>
+        {{ visionPage.heroSection.title }}
+      </template>
+    </SimpleHeroSection>
+    <TextContainer class="focus">
+      <template #text>
+        <EnrichedText
+          class="focus"
+          :value="visionPage.priseDeConscience.content"
+        />
+        <ConceptContainer :image-src="visionPage.founderSection.image">
+          <template #founder>
+            {{ visionPage.founderSection.caption }}
+          </template>
+        </ConceptContainer>
+        <EnrichedText :value="visionPage.ceQueOnDefend.content" />
+        <EnrichedText :value="visionPage.teamSection.content" />
+      </template>
+    </TextContainer>
   </v-container>
 </template>
 
@@ -16,38 +35,62 @@ definePageMeta({
 })
 
 const route = useRoute()
-const { data: page } = await useAsyncData(route.path, () => {
-  return queryCollection('content').path(route.path).first()
-})
-if (page.value) {
-  defineOgImageComponent(page.value?.ogImage?.component, {
-    title: page.value.ogImage?.props.title,
-    description: page.value.ogImage?.props.description,
-    image: page.value.ogImage?.props.image,
-  })
 
-  // Set the page title explicitly
+const visionPageQuery = groq`*[_type == "visionVoyageOdysway"][0]{
+  ...,
+  teamSection{
+    content[]{
+      ...,
+      _type == "image" => {
+        ...,
+        asset->{
+          _id,
+          url,
+          metadata
+        }
+      }
+    }
+  }
+}`
+
+const { data: visionPage } = await useSanityQuery(visionPageQuery, {}, {
+  key: 'vision-voyage-odysway',
+  getCachedData: (key) => {
+    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
+  },
+})
+console.log('visionPage', visionPage.value)
+
+if (visionPage.value) {
+  // Set the visionPage title explicitly
   useHead({
-    title: page.value.seo?.title || page.value.title,
+    title: visionPage.value.pageSettings.seo?.title || visionPage.value.pageSettings.title,
     htmlAttrs: {
       lang: 'fr',
     },
-    ...page.value.head,
+    ...visionPage.value.pageSettings.head,
   })
 
   // Set SEO meta tags
   useSeoMeta({
-    title: page.value.seo?.title || page.value.title,
-    description: page.value.seo?.description || page.value.description,
-    ogTitle: page.value.seo?.title || page.value.title,
-    ogDescription: page.value.seo?.description || page.value.description,
+    title: visionPage.value.pageSettings.seo?.title || visionPage.value.pageSettings.title,
+    description: visionPage.value.pageSettings.seo?.description || visionPage.value.pageSettings.description,
+    ogTitle: visionPage.value.pageSettings.seo?.title || visionPage.value.pageSettings.title,
+    ogDescription: visionPage.value.pageSettings.seo?.description || visionPage.value.pageSettings.description,
     ogType: 'website',
     ogUrl: `https://odysway.com${route.path}`,
-    twitterTitle: page.value.seo?.title || page.value.title,
-    twitterDescription: page.value.seo?.description || page.value.description,
+    twitterTitle: visionPage.value.pageSettings.seo?.title || visionPage.value.pageSettings.title,
+    twitterDescription: visionPage.value.pageSettings.seo?.description || visionPage.value.pageSettings.description,
     twitterCard: 'summary_large_image',
     canonical: `https://odysway.com${route.path}`,
-    robots: page.value.robots || 'index, follow',
+    robots: visionPage.value.pageSettings.robots || 'index, follow',
   })
 }
 </script>
+
+<style scoped>
+.focus :deep(h2){
+  color: rgb(var(--v-theme-primary))!important;
+  font-size: 28px!important;
+}
+</style>

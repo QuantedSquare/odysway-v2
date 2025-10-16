@@ -22,16 +22,16 @@
       class="py-0 my-0 px-2 px-md-9"
     >
       <ColorContainer
-        v-if="status === 'success'"
+        v-if="pageTextes"
         color="secondary"
         :white-text="true"
       >
         <InfoContainer :white-text="true">
           <template #title>
-            {{ partenairesTextes?.layoutInfoContainer?.title }}
+            {{ pageTextes?.layoutInfoContainer?.title }}
           </template>
           <template #description>
-            {{ partenairesTextes?.layoutInfoContainer?.subtitle }}
+            {{ pageTextes?.layoutInfoContainer?.subtitle }}
           </template>
           <template #bottom>
             <PartenairesContainer />
@@ -49,8 +49,12 @@ import { useDisplay } from 'vuetify'
 
 const { width } = useDisplay()
 const drawer = ref(false)
-const { data: partenairesTextes, status } = useAsyncData('partenairesTextes', () => {
-  return queryCollection('ctas').select('layoutInfoContainer', 'partenairesSection').first()
+
+const pageTextesQuery = groq`*[_type == "ctas"][0]{
+  layoutInfoContainer,
+}`
+const { data: pageTextes } = await useSanityQuery(pageTextesQuery, {}, {
+  key: 'page-textes-layouts',
 })
 </script>
 

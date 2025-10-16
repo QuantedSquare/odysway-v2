@@ -195,11 +195,10 @@
 </template>
 
 <script setup>
-const { data: page } = await useAsyncData('homepage', () => queryCollection('content').path('/').first())
-
 const homeQuery = `
   *[_type == "homePage"][0]{
     ...,
+    seo,
     franceTrips{
       title,
       voyagesFrance[]->{
@@ -287,11 +286,11 @@ const { data: homeSanity } = await useSanityQuery(homeQuery, {}, {
     return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
   },
 })
-
-if (page.value) {
+console.log('homeSanity', homeSanity.value)
+if (homeSanity.value) {
   // Set the page title explicitly
   useHead({
-    title: page.value.seo?.title || page.value.title,
+    title: homeSanity.value.seo?.title || homeSanity.value.title,
     htmlAttrs: {
       lang: 'fr',
     },
@@ -302,22 +301,22 @@ if (page.value) {
         href: '/favicon.ico',
       },
     ],
-    ...page.value.head,
+    ...homeSanity.value.head,
   })
 
   // Set SEO meta tags
   useSeoMeta({
-    title: page.value.seo?.title || page.value.title,
-    description: page.value.seo?.description || page.value.description,
-    ogTitle: page.value.seo?.title || page.value.title,
-    ogDescription: page.value.seo?.description || page.value.description,
+    title: homeSanity.value.seo?.title || homeSanity.value.title,
+    description: homeSanity.value.seo?.description || homeSanity.value.description,
+    ogTitle: homeSanity.value.seo?.title || homeSanity.value.title,
+    ogDescription: homeSanity.value.seo?.description || homeSanity.value.description,
     ogType: 'website',
     ogUrl: 'https://odysway.com/',
-    twitterTitle: page.value.seo?.title || page.value.title,
-    twitterDescription: page.value.seo?.description || page.value.description,
+    twitterTitle: homeSanity.value.seo?.title || homeSanity.value.title,
+    twitterDescription: homeSanity.value.seo?.description || homeSanity.value.description,
     twitterCard: 'summary_large_image',
     canonical: 'https://odysway.com/',
-    robots: page.value.robots || 'index, follow',
+    robots: homeSanity.value.robots || 'index, follow',
   })
 }
 </script>
