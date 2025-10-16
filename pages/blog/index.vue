@@ -10,21 +10,21 @@
           ref="scroll-target"
           class="font-weight-black text-h2 my-4 "
         >
-          {{ blogContent?.pageTitle || 'Blog' }}
+          Blog
         </v-col>
       </v-row>
     </v-container>
     <v-container>
       <v-row class="mb-4">
         <v-col
-          cols="12"
+          cols="12"getImageUrl
           sm="6"
           class="py-0"
         >
           <v-text-field
             :id="searchId"
             v-model="search"
-            :label="blogContent?.searchPlaceholder || 'Rechercher par mot clé'"
+            :label="'Rechercher par mot clé'"
             :prepend-inner-icon="mdiMagnify"
             clearable
             density="comfortable"
@@ -39,7 +39,7 @@
             :id="categoryId"
             v-model="selectedCategory"
             :items="categoriesList"
-            :label="blogContent?.categoryFilter || 'Filtrer par catégorie'"
+            :label="'Filtrer par catégorie'"
             :item-title="item => item.charAt(0).toUpperCase() + item.slice(1)"
             clearable
             density="comfortable"
@@ -55,7 +55,7 @@
             :id="sortId"
             v-model="sortOrder"
             :items="sortOptions"
-            :label="blogContent?.sortByDate || 'Trier par date'"
+            :label=" 'Trier par date'"
             density="comfortable"
             clearable
           >
@@ -96,7 +96,7 @@
             {{ mdiMagnifyClose }}
           </v-icon>
           <div class="text-h6 mt-2 mb-4">
-            {{ blogContent?.noArticlesFound || 'Aucun article trouvé' }}
+             Aucun article trouvé
           </div>
           <v-btn
             v-if="search || selectedCategory"
@@ -104,7 +104,7 @@
             variant="outlined"
             @click="() => { search = ''; selectedCategory = null; }"
           >
-            {{ blogContent?.resetFilters || 'Réinitialiser les filtres' }}
+        Réinitialiser les filtres
           </v-btn>
         </v-col>
       </v-row>
@@ -176,10 +176,6 @@ const blogsQuery = `
 
 const { data: pages, status } = await useSanityQuery(blogsQuery)
 
-const { data: blogContent } = await useAsyncData('blog-content', () =>
-  queryCollection('page_blog').first(),
-)
-
 const loading = computed(() => {
   return status.value !== 'success'
 })
@@ -188,10 +184,10 @@ const search = ref('')
 const selectedCategory = ref(null)
 const sortOrder = ref(null)
 const sortOptions = computed(() => [
-  { title: blogContent.value?.sortOptions?.newest || 'Plus récent', value: 'desc' },
-  { title: blogContent.value?.sortOptions?.oldest || 'Plus ancien', value: 'asc' },
-  { title: blogContent.value?.sortOptions?.shortest || 'Plus court', value: 'readingTimeAsc' },
-  { title: blogContent.value?.sortOptions?.longest || 'Plus long', value: 'readingTimeDesc' },
+  { title:  'Plus récent', value: 'desc' },
+  { title:  'Plus ancien', value: 'asc' },
+  { title:  'Plus court', value: 'readingTimeAsc' },
+  { title:  'Plus long', value: 'readingTimeDesc' },
 ])
 
 function normalize(str) {
