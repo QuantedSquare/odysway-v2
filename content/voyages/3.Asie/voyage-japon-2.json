@@ -119,7 +119,7 @@
       "name": "Japon"
     }
   ],
-  "slug": "immersion-japon-temples-montagnes-sources-chaudes",
+  "slug": "voyage-immersion-japon",
   "level": "1",
   "experienceType": "Plonger dans la culture",
   "duration": 13,
@@ -168,5 +168,6 @@
   },
   "groupeAvailable": true,
   "miniatureDisplay": "Nouveau",
-  "accompanistsDescription": "Votre guide local francophone vous accompagne tout au long du voyage. Fin connaisseur de son pays, il vous aidera à comprendre les codes du Japon, ses rites, sa retenue, son humour discret. Plus qu’un simple accompagnateur, c’est un passeur entre deux mondes."
+  "accompanistsDescription": "Votre guide local francophone vous accompagne tout au long du voyage. Fin connaisseur de son pays, il vous aidera à comprendre les codes du Japon, ses rites, sa retenue, son humour discret. Plus qu’un simple accompagnateur, c’est un passeur entre deux mondes.",
+  "published": true
 }
