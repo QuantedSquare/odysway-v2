@@ -5,6 +5,7 @@ import imageUrlBuilder from '@sanity/image-url'
 export function getImageUrl(ref, vanityName = null) {
   const config = useRuntimeConfig()
   const builder = imageUrlBuilder({
+    // baseUrl: config.public.siteURL || 'https://odysway.com', // Only available for Entreprise account on Sanity
     projectId: config.public.sanity.projectId,
     dataset: config.public.sanity.dataset,
   })

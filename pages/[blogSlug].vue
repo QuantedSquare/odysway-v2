@@ -38,12 +38,10 @@
 
 <script setup>
 import { watchEffect } from 'vue'
+import { getImageUrl } from '~/utils/getImageUrl'
 
 const route = useRoute()
 const { gtag } = useGtag()
-const { data } = await useAsyncData(route.path, () => {
-  return queryCollection('blog').path('/blog' + route.path).where('published', '=', true).first()
-})
 
 const slug = computed(() => route.params.blogSlug)
 
@@ -80,6 +78,8 @@ const { data: blogSanity } = await useSanityQuery(blogQuery, {
   },
 })
 
+console.log('blogSanity', blogSanity.value)
+
 const dataToPage = reactive({
   title: blogSanity.value?.title,
   displayedImg: blogSanity.value?.displayedImg,
@@ -98,36 +98,36 @@ const dataToPage = reactive({
 console.log('dataToPage', dataToPage)
 
 onMounted(() => {
-  trackPixel('trackCustom', 'BlogView', { titre: data.value.title })
+  trackPixel('trackCustom', 'BlogView', { titre: blogSanity.value.title })
   gtag('event', 'page_view', {
     eventCategory: 'Blog',
     eventAction: 'View',
-    eventLabel: data.value.title })
+    eventLabel: blogSanity.value.title })
 })
 
 watchEffect(() => {
-  if (!data.value) return
+  if (!blogSanity.value) return
   // SEO Meta Tags
   useSeoMeta({
-    title: data.value.seo?.title || data.value.title,
-    description: data.value.seo?.description || data.value.description,
-    ogTitle: data.value.seo?.title || data.value.title,
-    ogDescription: data.value.seo?.description || data.value.description,
-    ogImage: data.value.displayedImg ? `https://odysway.com${data.value.displayedImg}` : undefined,
+    title: blogSanity.value.seoTitle || blogSanity.value.title,
+    description: blogSanity.value.seoDescription || blogSanity.value.description,
+    ogTitle: blogSanity.value.seoTitle || blogSanity.value.title,
+    ogDescription: blogSanity.value.seoDescription || blogSanity.value.description,
+    ogImage: blogSanity.value.displayedImg ? getImageUrl(blogSanity.value.displayedImg.asset._ref, `${blogSanity.value.slug.current}.jpg`) : undefined,
     ogType: 'article',
     ogUrl: `https://odysway.com${route.path}`,
-    twitterTitle: data.value.seo?.title || data.value.title,
-    twitterDescription: data.value.seo?.description || data.value.description,
-    twitterImage: data.value.displayedImg ? `https://odysway.com${data.value.displayedImg}` : undefined,
+    twitterTitle: blogSanity.value.seoTitle || blogSanity.value.title,
+    twitterDescription: blogSanity.value.seoDescription || blogSanity.value.description,
+    twitterImage: blogSanity.value.displayedImg ? getImageUrl(blogSanity.value.displayedImg.asset._ref, `${blogSanity.value.slug.current}.jpg`) : undefined,
     twitterCard: 'summary_large_image',
     canonical: `https://odysway.com${route.path}`,
   })
 
-  // Structured Data (BlogPosting)
+  // Structured blogSanity (BlogPosting)
   const blogPosting = {
     '@context': 'http://schema.org',
     '@type': 'BlogPosting',
-    'headline': data.value.seo?.title || data.value.title,
+    'headline': blogSanity.value.seoTitle || blogSanity.value.title,
     'publisher': {
       '@type': 'TravelAgency',
       'url': 'https://odysway.com/',
@@ -137,19 +137,20 @@ watchEffect(() => {
         'url': 'https://odysway.com/logos/logo_noir.png',
       },
     },
-    'author': data.value.author || undefined,
-    'image': data.value.displayedImg ? `https://odysway.com${data.value.displayedImg}` : undefined,
-    'datePublished': data.value.publishedAt,
-    'dateModified': data.value.publishedAt,
-    'articleBody': data.value.seo?.description || data.value.description,
+    'author': blogSanity.value.author || undefined,
+    'image': blogSanity.value.displayedImg ? getImageUrl(blogSanity.value.displayedImg.asset._ref, `${blogSanity.value.slug.current}.jpg`) : undefined,
+    'datePublished': blogSanity.value.publishedAt,
+    'dateModified': blogSanity.value.publishedAt,
+    'articleBody': blogSanity.value.seoDescription || blogSanity.value.description,
     'mainEntityOfPage': {
       '@type': 'WebPage',
       '@id': `https://odysway.com${route.path}`,
     },
-    'keywords': Array.isArray(data.value.tags) ? data.value.tags.join(', ') : data.value.tags.split(', '),
+    'keywords': Array.isArray(blogSanity.value.tags) ? blogSanity.value.tags.join(', ') : blogSanity.value.tags.split(', '),
   }
+  console.log('blogPosting', blogPosting)
 
-  // BreadcrumbList structured data
+  // BreadcrumbList structured blogSanity
   const breadcrumbs = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -163,7 +164,7 @@ watchEffect(() => {
       {
         '@type': 'ListItem',
         'position': 2,
-        'name': data.value.seo?.title || data.value.title,
+        'name': blogSanity.value.seoTitle || blogSanity.value.title,
         'item': `https://odysway.com${route.path}`,
       },
     ],
