@@ -58,7 +58,7 @@
               class="d-none d-sm-inline"
             >
               <v-img
-                :src="img('/images/guillemet-gauche.svg', { format: 'webp', quality: 70, width: 640 })"
+                src="/images/guillemet-gauche.svg"
                 height="27"
                 width="27"
               />
@@ -84,7 +84,7 @@
               class="d-none d-sm-inline"
             >
               <v-img
-                :src="img('/images/guillemet-gauche.svg', { format: 'webp', quality: 70, width: 640 })"
+                src="/images/guillemet-gauche.svg"
                 height="27"
                 width="27"
               />

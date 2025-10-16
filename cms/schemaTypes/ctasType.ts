@@ -133,6 +133,20 @@ export const ctasType = defineType({
           title: 'Sous-titre de la section',
           type: 'string',
           validation: Rule => Rule.required()
+        }),
+        defineField({
+          name: 'images',
+          title: 'Images des partenaires',
+          type: 'array',
+          of: [
+            {
+              type: 'image',
+              options: {
+                hotspot: true
+              }
+            }
+          ],
+          validation: Rule => Rule.required()
         })
       ]
     }),

@@ -10,7 +10,7 @@
         class="d-flex flex-column align-center justify-center my-4 my-md-8"
       >
         <h3
-          class="d-flex text-center text-h5 text-lg-h4 pb-2"
+          class="d-flex align-center text-center text-h5 text-lg-h4 pb-2"
         >
           <v-icon color="orange-lighten-1">
             {{ mdiStar }}

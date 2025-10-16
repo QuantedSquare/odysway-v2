@@ -8,7 +8,7 @@
       align="center"
     >
       <v-col
-        v-for="(partenaire, key) in partenaires"
+        v-for="(partenaire, key) in partenaires.partenairesSection.images"
         :key="key"
         cols="6"
         class="d-flex justify-center align-center"
@@ -20,12 +20,11 @@
           transition="fade-transition"
         >
           <v-img
-            :src="img(partenaire?.imgSrc, { format: 'webp', quality: 70, height: 32, width: 320 })"
-            :lazy-src="img(partenaire?.imgSrc, { format: 'webp', quality: 10, height: 32, width: 320 })"
-            :srcset="`${img(partenaire?.imgSrc, { format: 'webp', quality: 70, width: 320 })} 320w, ${img(partenaire?.imgSrc, { format: 'webp', quality: 70, width: 640 })} 640w`"
-            :alt="`logo du partenaire ${partenaire.description}`"
-            class="partenaire-img-sizing"
-            :class="partenaire.whiteFilter ? 'white-filter' : ''"
+            :src="img(getImageUrl(partenaire.asset._ref, { format: 'webp', quality: 70, height: 32, width: 320 }))"
+            :lazy-src="img(getImageUrl(partenaire.asset._ref, { format: 'webp', quality: 10, height: 32, width: 320 }))"
+
+            alt="logo du partenaire"
+            class="partenaire-img-sizing white-filter"
           />
         </v-lazy>
       </v-col>
@@ -34,10 +33,17 @@
 </template>
 
 <script setup>
-const img = useImage()
+import { getImageUrl } from '~/utils/getImageUrl'
 
-const { data: partenaires } = await useAsyncData('partenaires', () => {
-  return queryCollection('partenaires').all()
+const img = useImage()
+const sanity = useSanity()
+
+const { data: partenaires } = await useAsyncData('partenairesImg', () => {
+  return sanity.fetch(groq`*[_type == "ctas"][0]{
+    partenairesSection{
+      images
+    }
+  }`)
 })
 </script>
 
