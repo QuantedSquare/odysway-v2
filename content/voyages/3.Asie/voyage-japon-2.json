@@ -21,8 +21,27 @@
     "indivRoomPrice": 350
   },
   "pricingDetailsBlock": {
-    "exclude": [],
-    "include": []
+    "exclude": [
+      "Les vols internationaux (possibilité de devis avec vols inclus sur demande).",
+      "Les repas non mentionnés et les boissons.",
+      "Les activités et options proposées en supplément.",
+      "Les pourboires et dépenses à caractère personnel.",
+      "Les « early check-in » ou « late check-out » dans les hébergements sélectionnés.",
+      "Les taxes de séjour prélevées localement par certains établissements.",
+      "Toutes les prestations non mentionnées dans le programme.",
+      "L’assurance voyage multirisque ou annulation, fortement conseillée (possibilité de souscrire une formule adaptée auprès d’Odysway)."
+    ],
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, WhatsApp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "L’accueil à l’aéroport à Osaka et l’assistance francophone locale dès votre arrivée.",
+      "L’encadrement par un guide local francophone pendant la durée du voyage (hors journées libres).",
+      "Les transferts, excursions et visites mentionnés au programme, en train, bus ou véhicules climatisés selon les étapes.",
+      "L’hébergement en hôtels et ryokan tels que décrits dans le programme (ou similaires), base chambre double ou twin (selon disponibilité au moment de la réservation).",
+      "Les repas mentionnés au programme, soit 7 déjeuners et 3 dîners, dont le dîner de bienvenue, le dîner à Gero Onsen et le dîner d’au revoir à Tokyo.",
+      "Les entrées sur les sites et monuments mentionnés dans le programme.",
+      "Le pocket wifi et la carte de transport IC préchargée.",
+      "La compensation carbone intégrale du voyage, réalisée par Odysway et son partenaire local, en soutien à des projets de reforestation et d’énergies renouvelables au Japon"
+    ]
   },
   "programmeBlock": [
     {
@@ -169,5 +188,8 @@
   "groupeAvailable": true,
   "miniatureDisplay": "Nouveau",
   "accompanistsDescription": "Votre guide local francophone vous accompagne tout au long du voyage. Fin connaisseur de son pays, il vous aidera à comprendre les codes du Japon, ses rites, sa retenue, son humour discret. Plus qu’un simple accompagnateur, c’est un passeur entre deux mondes.",
-  "published": true
+  "published": true,
+  "seoSection": {
+    "metaTitle": "Partez pour 13 jours d’immersion au Japon, entre Osaka, Kyoto, Takayama et Tokyo. Un voyage en petit groupe à la rencontre d’un Japon vivant et apaisé : traditions, montagnes, gastronomie et bains thermaux au fil des saisons."
+  }
 }
