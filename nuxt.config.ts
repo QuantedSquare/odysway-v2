@@ -8,7 +8,6 @@ export default defineNuxtConfig({
     '@nuxtjs/mdc',
     '@nuxt/fonts',
     '@nuxtjs/seo',
-    '@nuxt/content',
     '@nuxt/image',
     'nuxt-calendly',
     'nuxt-gtag',
@@ -57,16 +56,6 @@ export default defineNuxtConfig({
     url: process.env.BASE_URL || 'https://odysway.com', // TODO: change the first to the dev env
     name: process.env.NUXT_SITE_NAME || 'Odysway',
     indexable: process.env.VERCEL_ENV === 'production',
-  },
-  content: {
-    preview: {
-      api: 'https://api.nuxt.studio',
-      dev: true,
-    },
-    // database: {
-    //   type: 'postgres',
-    //   url: process.env.POSTGRES_URL || 'postgres://localhost:5432/nuxt',
-    // },
   },
   runtimeConfig: {
     public: {

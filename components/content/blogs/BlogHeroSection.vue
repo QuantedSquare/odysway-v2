@@ -66,7 +66,6 @@ defineProps({
 })
 
 const page = inject('page')
-console.log('page', page)
 </script>
 
 <style scoped>

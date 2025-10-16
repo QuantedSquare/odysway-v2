@@ -286,7 +286,6 @@ const { data: homeSanity } = await useSanityQuery(homeQuery, {}, {
     return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
   },
 })
-console.log('homeSanity', homeSanity.value)
 if (homeSanity.value) {
   // Set the page title explicitly
   useHead({

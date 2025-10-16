@@ -78,7 +78,6 @@ const { data: blogSanity } = await useSanityQuery(blogQuery, {
   },
 })
 
-console.log('blogSanity', blogSanity.value)
 
 const dataToPage = reactive({
   title: blogSanity.value?.title,
@@ -95,7 +94,6 @@ const dataToPage = reactive({
   readingTime: blogSanity.value?.readingTime,
 })
 
-console.log('dataToPage', dataToPage)
 
 onMounted(() => {
   trackPixel('trackCustom', 'BlogView', { titre: blogSanity.value.title })

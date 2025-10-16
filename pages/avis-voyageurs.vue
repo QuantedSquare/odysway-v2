@@ -38,7 +38,7 @@ const { data: page } = await useSanityQuery(pageQuery, {}, {
     return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
   },
 })
-console.log('page', page.value)
+
 // if (page.value) {
 //   // Set the page title explicitly
 //   useHead({

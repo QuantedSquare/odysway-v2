@@ -162,7 +162,7 @@ const { data: page } = await useSanityQuery(voyagePageQuery, {}, {
     return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
   },
 })
-console.log('page voyage ', page.value)
+
 
 const voyageQuery = `
   *[_type == "voyage" && slug.current == $slug][0]{

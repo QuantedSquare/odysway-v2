@@ -85,7 +85,6 @@ const { data: destinationSanity } = await useSanityQuery(destinationQuery, {
   },
 })
 
-console.log('DATA DESTINATION  SANITY', destinationSanity.value)
 
 const dataToBlog = reactive({
   title: destinationSanity.value?.blog?.title,
