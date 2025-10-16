@@ -124,8 +124,28 @@ import { useGoTo, useDisplay } from 'vuetify'
 
 const { width } = useDisplay()
 
-const { data: reviews } = await useAsyncData('reviews-home', () => {
-  return queryCollection('reviews').all()
+const reviewsQuery = `
+  *[_type == "review"]{
+    _id,
+    author,
+    authorAge,
+    date,
+    photo,
+    rating,
+    text,
+    voyage->{
+      _id,
+      title,
+      slug
+    }
+  }
+`
+
+const { data: reviews } = await useSanityQuery(reviewsQuery, {}, {
+  key: 'reviews-avis-voyageurs',
+  getCachedData: (key) => {
+    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
+  },
 })
 
 const scrollTarget = useTemplateRef('scroll-target')

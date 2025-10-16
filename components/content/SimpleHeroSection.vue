@@ -28,15 +28,23 @@
           md="6"
           class="pa-0"
         >
-          <v-img
-            :src="img(displayedImg, { format: 'webp', quality: 70, height: 900, width: 1536 })"
-            :lazy-src="img(displayedImg, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-            cover
-            alt="Image principale de la page"
-            :class="smAndDown ? 'rounded-t-lg' : 'rounded-e-lg'"
-            max-height="682px"
-            width="100%"
-          />
+          <SanityImage
+            v-if="displayedImg?.asset?._ref"
+            :asset-id="displayedImg.asset._ref"
+            auto="format"
+          >
+            <template #default="{ src }">
+              <v-img
+                :src="img(src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+                :lazy-src="img(src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+                cover
+                alt="Image principale de la page"
+                :class="smAndDown ? 'rounded-t-lg' : 'rounded-e-lg'"
+                max-height="682px"
+                width="100%"
+              />
+            </template>
+          </SanityImage>
         </v-col>
       </v-row>
     </v-container>
@@ -50,7 +58,7 @@ import { useImage } from '#imports'
 defineProps({
   backgroundColor: { type: String, default: 'primary' },
   titleColor: { type: String, default: 'white' },
-  displayedImg: String,
+  displayedImg: { type: Object, default: () => ({}) },
 })
 
 const { smAndDown } = useDisplay()
