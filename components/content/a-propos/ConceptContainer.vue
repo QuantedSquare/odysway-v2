@@ -17,7 +17,14 @@
             size="x-large"
             class="mr-4"
           >
-            <v-img :src="img(imageSrc, { format: 'webp', quality: 70, width: 640 })" />
+            <SanityImage
+              :asset-id="imageSrc.asset._ref"
+              auto="format"
+            >
+              <template #default="{ src }">
+                <v-img :src="img(src, { format: 'webp', quality: 70, width: 640 })" />
+              </template>
+            </SanityImage>
           </v-avatar>
           <slot name="founder" />
         </v-col>
@@ -31,7 +38,7 @@ import { useImage } from '#imports'
 
 defineProps({
   imageSrc: {
-    type: String,
+    type: Object,
     required: true,
   },
 })
