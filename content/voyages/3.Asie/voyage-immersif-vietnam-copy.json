@@ -209,12 +209,13 @@
       "Les transferts, excursions et visites",
       "Le guide francophone et chauffeur privé (hors journées libres)",
       "Les nuitées en base double avec petit-déjeuner",
-      "Tous les petits-déjeuners et repas suivants :\n\n*   Déjeuners : Jours 2, 6, 7, 8\n*   Dîners : Jours 3 et 7",
-      "Déjeuners : Jours 2, 6, 7, 8",
-      "Dîners : Jours 3 et 7",
+      "Tous les petits-déjeuners à partir du Jour 2",
+      "Les déjeuners des Jours 4, 5 et ",
+      "Les dîners des Jours 5 et 13",
       "Toutes les activités indiquées dans le programme",
       "La croisière en jonque partagée sur la baie d'Halong (guide anglophone à bord)",
-      "Le trajet en train de nuit de Hanoi à Dong Hoi (en compartiment partagé de 4 couchettes)"
+      "Le trajet en train de nuit de Hanoi à Hué (en compartiment partagé de 4 couchettes)",
+      "Le vol domestique de Danang à Hô Chi Minh-Ville "
     ],
     "exclude": [
       "Les vols internationaux (possibilité de devis avec vols inclus sur demande)",
@@ -226,7 +227,7 @@
     ]
   },
   "pricing": {
-    "startingPrice": 1445,
+    "startingPrice": 1690,
     "lastMinuteAvailable": false,
     "lastMinuteReduction": 80,
     "earlyBirdAvailable": false,
@@ -235,8 +236,8 @@
     "minTravelersToConfirm": 2,
     "indivRoom": true,
     "forcedIndivRoom": true,
-    "indivRoomPrice": 370,
-    "cseReduction": 0,
+    "indivRoomPrice": 420,
+    "cseReduction": 80,
     "cseAvailable": false,
     "childrenPromo": 0,
     "childrenAge": 12,
