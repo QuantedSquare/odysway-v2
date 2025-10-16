@@ -28,22 +28,19 @@
           <CommonReviewContainer />
         </ColorContainer>
       </div>
-      <ContentRenderer
-        v-if="faqPage"
-        :value="faqPage"
-      />
+      <LazyFaqContainer />
       <div class="mx-1">
         <ColorContainer
-          v-if="partenairesTextes"
+          v-if="pageTextes"
           color="secondary"
           :white-text="true"
         >
           <InfoContainer :white-text="true">
             <template #title>
-              {{ partenairesTextes?.layoutInfoContainer?.title }}
+              {{ pageTextes?.layoutInfoContainer?.title }}
             </template>
             <template #description>
-              {{ partenairesTextes?.layoutInfoContainer?.subtitle }}
+              {{ pageTextes?.layoutInfoContainer?.subtitle }}
             </template>
             <template #bottom>
               <PartenairesContainer />
@@ -63,14 +60,11 @@ import { useDisplay } from 'vuetify'
 const { width } = useDisplay()
 const drawer = ref(false)
 
-const { data: faqPage } = await useAsyncData('faq-section', () => {
-  return queryCollection('content')
-    .path('/faq')
-    .first()
-})
-
-const { data: partenairesTextes } = await useAsyncData('partenairesTextes', () => {
-  return queryCollection('ctas').select('layoutInfoContainer', 'partenairesSection').first()
+const pageTextesQuery = groq`*[_type == "ctas"][0]{
+  layoutInfoContainer
+}`
+const { data: pageTextes } = await useSanityQuery(pageTextesQuery, {}, {
+  key: 'page-textes-layouts',
 })
 </script>
 

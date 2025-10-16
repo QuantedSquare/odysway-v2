@@ -171,8 +171,6 @@ const { data: page } = await useSanityQuery(entreprisePageQuery, {}, {
   },
 })
 
-console.log('page', page.value)
-
 if (page.value) {
   const seoTitle = page.value.pageSettings?.seo?.title || page.value.pageSettings?.title || page.value.heroSection.title || 'Tribus par Odysway'
   const seoDescription = page.value.pageSettings?.seo?.description || page.value.pageSettings?.description || 'Des expériences uniques pour votre entreprise : découvrez nos séminaires et voyages Tribus'
