@@ -141,6 +141,8 @@
 </template>
 
 <script setup>
+import { getImageUrl } from '~/utils/getImageUrl'
+
 definePageMeta({
   layout: 'voyage',
   middleware: ['old-voyages-link-redirection'],
@@ -174,10 +176,10 @@ const voyageQuery = `
       author->{
       ...
       }
-    }
+    },
   }
 `
-const { data: voyage, status } = await useSanityQuery(voyageQuery, {
+const { data: voyage } = await useSanityQuery(voyageQuery, {
   slug: route.params.voyageSlug,
 }, {
   key: 'voyage-' + route.params.voyageSlug,
@@ -185,7 +187,6 @@ const { data: voyage, status } = await useSanityQuery(voyageQuery, {
     return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
   },
 })
-console.log('voyage ', voyage.value)
 
 const voyagePropositionsQuery = `
   *[_type == "voyage" && slug.current != $slug && experienceType._ref == $experienceTypeId][0...5]{
@@ -243,7 +244,7 @@ watchEffect(() => {
     '@type': 'TouristTrip',
     'name': voyage.value.title,
     'description': voyage.value.metaDescription || voyage.value.description,
-    'image': voyage.value.image?.src ? [`https://odysway.com${voyage.value.image.src}`] : [],
+    'image': voyage.value.image ? [getImageUrl(voyage.value.image.asset._ref, `${voyage.value.slug.current}.jpg`)] : '',
     'touristType': 'Adventure',
     'mainEntity': {
       '@type': 'TouristTrip',
@@ -263,11 +264,11 @@ watchEffect(() => {
       'name': 'Odysway',
       'url': 'https://odysway.com',
     },
-    'itinerary': voyage.value.programmeBlock?.map(day => ({
+    'itinerary': voyage.value.programmeBlock?.map((day, index) => ({
       '@type': 'TouristAttraction',
       'name': day.title,
       'description': day.description,
-      'image': day.photo ? [`https://odysway.com${day.photo}`] : [],
+      'image': day.photo ? [getImageUrl(day.photo.asset._ref, `${voyage.value.slug.current}-day-${index + 1}.jpg`)] : '',
     })),
     ...(voyage.value.rating && voyage.value.comments
       ? {
@@ -284,7 +285,6 @@ watchEffect(() => {
         }
       : {}),
   }
-
   // BreadcrumbList structured data
   const breadcrumbs = {
     '@context': 'https://schema.org',
