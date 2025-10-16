@@ -274,14 +274,36 @@
     }
   ],
   "image": {
-    "src": "/images/1.voyages/voyage-immersif-vietnam/rkwkGlNTJinuNd1jvHx6.jpg",
+    "src": "/images/1.voyages/voyage-immersif-vietnam/pexels_tuongchopper_28899310_93c3302945.jpg",
     "alt": "image principale du voyage Voyage au Vietnam : de la baie d'Halong à Hoi an, entre incontournables et immersion locale"
   },
   "imageSecondary": {
-    "src": "/images/1.voyages/voyage-immersif-vietnam/HWp5LdV0TVq9qE9aMqbn.jpg",
+    "src": "/images/1.voyages/voyage-immersif-vietnam/Vietnam_Mekong_bd8d8451fd.jpeg",
     "alt": "image secondaire du voyage Voyage au Vietnam : de la baie d'Halong à Hoi an, entre incontournables et immersion locale"
   },
-  "photosList": [],
+  "photosList": [
+    {
+      "src": "/images/1.voyages/voyage-immersif-vietnam-lan-ha/0ZGKTGsLQumnbOHtfvDR.jpg",
+      "alt": "La Baie d'Halong"
+    },
+    {
+      "src": "/images/1.voyages/voyage-immersif-vietnam-lan-ha/gdJchAjSKWCTsQzY5HQs.jpg",
+      "alt": "Le charme de Hoi An"
+    },
+    {
+      "src": "/images/1.voyages/voyage-immersif-vietnam-lan-ha/qlpt5y0T7uDKutelao5A.jpg",
+      "alt": "Ninh Binh"
+    },
+    {
+      "src": "/images/1.voyages/voyage-immersif-vietnam/45StGXgzRM2tDyZnGANA.jpg",
+      "alt": "Un tuktuk au cœur de la ville de Hoi An"
+    },
+    {
+      "src": "/images/1.voyages/voyage-immersif-vietnam/Hochi_Minh_91d29ece30.jpeg",
+      "alt": "Une ruelle au cœur de Saigon"
+    },
+    {}
+  ],
   "videoLinks": [],
   "faqBlock": {
     "faqList": [
