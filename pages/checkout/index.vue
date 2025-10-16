@@ -49,7 +49,7 @@ const { data: page } = await useAsyncData(
     },
   },
 )
-console.log('page', page.value)
+
 
 definePageMeta({
   layout: 'funnel',

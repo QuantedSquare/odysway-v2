@@ -22,5 +22,5 @@ const { data: page } = await useAsyncData(
     },
   },
 )
-console.log('page', page.value)
+
 </script>

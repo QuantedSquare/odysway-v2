@@ -135,7 +135,6 @@ const experiencesQuery = `
 const { data: experiences } = useAsyncData('experiences-on-content-layout', async () => {
   if (props.isExperience) {
     const { data } = await useSanityQuery(experiencesQuery)
-    console.log('experiences', data.value)
     return data.value
   }
   return null

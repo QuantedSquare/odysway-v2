@@ -39,7 +39,7 @@ const { data: categoriesWithVoyages } = await useSanityQuery(categoriesQuery, {}
     return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
   },
 })
-console.log('categoriesWithVoyages', categoriesWithVoyages.value)
+
 useHead({
   htmlAttrs: {
     lang: 'fr',
