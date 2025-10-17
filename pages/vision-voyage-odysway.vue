@@ -59,7 +59,6 @@ const { data: visionPage } = await useSanityQuery(visionPageQuery, {}, {
     return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
   },
 })
-console.log('visionPage', visionPage.value)
 
 if (visionPage.value) {
   // Set the visionPage title explicitly
