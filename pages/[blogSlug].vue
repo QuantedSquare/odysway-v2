@@ -39,6 +39,7 @@
 <script setup>
 import { watchEffect } from 'vue'
 import { getImageUrl } from '~/utils/getImageUrl'
+import { useSanityQuery } from '@nuxtjs/sanity/dist/runtime/composables/useSanityQuery'
 
 const route = useRoute()
 const { gtag } = useGtag()

@@ -150,6 +150,7 @@ import _ from 'lodash'
 import { mdiMagnify, mdiFilterOutline, mdiMagnifyClose } from '@mdi/js'
 import { useImage } from '#imports'
 import { getImageUrl } from '~/utils/getImageUrl'
+import { useSanityQuery } from '@nuxtjs/sanity/dist/runtime/composables/useSanityQuery'
 
 const img = useImage()
 

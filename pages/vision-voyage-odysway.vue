@@ -30,6 +30,8 @@
 </template>
 
 <script setup>
+import { useSanityQuery } from '@nuxtjs/sanity/dist/runtime/composables/useSanityQuery'
+
 definePageMeta({
   layout: 'simple-pages',
 })

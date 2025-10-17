@@ -13,6 +13,8 @@
 </template>
 
 <script setup>
+import { useSanityQuery } from '@nuxtjs/sanity/dist/runtime/composables/useSanityQuery'
+
 const pageContentQuery = groq`*[_type == "page_thematiques"][0]{
   index,
   slug,

@@ -23,6 +23,8 @@
 </template>
 
 <script setup>
+import { useSanityQuery } from '@nuxtjs/sanity/dist/runtime/composables/useSanityQuery'
+
 const route = useRoute()
 
 const pageQuery = `
