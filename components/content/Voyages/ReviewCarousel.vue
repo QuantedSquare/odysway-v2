@@ -134,7 +134,6 @@ const { data: reviewsSanity } = useSanityQuery(reviewsQuery, {
 const reviews = computed(() => {
   return _.uniqBy(reviewsSanity.value, 'text') || []
 })
-console.log('reviews ', reviews.value)
 // Initialize scroll setup function
 const setupScrollElement = () => {
   nextTick(() => {

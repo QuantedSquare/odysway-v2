@@ -36,7 +36,7 @@
               :titre="voyage.title"
               :travel-type="voyage.travelType"
               :image="voyage.imgSrc"
-              :date="`Du ${dayjs(voyage.departureDate).format('DD/MM/YYYY')} au ${dayjs(voyage.returnDate).format('DD/MM/YYYY')}`"
+              :date="displayedDates"
               :current-step="currentStep"
               :step-definitions="stepperHeaderRef?.stepDefinitions"
               :skipper-mode="skipperMode"
@@ -182,200 +182,47 @@
 import dayjs from 'dayjs'
 import customParseFormat from 'dayjs/plugin/customParseFormat.js'
 
-defineProps({
+dayjs.extend(customParseFormat)
+const { voyage, initialDealValues } = defineProps({
   pageTexts: {
     type: Object,
     required: true,
   },
+  voyage: {
+    type: Object,
+    required: true,
+  },
+  initialDealValues: {
+    type: Object,
+    required: true,
+  },
 })
-dayjs.extend(customParseFormat)
+console.log('initialDealValues', initialDealValues)
+console.log('voyage in stepper', voyage)
 
 const route = useRoute()
 
-const { step, date_id, booked_id } = route.query
+const { step, date_id } = route.query
 const { addSingleParam } = useParams()
 
 const stepperHeaderRef = useTemplateRef('stepperHeaderRef')
 
 const insurancesPrice = ref(null)
 
-const checkoutType = ref(null)
 // We use those 2 ref to compare if we need a loading between steps by comparing the values
-const dynamicDealValues = ref(null)
-
+const dynamicDealValues = ref(initialDealValues)
+// console.log('dynamicDealValues', dynamicDealValues.value)
+const checkoutType = ref(determinePaymentOptions(voyage.departureDate, route.query))
+// console.log('checkoutType', checkoutType.value)
 // ================== Voyage ==================
-const { data: voyage } = await useAsyncData(`voyage-${step}`, async () => {
-  if (date_id) {
-    // We fetch the date details from BMS, the price and dates
-    const fetchedDate = await apiRequest(`/booking/date/${date_id}`)
-    // We fetch the travel details from Nuxt, we always need to have one
-    const travelQuery = `*[_type == "voyage" && slug.current == $slug][0]{
-      ...,
-      image {
-        asset -> {
-          url
-        }
-      },
-      destinations[]-> {
-        _id,
-        title,
-        iso,
-        chapka
-      }
-    }`
-    const { data: travelSanity } = await useSanityQuery(travelQuery, {
-      slug: fetchedDate.travel_slug,
-    })
-    console.log('travelSanity', travelSanity.value)
-    // We fetch the destinations details from Nuxt, used for insurance
-    const travel = travelSanity.value
-    if (!travel) {
-      throw new Error('Travel not found.')
-    }
 
-    checkoutType.value = determinePaymentOptions(fetchedDate.departure_date, route.query)
-    const travelStaticValues = {
-      departureDate: fetchedDate.departure_date,
-      returnDate: fetchedDate.return_date,
-      title: travel.title,
-      imgSrc: travel.image?.asset?.url || '/images/sur-mesure/AdobeStock_557006728.webp',
-      country: travel.destinations.map(d => d.iso).join(','),
-      slug: travel.slug.current,
-      iso: travel.destinations.map(d => d.iso).join(','),
-      zoneChapka: +travel.destinations[0]?.chapka || 0,
-      privatisation: travel.privatisationAvailable,
-      startingPrice: fetchedDate.starting_price * 100,
-      indivRoomPrice: travel.pricing.indivRoom && travel.pricing.indivRoomPrice > 0 ? travel.pricing.indivRoomPrice * 100 : 0,
-      gotIndivRoomAvailable: travel.pricing.indivRoom && travel.pricing.indivRoomPrice > 0,
-      gotEarlybird: fetchedDate.early_bird && dayjs(fetchedDate.departure_date).isAfter(dayjs().add(7, 'month')),
-      promoEarlybird: travel.pricing.earlyBirdReduction * 100 || 0,
-      gotLastMinute: fetchedDate.last_minute && dayjs(fetchedDate.departure_date).isBefore(dayjs().add(1, 'month')),
-      promoLastMinute: travel.pricing.lastMinuteReduction * 100 || 0,
-      depositPrice: +fetchedDate.starting_price * 0.3,
-      promoChildren: travel.pricing.childrenPromo * 100 || 0,
-      maxChildrenAge: travel.pricing.childrenAge || 12,
-      source: 'Devis',
-      forcedIndivRoom: travel.pricing.forcedIndivRoom,
-      travelType: 'Groupe', // TODO: check comment le rendre dynamique
-      flightPrice: fetchedDate.flight_price * 100 || 0,
-      includeFlight: fetchedDate.include_flight,
-      extensionPrice: 0,
-      promoValue: 0,
-      alreadyPaid: 0,
-      totalTravelPrice: +fetchedDate.starting_price * 100,
-    }
-
-    const dynamicValues = {
-      // Details
-      nbTravelers: 1,
-      nbAdults: 1,
-      nbChildren: 0,
-      nbUnderAge: 0,
-      nbTeen: 0,
-      email: '',
-      phone: '',
-      firstName: '',
-      lastName: '',
-      optinNewsletter: false,
-
-      // Travelers Infos
-      isCouple: false,
-      // Options
-      specialRequest: '',
-      indivRoom: false,
-      // Insurances
-      insurance: false,
-      insuranceCommissionPrice: 0,
-      insuranceCommissionPerTraveler: 0,
-    }
-    await fetchInsuranceQuote(travelStaticValues, dynamicValues)
-    dynamicDealValues.value = dynamicValues
-    loading.value = false
-    return travelStaticValues
-  }
-  else {
-    // Voyage = Toutes les valeurs fixes
-    const deal = await apiRequest(`/ac/deals/deal-from-bms?bookedId=${booked_id}`)
-    // Initialize travelers data
-    const travelersData = {}
-    const numberOfTravelers = +deal.nbTravelers || 1
-
-    // Add travelers data for up to 11 travelers
-    for (let i = 1; i <= 11; i++) {
-      const travelerKey = `traveler${i}`
-      if (deal[travelerKey]) {
-        // Use existing traveler data from ActiveCampaign
-        travelersData[travelerKey] = deal[travelerKey]
-      }
-      else if (i <= numberOfTravelers) {
-        // Initialize empty traveler data for the expected number of travelers
-        travelersData[travelerKey] = null
-      }
-    }
-
-    const dynamicValues = {
-      // Details
-      nbTravelers: +deal.nbTravelers,
-      nbAdults: +deal.nbAdults || 1,
-      nbChildren: +deal.nbChildren || 0,
-      nbUnderAge: +deal.nbUnderAge || 0,
-      email: deal.contact.email,
-      phone: deal.contact.phone,
-      firstName: deal.contact.firstName,
-      lastName: deal.contact.lastName,
-      optinNewsletter: false,
-      // Travelers Infos
-      isCouple: deal.isCouple === 'Oui',
-      ...travelersData,
-      // Options
-      specialRequest: deal.specialRequest,
-      indivRoom: deal.indivRoom === 'Oui',
-      // Insurances
-      insurance: deal.insurance,
-      insuranceCommissionPrice: deal.insuranceCommissionPrice || 0,
-      insuranceCommissionPerTraveler: deal.insuranceCommissionPerTraveler || 0,
-      alreadyPaid: deal.alreadyPaid,
-    }
-
-    dynamicDealValues.value = dynamicValues
-    checkoutType.value = determinePaymentOptions(deal.departureDate, route.query)
-
-    const voyageStaticValues = {
-      departureDate: deal.departureDate,
-      returnDate: deal.returnDate,
-      title: deal.title,
-      imgSrc: deal.image || '/images/default/Odysway-couverture-mongolie.jpeg',
-      country: deal.country,
-      slug: deal.slug,
-      iso: deal.iso,
-      startingPrice: deal.basePricePerTraveler,
-      zoneChapka: +deal.zoneChapka,
-      depositPrice: +deal.depositPrice, // #Todo faire sauter
-      promoChildren: deal.promoChildren,
-      maxChildrenAge: deal.maxChildrenAge || 12,
-      source: 'Devis', // Possible que ça change
-      forcedIndivRoom: deal.forcedIndivRoom === 'Oui',
-      indivRoomPrice: deal.indivRoomPrice,
-      gotIndivRoomAvailable: deal.indivRoomPrice > 0,
-      promoEarlybird: deal.promoEarlybird || 0,
-      promoLastMinute: deal.promoLastMinute || 0,
-      gotLastMinute: deal.gotLastMinute === 'Oui',
-      gotEarlybird: deal.gotEarlybid === 'Oui',
-      travelType: deal.travelType,
-      extensionPrice: deal.extensionPrice || 0,
-      includeFlight: deal.includeFlight === 'Oui',
-      flightPrice: deal.flightPrice || 0,
-      promoValue: deal.promoValue || 0,
-      alreadyPaid: deal.alreadyPaid || 0,
-      totalTravelPrice: deal.value,
-    }
-
-    await fetchInsuranceQuote(voyageStaticValues, dynamicValues)
-    return voyageStaticValues
-  }
+const displayedDates = computed(() => {
+  const dates = `Du ${dayjs(voyage.departureDate).format('DD/MM/YYYY')} au ${dayjs(voyage.returnDate).format('DD/MM/YYYY')}`
+  // console.log('displayedDates', dates)
+  return dates
 })
 // ================== Stepper Management ==================
-const loading = ref(false)
+// const loading = ref(false)
 const currentStep = ref(step ? parseInt(step) : 0)
 const skipperMode = ref('normal')
 if (route.query.type === 'custom' || route.query.type === 'balance') {
@@ -383,6 +230,7 @@ if (route.query.type === 'custom' || route.query.type === 'balance') {
   skipperMode.value = route.query.type === 'custom' ? 'normal' : 'summary'
 }
 
+// 🧱 Step navigation
 const nextStep = () => {
   const nextStepValue = currentStep.value === 3 && !showInsuranceStep.value ? 5 : currentStep.value + 1
 
@@ -397,7 +245,7 @@ const nextStep = () => {
     })
   }
 }
-console.log('voyage', voyage.value)
+
 const previousStep = () => {
   let previousStepValue
   if (currentStep.value === 5 && !showInsuranceStep.value) {
@@ -417,35 +265,34 @@ watch(() => route.query.step, (newVal) => {
   }
 })
 
+// 💰 Insurance fetching logic
 const { calculatePricePerPerson } = usePricePerTraveler(dynamicDealValues, voyage)
 
-const fetchInsuranceQuote = async (voyage, dynamicDealValues) => {
-  try {
-    if (!voyage || !dynamicDealValues) {
-      console.log('Missing voyage or dynamicDealValues for insurance quote')
-      return
-    }
+const fetchInsuranceQuote = async () => {
+  if (!voyage || !dynamicDealValues.value) return
+  const base = calculatePricePerPerson(dynamicDealValues.value, voyage)
 
-    const pricePerTravelerWithoutInsurance = calculatePricePerPerson(dynamicDealValues, voyage)
-    const indivRoomPrice = dynamicDealValues.indivRoom ? voyage?.indivRoomPrice : 0
-    const insurance = await $fetch('/api/v1/chapka/quote', {
+  const indivRoom = dynamicDealValues.value.indivRoom ? voyage.indivRoomPrice : 0
+  try {
+    const res = await $fetch('/api/v1/chapka/quote', {
       method: 'POST',
       body: {
-        pricePerTraveler: (pricePerTravelerWithoutInsurance + indivRoomPrice) / 100,
+        pricePerTraveler: (base + indivRoom) / 100,
         countries: voyage.iso,
         zoneChapka: +voyage.zoneChapka || 0,
         departureDate: voyage.departureDate,
         returnDate: voyage.returnDate,
-        nbTravelers: +dynamicDealValues.nbAdults + +dynamicDealValues.nbChildren,
+        nbTravelers: +dynamicDealValues.value.nbAdults + +dynamicDealValues.value.nbChildren,
       },
     })
-    insurancesPrice.value = insurance
+    insurancesPrice.value = res
   }
-  catch (error) {
-    console.error('Error fetching insurance quote:', error)
-    insurancesPrice.value = null
+  catch (e) {
+    console.error('Insurance quote failed:', e)
   }
 }
+
+watch([() => voyage, dynamicDealValues], fetchInsuranceQuote, { immediate: true })
 
 // Specific watcher for nbAdults, nbChildren, and indivRoom changes
 watch(() => [dynamicDealValues.value?.nbAdults, dynamicDealValues.value?.nbChildren, dynamicDealValues.value?.indivRoom], async ([newNbAdults, newNbChildren, newIndivRoom], [oldNbAdults, oldNbChildren, oldIndivRoom]) => {
@@ -457,8 +304,8 @@ watch(() => [dynamicDealValues.value?.nbAdults, dynamicDealValues.value?.nbChild
 
 // Computed property to determine if insurance step should be shown
 const showInsuranceStep = computed(() => {
-  return insurancesPrice.value
-    && (insurancesPrice.value.rapatriement || insurancesPrice.value.cancel)
+  const v = insurancesPrice.value
+  return v && (v.rapatriement || v.cancel)
 })
 </script>
 

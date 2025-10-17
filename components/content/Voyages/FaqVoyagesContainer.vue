@@ -69,7 +69,6 @@ const { faqBlock } = defineProps({
     required: true,
   },
 })
-console.log('faqBlock ', faqBlock)
 </script>
 
 <style scoped>

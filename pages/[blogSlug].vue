@@ -144,7 +144,7 @@ watchEffect(() => {
       '@type': 'WebPage',
       '@id': `https://odysway.com${route.path}`,
     },
-    'keywords': Array.isArray(blogSanity.value.tags) ? blogSanity.value.tags.join(', ') : blogSanity.value.tags.split(', '),
+    'keywords': Array.isArray(blogSanity.value.tags) ? blogSanity.value.tags.join(', ') : blogSanity.value?.tags?.split(', '),
   }
   console.log('blogPosting', blogPosting)
 

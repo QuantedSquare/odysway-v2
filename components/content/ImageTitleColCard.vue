@@ -4,43 +4,43 @@
     sm="4"
     md="3"
   >
-    <v-lazy
+    <!-- <v-lazy
       :min-height="228"
       :options="{ threshold: 0.5 }"
       transition="fade-transition"
+    > -->
+    <NuxtLink
+      :to="link"
+      class="image-wrapper default-expanded"
     >
-      <NuxtLink
-        :to="link"
-        class="image-wrapper default-expanded"
+      <SanityImage
+        v-if="image"
+        :asset-id="image.asset._ref"
+        auto="format"
       >
-        <SanityImage
-          v-if="image"
-          :asset-id="image.asset._ref"
-          auto="format"
-        >
-          <template #default="{ src }">
-            <v-img
-              :src="img(src, { format: 'webp', quality: 70, width: 640 })"
-              :lazy-src="img(src, { format: 'webp', quality: 10, width: 640 })"
-              :srcset="`${img(src, { format: 'webp', quality: 70, width: 640 })} 640w, ${img(src, { format: 'webp', quality: 70, width: 1024 })} 1024w`"
-              :alt="`Image représentant ${title}`"
-              sizes="(max-width: 600px) 266px, 228px"
-              cover
-              height="228"
-              loading="lazy"
-            />
-          </template>
-        </SanityImage>
+        <template #default="{ src }">
+          <v-img
+            :src="img(src, { format: 'webp', quality: 70, width: 640 })"
+            :lazy-src="img(src, { format: 'webp', quality: 10, width: 640 })"
+            :srcset="`${img(src, { format: 'webp', quality: 70, width: 640 })} 640w, ${img(src, { format: 'webp', quality: 70, width: 1024 })} 1024w`"
+            :alt="`Image représentant ${title}`"
+            sizes="(max-width: 600px) 266px, 228px"
+            cover
+            height="228"
+            loading="lazy"
+          />
+        </template>
+      </SanityImage>
 
-        <div class="blur-overlay" />
-        <div class="image-overlay" />
-        <div class="content-overlay">
-          <div class="w-100 d-flex flex-column align-center justify-center">
-            <h3 class="category-title font-weight-bold  text-h3 d-flex align-center text-center text-shadow ">{{ title }}</h3>
-          </div>
+      <div class="blur-overlay" />
+      <div class="image-overlay" />
+      <div class="content-overlay">
+        <div class="w-100 d-flex flex-column align-center justify-center">
+          <h3 class="category-title font-weight-bold  text-h3 d-flex align-center text-center text-shadow ">{{ title }}</h3>
         </div>
-      </NuxtLink>
-    </v-lazy>
+      </div>
+    </NuxtLink>
+    <!-- </v-lazy> -->
   </v-col>
 </template>
 
