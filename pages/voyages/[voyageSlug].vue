@@ -142,7 +142,6 @@
 
 <script setup>
 import { getImageUrl } from '~/utils/getImageUrl'
-import { useSanityQuery } from '#imports'
 
 definePageMeta({
   layout: 'voyage',

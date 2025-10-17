@@ -46,7 +46,6 @@
 
 <script setup>
 import _ from 'lodash'
-import { useSanityQuery } from '#imports'
 
 const route = useRoute()
 const slug = computed(() => route.params.destinationSlug)

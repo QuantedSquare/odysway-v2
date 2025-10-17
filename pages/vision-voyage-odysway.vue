@@ -30,7 +30,6 @@
 </template>
 
 <script setup>
-import { useSanityQuery } from '#imports'
 
 definePageMeta({
   layout: 'simple-pages',

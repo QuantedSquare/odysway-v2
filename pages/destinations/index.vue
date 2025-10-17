@@ -12,7 +12,6 @@
 </template>
 
 <script setup>
-import { useSanityQuery } from '#imports'
 
 const destinationQuery = `
   *[_type == "destination"]{

@@ -195,7 +195,6 @@
 </template>
 
 <script setup>
-import { useSanityQuery } from '#imports'
 
 const homeQuery = `
   *[_type == "homePage"][0]{

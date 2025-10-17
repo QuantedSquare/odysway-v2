@@ -39,7 +39,6 @@
 <script setup>
 import { watchEffect } from 'vue'
 import { getImageUrl } from '~/utils/getImageUrl'
-import { useSanityQuery } from '#imports'
 
 const route = useRoute()
 const { gtag } = useGtag()

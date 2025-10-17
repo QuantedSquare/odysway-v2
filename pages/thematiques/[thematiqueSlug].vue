@@ -48,7 +48,6 @@
 </template>
 
 <script setup>
-import { useSanityQuery } from '#imports'
 
 const route = useRoute()
 const slug = computed(() => route.params.thematiqueSlug)

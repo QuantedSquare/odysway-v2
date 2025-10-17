@@ -13,7 +13,6 @@
 </template>
 
 <script setup>
-import { useSanityQuery } from '#imports'
 
 const pageContentQuery = groq`*[_type == "page_thematiques"][0]{
   index,

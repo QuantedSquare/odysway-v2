@@ -65,7 +65,6 @@
 
 <script setup>
 import { mdiAlertCircleOutline } from '@mdi/js'
-import { useSanityQuery } from '#imports'
 
 import { useImage } from '#imports'
 import { buildVoyageFromSanity, buildVoyageFromAC } from '~/utils/voyageBuilders'
