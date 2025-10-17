@@ -139,6 +139,9 @@ export default defineNuxtConfig({
       1536: 1536,
       3072: 3072,
     },
+    sanity: {
+      projectId: process.env.SANITY_PROJECT_ID,
+    },
   },
   sanity: {
     projectId: process.env.SANITY_PROJECT_ID,
