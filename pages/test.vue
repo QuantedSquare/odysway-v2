@@ -1,18 +1,46 @@
 <template>
   <div>
-    <h1>coucou</h1>
+    <img
+      :src="voyage.imageUrl"
+      alt="Voyage Image"
+      width="100%"
+      height="100%"
+    >
   </div>
 </template>
 
 <script setup>
-const query = groq`*[_type == "checkout"][0]{
-  ...
-}`
+// definePageMeta({
+//   layout: 'blank',
+// })
 
-const { data: page } = await useAsyncData(
+const voyageQuery = /* groq */`
+  *[_type == "voyage" && published == true] | order(title asc)[0] {
+    _id,
+    title,
+    duration,
+    rating,
+    description,
+    destinations[]->{_id, title},
+    categories[]->{_id, title},
+    pricing,
+    "imageUrl": image.asset->url,
+    ...,
+    programmeBlock[]{
+      title,
+      badgeText,
+      description,
+      denivellation,
+      road,
+      night
+    }
+  }
+`
+
+const { data: voyage } = await useAsyncData(
   'test-checkout',
   async () => {
-    const { data } = await useSanityQuery(query, {})
+    const { data } = await useSanityQuery(voyageQuery, {})
     return data.value
   },
   {
@@ -22,5 +50,5 @@ const { data: page } = await useAsyncData(
     },
   },
 )
-
+console.log(voyage.value)
 </script>
