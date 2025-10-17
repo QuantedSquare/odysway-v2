@@ -140,8 +140,8 @@ export default defineNuxtConfig({
       3072: 3072,
     },
     sanity: {
-      projectId: process.env.SANITY_PROJECT_ID
-    }
+      projectId: process.env.SANITY_PROJECT_ID,
+    },
   },
   sanity: {
     projectId: process.env.SANITY_PROJECT_ID,
@@ -149,11 +149,11 @@ export default defineNuxtConfig({
     apiVersion: '2025-04-01',
     useCdn: false,
     withCredentials: false,
-    // visualEditing: {
-    //   token: process.env.SANITY_VIEWER_TOKEN,
-    //   studioUrl: process.env.SANITY_STUDIO_URL,
-    //   stega: true,
-    // },
+    visualEditing: {
+      token: process.env.SANITY_VIEWER_TOKEN,
+      studioUrl: process.env.SANITY_STUDIO_URL,
+      stega: true,
+    },
   },
   schemaOrg: {
     identity: defineOrganization({

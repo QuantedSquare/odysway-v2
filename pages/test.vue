@@ -1,18 +1,23 @@
 <template>
   <div>
-    <img
+    <v-img
       :src="voyage.imageUrl"
       alt="Voyage Image"
       width="100%"
       height="100%"
+      cover
     >
+      <div class="d-flex align-center justify-center">
+        <h1>{{ voyage.title }}</h1>
+      </div>
+    </v-img>
   </div>
 </template>
 
 <script setup>
-// definePageMeta({
-//   layout: 'blank',
-// })
+definePageMeta({
+  layout: 'blank',
+})
 const payload = useNuxtApp().payload
 console.log(payload)
 const voyageQuery = /* groq */`
