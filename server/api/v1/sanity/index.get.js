@@ -39,7 +39,6 @@ export default eventHandler(async (event) => {
     }`,
     { slug },
   )
-  console.log('voyage from api in backend', voyage)
   if (!voyage) {
     throw createError({
       statusCode: 404,

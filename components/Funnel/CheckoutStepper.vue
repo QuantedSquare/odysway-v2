@@ -211,14 +211,14 @@ const insurancesPrice = ref(null)
 
 // We use those 2 ref to compare if we need a loading between steps by comparing the values
 const dynamicDealValues = ref(initialDealValues)
-console.log('dynamicDealValues', dynamicDealValues.value)
+// console.log('dynamicDealValues', dynamicDealValues.value)
 const checkoutType = ref(determinePaymentOptions(voyage.departureDate, route.query))
-console.log('checkoutType', checkoutType.value)
+// console.log('checkoutType', checkoutType.value)
 // ================== Voyage ==================
 
 const displayedDates = computed(() => {
   const dates = `Du ${dayjs(voyage.departureDate).format('DD/MM/YYYY')} au ${dayjs(voyage.returnDate).format('DD/MM/YYYY')}`
-  console.log('displayedDates', dates)
+  // console.log('displayedDates', dates)
   return dates
 })
 // ================== Stepper Management ==================
@@ -271,7 +271,7 @@ const { calculatePricePerPerson } = usePricePerTraveler(dynamicDealValues, voyag
 const fetchInsuranceQuote = async () => {
   if (!voyage || !dynamicDealValues.value) return
   const base = calculatePricePerPerson(dynamicDealValues.value, voyage)
-  console.log('base', base)
+
   const indivRoom = dynamicDealValues.value.indivRoom ? voyage.indivRoomPrice : 0
   try {
     const res = await $fetch('/api/v1/chapka/quote', {
