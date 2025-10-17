@@ -78,11 +78,6 @@ const destinationQuery = `
 `
 const { data: destinationSanity } = await useSanityQuery(destinationQuery, {
   slug: slug.value,
-}, {
-  key: 'destination-' + slug.value,
-  getCachedData: (key) => {
-    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-  },
 })
 
 

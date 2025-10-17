@@ -17,9 +17,6 @@ const { data: page } = await useAsyncData(
   },
   {
     server: true,
-    getCachedData: (key) => {
-      return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-    },
   },
 )
 

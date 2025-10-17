@@ -33,12 +33,7 @@ const pageQuery = `
     secondPhrase,
   }
 `
-const { data: page } = await useSanityQuery(pageQuery, {}, {
-  key: 'avis-voyageurs',
-  getCachedData: (key) => {
-    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-  },
-})
+const { data: page } = await useSanityQuery(pageQuery)
 
 // if (page.value) {
 //   // Set the page title explicitly

@@ -109,19 +109,9 @@ const faqTextesQuery = `
     faqSection
   }
 `
-const { data: faqSanity } = await useSanityQuery(faqSanityQuery, {}, {
-  key: 'faq-sanity',
-  getCachedData: (key) => {
-    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-  },
-})
+const { data: faqSanity } = await useSanityQuery(faqSanityQuery)
 
-const { data: faqTextes } = await useSanityQuery(faqTextesQuery, {}, {
-  key: 'faq-textes',
-  getCachedData: (key) => {
-    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-  },
-})
+const { data: faqTextes } = await useSanityQuery(faqTextesQuery)
 </script>
 
 <style scoped>

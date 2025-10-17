@@ -156,12 +156,7 @@ const voyagePageQuery = `
     ...
   }
 `
-const { data: page } = await useSanityQuery(voyagePageQuery, {}, {
-  key: 'voyage-page',
-  getCachedData: (key) => {
-    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-  },
-})
+const { data: page } = await useSanityQuery(voyagePageQuery)
 
 
 const voyageQuery = `
@@ -181,11 +176,6 @@ const voyageQuery = `
 `
 const { data: voyage } = await useSanityQuery(voyageQuery, {
   slug: route.params.voyageSlug,
-}, {
-  key: 'voyage-' + route.params.voyageSlug,
-  getCachedData: (key) => {
-    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-  },
 })
 
 const voyagePropositionsQuery = `
@@ -206,11 +196,6 @@ const voyagePropositionsQuery = `
 const { data: voyagePropositions } = await useSanityQuery(voyagePropositionsQuery, {
   slug: route.params.voyageSlug,
   experienceTypeId: voyage.value?.experienceType?._id,
-}, {
-  key: 'voyage-propositions-' + route.params.voyageSlug,
-  getCachedData: (key) => {
-    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-  },
 })
 
 onMounted(() => {

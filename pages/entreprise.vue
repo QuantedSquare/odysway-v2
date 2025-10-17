@@ -165,12 +165,7 @@ const entreprisePageQuery = groq`*[_type == "entreprise"][0]{
   ctaButton
 }`
 
-const { data: page } = await useSanityQuery(entreprisePageQuery, {}, {
-  key: 'entreprise-page',
-  getCachedData: (key) => {
-    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-  },
-})
+const { data: page } = await useSanityQuery(entreprisePageQuery)
 
 if (page.value) {
   const seoTitle = page.value.pageSettings?.seo?.title || page.value.pageSettings?.title || page.value.heroSection.title || 'Tribus par Odysway'

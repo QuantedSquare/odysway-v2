@@ -235,12 +235,7 @@ const datesPricesItemQuery = `
     dateSections
   }
 `
-const { data: texte } = await useSanityQuery(datesPricesItemQuery, {}, {
-  key: 'cta-list-dates-price-item',
-  getCachedData: (key) => {
-    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-  },
-})
+const { data: texte } = await useSanityQuery(datesPricesItemQuery)
 
 const enrichedDate = computed(() => {
   return {

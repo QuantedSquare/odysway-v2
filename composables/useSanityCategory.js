@@ -65,7 +65,6 @@ export function useSanityCategory(slug) {
    * 1. Unique key per slug for proper caching
    * 2. watch: [slug] for reactive updates when slug changes
    * 3. server: true to enable SSR
-   * 4. getCachedData for client-side cache reuse
    */
   const {
     data: category,
@@ -85,10 +84,6 @@ export function useSanityCategory(slug) {
       watch: [slug],
       // Enable server-side rendering
       server: true,
-      // Reuse cached data on client-side navigation
-      getCachedData: (key) => {
-        return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-      },
     },
   )
 

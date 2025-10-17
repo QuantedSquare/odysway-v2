@@ -70,12 +70,6 @@ const blogQuery = `
 
 const { data: blogSanity } = await useSanityQuery(blogQuery, {
   slug: slug.value,
-}, {
-  key: 'blog-' + slug.value,
-  watch: [slug],
-  getCachedData: (key) => {
-    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-  },
 })
 
 

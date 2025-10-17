@@ -94,16 +94,7 @@ const sanityQuery = `
     ...
   }
 `
-const { data: avatars } = useSanityQuery(
-  sanityQuery,
-  {},
-  {
-    key: 'avatars-team-sanity',
-    getCachedData: (key) => {
-      return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-    },
-  },
-)
+const { data: avatars } = useSanityQuery(sanityQuery)
 
 const img = useImage()
 const hoveredIndex = ref(null)

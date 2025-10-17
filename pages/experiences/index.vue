@@ -27,19 +27,9 @@ const experiencesQuery = `
     }
   }
 `
-const { data: pageContent } = await useSanityQuery(pageContentQuery, {}, {
-  key: 'page-experiences',
-  getCachedData: (key) => {
-    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-  },
-})
+const { data: pageContent } = await useSanityQuery(pageContentQuery)
 
-const { data: experiencesWithVoyages } = await useSanityQuery(experiencesQuery, {}, {
-  key: 'experiences-with-voyages',
-  getCachedData: (key) => {
-    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-  },
-})
+const { data: experiencesWithVoyages } = await useSanityQuery(experiencesQuery)
 
 useHead({
   htmlAttrs: {

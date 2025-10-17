@@ -141,12 +141,7 @@ const reviewsQuery = `
   }
 `
 
-const { data: reviews } = await useSanityQuery(reviewsQuery, {}, {
-  key: 'reviews-avis-voyageurs',
-  getCachedData: (key) => {
-    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-  },
-})
+const { data: reviews } = await useSanityQuery(reviewsQuery)
 
 const scrollTarget = useTemplateRef('scroll-target')
 

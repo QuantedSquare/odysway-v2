@@ -27,19 +27,9 @@ const categoriesQuery = `
     }
   }
 `
-const { data: pageContent } = await useSanityQuery(pageContentQuery, {}, {
-  key: 'page-thematiques',
-  getCachedData: (key) => {
-    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-  },
-})
+const { data: pageContent } = await useSanityQuery(pageContentQuery)
 
-const { data: categoriesWithVoyages } = await useSanityQuery(categoriesQuery, {}, {
-  key: 'categories-with-voyages',
-  getCachedData: (key) => {
-    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-  },
-})
+const { data: categoriesWithVoyages } = await useSanityQuery(categoriesQuery)
 
 useHead({
   htmlAttrs: {
