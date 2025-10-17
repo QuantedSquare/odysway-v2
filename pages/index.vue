@@ -288,6 +288,7 @@ const { data: homeSanity } = await useSanityQuery(homeQuery, {}, {
 })
 if (homeSanity.value) {
   // Set the page title explicitly
+  // useSeoMeta overRide useHead
   useHead({
     title: homeSanity.value.seo?.title || homeSanity.value.title,
     htmlAttrs: {
@@ -303,6 +304,7 @@ if (homeSanity.value) {
     ...homeSanity.value.head,
   })
 
+  console.log('homeSanity', homeSanity.value.seo)
   // Set SEO meta tags
   useSeoMeta({
     title: homeSanity.value.seo?.title || homeSanity.value.title,
