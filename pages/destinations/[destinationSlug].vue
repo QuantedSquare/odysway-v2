@@ -46,7 +46,6 @@
 
 <script setup>
 import _ from 'lodash'
-import { useSanityQuery } from '#imports'
 
 const route = useRoute()
 const slug = computed(() => route.params.destinationSlug)
@@ -79,11 +78,6 @@ const destinationQuery = `
 `
 const { data: destinationSanity } = await useSanityQuery(destinationQuery, {
   slug: slug.value,
-}, {
-  key: 'destination-' + slug.value,
-  getCachedData: (key) => {
-    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-  },
 })
 
 

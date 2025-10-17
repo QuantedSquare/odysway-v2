@@ -48,7 +48,6 @@
 </template>
 
 <script setup>
-import { useSanityQuery } from '#imports'
 
 const route = useRoute()
 const slug = computed(() => route.params.thematiqueSlug)
@@ -59,12 +58,7 @@ const pageContentQuery = `
     ...
   }
 `
-const { data: pageContent } = await useSanityQuery(pageContentQuery, {}, {
-  key: 'page-thematiques',
-  getCachedData: (key) => {
-    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-  },
-})
+const { data: pageContent } = await useSanityQuery(pageContentQuery)
 
 // Fetch the category with its linked blog post
 const categoryQuery = `
@@ -95,11 +89,6 @@ const categoryQuery = `
 
 const { data: categorySanity } = await useSanityQuery(categoryQuery, {
   slug: slug.value,
-}, {
-  key: 'category-' + slug.value,
-  getCachedData: (key) => {
-    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-  },
 })
 
 const dataToBlog = reactive({

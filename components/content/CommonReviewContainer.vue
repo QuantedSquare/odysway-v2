@@ -80,13 +80,7 @@ const reviewsToDisplayQuery = `
     }
   }
 `
-const { data: reviewsToDisplaySanity } = useSanityQuery(reviewsToDisplayQuery, {
-}, {
-  key: 'reviewsToDisplay-' + route.name,
-  getCachedData: (key) => {
-    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-  },
-})
+const { data: reviewsToDisplaySanity } = useSanityQuery(reviewsToDisplayQuery)
 const reviewsToDisplay = computed(() => {
   return reviewsToDisplaySanity.value?.map(review => ({
     ...review,

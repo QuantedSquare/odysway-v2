@@ -195,7 +195,6 @@
 </template>
 
 <script setup>
-import { useSanityQuery } from '#imports'
 
 const homeQuery = `
   *[_type == "homePage"][0]{
@@ -282,12 +281,7 @@ const homeQuery = `
   }
 `
 
-const { data: homeSanity } = await useSanityQuery(homeQuery, {}, {
-  key: 'home-page',
-  getCachedData: (key) => {
-    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-  },
-})
+const { data: homeSanity } = await useSanityQuery(homeQuery)
 if (homeSanity.value) {
   // Set the page title explicitly
   // useSeoMeta overRide useHead

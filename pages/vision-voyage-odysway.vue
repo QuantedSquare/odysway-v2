@@ -30,7 +30,6 @@
 </template>
 
 <script setup>
-import { useSanityQuery } from '#imports'
 
 definePageMeta({
   layout: 'simple-pages',
@@ -55,12 +54,7 @@ const visionPageQuery = groq`*[_type == "visionVoyageOdysway"][0]{
   }
 }`
 
-const { data: visionPage } = await useSanityQuery(visionPageQuery, {}, {
-  key: 'vision-voyage-odysway',
-  getCachedData: (key) => {
-    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-  },
-})
+const { data: visionPage } = await useSanityQuery(visionPageQuery)
 
 if (visionPage.value) {
   // Set the visionPage title explicitly

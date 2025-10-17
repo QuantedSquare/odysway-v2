@@ -48,7 +48,6 @@
 </template>
 
 <script setup>
-import { useSanityQuery } from '#imports'
 
 const route = useRoute()
 const slug = computed(() => route.params.experienceSlug)
@@ -56,12 +55,7 @@ const slug = computed(() => route.params.experienceSlug)
 const pageContentQuery = groq`*[_type == "page_experiences"][0]{
   ...
 }`
-const { data: pageContent } = await useSanityQuery(pageContentQuery, {}, {
-  key: 'page-experiences',
-  getCachedData: (key) => {
-    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-  },
-})
+const { data: pageContent } = await useSanityQuery(pageContentQuery)
 
 const experienceQuery = `
   *[_type == "experience" && slug.current == $slug][0]{
@@ -91,11 +85,6 @@ const experienceQuery = `
 
 const { data: selectedExperience } = await useSanityQuery(experienceQuery, {
   slug: slug.value,
-}, {
-  key: 'experience-' + slug.value,
-  getCachedData: (key) => {
-    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-  },
 })
 
 const dataToBlog = reactive({

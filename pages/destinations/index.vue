@@ -12,7 +12,6 @@
 </template>
 
 <script setup>
-import { useSanityQuery } from '#imports'
 
 const destinationQuery = `
   *[_type == "destination"]{
@@ -22,12 +21,7 @@ const destinationQuery = `
     }
   }
 `
-const { data: destinationsWithVoyages } = await useSanityQuery(destinationQuery, {}, {
-  key: 'destinations-index',
-  getCachedData: (key) => {
-    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-  },
-})
+const { data: destinationsWithVoyages } = await useSanityQuery(destinationQuery)
 
 useHead({
   htmlAttrs: {

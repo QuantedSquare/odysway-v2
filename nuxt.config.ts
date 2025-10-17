@@ -99,6 +99,9 @@ export default defineNuxtConfig({
         transformAssetUrls,
       },
     },
+    build: {
+      sourcemap: true,
+    },
   },
   calendly: {
     isEnabled: true,
@@ -135,6 +138,9 @@ export default defineNuxtConfig({
       1280: 1280,
       1536: 1536,
       3072: 3072,
+    },
+    sanity: {
+      projectId: process.env.SANITY_PROJECT_ID,
     },
   },
   sanity: {

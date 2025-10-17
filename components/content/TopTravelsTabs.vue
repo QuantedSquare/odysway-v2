@@ -119,13 +119,7 @@ const topsQuery = `
 `
 
 // Fetch tops data with SSR support
-const { data, error } = await useSanityQuery(topsQuery, {}, {
-  key: 'tops',
-  // Reuse cached data on client-side navigation
-  getCachedData: (key) => {
-    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-  },
-})
+const { data, error } = await useSanityQuery(topsQuery)
 </script>
 
 <style scoped>

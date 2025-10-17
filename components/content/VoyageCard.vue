@@ -172,12 +172,7 @@ const voyageCardContentQuery = `
     ...
   }
 `
-const { data: voyageCardContent } = await useSanityQuery(voyageCardContentQuery, {}, {
-  key: 'voyage-card-content',
-  getCachedData: (key) => {
-    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-  },
-})
+const { data: voyageCardContent } = await useSanityQuery(voyageCardContentQuery)
 
 const actionColor = computed(() => props.voyage.groupeAvailable ? '#f7f8f8' : '#fef9f8')
 </script>

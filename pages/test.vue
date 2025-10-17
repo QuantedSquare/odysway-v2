@@ -45,9 +45,6 @@ const { data: voyage } = await useAsyncData(
   },
   {
     server: true,
-    getCachedData: (key) => {
-      return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-    },
   },
 )
 console.log(voyage.value)

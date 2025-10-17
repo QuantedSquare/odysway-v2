@@ -124,13 +124,7 @@ const reviewsQuery = `
 `
 
 const { data: reviewsSanity } = useSanityQuery(reviewsQuery, {
-  voyageSlug: route.params.voyageSlug },
-{
-  key: 'reviews-' + route.params.voyageSlug,
-  getCachedData: (key) => {
-    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-  },
-})
+  voyageSlug: route.params.voyageSlug })
 const reviews = computed(() => {
   return _.uniqBy(reviewsSanity.value, 'text') || []
 })

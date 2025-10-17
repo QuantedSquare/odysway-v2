@@ -39,7 +39,6 @@
 <script setup>
 import { watchEffect } from 'vue'
 import { getImageUrl } from '~/utils/getImageUrl'
-import { useSanityQuery } from '#imports'
 
 const route = useRoute()
 const { gtag } = useGtag()
@@ -71,12 +70,6 @@ const blogQuery = `
 
 const { data: blogSanity } = await useSanityQuery(blogQuery, {
   slug: slug.value,
-}, {
-  key: 'blog-' + slug.value,
-  watch: [slug],
-  getCachedData: (key) => {
-    return useNuxtApp().payload.data[key] || useNuxtApp().static.data[key]
-  },
 })
 
 
