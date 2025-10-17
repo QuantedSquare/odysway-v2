@@ -195,7 +195,7 @@
 </template>
 
 <script setup>
-import { useSanityQuery } from '@nuxtjs/sanity/dist/runtime/composables/useSanityQuery'
+import { useSanityQuery } from '#imports'
 
 const homeQuery = `
   *[_type == "homePage"][0]{

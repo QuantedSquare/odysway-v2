@@ -142,7 +142,7 @@
 
 <script setup>
 import { getImageUrl } from '~/utils/getImageUrl'
-import { useSanityQuery } from '@nuxtjs/sanity/dist/runtime/composables/useSanityQuery'
+import { useSanityQuery } from '#imports'
 
 definePageMeta({
   layout: 'voyage',

@@ -48,7 +48,7 @@
 </template>
 
 <script setup>
-import { useSanityQuery } from '@nuxtjs/sanity/dist/runtime/composables/useSanityQuery'
+import { useSanityQuery } from '#imports'
 
 const route = useRoute()
 const slug = computed(() => route.params.thematiqueSlug)
