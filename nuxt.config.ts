@@ -140,14 +140,14 @@ export default defineNuxtConfig({
       3072: 3072,
     },
     sanity: {
-      projectId: process.env.SANITY_PROJECT_ID,
-    },
+      projectId: process.env.SANITY_PROJECT_ID
+    }
   },
   sanity: {
     projectId: process.env.SANITY_PROJECT_ID,
     dataset: process.env.SANITY_DATASET,
     apiVersion: '2025-04-01',
-    useCdn: true,
+    useCdn: false,
     withCredentials: false,
     // visualEditing: {
     //   token: process.env.SANITY_VIEWER_TOKEN,
