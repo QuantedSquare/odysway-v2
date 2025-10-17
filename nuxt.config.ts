@@ -140,14 +140,14 @@ export default defineNuxtConfig({
   sanity: {
     projectId: process.env.SANITY_PROJECT_ID,
     dataset: process.env.SANITY_DATASET,
-    apiVersion: '2024-12-01',
+    apiVersion: '2025-04-01',
     useCdn: true,
     withCredentials: false,
-    visualEditing: {
-      token: process.env.SANITY_VIEWER_TOKEN,
-      studioUrl: process.env.SANITY_STUDIO_URL,
-      // stega: true,
-    },
+    // visualEditing: {
+    //   token: process.env.SANITY_VIEWER_TOKEN,
+    //   studioUrl: process.env.SANITY_STUDIO_URL,
+    //   stega: true,
+    // },
   },
   schemaOrg: {
     identity: defineOrganization({
