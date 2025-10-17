@@ -36,7 +36,7 @@ const createDataQuote = (data, insuranceType) => {
   }
 
   dataQuote.sign = getSignature(dataQuote)
-  console.log('dataQuote', dataQuote)
+
   return dataQuote
 }
 
@@ -76,7 +76,6 @@ const getQuote = async (data, insuranceType) => {
 
   try {
     const dataQuote = createDataQuote(data, insuranceType)
-    console.log('dataQuote', dataQuote)
     const res = await axios.post(
       'https://api.chapka.fr/quote/index.php?request=quote',
       dataQuote,

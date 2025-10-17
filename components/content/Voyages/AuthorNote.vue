@@ -101,8 +101,6 @@ const props = defineProps({
 
 const img = useImage()
 
-console.log('props ', props.authorNote)
-
 const author = computed(() => props.authorNote?.author)
 // Client-side state for expansion
 const isExpanded = ref(false)

@@ -172,7 +172,6 @@
               block
               :disabled="enrichedDate.status.status === 'full'"
               rounded="md"
-              :to="checkoutLink"
               @click="handleBookingClick"
             >
               <span class="text-body-1 font-weight-bold text-decoration-none">
@@ -319,22 +318,23 @@ const generateCheckoutLink = async () => {
 }
 
 // Function to handle booking button click
+const isGeneratingLink = ref(false)
+
 const handleBookingClick = async () => {
   try {
+    isGeneratingLink.value = true
     trackPixel('track', 'AddToWishlist')
 
-    // Generate link if not already generated
-    if (!checkoutLink.value) {
-      await generateCheckoutLink()
-    }
-
-    // Navigate to checkout
+    await generateCheckoutLink() // always wait for it
     if (checkoutLink.value) {
       await navigateTo(checkoutLink.value)
     }
   }
   catch (error) {
     console.error('Error handling booking click:', error)
+  }
+  finally {
+    isGeneratingLink.value = false
   }
 }
 

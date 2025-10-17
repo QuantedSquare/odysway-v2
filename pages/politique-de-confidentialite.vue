@@ -1,7 +1,13 @@
 <template>
   <div v-if="page">
-    <h1>{{ page.title }}</h1>
-    <SanityContent :blocks="page.body" />
+    <SectionContainer>
+      <template #content>
+        <h1 class="text-center  font-weight-bold">
+          {{ page.title }}
+        </h1>
+        <EnrichedText :value="page.body" />
+      </template>
+    </SectionContainer>
   </div>
 </template>
 
@@ -18,6 +24,6 @@ const privacyPolicyQuery = groq`*[_type == "privacyPolicy" && slug.current == "p
 }`
 
 const { data: page } = await useAsyncData('politique-de-confidentialite', () =>
-  sanity.fetch(privacyPolicyQuery)
+  sanity.fetch(privacyPolicyQuery),
 )
 </script>
