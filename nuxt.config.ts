@@ -79,9 +79,9 @@ export default defineNuxtConfig({
   features: {
     inlineStyles: false,
   },
-  experimental: {
-    payloadExtraction: true,
-  },
+  // experimental: {
+  //   payloadExtraction: true,
+  // },
   compatibilityDate: '2024-11-01',
   nitro: {
     imports: {
@@ -146,7 +146,7 @@ export default defineNuxtConfig({
     visualEditing: {
       token: process.env.SANITY_VIEWER_TOKEN,
       studioUrl: process.env.SANITY_STUDIO_URL,
-      stega: true,
+      // stega: true,
     },
   },
   schemaOrg: {

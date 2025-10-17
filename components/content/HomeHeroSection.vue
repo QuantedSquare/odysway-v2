@@ -64,7 +64,6 @@ defineProps({
     type: Object,
     required: true,
   },
-
 })
 const img = useImage()
 </script>
