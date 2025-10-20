@@ -22,7 +22,6 @@
           <v-img
             :src="img(getImageUrl(partenaire.asset._ref, { format: 'webp', quality: 70, height: 32, width: 320 }))"
             :lazy-src="img(getImageUrl(partenaire.asset._ref, { format: 'webp', quality: 10, height: 32, width: 320 }))"
-
             alt="logo du partenaire"
             class="partenaire-img-sizing white-filter"
           />

@@ -8,19 +8,12 @@
       :to="header.logo.to || '/'"
       class="header-logo-link"
     >
-      <SanityImage
-        :asset-id="logoImage.asset._ref"
-        auto="format"
+      <img
+        :src="OdyswayFooterBleu"
+        width="320"
+        :alt="header.logo.alt || 'Logo principale d\'Odysway'"
+        class="header-logo"
       >
-        <template #default="{ src }">
-          <img
-            :src="src"
-            width="320"
-            :alt="header.logo.alt || 'Logo principale d\'Odysway'"
-            class="header-logo"
-          >
-        </template>
-      </SanityImage>
     </NuxtLink>
 
     <v-spacer />
@@ -104,20 +97,15 @@
       :to="header.logo.to || '/'"
       class="header-logo-link"
     >
-      <SanityImage
+
+      <v-img
         v-if="logoImage?.asset"
-        :asset-id="logoImage.asset._ref"
-        auto="format"
-      >
-        <template #default="{ src }">
-          <img
-            :src="src"
-            width="320"
-            :alt="header.logo.alt || 'Logo principale d\'Odysway'"
-            class="header-logo"
-          >
-        </template>
-      </SanityImage>
+        :src="OdyswayFooterBleu"
+        width="150"
+        :alt="header.logo.alt || 'Logo principale d\'Odysway'"
+        class="header-logo"
+      />
+
       <NuxtImg
         v-else
         preload
@@ -205,7 +193,8 @@
 <script setup>
 import { mdiMenu } from '@mdi/js'
 import { useDisplay } from 'vuetify'
-
+import OdyswayFooterBleu from '~/assets/img/Logo-Odysway-Bleu.png'
+// Check logic to display logo without delay
 const router = useRouter()
 const model = defineModel()
 const { sm } = useDisplay()

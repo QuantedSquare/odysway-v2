@@ -5,80 +5,73 @@
     fluid
     class="rounded-lg px-1 py-0 mt-4 mt-md-8 max-container-width"
   >
-    <SanityImage
-      v-if="faqSanity?.backgroundImage?.asset._ref"
-      :asset-id="faqSanity?.backgroundImage?.asset._ref"
-      auto="format"
+    <v-img
+      v-if="faqBackgroundURL"
+      :src="img(faqBackgroundURL, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+      :lazy-src="img(faqBackgroundURL, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+      :srcset="`${img(faqBackgroundURL, { format: 'webp', quality: 70, width: 1536 })} 1536w, ${img(faqBackgroundURL, { format: 'webp', quality: 70, width: 1536 })} 1536w`"
+      sizes="(max-width: 600px) 480px, 1536px"
+      loading="lazy"
+      :alt="faqSanity?.backgroundImage?.alt"
+      cover
+      width="100%"
+      class="rounded-lg max-img-height"
+      :gradient="imageGradient"
     >
-      <template #default="{ src }">
-        <v-img
-          :src="img(src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
-          :lazy-src="img(src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-          :srcset="`${img(src, { format: 'webp', quality: 70, width: 1536 })} 1536w, ${img(src, { format: 'webp', quality: 70, width: 1536 })} 1536w`"
-          sizes="(max-width: 600px) 480px, 1536px"
-          loading="lazy"
-          :alt="faqSanity?.backgroundImage?.alt"
-          cover
-          width="100%"
-          class="rounded-lg max-img-height"
-          :gradient="imageGradient"
-        >
-          <h2 class="text-center text-white">
-            <TitleContainerH1>
-              <template #title>
-                {{ faqSanity?.title }}
-              </template>
-            </TitleContainerH1>
-          </h2>
-          <v-container
-            max-width="900px"
-            class="position-relative px-4 pt-0"
+      <h2 class="text-center text-white">
+        <TitleContainerH1>
+          <template #title>
+            {{ faqSanity?.title }}
+          </template>
+        </TitleContainerH1>
+      </h2>
+      <v-container
+        max-width="900px"
+        class="position-relative px-4 pt-0"
+      >
+        <v-row>
+          <v-col
+            class="max-height-with-overflow pt-2 pt-md-3"
           >
-            <v-row>
-              <v-col
-                class="max-height-with-overflow pt-2 pt-md-3"
-              >
-                <QuestionPanel
-                  v-for="item in faqSanity?.faqItems"
-                  :key="item._key"
-                  :hide="item.hide && route.path !== '/faq'"
-                  :item="item"
-                />
-              </v-col>
-            </v-row>
-            <v-row
-              class="mb-4 mb-md-10 text-shadow"
-              justify="center"
+            <QuestionPanel
+              v-for="item in faqSanity?.faqItems"
+              :key="item._key"
+              :hide="item.hide && route.path !== '/faq'"
+              :item="item"
+            />
+          </v-col>
+        </v-row>
+        <v-row
+          class="mb-4 mb-md-10 text-shadow"
+          justify="center"
+        >
+          <v-col cols="7">
+            <div
+              v-if="route.path !== '/faq'"
+              class="text-center text-h6 text-md-h5 text-white font-weight-bold"
             >
-              <v-col cols="7">
-                <div
-                  v-if="route.path !== '/faq'"
-                  class="text-center text-h6 text-md-h5 text-white font-weight-bold"
+              <span> {{ faqTextes?.faqSection?.faqHomeSubText?.question }} &nbsp; </span>
+              <SmartLink
+                to="/faq"
+                :link-class="'text-secondary font-weight-bold'"
+              >
+                {{ faqTextes?.faqSection?.faqHomeSubText?.text }}
+              </SmartLink>
+            </div>
+            <div class="text-center text-h6 text-md-h5 text-white font-weight-regular d-flex flex-column mt-md-6 mt-3">
+              <span> {{ faqTextes?.faqSection?.faqHomeSubText?.subtitle }}
+                <SmartLink
+                  :to="faqTextes?.faqSection?.faqHomeSubText?.linkOnText2"
+                  :link-class="'text-secondary font-weight-medium'"
                 >
-                  <span> {{ faqTextes?.faqSection?.faqHomeSubText?.question }} &nbsp; </span>
-                  <SmartLink
-                    to="/faq"
-                    :link-class="'text-secondary font-weight-bold'"
-                  >
-                    {{ faqTextes?.faqSection?.faqHomeSubText?.text }}
-                  </SmartLink>
-                </div>
-                <div class="text-center text-h6 text-md-h5 text-white font-weight-regular d-flex flex-column mt-md-6 mt-3">
-                  <span> {{ faqTextes?.faqSection?.faqHomeSubText?.subtitle }}
-                    <SmartLink
-                      :to="faqTextes?.faqSection?.faqHomeSubText?.linkOnText2"
-                      :link-class="'text-secondary font-weight-medium'"
-                    >
-                      {{ faqTextes?.faqSection?.faqHomeSubText?.text2 }}
-                    </SmartLink>
-                  </span>
-                </div>
-              </v-col>
-            </v-row>
-          </v-container>
-        </v-img>
-      </template>
-    </SanityImage>
+                  {{ faqTextes?.faqSection?.faqHomeSubText?.text2 }}
+                </SmartLink>
+              </span>
+            </div>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-img>
     <v-skeleton-loader
       v-else
       type="card"
@@ -110,6 +103,9 @@ const faqTextesQuery = `
   }
 `
 const { data: faqSanity } = await useSanityQuery(faqSanityQuery)
+const faqBackgroundURL = computed(() => {
+  return getImageUrl(faqSanity?.value?.backgroundImage?.asset._ref)
+})
 
 const { data: faqTextes } = await useSanityQuery(faqTextesQuery)
 </script>

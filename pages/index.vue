@@ -195,7 +195,6 @@
 </template>
 
 <script setup>
-
 const homeQuery = `
   *[_type == "homePage"][0]{
     ...,

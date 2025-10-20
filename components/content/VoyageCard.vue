@@ -14,34 +14,28 @@
         :to="`/voyages/${voyage.slug.current || voyage.slug}`"
         class="text-decoration-none position-relative text-white"
       >
-        <SanityImage
-          v-if="voyage.image && voyage.image?.asset?._ref"
-          :asset-id="voyage.image.asset?._ref"
-          auto="format"
+        <v-img
+          v-if="voyageCardImg"
+          :src="img(voyageCardImg, { format: 'webp', quality: 90, height: 228, width: 640 })"
+          :lazy-src="img(voyageCardImg, { format: 'webp', quality: 10, height: 228, width: 640 })"
+          :alt="voyage.image.alt || `Paysage de destination pour le voyage ${voyage.title}`"
+          :srcset="`${img(voyageCardImg, { format: 'webp', quality: 90, width: 640 })} 640w, ${img(voyageCardImg, { format: 'webp', quality: 90, width: 1024 })} 1024w`"
+          sizes="(max-width: 600px) 480px, 1024px"
+          class="img-height"
+          cover
+          aspect-ratio="auto"
         >
-          <template #default="{ src }">
-            <v-img
-              :src="img(src, { format: 'webp', quality: 90, height: 228, width: 640 })"
-              :lazy-src="img(src, { format: 'webp', quality: 10, height: 228, width: 640 })"
-              :alt="voyage.image.alt || `Paysage de destination pour le voyage ${voyage.title}`"
-              :srcset="`${img(src, { format: 'webp', quality: 90, width: 640 })} 640w, ${img(src, { format: 'webp', quality: 90, width: 1024 })} 1024w`"
-              sizes="(max-width: 600px) 480px, 1024px"
-              class="img-height"
-              cover
-              aspect-ratio="auto"
-            >
-              <template #default>
-                <div class="badge-position">
-                  <RatingBadge
-                    :rating="voyage.rating"
-                    :comments="voyage.comments"
-                    no-link
-                  />
-                </div>
-              </template>
-            </v-img>
+          <template #default>
+            <div class="badge-position">
+              <RatingBadge
+                :rating="voyage.rating"
+                :comments="voyage.comments"
+                no-link
+              />
+            </div>
           </template>
-        </SanityImage>
+        </v-img>
+
       </NuxtLink>
 
       <!--  BOTTOM TEXT -->
@@ -175,6 +169,9 @@ const voyageCardContentQuery = `
 const { data: voyageCardContent } = await useSanityQuery(voyageCardContentQuery)
 
 const actionColor = computed(() => props.voyage.groupeAvailable ? '#f7f8f8' : '#fef9f8')
+const voyageCardImg = computed(() => {
+  return getImageUrl(props.voyage.image?.asset?._ref)
+})
 </script>
 
 <style scoped>
