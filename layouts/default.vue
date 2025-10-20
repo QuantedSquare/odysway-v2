@@ -73,7 +73,7 @@
         <LazyTopTravelsTabs />
       </div>
     </v-container>
-    <FooterOdysway />
+    <!-- <FooterOdysway /> -->
   </v-app>
 </template>
 
