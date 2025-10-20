@@ -23,7 +23,7 @@
       </template>
     </ExperienceCarousel>
 
-    <!-- <ColorContainer color="soft-blush">
+    <ColorContainer color="soft-blush">
       <HorizontalCarousel text-color="primary">
         <template #title>
           <span style="color: rgba(43, 76, 82, 1)">
@@ -49,7 +49,7 @@
       </CardGrid>
     </ColorContainer>
 
-    <ColorContainer color="white">
+    <!-- <ColorContainer color="white">
       <TextImageContainer
         :display-cta-button="true"
         :image-desktop-right="true"
