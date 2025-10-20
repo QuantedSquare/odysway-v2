@@ -110,26 +110,23 @@ const { data: partenairesTextes } = await useAsyncData(
   },
 )
 
-// const { data: searchContent } = await useAsyncData(
-//   'search-content',
-//   async () => {
-//     try {
-//       const sanity = useSanity()
-//       const result = await sanity.fetch(searchQuery)
-//       return result || null
-//     }
-//     catch (e) {
-//       console.error('Error fetching search content:', e)
-//       return null
-//     }
-//   },
-//   {
-//     server: true,
-//   },
-// )
-const { data: searchContent } = await useSanityQuery(searchQuery, {}, {
-  key: 'search-content',
-})
+const { data: searchContent } = await useAsyncData(
+  'search-content',
+  async () => {
+    try {
+      const sanity = useSanity()
+      const result = await sanity.fetch(searchQuery)
+      return result || null
+    }
+    catch (e) {
+      console.error('Error fetching search content:', e)
+      return null
+    }
+  },
+  {
+    server: true,
+  },
+)
 </script>
 
 <style scoped>
