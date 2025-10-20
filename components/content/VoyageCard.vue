@@ -154,11 +154,12 @@
 import { mdiPlusCircle } from '@mdi/js'
 import { useImage } from '#imports'
 
-const props = defineProps({
+const { voyage } = defineProps({
   voyage: {
     type: Object,
   },
 })
+console.log('voyage in card', voyage)
 const img = useImage()
 
 const voyageCardContentQuery = `
@@ -166,11 +167,14 @@ const voyageCardContentQuery = `
     ...
   }
 `
-const { data: voyageCardContent } = await useSanityQuery(voyageCardContentQuery)
+const sanity = useSanity()
+const { data: voyageCardContent } = await useAsyncData('voyage-card-content', () =>
+  sanity.fetch(voyageCardContentQuery),
+)
 
-const actionColor = computed(() => props.voyage.groupeAvailable ? '#f7f8f8' : '#fef9f8')
+const actionColor = computed(() => voyage.groupeAvailable ? '#f7f8f8' : '#fef9f8')
 const voyageCardImg = computed(() => {
-  return getImageUrl(props.voyage.image?.asset?._ref)
+  return getImageUrl(voyage.image?.asset?._ref)
 })
 </script>
 

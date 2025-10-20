@@ -15,7 +15,7 @@
       </template>
     </HomeHeroSection>
     <ExperienceCarousel
-      v-if="homeSanity"
+      v-if="homeSanity && homeSanity.experienceCarousel?.experiences?.length > 0"
       :experiences-data="homeSanity.experienceCarousel.experiences"
     >
       <template #title>
