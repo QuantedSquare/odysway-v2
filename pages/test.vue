@@ -11,6 +11,23 @@
           </p>
 
           <v-alert
+            type="info"
+            variant="tonal"
+            class="mb-4"
+            density="compact"
+          >
+            <div class="text-caption">
+              <strong>Note:</strong> This test calls the webhook directly from your browser.
+              <ul class="mt-2 ml-4">
+                <li><strong>On localhost:</strong> Tests <code>localhost:3000</code></li>
+                <li><strong>On preview deployments:</strong> May be blocked by Vercel Authentication</li>
+                <li><strong>On production:</strong> Works normally</li>
+              </ul>
+              For preview deployments, configure the webhook in Sanity to use your production URL instead.
+            </div>
+          </v-alert>
+
+          <v-alert
             v-if="webhookResponse"
             :type="webhookResponse.success ? 'success' : 'error'"
             class="mb-4"
@@ -149,7 +166,12 @@ async function testWebhook() {
 
   try {
     // Get the full URL for the webhook
-    const baseUrl = 'https://odysway-v2-git-sanity-dev-quanted-square.vercel.app/api/v1/webhooks/sanity/revalidate'// config.public.siteURL
+    // For local testing, use localhost
+    // For production testing, use your production domain
+    const isDev = window.location.hostname === 'localhost'
+    const baseUrl = isDev
+      ? 'http://localhost:3000/api/v1/webhooks/sanity/revalidate'
+      : `${config.public.siteURL}/api/v1/webhooks/sanity/revalidate`
 
     console.log('🔗 Testing webhook:', baseUrl)
 

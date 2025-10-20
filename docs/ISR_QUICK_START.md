@@ -29,7 +29,7 @@ Then redeploy your app.
 Go to: [Sanity Manage](https://www.sanity.io/manage) → Your Project → API → Webhooks
 
 Create webhook:
-- **URL**: `https://your-domain.com/api/v1/webhooks/sanity/revalidate`
+- **URL**: `https://your-production-domain.com/api/v1/webhooks/sanity/revalidate` (use production, not preview URL!)
 - **Trigger**: On document publish for: `voyage`, `blog`, `destination`, `category`, `homePage`
 - **HTTP Header**: 
   - Name: `x-sanity-webhook-secret`
@@ -184,11 +184,18 @@ export default defineNuxtConfig({
 # Chrome/Firefox: Cmd+Shift+R (Mac) or Ctrl+Shift+R (Windows)
 ```
 
-### Webhook returns 401?
+### Webhook returns 401 with "Authenticating" HTML page?
+- **Cause**: Vercel Deployment Protection is blocking the webhook
+- **Solution**: Use your **production URL** in Sanity webhook, not preview URLs
+- **Details**: See `docs/VERCEL_DEPLOYMENT_PROTECTION.md`
+
+### Webhook returns 401 JSON error?
 - Check `SANITY_WEBHOOK_SECRET` matches in both Sanity and Vercel
+- Verify the header name is exactly `x-sanity-webhook-secret`
 
 ### Revalidation failing?
-- Check `VERCEL_BYPASS_TOKEN` is set correctly
+- Check `VERCEL_BYPASS_TOKEN` is set correctly in Vercel
+- Verify `nitro.vercel.config.bypassToken` is configured in `nuxt.config.ts`
 - Check your domain is correct in Sanity webhook URL
 - Try manual test (see "Test It" section above)
 
