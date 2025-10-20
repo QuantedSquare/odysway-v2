@@ -14,7 +14,7 @@
         />
       </template>
     </HomeHeroSection>
-    <ExperienceCarousel
+    <!-- <ExperienceCarousel
       v-if="homeSanity"
       :experiences-data="homeSanity.experienceCarousel.experiences"
     >
@@ -190,14 +190,11 @@
           </CtaButton>
         </template>
       </InfoContainer>
-    </ColorContainer>
+    </ColorContainer> -->
   </v-container>
 </template>
 
 <script setup>
-definePageMeta({
-  layout: 'blank',
-})
 const sanity = useSanity()
 const homeQuery = groq`
   *[_type == "homePage"][0]{
