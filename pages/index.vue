@@ -14,7 +14,7 @@
         />
       </template>
     </HomeHeroSection>
-    <!-- <ExperienceCarousel
+    <ExperienceCarousel
       v-if="homeSanity"
       :experiences-data="homeSanity.experienceCarousel.experiences"
     >
@@ -23,7 +23,7 @@
       </template>
     </ExperienceCarousel>
 
-    <ColorContainer color="soft-blush">
+    <!-- <ColorContainer color="soft-blush">
       <HorizontalCarousel text-color="primary">
         <template #title>
           <span style="color: rgba(43, 76, 82, 1)">
