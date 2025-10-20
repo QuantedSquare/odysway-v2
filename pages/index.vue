@@ -85,7 +85,7 @@
       </TextImageContainer>
     </ColorContainer>
 
-    <!-- <ColorContainer color="grey-light">
+    <ColorContainer color="grey-light">
       <HorizontalCarousel :text-color="'primary'">
         <template #title>
           <span style="color: rgba(43, 76, 82, 1)">
@@ -102,9 +102,9 @@
           </v-col>
         </template>
       </HorizontalCarousel>
-    </ColorContainer> -->
+    </ColorContainer>
 
-    <!-- <ColorContainer color="white">
+    <ColorContainer color="white">
       <HorizontalCarousel :text-color="'primary'">
         <template #title>
           {{ homeSanity.summerTravel.title }}
@@ -118,7 +118,7 @@
           </v-col>
         </template>
       </HorizontalCarousel>
-    </ColorContainer> -->
+    </ColorContainer>
 
     <!-- <ColorContainer color="soft-blush">
       <NewsletterContainer>
