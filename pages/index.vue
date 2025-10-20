@@ -195,7 +195,7 @@
 </template>
 
 <script setup>
-const homeQuery = `
+const homeQuery = groq`
   *[_type == "homePage"][0]{
     ...,
     seo,

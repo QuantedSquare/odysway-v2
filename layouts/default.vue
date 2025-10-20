@@ -101,10 +101,12 @@ const { data: partenairesTextes } = await useAsyncData('partenairesTextes', () =
 })
 
 const { data: searchContent } = await useAsyncData('search-content', () =>
-  sanity.fetch(groq`*[_type == "page_search"][0]{
+  sanity.fetch(groq`*[_type == "search"][0]{
     infoContainer
   }`),
 )
+console.log('search', searchContent.value)
+console.log('partenaires', partenairesTextes.value)
 </script>
 
 <style scoped>
