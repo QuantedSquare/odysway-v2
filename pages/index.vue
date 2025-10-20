@@ -198,6 +198,7 @@
 definePageMeta({
   layout: 'blank',
 })
+const sanity = useSanity()
 const homeQuery = groq`
   *[_type == "homePage"][0]{
     ...,
@@ -283,7 +284,9 @@ const homeQuery = groq`
   }
 `
 
-const { data: homeSanity } = await useSanityQuery(homeQuery)
+const { data: homeSanity } = await useAsyncData('home', () =>
+  sanity.fetch(homeQuery),
+)
 if (homeSanity.value) {
   // Set the page title explicitly
   // useSeoMeta overRide useHead
