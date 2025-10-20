@@ -180,7 +180,6 @@
   "pricingDetailsBlock": {
     "include": [
       "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "Les vols pour rejoindre Lulea aller-retour",
       "L'accueil à l'aéroport",
       "Les transferts sur place en minibus privatisé entre l'aéroport et votre hébergement",
       "L'hébergement en chalet (base double)",
@@ -193,7 +192,8 @@
       "Les boissons",
       "Les entrées dans les sites et musées (~ 20 euros)",
       "Les pourboires selon votre degré de satisfaction et les dépenses personnelles",
-      "L'assurance annulation ou multirisques"
+      "L'assurance annulation ou multirisques",
+      "Les vols pour rejoindre Lulea aller-retour"
     ]
   },
   "pricing": {
