@@ -159,7 +159,6 @@ const { voyage } = defineProps({
     type: Object,
   },
 })
-console.log('voyage in card', voyage)
 const img = useImage()
 
 const voyageCardContentQuery = `

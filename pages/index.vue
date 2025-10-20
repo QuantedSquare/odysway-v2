@@ -41,13 +41,13 @@
       </HorizontalCarousel>
     </ColorContainer>
 
-    <!-- <ColorContainer color="primary">
+    <ColorContainer color="primary">
       <CardGrid :categories="homeSanity.followDesires.categoriesFollowDesires">
         <template #title>
           {{ homeSanity.followDesires.title }}
         </template>
       </CardGrid>
-    </ColorContainer> -->
+    </ColorContainer>
 
     <!-- <ColorContainer color="white">
       <TextImageContainer
@@ -302,7 +302,6 @@ if (homeSanity.value) {
     ...homeSanity.value.head,
   })
 
-  console.log('homeSanity', homeSanity.value.seo)
   // Set SEO meta tags
   useSeoMeta({
     title: homeSanity.value.seo?.title || homeSanity.value.title,
