@@ -16,8 +16,6 @@
 </template>
 
 <script setup>
-const payload = useNuxtApp().payload
-console.log(payload)
 const voyageQuery = /* groq */`
   *[_type == "voyage" && published == true] | order(title asc)[0] {
     _id,

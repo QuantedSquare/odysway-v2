@@ -17,7 +17,7 @@
       <WhatsAppBtn />
     </div>
 
-    <v-container
+    <!-- <v-container
       :fluid="width > 600"
       class="py-0 my-0 px-2 px-md-9"
     >
@@ -80,7 +80,7 @@
         </ColorContainer>
         <LazyTopTravelsTabs />
       </div>
-    </v-container>
+    </v-container> -->
     <FooterOdysway />
   </v-app>
 </template>
@@ -107,6 +107,7 @@ const { data: partenairesTextes } = await useAsyncData(
     try {
       const sanity = useSanity()
       const result = await sanity.fetch(partenairesQuery)
+      console.log('PartenairesData', result)
       return result || null
     }
     catch (e) {
@@ -125,6 +126,7 @@ const { data: searchContent } = await useAsyncData(
     try {
       const sanity = useSanity()
       const result = await sanity.fetch(searchQuery)
+      console.log('SearchData', result)
       return result || null
     }
     catch (e) {
