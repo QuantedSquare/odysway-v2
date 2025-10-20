@@ -9,7 +9,7 @@
       <WhatsAppBtn />
     </div>
 
-    <v-container
+    <!-- <v-container
       :fluid="width > 600"
       class="py-0 my-0 px-2 px-md-9"
     >
@@ -72,7 +72,7 @@
         </ColorContainer>
         <LazyTopTravelsTabs />
       </div>
-    </v-container>
+    </v-container> -->
     <!-- <FooterOdysway /> -->
   </v-app>
 </template>
@@ -81,7 +81,6 @@
 import { useDisplay } from 'vuetify'
 
 const { width } = useDisplay()
-const drawer = ref(false)
 const route = useRoute()
 
 const partenairesQuery = groq`*[_type == "ctas"][0]{

@@ -191,12 +191,10 @@
 
 <script setup>
 import { mdiMenu } from '@mdi/js'
-import { useDisplay } from 'vuetify'
 // Check logic to display logo without delay
 
 const router = useRouter()
 const model = defineModel()
-const { sm } = useDisplay()
 
 const { header } = defineProps({
   scrollBehavior: {
@@ -211,18 +209,6 @@ const { header } = defineProps({
     type: Object,
     required: true,
   },
-})
-
-const logoImage = computed(() => {
-  if (!header?.logo) return null
-  return sm.value ? header.logo.mobile : header.logo.desktop
-})
-
-const logo = computed(() => {
-  if (!header?.logo) return '/logos/Logo-Odysway-Bleu.png'
-  // Fallback for non-Sanity images (string paths)
-  const img = sm.value ? header.logo.mobile : header.logo.desktop
-  return typeof img === 'string' ? img : '/logos/Logo-Odysway-Bleu.png'
 })
 
 const { gtag } = useGtag()
