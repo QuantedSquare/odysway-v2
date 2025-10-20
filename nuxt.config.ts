@@ -100,7 +100,7 @@ export default defineNuxtConfig({
       },
     },
     build: {
-      sourcemap: false,
+      sourcemap: true,
     },
   },
   calendly: {
