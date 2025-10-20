@@ -72,7 +72,11 @@ export default defineNuxtConfig({
     transpile: ['vuetify'],
   },
   routeRules: {
-    '/': { prerender: true },
+    '/': { isr: 60 }, // Revalidate homepage every 60 seconds
+    '/voyages/**': { isr: 60 }, // Voyage pages regenerate every 60s
+    '/destinations/**': { isr: 60 },
+    '/thematiques/**': { isr: 60 },
+    '/blog/**': { isr: 60 },
     '/api/**': { cors: true },
   },
   // ot sure this improve a lot.
@@ -91,6 +95,11 @@ export default defineNuxtConfig({
     },
     prerender: {
       routes: ['/'],
+    },
+    vercel: {
+      config: {
+        bypassToken: process.env.VERCEL_BYPASS_TOKEN,
+      },
     },
   },
   vite: {
@@ -147,7 +156,7 @@ export default defineNuxtConfig({
     projectId: process.env.SANITY_PROJECT_ID,
     dataset: process.env.SANITY_DATASET,
     apiVersion: '2025-04-01',
-    useCdn: true,
+    useCdn: false, // Disable CDN for instant updates (recommended for webhooks)
     withCredentials: false,
     visualEditing: {
       token: process.env.SANITY_VIEWER_TOKEN,
