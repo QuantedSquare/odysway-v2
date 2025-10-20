@@ -195,6 +195,7 @@ import { mdiMenu } from '@mdi/js'
 import { useDisplay } from 'vuetify'
 import OdyswayFooterBleu from '~/assets/img/Logo-Odysway-Bleu.png'
 // Check logic to display logo without delay
+const { header } = defineProps()
 const router = useRouter()
 const model = defineModel()
 const { sm } = useDisplay()
@@ -209,34 +210,6 @@ defineProps({
     default: 5,
   },
 })
-
-const headerQuery = groq`*[_type == "header"][0]{
-  logo,
-  search,
-  button1,
-  button2,
-  button3,
-  button4,
-  button5
-}`
-
-const { data: header } = await useAsyncData(
-  'header',
-  async () => {
-    try {
-      const sanity = useSanity()
-      const result = await sanity.fetch(headerQuery)
-      return result || null
-    }
-    catch (e) {
-      console.error('Error fetching header:', e)
-      return null
-    }
-  },
-  {
-    server: true,
-  },
-)
 
 const logoImage = computed(() => {
   if (!header.value?.logo) return null

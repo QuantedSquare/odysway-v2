@@ -99,9 +99,9 @@ export default defineNuxtConfig({
         transformAssetUrls,
       },
     },
-    build: {
-      sourcemap: true,
-    },
+    // build: {
+    //   sourcemap: true,
+    // },
   },
   calendly: {
     isEnabled: true,
