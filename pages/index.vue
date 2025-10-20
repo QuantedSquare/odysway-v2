@@ -49,7 +49,7 @@
       </CardGrid>
     </ColorContainer>
 
-    <!-- <ColorContainer color="white">
+    <ColorContainer color="white">
       <TextImageContainer
         :display-cta-button="true"
         :image-desktop-right="true"
@@ -83,7 +83,7 @@
           </CtaButton>
         </template>
       </TextImageContainer>
-    </ColorContainer> -->
+    </ColorContainer>
 
     <!-- <ColorContainer color="grey-light">
       <HorizontalCarousel :text-color="'primary'">
