@@ -113,8 +113,14 @@ defineProps({
 const sanity = useSanity()
 
 const { data: newsletterContent } = await useAsyncData('newsletter-content', () =>
-  sanity.fetch(`*[_type == "newsletter"][0]`),
+  sanity.fetch(`*[_type == "newsletter"][0]{
+  emailPlaceholder,
+  subscribeButton,
+  successMessage,
+  closeButton
+}`),
 )
+console.log('newsletterContent', newsletterContent.value)
 
 const { gtag } = useGtag()
 
