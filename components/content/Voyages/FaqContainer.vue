@@ -102,12 +102,43 @@ const faqTextesQuery = `
     faqSection
   }
 `
-const { data: faqSanity } = await useSanityQuery(faqSanityQuery)
+const { data: faqSanity } = await useAsyncData(
+  'faq-content',
+  async () => {
+    try {
+      const { data } = await useSanityQuery(faqSanityQuery)
+      return data.value || null
+    }
+    catch (e) {
+      console.error('Error fetching FAQ content:', e)
+      return null
+    }
+  },
+  {
+    server: true,
+  },
+)
+
 const faqBackgroundURL = computed(() => {
   return getImageUrl(faqSanity?.value?.backgroundImage?.asset._ref)
 })
 
-const { data: faqTextes } = await useSanityQuery(faqTextesQuery)
+const { data: faqTextes } = await useAsyncData(
+  'faq-texts',
+  async () => {
+    try {
+      const { data } = await useSanityQuery(faqTextesQuery)
+      return data.value || null
+    }
+    catch (e) {
+      console.error('Error fetching FAQ texts:', e)
+      return null
+    }
+  },
+  {
+    server: true,
+  },
+)
 </script>
 
 <style scoped>

@@ -210,8 +210,6 @@ defineProps({
   },
 })
 
-const sanity = useSanity()
-
 const headerQuery = groq`*[_type == "header"][0]{
   logo,
   search,
@@ -222,8 +220,22 @@ const headerQuery = groq`*[_type == "header"][0]{
   button5
 }`
 
-const { data: header } = await useAsyncData('header', () =>
-  sanity.fetch(headerQuery),
+const { data: header } = await useAsyncData(
+  'header',
+  async () => {
+    try {
+      const sanity = useSanity()
+      const result = await sanity.fetch(headerQuery)
+      return result || null
+    }
+    catch (e) {
+      console.error('Error fetching header:', e)
+      return null
+    }
+  },
+  {
+    server: true,
+  },
 )
 
 const logoImage = computed(() => {

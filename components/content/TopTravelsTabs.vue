@@ -119,7 +119,22 @@ const topsQuery = `
 `
 
 // Fetch tops data with SSR support
-const { data, error } = await useSanityQuery(topsQuery)
+const { data, error } = await useAsyncData(
+  'tops-tabs',
+  async () => {
+    try {
+      const { data } = await useSanityQuery(topsQuery)
+      return data.value || []
+    }
+    catch (e) {
+      console.error('Error fetching tops:', e)
+      return []
+    }
+  },
+  {
+    server: true,
+  },
+)
 </script>
 
 <style scoped>

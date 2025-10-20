@@ -214,7 +214,6 @@ import OdyswayFooter from '~/assets/img/odysway-text.png'
 import OdyswayFooterBleu from '~/assets/img/Logo-Odysway-Bleu.png'
 
 const route = useRoute()
-const sanity = useSanity()
 
 const footerQuery = groq`*[_type == "footer"][0]{
   logo {
@@ -232,8 +231,22 @@ const footerQuery = groq`*[_type == "footer"][0]{
   linksList
 }`
 
-const { data: footer } = await useAsyncData('footer', () =>
-  sanity.fetch(footerQuery),
+const { data: footer } = await useAsyncData(
+  'footer',
+  async () => {
+    try {
+      const sanity = useSanity()
+      const result = await sanity.fetch(footerQuery)
+      return result || null
+    }
+    catch (e) {
+      console.error('Error fetching footer:', e)
+      return null
+    }
+  },
+  {
+    server: true,
+  },
 )
 
 const img = useImage()

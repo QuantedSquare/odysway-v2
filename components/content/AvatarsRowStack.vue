@@ -88,7 +88,22 @@ const sanityQuery = `
     image
   }
 `
-const { data: avatars } = useSanityQuery(sanityQuery)
+const { data: avatars } = await useAsyncData(
+  'team-avatars',
+  async () => {
+    try {
+      const { data } = await useSanityQuery(sanityQuery)
+      return data.value || []
+    }
+    catch (e) {
+      console.error('Error fetching avatars:', e)
+      return []
+    }
+  },
+  {
+    server: true,
+  },
+)
 
 const img = useImage()
 const hoveredIndex = ref(null)
