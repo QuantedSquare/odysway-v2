@@ -120,7 +120,7 @@ const { data: newsletterContent } = await useAsyncData('newsletter-content', () 
   closeButton
 }`),
 )
-console.log('newsletterContent', newsletterContent.value)
+console.log('newsletterContent 2', newsletterContent.value)
 
 const { gtag } = useGtag()
 
