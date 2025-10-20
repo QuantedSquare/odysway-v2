@@ -100,6 +100,11 @@ export default defineNuxtConfig({
     prerender: {
       routes: ['/'],
     },
+    vercel: {
+      config: {
+        bypassToken: process.env.VERCEL_BYPASS_TOKEN,
+      },
+    },
   },
   vite: {
     vue: {
