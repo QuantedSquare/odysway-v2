@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <HeaderOdysway
+    <!-- <HeaderOdysway
       v-model="drawer"
     />
     <ClientOnly>
@@ -8,7 +8,7 @@
         v-if="width < 960"
         v-model="drawer"
       />
-    </ClientOnly>
+    </ClientOnly> -->
 
     <v-main class="main-content mx-0 mx-md-5 px-1">
       <slot />
@@ -17,7 +17,7 @@
       <WhatsAppBtn />
     </div>
 
-    <!-- <v-container
+    <v-container
       :fluid="width > 600"
       class="py-0 my-0 px-2 px-md-9"
     >
@@ -80,7 +80,7 @@
         </ColorContainer>
         <LazyTopTravelsTabs />
       </div>
-    </v-container> -->
+    </v-container>
     <FooterOdysway />
   </v-app>
 </template>

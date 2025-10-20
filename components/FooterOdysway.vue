@@ -237,6 +237,7 @@ const { data: footer } = await useAsyncData(
     try {
       const sanity = useSanity()
       const result = await sanity.fetch(footerQuery)
+      console.log('footer result', result)
       return result || null
     }
     catch (e) {
