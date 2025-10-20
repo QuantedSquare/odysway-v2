@@ -210,8 +210,9 @@
 
 <script setup>
 import { useImage } from '#imports'
-import OdyswayFooter from '~/assets/img/odysway-text.png'
-import OdyswayFooterBleu from '~/assets/img/Logo-Odysway-Bleu.png'
+
+const OdyswayFooter = '/logos/odysway-text.png'
+const OdyswayFooterBleu = '/logos/Logo-Odysway-Bleu.png'
 
 const route = useRoute()
 

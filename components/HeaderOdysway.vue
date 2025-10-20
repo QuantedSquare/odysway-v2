@@ -9,7 +9,7 @@
       class="header-logo-link"
     >
       <img
-        :src="OdyswayFooterBleu"
+        src="/logos/Logo-Odysway-Bleu.png"
         width="320"
         :alt="header.logo.alt || 'Logo principale d\'Odysway'"
         class="header-logo"
@@ -99,14 +99,13 @@
     >
 
       <v-img
-        v-if="logoImage?.asset"
-        :src="OdyswayFooterBleu"
+        src="/logos/Logo-Odysway-Bleu.png"
         width="150"
         :alt="header.logo.alt || 'Logo principale d\'Odysway'"
         class="header-logo"
       />
 
-      <NuxtImg
+      <!-- <NuxtImg
         v-else
         preload
         as="image"
@@ -116,7 +115,7 @@
         width="320"
         :alt="header.logo.alt || 'Logo principale d\'Odysway'"
         class="header-logo"
-      />
+      /> -->
     </NuxtLink>
 
     <v-spacer />
@@ -193,7 +192,6 @@
 <script setup>
 import { mdiMenu } from '@mdi/js'
 import { useDisplay } from 'vuetify'
-import OdyswayFooterBleu from '~/assets/img/Logo-Odysway-Bleu.png'
 // Check logic to display logo without delay
 
 const router = useRouter()
