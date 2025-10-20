@@ -195,6 +195,9 @@
 </template>
 
 <script setup>
+definePageMeta({
+  layout: 'blank',
+})
 const homeQuery = groq`
   *[_type == "homePage"][0]{
     ...,

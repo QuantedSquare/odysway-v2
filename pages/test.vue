@@ -16,6 +16,9 @@
 </template>
 
 <script setup>
+definePageMeta({
+  layout: 'default',
+})
 const voyageQuery = /* groq */`
   *[_type == "voyage" && published == true] | order(title asc)[0] {
     _id,
