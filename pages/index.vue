@@ -41,13 +41,13 @@
       </HorizontalCarousel>
     </ColorContainer>
 
-    <ColorContainer color="primary">
+    <!-- <ColorContainer color="primary">
       <CardGrid :categories="homeSanity.followDesires.categoriesFollowDesires">
         <template #title>
           {{ homeSanity.followDesires.title }}
         </template>
       </CardGrid>
-    </ColorContainer>
+    </ColorContainer> -->
 
     <!-- <ColorContainer color="white">
       <TextImageContainer
@@ -83,9 +83,9 @@
           </CtaButton>
         </template>
       </TextImageContainer>
-    </ColorContainer>
+    </ColorContainer> -->
 
-    <ColorContainer color="grey-light">
+    <!-- <ColorContainer color="grey-light">
       <HorizontalCarousel :text-color="'primary'">
         <template #title>
           <span style="color: rgba(43, 76, 82, 1)">
@@ -102,9 +102,9 @@
           </v-col>
         </template>
       </HorizontalCarousel>
-    </ColorContainer>
+    </ColorContainer> -->
 
-    <ColorContainer color="white">
+    <!-- <ColorContainer color="white">
       <HorizontalCarousel :text-color="'primary'">
         <template #title>
           {{ homeSanity.summerTravel.title }}
@@ -118,9 +118,9 @@
           </v-col>
         </template>
       </HorizontalCarousel>
-    </ColorContainer>
+    </ColorContainer> -->
 
-    <ColorContainer color="soft-blush">
+    <!-- <ColorContainer color="soft-blush">
       <NewsletterContainer>
         <template #title>
           <EnrichedText :value="homeSanity.newsletter.title" />
@@ -132,9 +132,9 @@
           />
         </template>
       </NewsletterContainer>
-    </ColorContainer>
+    </ColorContainer> -->
 
-    <ColorContainer
+    <!-- <ColorContainer
       white-text
       color="primary"
     >
@@ -153,9 +153,9 @@
           </v-col>
         </template>
       </HorizontalCarousel>
-    </ColorContainer>
+    </ColorContainer> -->
 
-    <ColorContainer color="white">
+    <!-- <ColorContainer color="white">
       <CommonReviewContainer>
         <template #title>
           <span style="color: rgba(43, 76, 82, 1)">
@@ -166,9 +166,9 @@
           {{ homeSanity.reviews.ctaText }}
         </template>
       </CommonReviewContainer>
-    </ColorContainer>
+    </ColorContainer> -->
 
-    <ColorContainer color="grey-light-2">
+    <!-- <ColorContainer color="grey-light-2">
       <InfoContainer>
         <template #top>
           <AvatarsRowStack />
