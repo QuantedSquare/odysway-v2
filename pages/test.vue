@@ -1,7 +1,8 @@
 <template>
   <div>
     <v-img
-      :src="voyage.imageUrl"
+      :src="getImageUrl(voyage.imageUrl.asset._ref)"
+      :lazy-src="getImageUrl(voyage.imageUrl.asset._ref)"
       alt="Voyage Image"
       width="100%"
       height="100%"
@@ -15,9 +16,6 @@
 </template>
 
 <script setup>
-definePageMeta({
-  layout: 'blank',
-})
 const payload = useNuxtApp().payload
 console.log(payload)
 const voyageQuery = /* groq */`
@@ -30,7 +28,7 @@ const voyageQuery = /* groq */`
     destinations[]->{_id, title},
     categories[]->{_id, title},
     pricing,
-    "imageUrl": image.asset->url,
+    "imageUrl": image,
     ...,
     programmeBlock[]{
       title,
@@ -43,15 +41,5 @@ const voyageQuery = /* groq */`
   }
 `
 
-const { data: voyage } = await useAsyncData(
-  'test-checkout',
-  async () => {
-    const { data } = await useSanityQuery(voyageQuery, {})
-    return data.value
-  },
-  {
-    server: true,
-  },
-)
-console.log(voyage.value)
+const { data: voyage } = await useSanityQuery(voyageQuery, {})
 </script>
