@@ -1,14 +1,6 @@
 <template>
   <v-app>
-    <!-- <HeaderOdysway
-      v-model="drawer"
-    />
-    <ClientOnly>
-      <LazyDrawer
-        v-if="width < 960"
-        v-model="drawer"
-      />
-    </ClientOnly> -->
+    <TopBar />
 
     <v-main class="main-content mx-0 mx-md-5 px-1">
       <slot />
@@ -107,7 +99,6 @@ const { data: partenairesTextes } = await useAsyncData(
     try {
       const sanity = useSanity()
       const result = await sanity.fetch(partenairesQuery)
-      console.log('PartenairesData', result)
       return result || null
     }
     catch (e) {
@@ -126,7 +117,6 @@ const { data: searchContent } = await useAsyncData(
     try {
       const sanity = useSanity()
       const result = await sanity.fetch(searchQuery)
-      console.log('SearchData', result)
       return result || null
     }
     catch (e) {

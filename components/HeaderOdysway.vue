@@ -195,12 +195,12 @@ import { mdiMenu } from '@mdi/js'
 import { useDisplay } from 'vuetify'
 import OdyswayFooterBleu from '~/assets/img/Logo-Odysway-Bleu.png'
 // Check logic to display logo without delay
-const { header } = defineProps()
+
 const router = useRouter()
 const model = defineModel()
 const { sm } = useDisplay()
 
-defineProps({
+const { header } = defineProps({
   scrollBehavior: {
     type: String,
     default: 'elevate',
@@ -209,17 +209,21 @@ defineProps({
     type: Number,
     default: 5,
   },
+  header: {
+    type: Object,
+    required: true,
+  },
 })
 
 const logoImage = computed(() => {
-  if (!header.value?.logo) return null
-  return sm.value ? header.value.logo.mobile : header.value.logo.desktop
+  if (!header?.logo) return null
+  return sm.value ? header.logo.mobile : header.logo.desktop
 })
 
 const logo = computed(() => {
-  if (!header.value?.logo) return '/logos/Logo-Odysway-Bleu.png'
+  if (!header?.logo) return '/logos/Logo-Odysway-Bleu.png'
   // Fallback for non-Sanity images (string paths)
-  const img = sm.value ? header.value.logo.mobile : header.value.logo.desktop
+  const img = sm.value ? header.logo.mobile : header.logo.desktop
   return typeof img === 'string' ? img : '/logos/Logo-Odysway-Bleu.png'
 })
 

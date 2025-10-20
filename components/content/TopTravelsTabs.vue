@@ -124,7 +124,6 @@ const { data, error } = await useAsyncData(
   async () => {
     try {
       const data = await sanity.fetch(topsQuery)
-      console.log('TopTravelData', data)
       return data || []
     }
     catch (e) {

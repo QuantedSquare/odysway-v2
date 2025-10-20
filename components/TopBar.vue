@@ -1,11 +1,12 @@
 <template>
   <ClientOnly>
     <HeaderOdysway
+      v-if="header"
       v-model="drawer"
       :header="header"
     />
     <LazyDrawer
-      v-if="width < 960"
+      v-if="width < 960 && header"
       v-model="drawer"
       :header="header"
     />

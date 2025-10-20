@@ -55,21 +55,13 @@
 
 <script setup>
 const model = defineModel()
-const sanity = useSanity()
 
-const headerQuery = groq`*[_type == "header"][0]{
-  logo,
-  search,
-  button1,
-  button2,
-  button3,
-  button4,
-  button5
-}`
-
-const { data: header } = await useAsyncData('header', () =>
-  sanity.fetch(headerQuery),
-)
+const { header } = defineProps({
+  header: {
+    type: Object,
+    required: true,
+  },
+})
 const router = useRouter()
 const { gtag } = useGtag()
 
