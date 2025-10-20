@@ -41,6 +41,8 @@ const voyageQuery = /* groq */`
     }
   }
 `
-
-const { data: voyage } = await useSanityQuery(voyageQuery, {})
+const sanity = useSanity()
+const { data: voyage } = await useAsyncData('voyage', () =>
+  sanity.fetch(voyageQuery),
+)
 </script>
