@@ -66,18 +66,38 @@
               persistent-hint
             />
 
-            <v-text-field
-              v-model="testSlug"
-              label="Test Slug"
-              :hint="`Will test revalidation for: /voyages/${testSlug}`"
+            <v-select
+              v-model="testType"
+              label="Content Type"
+              :items="contentTypes"
+              item-title="label"
+              item-value="value"
+              hint="Select the Sanity content type to test"
               persistent-hint
             />
+
+            <v-text-field
+              v-if="requiresSlug"
+              v-model="testSlug"
+              label="Slug (if applicable)"
+              :hint="slugHint"
+              persistent-hint
+            />
+
+            <v-chip
+              v-if="affectedPaths.length > 0"
+              class="mb-2"
+              color="info"
+              variant="outlined"
+            >
+              Will revalidate: {{ affectedPaths.join(', ') }}
+            </v-chip>
 
             <v-btn
               color="primary"
               size="large"
               :loading="testing"
-              :disabled="!webhookSecret || !testSlug"
+              :disabled="!webhookSecret || (requiresSlug && !testSlug)"
               @click="testWebhook"
             >
               🚀 Test Webhook
@@ -152,11 +172,92 @@ const { data: voyage } = await useAsyncData('voyage', () =>
 )
 
 // Webhook testing state
-const webhookSecret = ref('')
+const webhookSecret = ref('mY7f1j2Q1RskslUV6o4wU6tzE32xqTXBx2N4t66jEe8')
+const testType = ref('voyage')
 const testSlug = ref('photographie-animaliere-vosges')
 const webhookResponse = ref(null)
 const webhookError = ref(null)
 const testing = ref(false)
+
+// Content types list
+const contentTypes = [
+  { label: '🧳 Voyage', value: 'voyage', requiresSlug: true, exampleSlug: 'bali' },
+  { label: '📝 Blog', value: 'blog', requiresSlug: true, exampleSlug: 'guide-voyage-sri-lanka' },
+  { label: '🌍 Destination', value: 'destination', requiresSlug: true, exampleSlug: 'sri-lanka' },
+  { label: '🎯 Category', value: 'category', requiresSlug: true, exampleSlug: 'nature-et-grands-espaces' },
+  { label: '✨ Experience', value: 'experience', requiresSlug: true, exampleSlug: 'photographie-animaliere' },
+  { label: '🏠 Homepage', value: 'homePage', requiresSlug: false },
+  { label: '🏢 Entreprise', value: 'entreprise', requiresSlug: false },
+  { label: '✏️ Sur Mesure', value: 'surMesure', requiresSlug: false },
+  { label: '👁️ Vision Voyage', value: 'visionVoyageOdysway', requiresSlug: false },
+  { label: '🔒 Privacy Policy', value: 'privacyPolicy', requiresSlug: false },
+  { label: '⚖️ Legal Mentions', value: 'legalMentions', requiresSlug: false },
+  { label: '💳 Chèques Vacances', value: 'chequesVacances', requiresSlug: false },
+  { label: '📄 CGV', value: 'conditionsGeneralesVente', requiresSlug: false },
+  { label: '✅ Confirmation', value: 'confirmation', requiresSlug: false },
+  { label: '🎁 Offre Cadeau', value: 'offreCadeau', requiresSlug: false },
+  { label: '👔 Recruitment', value: 'recruitment', requiresSlug: false },
+  { label: '❓ FAQ', value: 'faq', requiresSlug: false },
+  { label: '⭐ Avis Voyageurs', value: 'avisVoyageurs', requiresSlug: false },
+  { label: '📧 Page Contact', value: 'page_contact', requiresSlug: false },
+  { label: '🔍 Search Page', value: 'search', requiresSlug: false },
+  { label: '🛒 Checkout', value: 'checkout', requiresSlug: false },
+  { label: '📋 Devis', value: 'devis', requiresSlug: false },
+  { label: '🧭 Header (Global)', value: 'header', requiresSlug: false },
+  { label: '👣 Footer (Global)', value: 'footer', requiresSlug: false },
+  { label: '📬 Newsletter', value: 'newsletter', requiresSlug: false },
+  { label: '🎯 CTAs', value: 'ctas', requiresSlug: false },
+  { label: '🃏 Voyage Card', value: 'voyage_card', requiresSlug: false },
+  { label: '👤 Team Member', value: 'teamMember', requiresSlug: false },
+  { label: '💬 Review', value: 'review', requiresSlug: false },
+]
+
+// Computed properties
+const selectedContentType = computed(() => contentTypes.find(ct => ct.value === testType.value))
+const requiresSlug = computed(() => selectedContentType.value?.requiresSlug || false)
+const slugHint = computed(() => {
+  if (!requiresSlug.value) return ''
+  const example = selectedContentType.value?.exampleSlug
+  return example ? `Example: ${example}` : 'Enter the slug for this content'
+})
+
+// Compute affected paths based on selected type
+const affectedPaths = computed(() => {
+  const type = testType.value
+  const slug = testSlug.value
+
+  if (type === 'voyage' && slug) return [`/voyages/${slug}`, '/search', '/prochains-departs']
+  if (type === 'blog' && slug) return [`/${slug}`, '/blog']
+  if (type === 'destination' && slug) return [`/destinations/${slug}`, '/destinations', '/search']
+  if (type === 'category' && slug) return [`/thematiques/${slug}`, '/thematiques']
+  if (type === 'experience' && slug) return [`/experiences/${slug}`, '/experiences']
+  if (type === 'homePage') return ['/']
+  if (type === 'entreprise') return ['/entreprise']
+  if (type === 'surMesure') return ['/sur-mesure']
+  if (type === 'visionVoyageOdysway') return ['/vision-voyage-odysway']
+  if (type === 'privacyPolicy') return ['/politique-de-confidentialite']
+  if (type === 'legalMentions') return ['/mentions-legales']
+  if (type === 'chequesVacances') return ['/cheques-vacances']
+  if (type === 'conditionsGeneralesVente') return ['/conditions-generales-de-vente']
+  if (type === 'confirmation') return ['/confirmation']
+  if (type === 'offreCadeau') return ['/offre-cadeau']
+  if (type === 'recruitment') return ['/nous-recrutons']
+  if (type === 'faq') return ['/faq']
+  if (type === 'avisVoyageurs') return ['/avis-voyageurs']
+  if (type === 'page_contact') return ['/contact']
+  if (type === 'search') return ['/search']
+  if (type === 'checkout') return ['/checkout']
+  if (type === 'devis') return ['/devis']
+  if (type === 'header') return ['/', '/destinations', '/thematiques', '/experiences', '/blog']
+  if (type === 'footer') return ['/', '/contact']
+  if (type === 'newsletter') return ['/']
+  if (type === 'ctas') return ['/']
+  if (type === 'voyage_card') return ['/search', '/destinations', '/thematiques', '/experiences']
+  if (type === 'teamMember') return ['/vision-voyage-odysway']
+  if (type === 'review') return ['/', '/avis-voyageurs']
+
+  return []
+})
 
 // Test webhook function
 async function testWebhook() {
@@ -170,10 +271,25 @@ async function testWebhook() {
     // For production testing, use your production domain
     const isDev = window.location.hostname === 'localhost'
     const baseUrl = isDev
-      ? 'http://localhost:3000/api/v1/webhooks/sanity/revalidate'
+      ? 'http://odysway.com/api/v1/webhooks/sanity/revalidate'
       : `${config.public.siteURL}/api/v1/webhooks/sanity/revalidate`
 
     console.log('🔗 Testing webhook:', baseUrl)
+
+    // Build the webhook body
+    const webhookBody = {
+      _type: testType.value,
+      _id: voyage.value?._id || 'test-id',
+    }
+
+    // Add slug if the content type requires it
+    if (requiresSlug.value && testSlug.value) {
+      webhookBody.slug = {
+        current: testSlug.value,
+      }
+    }
+
+    console.log('📤 Webhook payload:', webhookBody)
 
     // Call the webhook with proper headers
     const response = await $fetch(baseUrl, {
@@ -182,13 +298,7 @@ async function testWebhook() {
         'Content-Type': 'application/json',
         'x-sanity-webhook-secret': webhookSecret.value,
       },
-      body: {
-        _type: 'voyage',
-        _id: voyage.value?._id || 'test-id',
-        slug: {
-          current: testSlug.value,
-        },
-      },
+      body: webhookBody,
     })
 
     console.log('✅ Webhook response:', response)

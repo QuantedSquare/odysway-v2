@@ -51,13 +51,35 @@ When you publish a change in Sanity Studio:
    
    **Dataset**: Choose your dataset (e.g., `production`)
    
-   **Trigger on**: Select the document types you want to trigger revalidation:
-   - `voyage`
-   - `blog`
-   - `destination`
-   - `category`
-   - `homePage`
-   - (Add any other content types you want to auto-update)
+   **Trigger on**: Select these document types to trigger revalidation:
+   
+   **Content Pages (High Priority):**
+   - `voyage` - Travel packages
+   - `blog` - Blog posts
+   - `destination` - Destination pages
+   - `category` - Theme/category pages
+   - `experience` - Experience pages
+   - `homePage` - Homepage
+   
+   **Static Pages (Medium Priority):**
+   - `entreprise`, `surMesure`, `visionVoyageOdysway`
+   - `faq`, `avisVoyageurs`, `page_contact`
+   - `search`, `offreCadeau`, `recruitment`
+   
+   **Legal Pages (Low Priority):**
+   - `privacyPolicy`, `legalMentions`, `conditionsGeneralesVente`
+   - `chequesVacances`, `confirmation`
+   
+   **Global Content (Important!):**
+   - `header` - Site navigation
+   - `footer` - Site footer
+   - `newsletter`, `ctas`, `voyage_card`
+   - `page_voyage`, `page_thematiques`, `page_experiences`, `page_blog`
+   
+   **Referenced Content:**
+   - `teamMember`, `review`
+   
+   > **Tip**: For a complete list with detailed mapping, see `SANITY_CONTENT_TYPE_MAPPING.md`
    
    **HTTP method**: `POST`
    
