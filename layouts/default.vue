@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <TopBar />
+    <!-- <TopBar /> -->
 
     <v-main class="main-content mx-0 mx-md-5 px-1">
       <slot />
