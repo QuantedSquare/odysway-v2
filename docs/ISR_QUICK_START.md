@@ -29,7 +29,7 @@ Then redeploy your app.
 Go to: [Sanity Manage](https://www.sanity.io/manage) → Your Project → API → Webhooks
 
 Create webhook:
-- **URL**: `https://your-domain.com/api/revalidate`
+- **URL**: `https://your-domain.com/api/v1/webhooks/sanity/revalidate`
 - **Trigger**: On document publish for: `voyage`, `blog`, `destination`, `category`, `homePage`
 - **HTTP Header**: 
   - Name: `x-sanity-webhook-secret`
@@ -74,10 +74,20 @@ Create webhook:
 
 ## Test It
 
-### Test webhook manually:
+### Option 1: Use the test page (easiest)
+
+Go to: `https://your-domain.com/test`
+
+The test page has a webhook tester that lets you:
+- Enter your `SANITY_WEBHOOK_SECRET`
+- Choose a slug to test
+- Click "Test Webhook" button
+- See the full response
+
+### Option 2: Test webhook manually with curl:
 
 ```bash
-curl -X POST https://your-domain.com/api/revalidate \
+curl -X POST https://your-domain.com/api/v1/webhooks/sanity/revalidate \
   -H "x-sanity-webhook-secret: YOUR_SECRET" \
   -H "Content-Type: application/json" \
   -d '{

@@ -47,7 +47,7 @@ When you publish a change in Sanity Studio:
 
    **Name**: `Vercel Revalidation`
    
-   **URL**: `https://your-production-domain.com/api/revalidate`
+   **URL**: `https://your-production-domain.com/api/v1/webhooks/sanity/revalidate`
    
    **Dataset**: Choose your dataset (e.g., `production`)
    
@@ -244,7 +244,7 @@ Monitor usage at [Sanity Manage → Usage](https://www.sanity.io/manage)
 ## Summary
 
 ✅ **What you've set up**:
-- Webhook endpoint at `/api/revalidate`
+- Webhook endpoint at `/api/v1/webhooks/sanity/revalidate`
 - ISR with 60-second background revalidation
 - On-demand revalidation with bypass token (instant updates)
 - Fresh Sanity data on every query (`useCdn: false`)

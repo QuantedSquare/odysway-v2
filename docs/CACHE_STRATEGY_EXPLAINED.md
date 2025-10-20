@@ -239,7 +239,7 @@ Age: 30                # Been cached for 30 seconds
 
 ```bash
 # Manually trigger webhook
-curl -X POST https://yourdomain.com/api/revalidate \
+curl -X POST https://yourdomain.com/api/v1/webhooks/sanity/revalidate \
   -H "x-sanity-webhook-secret: your-secret" \
   -H "Content-Type: application/json" \
   -d '{
