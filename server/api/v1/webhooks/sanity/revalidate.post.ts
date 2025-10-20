@@ -2,6 +2,7 @@ import { defineEventHandler, readBody, getHeader, createError } from 'h3'
 
 export default defineEventHandler(async (event) => {
   // Verify webhook secret for security
+  console.log('Sanity webhook received', event)
   const secret = getHeader(event, 'x-sanity-webhook-secret')
   if (secret !== process.env.SANITY_WEBHOOK_SECRET) {
     throw createError({
