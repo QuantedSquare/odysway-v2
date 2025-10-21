@@ -186,11 +186,11 @@ export const blogType = defineType({
       description: 'Badge color for display',
       options: {
         list: [
-          {title: 'Primary', value: 'primary'},
-          {title: 'Secondary', value: 'secondary'},
-          {title: 'Success', value: 'success'},
-          {title: 'Warning', value: 'warning'},
-          {title: 'Danger', value: 'danger'},
+          {title: '🔵 Primary (Dark Teal)', value: 'primary'},
+          {title: '🟠 Secondary (Orange)', value: 'secondary'},
+          {title: '🟢 Success (Green)', value: 'success'},
+          {title: '🟡 Warning (Yellow)', value: 'warning'},
+          {title: '🔴 Danger (Red)', value: 'danger'},
         ],
       },
       group: 'metadata',
