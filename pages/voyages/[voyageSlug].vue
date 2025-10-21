@@ -172,6 +172,7 @@ const voyageQuery = `
     },
   }
 `
+
 const voyagePropositionsQuery = `
   *[_type == "voyage" && slug.current != $slug && experienceType._ref == $experienceTypeId][0...5]{
     _id,

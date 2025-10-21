@@ -47,16 +47,19 @@
             :line-height="30"
           >
             <span v-if="description"><EnrichedText :value="description" /></span>
-            <div class="d-flex flex-column px-8 mt-4">
-              <div v-if="denivellation">
+            <div
+              v-if="denivellation || road || night"
+              class="d-flex flex-column px-8 mt-4"
+            >
+              <div v-if="denivellation && stegaClean(denivellation).length > 0">
                 <span class="font-weight-bold">Dénivelé:&nbsp;</span>
                 <span>{{ denivellation }}</span>
               </div>
-              <div v-if="road">
+              <div v-if="road && stegaClean(road).length > 0">
                 <span class="font-weight-bold">Temps de trajet:&nbsp;</span>
                 <span>{{ road }}</span>
               </div>
-              <div v-if="night">
+              <div v-if="night && stegaClean(night).length > 0">
                 <span class="font-weight-bold">Nuit:&nbsp;</span>
                 <span>{{ night }}</span>
               </div>
@@ -71,8 +74,13 @@
 <script setup>
 import { useDisplay } from 'vuetify'
 import { useElementSize } from '@vueuse/core'
+import { stegaClean } from '@sanity/client/stega'
 
 defineProps({
+  day: {
+    type: Object,
+    required: true,
+  },
   photo: {
     type: Object,
     required: true,
@@ -102,10 +110,8 @@ defineProps({
     default: '',
   },
 })
-
 const img = useImage()
 const { xs, width } = useDisplay()
-
 const isHydrated = ref(false)
 const colContainer = ref(null)
 
