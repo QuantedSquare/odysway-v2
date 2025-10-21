@@ -1,6 +1,9 @@
 <template>
   <div>
-    <v-container class="py-8">
+    <v-container
+      v-if="config.public.environment === 'development'"
+      class="py-8"
+    >
       <v-card class="mb-6 pa-4">
         <v-card-title class="text-h5">
           🔗 Webhook Tester
