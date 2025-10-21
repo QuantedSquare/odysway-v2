@@ -48,7 +48,6 @@
 </template>
 
 <script setup>
-
 const route = useRoute()
 const slug = computed(() => route.params.thematiqueSlug)
 
@@ -58,7 +57,10 @@ const pageContentQuery = `
     ...
   }
 `
-const { data: pageContent } = await useSanityQuery(pageContentQuery)
+const sanity = useSanity()
+const { data: pageContent } = await useAsyncData('page-content', () =>
+  sanity.fetch(pageContentQuery),
+)
 
 // Fetch the category with its linked blog post
 const categoryQuery = `
@@ -87,9 +89,11 @@ const categoryQuery = `
   }
 `
 
-const { data: categorySanity } = await useSanityQuery(categoryQuery, {
-  slug: slug.value,
-})
+const { data: categorySanity } = await useAsyncData('category-sanity', () =>
+  sanity.fetch(categoryQuery, {
+    slug: slug.value,
+  }),
+)
 
 const dataToBlog = reactive({
   title: categorySanity.value?.blog?.title,

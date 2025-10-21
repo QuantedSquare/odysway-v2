@@ -80,12 +80,14 @@ const reviewsToDisplayQuery = `
     }
   }
 `
+
+const sanity = useSanity()
 const { data: reviewsToDisplaySanity } = await useAsyncData(
   'home-reviews',
   async () => {
     try {
-      const { data } = await useSanityQuery(reviewsToDisplayQuery)
-      return data.value || []
+      const result = await sanity.fetch(reviewsToDisplayQuery)
+      return result || []
     }
     catch (e) {
       console.error('Error fetching reviews:', e)

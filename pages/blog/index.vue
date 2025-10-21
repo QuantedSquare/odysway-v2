@@ -17,7 +17,8 @@
     <v-container>
       <v-row class="mb-4">
         <v-col
-          cols="12"getImageUrl
+          cols="12"
+          get-image-url
           sm="6"
           class="py-0"
         >
@@ -96,7 +97,7 @@
             {{ mdiMagnifyClose }}
           </v-icon>
           <div class="text-h6 mt-2 mb-4">
-             Aucun article trouvé
+            Aucun article trouvé
           </div>
           <v-btn
             v-if="search || selectedCategory"
@@ -104,7 +105,7 @@
             variant="outlined"
             @click="() => { search = ''; selectedCategory = null; }"
           >
-        Réinitialiser les filtres
+            Réinitialiser les filtres
           </v-btn>
         </v-col>
       </v-row>
@@ -174,7 +175,10 @@ const blogsQuery = `
   } | order(publishedAt desc)
 `
 
-const { data: pages, status } = await useSanityQuery(blogsQuery)
+const sanity = useSanity()
+const { data: pages, status } = await useAsyncData('blog', () =>
+  sanity.fetch(blogsQuery),
+)
 
 const loading = computed(() => {
   return status.value !== 'success'
@@ -184,10 +188,10 @@ const search = ref('')
 const selectedCategory = ref(null)
 const sortOrder = ref(null)
 const sortOptions = computed(() => [
-  { title:  'Plus récent', value: 'desc' },
-  { title:  'Plus ancien', value: 'asc' },
-  { title:  'Plus court', value: 'readingTimeAsc' },
-  { title:  'Plus long', value: 'readingTimeDesc' },
+  { title: 'Plus récent', value: 'desc' },
+  { title: 'Plus ancien', value: 'asc' },
+  { title: 'Plus court', value: 'readingTimeAsc' },
+  { title: 'Plus long', value: 'readingTimeDesc' },
 ])
 
 function normalize(str) {

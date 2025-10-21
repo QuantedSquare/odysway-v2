@@ -48,14 +48,16 @@
 </template>
 
 <script setup>
-
 const route = useRoute()
 const slug = computed(() => route.params.experienceSlug)
 
 const pageContentQuery = groq`*[_type == "page_experiences"][0]{
   ...
 }`
-const { data: pageContent } = await useSanityQuery(pageContentQuery)
+const sanity = useSanity()
+const { data: pageContent } = await useAsyncData('page-content', () =>
+  sanity.fetch(pageContentQuery),
+)
 
 const experienceQuery = `
   *[_type == "experience" && slug.current == $slug][0]{
@@ -83,9 +85,11 @@ const experienceQuery = `
   }
 `
 
-const { data: selectedExperience } = await useSanityQuery(experienceQuery, {
-  slug: slug.value,
-})
+const { data: selectedExperience } = await useAsyncData('selected-experience', () =>
+  sanity.fetch(experienceQuery, {
+    slug: slug.value,
+  }),
+)
 
 const dataToBlog = reactive({
   title: selectedExperience.value?.blog?.title,

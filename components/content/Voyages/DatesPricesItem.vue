@@ -235,7 +235,10 @@ const datesPricesItemQuery = `
     dateSections
   }
 `
-const { data: texte } = await useSanityQuery(datesPricesItemQuery)
+const sanity = useSanity()
+const { data: texte } = await useAsyncData('datesPricesItem', () =>
+  sanity.fetch(datesPricesItemQuery),
+)
 
 const enrichedDate = computed(() => {
   return {

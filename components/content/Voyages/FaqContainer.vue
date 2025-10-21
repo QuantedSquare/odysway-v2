@@ -102,12 +102,13 @@ const faqTextesQuery = `
     faqSection
   }
 `
+const sanity = useSanity()
 const { data: faqSanity } = await useAsyncData(
   'faq-content',
   async () => {
     try {
-      const { data } = await useSanityQuery(faqSanityQuery)
-      return data.value || null
+      const result = await sanity.fetch(faqSanityQuery)
+      return result || null
     }
     catch (e) {
       console.error('Error fetching FAQ content:', e)
@@ -127,8 +128,8 @@ const { data: faqTextes } = await useAsyncData(
   'faq-texts',
   async () => {
     try {
-      const { data } = await useSanityQuery(faqTextesQuery)
-      return data.value || null
+      const result = await sanity.fetch(faqTextesQuery)
+      return result || null
     }
     catch (e) {
       console.error('Error fetching FAQ texts:', e)

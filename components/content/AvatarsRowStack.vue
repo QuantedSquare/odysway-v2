@@ -88,12 +88,13 @@ const sanityQuery = `
     image
   }
 `
+const sanity = useSanity()
 const { data: avatars } = await useAsyncData(
   'team-avatars',
   async () => {
     try {
-      const { data } = await useSanityQuery(sanityQuery)
-      return data.value || []
+      const result = await sanity.fetch(sanityQuery)
+      return result || []
     }
     catch (e) {
       console.error('Error fetching avatars:', e)

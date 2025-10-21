@@ -13,7 +13,6 @@
 </template>
 
 <script setup>
-
 const pageContentQuery = groq`*[_type == "page_thematiques"][0]{
   index,
   slug,
@@ -27,9 +26,14 @@ const categoriesQuery = `
     }
   }
 `
-const { data: pageContent } = await useSanityQuery(pageContentQuery)
+const sanity = useSanity()
+const { data: pageContent } = await useAsyncData('page-content', () =>
+  sanity.fetch(pageContentQuery),
+)
 
-const { data: categoriesWithVoyages } = await useSanityQuery(categoriesQuery)
+const { data: categoriesWithVoyages } = await useAsyncData('categories-with-voyages', () =>
+  sanity.fetch(categoriesQuery),
+)
 
 useHead({
   htmlAttrs: {

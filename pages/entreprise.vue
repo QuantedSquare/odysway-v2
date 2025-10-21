@@ -93,7 +93,6 @@
 </template>
 
 <script setup>
-
 definePageMeta({
   layout: 'simple-pages',
 })
@@ -165,7 +164,10 @@ const entreprisePageQuery = groq`*[_type == "entreprise"][0]{
   ctaButton
 }`
 
-const { data: page } = await useSanityQuery(entreprisePageQuery)
+const sanity = useSanity()
+const { data: page } = await useAsyncData('entreprise', () =>
+  sanity.fetch(entreprisePageQuery),
+)
 
 if (page.value) {
   const seoTitle = page.value.pageSettings?.seo?.title || page.value.pageSettings?.title || page.value.heroSection.title || 'Tribus par Odysway'

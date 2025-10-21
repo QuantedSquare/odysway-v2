@@ -111,6 +111,7 @@ const props = defineProps({
   },
 })
 const route = useRoute()
+const sanity = useSanity()
 const isComputedCategory = computed(() => !!props.isCategory)
 const isComputedExperience = computed(() => !!props.isExperience)
 
@@ -121,8 +122,8 @@ const categoriesQuery = `
 `
 const { data: categories } = useAsyncData('categories-on-content-layout', async () => {
   if (props.isCategory) {
-    const { data } = await useSanityQuery(categoriesQuery)
-    return data.value
+    const result = await sanity.fetch(categoriesQuery)
+    return result || []
   }
   return null
 }, { watch: [isComputedCategory, isComputedExperience] })
@@ -134,8 +135,8 @@ const experiencesQuery = `
 `
 const { data: experiences } = useAsyncData('experiences-on-content-layout', async () => {
   if (props.isExperience) {
-    const { data } = await useSanityQuery(experiencesQuery)
-    return data.value
+    const result = await sanity.fetch(experiencesQuery)
+    return result || []
   }
   return null
 }, { watch: [isComputedCategory, isComputedExperience] })
@@ -147,8 +148,8 @@ const destinationsQuery = `
 `
 const { data: destinations } = useAsyncData('destinations-on-content-layout', async () => {
   if (props.isDestination) {
-    const { data } = await useSanityQuery(destinationsQuery)
-    return data.value
+    const result = await sanity.fetch(destinationsQuery)
+    return result || []
   }
   return null
 })

@@ -68,10 +68,12 @@ const blogQuery = `
   }
 `
 
-const { data: blogSanity } = await useSanityQuery(blogQuery, {
-  slug: slug.value,
-})
-
+const sanity = useSanity()
+const { data: blogSanity } = await useAsyncData('blog', () =>
+  sanity.fetch(blogQuery, {
+    slug: slug.value,
+  }),
+)
 
 const dataToPage = reactive({
   title: blogSanity.value?.title,
@@ -87,7 +89,6 @@ const dataToPage = reactive({
   badgeColor: blogSanity.value?.badgeColor,
   readingTime: blogSanity.value?.readingTime,
 })
-
 
 onMounted(() => {
   trackPixel('trackCustom', 'BlogView', { titre: blogSanity.value.title })

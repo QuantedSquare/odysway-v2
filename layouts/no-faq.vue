@@ -53,9 +53,10 @@ const drawer = ref(false)
 const pageTextesQuery = groq`*[_type == "ctas"][0]{
   layoutInfoContainer,
 }`
-const { data: pageTextes } = await useSanityQuery(pageTextesQuery, {}, {
-  key: 'page-textes-layouts',
-})
+const sanity = useSanity()
+const { data: pageTextes } = await useAsyncData('page-textes-layouts', () =>
+  sanity.fetch(pageTextesQuery),
+)
 </script>
 
 <style scoped>

@@ -121,17 +121,19 @@
     </ColorContainer>
 
     <ColorContainer color="soft-blush">
-      <NewsletterContainer>
-        <template #title>
-          <EnrichedText :value="homeSanity.newsletter.title" />
-        </template>
-        <template #subtitle>
-          <EnrichedText
-            class="text-grey"
-            :value="homeSanity.newsletter.subtitle"
-          />
-        </template>
-      </NewsletterContainer>
+      <ClientOnly>
+        <NewsletterContainer v-if="homeSanity.newsletter">
+          <template #title>
+            <EnrichedText :value="homeSanity.newsletter.title" />
+          </template>
+          <template #subtitle>
+            <EnrichedText
+              class="text-grey"
+              :value="homeSanity.newsletter.subtitle"
+            />
+          </template>
+        </NewsletterContainer>
+      </ClientOnly>
     </ColorContainer>
 
     <ColorContainer
