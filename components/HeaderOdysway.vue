@@ -8,19 +8,12 @@
       :to="header.logo.to || '/'"
       class="header-logo-link"
     >
-      <SanityImage
-        :asset-id="logoImage.asset._ref"
-        auto="format"
+      <img
+        src="/logos/Logo-Odysway-Bleu.png"
+        width="320"
+        :alt="header.logo.alt || 'Logo principale d\'Odysway'"
+        class="header-logo"
       >
-        <template #default="{ src }">
-          <img
-            :src="src"
-            width="320"
-            :alt="header.logo.alt || 'Logo principale d\'Odysway'"
-            class="header-logo"
-          >
-        </template>
-      </SanityImage>
     </NuxtLink>
 
     <v-spacer />
@@ -104,21 +97,15 @@
       :to="header.logo.to || '/'"
       class="header-logo-link"
     >
-      <SanityImage
-        v-if="logoImage?.asset"
-        :asset-id="logoImage.asset._ref"
-        auto="format"
-      >
-        <template #default="{ src }">
-          <img
-            :src="src"
-            width="320"
-            :alt="header.logo.alt || 'Logo principale d\'Odysway'"
-            class="header-logo"
-          >
-        </template>
-      </SanityImage>
-      <NuxtImg
+
+      <v-img
+        src="/logos/Logo-Odysway-Bleu.png"
+        width="150"
+        :alt="header.logo.alt || 'Logo principale d\'Odysway'"
+        class="header-logo"
+      />
+
+      <!-- <NuxtImg
         v-else
         preload
         as="image"
@@ -128,7 +115,7 @@
         width="320"
         :alt="header.logo.alt || 'Logo principale d\'Odysway'"
         class="header-logo"
-      />
+      /> -->
     </NuxtLink>
 
     <v-spacer />
@@ -204,13 +191,12 @@
 
 <script setup>
 import { mdiMenu } from '@mdi/js'
-import { useDisplay } from 'vuetify'
+// Check logic to display logo without delay
 
 const router = useRouter()
 const model = defineModel()
-const { sm } = useDisplay()
 
-defineProps({
+const { header } = defineProps({
   scrollBehavior: {
     type: String,
     default: 'elevate',
@@ -219,34 +205,10 @@ defineProps({
     type: Number,
     default: 5,
   },
-})
-
-const sanity = useSanity()
-
-const headerQuery = groq`*[_type == "header"][0]{
-  logo,
-  search,
-  button1,
-  button2,
-  button3,
-  button4,
-  button5
-}`
-
-const { data: header } = await useAsyncData('header', () =>
-  sanity.fetch(headerQuery),
-)
-
-const logoImage = computed(() => {
-  if (!header.value?.logo) return null
-  return sm.value ? header.value.logo.mobile : header.value.logo.desktop
-})
-
-const logo = computed(() => {
-  if (!header.value?.logo) return '/logos/Logo-Odysway-Bleu.png'
-  // Fallback for non-Sanity images (string paths)
-  const img = sm.value ? header.value.logo.mobile : header.value.logo.desktop
-  return typeof img === 'string' ? img : '/logos/Logo-Odysway-Bleu.png'
+  header: {
+    type: Object,
+    required: true,
+  },
 })
 
 const { gtag } = useGtag()

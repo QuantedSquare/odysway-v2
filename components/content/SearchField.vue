@@ -190,8 +190,8 @@ const searchFieldQuery = groq`*[_type == "search"][0]{
   travelTypes
 }`
 
-const { data: searchFieldContent, status: searchFieldContentStatus } = useAsyncData('search-field-content', () =>
-  sanity.fetch(searchFieldQuery)
+const { data: searchFieldContent, status: searchFieldContentStatus } = await useAsyncData('search-field-content', () =>
+  sanity.fetch(searchFieldQuery),
 )
 
 const isSelectionARegion = useState('isSelectionARegion', () => false)
@@ -247,8 +247,8 @@ const destinationsQuery = groq`*[_type == "destination"]{
   isTopDestination
 }`
 
-const { data: destinations, status: destinationsStatus } = useAsyncData('destinations-in-search', () =>
-  sanity.fetch(destinationsQuery)
+const { data: destinations, status: destinationsStatus } = await useAsyncData('destinations-in-search', () =>
+  sanity.fetch(destinationsQuery),
 )
 
 const regionsQuery = groq`*[_type == "region"]{
@@ -257,8 +257,8 @@ const regionsQuery = groq`*[_type == "region"]{
   meta_description
 }`
 
-const { data: regions, status: regionsStatus } = useAsyncData('regions', () =>
-  sanity.fetch(regionsQuery)
+const { data: regions, status: regionsStatus } = await useAsyncData('regions', () =>
+  sanity.fetch(regionsQuery),
 )
 
 const mappedDestinationsToRegions = computed(() => {
@@ -321,20 +321,20 @@ const filteredRegions = computed(() => {
 
   // Filter regions that match search OR have destinations that match
   return mappedDestinationsToRegions.value
-    .map(region => {
+    .map((region) => {
       // Keep region if name matches
       const regionMatches = normalize(region.title).includes(searchText)
 
       // Filter destinations that match search
       const matchingDestinations = region.destinations.filter(dest =>
-        normalize(dest.title).includes(searchText)
+        normalize(dest.title).includes(searchText),
       )
 
       // Include region if it matches or has matching destinations
       if (regionMatches || matchingDestinations.length > 0) {
         return {
           ...region,
-          destinations: regionMatches ? region.destinations : matchingDestinations
+          destinations: regionMatches ? region.destinations : matchingDestinations,
         }
       }
       return null

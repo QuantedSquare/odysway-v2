@@ -15,7 +15,7 @@
       </template>
     </HomeHeroSection>
     <ExperienceCarousel
-      v-if="homeSanity"
+      v-if="homeSanity && homeSanity.experienceCarousel?.experiences?.length > 0"
       :experiences-data="homeSanity.experienceCarousel.experiences"
     >
       <template #title>
@@ -121,17 +121,19 @@
     </ColorContainer>
 
     <ColorContainer color="soft-blush">
-      <NewsletterContainer>
-        <template #title>
-          <EnrichedText :value="homeSanity.newsletter.title" />
-        </template>
-        <template #subtitle>
-          <EnrichedText
-            class="text-grey"
-            :value="homeSanity.newsletter.subtitle"
-          />
-        </template>
-      </NewsletterContainer>
+      <ClientOnly>
+        <NewsletterContainer v-if="homeSanity.newsletter">
+          <template #title>
+            <EnrichedText :value="homeSanity.newsletter.title" />
+          </template>
+          <template #subtitle>
+            <EnrichedText
+              class="text-grey"
+              :value="homeSanity.newsletter.subtitle"
+            />
+          </template>
+        </NewsletterContainer>
+      </ClientOnly>
     </ColorContainer>
 
     <ColorContainer
@@ -195,8 +197,8 @@
 </template>
 
 <script setup>
-
-const homeQuery = `
+const sanity = useSanity()
+const homeQuery = groq`
   *[_type == "homePage"][0]{
     ...,
     seo,
@@ -281,7 +283,9 @@ const homeQuery = `
   }
 `
 
-const { data: homeSanity } = await useSanityQuery(homeQuery)
+const { data: homeSanity } = await useAsyncData('home', () =>
+  sanity.fetch(homeQuery),
+)
 if (homeSanity.value) {
   // Set the page title explicitly
   // useSeoMeta overRide useHead
@@ -300,7 +304,6 @@ if (homeSanity.value) {
     ...homeSanity.value.head,
   })
 
-  console.log('homeSanity', homeSanity.value.seo)
   // Set SEO meta tags
   useSeoMeta({
     title: homeSanity.value.seo?.title || homeSanity.value.title,

@@ -15,10 +15,13 @@
         :key="index"
         cols="12"
       >
-        <DayCard
-          v-bind="day"
-          :index="index"
-        />
+        <ClientOnly>
+          <DayCard
+            v-bind="day"
+            :day="day"
+            :index="index"
+          />
+        </ClientOnly>
       </v-col>
     </v-row>
   </v-container>

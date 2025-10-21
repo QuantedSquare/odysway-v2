@@ -102,7 +102,7 @@
 
 <script setup>
 const currentTab = ref(0)
-
+const sanity = useSanity()
 // Optimized GROQ query - fetch only required fields
 const topsQuery = `
   *[_type == "tops"]|order(orderRank) {
@@ -119,7 +119,22 @@ const topsQuery = `
 `
 
 // Fetch tops data with SSR support
-const { data, error } = await useSanityQuery(topsQuery)
+const { data, error } = await useAsyncData(
+  'tops-tabs',
+  async () => {
+    try {
+      const data = await sanity.fetch(topsQuery)
+      return data || []
+    }
+    catch (e) {
+      console.error('Error fetching tops:', e)
+      return []
+    }
+  },
+  {
+    server: true,
+  },
+)
 </script>
 
 <style scoped>

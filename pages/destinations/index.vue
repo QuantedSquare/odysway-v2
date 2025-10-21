@@ -12,7 +12,6 @@
 </template>
 
 <script setup>
-
 const destinationQuery = `
   *[_type == "destination"]{
     ...,
@@ -21,7 +20,10 @@ const destinationQuery = `
     }
   }
 `
-const { data: destinationsWithVoyages } = await useSanityQuery(destinationQuery)
+const sanity = useSanity()
+const { data: destinationsWithVoyages } = await useAsyncData('destinations', () =>
+  sanity.fetch(destinationQuery),
+)
 
 useHead({
   htmlAttrs: {

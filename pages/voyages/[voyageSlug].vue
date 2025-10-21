@@ -150,15 +150,13 @@ definePageMeta({
 const { gtag } = useGtag()
 
 const route = useRoute()
+const sanity = useSanity()
 
 const voyagePageQuery = `
   *[_type == "page_voyage"][0]{
     ...
   }
 `
-const { data: page } = await useSanityQuery(voyagePageQuery)
-
-
 const voyageQuery = `
   *[_type == "voyage" && slug.current == $slug][0]{
     ...,
@@ -174,9 +172,6 @@ const voyageQuery = `
     },
   }
 `
-const { data: voyage } = await useSanityQuery(voyageQuery, {
-  slug: route.params.voyageSlug,
-})
 
 const voyagePropositionsQuery = `
   *[_type == "voyage" && slug.current != $slug && experienceType._ref == $experienceTypeId][0...5]{
@@ -193,10 +188,20 @@ const voyagePropositionsQuery = `
     }
   }
 `
-const { data: voyagePropositions } = await useSanityQuery(voyagePropositionsQuery, {
-  slug: route.params.voyageSlug,
-  experienceTypeId: voyage.value?.experienceType?._id,
-})
+const { data: page } = await useAsyncData('voyage-page', () =>
+  sanity.fetch(voyagePageQuery),
+)
+
+const { data: voyage } = await useAsyncData('voyage', () =>
+  sanity.fetch(voyageQuery, { slug: route.params.voyageSlug }),
+)
+
+const { data: voyagePropositions } = await useAsyncData('voyage-propositions', () =>
+  sanity.fetch(voyagePropositionsQuery, {
+    slug: route.params.voyageSlug,
+    experienceTypeId: voyage.value?.experienceType?._id,
+  }),
+)
 
 onMounted(() => {
   gtag('event', 'page_view', {

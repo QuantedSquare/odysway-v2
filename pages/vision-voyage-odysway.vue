@@ -30,7 +30,6 @@
 </template>
 
 <script setup>
-
 definePageMeta({
   layout: 'simple-pages',
 })
@@ -54,7 +53,10 @@ const visionPageQuery = groq`*[_type == "visionVoyageOdysway"][0]{
   }
 }`
 
-const { data: visionPage } = await useSanityQuery(visionPageQuery)
+const sanity = useSanity()
+const { data: visionPage } = await useAsyncData('vision-voyage-odysway', () =>
+  sanity.fetch(visionPageQuery),
+)
 
 if (visionPage.value) {
   // Set the visionPage title explicitly

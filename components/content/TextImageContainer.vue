@@ -36,31 +36,24 @@
         cols="12"
         md="6"
       >
-        <!-- <v-lazy
+        <v-lazy
           :min-height="550"
           :options="{ threshold: 0.5 }"
           transition="fade-transition"
-        > -->
-        <SanityImage
-          :asset-id="imageSrc.asset._ref"
-          auto="format"
         >
-          <template #default="{ src }">
-            <v-img
-              :src="img(src, { format: 'webp', quality: 70, height: 640, width: 640 })"
-              :lazy-src="img(src, { format: 'webp', quality: 10, height: 640, width: 640 })"
-              :srcset="`${img(src, { format: 'webp', quality: 70, width: 640 })} 640w, ${img(src, { format: 'webp', quality: 70, width: 1024 })} 1024w`"
-              sizes="(max-width: 600px) 480px, 1024px"
-              alt="Image section voyager autrement"
-              loading="lazy"
-              height="100%"
-              max-height="550"
-              cover
-              rounded="xl"
-            />
-          </template>
-        </SanityImage>
-        <!-- </v-lazy> -->
+          <v-img
+            :src="img(imageUrl, { format: 'webp', quality: 70, height: 640, width: 640 })"
+            :lazy-src="img(imageUrl, { format: 'webp', quality: 10, height: 640, width: 640 })"
+            :srcset="`${img(imageUrl, { format: 'webp', quality: 70, width: 640 })} 640w, ${img(imageUrl, { format: 'webp', quality: 70, width: 1024 })} 1024w`"
+            sizes="(max-width: 600px) 480px, 1024px"
+            alt="Image section voyager autrement"
+            loading="lazy"
+            height="100%"
+            max-height="550"
+            cover
+            rounded="xl"
+          />
+        </v-lazy>
       </v-col>
     </v-row>
   </v-container>
@@ -70,7 +63,7 @@
 import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
-defineProps({
+const { imageSrc } = defineProps({
   imageSrc: {
     type: Object,
     required: true,
@@ -91,4 +84,7 @@ defineProps({
 
 const img = useImage()
 const { width, smAndDown } = useDisplay()
+const imageUrl = computed(() => {
+  return getImageUrl(imageSrc?.asset?._ref)
+})
 </script>

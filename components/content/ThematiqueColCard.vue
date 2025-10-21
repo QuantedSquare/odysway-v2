@@ -13,25 +13,18 @@
         :to="`/${type}/${slug}`"
         class="image-wrapper default-expanded"
       >
-        <SanityImage
-          v-if="image.asset._ref"
-          :asset-id="image.asset._ref"
-          auto="format"
-        >
-          <template #default="{ src }">
-            <v-img
-              v-if="src"
-              :src="imgComp(src, { format: 'webp', quality: 70, width: 1024 })"
-              :lazy-src="imgComp(src, { format: 'webp', quality: 10, width: 1024 })"
-              :srcset="`${imgComp(src, { format: 'webp', quality: 70, width: 1024 })} 1024w, ${imgComp(src, { format: 'webp', quality: 70, width: 1536 })} 1536w`"
-              sizes="(max-width: 600px) 480px, 1024px"
-              loading="lazy"
-              width="100%"
-              :alt="`Illustration de la catégorie ${title}`"
-              cover
-            />
-          </template>
-        </SanityImage>
+
+        <v-img
+          v-if="imgUrl"
+          :src="imgComp(imgUrl, { format: 'webp', quality: 70, width: 1024 })"
+          :lazy-src="imgComp(imgUrl, { format: 'webp', quality: 10, width: 1024 })"
+          :srcset="`${imgComp(imgUrl, { format: 'webp', quality: 70, width: 1024 })} 1024w, ${imgComp(imgUrl, { format: 'webp', quality: 70, width: 1536 })} 1536w`"
+          sizes="(max-width: 600px) 480px, 1024px"
+          loading="lazy"
+          width="100%"
+          :alt="`Illustration de la catégorie ${title}`"
+          cover
+        />
         <div class="blur-overlay" />
         <div class="image-overlay" />
 
@@ -58,7 +51,7 @@ import { useImage } from '#imports'
 
 const imgComp = useImage()
 
-defineProps({
+const { image } = defineProps({
   slug: {
     type: String,
     required: true,
@@ -79,6 +72,9 @@ defineProps({
     type: String,
     required: true,
   },
+})
+const imgUrl = computed(() => {
+  return getImageUrl(image?.asset?._ref)
 })
 </script>
 

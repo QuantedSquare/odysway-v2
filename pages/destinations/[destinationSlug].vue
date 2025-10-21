@@ -76,10 +76,12 @@ const destinationQuery = `
     }
   }
 `
-const { data: destinationSanity } = await useSanityQuery(destinationQuery, {
-  slug: slug.value,
-})
-
+const sanity = useSanity()
+const { data: destinationSanity } = await useAsyncData('destination', () =>
+  sanity.fetch(destinationQuery, {
+    slug: slug.value,
+  }),
+)
 
 const dataToBlog = reactive({
   title: destinationSanity.value?.blog?.title,

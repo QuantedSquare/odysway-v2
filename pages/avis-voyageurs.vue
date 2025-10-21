@@ -23,7 +23,6 @@
 </template>
 
 <script setup>
-
 const route = useRoute()
 
 const pageQuery = `
@@ -33,7 +32,10 @@ const pageQuery = `
     secondPhrase,
   }
 `
-const { data: page } = await useSanityQuery(pageQuery)
+const sanity = useSanity()
+const { data: page } = await useAsyncData('avis-voyageurs', () =>
+  sanity.fetch(pageQuery),
+)
 
 // if (page.value) {
 //   // Set the page title explicitly

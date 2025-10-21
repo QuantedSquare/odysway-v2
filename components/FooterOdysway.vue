@@ -49,22 +49,15 @@
             md="4"
             class="rounded-lg px-md-0"
           >
-            <SanityImage
-              v-if="footer.team.image?.asset"
-              :asset-id="footer.team.image.asset._ref"
-              auto="format"
-            >
-              <template #default="{ src }">
-                <v-img
-                  rounded="lg"
-                  :src="img(src, { format: 'webp', quality: 70, width: 320, height: 270 })"
-                  :lazy-src="img(src, { format: 'webp', quality: 10, width: 320, height: 270 })"
-                  loading="lazy"
-                  alt="Image de l'équipe"
-                  class="max-height-300"
-                />
-              </template>
-            </SanityImage>
+            <v-img
+              v-if="footer?.team?.image?.asset"
+              rounded="lg"
+              :src="img(getImageUrl(footer?.team?.image?.asset), { format: 'webp', quality: 70, width: 320, height: 270 })"
+              :lazy-src="img(getImageUrl(footer?.team?.image?.asset), { format: 'webp', quality: 10, width: 320, height: 270 })"
+              loading="lazy"
+              alt="Image de l'équipe"
+              class="max-height-300"
+            />
           </v-col>
           <v-col
             cols="12"
@@ -217,11 +210,11 @@
 
 <script setup>
 import { useImage } from '#imports'
-import OdyswayFooter from '~/assets/img/odysway-text.png'
-import OdyswayFooterBleu from '~/assets/img/Logo-Odysway-Bleu.png'
+
+const OdyswayFooter = '/logos/odysway-text.png'
+const OdyswayFooterBleu = '/logos/Logo-Odysway-Bleu.png'
 
 const route = useRoute()
-const sanity = useSanity()
 
 const footerQuery = groq`*[_type == "footer"][0]{
   logo {
@@ -239,8 +232,22 @@ const footerQuery = groq`*[_type == "footer"][0]{
   linksList
 }`
 
-const { data: footer } = await useAsyncData('footer', () =>
-  sanity.fetch(footerQuery),
+const { data: footer } = await useAsyncData(
+  'footer',
+  async () => {
+    try {
+      const sanity = useSanity()
+      const result = await sanity.fetch(footerQuery)
+      return result || null
+    }
+    catch (e) {
+      console.error('Error fetching footer:', e)
+      return null
+    }
+  },
+  {
+    server: true,
+  },
 )
 
 const img = useImage()

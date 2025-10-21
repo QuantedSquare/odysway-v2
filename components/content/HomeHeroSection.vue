@@ -1,54 +1,47 @@
 <template>
   <div class="mt-8 mt-md-0">
     <div class="relative-hero-section mb-16 rounded-xl">
-      <SanityImage
-        v-if="image"
-        :asset-id="image.asset._ref"
-        auto="format"
+      <v-img
+        v-if="srcUrl"
+        :src="img(srcUrl, { format: 'webp', quality: 90, height: 900, width: 1536 })"
+        :lazy-src="img(srcUrl, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+        size="(max-width: 600) 480px, 1500px"
+        :srcset="`${img(srcUrl, { format: 'webp', quality: 80, width: 640, height: 900 })} 480w, ${img(srcUrl, { format: 'webp', quality: 80, width: 1024, height: 900 })} 1500w`"
+        height="100%"
+        alt="Image principale Hero d'Odysway"
+        class="rounded-xl hero-height"
+        cover
       >
-        <template #default="{ src }">
-          <v-img
-            :src="img(src, { format: 'webp', quality: 90, height: 900, width: 1536 })"
-            :lazy-src="img(src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-            size="(max-width: 600) 480px, 1500px"
-            :srcset="`${img(src, { format: 'webp', quality: 80, width: 640, height: 900 })} 480w, ${img(src, { format: 'webp', quality: 80, width: 1024, height: 900 })} 1500w`"
-            height="100%"
-            alt="Image principale Hero d'Odysway"
-            class="rounded-xl hero-height"
-            cover
-          >
-            <template #placeholder>
-              <div class="d-flex align-center justify-center fill-height">
-                <v-progress-circular
-                  indeterminate
-                  color="primary"
-                />
-              </div>
-            </template>
-
-            <template #default>
-              <div class="h-100 d-flex align-center position-relative">
-                <v-container class="text-white text-h4 text-md-h2 font-weight-bold text-shadow text-center">
-                  <v-row
-                    justify="center"
-                    align="center"
-                  >
-                    <v-col
-                      cols="12"
-                      md="auto"
-                    >
-                      <h1 class="custom-hero-title ">
-                        <slot name="title" />
-                      </h1>
-                      <slot name="subtitle" />
-                    </v-col>
-                  </v-row>
-                </v-container>
-              </div>
-            </template>
-          </v-img>
+        <template #placeholder>
+          <div class="d-flex align-center justify-center fill-height">
+            <v-progress-circular
+              indeterminate
+              color="primary"
+            />
+          </div>
         </template>
-      </SanityImage>
+
+        <template #default>
+          <div class="h-100 d-flex align-center position-relative">
+            <v-container class="text-white text-h4 text-md-h2 font-weight-bold text-shadow text-center">
+              <v-row
+                justify="center"
+                align="center"
+              >
+                <v-col
+                  cols="12"
+                  md="auto"
+                >
+                  <h1 class="custom-hero-title ">
+                    <slot name="title" />
+                  </h1>
+                  <slot name="subtitle" />
+                </v-col>
+              </v-row>
+            </v-container>
+          </div>
+        </template>
+      </v-img>
     </div>
     <div class="searchfield-overlap">
       <SearchField />
@@ -59,13 +52,17 @@
 <script setup>
 import { useImage } from '#imports'
 
-defineProps({
+const { image } = defineProps({
   image: {
     type: Object,
     required: true,
   },
 })
 const img = useImage()
+
+const srcUrl = computed(() => {
+  return getImageUrl(image?.asset?._ref)
+})
 </script>
 
 <style scoped>
@@ -124,10 +121,10 @@ margin-bottom: 45px;
   .hero-height {
     height: 50vh;
   }
-  .custom-hero-title {
-    font-size: 40px!important;
-    line-height: 40px!important;
-    margin-bottom: 90px;
+  .custom-hero-title:deep(p) {
+    font-size: 35px!important;
+    line-height: 30px!important;
+    margin-bottom: 0;
   }
   .searchfield-overlap {
     margin: -150px auto 0 auto;

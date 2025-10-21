@@ -1,14 +1,10 @@
 <template>
   <v-app>
-    <TopBar />
-    <v-main class="main-content mx-0 mx-md-5">
+    <v-main class="main-content mx-0 mx-md-5 px-1">
       <slot />
     </v-main>
   </v-app>
 </template>
-
-<script setup>
-</script>
 
 <style scoped>
 .main-content {

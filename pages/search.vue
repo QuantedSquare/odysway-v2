@@ -109,7 +109,7 @@ const searchContentQuery = groq`*[_type == "search"][0]{
 }`
 
 const { data: searchContent } = await useAsyncData('search-content', () =>
-  sanity.fetch(searchContentQuery)
+  sanity.fetch(searchContentQuery),
 )
 
 const { data: fetchedDestination } = useAsyncData('fetchedDestination', () => {
@@ -155,7 +155,7 @@ const travelTypesQuery = groq`*[_type == "search"][0]{
 }`
 
 const { data: travelTypes } = await useAsyncData('travelTypes', () =>
-  sanity.fetch(travelTypesQuery)
+  sanity.fetch(travelTypesQuery),
 )
 
 const TRAVEL_TYPES = {
@@ -204,7 +204,7 @@ const regionsQuery = groq`*[_type == "region"]{
 }`
 
 const { data: regions } = await useAsyncData('regions', () =>
-  sanity.fetch(regionsQuery)
+  sanity.fetch(regionsQuery),
 )
 
 const destinationsQuery = groq`*[_type == "destination"]{
@@ -218,7 +218,7 @@ const destinationsQuery = groq`*[_type == "destination"]{
 }`
 
 const { data: destinations } = await useAsyncData('destinations', () =>
-  sanity.fetch(destinationsQuery)
+  sanity.fetch(destinationsQuery),
 )
 
 const { data: voyages } = await useAsyncData(
@@ -255,6 +255,10 @@ const { data: voyages } = await useAsyncData(
       title,
       "slug": slug.current,
       image,
+      rating,
+      comments,
+      duration,
+      pricing,
       groupeAvailable,
       privatisationAvailable,
       monthlyAvailability,

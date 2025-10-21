@@ -26,22 +26,15 @@
             @mouseenter="hoveredIndex = index"
             @mouseleave="hoveredIndex = null"
           >
-            <SanityImage
-              :asset-id="avatar.image.asset._ref"
-              auto="format"
-            >
-              <template #default="{ src }">
-                <v-img
-                  :src="src"
-                  :lazy-src="img(src, { format: 'webp', quality: 10, width: 320 })"
-                  :srcset="`${img(src, { format: 'webp', quality: 70, width: 320 })} 70w, ${img(src, { format: 'webp', quality: 70, width: 320 })} 100w`"
-                  sizes="(max-width: 600px) 70px, 100px"
-                  rounded="circle"
-                  loading="lazy"
-                  :alt="avatar.name || 'Avatar de l\'équipe'"
-                />
-              </template>
-            </SanityImage>
+            <v-img
+              :src="getImageUrl(avatar.image.asset._ref)"
+              :lazy-src="img(getImageUrl(avatar.image.asset._ref), { format: 'webp', quality: 10, width: 320 })"
+              :srcset="`${img(getImageUrl(avatar.image.asset._ref), { format: 'webp', quality: 70, width: 320 })} 70w, ${img(getImageUrl(avatar.image.asset._ref), { format: 'webp', quality: 70, width: 320 })} 100w`"
+              sizes="(max-width: 600px) 70px, 100px"
+              rounded="circle"
+              loading="lazy"
+              :alt="avatar.name || 'Avatar de l\'équipe'"
+            />
           </v-avatar>
         </div>
       </v-lazy>
@@ -87,14 +80,31 @@
 <script setup>
 import { ref, watch, nextTick } from 'vue'
 import { useImage } from '#imports'
-import { SanityImage } from '#components'
 
 const sanityQuery = `
   *[_type == "teamMember"]|order(orderRank) {
-    ...
+    name,
+    description,
+    image
   }
 `
-const { data: avatars } = useSanityQuery(sanityQuery)
+const sanity = useSanity()
+const { data: avatars } = await useAsyncData(
+  'team-avatars',
+  async () => {
+    try {
+      const result = await sanity.fetch(sanityQuery)
+      return result || []
+    }
+    catch (e) {
+      console.error('Error fetching avatars:', e)
+      return []
+    }
+  },
+  {
+    server: true,
+  },
+)
 
 const img = useImage()
 const hoveredIndex = ref(null)

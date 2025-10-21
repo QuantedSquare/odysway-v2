@@ -72,7 +72,38 @@ export default defineNuxtConfig({
     transpile: ['vuetify'],
   },
   routeRules: {
-    '/': { prerender: true },
+    // Homepage and main sections
+    '/': { isr: 60 },
+    '/search': { isr: 60 },
+    '/prochains-departs': { isr: 60 },
+
+    // Dynamic content pages with slugs
+    '/voyages/**': { isr: 60 },
+    '/destinations/**': { isr: 60 },
+    '/thematiques/**': { isr: 60 },
+    '/experiences/**': { isr: 60 },
+    '/blog/**': { isr: 60 },
+
+    // Singleton pages (static content)
+    '/entreprise': { isr: 300 }, // 5 min - less frequently updated
+    '/sur-mesure': { isr: 300 },
+    '/vision-voyage-odysway': { isr: 300 },
+    '/contact': { isr: 300 },
+    '/faq': { isr: 300 },
+    '/avis-voyageurs': { isr: 300 },
+    '/offre-cadeau': { isr: 300 },
+    '/nous-recrutons': { isr: 300 },
+    '/devis': { isr: 300 },
+    '/checkout': { isr: 300 },
+
+    // Legal pages (rarely updated)
+    '/politique-de-confidentialite': { isr: 3600 }, // 1 hour
+    '/mentions-legales': { isr: 3600 },
+    '/conditions-generales-de-vente': { isr: 3600 },
+    '/cheques-vacances': { isr: 3600 },
+    '/confirmation': { isr: 3600 },
+
+    // API routes
     '/api/**': { cors: true },
   },
   // ot sure this improve a lot.
@@ -91,6 +122,11 @@ export default defineNuxtConfig({
     },
     prerender: {
       routes: ['/'],
+    },
+    vercel: {
+      config: {
+        bypassToken: process.env.VERCEL_BYPASS_TOKEN,
+      },
     },
   },
   vite: {
@@ -140,20 +176,20 @@ export default defineNuxtConfig({
       3072: 3072,
     },
     sanity: {
-      projectId: process.env.SANITY_PROJECT_ID
-    }
+      projectId: process.env.SANITY_PROJECT_ID,
+    },
   },
   sanity: {
     projectId: process.env.SANITY_PROJECT_ID,
     dataset: process.env.SANITY_DATASET,
     apiVersion: '2025-04-01',
-    useCdn: false,
+    useCdn: false, // Disable CDN for instant updates (recommended for webhooks)
     withCredentials: false,
-    // visualEditing: {
-    //   token: process.env.SANITY_VIEWER_TOKEN,
-    //   studioUrl: process.env.SANITY_STUDIO_URL,
-    //   stega: true,
-    // },
+    visualEditing: {
+      token: process.env.SANITY_VIEWER_TOKEN,
+      studioUrl: process.env.SANITY_STUDIO_URL,
+      stega: true,
+    },
   },
   schemaOrg: {
     identity: defineOrganization({

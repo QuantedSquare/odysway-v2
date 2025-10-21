@@ -1,14 +1,6 @@
 <template>
   <v-app>
-    <HeaderOdysway
-      v-model="drawer"
-    />
-    <ClientOnly>
-      <LazyDrawer
-        v-if="width < 960"
-        v-model="drawer"
-      />
-    </ClientOnly>
+    <TopBar />
 
     <v-main class="main-content mx-0 mx-md-5 px-1">
       <slot />
@@ -89,21 +81,51 @@
 import { useDisplay } from 'vuetify'
 
 const { width } = useDisplay()
-const drawer = ref(false)
 const route = useRoute()
-const sanity = useSanity()
 
-const { data: partenairesTextes } = await useAsyncData('partenairesTextes', () => {
-  return sanity.fetch(groq`*[_type == "ctas"][0]{
-    layoutInfoContainer,
-    partenairesSection
-  }`)
-})
+const partenairesQuery = groq`*[_type == "ctas"][0]{
+  layoutInfoContainer,
+  partenairesSection
+}`
 
-const { data: searchContent } = await useAsyncData('search-content', () =>
-  sanity.fetch(groq`*[_type == "page_search"][0]{
-    infoContainer
-  }`),
+const searchQuery = groq`*[_type == "search"][0]{
+  infoContainer
+}`
+
+const { data: partenairesTextes } = await useAsyncData(
+  'partenairesTextes',
+  async () => {
+    try {
+      const sanity = useSanity()
+      const result = await sanity.fetch(partenairesQuery)
+      return result || null
+    }
+    catch (e) {
+      console.error('Error fetching partenaires:', e)
+      return null
+    }
+  },
+  {
+    server: true,
+  },
+)
+
+const { data: searchContent } = await useAsyncData(
+  'search-content',
+  async () => {
+    try {
+      const sanity = useSanity()
+      const result = await sanity.fetch(searchQuery)
+      return result || null
+    }
+    catch (e) {
+      console.error('Error fetching search content:', e)
+      return null
+    }
+  },
+  {
+    server: true,
+  },
 )
 </script>
 

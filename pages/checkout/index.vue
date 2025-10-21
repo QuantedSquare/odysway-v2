@@ -94,8 +94,11 @@ const error = ref(null)
 
 // 🧱 1. Fetch page texts (from Sanity)
 const checkoutTextsQuery = groq`*[_type == "checkout"][0]{ ... }`
+const sanity = useSanity()
 try {
-  const { data: pageTextsData } = await useSanityQuery(checkoutTextsQuery, {})
+  const { data: pageTextsData } = await useAsyncData('checkout-page-texts', () =>
+    sanity.fetch(checkoutTextsQuery),
+  )
   pageTexts.value = pageTextsData.value
 }
 catch (err) {

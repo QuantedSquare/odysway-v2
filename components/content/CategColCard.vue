@@ -1,58 +1,54 @@
 <template>
   <v-col class="mr-0 pr-0">
-    <!-- <v-lazy
+    <v-lazy
       :min-height="width <= 960 ? 300 : 415"
       :options="{ threshold: 0.5 }"
       transition="fade-transition"
-    > -->
-    <NuxtLink
-      :to="`/${type}/${slug}`"
-      class="image-wrapper default-expanded rounded"
     >
-      <SanityImage
-        v-if="image"
-        :asset-id="image.asset._ref"
-        auto="format"
+      <NuxtLink
+        :to="`/${type}/${slug}`"
+        class="image-wrapper default-expanded rounded"
       >
-        <template #default="{ src }">
-          <v-img
-            v-if="src"
-            :src="imgComp(src, { format: 'webp', quality: 70, width: 1024 })"
-            :lazy-src="imgComp(src, { format: 'webp', quality: 10, width: 1024 })"
-            :srcset="`${imgComp(src, { format: 'webp', quality: 70, width: 1024 })} 1024w, ${imgComp(src, { format: 'webp', quality: 70, width: 1536 })} 1536w`"
-            sizes="(max-width: 600px) 480px, 1024px"
-            loading="lazy"
-            width="100%"
-            :alt="`Image de la thématique ${title}`"
-            cover
-          />
-        </template>
-      </SanityImage>
 
-      <div class="blur-overlay" />
-      <div class="image-overlay" />
+        <v-img
+          v-if="imageUrl"
+          :src="imgComp(imageUrl, { format: 'webp', quality: 70, width: 1024 })"
+          :lazy-src="imgComp(imageUrl, { format: 'webp', quality: 10, width: 1024 })"
+          :srcset="`${imgComp(imageUrl, { format: 'webp', quality: 70, width: 1024 })} 1024w, ${imgComp(imageUrl, { format: 'webp', quality: 70, width: 1536 })} 1536w`"
+          sizes="(max-width: 600px) 480px, 1024px"
+          loading="lazy"
+          width="100%"
+          :alt="`Image de la thématique ${title}`"
+          cover
+        />
 
-      <div
-        class="content-wrapper "
-      >
-        <h3
-          key="title"
-          class=" font-weight-bold custom-font-size text-center text-shadow text-line-space mx-2 mx-md-3"
+        <div class="blur-overlay" />
+        <div class="image-overlay" />
+
+        <div
+          class="content-wrapper "
         >
-          {{ title }}
-        </h3>
-      </div>
-    </NuxtLink>
-    <!-- </v-lazy> -->
+          <h3
+            key="title"
+            class=" font-weight-bold custom-font-size text-center text-shadow text-line-space mx-2 mx-md-3"
+          >
+            {{ title }}
+          </h3>
+        </div>
+      </NuxtLink>
+    </v-lazy>
   </v-col>
 </template>
 
 <script setup>
+import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
+
+const { width } = useDisplay()
 
 const imgComp = useImage()
 
-defineProps({
+const { image } = defineProps({
   slug: {
     type: String,
     required: true,
@@ -73,6 +69,9 @@ defineProps({
     type: String,
     required: true,
   },
+})
+const imageUrl = computed(() => {
+  return getImageUrl(image?.asset?._ref)
 })
 </script>
 
