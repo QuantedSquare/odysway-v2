@@ -4,6 +4,91 @@
       v-if="config.public.environment === 'development'"
       class="py-8"
     >
+      <!-- Dataset Switcher Card -->
+      <v-card class="mb-6 pa-4">
+        <v-card-title class="text-h5 d-flex align-center justify-space-between">
+          <span>🗂️ Dataset Switcher</span>
+          <DatasetSwitcher />
+        </v-card-title>
+        <v-card-text>
+          <v-alert
+            type="info"
+            variant="tonal"
+            class="mb-4"
+            density="compact"
+          >
+            <div class="text-caption">
+              <strong>Current Dataset:</strong> {{ currentDataset }}
+              <br>
+              <strong>Note:</strong> Switch between Sanity datasets to test content from different workspaces.
+              Data will automatically refetch when you change datasets.
+            </div>
+          </v-alert>
+
+          <div v-if="datasetVoyage">
+            <h3 class="mb-3">
+              Sample Data from "{{ currentDataset }}" Dataset (with published filter):
+            </h3>
+            <p><strong>Voyage Title:</strong> {{ datasetVoyage.title }}</p>
+            <p><strong>ID:</strong> {{ datasetVoyage._id }}</p>
+            <p><strong>Published:</strong> {{ datasetVoyage.published }}</p>
+          </div>
+          <v-alert
+            v-else
+            type="warning"
+            class="ma-4"
+          >
+            No published voyage found in "{{ currentDataset }}" dataset
+          </v-alert>
+
+          <v-divider class="my-4" />
+
+          <div v-if="allVoyages && allVoyages.length > 0">
+            <h3 class="mb-3">
+              All Voyages in "{{ currentDataset }}" (no filter):
+            </h3>
+            <p><strong>Total voyages:</strong> {{ allVoyages.length }}</p>
+            <v-list density="compact">
+              <v-list-item
+                v-for="v in allVoyages.slice(0, 5)"
+                :key="v._id"
+              >
+                <v-list-item-title>{{ v.title }}</v-list-item-title>
+                <v-list-item-subtitle>Published: {{ v.published || 'undefined' }}</v-list-item-subtitle>
+              </v-list-item>
+            </v-list>
+          </div>
+          <v-alert
+            v-else
+            type="error"
+            class="ma-4"
+          >
+            No voyages found at all in "{{ currentDataset }}" dataset!
+          </v-alert>
+
+          <v-divider class="my-4" />
+
+          <div>
+            <h3 class="mb-3">
+              Debug: Test Raw Connection
+            </h3>
+            <v-btn
+              color="info"
+              @click="testConnection"
+            >
+              Test Sanity Connection
+            </v-btn>
+            <v-alert
+              v-if="connectionTest"
+              :type="connectionTest.success ? 'success' : 'error'"
+              class="mt-3"
+            >
+              <pre class="text-caption">{{ JSON.stringify(connectionTest, null, 2) }}</pre>
+            </v-alert>
+          </div>
+        </v-card-text>
+      </v-card>
+
       <v-card class="mb-6 pa-4">
         <v-card-title class="text-h5">
           🔗 Webhook Tester
@@ -113,7 +198,7 @@
         <v-card-title>Sample Voyage Data</v-card-title>
         <v-card-text>
           <v-img
-            v-if="voyage"
+            v-if="voyage && voyage.imageUrl"
             :src="getImageUrl(voyage.imageUrl.asset._ref)"
             :lazy-src="getImageUrl(voyage.imageUrl.asset._ref)"
             alt="Voyage Image"
@@ -145,34 +230,79 @@ definePageMeta({
 
 const config = useRuntimeConfig()
 
-// Fetch voyage data
+// Dataset switching setup
+const { dataset: currentDataset, fetch: fetchFromDataset } = useSanityDataset()
+
+// Fetch voyage data using the dynamic dataset
 const voyageQuery = /* groq */`
   *[_type == "voyage" && published == true] | order(title asc)[0] {
-    _id,
-    title,
-    duration,
-    rating,
-    description,
-    destinations[]->{_id, title},
-    categories[]->{_id, title},
-    pricing,
-    "imageUrl": image,
-    "slug": slug.current,
-    ...,
-    programmeBlock[]{
-      title,
-      badgeText,
-      description,
-      denivellation,
-      road,
-      night
-    }
+    ...
   }
 `
+
+// Fetch data using the dynamic dataset composable (with published filter)
+const { data: datasetVoyage } = await useAsyncData(
+  `voyage-${currentDataset.value}`,
+  () => fetchFromDataset(voyageQuery),
+  {
+    watch: [currentDataset], // Automatically refetch when dataset changes
+  },
+)
+
+// Also fetch ALL voyages without the published filter to debug
+const allVoyagesQuery = /* groq */`
+  *[_type == "voyage"] | order(title asc) {
+    _id,
+    title,
+    published,
+    "slug": slug.current
+  }
+`
+const { data: allVoyages } = await useAsyncData(
+  `all-voyages-${currentDataset.value}`,
+  () => fetchFromDataset(allVoyagesQuery),
+  {
+    watch: [currentDataset],
+  },
+)
+
+// Keep the original fetch for backward compatibility with webhook tester
 const sanity = useSanity()
 const { data: voyage } = await useAsyncData('voyage', () =>
   sanity.fetch(voyageQuery),
 )
+
+// Connection testing
+const connectionTest = ref(null)
+const testConnection = async () => {
+  connectionTest.value = null
+  try {
+    // Test 1: Very simple count query
+    const count = await fetchFromDataset('count(*[_type == "voyage"])')
+
+    // Test 2: Get first voyage (any state)
+    const firstVoyage = await fetchFromDataset('*[_type == "voyage"][0]{ _id, title, published }')
+
+    // Test 3: Check published voyages
+    const publishedCount = await fetchFromDataset('count(*[_type == "voyage" && published == true])')
+
+    connectionTest.value = {
+      success: true,
+      dataset: currentDataset.value,
+      totalVoyages: count,
+      publishedVoyages: publishedCount,
+      firstVoyage: firstVoyage || 'none found',
+    }
+  }
+  catch (error) {
+    connectionTest.value = {
+      success: false,
+      dataset: currentDataset.value,
+      error: error.message,
+      details: error,
+    }
+  }
+}
 
 // Webhook testing state
 // #TODO TO change before go on live
@@ -182,7 +312,6 @@ const testSlug = ref('photographie-animaliere-vosges')
 const webhookResponse = ref(null)
 const webhookError = ref(null)
 const testing = ref(false)
-console.log('webhookSecret', webhookSecret.value)
 // Content types list
 const contentTypes = [
   { label: '🧳 Voyage', value: 'voyage', requiresSlug: true, exampleSlug: 'bali' },
