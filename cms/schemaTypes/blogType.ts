@@ -134,21 +134,11 @@ export const blogType = defineType({
 
     // SEO
     defineField({
-      name: 'seoTitle',
-      type: 'string',
-      title: 'SEO Title',
-      description: 'Title for search engines (max 60 chars)',
-      validation: (rule) => rule.max(60),
+      name: 'seo',
+      title: 'SEO Settings',
+      type: 'seo',
       group: 'seo',
-    }),
-    defineField({
-      name: 'seoDescription',
-      type: 'text',
-      title: 'SEO Description',
-      description: 'Description for search engines (max 160 chars)',
-      rows: 3,
-      validation: (rule) => rule.max(160),
-      group: 'seo',
+      description: 'Configuration SEO pour ce blog post',
     }),
     defineField({
       name: 'tags',
@@ -158,6 +148,7 @@ export const blogType = defineType({
         layout: 'tags',
       },
       group: 'seo',
+      description: 'Tags pour le blog (différent des mots-clés SEO)',
     }),
 
     // Blog metadata
