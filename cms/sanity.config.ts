@@ -105,7 +105,7 @@ export default defineConfig({
             S.divider(),
             S.listItem()
               .title('Textes')
-              .icon(() => '📝')
+              .icon(() => '🖋️')
               .child(
                 S.list()
                   .title('Textes')
@@ -114,42 +114,45 @@ export default defineConfig({
                     S.documentTypeListItem('footer').title('Footer'),
                     S.documentTypeListItem('tops').title('Tops'),
                     S.documentTypeListItem('partner').title('Partners'),
-                    S.documentTypeListItem('page_blog').title('Page Blog'),
                     S.documentTypeListItem('checkout').title('Checkout'),
-                    S.documentTypeListItem('page_contact').title('Page Contact'),
-                    S.documentTypeListItem('page_experiences').title('Page Expériences'),
-                    S.documentTypeListItem('page_thematiques').title('Page Thématiques'),
                     S.documentTypeListItem('newsletter').title('Newsletter'),
-                    S.documentTypeListItem('search').title('Page Recherche'),
                     S.documentTypeListItem('ctas').title('CTAs'),
                     S.documentTypeListItem('devis').title('Devis'),
-                    S.documentTypeListItem('page_voyage').title('Page Voyage'),
                     S.documentTypeListItem('voyage_card').title('Carte Voyage'),
-                    S.documentTypeListItem('avisVoyageurs').title('Page Avis Voyageurs'),
-                    S.documentTypeListItem('faq').title('Page FAQ'),
+                   
                   ]),
               ),
             S.listItem()
-              .title('Autres pages')
+              .title('Pages')
+              .icon(() => '📄')
               .child(
                 S.list()
-                  .title('Autres pages')
+                  .title('Pages')
                   .items([
                     S.documentTypeListItem('homePage').title('Page Accueil'),
-                    S.documentTypeListItem('privacyPolicy').title(
-                      'Page Politique de confidentialité',
-                    ),
+                    S.documentTypeListItem('page_voyage').title('Page Voyage'),
+                    S.documentTypeListItem('page_contact').title('Page Contact'),
+                    S.documentTypeListItem('page_experiences').title('Page Expériences'),
+                    S.documentTypeListItem('page_thematiques').title('Page Thématiques'),
+                    S.documentTypeListItem('page_blog').title('Page Blog'),
+                    S.documentTypeListItem('search').title('Page Recherche'),
+                    S.documentTypeListItem('faq').title('Page FAQ'),
+                    S.divider(),
                     S.documentTypeListItem('recruitment').title('Page Recruitement'),
-                    S.documentTypeListItem('legalMentions').title('Page Mentions légales'),
                     S.documentTypeListItem('chequesVacances').title('Page Chèques-Vacances'),
                     S.documentTypeListItem('conditionsGeneralesVente').title(
                       'Page Conditions Générales de Vente',
                     ),
+                    S.documentTypeListItem('avisVoyageurs').title('Page Avis Voyageurs'),
                     S.documentTypeListItem('confirmation').title('Page Confirmation'),
                     S.documentTypeListItem('offreCadeau').title('Page Offre Cadeau'),
                     S.documentTypeListItem('surMesure').title('Page Sur Mesure'),
                     S.documentTypeListItem('visionVoyageOdysway').title('Page Vision Voyage Odysway'),
                     S.documentTypeListItem('entreprise').title('Page Entreprise'),
+                    S.documentTypeListItem('legalMentions').title('Page Mentions légales'),
+                    S.documentTypeListItem('privacyPolicy').title(
+                      'Page Politique de confidentialité',
+                    ),
                   ]),
               ),
             orderableDocumentListDeskItem({
