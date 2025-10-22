@@ -24,7 +24,7 @@
       },
       {
         "question": "Comment se déroulent les repas ?",
-        "answer": "Les repas inclus sont pris dans des restaurants locaux ou ryokan traditionnels, pour goûter à la diversité de la gastronomie japonaise. Les repas libres sont l’occasion de choisir vos adresses selon vos envies : votre guide vous partagera toujours ses meilleures recommandations."
+        "answer": "Les repas inclus sont pris dans des restaurants locaux ou ryokan traditionnels, pour goûter à la diversité de la gastronomie japonaise. Les repas libres sont l’occasion de choisir vos adresses selon vos envies : votre guide vous partagera toujours ses meilleures recommandations. \t•\tJour 1 : Déjeuner et dîner libres. \t•\tJour 2 : Petit-déjeuner, déjeuner et dîner inclus. \t•\tJour 3 : Petit-déjeuner et déjeuner inclus. Dîner libre. \t•\tJour 4 : Petit-déjeuner inclus. Déjeuner et dîner libres. \t•\tJour 5 : Petit-déjeuner et déjeuner inclus. Dîner libre. \t•\tJour 6 : Petit-déjeuner et déjeuner inclus (bento à bord du train). Dîner libre. \t•\tJour 7 : Petit-déjeuner et déjeuner inclus. Dîner libre. \t•\tJour 8 : Petit-déjeuner, déjeuner et dîner inclus. \t•\tJour 9 : Petit-déjeuner et déjeuner inclus (bento à bord du train). Dîner libre. \t•\tJour 10 : Petit-déjeuner et déjeuner inclus. Dîner libre. \t•\tJour 11 : Petit-déjeuner et déjeuner inclus. Dîner libre. \t•\tJour 12 : Petit-déjeuner et dîner inclus. Déjeuner libre. \t•\tJour 13 : Petit-déjeuner inclus."
       },
       {
         "question": "Peut-on voyager seul ?",
@@ -115,22 +115,22 @@
     {
       "title": "Arrivée à Osaka",
       "badgeText": "Jour 1",
-      "description": "Bienvenue au Japon. À votre arrivée, un assistant francophone vous accueille à l’aéroport et vous accompagne jusqu’à votre hôtel. Osaka vous tend les bras : grande, colorée, pleine de vie. Vous pouvez choisir de vous reposer ou de faire vos premiers pas dans le quartier animé de Dotonbori, où les néons s’allument et où la street food japonaise tient ses promesses. Okonomiyaki, takoyaki, sushi carrés… le Japon commence par une bouchée.  Dîner libre..",
+      "description": "Bienvenue au Japon. À votre arrivée, un assistant francophone vous accueille à l’aéroport et vous accompagne jusqu’à votre hôtel. Osaka vous tend les bras : grande, colorée, pleine de vie. Vous pouvez choisir de vous reposer ou de faire vos premiers pas dans le quartier animé de Dotonbori, où les néons s’allument et où la street food japonaise tient ses promesses. Okonomiyaki, takoyaki, sushi carrés… le Japon commence par une bouchée. Dîner libre..",
       "photo": "/images/1.voyages/voyage-immersion-japon/osaka-jour-1.jpg",
       "night": ""
     },
     {
       "title": "Osaka, entre modernité et traditions",
       "badgeText": "Jour 2",
-      "description": "Accompagnés de votre guide, partez à la découverte du château d’Osaka, symbole de la réunification du Japon. Ses douves et ses remparts racontent des siècles d’histoire. L’après-midi, le quartier de Namba vous plonge dans un autre Japon : effervescent, lumineux, excentrique. Le soir, un dîner de bienvenue réunit le groupe autour de la gastronomie locale.  Déjeuner et dîner inclus. Nuit à Osaka.  Suggestion Odysway : devenez artisan du mochi le temps d’un atelier convivial au cœur de la ville.",
+      "description": "Accompagnés de votre guide, partez à la découverte du château d’Osaka, symbole de la réunification du Japon. Ses douves et ses remparts racontent des siècles d’histoire. L’après-midi, le quartier de Namba vous plonge dans un autre Japon : effervescent, lumineux, excentrique. Le soir, un dîner de bienvenue réunit le groupe autour de la gastronomie japonaise locale. Nuit à Osaka. ",
       "photo": "/images/1.voyages/voyage-immersion-japon/osaka-jour-2.jpg"
     },
     {
       "title": "Osaka - Kyoto : bambous et pavillons d’or",
       "badgeText": "Jour 3",
-      "description": "Train vers Kyoto, l’ancienne capitale impériale. Vous découvrez la bambouseraie d’Arashiyama, un tunnel de verdure où chaque pas résonne doucement sur le bois. Puis vient la cérémonie du thé, lente et précise, avant la visite du célèbre Pavillon d’Or, le Kinkaku-ji, qui se reflète sur l’eau comme une promesse d’harmonie.  Déjeuner inclus. ",
+      "description": "Train vers Kyoto, l’ancienne capitale impériale. Vous découvrez la bambouseraie d’Arashiyama, un tunnel de verdure où chaque pas résonne doucement sur le bois. Puis vient la cérémonie du thé, lente et précise, avant la visite du célèbre Pavillon d’Or, le Kinkaku-ji, qui se reflète sur l’eau comme une promesse d’harmonie. ",
       "photo": "/images/1.voyages/voyage-immersion-culturelle-japon/4VSIIE5NQ16QalmcfUTy.jpg",
-      "night": "Nuit à l’hôtel Prince Kyoto Takaragaike."
+      "night": ""
     },
     {
       "title": "Kyoto libre, au rythme des traditions",
@@ -141,41 +141,41 @@
     {
       "title": "Kyoto - Nara - Kyoto : au pays des daims",
       "badgeText": "Jour 5",
-      "description": "Départ pour Nara, première capitale du Japon. Ici, les daims se promènent librement parmi les temples et les visiteurs. Vous découvrez le temple Todai-ji et son immense Bouddha de bronze, puis le sanctuaire Kasuga Taisha et ses milliers de lanternes. Retour à Kyoto en fin de journée.  Déjeuner inclus. Dîner libre. Nuit à Kyoto.",
-      "photo": "/images/1.voyages/voyage-immersion-japon/nara-jour-5.jpg"
+      "description": "Départ pour Nara, première capitale du Japon. Ici, les daims se promènent librement parmi les temples et les visiteurs. Vous découvrez le temple Todai-ji et son immense Bouddha de bronze, puis le sanctuaire Kasuga Taisha et ses milliers de lanternes. Retour à Kyoto en fin de journée. Dîner libre. Nuit à Kyoto.",
+      "photo": "/images/1.voyages/voyage-immersion-japon/nara-japon.jpg"
     },
     {
       "badgeText": "Jour 6",
       "title": "Kyoto - Takayama : l’esprit Edo",
-      "description": "Train express vers Takayama, au cœur des Alpes japonaises. Le trajet en Shinkansen offre déjà un aperçu du Japon rural, entre rizières et montagnes. Déjeuner bento à bord, comme les Japonais. À Takayama, les maisons de bois, les ruelles calmes et les échoppes artisanales vous transportent dans le Japon d’autrefois.  Déjeuner inclus. Nuit à l’hôtel Mercure Hida Takayama.",
-      "photo": "/images/1.voyages/voyage-immersion-japon/takayama.jpg"
+      "description": "Train express vers Takayama, au cœur des Alpes japonaises. Le trajet en Shinkansen vous offre un aperçu du Japon rural, entre rizières et montagnes. Déjeuner bento à bord, comme les Japonais. À Takayama, les maisons de bois, les ruelles calmes et les échoppes artisanales vous transportent dans le Japon d’autrefois. Nuit à l’hôtel Mercure Hida Takayama.",
+      "photo": "/images/1.voyages/voyage-immersion-japon/takayma-japon.png"
     },
     {
       "badgeText": "Jour 7",
       "title": "Shirakawa-go : village suspendu dans le temps",
-      "description": "Excursion dans le village classé de Shirakawa-go, célèbre pour ses toits de chaume pentus. Un décor de carte postale, figé depuis des siècles. On y sent la vie simple d’autrefois, l’hiver rude, la chaleur du foyer. Retour à Takayama pour une soirée libre.  Déjeuner inclus. Nuit à Takayama.",
+      "description": "Découverte ce matin du village classé de Shirakawa-go, célèbre pour ses toits de chaume pentus. Un décor de carte postale, figé depuis des siècles. On y sent la vie simple d’autrefois, l’hiver rude, la chaleur du foyer. Retour à Takayama pour une soirée libre. Nuit à Takayama.",
       "photo": "/images/1.voyages/voyage-immersion-japon/shirakawa-go.jpg"
     },
     {
       "title": "Takayama - Gero Onsen : le Japon des sources chaudes",
       "badgeText": "Jour 8",
-      "description": "Direction Gero Onsen, cité thermale légendaire. Une ville où l’eau est reine, où les vapeurs s’élèvent dans les ruelles et où le temps s’arrête. Installez-vous dans votre ryokan et goûtez au plaisir du bain japonais : le corps se détend, l’esprit aussi. Le soir, un dîner kaiseki vous attend, tout en finesse.  Déjeuner et dîner inclus. Nuit au Ryokan Suimeikan.",
+      "description": "Direction Gero Onsen, cité thermale légendaire. Une ville où l’eau est reine, où les vapeurs s’élèvent dans les ruelles et où le temps s’arrête. Installez-vous dans votre ryokan et goûtez au plaisir du bain japonais . Le soir, un dîner kaiseki vous attend, tout en finesse.  Nuit au Ryokan Suimeikan. ",
       "photo": "/images/1.voyages/voyage-immersion-japon/onsen.jpg"
     },
     {
       "title": "Gero Onsen - Tokyo : entre passé et futur",
       "badgeText": "Jour 9",
-      "description": "Matinée libre, puis train vers Tokyo. Changement de décor : la capitale s’impose, vibrante et fascinante. Vous découvrez le sanctuaire Meiji-jingu, havre de paix au cœur de la ville, puis le quartier excentrique de Harajuku, théâtre du Japon moderne.  Déjeuner inclus. Nuit à l’hôtel Tokyo Intergate Kyobashi.",
+      "description": "Matinée libre, puis train vers Tokyo. Changement de décor : la capitale s’impose, fascinante. Vous découvrez le sanctuaire Meiji-jingu, havre de paix au cœur de la ville, puis le quartier excentrique de Harajuku, théâtre du Japon moderne. Nuit à l’hôtel Tokyo Intergate Kyobashi.",
       "photo": "/images/1.voyages/voyage-immersion-japon/meiji-jing.jpg"
     },
     {
       "title": "Tokyo : traditions et lumières",
       "badgeText": "Jour 10",
-      "description": "Balade au jardin Hamarikyu, bulle de verdure suspendue au milieu des gratte-ciel. Puis direction Odaiba, île futuriste et joyeuse. L’après-midi, retour à l’histoire : Asakusa et le temple Senso-ji, cœur battant du vieux Tokyo. Un Japon multiple, tout en contrastes.  Déjeuner inclus. Nuit à Tokyo.",
+      "description": "Balade au jardin Hamarikyu, bulle de verdure suspendue au milieu des gratte-ciel. Puis direction Odaiba, île futuriste et joyeuse. L’après-midi, retour à l’histoire : Asakusa et le temple Senso-ji, cœur battant du vieux Tokyo. Un Japon multiple, tout en contrastes. Nuit à Tokyo.",
       "photo": "/images/1.voyages/voyage-immersion-culturelle-japon/nJQYqGHATTaF6zQToxql.jpg"
     },
     {
-      "description": "Excursion à Kamakura, petite ville côtière entourée de collines. Visite du temple Hachimangu, puis du Grand Bouddha de bronze de Kotoku-in. L’air marin et la douceur du lieu en font une journée paisible et inspirante. Retour à Tokyo en fin d’après-midi.  Déjeuner inclus. Nuit à Tokyo.",
+      "description": "Visite de Kamakura, petite ville côtière entourée de collines. Visite du temple Hachimangu, puis du Grand Bouddha de bronze de Kotoku-in. L’air marin et la douceur du lieu en font une journée paisible et inspirante. Retour à Tokyo en fin d’après-midi. Nuit à Tokyo.",
       "badgeText": "Jour 11",
       "title": "Kamakura : entre mer et bouddhas géants",
       "photo": "/images/1.voyages/voyage-immersion-japon/kamakura-2.jpg"
@@ -183,7 +183,7 @@
     {
       "badgeText": "Jour 12",
       "title": "Tokyo libre et dîner d’au revoir",
-      "description": "Une journée pour flâner à votre rythme : Ginza, Ueno, Shibuya ou Akihabara… Le soir, dîner d’au revoir dans un izakaya typique pour célébrer la fin du voyage autour de quelques plats à partager.  Dîner inclus. Nuit à Tokyo.",
+      "description": "Une journée pour flâner à votre rythme : Ginza, Ueno, Shibuya ou Akihabara… Le soir, dîner d’au revoir dans un izakaya typique pour célébrer la fin du voyage autour de quelques plats à partager. Nuit à Tokyo.",
       "photo": "/images/1.voyages/voyage-immersion-japon/izakaya.jpg"
     },
     {
