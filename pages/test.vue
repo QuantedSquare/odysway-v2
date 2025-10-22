@@ -175,13 +175,14 @@ const { data: voyage } = await useAsyncData('voyage', () =>
 )
 
 // Webhook testing state
+// #TODO TO change before go on live
 const webhookSecret = ref('mY7f1j2Q1RskslUV6o4wU6tzE32xqTXBx2N4t66jEe8')
 const testType = ref('voyage')
 const testSlug = ref('photographie-animaliere-vosges')
 const webhookResponse = ref(null)
 const webhookError = ref(null)
 const testing = ref(false)
-
+console.log('webhookSecret', webhookSecret.value)
 // Content types list
 const contentTypes = [
   { label: '🧳 Voyage', value: 'voyage', requiresSlug: true, exampleSlug: 'bali' },
