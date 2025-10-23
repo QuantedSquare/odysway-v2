@@ -93,35 +93,6 @@ export const seoFields = defineType({
         },
       ],
     }),
-    defineField({
-      name: 'ogType',
-      title: 'Open Graph Type',
-      type: 'string',
-      options: {
-        list: [
-          {title: 'Website (page d\'accueil)', value: 'website'},
-          {title: 'Article (blog/destination)', value: 'article'},
-          {title: 'Product (voyage individuel)', value: 'product'},
-        ],
-      },
-      initialValue: 'website',
-      description: 'Type de contenu pour le partage social',
-    }),
-    // Advanced
-    defineField({
-      name: 'noSnippet',
-      title: 'No Snippet',
-      type: 'boolean',
-      description: 'Empêcher les moteurs de recherche d\'afficher un extrait dans les résultats',
-      initialValue: false,
-    }),
-    defineField({
-      name: 'noArchive',
-      title: 'No Archive',
-      type: 'boolean',
-      description: 'Empêcher les moteurs de recherche d\'afficher un lien en cache',
-      initialValue: false,
-    }),
   ],
 })
 
