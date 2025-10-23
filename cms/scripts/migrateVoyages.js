@@ -260,11 +260,19 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
     }
   }
 
-  // Convert SEO images
-  let seoSectionWithImages = voyage.seoSection
+  // Convert SEO fields to new format
+  let seoFields = null
   if (voyage.seoSection) {
-    seoSectionWithImages = {
-      ...voyage.seoSection,
+    seoFields = {
+      metaTitle: voyage.seoSection.metaTitle || null,
+      metaDescription: voyage.seoSection.metaDescription || null,
+      canonicalUrl: voyage.seoSection.canonicalUrl || null,
+      focusKeyword: voyage.seoSection.focusKeyword || null,
+      keywords: voyage.seoSection.keywords || [],
+      robotsIndex: voyage.seoSection.robotsIndex !== undefined ? voyage.seoSection.robotsIndex : true,
+      robotsFollow: voyage.seoSection.robotsFollow !== undefined ? voyage.seoSection.robotsFollow : true,
+      ogTitle: voyage.seoSection.ogTitle || null,
+      ogDescription: voyage.seoSection.ogDescription || null,
       ogImage: voyage.seoSection.ogImage?.src
         ? convertImageReference(
             basename(voyage.seoSection.ogImage.src),
@@ -273,16 +281,7 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
             reporter,
             voyageID,
           )
-        : voyage.seoSection.ogImage,
-      twitterImage: voyage.seoSection.twitterImage?.src
-        ? convertImageReference(
-            basename(voyage.seoSection.twitterImage.src),
-            assetMapping,
-            voyage.seoSection.twitterImage.alt || '',
-            reporter,
-            voyageID,
-          )
-        : voyage.seoSection.twitterImage,
+        : null,
     }
   }
 
@@ -386,7 +385,7 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
     photosList: photosListRefs,
     videoLinks: voyage.videoLinks || [],
     faqBlock: await convertFaqBlockToPortableText(voyage.faqBlock?.faqList || [], assetMapping),
-    seoSection: seoSectionWithImages,
+    seo: seoFields,
 
     // Convert monthlyAvailability from object to array
     monthlyAvailability: monthlyAvailabilityArray,
