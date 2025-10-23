@@ -77,24 +77,60 @@ export const voyageType = defineType({
       title: 'Slug du voyage',
     }),
     defineField({
+      name: 'availabilityTypes',
+      type: 'array',
+      title: 'Types de disponibilité',
+      description: 'Sélectionnez les types de voyage disponibles',
+      of: [{type: 'string'}],
+      options: {
+        list: [
+          {title: 'Voyage en groupe', value: 'groupe'},
+          {title: 'Voyage en privatisation', value: 'privatisation'},
+          {title: 'Voyage sur-mesure', value: 'custom'},
+        ],
+        layout: 'grid',
+      },
+      group: 'basic',
+    }),
+    defineField({
       name: 'groupeAvailable',
       type: 'boolean',
       group: 'basic',
-      title: 'Voyage disponible en groupe',
+      title: 'Voyage disponible en groupe (Legacy)',
+      description: 'Ancien champ - À migrer vers availabilityTypes',
+      hidden: true,
     }),
     defineField({
       name: 'privatisationAvailable',
       type: 'boolean',
       group: 'basic',
-      title: 'Voyage disponible en privatisation',
+      title: 'Voyage disponible en privatisation (Legacy)',
+      description: 'Ancien champ - À migrer vers availabilityTypes',
+      hidden: true,
     }),
     defineField({
       name: 'customAvailable',
       type: 'boolean',
       group: 'basic',
-      title: 'Voyage disponible en sur-mesure',
+      title: 'Voyage disponible en sur-mesure (Legacy)',
+      description: 'Ancien champ - À migrer vers availabilityTypes',
+      hidden: true,
     }),
-    defineField({name: 'level', type: 'string', group: 'basic', title: 'Niveau de difficulté'}),
+    defineField({
+      name: 'difficultyLevel',
+      type: 'reference',
+      to: [{type: 'difficultyLevel'}],
+      title: 'Niveau de difficulté',
+      group: 'basic',
+    }),
+    defineField({
+      name: 'level',
+      type: 'string',
+      group: 'basic',
+      title: 'Niveau de difficulté (Legacy)',
+      description: 'Ancien champ - À migrer vers difficultyLevel',
+      hidden: true,
+    }),
     defineField({name: 'duration', type: 'number', group: 'basic', title: 'Durée du voyage'}),
     defineField({name: 'nights', type: 'number', group: 'basic', title: 'Nombre de nuits'}),
     defineField({
@@ -103,26 +139,12 @@ export const voyageType = defineType({
       group: 'basic',
       title: 'Voyage inclut un vol',
     }),
-    defineField({name: 'housingType', type: 'string', group: 'basic', title: 'Type de logement'}),
-    defineField({
-      name: 'minAge',
-      type: 'number',
-      initialValue: 8,
-      group: 'basic',
-      title: 'Age minimum',
-    }),
     defineField({name: 'rating', type: 'number', group: 'basic', title: 'Note moyenne'}),
     defineField({
       name: 'comments',
       type: 'number',
       group: 'basic',
       title: 'Nombre de commentaires',
-    }),
-    defineField({
-      name: 'miniatureDisplay',
-      type: 'string',
-      group: 'basic',
-      title: 'Miniature affichée',
     }),
     defineField({
       name: 'image',
@@ -150,7 +172,7 @@ export const voyageType = defineType({
     }),
     defineField({
       name: 'experienceType',
-      title: 'Plus du Voyages',
+      title: 'Experiences',
       type: 'reference',
       to: [{type: 'experience'}],
       group: 'basic',
@@ -160,31 +182,6 @@ export const voyageType = defineType({
       type: 'array',
       of: [{type: 'reference', to: [{type: 'category'}]}],
       group: 'basic',
-    }),
-    defineField({
-      name: 'idealPeriods',
-      type: 'array',
-      title: 'Périodes idéales',
-      of: [{type: 'string'}],
-      options: {
-        list: [
-          {title: 'Toutes périodes', value: 'toutePeriodes'},
-          {title: 'Janvier', value: 'janvier'},
-          {title: 'Février', value: 'fevrier'},
-          {title: 'Mars', value: 'mars'},
-          {title: 'Avril', value: 'avril'},
-          {title: 'Mai', value: 'mai'},
-          {title: 'Juin', value: 'juin'},
-          {title: 'Juillet', value: 'juillet'},
-          {title: 'Août', value: 'aout'},
-          {title: 'Septembre', value: 'septembre'},
-          {title: 'Octobre', value: 'octobre'},
-          {title: 'Novembre', value: 'novembre'},
-          {title: 'Décembre', value: 'decembre'},
-        ],
-        layout: 'grid',
-      },
-      group: 'perfectPeriods',
     }),
     defineField({
       name: 'monthlyAvailability',
@@ -227,7 +224,7 @@ export const voyageType = defineType({
       type: 'array',
       of: [richTextBlock],
       group: 'voyageDescription',
-      title: 'Bloc expériences',
+      title: 'Plus du voyage',
     }),
     defineField({
       name: 'description',
@@ -242,63 +239,83 @@ export const voyageType = defineType({
       title: 'Description email',
     }),
     defineField({
-      name: 'metaDescription',
-      type: 'text',
-      group: 'voyageDescription',
-      title: 'Description méta',
-    }),
-    defineField({
-      name: 'badgeSection',
-      type: 'object',
-      group: 'badges',
-      title: 'Badges',
-      fields: [
+      name: 'badges',
+      type: 'array',
+      title: 'Badges du voyage',
+      description: 'Sélectionnez et personnalisez les badges pour ce voyage',
+      of: [
         {
-          name: 'groupeBadge',
           type: 'object',
-          title: 'Badge groupe',
           fields: [
-            {name: 'text', type: 'string'} as any,
-            {name: 'visible', type: 'boolean'} as any,
+            {
+              name: 'badge',
+              type: 'reference',
+              to: [{type: 'badge'}],
+              title: 'Badge',
+              validation: (rule: any) => rule.required(),
+            } as any,
+            {
+              name: 'variable1Value',
+              type: 'string',
+              title: 'Variable 1 (optionnel)',
+              description: 'Remplace {var1} dans le texte du badge (ex: "2", "10", "Paris", etc.)',
+            } as any,
+            {
+              name: 'variable2Value',
+              type: 'string',
+              title: 'Variable 2 (optionnel)',
+              description: 'Remplace {var2} dans le texte du badge (ex: "6", "15", "Lyon", etc.)',
+            } as any,
+            {
+              name: 'overrideText',
+              type: 'string',
+              title: 'Remplacer complètement le texte (optionnel)',
+              description: 'Remplace entièrement le texte du badge (utiliser uniquement en cas exceptionnel)',
+            } as any,
           ],
-        } as any,
-        {
-          name: 'durationBadge',
-          type: 'object',
-          title: 'Badge durée',
-          fields: [
-            {name: 'text', type: 'string'} as any,
-            {name: 'visible', type: 'boolean'} as any,
-          ],
-        } as any,
-        {
-          name: 'includeFlightBadge',
-          type: 'object',
-          title: 'Badge vol',
-          fields: [
-            {name: 'text', type: 'string'} as any,
-            {name: 'visible', type: 'boolean'} as any,
-          ],
-        } as any,
-        {
-          name: 'housingBadge',
-          type: 'object',
-          title: 'Badge logement',
-          fields: [
-            {name: 'text', type: 'string'} as any,
-            {name: 'visible', type: 'boolean'} as any,
-          ],
-        } as any,
-        {
-          name: 'periodBadge',
-          type: 'object',
-          title: 'Badge période',
-          fields: [
-            {name: 'text', type: 'string'} as any,
-            {name: 'visible', type: 'boolean'} as any,
-          ],
-        } as any,
+          preview: {
+            select: {
+              badgeText: 'badge.text',
+              badgePicto: 'badge.picto',
+              variable1Value: 'variable1Value',
+              variable2Value: 'variable2Value',
+              overrideText: 'overrideText',
+            },
+            prepare({badgeText, badgePicto, variable1Value, variable2Value, overrideText}: any) {
+              // Priority: overrideText > variable replacement > default badge text
+              let displayText = badgeText || 'Badge'
+
+              if (overrideText) {
+                displayText = overrideText
+              } else if (badgeText) {
+                // Replace variables
+                if (variable1Value) {
+                  displayText = displayText.replace(/\{var1\}/g, variable1Value)
+                }
+                if (variable2Value) {
+                  displayText = displayText.replace(/\{var2\}/g, variable2Value)
+                }
+              }
+
+              // Build subtitle
+              let subtitle = 'Badge standard'
+              if (overrideText) {
+                subtitle = 'Texte personnalisé'
+              } else if (variable1Value || variable2Value) {
+                const vars = [variable1Value, variable2Value].filter(Boolean).join(', ')
+                subtitle = `Variables: ${vars}`
+              }
+
+              return {
+                title: displayText,
+                subtitle,
+                media: badgePicto,
+              }
+            },
+          },
+        },
       ],
+      group: 'badges',
     }),
     defineField({
       name: 'programmeBlock',

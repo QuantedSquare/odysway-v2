@@ -1,5 +1,7 @@
 import {avisVoyageursType} from './avisVoyageursType'
+import {badgeType} from './badgeType'
 import {blockContent} from './blockContent'
+import {difficultyLevelType} from './difficultyLevelType'
 import {entrepriseType} from './entrepriseType'
 import {homePageType} from './homePageType'
 import {checkoutType} from './checkoutType'
@@ -44,6 +46,7 @@ export const schemaTypes = [
   seoFields,
   // Document types
   avisVoyageursType,
+  badgeType,
   blockContent,
   blogType,
   categoryType,
@@ -54,6 +57,7 @@ export const schemaTypes = [
   ctasType,
   devisType,
   destinationType,
+  difficultyLevelType,
   entrepriseType,
   experienceType,
   faqType,

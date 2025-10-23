@@ -150,34 +150,6 @@ export const blogType = defineType({
       group: 'metadata',
     }),
     defineField({
-      name: 'blogType',
-      type: 'string',
-      description: 'Blog post type',
-      options: {
-        list: [
-          {title: 'Actu', value: 'Actu'},
-          {title: 'Guide', value: 'Guide'},
-          {title: 'Inspiration', value: 'Inspiration'},
-        ],
-      },
-      group: 'metadata',
-    }),
-    defineField({
-      name: 'badgeColor',
-      type: 'string',
-      description: 'Badge color for display',
-      options: {
-        list: [
-          {title: '🔵 Primary (Dark Teal)', value: 'primary'},
-          {title: '🟠 Secondary (Orange)', value: 'secondary'},
-          {title: '🟢 Success (Green)', value: 'success'},
-          {title: '🟡 Warning (Yellow)', value: 'warning'},
-          {title: '🔴 Danger (Red)', value: 'danger'},
-        ],
-      },
-      group: 'metadata',
-    }),
-    defineField({
       name: 'legacyCategories',
       type: 'string',
       title: 'Legacy Categories',

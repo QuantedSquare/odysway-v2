@@ -20,6 +20,7 @@
   "dependencies": {
     "@portabletext/toolkit": "^3.0.1",
     "@sanity/client": "^7.11.0",
+    "@sanity/color-input": "^4.0.6",
     "@sanity/orderable-document-list": "^1.4.0",
     "@sanity/vision": "^4.11.0",
     "js-yaml": "^4.1.0",
