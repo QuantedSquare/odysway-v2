@@ -133,23 +133,14 @@ export const blogType = defineType({
     }),
 
     // SEO
-    defineField({
-      name: 'seo',
-      title: 'SEO Settings',
-      type: 'seo',
-      group: 'seo',
-      description: 'Configuration SEO pour ce blog post',
-    }),
-    defineField({
-      name: 'tags',
-      type: 'array',
-      of: [{type: 'string'}],
-      options: {
-        layout: 'tags',
-      },
-      group: 'seo',
-      description: 'Tags pour le blog (différent des mots-clés SEO)',
-    }),
+      // SEO Settings
+      defineField({
+        name: 'seo',
+        title: 'SEO Settings',
+        type: 'seo',
+        group: 'seo',
+        description: 'Configuration SEO pour ce blog post',
+      }),
 
     // Blog metadata
     defineField({

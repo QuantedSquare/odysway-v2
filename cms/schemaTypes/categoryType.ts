@@ -24,20 +24,14 @@ export const categoryType = defineType({
       validation: (rule) => rule.required(),
       group: 'content',
     }),
-    defineField({
-      name: 'discoveryTitle',
-      type: 'string',
-      description: 'Titre pour la page de découverte',
-      group: 'content',
-    }),
-    defineField({
-      name: 'seoTitle',
-      type: 'string',
-      title: 'SEO Title',
-      description: 'Title for search engines (max 60 chars)',
-      validation: (rule) => rule.max(60),
-      group: 'seo',
-    }),
+      // SEO Settings
+      defineField({
+        name: 'seo',
+        title: 'SEO Settings',
+        type: 'seo',
+        group: 'seo',
+        description: 'Configuration SEO pour la page d\'accueil (og:type = "website", structuredData = "Organization")',
+      }),
     defineField({
       name: 'image',
       type: 'image',

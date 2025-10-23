@@ -42,7 +42,6 @@ import {seoFields} from './objects/seoFields'
 export const schemaTypes = [
   // Reusable objects must be registered first
   seoFields,
-  
   // Document types
   avisVoyageursType,
   blockContent,
