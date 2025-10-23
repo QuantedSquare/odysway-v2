@@ -78,25 +78,9 @@ export const homePageType = defineType({
     defineField({
       name: 'seo',
       title: 'SEO Settings',
-      type: 'object',
+      type: 'seo',
       group: 'seo',
-      fields: [
-        defineField({
-          name: 'title',
-          title: 'SEO Title',
-          type: 'string',
-          description: 'Title for search engines (max 60 chars)',
-          validation: (rule) => rule.max(60),
-        }),
-        defineField({
-          name: 'description',
-          title: 'SEO Description',
-          type: 'text',
-          description: 'Description for search engines (max 160 chars)',
-          rows: 3,
-          validation: (rule) => rule.max(180),
-        }),
-      ],
+      description: 'Configuration SEO pour la page d\'accueil (og:type = "website", structuredData = "Organization")',
     }),
 
     // Hero Section

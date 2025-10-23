@@ -11,163 +11,12 @@ export const visionVoyageOdyswayType = defineType({
       default: true,
     },
     {
-      name: 'pageSettings',
-      title: 'Page Settings',
+      name: 'seo',
+      title: 'SEO Settings',
     },
   ],
   fields: [
-    // Page Settings Group
-    defineField({
-      name: 'pageSettings',
-      title: 'Page Settings',
-      type: 'object',
-      group: 'pageSettings',
-      fields: [
-        // Basic page info
-        defineField({
-          name: 'title',
-          title: 'Page Title',
-          type: 'string',
-          validation: (Rule) => Rule.required(),
-        }),
-        defineField({
-          name: 'description',
-          title: 'Page Description',
-          type: 'text',
-          validation: (Rule) => Rule.required(),
-        }),
-
-        // SEO Settings
-        defineField({
-          name: 'seo',
-          title: 'SEO Settings',
-          type: 'object',
-          fields: [
-            defineField({
-              name: 'title',
-              title: 'SEO Title',
-              type: 'string',
-              validation: (Rule) => Rule.required(),
-            }),
-            defineField({
-              name: 'description',
-              title: 'SEO Description',
-              type: 'text',
-              validation: (Rule) => Rule.required(),
-            }),
-            defineField({
-              name: 'robots',
-              title: 'Robots',
-              type: 'string',
-              initialValue: 'index, follow',
-              options: {
-                list: [
-                  {title: 'Index, Follow', value: 'index, follow'},
-                  {title: 'No Index, No Follow', value: 'noindex, nofollow'},
-                  {title: 'Index, No Follow', value: 'index, nofollow'},
-                  {title: 'No Index, Follow', value: 'noindex, follow'},
-                ],
-              },
-            }),
-          ],
-        }),
-
-        // Sitemap Settings
-        defineField({
-          name: 'sitemap',
-          title: 'Sitemap Settings',
-          type: 'object',
-          fields: [
-            defineField({
-              name: 'lastmod',
-              title: 'Last Modified',
-              type: 'date',
-            }),
-            defineField({
-              name: 'videos',
-              title: 'Videos',
-              type: 'array',
-              of: [{type: 'string'}],
-            }),
-            defineField({
-              name: 'images',
-              title: 'Images',
-              type: 'array',
-              of: [{type: 'string'}],
-            }),
-          ],
-        }),
-
-        // Social Media / OG Image Settings
-        defineField({
-          name: 'ogImage',
-          title: 'Social Media / OG Image',
-          type: 'object',
-          fields: [
-            defineField({
-              name: 'component',
-              title: 'Component',
-              type: 'string',
-              initialValue: 'default',
-            }),
-            defineField({
-              name: 'props',
-              title: 'OG Image Properties',
-              type: 'object',
-              fields: [
-                defineField({
-                  name: 'title',
-                  title: 'OG Title',
-                  type: 'string',
-                }),
-                defineField({
-                  name: 'description',
-                  title: 'OG Description',
-                  type: 'text',
-                }),
-                defineField({
-                  name: 'image',
-                  title: 'OG Image',
-                  type: 'image',
-                  options: {
-                    hotspot: true,
-                  },
-                }),
-              ],
-            }),
-          ],
-        }),
-
-        // HTML Head Settings
-        defineField({
-          name: 'head',
-          title: 'HTML Head Settings',
-          type: 'object',
-          fields: [
-            defineField({
-              name: 'htmlAttrs',
-              title: 'HTML Attributes',
-              type: 'object',
-              fields: [
-                defineField({
-                  name: 'lang',
-                  title: 'Language',
-                  type: 'string',
-                  initialValue: 'fr',
-                }),
-              ],
-            }),
-            defineField({
-              name: 'script',
-              title: 'Scripts',
-              type: 'array',
-              of: [{type: 'string'}],
-            }),
-          ],
-        }),
-      ],
-    }),
-
+    
     // Content Group
     defineField({
       name: 'heroSection',
@@ -394,6 +243,14 @@ export const visionVoyageOdyswayType = defineType({
       ],
     }),
 
+    // SEO Settings
+    defineField({
+      name: 'seo',
+      title: 'SEO Settings',
+      type: 'seo',
+      group: 'seo',
+      description: 'Configuration SEO pour la page vision voyage odysway',
+    }),
   ],
   preview: {
     select: {

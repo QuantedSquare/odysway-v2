@@ -193,50 +193,16 @@ export const blogType = defineType({
       group: 'metadata',
     }),
 
-    // Navigation (optional override for navigation display)
-    defineField({
-      name: 'navigationTitle',
-      type: 'string',
-      title: 'Navigation Title',
-      description: 'Override title for navigation (from frontmatter navigation.title)',
-      group: 'content',
-    }),
-    defineField({
-      name: 'navigationDescription',
-      type: 'text',
-      title: 'Navigation Description',
-      description: 'Override description for navigation (from frontmatter navigation.description)',
-      rows: 2,
-      group: 'content',
-    }),
 
     // SEO
-    defineField({
-      name: 'seoTitle',
-      type: 'string',
-      title: 'SEO Title',
-      description: 'Title for search engines (max 60 chars)',
-      validation: (rule) => rule.max(60),
-      group: 'seo',
-    }),
-    defineField({
-      name: 'seoDescription',
-      type: 'text',
-      title: 'SEO Description',
-      description: 'Description for search engines (max 160 chars)',
-      rows: 3,
-      validation: (rule) => rule.max(160),
-      group: 'seo',
-    }),
-    defineField({
-      name: 'tags',
-      type: 'array',
-      of: [{type: 'string'}],
-      options: {
-        layout: 'tags',
-      },
-      group: 'seo',
-    }),
+      // SEO Settings
+      defineField({
+        name: 'seo',
+        title: 'SEO Settings',
+        type: 'seo',
+        group: 'seo',
+        description: 'Configuration SEO pour ce blog post',
+      }),
 
     // Blog metadata
     defineField({

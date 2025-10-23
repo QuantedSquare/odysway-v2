@@ -93,6 +93,12 @@ export const offreCadeauType = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: 'seo',
+      title: 'SEO Settings',
+      type: 'seo',
+      description: 'Configuration SEO pour la page offre cadeau',
+    }),
+    defineField({
       name: 'pictoCols',
       type: 'array',
       title: 'Colonnes avec pictogrammes',

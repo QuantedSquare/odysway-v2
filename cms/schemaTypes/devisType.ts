@@ -16,7 +16,7 @@ export const devisType = defineType({
     prepare() {
       return {
         title: 'Devis',
-        subtitle: 'Textes pour le processus de devis'
+        subtitle: 'Textes pour le funnel de demande de devis'
       }
     }
   },

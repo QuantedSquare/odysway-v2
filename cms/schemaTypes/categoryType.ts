@@ -6,7 +6,6 @@ export const categoryType = defineType({
   type: 'document',
   groups: [
     {name: 'content', title: 'Content'},
-    {name: 'seo', title: 'SEO'},
     {name: 'settings', title: 'Settings'},
   ],
   fields: [
@@ -23,20 +22,6 @@ export const categoryType = defineType({
       options: {source: 'title'},
       validation: (rule) => rule.required(),
       group: 'content',
-    }),
-    defineField({
-      name: 'discoveryTitle',
-      type: 'string',
-      description: 'Titre pour la page de découverte',
-      group: 'content',
-    }),
-    defineField({
-      name: 'seoTitle',
-      type: 'string',
-      title: 'SEO Title',
-      description: 'Title for search engines (max 60 chars)',
-      validation: (rule) => rule.max(60),
-      group: 'seo',
     }),
     defineField({
       name: 'image',

@@ -122,5 +122,11 @@ export const recruitmentType = defineType({
         },
       ],
     }),
+    defineField({
+      name: 'seo',
+      title: 'SEO Settings',
+      type: 'seo',
+      description: 'Configuration SEO pour la page de recrutement',
+    }),
   ],
 })

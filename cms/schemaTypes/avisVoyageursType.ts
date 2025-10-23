@@ -38,7 +38,6 @@ export const avisVoyageursType = defineType({
         }),
       ],
     }),
-
     defineField({
       name: 'firstPhrase',
       title: 'Première Phrase',
@@ -51,6 +50,12 @@ export const avisVoyageursType = defineType({
       type: 'text',
       rows: 3,
       description: 'Texte principal',
+    }),
+    defineField({
+      name: 'seo',
+      title: 'SEO Settings',
+      type: 'seo',
+      description: 'Configuration SEO pour la page d\'avis voyageurs (og:type = "website", structuredData = "Organization")',
     }),
   ],
 })
