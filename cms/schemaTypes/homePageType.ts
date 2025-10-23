@@ -16,12 +16,17 @@ const richTextBlock = {
 export const homePageType = defineType({
   name: 'homePage',
   title: "Page d'Accueil",
+  preview: {
+    prepare() {
+      return {
+        title: 'Page d\'Accueil',
+        subtitle: 'Textes et sections de la page d\'accueil'
+      }
+    }
+  },
   type: 'document',
   groups: [
-    {
-      name: 'seo',
-      title: 'SEO',
-    },
+    
     {
       name: 'hero',
       title: 'Hero Section',
@@ -33,23 +38,23 @@ export const homePageType = defineType({
     },
     {
       name: 'franceTrips',
-      title: 'Section voyages en France',
+      title: 'Premier carousel de voyages',
     },
     {
       name: 'followDesires',
-      title: 'Section suivez vos envies',
+      title: 'Section suivez vos envies / catégories thématiques',
     },
     {
       name: 'travelDifferently',
-      title: 'Section voyager, autrement',
+      title: 'Section voyager, autrement, icons et textes',
     },
     {
       name: 'guaranteedDepartures',
-      title: 'Section départs garantis',
+      title: 'Deuxième carousel de voyages',
     },
     {
       name: 'summerTravel',
-      title: 'Section voyager cet été',
+      title: 'Troisième carousel de voyages',
     },
     {
       name: 'newsletter',
@@ -57,22 +62,22 @@ export const homePageType = defineType({
     },
     {
       name: 'unforgettableTravels',
-      title: 'Section voyages inoubliables',
+      title: 'Quatrième carousel de voyages',
     },
     {
       name: 'reviews',
-      title: 'Section témoignages',
+      title: 'Section reviews',
     },
     {
       name: 'contact',
       title: 'Section contact',
     },
-  ],
-  preview: {
-    select: {
-      title: 'heroSection.title',
+    {
+      name: 'seo',
+      title: 'SEO',
     },
-  },
+  ],
+  
   fields: [
     // SEO Settings
     defineField({
@@ -345,7 +350,7 @@ export const homePageType = defineType({
         }),
         defineField({
           name: 'reviews',
-          title: 'Liste des témoignages',
+          title: 'Liste des reviews',
           type: 'array',
           of: [{type: 'reference', to: [{type: 'review'}]}],
         }),

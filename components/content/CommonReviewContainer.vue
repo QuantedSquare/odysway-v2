@@ -72,12 +72,22 @@
 const route = useRoute()
 
 const reviewsToDisplayQuery = `
-  *[_type == "review" && isOnHome == true]{
-    ...,
-    voyage->{
-      slug,
-      title,
-    }
+  *[_type == "homePage"][0]{
+    reviews{
+      reviews[]->{
+        _id,
+        author,
+        authorAge,
+        date,
+        photo,
+        rating,
+        text,
+        voyage->{
+          slug,
+          title,
+        }
+      }
+    },
   }
 `
 
@@ -87,6 +97,7 @@ const { data: reviewsToDisplaySanity } = await useAsyncData(
   async () => {
     try {
       const result = await sanity.fetch(reviewsToDisplayQuery)
+      console.log('reviewsToDisplaySanity ===> ', result)
       return result || []
     }
     catch (e) {
@@ -100,7 +111,7 @@ const { data: reviewsToDisplaySanity } = await useAsyncData(
 )
 
 const reviewsToDisplay = computed(() => {
-  return reviewsToDisplaySanity.value?.map(review => ({
+  return reviewsToDisplaySanity.value?.reviews?.reviews?.map(review => ({
     ...review,
     voyageSlug: review.voyage?.slug?.current,
     voyageTitle: review.voyage?.title,

@@ -18,7 +18,7 @@ export const reviewType = defineType({
       to: [{type: 'voyage'}],
     }),
     defineField({name: 'voyageTitle', type: 'string'}),
-    defineField({name: 'isOnHome', type: 'boolean'}),
+    defineField({name: 'isOnHome', type: 'boolean', hidden: true}),
   ],
 })
 
