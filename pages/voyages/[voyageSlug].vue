@@ -14,7 +14,7 @@
         <HeroVoyageSection :voyage="voyage" />
 
         <ChipsContainer
-          :badge-section="voyage.badgeSection"
+          :badges="voyage.badges"
           :badge-title="voyage.experienceType.badgeTitle"
           :level="voyage.level"
         />
@@ -160,6 +160,17 @@ const voyagePageQuery = `
 const voyageQuery = `
   *[_type == "voyage" && slug.current == $slug][0]{
     ...,
+    badges[]{
+      badge->{
+        _id,
+        title,
+        text,
+        picto
+      },
+      variable1Value,
+      variable2Value,
+      overrideText
+    },
     experienceType->{
       badgeTitle,
       _id

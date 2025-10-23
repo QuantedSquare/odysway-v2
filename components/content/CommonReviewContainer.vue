@@ -97,7 +97,6 @@ const { data: reviewsToDisplaySanity } = await useAsyncData(
   async () => {
     try {
       const result = await sanity.fetch(reviewsToDisplayQuery)
-      console.log('reviewsToDisplaySanity ===> ', result)
       return result || []
     }
     catch (e) {
