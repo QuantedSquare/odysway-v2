@@ -163,6 +163,30 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
     experienceTypeRef = createDocumentReference('experience', voyage.experienceType)
   }
 
+  // Convert difficulty level to reference
+  let difficultyLevelRef = null
+  if (voyage.level) {
+    // Extract numeric level from string (e.g., "Niveau 1" -> 1, "1" -> 1)
+    const levelMatch = voyage.level.match(/\d+/)
+    if (levelMatch) {
+      const levelNumber = parseInt(levelMatch[0], 10)
+      // Fetch difficulty level by level number
+      const difficultyLevel = await client.fetch(
+        '*[_type == "difficultyLevel" && level == $levelNumber][0]',
+        { levelNumber }
+      )
+      if (difficultyLevel) {
+        difficultyLevelRef = {
+          _type: 'reference',
+          _ref: difficultyLevel._id,
+        }
+        log(`  🎯 Difficulty level "${voyage.level}" -> Level ${levelNumber} -> ID: ${difficultyLevel._id} ✅ EXISTS`)
+      } else {
+        log(`  ⚠️  Difficulty level "${voyage.level}" -> Level ${levelNumber} -> ❌ NOT FOUND`)
+      }
+    }
+  }
+
   // Convert author to team member reference
   let authorRef = null
   if (voyage.authorNote?.author) {
@@ -265,6 +289,30 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
   // Use draft prefix if not published
   const finalVoyageID = voyage.published === false ? `drafts.${voyageID}` : voyageID
 
+  // Convert availability types from old boolean fields to new array format
+  const availabilityTypes = []
+  if (voyage.groupeAvailable) availabilityTypes.push('groupe')
+  if (voyage.privatisationAvailable) availabilityTypes.push('privatisation')
+  if (voyage.customAvailable) availabilityTypes.push('custom')
+
+  // Convert monthlyAvailability from object to array
+  const monthlyAvailabilityArray = []
+  if (voyage.monthlyAvailability) {
+    if (voyage.monthlyAvailability.toutePeriodes) monthlyAvailabilityArray.push('toutePeriodes')
+    if (voyage.monthlyAvailability.janvier) monthlyAvailabilityArray.push('janvier')
+    if (voyage.monthlyAvailability.fevrier) monthlyAvailabilityArray.push('fevrier')
+    if (voyage.monthlyAvailability.mars) monthlyAvailabilityArray.push('mars')
+    if (voyage.monthlyAvailability.avril) monthlyAvailabilityArray.push('avril')
+    if (voyage.monthlyAvailability.mai) monthlyAvailabilityArray.push('mai')
+    if (voyage.monthlyAvailability.juin) monthlyAvailabilityArray.push('juin')
+    if (voyage.monthlyAvailability.juillet) monthlyAvailabilityArray.push('juillet')
+    if (voyage.monthlyAvailability.aout) monthlyAvailabilityArray.push('aout')
+    if (voyage.monthlyAvailability.septembre) monthlyAvailabilityArray.push('septembre')
+    if (voyage.monthlyAvailability.octobre) monthlyAvailabilityArray.push('octobre')
+    if (voyage.monthlyAvailability.novembre) monthlyAvailabilityArray.push('novembre')
+    if (voyage.monthlyAvailability.decembre) monthlyAvailabilityArray.push('decembre')
+  }
+
   // Prepare the voyage document for Sanity
   return {
     _id: finalVoyageID,
@@ -274,20 +322,29 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
       current: voyage.slug || voyageID.replace('voyage-', ''),
     },
     destinations: destinationsRefs,
+
+    // New array-based availability types
+    availabilityTypes: availabilityTypes,
+
+    // Legacy fields (hidden in schema but kept for backward compatibility)
     groupeAvailable: voyage.groupeAvailable || false,
     privatisationAvailable: voyage.privatisationAvailable || false,
     customAvailable: voyage.customAvailable || false,
+
     experienceType: experienceTypeRef,
+
+    // Difficulty level - keep old string field for now
+    // TODO: Create difficultyLevel references after difficulty levels are created
     level: voyage.level || '',
+
     categories: categoriesRefs,
     duration: voyage.duration || 0,
     nights: voyage.nights || 0,
     includeFlight: voyage.includeFlight || false,
-    housingType: voyage.housingType || '',
-    minAge: voyage.minAge || 0,
     rating: voyage.rating || 0,
     comments: voyage.comments || 0,
-    miniatureDisplay: voyage.miniatureDisplay || '',
+    image: mainImageRef,
+    imageSecondary: secondaryImageRef,
     authorNote: {
       text: await convertMarkdownToPortableText(voyage.authorNote?.text || '', assetMapping),
       author: authorRef,
@@ -296,8 +353,10 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
     experiencesBlock: await convertStringArrayToPortableText(voyage.experiencesBlock || [], assetMapping),
     description: voyage.description || '',
     emailDescription: voyage.emailDescription || '',
-    metaDescription: voyage.metaDescription || '',
-    badgeSection: voyage.badgeSection || {},
+
+    // Note: Badges will need to be migrated separately using badge references
+    // TODO: Implement badge migration after standard badges are created in Sanity
+    badges: [],
     programmeBlock: programmeBlockWithImages,
     pricingDetailsBlock: {
       listInclude: await convertStringArrayToPortableText(voyage.pricingDetailsBlock?.include || [], assetMapping),
@@ -322,14 +381,13 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
     accompanistsDescription: await convertMarkdownToPortableText(voyage.accompanistsDescription || '', assetMapping),
     accompanistsList: accompanistsWithImages,
     housingBlock: housingBlockWithImages,
-    image: mainImageRef,
-    imageSecondary: secondaryImageRef,
     photosList: photosListRefs,
     videoLinks: voyage.videoLinks || [],
     faqBlock: await convertFaqBlockToPortableText(voyage.faqBlock?.faqList || [], assetMapping),
     seoSection: seoSectionWithImages,
-    idealPeriods: voyage.idealPeriods || {},
-    monthlyAvailability: voyage.monthlyAvailability || {},
+
+    // Convert monthlyAvailability from object to array
+    monthlyAvailability: monthlyAvailabilityArray,
   }
 }
 

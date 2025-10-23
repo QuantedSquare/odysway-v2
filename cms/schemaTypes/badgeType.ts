@@ -6,6 +6,20 @@ export const badgeType = defineType({
   type: 'document',
   fields: [
     defineField({
+      name: 'title',
+      type: 'string',
+      title: 'Titre du badge',
+      description: 'Nom interne pour identifier le badge (ex: "Badge Groupe", "Badge Durée")',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'slug',
+      type: 'slug',
+      title: 'Slug',
+      description: 'Identifiant unique pour la migration (ex: "groupe", "duree", "vol-inclus")',
+      options: {source: 'title'}
+    }),
+    defineField({
       name: 'text',
       type: 'string',
       title: 'Texte du badge',
@@ -36,12 +50,11 @@ export const badgeType = defineType({
     defineField({
       name: 'picto',
       type: 'image',
-      title: 'Pictogramme',
+      title: 'Pictogramme (optionnel)',
       description: 'Icône ou image à afficher',
       options: {
         hotspot: true,
       },
-      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'color',
@@ -60,14 +73,16 @@ export const badgeType = defineType({
   ],
   preview: {
     select: {
+      title: 'title',
       text: 'text',
+      slug: 'slug.current',
       picto: 'picto',
       colorHex: 'color.hex',
     },
-    prepare({text, picto, colorHex}) {
+    prepare({title, text, slug, picto, colorHex}) {
       return {
-        title: text,
-        subtitle: colorHex || 'No color',
+        title: title || text,
+        subtitle: `${slug || ''} ${colorHex ? `• ${colorHex}` : ''}`,
         media: picto,
       }
     },
