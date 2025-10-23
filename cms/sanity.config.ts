@@ -4,7 +4,7 @@ import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemaTypes'
 import {media} from 'sanity-plugin-media'
 import {orderableDocumentListDeskItem} from '@sanity/orderable-document-list'
-
+import {colorInput} from '@sanity/color-input'
 export default defineConfig({
   name: 'default',
   title: 'Odysway',
@@ -93,6 +93,8 @@ export default defineConfig({
             S.documentTypeListItem('experience').title('Experiences'),
             S.documentTypeListItem('category').title('Categories'),
             S.documentTypeListItem('region').title('Regions'),
+            S.documentTypeListItem('badge').title('Badges'),
+            S.documentTypeListItem('difficultyLevel').title('Niveaux de Difficulté'),
             S.divider(),
             orderableDocumentListDeskItem({
               type: 'teamMember',
@@ -171,6 +173,7 @@ export default defineConfig({
     }),
     media(),
     visionTool(),
+    colorInput()
   ],
 
   schema: {

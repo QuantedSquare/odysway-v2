@@ -1,5 +1,7 @@
 import {avisVoyageursType} from './avisVoyageursType'
+import {badgeType} from './badgeType'
 import {blockContent} from './blockContent'
+import {difficultyLevelType} from './difficultyLevelType'
 import {entrepriseType} from './entrepriseType'
 import {homePageType} from './homePageType'
 import {checkoutType} from './checkoutType'
@@ -38,6 +40,7 @@ import {voyageType} from './voyageType'
 
 export const schemaTypes = [
   avisVoyageursType,
+  badgeType,
   blockContent,
   blogType,
   categoryType,
@@ -48,6 +51,7 @@ export const schemaTypes = [
   ctasType,
   devisType,
   destinationType,
+  difficultyLevelType,
   entrepriseType,
   experienceType,
   faqType,
