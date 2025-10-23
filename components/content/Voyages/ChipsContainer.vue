@@ -49,7 +49,7 @@
         </v-chip>
 
         <v-chip
-          v-if="+level >= 1"
+          v-if="stegaClean(level).length > 0"
           variant="flat"
           size="large"
           class="chip-responsive"
@@ -58,7 +58,7 @@
         >
           <span class="d-flex align-center text-primary text-caption text-sm-subtitle-2 px-3 mb-1">
             <v-icon
-              :icon="level === '1' ? mdiSignalCellular1 : level === '2' ? mdiSignalCellular2 : mdiSignalCellular3"
+              :icon="stegaClean(level) === '1' ? mdiSignalCellular1 : stegaClean(level) === '2' ? mdiSignalCellular2 : mdiSignalCellular3"
               class="mr-3 icon-responsive"
               :alt="`Icone d'un niveau de difficulté ${level}`"
             />
@@ -73,6 +73,7 @@
 
 <script setup>
 import { mdiSignalCellular1, mdiSignalCellular2, mdiSignalCellular3 } from '@mdi/js'
+import { stegaClean } from '@sanity/client/stega'
 import { getImageUrl } from '~/utils/getImageUrl'
 
 const props = defineProps({
@@ -115,7 +116,7 @@ const processedBadges = computed(() => {
     }
 
     // Get picto URL
-    console.log('badgeItem.badge.picto ===> ', badgeItem.badge.picto)
+    console.log('badgeItem.badge.picto ===> ', props)
     const pictoUrl = badgeItem.badge.picto?.asset?._ref
       ? getImageUrl(badgeItem.badge.picto.asset._ref)
       : ''
