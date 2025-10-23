@@ -265,7 +265,7 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
   if (voyage.seoSection) {
     seoFields = {
       metaTitle: voyage.seoSection.metaTitle || null,
-      metaDescription: voyage.seoSection.metaDescription || null,
+      metaDescription: voyage.seoSection.metaDescription || voyage.seoSection.ogDescription || null,
       canonicalUrl: voyage.seoSection.canonicalUrl || null,
       focusKeyword: voyage.seoSection.focusKeyword || null,
       keywords: voyage.seoSection.keywords || [],
