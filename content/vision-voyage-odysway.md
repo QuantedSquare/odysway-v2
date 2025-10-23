@@ -140,7 +140,7 @@ Nous travaillons de manière artisanale, avec sérieux. Nous allons sur le terra
   :::image-container
   ---
   alt: La photo d'équipe Odysway
-  imageSrc: /images/team/team-photo.webp
+  imageSrc: /images/team/equipe-photo-seminaire.png
   ---
   :::
 ::

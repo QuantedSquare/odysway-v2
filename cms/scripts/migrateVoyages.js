@@ -8,7 +8,7 @@ import {convertMarkdownToPortableText} from './markdownToPortableText.js'
 import {MigrationReporter} from './migrationReporter.js'
 
 // Configuration: Set to either a specific file path or the voyages directory
-const voyagesBasePath = '../content/voyages/1. France'
+const voyagesBasePath = '../content/voyages/1. France/sejour-berger-bearn.json'
 
 export default async function migrateVoyages(client) {
   // Create reporter
@@ -333,8 +333,10 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
 
     experienceType: experienceTypeRef,
 
-    // Difficulty level - keep old string field for now
-    // TODO: Create difficultyLevel references after difficulty levels are created
+    // New difficultyLevel reference
+    difficultyLevel: difficultyLevelRef,
+
+    // Legacy level field (hidden in schema but kept for backward compatibility)
     level: voyage.level || '',
 
     categories: categoriesRefs,
@@ -424,3 +426,4 @@ async function convertFaqBlockToPortableText(faqList, assetMapping) {
   
   return faqBlockWithPortableText
 }
+

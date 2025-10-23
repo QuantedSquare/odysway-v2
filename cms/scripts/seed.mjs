@@ -76,10 +76,10 @@ async function run() {
   // await migrateHeader(client)
 
   // log('🔄 Migrating destinations from JSON files...')
-   await migrateDestinations(client)
+   //await migrateDestinations(client)
 
   // log('🔄 Migrating categories from JSON files...')
-   await migrateCategories(client)
+   //await migrateCategories(client)
 
   // log('🔄 Migrating checkout page configuration...')
   // await migrateCheckoutPage(client)
@@ -97,16 +97,16 @@ async function run() {
   // await migrateExperiencesPage(client)
 
   // log('🔄 Migrating voyages...')
-  // await migrateVoyages(client)
+  await migrateVoyages(client)
 
   // log('🔄 Migrating reviews...')
   // await migrateReviews(client)
 
   // log('🔄 Migrating blogs from MD files...')
-   await migrateBlogs(client)
+   //await migrateBlogs(client)
 
   // log('🔄 Linking blogs to categories...')
-  await linkBlogsToCategories(client)
+  //await linkBlogsToCategories(client)
 
   // log('🔄 Linking blogs to destinations...')
   // await linkBlogsToDestinations(client)
@@ -114,8 +114,8 @@ async function run() {
   // log('🔄 Migrating home page...')
   // await migrateHomePage(client)
 
-  log('🔄 Migrating FAQ page...')
-  await migrateFaq(client)
+  //log('🔄 Migrating FAQ page...')
+  //await migrateFaq(client)
 
   log('Seed completed')
 }

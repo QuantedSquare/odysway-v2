@@ -1,0 +1,347 @@
+{
+  "published": true,
+  "title": "Voyage au Costa Rica : volcans, jungle et douceur de vivre",
+  "destinations": [
+    {
+      "name": "Costa Rica"
+    }
+  ],
+  "groupeAvailable": true,
+  "privatisationAvailable": false,
+  "customAvailable": false,
+  "experienceType": "Plonger dans la culture",
+  "level": "1",
+  "categories": [
+    {
+      "name": "voyage-nature"
+    },
+    {
+      "name": "voyage-culturel"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "voyage-aventure"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    },
+    {
+      "name": "ou-partir-en-ete"
+    },
+    {
+      "name": "ou-partir-en-hiver"
+    }
+  ],
+  "duration": 11,
+  "nights": 10,
+  "includeFlight": false,
+  "housingType": "Hôtels et lodges nature",
+  "idealPeriods": {
+    "toutePeriodes": true,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": true,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "minAge": 12,
+  "rating": 0,
+  "comments": 0,
+  "miniatureDisplay": "Nouveau",
+  "authorNote": {
+    "text": "Ce voyage immersif au Costa Rica vous emmène au cœur d’un pays vibrant de nature et de vie. Des volcans d’Arenal aux forêts tropicales de Monteverde, jusqu’aux plages sauvages de la côte Pacifique, chaque étape est une invitation à découvrir un Costa Rica authentique, loin des circuits touristiques.  En petit groupe, accompagné par un guide local passionné, vous partirez à la rencontre des habitants : producteurs de cacao, fermiers, artisans… Des moments simples, vrais, où l’on comprend ce que signifie vraiment le “Pura Vida”.  Un voyage entre nature et humanité, pour explorer les trésors naturels du Costa Rica tout en vivant des échanges sincères.",
+    "author": "Coralie",
+    "affixeAuthor": "Spécialiste Costa Rica"
+  },
+  "experiencesBlock": [
+    "Une immersion complète dans des sites d’exception : volcan Irazú, jungle de Tortuguero, volcan Arenal, forêt de Monteverde",
+    "Des expériences locales : ferme rurale, plantations de café, découverte du guaro et de la canne à sucre.",
+    "Un guide local francophone présent sur tout le circuit.",
+    "Un petit groupe de 2 à 14 voyageurs, pour un rythme fluide et convivial .",
+    "Extension possible bord de mer (Playa Samara ou Manuel Antonio) pour détendre corps et esprit après le voyage."
+  ],
+  "slug": "voyage-costa-rica-petit-groupe",
+  "description": "Explorez le Costa Rica, un pays vibrant entre mer des Caraïbes et océan Pacifique, où la nature impose son rythme. Forêts primaires, volcans actifs, rivières sinueuses et plages sauvages se succèdent dans un décor grandiose. Au fil des sentiers, paresseux, singes et toucans deviennent compagnons de route. Ce voyage en petit groupe offre une immersion unique, entre découvertes, biodiversité et moments partagés.",
+  "emailDescription": "👉 Se réveiller au chant des singes hurleurs, marcher au cœur de la jungle, partager un repas dans une ferme familiale : ici, tout invite à ralentir et à se reconnecter à l’essentiel.",
+  "metaDescription": "Partez pour 11 jours d’immersion au Costa Rica en petit groupe, entre volcans, jungle tropicale et plages sauvages. Un voyage guidé à la rencontre d’un pays vibrant de nature et de vie.",
+  "badgeSection": {
+    "groupeBadge": {
+      "text": "Groupe de 4 à 12 personnes",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**10 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** sur demande",
+      "visible": true
+    },
+    "housingBadge": {
+      "text": "Hôtel et lodge",
+      "visible": true
+    },
+    "periodBadge": {
+      "text": "Toute l'année",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "Arrivée à San José",
+      "badgeText": "JOUR 1",
+      "description": "Arrivée à l’aéroport international de San José où votre aventure costaricienne commence. Accueil par votre guide francophone et transfert collectif vers votre hôtel situé en centre-ville. Installation et première soirée libre pour vous imprégner de l’atmosphère tropicale de la capitale.  Nuit à l’hôtel Radisson San José .",
+      "photo": "/images/1.voyages/Costa Rica 2/san-jose-jour-1.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "Le volcan Irazú et la capitale",
+      "badgeText": "Jour 2",
+      "description": "Départ matinal vers le volcan Irazú, à 30 km de San José. Vous découvrez son lac d’un bleu profond et ses paysages lunaires impressionnants. L’après-midi, deux options s’offrent à vous : visiter le Musée de l’Or pour explorer l’art précolombien ou découvrir la ville à vélo avec un guide local.  Nuit à l’hôtel Radisson San José .",
+      "photo": "/images/1.voyages/Costa Rica 2/volcan-jour-2-costa-rica.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "De San José à Tortuguero : Premiers pas dans la jungle",
+      "badgeText": "Jour 3",
+      "description": "Départ tôt le matin en bus à travers forêts primaires et bananeraies avant d’embarquer sur un bateau qui remonte les rivières de Tortuguero. Installation dans votre lodge au cœur de la jungle. Après le déjeuner, balade libre dans le village et premiers contacts avec la nature luxuriante.",
+      "photo": "/images/1.voyages/Costa Rica 2/tortuguero-boat-trip.jpeg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "Parc national de Tortuguero : La biodiversité caribéenne",
+      "badgeText": "Jour 4",
+      "description": "Excursion en bateau à travers les canaux du parc national. Observation de la faune : caïmans, singes-araignées, hérons, toucans et grenouilles tropicales. Entre mars et octobre, possibilité d’assister à la ponte des tortues marines sur la plage.  Nuit au Laguna Lodge de Tortuguero.",
+      "photo": "/images/1.voyages/Costa Rica 2/tortuguero-jour-3.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "De Tortuguero à Arenal",
+      "badgeText": "Jour 5",
+      "description": "Retour en bateau puis route vers la région d’Arenal, via Sarapiquí et ses plantations d’ananas. En chemin, arrêt pour observer les iguanes qui se chauffent au soleil sur les berges de la rivière San Carlos. Arrivée au pied du volcan Arenal, dont la silhouette conique domine la forêt tropicale.  Nuit à l’hôtel Arenal Paraíso .",
+      "photo": "/images/1.voyages/Costa Rica 2/arenal-volcan.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "Immersion rurale et détente",
+      "badgeText": "Jour 6",
+      "description": "Rencontre avec une communauté rurale pour découvrir la vie agricole du Costa Rica. Vous apprendrez à préparer la tortilla, goûterez le guaro et la canne à sucre. Après le déjeuner, temps libre avec deux options : traverser la canopée sur les ponts suspendus ou tester la tyrolienne. Fin de journée détente dans les sources chaudes naturelles.  Nuit à l’hôtel Arenal Paraíso",
+      "photo": "/images/1.voyages/Costa Rica 2/sources-eau-chaudes.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "Sur la route du café  ",
+      "badgeText": "Jour 7",
+      "description": "Route vers la cordillère de Tilarán et les montagnes brumeuses de Monteverde. En chemin, arrêt chez un producteur pour découvrir la culture du café, véritable emblème du Costa Rica. Arrivée à Monteverde et installation à votre lodge.  Nuit à l’hôtel Monteverde Country Lodge.",
+      "photo": "/images/1.voyages/Costa Rica 2/cafe-costa-rica.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "Forêt de nuages",
+      "badgeText": "Jour 8",
+      "description": "Découverte de la forêt d’altitude de Monteverde. Balade matinale dans une réserve naturelle au cœur d’une végétation dense : orchidées, fougères géantes et plantes grimpantes. Le soir, promenade guidée de nuit pour observer la faune qui s’éveille : insectes, grenouilles, paresseux.  Nuit à l’hôtel Monteverde Country Lodge",
+      "photo": "/images/1.voyages/Costa Rica 2/monteverde.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "De Monteverde à Rincón de la Vieja",
+      "badgeText": "Jour 9",
+      "description": "Départ vers la province de Guanacaste en empruntant la mythique Panaméricaine. Paysages de pampa, ranchs et ambiance cow-boy : un autre visage du Costa Rica. Dans l’après-midi, découverte du parc national du Rincón de la Vieja, une forêt tropicale sèche abritant cascades, fumerolles et sources sulfureuses.  Nuit à l’hôtel Buena Vista del Rincón Lodge 3 ",
+      "photo": "/images/1.voyages/Costa Rica 2/photo-hotel-buena-vista-del-rincon.webp",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "Eaux volcaniques et nature",
+      "badgeText": "Jour 10",
+      "description": "Journée dédiée à la détente et à l’exploration. Baignade dans les eaux chaudes naturelles du volcan Pacaya au cœur de la jungle. Balades sur les sentiers ponctués de ponts suspendus et de miradors. En option : balade à cheval, tubing sur la rivière ou canopy.  Nuit à l’hôtel Buena Vista del Rincón Lodge.",
+      "photo": "/images/1.voyages/Costa Rica 2/Journee dediee a la detente et a l’exploration.baignade-dans-les-eaux-chaudes-naturelles-du-volcan-pacaya-au-c-ur-de-la-jungle.balades-sur-les-sentiers-ponctues-de-ponts-suspendus-et-de-miradors.en-option-balade-a-cheval-tubing-sur-la-riviere-ou-canopy.  Nuit a l’hotel Buena Vista del Rincon cheval.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "Adios Costa Rica",
+      "badgeText": "JOUR 11",
+      "description": "Fin du séjour principal. Transfert vers San José pour votre vol international ou poursuite de votre voyage avec l’extension plage.",
+      "photo": "/images/1.voyages/refuge-animaux-costa-rica/J2LzuT7MQ8K5E0XDNXoq.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "description": "Prolongez votre séjour au bord de la mer à Samara ou Manuel Antonio, deux stations balnéaires emblématiques du Pacifique. Plages dorées, baignades, farniente et balades au coucher du soleil ponctuent ces derniers jours.  Nuit à l’hôtel Giada 3 étoiles à Samara (ou équivalent).",
+      "badgeText": "Jour 11 à 13 (en option)",
+      "denivellation": "",
+      "photo": "/images/1.voyages/Costa Rica 2/samara.jpeg"
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7. Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, WhatsApp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "L’accueil à l’aéroport et l’assistance francophone locale dès votre arrivée à San José.",
+      "L’encadrement par un guide local francophone pendant tout le voyage, de San José à Rincón de la Vieja.",
+      "Les transferts, excursions et visites mentionnés dans le programme, en minibus, bateau ou véhicule adapté selon les étapes.",
+      "L’hébergement en hôtels et lodges tels que décrits dans le programme, en base chambre double ou twin (selon disponibilité au moment de la réservation).",
+      "La pension complète.",
+      "Les entrées sur les sites et parcs nationaux mentionnés dans le programme.",
+      "La compensation carbone du voyage, réalisée par Odysway et son partenaire local, en soutien à des projets de reforestation et d’énergies renouvelables au Costa Rica."
+    ],
+    "exclude": [
+      "Les vols internationaux (possibilité de devis avec vols inclus sur demande).",
+      "Les repas non mentionnés et les boissons.",
+      "Les activités optionnelles proposées sur place.",
+      "Les pourboires et dépenses à caractère personnel.",
+      "Les « early check-in » ou « late check-out » dans les hébergements sélectionnés.",
+      "Toutes les prestations non mentionnées dans le programme.",
+      "L’assurance voyage multirisque ou annulation, conseillée (possibilité de souscrire une formule adaptée auprès d’Odysway)."
+    ]
+  },
+  "pricing": {
+    "startingPrice": 2990,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": 8,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "CDG",
+      "SJO"
+    ]
+  },
+  "accompanistsDescription": "Un guide francophone expérimenté accompagne le groupe tout au long du voyage. Fin connaisseur du pays, il partage ses connaissances sur la culture, la faune et la flore du Costa Rica tout en veillant à la bonne harmonie du groupe.",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "Hôtels et dans une communauté",
+      "housingType": "",
+      "housingMood": "Pendant ce voyage, vous séjournerez dans un hôtel de charme à Alajuela, niché dans un écrin de verdure près de la capitale. Avec ses jardins luxuriants et ses chambres confortables, c’est le lieu idéal pour commencer votre aventure au Costa Rica dans un cadre paisible et accueillant.\r\nAu cœur de la jungle, vous vivrez une immersion exceptionnelle au sein de la communauté Bribri. Hébergé dans un cadre simple mais chaleureux, vous partagerez leur quotidien, découvrirez leurs traditions ancestrales et vous connecterez à une culture unique dans un environnement dépaysant et authentique.\r\nPour conclure votre séjour en beauté, vous profiterez du confort d’un hébergement tropical à Puerto Viejo, situé à deux pas de la plage de Cocles. Entouré de nature et bercé par l’ambiance caribéenne, cet hébergement offre tout ce qu’il faut pour vous détendre : piscine, spa et accès direct aux plages paradisiaques. Un cadre parfait pour savourer les derniers instants de votre voyage.\r\n",
+      "image": [
+        {
+          "src": "/images/1.voyages/voyage-costa-rica-immersion-communaute-locale/DVjp2u5rTnurxmVMcYhy.jpg",
+          "alt": "image de l'hébergement Pura Vida au Costa Rica : aventure tropicale et immersion dans la communauté Bribri"
+        },
+        {
+          "src": "/images/1.voyages/voyage-costa-rica-immersion-communaute-locale/SeTyLDzGTaOXXFmOoyxX.jpg",
+          "alt": "image de l'hébergement Pura Vida au Costa Rica : aventure tropicale et immersion dans la communauté Bribri"
+        },
+        {
+          "src": "/images/1.voyages/voyage-costa-rica-immersion-communaute-locale/XDcU2TPVSYWYKTjGKrPp.jpg",
+          "alt": "image de l'hébergement Pura Vida au Costa Rica : aventure tropicale et immersion dans la communauté Bribri"
+        }
+      ]
+    }
+  ],
+  "image": {
+    "src": "/images/1.voyages/voyage-costa-rica-immersion-communaute-locale/ry7Hnsm9R1KxzOdMuUPx.jpg",
+    "alt": "image principale du voyage Pura Vida au Costa Rica : aventure tropicale et immersion dans la communauté Bribri"
+  },
+  "imageSecondary": {
+    "src": "/images/1.voyages/voyage-costa-rica-immersion-communaute-locale/w5TvOe7SsSQBy5CLkbki.jpg",
+    "alt": "image secondaire du voyage Pura Vida au Costa Rica : aventure tropicale et immersion dans la communauté Bribri"
+  },
+  "photosList": [],
+  "videoLinks": [],
+  "faqBlock": {
+    "faqList": [
+      {
+        "question": "Où vais-je dormir ?",
+        "answer": "Le voyage alterne entre hôtels et lodges confortables, toujours bien situés et choisis pour leur cadre naturel. Les premières nuits se passent à San José, dans un hôtel 4 étoiles moderne et central. À Tortuguero, vous dormez au Laguna Lodge, accessible uniquement en bateau, en pleine jungle tropicale. À Arenal, l’hébergement se fait à l’hôtel Arenal Paraíso, avec vue sur le volcan et accès aux sources chaudes. À Monteverde, vous séjournez au Monteverde Country Lodge, une adresse simple et chaleureuse au cœur de la forêt nuageuse. Enfin, à Rincón de la Vieja, vous dormez au Buena Vista del Rincón Lodge, un hébergement nature entouré de forêt sèche et de sentiers volcaniques. Pour l’extension plage, les nuits se font à l’hôtel Giada, à Samara, proche de la mer."
+      },
+      {
+        "question": "Combien de personnes par départ ?",
+        "answer": "Les groupes sont constitués de 2 à 14 participants maximum. Chaque départ est garanti à partir de 2 voyageurs, pour assurer des conditions de découverte conviviales et souples."
+      },
+      {
+        "question": "Qui accompagne le voyage ?",
+        "answer": "out au long du circuit, vous êtes accompagné d’un guide local francophone. Il partage ses connaissances sur la culture, la faune et la flore du pays, et veille au bon déroulement du voyage."
+      },
+      {
+        "question": "Quelle est la meilleure période pour voyager au Costa Rica ?",
+        "answer": "Le Costa Rica se visite toute l’année, mais la saison sèche, de décembre à avril, est particulièrement agréable pour voyager : les routes sont plus praticables et la lumière magnifique. La saison verte, de mai à novembre, offre quant à elle des paysages plus luxuriants, des prix souvent plus doux et une ambiance plus tranquille dans les parcs naturels."
+      },
+      {
+        "question": "Quel est le niveau de confort du voyage ?",
+        "answer": "Ce voyage est accessible à tous. Il ne comporte pas de difficulté physique particulière, seulement quelques marches sur sentiers et balades dans les parcs nationaux. Les hébergements offrent un bon niveau de confort, tous avec salle de bain privative et restauration sur place."
+      },
+      {
+        "question": "Comment se passent les repas ?",
+        "answer": "Les repas sont pris dans les hébergements ou dans des restaurants locaux selon les jours. La cuisine costaricienne est simple, saine et savoureuse : fruits frais, riz, haricots noirs, poissons et légumes locaux. Certains repas sont libres pour vous laisser le choix de vos découvertes culinaires."
+      },
+      {
+        "question": "Peut-on prolonger le voyage ?",
+        "answer": "Oui. Une extension de 3 jours / 2 nuits est proposée en fin de séjour, au bord de la mer à Samara ou Manuel Antonio, pour profiter de quelques jours de détente sur la côte Pacifique."
+      },
+      {
+        "question": "Quelle monnaie utiliser sur place ?",
+        "answer": "La monnaie locale est le colón costaricien (CRC). Les cartes bancaires sont largement acceptées dans les zones touristiques et les grandes villes, mais il est conseillé d’avoir un peu de liquide pour les achats courants et les petits commerces."
+      }
+    ]
+  },
+  "seoSection": {
+    "metaTitle": "Voyage au Costa Rica : entre volcans, jungle et douceur de vivre",
+    "canonicalUrl": "",
+    "ogTitle": "Voyage au Costa Rica : entre volcans, jungle et douceur de vivre",
+    "ogDescription": "Partez pour 11 jours d’immersion au Costa Rica en petit groupe, entre volcans, jungle tropicale et plages sauvages. Un voyage guidé à la rencontre d’un pays vibrant de nature et de vie.",
+    "ogImage": {
+      "src": "/images/1.voyages/voyage-costa-rica-immersion-communaute-locale/ry7Hnsm9R1KxzOdMuUPx.jpg",
+      "alt": "image principale du voyage Pura Vida au Costa Rica : aventure tropicale et immersion dans la communauté Bribri"
+    },
+    "twitterTitle": "Pura Vida au Costa Rica : aventure tropicale et immersion dans la communauté Bribri",
+    "twitterDescription": "Voyage au Costa Rica : immersion avec la communauté Bribri, jungles luxuriantes, volcans, plages paradisiaques et rencontres authentiques inoubliables.",
+    "twitterImage": {
+      "src": "/images/1.voyages/voyage-costa-rica-immersion-communaute-locale/ry7Hnsm9R1KxzOdMuUPx.jpg",
+      "alt": "image principale du voyage Pura Vida au Costa Rica : aventure tropicale et immersion dans la communauté Bribri"
+    },
+    "twitterCard": "summary_large_image"
+  }
+}

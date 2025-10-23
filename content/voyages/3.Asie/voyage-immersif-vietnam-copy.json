@@ -1,5 +1,5 @@
 {
-  "published": true,
+  "published": false,
   "title": "Le Vietnam du Nord au Sud, de la baie d’Halong au delta du Mékong",
   "destinations": [
     {
@@ -70,7 +70,7 @@
   "comments": 10,
   "miniatureDisplay": "Note moyenne",
   "authorNote": {
-    "text": "Partez à la rencontre du Vietnam, entre vie locale, paysages apaisants et héritage culturel.  Commencez votre voyage à Hanoï, en arpentant les ruelles animées où les odeurs d’épices et de cuisine de rue se mêlent aux étals colorés. Goûtez un Phô fumant, échangez un sourire avec un vendeur et observez la ville qui s’éveille.  Poursuivez vers Ninh Binh, la “baie d’Halong terrestre”. Glissez en barque sur la rivière entre rizières et pitons calcaires, pédalez à travers la campagne et laissez-vous guider par ceux qui y vivent, entre champs, marchés et pagodes nichées dans la verdure.  Embarquez ensuite pour une croisière sur la baie d’Halong, à bord d’une jonque traditionnelle. Contemplez les formations rocheuses qui se reflètent dans les eaux calmes et profitez du silence apaisant qui enveloppe les paysages.  Découvrez ensuite Hué et Hoi An, qui dévoilent un Vietnam empreint de douceur et de poésie. Explorez les vestiges impériaux, traversez les ruelles bordées de maisons anciennes et laissez la magie opérer à la tombée du jour, lorsque les lanternes s’allument au-dessus de la rivière.  Terminez votre voyage dans le sud, entre Hô Chi Minh-Ville et le delta du Mékong. Plongez au cœur de l’histoire et embarquez sur les canaux pour découvrir la vie qui s’anime au fil de l’eau, entre barques et marchés flottants.  Un voyage à la rencontre d’un pays attachant, où chaque moment invite à la découverte, au partage et à la sérénité.",
+    "text": "Plongez au cœur de l'âme du Vietnam, où chaque étape mêle incontournables et découvertes hors des sentiers battus.\n\nVotre aventure débute à Hanoi, où l'effervescence des rues, les couleurs vibrantes et les senteurs enivrantes des marchés éveillent vos sens. Arpentez ses ruelles animées, savourez un délicieux Phô, et imprégnez-vous de cette atmosphère unique, typique du Vietnam. Puis, laissez-vous bercer par la quiétude de la baie d'Halong lors d'une croisière à bord d'une jonque, où les formations karstiques se reflètent dans des eaux paisibles...\n\nPoursuivez vers Phu Long pour une expérience inoubliable chez l’habitant, où vous partagerez la simplicité de la vie locale et découvrirez la chaleur de l'accueil vietnamien. À Hué, déambulez à travers les rues chargées d’histoire, entre architectures grandioses et jardins ornés de frangipaniers. Chaque pagode, chaque mausolée murmure les légendes d’antan et vous transporte dans un passé glorieux.\n\nEnfin, laissez-vous charmer par la belle Hoi An surnommée \"la ville lanterne\". Flânez dans ses ruelles pavées, bordées de maisons anciennes aux façades colorées, et admirez les lanternes qui dansent au gré du vent.A la tombée du jour, la rivière s'illumine sous une pluie de lumières, tandis que les délicieuses senteurs des plats locaux s’échappent des petites échoppes. Ici, le temps semble suspendu, et chaque coin de rue dévoile un tableau vivant où traditions et paysages se fondent harmonieusement...\n\nUn voyage qui vous emmène à la découverte de l'essence du Vietnam, de sa culture fascinante et de ses paysages à couper le souffle.",
     "author": "Linda",
     "affixeAuthor": "Responsable Asie"
   },
@@ -82,7 +82,7 @@
     "Tombez sous le charme de Hoi An, avec ses ruelles bordées de maisons anciennes et ses lanternes qui s’allument à la nuit tombée.",
     "Terminez votre voyage dans le delta du Mékong, en naviguant entre les canaux et les marchés flottants, au plus près de la vie locale"
   ],
-  "slug": "voyage-immersif-vietnam",
+  "slug": "voyage-immersif-vietnam-copy",
   "description": "Partez à la rencontre du Vietnam, entre vie locale, paysages apaisants et héritage culturel.  Commencez votre voyage à Hanoï, en arpentant les ruelles animées où les odeurs d’épices et de cuisine de rue se mêlent aux étals colorés. Goûtez un Phô fumant, échangez un sourire avec un vendeur et observez la ville qui s’éveille.  Poursuivez vers Ninh Binh, la “baie d’Halong terrestre”. Glissez en barque sur la rivière entre rizières et pitons calcaires, pédalez à travers la campagne et laissez-vous guider par ceux qui y vivent, entre champs, marchés et pagodes nichées dans la verdure.  Embarquez ensuite pour une croisière sur la baie d’Halong, à bord d’une jonque traditionnelle. Contemplez les formations rocheuses qui se reflètent dans les eaux calmes et profitez du silence apaisant qui enveloppe les paysages.  Découvrez ensuite Hué et Hoi An, qui dévoilent un Vietnam empreint de douceur et de poésie. Explorez les vestiges impériaux, traversez les ruelles bordées de maisons anciennes et laissez la magie opérer à la tombée du jour, lorsque les lanternes s’allument au-dessus de la rivière.  Terminez votre voyage dans le sud, entre Hô Chi Minh-Ville et le delta du Mékong. Plongez au cœur de l’histoire et embarquez sur les canaux pour découvrir la vie qui s’anime au fil de l’eau, entre barques et marchés flottants.  Un voyage à la rencontre d’un pays attachant, où chaque moment invite à la découverte, au partage et à la sérénité.",
   "emailDescription": "👉 Si vous souhaitez découvrir le Vietnam à travers une expérience unique, ce voyage est fait pour vous ! ",
   "metaDescription": "Partez à la rencontre du Vietnam : ruelles de Hanoï, lanternes de Hoi An, croisière sur la baie d’Halong et douceur du Mékong.",
@@ -166,7 +166,7 @@
     {
       "title": "À LA DÉCOUVERTE DU CHARME DE HOI AN",
       "badgeText": "JOURS 8 ET 9",
-      "description": "Prenez la route vers Hoi An en empruntant le Col des Nuages, entre mer et montagne. À l’arrivée, découvrez le charme de la vieille ville : le pont japonais, la pagode Phuc Thanh, le sanctuaire de Fujian ou la maison de Tan Ky... En fin de journée, apprenez à fabriquer votre propre lanterne, un souvenir fait main de Hoi An.  Le lendemain, partez vers le village de Van Lang et sa mangrove, puis rejoignez Tra Que, un village jardin où l’agriculture se pratique encore de façon naturelle. Aux côtés des cultivateurs, initiez-vous aux gestes de l’agriculture traditionnelle et plongez, le temps d’un atelier, dans un mode de vie en harmonie avec la nature.",
+      "description": "Commencez la journée par un trajet vers Hoi An en empruntant le Col des Nuages, cette route sinueuse entre mer et montagne... À l'arrivée, plongez dans le charme de la vieille ville : le pont japonais, la pagode Phuc Thanh, le sanctuaire de Fujian, la maison traditionnelle de Tan Ky… Un voyage dans le temps à travers les ruelles colorées.  En fin de journée, apprenez à fabriquer votre propre lanterne, pour repartir avec un souvenir fait main et un petit morceau de Hoi An..  Le lendemain, partez à vélo ou en voiture vers le village de Van Lang et sa mangrove, puis rejoignez Tra Que, un village jardin où l’agriculture se pratique encore de manière totalement naturelle. Rencontrez les cultivateurs et participez à un atelier les mains dans la terre : une expérience simple, engagée et au plus près des savoir-faire locaux.  Retour à Hoi An et après-midi libre pour flâner, goûter, découvrir à votre rythme. ",
       "photo": "/images/1.voyages/voyage-immersif-vietnam/45StGXgzRM2tDyZnGANA.jpg",
       "denivellation": "",
       "road": "",
@@ -179,13 +179,13 @@
       "photo": "/images/1.voyages/voyage-immersif-vietnam/pexels_tuongchopper_28899310_93c3302945.jpg"
     },
     {
-      "description": "Partez à la découverte des lieux emblématiques de Hô Chi Minh-Ville. Commencez par le bureau de poste central, chef-d’œuvre de l’époque coloniale signé Gustave Eiffel, puis visitez le palais de la Réunification, symbole fort de l’histoire vietnamienne. Flânez ensuite dans la rue Dong Khoi, artère emblématique de la ville où se côtoient cafés, galeries, boutiques et bâtiments d’époque. Terminez la journée dans le quartier chinois de Cho Lon, un véritable labyrinthe de ruelles animées où temples, échoppes et marchés colorés racontent la vie quotidienne des communautés chinoises depuis plusieurs générations.",
+      "description": "Aujourd'hui, vous partez à la découverte des lieux emblématiques de Hô Chi Minh-Ville. Commencez par le bureau de poste central, joyau de l’époque coloniale signé Gustave Eiffel. Un lieu chargé d’histoire, entre élégance architecturale et traces du passé français.  Poursuivez avec le palais de la Réunification, symbole fort de l’unification du Vietnam. Son architecture moderniste et ses pièces figées dans le temps offrent un véritable retour en arrière.  Flânez ensuite dans la rue Dong Khoi, artère emblématique mêlant cafés, galeries, boutiques de luxe et bâtiments coloniaux. Une belle immersion dans la vieille Saigon, entre charme et modernité.  Terminez la journée dans le quartier chinois de Cho Lon. Entre temples, ruelles animées et marché Binh Tay, vous découvrez une autre facette de la ville, portée par la culture et le commerce des communautés chinoises.",
       "title": "DU CHARME COLONIAL À LA VIE LOCALE",
       "badgeText": "JOUR 11",
       "photo": "/images/1.voyages/voyage-immersif-vietnam/Vietnam_Saigon1_ceb971d299.jpg"
     },
     {
-      "description": "Tôt le matin, prenez la route vers Cai Be, à travers les paysages verdoyants de la campagne vietnamienne. Faites halte dans de petits ateliers artisanaux où l’on fabrique encore la pâte de riz, les bonbons à la noix de coco ou le pop-corn local, perpétuant des savoir-faire anciens.  Depuis Vinh Long, embarquez pour une croisière sur le Mékong en direction de l’île d’An Binh. Couverte de vergers et traversée de canaux, cette île paisible est réputée pour sa douceur de vivre et ses cultures de fruits et de fleurs destinées à Saigon. Explorez-la à pied ou à vélo, le long des sentiers bordés d’arbres fruitiers, et laissez-vous porter par le rythme tranquille de la vie locale.  En fin de journée, rejoignez Can Tho, au cœur du delta.",
+      "description": "Tôt le matin, vous quittez Hô Chi Minh-Ville en direction de Cai Be, à travers les paysages verdoyants de la campagne vietnamienne.  En chemin, vous visitez quelques ateliers artisanaux : fabrication de pâte de riz, de bonbons à la noix de coco ou encore de pop-corn local : des savoir-faire simples, transmis de génération en génération. Depuis Vinh Long, vous embarquez pour une croisière sur le Mékong en direction de l’île d’An Binh. Cette petite île paisible, couverte de vergers et sillonnée de canaux, est réputée pour sa douceur de vivre et ses cultures de fruits et de fleurs destinés à Saigon.  À votre rythme, vous explorez l’île à pied ou à vélo, le long de petits chemins bordés d’arbres fruitiers. L’occasion d’observer la vie quotidienne des habitants et de découvrir un autre visage du Vietnam, plus rural et apaisé. En fin de journée, route vers Can Tho, au cœur du delta.",
       "title": "DU DELTA DU MÉKONG A CAN THO",
       "badgeText": "JOUR 12",
       "photo": "/images/1.voyages/voyage-immersif-vietnam/pexels_thanhhoa_tran_640546_28929489_36df908d78.jpg"
@@ -210,7 +210,7 @@
       "Le guide francophone et chauffeur privé (hors journées libres)",
       "Les nuitées en base double avec petit-déjeuner",
       "Tous les petits-déjeuners à partir du Jour 2",
-      "Les déjeuners des Jours 4, 5, 6 et 9",
+      "Les déjeuners des Jours 4, 5, 6 et 9 ",
       "Les dîners des Jours 2, 5 et 13",
       "Toutes les activités indiquées dans le programme",
       "La croisière en jonque partagée sur la baie d'Halong (guide anglophone à bord)",
@@ -274,25 +274,25 @@
     }
   ],
   "image": {
-    "src": "/images/voyages/voyage-immersif-vietnam-lan-ha/vietnam-street.jpg",
+    "src": "/images/1.voyages/voyage-immersif-vietnam/pexels_tuongchopper_28899310_93c3302945.jpg",
     "alt": "image principale du voyage Voyage au Vietnam : de la baie d'Halong à Hoi an, entre incontournables et immersion locale"
   },
   "imageSecondary": {
-    "src": "/images/voyages/voyage-immersif-vietnam-lan-ha/vietnam-mekong.jpeg",
+    "src": "/images/1.voyages/voyage-immersif-vietnam/Vietnam_Mekong_bd8d8451fd.jpeg",
     "alt": "image secondaire du voyage Voyage au Vietnam : de la baie d'Halong à Hoi an, entre incontournables et immersion locale"
   },
   "photosList": [
     {
-      "src": "/images/1.voyages/voyage-immersif-vietnam/pexels_tran_le_tuan_865376_9847127_735afca06b.jpg",
-      "alt": "Vie locale au Vietnam"
+      "src": "/images/1.voyages/voyage-immersif-vietnam-lan-ha/0ZGKTGsLQumnbOHtfvDR.jpg",
+      "alt": "La Baie d'Halong"
     },
     {
       "src": "/images/1.voyages/voyage-immersif-vietnam-lan-ha/gdJchAjSKWCTsQzY5HQs.jpg",
       "alt": "Le charme de Hoi An"
     },
     {
-      "src": "/images/voyages/voyage-immersif-vietnam-lan-ha/0ZGKTGsLQumnbOHtfvDR.jpg",
-      "alt": "La Baie d'Halong"
+      "src": "/images/1.voyages/voyage-immersif-vietnam-lan-ha/qlpt5y0T7uDKutelao5A.jpg",
+      "alt": "Ninh Binh"
     },
     {
       "src": "/images/1.voyages/voyage-immersif-vietnam/45StGXgzRM2tDyZnGANA.jpg",
@@ -302,14 +302,7 @@
       "src": "/images/1.voyages/voyage-immersif-vietnam/Hochi_Minh_91d29ece30.jpeg",
       "alt": "Une ruelle au cœur de Saigon"
     },
-    {
-      "src": "/images/1.voyages/voyage-immersif-vietnam/UjpRtoNHTIGeyyQ24TQh.jpg",
-      "alt": "Atelier de cuisine"
-    },
-    {
-      "src": "/images/1.voyages/voyage-immersif-vietnam/pexels_minan1398_1006143_e182bbe9df.jpg",
-      "alt": "Coucher de soleil sur Saigon"
-    }
+    {}
   ],
   "videoLinks": [],
   "faqBlock": {
