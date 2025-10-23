@@ -26,7 +26,8 @@ export default defineConfig({
                 S.list()
                   .title('Voyages')
                   .items([
-                    S.documentTypeListItem('voyage').title('All Voyages'),
+                    S.documentTypeListItem('voyage').title('Tous les Voyages'),
+                    S.divider(),
                     S.listItem()
                       .title('Voyages by Category')
                       .child(
@@ -50,6 +51,41 @@ export default defineConfig({
                               .filter('_type == "voyage" && references($destId)')
                               .params({destId}),
                           ),
+                      ),
+                    
+                    S.listItem()
+                      .title('Voyages by Experience')
+                      .child(
+                        S.documentTypeList('experience')
+                          .title('Experiences')
+                          .child((experienceId) =>
+                            S.documentList()
+                              .title('Voyages')
+                              .filter('_type == "voyage" && references($experienceId)')
+                              .params({experienceId}),
+                          ),
+                      ),
+                    S.divider(),
+                    S.listItem()
+                      .title('Voyages en Groupe')
+                      .child(
+                        S.documentList()
+                          .title('Voyages en Groupe')
+                          .filter('_type == "voyage" && "groupe" in availabilityTypes')
+                      ),
+                    S.listItem()
+                      .title('Voyages en Privatisation')
+                      .child(
+                        S.documentList()
+                          .title('Voyages en Privatisation')
+                          .filter('_type == "voyage" && "privatisation" in availabilityTypes')
+                      ),
+                    S.listItem()
+                      .title('Voyages Sur-Mesure')
+                      .child(
+                        S.documentList()
+                          .title('Voyages Sur-Mesure')
+                          .filter('_type == "voyage" && "custom" in availabilityTypes')
                       ),
                   ]),
               ),
