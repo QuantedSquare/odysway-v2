@@ -7,8 +7,8 @@ export const pageThematiquesType = defineType({
   preview: {
     prepare() {
       return {
-        title: 'Page Thématiques',
-        subtitle: 'Textes pour la page des thématiques'
+        title: 'Page Catégories Thématiques',
+        subtitle: 'Textes pour la page des catégories thématiques'
       }
     }
   },
@@ -82,6 +82,12 @@ export const pageThematiquesType = defineType({
           ]
         })
       ]
-    })
+    }),
+    defineField({
+      name: 'seo',
+      title: 'SEO Settings',
+      type: 'seo',
+      description: 'Configuration SEO pour la page catégories thématiques',
+    }),
   ]
 })

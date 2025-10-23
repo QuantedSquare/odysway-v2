@@ -72,5 +72,12 @@ export const conditionsGeneralesVenteType = defineType({
         },
       ],
     }),
+    // SEO Settings
+    defineField({
+      name: 'seo',
+      title: 'SEO Settings',
+      type: 'seo',
+      description: 'Configuration SEO pour les conditions générales de vente (og:type = "website", structuredData = "Organization")',
+    }),
   ],
 })

@@ -156,16 +156,11 @@ export default defineEventHandler(async (event) => {
     // === Content Without Direct Pages (logging only) ===
     else if (['teamMember', 'review', 'partner', 'region', 'tops'].includes(documentType)) {
       // These are referenced by other pages but don't have their own pages
-      console.log(`ℹ️  ${documentType} updated - referenced content, no direct page to revalidate`)
+      console.log(`ℹ️  ${documentType} updated - referenced content, no direct page to revalidate, revalidating some`)
       // Reviews might be on homepage or voyage pages
-      if (documentType === 'review') {
-        pathsToRevalidate.push('/')
-        pathsToRevalidate.push('/avis-voyageurs')
-      }
-      // Team members on various pages
-      if (documentType === 'teamMember') {
-        pathsToRevalidate.push('/vision-voyage-odysway')
-      }
+      pathsToRevalidate.push('/')
+      pathsToRevalidate.push('/avis-voyageurs')
+      pathsToRevalidate.push('/vision-voyage-odysway')
     }
     else {
       console.log(`⚠️  Unknown document type: ${documentType}`)

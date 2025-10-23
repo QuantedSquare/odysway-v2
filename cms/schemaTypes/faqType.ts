@@ -110,5 +110,11 @@ export const faqType = defineType({
         },
       ],
     }),
+    defineField({
+      name: 'seo',
+      title: 'SEO Settings',
+      type: 'seo',
+      description: 'Configuration SEO pour la page FAQ',
+    }),
   ],
 })

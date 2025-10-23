@@ -56,10 +56,7 @@ export const entrepriseType = defineType({
   title: 'Page Entreprise',
   type: 'document',
   groups: [
-    {
-      name: 'pageSettings',
-      title: 'Page Settings',
-    },
+
     {
       name: 'hero',
       title: 'Hero Section',
@@ -89,6 +86,10 @@ export const entrepriseType = defineType({
       name: 'cta',
       title: 'Boutons CTA',
     },
+    {
+      name: 'seo',
+      title: 'SEO Settings',
+    },
   ],
   preview: {
     select: {
@@ -96,63 +97,14 @@ export const entrepriseType = defineType({
     },
   },
   fields: [
-    // Page Settings Group
-    defineField({
-      name: 'pageSettings',
-      title: 'Page Settings',
-      type: 'object',
-      group: 'pageSettings',
-      fields: [
-        // Basic page info
-        defineField({
-          name: 'title',
-          title: 'Page Title',
-          type: 'string',
-          validation: (rule) => rule.required(),
-        }),
-        defineField({
-          name: 'description',
-          title: 'Page Description',
-          type: 'text',
-          validation: (rule) => rule.required(),
-        }),
-
-        // SEO Settings
-        defineField({
-          name: 'seo',
-          title: 'SEO Settings',
-          type: 'object',
-          fields: [
-            defineField({
-              name: 'title',
-              title: 'SEO Title',
-              type: 'string',
-              validation: (rule) => rule.required(),
-            }),
-            defineField({
-              name: 'description',
-              title: 'SEO Description',
-              type: 'text',
-              validation: (rule) => rule.required(),
-            }),
-            defineField({
-              name: 'robots',
-              title: 'Robots',
-              type: 'string',
-              initialValue: 'index, follow',
-              options: {
-                list: [
-                  {title: 'Index, Follow', value: 'index, follow'},
-                  {title: 'No Index, No Follow', value: 'noindex, nofollow'},
-                  {title: 'Index, No Follow', value: 'index, nofollow'},
-                  {title: 'No Index, Follow', value: 'noindex, follow'},
-                ],
-              },
-            }),
-          ],
-        }),
-      ],
-    }),
+      // SEO Settings
+      defineField({
+        name: 'seo',
+        title: 'SEO Settings',
+        type: 'seo',
+        group: 'seo',
+        description: 'Configuration SEO pour la page entreprise (og:type = "website", structuredData = "Organization")',
+      }),
 
     // Hero Section
     defineField({

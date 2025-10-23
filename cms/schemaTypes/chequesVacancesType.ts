@@ -78,6 +78,13 @@ export const chequesVacancesType = defineType({
         },
       ],
     }),
+      // SEO Settings
+      defineField({
+        name: 'seo',
+        title: 'SEO Settings',
+        type: 'seo',
+        description: 'Configuration SEO pour la page de chèques-vacances (og:type = "website", structuredData = "Organization")',
+      }),
     defineField({
       name: 'ctaButton',
       type: 'object',

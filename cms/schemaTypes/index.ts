@@ -38,7 +38,13 @@ import {topsType} from './topsType'
 import {voyageCardType} from './voyageCardType'
 import {voyageType} from './voyageType'
 
+// Reusable objects
+import {seoFields} from './objects/seoFields'
+
 export const schemaTypes = [
+  // Reusable objects must be registered first
+  seoFields,
+  // Document types
   avisVoyageursType,
   badgeType,
   blockContent,

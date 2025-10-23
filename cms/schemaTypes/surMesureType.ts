@@ -109,5 +109,11 @@ export const surMesureType = defineType({
         },
       },
     }),
+    defineField({
+      name: 'seo',
+      title: 'SEO Settings',
+      type: 'seo',
+      description: 'Configuration SEO pour la page sur mesure',
+    }),
   ],
 })

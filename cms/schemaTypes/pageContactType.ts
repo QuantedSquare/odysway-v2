@@ -9,6 +9,7 @@ export const pageContactType = defineType({
     {name: 'contact_form', title: 'Formulaire de Contact'},
     {name: 'gdpr_section', title: 'Section RGPD'},
     {name: 'validation_messages', title: 'Messages de Validation'},
+    {name: 'seo', title: 'SEO'},
   ],
   preview: {
     prepare() {
@@ -319,6 +320,13 @@ export const pageContactType = defineType({
           validation: Rule => Rule.required()
         })
       ]
-    })
+    }),
+    defineField({
+      name: 'seo',
+      title: 'SEO Settings',
+      type: 'seo',
+      group: 'seo',
+      description: 'Configuration SEO pour la page contact',
+    }),
   ]
 })
