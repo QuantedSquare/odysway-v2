@@ -70,9 +70,42 @@
     },
     {
       "src": "/images/voyages/Japon-shanti/pexels-ryutaro-5745864.jpg"
+    },
+    {
+      "src": "/images/1.voyages/voyage-immersion-japon/izakaya.jpg"
     }
   ],
-  "housingBlock": [],
+  "housingBlock": [
+    {
+      "title": "Vos hébergements",
+      "image": [
+        {
+          "src": "/images/1.voyages/voyage-immersion-japon/hotel-2.png"
+        },
+        {
+          "src": "/images/1.voyages/voyage-immersion-japon/hotel-3.jpg"
+        }
+      ],
+      "housingType": "Hôtel",
+      "housingMood": "Vous séjournerez dans des hôtels confortables à Osaka, Kyoto, Takayama et Tokyo, alliant modernité et sens du détail japonais. Les chambres seront calmes, bien équipées et idéales pour vous reposer après les visites. Chaque établissement offrira un cadre agréable, entre confort occidental et hospitalité locale. Vous découvrirez le Japon dans des conditions à la fois simples et sereines."
+    },
+    {
+      "title": "Expérience Ryokan",
+      "image": [
+        {
+          "src": "/images/1.voyages/voyage-immersion-japon/ryokan-3.png"
+        },
+        {
+          "src": "/images/1.voyages/voyage-immersion-japon/ryokan-2.png"
+        },
+        {
+          "src": "/images/1.voyages/voyage-immersion-japon/ryokan-1.png"
+        }
+      ],
+      "housingType": "Ryokan",
+      "housingMood": "À Gero Onsen, vous passerez une nuit en ryokan, auberge traditionnelle japonaise. Vous dormirez sur des tatamis, dégusterez un dîner kaiseki et profiterez des onsen, les bains thermaux. Le Suimeikan Ryokan alliera élégance, calme et hospitalité japonaise. Ce sera une parenthèse apaisante et authentique au cœur du voyage."
+    }
+  ],
   "accompanistsList": [
     {
       "name": "Guide francophone",
@@ -184,7 +217,7 @@
       "badgeText": "Jour 12",
       "title": "Tokyo libre et dîner d’au revoir",
       "description": "Une journée pour flâner à votre rythme : Ginza, Ueno, Shibuya ou Akihabara… Le soir, dîner d’au revoir dans un izakaya typique pour célébrer la fin du voyage autour de quelques plats à partager. Nuit à Tokyo.",
-      "photo": "/images/1.voyages/voyage-immersion-japon/izakaya.jpg"
+      "photo": "/images/1.voyages/voyage-immersion-japon/jezael-melgoza-cud-nrzbsy-zw-unsplash.jpg"
     },
     {
       "title": "Départ de Tokyo",
