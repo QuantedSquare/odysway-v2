@@ -8,7 +8,7 @@ import {convertMarkdownToPortableText} from './markdownToPortableText.js'
 import {MigrationReporter} from './migrationReporter.js'
 
 // Configuration: Set to either a specific file path or the voyages directory
-const voyagesBasePath = '../content/voyages/1. France/sejour-berger-bearn.json'
+const voyagesBasePath = '../content/voyages/2.Europe/'
 
 export default async function migrateVoyages(client) {
   // Create reporter
