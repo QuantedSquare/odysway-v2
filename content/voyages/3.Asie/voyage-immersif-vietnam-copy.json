@@ -1,5 +1,5 @@
 {
-  "published": true,
+  "published": false,
   "title": "Le Vietnam du Nord au Sud, de la baie d’Halong au delta du Mékong",
   "destinations": [
     {
@@ -82,7 +82,7 @@
     "Tombez sous le charme de Hoi An, avec ses ruelles bordées de maisons anciennes et ses lanternes qui s’allument à la nuit tombée.",
     "Terminez votre voyage dans le delta du Mékong, en naviguant entre les canaux et les marchés flottants, au plus près de la vie locale"
   ],
-  "slug": "voyage-immersif-vietnam",
+  "slug": "voyage-immersif-vietnam-copy",
   "description": "Partez à la rencontre du Vietnam, entre vie locale, paysages apaisants et héritage culturel.  Commencez votre voyage à Hanoï, en arpentant les ruelles animées où les odeurs d’épices et de cuisine de rue se mêlent aux étals colorés. Goûtez un Phô fumant, échangez un sourire avec un vendeur et observez la ville qui s’éveille.  Poursuivez vers Ninh Binh, la “baie d’Halong terrestre”. Glissez en barque sur la rivière entre rizières et pitons calcaires, pédalez à travers la campagne et laissez-vous guider par ceux qui y vivent, entre champs, marchés et pagodes nichées dans la verdure.  Embarquez ensuite pour une croisière sur la baie d’Halong, à bord d’une jonque traditionnelle. Contemplez les formations rocheuses qui se reflètent dans les eaux calmes et profitez du silence apaisant qui enveloppe les paysages.  Découvrez ensuite Hué et Hoi An, qui dévoilent un Vietnam empreint de douceur et de poésie. Explorez les vestiges impériaux, traversez les ruelles bordées de maisons anciennes et laissez la magie opérer à la tombée du jour, lorsque les lanternes s’allument au-dessus de la rivière.  Terminez votre voyage dans le sud, entre Hô Chi Minh-Ville et le delta du Mékong. Plongez au cœur de l’histoire et embarquez sur les canaux pour découvrir la vie qui s’anime au fil de l’eau, entre barques et marchés flottants.  Un voyage à la rencontre d’un pays attachant, où chaque moment invite à la découverte, au partage et à la sérénité.",
   "emailDescription": "👉 Si vous souhaitez découvrir le Vietnam à travers une expérience unique, ce voyage est fait pour vous ! ",
   "metaDescription": "Partez à la rencontre du Vietnam : ruelles de Hanoï, lanternes de Hoi An, croisière sur la baie d’Halong et douceur du Mékong.",
@@ -210,8 +210,8 @@
       "Le guide francophone et chauffeur privé (hors journées libres)",
       "Les nuitées en base double avec petit-déjeuner",
       "Tous les petits-déjeuners à partir du Jour 2",
-      "Les déjeuners des Jours 4, 5 et ",
-      "Les dîners des Jours 5 et 13",
+      "Les déjeuners des Jours 4, 5, 6 et 9 ",
+      "Les dîners des Jours 2, 5 et 13",
       "Toutes les activités indiquées dans le programme",
       "La croisière en jonque partagée sur la baie d'Halong (guide anglophone à bord)",
       "Le trajet en train de nuit de Hanoi à Hué (en compartiment partagé de 4 couchettes)",

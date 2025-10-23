@@ -119,7 +119,8 @@
     "maxTravelers": 12,
     "minTravelersToConfirm": 4,
     "indivRoom": true,
-    "indivRoomPrice": 350
+    "indivRoomPrice": 350,
+    "forcedIndivRoom": true
   },
   "pricingDetailsBlock": {
     "exclude": [
@@ -265,9 +266,9 @@
   "authorNote": {
     "author": "Linda",
     "affixeAuthor": "Amoureuse des Alpes japonaises et du Katsudon",
-    "text": "La découverte du Japon en petit groupe est une expérience unique, mêlant traditions millénaires et modernité impressionnante. Ce circuit invite à explorer les sites emblématiques du pays : Osaka, Kyoto, Nara, Takayama, Shirakawago et Tokyo. Entre temples anciens, villages de montagne et mégalopoles fascinantes, chaque étape révèle une facette différente du Japon, entre douceur, précision et beauté du détail. Un voyage complet et équilibré, entre immersion culturelle et détente, pour vivre le Japon dans toute sa richesse."
+    "text": "Treize jours pour ressentir l’âme du Japon. D’Osaka à Tokyo, en passant par Kyoto, Nara et les Alpes japonaises, ce voyage est une invitation à découvrir un Japon authentique, loin des clichés. Vous partirez en petit groupe, accompagnés d’un guide local francophone, entre temples séculaires, villages de montagne et sources chaudes. Au fil des jours, les contrastes se dévoilent : la frénésie lumineuse d’Osaka, la sérénité de Kyoto, la douceur d’un bain à Gero Onsen, l’élégance tranquille de Takayama… jusqu’à Tokyo, immense et vibrante.  Un voyage complet, où chaque étape révèle une facette du Japon : sa beauté, sa retenue, sa précision, et cette poésie si particulière qui naît du calme et du détail."
   },
-  "description": "Treize jours pour ressentir l’âme du Japon. D’Osaka à Tokyo, en passant par Kyoto, Nara et les Alpes japonaises, ce voyage est une invitation à découvrir un Japon authentique, loin des clichés. Vous partirez en petit groupe, accompagnés d’un guide local francophone, entre temples séculaires, villages de montagne et sources chaudes. Au fil des jours, les contrastes se dévoilent : la frénésie lumineuse d’Osaka, la sérénité de Kyoto, la douceur d’un bain à Gero Onsen, l’élégance tranquille de Takayama… jusqu’à Tokyo, immense et vibrante.  Un voyage complet, où chaque étape révèle une facette du Japon : sa beauté, sa retenue, sa précision, et cette poésie si particulière qui naît du calme et du détail.",
+  "description": "La découverte du Japon en petit groupe est une expérience unique, mêlant traditions millénaires et modernité impressionnante. Ce circuit invite à explorer les sites emblématiques du pays : Osaka, Kyoto, Nara, Takayama, Shirakawago et Tokyo. Entre temples anciens, villages de montagne et mégalopoles fascinantes, chaque étape révèle une facette différente du Japon, entre douceur, précision et beauté du détail. Un voyage complet et équilibré, entre immersion culturelle et détente, pour vivre le Japon dans toute sa richesse.",
   "metaDescription": "Partez pour 13 jours d’immersion au Japon, entre Osaka, Kyoto, Takayama et Tokyo. Un voyage en petit groupe à la rencontre d’un Japon vivant et apaisé : traditions, montagnes, gastronomie et bains thermaux au fil des saisons.",
   "badgeSection": {
     "groupeBadge": {
