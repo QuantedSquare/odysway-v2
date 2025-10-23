@@ -8,8 +8,7 @@ export const experienceType = defineType({
     defineField({name: 'title', type: 'string', validation: (r) => r.required()}),
     defineField({name: 'badgeTitle', type: 'string', validation: (r) => r.required()}),
     defineField({name: 'slug', type: 'slug', options: {source: 'title'}, validation: (r) => r.required()}),
-    defineField({name: 'discoveryTitle', type: 'string'}),
-    defineField({name: 'seoTitle', type: 'string'}),
+    defineField({name: 'description', type: 'text'}),
     defineField({
       name: 'image',
       type: 'image',

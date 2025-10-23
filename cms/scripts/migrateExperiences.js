@@ -59,8 +59,7 @@ export default async function migrateExperiences(client) {
         slug: {
           current: data.slug
         },
-        discoveryTitle: data.discoveryTitle,
-        seoTitle: data.seoTitle,
+        description: data.description,
         showOnHome: data.showOnHome,
       }
       

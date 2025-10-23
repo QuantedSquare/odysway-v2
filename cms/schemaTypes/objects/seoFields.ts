@@ -107,7 +107,6 @@ export const seoFields = defineType({
       initialValue: 'website',
       description: 'Type de contenu pour le partage social',
     }),
-
     // Advanced
     defineField({
       name: 'noSnippet',

@@ -6,7 +6,6 @@ export const categoryType = defineType({
   type: 'document',
   groups: [
     {name: 'content', title: 'Content'},
-    {name: 'seo', title: 'SEO'},
     {name: 'settings', title: 'Settings'},
   ],
   fields: [
@@ -24,14 +23,6 @@ export const categoryType = defineType({
       validation: (rule) => rule.required(),
       group: 'content',
     }),
-      // SEO Settings
-      defineField({
-        name: 'seo',
-        title: 'SEO Settings',
-        type: 'seo',
-        group: 'seo',
-        description: 'Configuration SEO pour la page d\'accueil (og:type = "website", structuredData = "Organization")',
-      }),
     defineField({
       name: 'image',
       type: 'image',

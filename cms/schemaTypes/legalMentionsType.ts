@@ -72,5 +72,11 @@ export const legalMentionsType = defineType({
         },
       ],
     }),
+    defineField({
+      name: 'seo',
+      title: 'SEO Settings',
+      type: 'seo',
+      description: 'Configuration SEO pour les mentions légales',
+    }),
   ],
 })

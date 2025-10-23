@@ -115,22 +115,6 @@ export const blogType = defineType({
       group: 'metadata',
     }),
 
-    // Navigation (optional override for navigation display)
-    defineField({
-      name: 'navigationTitle',
-      type: 'string',
-      title: 'Navigation Title',
-      description: 'Override title for navigation (from frontmatter navigation.title)',
-      group: 'content',
-    }),
-    defineField({
-      name: 'navigationDescription',
-      type: 'text',
-      title: 'Navigation Description',
-      description: 'Override description for navigation (from frontmatter navigation.description)',
-      rows: 2,
-      group: 'content',
-    }),
 
     // SEO
       // SEO Settings

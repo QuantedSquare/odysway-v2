@@ -82,6 +82,12 @@ export const pageExperiencesType = defineType({
           ]
         })
       ]
-    })
+    }),
+    defineField({
+      name: 'seo',
+      title: 'SEO Settings',
+      type: 'seo',
+      description: 'Configuration SEO pour la page expériences',
+    }),
   ]
 })
