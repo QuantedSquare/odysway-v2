@@ -67,7 +67,7 @@ async function run() {
   // await migrateExperiences(client)
 
   // log('🔄 Migrating team members from JSON files...')
-  // await migrateTeam(client)
+   //await migrateTeam(client)
 
   // log('🔄 Migrating footer configuration...')
   // await migrateFooter(client)
