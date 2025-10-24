@@ -128,6 +128,7 @@ export function useSeo(options = {}) {
   })
 
   // Set SEO meta tags
+  console.log('normalized', normalized)
   useSeoMeta({
     title: normalized.metaTitle,
     description: normalized.metaDescription,

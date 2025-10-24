@@ -47,7 +47,6 @@
             <div>{{ badgeItem.displayText }}</div>
           </span>
         </v-chip>
-
         <v-chip
           v-if="stegaClean(level).length > 0"
           variant="flat"

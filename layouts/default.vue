@@ -129,21 +129,6 @@ const { data: searchContent } = await useAsyncData(
     server: true,
   },
 )
-
-// const { getFaqsForSchema } = await useFaqData({
-//   includeHidden: true, // Include all FAQs on the FAQ page
-// })
-// // Add SEO with FAQ structured data
-// useSeo({
-//   seoData: {},
-//   content: {
-//     title: 'FAQ - Questions fréquentes',
-//     description: 'Retrouvez les réponses aux questions les plus fréquentes sur nos voyages en petits groupes : réservation, organisation, destinations et bien plus.',
-//   },
-//   pageType: 'website',
-//   slug: 'faq',
-//   structuredData: createFAQPageSchema(getFaqsForSchema.value),
-// })
 </script>
 
 <style scoped>
