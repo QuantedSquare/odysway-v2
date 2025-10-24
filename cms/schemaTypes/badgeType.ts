@@ -64,10 +64,26 @@ export const badgeType = defineType({
       options: {
         disableAlpha: false,
         colorList: [
-           {hex: '#2B4C52'},
-           {hex: '#DB6644'},
+          {hex: '#ebedef'},
+          {hex: '#DB6644'},
+          {hex: '#f0b348'}
         ],
       },
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'textColor',
+      type: 'string',
+      title: 'Couleur du texte',
+      description: 'Choisir si le texte doit être sombre ou clair',
+      options: {
+        list: [
+          {title: 'Sombre', value: '#2B4C52'},
+          {title: 'Clair', value: 'white'},
+        ],
+        layout: 'radio',
+      },
+      initialValue: '#2B4C52',
       validation: (rule) => rule.required(),
     }),
   ],

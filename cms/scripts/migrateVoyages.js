@@ -8,11 +8,23 @@ import {convertMarkdownToPortableText} from './markdownToPortableText.js'
 import {MigrationReporter} from './migrationReporter.js'
 
 // Configuration: Set to either a specific file path or the voyages directory
-const voyagesBasePath = '../content/voyages/2.Europe/'
+const voyagesBasePath = '../content/voyages/Sur-mesure'
 
 export default async function migrateVoyages(client) {
   // Create reporter
   const reporter = new MigrationReporter('voyages')
+
+  // List all team members at the start
+  log('\n📋 Listing all Team Members:')
+  const teamMembers = await client.fetch('*[_type == "teamMember"]{_id, name, slug}')
+  if (teamMembers.length === 0) {
+    log('  ⚠️  No team members found in Sanity!')
+  } else {
+    teamMembers.forEach(member => {
+      log(`  👤 ${member.name || 'No name'} -> slug: ${member.slug?.current || 'No slug'} (ID: ${member._id})`)
+    })
+  }
+  log('')
 
   // Build image asset mapping once at the start
   const assetMapping = await buildImageAssetMapping(client)
@@ -157,10 +169,24 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
     })
   }
 
-  // Convert experience type to reference
+  // Convert experience type to reference with validation
   let experienceTypeRef = null
   if (voyage.experienceType) {
-    experienceTypeRef = createDocumentReference('experience', voyage.experienceType)
+    const experienceId = createId('experience', voyage.experienceType)
+
+    // Check if experience exists
+    const experienceExists = await client.fetch(
+      '*[_type == "experience" && _id == $experienceId][0]',
+      { experienceId }
+    )
+
+    if (experienceExists) {
+      experienceTypeRef = {_type: 'reference', _ref: experienceId}
+      log(`  🎯 Experience "${voyage.experienceType}" -> ${experienceId} ✅ EXISTS`)
+    } else {
+      experienceTypeRef = null
+      log(`  ⚠️  Experience "${voyage.experienceType}" -> ${experienceId} ❌ NOT FOUND, skipping reference`)
+    }
   }
 
   // Convert difficulty level to reference
@@ -187,11 +213,26 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
     }
   }
 
-  // Convert author to team member reference
+  // Convert author to team member reference with fallback to romain
   let authorRef = null
   if (voyage.authorNote?.author) {
     const authorSlug = voyage.authorNote.author.toLowerCase().replace(/\s+/g, '-')
-    authorRef = createDocumentReference('teamMember', authorSlug)
+    const authorId = createId('teamMember', authorSlug)
+
+    // Check if team member exists
+    const teamMemberExists = await client.fetch(
+      '*[_type == "teamMember" && _id == $authorId][0]',
+      { authorId }
+    )
+
+    if (teamMemberExists) {
+      authorRef = {_type: 'reference', _ref: authorId}
+      log(`  👤 Author "${voyage.authorNote.author}" -> ${authorSlug} ✅ EXISTS`)
+    } else {
+      // Fallback to romain
+      authorRef = {_type: 'reference', _ref: 'teamMember-romain'}
+      log(`  👤 Author "${voyage.authorNote.author}" -> ${authorSlug} ❌ NOT FOUND, using fallback: romain`)
+    }
   }
 
   // Convert photos list images
