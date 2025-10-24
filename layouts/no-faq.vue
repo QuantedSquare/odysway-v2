@@ -1,14 +1,6 @@
 <template>
   <v-app>
-    <HeaderOdysway
-      v-model="drawer"
-    />
-    <ClientOnly>
-      <LazyDrawer
-        v-if="width < 960"
-        v-model="drawer"
-      />
-    </ClientOnly>
+    <TopBar />
 
     <v-main class="main-content mx-0 mx-md-5">
       <slot />
@@ -48,7 +40,6 @@
 import { useDisplay } from 'vuetify'
 
 const { width } = useDisplay()
-const drawer = ref(false)
 
 const pageTextesQuery = groq`*[_type == "ctas"][0]{
   layoutInfoContainer,

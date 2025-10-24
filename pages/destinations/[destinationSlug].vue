@@ -99,9 +99,28 @@ const dataToBlog = reactive({
 })
 
 provide('page', dataToBlog)
-useHead({
-  htmlAttrs: {
-    lang: 'fr',
-  },
-})
+
+// Use SEO composable - automatically uses blog's SEO fields
+if (destinationSanity.value) {
+  useSeo({
+    seoData: {}, // Blog SEO will be detected from content.blog
+    content: destinationSanity.value,
+    pageType: 'article',
+    slug: destinationSanity.value.slug?.current,
+    structuredData: destinationSanity.value.blog
+      ? createBlogPostingSchema(
+          destinationSanity.value.blog,
+          `https://odysway.com/destinations/${destinationSanity.value.slug.current}`,
+        )
+      : null,
+    breadcrumbs: [
+      { name: 'Accueil', url: 'https://odysway.com' },
+      { name: 'Destinations', url: 'https://odysway.com/destinations' },
+      {
+        name: destinationSanity.value.title,
+        url: `https://odysway.com/destinations/${destinationSanity.value.slug.current}`,
+      },
+    ],
+  })
+}
 </script>

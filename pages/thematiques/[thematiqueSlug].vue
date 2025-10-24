@@ -112,9 +112,27 @@ const dataToBlog = reactive({
 
 provide('page', dataToBlog)
 
-useHead({
-  htmlAttrs: {
-    lang: 'fr',
-  },
-})
+// Use SEO composable - automatically uses blog's SEO fields
+if (categorySanity.value) {
+  useSeo({
+    seoData: {}, // Blog SEO will be detected from content.blog
+    content: categorySanity.value,
+    pageType: 'article',
+    slug: categorySanity.value.slug?.current,
+    structuredData: categorySanity.value.blog
+      ? createBlogPostingSchema(
+          categorySanity.value.blog,
+          `https://odysway.com/thematiques/${categorySanity.value.slug.current}`,
+        )
+      : null,
+    breadcrumbs: [
+      { name: 'Accueil', url: 'https://odysway.com' },
+      { name: 'Thématiques', url: 'https://odysway.com/thematiques' },
+      {
+        name: categorySanity.value.title,
+        url: `https://odysway.com/thematiques/${categorySanity.value.slug.current}`,
+      },
+    ],
+  })
+}
 </script>

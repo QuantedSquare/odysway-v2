@@ -37,9 +37,6 @@
 </template>
 
 <script setup>
-import { watchEffect } from 'vue'
-import { getImageUrl } from '~/utils/getImageUrl'
-
 const route = useRoute()
 const { gtag } = useGtag()
 
@@ -100,82 +97,20 @@ onMounted(() => {
 
 watchEffect(() => {
   if (!blogSanity.value) return
-  // SEO Meta Tags
-  useSeoMeta({
-    title: blogSanity.value.seoTitle || blogSanity.value.title,
-    description: blogSanity.value.seoDescription || blogSanity.value.description,
-    ogTitle: blogSanity.value.seoTitle || blogSanity.value.title,
-    ogDescription: blogSanity.value.seoDescription || blogSanity.value.description,
-    ogImage: blogSanity.value.displayedImg ? getImageUrl(blogSanity.value.displayedImg.asset._ref, `${blogSanity.value.slug.current}.jpg`) : undefined,
-    ogType: 'article',
-    ogUrl: `https://odysway.com${route.path}`,
-    twitterTitle: blogSanity.value.seoTitle || blogSanity.value.title,
-    twitterDescription: blogSanity.value.seoDescription || blogSanity.value.description,
-    twitterImage: blogSanity.value.displayedImg ? getImageUrl(blogSanity.value.displayedImg.asset._ref, `${blogSanity.value.slug.current}.jpg`) : undefined,
-    twitterCard: 'summary_large_image',
-    canonical: `https://odysway.com${route.path}`,
-  })
 
-  // Structured blogSanity (BlogPosting)
-  const blogPosting = {
-    '@context': 'http://schema.org',
-    '@type': 'BlogPosting',
-    'headline': blogSanity.value.seoTitle || blogSanity.value.title,
-    'publisher': {
-      '@type': 'TravelAgency',
-      'url': 'https://odysway.com/',
-      'name': 'Odysway',
-      'logo': {
-        '@type': 'ImageObject',
-        'url': 'https://odysway.com/logos/logo_noir.png',
-      },
-    },
-    'author': blogSanity.value.author || undefined,
-    'image': blogSanity.value.displayedImg ? getImageUrl(blogSanity.value.displayedImg.asset._ref, `${blogSanity.value.slug.current}.jpg`) : undefined,
-    'datePublished': blogSanity.value.publishedAt,
-    'dateModified': blogSanity.value.publishedAt,
-    'articleBody': blogSanity.value.seoDescription || blogSanity.value.description,
-    'mainEntityOfPage': {
-      '@type': 'WebPage',
-      '@id': `https://odysway.com${route.path}`,
-    },
-    'keywords': Array.isArray(blogSanity.value.tags) ? blogSanity.value.tags.join(', ') : blogSanity.value?.tags?.split(', '),
-  }
-  console.log('blogPosting', blogPosting)
-
-  // BreadcrumbList structured blogSanity
-  const breadcrumbs = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    'itemListElement': [
-      {
-        '@type': 'ListItem',
-        'position': 1,
-        'name': 'Blog',
-        'item': 'https://odysway.com/blog',
-      },
-      {
-        '@type': 'ListItem',
-        'position': 2,
-        'name': blogSanity.value.seoTitle || blogSanity.value.title,
-        'item': `https://odysway.com${route.path}`,
-      },
-    ],
-  }
-
-  useHead({
-    htmlAttrs: {
-      lang: 'fr',
-    },
-    script: [
-      {
-        type: 'application/ld+json',
-        children: JSON.stringify(blogPosting),
-      },
-      {
-        type: 'application/ld+json',
-        children: JSON.stringify(breadcrumbs),
-      },
+  // Use the SEO composable with BlogPosting structured data
+  useSeo({
+    seoData: blogSanity.value, // Uses seoTitle, seoDescription naming
+    content: blogSanity.value,
+    pageType: 'article',
+    slug: blogSanity.value.slug?.current,
+    structuredData: createBlogPostingSchema(
+      blogSanity.value,
+      `https://odysway.com${route.path}`,
+    ),
+    breadcrumbs: [
+      { name: 'Blog', url: 'https://odysway.com/blog' },
+      { name: blogSanity.value.seoTitle || blogSanity.value.title, url: `https://odysway.com${route.path}` },
     ],
   })
 })

@@ -198,10 +198,29 @@
 
 <script setup>
 const sanity = useSanity()
+
 const homeQuery = groq`
   *[_type == "homePage"][0]{
     ...,
-    seo,
+    seo{
+      metaTitle,
+      metaDescription,
+      canonicalUrl,
+      focusKeyword,
+      keywords,
+      robotsIndex,
+      robotsFollow,
+      ogTitle,
+      ogDescription,
+      ogImage{
+        asset->{
+          _ref,
+          _id,
+          url
+        },
+        alt
+      }
+    },
     franceTrips{
       title,
       voyagesFrance[]->{
@@ -286,37 +305,28 @@ const homeQuery = groq`
 const { data: homeSanity } = await useAsyncData('home', () =>
   sanity.fetch(homeQuery),
 )
-if (homeSanity.value) {
-  // Set the page title explicitly
-  // useSeoMeta overRide useHead
-  useHead({
-    title: homeSanity.value.seo?.title || homeSanity.value.title,
-    htmlAttrs: {
-      lang: 'fr',
-    },
-    link: [
-      {
-        rel: 'icon',
-        type: 'image/x-icon',
-        href: '/favicon.ico',
-      },
-    ],
-    ...homeSanity.value.head,
-  })
 
-  // Set SEO meta tags
-  useSeoMeta({
-    title: homeSanity.value.seo?.title || homeSanity.value.title,
-    description: homeSanity.value.seo?.description || homeSanity.value.description,
-    ogTitle: homeSanity.value.seo?.title || homeSanity.value.title,
-    ogDescription: homeSanity.value.seo?.description || homeSanity.value.description,
-    ogType: 'website',
-    ogUrl: 'https://odysway.com/',
-    twitterTitle: homeSanity.value.seo?.title || homeSanity.value.title,
-    twitterDescription: homeSanity.value.seo?.description || homeSanity.value.description,
-    twitterCard: 'summary_large_image',
-    canonical: 'https://odysway.com/',
-    robots: homeSanity.value.robots || 'index, follow',
+if (homeSanity.value) {
+  // Fallback values for content
+  const defaultContent = {
+    title: 'Odysway - Voyages en Petits Groupes et Expériences Authentiques',
+    description: 'Découvrez nos voyages en petits groupes à travers le monde. Expériences authentiques, rencontres locales et aventures inoubliables avec Odysway.',
+    image: homeSanity.value.heroSection?.image,
+  }
+
+  // Use the SEO composable
+  useSeo({
+    seoData: homeSanity.value.seo,
+    content: defaultContent,
+    pageType: 'website',
+    slug: 'home',
+    baseUrl: '/',
+    structuredData: [
+      createOrganizationSchema({
+        description: homeSanity.value.seo?.metaDescription || defaultContent.description,
+      }),
+      createWebSiteSchema(),
+    ],
   })
 }
 </script>

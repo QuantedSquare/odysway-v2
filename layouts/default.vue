@@ -17,31 +17,33 @@
         v-if="route.path !== '/'"
         class="mx-1"
       >
-        <ColorContainer
-          color="grey-light-2"
-        >
-          <InfoContainer>
-            <template #top>
-              <AvatarsRowStack />
-            </template>
-            <template #title>
-              {{ searchContent?.infoContainer?.title || 'Vous hésitez encore ?' }}
-            </template>
-            <template #description>
-              {{ searchContent?.infoContainer?.description || 'Prenez un RDV avec un spécialiste qui vous conseillera selon vos envies.' }}
-            </template>
-            <template #bottom>
-              <CtaButton
-                color="secondary"
-                link="/calendly"
-              >
-                <template #text>
-                  {{ searchContent?.infoContainer?.buttonText || 'Prendre RDV' }}
-                </template>
-              </CtaButton>
-            </template>
-          </InfoContainer>
-        </ColorContainer>
+        <ClientOnly>
+          <LazyColorContainer
+            color="grey-light-2"
+          >
+            <LazyInfoContainer>
+              <template #top>
+                <AvatarsRowStack />
+              </template>
+              <template #title>
+                {{ searchContent?.infoContainer?.title || 'Vous hésitez encore ?' }}
+              </template>
+              <template #description>
+                {{ searchContent?.infoContainer?.description || 'Prenez un RDV avec un spécialiste qui vous conseillera selon vos envies.' }}
+              </template>
+              <template #bottom>
+                <CtaButton
+                  color="secondary"
+                  link="/calendly"
+                >
+                  <template #text>
+                    {{ searchContent?.infoContainer?.buttonText || 'Prendre RDV' }}
+                  </template>
+                </CtaButton>
+              </template>
+            </LazyInfoContainer>
+          </LazyColorContainer>
+        </ClientOnly>
         <ColorContainer
           v-if="route.path !== '/avis-voyageurs'"
           color="white"
@@ -127,6 +129,21 @@ const { data: searchContent } = await useAsyncData(
     server: true,
   },
 )
+
+// const { getFaqsForSchema } = await useFaqData({
+//   includeHidden: true, // Include all FAQs on the FAQ page
+// })
+// // Add SEO with FAQ structured data
+// useSeo({
+//   seoData: {},
+//   content: {
+//     title: 'FAQ - Questions fréquentes',
+//     description: 'Retrouvez les réponses aux questions les plus fréquentes sur nos voyages en petits groupes : réservation, organisation, destinations et bien plus.',
+//   },
+//   pageType: 'website',
+//   slug: 'faq',
+//   structuredData: createFAQPageSchema(getFaqsForSchema.value),
+// })
 </script>
 
 <style scoped>

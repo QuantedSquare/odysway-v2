@@ -19,7 +19,7 @@
           <v-list-item-title class="text-h5 font-weight-bold text-center text-sm-start no-white-space ">
             {{ name }}
           </v-list-item-title>
-          <v-list-item-subtitle class="no-white-space text-h5">
+          <v-list-item-subtitle class="no-white-space text-h5 pb-1">
             {{ role }}
           </v-list-item-subtitle>
           <ExpandableText
@@ -49,7 +49,7 @@ defineProps({
   },
   description: {
     type: Array,
-    default: '',
+    default: () => [],
   },
   role: {
     type: String,
