@@ -116,7 +116,6 @@ const processedBadges = computed(() => {
     }
 
     // Get picto URL
-    console.log('badgeItem.badge.picto ===> ', props)
     const pictoUrl = badgeItem.badge.picto?.asset?._ref
       ? getImageUrl(badgeItem.badge.picto.asset._ref)
       : ''
