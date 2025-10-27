@@ -16,6 +16,13 @@ export const experienceType = defineType({
       fields: [{name: 'alt', type: 'string'} as any],
     }),
     defineField({name: 'showOnHome', type: 'boolean', initialValue: false}),
+    defineField({
+      name: 'blog',
+      type: 'reference',
+      to: [{type: 'blog'}],
+      title: 'Blog Post',
+      description: 'Blog post associé à cette expérience',
+    }),
   ],
 })
 

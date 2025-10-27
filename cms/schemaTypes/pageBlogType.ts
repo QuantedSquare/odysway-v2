@@ -16,42 +16,52 @@ export const pageBlogType = defineType({
       }
     }
   },
+  groups: [
+    {name: 'content', title: 'Content'},
+    {name: 'seo', title: 'SEO'},
+  ],
   fields: [
     defineField({
       name: 'pageTitle',
       title: 'Titre de la page blog',
       type: 'string',
-      validation: Rule => Rule.required()
+      validation: Rule => Rule.required(),
+      group: 'content',
     }),
     defineField({
       name: 'searchPlaceholder',
       title: 'Placeholder du champ de recherche',
       type: 'string',
-      validation: Rule => Rule.required()
+      validation: Rule => Rule.required(),
+      group: 'content',
     }),
     defineField({
       name: 'categoryFilter',
       title: 'Label du filtre par catégorie',
       type: 'string',
-      validation: Rule => Rule.required()
+      validation: Rule => Rule.required(),
+      group: 'content',
     }),
     defineField({
       name: 'sortByDate',
       title: 'Label du tri par date',
       type: 'string',
-      validation: Rule => Rule.required()
+      validation: Rule => Rule.required(),
+      group: 'content',
     }),
     defineField({
       name: 'noArticlesFound',
       title: 'Message quand aucun article trouvé',
       type: 'string',
-      validation: Rule => Rule.required()
+      validation: Rule => Rule.required(),
+      group: 'content',
     }),
     defineField({
       name: 'resetFilters',
       title: 'Texte du bouton réinitialiser les filtres',
       type: 'string',
-      validation: Rule => Rule.required()
+      validation: Rule => Rule.required(),
+      group: 'content',
     }),
     defineField({
       name: 'sortOptions',
@@ -83,6 +93,13 @@ export const pageBlogType = defineType({
           validation: Rule => Rule.required()
         })
       ]
-    })
+    }),
+    defineField({
+      name: 'seo',
+      title: 'SEO Settings',
+      type: 'seo',
+      group: 'seo',
+      description: 'Configuration SEO pour la page blog',
+    }),
   ]
 })

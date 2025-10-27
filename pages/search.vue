@@ -168,8 +168,8 @@ function filterByType(voyages, travelType) {
   if (!travelType) return voyages
 
   const typeFilters = {
-    [TRAVEL_TYPES.GROUP]: voyage => voyage.groupeAvailable === true,
-    [TRAVEL_TYPES.INDIVIDUAL]: voyage => voyage.privatisationAvailable === true,
+    [TRAVEL_TYPES.GROUP]: voyage => voyage.availabilityTypes?.includes('groupe'),
+    [TRAVEL_TYPES.INDIVIDUAL]: voyage => voyage.availabilityTypes?.includes('privatisation'),
   }
 
   const filterFn = typeFilters[travelType]
@@ -191,9 +191,10 @@ function filterByDate(voyages, fromList) {
 
   return voyages.filter((v) => {
     const avail = v.monthlyAvailability
-    if (!avail || typeof avail !== 'object') return false
-    if (avail.toutePeriodes) return true
-    return selectedKeys.some(key => avail[key])
+    if (!Array.isArray(avail)) return false
+    // Clean the month strings by removing any invisible characters
+    const cleanedAvail = avail.map(month => month.replace(/[\u200B-\u200F\uFEFF]/g, ''))
+    return selectedKeys.some(key => cleanedAvail.includes(key))
   })
 }
 
@@ -250,7 +251,7 @@ const { data: voyages } = await useAsyncData(
     const travelType = route.query.travelType || null
     const fromList = route.query.from || null
 
-    const voyagesQuery = groq`*[_type == "voyage"]{
+    const voyagesQuery = groq`*[_type == "voyage" && !('custom' in availabilityTypes)]{
       _id,
       title,
       "slug": slug.current,
@@ -259,8 +260,7 @@ const { data: voyages } = await useAsyncData(
       comments,
       duration,
       pricing,
-      groupeAvailable,
-      privatisationAvailable,
+      availabilityTypes,
       monthlyAvailability,
       destinations[]-> {
         _id,

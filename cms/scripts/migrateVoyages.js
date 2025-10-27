@@ -8,11 +8,23 @@ import {convertMarkdownToPortableText} from './markdownToPortableText.js'
 import {MigrationReporter} from './migrationReporter.js'
 
 // Configuration: Set to either a specific file path or the voyages directory
-const voyagesBasePath = '../content/voyages/1. France'
+const voyagesBasePath = '../content/voyages/Sur-mesure'
 
 export default async function migrateVoyages(client) {
   // Create reporter
   const reporter = new MigrationReporter('voyages')
+
+  // List all team members at the start
+  log('\n📋 Listing all Team Members:')
+  const teamMembers = await client.fetch('*[_type == "teamMember"]{_id, name, slug}')
+  if (teamMembers.length === 0) {
+    log('  ⚠️  No team members found in Sanity!')
+  } else {
+    teamMembers.forEach(member => {
+      log(`  👤 ${member.name || 'No name'} -> slug: ${member.slug?.current || 'No slug'} (ID: ${member._id})`)
+    })
+  }
+  log('')
 
   // Build image asset mapping once at the start
   const assetMapping = await buildImageAssetMapping(client)
@@ -157,17 +169,70 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
     })
   }
 
-  // Convert experience type to reference
+  // Convert experience type to reference with validation
   let experienceTypeRef = null
   if (voyage.experienceType) {
-    experienceTypeRef = createDocumentReference('experience', voyage.experienceType)
+    const experienceId = createId('experience', voyage.experienceType)
+
+    // Check if experience exists
+    const experienceExists = await client.fetch(
+      '*[_type == "experience" && _id == $experienceId][0]',
+      { experienceId }
+    )
+
+    if (experienceExists) {
+      experienceTypeRef = {_type: 'reference', _ref: experienceId}
+      log(`  🎯 Experience "${voyage.experienceType}" -> ${experienceId} ✅ EXISTS`)
+    } else {
+      experienceTypeRef = null
+      log(`  ⚠️  Experience "${voyage.experienceType}" -> ${experienceId} ❌ NOT FOUND, skipping reference`)
+    }
   }
 
-  // Convert author to team member reference
+  // Convert difficulty level to reference
+  let difficultyLevelRef = null
+  if (voyage.level) {
+    // Extract numeric level from string (e.g., "Niveau 1" -> 1, "1" -> 1)
+    const levelMatch = voyage.level.match(/\d+/)
+    if (levelMatch) {
+      const levelNumber = parseInt(levelMatch[0], 10)
+      // Fetch difficulty level by level number
+      const difficultyLevel = await client.fetch(
+        '*[_type == "difficultyLevel" && level == $levelNumber][0]',
+        { levelNumber }
+      )
+      if (difficultyLevel) {
+        difficultyLevelRef = {
+          _type: 'reference',
+          _ref: difficultyLevel._id,
+        }
+        log(`  🎯 Difficulty level "${voyage.level}" -> Level ${levelNumber} -> ID: ${difficultyLevel._id} ✅ EXISTS`)
+      } else {
+        log(`  ⚠️  Difficulty level "${voyage.level}" -> Level ${levelNumber} -> ❌ NOT FOUND`)
+      }
+    }
+  }
+
+  // Convert author to team member reference with fallback to romain
   let authorRef = null
   if (voyage.authorNote?.author) {
     const authorSlug = voyage.authorNote.author.toLowerCase().replace(/\s+/g, '-')
-    authorRef = createDocumentReference('teamMember', authorSlug)
+    const authorId = createId('teamMember', authorSlug)
+
+    // Check if team member exists
+    const teamMemberExists = await client.fetch(
+      '*[_type == "teamMember" && _id == $authorId][0]',
+      { authorId }
+    )
+
+    if (teamMemberExists) {
+      authorRef = {_type: 'reference', _ref: authorId}
+      log(`  👤 Author "${voyage.authorNote.author}" -> ${authorSlug} ✅ EXISTS`)
+    } else {
+      // Fallback to romain
+      authorRef = {_type: 'reference', _ref: 'teamMember-romain'}
+      log(`  👤 Author "${voyage.authorNote.author}" -> ${authorSlug} ❌ NOT FOUND, using fallback: romain`)
+    }
   }
 
   // Convert photos list images
@@ -236,11 +301,19 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
     }
   }
 
-  // Convert SEO images
-  let seoSectionWithImages = voyage.seoSection
+  // Convert SEO fields to new format
+  let seoFields = null
   if (voyage.seoSection) {
-    seoSectionWithImages = {
-      ...voyage.seoSection,
+    seoFields = {
+      metaTitle: voyage.seoSection.metaTitle || null,
+      metaDescription: voyage.seoSection.metaDescription || voyage.seoSection.ogDescription || null,
+      canonicalUrl: voyage.seoSection.canonicalUrl || null,
+      focusKeyword: voyage.seoSection.focusKeyword || null,
+      keywords: voyage.seoSection.keywords || [],
+      robotsIndex: voyage.seoSection.robotsIndex !== undefined ? voyage.seoSection.robotsIndex : true,
+      robotsFollow: voyage.seoSection.robotsFollow !== undefined ? voyage.seoSection.robotsFollow : true,
+      ogTitle: voyage.seoSection.ogTitle || null,
+      ogDescription: voyage.seoSection.ogDescription || null,
       ogImage: voyage.seoSection.ogImage?.src
         ? convertImageReference(
             basename(voyage.seoSection.ogImage.src),
@@ -249,21 +322,36 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
             reporter,
             voyageID,
           )
-        : voyage.seoSection.ogImage,
-      twitterImage: voyage.seoSection.twitterImage?.src
-        ? convertImageReference(
-            basename(voyage.seoSection.twitterImage.src),
-            assetMapping,
-            voyage.seoSection.twitterImage.alt || '',
-            reporter,
-            voyageID,
-          )
-        : voyage.seoSection.twitterImage,
+        : null,
     }
   }
 
   // Use draft prefix if not published
   const finalVoyageID = voyage.published === false ? `drafts.${voyageID}` : voyageID
+
+  // Convert availability types from old boolean fields to new array format
+  const availabilityTypes = []
+  if (voyage.groupeAvailable) availabilityTypes.push('groupe')
+  if (voyage.privatisationAvailable) availabilityTypes.push('privatisation')
+  if (voyage.customAvailable) availabilityTypes.push('custom')
+
+  // Convert monthlyAvailability from object to array
+  const monthlyAvailabilityArray = []
+  if (voyage.monthlyAvailability) {
+    if (voyage.monthlyAvailability.toutePeriodes) monthlyAvailabilityArray.push('toutePeriodes')
+    if (voyage.monthlyAvailability.janvier) monthlyAvailabilityArray.push('janvier')
+    if (voyage.monthlyAvailability.fevrier) monthlyAvailabilityArray.push('fevrier')
+    if (voyage.monthlyAvailability.mars) monthlyAvailabilityArray.push('mars')
+    if (voyage.monthlyAvailability.avril) monthlyAvailabilityArray.push('avril')
+    if (voyage.monthlyAvailability.mai) monthlyAvailabilityArray.push('mai')
+    if (voyage.monthlyAvailability.juin) monthlyAvailabilityArray.push('juin')
+    if (voyage.monthlyAvailability.juillet) monthlyAvailabilityArray.push('juillet')
+    if (voyage.monthlyAvailability.aout) monthlyAvailabilityArray.push('aout')
+    if (voyage.monthlyAvailability.septembre) monthlyAvailabilityArray.push('septembre')
+    if (voyage.monthlyAvailability.octobre) monthlyAvailabilityArray.push('octobre')
+    if (voyage.monthlyAvailability.novembre) monthlyAvailabilityArray.push('novembre')
+    if (voyage.monthlyAvailability.decembre) monthlyAvailabilityArray.push('decembre')
+  }
 
   // Prepare the voyage document for Sanity
   return {
@@ -274,20 +362,31 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
       current: voyage.slug || voyageID.replace('voyage-', ''),
     },
     destinations: destinationsRefs,
+
+    // New array-based availability types
+    availabilityTypes: availabilityTypes,
+
+    // Legacy fields (hidden in schema but kept for backward compatibility)
     groupeAvailable: voyage.groupeAvailable || false,
     privatisationAvailable: voyage.privatisationAvailable || false,
     customAvailable: voyage.customAvailable || false,
+
     experienceType: experienceTypeRef,
+
+    // New difficultyLevel reference
+    difficultyLevel: difficultyLevelRef,
+
+    // Legacy level field (hidden in schema but kept for backward compatibility)
     level: voyage.level || '',
+
     categories: categoriesRefs,
     duration: voyage.duration || 0,
     nights: voyage.nights || 0,
     includeFlight: voyage.includeFlight || false,
-    housingType: voyage.housingType || '',
-    minAge: voyage.minAge || 0,
     rating: voyage.rating || 0,
     comments: voyage.comments || 0,
-    miniatureDisplay: voyage.miniatureDisplay || '',
+    image: mainImageRef,
+    imageSecondary: secondaryImageRef,
     authorNote: {
       text: await convertMarkdownToPortableText(voyage.authorNote?.text || '', assetMapping),
       author: authorRef,
@@ -296,8 +395,10 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
     experiencesBlock: await convertStringArrayToPortableText(voyage.experiencesBlock || [], assetMapping),
     description: voyage.description || '',
     emailDescription: voyage.emailDescription || '',
-    metaDescription: voyage.metaDescription || '',
-    badgeSection: voyage.badgeSection || {},
+
+    // Note: Badges will need to be migrated separately using badge references
+    // TODO: Implement badge migration after standard badges are created in Sanity
+    badges: [],
     programmeBlock: programmeBlockWithImages,
     pricingDetailsBlock: {
       listInclude: await convertStringArrayToPortableText(voyage.pricingDetailsBlock?.include || [], assetMapping),
@@ -322,14 +423,13 @@ async function prepareVoyageDocument(voyage, voyageID, assetMapping, client, rep
     accompanistsDescription: await convertMarkdownToPortableText(voyage.accompanistsDescription || '', assetMapping),
     accompanistsList: accompanistsWithImages,
     housingBlock: housingBlockWithImages,
-    image: mainImageRef,
-    imageSecondary: secondaryImageRef,
     photosList: photosListRefs,
     videoLinks: voyage.videoLinks || [],
     faqBlock: await convertFaqBlockToPortableText(voyage.faqBlock?.faqList || [], assetMapping),
-    seoSection: seoSectionWithImages,
-    idealPeriods: voyage.idealPeriods || {},
-    monthlyAvailability: voyage.monthlyAvailability || {},
+    seo: seoFields,
+
+    // Convert monthlyAvailability from object to array
+    monthlyAvailability: monthlyAvailabilityArray,
   }
 }
 
@@ -366,3 +466,4 @@ async function convertFaqBlockToPortableText(faqList, assetMapping) {
   
   return faqBlockWithPortableText
 }
+

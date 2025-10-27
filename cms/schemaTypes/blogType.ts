@@ -6,6 +6,7 @@ export const blogType = defineType({
   type: 'document',
   groups: [
     {name: 'content', title: 'Content'},
+    {name: 'badges', title: 'Badges'},
     {name: 'seo', title: 'SEO'},
     {name: 'metadata', title: 'Metadata'},
   ],
@@ -108,7 +109,84 @@ export const blogType = defineType({
       group: 'content',
     }),
 
-   
+    // Badges
+    defineField({
+      name: 'badges',
+      type: 'array',
+      title: 'Badges du blog',
+      description: 'Sélectionnez et personnalisez les badges pour ce blog',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'badge',
+              type: 'reference',
+              to: [{type: 'badge'}],
+              title: 'Badge',
+              validation: (rule: any) => rule.required(),
+            } as any,
+            {
+              name: 'variable1Value',
+              type: 'string',
+              title: 'Variable 1 (optionnel)',
+              description: 'Remplace {var1} dans le texte du badge',
+            } as any,
+            {
+              name: 'variable2Value',
+              type: 'string',
+              title: 'Variable 2 (optionnel)',
+              description: 'Remplace {var2} dans le texte du badge',
+            } as any,
+            {
+              name: 'overrideText',
+              type: 'string',
+              title: 'Remplacer complètement le texte (optionnel)',
+              description: 'Remplace entièrement le texte du badge',
+            } as any,
+          ],
+          preview: {
+            select: {
+              badgeText: 'badge.text',
+              badgePicto: 'badge.picto',
+              variable1Value: 'variable1Value',
+              variable2Value: 'variable2Value',
+              overrideText: 'overrideText',
+            },
+            prepare({badgeText, badgePicto, variable1Value, variable2Value, overrideText}: any) {
+              let displayText = badgeText || 'Badge'
+
+              if (overrideText) {
+                displayText = overrideText
+              } else if (badgeText) {
+                if (variable1Value) {
+                  displayText = displayText.replace(/\{var1\}/g, variable1Value)
+                }
+                if (variable2Value) {
+                  displayText = displayText.replace(/\{var2\}/g, variable2Value)
+                }
+              }
+
+              let subtitle = 'Badge standard'
+              if (overrideText) {
+                subtitle = 'Texte personnalisé'
+              } else if (variable1Value || variable2Value) {
+                const vars = [variable1Value, variable2Value].filter(Boolean).join(', ')
+                subtitle = `Variables: ${vars}`
+              }
+
+              return {
+                title: displayText,
+                subtitle,
+                media: badgePicto,
+              }
+            },
+          },
+        },
+      ],
+      group: 'badges',
+    }),
+
     defineField({
       name: 'publishedAt',
       type: 'datetime',

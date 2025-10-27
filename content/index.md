@@ -86,7 +86,7 @@ au cœur du voyage
   [Nos séjours en France]{style="color: rgba(43, 76, 82, 1)"}
   
   #carousel-item
-    ::::voyage-col-card{slug="sejour-berger-bearn"}
+    ::::voyage-col-card{slug="sejour-hiver-pyrenees"}
     ::::
   
     ::::voyage-col-card{slug="bivouac-montagne-pyrenees"}
@@ -107,7 +107,7 @@ au cœur du voyage
     ::::voyage-col-card{slug="sejour-multiactivites-famille-ecrins"}
     ::::
   
-    ::::voyage-col-card{slug="sejour-hiver-pyrenees"}
+    ::::voyage-col-card{slug="sejour-berger-bearn"}
     ::::
   :::
 ::
@@ -207,19 +207,22 @@ au cœur du voyage
 ::color-container{color="white"}
   :::horizontal-carousel
   #title
-  [Voyager cet été]{style="color: rgba(43, 76, 82, 1)"}
+  [Voyager cet hiver]{style="color: rgba(43, 76, 82, 1)"}
   
   #carousel-item
-    ::::voyage-col-card{slug="sejour-berger-bearn"}
+    ::::voyage-col-card{slug="sejour-hiver-pyrenees"}
     ::::
   
-    ::::voyage-col-card{slug="voyage-nomades-mongolie"}
+    ::::voyage-col-card{slug="aurores-boreales-randonnees-norvege"}
     ::::
   
-    ::::voyage-col-card{slug="immersion-culturelle-cap-vert"}
+    ::::voyage-col-card{slug="finlande-hiver-nature-activites"}
     ::::
   
-    ::::voyage-col-card{slug="reconnexion-nature-finlande"}
+    ::::voyage-col-card{slug="islande-nature-aurores-boreales"}
+    ::::
+  
+    ::::voyage-col-card{slug="trek-chez-lhabitant-nepal"}
     ::::
   :::
 ::

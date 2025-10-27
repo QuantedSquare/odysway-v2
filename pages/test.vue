@@ -450,6 +450,13 @@ async function testWebhook() {
     testing.value = false
   }
 }
+// Remove this page from indexing
+useSeo({
+  seoData: {
+    robotsIndex: false,
+    robotsFollow: false,
+  },
+})
 </script>
 
 <style scoped>

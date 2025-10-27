@@ -4,14 +4,15 @@
     class="pt-2 mt-0 mt-md-5 mb-1 px-0 pb-1 pb-md-3"
   >
     <v-row
-      v-if="badgeSection"
-      class="d-flex  flex-wrap text-custom  custom-chip-height"
+      v-if="badges || badgeTitle"
+      class="d-flex flex-wrap text-custom custom-chip-height"
     >
       <v-col
         cols="12"
-        class="d-flex  ga-2 ga-md-4 flex-wrap"
+        class="d-flex ga-2 ga-md-4 flex-wrap"
       >
         <v-chip
+          v-if="badgeTitle"
           variant="flat"
           size="large"
           class="chip-responsive"
@@ -19,123 +20,44 @@
           color="yellow"
         >
           <span
-            v-if="badgeTitle"
-            class="d-flex align-center text-white text-caption text-sm-subtitle-2  px-3 mb-1 font-weight-bold"
+            class="d-flex align-center text-white text-caption text-sm-subtitle-2 px-3 mb-1 font-weight-bold"
           >
             {{ badgeTitle }}
           </span>
         </v-chip>
 
         <v-chip
-          v-if="badgeSection.groupeBadge.visible"
+          v-for="(badgeItem, index) in processedBadges"
+          :key="index"
           variant="flat"
           size="large"
           class="chip-responsive"
           color="grey-light"
           density="comfortable"
         >
-          <span class="d-flex align-center text-primary text-caption text-sm-subtitle-2  px-3 mb-1">
+          <span class="d-flex align-center text-primary text-caption text-sm-subtitle-2 px-3 mb-1">
             <v-img
-              :src="'/icons/business-team.svg'"
+              v-if="badgeItem.pictoUrl"
+              :src="badgeItem.pictoUrl"
               height="18"
               width="18"
               class="mr-3 icon-responsive"
-              alt="Icone d'un groupe de personnes"
+              :alt="badgeItem.title || 'Badge icon'"
             />
-            <div v-dompurify-html="parseBoldText(badgeSection.groupeBadge.text)" />
+            <div>{{ badgeItem.displayText }}</div>
           </span>
         </v-chip>
-
         <v-chip
-          v-if="badgeSection.durationBadge.visible"
+          v-if="stegaClean(level).length > 0"
           variant="flat"
           size="large"
           class="chip-responsive"
           color="grey-light"
           density="comfortable"
         >
-          <span class="d-flex align-center text-primary text-caption text-sm-subtitle-2  px-3 mb-1">
-            <v-img
-              :src="'/icons/calendar.svg'"
-              height="18"
-              width="18"
-              class="mr-3 icon-responsive"
-              alt="Icone d'un calendrier"
-            />
-            <div v-dompurify-html="parseBoldText(badgeSection.durationBadge.text)" />
-          </span>
-        </v-chip>
-
-        <v-chip
-          v-if="badgeSection.includeFlightBadge.visible"
-          variant="flat"
-          size="large"
-          class="chip-responsive"
-          color="grey-light"
-          density="comfortable"
-        >
-          <span class="d-flex align-center text-primary text-caption text-sm-subtitle-2  px-3 mb-1">
-            <v-img
-              :src="'/icons/airplane.svg'"
-              height="18"
-              width="18"
-              class="mr-3 icon-responsive"
-              alt="Icone d'un avion"
-            />
-            <div v-dompurify-html="parseBoldText(badgeSection.includeFlightBadge.text)" />
-          </span>
-        </v-chip>
-
-        <v-chip
-          v-if="badgeSection.housingBadge.visible"
-          variant="flat"
-          size="large"
-          class="chip-responsive"
-          color="grey-light"
-          density="comfortable"
-        >
-          <span class="d-flex align-center text-primary text-caption text-sm-subtitle-2  px-3 mb-1">
-            <v-img
-              :src="'/icons/bed.svg'"
-              height="18"
-              width="18"
-              class="mr-3 icon-responsive"
-              alt="Icone d'un lit"
-            />
-            <div v-dompurify-html="parseBoldText(badgeSection.housingBadge.text)" />
-          </span>
-        </v-chip>
-
-        <v-chip
-          v-if="badgeSection.periodBadge.visible"
-          variant="flat"
-          size="large"
-          class="chip-responsive"
-          color="grey-light"
-          density="comfortable"
-        >
-          <span class="d-flex align-center text-primary text-caption text-sm-subtitle-2  px-3 mb-1 font-weight-bold">
-            <v-img
-              :src="'/icons/sun.svg'"
-              height="18"
-              width="18"
-              class="mr-3 icon-responsive"
-              alt="Icone d'un soleil"
-            />
-            <div v-dompurify-html="parseBoldText(badgeSection.periodBadge.text)" />
-          </span>
-        </v-chip>
-        <v-chip
-          v-if="+level >= 1"
-          variant="flat"
-          size="large"
-          class="chip-responsive"
-          color="grey-light"
-          density="comfortable"
-        >
-          <span class="d-flex align-center text-primary text-caption text-sm-subtitle-2  px-3 mb-1">
+          <span class="d-flex align-center text-primary text-caption text-sm-subtitle-2 px-3 mb-1">
             <v-icon
-              :icon="level === '1' ? mdiSignalCellular1 : level === '2' ? mdiSignalCellular2 : mdiSignalCellular3"
+              :icon="stegaClean(level) === '1' ? mdiSignalCellular1 : stegaClean(level) === '2' ? mdiSignalCellular2 : mdiSignalCellular3"
               class="mr-3 icon-responsive"
               :alt="`Icone d'un niveau de difficulté ${level}`"
             />
@@ -150,20 +72,59 @@
 
 <script setup>
 import { mdiSignalCellular1, mdiSignalCellular2, mdiSignalCellular3 } from '@mdi/js'
+import { stegaClean } from '@sanity/client/stega'
+import { getImageUrl } from '~/utils/getImageUrl'
 
-defineProps({
-  badgeSection: {
-    type: Object,
-    required: true,
+const props = defineProps({
+  badges: {
+    type: Array,
+    default: () => [],
   },
   level: {
     type: String,
-    required: true,
+    default: '0',
   },
   badgeTitle: {
     type: String,
-    required: true,
+    default: '',
   },
+})
+
+// Process badges to replace variables and get image URLs
+const processedBadges = computed(() => {
+  if (!props.badges || props.badges.length === 0) return []
+
+  return props.badges.map((badgeItem) => {
+    if (!badgeItem.badge) return null
+
+    // Start with the badge text
+    let displayText = badgeItem.badge.text || ''
+
+    // Priority: overrideText > variable replacement > default badge text
+    if (badgeItem.overrideText) {
+      displayText = badgeItem.overrideText
+    }
+    else {
+      // Replace variables if provided
+      if (badgeItem.variable1Value) {
+        displayText = displayText.replace(/\{var1\}/g, badgeItem.variable1Value)
+      }
+      if (badgeItem.variable2Value) {
+        displayText = displayText.replace(/\{var2\}/g, badgeItem.variable2Value)
+      }
+    }
+
+    // Get picto URL
+    const pictoUrl = badgeItem.badge.picto?.asset?._ref
+      ? getImageUrl(badgeItem.badge.picto.asset._ref)
+      : ''
+
+    return {
+      title: badgeItem.badge.title,
+      displayText,
+      pictoUrl,
+    }
+  }).filter(Boolean) // Remove null entries
 })
 </script>
 

@@ -1,8 +1,5 @@
 <template>
   <div>
- 
-
-    
     <HeroSection
       v-if="page?.heroImage"
       :image-src="page.heroImage"
@@ -11,7 +8,7 @@
         {{ page.title }}
       </template>
     </HeroSection>
- 
+
     <!-- Content Section -->
     <SectionContainer v-if="page">
       <template #content>
@@ -32,8 +29,8 @@
           >
             <template #text>
               <p>
-              {{ job.title }}
-              <span v-if="job.location"> | {{ job.location }}</span>
+                {{ job.title }}
+                <span v-if="job.location"> | {{ job.location }}</span>
               </p>
             </template>
             <template #cta>
@@ -71,10 +68,21 @@ const query = groq`*[_type == "recruitment" && slug.current == "nous-recrutons"]
     description,
     applicationLink,
     ctaText
-  }
+  },
+  seo
 }`
 
 const { data: page, status } = await useAsyncData('nous-recrutons', () =>
-  sanity.fetch(query)
+  sanity.fetch(query),
 )
+
+if (page.value) {
+  useSeo({
+    seoData: page.value?.seo,
+    content: page.value,
+    pageType: 'website',
+    slug: 'nous-recrutons',
+    baseUrl: '/nous-recrutons',
+  })
+}
 </script>

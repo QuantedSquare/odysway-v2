@@ -27,6 +27,7 @@
             @mouseleave="hoveredIndex = null"
           >
             <v-img
+              v-if="avatar.image?.asset?._ref"
               :src="getImageUrl(avatar.image.asset._ref)"
               :lazy-src="img(getImageUrl(avatar.image.asset._ref), { format: 'webp', quality: 10, width: 320 })"
               :srcset="`${img(getImageUrl(avatar.image.asset._ref), { format: 'webp', quality: 70, width: 320 })} 70w, ${img(getImageUrl(avatar.image.asset._ref), { format: 'webp', quality: 70, width: 320 })} 100w`"
@@ -94,7 +95,7 @@ const { data: avatars } = await useAsyncData(
   async () => {
     try {
       const result = await sanity.fetch(sanityQuery)
-      return result || []
+      return result.filter(avatar => avatar.image?.asset?._ref) || []
     }
     catch (e) {
       console.error('Error fetching avatars:', e)

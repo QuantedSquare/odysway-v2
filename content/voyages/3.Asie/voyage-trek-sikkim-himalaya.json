@@ -6,9 +6,9 @@
       "name": "Inde"
     }
   ],
-  "groupeAvailable": true,
-  "privatisationAvailable": false,
-  "customAvailable": false,
+  "groupeAvailable": false,
+  "privatisationAvailable": true,
+  "customAvailable": true,
   "experienceType": "Explorer à pied",
   "level": "2",
   "categories": [
@@ -91,7 +91,7 @@
   "badgeSection": {
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
-      "visible": true
+      "visible": false
     },
     "durationBadge": {
       "text": "**13 nuits sur place**",

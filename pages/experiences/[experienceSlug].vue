@@ -108,9 +108,27 @@ const dataToBlog = reactive({
 
 provide('page', dataToBlog)
 
-useHead({
-  htmlAttrs: {
-    lang: 'fr',
-  },
-})
+// Use SEO composable - automatically uses blog's SEO fields
+if (selectedExperience.value) {
+  useSeo({
+    seoData: {}, // Blog SEO will be detected from content.blog
+    content: selectedExperience.value,
+    pageType: 'article',
+    slug: selectedExperience.value.slug?.current,
+    structuredData: selectedExperience.value.blog
+      ? createBlogPostingSchema(
+          selectedExperience.value.blog,
+          `https://odysway.com/experiences/${selectedExperience.value.slug.current}`,
+        )
+      : null,
+    breadcrumbs: [
+      { name: 'Accueil', url: 'https://odysway.com' },
+      { name: 'Expériences', url: 'https://odysway.com/experiences' },
+      {
+        name: selectedExperience.value.title,
+        url: `https://odysway.com/experiences/${selectedExperience.value.slug.current}`,
+      },
+    ],
+  })
+}
 </script>

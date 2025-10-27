@@ -23,13 +23,12 @@
 </template>
 
 <script setup>
-const route = useRoute()
-
 const pageQuery = `
   *[_type == "avisVoyageurs"][0]{
     heroSection,
     firstPhrase,
     secondPhrase,
+    seo
   }
 `
 const sanity = useSanity()
@@ -37,29 +36,13 @@ const { data: page } = await useAsyncData('avis-voyageurs', () =>
   sanity.fetch(pageQuery),
 )
 
-// if (page.value) {
-//   // Set the page title explicitly
-//   useHead({
-//     title: page.value.seo?.title || page.value.title,
-//     htmlAttrs: {
-//       lang: 'fr',
-//     },
-//     ...page.value.head,
-//   })
-
-//   // Set SEO meta tags
-//   useSeoMeta({
-//     title: page.value.seo?.title || page.value.title,
-//     description: page.value.seo?.description || page.value.description,
-//     ogTitle: page.value.seo?.title || page.value.title,
-//     ogDescription: page.value.seo?.description || page.value.description,
-//     ogType: 'website',
-//     ogUrl: `https://odysway.com${route.path}`,
-//     twitterTitle: page.value.seo?.title || page.value.title,
-//     twitterDescription: page.value.seo?.description || page.value.description,
-//     twitterCard: 'summary_large_image',
-//     canonical: `https://odysway.com${route.path}`,
-//     robots: page.value.robots || 'index, follow',
-//   })
-// }
+if (page.value) {
+  useSeo({
+    seoData: page.value?.seo,
+    content: page.value,
+    pageType: 'website',
+    slug: 'avis-voyageurs',
+    baseUrl: '/avis-voyageurs',
+  })
+}
 </script>

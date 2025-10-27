@@ -101,7 +101,6 @@ const route = useRoute()
 // #TODO Page settings à définir
 const entreprisePageQuery = groq`*[_type == "entreprise"][0]{
   ...,
-  pageSettings,
   heroSection{
     image,
     title
@@ -156,6 +155,7 @@ const entreprisePageQuery = groq`*[_type == "entreprise"][0]{
       ...,
       asset->{
         _id,
+        _ref,
         url,
         metadata
       }
@@ -170,31 +170,25 @@ const { data: page } = await useAsyncData('entreprise', () =>
 )
 
 if (page.value) {
-  const seoTitle = page.value.pageSettings?.seo?.title || page.value.pageSettings?.title || page.value.heroSection.title || 'Tribus par Odysway'
-  const seoDescription = page.value.pageSettings?.seo?.description || page.value.pageSettings?.description || 'Des expériences uniques pour votre entreprise : découvrez nos séminaires et voyages Tribus'
-  const robots = page.value.pageSettings?.seo?.robots || 'index, follow'
-
-  // Set the page title explicitly
-  useHead({
-    title: seoTitle,
-    htmlAttrs: {
-      lang: 'fr',
-    },
-  })
-
-  // Set SEO meta tags
-  useSeoMeta({
-    title: seoTitle,
-    description: seoDescription,
-    ogTitle: seoTitle,
-    ogDescription: seoDescription,
-    ogType: 'website',
-    ogUrl: `https://odysway.com${route.path}`,
-    twitterTitle: seoTitle,
-    twitterDescription: seoDescription,
-    twitterCard: 'summary_large_image',
-    canonical: `https://odysway.com${route.path}`,
-    robots,
+  // Fallback values for content
+  const defaultContent = {
+    title: 'Tribus par Odysway',
+    description: 'Des expériences uniques pour votre entreprise : découvrez nos séminaires et voyages Tribus',
+    image: page.value.heroSection?.image,
+  }
+  // Use the SEO composable
+  useSeo({
+    seoData: page.value?.seo,
+    content: defaultContent,
+    pageType: 'website',
+    slug: 'entreprise',
+    baseUrl: '/entreprise',
+    structuredData: [
+      createOrganizationSchema({
+        description: page.value?.seo?.metaDescription || defaultContent.description,
+      }),
+      createWebSiteSchema(),
+    ],
   })
 }
 </script>

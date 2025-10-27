@@ -33,3 +33,4 @@ cursor/
 .vscode/
 
 cms/migration-reports
+public/images/

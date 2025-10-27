@@ -19,6 +19,7 @@
         <CtaButton
           v-if="page.ctaButton"
           :link="getButtonLink(page.ctaButton.link)"
+          :external="page.ctaButton.external"
           class="mt-8"
         >
           <template #text>
@@ -52,9 +53,29 @@ const surMesureQuery = groq`*[_type == "surMesure" && slug.current == "sur-mesur
 }`
 
 const { data: page, status } = await useAsyncData('sur-mesure', () =>
-  sanity.fetch(surMesureQuery)
+  sanity.fetch(surMesureQuery),
 )
 
+if (page.value) {
+  const defaultContent = {
+    title: 'Un voyage sur mesure, au rythme de vos envies',
+    description: 'Un voyage sur mesure, au rythme de vos envies',
+    image: page.value.heroImage,
+  }
+  useSeo({
+    seoData: page.value?.seo,
+    content: defaultContent,
+    pageType: 'website',
+    slug: 'sur-mesure',
+    baseUrl: '/sur-mesure',
+    structuredData: [
+      createOrganizationSchema({
+        description: page.value?.seo?.metaDescription || defaultContent.description,
+      }),
+      createWebSiteSchema(),
+    ],
+  })
+}
 function getButtonLink(link) {
   if (!link) return '/'
   // If it's a full URL to odysway.com, extract just the path

@@ -10,9 +10,10 @@ definePageMeta({
 })
 const titre = useRoute().query?.travelTitle || ''
 
-useHead({
-  htmlAttrs: {
-    lang: 'fr',
+useSeo({
+  seoData: {
+    robotsIndex: false,
+    robotsFollow: false,
   },
 })
 </script>

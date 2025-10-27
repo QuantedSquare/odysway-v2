@@ -30,9 +30,7 @@
         </v-row>
       </v-col>
       <v-col
-        :class="{
-          'd-none': smAndDown && !displayImageMobile,
-        }"
+        class="d-none d-md-block"
         cols="12"
         md="6"
       >
@@ -72,10 +70,6 @@ const { imageSrc } = defineProps({
     type: Boolean,
     default: true,
   },
-  displayImageMobile: {
-    type: Boolean,
-    default: false,
-  },
   displayCtaButton: {
     type: Boolean,
     default: true,
@@ -83,7 +77,7 @@ const { imageSrc } = defineProps({
 })
 
 const img = useImage()
-const { width, smAndDown } = useDisplay()
+const { width } = useDisplay()
 const imageUrl = computed(() => {
   return getImageUrl(imageSrc?.asset?._ref)
 })

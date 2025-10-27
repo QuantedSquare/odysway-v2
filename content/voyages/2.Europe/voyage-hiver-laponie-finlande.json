@@ -92,7 +92,7 @@
     },
     "includeFlightBadge": {
       "text": "**Vol** compris",
-      "visible": true
+      "visible": false
     },
     "housingBadge": {
       "text": "Ecolodge",
@@ -180,7 +180,6 @@
   "pricingDetailsBlock": {
     "include": [
       "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "Le transport aérien avec escale entre Paris et Kuusamo ou Oulu et les taxes d'aéroport",
       "L’accueil à l'aéroport",
       "Les transferts aller/retour de l'aéroport au camp de base",
       "L'hébergement en chambre double au sein de l'écolodge",
@@ -193,7 +192,8 @@
       "L'assurance annulation ou multirisques",
       "Les boissons alcoolisées",
       "Les dépenses personnelles",
-      "Les pourboires (montant conseillé : 20 à 30€ par personne)"
+      "Les pourboires (montant conseillé : 20 à 30€ par personne)",
+      "Le transport aérien avec escale entre Paris et Kuusamo ou Oulu et les taxes d'aéroport"
     ]
   },
   "pricing": {

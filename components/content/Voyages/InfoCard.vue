@@ -105,7 +105,7 @@
               height="60"
               block
               rounded="md"
-              :to="`/devis?slug=${voyage.slug}`"
+              :to="`/devis?slug=${typeof voyage.slug === 'object' ? voyage.slug.current : voyage.slug}`"
             >
               <span class="text-body-2 font-weight-bold text-decoration-none">
                 Demander un devis

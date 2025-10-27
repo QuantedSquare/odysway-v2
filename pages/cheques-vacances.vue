@@ -48,11 +48,12 @@ const query = groq`*[_type == "chequesVacances" && slug.current == "cheques-vaca
   title,
   heroImage,
   content,
-  ctaButton
+  ctaButton,
+  seo
 }`
 
 const { data: page, status } = await useAsyncData('cheques-vacances', () =>
-  sanity.fetch(query)
+  sanity.fetch(query),
 )
 
 function getButtonLink(link) {
@@ -62,5 +63,15 @@ function getButtonLink(link) {
     return link.replace('https://odysway.com', '')
   }
   return link
+}
+
+if (page.value) {
+  useSeo({
+    seoData: page.value?.seo,
+    content: page.value,
+    pageType: 'website',
+    slug: 'cheques-vacances',
+    baseUrl: '/cheques-vacances',
+  })
 }
 </script>

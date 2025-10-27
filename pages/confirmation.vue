@@ -44,6 +44,13 @@ const confirmationQuery = groq`*[_type == "confirmation" && slug.current == "con
 }`
 
 const { data: page, status } = await useAsyncData('confirmation-page', () =>
-  sanity.fetch(confirmationQuery)
+  sanity.fetch(confirmationQuery),
 )
+// No indexing for this page
+useSeo({
+  seoData: {
+    robotsIndex: false,
+    robotsFollow: false,
+  },
+})
 </script>

@@ -14,7 +14,7 @@
         <HeroVoyageSection :voyage="voyage" />
 
         <ChipsContainer
-          :badge-section="voyage.badgeSection"
+          :badges="voyage.badges"
           :badge-title="voyage.experienceType.badgeTitle"
           :level="voyage.level"
         />
@@ -141,8 +141,6 @@
 </template>
 
 <script setup>
-import { getImageUrl } from '~/utils/getImageUrl'
-
 definePageMeta({
   layout: 'voyage',
   middleware: ['old-voyages-link-redirection'],
@@ -160,6 +158,36 @@ const voyagePageQuery = `
 const voyageQuery = `
   *[_type == "voyage" && slug.current == $slug][0]{
     ...,
+    seo{
+      metaTitle,
+      metaDescription,
+      canonicalUrl,
+      focusKeyword,
+      keywords,
+      robotsIndex,
+      robotsFollow,
+      ogTitle,
+      ogDescription,
+      ogImage{
+        asset->{
+          _ref,
+          _id,
+          url
+        },
+        alt
+      }
+    },
+    badges[]{
+      badge->{
+        _id,
+        title,
+        text,
+        picto
+      },
+      variable1Value,
+      variable2Value,
+      overrideText
+    },
     experienceType->{
       badgeTitle,
       _id
@@ -213,100 +241,23 @@ onMounted(() => {
 
 watchEffect(() => {
   if (!voyage.value) return
-  // SEO Meta Tags
-  useSeoMeta({
-    title: voyage.value.seoSection?.metaTitle || voyage.value.title,
-    description: voyage.value.seoSection?.ogDescription || voyage.value.metaDescription || voyage.value.description,
-    ogTitle: voyage.value.seoSection?.ogTitle || voyage.value.title,
-    ogDescription: voyage.value.seoSection?.ogDescription || voyage.value.metaDescription || voyage.value.description,
-    ogImage: voyage.value.seoSection?.ogImage?.src || voyage.value.image?.src,
-    ogType: 'website',
-    twitterTitle: voyage.value.seoSection?.twitterTitle || voyage.value.title,
-    twitterDescription: voyage.value.seoSection?.twitterDescription || voyage.value.metaDescription || voyage.value.description,
-    twitterImage: voyage.value.seoSection?.twitterImage?.src || voyage.value.image?.src,
-    twitterCard: voyage.value.seoSection?.twitterCard || 'summary_large_image',
-    canonical: voyage.value.seoSection?.canonicalUrl || `https://odysway.com/voyages/${voyage.value.slug.current}`,
-  })
 
-  // Structured Data (TouristTrip)
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'TouristTrip',
-    'name': voyage.value.title,
-    'description': voyage.value.metaDescription || voyage.value.description,
-    'image': voyage.value.image ? [getImageUrl(voyage.value.image.asset._ref, `${voyage.value.slug.current}.jpg`)] : '',
-    'touristType': 'Adventure',
-    'mainEntity': {
-      '@type': 'TouristTrip',
-      'name': voyage.value.title,
-      'description': voyage.value.metaDescription || voyage.value.description,
-      'url': `https://odysway.com/voyages/${voyage.value.slug.current}`,
-    },
-    'offers': {
-      '@type': 'Offer',
-      'price': voyage.value.pricing?.startingPrice,
-      'priceCurrency': 'EUR',
-      'availability': 'https://schema.org/InStock',
-    },
-    'url': `https://odysway.com/voyages/${voyage.value.slug.current}`,
-    'provider': {
-      '@type': 'Organization',
-      'name': 'Odysway',
-      'url': 'https://odysway.com',
-    },
-    'itinerary': voyage.value.programmeBlock?.map((day, index) => ({
-      '@type': 'TouristAttraction',
-      'name': day.title,
-      'description': day.description,
-      'image': day.photo ? [getImageUrl(day.photo.asset._ref, `${voyage.value.slug.current}-day-${index + 1}.jpg`)] : '',
-    })),
-    ...(voyage.value.rating && voyage.value.comments
-      ? {
-          aggregateRating: {
-            '@type': 'AggregateRating',
-            'ratingValue': voyage.value.rating,
-            'reviewCount': voyage.value.comments,
-            'itemReviewed': {
-              '@type': 'TouristTrip',
-              'name': voyage.value.title,
-              'url': `https://odysway.com/voyages/${voyage.value.slug.current}`,
-            },
-          },
-        }
-      : {}),
-  }
-  // BreadcrumbList structured data
-  const breadcrumbs = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    'itemListElement': [
+  // Use the SEO composable with TouristTrip structured data
+  useSeo({
+    seoData: voyage.value.seo,
+    content: voyage.value,
+    pageType: 'website',
+    slug: voyage.value.slug?.current,
+    structuredData: createTouristTripSchema(
+      voyage.value,
+      `https://odysway.com/voyages/${voyage.value.slug.current}`,
+    ),
+    breadcrumbs: [
+      { name: 'Accueil', url: 'https://odysway.com' },
+      { name: 'Voyages', url: 'https://odysway.com/voyages' },
       {
-        '@type': 'ListItem',
-        'position': 1,
-        'name': 'Voyages',
-        'item': 'https://odysway.com/voyages',
-      },
-      {
-        '@type': 'ListItem',
-        'position': 2,
-        'name': voyage.value.title,
-        'item': `https://odysway.com/voyages/${voyage.value.slug.current}`,
-      },
-    ],
-  }
-
-  useHead({
-    htmlAttrs: {
-      lang: 'fr',
-    },
-    script: [
-      {
-        type: 'application/ld+json',
-        children: JSON.stringify(structuredData),
-      },
-      {
-        type: 'application/ld+json',
-        children: JSON.stringify(breadcrumbs),
+        name: voyage.value.title,
+        url: `https://odysway.com/voyages/${voyage.value.slug.current}`,
       },
     ],
   })

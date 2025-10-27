@@ -26,7 +26,8 @@ export default defineConfig({
                 S.list()
                   .title('Voyages')
                   .items([
-                    S.documentTypeListItem('voyage').title('All Voyages'),
+                    S.documentTypeListItem('voyage').title('Tous les Voyages'),
+                    S.divider(),
                     S.listItem()
                       .title('Voyages by Category')
                       .child(
@@ -50,6 +51,41 @@ export default defineConfig({
                               .filter('_type == "voyage" && references($destId)')
                               .params({destId}),
                           ),
+                      ),
+                    
+                    S.listItem()
+                      .title('Voyages by Experience')
+                      .child(
+                        S.documentTypeList('experience')
+                          .title('Experiences')
+                          .child((experienceId) =>
+                            S.documentList()
+                              .title('Voyages')
+                              .filter('_type == "voyage" && references($experienceId)')
+                              .params({experienceId}),
+                          ),
+                      ),
+                    S.divider(),
+                    S.listItem()
+                      .title('Voyages en Groupe')
+                      .child(
+                        S.documentList()
+                          .title('Voyages en Groupe')
+                          .filter('_type == "voyage" && "groupe" in availabilityTypes')
+                      ),
+                    S.listItem()
+                      .title('Voyages en Privatisation')
+                      .child(
+                        S.documentList()
+                          .title('Voyages en Privatisation')
+                          .filter('_type == "voyage" && "privatisation" in availabilityTypes')
+                      ),
+                    S.listItem()
+                      .title('Voyages Sur-Mesure')
+                      .child(
+                        S.documentList()
+                          .title('Voyages Sur-Mesure')
+                          .filter('_type == "voyage" && "custom" in availabilityTypes')
                       ),
                   ]),
               ),
@@ -131,29 +167,29 @@ export default defineConfig({
                 S.list()
                   .title('Pages')
                   .items([
-                    S.documentTypeListItem('homePage').title('Page Accueil'),
-                    S.documentTypeListItem('page_voyage').title('Page Voyage'),
-                    S.documentTypeListItem('page_contact').title('Page Contact'),
-                    S.documentTypeListItem('page_experiences').title('Page Expériences'),
-                    S.documentTypeListItem('page_thematiques').title('Page Thématiques'),
-                    S.documentTypeListItem('page_blog').title('Page Blog'),
-                    S.documentTypeListItem('search').title('Page Recherche'),
-                    S.documentTypeListItem('faq').title('Page FAQ'),
+                    S.documentTypeListItem('homePage').title('Accueil'),
+                    S.documentTypeListItem('page_voyage').title('Voyage'),
+                    S.documentTypeListItem('page_contact').title('Contact'),
+                    S.documentTypeListItem('page_experiences').title('Expériences'),
+                    S.documentTypeListItem('page_thematiques').title('Thématiques'),
+                    S.documentTypeListItem('page_blog').title('Blog'),
+                    S.documentTypeListItem('search').title('Recherche'),
+                    S.documentTypeListItem('faq').title('FAQ'),
                     S.divider(),
-                    S.documentTypeListItem('recruitment').title('Page Recruitement'),
-                    S.documentTypeListItem('chequesVacances').title('Page Chèques-Vacances'),
+                    S.documentTypeListItem('recruitment').title('Recrutement'),
+                    S.documentTypeListItem('chequesVacances').title('Chèques-Vacances'),
                     S.documentTypeListItem('conditionsGeneralesVente').title(
-                      'Page Conditions Générales de Vente',
+                      'Conditions Générales de Vente',
                     ),
-                    S.documentTypeListItem('avisVoyageurs').title('Page Avis Voyageurs'),
-                    S.documentTypeListItem('confirmation').title('Page Confirmation'),
-                    S.documentTypeListItem('offreCadeau').title('Page Offre Cadeau'),
-                    S.documentTypeListItem('surMesure').title('Page Sur Mesure'),
-                    S.documentTypeListItem('visionVoyageOdysway').title('Page Vision Voyage Odysway'),
-                    S.documentTypeListItem('entreprise').title('Page Entreprise'),
-                    S.documentTypeListItem('legalMentions').title('Page Mentions légales'),
+                    S.documentTypeListItem('avisVoyageurs').title('Avis Voyageurs'),
+                    S.documentTypeListItem('confirmation').title('Confirmation'),
+                    S.documentTypeListItem('offreCadeau').title('Offre Cadeau'),
+                    S.documentTypeListItem('surMesure').title('Sur Mesure'),
+                    S.documentTypeListItem('visionVoyageOdysway').title('Vision Voyage Odysway'),
+                    S.documentTypeListItem('entreprise').title('Entreprise'),
+                    S.documentTypeListItem('legalMentions').title('Mentions légales'),
                     S.documentTypeListItem('privacyPolicy').title(
-                      'Page Politique de confidentialité',
+                      'Politique de confidentialité',
                     ),
                   ]),
               ),
