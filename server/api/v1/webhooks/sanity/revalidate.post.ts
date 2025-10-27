@@ -185,8 +185,8 @@ export default defineEventHandler(async (event) => {
               'x-prerender-revalidate': bypassToken,
             },
           })
-
-          console.log(`✓ Revalidated instantly: ${path}`, response)
+          console.log('response revalidation', response)
+          console.log(`✓ Revalidated instantly: ${path}`)
           revalidationResults.push({ path, status: 'success' })
         }
         catch (err) {
