@@ -20,9 +20,21 @@ const pageContentQuery = groq`*[_type == "page_experiences"][0]{
 }`
 const experiencesQuery = `
   *[_type == "experience"]{
-    ...,
-    "voyages": *[_type == "voyage" && references(^._id)]{
-      ...,
+     _id,
+    title,
+    slug,
+    description,
+    image,
+    "voyages": *[_type == "voyage" && references(^._id) && !('custom' in availabilityTypes)]{
+       _id,
+      title,
+      slug,
+      image,
+      duration,
+      nights,
+      rating,
+      comments,
+      pricing
     }
   }
 `

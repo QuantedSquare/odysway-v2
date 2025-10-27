@@ -14,9 +14,21 @@
 <script setup>
 const destinationQuery = `
   *[_type == "destination"]{
-    ...,
-    "voyages": *[_type == "voyage" && references(^._id)]{
-      ...,
+     _id,
+    title,
+    slug,
+    description,
+    image,
+    "voyages": *[_type == "voyage" && references(^._id) && !('custom' in availabilityTypes)]{
+        _id,
+      title,
+      slug,
+      image,
+      duration,
+      nights,
+      rating,
+      comments,
+      pricing
     }
   }
 `
