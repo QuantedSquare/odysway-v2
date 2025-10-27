@@ -34,8 +34,6 @@ definePageMeta({
   layout: 'simple-pages',
 })
 
-const route = useRoute()
-
 const visionPageQuery = groq`*[_type == "visionVoyageOdysway"][0]{
   ...,
   teamSection{
@@ -45,6 +43,7 @@ const visionPageQuery = groq`*[_type == "visionVoyageOdysway"][0]{
         ...,
         asset->{
           _id,
+          _ref,
           url,
           metadata
         }
@@ -60,27 +59,24 @@ const { data: visionPage } = await useAsyncData('vision-voyage-odysway', () =>
 
 if (visionPage.value) {
   // Set the visionPage title explicitly
-  useHead({
-    title: visionPage.value.pageSettings.seo?.title || visionPage.value.pageSettings.title,
-    htmlAttrs: {
-      lang: 'fr',
-    },
-    ...visionPage.value.pageSettings.head,
-  })
+  const defaultContent = {
+    title: 'Vision Voyage Odysway',
+    description: 'Vision Voyage Odysway',
+    image: visionPage.value.heroSection.image,
+  }
 
-  // Set SEO meta tags
-  useSeoMeta({
-    title: visionPage.value.pageSettings.seo?.title || visionPage.value.pageSettings.title,
-    description: visionPage.value.pageSettings.seo?.description || visionPage.value.pageSettings.description,
-    ogTitle: visionPage.value.pageSettings.seo?.title || visionPage.value.pageSettings.title,
-    ogDescription: visionPage.value.pageSettings.seo?.description || visionPage.value.pageSettings.description,
-    ogType: 'website',
-    ogUrl: `https://odysway.com${route.path}`,
-    twitterTitle: visionPage.value.pageSettings.seo?.title || visionPage.value.pageSettings.title,
-    twitterDescription: visionPage.value.pageSettings.seo?.description || visionPage.value.pageSettings.description,
-    twitterCard: 'summary_large_image',
-    canonical: `https://odysway.com${route.path}`,
-    robots: visionPage.value.pageSettings.robots || 'index, follow',
+  useSeo({
+    seoData: visionPage.value?.seo,
+    content: defaultContent,
+    pageType: 'website',
+    slug: 'vision-voyage-odysway',
+    baseUrl: '/vision-voyage-odysway',
+    structuredData: [
+      createOrganizationSchema({
+        description: visionPage.value?.seo?.metaDescription || defaultContent.description,
+      }),
+      createWebSiteSchema(),
+    ],
   })
 }
 </script>

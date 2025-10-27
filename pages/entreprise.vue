@@ -101,7 +101,6 @@ const route = useRoute()
 // #TODO Page settings à définir
 const entreprisePageQuery = groq`*[_type == "entreprise"][0]{
   ...,
-  pageSettings,
   heroSection{
     image,
     title
@@ -156,6 +155,7 @@ const entreprisePageQuery = groq`*[_type == "entreprise"][0]{
       ...,
       asset->{
         _id,
+        _ref,
         url,
         metadata
       }
@@ -176,17 +176,16 @@ if (page.value) {
     description: 'Des expériences uniques pour votre entreprise : découvrez nos séminaires et voyages Tribus',
     image: page.value.heroSection?.image,
   }
-
   // Use the SEO composable
   useSeo({
-    seoData: page.value.pageSettings?.seo,
+    seoData: page.value?.seo,
     content: defaultContent,
     pageType: 'website',
     slug: 'entreprise',
     baseUrl: '/entreprise',
     structuredData: [
       createOrganizationSchema({
-        description: page.value.pageSettings?.seo?.metaDescription || defaultContent.description,
+        description: page.value?.seo?.metaDescription || defaultContent.description,
       }),
       createWebSiteSchema(),
     ],
