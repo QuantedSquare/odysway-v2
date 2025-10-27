@@ -108,13 +108,13 @@ export default defineNuxtConfig({
     // API routes
     '/api/**': { cors: true },
   },
-  // ot sure this improve a lot.
+  // Inline critical CSS for better performance
   features: {
-    inlineStyles: false,
+    inlineStyles: true, // Changed from false - inlining CSS eliminates render-blocking request
   },
-  // experimental: {
-  //   payloadExtraction: true,
-  // },
+  experimental: {
+     payloadExtraction: true,
+  },
   compatibilityDate: '2024-11-01',
   nitro: {
     imports: {

@@ -16,14 +16,16 @@
       >
         <v-img
           v-if="voyageCardImg"
-          :src="img(voyageCardImg, { format: 'webp', quality: 90, height: 228, width: 640 })"
+          :src="img(voyageCardImg, { format: 'webp', quality: 75, height: 228, width: 640 })"
           :lazy-src="img(voyageCardImg, { format: 'webp', quality: 10, height: 228, width: 640 })"
           :alt="voyage.image.alt || `Paysage de destination pour le voyage ${voyage.title}`"
-          :srcset="`${img(voyageCardImg, { format: 'webp', quality: 90, width: 640 })} 640w, ${img(voyageCardImg, { format: 'webp', quality: 90, width: 1024 })} 1024w`"
+          :srcset="`${img(voyageCardImg, { format: 'webp', quality: 75, width: 640 })} 640w, ${img(voyageCardImg, { format: 'webp', quality: 75, width: 1024 })} 1024w`"
           sizes="(max-width: 600px) 480px, 1024px"
           class="img-height"
           cover
           aspect-ratio="auto"
+          width="640"
+          height="228"
         >
           <template #default>
             <div class="badge-position">
