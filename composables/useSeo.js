@@ -12,6 +12,7 @@
  * @param {Object} options.customMeta - Additional custom meta tags
  */
 export function useSeo(options = {}) {
+  const config = useRuntimeConfig()
   const route = useRoute()
   const {
     seoData = {},
@@ -24,10 +25,62 @@ export function useSeo(options = {}) {
     customMeta = {},
   } = options
 
+  /**
+   * Generate a readable title from a slug
+   * @param {String} slug - Page slug (e.g., "immersion-japon")
+   * @returns {String} - Formatted title (e.g., "Immersion Japon")
+   */
+  const generateTitleFromSlug = (slug) => {
+    if (!slug) return 'Odysway'
+
+    // Remove common suffixes
+    const cleanSlug = slug
+      .replace(/\.html?$/i, '')
+      .replace(/^\/|\/$/g, '')
+
+    // Split by hyphens/underscores/slashes, capitalize each word
+    const words = cleanSlug
+      .split(/[-_/]/)
+      .map(word =>
+        word.charAt(0).toUpperCase() + word.slice(1).toLowerCase(),
+      )
+      .join(' ')
+
+    return words
+  }
+
+  /**
+   * Generate a default description from a slug
+   * @param {String} slug - Page slug
+   * @param {String} pageType - Type of page
+   * @returns {String} - Default description
+   */
+  const generateDescriptionFromSlug = (slug, pageType) => {
+    if (!slug) return 'Découvrez Odysway, spécialiste des voyages en petits groupes et des expériences authentiques à travers le monde.'
+
+    const cleanSlug = slug
+      .replace(/\.html?$/i, '')
+      .replace(/^\/|\/$/g, '')
+      .split(/[-_/]/)
+      .join(' ')
+
+    // Generate contextual description based on page type
+    const templates = {
+      article: `Découvrez notre article sur ${cleanSlug}. Guides, conseils et informations pour préparer votre voyage avec Odysway.`,
+      website: `Découvrez ${cleanSlug} avec Odysway. Voyages en petits groupes et expériences authentiques.`,
+    }
+
+    return templates[pageType] || templates.website
+  }
+
   // Normalize SEO field names (handle different naming conventions)
-  const normalizeSeoData = (seo, contentFallback) => {
+  const normalizeSeoData = (seo, contentFallback, pageSlug, type) => {
     // For blog-referenced pages (destinations, experiences, thematiques)
     const blogSeo = contentFallback?.blog || {}
+
+    // Generate slug-based defaults
+    const defaultTitle = generateTitleFromSlug(pageSlug)
+    const defaultDescription = generateDescriptionFromSlug(pageSlug, type)
 
     return {
       metaTitle:
@@ -35,7 +88,7 @@ export function useSeo(options = {}) {
         || seo?.seoTitle // Blog posts
         || blogSeo?.seoTitle // Blog-referenced content
         || contentFallback?.title // Fallback
-        || '',
+        || defaultTitle, // ← Slug-based default
       metaDescription:
         seo?.metaDescription // New standard
         || seo?.seoDescription // Blog posts
@@ -43,20 +96,20 @@ export function useSeo(options = {}) {
         || blogSeo?.seoDescription // Blog-referenced content
         || contentFallback?.metaDescription
         || contentFallback?.description
-        || '',
+        || defaultDescription, // ← Slug-based default
       ogTitle:
         seo?.ogTitle
         || seo?.seoTitle
         || blogSeo?.seoTitle
         || contentFallback?.title
-        || '',
+        || defaultTitle, // ← Slug-based default
       ogDescription:
         seo?.ogDescription
         || seo?.seoDescription
         || blogSeo?.seoDescription
         || contentFallback?.metaDescription
         || contentFallback?.description
-        || '',
+        || defaultDescription, // ← Slug-based default
       ogImage:
         seo?.ogImage // New standard with asset object
         || seo?.ogImage?.src // Voyage pages
@@ -90,7 +143,7 @@ export function useSeo(options = {}) {
     }
   }
 
-  const normalized = normalizeSeoData(seoData, content)
+  const normalized = normalizeSeoData(seoData, content, slug, pageType)
 
   // Generate canonical URL
   const canonicalUrl = computed(() => {
@@ -223,6 +276,65 @@ export function useSeo(options = {}) {
   }
 
   useHead(headConfig)
+
+  // Debug logging (client-side only)
+  if (import.meta.client && config.public.environment === 'development') {
+    console.group('🔍 SEO Debug - ' + (normalized.metaTitle || 'No Title'))
+
+    console.log('📄 Page Info:', {
+      type: pageType,
+      slug,
+      path: route.path,
+    })
+
+    console.log('📝 Meta Tags:', {
+      title: normalized.metaTitle,
+      description: normalized.metaDescription?.substring(0, 100),
+      canonical: canonicalUrl.value,
+      robots: robotsMeta.value,
+    })
+
+    console.log('🖼️ Open Graph:', {
+      ogTitle: normalized.ogTitle,
+      ogDescription: normalized.ogDescription?.substring(0, 100),
+      ogImage: ogImageUrl.value,
+      ogImageAlt: normalized.ogImageAlt,
+      ogType: pageType === 'article' ? 'article' : 'website',
+    })
+
+    console.log('🐦 Twitter Card:', {
+      twitterTitle: normalized.ogTitle,
+      twitterCard: normalized.twitterCard,
+      twitterImage: ogImageUrl.value,
+    })
+
+    if (normalized.keywords?.length > 0) {
+      console.log('🔑 Keywords:', normalized.keywords)
+    }
+
+    if (normalized.focusKeyword) {
+      console.log('🎯 Focus Keyword:', normalized.focusKeyword)
+    }
+
+    if (structuredData) {
+      const schemas = Array.isArray(structuredData) ? structuredData : [structuredData]
+      console.log('📊 Structured Data (' + schemas.filter(s => s).length + ' schemas):',
+        schemas.filter(s => s).map(s => s['@type']),
+      )
+      // Log full structured data for inspection
+      schemas.forEach((schema, index) => {
+        if (schema) {
+          console.log(`  ${index + 1}. ${schema['@type']}:`, schema)
+        }
+      })
+    }
+
+    if (breadcrumbs?.length > 0) {
+      console.log('🍞 Breadcrumbs:', breadcrumbs.map(b => b.name).join(' → '))
+    }
+
+    console.groupEnd()
+  }
 
   return {
     normalized,

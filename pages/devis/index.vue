@@ -108,9 +108,12 @@
 </template>
 
 <script setup>
-import { useImage } from '#imports'
-
-const img = useImage()
+useSeo({
+  seoData: {
+    robotsIndex: false,
+    robotsFollow: false,
+  },
+})
 const route = useRoute()
 const router = useRouter()
 const skipperChoice = ref('devis')
@@ -157,7 +160,7 @@ const voyageQuery = groq`*[_type == "voyage" && slug.current == $slug][0]{
 }`
 
 const { data: voyage } = await useAsyncData(`voyages-${route.query.slug}`, () =>
-  sanity.fetch(voyageQuery, { slug: route.query.slug })
+  sanity.fetch(voyageQuery, { slug: route.query.slug }),
 )
 
 const destinations = computed(() => voyage.value?.destinations || [])
@@ -174,7 +177,7 @@ const devisQuery = groq`*[_type == "devis"][0]{
 }`
 
 const { data: pageTexts, status: pageStatus } = await useAsyncData('devis-texts', () =>
-  sanity.fetch(devisQuery)
+  sanity.fetch(devisQuery),
 )
 
 const nextStep = () => {

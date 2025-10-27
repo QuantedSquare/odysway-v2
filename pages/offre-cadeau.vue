@@ -13,7 +13,10 @@
           :value="page.mainContent"
         />
 
-        <h1 v-if="page.howItWorksTitle" class="text-center my-8">
+        <h1
+          v-if="page.howItWorksTitle"
+          class="text-center my-8"
+        >
           {{ page.howItWorksTitle }}
         </h1>
 
@@ -49,7 +52,7 @@ definePageMeta({
 
 const sanity = useSanity()
 
-const query = groq`*[_type == "offreCadeau" && slug.current == "offre-cadeau"][0]{
+const query = groq`*[_type == "offreCadeau"][0]{
   title,
   heroImage,
   heroImageMobile,
@@ -58,10 +61,21 @@ const query = groq`*[_type == "offreCadeau" && slug.current == "offre-cadeau"][0
   pictoCols[]{
     image,
     text
-  }
+  },
+  seo
 }`
 
 const { data: page, status } = await useAsyncData('offre-cadeau', () =>
-  sanity.fetch(query)
+  sanity.fetch(query),
 )
+
+if (page.value) {
+  useSeo({
+    seoData: page.value?.seo,
+    content: page.value,
+    pageType: 'website',
+    slug: 'offre-cadeau',
+    baseUrl: '/offre-cadeau',
+  })
+}
 </script>

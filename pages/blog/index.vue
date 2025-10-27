@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="pageBlogSanity">
     <v-container>
       <v-row
         justify="center"
@@ -10,7 +10,7 @@
           ref="scroll-target"
           class="font-weight-black text-h2 my-4 "
         >
-          Blog
+          {{ pageBlogSanity.pageTitle }}
         </v-col>
       </v-row>
     </v-container>
@@ -25,7 +25,7 @@
           <v-text-field
             :id="searchId"
             v-model="search"
-            :label="'Rechercher par mot clé'"
+            :label="pageBlogSanity.searchPlaceholder || 'Rechercher par mot clé'"
             :prepend-inner-icon="mdiMagnify"
             clearable
             density="comfortable"
@@ -40,7 +40,7 @@
             :id="categoryId"
             v-model="selectedCategory"
             :items="categoriesList"
-            :label="'Filtrer par catégorie'"
+            :label="pageBlogSanity.categoryFilter || 'Filtrer par catégorie'"
             :item-title="item => item.charAt(0).toUpperCase() + item.slice(1)"
             clearable
             density="comfortable"
@@ -56,7 +56,7 @@
             :id="sortId"
             v-model="sortOrder"
             :items="sortOptions"
-            :label=" 'Trier par date'"
+            :label="pageBlogSanity.sortByDate || 'Trier par date'"
             density="comfortable"
             clearable
           >
@@ -97,7 +97,7 @@
             {{ mdiMagnifyClose }}
           </v-icon>
           <div class="text-h6 mt-2 mb-4">
-            Aucun article trouvé
+            {{ pageBlogSanity.noArticlesFound }}
           </div>
           <v-btn
             v-if="search || selectedCategory"
@@ -105,7 +105,7 @@
             variant="outlined"
             @click="() => { search = ''; selectedCategory = null; }"
           >
-            Réinitialiser les filtres
+            {{ pageBlogSanity.resetFilters }}
           </v-btn>
         </v-col>
       </v-row>
@@ -138,6 +138,24 @@
             @next="pagination.currentPage = pagination.currentPage++"
             @prev="pagination.currentPage = pagination.currentPage-- "
           />
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
+  <div v-else-if="pageBlogStatus === 'loading'">
+    <v-container>
+      <v-row>
+        <v-col>
+          <v-skeleton-loader type="card" />
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
+  <div v-else>
+    <v-container>
+      <v-row>
+        <v-col>
+          ...
         </v-col>
       </v-row>
     </v-container>
@@ -180,6 +198,27 @@ const { data: pages, status } = await useAsyncData('blog', () =>
   sanity.fetch(blogsQuery),
 )
 
+const pageBlogQuery = groq`
+  *[_type == "page_blog"][0]{
+    ...,
+    seo{
+      ...
+    }
+  }
+`
+const { data: pageBlogSanity, status: pageBlogStatus } = await useAsyncData('pageBlog', () =>
+  sanity.fetch(pageBlogQuery),
+)
+
+if (pageBlogSanity.value) {
+  useSeo({
+    seoData: pageBlogSanity.value.seo,
+    content: pageBlogSanity.value,
+    pageType: 'website',
+    slug: 'blog',
+  })
+}
+
 const loading = computed(() => {
   return status.value !== 'success'
 })
@@ -188,10 +227,11 @@ const search = ref('')
 const selectedCategory = ref(null)
 const sortOrder = ref(null)
 const sortOptions = computed(() => [
-  { title: 'Plus récent', value: 'desc' },
-  { title: 'Plus ancien', value: 'asc' },
-  { title: 'Plus court', value: 'readingTimeAsc' },
-  { title: 'Plus long', value: 'readingTimeDesc' },
+  // Add fallback values
+  { title: pageBlogSanity.value?.sortOptions?.newest || 'Plus récent', value: 'desc' },
+  { title: pageBlogSanity.value?.sortOptions?.oldest || 'Plus ancien', value: 'asc' },
+  { title: pageBlogSanity.value?.sortOptions?.shortest || 'Plus court', value: 'readingTimeAsc' },
+  { title: pageBlogSanity.value?.sortOptions?.longest || 'Plus long', value: 'readingTimeDesc' },
 ])
 
 function normalize(str) {
@@ -291,11 +331,14 @@ watch([filteredBlogs], () => {
 const goTo = useGoTo()
 const scrollTarget = useTemplateRef('scroll-target')
 
-useHead({
-  htmlAttrs: {
-    lang: 'fr',
-  },
-})
+if (pages.value) {
+  useSeo({
+    seoData: {
+      robotsIndex: false,
+      robotsFollow: false,
+    },
+  })
+}
 </script>
 
 <style scoped>

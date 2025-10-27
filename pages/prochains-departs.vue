@@ -1,5 +1,8 @@
 <template>
-  <v-container fluid class="pt-0 position-relative max-container-width">
+  <v-container
+    fluid
+    class="pt-0 position-relative max-container-width"
+  >
     <SearchHeroSection
       :is-next-departures="true"
       :destination="{
@@ -12,9 +15,20 @@
       :no-margin-bottom="true"
     />
 
-    <v-row align="center" justify="center" class="bg-white rounded-md filter-wrapper pa-4">
-      <v-col cols="12" sm="7">
-        <v-btn-toggle v-model="toggledBtn" mandatory class="d-flex justify-center ga-sm-3 btn-height">
+    <v-row
+      align="center"
+      justify="center"
+      class="bg-white rounded-md filter-wrapper pa-4"
+    >
+      <v-col
+        cols="12"
+        sm="7"
+      >
+        <v-btn-toggle
+          v-model="toggledBtn"
+          mandatory
+          class="d-flex justify-center ga-sm-3 btn-height"
+        >
           <v-btn
             v-for="btn of toggleBtns"
             :key="btn.text"
@@ -27,7 +41,11 @@
           </v-btn>
         </v-btn-toggle>
       </v-col>
-      <v-col cols="12" sm="4" class="pl-md-0">
+      <v-col
+        cols="12"
+        sm="4"
+        class="pl-md-0"
+      >
         <v-select
           :id="periodId"
           v-model="selectedPeriod"
@@ -179,14 +197,14 @@ const groupByMonth = computed(() => {
   filteredTravels.value.forEach((travel) => {
     // Find the earliest future date for this travel
     const futureDates = travel.dates.filter(dateInfo =>
-      dayjs(dateInfo.departure_date).isAfter(today)
+      dayjs(dateInfo.departure_date).isAfter(today),
     )
 
     if (futureDates.length === 0) return
 
     // Sort dates and get the earliest one
     const earliestDate = futureDates.sort((a, b) =>
-      dayjs(a.departure_date).valueOf() - dayjs(b.departure_date).valueOf()
+      dayjs(a.departure_date).valueOf() - dayjs(b.departure_date).valueOf(),
     )[0]
 
     const departureDate = dayjs(earliestDate.departure_date)
@@ -254,11 +272,20 @@ const dealsLastMinuteFiltered = computed(() => {
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1)
 }
-
-useHead({
-  htmlAttrs: {
-    lang: 'fr',
+// Static seo data with plain text from this file / No data on Sanity
+useSeo({
+  seoData: {
+    metaTitle: 'Prochains départs',
+    metaDescription: 'Prochains départs',
   },
+  content: {
+    title: 'Prochains départs',
+    description: 'Prochains départs',
+  },
+  pageType: 'website',
+  slug: 'prochains-departs',
+  baseUrl: '/prochains-departs',
+  structuredData: [createOrganizationSchema()],
 })
 </script>
 

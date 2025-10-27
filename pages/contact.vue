@@ -19,16 +19,20 @@ const query = groq`*[_type == "page_contact"][0]{
   heroSection,
   contactForm,
   gdprSection,
-  validationMessages
+  validationMessages,
+  seo
 }`
 
 const { data: contactContent } = await useAsyncData('contact-content', () =>
-  sanity.fetch(query)
+  sanity.fetch(query),
 )
-
-useHead({
-  htmlAttrs: {
-    lang: 'fr',
-  },
-})
+if (contactContent.value) {
+  useSeo({
+    seoData: contactContent.value?.seo,
+    content: contactContent.value,
+    pageType: 'website',
+    slug: 'contact',
+    baseUrl: '/contact',
+  })
+}
 </script>
