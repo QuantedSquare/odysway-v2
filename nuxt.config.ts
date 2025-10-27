@@ -110,9 +110,9 @@ export default defineNuxtConfig({
   features: {
     inlineStyles: false,
   },
-  // experimental: {
-  //   payloadExtraction: true,
-  // },
+  experimental: {
+     payloadExtraction: true,
+  },
   compatibilityDate: '2024-11-01',
   nitro: {
     imports: {
