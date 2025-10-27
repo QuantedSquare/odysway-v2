@@ -212,7 +212,7 @@ const { data: pageBlogSanity, status: pageBlogStatus } = await useAsyncData('pag
 
 if (pageBlogSanity.value) {
   useSeo({
-    seoData: pageBlogSanity.value.seo,
+    seoData: pageBlogSanity.value?.seo,
     content: pageBlogSanity.value,
     pageType: 'website',
     slug: 'blog',
@@ -330,15 +330,6 @@ watch([filteredBlogs], () => {
 
 const goTo = useGoTo()
 const scrollTarget = useTemplateRef('scroll-target')
-
-if (pages.value) {
-  useSeo({
-    seoData: {
-      robotsIndex: false,
-      robotsFollow: false,
-    },
-  })
-}
 </script>
 
 <style scoped>

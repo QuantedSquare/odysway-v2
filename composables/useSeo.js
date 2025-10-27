@@ -144,7 +144,6 @@ export function useSeo(options = {}) {
   }
 
   const normalized = normalizeSeoData(seoData, content, slug, pageType)
-
   // Generate canonical URL
   const canonicalUrl = computed(() => {
     if (normalized.canonicalUrl) return normalized.canonicalUrl
