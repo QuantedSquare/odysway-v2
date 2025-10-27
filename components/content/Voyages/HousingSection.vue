@@ -79,25 +79,18 @@
                     </template>
                     <v-carousel-item
                       v-for="image, i in housing.image"
-                      :key="image.asset._ref + i"
+                      :key="image._key + i"
                       rounded="lg"
                       max-height="215"
                     >
                       <template #default>
-                        <SanityImage
-                          :asset-id="image.asset._ref"
-                          auto="format"
-                        >
-                          <template #default="{ src }">
-                            <v-img
-                              rounded="lg"
-                              cover
-                              :src="img(src, { format: 'webp', quality: 70, width: 640 })"
-                              :alt="image.alt"
-                              height="100%"
-                            />
-                          </template>
-                        </SanityImage>
+                        <v-img
+                          rounded="lg"
+                          cover
+                          :src="img(getImageUrl(image?.asset?._ref), { format: 'webp', quality: 70, width: 640 })"
+                          :alt="'housing image ' + index + 1 || ''"
+                          height="100%"
+                        />
                       </template>
                     </v-carousel-item>
                   </v-carousel>
@@ -133,10 +126,14 @@
                         wrapper-class="housing-description"
                       >
                         <div v-if="housing.housingType">
-                          <span class="font-weight-bold text-no-wrap">{{ housingTypeTitle }}:</span> <EnrichedText :value="housing.housingType" />
+                          <span class="font-weight-bold text-no-wrap">{{ housingTypeTitle }}:</span>
+                          {{ housing.housingType }}
                         </div>
                         <div v-if="housing.housingMood">
-                          <span class="font-weight-bold text-no-wrap">{{ housingMoodTitle }}:</span> <EnrichedText :value="housing.housingMood" />
+                          <span class="font-weight-bold text-no-wrap">{{ housingMoodTitle }}:</span>
+                          <EnrichedText
+                            :value="housing.housingMood"
+                          />
                         </div>
                       </ExpandableText>
                     </v-col>
@@ -170,14 +167,15 @@ const { housingBlock } = defineProps({
     required: true,
   },
   housingTypeTitle: {
-    type: String,
+    type: [String, Array],
     required: true,
   },
   housingMoodTitle: {
-    type: String,
+    type: [String, Array],
     required: true,
   },
 })
+console.log('housingBlock', housingBlock)
 const img = useImage()
 const { mdAndUp, sm } = useDisplay()
 const scrollContainer = ref(null)
