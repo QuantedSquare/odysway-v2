@@ -18,11 +18,23 @@ const pageContentQuery = groq`*[_type == "page_thematiques"][0]{
   slug,
   common
 }`
-const categoriesQuery = `
+const categoriesQuery = groq`
   *[_type == "category"]{
-    ...,
+    _id,
+    title,
+    slug,
+    description,
+    image,
     "voyages": *[_type == "voyage" && references(^._id)]{
-      ...,
+      _id,
+      title,
+      slug,
+      image,
+      duration,
+      nights,
+      rating,
+      comments,
+      pricing
     }
   }
 `
