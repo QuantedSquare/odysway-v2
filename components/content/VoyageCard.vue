@@ -161,14 +161,22 @@ const { voyage } = defineProps({
 })
 const img = useImage()
 
-const voyageCardContentQuery = `
-  *[_type == "voyage_card"][0]{
-    ...
-  }
-`
+const voyageCardContentQuery = groq`*[_type == "voyage_card"][0]{
+  type,
+  groupType,
+  soloType,
+  days,
+  startingFrom,
+  discoverDates,
+  requestQuote
+}`
+
 const sanity = useSanity()
 const { data: voyageCardContent } = await useAsyncData('voyage-card-content', () =>
   sanity.fetch(voyageCardContentQuery),
+  {
+    dedupe: 'defer' // This ensures all components wait for first request to complete
+  }
 )
 
 const actionColor = computed(() => voyage.groupeAvailable ? '#f7f8f8' : '#fef9f8')
