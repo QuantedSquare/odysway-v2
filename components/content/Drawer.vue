@@ -8,6 +8,7 @@
   >
     <div class="d-flex flex-column ga-4 pa-4">
       <v-btn-secondary
+        v-if="header?.button5?.visible"
         block
         class="text-caption text-sm-subtitle-2"
         color="primary"
@@ -16,6 +17,7 @@
         {{ header.button5.text }}
       </v-btn-secondary>
       <v-btn-secondary
+        v-if="header?.button4?.visible"
         href="tel: +33184807975"
         block
         variant="tonal"
@@ -26,6 +28,7 @@
         {{ header.button4.text }}
       </v-btn-secondary>
       <v-btn-secondary
+        v-if="header?.button3?.visible"
         color="white"
         block
         class="text-caption text-sm-subtitle-2 text-primary"
@@ -34,6 +37,7 @@
         {{ header.button3.text }}
       </v-btn-secondary>
       <v-btn-secondary
+        v-if="header?.button2?.visible"
         color="white"
         block
         class="text-caption text-sm-subtitle-2 text-primary"
@@ -42,6 +46,7 @@
         {{ header.button2.text }}
       </v-btn-secondary>
       <v-btn-secondary
+        v-if="header?.button1?.visible"
         color="white"
         block
         class="text-caption text-sm-subtitle-2 text-primary"
@@ -54,7 +59,7 @@
 </template>
 
 <script setup>
-const model = defineModel()
+const model = defineModel({ type: Boolean, default: false })
 
 const { header } = defineProps({
   header: {

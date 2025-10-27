@@ -1,17 +1,18 @@
 <template>
   <div
-    v-if="header"
     class="d-sm-none px-4 px-md-9 d-flex align-center height-app-bar custom-app-bar bg-white"
     :class="!model ? 'app-bar-shadow' : ''"
   >
     <NuxtLink
-      :to="header.logo.to || '/'"
+      :to="'/'"
       class="header-logo-link"
     >
       <img
         src="/logos/Logo-Odysway-Bleu.png"
-        width="320"
-        :alt="header.logo.alt || 'Logo principale d\'Odysway'"
+        width="100"
+        height="25"
+        fetchpriority="high"
+        :alt="header?.logo?.alt || 'Logo principale d\'Odysway'"
         class="header-logo"
       >
     </NuxtLink>
@@ -20,7 +21,7 @@
     <div class="d-flex align-center ga-4">
       <SearchDialog />
       <v-btn
-        v-if="header.button1.visible"
+        v-if="header?.button1?.visible"
         height="45"
         color="primary"
         rounded="default"
@@ -30,7 +31,7 @@
         {{ header.button1.text }}
       </v-btn>
       <v-btn
-        v-if="header.button2.visible"
+        v-if="header?.button2?.visible"
         color="primary"
         height="45"
         class="text-caption text-md-body-1 d-none d-md-inline"
@@ -39,7 +40,7 @@
         {{ header.button2.text }}
       </v-btn>
       <v-btn
-        v-if="header.button3.visible"
+        v-if="header?.button3?.visible"
         color="primary"
         height="45"
         class="text-caption text-md-body-1 d-none d-md-inline"
@@ -48,24 +49,24 @@
         {{ header.button3.text }}
       </v-btn>
       <v-btn
-        v-if="header.button4.visible"
+        v-if="header?.button4?.visible"
         href="tel: +33184807975"
         color="primary"
         height="45"
         variant="tonal"
         rounded="default"
         class="text-caption text-md-body-1 d-none d-md-inline"
-        @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.button3.text) }"
+        @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.button4.text) }"
       >
         <span class="mt-2">{{ header.button4.text }}</span>
       </v-btn>
       <v-btn
-        v-if="header.button5.visible"
+        v-if="header?.button5?.visible"
         height="45"
         color="white"
         rounded="default"
         class="text-caption text-md-body-1 d-none d-md-inline bg-primary"
-        @click="() => { router.push(header.button4.link); trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(header.button4.text) }"
+        @click="() => { router.push(header.button5.link); trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(header.button5.text) }"
       >
         {{ header.button5.text }}
       </v-btn>
@@ -85,7 +86,6 @@
     </div>
   </div>
   <v-app-bar
-    v-if="header"
     elevation="0"
     mobile
     class="d-header-desktop px-4 px-md-9 d-flex align-center height-app-bar mx-0"
@@ -94,35 +94,24 @@
     :scroll-threshold="scrollThreshold"
   >
     <NuxtLink
-      :to="header.logo.to || '/'"
+      :to="'/'"
       class="header-logo-link"
     >
-
-      <v-img
+      <img
         src="/logos/Logo-Odysway-Bleu.png"
         width="150"
-        :alt="header.logo.alt || 'Logo principale d\'Odysway'"
+        height="38"
+        fetchpriority="high"
+        :alt="header?.logo?.alt || 'Logo principale d\'Odysway'"
         class="header-logo"
-      />
-
-      <!-- <NuxtImg
-        v-else
-        preload
-        as="image"
-        format="webp"
-        quality="100"
-        :src="logo"
-        width="320"
-        :alt="header.logo.alt || 'Logo principale d\'Odysway'"
-        class="header-logo"
-      /> -->
+      >
     </NuxtLink>
 
     <v-spacer />
     <div class="d-flex align-center ga-4">
       <SearchDialog />
       <v-btn
-        v-if="header.button1.visible"
+        v-if="header?.button1?.visible"
         height="45"
         color="primary"
         rounded="default"
@@ -132,7 +121,7 @@
         {{ header.button1.text }}
       </v-btn>
       <v-btn
-        v-if="header.button2.visible"
+        v-if="header?.button2?.visible"
         color="primary"
         height="45"
         class="text-caption text-md-body-1 d-none d-md-inline"
@@ -141,7 +130,7 @@
         {{ header.button2.text }}
       </v-btn>
       <v-btn
-        v-if="header.button3.visible"
+        v-if="header?.button3?.visible"
         color="primary"
         height="45"
         class="text-caption text-md-body-1 d-none d-md-inline"
@@ -150,7 +139,7 @@
         {{ header.button3.text }}
       </v-btn>
       <v-btn
-        v-if="header.button4.visible"
+        v-if="header?.button4?.visible"
         href="tel: +33184807975"
         color="primary"
         height="45"
@@ -162,7 +151,7 @@
         <span class="mt-2">{{ header.button4.text }}</span>
       </v-btn>
       <v-btn
-        v-if="header.button5.visible"
+        v-if="header?.button5?.visible"
         height="45"
         color="white"
         rounded="default"
@@ -191,10 +180,9 @@
 
 <script setup>
 import { mdiMenu } from '@mdi/js'
-// Check logic to display logo without delay
 
 const router = useRouter()
-const model = defineModel()
+const model = defineModel({ type: Boolean, default: false })
 
 const { header } = defineProps({
   scrollBehavior: {

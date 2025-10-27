@@ -175,7 +175,6 @@ const { housingBlock } = defineProps({
     required: true,
   },
 })
-console.log('housingBlock', housingBlock)
 const img = useImage()
 const { mdAndUp, sm } = useDisplay()
 const scrollContainer = ref(null)

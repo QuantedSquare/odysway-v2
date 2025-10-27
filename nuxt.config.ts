@@ -34,6 +34,8 @@ export default defineNuxtConfig({
     head: {
       titleTemplate: '%s - Odysway',
       link: [
+        // Preload critical logo for LCP optimization
+        { rel: 'preload', href: '/logos/Logo-Odysway-Bleu.png', as: 'image', fetchpriority: 'high' },
         // Google Analytics
         // { rel: 'preconnect', href: 'https://www.googletagmanager.com' },
         // { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },

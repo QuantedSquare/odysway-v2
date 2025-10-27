@@ -49,8 +49,40 @@ import _ from 'lodash'
 
 const route = useRoute()
 const slug = computed(() => route.params.destinationSlug)
-
+const isRegionDestination = computed(() => {
+  const regionsList = ['europe', 'afrique', 'asie', 'amerique-du-sud', 'amerique-du-nord', 'amerique-centrale', 'moyen-orient', 'france']
+  return regionsList.includes(slug.value)
+})
 // #TODO OPTI LE SELECT DES PROPS NECESSAIRES
+const destinationFromRegionQuery = `
+  *[_type == "region" && slug.current == $slug][0]{
+    ...,
+    "destinations": *[_type == "destination" && references(^._id)]{
+      ...,
+      "voyages": *[_type == "voyage" && references(^._id)]{
+        ...,
+      }
+    },
+    blog->{
+      ...,
+      author->{
+        ...
+      },
+      body[]{
+        ...,
+        _type == "image" => {
+          ...,
+          asset->{
+            _id,
+            url,
+            metadata
+          }
+        }
+      }
+    }
+  } 
+`
+
 const destinationQuery = `
   *[_type == "destination" && slug.current == $slug][0]{
     ...,
@@ -77,11 +109,28 @@ const destinationQuery = `
   }
 `
 const sanity = useSanity()
-const { data: destinationSanity } = await useAsyncData('destination', () =>
-  sanity.fetch(destinationQuery, {
-    slug: slug.value,
-  }),
-)
+const { data: destinationSanity } = await useAsyncData('destination', async () => {
+  if (!isRegionDestination.value) {
+    return sanity.fetch(destinationQuery, {
+      slug: slug.value,
+    })
+  }
+  else {
+    const data = await sanity.fetch(destinationFromRegionQuery, {
+      slug: slug.value,
+    })
+    const voyageFlatMap = _.flatMap(data.destinations.map(destination => destination.voyages))
+    return {
+      interjection: data.interjection,
+      meta_description: data.meta_description,
+      slug: data.slug,
+      blog: data.blog,
+      title: data.nom,
+      image: voyageFlatMap[0]?.image,
+      voyages: voyageFlatMap,
+    }
+  }
+})
 
 const dataToBlog = reactive({
   title: destinationSanity.value?.blog?.title,

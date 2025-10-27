@@ -17,7 +17,7 @@
           v-if="destination && !isCategory && !isExperience && !isNextDepartures"
           class="custom-hero-title"
         >
-          {{ `${contentText?.searchHero?.voyagePrefix || 'Nos voyages'} ${destination.interjection} ${destination.title}` }}
+          {{ `${contentText?.searchHero?.voyagePrefix || 'Nos voyages'} ${destination.interjection} ${destination.title || destination.nom}` }}
         </h1>
         <h1
           v-else-if="destination && isCategory"
@@ -49,15 +49,15 @@
         md="8"
       >
         <v-img
-          v-if="destination?.image?.src"
-          :src="img(destination?.image?.src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
-          :lazy-src="img(destination?.image?.src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+          v-if="displayedImg"
+          :src="img(displayedImg, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+          :lazy-src="img(displayedImg, { format: 'webp', quality: 10, height: 900, width: 1536 })"
           size="(max-width: 600) 480px, 1500px"
-          :srcset="`${img(destination?.image?.src, { format: 'webp', quality: 70, width: 640 })} 480w, ${img(destination?.image?.src, { format: 'webp', quality: 70, width: 1024 })} 1500w`"
+          :srcset="`${img(displayedImg, { format: 'webp', quality: 70, width: 640 })} 480w, ${img(displayedImg, { format: 'webp', quality: 70, width: 1024 })} 1500w`"
           height="302"
           class="rounded-md"
           cover
-          :alt="destination?.image?.alt"
+          :alt="destination?.image?.alt "
         />
         <v-img
           v-else
@@ -74,10 +74,10 @@
     </v-row>
     <v-img
       v-else
-      :src="img(destination ? destination.image?.src : '/images/homeHero.jpeg', { format: 'webp', quality: 80, height: 900, width: 1536 })"
-      :lazy-src="img(destination ? destination.image?.src : '/images/homeHero.jpeg', { format: 'webp', quality: 10, height: 900, width: 1536 })"
+      :src="img(destination ? displayedImg : '/images/homeHero.jpeg', { format: 'webp', quality: 80, height: 900, width: 1536 })"
+      :lazy-src="img(destination ? displayedImg : '/images/homeHero.jpeg', { format: 'webp', quality: 10, height: 900, width: 1536 })"
       size="(max-width: 600) 480px, 1500px"
-      :srcset="`${img(destination ? destination.image?.src : '/images/homeHero.jpeg', { format: 'webp', quality: 80, width: 640 })} 480w, ${img(destination ? destination.image?.src : '/images/homeHero.jpeg', { format: 'webp', quality: 80, width: 1024 })} 1500w`"
+      :srcset="`${img(destination ? displayedImg : '/images/homeHero.jpeg', { format: 'webp', quality: 80, width: 640 })} 480w, ${img(destination ? destination.image?.src : '/images/homeHero.jpeg', { format: 'webp', quality: 80, width: 1024 })} 1500w`"
       height="50vh"
       :alt="destination ? destination.image?.alt : 'Image principale Hero d\'Odysway'"
       class="rounded-md"
@@ -160,7 +160,7 @@ const query = groq`*[_type == "search"][0]{
 }`
 
 const { data: contentText } = await useAsyncData('page-search-search-hero', () =>
-  sanity.fetch(query)
+  sanity.fetch(query),
 )
 
 const img = useImage()
@@ -190,6 +190,19 @@ const { destination, isCategory, isExperience, isNextDepartures, noMarginBottom 
     type: Boolean,
     default: false,
   },
+})
+const displayedImg = computed(() => {
+  if (destination.image?.src) {
+    return destination.image.src
+  }
+  else {
+    if (destination.image.asset._ref) {
+      return getImageUrl(destination.image.asset._ref)
+    }
+    else {
+      return '/images/homeHero.jpeg'
+    }
+  }
 })
 const isHydrated = ref(false)
 onMounted(() => {

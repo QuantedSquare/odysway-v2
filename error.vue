@@ -32,7 +32,7 @@ defineProps({
 #error {
   color: #3e3e3e;
   background-size: cover;
-  background-image: url('/images/error page/404.jpg');
+  background-image: url('/images/error_page/404.jpg');
   background-color: rgba(255, 255, 255, 0.8);
   background-blend-mode: screen;
 }

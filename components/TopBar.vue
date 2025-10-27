@@ -1,11 +1,10 @@
 <template>
+  <HeaderOdysway
+    v-model="drawer"
+    :header="header"
+  />
   <ClientOnly>
-    <HeaderOdysway
-      v-if="header"
-      v-model="drawer"
-      :header="header"
-    />
-    <LazyDrawer
+    <Drawer
       v-if="width < 960 && header"
       v-model="drawer"
       :header="header"
@@ -30,6 +29,7 @@ const headerQuery = groq`*[_type == "header"][0]{
   button5
 }`
 
+// Fetch header data with lazy option to not block rendering
 const { data: header } = await useAsyncData(
   'header',
   async () => {
@@ -45,6 +45,16 @@ const { data: header } = await useAsyncData(
   },
   {
     server: true,
+    // Add default fallback to prevent blocking
+    default: () => ({
+      logo: { alt: 'Logo Odysway' },
+      search: true,
+      button1: { visible: false, text: '', link: '' },
+      button2: { visible: false, text: '', link: '' },
+      button3: { visible: false, text: '', link: '' },
+      button4: { visible: false, text: '', link: '' },
+      button5: { visible: false, text: '', link: '' },
+    }),
   },
 )
 </script>

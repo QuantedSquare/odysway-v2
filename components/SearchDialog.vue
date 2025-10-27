@@ -6,15 +6,17 @@
     <template #activator="{ props: activatorProps }">
       <v-btn
         v-bind="activatorProps"
-        :size="smAndDown ? 24 : 36"
+        :size="36"
         icon
         class="border-circle stronger-hover bg-white"
       >
-        <v-img
+        <img
           :src="img('/icons/Search.svg', { format: 'webp', quality: 70, width: 320, height: 320 })"
           alt="Search icon"
-          :width="smAndDown ? 16 : 20"
-        />
+          :width="20"
+          height="20"
+          fetchpriority="high"
+        >
       </v-btn>
     </template>
 

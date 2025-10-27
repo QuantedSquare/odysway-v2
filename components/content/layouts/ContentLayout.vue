@@ -197,7 +197,7 @@ const displayedData = computed(() => {
       items: destinations.value?.map((destination) => {
         return {
           id: destination._id,
-          title: destination.title,
+          title: destination.title || destination.nom,
           slug: destination.slug.current,
           image: destination.image,
           type: 'destinations',
