@@ -127,7 +127,7 @@ export default defineNuxtConfig({
     },
     vercel: {
       config: {
-        bypassToken: process.env.VERCEL_BYPASS_TOKEN,
+        bypassToken: process.env.VERCEL_AUTOMATION_BYPASS_SECRET,
       },
     },
   },

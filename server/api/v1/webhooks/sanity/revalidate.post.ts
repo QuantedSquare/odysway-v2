@@ -166,7 +166,7 @@ export default defineEventHandler(async (event) => {
     }
 
     // Trigger on-demand revalidation using Vercel's bypass token
-    const bypassToken = process.env.VERCEL_BYPASS_TOKEN
+    const bypassToken = process.env.VERCEL_AUTOMATION_BYPASS_SECRET
 
     if (bypassToken && pathsToRevalidate.length > 0) {
       const config = useRuntimeConfig()
