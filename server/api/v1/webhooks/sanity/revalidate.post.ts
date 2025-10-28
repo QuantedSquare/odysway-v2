@@ -166,7 +166,9 @@ export default defineEventHandler(async (event) => {
     }
 
     // Trigger on-demand revalidation using Vercel's bypass token
-    const bypassToken = process.env.VERCEL_AUTOMATION_BYPASS_SECRET
+    // Note: This is NOT the same as VERCEL_AUTOMATION_BYPASS_SECRET
+    // VERCEL_BYPASS_TOKEN is a custom secret you create for ISR revalidation
+    const bypassToken = process.env.VERCEL_BYPASS_TOKEN
 
     if (bypassToken && pathsToRevalidate.length > 0) {
       const config = useRuntimeConfig()
@@ -185,6 +187,7 @@ export default defineEventHandler(async (event) => {
           const response = await fetch(url, {
             method: 'GET',
             headers: {
+              'x-vercel-protection-bypass': bypassToken,
               'x-prerender-revalidate': bypassToken,
               'Cache-Control': 'no-cache, no-store, must-revalidate',
             },
