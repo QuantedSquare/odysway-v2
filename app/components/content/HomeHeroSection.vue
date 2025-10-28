@@ -1,50 +1,34 @@
 <template>
   <div class="mt-8 mt-md-0">
-    <div class="relative-hero-section mb-16 rounded-xl">
-      <v-img
+    <div class="relative-hero-section mb-16 hero-image-wrapper">
+      <img
         v-if="srcUrl"
         :src="srcUrl"
-        :lazy-src="lazySrc"
-        sizes="(max-width: 600px) 100vw, (max-width: 960px) 960px, 1536px"
         :srcset="srcset"
-        height="100%"
+        sizes="(max-width: 600px) 100vw, (max-width: 960px) 960px, 1536px"
         alt="Image principale Hero d'Odysway"
-        class="rounded-xl hero-height"
-        cover
-        :aspect-ratio="1536/900"
+        class="hero-image"
         loading="eager"
         fetchpriority="high"
       >
-        <template #placeholder>
-          <div class="d-flex align-center justify-center fill-height">
-            <v-progress-circular
-              indeterminate
-              color="primary"
-            />
-          </div>
-        </template>
-
-        <template #default>
-          <div class="h-100 d-flex align-center position-relative">
-            <v-container class="text-white text-h4 text-md-h2 font-weight-bold text-shadow text-center">
-              <v-row
-                justify="center"
-                align="center"
-              >
-                <v-col
-                  cols="12"
-                  md="auto"
-                >
-                  <h1 class="custom-hero-title ">
-                    <slot name="title" />
-                  </h1>
-                  <slot name="subtitle" />
-                </v-col>
-              </v-row>
-            </v-container>
-          </div>
-        </template>
-      </v-img>
+      <div class="hero-overlay h-100 d-flex align-center">
+        <v-container class="text-white text-h4 text-md-h2 font-weight-bold text-shadow text-center">
+          <v-row
+            justify="center"
+            align="center"
+          >
+            <v-col
+              cols="12"
+              md="auto"
+            >
+              <h1 class="custom-hero-title ">
+                <slot name="title" />
+              </h1>
+              <slot name="subtitle" />
+            </v-col>
+          </v-row>
+        </v-container>
+      </div>
     </div>
     <div class="searchfield-overlap">
       <SearchField />
@@ -119,6 +103,36 @@ const lazySrc = computed(() => {
  position:relative;
  height: 600px;
  width: 100%;
+}
+
+.hero-image-wrapper {
+ position: relative;
+ width: 100%;
+ height: 100%;
+ border-radius: 12px;
+ overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1536 / 900;
+  display: block;
+  position: relative;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
 }
 
 .custom-hero-title {
