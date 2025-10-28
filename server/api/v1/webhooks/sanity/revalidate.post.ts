@@ -171,7 +171,7 @@ export default defineEventHandler(async (event) => {
 
     if (bypassToken && pathsToRevalidate.length > 0) {
       const config = useRuntimeConfig()
-      const baseUrl = config.public.siteURL
+      const baseUrl = config.public.environment === 'development' ? 'https://dev.odysway.com' : config.public.siteURL
 
       const revalidationResults = []
 
@@ -185,12 +185,7 @@ export default defineEventHandler(async (event) => {
               'x-prerender-revalidate': bypassToken,
             },
           })
-          await $fetch(url, {
-            method: 'GET',
-            headers: {
-              'x-prerender-revalidate': bypassToken,
-            },
-          })
+         
           console.log(`✓ Revalidated instantly: ${path}`)
           revalidationResults.push({ path, status: 'success' })
         }
