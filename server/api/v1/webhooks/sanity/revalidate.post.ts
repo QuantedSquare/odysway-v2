@@ -1,5 +1,5 @@
 import { defineEventHandler, readBody, getHeader, createError } from 'h3'
-
+import axios from 'axios'
 export default defineEventHandler(async (event) => {
   // Verify webhook secret for security
   console.log('Sanity webhook received', event)
@@ -179,12 +179,12 @@ export default defineEventHandler(async (event) => {
         try {
           // Trigger revalidation by making a HEAD request with the bypass token
           const url = `${baseUrl}${path}`
-          await $fetch(url, {
-            method: 'HEAD',
+          const response = await axios.head(url, {
             headers: {
               'x-prerender-revalidate': bypassToken,
             },
           })
+          console.log('response revalidation on ', url, response)
          
           console.log(`✓ Revalidated instantly: ${path}`)
           revalidationResults.push({ path, status: 'success' })
