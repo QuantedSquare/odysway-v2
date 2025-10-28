@@ -24,8 +24,7 @@
           class="img-height"
           cover
           aspect-ratio="auto"
-          width="640"
-          height="228"
+          
         >
           <template #default>
             <div class="badge-position">
@@ -270,6 +269,8 @@ const voyageCardImg = computed(() => {
   }
   .custom-card-width{
   min-width:280px!important;
+  max-width: 280px!important;
+  max-height: 345px!important;
   }
 }
 .custom-row-height{

@@ -28,7 +28,7 @@
       v-else
       :center-title="true"
     >
-      <template #title>
+      <template #title>aaaaaa
         <slot name="title" />
       </template>
       <template #carousel-item>
@@ -57,4 +57,5 @@ defineProps({
   },
 })
 const { width } = useDisplay()
+
 </script>

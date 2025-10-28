@@ -1,16 +1,19 @@
 <template>
   <div class="mt-8 mt-md-0">
     <div class="relative-hero-section mb-16 hero-image-wrapper">
-      <img
+      <NuxtImg
         v-if="srcUrl"
         :src="srcUrl"
         :srcset="srcset"
         sizes="(max-width: 600px) 100vw, (max-width: 960px) 960px, 1536px"
         alt="Image principale Hero d'Odysway"
         class="hero-image"
+        format="webp"
         loading="eager"
-        fetchpriority="high"
-      >
+        fetch-priority="high"
+        width="1536"
+        height="900"
+      />
       <div class="hero-overlay h-100 d-flex align-center">
         <v-container class="text-white text-h4 text-md-h2 font-weight-bold text-shadow text-center">
           <v-row
@@ -109,13 +112,15 @@ const lazySrc = computed(() => {
  position: relative;
  width: 100%;
  height: 100%;
- border-radius: 12px;
+ max-height: 600px;
+ border-radius: 24px!important;
  overflow: hidden;
 }
 
 .hero-image {
   width: 100%;
   height: 100%;
+  max-height: 600px;
   object-fit: cover;
   object-position: center;
   aspect-ratio: 1536 / 900;

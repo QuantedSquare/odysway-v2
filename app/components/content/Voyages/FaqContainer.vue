@@ -4,19 +4,23 @@
     fluid
     class="rounded-lg px-1 py-0 mt-4 mt-md-8 max-container-width"
   >
-    <v-img
+    <div
       v-if="faqBackgroundURL"
-      :src="faqBackgroundURL"
-      :lazy-src="faqBackgroundLazy"
-      sizes="(max-width: 600px) 100vw, (max-width: 960px) 960px, 1536px"
-      :srcset="faqBackgroundSrcset"
-      loading="lazy"
-      :alt="faqSanity?.backgroundImage?.alt"
-      cover
-      width="100%"
-      class="rounded-lg max-img-height"
-      :gradient="imageGradient"
+      class="faq-image-wrapper rounded-lg max-img-height"
     >
+      <NuxtImg
+        :src="faqBackgroundURL"
+        :srcset="faqBackgroundSrcset"
+        sizes="(max-width: 600px) 100vw, (max-width: 960px) 960px, 1536px"
+        :alt="faqSanity?.backgroundImage?.alt"
+        class="faq-background-image"
+        format="webp"
+        loading="lazy"
+        fetch-priority="low"
+        width="1536"
+        height="800"
+      />
+      <div class="faq-overlay" :style="{ background: imageGradient }">
       <h2 class="text-center text-white">
         <TitleContainerH1>
           <template #title>
@@ -70,7 +74,8 @@
           </v-col>
         </v-row>
       </v-container>
-    </v-img>
+      </div>
+    </div>
     <v-skeleton-loader
       v-else
       type="card"
@@ -93,7 +98,7 @@ const secondaryColor = 'rgba(43, 76, 82, 0.8)'
 const route = useRoute()
 
 // Compute gradient to avoid reactivity issues during hydration
-const imageGradient = computed(() => `to top, ${secondaryColor}, ${primaryColor}`)
+const imageGradient = computed(() => `linear-gradient(to top, ${secondaryColor}, ${primaryColor})`)
 
 const faqSanityQuery = `
   *[_type == "faq"][0]{
@@ -180,6 +185,36 @@ const { data: faqTextes } = await useAsyncData(
 .max-img-height {
   height: 100%;
   max-height: 800px;
+}
+@media screen and (max-width: 960px) {
+  .max-img-height {
+    max-height: 600px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .max-img-height {
+    max-height: 700px!important;
+  }
+}
+.faq-image-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.faq-background-image {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+.faq-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 ::-webkit-scrollbar {
   width: 5px;

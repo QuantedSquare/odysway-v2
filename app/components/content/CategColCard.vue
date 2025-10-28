@@ -1,10 +1,10 @@
 <template>
   <v-col class="mr-0 pr-0">
-    <v-lazy
+    <!-- <v-lazy
       :min-height="width <= 960 ? 300 : 415"
       :options="{ threshold: 0.5 }"
       transition="fade-transition"
-    >
+    > -->
       <NuxtLink
         :to="`/${type}/${slug}`"
         class="image-wrapper default-expanded rounded"
@@ -36,7 +36,7 @@
           </h3>
         </div>
       </NuxtLink>
-    </v-lazy>
+    <!-- </v-lazy> -->
   </v-col>
 </template>
 

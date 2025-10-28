@@ -74,4 +74,9 @@ defineProps({
 .custom-list-item:deep(ul li) {
   margin-left: 0.8em;
 }
+@media screen and (max-width: 600px) {
+  .custom-list-item:deep(ul li) {
+    font-size: 14px!important;
+  }
+}
 </style>
