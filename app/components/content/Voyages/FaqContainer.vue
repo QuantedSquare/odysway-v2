@@ -1,16 +1,15 @@
 <template>
   <v-container
-
     id="faq-container"
     fluid
     class="rounded-lg px-1 py-0 mt-4 mt-md-8 max-container-width"
   >
     <v-img
       v-if="faqBackgroundURL"
-      :src="img(faqBackgroundURL, { format: 'webp', quality: 65, height: 900, width: 1536 })"
-      :lazy-src="img(faqBackgroundURL, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-      sizes="(max-width: 600px) 600px, (max-width: 960px) 960px, 1536px"
-      :srcset="`${img(faqBackgroundURL, { format: 'webp', quality: 60, width: 600 })} 600w, ${img(faqBackgroundURL, { format: 'webp', quality: 65, width: 960 })} 960w, ${img(faqBackgroundURL, { format: 'webp', quality: 70, width: 1536 })} 1536w`"
+      :src="img(faqBackgroundURL, { format: 'webp', quality: 55, height: 400, width: 600 })"
+      :lazy-src="img(faqBackgroundURL, { format: 'webp', quality: 10, height: 400, width: 600 })"
+      sizes="(max-width: 600px) 100vw, (max-width: 960px) 960px, 1536px"
+      :srcset="`${img(faqBackgroundURL, { format: 'webp', quality: 50, width: 400 })} 400w, ${img(faqBackgroundURL, { format: 'webp', quality: 55, width: 600 })} 600w, ${img(faqBackgroundURL, { format: 'webp', quality: 60, width: 960 })} 960w, ${img(faqBackgroundURL, { format: 'webp', quality: 70, width: 1536 })} 1536w`"
       loading="lazy"
       :alt="faqSanity?.backgroundImage?.alt"
       cover

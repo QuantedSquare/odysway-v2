@@ -3,10 +3,10 @@
     <div class="relative-hero-section mb-16 rounded-xl">
       <v-img
         v-if="srcUrl"
-        :src="img(srcUrl, { format: 'webp', quality: 70, height: 900, width: 1536 })"
-        :lazy-src="img(srcUrl, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-        sizes="(max-width: 600px) 600px, (max-width: 960px) 960px, 1536px"
-        :srcset="`${img(srcUrl, { format: 'webp', quality: 65, width: 600, height: 400 })} 600w, ${img(srcUrl, { format: 'webp', quality: 70, width: 960, height: 600 })} 960w, ${img(srcUrl, { format: 'webp', quality: 75, width: 1536, height: 900 })} 1536w`"
+        :src="img(srcUrl, { format: 'webp', quality: 60, height: 400, width: 600 })"
+        :lazy-src="img(srcUrl, { format: 'webp', quality: 10, height: 400, width: 600 })"
+        sizes="(max-width: 600px) 100vw, (max-width: 960px) 960px, 1536px"
+        :srcset="`${img(srcUrl, { format: 'webp', quality: 55, width: 400, height: 300 })} 400w, ${img(srcUrl, { format: 'webp', quality: 60, width: 600, height: 400 })} 600w, ${img(srcUrl, { format: 'webp', quality: 65, width: 960, height: 600 })} 960w, ${img(srcUrl, { format: 'webp', quality: 75, width: 1536, height: 900 })} 1536w`"
         height="100%"
         alt="Image principale Hero d'Odysway"
         class="rounded-xl hero-height"
