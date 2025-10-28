@@ -1,6 +1,6 @@
 import { defineEventHandler } from 'h3'
 import dayjs from 'dayjs'
-import supabase from '~/server/utils/supabase'
+
 import { createClient } from '@sanity/client'
 
 export default defineEventHandler(async (event) => {

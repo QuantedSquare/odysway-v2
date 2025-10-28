@@ -12,7 +12,6 @@ export default defineNuxtConfig({
     'nuxt-calendly',
     'nuxt-gtag',
     '@nuxtjs/sanity',
-    'nuxt-meta-pixel',
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
         // @ts-expect-error This come from Vuetify doc.
@@ -137,6 +136,15 @@ export default defineNuxtConfig({
         transformAssetUrls,
       },
     },
+    optimizeDeps: {
+      include: ['minimatch', 'brace-expansion', '@sanity/visual-editing'],
+    },
+    resolve: {
+      alias: {
+        'react-compiler-runtime': 'react-compiler-runtime',
+        react: 'react',
+      },
+    },
     build: {
       sourcemap: true,
       cssCodeSplit: false, // Combine all CSS into single file to reduce requests
@@ -191,7 +199,7 @@ export default defineNuxtConfig({
     visualEditing: {
       token: process.env.SANITY_VIEWER_TOKEN,
       studioUrl: process.env.SANITY_STUDIO_URL,
-      stega: true,
+      stega: false,
     },
   },
   schemaOrg: {

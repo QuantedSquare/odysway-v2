@@ -1,6 +1,5 @@
 import type { H3Event } from 'h3'
-import chapka from '~/server/utils/chapka'
-import { InsuranceSchema, type TypeInsuranceQuote } from '~/server/utils/types/insurance'
+
 
 export default defineEventHandler(async (event: H3Event): Promise<TypeInsuranceQuote> => {
   if (event.method !== 'POST') {

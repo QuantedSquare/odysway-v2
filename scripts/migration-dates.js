@@ -1,6 +1,6 @@
 import fs from 'node:fs'
 import slugify from 'slugify'
-import supabase from '../server/utils/supabase.js'
+
 
 function readJson(filename) {
   const data = JSON.parse(fs.readFileSync(filename))

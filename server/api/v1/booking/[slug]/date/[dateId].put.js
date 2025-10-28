@@ -1,5 +1,5 @@
 import { defineEventHandler, readBody } from 'h3'
-import supabase from '~/server/utils/supabase'
+
 
 export default defineEventHandler(async (event) => {
   const { dateId } = event.context.params

@@ -61,9 +61,18 @@ function acceptCookies() {
     ad_storage: 'granted',
     analytics_storage: 'granted',
   })
-  trackPixel('track', 'PageView')
-  useTrackEvent('page_view')
   localStorage.setItem('consent', 'granted')
+  
+  // Initialize Facebook Pixel if available
+  if (typeof window !== 'undefined' && window.__initFacebookPixel) {
+    window.__initFacebookPixel()
+  }
+  
+  // Small delay to ensure pixel is ready, then track
+  setTimeout(() => {
+    trackPixel('track', 'PageView')
+  }, 100)
+  useTrackEvent('page_view')
 }
 
 function refuseCookies() {

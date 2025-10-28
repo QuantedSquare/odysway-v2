@@ -1,4 +1,3 @@
-import { stripeCLI } from '@/server/utils/stripeCLI'
 
 export default defineEventHandler(async (event) => {
   const body = await readRawBody(event, 'utf8')
