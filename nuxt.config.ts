@@ -42,7 +42,9 @@ export default defineNuxtConfig({
         { rel: 'dns-prefetch', href: 'https://connect.facebook.net' },
         { rel: 'dns-prefetch', href: 'https://static.hotjar.com' },
         // Preconnect to Sanity CDN for faster image loading
+        { rel: 'preconnect', href: 'https://nu6yntji.apicdn.sanity.io', crossorigin: 'anonymous' },
         { rel: 'preconnect', href: 'https://cdn.sanity.io', crossorigin: 'anonymous' },
+        { rel: 'dns-prefetch', href: 'https://nu6yntji.apicdn.sanity.io' },
         { rel: 'dns-prefetch', href: 'https://cdn.sanity.io' },
       ],
       // script: [
@@ -137,6 +139,7 @@ export default defineNuxtConfig({
     },
     build: {
       sourcemap: true,
+      cssCodeSplit: false, // Combine all CSS into single file to reduce requests
     },
   },
   calendly: {

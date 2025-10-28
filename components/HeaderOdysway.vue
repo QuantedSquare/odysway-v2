@@ -14,6 +14,7 @@
         fetchpriority="high"
         :alt="header?.logo?.alt || 'Logo principale d\'Odysway'"
         class="header-logo"
+        style="width: 100px; height: auto; max-width: 100px;"
       >
     </NuxtLink>
 
@@ -104,6 +105,7 @@
         fetchpriority="high"
         :alt="header?.logo?.alt || 'Logo principale d\'Odysway'"
         class="header-logo"
+        style="width: 150px; height: auto; max-width: 150px;"
       >
     </NuxtLink>
 

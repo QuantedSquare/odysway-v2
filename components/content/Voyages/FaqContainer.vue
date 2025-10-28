@@ -7,10 +7,10 @@
   >
     <v-img
       v-if="faqBackgroundURL"
-      :src="img(faqBackgroundURL, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+      :src="img(faqBackgroundURL, { format: 'webp', quality: 65, height: 900, width: 1536 })"
       :lazy-src="img(faqBackgroundURL, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-      :srcset="`${img(faqBackgroundURL, { format: 'webp', quality: 70, width: 1536 })} 1536w, ${img(faqBackgroundURL, { format: 'webp', quality: 70, width: 1536 })} 1536w`"
-      sizes="(max-width: 600px) 480px, 1536px"
+      sizes="(max-width: 600px) 600px, (max-width: 960px) 960px, 1536px"
+      :srcset="`${img(faqBackgroundURL, { format: 'webp', quality: 60, width: 600 })} 600w, ${img(faqBackgroundURL, { format: 'webp', quality: 65, width: 960 })} 960w, ${img(faqBackgroundURL, { format: 'webp', quality: 70, width: 1536 })} 1536w`"
       loading="lazy"
       :alt="faqSanity?.backgroundImage?.alt"
       cover

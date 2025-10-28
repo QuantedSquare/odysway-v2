@@ -3,10 +3,10 @@
     <div class="relative-hero-section mb-16 rounded-xl">
       <v-img
         v-if="srcUrl"
-        :src="img(srcUrl, { format: 'webp', quality: 75, height: 900, width: 1536 })"
+        :src="img(srcUrl, { format: 'webp', quality: 70, height: 900, width: 1536 })"
         :lazy-src="img(srcUrl, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-        size="(max-width: 600) 480px, 1500px"
-        :srcset="`${img(srcUrl, { format: 'webp', quality: 75, width: 640, height: 900 })} 480w, ${img(srcUrl, { format: 'webp', quality: 75, width: 1024, height: 900 })} 1500w`"
+        sizes="(max-width: 600px) 600px, (max-width: 960px) 960px, 1536px"
+        :srcset="`${img(srcUrl, { format: 'webp', quality: 65, width: 600, height: 400 })} 600w, ${img(srcUrl, { format: 'webp', quality: 70, width: 960, height: 600 })} 960w, ${img(srcUrl, { format: 'webp', quality: 75, width: 1536, height: 900 })} 1536w`"
         height="100%"
         alt="Image principale Hero d'Odysway"
         class="rounded-xl hero-height"
