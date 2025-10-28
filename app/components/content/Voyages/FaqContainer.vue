@@ -6,10 +6,10 @@
   >
     <v-img
       v-if="faqBackgroundURL"
-      :src="img(faqBackgroundURL, { format: 'webp', quality: 55, height: 400, width: 600 })"
-      :lazy-src="img(faqBackgroundURL, { format: 'webp', quality: 10, height: 400, width: 600 })"
+      :src="faqBackgroundURL"
+      :lazy-src="faqBackgroundLazy"
       sizes="(max-width: 600px) 100vw, (max-width: 960px) 960px, 1536px"
-      :srcset="`${img(faqBackgroundURL, { format: 'webp', quality: 50, width: 400 })} 400w, ${img(faqBackgroundURL, { format: 'webp', quality: 55, width: 600 })} 600w, ${img(faqBackgroundURL, { format: 'webp', quality: 60, width: 960 })} 960w, ${img(faqBackgroundURL, { format: 'webp', quality: 70, width: 1536 })} 1536w`"
+      :srcset="faqBackgroundSrcset"
       loading="lazy"
       :alt="faqSanity?.backgroundImage?.alt"
       cover
@@ -80,9 +80,13 @@
 
 <script setup>
 import { computed } from 'vue'
-import { useImage } from '#imports'
+import imageUrlBuilder from '@sanity/image-url'
 
-const img = useImage()
+const config = useRuntimeConfig()
+const builder = imageUrlBuilder({
+  projectId: config.public.sanity.projectId,
+  dataset: config.public.sanity.dataset,
+})
 
 const primaryColor = 'rgba(43, 76, 82, 0)'
 const secondaryColor = 'rgba(43, 76, 82, 0.8)'
@@ -119,8 +123,34 @@ const { data: faqSanity } = await useAsyncData(
   },
 )
 
+// Build optimized Sanity URLs with proper sizes for FAQ background
+const buildSanityImageUrl = (width, quality = 60) => {
+  if (!faqSanity?.value?.backgroundImage?.asset?._ref) return ''
+  return builder
+    .image(faqSanity.value.backgroundImage.asset._ref)
+    .width(width)
+    .format('webp')
+    .quality(quality)
+    .fit('max')
+    .url()
+}
+
 const faqBackgroundURL = computed(() => {
-  return getImageUrl(faqSanity?.value?.backgroundImage?.asset._ref)
+  return buildSanityImageUrl(600, 55)
+})
+
+const faqBackgroundSrcset = computed(() => {
+  if (!faqSanity?.value?.backgroundImage?.asset?._ref) return ''
+  return [
+    `${buildSanityImageUrl(400, 50)} 400w`,
+    `${buildSanityImageUrl(600, 55)} 600w`,
+    `${buildSanityImageUrl(960, 60)} 960w`,
+    `${buildSanityImageUrl(1536, 70)} 1536w`,
+  ].join(', ')
+})
+
+const faqBackgroundLazy = computed(() => {
+  return buildSanityImageUrl(600, 10)
 })
 
 const { data: faqTextes } = await useAsyncData(

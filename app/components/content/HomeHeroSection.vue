@@ -3,10 +3,10 @@
     <div class="relative-hero-section mb-16 rounded-xl">
       <v-img
         v-if="srcUrl"
-        :src="img(srcUrl, { format: 'webp', quality: 60, height: 400, width: 600 })"
-        :lazy-src="img(srcUrl, { format: 'webp', quality: 10, height: 400, width: 600 })"
+        :src="srcUrl"
+        :lazy-src="lazySrc"
         sizes="(max-width: 600px) 100vw, (max-width: 960px) 960px, 1536px"
-        :srcset="`${img(srcUrl, { format: 'webp', quality: 55, width: 400, height: 300 })} 400w, ${img(srcUrl, { format: 'webp', quality: 60, width: 600, height: 400 })} 600w, ${img(srcUrl, { format: 'webp', quality: 65, width: 960, height: 600 })} 960w, ${img(srcUrl, { format: 'webp', quality: 75, width: 1536, height: 900 })} 1536w`"
+        :srcset="srcset"
         height="100%"
         alt="Image principale Hero d'Odysway"
         class="rounded-xl hero-height"
@@ -53,7 +53,7 @@
 </template>
 
 <script setup>
-import { useImage } from '#imports'
+import imageUrlBuilder from '@sanity/image-url'
 
 const { image } = defineProps({
   image: {
@@ -61,10 +61,42 @@ const { image } = defineProps({
     required: true,
   },
 })
-const img = useImage()
+
+const config = useRuntimeConfig()
+const builder = imageUrlBuilder({
+  projectId: config.public.sanity.projectId,
+  dataset: config.public.sanity.dataset,
+})
+
+// Build optimized Sanity URLs with proper sizes for each breakpoint
+const buildSanityImageUrl = (width, height, quality = 75) => {
+  if (!image?.asset?._ref) return ''
+  return builder
+    .image(image.asset._ref)
+    .width(width)
+    .height(height)
+    .format('webp')
+    .quality(quality)
+    .fit('max')
+    .url()
+}
 
 const srcUrl = computed(() => {
-  return getImageUrl(image?.asset?._ref)
+  // Default to 600px for mobile-first approach
+  return buildSanityImageUrl(600, 400, 60)
+})
+
+const srcset = computed(() => {
+  return [
+    `${buildSanityImageUrl(400, 300, 55)} 400w`,
+    `${buildSanityImageUrl(600, 400, 60)} 600w`,
+    `${buildSanityImageUrl(960, 600, 65)} 960w`,
+    `${buildSanityImageUrl(1536, 900, 75)} 1536w`,
+  ].join(', ')
+})
+
+const lazySrc = computed(() => {
+  return buildSanityImageUrl(600, 400, 10)
 })
 </script>
 

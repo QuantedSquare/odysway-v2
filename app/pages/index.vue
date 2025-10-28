@@ -314,9 +314,24 @@ if (homeSanity.value) {
     image: homeSanity.value.heroSection?.image,
   }
 
-  // Preload hero image for LCP optimization
+  // Preload hero image for LCP optimization (mobile-first: 400px width)
   if (homeSanity.value?.heroSection?.image?.asset?._ref) {
-    const heroImageUrl = getImageUrl(homeSanity.value.heroSection.image.asset._ref)
+    const config = useRuntimeConfig()
+    const imageUrlBuilder = (await import('@sanity/image-url')).default
+    const builder = imageUrlBuilder({
+      projectId: config.public.sanity.projectId,
+      dataset: config.public.sanity.dataset,
+    })
+    // Preload mobile-optimized version (400px width, quality 55) for better LCP on mobile
+    const heroImageUrl = builder
+      .image(homeSanity.value.heroSection.image.asset._ref)
+      .width(400)
+      .height(300)
+      .format('webp')
+      .quality(55)
+      .fit('max')
+      .url()
+    
     if (heroImageUrl) {
       useHead({
         link: [
