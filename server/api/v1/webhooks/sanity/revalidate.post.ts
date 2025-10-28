@@ -1,5 +1,4 @@
 import { defineEventHandler, readBody, getHeader, createError } from 'h3'
-import axios from 'axios'
 export default defineEventHandler(async (event) => {
   // Verify webhook secret for security
   console.log('Sanity webhook received', event)
@@ -173,21 +172,56 @@ export default defineEventHandler(async (event) => {
       const config = useRuntimeConfig()
       const baseUrl = config.public.environment === 'development' ? 'https://dev.odysway.com' : config.public.siteURL
 
+      console.log(`Starting revalidation for ${pathsToRevalidate.length} paths with bypass token: ${bypassToken ? 'SET' : 'NOT SET'}`)
+      
       const revalidationResults = []
 
       for (const path of pathsToRevalidate) {
         try {
-          // Trigger revalidation by making a HEAD request with the bypass token
+          // Trigger revalidation by making a GET request with the bypass token
+          // Using native fetch instead of axios to ensure headers are sent correctly
           const url = `${baseUrl}${path}`
-          const response = await axios.head(url, {
+          
+          const response = await fetch(url, {
+            method: 'GET',
             headers: {
               'x-prerender-revalidate': bypassToken,
+              'Cache-Control': 'no-cache, no-store, must-revalidate',
+            },
+            redirect: 'follow',
+          })
+          
+          // Consume the response body to ensure request completes
+          // For revalidation, we don't need the actual content
+          await response.text().catch(() => {}) // Ignore errors when consuming body
+          
+          const cacheStatus = response.headers.get('x-vercel-cache') || 'UNKNOWN'
+          const vercelId = response.headers.get('x-vercel-id') || 'UNKNOWN'
+          const isSuccess = cacheStatus === 'BYPASS' || cacheStatus === 'MISS' || cacheStatus === 'STALE'
+          
+          console.log(`Revalidation response for ${path}:`, {
+            url,
+            status: response.status,
+            cacheStatus,
+            isSuccess,
+            vercelId,
+            headers: {
+              'x-vercel-cache': cacheStatus,
+              'x-vercel-id': vercelId,
+              'cache-control': response.headers.get('cache-control'),
             },
           })
-          console.log('response revalidation on ', url, response)
          
-          console.log(`✓ Revalidated instantly: ${path}`)
-          revalidationResults.push({ path, status: 'success' })
+          if (isSuccess || response.status === 200) {
+            console.log(`✓ Revalidated successfully: ${path} (cache: ${cacheStatus})`)
+            revalidationResults.push({ path, status: 'success', cacheStatus })
+          } else {
+            console.log(`⚠️  Revalidation may not have triggered: ${path} (cache: ${cacheStatus})`)
+            console.log(`   Expected cache status: BYPASS, MISS, or STALE`)
+            console.log(`   Actual cache status: ${cacheStatus}`)
+            console.log(`   This might indicate the bypass token is not working correctly.`)
+            revalidationResults.push({ path, status: 'warning', cacheStatus })
+          }
         }
         catch (err) {
           const errorMessage = err instanceof Error ? err.message : String(err)
