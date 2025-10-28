@@ -179,13 +179,18 @@ export default defineEventHandler(async (event) => {
         try {
           // Trigger revalidation by making a HEAD request with the bypass token
           const url = `${baseUrl}${path}`
-          const response = await $fetch(url, {
+          await $fetch(url, {
             method: 'HEAD',
             headers: {
               'x-prerender-revalidate': bypassToken,
             },
           })
-          console.log('response revalidation', response)
+          await $fetch(url, {
+            method: 'GET',
+            headers: {
+              'x-prerender-revalidate': bypassToken,
+            },
+          })
           console.log(`✓ Revalidated instantly: ${path}`)
           revalidationResults.push({ path, status: 'success' })
         }
