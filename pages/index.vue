@@ -14,17 +14,17 @@
         />
       </template>
     </HomeHeroSection>
-    <ExperienceCarousel
+    <LazyExperienceCarousel
       v-if="homeSanity && homeSanity.experienceCarousel?.experiences?.length > 0"
       :experiences-data="homeSanity.experienceCarousel.experiences"
     >
       <template #title>
         {{ homeSanity.experienceCarousel.title }}
       </template>
-    </ExperienceCarousel>
+    </LazyExperienceCarousel>
 
-    <ColorContainer color="soft-blush">
-      <HorizontalCarousel text-color="primary">
+    <LazyColorContainer color="soft-blush">
+      <LazyHorizontalCarousel text-color="primary">
         <template #title>
           <span style="color: rgba(43, 76, 82, 1)">
             {{ homeSanity.franceTrips.title }}
@@ -38,19 +38,19 @@
             <VoyageCard :voyage="voyage" />
           </v-col>
         </template>
-      </HorizontalCarousel>
-    </ColorContainer>
+      </LazyHorizontalCarousel>
+    </LazyColorContainer>
 
-    <ColorContainer color="primary">
-      <CardGrid :categories="homeSanity.followDesires.categoriesFollowDesires">
+    <LazyColorContainer color="primary">
+      <LazyCardGrid :categories="homeSanity.followDesires.categoriesFollowDesires">
         <template #title>
           {{ homeSanity.followDesires.title }}
         </template>
-      </CardGrid>
-    </ColorContainer>
+      </LazyCardGrid>
+    </LazyColorContainer>
 
-    <ColorContainer color="white">
-      <TextImageContainer
+    <LazyColorContainer color="white">
+      <LazyTextImageContainer
         :display-cta-button="true"
         :image-desktop-right="true"
         :image-src="homeSanity.travelDifferently.image"
@@ -82,11 +82,11 @@
             </template>
           </CtaButton>
         </template>
-      </TextImageContainer>
-    </ColorContainer>
+      </LazyTextImageContainer>
+    </LazyColorContainer>
 
-    <ColorContainer color="grey-light">
-      <HorizontalCarousel :text-color="'primary'">
+    <LazyColorContainer color="grey-light">
+      <LazyHorizontalCarousel :text-color="'primary'">
         <template #title>
           <span style="color: rgba(43, 76, 82, 1)">
             {{ homeSanity.guaranteedDepartures.title }}
@@ -101,11 +101,11 @@
             <VoyageCard :voyage="voyage" />
           </v-col>
         </template>
-      </HorizontalCarousel>
-    </ColorContainer>
+      </LazyHorizontalCarousel>
+    </LazyColorContainer>
 
-    <ColorContainer color="white">
-      <HorizontalCarousel :text-color="'primary'">
+    <LazyColorContainer color="white">
+      <LazyHorizontalCarousel :text-color="'primary'">
         <template #title>
           {{ homeSanity.summerTravel.title }}
         </template>
@@ -117,10 +117,10 @@
             <VoyageCard :voyage="voyage" />
           </v-col>
         </template>
-      </HorizontalCarousel>
-    </ColorContainer>
+      </LazyHorizontalCarousel>
+    </LazyColorContainer>
 
-    <ColorContainer color="soft-blush">
+    <LazyColorContainer color="soft-blush">
       <ClientOnly>
         <NewsletterContainer v-if="homeSanity.newsletter">
           <template #title>
@@ -134,13 +134,13 @@
           </template>
         </NewsletterContainer>
       </ClientOnly>
-    </ColorContainer>
+    </LazyColorContainer>
 
-    <ColorContainer
+    <LazyColorContainer
       white-text
       color="primary"
     >
-      <HorizontalCarousel
+      <LazyHorizontalCarousel
         :text-color="'white'"
       >
         <template #title>
@@ -154,11 +154,11 @@
             <VoyageCard :voyage="voyage" />
           </v-col>
         </template>
-      </HorizontalCarousel>
-    </ColorContainer>
+      </LazyHorizontalCarousel>
+    </LazyColorContainer>
 
-    <ColorContainer color="white">
-      <CommonReviewContainer>
+    <LazyColorContainer color="white">
+      <LazyCommonReviewContainer>
         <template #title>
           <span style="color: rgba(43, 76, 82, 1)">
             {{ homeSanity.reviews.title }}
@@ -167,11 +167,11 @@
         <template #cta>
           {{ homeSanity.reviews.ctaText }}
         </template>
-      </CommonReviewContainer>
-    </ColorContainer>
+      </LazyCommonReviewContainer>
+    </LazyColorContainer>
 
-    <ColorContainer color="grey-light-2">
-      <InfoContainer>
+    <LazyColorContainer color="grey-light-2">
+      <LazyInfoContainer>
         <template #top>
           <AvatarsRowStack />
         </template>
@@ -191,8 +191,8 @@
             </template>
           </CtaButton>
         </template>
-      </InfoContainer>
-    </ColorContainer>
+      </LazyInfoContainer>
+    </LazyColorContainer>
   </v-container>
 </template>
 
@@ -312,6 +312,23 @@ if (homeSanity.value) {
     title: 'Odysway - Voyages en Petits Groupes et Expériences Authentiques',
     description: 'Découvrez nos voyages en petits groupes à travers le monde. Expériences authentiques, rencontres locales et aventures inoubliables avec Odysway.',
     image: homeSanity.value.heroSection?.image,
+  }
+
+  // Preload hero image for LCP optimization
+  if (homeSanity.value?.heroSection?.image?.asset?._ref) {
+    const heroImageUrl = getImageUrl(homeSanity.value.heroSection.image.asset._ref)
+    if (heroImageUrl) {
+      useHead({
+        link: [
+          {
+            rel: 'preload',
+            as: 'image',
+            href: heroImageUrl,
+            fetchpriority: 'high',
+          },
+        ],
+      })
+    }
   }
 
   // Use the SEO composable

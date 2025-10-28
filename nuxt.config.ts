@@ -36,16 +36,14 @@ export default defineNuxtConfig({
       link: [
         // Preload critical logo for LCP optimization
         { rel: 'preload', href: '/logos/Logo-Odysway-Bleu.png', as: 'image', fetchpriority: 'high' },
-        // Google Analytics
-        // { rel: 'preconnect', href: 'https://www.googletagmanager.com' },
-        // { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
-        // { rel: 'preconnect', href: 'https://www.google-analytics.com' },
-        // { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
-        // Meta Pixel
-        // { rel: 'preconnect', href: 'https://connect.facebook.net' },
-        // { rel: 'dns-prefetch', href: 'https://connect.facebook.net' },
-        // { rel: 'preconnect', href: 'https://www.facebook.com' },
-        // { rel: 'dns-prefetch', href: 'https://www.facebook.com' },
+        // Resource hints for external domains (defer actual script loading)
+        { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
+        { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
+        { rel: 'dns-prefetch', href: 'https://connect.facebook.net' },
+        { rel: 'dns-prefetch', href: 'https://static.hotjar.com' },
+        // Preconnect to Sanity CDN for faster image loading
+        { rel: 'preconnect', href: 'https://cdn.sanity.io', crossorigin: 'anonymous' },
+        { rel: 'dns-prefetch', href: 'https://cdn.sanity.io' },
       ],
       // script: [
       //   { src: 'https://embed.small.chat/TD5UA8M5KC05K7GGNJNM.js', async: true },
@@ -113,7 +111,7 @@ export default defineNuxtConfig({
     inlineStyles: true, // Changed from false - inlining CSS eliminates render-blocking request
   },
   experimental: {
-     payloadExtraction: true,
+    payloadExtraction: true,
   },
   compatibilityDate: '2024-11-01',
   nitro: {

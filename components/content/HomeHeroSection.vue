@@ -12,6 +12,8 @@
         class="rounded-xl hero-height"
         cover
         :aspect-ratio="1536/900"
+        loading="eager"
+        fetchpriority="high"
       >
         <template #placeholder>
           <div class="d-flex align-center justify-center fill-height">
