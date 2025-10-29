@@ -43,7 +43,7 @@ const props = defineProps({
 })
 const voyageRef = toRef(props, 'voyage')
 
-if (voyageRef.value.accompanistsList.length > 0 && !voyageRef.value.accompanistsList[0].description) {
+if (voyageRef.value.accompanistsList?.length > 0 && !voyageRef.value.accompanistsList?.[0]?.description) {
   voyageRef.value.accompanistsList[0].description = voyageRef.value.accompanistsDescription
   delete voyageRef.value.accompanistsDescription
 }

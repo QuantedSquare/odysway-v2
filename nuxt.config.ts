@@ -114,6 +114,7 @@ export default defineNuxtConfig({
   },
   experimental: {
     payloadExtraction: true,
+    appManifest: false,
   },
   compatibilityDate: '2024-11-01',
   nitro: {
