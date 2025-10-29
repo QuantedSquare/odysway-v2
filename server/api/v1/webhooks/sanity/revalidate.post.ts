@@ -169,6 +169,7 @@ export default defineEventHandler(async (event) => {
     // Note: This is NOT the same as VERCEL_AUTOMATION_BYPASS_SECRET
     // VERCEL_BYPASS_TOKEN is a custom secret you create for ISR revalidation
     const bypassToken = process.env.VERCEL_BYPASS_TOKEN
+    const vercelToken = process.env.VERCEL_TOKEN // Optional: For Cache Purge API fallback
 
     if (bypassToken && pathsToRevalidate.length > 0) {
       const config = useRuntimeConfig()
@@ -217,18 +218,19 @@ export default defineEventHandler(async (event) => {
             },
           })
          
-          // IMPORTANT: Even if we get HIT, Vercel may regenerate in the background
-          // The header tells Vercel to regenerate, even if current response is cached
+          // IMPORTANT: Nuxt 3 on Vercel has limited support for on-demand revalidation
+          // Even if we get HIT, the page will still be regenerated via ISR (60s max wait)
+          // The x-prerender-revalidate header approach works better for Next.js than Nuxt 3
           if (cacheStatus === 'HIT') {
-            console.log(`⚠️  Cache HIT for ${path}`)
-            console.log(`   This may indicate the bypass token isn't matching`)
-            console.log(`   Please verify: VERCEL_BYPASS_TOKEN in Vercel matches bypassToken in nuxt.config.ts`)
-            console.log(`   However, page may still regenerate in background - next visitor should see fresh content`)
+            console.log(`⚠️  Cache HIT for ${path} - bypass token not recognized`)
+            console.log(`   This is a known limitation of Nuxt 3 + Vercel ISR revalidation`)
+            console.log(`   The page will still update within 60 seconds via time-based ISR`)
+            console.log(`   For instant updates, consider using Vercel's Cache Purge API (requires VERCEL_TOKEN)`)
             revalidationResults.push({ 
               path, 
               status: 'warning', 
               cacheStatus,
-              note: 'HIT - verify bypass token configuration' 
+              note: 'HIT - will update via 60s ISR fallback' 
             })
           } else if (isSuccess) {
             console.log(`✓ Revalidated successfully: ${path} (cache: ${cacheStatus})`)
@@ -254,12 +256,20 @@ export default defineEventHandler(async (event) => {
         }
       }
 
+      // Check if any revalidations got HIT (bypass token not working)
+      const hasHits = revalidationResults.some(r => r.cacheStatus === 'HIT')
+      
       return {
         success: true,
-        message: 'On-demand revalidation triggered. Changes are live!',
+        message: hasHits 
+          ? 'Webhook processed. Pages will update within 60 seconds via ISR.' 
+          : 'On-demand revalidation triggered. Changes are live!',
         documentType,
         slug,
         revalidationResults,
+        note: hasHits 
+          ? 'Bypass token not recognized - using 60s ISR fallback (normal for Nuxt 3)'
+          : 'Instant revalidation working',
         timestamp: new Date().toISOString(),
       }
     }

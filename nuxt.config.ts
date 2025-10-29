@@ -75,16 +75,7 @@ export default defineNuxtConfig({
   },
   routeRules: {
     // Homepage and main sections
-    '/': { isr: 60 },
-    '/search': { isr: 60 },
-    '/prochains-departs': { isr: 60 },
-
-    // Dynamic content pages with slugs
-    '/voyages/**': { isr: 60 },
-    '/destinations/**': { isr: 60 },
-    '/thematiques/**': { isr: 60 },
-    '/experiences/**': { isr: 60 },
-    '/blog/**': { isr: 60 },
+    '/**': { isr: 60 },
 
     // Singleton pages (static content)
     '/entreprise': { isr: 300 }, // 5 min - less frequently updated
