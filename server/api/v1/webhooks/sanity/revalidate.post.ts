@@ -184,12 +184,13 @@ export default defineEventHandler(async (event) => {
           // Using native fetch instead of axios to ensure headers are sent correctly
           const url = `${baseUrl}${path}`
           
+          console.log(`Attempting revalidation for ${path} with bypass token (token length: ${bypassToken?.length || 0})`)
+          
           const response = await fetch(url, {
             method: 'GET',
             headers: {
-              'x-vercel-protection-bypass': bypassToken,
               'x-prerender-revalidate': bypassToken,
-              'Cache-Control': 'no-cache, no-store, must-revalidate',
+              'Cache-Control': 'no-cache, no-store, must-revalidate, max-age=0',
             },
             redirect: 'follow',
           })
@@ -208,6 +209,7 @@ export default defineEventHandler(async (event) => {
             cacheStatus,
             isSuccess,
             vercelId,
+            bypassTokenLength: bypassToken?.length || 0,
             headers: {
               'x-vercel-cache': cacheStatus,
               'x-vercel-id': vercelId,
@@ -215,15 +217,34 @@ export default defineEventHandler(async (event) => {
             },
           })
          
-          if (isSuccess || response.status === 200) {
+          // IMPORTANT: Even if we get HIT, Vercel may regenerate in the background
+          // The header tells Vercel to regenerate, even if current response is cached
+          if (cacheStatus === 'HIT') {
+            console.log(`⚠️  Cache HIT for ${path}`)
+            console.log(`   This may indicate the bypass token isn't matching`)
+            console.log(`   Please verify: VERCEL_BYPASS_TOKEN in Vercel matches bypassToken in nuxt.config.ts`)
+            console.log(`   However, page may still regenerate in background - next visitor should see fresh content`)
+            revalidationResults.push({ 
+              path, 
+              status: 'warning', 
+              cacheStatus,
+              note: 'HIT - verify bypass token configuration' 
+            })
+          } else if (isSuccess) {
             console.log(`✓ Revalidated successfully: ${path} (cache: ${cacheStatus})`)
             revalidationResults.push({ path, status: 'success', cacheStatus })
+          } else if (response.status === 200) {
+            // Status 200 means request succeeded - may have triggered revalidation
+            console.log(`✓ Request succeeded for ${path} (status: ${response.status}, cache: ${cacheStatus})`)
+            revalidationResults.push({ path, status: 'success', cacheStatus, note: 'Status 200' })
           } else {
-            console.log(`⚠️  Revalidation may not have triggered: ${path} (cache: ${cacheStatus})`)
-            console.log(`   Expected cache status: BYPASS, MISS, or STALE`)
-            console.log(`   Actual cache status: ${cacheStatus}`)
-            console.log(`   This might indicate the bypass token is not working correctly.`)
+            console.log(`⚠️  Unexpected revalidation response for ${path}`)
             revalidationResults.push({ path, status: 'warning', cacheStatus })
+          }
+          
+          // Small delay between requests to avoid overwhelming the system
+          if (pathsToRevalidate.length > 1) {
+            await new Promise(resolve => setTimeout(resolve, 100))
           }
         }
         catch (err) {
