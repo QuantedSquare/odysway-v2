@@ -58,7 +58,7 @@
               <td>{{ dayjs(item.return_date).format('DD/MM/YYYY') }}</td>
               <td>
                 <span>
-                  {{ statuses.find(s => s.value === item.displayed_status)?.label || 'Statut inconnu' }}
+                  {{getDateStatus(item).text}}
                   <v-badge
                     v-if="isOngoing(item)"
                     color="green"
@@ -134,7 +134,7 @@ const headers = [
   { title: 'Statut publication', key: 'published', sortable: true },
   { title: 'Date de départ', key: 'departure_date', sortable: true },
   { title: 'Date de retour', key: 'return_date', sortable: true },
-  { title: 'Statut', key: 'displayed_status', sortable: true },
+  { title: 'Statut Affiché', key: 'displayed_status', sortable: true },
   { title: 'Voyageurs', key: 'travelers', sortable: false },
   { title: '', key: 'actions', sortable: false },
 ]

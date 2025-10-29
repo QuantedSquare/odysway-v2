@@ -1,45 +1,56 @@
+// Status configuration mapping
+const statuses = ref([
+  { value: 'soon_confirmed', label: 'Bientôt confirmé' },
+  { value: 'confirmed', label: 'Confirmé' },
+  { value: 'guaranteed', label: 'Garanti (Complet)' },
+])
+
+const STATUS_MAP = {
+  soon_confirmed: {
+    status: 'soon_confirmed',
+    text: 'Bientôt confirmé',
+    color: 'yellow',
+  },
+  confirmed: {
+    status: 'confirmed',
+    text: 'Départ Garanti',
+    color: 'green',
+  },
+  guaranteed: {
+    status: 'full',
+    text: 'Complet',
+    color: 'secondary',
+  },
+}
+
+/**
+ * Calculates the status based on booking data
+ * @param {Object} date - The date object containing booking information
+ * @returns {Object} Status object with status, text, and color properties
+ */
+function calculateStatusFromBookings(date) {
+  if (date.max_travelers === date.booked_seat) {
+    return STATUS_MAP.full
+  }
+  
+  if (date.booked_seat >= date.min_travelers) {
+    return STATUS_MAP.confirmed
+  }
+  
+  return STATUS_MAP.soon_confirmed
+}
+
+/**
+ * Gets the display status for a date based on custom display settings or booking data
+ * @param {Object} date - The date object
+ * @returns {Object} Status object with status, text, and color properties
+ */
 export function getDateStatus(date) {
-  if (!date.custom_display) {
-    if (date.max_travelers === date.booked_seat) {
-      return {
-        status: 'full',
-        text: 'Complet',
-        color: 'secondary',
-      }
-    }
-    if (date.booked_seat >= date.min_travelers) {
-      return {
-        status: 'confirmed',
-        text: 'Départ Garanti',
-        color: 'green',
-      }
-    }
-    else {
-      return {
-        status: 'soon_confirmed',
-        text: 'Bientôt confirmé',
-        color: 'yellow',
-      }
-    }
+  // If custom display is enabled and a valid status is provided, use it
+  if (date.custom_display && date.displayed_status && STATUS_MAP[date.displayed_status]) {
+    return STATUS_MAP[date.displayed_status]
   }
-  else {
-    const displayedStatusObject = [
-      {
-        status: 'soon_confirmed',
-        text: 'Bientôt confirmé',
-        color: 'yellow',
-      },
-      {
-        status: 'confirmed',
-        text: 'Départ Garanti',
-        color: 'green',
-      },
-      {
-        status: 'full',
-        text: 'Complet',
-        color: 'secondary',
-      },
-    ]
-    return displayedStatusObject.find(status => status.status === date.displayed_status)
-  }
+  
+  // Otherwise, calculate status based on bookings
+  return calculateStatusFromBookings(date)
 }

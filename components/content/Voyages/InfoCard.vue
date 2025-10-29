@@ -237,26 +237,6 @@ const { stickyBlock, voyage } = defineProps({
   },
 })
 
-// watch(dates, () => {
-//   if (dates.value.length > 0) {
-//     const sortedByDates = dates.value
-//       .filter(date => dayjs(date.departure_date).isAfter(dayjs()))
-//       .sort((a, b) => dayjs(a.departure_date).diff(dayjs(b.departure_date)))
-
-//     displayedDates.value = sortedByDates.slice(0, 4).map((date) => {
-//       const in30days = dayjs().add(30, 'day')
-//       const checkoutType = dayjs(date.departure_date).isBefore(in30days) ? 'full' : 'deposit'
-//       return {
-//         departureDate: date.departure_date,
-//         returnDate: date.return_date,
-//         status: getDateStatus(date),
-//         link: `/checkout?date_id=${date.id}&type=${checkoutType}`,
-//         id: date.id,
-//         slug: voyage.slug,
-//       }
-//     })
-//   }
-// }, { immediate: true })
 
 const displayedDates = computed(() => {
   if (dates.value.length > 0) {
