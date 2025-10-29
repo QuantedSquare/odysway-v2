@@ -265,7 +265,7 @@ const submitStepData = async () => {
       const linkBms = `${origin}/booking-management/${voyage.slug}/${dateId}`
 
       // #TODO: Add a dev column/stage  in ActiveCampaign
-      const stage = (model.value.email === 'test@test.com' || model.value.email === 'ottmann.alex@gmail.com') || config.public.environment === 'development' ? '2' : '2'
+      const stage = (model.value.email === 'test@test.com' || model.value.email === 'ottmann.alex@gmail.com') || config.public.environment === 'development' ? '75' : '2'
       buttonLoading.value = true
       const utmSource = localStorage.getItem('utmSource')
       const flattenedDeal = {

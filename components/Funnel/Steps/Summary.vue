@@ -270,7 +270,7 @@ const model = defineModel()
 
 // Get forceIndivRoom from voyage
 const forceIndivRoom = computed(() => {
-  return voyage?.forcedIndivRoom || false
+  return voyage?.forcedIndivRoom && voyage.indivRoomPrice > 0 && (model.value.nbAdults + model.value.nbChildren === 1) && model.value.nbChildren === 0
 })
 
 // Calculate prices per traveler

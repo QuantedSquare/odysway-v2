@@ -197,8 +197,8 @@ const { voyage, initialDealValues } = defineProps({
     required: true,
   },
 })
-console.log('initialDealValues', initialDealValues)
-console.log('voyage in stepper', voyage)
+// console.log('initialDealValues', initialDealValues)
+// console.log('voyage in stepper', voyage)
 
 const route = useRoute()
 
@@ -229,6 +229,10 @@ if (route.query.type === 'custom' || route.query.type === 'balance') {
   currentStep.value = route.query.type === 'custom' ? 1 : 5
   skipperMode.value = route.query.type === 'custom' ? 'normal' : 'summary'
 }
+
+// const forcedIndivRoom = computed(() => {
+//   return voyage.forcedIndivRoom && voyage.indivRoomPrice > 0 && dynamicDealValues.value.nbAdults === 1 && dynamicDealValues.value.nbChildren === 0
+// })
 
 // 🧱 Step navigation
 const nextStep = () => {
