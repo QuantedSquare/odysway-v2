@@ -9,6 +9,7 @@
         :class="model.indivRoom ? 'text-primary' : 'text-grey'"
       >
         <v-switch
+          :disabled="forcedIndivRoom"
           v-model="model.indivRoom"
           :label="page.options.indiv_room_label"
         />
@@ -67,19 +68,27 @@
 </template>
 
 <script setup>
-const { voyage, currentStep, ownStep, page } = defineProps(['voyage', 'currentStep', 'ownStep', 'page'])
+const { voyage,  ownStep, page } = defineProps(['voyage',  'ownStep', 'page'])
 const { updateDeal } = useStepperDeal(ownStep)
 
 const model = defineModel()
-
+console.log('===========model in Options===========',voyage)
 // New: Local validation state
 const emit = defineEmits(['next', 'previous'])
 
+const forcedIndivRoom = computed(() => {
+  return voyage?.forcedIndivRoom && voyage.indivRoomPrice > 0 && model.value.nbAdults + model.value.nbChildren === 1 || false
+})
+watch(forcedIndivRoom, (newVal) => {
+  if (forcedIndivRoom.value) {
+    model.value.indivRoom = true
+  }
+}, { immediate: true })
 const submitStepData = () => {
   // Validate form
   const dealData = {
     specialRequest: model.value.specialRequest,
-    indivRoom: model.value.indivRoom ? ['Oui'] : ['Non'],
+    indivRoom: model.value.indivRoom || forcedIndivRoom.value ? ['Oui'] : ['Non'],
     currentStep: 'A choisi ses options',
   }
 

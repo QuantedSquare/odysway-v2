@@ -14,7 +14,7 @@
   "calendly": "Merci pour votre demande ! Envie d’échanger plus en détail sur votre projet ? Prenez rendez-vous avec un conseiller Odysway !",
   "room_indiv_accroche": "Si vous partez seul, vous ne partagerez pas votre chambre avec d'autres voyageurs.",
   "room_indiv_text": "Si vous partez seul et que vous ne sélectionnez pas cette option, vous pourrez partager votre chambre avec un autre voyageur du même sexe.",
-  "forced_indiv_room_text": "Texte chambre individuelle forcée",
+  "forced_indiv_room_text": "Si vous partez seul, vous ne partagerez pas votre chambre avec d'autres voyageurs.",
   "cancel_text": "Vous pouvez annuler gratuitement jusqu'à 30 jours avant le départ. Vous serez remboursé sous 7 jours sans frais (hors frais CB). ",
   "details": {
     "select_travelers_title": "Sélectionnez le nombre de voyageurs à régler",

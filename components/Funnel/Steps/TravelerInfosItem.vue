@@ -21,7 +21,7 @@
       class="py-0 my-0"
     >
       <v-text-field
-        id="firstname"
+        :id="'firstname-' + id"
         v-model="i_firstname"
         outlined
         label="Prénom *"
@@ -36,7 +36,7 @@
       class="py-0 my-0"
     >
       <v-text-field
-        id="lastname"
+        :id="'lastname-' + id"
         v-model="i_lastname"
         type="textbox"
         label="Nom *"
@@ -53,7 +53,7 @@
       class="py-0 my-0"
     >
       <v-text-field
-        id="birthdate"
+        :id="'birthdate-' + id"
         v-model="date"
         label="Date de naissance *"
         type="text"
