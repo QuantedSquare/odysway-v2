@@ -58,7 +58,7 @@
               <td>{{ dayjs(item.return_date).format('DD/MM/YYYY') }}</td>
               <td>
                 <span>
-                  {{getDateStatus(item).text}}
+                  {{ getDateStatus(item)?.text || '-' }}
                   <v-badge
                     v-if="isOngoing(item)"
                     color="green"
