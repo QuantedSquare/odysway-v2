@@ -108,7 +108,7 @@ const searchContentQuery = groq`*[_type == "search"][0]{
   resetButton
 }`
 
-const { data: searchContent } = await useAsyncData('search-content', () =>
+const { data: searchContent } = await useAsyncData('search-content-page', () =>
   sanity.fetch(searchContentQuery),
 )
 
@@ -157,7 +157,6 @@ const travelTypesQuery = groq`*[_type == "search"][0]{
 const { data: travelTypes } = await useAsyncData('travelTypes', () =>
   sanity.fetch(travelTypesQuery),
 )
-
 const TRAVEL_TYPES = {
   GROUP: travelTypes.value?.travelTypes?.group,
   INDIVIDUAL: travelTypes.value?.travelTypes?.individual,

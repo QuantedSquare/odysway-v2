@@ -192,11 +192,11 @@ const { destination, isCategory, isExperience, isNextDepartures, noMarginBottom 
   },
 })
 const displayedImg = computed(() => {
-  if (destination.image?.src) {
+  if (destination?.image?.src) {
     return destination.image.src
   }
   else {
-    if (destination.image.asset._ref) {
+    if (destination?.image?.asset?._ref) {
       return getImageUrl(destination.image.asset._ref)
     }
     else {
