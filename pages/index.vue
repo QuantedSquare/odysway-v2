@@ -208,6 +208,10 @@ const sanity = useSanity()
 const homeQuery = groq`
   *[_type == "homePage"][0]{
     ...,
+    reviews{
+      ctaText,
+      title
+    },
     seo{
       metaTitle,
       metaDescription,
@@ -311,7 +315,7 @@ const homeQuery = groq`
 const { data: homeSanity } = await useAsyncData('home', () =>
   sanity.fetch(homeQuery),
 )
-
+console.log('========homeSanity========', homeSanity.value)
 if (homeSanity.value) {
   // Fallback values for content
   const defaultContent = {
