@@ -16,7 +16,9 @@ export default defineNuxtConfig({
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
         // @ts-expect-error This come from Vuetify doc.
-        config.plugins.push(vuetify({ autoImport: true }))
+        config.plugins.push(vuetify({
+          autoImport: true,
+        }))
       })
     },
   ],
@@ -34,16 +36,14 @@ export default defineNuxtConfig({
     head: {
       titleTemplate: '%s - Odysway',
       link: [
+        // Critical: Preconnect to Sanity CDN for LCP image (must be first)
+        { rel: 'preconnect', href: 'https://nu6yntji.apicdn.sanity.io', crossorigin: 'anonymous' },
+        { rel: 'preconnect', href: 'https://cdn.sanity.io', crossorigin: 'anonymous' },
         // Resource hints for external domains (defer actual script loading)
         { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
         { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
         { rel: 'dns-prefetch', href: 'https://connect.facebook.net' },
         { rel: 'dns-prefetch', href: 'https://static.hotjar.com' },
-        // Preconnect to Sanity CDN for faster image loading
-        { rel: 'preconnect', href: 'https://nu6yntji.apicdn.sanity.io', crossorigin: 'anonymous' },
-        { rel: 'preconnect', href: 'https://cdn.sanity.io', crossorigin: 'anonymous' },
-        { rel: 'dns-prefetch', href: 'https://nu6yntji.apicdn.sanity.io' },
-        { rel: 'dns-prefetch', href: 'https://cdn.sanity.io' },
       ],
       // script: [
       //   { src: 'https://embed.small.chat/TD5UA8M5KC05K7GGNJNM.js', async: true },
@@ -108,7 +108,7 @@ export default defineNuxtConfig({
   },
   // Inline critical CSS for better performance
   features: {
-    inlineStyles: false, // Changed from false - inlining CSS eliminates render-blocking request
+    inlineStyles: true, // Inline critical CSS to eliminate render-blocking CSS request
   },
   experimental: {
     payloadExtraction: true,
@@ -145,7 +145,17 @@ export default defineNuxtConfig({
     // },
     build: {
       sourcemap: true,
-      cssCodeSplit: false, // Combine all CSS into single file to reduce requests
+      cssCodeSplit: true, // Enable CSS code splitting for better caching and parallel loading
+      cssMinify: 'lightningcss', // Use faster CSS minifier
+      minify: 'esbuild', // Use esbuild for faster minification
+    },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          // Optimize SCSS compilation
+          quietDeps: true,
+        },
+      },
     },
   },
   calendly: {

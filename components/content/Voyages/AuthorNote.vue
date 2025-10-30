@@ -121,6 +121,8 @@ const contentStyle = ref({
   transition: 'max-height 0.5s ease',
 })
 
+const { readScrollHeight } = useLayoutRead()
+
 // Toggle function for expansion
 const toggleExpanded = () => {
   isExpanded.value = !isExpanded.value
@@ -132,8 +134,9 @@ watch(isExpanded, async (newVal) => {
   if (import.meta.client && content.value) {
     await nextTick()
     if (newVal) {
-      // Expanding: animate to full height
-      contentStyle.value.maxHeight = content.value.scrollHeight + 'px'
+      // Expanding: animate to full height using batched layout read
+      const scrollHeight = await readScrollHeight(content.value)
+      contentStyle.value.maxHeight = scrollHeight + 'px'
     }
     else {
       // Collapsing: animate to clamped height

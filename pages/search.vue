@@ -250,7 +250,12 @@ const { data: voyages } = await useAsyncData(
     const travelType = route.query.travelType || null
     const fromList = route.query.from || null
 
-    const voyagesQuery = groq`*[_type == "voyage" && !('custom' in availabilityTypes)]{
+    const voyagesQuery = groq`*[
+      _type == "voyage" && (
+        !('custom' in availabilityTypes) ||
+        (count(availabilityTypes) > 1)
+      )
+    ]{
       _id,
       title,
       "slug": slug.current,

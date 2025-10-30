@@ -132,14 +132,7 @@ const imageWidth = computed(() => {
 
 onMounted(() => {
   isHydrated.value = true
-  // Wait for next tick to ensure the element is rendered
-  nextTick(() => {
-    // Force a resize observation if needed
-    if (colContainer.value) {
-      // Trigger a resize event to update the size
-      window.dispatchEvent(new Event('resize'))
-    }
-  })
+  // useElementSize handles resize observation automatically
 })
 </script>
 

@@ -5,7 +5,7 @@
         v-if="srcUrl"
         :src="srcUrl"
         :srcset="srcset"
-        sizes="(max-width: 600px) 100vw, (max-width: 960px) 960px, 1536px"
+        sizes="(max-width: 600px) 100vw, (max-width: 768px) 768px, (max-width: 960px) 960px, (max-width: 1280px) 1280px, 1536px"
         alt="Image principale Hero d'Odysway"
         class="hero-image"
         format="webp"
@@ -76,15 +76,13 @@ const srcUrl = computed(() => {
 
 const srcset = computed(() => {
   return [
-    `${buildSanityImageUrl(400, 300, 55)} 400w`,
-    `${buildSanityImageUrl(600, 400, 60)} 600w`,
-    `${buildSanityImageUrl(960, 600, 65)} 960w`,
+    `${buildSanityImageUrl(400, 240, 55)} 400w`,
+    `${buildSanityImageUrl(600, 350, 60)} 600w`,
+    `${buildSanityImageUrl(768, 450, 65)} 768w`,
+    `${buildSanityImageUrl(960, 560, 70)} 960w`,
+    `${buildSanityImageUrl(1280, 750, 75)} 1280w`,
     `${buildSanityImageUrl(1536, 900, 75)} 1536w`,
   ].join(', ')
-})
-
-const lazySrc = computed(() => {
-  return buildSanityImageUrl(600, 400, 10)
 })
 </script>
 

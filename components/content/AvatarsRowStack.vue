@@ -146,6 +146,7 @@ const infoAnimStyle = ref({
 
 const showText = ref(false)
 let heightTimeout = null
+const { readScrollHeight } = useLayoutRead()
 
 watch(hoveredIndex, async (val) => {
   await nextTick()
@@ -158,7 +159,9 @@ watch(hoveredIndex, async (val) => {
     if (infoAnim.value) {
       const content = infoAnim.value.querySelector('.avatar-info')
       if (content) {
-        infoAnimStyle.value.maxHeight = content.scrollHeight + 'px'
+        // Use batched layout read to avoid forced reflow
+        const scrollHeight = await readScrollHeight(content)
+        infoAnimStyle.value.maxHeight = scrollHeight + 'px'
         infoAnimStyle.value.opacity = 1
       }
     }
