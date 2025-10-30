@@ -11,21 +11,25 @@
         {{ visionPage.heroSection.title }}
       </template>
     </SimpleHeroSection>
-    <TextContainer class="focus">
-      <template #text>
-        <EnrichedText
-          class="focus"
-          :value="visionPage.priseDeConscience.content"
-        />
-        <ConceptContainer :image-src="visionPage.founderSection.image">
-          <template #founder>
-            {{ visionPage.founderSection.caption }}
+    <SectionContainer>
+      <template #content>
+        <TextContainer class="focus">
+          <template #text>
+            <EnrichedText
+              class="focus"
+              :value="visionPage.priseDeConscience.content"
+            />
+            <ConceptContainer :image-src="visionPage.founderSection.image">
+              <template #founder>
+                {{ visionPage.founderSection.caption }}
+              </template>
+            </ConceptContainer>
+            <EnrichedText :value="visionPage.ceQueOnDefend.content" />
+            <EnrichedText :value="visionPage.teamSection.content" />
           </template>
-        </ConceptContainer>
-        <EnrichedText :value="visionPage.ceQueOnDefend.content" />
-        <EnrichedText :value="visionPage.teamSection.content" />
+        </TextContainer>
       </template>
-    </TextContainer>
+    </SectionContainer>
   </v-container>
 </template>
 
