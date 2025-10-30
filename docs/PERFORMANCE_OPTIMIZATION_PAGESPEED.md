@@ -21,8 +21,7 @@ This document details the optimizations implemented to address the PageSpeed Web
   ```js
   build: {
     cssCodeSplit: true, // Split CSS per route for better caching
-    cssMinify: 'lightningcss', // Use faster CSS minifier
-    minify: 'esbuild', // Use esbuild for faster minification
+    minify: 'esbuild', // Use esbuild for fast minification (also handles CSS)
   }
   ```
 
@@ -141,8 +140,7 @@ vuetify({
 ```js
 build: {
   cssCodeSplit: true, // Enable CSS code splitting
-  cssMinify: 'lightningcss', // Use faster CSS minifier
-  minify: 'esbuild', // Use esbuild for faster minification
+  minify: 'esbuild', // Use esbuild for fast minification (handles both JS and CSS)
 }
 ```
 

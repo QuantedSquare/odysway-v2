@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
+
 import { defineOrganization } from 'nuxt-schema-org/schema'
 
 export default defineNuxtConfig({
@@ -146,8 +147,7 @@ export default defineNuxtConfig({
     build: {
       sourcemap: true,
       cssCodeSplit: true, // Enable CSS code splitting for better caching and parallel loading
-      cssMinify: 'lightningcss', // Use faster CSS minifier
-      minify: 'esbuild', // Use esbuild for faster minification
+      minify: 'esbuild', // Use esbuild for fast minification (also handles CSS)
     },
     css: {
       preprocessorOptions: {
