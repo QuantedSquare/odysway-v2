@@ -23,7 +23,6 @@ const STATUS_MAP = {
  * @returns {Object} Status object with status, text, and color properties
  */
 function calculateStatusFromBookings(date) {
-  console.log('date', date)
   if (date.max_travelers === date.booked_seat) {
     return STATUS_MAP.full
   }

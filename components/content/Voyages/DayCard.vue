@@ -12,6 +12,7 @@
         class="pb-0 pb-sm-3"
       >
         <SanityImage
+          v-if="photo?.asset?._ref"
           :asset-id="photo.asset._ref"
           auto="format"
         >

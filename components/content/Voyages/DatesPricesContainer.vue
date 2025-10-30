@@ -73,21 +73,6 @@
         </v-btn>
       </v-col>
     </v-row>
-    <v-row v-else-if="limitedDatesList.length === 0">
-      <v-col class="bg-grey-light-3 rounded-lg mx-3 d-flex flex-column align-center justify-center ga-6 my-5 py-10">
-        <div class="text-h4 font-weight-bold text-primary text-center">
-          Nous sommes désolés, <br> Mais il n'y a pas de dates disponibles pour le moment.
-        </div>
-        <v-btn
-          height="54"
-          :to="`/devis?slug=${route.params.voyageSlug}`"
-        >
-          <div class="text-h6 font-weight-bold">
-            {{ indivSection.textButtonDevis }}
-          </div>
-        </v-btn>
-      </v-col>
-    </v-row>
   </v-container>
 </template>
 
