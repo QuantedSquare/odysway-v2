@@ -24,8 +24,6 @@
           class="img-height"
           cover
           aspect-ratio="auto"
-          width="640"
-          height="228"
         >
           <template #default>
             <div class="badge-position">
@@ -176,9 +174,9 @@ const voyageCardContentQuery = groq`*[_type == "voyage_card"][0]{
 const sanity = useSanity()
 const { data: voyageCardContent } = await useAsyncData('voyage-card-content', () =>
   sanity.fetch(voyageCardContentQuery),
-  {
-    dedupe: 'defer' // This ensures all components wait for first request to complete
-  }
+{
+  dedupe: 'defer', // This ensures all components wait for first request to complete
+},
 )
 
 const actionColor = computed(() => voyage.groupeAvailable ? '#f7f8f8' : '#fef9f8')
@@ -270,6 +268,8 @@ const voyageCardImg = computed(() => {
   }
   .custom-card-width{
   min-width:280px!important;
+  max-width: 280px!important;
+  max-height: 345px!important;
   }
 }
 .custom-row-height{

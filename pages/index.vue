@@ -1,5 +1,6 @@
 <template>
   <v-container
+    v-once
     class="py-0 my-0 px-2 px-md-4"
     fluid
   >
@@ -23,7 +24,10 @@
       </template>
     </LazyExperienceCarousel>
 
-    <LazyColorContainer color="soft-blush">
+    <LazyColorContainer
+      v-once
+      color="soft-blush"
+    >
       <LazyHorizontalCarousel text-color="primary">
         <template #title>
           <span style="color: rgba(43, 76, 82, 1)">
@@ -44,7 +48,9 @@
     <LazyColorContainer color="primary">
       <LazyCardGrid :categories="homeSanity.followDesires.categoriesFollowDesires">
         <template #title>
-          {{ homeSanity.followDesires.title }}
+          <h4 class="text-white">
+            {{ homeSanity.followDesires.title }}
+          </h4>
         </template>
       </LazyCardGrid>
     </LazyColorContainer>
@@ -312,23 +318,6 @@ if (homeSanity.value) {
     title: 'Odysway - Voyages en Petits Groupes et Expériences Authentiques',
     description: 'Découvrez nos voyages en petits groupes à travers le monde. Expériences authentiques, rencontres locales et aventures inoubliables avec Odysway.',
     image: homeSanity.value.heroSection?.image,
-  }
-
-  // Preload hero image for LCP optimization
-  if (homeSanity.value?.heroSection?.image?.asset?._ref) {
-    const heroImageUrl = getImageUrl(homeSanity.value.heroSection.image.asset._ref)
-    if (heroImageUrl) {
-      useHead({
-        link: [
-          {
-            rel: 'preload',
-            as: 'image',
-            href: heroImageUrl,
-            fetchpriority: 'high',
-          },
-        ],
-      })
-    }
   }
 
   // Use the SEO composable

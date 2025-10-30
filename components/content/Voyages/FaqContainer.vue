@@ -1,77 +1,84 @@
 <template>
   <v-container
-
     id="faq-container"
     fluid
     class="rounded-lg px-1 py-0 mt-4 mt-md-8 max-container-width"
   >
-    <v-img
+    <div
       v-if="faqBackgroundURL"
-      :src="img(faqBackgroundURL, { format: 'webp', quality: 65, height: 900, width: 1536 })"
-      :lazy-src="img(faqBackgroundURL, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-      sizes="(max-width: 600px) 600px, (max-width: 960px) 960px, 1536px"
-      :srcset="`${img(faqBackgroundURL, { format: 'webp', quality: 60, width: 600 })} 600w, ${img(faqBackgroundURL, { format: 'webp', quality: 65, width: 960 })} 960w, ${img(faqBackgroundURL, { format: 'webp', quality: 70, width: 1536 })} 1536w`"
-      loading="lazy"
-      :alt="faqSanity?.backgroundImage?.alt"
-      cover
-      width="100%"
-      class="rounded-lg max-img-height"
-      :gradient="imageGradient"
+      class="faq-image-wrapper rounded-lg max-img-height"
     >
-      <h2 class="text-center text-white">
-        <TitleContainerH1>
-          <template #title>
-            {{ faqSanity?.title }}
-          </template>
-        </TitleContainerH1>
-      </h2>
-      <v-container
-        max-width="900px"
-        class="position-relative px-4 pt-0"
+      <NuxtImg
+        :src="faqBackgroundURL"
+        :srcset="faqBackgroundSrcset"
+        sizes="(max-width: 600px) 100vw, (max-width: 960px) 960px, 1536px"
+        :alt="faqSanity?.backgroundImage?.alt"
+        class="faq-background-image"
+        format="webp"
+        loading="lazy"
+        fetch-priority="low"
+        width="1536"
+        height="800"
+      />
+      <div
+        class="faq-overlay"
+        :style="{ background: imageGradient }"
       >
-        <v-row>
-          <v-col
-            class="max-height-with-overflow pt-2 pt-md-3"
-          >
-            <QuestionPanel
-              v-for="item in faqSanity?.faqItems"
-              :key="item._key"
-              :hide="item.hide && route.path !== '/faq'"
-              :item="item"
-            />
-          </v-col>
-        </v-row>
-        <v-row
-          class="mb-4 mb-md-10 text-shadow"
-          justify="center"
+        <h2 class="text-center text-white">
+          <TitleContainerH1>
+            <template #title>
+              {{ faqSanity?.title }}
+            </template>
+          </TitleContainerH1>
+        </h2>
+        <v-container
+          max-width="900px"
+          class="position-relative px-4 pt-0"
         >
-          <v-col cols="7">
-            <div
-              v-if="route.path !== '/faq'"
-              class="text-center text-h6 text-md-h5 text-white font-weight-bold"
+          <v-row>
+            <v-col
+              class="max-height-with-overflow pt-2 pt-md-3"
             >
-              <span> {{ faqTextes?.faqSection?.faqHomeSubText?.question }} &nbsp; </span>
-              <SmartLink
-                to="/faq"
-                :link-class="'text-secondary font-weight-bold'"
+              <QuestionPanel
+                v-for="item in faqSanity?.faqItems"
+                :key="item._key"
+                :hide="item.hide && route.path !== '/faq'"
+                :item="item"
+              />
+            </v-col>
+          </v-row>
+          <v-row
+            class="mb-4 mb-md-10 text-shadow"
+            justify="center"
+          >
+            <v-col cols="7">
+              <div
+                v-if="route.path !== '/faq'"
+                class="text-center text-h6 text-md-h5 text-white font-weight-bold"
               >
-                {{ faqTextes?.faqSection?.faqHomeSubText?.text }}
-              </SmartLink>
-            </div>
-            <div class="text-center text-h6 text-md-h5 text-white font-weight-regular d-flex flex-column mt-md-6 mt-3">
-              <span> {{ faqTextes?.faqSection?.faqHomeSubText?.subtitle }}
+                <span> {{ faqTextes?.faqSection?.faqHomeSubText?.question }} &nbsp; </span>
                 <SmartLink
-                  :to="faqTextes?.faqSection?.faqHomeSubText?.linkOnText2"
-                  :link-class="'text-secondary font-weight-medium'"
+                  to="/faq"
+                  :link-class="'text-secondary font-weight-bold'"
                 >
-                  {{ faqTextes?.faqSection?.faqHomeSubText?.text2 }}
+                  {{ faqTextes?.faqSection?.faqHomeSubText?.text }}
                 </SmartLink>
-              </span>
-            </div>
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-img>
+              </div>
+              <div class="text-center text-h6 text-md-h5 text-white font-weight-regular d-flex flex-column mt-md-6 mt-3">
+                <span> {{ faqTextes?.faqSection?.faqHomeSubText?.subtitle }}
+                  <SmartLink
+                    :to="faqTextes?.faqSection?.faqHomeSubText?.linkOnText2"
+                    :link-class="'text-secondary font-weight-medium'"
+                  >
+                    {{ faqTextes?.faqSection?.faqHomeSubText?.text2 }}
+                  </SmartLink>
+                </span>
+              </div>
+            </v-col>
+          </v-row>
+        </v-container>
+      </div>
+    </div>
     <v-skeleton-loader
       v-else
       type="card"
@@ -81,16 +88,20 @@
 
 <script setup>
 import { computed } from 'vue'
-import { useImage } from '#imports'
+import imageUrlBuilder from '@sanity/image-url'
 
-const img = useImage()
+const config = useRuntimeConfig()
+const builder = imageUrlBuilder({
+  projectId: config.public.sanity.projectId,
+  dataset: config.public.sanity.dataset,
+})
 
 const primaryColor = 'rgba(43, 76, 82, 0)'
 const secondaryColor = 'rgba(43, 76, 82, 0.8)'
 const route = useRoute()
 
 // Compute gradient to avoid reactivity issues during hydration
-const imageGradient = computed(() => `to top, ${secondaryColor}, ${primaryColor}`)
+const imageGradient = computed(() => `linear-gradient(to top, ${secondaryColor}, ${primaryColor})`)
 
 const faqSanityQuery = `
   *[_type == "faq"][0]{
@@ -120,8 +131,34 @@ const { data: faqSanity } = await useAsyncData(
   },
 )
 
+// Build optimized Sanity URLs with proper sizes for FAQ background
+const buildSanityImageUrl = (width, quality = 60) => {
+  if (!faqSanity?.value?.backgroundImage?.asset?._ref) return ''
+  return builder
+    .image(faqSanity.value.backgroundImage.asset._ref)
+    .width(width)
+    .format('webp')
+    .quality(quality)
+    .fit('max')
+    .url()
+}
+
 const faqBackgroundURL = computed(() => {
-  return getImageUrl(faqSanity?.value?.backgroundImage?.asset._ref)
+  return buildSanityImageUrl(600, 55)
+})
+
+const faqBackgroundSrcset = computed(() => {
+  if (!faqSanity?.value?.backgroundImage?.asset?._ref) return ''
+  return [
+    `${buildSanityImageUrl(400, 50)} 400w`,
+    `${buildSanityImageUrl(600, 55)} 600w`,
+    `${buildSanityImageUrl(960, 60)} 960w`,
+    `${buildSanityImageUrl(1536, 70)} 1536w`,
+  ].join(', ')
+})
+
+const faqBackgroundLazy = computed(() => {
+  return buildSanityImageUrl(600, 10)
 })
 
 const { data: faqTextes } = await useAsyncData(
@@ -151,6 +188,36 @@ const { data: faqTextes } = await useAsyncData(
 .max-img-height {
   height: 100%;
   max-height: 800px;
+}
+@media screen and (max-width: 960px) {
+  .max-img-height {
+    max-height: 600px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .max-img-height {
+    max-height: 700px!important;
+  }
+}
+.faq-image-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.faq-background-image {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+.faq-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 ::-webkit-scrollbar {
   width: 5px;

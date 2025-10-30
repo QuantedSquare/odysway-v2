@@ -34,8 +34,6 @@ export default defineNuxtConfig({
     head: {
       titleTemplate: '%s - Odysway',
       link: [
-        // Preload critical logo for LCP optimization
-        { rel: 'preload', href: '/logos/Logo-Odysway-Bleu.png', as: 'image', fetchpriority: 'high' },
         // Resource hints for external domains (defer actual script loading)
         { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
         { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
@@ -110,7 +108,7 @@ export default defineNuxtConfig({
   },
   // Inline critical CSS for better performance
   features: {
-    inlineStyles: true, // Changed from false - inlining CSS eliminates render-blocking request
+    inlineStyles: false, // Changed from false - inlining CSS eliminates render-blocking request
   },
   experimental: {
     payloadExtraction: true,
@@ -122,11 +120,6 @@ export default defineNuxtConfig({
       dirs: [
         'server/utils/**',
       ],
-    },
-    // Note: Removed '/' from prerender to allow ISR to work
-    // Prerender conflicts with ISR - pages in prerender are fully static
-    prerender: {
-      routes: [],
     },
     vercel: {
       config: {
@@ -140,6 +133,16 @@ export default defineNuxtConfig({
         transformAssetUrls,
       },
     },
+    // Uncomment for Nuxt4 upgrade
+    // optimizeDeps: {
+    //   include: ['minimatch', 'brace-expansion', '@sanity/visual-editing'],
+    // },
+    // resolve: {
+    //   alias: {
+    //     'react-compiler-runtime': 'react-compiler-runtime',
+    //     react: 'react',
+    //   },
+    // },
     build: {
       sourcemap: true,
       cssCodeSplit: false, // Combine all CSS into single file to reduce requests
@@ -270,15 +273,6 @@ export default defineNuxtConfig({
         'https://www.instagram.com/odysway',
         'https://www.linkedin.com/company/odysway',
       ],
-
-      // Trust Indicators
-      // 'hasCredential': [
-      //   {
-      //     '@type': 'EducationalOccupationalCredential',
-      //     'credentialCategory': 'Immatriculation Atout France',
-      //     'url': 'https://registre-operateurs-de-voyages.atout-france.fr',
-      //   },
-      // ],
 
       // Business Keywords
       'slogan': 'La rencontre au cœur du voyage',

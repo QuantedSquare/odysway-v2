@@ -13,18 +13,9 @@
         :class="'text-'+ questionColor"
       >
         <div v-if="question">
-          <!-- <MDCRenderer
-            :body="question.body"
-            :data="question.data"
-          /> -->
           {{ item.question }}
         </div>
-        <!-- <div v-if="!item">
-          <MDCSlot
-            unwrap="p"
-            name="question"
-          />
-        </div> -->
+
         <template #actions="{ expanded }">
           <v-icon
             color="secondary"
@@ -36,13 +27,10 @@
         eager
         class="text-subtitle-2 text-md-subtitle-1 text-grey pl-md-6 bg-white"
       >
-        <!-- <MDCRenderer
-          v-if="answer"
+        <EnrichedText
           class="custom-font-size"
-          :body="answer.body"
-          :data="answer.data"
-        /> -->
-        <EnrichedText :value="item.answer" />
+          :value="item.answer"
+        />
       </v-expansion-panel-text>
     </v-expansion-panel>
   </v-expansion-panels>
@@ -88,7 +76,7 @@ if (item) {
   background-color: rgba(255, 255, 255, 0)!important;
 }
 .custom-font-size{
-  font-size: 13px!important;
+  font-size: 12px!important;
   font-weight: 300!important;
 }
 @media screen and (min-width: 600px) {

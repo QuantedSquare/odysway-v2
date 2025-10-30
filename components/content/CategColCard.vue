@@ -1,53 +1,43 @@
 <template>
   <v-col class="mr-0 pr-0">
-    <v-lazy
-      :min-height="width <= 960 ? 300 : 415"
-      :options="{ threshold: 0.5 }"
-      transition="fade-transition"
+    <NuxtLink
+      :to="`/${type}/${slug}`"
+      class="image-wrapper default-expanded rounded"
     >
-      <NuxtLink
-        :to="`/${type}/${slug}`"
-        class="image-wrapper default-expanded rounded"
+
+      <v-img
+        v-if="imageUrl"
+        :src="imgComp(imageUrl, { format: 'webp', quality: 70, width: 1024 })"
+        :lazy-src="imgComp(imageUrl, { format: 'webp', quality: 10, width: 1024 })"
+        :srcset="`${imgComp(imageUrl, { format: 'webp', quality: 70, width: 1024 })} 1024w, ${imgComp(imageUrl, { format: 'webp', quality: 70, width: 1536 })} 1536w`"
+        sizes="(max-width: 600px) 480px, 1024px"
+        loading="lazy"
+        width="100%"
+        :alt="`Image de la thématique ${title}`"
+        cover
+      />
+
+      <div class="blur-overlay" />
+      <div class="image-overlay" />
+
+      <div
+        class="content-wrapper "
       >
-
-        <v-img
-          v-if="imageUrl"
-          :src="imgComp(imageUrl, { format: 'webp', quality: 70, width: 1024 })"
-          :lazy-src="imgComp(imageUrl, { format: 'webp', quality: 10, width: 1024 })"
-          :srcset="`${imgComp(imageUrl, { format: 'webp', quality: 70, width: 1024 })} 1024w, ${imgComp(imageUrl, { format: 'webp', quality: 70, width: 1536 })} 1536w`"
-          sizes="(max-width: 600px) 480px, 1024px"
-          loading="lazy"
-          width="100%"
-          :alt="`Image de la thématique ${title}`"
-          cover
-        />
-
-        <div class="blur-overlay" />
-        <div class="image-overlay" />
-
-        <div
-          class="content-wrapper "
+        <h3
+          key="title"
+          class=" font-weight-bold custom-font-size text-center text-shadow text-line-space mx-2 mx-md-3"
         >
-          <h3
-            key="title"
-            class=" font-weight-bold custom-font-size text-center text-shadow text-line-space mx-2 mx-md-3"
-          >
-            {{ title }}
-          </h3>
-        </div>
-      </NuxtLink>
-    </v-lazy>
+          {{ title }}
+        </h3>
+      </div>
+    </NuxtLink>
   </v-col>
 </template>
 
 <script setup>
-import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
-const { width } = useDisplay()
-
 const imgComp = useImage()
-
 const { image } = defineProps({
   slug: {
     type: String,

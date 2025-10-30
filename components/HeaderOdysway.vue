@@ -8,7 +8,9 @@
       class="header-logo-link"
     >
       <img
-        src="/logos/Logo-Odysway-Bleu.png"
+        :src="img('/logos/Logo-Odysway-Bleu.png', { format: 'webp', quality: 90, width: 100 })"
+        :srcset="`${img('/logos/Logo-Odysway-Bleu.png', { format: 'webp', quality: 90, width: 100 })} 100w, ${img('/logos/Logo-Odysway-Bleu.png', { format: 'webp', quality: 90, width: 120 })} 120w`"
+        sizes="100px"
         width="100"
         height="25"
         fetchpriority="high"
@@ -99,7 +101,9 @@
       class="header-logo-link"
     >
       <img
-        src="/logos/Logo-Odysway-Bleu.png"
+        :src="img('/logos/Logo-Odysway-Bleu.png', { format: 'webp', quality: 90, width: 150 })"
+        :srcset="`${img('/logos/Logo-Odysway-Bleu.png', { format: 'webp', quality: 90, width: 150 })} 150w, ${img('/logos/Logo-Odysway-Bleu.png', { format: 'webp', quality: 90, width: 180 })} 180w`"
+        sizes="150px"
         width="150"
         height="38"
         fetchpriority="high"
@@ -182,9 +186,11 @@
 
 <script setup>
 import { mdiMenu } from '@mdi/js'
+import { useImage } from '#imports'
 
 const router = useRouter()
 const model = defineModel({ type: Boolean, default: false })
+const img = useImage()
 
 const { header } = defineProps({
   scrollBehavior: {

@@ -1,50 +1,37 @@
 <template>
   <div class="mt-8 mt-md-0">
-    <div class="relative-hero-section mb-16 rounded-xl">
-      <v-img
+    <div class="relative-hero-section mb-16 hero-image-wrapper">
+      <NuxtImg
         v-if="srcUrl"
-        :src="img(srcUrl, { format: 'webp', quality: 70, height: 900, width: 1536 })"
-        :lazy-src="img(srcUrl, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-        sizes="(max-width: 600px) 600px, (max-width: 960px) 960px, 1536px"
-        :srcset="`${img(srcUrl, { format: 'webp', quality: 65, width: 600, height: 400 })} 600w, ${img(srcUrl, { format: 'webp', quality: 70, width: 960, height: 600 })} 960w, ${img(srcUrl, { format: 'webp', quality: 75, width: 1536, height: 900 })} 1536w`"
-        height="100%"
+        :src="srcUrl"
+        :srcset="srcset"
+        sizes="(max-width: 600px) 100vw, (max-width: 960px) 960px, 1536px"
         alt="Image principale Hero d'Odysway"
-        class="rounded-xl hero-height"
-        cover
-        :aspect-ratio="1536/900"
+        class="hero-image"
+        format="webp"
         loading="eager"
-        fetchpriority="high"
-      >
-        <template #placeholder>
-          <div class="d-flex align-center justify-center fill-height">
-            <v-progress-circular
-              indeterminate
-              color="primary"
-            />
-          </div>
-        </template>
-
-        <template #default>
-          <div class="h-100 d-flex align-center position-relative">
-            <v-container class="text-white text-h4 text-md-h2 font-weight-bold text-shadow text-center">
-              <v-row
-                justify="center"
-                align="center"
-              >
-                <v-col
-                  cols="12"
-                  md="auto"
-                >
-                  <h1 class="custom-hero-title ">
-                    <slot name="title" />
-                  </h1>
-                  <slot name="subtitle" />
-                </v-col>
-              </v-row>
-            </v-container>
-          </div>
-        </template>
-      </v-img>
+        :preload="{ fetchPriority: 'high' }"
+        width="1536"
+        height="900"
+      />
+      <div class="hero-overlay h-100 d-flex align-center">
+        <v-container class="text-white text-h4 text-md-h2 font-weight-bold text-shadow text-center">
+          <v-row
+            justify="center"
+            align="center"
+          >
+            <v-col
+              cols="12"
+              md="auto"
+            >
+              <h1 class="custom-hero-title ">
+                <slot name="title" />
+              </h1>
+              <slot name="subtitle" />
+            </v-col>
+          </v-row>
+        </v-container>
+      </div>
     </div>
     <div class="searchfield-overlap">
       <SearchField />
@@ -53,7 +40,7 @@
 </template>
 
 <script setup>
-import { useImage } from '#imports'
+import imageUrlBuilder from '@sanity/image-url'
 
 const { image } = defineProps({
   image: {
@@ -61,10 +48,42 @@ const { image } = defineProps({
     required: true,
   },
 })
-const img = useImage()
+
+const config = useRuntimeConfig()
+const builder = imageUrlBuilder({
+  projectId: config.public.sanity.projectId,
+  dataset: config.public.sanity.dataset,
+})
+
+// Build optimized Sanity URLs with proper sizes for each breakpoint
+const buildSanityImageUrl = (width, height, quality = 75) => {
+  if (!image?.asset?._ref) return ''
+  return builder
+    .image(image.asset._ref)
+    .width(width)
+    .height(height)
+    .format('webp')
+    .quality(quality)
+    .fit('max')
+    .url()
+}
 
 const srcUrl = computed(() => {
-  return getImageUrl(image?.asset?._ref)
+  // Default to 600px for mobile-first approach
+  return buildSanityImageUrl(600, 400, 60)
+})
+
+const srcset = computed(() => {
+  return [
+    `${buildSanityImageUrl(400, 300, 55)} 400w`,
+    `${buildSanityImageUrl(600, 400, 60)} 600w`,
+    `${buildSanityImageUrl(960, 600, 65)} 960w`,
+    `${buildSanityImageUrl(1536, 900, 75)} 1536w`,
+  ].join(', ')
+})
+
+const lazySrc = computed(() => {
+  return buildSanityImageUrl(600, 400, 10)
 })
 </script>
 
@@ -87,6 +106,38 @@ const srcUrl = computed(() => {
  position:relative;
  height: 600px;
  width: 100%;
+}
+
+.hero-image-wrapper {
+ position: relative;
+ width: 100%;
+ height: 100%;
+ max-height: 600px;
+ border-radius: 24px!important;
+ overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1536 / 900;
+  display: block;
+  position: relative;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
 }
 
 .custom-hero-title {

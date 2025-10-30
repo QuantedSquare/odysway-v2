@@ -2,43 +2,44 @@
   <ClientOnly>
     <v-row
       justify="center"
+      class="avatar-row-wrapper"
     >
-      <v-lazy
-        v-if="avatars && avatars.length > 0"
-        class="avatar-min-height-lazy"
-        :options="{ threshold: 0.5 }"
-        transition="fade-transition"
-      >
-        <div
-          class="avatar-stack d-flex justify-center"
-          :style="{
-            width: `${(avatars.length - 1) * 60 + 100}px`,
-          }"
+      <div class="avatar-scroll-container">
+        <v-lazy
+          v-if="avatars && avatars.length > 0"
+          class="avatar-min-height-lazy"
+          :options="{ threshold: 0.5 }"
+          transition="fade-transition"
         >
-          <v-avatar
-            v-for="(avatar, index) in avatars"
-            :key="index"
-
-            :class="`avatar-${index + 1} avatar-size-responsive`"
-            :style="{
-              zIndex: hoveredIndex === index ? 1000 : avatars.length - index,
-            }"
-            @mouseenter="hoveredIndex = index"
-            @mouseleave="hoveredIndex = null"
+          <div
+            class="avatar-stack d-flex justify-center"
+            :style="stackWidthStyle"
           >
-            <v-img
-              v-if="avatar.image?.asset?._ref"
-              :src="getImageUrl(avatar.image.asset._ref)"
-              :lazy-src="img(getImageUrl(avatar.image.asset._ref), { format: 'webp', quality: 10, width: 320 })"
-              :srcset="`${img(getImageUrl(avatar.image.asset._ref), { format: 'webp', quality: 70, width: 320 })} 70w, ${img(getImageUrl(avatar.image.asset._ref), { format: 'webp', quality: 70, width: 320 })} 100w`"
-              sizes="(max-width: 600px) 70px, 100px"
-              rounded="circle"
-              loading="lazy"
-              :alt="avatar.name || 'Avatar de l\'équipe'"
-            />
-          </v-avatar>
-        </div>
-      </v-lazy>
+            <v-avatar
+              v-for="(avatar, index) in avatars"
+              :key="index"
+
+              :class="`avatar-${index + 1} avatar-size-responsive`"
+              :style="{
+                zIndex: hoveredIndex === index ? 1000 : avatars.length - index,
+              }"
+              @mouseenter="hoveredIndex = index"
+              @mouseleave="hoveredIndex = null"
+            >
+              <v-img
+                v-if="avatar.image?.asset?._ref"
+                :src="getImageUrl(avatar.image.asset._ref)"
+                :lazy-src="img(getImageUrl(avatar.image.asset._ref), { format: 'webp', quality: 10, width: 320 })"
+                :srcset="`${img(getImageUrl(avatar.image.asset._ref), { format: 'webp', quality: 70, width: 320 })} 70w, ${img(getImageUrl(avatar.image.asset._ref), { format: 'webp', quality: 70, width: 320 })} 100w`"
+                sizes="(max-width: 600px) 70px, 100px"
+                rounded="circle"
+                loading="lazy"
+                :alt="avatar.name || 'Avatar de l\'équipe'"
+              />
+            </v-avatar>
+          </div>
+        </v-lazy>
+      </div>
     </v-row>
     <div
       v-if="avatars && avatars.length > 0"
@@ -79,11 +80,13 @@
 </template>
 
 <script setup>
-import { ref, watch, nextTick } from 'vue'
+import { ref, watch, nextTick, computed } from 'vue'
+import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
+import { getImageUrl } from '~/utils/getImageUrl'
 
 const sanityQuery = `
-  *[_type == "teamMember"]|order(orderRank) {
+  *[_type == "teamMember" && name != 'Salomé']|order(orderRank) {
     name,
     description,
     image
@@ -109,6 +112,28 @@ const { data: avatars } = await useAsyncData(
 
 const img = useImage()
 const hoveredIndex = ref(null)
+const { width } = useDisplay()
+
+// Calculate stack width based on screen size and avatar count
+const stackWidthStyle = computed(() => {
+  if (!avatars.value || avatars.value.length === 0) return { width: '100px' }
+
+  const avatarCount = avatars.value.length
+  // Desktop: 100px avatars spaced 60px apart (overlap)
+  // Mobile: 70px avatars spaced 40px apart (overlap)
+  if (width.value <= 600) {
+    // Mobile calculation: calculate the full width needed to contain all avatars
+    // The leftmost avatar extends to the left by half its width (35px) from the center
+    // The rightmost avatar extends by: (avatarCount - 1) * 40px + 35px to the right
+    // Total width: left extension + right extension = 35px + (avatarCount - 1) * 40px + 35px
+    const mobileWidth = (avatarCount - 1) * 40 + 70
+    return { width: `${mobileWidth}px` }
+  }
+  else {
+    // Desktop calculation
+    return { width: `${(avatarCount - 1) * 60 + 100}px` }
+  }
+})
 
 // Animated height for info section
 const infoAnim = ref(null)
@@ -150,13 +175,42 @@ watch(hoveredIndex, async (val) => {
 </script>
 
 <style scoped lang="scss">
+.avatar-row-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.avatar-scroll-container {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  /* Limit width on desktop to show ~6 avatars max */
+  @media (min-width: 601px) {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
 .avatar-stack {
   position: relative;
   height: 100px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 0 auto;
+
+  /* Center on desktop */
+  @media (min-width: 601px) {
+    justify-content: center;
+  }
 }
 
 .v-avatar {
@@ -182,12 +236,23 @@ watch(hoveredIndex, async (val) => {
 }
 
 @media (max-width: 600px) {
+  .avatar-scroll-container {
+    /* Add padding on both sides to allow scrolling to see edge avatars */
+    /* 35px = half avatar width, 20px = extra scroll space */
+    padding: 0 55px;
+    -webkit-overflow-scrolling: touch;
+  }
+
   .avatar-stack {
-    width: auto !important;
+    /* Keep the computed width from stackWidthStyle */
     overflow: visible;
+    /* Center the stack */
+    margin: 0 auto;
+    justify-content: center;
   }
 
   .v-avatar[class*="avatar-"] {
+    /* Position relative to center, then offset by index */
     left: 50%;
     transform: translateX(calc(-50% + (var(--avatar-index) - ((var(--total-avatars) - 1) / 2)) * 40px));
   }
@@ -201,8 +266,12 @@ watch(hoveredIndex, async (val) => {
 @for $i from 1 through 10 {
   .avatar-#{$i} {
     --avatar-index: #{$i - 1};
-    --total-avatars: v-bind(avatars?.length); /* Update this number based on max possible avatars */
   }
+}
+
+/* Set total avatars variable on the stack */
+.avatar-stack {
+  --total-avatars: v-bind(avatars?.length || 0);
 }
 
 .avatar-info-wrapper {
