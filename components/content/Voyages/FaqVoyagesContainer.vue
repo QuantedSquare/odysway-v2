@@ -5,9 +5,10 @@
     class="position-relative px-0 pt-0"
   >
     <v-img
-      :src="img(backgroundImage, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+      :src="backgroundImageUrl"
       cover
       rounded="lg"
+      :alt="backgroundImage?.alt || 'Image de fond FAQ'"
       :gradient="`to top, ${secondaryColor}, ${primaryColor}`"
     >
       <v-container
@@ -51,10 +52,10 @@
 import { useImage } from '#imports'
 
 const img = useImage()
-const { faqBlock } = defineProps({
+const { faqBlock, backgroundImage } = defineProps({
   backgroundImage: {
-    type: String,
-    default: '/images/b27a23f333a8c96567d46c123d1efb15.jpeg',
+    type: Object,
+    default: null,
   },
   primaryColor: {
     type: String,
@@ -68,6 +69,14 @@ const { faqBlock } = defineProps({
     type: Object,
     required: true,
   },
+})
+const backgroundImageUrl = computed(() => {
+  if (backgroundImage.asset?._ref) {
+    return img(getImageUrl(backgroundImage.asset?._ref), { format: 'webp', quality: 70, height: 900, width: 1536 })
+  }
+  else {
+    return img('/images/b27a23f333a8c96567d46c123d1efb15.jpeg', { format: 'webp', quality: 70, height: 900, width: 1536 })
+  }
 })
 </script>
 

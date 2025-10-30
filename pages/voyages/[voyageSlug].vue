@@ -77,7 +77,7 @@
           />
 
           <LazyFaqVoyagesContainer
-            :background-image="voyage.image.src"
+            :background-image="voyage.image"
             :faq-block="voyage.faqBlock"
           />
 
@@ -223,6 +223,7 @@ const { data: page } = await useAsyncData('voyage-page', () =>
 const { data: voyage } = await useAsyncData('voyage', () =>
   sanity.fetch(voyageQuery, { slug: route.params.voyageSlug }),
 )
+console.log('voyage', voyage.value)
 
 const { data: voyagePropositions } = await useAsyncData('voyage-propositions', () =>
   sanity.fetch(voyagePropositionsQuery, {
