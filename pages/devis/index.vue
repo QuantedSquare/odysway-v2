@@ -202,7 +202,7 @@ const previousStep = () => {
 
 const submit = async () => {
   userInfo.value.loading = true
-  const stage = (userInfo.value.email === 'test@test.com' || userInfo.value.email === 'ottmann.alex@gmail.com') ? '48' : '2'
+  const stage = (userInfo.value.email === 'test@test.com' || userInfo.value.email === 'ottmann.alex@gmail.com') ? '75' : '2'
   const utmSource = localStorage.getItem('utmSource')
   const voyageBody = {
     value: voyage.value.pricing.startingPrice * 100,
@@ -224,7 +224,7 @@ const submit = async () => {
     country: destinations.value.map(d => d.iso).join(','),
     iso: destinations.value.map(d => d.iso).join(','),
     zoneChapka: +destinations.value[0]?.chapka || 0,
-    image: voyage.value.image || '/images/default/Odysway-couverture-mongolie.jpeg',
+    image: getImageUrl(voyage.value?.image?.asset?._ref) || '/images/default/Odysway-couverture-mongolie.jpeg',
     currentStep: skipperChoice.value === 'devis' ? 'Souhaite réserver/planifier un voyage individuel' : 'Souhaite des infos',
     alreadyPaid: 0,
     restToPay: 0,

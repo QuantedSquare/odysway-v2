@@ -1,4 +1,5 @@
 import { defineEventHandler, readBody, getHeader, createError } from 'h3'
+
 export default defineEventHandler(async (event) => {
   // Verify webhook secret for security
   console.log('Sanity webhook received', event)
@@ -169,14 +170,13 @@ export default defineEventHandler(async (event) => {
     // Note: This is NOT the same as VERCEL_AUTOMATION_BYPASS_SECRET
     // VERCEL_BYPASS_TOKEN is a custom secret you create for ISR revalidation
     const bypassToken = process.env.VERCEL_BYPASS_TOKEN
-    const vercelToken = process.env.VERCEL_TOKEN // Optional: For Cache Purge API fallback
 
     if (bypassToken && pathsToRevalidate.length > 0) {
       const config = useRuntimeConfig()
       const baseUrl = config.public.environment === 'development' ? 'https://dev.odysway.com' : config.public.siteURL
 
       console.log(`Starting revalidation for ${pathsToRevalidate.length} paths with bypass token: ${bypassToken ? 'SET' : 'NOT SET'}`)
-      
+
       const revalidationResults = []
 
       for (const path of pathsToRevalidate) {
@@ -184,9 +184,9 @@ export default defineEventHandler(async (event) => {
           // Trigger revalidation by making a GET request with the bypass token
           // Using native fetch instead of axios to ensure headers are sent correctly
           const url = `${baseUrl}${path}`
-          
+
           console.log(`Attempting revalidation for ${path} with bypass token (token length: ${bypassToken?.length || 0})`)
-          
+
           const response = await fetch(url, {
             method: 'GET',
             headers: {
@@ -195,15 +195,15 @@ export default defineEventHandler(async (event) => {
             },
             redirect: 'follow',
           })
-          
+
           // Consume the response body to ensure request completes
           // For revalidation, we don't need the actual content
           await response.text().catch(() => {}) // Ignore errors when consuming body
-          
+
           const cacheStatus = response.headers.get('x-vercel-cache') || 'UNKNOWN'
           const vercelId = response.headers.get('x-vercel-id') || 'UNKNOWN'
           const isSuccess = cacheStatus === 'BYPASS' || cacheStatus === 'MISS' || cacheStatus === 'STALE'
-          
+
           console.log(`Revalidation response for ${path}:`, {
             url,
             status: response.status,
@@ -217,7 +217,7 @@ export default defineEventHandler(async (event) => {
               'cache-control': response.headers.get('cache-control'),
             },
           })
-         
+
           // IMPORTANT: Nuxt 3 on Vercel has limited support for on-demand revalidation
           // Even if we get HIT, the page will still be regenerated via ISR (60s max wait)
           // The x-prerender-revalidate header approach works better for Next.js than Nuxt 3
@@ -226,24 +226,27 @@ export default defineEventHandler(async (event) => {
             console.log(`   This is a known limitation of Nuxt 3 + Vercel ISR revalidation`)
             console.log(`   The page will still update within 60 seconds via time-based ISR`)
             console.log(`   For instant updates, consider using Vercel's Cache Purge API (requires VERCEL_TOKEN)`)
-            revalidationResults.push({ 
-              path, 
-              status: 'warning', 
+            revalidationResults.push({
+              path,
+              status: 'warning',
               cacheStatus,
-              note: 'HIT - will update via 60s ISR fallback' 
+              note: 'HIT - will update via 60s ISR fallback',
             })
-          } else if (isSuccess) {
+          }
+          else if (isSuccess) {
             console.log(`✓ Revalidated successfully: ${path} (cache: ${cacheStatus})`)
             revalidationResults.push({ path, status: 'success', cacheStatus })
-          } else if (response.status === 200) {
+          }
+          else if (response.status === 200) {
             // Status 200 means request succeeded - may have triggered revalidation
             console.log(`✓ Request succeeded for ${path} (status: ${response.status}, cache: ${cacheStatus})`)
             revalidationResults.push({ path, status: 'success', cacheStatus, note: 'Status 200' })
-          } else {
+          }
+          else {
             console.log(`⚠️  Unexpected revalidation response for ${path}`)
             revalidationResults.push({ path, status: 'warning', cacheStatus })
           }
-          
+
           // Small delay between requests to avoid overwhelming the system
           if (pathsToRevalidate.length > 1) {
             await new Promise(resolve => setTimeout(resolve, 100))
@@ -258,16 +261,16 @@ export default defineEventHandler(async (event) => {
 
       // Check if any revalidations got HIT (bypass token not working)
       const hasHits = revalidationResults.some(r => r.cacheStatus === 'HIT')
-      
+
       return {
         success: true,
-        message: hasHits 
-          ? 'Webhook processed. Pages will update within 60 seconds via ISR.' 
+        message: hasHits
+          ? 'Webhook processed. Pages will update within 60 seconds via ISR.'
           : 'On-demand revalidation triggered. Changes are live!',
         documentType,
         slug,
         revalidationResults,
-        note: hasHits 
+        note: hasHits
           ? 'Bypass token not recognized - using 60s ISR fallback (normal for Nuxt 3)'
           : 'Instant revalidation working',
         timestamp: new Date().toISOString(),
