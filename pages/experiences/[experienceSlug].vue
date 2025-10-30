@@ -61,14 +61,42 @@ const { data: pageContent } = await useAsyncData('page-content', () =>
 
 const experienceQuery = `
   *[_type == "experience" && slug.current == $slug][0]{
-    ...,
+    _id,
+    title,
+    badgeTitle,
+    slug,
+    description,
+    image,
+    showOnHome,
     "voyages": *[_type == "voyage" && references(^._id)]{
-      ...,
+      _id,
+      title,
+      slug,
+      image,
+      duration,
+      nights,
+      rating,
+      comments,
+      groupeAvailable,
+      "startingPrice": pricing.startingPrice,
+      pricing {
+        startingPrice
+      }
     },
     blog->{
-      ...,
+      _id,
+      title,
+      slug,
+      description,
+      displayedImg,
+      publishedAt,
+      readingTime,
+      legacyCategories,
       author->{
-        ...
+        _id,
+        name,
+        image,
+        position
       },
       body[]{
         ...,
@@ -77,10 +105,14 @@ const experienceQuery = `
           asset->{
             _id,
             url,
-            metadata
+            "metadata": {
+              "dimensions": metadata.dimensions,
+              "lqip": metadata.lqip
+            }
           }
         }
-      }
+      },
+      seo
     },
   }
 `
