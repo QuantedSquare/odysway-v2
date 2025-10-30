@@ -10,6 +10,7 @@
         class="hero-image"
         format="webp"
         loading="eager"
+        fetchpriority="high"
         :preload="{ fetchPriority: 'high' }"
         width="1536"
         height="900"
