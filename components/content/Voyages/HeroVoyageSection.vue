@@ -76,7 +76,7 @@
     <v-row class="align-start ">
       <v-col
         cols="12"
-        sm="9"
+        :sm="voyage.imageSecondary?.asset?._ref ? 9 : 12"
       >
         <SanityImage
           v-if="voyage.image?.asset?._ref"
