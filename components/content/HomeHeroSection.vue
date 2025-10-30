@@ -5,13 +5,12 @@
         v-if="srcUrl"
         :src="srcUrl"
         :srcset="srcset"
-        sizes="(max-width: 600px) 100vw, (max-width: 768px) 768px, (max-width: 960px) 960px, (max-width: 1280px) 1280px, 1536px"
+        sizes="(max-width: 600px) 100vw, (max-width: 960px) 90vw, (max-width: 1280px) 85vw, 1280px"
         alt="Image principale Hero d'Odysway"
         class="hero-image"
         format="webp"
         loading="eager"
         fetchpriority="high"
-        :preload="{ fetchPriority: 'high' }"
         width="1536"
         height="900"
       />
@@ -70,18 +69,19 @@ const buildSanityImageUrl = (width, height, quality = 75) => {
 }
 
 const srcUrl = computed(() => {
-  // Default to 600px for mobile-first approach
-  return buildSanityImageUrl(600, 400, 60)
+  // Default to 800px as fallback for common desktop viewport
+  return buildSanityImageUrl(800, 470, 70)
 })
 
 const srcset = computed(() => {
+  // Generate srcset matching actual container widths accounting for padding
+  // Heights calculated to maintain 1.7:1 aspect ratio (hero section aspect)
   return [
-    `${buildSanityImageUrl(400, 240, 55)} 400w`,
-    `${buildSanityImageUrl(600, 350, 60)} 600w`,
-    `${buildSanityImageUrl(768, 450, 65)} 768w`,
-    `${buildSanityImageUrl(960, 560, 70)} 960w`,
+    `${buildSanityImageUrl(400, 235, 60)} 400w`,
+    `${buildSanityImageUrl(600, 350, 65)} 600w`,
+    `${buildSanityImageUrl(800, 470, 70)} 800w`,
+    `${buildSanityImageUrl(1000, 590, 75)} 1000w`,
     `${buildSanityImageUrl(1280, 750, 75)} 1280w`,
-    `${buildSanityImageUrl(1536, 900, 75)} 1536w`,
   ].join(', ')
 })
 </script>

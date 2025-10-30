@@ -165,7 +165,7 @@ const apiRequest = async (endpoint, method = 'get', data = null) => {
     return response.data
   }
   catch (error) {
-    console.error(`API Error in ${endpoint}:`, error)
+    console.error(`API Error in ${endpoint}:`, error, data)
     throw error
   }
 }
@@ -302,7 +302,7 @@ const createDeal = async (data) => {
 
   // console.log('===========formatedDeal after delete in activecampaign.js===========', formatedDeal)
   // console.log('===========formatedDeal after delete in customfields===========', formatedDeal.deal.fields)
-
+  console.log('===========formatedDeal in deal creation in activecampaign.js===========', formatedDeal)
   const response = await apiRequest('/deals', 'post', formatedDeal)
   console.log('===========response in activecampaign.js===========', response)
   if (response.deal.id) {

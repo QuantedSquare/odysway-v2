@@ -22,7 +22,7 @@ const apiRequest = async (path, method = 'get', data = null) => {
     }
     console.log('========options=======', options)
     const response = await axios.request(options).then((res) => {
-      // console.log('========response=======', res)
+      // console.log('========Brevo response=======', res)
       return res
     })
     return response
