@@ -136,6 +136,7 @@
             </v-col>
           </Transition>
           <v-col
+            v-if="route.query.type !== 'balance'"
             cols="12"
             class="d-flex justify-space-between align-end"
           >
