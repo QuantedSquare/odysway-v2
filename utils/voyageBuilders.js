@@ -38,7 +38,7 @@ export function buildVoyageFromAC(deal) {
     departureDate: deal.departureDate,
     returnDate: deal.returnDate,
     title: deal.title,
-    imgSrc: deal.image || '/images/default/Odysway-couverture-mongolie.jpeg',
+    imgSrc: deal.image.startsWith('http') ? deal.image : '/images/sur-mesure/AdobeStock_557006728.webp',
     country: deal.country,
     slug: deal.slug,
     iso: deal.iso,
