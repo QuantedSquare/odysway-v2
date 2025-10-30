@@ -8,6 +8,7 @@
         v-bind="activatorProps"
         :size="36"
         icon
+        variant="outlined"
         class="border-circle stronger-hover bg-white"
       >
         <img
