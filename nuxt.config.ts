@@ -207,7 +207,7 @@ export default defineNuxtConfig({
     visualEditing: {
       token: process.env.SANITY_VIEWER_TOKEN,
       studioUrl: process.env.SANITY_STUDIO_URL,
-      stega: true,
+      stega: process.env.VERCEL_ENV !== 'production',
     },
   },
   schemaOrg: {

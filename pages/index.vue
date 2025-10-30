@@ -315,7 +315,6 @@ const homeQuery = groq`
 const { data: homeSanity } = await useAsyncData('home', () =>
   sanity.fetch(homeQuery),
 )
-console.log('========homeSanity========', homeSanity.value)
 if (homeSanity.value) {
   // Fallback values for content
   const defaultContent = {
