@@ -258,6 +258,17 @@ const allVoyagesQuery = /* groq */`
     "slug": slug.current
   }
 `
+
+const allAssetsQuery = `*[_type == 'media'] {
+  ...
+}`
+
+const { data: allAssets } = await useAsyncData(
+  `all-assets-${currentDataset.value}`,
+  () => fetchFromDataset(allAssetsQuery),
+)
+console.log('allAssets', allAssets.value)
+
 const { data: allVoyages } = await useAsyncData(
   `all-voyages-${currentDataset.value}`,
   () => fetchFromDataset(allVoyagesQuery),

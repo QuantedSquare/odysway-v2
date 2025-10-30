@@ -79,8 +79,8 @@
         sm="9"
       >
         <SanityImage
-          v-if="voyage.image"
-          :asset-id="voyage.image.asset._ref"
+          v-if="voyage.image?.asset?._ref"
+          :asset-id="voyage.image?.asset?._ref"
           auto="format"
         >
           <template #default="{ src }">
@@ -88,7 +88,7 @@
               v-if="src"
               :src="src"
               :lazy-src="img(src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-              :alt="voyage.image.alt || `Image principale du voyage ${voyage.title}`"
+              :alt="voyage.image?.alt || `Image principale du voyage ${voyage.title}`"
               cover
               class="custom-height"
               rounded="lg"
@@ -101,8 +101,8 @@
         class="d-none d-sm-flex flex-column ga-7"
       >
         <SanityImage
-          v-if="voyage.imageSecondary"
-          :asset-id="voyage.imageSecondary.asset._ref"
+          v-if="voyage.imageSecondary?.asset?._ref"
+          :asset-id="voyage.imageSecondary?.asset?._ref"
           auto="format"
         >
           <template #default="{ src }">
@@ -118,7 +118,7 @@
           </template>
         </SanityImage>
         <SanityImage
-          v-if="voyage.photosList?.length > 0"
+          v-if="voyage.photosList?.length > 0 && voyage.photosList[0].asset?._ref"
           :asset-id="voyage.photosList[0].asset._ref"
           auto="format"
         >

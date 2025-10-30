@@ -1,8 +1,8 @@
 import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
-import {visionTool} from '@sanity/vision'
+
 import {schemaTypes} from './schemaTypes'
-import {media} from 'sanity-plugin-media'
+import {media, mediaAssetSource} from 'sanity-plugin-media'
 import {orderableDocumentListDeskItem} from '@sanity/orderable-document-list'
 import {colorInput} from '@sanity/color-input'
 export default defineConfig({
@@ -208,10 +208,8 @@ export default defineConfig({
           ]),
     }),
     media(),
-    visionTool(),
     colorInput()
   ],
-
   schema: {
     types: schemaTypes,
   },
