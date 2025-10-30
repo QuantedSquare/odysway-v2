@@ -158,7 +158,7 @@ css: {
 **Benefits:**
 - Reduced CSS bundle size through code splitting
 - Better tree-shaking of unused Vuetify components
-- Faster CSS minification with lightningcss
+- Faster minification with esbuild (handles both JS and CSS)
 - Better caching strategy with split CSS files
 
 ---

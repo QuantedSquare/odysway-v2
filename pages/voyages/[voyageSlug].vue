@@ -202,7 +202,10 @@ const voyageQuery = `
 `
 
 const voyagePropositionsQuery = `
-  *[_type == "voyage" && slug.current != $slug && experienceType._ref == $experienceTypeId][0...5]{
+  *[_type == "voyage" && (
+        !('custom' in availabilityTypes) ||
+        (count(availabilityTypes) > 1)
+      ) && slug.current != $slug && experienceType._ref == $experienceTypeId][0...5]{
     _id,
     title,
     slug,
@@ -231,7 +234,7 @@ const { data: voyagePropositions } = await useAsyncData('voyage-propositions', (
     experienceTypeId: voyage.value?.experienceType?._id,
   }),
 )
-
+console.log('voyagePropositions', voyagePropositions.value)
 onMounted(() => {
   gtag('event', 'page_view', {
     eventCategory: 'Voyage',
