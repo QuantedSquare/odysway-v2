@@ -6,11 +6,11 @@
     >
 
       <v-img
-        v-if="imageUrl"
-        :src="imgComp(imageUrl, { format: 'webp', quality: 70, width: 1024 })"
-        :lazy-src="imgComp(imageUrl, { format: 'webp', quality: 10, width: 1024 })"
-        :srcset="`${imgComp(imageUrl, { format: 'webp', quality: 70, width: 1024 })} 1024w, ${imgComp(imageUrl, { format: 'webp', quality: 70, width: 1536 })} 1536w`"
-        sizes="(max-width: 600px) 480px, 1024px"
+        v-if="srcUrl"
+        :src="srcUrl"
+        :lazy-src="lazySrc"
+        :srcset="srcset"
+        sizes="(max-width: 600px) 150px, (max-width: 960px) 300px, 350px"
         loading="lazy"
         width="100%"
         :alt="`Image de la thématique ${title}`"
@@ -35,9 +35,8 @@
 </template>
 
 <script setup>
-import { useImage } from '#imports'
+import imageUrlBuilder from '@sanity/image-url'
 
-const imgComp = useImage()
 const { image } = defineProps({
   slug: {
     type: String,
@@ -60,8 +59,42 @@ const { image } = defineProps({
     required: true,
   },
 })
-const imageUrl = computed(() => {
-  return getImageUrl(image?.asset?._ref)
+
+const config = useRuntimeConfig()
+const builder = imageUrlBuilder({
+  projectId: config.public.sanity.projectId,
+  dataset: config.public.sanity.dataset,
+})
+
+// Build optimized Sanity URLs with proper sizes for card dimensions
+const buildSanityImageUrl = (width, height, quality = 70) => {
+  if (!image?.asset?._ref) return ''
+  return builder
+    .image(image.asset._ref)
+    .width(width)
+    .height(height)
+    .format('webp')
+    .quality(quality)
+    .fit('crop')
+    .url()
+}
+
+const srcUrl = computed(() => {
+  // Default to 300px for mobile-first approach (displayed at ~315px on desktop)
+  return buildSanityImageUrl(300, 400, 65)
+})
+
+const srcset = computed(() => {
+  return [
+    `${buildSanityImageUrl(150, 200, 60)} 150w`,
+    `${buildSanityImageUrl(300, 400, 65)} 300w`,
+    `${buildSanityImageUrl(350, 470, 70)} 350w`,
+    `${buildSanityImageUrl(450, 600, 70)} 450w`,
+  ].join(', ')
+})
+
+const lazySrc = computed(() => {
+  return buildSanityImageUrl(150, 200, 10)
 })
 </script>
 
