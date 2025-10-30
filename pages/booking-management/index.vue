@@ -122,6 +122,7 @@ const router = useRouter()
 
 const fetchTravels = async () => {
   loading.value = true
+  console.log('fetching...')
   const res = await fetch('/api/v1/booking/travels')
   const data = await res.json()
   travels.value = data.filter(travel => !travel.is_custom_travel)
