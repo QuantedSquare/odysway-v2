@@ -95,7 +95,7 @@ const search = ref(null)
 const loading = ref(false)
 const sanity = useSanity()
 const travelesListQuery = groq`*[_type == "voyage" && customAvailable == false]{
-  slug,
+  "slug": slug.current,
   title,
   image {
     asset -> {
@@ -106,7 +106,6 @@ const travelesListQuery = groq`*[_type == "voyage" && customAvailable == false]{
 const { data: travelesList } = await useAsyncData('travelesList', () =>
   sanity.fetch(travelesListQuery),
 )
-console.log('travelesList', travelesList.value)
 useSeoMeta({
   htmlAttrs: {
     lang: 'fr',
@@ -144,10 +143,10 @@ const goToCustomTravels = () => {
 const filteredTravels = computed(() => {
   // Merge travelesList (all possible travels) with booking data from travels.value
   return travelesList.value?.map((travel) => {
-    const bookingData = travels.value.find(t => t.travel_slug === travel.slug.current)
+    const bookingData = travels.value.find(t => t.travel_slug === travel.slug)
     return {
       ...bookingData,
-      travel_slug: travel.slug.current,
+      travel_slug: travel.slug,
       image: travel.image?.asset?.url,
       title: travel.title,
       nb_dates: bookingData?.nb_dates || 0,
