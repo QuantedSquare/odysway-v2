@@ -125,7 +125,7 @@ const { data: categories } = useAsyncData('categories-on-content-layout', async 
     const result = await sanity.fetch(categoriesQuery)
     return result || []
   }
-  return null
+  return []
 }, { watch: [isComputedCategory, isComputedExperience] })
 
 const experiencesQuery = `
@@ -138,7 +138,7 @@ const { data: experiences } = useAsyncData('experiences-on-content-layout', asyn
     const result = await sanity.fetch(experiencesQuery)
     return result || []
   }
-  return null
+  return []
 }, { watch: [isComputedCategory, isComputedExperience] })
 
 const destinationsQuery = `
@@ -151,7 +151,7 @@ const { data: destinations } = useAsyncData('destinations-on-content-layout', as
     const result = await sanity.fetch(destinationsQuery)
     return result || []
   }
-  return null
+  return []
 })
 
 const displayedData = computed(() => {

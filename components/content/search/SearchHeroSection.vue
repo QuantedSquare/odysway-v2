@@ -17,7 +17,7 @@
           v-if="destination && !isCategory && !isExperience && !isNextDepartures"
           class="custom-hero-title"
         >
-          {{ `${contentText?.searchHero?.voyagePrefix || 'Nos voyages'} ${destination.interjection} ${destination.title || destination.nom}` }}
+          {{ `${contentText?.searchHero?.voyagePrefix || 'Nos voyages'} ${destination.interjection || 'en'} ${destination.title || destination.nom}` }}
         </h1>
         <h1
           v-else-if="destination && isCategory"
@@ -110,7 +110,7 @@
                 v-if="destination && !isCategory && !isExperience && !isNextDepartures"
                 class="custom-hero-title"
               >
-                {{ `${contentText?.searchHero?.voyagePrefix || 'Nos voyages'} ${destination.interjection} ${destination.title}` }}
+                {{ `${contentText?.searchHero?.voyagePrefix || 'Nos voyages'} ${destination.interjection || 'en'} ${destination.title}` }}
               </h1>
               <h1
                 v-else-if="destination && isCategory"

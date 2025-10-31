@@ -1,6 +1,8 @@
-
 User-agent: *
 Disallow: /paiement
 Disallow: /devis
 Disallow: /checkout
 Disallow: /booking-management
+Sitemap: https://odysway.com/sitemap.xml
+
+

@@ -56,17 +56,50 @@ const isRegionDestination = computed(() => {
 // #TODO OPTI LE SELECT DES PROPS NECESSAIRES
 const destinationFromRegionQuery = `
   *[_type == "region" && slug.current == $slug][0]{
-    ...,
+    _id,
+    nom,
+    slug,
+    description,
+    image,
+    interjection,
+    showOnHome,
     "destinations": *[_type == "destination" && references(^._id)]{
-      ...,
+      _id,
+      title,
+      slug,
+      image,
+      description,
+      showOnHome,
       "voyages": *[_type == "voyage" && references(^._id)]{
-        ...,
+         _id,
+      title,
+      slug,
+      image,
+      duration,
+      nights,
+      rating,
+      comments,
+      groupeAvailable,
+      "startingPrice": pricing.startingPrice,
+      pricing {
+        startingPrice
+        }
       }
     },
     blog->{
-      ...,
+      _id,
+      title,
+      slug,
+      description,
+      displayedImg,
+      publishedAt,
+      readingTime,
+      legacyCategories,
       author->{
-        ...
+        _id,
+        name,
+        image,
+        position
       },
       body[]{
         ...,
@@ -75,24 +108,57 @@ const destinationFromRegionQuery = `
           asset->{
             _id,
             url,
-            metadata
+            "metadata": {
+              "dimensions": metadata.dimensions,
+              "lqip": metadata.lqip
+            }
           }
         }
-      }
-    }
+      },
+      seo
+    },
   } 
 `
 
 const destinationQuery = `
   *[_type == "destination" && slug.current == $slug][0]{
-    ...,
+_id,
+    title,
+    badgeTitle,
+    slug,
+    description,
+    image,
+    interjection,
+    showOnHome,
     "voyages": *[_type == "voyage" && references(^._id)]{
-      ...,
+      _id,
+      title,
+      slug,
+      image,
+      duration,
+      nights,
+      rating,
+      comments,
+      groupeAvailable,
+      "startingPrice": pricing.startingPrice,
+      pricing {
+        startingPrice
+      }
     },
     blog->{
-      ...,
+      _id,
+      title,
+      slug,
+      description,
+      displayedImg,
+      publishedAt,
+      readingTime,
+      legacyCategories,
       author->{
-        ...
+        _id,
+        name,
+        image,
+        position
       },
       body[]{
         ...,
@@ -101,11 +167,15 @@ const destinationQuery = `
           asset->{
             _id,
             url,
-            metadata
+            "metadata": {
+              "dimensions": metadata.dimensions,
+              "lqip": metadata.lqip
+            }
           }
         }
-      }
-    }
+      },
+      seo
+    },
   }
 `
 const sanity = useSanity()

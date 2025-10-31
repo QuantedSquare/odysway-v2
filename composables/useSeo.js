@@ -81,7 +81,6 @@ export function useSeo(options = {}) {
     // Generate slug-based defaults
     const defaultTitle = generateTitleFromSlug(pageSlug)
     const defaultDescription = generateDescriptionFromSlug(pageSlug, type)
-
     return {
       metaTitle:
         seo?.metaTitle // New standard
@@ -180,7 +179,6 @@ export function useSeo(options = {}) {
   })
 
   // Set SEO meta tags
-
   useSeoMeta({
     title: normalized.metaTitle,
     description: normalized.metaDescription,

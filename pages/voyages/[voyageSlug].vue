@@ -258,7 +258,7 @@ watchEffect(() => {
     ),
     breadcrumbs: [
       { name: 'Accueil', url: 'https://odysway.com' },
-      { name: 'Voyages', url: 'https://odysway.com/voyages' },
+      { name: 'Voyages', url: 'https://odysway.com/search' },
       {
         name: voyage.value.title,
         url: `https://odysway.com/voyages/${voyage.value.slug.current}`,

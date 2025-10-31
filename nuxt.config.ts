@@ -77,6 +77,8 @@ export default defineNuxtConfig({
     '/': { isr: 60 },
     '/search': { isr: 60 },
     '/prochains-departs': { isr: 60 },
+    // Redirect legacy or non-existent index to listing page
+    '/voyages': { redirect: { to: '/search', statusCode: 301 } },
 
     // Dynamic content pages with slugs
     '/voyages/**': { isr: 60 },
@@ -322,5 +324,11 @@ export default defineNuxtConfig({
       google: 'nopagereadaloud',
       googlebot: 'max-snippet',
     },
+  },
+  sitemap: {
+    // Use our runtime source that fetches dynamic URLs from Sanity
+    sources: [
+      '/api/__sitemap__/urls',
+    ],
   },
 })

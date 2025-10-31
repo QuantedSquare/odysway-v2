@@ -12,7 +12,7 @@ export default defineEventHandler(async (event) => {
 
   // Get all content for sitemap
   const [blogPosts, voyages, destinations, experiences, categories] = await Promise.all([
-    sanityClient.fetch(`*[_type == "post"]{
+    sanityClient.fetch(`*[_type == "blog"]{
       "slug": slug.current,
       _updatedAt
     }`),
@@ -31,9 +31,8 @@ export default defineEventHandler(async (event) => {
     sanityClient.fetch(`*[_type == "category"]{
       "slug": slug.current,
       _updatedAt
-    }`)
+    }`),
   ])
-
   const sitemapUrls = [
     // Static pages
     { url: '/', lastmod: new Date().toISOString(), changefreq: 'daily', priority: 1.0 },
@@ -49,7 +48,7 @@ export default defineEventHandler(async (event) => {
       url: `/${post.slug}`,
       lastmod: post._updatedAt,
       changefreq: 'monthly',
-      priority: 0.7
+      priority: 0.7,
     })),
 
     // Voyages
@@ -57,7 +56,7 @@ export default defineEventHandler(async (event) => {
       url: `/voyages/${voyage.slug}`,
       lastmod: voyage._updatedAt,
       changefreq: 'weekly',
-      priority: 0.9
+      priority: 0.9,
     })),
 
     // Destinations
@@ -65,7 +64,7 @@ export default defineEventHandler(async (event) => {
       url: `/destinations/${dest.slug}`,
       lastmod: dest._updatedAt,
       changefreq: 'monthly',
-      priority: 0.8
+      priority: 0.8,
     })),
 
     // Experiences
@@ -73,7 +72,7 @@ export default defineEventHandler(async (event) => {
       url: `/experiences/${exp.slug}`,
       lastmod: exp._updatedAt,
       changefreq: 'monthly',
-      priority: 0.8
+      priority: 0.8,
     })),
 
     // Categories (Thematiques)
@@ -81,10 +80,11 @@ export default defineEventHandler(async (event) => {
       url: `/thematiques/${cat.slug}`,
       lastmod: cat._updatedAt,
       changefreq: 'monthly',
-      priority: 0.8
-    }))
+      priority: 0.8,
+    })),
   ]
 
+  // console.log('sitemapUrls', sitemapUrls)
   // Generate XML sitemap
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
