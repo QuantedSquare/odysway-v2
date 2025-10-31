@@ -135,9 +135,9 @@ catch (err) {
   console.error('Error building voyage:', err)
   error.value = err.message
   // Optional redirect after a short delay
-  setTimeout(() => {
-    router.back()
-  }, 6000)
+  // setTimeout(() => {
+  //   router.back()
+  // }, 6000)
 }
 finally {
   loading.value = false
