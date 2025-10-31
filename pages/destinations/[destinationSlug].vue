@@ -1,8 +1,9 @@
 <template>
   <ContentLayout
-    :is-destination="true"
+    type="destinations"
     :selected-destination="destinationSanity"
     :display-divider="true"
+    :displayed-data="displayedData"
   >
     <template #content>
       <div>
@@ -179,28 +180,61 @@ _id,
   }
 `
 const sanity = useSanity()
-const { data: destinationSanity } = await useAsyncData('destination', async () => {
-  if (!isRegionDestination.value) {
-    return sanity.fetch(destinationQuery, {
-      slug: slug.value,
-    })
-  }
-  else {
-    const data = await sanity.fetch(destinationFromRegionQuery, {
-      slug: slug.value,
-    })
-    const voyageFlatMap = _.flatMap(data.destinations.map(destination => destination.voyages))
-    return {
-      interjection: data.interjection,
-      meta_description: data.meta_description,
-      slug: data.slug,
-      blog: data.blog,
-      title: data.nom,
-      image: voyageFlatMap[0]?.image,
-      voyages: voyageFlatMap,
+const { data: destinationSanity } = await useAsyncData(
+  () => `destination-${slug.value}`,
+  async () => {
+    if (!isRegionDestination.value) {
+      return sanity.fetch(destinationQuery, {
+        slug: slug.value,
+      })
     }
+    else {
+      const data = await sanity.fetch(destinationFromRegionQuery, {
+        slug: slug.value,
+      })
+      const voyageFlatMap = _.flatMap(data.destinations.map(destination => destination.voyages))
+      return {
+        interjection: data.interjection,
+        meta_description: data.meta_description,
+        slug: data.slug,
+        blog: data.blog,
+        title: data.nom,
+        image: voyageFlatMap[0]?.image,
+        voyages: voyageFlatMap,
+      }
+    }
+  },
+)
+
+// Fetch all destinations for carousel and format for ContentLayout
+const destinationsListQuery = `
+  *[_type == "destination"]{
+    _id,
+    title,
+    nom,
+    slug,
+    image,
+    metaDescription,
+    description
   }
-})
+`
+const { data: destinationsList } = await useAsyncData('destinations-on-content-layout', () =>
+  sanity.fetch(destinationsListQuery),
+)
+
+const displayedData = computed(() => ({
+  items: destinationsList.value?.map(destination => ({
+    id: destination._id,
+    title: destination.title || destination.nom,
+    slug: destination.slug?.current,
+    image: destination.image,
+    type: 'destinations',
+    discoveryTitle: destination.metaDescription || destination.description || '',
+  })).filter(destination => destination.image?.asset?._ref),
+  selectedItem: destinationSanity.value,
+  pageTitle: 'Toutes nos destinations',
+  showOnBottom: false,
+}))
 
 const dataToBlog = reactive({
   title: destinationSanity.value?.blog?.title,

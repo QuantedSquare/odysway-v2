@@ -226,7 +226,7 @@ const { data: page } = await useAsyncData('voyage-page', () =>
 const { data: voyage } = await useAsyncData('voyage', () =>
   sanity.fetch(voyageQuery, { slug: route.params.voyageSlug }),
 )
-console.log('voyage', voyage.value)
+// console.log('voyage', voyage.value)
 
 const { data: voyagePropositions } = await useAsyncData('voyage-propositions', () =>
   sanity.fetch(voyagePropositionsQuery, {
@@ -234,7 +234,7 @@ const { data: voyagePropositions } = await useAsyncData('voyage-propositions', (
     experienceTypeId: voyage.value?.experienceType?._id,
   }),
 )
-console.log('voyagePropositions', voyagePropositions.value)
+// console.log('voyagePropositions', voyagePropositions.value)
 onMounted(() => {
   gtag('event', 'page_view', {
     eventCategory: 'Voyage',

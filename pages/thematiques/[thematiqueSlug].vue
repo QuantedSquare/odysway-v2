@@ -1,9 +1,10 @@
 <template>
   <ContentLayout
-    :is-category="true"
     :selected-category="categorySanity"
     :page-content="pageContent"
     :display-divider="true"
+    :displayed-data="displayedData"
+    type="thematiques"
   >
     <template #content>
       <div>
@@ -49,7 +50,9 @@
 
 <script setup>
 const route = useRoute()
-const slug = computed(() => route.params.thematiqueSlug)
+const slug = computed(() => {
+  return route.params.thematiqueSlug
+})
 
 // Fetch page thematiques content
 const pageContentQuery = `
@@ -58,20 +61,23 @@ const pageContentQuery = `
   }
 `
 const sanity = useSanity()
-const { data: pageContent } = await useAsyncData('page-content', () =>
-  sanity.fetch(pageContentQuery),
-)
+const { data: pageContent } = await useAsyncData('page-content', async () => {
+  try {
+    const result = await sanity.fetch(pageContentQuery)
+    return result || {}
+  }
+  catch {
+    return {}
+  }
+})
 
 // Fetch the category with its linked blog post
 const categoryQuery = `
   *[_type == "category" && slug.current == $slug][0]{
       _id,
     title,
-    badgeTitle,
     slug,
-    description,
     image,
-    showOnHome,
     "voyages": *[_type == "voyage" && references(^._id)]{
         _id,
       title,
@@ -121,11 +127,53 @@ const categoryQuery = `
   }
 `
 
-const { data: categorySanity } = await useAsyncData('category-sanity', () =>
-  sanity.fetch(categoryQuery, {
-    slug: slug.value,
-  }),
+const { data: categorySanity } = await useAsyncData(
+  () => `category-sanity-${slug.value}`,
+  async () => {
+    try {
+      const result = await sanity.fetch(categoryQuery, { slug: slug.value })
+      return result || {}
+    }
+    catch {
+      return {}
+    }
+  },
 )
+
+// Fetch all categories for carousel and format for ContentLayout
+const categoriesListQuery = `
+  *[_type == "category"]{
+    _id,
+    title,
+    slug,
+    image,
+    discoveryTitle,
+    description
+  }
+`
+const { data: categoriesList } = await useAsyncData('categories-on-content-layout', async () => {
+  try {
+    const result = await sanity.fetch(categoriesListQuery)
+    return result || []
+  }
+  catch {
+    return []
+  }
+})
+
+const displayedData = computed(() => ({
+  items: categoriesList.value?.map(category => ({
+    id: category._id,
+    title: category.title,
+    slug: category.slug?.current,
+    image: category.image,
+    type: 'thematiques',
+    discoveryTitle: category.discoveryTitle || category.description || '',
+  })).filter(category => category.image?.asset?._ref),
+  selectedItem: categorySanity.value,
+  pageTitle: pageContent.value?.index?.pageTitle || 'Toutes nos thématiques',
+  showOnBottom: false,
+}))
 
 const dataToBlog = reactive({
   title: categorySanity.value?.blog?.title,

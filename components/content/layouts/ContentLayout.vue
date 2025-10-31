@@ -5,9 +5,9 @@
     class="px-2 px-md-4 pt-0 "
   >
     <SearchHeroSection
-      :is-category="isCategory"
-      :is-experience="isExperience"
-      :is-destination="isDestination"
+      :is-category="type === 'thematiques'"
+      :is-experience="type === 'experiences'"
+      :is-destination="type === 'destinations'"
       :destination="displayedData?.selectedItem"
     >
       <SearchField />
@@ -77,13 +77,13 @@
 
 <script setup>
 const props = defineProps({
-  isCategory: {
-    type: Boolean,
-    default: false,
+  type: {
+    type: String,
+    default: null,
   },
-  isExperience: {
-    type: Boolean,
-    default: false,
+  displayedData: {
+    type: Object,
+    default: () => null,
   },
   selectedCategory: {
     type: Object,
@@ -97,10 +97,6 @@ const props = defineProps({
     type: Object,
     default: () => null,
   },
-  isDestination: {
-    type: Boolean,
-    default: false,
-  },
   pageContent: {
     type: Object,
     default: () => {},
@@ -110,116 +106,8 @@ const props = defineProps({
     default: true,
   },
 })
-const route = useRoute()
-const sanity = useSanity()
-const isComputedCategory = computed(() => !!props.isCategory)
-const isComputedExperience = computed(() => !!props.isExperience)
 
-const categoriesQuery = `
-  *[_type == "category"]{
-    ...,
-  }
-`
-const { data: categories } = useAsyncData('categories-on-content-layout', async () => {
-  if (props.isCategory) {
-    const result = await sanity.fetch(categoriesQuery)
-    return result || []
-  }
-  return []
-}, { watch: [isComputedCategory, isComputedExperience] })
-
-const experiencesQuery = `
-  *[_type == "experience"]{
-    ...,
-  }
-`
-const { data: experiences } = useAsyncData('experiences-on-content-layout', async () => {
-  if (props.isExperience) {
-    const result = await sanity.fetch(experiencesQuery)
-    return result || []
-  }
-  return []
-}, { watch: [isComputedCategory, isComputedExperience] })
-
-const destinationsQuery = `
-  *[_type == "destination"]{
-    ...,
-  }
-`
-const { data: destinations } = useAsyncData('destinations-on-content-layout', async () => {
-  if (props.isDestination) {
-    const result = await sanity.fetch(destinationsQuery)
-    return result || []
-  }
-  return []
-})
-
-const displayedData = computed(() => {
-  if (props.isCategory) {
-    const categoriesData = {
-      items: categories.value?.map((category) => {
-        return {
-          id: category._id,
-          title: category.title,
-          slug: category.slug.current,
-          image: category.image,
-          type: 'thematiques',
-          description: category.discoveryTitle || '',
-        }
-      }).filter(category => category.image?.asset?._ref),
-      selectedItem: props.selectedCategory,
-      pageTitle: props.pageContent?.index?.pageTitle || 'Toutes nos thématiques',
-      showOnBottom: Object.keys(route.params).length > 0,
-    }
-    return categoriesData
-  }
-  if (props.isExperience) {
-    const experienceData = {
-      items: experiences.value?.map((experience) => {
-        return {
-          id: experience._id,
-          title: experience.title,
-          slug: experience.slug.current,
-          image: experience.image,
-          type: 'experiences',
-          description: experience.discoveryTitle || '',
-        }
-      }).filter(experience => experience.image?.asset?._ref),
-      selectedItem: props.selectedExperience,
-      type: 'experiences',
-      pageTitle: props.pageContent?.index?.pageTitle || 'Toutes nos expériences',
-      showOnBottom: Object.keys(route.params).length > 0,
-    }
-    return experienceData
-  }
-  if (props.isDestination) {
-    const destinationData = {
-      items: destinations.value?.map((destination) => {
-        return {
-          id: destination._id,
-          title: destination.title || destination.nom,
-          slug: destination.slug.current,
-          image: destination.image,
-          type: 'destinations',
-          description: destination.metaDescription || '',
-        }
-      }).filter(destination => destination.image?.asset?._ref),
-      selectedItem: props.selectedDestination,
-      pageTitle: props.pageContent?.index?.pageTitle || 'Toutes nos destinations',
-      showOnBottom: Object.keys(route.params).length > 0,
-    }
-
-    return destinationData
-  }
-  return null
-})
-
-const type = computed(() => {
-  if (props.isCategory) return 'thematiques'
-  if (props.isExperience) return 'experiences'
-  if (props.isDestination) return 'destinations'
-  return null
-})
+const displayedData = computed(() => props.displayedData)
 </script>
 
 <style scoped>

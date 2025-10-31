@@ -210,7 +210,7 @@ watch([model, () => currentStep, () => insurances], () => {
 const formValidation = computed(() => {
   return selectedInsurance.value
 })
-console.log('model', model.value)
+// console.log('model', model.value)
 // Analytics
 const handleGAEvent = (event) => {
   const EVENTS = {

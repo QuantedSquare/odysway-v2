@@ -1,7 +1,8 @@
 <template>
   <ContentLayout
-    :is-category="true"
     :page-content="pageContent"
+    :displayed-data="displayedData"
+    type="thematiques"
   >
     <template #content>
       <DisplayVoyagesRow
@@ -39,13 +40,39 @@ const categoriesQuery = groq`
   }
 `
 const sanity = useSanity()
-const { data: pageContent } = await useAsyncData('page-content', () =>
-  sanity.fetch(pageContentQuery),
-)
+const { data: pageContent } = await useAsyncData('page-content', async () => {
+  try {
+    const result = await sanity.fetch(pageContentQuery)
+    return result || {}
+  }
+  catch {
+    return {}
+  }
+})
 
-const { data: categoriesWithVoyages } = await useAsyncData('categories-with-voyages', () =>
-  sanity.fetch(categoriesQuery),
-)
+const { data: categoriesWithVoyages } = await useAsyncData('categories-with-voyages', async () => {
+  try {
+    const result = await sanity.fetch(categoriesQuery)
+    return result || []
+  }
+  catch {
+    return []
+  }
+})
+
+const displayedData = computed(() => ({
+  items: categoriesWithVoyages.value?.map(category => ({
+    id: category._id,
+    title: category.title,
+    slug: category.slug?.current,
+    image: category.image,
+    type: 'thematiques',
+    discoveryTitle: category.discoveryTitle || category.description || '',
+  })).filter(category => category.image?.asset?._ref),
+  selectedItem: null,
+  pageTitle: pageContent.value?.index?.pageTitle || 'Toutes nos thématiques',
+  showOnBottom: false,
+}))
 
 useHead({
   htmlAttrs: {

@@ -1,7 +1,8 @@
 <template>
   <ContentLayout
-    :is-experience="true"
     :page-content="pageContent"
+    :displayed-data="displayedData"
+    type="experiences"
   >
     <template #content>
       <DisplayVoyagesRow
@@ -46,6 +47,20 @@ const { data: pageContent } = await useAsyncData('page-content', () =>
 const { data: experiencesWithVoyages } = await useAsyncData('experiences-with-voyages', () =>
   sanity.fetch(experiencesQuery),
 )
+
+const displayedData = computed(() => ({
+  items: experiencesWithVoyages.value?.map(experience => ({
+    id: experience._id,
+    title: experience.title,
+    slug: experience.slug?.current,
+    image: experience.image,
+    type: 'experiences',
+    discoveryTitle: experience.discoveryTitle || experience.description || '',
+  })).filter(experience => experience.image?.asset?._ref),
+  selectedItem: null,
+  pageTitle: pageContent.value?.index?.pageTitle || 'Toutes nos expériences',
+  showOnBottom: false,
+}))
 
 useHead({
   htmlAttrs: {

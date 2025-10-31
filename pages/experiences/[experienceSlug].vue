@@ -1,9 +1,10 @@
 <template>
   <ContentLayout
-    :is-experience="true"
     :selected-experience="selectedExperience"
     :page-content="pageContent"
     :display-divider="true"
+    :displayed-data="displayedData"
+    type="experiences"
   >
     <template #content>
       <div>
@@ -117,11 +118,39 @@ const experienceQuery = `
   }
 `
 
-const { data: selectedExperience } = await useAsyncData('selected-experience', () =>
-  sanity.fetch(experienceQuery, {
-    slug: slug.value,
-  }),
+const { data: selectedExperience } = await useAsyncData(
+  () => `selected-experience-${slug.value}`,
+  () => sanity.fetch(experienceQuery, { slug: slug.value }),
 )
+
+// Fetch all experiences for carousel and format for ContentLayout
+const experiencesListQuery = `
+  *[_type == "experience"]{
+    _id,
+    title,
+    slug,
+    image,
+    discoveryTitle,
+    description
+  }
+`
+const { data: experiencesList } = await useAsyncData('experiences-on-content-layout', () =>
+  sanity.fetch(experiencesListQuery),
+)
+
+const displayedData = computed(() => ({
+  items: experiencesList.value?.map(experience => ({
+    id: experience._id,
+    title: experience.title,
+    slug: experience.slug?.current,
+    image: experience.image,
+    type: 'experiences',
+    discoveryTitle: experience.discoveryTitle || experience.description || '',
+  })).filter(experience => experience.image?.asset?._ref),
+  selectedItem: selectedExperience.value,
+  pageTitle: pageContent.value?.index?.pageTitle || 'Toutes nos expériences',
+  showOnBottom: false,
+}))
 
 const dataToBlog = reactive({
   title: selectedExperience.value?.blog?.title,
