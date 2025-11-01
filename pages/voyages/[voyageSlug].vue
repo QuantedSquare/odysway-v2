@@ -15,7 +15,7 @@
 
         <ChipsContainer
           :badges="voyage.badges"
-          :badge-title="voyage.experienceType.badgeTitle"
+          :badge-title="voyage.experienceType?.badgeTitle"
           :level="voyage.level"
         />
 
