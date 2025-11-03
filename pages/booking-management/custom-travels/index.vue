@@ -8,7 +8,7 @@
         <p>
           Pour créer un voyage sur mesure, s'assurer de le créer dans Sanity.
           <br>
-          Laisser le voyage en "Non Publié".
+          Et de cocher la case "Voyage sur-mesure" dans Sanity.
         </p>
       </v-col>
     </v-row>
@@ -76,7 +76,7 @@ import { useRouter } from 'vue-router'
 const search = ref(null)
 const loading = ref(false)
 const sanity = useSanity()
-const travelesListQuery = groq`*[_type == "voyage" && customAvailable == true]{
+const travelesListQuery = `*[_type == "voyage" && customAvailable == true]{
   slug,
   title,
   image {
@@ -85,9 +85,11 @@ const travelesListQuery = groq`*[_type == "voyage" && customAvailable == true]{
     }
   }
 }`
-const { data: travelesList } = await useAsyncData('travelesList', () =>
-  sanity.fetch(travelesListQuery),
-)
+
+const travelesList = ref([])
+// const { data: travelesList } = await useAsyncData('travelesList-custom', () =>
+//   sanity.fetch(travelesListQuery),
+// )
 
 definePageMeta({
   layout: 'booking',
@@ -101,6 +103,8 @@ const fetchTravels = async () => {
   const res = await fetch('/api/v1/booking/travels')
   const data = await res.json()
   travels.value = data.filter(travel => travel.is_custom_travel)
+  travelesList.value = await sanity.fetch(travelesListQuery)
+  console.log('travelsList from sanity', travelesList.value)
   console.log('travels from supabase', travels.value)
   loading.value = false
 }
