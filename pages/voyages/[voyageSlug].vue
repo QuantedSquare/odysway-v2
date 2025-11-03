@@ -223,7 +223,7 @@ const { data: page } = await useAsyncData('voyage-page', () =>
   sanity.fetch(voyagePageQuery),
 )
 
-const { data: voyage } = await useAsyncData('voyage', () =>
+const { data: voyage } = await useAsyncData('voyage' + route.params.voyageSlug, () =>
   sanity.fetch(voyageQuery, { slug: route.params.voyageSlug }),
 )
 // console.log('voyage', voyage.value)
