@@ -24,7 +24,7 @@
               cols="12"
               md="auto"
             >
-              <h1 class="custom-hero-title ">
+              <h1 class="custom-hero-title">
                 <slot name="title" />
               </h1>
               <slot name="subtitle" />
@@ -145,7 +145,9 @@ font-size: 78px;
 line-height: 80px!important;
 margin-bottom: 45px;
 }
-
+.custom-hero-title:deep(.sanity-content > p){
+  line-height: 80px!important;
+}
 .searchfield-overlap {
   max-width: 1070px;
   margin: -110px auto 0 auto;
@@ -163,6 +165,9 @@ margin-bottom: 45px;
     line-height: 55px!important;
     margin-bottom: 85px;
   }
+  .custom-hero-title:deep(.sanity-content > p){
+  line-height: 55px!important;
+}
   .searchfield-overlap {
     margin: -150px auto 0 auto;
   }
@@ -179,6 +184,9 @@ margin-bottom: 45px;
     line-height: 30px!important;
     margin-bottom: 0;
   }
+  .custom-hero-title:deep(.sanity-content > p){
+  line-height: 35px!important;
+}
   .searchfield-overlap {
     margin: -150px auto 0 auto;
   }
