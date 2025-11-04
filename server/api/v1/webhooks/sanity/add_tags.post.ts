@@ -39,7 +39,6 @@ function collectImageReferences(node: unknown, path: string[] = [], acc: ImageRe
 
 export default defineEventHandler(async (event) => {
   // Verify webhook secret for security
-  console.log('Sanity webhook received', event)
   const secret = getHeader(event, 'x-sanity-webhook-secret')
   if (secret !== process.env.SANITY_WEBHOOK_SECRET) {
     throw createError({
@@ -50,7 +49,6 @@ export default defineEventHandler(async (event) => {
 
   try {
     const body = await readBody(event)
-    console.log('✓ Sanity webhook received:', body)
 
     const images = collectImageReferences(body)
     console.log(`✓ Found ${images.length} image reference(s) in updated content`, images)
