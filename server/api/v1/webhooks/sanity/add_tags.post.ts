@@ -289,8 +289,9 @@ export default defineEventHandler(async (event) => {
           return {
             patch: {
               id: tagDiff.assetId,
+              setIfMissing: { tags: [] },
               set: {
-                'opt.media.tags': mergedNames,
+                tags: mergedNames,
               },
             },
           }
@@ -298,7 +299,7 @@ export default defineEventHandler(async (event) => {
         .filter(Boolean) as any[]
 
       if (mutations.length > 0) {
-        console.log('✓ Mutations (merge tag names):', mutations)
+        console.log('✓ Mutations (merge tag names):', mutations.map((m) => m?.patch?.set.tags))
         const config = useRuntimeConfig()
         const sanity = createClient({
           projectId: config.public.sanity.projectId,
