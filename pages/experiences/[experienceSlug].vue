@@ -84,6 +84,7 @@ const experienceQuery = `
         startingPrice
       }
     },
+    seo,
     blog->{
       _id,
       title,
@@ -122,7 +123,6 @@ const { data: selectedExperience } = await useAsyncData(
   () => `selected-experience-${slug.value}`,
   () => sanity.fetch(experienceQuery, { slug: slug.value }),
 )
-
 // Fetch all experiences for carousel and format for ContentLayout
 const experiencesListQuery = `
   *[_type == "experience"]{
@@ -172,7 +172,7 @@ provide('page', dataToBlog)
 // Use SEO composable - automatically uses blog's SEO fields
 if (selectedExperience.value) {
   useSeo({
-    seoData: {}, // Blog SEO will be detected from content.blog
+    seoData: selectedExperience.value.seo || {}, // If {} blog SEO will be detected from content.blog or fallback or generated default
     content: selectedExperience.value,
     pageType: 'article',
     slug: selectedExperience.value.slug?.current,

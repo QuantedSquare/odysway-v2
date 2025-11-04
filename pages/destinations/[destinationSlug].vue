@@ -87,6 +87,7 @@ const destinationFromRegionQuery = `
         }
       }
     },
+    seo,
     blog->{
       _id,
       title,
@@ -146,6 +147,7 @@ _id,
         startingPrice
       }
     },
+    seo,
     blog->{
       _id,
       title,
@@ -256,7 +258,7 @@ provide('page', dataToBlog)
 // Use SEO composable - automatically uses blog's SEO fields
 if (destinationSanity.value) {
   useSeo({
-    seoData: {}, // Blog SEO will be detected from content.blog
+    seoData: destinationSanity.value.seo || {}, // If {} blog SEO will be detected from content.blog or fallback or generated default
     content: destinationSanity.value,
     pageType: 'article',
     slug: destinationSanity.value.slug?.current,

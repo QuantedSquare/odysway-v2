@@ -93,6 +93,7 @@ const categoryQuery = `
         startingPrice
       }
     },
+    seo,
     blog->{
       _id,
       title,
@@ -194,9 +195,8 @@ provide('page', dataToBlog)
 
 // Use SEO composable - automatically uses blog's SEO fields
 if (categorySanity.value) {
-  // console.log('categorySanity', categorySanity.value)
   useSeo({
-    seoData: {}, // Blog SEO will be detected from content.blog
+    seoData: categorySanity.value.seo || {}, // If {} blog SEO will be detected from content.blog or fallback or generated default
     content: categorySanity.value,
     pageType: 'article',
     slug: categorySanity.value.slug?.current,

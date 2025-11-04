@@ -77,7 +77,6 @@ export function useSeo(options = {}) {
   const normalizeSeoData = (seo, contentFallback, pageSlug, type) => {
     // For blog-referenced pages (destinations, experiences, thematiques)
     const blogSeo = contentFallback?.blog || {}
-
     // Generate slug-based defaults
     const defaultTitle = generateTitleFromSlug(pageSlug)
     const defaultDescription = generateDescriptionFromSlug(pageSlug, type)
