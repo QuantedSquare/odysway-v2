@@ -273,17 +273,42 @@ export default defineEventHandler(async (event) => {
 
     if (tagsDiffByAsset.length > 0) {
       console.log('✓ Tags diff by asset summary:', tagsDiffByAsset)
-      const mutations = tagsDiffByAsset.map((tagDiff) => {
-        return {
-          patch: {
-            id: tagDiff.assetId,
-            set: {
-              tags: tagDiff.suggestedTags,
+
+      // Build mutations that MERGE existing names with suggested names, not replace
+      const mutations = tagsDiffByAsset
+        .map((tagDiff) => {
+          // If nothing is missing, skip mutation for this asset
+          if (!tagDiff.missingTags || tagDiff.missingTags.length === 0) return null
+
+          const mergedNames = unique([
+            ...(tagDiff.existingTagNames || []),
+            ...(tagDiff.suggestedTags || []),
+          ])
+
+          return {
+            patch: {
+              id: tagDiff.assetId,
+              set: {
+                'opt.media.tags': mergedNames,
+              },
             },
-          },
-        }
-      })
-      console.log('✓ Mutations:', mutations)
+          }
+        })
+        .filter(Boolean) as any[]
+
+      if (mutations.length > 0) {
+        console.log('✓ Mutations (merge tag names):', mutations)
+        const config = useRuntimeConfig()
+        const sanity = createClient({
+          projectId: config.public.sanity.projectId,
+          dataset: config.public.sanity.dataset,
+          apiVersion: config.public.sanity.apiVersion,
+          useCdn: false,
+          token: config.public.sanity.token,
+        })
+        await sanity.mutate(mutations)
+        console.log('✓ Mutations applied (merge tag names)')
+      }
     }
 
     return {
@@ -292,10 +317,6 @@ export default defineEventHandler(async (event) => {
       documentType: typeof body?._type === 'string' ? body._type : undefined,
       slug: typeof body?.slug?.current === 'string' ? body.slug.current : undefined,
       imagesCount: images.length,
-      images,
-      assetsWithTags,
-      suggestedTags,
-      tagsDiffByAsset,
     }
   }
   catch (error) {
