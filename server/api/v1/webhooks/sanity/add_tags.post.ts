@@ -228,7 +228,7 @@ export default defineEventHandler(async (event) => {
     type TagsDiff = {
       assetId: string
       existingTagNames: string[]
-      existingTagRefs: Array<{ _type: 'reference'; _ref: string }>
+      existingTagRefs: Array<{ _type: 'reference'; _ref: string; _weak: true }>
       suggestedTags: string[]
       alreadyPresent: string[]
       missingTags: string[]
@@ -238,7 +238,7 @@ export default defineEventHandler(async (event) => {
       // Extract existing tag names and references from tagsRaw
       // tagsRaw can be: array of strings, array of references, or mixed
       const existingNames: string[] = []
-      const existingRefs: Array<{ _type: 'reference'; _ref: string }> = []
+      const existingRefs: Array<{ _type: 'reference'; _ref: string; _weak: true }> = []
       
       if (Array.isArray(asset.tagsRaw)) {
         asset.tagsRaw.forEach((tag) => {
@@ -246,8 +246,12 @@ export default defineEventHandler(async (event) => {
             existingNames.push(tag)
           }
           else if (tag && typeof tag === 'object' && '_ref' in tag) {
-            // Preserve existing references
-            existingRefs.push({ _type: 'reference', _ref: tag._ref as string })
+            // Preserve existing references with _weak: true
+            existingRefs.push({
+              _type: 'reference',
+              _ref: tag._ref as string,
+              _weak: true,
+            })
           }
         })
       }
@@ -256,7 +260,7 @@ export default defineEventHandler(async (event) => {
       if (Array.isArray(asset.tagRefs)) {
         asset.tagRefs.forEach((ref) => {
           if (typeof ref === 'string') {
-            existingRefs.push({ _type: 'reference', _ref: ref })
+            existingRefs.push({ _type: 'reference', _ref: ref, _weak: true })
           }
         })
       }
@@ -372,10 +376,11 @@ export default defineEventHandler(async (event) => {
           ])
 
           // Convert tag names to references and add to merged refs
+          // Note: Tags are stored as weak references per plugin specification
           mergedTagNames.forEach((name) => {
             const tagId = tagNameToRef.get(name.toLowerCase().trim())
             if (tagId) {
-              mergedRefs.push({ _type: 'reference', _ref: tagId })
+              mergedRefs.push({ _type: 'reference', _ref: tagId, _weak: true })
             }
           })
 

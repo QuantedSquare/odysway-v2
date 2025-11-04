@@ -469,8 +469,7 @@ useSeo({
   },
 })
 
-// const retrieveAllReferenceFromAnImage = `*[_type == "sanity.imageAsset"]{
-//     _id,
+// _id,
 //   originalFilename,
 //   url,
 //   "usedIn": *[
@@ -481,13 +480,16 @@ useSeo({
 //     title,
 //     // Add other fields you want to display from the referencing document
 //   }
-// }`
 
-// const { data: allReferences } = await useAsyncData(
-//   `all-references-${currentDataset.value}`,
-//   () => fetchFromDataset(retrieveAllReferenceFromAnImage),
-// )
-// console.log('allReferences', allReferences.value)
+const retrieveAllReferenceFromAnImage = `*[_type == "sanity.imageAsset"]{
+   ...
+}`
+
+const { data: allReferences } = await useAsyncData(
+  `all-references-${currentDataset.value}`,
+  () => fetchFromDataset(retrieveAllReferenceFromAnImage),
+)
+console.log('allReferences', allReferences.value.filter(asset => asset._id.includes('2ea6e3a40afe69059538db628d3593ed4c99b248')))
 </script>
 
 <style scoped>
