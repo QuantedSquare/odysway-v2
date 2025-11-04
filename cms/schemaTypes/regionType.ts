@@ -10,7 +10,7 @@ export const regionType = defineType({
   ],
   fields: [
     defineField({name: 'nom', type: 'string', validation: (r) => r.required(), group: 'basic'}),
-    defineField({name: 'meta_description', type: 'text', group: 'basic'}),
+    defineField({name: 'meta_description', type: 'text', group: 'basic', title: 'Description'}),
     defineField({name: 'slug', type: 'slug', options: {source: 'nom'}, validation: (r) => r.required(), group: 'basic'}),
     defineField({name: 'interjection', type: 'string', group: 'basic'}),
     defineField({

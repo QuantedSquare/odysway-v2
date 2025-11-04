@@ -468,6 +468,26 @@ useSeo({
     robotsFollow: false,
   },
 })
+
+// const retrieveAllReferenceFromAnImage = `*[_type == "sanity.imageAsset"]{
+//     _id,
+//   originalFilename,
+//   url,
+//   "usedIn": *[
+//     references(^._id)
+//   ]{
+//     _type,
+//     _id,
+//     title,
+//     // Add other fields you want to display from the referencing document
+//   }
+// }`
+
+// const { data: allReferences } = await useAsyncData(
+//   `all-references-${currentDataset.value}`,
+//   () => fetchFromDataset(retrieveAllReferenceFromAnImage),
+// )
+// console.log('allReferences', allReferences.value)
 </script>
 
 <style scoped>
