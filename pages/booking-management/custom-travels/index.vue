@@ -76,7 +76,7 @@ import { useRouter } from 'vue-router'
 const search = ref(null)
 const loading = ref(false)
 const sanity = useSanity()
-const travelesListQuery = `*[_type == "voyage" && customAvailable == true]{
+const travelesListQuery = `*[_type == "voyage" && ('custom' in availabilityTypes)]{
   slug,
   title,
   image {

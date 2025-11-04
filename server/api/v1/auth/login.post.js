@@ -12,12 +12,12 @@ export default defineEventHandler(async (event) => {
   const jwtSecret = process.env.BOOKING_JWT_SECRET
 
   if (id === validId && password === validPassword) {
-    const token = jwt.sign({ id }, jwtSecret, { expiresIn: '24h' })
+    const token = jwt.sign({ id }, jwtSecret, { expiresIn: '7d' })
     setCookie(event, 'booking_token', token, {
       httpOnly: true,
       sameSite: 'lax',
       path: '/',
-      maxAge: 60 * 60 * 24, // 24 hours
+      maxAge: 60 * 60 * 24 * 7, // 7 days
       secure: isDev,
     })
     return { success: true }
