@@ -137,6 +137,14 @@ export const checkoutType = defineType({
 
     // General
     defineField({
+      name: 'image_checkout',
+      type: 'image',
+      options: {hotspot: true},
+      group: 'general',
+      fields: [{name: 'alt', type: 'string'} as any],
+      title: 'Image Voyage sans image',
+    }),
+    defineField({
       name: 'calendly',
       title: 'Texte Calendly',
       type: 'text',

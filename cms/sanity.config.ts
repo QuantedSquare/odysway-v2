@@ -1,10 +1,15 @@
-import {defineConfig} from 'sanity'
+import {defineConfig, isObjectInputProps, ObjectInputProps} from 'sanity'
+import {Stack} from '@sanity/ui'
+import { RequiredProgress } from './schemaTypes/components/RequiredProgress'
 import {structureTool} from 'sanity/structure'
 
 import {schemaTypes} from './schemaTypes'
 import {media, mediaAssetSource} from 'sanity-plugin-media'
 import {orderableDocumentListDeskItem} from '@sanity/orderable-document-list'
 import {colorInput} from '@sanity/color-input'
+
+
+
 export default defineConfig({
   name: 'default',
   title: 'Odysway',
@@ -36,6 +41,7 @@ export default defineConfig({
                           .child((catId) =>
                             S.documentList()
                               .title('Voyages')
+                              .apiVersion('v2025-02-19')
                               .filter('_type == "voyage" && references($catId)')
                               .params({catId}),
                           ),
@@ -48,6 +54,7 @@ export default defineConfig({
                           .child((destId) =>
                             S.documentList()
                               .title('Voyages')
+                              .apiVersion('v2025-02-19')
                               .filter('_type == "voyage" && references($destId)')
                               .params({destId}),
                           ),
@@ -61,6 +68,7 @@ export default defineConfig({
                           .child((experienceId) =>
                             S.documentList()
                               .title('Voyages')
+                              .apiVersion('v2025-02-19')
                               .filter('_type == "voyage" && references($experienceId)')
                               .params({experienceId}),
                           ),
@@ -71,6 +79,7 @@ export default defineConfig({
                       .child(
                         S.documentList()
                           .title('Voyages en Groupe')
+                          .apiVersion('v2025-02-19')
                           .filter('_type == "voyage" && "groupe" in availabilityTypes')
                       ),
                     S.listItem()
@@ -78,6 +87,7 @@ export default defineConfig({
                       .child(
                         S.documentList()
                           .title('Voyages en Privatisation')
+                          .apiVersion('v2025-02-19')
                           .filter('_type == "voyage" && "privatisation" in availabilityTypes')
                       ),
                     S.listItem()
@@ -85,6 +95,7 @@ export default defineConfig({
                       .child(
                         S.documentList()
                           .title('Voyages Sur-Mesure')
+                          .apiVersion('v2025-02-19')
                           .filter('_type == "voyage" && "custom" in availabilityTypes')
                       ),
                   ]),
@@ -98,12 +109,16 @@ export default defineConfig({
                   .items([
                     S.listItem()
                       .title('All Blog Posts')
-                      .child(S.documentList().title('All Blog Posts').filter('_type == "blog"')),
+                      .child(S.documentList()
+                      .title('All Blog Posts')
+                      .apiVersion('v2025-02-19')
+                      .filter('_type == "blog"')),
                     S.listItem()
                       .title('Category Blog Posts')
                       .child(
                         S.documentList()
                           .title('Category Blog Posts')
+                          .apiVersion('v2025-02-19')
                           .filter('_type == "blog" && _id in *[_type == "category"].blog._ref'),
                       ),
                     S.listItem()
@@ -111,6 +126,7 @@ export default defineConfig({
                       .child(
                         S.documentList()
                           .title('Destination Blog Posts')
+                          .apiVersion('v2025-02-19')
                           .filter('_type == "blog" && _id in *[_type == "destination"].blog._ref'),
                       ),
                     S.listItem()
@@ -118,6 +134,7 @@ export default defineConfig({
                       .child(
                         S.documentList()
                           .title('Standalone Blog Posts')
+                          .apiVersion('v2025-02-19')
                           .filter(
                             '_type == "blog" && !(_id in *[_type == "category"].blog._ref) && !(_id in *[_type == "destination"].blog._ref)',
                           ),
@@ -151,7 +168,6 @@ export default defineConfig({
                     S.documentTypeListItem('header').title('Header'),
                     S.documentTypeListItem('footer').title('Footer'),
                     S.documentTypeListItem('tops').title('Tops'),
-                    S.documentTypeListItem('partner').title('Partners'),
                     S.documentTypeListItem('checkout').title('Checkout'),
                     S.documentTypeListItem('newsletter').title('Newsletter'),
                     S.documentTypeListItem('ctas').title('CTAs'),
@@ -210,6 +226,21 @@ export default defineConfig({
     media(),
     colorInput()
   ],
+  // form: {
+  //   components: {
+  //     input: (props) => {
+  //       if (
+  //         props.id === 'root' &&
+  //         props.schemaType.type?.name === 'document' &&
+  //         props.schemaType.name === 'voyage'
+  //       ) {
+  //         console.log('props', props)
+  //         return RequiredProgress(props as ObjectInputProps)
+  //       }
+  //       return props.renderDefault(props)
+  //     },
+  //   },
+  // },
   schema: {
     types: schemaTypes,
   },

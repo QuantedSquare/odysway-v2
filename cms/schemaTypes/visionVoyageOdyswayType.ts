@@ -254,8 +254,7 @@ export const visionVoyageOdyswayType = defineType({
   ],
   preview: {
     select: {
-      title: 'pageSettings.title',
-      subtitle: 'pageSettings.description',
+      title: 'heroSection.title',
     },
   },
 })

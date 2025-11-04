@@ -21,6 +21,10 @@
       justify="center"
       align="center"
     >
+      <v-skeleton-loader
+        v-if="loading"
+        type="card"
+      />
       <ClientOnly>
         <!-- ✅ Funnel component -->
         <FunnelCheckoutStepper
@@ -79,7 +83,6 @@ useSeoMeta({
 
 const img = useImage()
 const route = useRoute()
-const router = useRouter()
 
 // 🧠 Extract query parameters
 const dateId = route.query.date_id
@@ -91,7 +94,7 @@ const voyage = ref(null)
 const pageTexts = ref(null)
 const loading = ref(true)
 const error = ref(null)
-
+const imgSrc = ref(null)
 // 🧱 1. Fetch page texts (from Sanity)
 const checkoutTextsQuery = groq`*[_type == "checkout"][0]{ ... }`
 const sanity = useSanity()
@@ -100,6 +103,8 @@ try {
     sanity.fetch(checkoutTextsQuery),
   )
   pageTexts.value = pageTextsData.value
+
+  imgSrc.value = getImageUrl(pageTexts.value.image_checkout?.asset?._ref || null)
 }
 catch (err) {
   console.error('Error fetching checkout page texts:', err)
@@ -107,12 +112,14 @@ catch (err) {
 
 // 🚀 2. Build voyage (from AC or Sanity)
 try {
+  loading.value = true
   if (bookedId) {
     // ActiveCampaign deal checkout
     const deal = await apiRequest(`/ac/deals/deal-from-bms?bookedId=${bookedId}`)
     if (!deal) throw new Error(`No deal found with bookedId ${bookedId}`)
+
     dealValues.value = buildDynamicDealValues(deal)
-    voyage.value = buildVoyageFromAC(deal)
+    voyage.value = buildVoyageFromAC(deal, imgSrc.value)
   }
   else if (dateId && voyageSlug) {
     // Sanity voyage checkout
@@ -120,7 +127,7 @@ try {
 
     const fetchedDate = await apiRequest(`/booking/date/${dateId}`)
     if (fetchedDate && travelSanity) {
-      voyage.value = buildVoyageFromSanity(fetchedDate, travelSanity)
+      voyage.value = buildVoyageFromSanity(fetchedDate, travelSanity, imgSrc.value)
       dealValues.value = buildDynamicDealValues()
     }
     else {
@@ -130,17 +137,12 @@ try {
   else {
     throw new Error('Missing required query parameters')
   }
+  loading.value = false
 }
 catch (err) {
+  loading.value = false
   console.error('Error building voyage:', err)
   error.value = err.message
-  // Optional redirect after a short delay
-  // setTimeout(() => {
-  //   router.back()
-  // }, 6000)
-}
-finally {
-  loading.value = false
 }
 </script>
 

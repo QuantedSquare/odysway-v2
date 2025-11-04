@@ -1,28 +1,28 @@
 import dayjs from 'dayjs'
 // utils/voyageBuilders.js
-export function buildVoyageFromSanity(fetchedDate, travel) {
+export function buildVoyageFromSanity(fetchedDate, travel, imgSrc = null) {
   return {
     departureDate: fetchedDate.departure_date,
     returnDate: fetchedDate.return_date,
     title: travel.title,
-    imgSrc: travel.image?.asset?.url || '/images/sur-mesure/AdobeStock_557006728.webp',
+    imgSrc: travel.image?.asset?.url || imgSrc || '/images/sur-mesure/AdobeStock_557006728.webp',
     country: travel.destinations.map(d => d.iso).join(','),
     slug: travel.slug,
     iso: travel.destinations.map(d => d.iso).join(','),
     zoneChapka: +travel.destinations[0]?.chapka || 0,
-    privatisation: travel.privatisationAvailable,
+    privatisation: travel.privatisationAvailable || true,
     startingPrice: fetchedDate.starting_price * 100,
-    indivRoomPrice: travel.pricing.indivRoom && travel.pricing.indivRoomPrice > 0 ? travel.pricing.indivRoomPrice * 100 : 0,
-    gotIndivRoomAvailable: travel.pricing.indivRoom && travel.pricing.indivRoomPrice > 0,
+    indivRoomPrice: travel.pricing?.indivRoom && travel.pricing?.indivRoomPrice > 0 ? travel.pricing.indivRoomPrice * 100 : 0,
+    gotIndivRoomAvailable: travel.pricing?.indivRoom && travel.pricing?.indivRoomPrice > 0,
     gotEarlybird: fetchedDate.early_bird && dayjs(fetchedDate.departure_date).isAfter(dayjs().add(7, 'month')),
-    promoEarlybird: travel.pricing.earlyBirdReduction * 100 || 0,
+    promoEarlybird: travel.pricing?.earlyBirdReduction * 100 || 0,
     gotLastMinute: fetchedDate.last_minute && dayjs(fetchedDate.departure_date).isBefore(dayjs().add(1, 'month')),
-    promoLastMinute: travel.pricing.lastMinuteReduction * 100 || 0,
+    promoLastMinute: travel.pricing?.lastMinuteReduction * 100 || 0,
     depositPrice: +fetchedDate.starting_price * 0.3,
-    promoChildren: travel.pricing.childrenPromo * 100 || 0,
-    maxChildrenAge: travel.pricing.childrenAge || 12,
+    promoChildren: travel.pricing?.childrenPromo * 100 || 0,
+    maxChildrenAge: travel.pricing?.childrenAge || 12,
     source: 'Devis',
-    forcedIndivRoom: travel.pricing.forcedIndivRoom,
+    forcedIndivRoom: travel.pricing?.forcedIndivRoom || false,
     travelType: 'Groupe', // TODO: check comment le rendre dynamique
     flightPrice: fetchedDate.flight_price * 100 || 0,
     includeFlight: fetchedDate.include_flight,
@@ -33,12 +33,12 @@ export function buildVoyageFromSanity(fetchedDate, travel) {
   }
 }
 
-export function buildVoyageFromAC(deal) {
+export function buildVoyageFromAC(deal, imgSrc = null) {
   return {
     departureDate: deal.departureDate,
     returnDate: deal.returnDate,
     title: deal.title,
-    imgSrc: deal.image?.startsWith('http') ? deal.image : '/images/sur-mesure/AdobeStock_557006728.webp',
+    imgSrc: deal.image?.startsWith('http') ? deal.image : imgSrc || '/images/sur-mesure/AdobeStock_557006728.webp',
     country: deal.country,
     slug: deal.slug,
     iso: deal.iso,

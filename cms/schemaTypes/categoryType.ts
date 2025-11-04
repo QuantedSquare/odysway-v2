@@ -7,6 +7,7 @@ export const categoryType = defineType({
   groups: [
     {name: 'content', title: 'Content'},
     {name: 'settings', title: 'Settings'},
+    {name: 'seo', title: 'SEO'},
   ],
   fields: [
     // Basic Info (from JSON)
@@ -45,6 +46,7 @@ export const categoryType = defineType({
       to: [{type: 'blog'}],
       group: 'content',
     }),
+    defineField({name: 'seo', type: 'seo', group: 'seo'}),
   ],
   preview: {
     select: {

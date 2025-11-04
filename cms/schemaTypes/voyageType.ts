@@ -1,4 +1,5 @@
 import {defineField, defineType} from 'sanity'
+import BmsLink from './components/BmsLink'
 
 const richTextBlock = {
   type: 'block',
@@ -47,6 +48,8 @@ export const voyageType = defineType({
   title: 'Voyage',
   type: 'document',
   groups: [
+    {name: 'requiredBMS', title: 'Champs requis pour une Date'},
+    {name: 'requiredTravelPage', title: 'Champs requis pour afficher la page Voyage'},
     {name: 'basic', title: 'Informations de Base'},
     {name: 'photoGallery', title: 'Galerie de Photos'},
     {name: 'voyageDescription', title: 'Déscriptions du voyage'},
@@ -64,16 +67,28 @@ export const voyageType = defineType({
     defineField({
       name: 'title',
       type: 'string',
-      validation: (r) => r.required(),
-      group: 'basic',
+      validation: (r) => r.required().min(1),
+      group: ['requiredBMS', 'basic'],
       title: 'Titre du voyage',
+    }),
+    defineField({
+      name: 'bmsLink',
+      type: 'url',
+      hidden: ({document}) => {
+        const doc = document as any
+        return !doc?._id || doc._id.startsWith('drafts.') || !doc?.slug?.current
+      },
+      readOnly: true,
+      components: {input: BmsLink} as any,
+      group: ['requiredBMS', 'basic'],
+      title: 'Lien BMS',
     }),
     defineField({
       name: 'slug',
       type: 'slug',
       options: {source: 'title'},
       validation: (r) => r.required(),
-      group: 'basic',
+      group: ['requiredBMS', 'basic'],
       title: 'Slug du voyage',
     }),
     defineField({
@@ -90,7 +105,8 @@ export const voyageType = defineType({
         ],
         layout: 'grid',
       },
-      group: 'basic',
+      validation: (r) => r.required().min(1),
+      group: ['requiredBMS', 'basic'],
     }),
     defineField({
       name: 'groupeAvailable',
@@ -167,8 +183,8 @@ export const voyageType = defineType({
       title: 'Destinations',
       type: 'array',
       of: [{type: 'reference', to: [{type: 'destination'}]}],
-      validation: (r) => r.min(1),
-      group: 'basic',
+      validation: (r) => r.required().min(1),
+      group: ['basic', 'requiredBMS'],
     }),
     defineField({
       name: 'experienceType',

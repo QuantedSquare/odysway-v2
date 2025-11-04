@@ -4,6 +4,7 @@ export const partnerType = defineType({
   name: 'partner',
   title: 'Partner',
   type: 'document',
+  hidden: true,
   fields: [
     defineField({name: 'img', title: 'Image', type: 'image', options: {hotspot: true}}),
     defineField({name: 'description', type: 'string'}),
