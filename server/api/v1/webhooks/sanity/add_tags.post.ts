@@ -88,6 +88,7 @@ export default defineEventHandler(async (event) => {
         "tags": coalesce(opt.media.tags[]->{
           _id,
           name,
+          ...,
           // tags often have slug or value; project both safely
           "slug": select(defined(slug.current) => slug.current, slug)
         }, [])
@@ -96,6 +97,14 @@ export default defineEventHandler(async (event) => {
       try {
         assetsWithTags = await sanity.fetch(query, { ids: assetIds })
         console.log('✓ Retrieved tags for assets:', assetsWithTags)
+        if (assetsWithTags.length > 0) {
+          for (const asset of assetsWithTags) {
+            console.log('✓ Asset:', asset.tags)
+            for (const tag of asset.tags || []) {
+              console.log('✓ Tag:', tag)
+            }
+          }
+        }
       }
       catch (err) {
         console.error('Failed to fetch tags for assets', err)
