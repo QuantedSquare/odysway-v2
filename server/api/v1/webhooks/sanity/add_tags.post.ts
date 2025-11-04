@@ -277,29 +277,28 @@ export default defineEventHandler(async (event) => {
 
       // Build mutations that MERGE existing names with suggested names, not replace
       const mutations = tagsDiffByAsset
-        .map((tagDiff) => {
-          // If nothing is missing, skip mutation for this asset
-          if (!tagDiff.missingTags || tagDiff.missingTags.length === 0) return null
+            .map((tagDiff) => {
+              if (!tagDiff.missingTags || tagDiff.missingTags.length === 0) return null
 
-          const mergedNames = unique([
-            ...(tagDiff.existingTagNames || []),
-            ...(tagDiff.suggestedTags || []),
-          ])
+              const mergedNames = unique([
+                ...(tagDiff.existingTagNames || []),
+                ...(tagDiff.suggestedTags || []),
+              ])
 
-          return {
-            patch: {
-              id: tagDiff.assetId,
-              setIfMissing: { tags: [] },
-              set: {
-                tags: mergedNames,
-              },
-            },
-          }
-        })
-        .filter(Boolean) as any[]
+              return {
+                patch: {
+                  id: tagDiff.assetId,
+                  setIfMissing: { opt: { media: {} } },
+                  set: {
+                    'opt.media.tags': mergedNames,
+                  },
+                },
+              }
+            })
+            .filter(Boolean)
 
       if (mutations.length > 0) {
-        console.log('✓ Mutations (merge tag names):', mutations.map((m) => m?.patch?.set.tags))
+        console.log('✓ Mutations (merge tag names):', mutations.map((m) => m?.patch?.set['opt.media.tags']))
         const config = useRuntimeConfig()
         const sanity = createClient({
           projectId: config.public.sanity.projectId,
@@ -308,7 +307,7 @@ export default defineEventHandler(async (event) => {
           useCdn: false,
           token: SANITY_WRITE_TOKEN,
         })
-        await sanity.mutate(mutations)
+        await sanity.mutate(mutations as any)
         console.log('✓ Mutations applied (merge tag names)')
       }
     }
