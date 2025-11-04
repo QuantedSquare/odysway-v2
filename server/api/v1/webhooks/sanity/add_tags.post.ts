@@ -35,83 +35,100 @@ function unique<T>(items: T[]): T[] {
 // - Include a readable document type tag
 // - Add a couple of type-specific variants for common types
 function deriveSuggestedTags(doc: any): string[] {
-  const tags: string[] = []
+  if (!doc || typeof doc !== 'object') return []
 
-  if (!doc || typeof doc !== 'object') return tags
-
-  const docType: string | undefined = typeof doc._type === 'string' ? doc._type : undefined
+  const typeName: string | undefined = typeof doc._type === 'string' ? doc._type : undefined
   const slugCurrent: string | undefined = typeof doc?.slug?.current === 'string' ? doc.slug.current : undefined
 
-  if (docType) {
-    // Generic type tag (Title-cased)
-    tags.push(toTitleCase(docType))
-  }
-
-  if (slugCurrent) {
-    // Add both raw slug and a human version
-    tags.push(slugCurrent)
-    tags.push(toTitleCase(slugCurrent))
-  }
-
-  const titleLikeFields = ['title', 'nom', 'name', 'heading', 'label']
-  for (const key of titleLikeFields) {
-    const value = (doc as any)[key]
-    if (typeof value === 'string') {
-      const normalized = normalizeTagCandidate(value)
-      if (normalized) tags.push(normalized, toTitleCase(normalized))
-    }
-    else if (value && typeof value === 'object' && typeof value.current === 'string') {
-      const normalized = normalizeTagCandidate(value.current)
-      if (normalized) tags.push(normalizeTagCandidate(value.current)!, toTitleCase(value.current))
-    }
-  }
-
-  // Type-specific heuristics
-  switch (docType) {
-    case 'voyage': {
-      // Voyage commonly tied to a destination/region via slugs or refs.
-      // If we have explicit fields, incorporate them when available.
-      const voyageName = slugCurrent || (typeof doc.title === 'string' ? doc.title : undefined)
-      if (voyageName) tags.push(`Voyage ${toTitleCase(voyageName)}`)
-      // If destination slug present
-      const destinationSlug = typeof doc?.destinationSlug === 'string' ? doc.destinationSlug : (typeof doc?.destination?.slug?.current === 'string' ? doc.destination.slug.current : undefined)
-      if (destinationSlug) tags.push(`Destination ${toTitleCase(destinationSlug)}`)
-      break
-    }
-    case 'destination': {
-      const destName = slugCurrent || (typeof doc.title === 'string' ? doc.title : undefined)
-      if (destName) tags.push(`Destination ${toTitleCase(destName)}`)
-      break
-    }
-    case 'region': {
-      const regionName = slugCurrent || (typeof doc.nom === 'string' ? doc.nom : undefined)
-      if (regionName) tags.push(`Region ${toTitleCase(regionName)}`)
-      break
-    }
-    case 'blog':
-    case 'post':
-    case 'pageBlog': {
-      const blogName = slugCurrent || (typeof doc.title === 'string' ? doc.title : undefined)
-      if (blogName) tags.push(`Blog ${toTitleCase(blogName)}`)
-      break
-    }
-    case 'experience': {
-      const expName = slugCurrent || (typeof doc.title === 'string' ? doc.title : undefined)
-      if (expName) tags.push(`Experience ${toTitleCase(expName)}`)
-      break
-    }
-    case 'category': {
-      const catName = slugCurrent || (typeof doc.title === 'string' ? doc.title : undefined)
-      if (catName) tags.push(`Category ${toTitleCase(catName)}`)
-      break
-    }
-    default: {
-      // No special handling
+  const byType = (): string | null => {
+    switch (typeName) {
+      case 'avisVoyageurs':
+        return 'avis voyageur'
+      case 'badge':
+        return 'badge'
+      case 'blog': {
+        // handled as [slug, 'blog'] below
+        return null
+      }
+      case 'category':
+        // handled as [slug, 'categorie'] below
+        return null
+      case 'checkout':
+        return 'checkout'
+      case 'chequesVacances':
+        return 'cheque vacances'
+      case 'ctas':
+        return 'ctas'
+      case 'destination':
+        // handled as [slug, 'destination'] below
+        return null
+      case 'entreprise':
+        return 'page entreprise'
+      case 'experience':
+        // handled as [slug, 'experience'] below
+        return null
+      case 'faq':
+        return 'faq'
+      case 'footer':
+        return 'footer'
+      case 'header':
+        return 'header'
+      case 'homePage':
+        return "Page d'accueil"
+      case 'offreCadeau':
+        return 'Offre cadeau'
+      case 'page_voyage':
+        return 'Text page voyage'
+      case 'recruitment':
+        return 'Page recrutement'
+      case 'region':
+        // handled as [slug, 'region'] below
+        return null
+      case 'review':
+        return 'avatar review'
+      case 'surMesure':
+        return 'page sur-mesure'
+      case 'teamMember':
+        return 'team'
+      case 'visionVoyageOdysway':
+        return 'page vision'
+      case 'voyage':
+        // handled as [slug, 'voyage'] below
+        return null
+      default:
+        return null
     }
   }
 
-  // Remove falsy and duplicates; keep short list
-  return unique(tags.filter(Boolean).map((t) => t.trim()).filter((t) => t.length > 0 && t.length <= 80))
+  const chosen = byType()
+  if (chosen) {
+    const tag = normalizeTagCandidate(chosen) ?? chosen
+    return [tag].filter((t) => t && t.length <= 80)
+  }
+
+  // Multi-tag cases (slug + type label) or slug-only
+  const pairs: Record<string, string> = {
+    blog: 'blog',
+    category: 'categorie',
+    destination: 'destination',
+    experience: 'experience',
+    region: 'region',
+    voyage: 'voyage',
+  }
+
+  if (typeName && Object.prototype.hasOwnProperty.call(pairs, typeName)) {
+    const arr: string[] = []
+    if (slugCurrent) arr.push(normalizeTagCandidate(slugCurrent) || slugCurrent)
+    const label = (pairs as any)[typeName]
+    if (label) arr.push(label)
+    const cleaned = unique(arr.filter((t) => t && t.length <= 80))
+    if (cleaned.length > 0) return cleaned
+  }
+
+  // Generic fallbacks
+  if (slugCurrent) return [normalizeTagCandidate(slugCurrent) || slugCurrent]
+  if (typeName) return [toTitleCase(typeName)]
+  return []
 }
 
 function collectImageReferences(node: unknown, path: string[] = [], acc: ImageReference[] = []): ImageReference[] {
