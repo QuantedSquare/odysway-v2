@@ -186,10 +186,10 @@ export default defineEventHandler(async (event) => {
       _id: string
       originalFilename?: string
       url?: string
-      // Raw tags field as stored by the Media plugin (may be array of strings or refs)
+      // Raw tags as stored by the Media plugin (may be strings or references)
       tagsRaw?: unknown
-      // Resolved tags if they are references
-      tags?: Array<{ _id: string; name?: string; slug?: string }>
+      // Tag references if they exist
+      tagRefs?: string[]
     }> = []
 
     if (images.length > 0) {
@@ -208,16 +208,10 @@ export default defineEventHandler(async (event) => {
         _id,
         originalFilename,
         url,
-        // Raw tags as stored by the Media plugin (keep for debugging)
+        // Raw tags as stored by the Media plugin (may be strings or references)
         "tagsRaw": opt.media.tags,
-        // Attempt to resolve tag refs if present (common in Media plugin)
-        "tags": coalesce(opt.media.tags[]->{
-          _id,
-          name,
-          ...,
-          // tags often have slug or value; project both safely
-          "slug": select(defined(slug.current) => slug.current, slug)
-        }, [])
+        // Extract tag references if they exist
+        "tagRefs": opt.media.tags[]._ref
       }`
 
       try {
@@ -234,22 +228,38 @@ export default defineEventHandler(async (event) => {
     type TagsDiff = {
       assetId: string
       existingTagNames: string[]
+      existingTagRefs: Array<{ _type: 'reference'; _ref: string }>
       suggestedTags: string[]
       alreadyPresent: string[]
       missingTags: string[]
     }
 
     const tagsDiffByAsset: TagsDiff[] = (assetsWithTags || []).map((asset) => {
-      const existingNames = (asset.tags || [])
-        .map((t) => {
-          const maybeName = (t as any)?.name
-          const maybeSlug = (t as any)?.slug
-          const nameFromSlugObj = typeof maybeName?.current === 'string' ? maybeName.current : undefined
-          const slugString = typeof maybeSlug?.current === 'string' ? maybeSlug.current : (typeof maybeSlug === 'string' ? maybeSlug : undefined)
-          const pick = nameFromSlugObj || slugString
-          return typeof pick === 'string' ? pick : undefined
+      // Extract existing tag names and references from tagsRaw
+      // tagsRaw can be: array of strings, array of references, or mixed
+      const existingNames: string[] = []
+      const existingRefs: Array<{ _type: 'reference'; _ref: string }> = []
+      
+      if (Array.isArray(asset.tagsRaw)) {
+        asset.tagsRaw.forEach((tag) => {
+          if (typeof tag === 'string') {
+            existingNames.push(tag)
+          }
+          else if (tag && typeof tag === 'object' && '_ref' in tag) {
+            // Preserve existing references
+            existingRefs.push({ _type: 'reference', _ref: tag._ref as string })
+          }
         })
-        .filter((v): v is string => Boolean(v))
+      }
+      
+      // Also check tagRefs array if available
+      if (Array.isArray(asset.tagRefs)) {
+        asset.tagRefs.forEach((ref) => {
+          if (typeof ref === 'string') {
+            existingRefs.push({ _type: 'reference', _ref: ref })
+          }
+        })
+      }
 
       const toKey = (s: string) => s.trim().toLocaleLowerCase()
 
@@ -263,9 +273,15 @@ export default defineEventHandler(async (event) => {
       const humanAlready = (suggestedTags || []).filter((t) => alreadyPresent.includes(toKey(t)))
       const humanMissing = (suggestedTags || []).filter((t) => missingTags.includes(toKey(t)))
 
+      // Deduplicate existing refs by _ref
+      const uniqueExistingRefs = Array.from(
+        new Map(existingRefs.map((ref) => [ref._ref, ref])).values(),
+      )
+
       return {
         assetId: asset._id,
         existingTagNames: unique(existingNames),
+        existingTagRefs: uniqueExistingRefs,
         suggestedTags: unique(suggestedTags || []),
         alreadyPresent: unique(humanAlready),
         missingTags: unique(humanMissing),
@@ -275,41 +291,116 @@ export default defineEventHandler(async (event) => {
     if (tagsDiffByAsset.length > 0) {
       console.log('✓ Tags diff by asset summary:', tagsDiffByAsset)
 
-      // Build mutations that MERGE existing names with suggested names, not replace
-      const mutations = tagsDiffByAsset
-            .map((tagDiff) => {
-              if (!tagDiff.missingTags || tagDiff.missingTags.length === 0) return null
+      // Collect all unique tag names (existing + suggested) that need to be referenced
+      const allTagNames = unique(
+        tagsDiffByAsset.flatMap((tagDiff) => [
+          ...(tagDiff.existingTagNames || []),
+          ...(tagDiff.suggestedTags || []),
+        ]),
+      ).filter(Boolean)
 
-              const mergedNames = unique([
-                ...(tagDiff.existingTagNames || []),
-                ...(tagDiff.suggestedTags || []),
-              ])
+      const config = useRuntimeConfig()
+      const sanity = createClient({
+        projectId: config.public.sanity.projectId,
+        dataset: config.public.sanity.dataset,
+        apiVersion: config.public.sanity.apiVersion,
+        useCdn: false,
+        token: SANITY_WRITE_TOKEN,
+      })
 
-              return {
-                patch: {
-                  id: tagDiff.assetId,
-                  setIfMissing: { opt: { media: {} } },
-                  set: {
-                    'opt.media.tags': mergedNames,
-                  },
+      // Find or create media.tag documents for each tag name
+      const tagNameToRef = new Map<string, string>()
+
+      if (allTagNames.length > 0) {
+        try {
+          // Query existing media.tag documents by name
+          const tagQuery = `*[_type == "media.tag"]{
+            _id,
+            name,
+            slug
+          }`
+          const existingTags = await sanity.fetch(tagQuery)
+
+          // Build map of tag name (lowercase) -> tag document _id
+          existingTags.forEach((tagDoc: any) => {
+            const name = tagDoc.name?.current || tagDoc.slug?.current || tagDoc.name || tagDoc.slug
+            if (name) {
+              tagNameToRef.set(name.toLowerCase().trim(), tagDoc._id)
+            }
+          })
+
+          // Create missing tag documents
+          const tagsToCreate = allTagNames.filter(
+            (name) => !tagNameToRef.has(name.toLowerCase().trim()),
+          )
+
+          for (const tagName of tagsToCreate) {
+            try {
+              const tagDoc = {
+                _type: 'media.tag',
+                name: {
+                  _type: 'slug',
+                  current: tagName,
                 },
               }
-            })
-            .filter(Boolean)
+              const created = await sanity.create(tagDoc)
+              tagNameToRef.set(tagName.toLowerCase().trim(), created._id)
+              console.log(`✓ Created media.tag document for "${tagName}": ${created._id}`)
+            }
+            catch (err) {
+              console.error(`Failed to create tag "${tagName}":`, err)
+            }
+          }
+        }
+        catch (err) {
+          console.error('Error finding/creating tag documents:', err)
+        }
+      }
+
+      // Build mutations with tag references
+      const mutations = tagsDiffByAsset
+        .map((tagDiff) => {
+          if (!tagDiff.missingTags || tagDiff.missingTags.length === 0) return null
+
+          // Start with existing tag references (already in correct format)
+          const mergedRefs = [...(tagDiff.existingTagRefs || [])]
+
+          // Merge existing and suggested tag names, then convert to references
+          const mergedTagNames = unique([
+            ...(tagDiff.existingTagNames || []),
+            ...(tagDiff.suggestedTags || []),
+          ])
+
+          // Convert tag names to references and add to merged refs
+          mergedTagNames.forEach((name) => {
+            const tagId = tagNameToRef.get(name.toLowerCase().trim())
+            if (tagId) {
+              mergedRefs.push({ _type: 'reference', _ref: tagId })
+            }
+          })
+
+          // Remove duplicate references by _ref
+          const uniqueRefs = Array.from(
+            new Map(mergedRefs.map((ref) => [ref._ref, ref])).values(),
+          )
+
+          return {
+            patch: {
+              id: tagDiff.assetId,
+              setIfMissing: { opt: { media: {} } },
+              set: {
+                'opt.media.tags': uniqueRefs,
+              },
+            },
+          }
+        })
+        .filter(Boolean)
 
       if (mutations.length > 0) {
-        console.log('✓ Mutations (merge tag names):', mutations.map((m) => m?.patch?.set['opt.media.tags']))
-        const config = useRuntimeConfig()
-        const sanity = createClient({
-          projectId: config.public.sanity.projectId,
-          dataset: config.public.sanity.dataset,
-          apiVersion: config.public.sanity.apiVersion,
-          useCdn: false,
-          token: SANITY_WRITE_TOKEN,
-        })
+        console.log('✓ Mutations (with tag references):', mutations.length)
         try {
-       const result =   await sanity.mutate(mutations as any)
-          console.log('✓ Mutations applied (merge tag names):', result)
+          const result = await sanity.mutate(mutations as any)
+          console.log('✓ Mutations applied (tag references):', result)
         }
         catch (error) {
           console.error('Error applying mutations:', error)
