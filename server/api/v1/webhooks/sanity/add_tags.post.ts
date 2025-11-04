@@ -307,8 +307,13 @@ export default defineEventHandler(async (event) => {
           useCdn: false,
           token: SANITY_WRITE_TOKEN,
         })
-        await sanity.mutate(mutations as any)
-        console.log('✓ Mutations applied (merge tag names)')
+        try {
+       const result =   await sanity.mutate(mutations as any)
+          console.log('✓ Mutations applied (merge tag names):', result)
+        }
+        catch (error) {
+          console.error('Error applying mutations:', error)
+        }
       }
     }
 
