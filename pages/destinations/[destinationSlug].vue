@@ -60,7 +60,7 @@ const destinationFromRegionQuery = `
     _id,
     nom,
     slug,
-    description,
+    meta_description,
     image,
     interjection,
     showOnHome,
@@ -127,7 +127,7 @@ _id,
     title,
     badgeTitle,
     slug,
-    description,
+    metaDescription,
     image,
     interjection,
     showOnHome,
@@ -192,6 +192,7 @@ const { data: destinationSanity } = await useAsyncData(
       const data = await sanity.fetch(destinationFromRegionQuery, {
         slug: slug.value,
       })
+      console.log('data', data)
       const voyageFlatMap = _.flatMap(data.destinations.map(destination => destination.voyages))
       return {
         interjection: data.interjection,
@@ -199,7 +200,7 @@ const { data: destinationSanity } = await useAsyncData(
         slug: data.slug,
         blog: data.blog,
         title: data.nom,
-        image: voyageFlatMap[0]?.image,
+        image: data?.image || voyageFlatMap[0]?.image,
         voyages: voyageFlatMap,
       }
     }
@@ -229,7 +230,7 @@ const displayedData = computed(() => ({
     slug: destination.slug?.current,
     image: destination.image,
     type: 'destinations',
-    discoveryTitle: destination.metaDescription || destination.description || '',
+    discoveryTitle: destination.metaDescription || destination.meta_description || destination.description || '',
   })).filter(destination => destination.image?.asset?._ref),
   selectedItem: destinationSanity.value,
   pageTitle: 'Toutes nos destinations',
