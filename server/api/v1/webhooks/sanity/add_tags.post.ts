@@ -205,18 +205,68 @@ export default defineEventHandler(async (event) => {
       try {
         assetsWithTags = await sanity.fetch(query, { ids: assetIds })
         console.log('✓ Retrieved tags for assets:', assetsWithTags)
-        if (assetsWithTags.length > 0) {
-          for (const asset of assetsWithTags) {
-            console.log('✓ Asset:', asset.tags)
-            for (const tag of asset.tags || []) {
-              console.log('✓ Tag:', tag)
-            }
-          }
-        }
+        // no verbose per-tag logs here; we'll summarize with diffs below
       }
       catch (err) {
         console.error('Failed to fetch tags for assets', err)
       }
+    }
+
+    // Build a per-asset diff between suggestedTags and existing tags
+    type TagsDiff = {
+      assetId: string
+      existingTagNames: string[]
+      suggestedTags: string[]
+      alreadyPresent: string[]
+      missingTags: string[]
+    }
+
+    const tagsDiffByAsset: TagsDiff[] = (assetsWithTags || []).map((asset) => {
+      const existingNames = (asset.tags || [])
+        .map((t) => {
+          const maybeName = (t as any)?.name
+          const maybeSlug = (t as any)?.slug
+          const nameFromSlugObj = typeof maybeName?.current === 'string' ? maybeName.current : undefined
+          const slugString = typeof maybeSlug?.current === 'string' ? maybeSlug.current : (typeof maybeSlug === 'string' ? maybeSlug : undefined)
+          const pick = nameFromSlugObj || slugString
+          return typeof pick === 'string' ? pick : undefined
+        })
+        .filter((v): v is string => Boolean(v))
+
+      const toKey = (s: string) => s.trim().toLocaleLowerCase()
+
+      const existingSet = new Set(existingNames.map(toKey))
+      const suggestedSet = new Set((suggestedTags || []).map(toKey))
+
+      const alreadyPresent = Array.from(suggestedSet).filter((s) => existingSet.has(s))
+      const missingTags = Array.from(suggestedSet).filter((s) => !existingSet.has(s))
+
+      // Return human facing values for readability (original casing from suggestedTags)
+      const humanAlready = (suggestedTags || []).filter((t) => alreadyPresent.includes(toKey(t)))
+      const humanMissing = (suggestedTags || []).filter((t) => missingTags.includes(toKey(t)))
+
+      return {
+        assetId: asset._id,
+        existingTagNames: unique(existingNames),
+        suggestedTags: unique(suggestedTags || []),
+        alreadyPresent: unique(humanAlready),
+        missingTags: unique(humanMissing),
+      }
+    })
+
+    if (tagsDiffByAsset.length > 0) {
+      console.log('✓ Tags diff by asset summary:', tagsDiffByAsset)
+      const mutations = tagsDiffByAsset.map((tagDiff) => {
+        return {
+          patch: {
+            id: tagDiff.assetId,
+            set: {
+              tags: tagDiff.suggestedTags,
+            },
+          },
+        }
+      })
+      console.log('✓ Mutations:', mutations)
     }
 
     return {
@@ -228,6 +278,7 @@ export default defineEventHandler(async (event) => {
       images,
       assetsWithTags,
       suggestedTags,
+      tagsDiffByAsset,
     }
   }
   catch (error) {
