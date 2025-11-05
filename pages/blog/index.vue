@@ -178,7 +178,7 @@ const sortId = useId()
 
 // Fetch all published blogs from Sanity
 const blogsQuery = `
-  *[_type == "blog"]{
+  *[_type == "blog"]|order(orderRank){
     _id,
     title,
     "slug": slug.current,
@@ -190,13 +190,14 @@ const blogsQuery = `
     badgeColor,
     readingTime,
     legacyCategories
-  } | order(publishedAt desc)
+  }
 `
 
 const sanity = useSanity()
 const { data: pages, status } = await useAsyncData('blog', () =>
   sanity.fetch(blogsQuery),
 )
+console.log('pages', pages.value)
 
 const pageBlogQuery = groq`
   *[_type == "page_blog"][0]{
@@ -289,21 +290,23 @@ const filteredBlogs = computed(() => {
     blogs = blogs.filter(page => page.categories.includes(selectedCategory.value))
   }
   // Sort by publishedAt
-  blogs = blogs.slice().sort((a, b) => {
-    if (sortOrder.value === 'readingTimeAsc') {
+  if (sortOrder.value) {
+    blogs = blogs.slice().sort((a, b) => {
+      if (sortOrder.value === 'readingTimeAsc') {
       // readingTime is a string, convert to number
-      return Number(a.readingTime) - Number(b.readingTime)
-    }
-    else if (sortOrder.value === 'readingTimeDesc') {
-      return Number(b.readingTime) - Number(a.readingTime)
-    }
-    else if (sortOrder.value === 'asc') {
-      return dayjs(a.publishedAt) - dayjs(b.publishedAt)
-    }
-    else {
-      return dayjs(b.publishedAt) - dayjs(a.publishedAt)
-    }
-  })
+        return Number(a.readingTime) - Number(b.readingTime)
+      }
+      else if (sortOrder.value === 'readingTimeDesc') {
+        return Number(b.readingTime) - Number(a.readingTime)
+      }
+      else if (sortOrder.value === 'asc') {
+        return dayjs(a.publishedAt) - dayjs(b.publishedAt)
+      }
+      else {
+        return dayjs(b.publishedAt) - dayjs(a.publishedAt)
+      }
+    })
+  }
   return blogs
 })
 

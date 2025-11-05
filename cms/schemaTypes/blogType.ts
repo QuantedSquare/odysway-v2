@@ -1,9 +1,11 @@
 import {defineField, defineType} from 'sanity'
+import {orderRankField, orderRankOrdering} from '@sanity/orderable-document-list'
 
 export const blogType = defineType({
   name: 'blog',
   title: 'Blog Post',
   type: 'document',
+  orderings: [orderRankOrdering],
   groups: [
     {name: 'content', title: 'Content'},
     {name: 'badges', title: 'Badges'},
@@ -11,6 +13,7 @@ export const blogType = defineType({
     {name: 'metadata', title: 'Metadata'},
   ],
   fields: [
+    orderRankField({type: 'blog'}),
     // Basic Info
     defineField({
       name: 'title',

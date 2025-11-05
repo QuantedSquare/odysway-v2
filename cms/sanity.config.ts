@@ -107,12 +107,12 @@ export default defineConfig({
                 S.list()
                   .title('Blog Posts')
                   .items([
-                    S.listItem()
-                      .title('All Blog Posts')
-                      .child(S.documentList()
-                      .title('All Blog Posts')
-                      .apiVersion('v2025-02-19')
-                      .filter('_type == "blog"')),
+                    orderableDocumentListDeskItem({
+                      type: 'blog',
+                      title: 'All Blog Posts',
+                      S,
+                      context,
+                    }),
                     S.listItem()
                       .title('Category Blog Posts')
                       .child(

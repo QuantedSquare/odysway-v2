@@ -1,4 +1,5 @@
 import {defineField, defineType} from 'sanity'
+import { CharacterCounter } from '../components/characterCounter'
 
 export const seoFields = defineType({
   name: 'seo',
@@ -16,6 +17,9 @@ export const seoFields = defineType({
       type: 'string',
       description: 'Titre SEO (max 60 caractères). Si vide, le titre de la page sera utilisé.',
       validation: (Rule) => Rule.max(60).warning('Devrait être inférieur à 60 caractères'),
+      components: {
+        input: (props) => CharacterCounter(props, {maxLength: 60}),
+      },
     }),
     defineField({
       name: 'metaDescription',
@@ -24,6 +28,9 @@ export const seoFields = defineType({
       rows: 3,
       description: 'Description SEO (max 160 caractères). Utilisée dans les résultats de recherche.',
       validation: (Rule) => Rule.max(160).warning('Devrait être inférieur à 160 caractères'),
+      components: {
+        input: (props) => CharacterCounter(props, {maxLength: 160}),
+      },
     }),
     defineField({
       name: 'canonicalUrl',
@@ -67,6 +74,9 @@ export const seoFields = defineType({
       type: 'string',
       description: 'Titre pour le partage social (Facebook, LinkedIn). Par défaut = SEO Title.',
       validation: (Rule) => Rule.max(60),
+      components: {
+        input: (props) => CharacterCounter(props, {maxLength: 60}),
+      },
     }),
     defineField({
       name: 'ogDescription',
@@ -75,6 +85,9 @@ export const seoFields = defineType({
       rows: 2,
       description: 'Description pour le partage social. Par défaut = SEO Description.',
       validation: (Rule) => Rule.max(160),
+      components: {
+        input: (props) => CharacterCounter(props, {maxLength: 160}),
+      },
     }),
     defineField({
       name: 'ogImage',
