@@ -80,7 +80,7 @@ const destinationFromRegionQuery = `
       nights,
       rating,
       comments,
-      groupeAvailable,
+      availabilityTypes,
       "startingPrice": pricing.startingPrice,
       pricing {
         startingPrice
@@ -142,7 +142,7 @@ _id,
       nights,
       rating,
       comments,
-      groupeAvailable,
+      availabilityTypes,
       "startingPrice": pricing.startingPrice,
       pricing {
         startingPrice

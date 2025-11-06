@@ -31,14 +31,14 @@
           <v-col
             cols="12"
           >
-            <v-divider v-if="voyage.groupeAvailable" />
+            <v-divider v-if="voyage.availabilityTypes?.includes('groupe')" />
           </v-col>
         </v-row>
 
         <v-row class="mt-0">
           <v-col cols="12">
             <span
-              v-if="voyage.groupeAvailable"
+              v-if="voyage.availabilityTypes?.includes('groupe')"
               class="text-h4 font-weight-bold text-primary"
             >
               {{ stickyBlock.dateText }}
@@ -85,7 +85,7 @@
         </v-row>
         <v-row v-else>
           <v-col
-            v-if="voyage.groupeAvailable && !voyage.privatisationAvailable"
+            v-if="voyage.availabilityTypes?.includes('groupe') && !voyage.availabilityTypes?.includes('privatisation')"
             cols="12"
           >
             <v-alert
@@ -114,7 +114,7 @@
           </v-col>
         </v-row>
         <v-row
-          v-if="!voyage.groupeAvailable && !voyage.privatisationAvailable"
+          v-if="!voyage.availabilityTypes?.includes('groupe') && !voyage.availabilityTypes?.includes('privatisation')"
           justify-md="center"
         >
           <v-col
@@ -177,7 +177,7 @@
             </v-col>
           </v-row>
         </template>
-        <template v-else-if="displayedDates.length === 0 && voyage.groupeAvailable">
+        <template v-else-if="displayedDates.length === 0 && voyage.availabilityTypes?.includes('groupe')">
           <v-row>
             <v-col cols="12">
               <div class="d-flex align-center ga-2">
@@ -197,7 +197,7 @@
     </v-card-text>
   </v-card>
   <v-row
-    v-if="voyage.groupeAvailable"
+    v-if="voyage.availabilityTypes?.includes('groupe')"
     class="mt-4"
   >
     <v-col
@@ -231,8 +231,6 @@ import dayjs from 'dayjs'
 const { mdAndDown } = useDisplay()
 const goTo = useGoTo()
 const { dates, isLoading } = useDates()
-
-// const displayedDates = ref([])
 
 const { stickyBlock, voyage } = defineProps({
   stickyBlock: {

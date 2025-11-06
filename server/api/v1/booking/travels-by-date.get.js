@@ -38,7 +38,7 @@ export default defineEventHandler(async (event) => {
     image,
     rating,
     comments,
-    groupeAvailable,
+    availabilityTypes,
     "startingPrice": pricing.startingPrice,
     duration,
     destinations[]-> {
@@ -58,7 +58,7 @@ export default defineEventHandler(async (event) => {
       image: travel.image,
       rating: travel.rating,
       comments: travel.comments,
-      groupeAvailable: travel.groupeAvailable,
+      availabilityTypes: travel.availabilityTypes,
       startingPrice: travel.startingPrice,
       iso: travel.destinations?.map(destination => destination.iso).filter(Boolean) || [],
       dates,

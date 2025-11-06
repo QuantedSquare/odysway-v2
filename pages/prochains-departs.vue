@@ -67,10 +67,15 @@
     </v-row>
 
     <VoyageCardsList
+      v-if="!loading && travels.length > 0"
       :filtered-deals="groupByMonthFiltered"
       :deals-lastminute="dealsLastMinuteFiltered"
       :selected-period="selectedPeriod"
       :toggled-btn="toggledBtn"
+    />
+    <v-skeleton-loader
+      v-else-if="loading"
+      type="article"
     />
   </v-container>
 </template>
@@ -179,13 +184,13 @@ const filteredTravels = computed(() => {
   return travels.value.filter((travel) => {
     const iso = Array.isArray(travel.iso) ? travel.iso[0] : travel.iso
     if (queryType === 'france') {
-      return iso === franceDealIso && travel.dates.length > 0 && travel.groupeAvailable
+      return iso === franceDealIso && travel.dates.length > 0 && travel.availabilityTypes?.includes('groupe')
     }
     else if (queryType === 'other') {
-      return iso !== franceDealIso && travel.dates.length > 0 && travel.groupeAvailable
+      return iso !== franceDealIso && travel.dates.length > 0 && travel.availabilityTypes?.includes('groupe')
     }
     else {
-      return travel.dates.length > 0 && travel.groupeAvailable
+      return travel.dates.length > 0 && travel.availabilityTypes?.includes('groupe')
     }
   })
 })

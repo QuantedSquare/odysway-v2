@@ -82,7 +82,7 @@
               <v-row class="custom-row-height">
                 <v-col cols="4">
                   <div class="text-grey font-weight-bold text-body-2 text-md-subtitle-2">{{ voyageCardContent?.type || 'Type' }}</div>
-                  <div class="text-h6 font-weight-bold text-primary">{{ voyage.groupeAvailable ? (voyageCardContent?.groupType || 'Groupe') : (voyageCardContent?.soloType || 'Solo') }}</div>
+                  <div class="text-h6 font-weight-bold text-primary">{{ voyage.availabilityTypes?.includes('groupe') ? (voyageCardContent?.groupType || 'Groupe') : (voyageCardContent?.soloType || 'Solo') }}</div>
                 </v-col>
                 <v-divider
                   inset
@@ -113,11 +113,11 @@
           </v-card-text>
           <v-divider />
           <v-card-actions
-            :class="voyage.groupeAvailable ? 'hover-primary' : 'hover-secondary'"
+            :class="voyage.availabilityTypes?.includes('groupe') ? 'hover-primary' : 'hover-secondary'"
           >
             <client-only>
               <v-btn
-                v-if="voyage.groupeAvailable"
+                v-if="voyage.availabilityTypes?.includes('groupe')"
                 block
                 color="primary"
                 class="text-body-1"
@@ -179,7 +179,7 @@ const { data: voyageCardContent } = await useAsyncData('voyage-card-content', ()
 },
 )
 
-const actionColor = computed(() => voyage.groupeAvailable ? '#f7f8f8' : '#fef9f8')
+const actionColor = computed(() => voyage.availabilityTypes?.includes('groupe') ? '#f7f8f8' : '#fef9f8')
 const voyageCardImg = computed(() => {
   return getImageUrl(voyage.image?.asset?._ref)
 })

@@ -240,7 +240,7 @@ const homeQuery = groq`
         rating,
         comments,
         title,
-        groupeAvailable,
+        availabilityTypes,
         duration,
         pricing
       }
@@ -276,7 +276,7 @@ const homeQuery = groq`
         rating,
         comments,
         title,
-        groupeAvailable,
+        availabilityTypes,
         duration,
         pricing
       }
@@ -290,7 +290,7 @@ const homeQuery = groq`
         rating,
         comments,
         title,
-        groupeAvailable,
+        availabilityTypes,
         duration,
         pricing
       }
@@ -304,7 +304,7 @@ const homeQuery = groq`
         rating,
         comments,
         title,
-        groupeAvailable,
+        availabilityTypes,
         duration,
         pricing
       }
