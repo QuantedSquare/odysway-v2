@@ -37,6 +37,13 @@ import {teamMemberType} from './teamMemberType'
 import {topsType} from './topsType'
 import {voyageCardType} from './voyageCardType'
 import {voyageType} from './voyageType'
+import {promotionType} from './objects/promotionType'
+import {videoType} from './objects/videoType'
+import {pageType} from './objects/pageBuilder'
+import {textWithIllustrationType} from './objects/textWithIllustrationType'
+import {imageGalleryType} from './objects/imageGalleryType'
+import {formType} from './objects/formType'
+import {heroType} from './objects/heroType'
 
 // Reusable objects
 import {seoFields} from './objects/seoFields'
@@ -44,6 +51,13 @@ import {seoFields} from './objects/seoFields'
 export const schemaTypes = [
   // Reusable objects must be registered first
   seoFields,
+  promotionType,
+  videoType,
+  textWithIllustrationType,
+  imageGalleryType,
+  heroType,
+  formType,
+  pageType,
   // Document types
   avisVoyageursType,
   badgeType,
@@ -84,4 +98,5 @@ export const schemaTypes = [
   visionVoyageOdyswayType,
   voyageCardType,
   voyageType,
+
 ]

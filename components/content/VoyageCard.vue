@@ -27,11 +27,11 @@
         >
           <template #default>
             <div class="badge-position">
-              <RatingBadge
+              <!-- <RatingBadge
                 :rating="voyage.rating"
                 :comments="voyage.comments"
                 no-link
-              />
+              /> -->
             </div>
           </template>
         </v-img>

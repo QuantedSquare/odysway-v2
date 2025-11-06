@@ -481,15 +481,38 @@ useSeo({
 //     // Add other fields you want to display from the referencing document
 //   }
 
+// const retrieveAllReferenceFromAnImage = `*[_type == "sanity.imageAsset"]{
+//    ...
+// }`
 const retrieveAllReferenceFromAnImage = `*[_type == "sanity.imageAsset"]{
-   ...
+  _id,
+  originalFilename,
+  url,
+  "usedIn": *[references(^._id)]{
+    _type,
+    _id,
+    title,
+    name,
+    // If the referencing document is a voyage, also fetch destination names
+    _type == "voyage" => {
+      destinations[]->{
+        title,
+        slug,
+        // Also fetch the regions related to this destination
+        "regions": regions[]->{
+          "title": nom,
+          "slug": slug.current,
+        },
+      }
+    }
+  }
 }`
 
 const { data: allReferences } = await useAsyncData(
   `all-references-${currentDataset.value}`,
   () => fetchFromDataset(retrieveAllReferenceFromAnImage),
 )
-console.log('allReferences', allReferences.value.filter(asset => asset._id.includes('2ea6e3a40afe69059538db628d3593ed4c99b248')))
+console.log('allReferences', allReferences.value)
 </script>
 
 <style scoped>
