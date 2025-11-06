@@ -50,7 +50,6 @@
         class="d-flex ga-3 mt-md-4 mt-2"
       >
         <v-avatar
-
           size="80"
           :alt="author.description || 'Photo de l\'auteur'"
         >

@@ -11,7 +11,7 @@
         lg="auto"
         class="pb-0 pb-sm-3"
       >
-        <SanityImage
+        <!-- <SanityImage
           v-if="photo?.asset?._ref"
           :asset-id="photo.asset._ref"
           auto="format"
@@ -26,7 +26,18 @@
               height="214"
             />
           </template>
-        </SanityImage>
+        </SanityImage> -->
+
+        <v-img
+          v-if="photoSource.srcUrl"
+          :src="photoSource.srcUrl"
+          :srcset="photoSource.srcSet"
+          :alt="`Photo du jour: ${title}`"
+          cover
+          :width="imageWidth"
+          height="214"
+          rounded="lg"
+        />
       </v-col>
       <v-col
         cols="12"
@@ -77,7 +88,7 @@ import { useDisplay } from 'vuetify'
 import { useElementSize } from '@vueuse/core'
 import { stegaClean } from '@sanity/client/stega'
 
-defineProps({
+const props = defineProps({
   day: {
     type: Object,
     required: true,
@@ -128,6 +139,10 @@ const imageWidth = computed(() => {
   }
   // Use conso if available, otherwise fallback to a reasonable default
   return colContainerWidth.value > 0 ? colContainerWidth.value : 300
+})
+
+const photoSource = computed(() => {
+  return testGetImageUrl(props.photo)
 })
 
 onMounted(() => {
