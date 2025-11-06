@@ -164,7 +164,6 @@ export function useSeo(options = {}) {
     if (!normalized.ogImage) return DEFAULT_IMG
 
     const og = normalized.ogImage
-    console.log('og', og)
     // If og is a string (url or path)
     if (typeof og === 'string') {
       const str = og.trim()

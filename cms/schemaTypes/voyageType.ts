@@ -115,6 +115,7 @@ export const voyageType = defineType({
       title: 'Voyage disponible en groupe (Legacy)',
       description: 'Ancien champ - À migrer vers availabilityTypes',
       hidden: true,
+      initialValue: false,
     }),
     defineField({
       name: 'privatisationAvailable',
@@ -123,6 +124,7 @@ export const voyageType = defineType({
       title: 'Voyage disponible en privatisation (Legacy)',
       description: 'Ancien champ - À migrer vers availabilityTypes',
       hidden: true,
+      initialValue: false,
     }),
     defineField({
       name: 'customAvailable',
@@ -131,6 +133,7 @@ export const voyageType = defineType({
       title: 'Voyage disponible en sur-mesure (Legacy)',
       description: 'Ancien champ - À migrer vers availabilityTypes',
       hidden: true,
+      initialValue: false,
     }),
     defineField({
       name: 'difficultyLevel',

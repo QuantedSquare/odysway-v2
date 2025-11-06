@@ -4,7 +4,7 @@
       <BottomAppBar
         :date-sections="page.dateSections"
         :starting-price="voyage.pricing.startingPrice"
-        :no-group-travel="!voyage.groupeAvailable"
+        :no-group-travel="!voyage.availabilityTypes?.includes('groupe')"
         :slug="voyage.slug.current"
       />
       <v-container
@@ -62,8 +62,8 @@
           <LazyDatesPricesContainer
             :date-sections="page.dateSections"
             :indiv-section="page.indivSection"
-            :is-groupe-available="voyage.groupeAvailable"
-            :is-privatisation-available="voyage.privatisationAvailable"
+            :is-groupe-available="voyage.availabilityTypes?.includes('groupe')"
+            :is-privatisation-available="voyage.availabilityTypes?.includes('privatisation')"
             :last-minute-price="voyage.pricing.lastMinuteReduction"
             :early-bird-price="voyage.pricing.earlyBirdReduction || 0"
           />
@@ -213,7 +213,7 @@ const voyagePropositionsQuery = `
     image,
     rating,
     comments,
-    groupeAvailable,
+    availabilityTypes,
     duration,
     pricing{
       startingPrice
@@ -227,7 +227,7 @@ const { data: page } = await useAsyncData('voyage-page', () =>
 const { data: voyage } = await useAsyncData('voyage' + route.params.voyageSlug, () =>
   sanity.fetch(voyageQuery, { slug: route.params.voyageSlug }),
 )
-// console.log('voyage', voyage.value)
+console.log('voyage', voyage.value)
 
 const { data: voyagePropositions } = await useAsyncData('voyage-propositions', () =>
   sanity.fetch(voyagePropositionsQuery, {
