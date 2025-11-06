@@ -16,7 +16,7 @@
 </template>
 
 <script setup>
-import { useImage } from '#imports'
+import { buildImageUrl, useImage } from '#imports'
 
 const { avatarImg } = defineProps({
   avatarImg: {
