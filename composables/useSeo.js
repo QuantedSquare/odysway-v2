@@ -158,22 +158,44 @@ export function useSeo(options = {}) {
 
   // Generate OG Image URL with proper formatting
   const ogImageUrl = computed(() => {
-    if (!normalized.ogImage) return 'https://odysway.com/logos/logo_noir.png'
+    const DEFAULT_IMG = 'https://odysway.com/logos/logo_noir.png'
 
-    // Handle different image formats
-    const imageRef = normalized.ogImage?.asset?._ref || normalized.ogImage?.src || normalized.ogImage
+    // No image object at all
+    if (!normalized.ogImage) return DEFAULT_IMG
 
-    if (!imageRef) return 'https://odysway.com/logos/logo_noir.png'
+    const og = normalized.ogImage
+    console.log('og', og)
+    // If og is a string (url or path)
+    if (typeof og === 'string') {
+      const str = og.trim()
+      if (!str) return DEFAULT_IMG
+      if (str.toLowerCase().startsWith('http')) return str
+      return str
+    }
 
-    // If it's already a full URL, return it
-    if (typeof imageRef === 'string' && imageRef.startsWith('http')) {
-      return imageRef
+    // Prefer direct URLs first (Sanity asset.url, generic url, or src)
+    const directUrl = og?.asset?.url || og?.url || og?.src || ''
+    if (typeof directUrl === 'string') {
+      const urlStr = directUrl.trim()
+      if (urlStr) {
+        if (urlStr.toLowerCase().startsWith('http')) return urlStr
+        return urlStr
+      }
+    }
+    const vanityName = slug ? `${slug}.jpg` : 'odysway.jpg'
+
+    const mainImg = content?.image || content?.image?.asset?._ref || content?.image?.src || content?.image || ''
+    // Otherwise, try Sanity image reference
+    const imageRef = og?.asset?._ref || ''
+
+    if (!imageRef) {
+      if (!mainImg) return DEFAULT_IMG
+      return getImageUrl(mainImg, vanityName)
     }
 
     // Generate vanity name for SEO
-    const vanityName = slug ? `${slug}.jpg` : 'odysway.jpg'
 
-    // Use getImageUrl utility
+    // Use getImageUrl utility for Sanity refs
     return getImageUrl(imageRef, vanityName)
   })
 

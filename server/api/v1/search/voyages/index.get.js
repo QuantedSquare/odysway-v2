@@ -26,10 +26,13 @@ export default eventHandler(async (event) => {
         nom,
         "slug": slug.current
       }`),
-      sanityClient.fetch(`*[_type == "voyage"]{
+      sanityClient.fetch(`*[_type == "voyage" && (
+        !('custom' in availabilityTypes) ||
+        (count(availabilityTypes) > 1)
+      )]{
         title,
         "slug": slug.current
-      }`)
+      }`),
     ])
 
     function filterAndMapData(data, dataSource) {
@@ -63,7 +66,7 @@ export default eventHandler(async (event) => {
       sanityClient.fetch(`*[_type == "region"]{
         nom,
         "slug": slug.current
-      }`)
+      }`),
     ])
 
     const topDestinations = destinations

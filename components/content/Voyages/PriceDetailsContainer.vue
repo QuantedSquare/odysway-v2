@@ -1,5 +1,6 @@
 <template>
   <v-container
+    v-if="pricingDetailsBlock?.listInclude?.length > 0 || pricingDetailsBlock?.listExclude?.length > 0"
     fluid
     class="px-0"
   >
@@ -38,12 +39,6 @@
               class="custom-include-list-item"
               :value="pricingDetailsBlock.listInclude"
             />
-            <!-- <PriceDetailsItem
-              v-for="item, index in pricingDetailsBlock.include"
-              :key="index"
-              is-included
-              :text="item"
-            /> -->
           </v-container>
         </v-list>
       </v-col>
@@ -72,11 +67,6 @@
               class="custom-exclude-list-item"
               :value="pricingDetailsBlock.listExclude"
             />
-            <!-- <PriceDetailsItem
-              v-for="item, index in pricingDetailsBlock.exclude"
-              :key="index"
-              :text="item"
-            /> -->
           </v-container>
         </v-list>
       </v-col>
@@ -86,14 +76,10 @@
 </template>
 
 <script setup>
-// import { useDisplay } from 'vuetify'
-
-// const { width } = useDisplay()
-
 defineProps({
   pricingDetailsBlock: {
     type: Object,
-    required: true,
+    default: undefined,
   },
   priceDetailsSection: {
     type: Object,

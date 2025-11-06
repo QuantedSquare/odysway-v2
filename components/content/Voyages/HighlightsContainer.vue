@@ -3,7 +3,10 @@
     <ColorContainer
       color="yellow-light-2"
     >
-      <v-container class="py-0">
+      <v-container
+        v-if="experiencesBlock && experiencesBlock.length > 0"
+        class="py-0"
+      >
         <v-row>
           <v-col
             cols="12"
@@ -49,7 +52,7 @@ import { mdiHeartOutline } from '@mdi/js'
 defineProps({
   experiencesBlock: {
     type: Array,
-    required: true,
+    default: () => [],
   },
   page: {
     type: Object,

@@ -69,7 +69,10 @@ const experienceQuery = `
     description,
     image,
     showOnHome,
-    "voyages": *[_type == "voyage" && references(^._id)]{
+    "voyages": *[_type == "voyage" && references(^._id) && (
+        !('custom' in availabilityTypes) ||
+        (count(availabilityTypes) > 1)
+      )]{
       _id,
       title,
       slug,

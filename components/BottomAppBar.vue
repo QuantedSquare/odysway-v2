@@ -12,12 +12,14 @@
           cols="5"
           class="d-flex flex-column align-start justify-center"
         >
-          <span class="text-caption text-grey">
-            {{ dateSections.pricePrefix }}
-          </span>
-          <span class="text-h4 font-weight-bold text-primary">
-            {{ startingPrice }}€<span class="text-caption">{{ dateSections.priceSuffix }}</span>
-          </span>
+          <template v-if="startingPrice > 0">
+            <span class="text-caption text-grey">
+              {{ dateSections.pricePrefix }}
+            </span>
+            <span class="text-h4 font-weight-bold text-primary">
+              {{ startingPrice }}€<span class="text-caption">{{ dateSections.priceSuffix }}</span>
+            </span>
+          </template>
         </v-col>
         <v-spacer class="d-block" />
         <v-col
@@ -52,7 +54,7 @@ defineProps({
   },
   startingPrice: {
     type: Number,
-    required: true,
+    default: 0,
   },
   noGroupTravel: {
     type: Boolean,

@@ -75,10 +75,10 @@ export default defineNuxtConfig({
   routeRules: {
     // Homepage and main sections
     '/': { isr: 60 },
-    '/search': { isr: 60 },
+    '/voyages': { isr: 60 },
     '/prochains-departs': { isr: 60 },
     // Redirect legacy or non-existent index to listing page
-    '/voyages': { redirect: { to: '/search', statusCode: 301 } },
+    '/search': { redirect: { to: '/voyages', statusCode: 301 } },
 
     // Dynamic content pages with slugs
     '/voyages/**': { isr: 60 },

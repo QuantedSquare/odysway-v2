@@ -158,6 +158,7 @@ const voyagePageQuery = `
 const voyageQuery = `
   *[_type == "voyage" && slug.current == $slug][0]{
     ...,
+    image,
     seo{
       metaTitle,
       metaDescription,
@@ -258,7 +259,7 @@ watchEffect(() => {
     ),
     breadcrumbs: [
       { name: 'Accueil', url: 'https://odysway.com' },
-      { name: 'Voyages', url: 'https://odysway.com/search' },
+      { name: 'Voyages', url: 'https://odysway.com/voyages' },
       {
         name: voyage.value.title,
         url: `https://odysway.com/voyages/${voyage.value.slug.current}`,

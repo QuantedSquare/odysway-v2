@@ -1,6 +1,9 @@
 <template>
   <ClientOnly>
-    <div class="text-primary d-flex flex-column px-2">
+    <div
+      v-if="authorNote"
+      class="text-primary d-flex flex-column px-2"
+    >
       <h4
         v-if="page?.authorNote?.title"
         class="text-h4 font-weight-bold mb-4"
@@ -91,7 +94,7 @@ import { shouldTruncatePortableText } from '~/utils/getPortableTextLength'
 const props = defineProps({
   authorNote: {
     type: Object,
-    required: true,
+    default: undefined,
   },
   page: {
     type: Object,

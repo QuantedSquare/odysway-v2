@@ -78,7 +78,9 @@ const categoryQuery = `
     title,
     slug,
     image,
-    "voyages": *[_type == "voyage" && references(^._id)]{
+    "voyages": *[_type == "voyage" && references(^._id) && (
+        !('custom' in availabilityTypes)
+      )]{
         _id,
       title,
       slug,
