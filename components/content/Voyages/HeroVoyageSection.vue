@@ -78,33 +78,6 @@
         cols="12"
         :sm="voyage.imageSecondary?.asset?._ref ? 9 : 12"
       >
-        <!-- <SanityImage
-          v-if="voyage.image?.asset?._ref"
-          :asset-id="voyage.image?.asset?._ref"
-          auto="format"
-        >
-          <template #default="{ src }">
-            <v-img
-              v-if="src"
-              :src="src"
-              :lazy-src="img(src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-              :alt="voyage.image?.alt || `Image principale du voyage ${voyage.title}`"
-              cover
-              class="custom-height"
-              rounded="lg"
-            />
-          </template>
-        </SanityImage> -->
-        <!-- <NuxtImg
-          v-if="imagesSources.mainImage.srcUrl"
-          :src="imagesSources.mainImage.srcUrl"
-          :srcset="imagesSources.mainImage.srcSet"
-          sizes="(max-width: 600px) 100vw, (max-width: 960px) 90vw, (max-width: 1280px) 85vw, 1280px"
-          :alt="voyage.image?.alt || `Image principale du voyage ${voyage.title}`"
-          class="hero-image hero-image-height"
-          loading="eager"
-          fetchpriority="high"
-        /> -->
         <v-img
           v-if="imagesSources.mainImage.srcUrl"
           :src="imagesSources.mainImage.srcUrl"
@@ -123,23 +96,6 @@
         cols="3"
         class="d-none d-sm-flex flex-column ga-7"
       >
-        <!-- <SanityImage
-          v-if="voyage.imageSecondary?.asset?._ref"
-          :asset-id="voyage.imageSecondary?.asset?._ref"
-          auto="format"
-        >
-          <template #default="{ src }">
-            <v-img
-              v-if="src"
-              :src="src"
-              :lazy-src="img(src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-              :alt="voyage.imageSecondary.alt || `Image secondaire du voyage ${voyage.title}`"
-              cover
-              height="214"
-              rounded="lg"
-            />
-          </template>
-        </SanityImage> -->
         <v-img
           v-if="imagesSources.secondImage.srcUrl"
           :src="imagesSources.secondImage.srcUrl"
@@ -152,32 +108,6 @@
           height="214"
           cover
         />
-        <!-- <SanityImage
-          v-if="voyage.photosList?.length > 0 && voyage.photosList[0].asset?._ref"
-          :asset-id="voyage.photosList[0].asset._ref"
-          auto="format"
-        >
-          <template #default="{ src }">
-            <v-img
-              v-if="src"
-              :src="src"
-              :lazy-src="img(src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-              :alt="voyage.photosList[0].alt || `Photo du voyage ${voyage.title}`"
-              cover
-              height="214"
-              rounded="lg"
-            />
-          </template>
-        </SanityImage> -->
-        <!-- <NuxtImg
-          v-if="imagesSources.thirdImage.srcUrl"
-          :src="imagesSources.thirdImage.srcUrl"
-          :srcset="imagesSources.thirdImage.srcSet"
-          sizes="(max-width: 600px) 100vw, (max-width: 960px) 90vw, (max-width: 1280px) 85vw, 1280px"
-          :alt="voyage.photosList[0].alt || `Photo du voyage ${voyage.title}`"
-          loading="eager"
-          fetchpriority="high"
-        /> -->
         <v-img
           v-if="imagesSources.thirdImage.srcUrl"
           :src="imagesSources.thirdImage.srcUrl"
@@ -246,9 +176,9 @@ function copyUrl() {
 
 const imagesSources = computed(() => {
   return {
-    mainImage: testGetImageUrl(voyage.image),
-    secondImage: testGetImageUrl(voyage.imageSecondary, null, 600),
-    thirdImage: testGetImageUrl(voyage.photosList[0], null, 600),
+    mainImage: buildImageUrl(voyage.image),
+    secondImage: buildImageUrl(voyage.imageSecondary, null, 600),
+    thirdImage: buildImageUrl(voyage.photosList[0], null, 600),
   }
 })
 </script>

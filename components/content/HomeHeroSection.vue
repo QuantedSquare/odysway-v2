@@ -47,7 +47,7 @@ const { image } = defineProps({
   },
 })
 const imageSource = computed(() => {
-  return testGetImageUrl(image)
+  return buildImageUrl(image)
 })
 </script>
 

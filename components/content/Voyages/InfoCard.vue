@@ -148,6 +148,7 @@
                       :src="avatarSource.srcUrl"
                       :srcset="avatarSource.srcSet"
                       sizes="(max-width: 600px) 70px, 100px"
+                      alt=" Photo de spécialiste"
                       height="40"
                       width="40"
                       loading="lazy"
@@ -273,7 +274,7 @@ const displayedDates = computed(() => {
 })
 
 const avatarSource = computed(() => {
-  return testGetImageUrl(stickyBlock.ctaCall.avatar)
+  return buildImageUrl(stickyBlock.ctaCall.avatar)
 })
 </script>
 

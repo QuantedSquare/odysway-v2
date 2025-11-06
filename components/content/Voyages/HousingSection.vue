@@ -87,8 +87,8 @@
                         <v-img
                           rounded="lg"
                           cover
-                          :src="testGetImageUrl(image, null, 600).srcUrl"
-                          :srcset="testGetImageUrl(image, null, 600).srcSet"
+                          :src="buildImageUrl(image, null, 600).srcUrl"
+                          :srcset="buildImageUrl(image, null, 600).srcSet"
                           :alt="'housing image ' + index + 1 || ''"
                           height="100%"
                           width="100%"
@@ -179,7 +179,7 @@ const { housingBlock } = defineProps({
     required: true,
   },
 })
-const img = useImage()
+
 const { mdAndUp, sm } = useDisplay()
 const scrollContainer = ref(null)
 const scrollElement = ref(null)

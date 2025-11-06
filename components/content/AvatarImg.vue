@@ -34,6 +34,6 @@ const { avatarImg } = defineProps({
 })
 const img = useImage()
 const imgUrl = computed(() => {
-  return testGetImageUrl(avatarImg, null, 600)
+  return buildImageUrl(avatarImg, null, 600)
 })
 </script>

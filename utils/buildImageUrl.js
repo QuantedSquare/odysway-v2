@@ -1,6 +1,6 @@
 import imageUrlBuilder from '@sanity/image-url'
 
-export function testGetImageUrl(image, vanityName = null, width = null) {
+export function buildImageUrl(image, vanityName = null, width = null) {
   const config = useRuntimeConfig()
   const builder = imageUrlBuilder({
     projectId: config.public.sanity.projectId,

@@ -11,23 +11,6 @@
         lg="auto"
         class="pb-0 pb-sm-3"
       >
-        <!-- <SanityImage
-          v-if="photo?.asset?._ref"
-          :asset-id="photo.asset._ref"
-          auto="format"
-        >
-          <template #default="{ src }">
-            <v-img
-              rounded="lg"
-              :src="img(src, { format: 'webp', quality: 70, width: 640 })"
-              :alt="`Photo du jour: ${title}`"
-              cover
-              :width="imageWidth"
-              height="214"
-            />
-          </template>
-        </SanityImage> -->
-
         <v-img
           v-if="photoSource.srcUrl"
           :src="photoSource.srcUrl"
@@ -122,7 +105,7 @@ const props = defineProps({
     default: '',
   },
 })
-const img = useImage()
+
 const { xs, width } = useDisplay()
 const isHydrated = ref(false)
 const colContainer = ref(null)
@@ -142,7 +125,7 @@ const imageWidth = computed(() => {
 })
 
 const photoSource = computed(() => {
-  return testGetImageUrl(props.photo, null, 600)
+  return buildImageUrl(props.photo, null, 600)
 })
 
 onMounted(() => {

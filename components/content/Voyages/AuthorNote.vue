@@ -19,10 +19,6 @@
           :style="shouldTruncate ? contentStyle : {}"
         >
           <EnrichedText :value="authorNote.text" />
-          <!-- <MDC
-            tag="article"
-            :value="authorNote.text"
-          /> -->
         </div>
       </div>
 
@@ -51,12 +47,12 @@
       >
         <v-avatar
           size="80"
-          :alt="author.description || 'Photo de l\'auteur'"
         >
           <NuxtImg
             v-if="authorImage.srcUrl"
             :src="authorImage.srcUrl"
             :srcset="authorImage.srcSet"
+            :alt="author.description || 'Photo de l\'auteur'"
             sizes="(max-width: 600px) 70px, 100px"
             height="100"
             width="100"
@@ -94,7 +90,7 @@ const props = defineProps({
 
 const author = computed(() => props.authorNote?.author)
 const authorImage = computed(() => {
-  return testGetImageUrl(author.value.image)
+  return buildImageUrl(author.value.image)
 })
 
 // Client-side state for expansion
