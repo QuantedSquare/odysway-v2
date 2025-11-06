@@ -71,14 +71,14 @@
   </v-container>
   <v-container
     fluid
-    class="d-flex align-start align-md-center position-relative px-0 custom-height mb-2 mb-md-0 pt-0 pt-md-4"
+    class="d-flex align-start align-md-center position-relative px-0 custom-height mb-md-0 pt-0 pb-2 pb-md-0"
   >
     <v-row class="align-start ">
       <v-col
         cols="12"
         :sm="voyage.imageSecondary?.asset?._ref ? 9 : 12"
       >
-        <SanityImage
+        <!-- <SanityImage
           v-if="voyage.image?.asset?._ref"
           :asset-id="voyage.image?.asset?._ref"
           auto="format"
@@ -94,7 +94,18 @@
               rounded="lg"
             />
           </template>
-        </SanityImage>
+        </SanityImage> -->
+        <NuxtImg
+          v-if="voyageImageUrl"
+          :src="voyageImageUrl"
+          :srcset="voyageImageSet"
+          sizes="(max-width: 600px) 100vw, (max-width: 960px) 90vw, (max-width: 1280px) 85vw, 1280px"
+          :alt="voyage.image?.alt || `Image principale du voyage ${voyage.title}`"
+          class="hero-image hero-image-height"
+          format="webp"
+          loading="eager"
+          fetchpriority="high"
+        />
       </v-col>
       <v-col
         cols="3"
@@ -163,22 +174,24 @@ import { mdiExportVariant } from '@mdi/js'
 import { useImage } from '#imports'
 
 const config = useRuntimeConfig()
-const props = defineProps({
+const { voyage } = defineProps({
   voyage: {
     type: Object,
     required: true,
   },
 })
 
+const { srcUrl: voyageImageUrl, srcSet: voyageImageSet } = useImageBuilder(voyage.image)
+
 const img = useImage()
 const route = useRoute()
 const snackbar = ref(false)
 const photoCarousel = computed(() => {
-  if (!props.voyage) return []
+  if (!voyage) return []
   const photos = []
-  if (props.voyage.image) photos.push(props.voyage.image)
-  if (props.voyage.imageSecondary) photos.push(props.voyage.imageSecondary)
-  if (props.voyage.photosList?.length) photos.push(...props.voyage.photosList)
+  if (voyage.image) photos.push(voyage.image)
+  if (voyage.imageSecondary) photos.push(voyage.imageSecondary)
+  if (voyage.photosList?.length) photos.push(...voyage.photosList)
   return photos
 })
 
@@ -195,7 +208,19 @@ function copyUrl() {
   bottom: 38px;
   left: 42px;
 }
-.custom-height{
+
+.hero-image {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1536 / 900;
+  display: block;
+  position: relative;
+  z-index: 0;
+  border-radius: 20px;
+}
+
+.hero-image-height{
   height: 455px;
 }
 @media screen and (max-width: 1280px) {
@@ -208,10 +233,10 @@ function copyUrl() {
 @media screen and (max-width: 600px) {
   .media-btns-position{
   position: absolute;
-  bottom: 15px;
+  bottom: 30px;
   left: 15px;
 }
-  .custom-height{
+  .hero-image-height{
   height: 270px;
   }
 }

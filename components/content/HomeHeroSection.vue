@@ -4,15 +4,13 @@
       <NuxtImg
         v-if="srcUrl"
         :src="srcUrl"
-        :srcset="srcset"
+        :srcset="srcSet"
         sizes="(max-width: 600px) 100vw, (max-width: 960px) 90vw, (max-width: 1280px) 85vw, 1280px"
         alt="Image principale Hero d'Odysway"
         class="hero-image"
         format="webp"
         loading="eager"
         fetchpriority="high"
-        width="1536"
-        height="900"
       />
       <div class="hero-overlay h-100 d-flex align-center">
         <v-container class="text-white text-h4 text-md-h2 font-weight-bold text-shadow text-center">
@@ -40,7 +38,7 @@
 </template>
 
 <script setup>
-import imageUrlBuilder from '@sanity/image-url'
+// import imageUrlBuilder from '@sanity/image-url'
 
 const { image } = defineProps({
   image: {
@@ -48,42 +46,42 @@ const { image } = defineProps({
     required: true,
   },
 })
+const { srcSet, srcUrl } = useImageBuilder(image)
+// const config = useRuntimeConfig()
+// const builder = imageUrlBuilder({
+//   projectId: config.public.sanity.projectId,
+//   dataset: config.public.sanity.dataset,
+// })
 
-const config = useRuntimeConfig()
-const builder = imageUrlBuilder({
-  projectId: config.public.sanity.projectId,
-  dataset: config.public.sanity.dataset,
-})
+// // Build optimized Sanity URLs with proper sizes for each breakpoint
+// const buildSanityImageUrl = (width, height, quality = 75) => {
+//   if (!image?.asset?._ref) return ''
+//   return builder
+//     .image(image.asset._ref)
+//     .width(width)
+//     .height(height)
+//     .format('webp')
+//     .quality(quality)
+//     .fit('max')
+//     .url()
+// }
 
-// Build optimized Sanity URLs with proper sizes for each breakpoint
-const buildSanityImageUrl = (width, height, quality = 75) => {
-  if (!image?.asset?._ref) return ''
-  return builder
-    .image(image.asset._ref)
-    .width(width)
-    .height(height)
-    .format('webp')
-    .quality(quality)
-    .fit('max')
-    .url()
-}
+// const srcUrl = computed(() => {
+//   // Default to 800px as fallback for common desktop viewport
+//   return buildSanityImageUrl(800, 470, 70)
+// })
 
-const srcUrl = computed(() => {
-  // Default to 800px as fallback for common desktop viewport
-  return buildSanityImageUrl(800, 470, 70)
-})
-
-const srcset = computed(() => {
-  // Generate srcset matching actual container widths accounting for padding
-  // Heights calculated to maintain 1.7:1 aspect ratio (hero section aspect)
-  return [
-    `${buildSanityImageUrl(400, 235, 60)} 400w`,
-    `${buildSanityImageUrl(600, 350, 65)} 600w`,
-    `${buildSanityImageUrl(800, 470, 70)} 800w`,
-    `${buildSanityImageUrl(1000, 590, 75)} 1000w`,
-    `${buildSanityImageUrl(1280, 750, 75)} 1280w`,
-  ].join(', ')
-})
+// const srcset = computed(() => {
+//   // Generate srcset matching actual container widths accounting for padding
+//   // Heights calculated to maintain 1.7:1 aspect ratio (hero section aspect)
+//   return [
+//     `${buildSanityImageUrl(400, 235, 60)} 400w`,
+//     `${buildSanityImageUrl(600, 350, 65)} 600w`,
+//     `${buildSanityImageUrl(800, 470, 70)} 800w`,
+//     `${buildSanityImageUrl(1000, 590, 75)} 1000w`,
+//     `${buildSanityImageUrl(1280, 750, 75)} 1280w`,
+//   ].join(', ')
+// })
 </script>
 
 <style scoped>
