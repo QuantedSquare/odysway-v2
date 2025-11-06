@@ -142,7 +142,7 @@ const imageWidth = computed(() => {
 })
 
 const photoSource = computed(() => {
-  return testGetImageUrl(props.photo)
+  return testGetImageUrl(props.photo, null, 600)
 })
 
 onMounted(() => {

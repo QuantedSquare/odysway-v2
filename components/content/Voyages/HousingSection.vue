@@ -87,9 +87,13 @@
                         <v-img
                           rounded="lg"
                           cover
-                          :src="img(getImageUrl(image?.asset?._ref), { format: 'webp', quality: 70, width: 640 })"
+                          :src="testGetImageUrl(image, null, 600).srcUrl"
+                          :srcset="testGetImageUrl(image, null, 600).srcSet"
                           :alt="'housing image ' + index + 1 || ''"
                           height="100%"
+                          width="100%"
+                          loading="lazy"
+                          fetch-priority="low"
                         />
                       </template>
                     </v-carousel-item>

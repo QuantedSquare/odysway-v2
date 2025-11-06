@@ -95,13 +95,26 @@
             />
           </template>
         </SanityImage> -->
-        <NuxtImg
+        <!-- <NuxtImg
           v-if="imagesSources.mainImage.srcUrl"
           :src="imagesSources.mainImage.srcUrl"
           :srcset="imagesSources.mainImage.srcSet"
           sizes="(max-width: 600px) 100vw, (max-width: 960px) 90vw, (max-width: 1280px) 85vw, 1280px"
           :alt="voyage.image?.alt || `Image principale du voyage ${voyage.title}`"
           class="hero-image hero-image-height"
+          loading="eager"
+          fetchpriority="high"
+        /> -->
+        <v-img
+          v-if="imagesSources.mainImage.srcUrl"
+          :src="imagesSources.mainImage.srcUrl"
+          :srcset="imagesSources.mainImage.srcSet"
+          sizes="(max-width: 600px) 100vw, (max-width: 960px) 90vw, (max-width: 1280px) 85vw, 1280px"
+          :lazy-src="img(imagesSources.mainImage.srcUrl, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+          :alt="voyage.image?.alt || `Image principale du voyage ${voyage.title}`"
+          class="hero-image-height"
+          cover
+          rounded="lg"
           loading="eager"
           fetchpriority="high"
         />
@@ -127,14 +140,17 @@
             />
           </template>
         </SanityImage> -->
-        <NuxtImg
+        <v-img
           v-if="imagesSources.secondImage.srcUrl"
           :src="imagesSources.secondImage.srcUrl"
           :srcset="imagesSources.secondImage.srcSet"
-          sizes="(max-width: 600px) 100vw, (max-width: 960px) 90vw, (max-width: 1280px) 85vw, 1280px"
+          :lazy-src="img(imagesSources.secondImage.srcUrl, { format: 'webp', quality: 10, height: 350, width: 600 })"
           :alt="voyage.imageSecondary.alt || `Image secondaire du voyage ${voyage.title}`"
           loading="eager"
           fetchpriority="high"
+          rounded="lg"
+          height="214"
+          cover
         />
         <!-- <SanityImage
           v-if="voyage.photosList?.length > 0 && voyage.photosList[0].asset?._ref"
@@ -166,10 +182,13 @@
           v-if="imagesSources.thirdImage.srcUrl"
           :src="imagesSources.thirdImage.srcUrl"
           :srcset="imagesSources.thirdImage.srcSet"
-          sizes="(max-width: 600px) 100vw, (max-width: 960px) 90vw, (max-width: 1280px) 85vw, 1280px"
+          :lazy-src="img(imagesSources.thirdImage.srcUrl, { format: 'webp', quality: 10, height: 350, width: 600 })"
           :alt="voyage.photosList[0].alt || `Photo du voyage ${voyage.title}`"
           loading="eager"
           fetchpriority="high"
+          rounded="lg"
+          height="214"
+          cover
         />
       </v-col>
     </v-row>
@@ -228,8 +247,8 @@ function copyUrl() {
 const imagesSources = computed(() => {
   return {
     mainImage: testGetImageUrl(voyage.image),
-    secondImage: testGetImageUrl(voyage.imageSecondary),
-    thirdImage: testGetImageUrl(voyage.photosList[0]),
+    secondImage: testGetImageUrl(voyage.imageSecondary, null, 600),
+    thirdImage: testGetImageUrl(voyage.photosList[0], null, 600),
   }
 })
 </script>
