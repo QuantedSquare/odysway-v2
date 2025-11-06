@@ -2,15 +2,17 @@
   <div class="mt-8 mt-md-0">
     <div class="relative-hero-section mb-16 hero-image-wrapper">
       <NuxtImg
-        v-if="srcUrl"
-        :src="srcUrl"
-        :srcset="srcSet"
+        v-if="imageSource.srcUrl"
+        :src="imageSource.srcUrl"
+        :srcset="imageSource.srcSet"
         sizes="(max-width: 600px) 100vw, (max-width: 960px) 90vw, (max-width: 1280px) 85vw, 1280px"
         alt="Image principale Hero d'Odysway"
         class="hero-image"
         format="webp"
         loading="eager"
         fetchpriority="high"
+        width="1536"
+        height="900"
       />
       <div class="hero-overlay h-100 d-flex align-center">
         <v-container class="text-white text-h4 text-md-h2 font-weight-bold text-shadow text-center">
@@ -46,7 +48,9 @@ const { image } = defineProps({
     required: true,
   },
 })
-const { srcSet, srcUrl } = useImageBuilder(image)
+const imageSource = computed(() => {
+  return testGetImageUrl(image)
+})
 // const config = useRuntimeConfig()
 // const builder = imageUrlBuilder({
 //   projectId: config.public.sanity.projectId,

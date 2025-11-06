@@ -96,13 +96,12 @@
           </template>
         </SanityImage> -->
         <NuxtImg
-          v-if="voyageImageUrl"
-          :src="voyageImageUrl"
-          :srcset="voyageImageSet"
+          v-if="imagesSources.mainImage.srcUrl"
+          :src="imagesSources.mainImage.srcUrl"
+          :srcset="imagesSources.mainImage.srcSet"
           sizes="(max-width: 600px) 100vw, (max-width: 960px) 90vw, (max-width: 1280px) 85vw, 1280px"
           :alt="voyage.image?.alt || `Image principale du voyage ${voyage.title}`"
           class="hero-image hero-image-height"
-          format="webp"
           loading="eager"
           fetchpriority="high"
         />
@@ -111,7 +110,7 @@
         cols="3"
         class="d-none d-sm-flex flex-column ga-7"
       >
-        <SanityImage
+        <!-- <SanityImage
           v-if="voyage.imageSecondary?.asset?._ref"
           :asset-id="voyage.imageSecondary?.asset?._ref"
           auto="format"
@@ -127,8 +126,17 @@
               rounded="lg"
             />
           </template>
-        </SanityImage>
-        <SanityImage
+        </SanityImage> -->
+        <NuxtImg
+          v-if="imagesSources.secondImage.srcUrl"
+          :src="imagesSources.secondImage.srcUrl"
+          :srcset="imagesSources.secondImage.srcSet"
+          sizes="(max-width: 600px) 100vw, (max-width: 960px) 90vw, (max-width: 1280px) 85vw, 1280px"
+          :alt="voyage.imageSecondary.alt || `Image secondaire du voyage ${voyage.title}`"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <!-- <SanityImage
           v-if="voyage.photosList?.length > 0 && voyage.photosList[0].asset?._ref"
           :asset-id="voyage.photosList[0].asset._ref"
           auto="format"
@@ -144,7 +152,25 @@
               rounded="lg"
             />
           </template>
-        </SanityImage>
+        </SanityImage> -->
+        <!-- <NuxtImg
+          v-if="imagesSources.thirdImage.srcUrl"
+          :src="imagesSources.thirdImage.srcUrl"
+          :srcset="imagesSources.thirdImage.srcSet"
+          sizes="(max-width: 600px) 100vw, (max-width: 960px) 90vw, (max-width: 1280px) 85vw, 1280px"
+          :alt="voyage.photosList[0].alt || `Photo du voyage ${voyage.title}`"
+          loading="eager"
+          fetchpriority="high"
+        /> -->
+        <v-img
+          v-if="imagesSources.thirdImage.srcUrl"
+          :src="imagesSources.thirdImage.srcUrl"
+          :srcset="imagesSources.thirdImage.srcSet"
+          sizes="(max-width: 600px) 100vw, (max-width: 960px) 90vw, (max-width: 1280px) 85vw, 1280px"
+          :alt="voyage.photosList[0].alt || `Photo du voyage ${voyage.title}`"
+          loading="eager"
+          fetchpriority="high"
+        />
       </v-col>
     </v-row>
     <v-row class="media-btns-position">
@@ -181,8 +207,6 @@ const { voyage } = defineProps({
   },
 })
 
-const { srcUrl: voyageImageUrl, srcSet: voyageImageSet } = useImageBuilder(voyage.image)
-
 const img = useImage()
 const route = useRoute()
 const snackbar = ref(false)
@@ -200,6 +224,14 @@ function copyUrl() {
   navigator.clipboard.writeText(copiedUrl)
   snackbar.value = true
 }
+
+const imagesSources = computed(() => {
+  return {
+    mainImage: testGetImageUrl(voyage.image),
+    secondImage: testGetImageUrl(voyage.imageSecondary),
+    thirdImage: testGetImageUrl(voyage.photosList[0]),
+  }
+})
 </script>
 
 <style scoped>
