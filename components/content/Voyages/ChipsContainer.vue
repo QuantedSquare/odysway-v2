@@ -130,8 +130,6 @@ const levelIcon = computed(() => {
     alt: `Icone d'un niveau de difficulté ${props.level}`,
   }
 })
-
-console.log('level icon path ', levelIcon.value)
 </script>
 
 <style scoped>
