@@ -172,6 +172,7 @@ export const voyageType = defineType({
       group: 'basic',
       fields: [{name: 'alt', type: 'string'} as any],
       title: 'Image principale',
+      description: 'Ratio 16:9 (1920x1080 px)'
     }),
     defineField({
       name: 'imageSecondary',
@@ -180,6 +181,7 @@ export const voyageType = defineType({
       group: 'basic',
       fields: [{name: 'alt', type: 'string'} as any],
       title: 'Image secondaire',
+      description: 'Ratio 16:9 (1920x1080 px)'
     }),
     defineField({
       name: 'destinations',
