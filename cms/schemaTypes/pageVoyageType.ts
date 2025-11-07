@@ -15,6 +15,7 @@ export const pageVoyageType = defineType({
     {name: 'faq_section', title: 'Section FAQ'},
     {name: 'why_section', title: 'Section Pourquoi'},
     {name: 'other_sections', title: 'Autres Sections'},
+    {name: 'seo', title: 'SEO'},
   ],
   preview: {
     prepare() {
@@ -25,6 +26,12 @@ export const pageVoyageType = defineType({
     }
   },
   fields: [
+      defineField({
+      name: 'seo',
+      title: 'SEO Settings',
+      type: 'seo',
+      description: 'Configuration SEO pour la page catégories thématiques',
+    }),
     // Buttons
     defineField({
       name: 'shareButton',
