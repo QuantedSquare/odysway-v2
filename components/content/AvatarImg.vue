@@ -5,8 +5,8 @@
   >
     <v-img
       v-if="imgUrl"
-      :src="img(imgUrl, { format: 'webp', quality: 70, height: 340, width: 640 })"
-      :lazy-src="img(imgUrl, { format: 'webp', quality: 10, height: 340, width: 640 })"
+      :src="imgUrl.srcUrl"
+      :lazy-src="img(imgUrl.srcUrl, { format: 'webp', quality: 10, height: 340, width: 640 })"
       :alt="name + ' avatar'"
       height="100%"
       width="100%"
@@ -16,7 +16,7 @@
 </template>
 
 <script setup>
-import { useImage } from '#imports'
+import { buildImageUrl, useImage } from '#imports'
 
 const { avatarImg } = defineProps({
   avatarImg: {
@@ -34,6 +34,6 @@ const { avatarImg } = defineProps({
 })
 const img = useImage()
 const imgUrl = computed(() => {
-  return getImageUrl(avatarImg?.asset?._ref)
+  return buildImageUrl(avatarImg, null, 600)
 })
 </script>

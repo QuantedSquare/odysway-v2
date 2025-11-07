@@ -2,9 +2,9 @@
   <div class="mt-8 mt-md-0">
     <div class="relative-hero-section mb-16 hero-image-wrapper">
       <NuxtImg
-        v-if="srcUrl"
-        :src="srcUrl"
-        :srcset="srcset"
+        v-if="imageSource.srcUrl"
+        :src="imageSource.srcUrl"
+        :srcset="imageSource.srcSet"
         sizes="(max-width: 600px) 100vw, (max-width: 960px) 90vw, (max-width: 1280px) 85vw, 1280px"
         alt="Image principale Hero d'Odysway"
         class="hero-image"
@@ -40,49 +40,14 @@
 </template>
 
 <script setup>
-import imageUrlBuilder from '@sanity/image-url'
-
 const { image } = defineProps({
   image: {
     type: Object,
     required: true,
   },
 })
-
-const config = useRuntimeConfig()
-const builder = imageUrlBuilder({
-  projectId: config.public.sanity.projectId,
-  dataset: config.public.sanity.dataset,
-})
-
-// Build optimized Sanity URLs with proper sizes for each breakpoint
-const buildSanityImageUrl = (width, height, quality = 75) => {
-  if (!image?.asset?._ref) return ''
-  return builder
-    .image(image.asset._ref)
-    .width(width)
-    .height(height)
-    .format('webp')
-    .quality(quality)
-    .fit('max')
-    .url()
-}
-
-const srcUrl = computed(() => {
-  // Default to 800px as fallback for common desktop viewport
-  return buildSanityImageUrl(800, 470, 70)
-})
-
-const srcset = computed(() => {
-  // Generate srcset matching actual container widths accounting for padding
-  // Heights calculated to maintain 1.7:1 aspect ratio (hero section aspect)
-  return [
-    `${buildSanityImageUrl(400, 235, 60)} 400w`,
-    `${buildSanityImageUrl(600, 350, 65)} 600w`,
-    `${buildSanityImageUrl(800, 470, 70)} 800w`,
-    `${buildSanityImageUrl(1000, 590, 75)} 1000w`,
-    `${buildSanityImageUrl(1280, 750, 75)} 1280w`,
-  ].join(', ')
+const imageSource = computed(() => {
+  return buildImageUrl(image)
 })
 </script>
 
