@@ -3,7 +3,7 @@
     fluid
     class="px-0"
   >
-    <v-row v-if="programmeBlock">
+    <v-row v-if="programmeBlock && programmeBlock.length > 0">
       <v-col cols="12">
         <h4 class="font-weight-black text-h4 my-1 my-md-4 pb-0 pb-md-4 px-2 px-md-0">
           <!-- #TODO: Add title from sanity -->
@@ -31,7 +31,7 @@
 defineProps({
   programmeBlock: {
     type: Array,
-    required: true,
+    default: () => [],
   },
 })
 </script>

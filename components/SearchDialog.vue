@@ -97,14 +97,13 @@
 import { mdiClose } from '@mdi/js'
 import { ref, computed } from 'vue'
 import _ from 'lodash'
-import { useDisplay } from 'vuetify'
+
 import { useImage } from '#imports'
 import { useTravelsSearch } from '~/composables/useTravelsSearch'
 
 const img = useImage()
 const searchText = ref('') // TODO use route params by default
 
-const { smAndDown } = useDisplay()
 const { destinations, loading, handleSearch } = useTravelsSearch()
 
 const debouncedHandleSearch = _.debounce(() => {
@@ -122,7 +121,7 @@ const nbVoyageIdeas = computed(() => {
 
 function navigate(destination) {
   const page = destination.dataSource === 'destinations' || destination.dataSource === 'regions'
-    ? `/search?destination=${destination.slug}`
+    ? `/voyages?destination=${destination.slug}`
     : `/voyages/${destination.slug}`
   navigateTo(page)
 }

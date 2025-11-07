@@ -78,7 +78,7 @@ const props = defineProps({
   },
   photo: {
     type: Object,
-    required: true,
+    default: undefined,
   },
   badgeText: {
     type: String,

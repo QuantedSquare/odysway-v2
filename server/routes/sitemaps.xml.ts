@@ -36,7 +36,7 @@ export default defineEventHandler(async (event) => {
   const sitemapUrls = [
     // Static pages
     { url: '/', lastmod: new Date().toISOString(), changefreq: 'daily', priority: 1.0 },
-    { url: '/search', lastmod: new Date().toISOString(), changefreq: 'daily', priority: 0.9 },
+    { url: '/voyages', lastmod: new Date().toISOString(), changefreq: 'daily', priority: 0.9 },
     { url: '/contact', lastmod: new Date().toISOString(), changefreq: 'monthly', priority: 0.8 },
     { url: '/sur-mesure', lastmod: new Date().toISOString(), changefreq: 'monthly', priority: 0.8 },
     { url: '/nous-recrutons', lastmod: new Date().toISOString(), changefreq: 'monthly', priority: 0.7 },

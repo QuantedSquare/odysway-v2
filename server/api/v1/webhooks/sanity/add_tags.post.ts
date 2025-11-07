@@ -12,7 +12,7 @@ function toTitleCase(input: string): string {
     .replace(/[-_]+/g, ' ')
     .replace(/\s+/g, ' ')
     .trim()
-    .replace(/\b\w/g, (c) => c.toUpperCase())
+    .replace(/\b\w/g, c => c.toUpperCase())
 }
 
 function normalizeTagCandidate(value: unknown): string | null {
@@ -74,7 +74,7 @@ function deriveSuggestedTags(doc: any): string[] {
       case 'header':
         return 'header'
       case 'homePage':
-        return "Page d'accueil"
+        return 'Page d\'accueil'
       case 'offreCadeau':
         return 'Offre cadeau'
       case 'page_voyage':
@@ -103,7 +103,7 @@ function deriveSuggestedTags(doc: any): string[] {
   const chosen = byType()
   if (chosen) {
     const tag = normalizeTagCandidate(chosen) ?? chosen
-    return [tag].filter((t) => t && t.length <= 80)
+    return [tag].filter(t => t && t.length <= 80)
   }
 
   // Multi-tag cases (slug + type label) or slug-only
@@ -121,7 +121,7 @@ function deriveSuggestedTags(doc: any): string[] {
     if (slugCurrent) arr.push(normalizeTagCandidate(slugCurrent) || slugCurrent)
     const label = (pairs as any)[typeName]
     if (label) arr.push(label)
-    const cleaned = unique(arr.filter((t) => t && t.length <= 80))
+    const cleaned = unique(arr.filter(t => t && t.length <= 80))
     if (cleaned.length > 0) return cleaned
   }
 
@@ -159,7 +159,7 @@ function collectImageReferences(node: unknown, path: string[] = [], acc: ImageRe
   }
 
   return acc
-} 
+}
 
 export default defineEventHandler(async (event) => {
   // Verify webhook secret for security
@@ -202,7 +202,7 @@ export default defineEventHandler(async (event) => {
         token: config.public.sanity.token,
       })
 
-      const assetIds = Array.from(new Set(images.map((i) => i.assetRef)))
+      const assetIds = Array.from(new Set(images.map(i => i.assetRef)))
 
       const query = `*[_type == "sanity.imageAsset" && _id in $ids]{
         _id,
@@ -228,7 +228,7 @@ export default defineEventHandler(async (event) => {
     type TagsDiff = {
       assetId: string
       existingTagNames: string[]
-      existingTagRefs: Array<{ _type: 'reference'; _ref: string; _weak: true }>
+      existingTagRefs: Array<{ _type: 'reference', _ref: string, _weak: true }>
       suggestedTags: string[]
       alreadyPresent: string[]
       missingTags: string[]
@@ -238,8 +238,8 @@ export default defineEventHandler(async (event) => {
       // Extract existing tag names and references from tagsRaw
       // tagsRaw can be: array of strings, array of references, or mixed
       const existingNames: string[] = []
-      const existingRefs: Array<{ _type: 'reference'; _ref: string; _weak: true }> = []
-      
+      const existingRefs: Array<{ _type: 'reference', _ref: string, _weak: true }> = []
+
       if (Array.isArray(asset.tagsRaw)) {
         asset.tagsRaw.forEach((tag) => {
           if (typeof tag === 'string') {
@@ -255,7 +255,7 @@ export default defineEventHandler(async (event) => {
           }
         })
       }
-      
+
       // Also check tagRefs array if available
       if (Array.isArray(asset.tagRefs)) {
         asset.tagRefs.forEach((ref) => {
@@ -270,16 +270,16 @@ export default defineEventHandler(async (event) => {
       const existingSet = new Set(existingNames.map(toKey))
       const suggestedSet = new Set((suggestedTags || []).map(toKey))
 
-      const alreadyPresent = Array.from(suggestedSet).filter((s) => existingSet.has(s))
-      const missingTags = Array.from(suggestedSet).filter((s) => !existingSet.has(s))
+      const alreadyPresent = Array.from(suggestedSet).filter(s => existingSet.has(s))
+      const missingTags = Array.from(suggestedSet).filter(s => !existingSet.has(s))
 
       // Return human facing values for readability (original casing from suggestedTags)
-      const humanAlready = (suggestedTags || []).filter((t) => alreadyPresent.includes(toKey(t)))
-      const humanMissing = (suggestedTags || []).filter((t) => missingTags.includes(toKey(t)))
+      const humanAlready = (suggestedTags || []).filter(t => alreadyPresent.includes(toKey(t)))
+      const humanMissing = (suggestedTags || []).filter(t => missingTags.includes(toKey(t)))
 
       // Deduplicate existing refs by _ref
       const uniqueExistingRefs = Array.from(
-        new Map(existingRefs.map((ref) => [ref._ref, ref])).values(),
+        new Map(existingRefs.map(ref => [ref._ref, ref])).values(),
       )
 
       return {
@@ -297,7 +297,7 @@ export default defineEventHandler(async (event) => {
 
       // Collect all unique tag names (existing + suggested) that need to be referenced
       const allTagNames = unique(
-        tagsDiffByAsset.flatMap((tagDiff) => [
+        tagsDiffByAsset.flatMap(tagDiff => [
           ...(tagDiff.existingTagNames || []),
           ...(tagDiff.suggestedTags || []),
         ]),
@@ -335,7 +335,7 @@ export default defineEventHandler(async (event) => {
 
           // Create missing tag documents
           const tagsToCreate = allTagNames.filter(
-            (name) => !tagNameToRef.has(name.toLowerCase().trim()),
+            name => !tagNameToRef.has(name.toLowerCase().trim()),
           )
 
           for (const tagName of tagsToCreate) {
@@ -386,7 +386,7 @@ export default defineEventHandler(async (event) => {
 
           // Remove duplicate references by _ref
           const uniqueRefs = Array.from(
-            new Map(mergedRefs.map((ref) => [ref._ref, ref])).values(),
+            new Map(mergedRefs.map(ref => [ref._ref, ref])).values(),
           )
 
           return {
@@ -404,7 +404,7 @@ export default defineEventHandler(async (event) => {
       if (mutations.length > 0) {
         console.log('✓ Mutations (with tag references):', mutations.length)
         try {
-          const result = await sanity.mutate(mutations as any)
+          const result = await sanity.mutate(mutations as any[])
           console.log('✓ Mutations applied (tag references):', result)
         }
         catch (error) {

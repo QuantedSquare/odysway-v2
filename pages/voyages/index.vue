@@ -94,7 +94,7 @@ useSeoMeta({
     lang: 'fr',
   },
   robots: 'noindex, follow',
-  canonical: 'https://www.odysway.com/search',
+  canonical: 'https://www.odysway.com/voyages',
 })
 const router = useRouter()
 const route = useRoute()
@@ -252,8 +252,7 @@ const { data: voyages } = await useAsyncData(
 
     const voyagesQuery = groq`*[
       _type == "voyage" && (
-        !('custom' in availabilityTypes) ||
-        (count(availabilityTypes) > 1)
+        !('custom' in availabilityTypes)
       )
     ]{
       _id,
@@ -309,7 +308,7 @@ const nbVoyages = computed(() => {
 })
 function reinitiliazeFilter() {
   router.push({
-    path: '/search',
+    path: '/voyages',
     query: null,
   })
 }

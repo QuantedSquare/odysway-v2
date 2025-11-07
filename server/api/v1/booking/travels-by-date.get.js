@@ -1,7 +1,7 @@
 import { defineEventHandler } from 'h3'
 import dayjs from 'dayjs'
-import supabase from '~/server/utils/supabase'
 import { createClient } from '@sanity/client'
+import supabase from '~/server/utils/supabase'
 
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
@@ -30,13 +30,15 @@ export default defineEventHandler(async (event) => {
     last_minute: dayjs(date.departure_date).diff(dayjs(), 'day') <= 31 ? date.last_minute : false,
   }))
 
-  const travelsQuery = `*[_type == "voyage"]{
+  const travelsQuery = `*[_type == "voyage" && (
+    !('custom' in availabilityTypes)
+  )]{
     "slug": slug.current,
     title,
     image,
     rating,
     comments,
-    groupeAvailable,
+    availabilityTypes,
     "startingPrice": pricing.startingPrice,
     duration,
     destinations[]-> {
@@ -56,7 +58,7 @@ export default defineEventHandler(async (event) => {
       image: travel.image,
       rating: travel.rating,
       comments: travel.comments,
-      groupeAvailable: travel.groupeAvailable,
+      availabilityTypes: travel.availabilityTypes,
       startingPrice: travel.startingPrice,
       iso: travel.destinations?.map(destination => destination.iso).filter(Boolean) || [],
       dates,

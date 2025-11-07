@@ -18,26 +18,26 @@
     <v-row
       align="center"
       justify="center"
-      class="bg-white rounded-md filter-wrapper pa-4"
+      class="bg-white rounded-md filter-wrapper "
     >
       <v-col
         cols="12"
-        sm="7"
+        sm="8"
       >
         <v-btn-toggle
           v-model="toggledBtn"
           mandatory
-          class="d-flex justify-center ga-sm-3 btn-height"
+          class="d-flex justify-center justify-md-start ga-2 btn-height "
         >
           <v-btn
             v-for="btn of toggleBtns"
             :key="btn.text"
             :value="btn.value"
             height="100%"
-            selected-class="bg-primary"
-            class="text-decoration-none rounded-lg"
+            selected-class="bg-primary border-none"
+            class="text-decoration-none rounded-lg border"
           >
-            <span class="text-caption text-sm-subtitle-1">{{ btn.text }}</span>
+            <span class="text-body-1 ">{{ btn.text }}</span>
           </v-btn>
         </v-btn-toggle>
       </v-col>
@@ -67,10 +67,15 @@
     </v-row>
 
     <VoyageCardsList
+      v-if="!loading && travels.length > 0"
       :filtered-deals="groupByMonthFiltered"
       :deals-lastminute="dealsLastMinuteFiltered"
       :selected-period="selectedPeriod"
       :toggled-btn="toggledBtn"
+    />
+    <v-skeleton-loader
+      v-else-if="loading"
+      type="article"
     />
   </v-container>
 </template>
@@ -179,13 +184,13 @@ const filteredTravels = computed(() => {
   return travels.value.filter((travel) => {
     const iso = Array.isArray(travel.iso) ? travel.iso[0] : travel.iso
     if (queryType === 'france') {
-      return iso === franceDealIso && travel.dates.length > 0 && travel.groupeAvailable
+      return iso === franceDealIso && travel.dates.length > 0 && travel.availabilityTypes?.includes('groupe')
     }
     else if (queryType === 'other') {
-      return iso !== franceDealIso && travel.dates.length > 0 && travel.groupeAvailable
+      return iso !== franceDealIso && travel.dates.length > 0 && travel.availabilityTypes?.includes('groupe')
     }
     else {
-      return travel.dates.length > 0 && travel.groupeAvailable
+      return travel.dates.length > 0 && travel.availabilityTypes?.includes('groupe')
     }
   })
 })
@@ -292,7 +297,7 @@ useSeo({
 <style scoped>
 .filter-wrapper{
   position: relative;
-  width: 700px;
+  width: 550px;
   height: fit-content;
   box-shadow: 5px 5px 100px 0px rgba(43, 76, 82, 0.5);
   margin: -45px auto 0 auto;

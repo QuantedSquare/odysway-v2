@@ -24,7 +24,7 @@
         </v-row>
         <v-row>
           <v-col
-            v-if="faqBlock"
+            v-if="faqBlock && faqBlock.length > 0"
             cols="12"
             md="8"
             class="max-height-with-overflow"
@@ -66,8 +66,8 @@ const { faqBlock, backgroundImage } = defineProps({
     default: 'rgba(43, 76, 82, 0.8)',
   },
   faqBlock: {
-    type: Object,
-    required: true,
+    type: Array,
+    default: () => [],
   },
 })
 const backgroundImageUrl = computed(() => {

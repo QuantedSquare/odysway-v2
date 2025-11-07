@@ -9,6 +9,7 @@
     <template #content>
       <div>
         <DisplayVoyagesRow
+          v-if="categorySanity"
           :is-search="true"
           :selected-category="categorySanity"
           :voyages="categorySanity.voyages"
@@ -78,7 +79,9 @@ const categoryQuery = `
     title,
     slug,
     image,
-    "voyages": *[_type == "voyage" && references(^._id)]{
+    "voyages": *[_type == "voyage" && references(^._id) && (
+        !('custom' in availabilityTypes)
+      )]{
         _id,
       title,
       slug,
@@ -87,7 +90,7 @@ const categoryQuery = `
       nights,
       rating,
       comments,
-      groupeAvailable,
+      availabilityTypes,
       "startingPrice": pricing.startingPrice,
       pricing {
         startingPrice
@@ -133,10 +136,10 @@ const { data: categorySanity } = await useAsyncData(
   async () => {
     try {
       const result = await sanity.fetch(categoryQuery, { slug: slug.value })
-      return result || {}
+      return result
     }
     catch {
-      return {}
+      return null
     }
   },
 )

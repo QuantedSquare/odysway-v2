@@ -94,7 +94,7 @@ import { useRouter } from 'vue-router'
 const search = ref(null)
 const loading = ref(false)
 const sanity = useSanity()
-const travelesListQuery = groq`*[_type == "voyage" && customAvailable == false]{
+const travelesListQuery = groq`*[_type == "voyage" && !('custom' in availabilityTypes)]{
   "slug": slug.current,
   title,
   image {

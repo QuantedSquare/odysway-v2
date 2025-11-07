@@ -1,5 +1,6 @@
 <template>
   <v-container
+
     fluid
     class="px-0 py-0"
   >
@@ -8,6 +9,7 @@
       class="px-2 px-md-0"
     >
       <v-col
+        v-if="housingBlock && housingBlock.length > 0"
         cols="12"
         xs="7"
         sm="9"
@@ -42,7 +44,7 @@
         class="flex-nowrap overflow-auto hidden-scroll"
       >
         <v-col
-          v-for="housing, index in housingBlock"
+          v-for="housing, index in housingBlock || []"
           :key="index"
           :cols="childrenCount > 1 ? 11 : 12"
           md="auto"
@@ -163,8 +165,8 @@ const { housingBlock } = defineProps({
     default: 'primary',
   },
   housingBlock: {
-    type: Object,
-    required: true,
+    type: Array,
+    default: () => [],
   },
   housingTitle: {
     type: String,
@@ -192,7 +194,7 @@ onMounted(() => {
 })
 
 const childrenCount = computed(() => {
-  return housingBlock.length
+  return housingBlock?.length || 0
 })
 const displayButton = computed(() => {
   if (mdAndUp.value) {

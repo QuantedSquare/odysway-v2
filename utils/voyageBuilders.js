@@ -10,7 +10,7 @@ export function buildVoyageFromSanity(fetchedDate, travel, imgSrc = null) {
     slug: travel.slug,
     iso: travel.destinations.map(d => d.iso).join(','),
     zoneChapka: +travel.destinations[0]?.chapka || 0,
-    privatisation: travel.privatisationAvailable || true,
+    privatisation: travel.availabilityTypes?.includes('privatisation') || true,
     startingPrice: fetchedDate.starting_price * 100,
     indivRoomPrice: travel.pricing?.indivRoom && travel.pricing?.indivRoomPrice > 0 ? travel.pricing.indivRoomPrice * 100 : 0,
     gotIndivRoomAvailable: travel.pricing?.indivRoom && travel.pricing?.indivRoomPrice > 0,

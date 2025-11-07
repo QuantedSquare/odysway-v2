@@ -239,6 +239,7 @@ const travelesQuery = groq`*[_type == "voyage"]{
     slug,
     title,
     customAvailable,
+    availabilityTypes,
     pricing
   }`
 const { data: list } = await useAsyncData('travel', () =>
@@ -253,7 +254,7 @@ const fetchTravels = () => {
 
 const onTravelSelect = (slug) => {
   const travel = travelesMap.value[slug]
-  isCustomTravel.value = travel.customAvailable
+  isCustomTravel.value = travel.availabilityTypes?.includes('custom')
   if (travel) {
     form.value.min_travelers = travel.pricing?.minTravelersToConfirm || 2
     form.value.max_travelers = travel.pricing?.maxTravelers || 10

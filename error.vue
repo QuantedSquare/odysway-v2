@@ -5,10 +5,10 @@
       fluid
       class="d-flex flex-column align-center justify-center fill-height ga-5"
     >
-      <h1>{{ error.statusCode }}</h1>
+      <h1>{{ error?.statusCode }}</h1>
       <h1>:'(</h1>
       <h3>
-        {{ error.statusCode === 404 ? "Nous n'avons pas trouvé cette page ..." : 'Une erreur est survenue' }}
+        {{ error?.statusCode === 404 ? "Nous n'avons pas trouvé cette page ..." : 'Une erreur est survenue' }}
       </h3>
       <v-btn
         to="/"

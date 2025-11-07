@@ -23,7 +23,7 @@ export default defineSitemapEventHandler(async () => {
   const urls: SitemapUrlInput[] = [
     // Static key pages
     { loc: '/', changefreq: 'daily', priority: 1.0 },
-    { loc: '/search', changefreq: 'daily', priority: 0.9 },
+    { loc: '/voyages', changefreq: 'daily', priority: 0.9 },
     { loc: '/contact', changefreq: 'monthly', priority: 0.8 },
     { loc: '/sur-mesure', changefreq: 'monthly', priority: 0.8 },
     { loc: '/nous-recrutons', changefreq: 'monthly', priority: 0.7 },

@@ -56,7 +56,6 @@ export const entrepriseType = defineType({
   title: 'Page Entreprise',
   type: 'document',
   groups: [
-
     {
       name: 'hero',
       title: 'Hero Section',
@@ -97,15 +96,6 @@ export const entrepriseType = defineType({
     },
   },
   fields: [
-      // SEO Settings
-      defineField({
-        name: 'seo',
-        title: 'SEO Settings',
-        type: 'seo',
-        group: 'seo',
-        description: 'Configuration SEO pour la page entreprise (og:type = "website", structuredData = "Organization")',
-      }),
-
     // Hero Section
     defineField({
       name: 'heroSection',
@@ -214,5 +204,18 @@ export const entrepriseType = defineType({
         }),
       ],
     }),
+          // SEO Settings
+          defineField({
+            name: 'seo',
+            title: 'SEO Settings',
+            type: 'seo',
+            group: 'seo',
+            description: 'Configuration SEO pour la page entreprise (og:type = "website", structuredData = "Organization")',
+          }),
+          defineField({
+            name: 'pageBuilder',
+            title: 'Page Builder',
+            type: 'pageBuilder',
+          }),
   ],
 })
