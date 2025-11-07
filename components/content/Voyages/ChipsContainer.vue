@@ -48,7 +48,7 @@
           </span>
         </v-chip>
         <v-chip
-          v-if="stegaClean(level).length > 0"
+          v-if="levelIcon.icon"
           variant="flat"
           size="large"
           class="chip-responsive"
@@ -56,12 +56,11 @@
           density="comfortable"
         >
           <span class="d-flex align-center text-primary text-caption text-sm-subtitle-2 px-3 mb-1">
-            <v-icon
-              :icon="stegaClean(level) === '1' ? mdiSignalCellular1 : stegaClean(level) === '2' ? mdiSignalCellular2 : mdiSignalCellular3"
+            <v-img
+              :src="levelIcon.icon"
               class="mr-3 icon-responsive"
-              :alt="`Icone d'un niveau de difficulté ${level}`"
+              :alt="levelIcon.alt"
             />
-
             <span class="font-weight-bold">Niveau {{ level }}</span>
           </span>
         </v-chip>
@@ -71,8 +70,6 @@
 </template>
 
 <script setup>
-import { mdiSignalCellular1, mdiSignalCellular2, mdiSignalCellular3 } from '@mdi/js'
-import { stegaClean } from '@sanity/client/stega'
 import { getImageUrl } from '~/utils/getImageUrl'
 
 const props = defineProps({
@@ -81,8 +78,8 @@ const props = defineProps({
     default: () => [],
   },
   level: {
-    type: String,
-    default: '0',
+    type: Number,
+    default: 0,
   },
   badgeTitle: {
     type: String,
@@ -126,6 +123,15 @@ const processedBadges = computed(() => {
     }
   }).filter(Boolean) // Remove null entries
 })
+
+const levelIcon = computed(() => {
+  return {
+    icon: `/icons/level-${props.level}.svg`,
+    alt: `Icone d'un niveau de difficulté ${props.level}`,
+  }
+})
+
+console.log('level icon path ', levelIcon.value)
 </script>
 
 <style scoped>

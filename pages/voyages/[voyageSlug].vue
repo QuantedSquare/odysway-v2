@@ -16,7 +16,7 @@
         <ChipsContainer
           :badges="voyage.badges"
           :badge-title="voyage.experienceType?.badgeTitle"
-          :level="voyage.level"
+          :level="voyage.difficultyLevel.level"
         />
 
         <StickyContainer>
@@ -199,6 +199,9 @@ const voyageQuery = `
       ...
       }
     },
+    difficultyLevel ->{
+      ...,
+    }
   }
 `
 
