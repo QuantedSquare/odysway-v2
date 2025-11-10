@@ -4,6 +4,11 @@ import { createClient } from '@sanity/client'
 export default eventHandler(async (event) => {
   const config = useRuntimeConfig()
 
+  const userAgent = event.node.req.headers['user-agent'] || 'unknown'
+  if (process.env.NODE_ENV !== 'production') {
+    console.debug('[search voyages] user-agent', userAgent)
+  }
+
   const sanityClient = createClient({
     projectId: config.public.sanity.projectId,
     dataset: config.public.sanity.dataset,

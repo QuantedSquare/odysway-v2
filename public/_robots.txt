@@ -1,8 +1,18 @@
 User-agent: *
+Disallow: /api/
+Disallow: /server/api/
+Disallow: /voyages/search
+Disallow: /search
+Disallow: /booking-management
+Disallow: /checkout
 Disallow: /paiement
 Disallow: /devis
-Disallow: /checkout
-Disallow: /booking-management
+Sitemap: https://odysway.com/sitemap.xml
 Sitemap: https://odysway.com/sitemap.xml
 
 
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
