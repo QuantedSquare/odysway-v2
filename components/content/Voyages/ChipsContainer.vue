@@ -48,7 +48,7 @@
           </span>
         </v-chip>
         <v-chip
-          v-if="levelIcon.icon"
+          v-if="difficultyLevel.level > 0"
           variant="flat"
           size="large"
           class="chip-responsive"
@@ -61,7 +61,19 @@
               class="mr-3 icon-responsive"
               :alt="levelIcon.alt"
             />
-            <span class="font-weight-bold">Niveau {{ level }}</span>
+            <span class="font-weight-bold mr-2">Niveau {{ difficultyLevel.level }}</span>
+            <v-tooltip
+              location="bottom"
+              max-width="500"
+            >
+              <template #activator="{ props }">
+                <v-icon v-bind="props">{{ mdiInformationOutline }}</v-icon>
+              </template>
+
+              <PortableText
+                :value="difficultyLevel.description"
+              />
+            </v-tooltip>
           </span>
         </v-chip>
       </v-col>
@@ -70,16 +82,22 @@
 </template>
 
 <script setup>
+import { mdiInformationOutline } from '@mdi/js'
+import { PortableText } from '@portabletext/vue'
 import { getImageUrl } from '~/utils/getImageUrl'
 
-const props = defineProps({
+const { badges, difficultyLevel, badgeTitle } = defineProps({
   badges: {
     type: Array,
     default: () => [],
   },
-  level: {
-    type: Number,
-    default: 0,
+  difficultyLevel: {
+    type: Object,
+    default: () => ({
+      title: '',
+      description: null,
+      level: 0,
+    }),
   },
   badgeTitle: {
     type: String,
@@ -89,9 +107,9 @@ const props = defineProps({
 
 // Process badges to replace variables and get image URLs
 const processedBadges = computed(() => {
-  if (!props.badges || props.badges.length === 0) return []
+  if (!badges || badges.length === 0) return []
 
-  return props.badges.map((badgeItem) => {
+  return badges.map((badgeItem) => {
     if (!badgeItem.badge) return null
 
     // Start with the badge text
@@ -126,8 +144,8 @@ const processedBadges = computed(() => {
 
 const levelIcon = computed(() => {
   return {
-    icon: `/icons/level-${props.level}.svg`,
-    alt: `Icone d'un niveau de difficulté ${props.level}`,
+    icon: `/icons/level-${difficultyLevel.level}.svg`,
+    alt: `Icone d'un niveau de difficulté ${difficultyLevel.title}`,
   }
 })
 </script>
@@ -176,5 +194,8 @@ const levelIcon = computed(() => {
   .custom-chip-height:deep(.v-chip){
     height: 46px!important;
   }
+}
+.max-width-200 {
+  max-width: 800px!important;
 }
 </style>
