@@ -77,7 +77,6 @@ export default defineEventHandler(async (event) => {
                 ],
               },
           })
-          await activecampaign.updateDeal(row.deal_id, { stage: 1 })
         }
         catch (err) {
           console.error('Error updating deal in ActiveCampaign', row.deal_id, err)
