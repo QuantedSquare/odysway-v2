@@ -204,7 +204,7 @@ export default defineNuxtConfig({
     projectId: process.env.SANITY_PROJECT_ID,
     dataset: process.env.SANITY_DATASET,
     apiVersion: '2025-04-01',
-    useCdn: false, // Disable CDN for instant updates (recommended for webhooks)
+    useCdn: true, // Disable CDN for instant updates (recommended for webhooks)
     withCredentials: false,
     visualEditing: {
       token: process.env.SANITY_VIEWER_TOKEN,
