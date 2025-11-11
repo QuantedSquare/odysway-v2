@@ -1,14 +1,14 @@
 import {defineField, defineType} from 'sanity'
 
-export const pageThematiquesType = defineType({
-  name: 'page_thematiques',
-  title: 'Page Thématiques',
+export const pageDestinationsType = defineType({
+  name: 'page_destinations',
+  title: 'Page Destinations',
   type: 'document',
   preview: {
     prepare() {
       return {
-        title: 'Page Catégories Thématiques',
-        subtitle: 'Textes pour la page des catégories thématiques'
+        title: 'Page Destinations',
+        subtitle: 'Textes pour la page des destinations'
       }
     }
   },
@@ -16,7 +16,7 @@ export const pageThematiquesType = defineType({
     // Index page
     defineField({
       name: 'index',
-      title: 'Page Index des Thématiques (odysway.com/thematiques)',
+      title: 'Page Index des Destinations (odysway.com/destinations)',
       type: 'object',
       fields: [
         defineField({
@@ -87,7 +87,7 @@ export const pageThematiquesType = defineType({
       name: 'seo',
       title: 'SEO Settings',
       type: 'seo',
-      description: 'Configuration SEO pour la page catégories thématiques',
+      description: 'Configuration SEO pour la page destinations',
     }),
   ]
 })

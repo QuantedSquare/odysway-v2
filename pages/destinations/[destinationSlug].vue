@@ -124,7 +124,7 @@ const destinationFromRegionQuery = `
 
 const destinationQuery = `
   *[_type == "destination" && slug.current == $slug][0]{
-_id,
+    _id,
     title,
     badgeTitle,
     slug,
@@ -133,7 +133,9 @@ _id,
     interjection,
     showOnHome,
     "voyages": *[_type == "voyage" && references(^._id) && (
-        !('custom' in availabilityTypes)]{
+        !('custom' in availabilityTypes) ||
+        (count(availabilityTypes) > 1)
+      )]{
       _id,
       title,
       slug,
@@ -209,6 +211,7 @@ const { data: destinationSanity } = await useAsyncData(
     }
   },
 )
+console.log('destinationSanity', destinationSanity.value)
 
 // Fetch all destinations for carousel and format for ContentLayout
 const destinationsListQuery = `

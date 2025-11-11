@@ -16,6 +16,7 @@ import {footerType} from './footerType'
 import {headerType} from './headerType'
 import {pageBlogType} from './pageBlogType'
 import {pageContactType} from './pageContactType'
+import {pageDestinationsType} from './pageDestinationsType'
 import {pageExperiencesType} from './pageExperiencesType'
 import {pageThematiquesType} from './pageThematiquesType'
 import {pageVoyageType} from './pageVoyageType'
@@ -83,6 +84,7 @@ export const schemaTypes = [
   offreCadeauType,
   pageBlogType,
   pageContactType,
+  pageDestinationsType,
   pageExperiencesType,
   pageThematiquesType,
   pageVoyageType,

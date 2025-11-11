@@ -16,7 +16,7 @@ export const pageExperiencesType = defineType({
     // Index page
     defineField({
       name: 'index',
-      title: 'Page Index des Expériences',
+      title: 'Page Index des Expériences (odysway.com/experiences)',
       type: 'object',
       fields: [
         defineField({
@@ -27,7 +27,7 @@ export const pageExperiencesType = defineType({
         }),
         defineField({
           name: 'metaDescription',
-          title: 'Description meta',
+          title: 'Description',
           type: 'text',
           rows: 3,
           validation: Rule => Rule.required()
@@ -38,7 +38,7 @@ export const pageExperiencesType = defineType({
     // Slug page
     defineField({
       name: 'slug',
-      title: 'Page Slug d\'une Expérience',
+      title: 'Placeholder pour la recherche',
       type: 'object',
       fields: [
         defineField({

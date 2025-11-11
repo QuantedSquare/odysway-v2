@@ -188,6 +188,7 @@ export default defineConfig({
                     S.documentTypeListItem('page_contact').title('Contact'),
                     S.documentTypeListItem('page_experiences').title('Expériences'),
                     S.documentTypeListItem('page_thematiques').title('Thématiques'),
+                    S.documentTypeListItem('page_destinations').title('Destinations'),
                     S.documentTypeListItem('page_blog').title('Blog'),
                     S.documentTypeListItem('search').title('Recherche'),
                     S.documentTypeListItem('faq').title('FAQ'),
