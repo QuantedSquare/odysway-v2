@@ -34,7 +34,18 @@ export const pageDestinationsType = defineType({
         })
       ]
     }),
-
+    defineField({
+      name: 'image',
+      title:'Image dans le Hero',
+      type: 'image',
+      options: {hotspot: true},
+      fields: [{name: 'alt', type: 'string'} as any],
+    }),
+    defineField({
+      name: 'heroText',
+      title: 'Texte dans le hero',
+      type: 'string',
+    }),
     // Slug page
     defineField({
       name: 'slug',
@@ -56,38 +67,5 @@ export const pageDestinationsType = defineType({
       ]
     }),
 
-    // Common elements
-    defineField({
-      name: 'common',
-      title: 'Éléments Communs',
-      type: 'object',
-      fields: [
-        defineField({
-          name: 'expandButton',
-          title: 'Bouton d\'expansion',
-          type: 'object',
-          fields: [
-            defineField({
-              name: 'showMore',
-              title: 'Texte "Voir plus"',
-              type: 'string',
-              validation: Rule => Rule.required()
-            }),
-            defineField({
-              name: 'showLess',
-              title: 'Texte "Voir moins"',
-              type: 'string',
-              validation: Rule => Rule.required()
-            })
-          ]
-        })
-      ]
-    }),
-    defineField({
-      name: 'seo',
-      title: 'SEO Settings',
-      type: 'seo',
-      description: 'Configuration SEO pour la page destinations',
-    }),
   ]
 })

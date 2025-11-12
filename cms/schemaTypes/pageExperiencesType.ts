@@ -34,7 +34,18 @@ export const pageExperiencesType = defineType({
         })
       ]
     }),
-
+    defineField({
+      name: 'image',
+      title:'Image dans le Hero',
+      type: 'image',
+      options: {hotspot: true},
+      fields: [{name: 'alt', type: 'string'} as any],
+    }),
+    defineField({
+      name: 'heroText',
+      title: 'Texte dans le hero',
+      type: 'string',
+    }),
     // Slug page
     defineField({
       name: 'slug',

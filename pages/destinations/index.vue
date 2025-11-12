@@ -3,25 +3,27 @@
     type="destinations"
     :display-divider="true"
     :displayed-data="displayedData"
+    :page-content="destinationsWithVoyages.pageContent"
   >
     <template #content>
       <DisplayVoyagesRow
-        :voyages="destinationsWithVoyages"
+        :voyages="destinationsWithVoyages.destinations"
       />
     </template>
   </ContentLayout>
 </template>
 
 <script setup>
-const destinationQuery = `
-  *[_type == "destination"]{
-     _id,
+const allQueries = `
+{
+  "destinations": *[_type == "destination"]{
+    _id,
     title,
     slug,
-    description,
+    "description": metaDescription,
     image,
     "voyages": *[_type == "voyage" && references(^._id) && !('custom' in availabilityTypes)]{
-        _id,
+      _id,
       title,
       slug,
       image,
@@ -31,15 +33,19 @@ const destinationQuery = `
       comments,
       pricing
     }
+  },
+  "pageContent": *[_type == "page_destinations"][0]{
+    ...
   }
+}
 `
 const sanity = useSanity()
 const { data: destinationsWithVoyages } = await useAsyncData('destinations', () =>
-  sanity.fetch(destinationQuery),
+  sanity.fetch(allQueries),
 )
 
 const displayedData = computed(() => ({
-  items: destinationsWithVoyages.value?.map(destination => ({
+  items: destinationsWithVoyages.value?.destinations?.map(destination => ({
     id: destination._id,
     title: destination.title,
     slug: destination.slug?.current,
@@ -48,7 +54,7 @@ const displayedData = computed(() => ({
     discoveryTitle: destination.metaDescription || destination.description || '',
   })).filter(destination => destination.image?.asset?._ref),
   selectedItem: null,
-  pageTitle: 'Toutes nos destinations',
+  pageTitle: destinationsWithVoyages.value?.pageContent?.index?.pageTitle || 'Toutes nos destinations',
   showOnBottom: false,
 }))
 
@@ -57,4 +63,13 @@ useHead({
     lang: 'fr',
   },
 })
+
+if (destinationsWithVoyages.value?.pageContent) {
+  useSeo({
+    seoData: destinationsWithVoyages.value?.pageContent?.seo,
+    slug: 'destinations',
+    content: destinationsWithVoyages.value?.pageContent,
+    pageType: 'website',
+  })
+}
 </script>

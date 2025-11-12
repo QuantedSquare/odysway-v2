@@ -1,27 +1,25 @@
 <template>
   <ContentLayout
-    :page-content="pageContent"
+    :page-content="categoriesWithVoyages.pageContent"
     :displayed-data="displayedData"
     type="thematiques"
   >
     <template #content>
       <DisplayVoyagesRow
-        :voyages="categoriesWithVoyages"
-        :page-content="pageContent"
+        :voyages="categoriesWithVoyages.categories"
       />
     </template>
   </ContentLayout>
 </template>
 
 <script setup>
-const pageContentQuery = groq`*[_type == "page_thematiques"][0]{
-  index,
-  slug,
-  common
-}`
-const categoriesQuery = groq`
-  *[_type == "category"]{
-    _id,
+const allQueries = `
+  {
+    "pageContent": *[_type == "page_thematiques"][0]{
+      ...
+    },
+    "categories": *[_type == "category"]{
+       _id,
     title,
     slug,
     description,
@@ -37,22 +35,14 @@ const categoriesQuery = groq`
       comments,
       pricing
     }
+    }
   }
 `
 const sanity = useSanity()
-const { data: pageContent } = await useAsyncData('page-content', async () => {
-  try {
-    const result = await sanity.fetch(pageContentQuery)
-    return result || {}
-  }
-  catch {
-    return {}
-  }
-})
 
 const { data: categoriesWithVoyages } = await useAsyncData('categories-with-voyages', async () => {
   try {
-    const result = await sanity.fetch(categoriesQuery)
+    const result = await sanity.fetch(allQueries)
     return result || []
   }
   catch {
@@ -61,7 +51,7 @@ const { data: categoriesWithVoyages } = await useAsyncData('categories-with-voya
 })
 
 const displayedData = computed(() => ({
-  items: categoriesWithVoyages.value?.map(category => ({
+  items: categoriesWithVoyages.value?.categories?.map(category => ({
     id: category._id,
     title: category.title,
     slug: category.slug?.current,
@@ -70,7 +60,7 @@ const displayedData = computed(() => ({
     discoveryTitle: category.discoveryTitle || category.description || '',
   })).filter(category => category.image?.asset?._ref),
   selectedItem: null,
-  pageTitle: pageContent.value?.index?.pageTitle || 'Toutes nos thématiques',
+  pageTitle: categoriesWithVoyages.value?.pageContent?.index?.pageTitle || 'Toutes nos thématiques',
   showOnBottom: false,
 }))
 
@@ -79,4 +69,13 @@ useHead({
     lang: 'fr',
   },
 })
+
+if (categoriesWithVoyages.value?.pageContent) {
+  useSeo({
+    seoData: categoriesWithVoyages.value?.pages?.seo,
+    content: categoriesWithVoyages.value?.pages,
+    pageType: 'website',
+    slug: 'thematiques',
+  })
+}
 </script>

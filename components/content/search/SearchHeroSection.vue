@@ -17,7 +17,7 @@
           v-if="destination && !isCategory && !isExperience && !isNextDepartures"
           class="custom-hero-title"
         >
-          {{ `${contentText?.searchHero?.voyagePrefix || 'Nos voyages'} ${destination.interjection || 'en'} ${destination.title || destination.nom}` }}
+          {{ `${pageContent?.searchHero?.voyagePrefix || 'Nos voyages'} ${destination.interjection || 'en'} ${destination.title || destination.nom}` }}
         </h1>
         <h1
           v-else-if="destination && isCategory"
@@ -41,7 +41,7 @@
           v-else
           class="custom-hero-title"
         >
-          {{ contentText?.searchHero?.defaultTitle || 'Trouvez votre prochain voyage' }}
+          {{ pageContent?.heroText || pageContent?.searchHero?.defaultTitle || 'Trouvez votre prochain voyage' }}
         </h1>
       </v-col>
       <v-col
@@ -110,7 +110,7 @@
                 v-if="destination && !isCategory && !isExperience && !isNextDepartures"
                 class="custom-hero-title"
               >
-                {{ `${contentText?.searchHero?.voyagePrefix || 'Nos voyages'} ${destination.interjection || 'en'} ${destination.title}` }}
+                {{ `${pageContent?.searchHero?.voyagePrefix || 'Nos voyages'} ${destination.interjection || 'en'} ${destination.title}` }}
               </h1>
               <h1
                 v-else-if="destination && isCategory"
@@ -134,7 +134,7 @@
                 v-else
                 class="custom-hero-title ml-3"
               >
-                {{ contentText?.searchHero?.defaultTitle || 'Trouvez votre prochain voyage' }}
+                {{ pageContent?.searchHero?.defaultTitle || 'Trouvez votre prochain voyage' }}
               </h1>
               <slot name="subtitle" />
             </v-col>
@@ -153,19 +153,9 @@
 import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
-const sanity = useSanity()
-
-const query = groq`*[_type == "search"][0]{
-  searchHero
-}`
-
-const { data: contentText } = await useAsyncData('page-search-search-hero', () =>
-  sanity.fetch(query),
-)
-
 const img = useImage()
 const { width } = useDisplay()
-const { destination, isCategory, isExperience, isNextDepartures, noMarginBottom } = defineProps({
+const { destination, isCategory, isExperience, isNextDepartures, noMarginBottom, pageContent } = defineProps({
   destination: {
     type: Object,
     default: null,
@@ -190,7 +180,12 @@ const { destination, isCategory, isExperience, isNextDepartures, noMarginBottom 
     type: Boolean,
     default: false,
   },
+  pageContent: {
+    type: Object,
+    default: null,
+  },
 })
+
 const displayedImg = computed(() => {
   if (destination?.image?.src) {
     return destination.image.src
@@ -198,6 +193,9 @@ const displayedImg = computed(() => {
   else {
     if (destination?.image?.asset?._ref) {
       return getImageUrl(destination.image.asset._ref)
+    }
+    if (pageContent?.image?.asset?._ref) {
+      return getImageUrl(pageContent.image.asset._ref)
     }
     else {
       return '/images/homeHero.jpeg'

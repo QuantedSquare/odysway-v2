@@ -34,7 +34,19 @@ export const pageThematiquesType = defineType({
         })
       ]
     }),
-
+    defineField({
+      name: 'image',
+      title:'Image dans le Hero',
+      type: 'image',
+      options: {hotspot: true},
+      fields: [{name: 'alt', type: 'string'} as any],
+    }),
+    defineField({
+      name: 'heroText',
+      title: 'Texte dans le hero',
+      type: 'string',
+    }),
+    //#TODO revoir ces champs parce que c'est n'imp
     // Slug page
     defineField({
       name: 'slug',
@@ -55,7 +67,6 @@ export const pageThematiquesType = defineType({
         })
       ]
     }),
-
     // Common elements
     defineField({
       name: 'common',

@@ -1,7 +1,6 @@
 <template>
   <v-container
     fluid
-
     class="px-2 px-md-4 pt-0 "
   >
     <SearchHeroSection
@@ -9,6 +8,7 @@
       :is-experience="type === 'experiences'"
       :is-destination="type === 'destinations'"
       :destination="displayedData?.selectedItem"
+      :page-content="pageContent"
     >
       <SearchField />
     </SearchHeroSection>
@@ -76,7 +76,7 @@
 </template>
 
 <script setup>
-const props = defineProps({
+const { displayedData, pageContent } = defineProps({
   type: {
     type: String,
     default: null,
@@ -99,15 +99,13 @@ const props = defineProps({
   },
   pageContent: {
     type: Object,
-    default: () => {},
+    default: null,
   },
   displayDivider: {
     type: Boolean,
     default: true,
   },
 })
-
-const displayedData = computed(() => props.displayedData)
 </script>
 
 <style scoped>

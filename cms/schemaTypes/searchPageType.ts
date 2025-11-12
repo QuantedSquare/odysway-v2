@@ -105,7 +105,13 @@ export const searchPageType = defineType({
       group: 'search_results',
       validation: Rule => Rule.required()
     }),
-
+    defineField({
+      name: 'image',
+      title:'Image dans le Hero',
+      type: 'image',
+      options: {hotspot: true},
+      fields: [{name: 'alt', type: 'string'} as any],
+    }),
     // Search Hero Section
     defineField({
       name: 'searchHero',

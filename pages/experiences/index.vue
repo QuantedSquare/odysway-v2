@@ -1,27 +1,25 @@
 <template>
   <ContentLayout
-    :page-content="pageContent"
-    :displayed-data="displayedData"
     type="experiences"
+    :displayed-data="displayedData"
+    :page-content="experiencesWithVoyages.pageContent"
   >
     <template #content>
       <DisplayVoyagesRow
-        :voyages="experiencesWithVoyages"
-        :page-content="pageContent"
+        :voyages="experiencesWithVoyages.experiences"
       />
     </template>
   </ContentLayout>
 </template>
 
 <script setup>
-const pageContentQuery = groq`*[_type == "page_experiences"][0]{
-  index,
-  slug,
-  common
-}`
-const experiencesQuery = `
-  *[_type == "experience"]{
-     _id,
+const allQueries = `
+  {
+    "pageContent": *[_type == "page_experiences"][0]{
+      ...
+    },
+    "experiences": *[_type == "experience"]{
+       _id,
     title,
     slug,
     description,
@@ -37,19 +35,16 @@ const experiencesQuery = `
       comments,
       pricing
     }
+    }
   }
 `
 const sanity = useSanity()
-const { data: pageContent } = await useAsyncData('page-content', () =>
-  sanity.fetch(pageContentQuery),
-)
 
 const { data: experiencesWithVoyages } = await useAsyncData('experiences-with-voyages', () =>
-  sanity.fetch(experiencesQuery),
+  sanity.fetch(allQueries),
 )
-
 const displayedData = computed(() => ({
-  items: experiencesWithVoyages.value?.map(experience => ({
+  items: experiencesWithVoyages.value?.experiences?.map(experience => ({
     id: experience._id,
     title: experience.title,
     slug: experience.slug?.current,
@@ -58,7 +53,7 @@ const displayedData = computed(() => ({
     discoveryTitle: experience.discoveryTitle || experience.description || '',
   })).filter(experience => experience.image?.asset?._ref),
   selectedItem: null,
-  pageTitle: pageContent.value?.index?.pageTitle || 'Toutes nos expériences',
+  pageTitle: experiencesWithVoyages.value?.pageContent?.index?.pageTitle || 'Toutes nos expériences',
   showOnBottom: false,
 }))
 
@@ -67,4 +62,13 @@ useHead({
     lang: 'fr',
   },
 })
+
+if (experiencesWithVoyages.value?.pageContent) {
+  useSeo({
+    seoData: experiencesWithVoyages.value?.pageContent?.seo,
+    content: experiencesWithVoyages.value?.pageContent,
+    pageType: 'website',
+    slug: 'experiences',
+  })
+}
 </script>

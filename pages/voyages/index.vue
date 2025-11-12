@@ -3,7 +3,10 @@
     class="py-0 my-0 px-2 px-md-4"
     fluid
   >
-    <SearchHeroSection :destination="fetchedDestination">
+    <SearchHeroSection
+      :destination="fetchedDestination"
+      :page-content="searchContent"
+    >
       <SearchField />
     </SearchHeroSection>
     <v-row class=" pb-0 pt-4 mt-md-12">
@@ -105,7 +108,9 @@ const sanity = useSanity()
 const searchContentQuery = groq`*[_type == "search"][0]{
   oneTrip,
   multipleTrips,
-  resetButton
+  resetButton,
+  image,
+  searchHero
 }`
 
 const { data: searchContent } = await useAsyncData('search-content-page', () =>
