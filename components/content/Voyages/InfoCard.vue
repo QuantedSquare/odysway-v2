@@ -245,7 +245,7 @@ const { stickyBlock, voyage } = defineProps({
 
 const displayedDates = computed(() => {
   if (dates.value.length > 0) {
-    const filteredDates = dates.value.filter(d => getDateStatus(d).status !== 'full')
+    const filteredDates = dates.value.filter(d => getDateStatus(d)?.status !== 'full')
 
     const sortedByDates = filteredDates
       .filter(date => dayjs(date.departure_date).isAfter(dayjs()))
