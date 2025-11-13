@@ -74,37 +74,37 @@ export default defineNuxtConfig({
   },
   routeRules: {
     // Homepage and main sections
-    '/': { isr: 60 },
-    '/voyages': { isr: 60 },
-    '/prochains-departs': { isr: 60 },
+    '/': { isr: 60 * 60 * 24 }, // 1 day
+    '/voyages': { isr: 60 * 60 * 24 },
+    '/prochains-departs': { isr: 60 * 60 * 24 },
     // Redirect legacy or non-existent index to listing page
     '/search': { redirect: { to: '/voyages', statusCode: 301 } },
 
     // Dynamic content pages with slugs
-    '/voyages/**': { isr: 60 },
-    '/destinations/**': { isr: 60 },
-    '/thematiques/**': { isr: 60 },
-    '/experiences/**': { isr: 60 },
-    '/blog/**': { isr: 60 },
+    '/voyages/**': { isr: 60 * 60 * 24 }, // 1 day
+    '/destinations/**': { isr: 60 * 60 * 24 },
+    '/thematiques/**': { isr: 60 * 60 * 24 }, // 1 day
+    '/experiences/**': { isr: 60 * 60 * 24 }, // 1 day
+    '/blog/**': { isr: 60 * 60 * 24 }, // 1 day
 
     // Singleton pages (static content)
-    '/entreprise': { isr: 300 }, // 5 min - less frequently updated
-    '/sur-mesure': { isr: 300 },
-    '/vision-voyage-odysway': { isr: 300 },
-    '/contact': { isr: 300 },
-    '/faq': { isr: 300 },
-    '/avis-voyageurs': { isr: 300 },
-    '/offre-cadeau': { isr: 300 },
-    '/nous-recrutons': { isr: 300 },
-    '/devis': { isr: 300 },
-    '/checkout': { isr: 300 },
+    '/entreprise': { isr: 60 * 60 * 24 * 5 }, // 5 days - less frequently updated
+    '/sur-mesure': { isr: 60 * 60 * 24 * 5 },
+    '/vision-voyage-odysway': { isr: 60 * 60 * 24 * 5 },
+    '/contact': { isr: 60 * 60 * 24 * 5 },
+    '/faq': { isr: 60 * 60 * 24 * 5 },
+    '/avis-voyageurs': { isr: 60 * 60 * 24 * 5 },
+    '/offre-cadeau': { isr: 60 * 60 * 24 * 5 },
+    '/nous-recrutons': { isr: 60 * 60 * 24 * 5 },
+    '/devis': { isr: 60 * 60 * 24 * 5 },
+    '/checkout': { isr: 60 * 60 * 24 * 5 },
 
     // Legal pages (rarely updated)
-    '/politique-de-confidentialite': { isr: 3600 }, // 1 hour
-    '/mentions-legales': { isr: 3600 },
-    '/conditions-generales-de-vente': { isr: 3600 },
-    '/cheques-vacances': { isr: 3600 },
-    '/confirmation': { isr: 3600 },
+    '/politique-de-confidentialite': { isr: 60 * 60 * 24 * 5 }, // 5 days
+    '/mentions-legales': { isr: 60 * 60 * 24 * 5 },
+    '/conditions-generales-de-vente': { isr: 60 * 60 * 24 * 5 },
+    '/cheques-vacances': { isr: 60 * 60 * 24 * 5 },
+    '/confirmation': { isr: 60 * 60 * 24 * 5 },
 
     // API routes
     '/api/**': { cors: true },
