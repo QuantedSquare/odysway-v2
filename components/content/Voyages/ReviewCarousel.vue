@@ -3,16 +3,17 @@
     <v-container
       id="reviews-container"
       :fluid="width < 1600"
-      class="px-0 py-0 mb-4"
+      class="px-0 py-0"
     >
       <v-row
         align="center"
         justify="center"
+        class="px-2 px-md-0"
       >
         <v-col
           cols="12"
           md="10"
-          class="text-h4 my-4 font-weight-bold px-5 px-md-0"
+          class="text-h4 mb-0  mt-2 mb-2 mb-md-6 font-weight-bold "
           :class="{ 'text-md-center text-start': centerTitle, 'd-none': reviews.length === 0 }"
         >
           {{ reviewsSection.title }}

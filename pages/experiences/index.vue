@@ -34,7 +34,7 @@ const allQueries = `
       rating,
       comments,
       pricing
-    }
+      }
     }
   }
 `

@@ -6,15 +6,18 @@
   >
     <v-row
       justify="center"
-      align="center"
+      align="start"
+      class="px-2 px-md-0"
     >
       <v-col
-        class="font-weight-black text-h4 px-5 px-md-0"
+        cols="12"
+        xs="7"
+        sm="9"
+        class="text-h4 mb-0  mt-2 mb-2 mb-md-6 font-weight-bold "
       >
         {{ priceDetailsSection.title }}
       </v-col>
-    </v-row>
-    <v-row>
+      <v-spacer />
       <v-col
         cols="12"
         md="6"
