@@ -12,12 +12,13 @@
       <v-col
         cols="12"
         xs="7"
-        sm="9"
-        class="text-h4 mb-0  mt-2 mb-2 mb-md-6 font-weight-bold "
+        class="text-h4 my-2 font-weight-bold "
       >
         {{ priceDetailsSection.title }}
       </v-col>
       <v-spacer />
+    </v-row>
+    <v-row>
       <v-col
         cols="12"
         md="6"

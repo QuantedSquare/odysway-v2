@@ -67,7 +67,7 @@
             v-for="review in reviews.slice(0, 3)"
             :key="review.id"
             cols="12"
-            class="pb-0"
+            class="pb-0 pr-4 bg-red"
           >
             <ReviewTraveller
               :review="review"
