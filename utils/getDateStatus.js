@@ -24,14 +24,16 @@ const STATUS_MAP = {
  */
 function calculateStatusFromBookings(date) {
   if (date.max_travelers === date.booked_seat) {
-    return STATUS_MAP.full
+    // console.log('STATUS_MAP.full', STATUS_MAP.full, 'on date', date.departure_date)
+    return STATUS_MAP.guaranteed
   }
 
-  if (date.booked_seat >= date.min_travelers) {
+  else if (date.booked_seat >= date.min_travelers) {
     return STATUS_MAP.confirmed
   }
-
-  return STATUS_MAP.soon_confirmed
+  else {
+    return STATUS_MAP.soon_confirmed
+  }
 }
 
 /**
@@ -44,7 +46,6 @@ export function getDateStatus(date) {
   if (date.custom_display && date.displayed_status && STATUS_MAP[date.displayed_status]) {
     return STATUS_MAP[date.displayed_status]
   }
-
   // Otherwise, calculate status based on bookings
   return calculateStatusFromBookings(date)
 }
