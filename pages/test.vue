@@ -469,54 +469,56 @@ useSeo({
   },
 })
 
-// _id,
-//   originalFilename,
-//   url,
-//   "usedIn": *[
-//     references(^._id)
-//   ]{
-//     _type,
-//     _id,
-//     title,
-//     // Add other fields you want to display from the referencing document
-//   }
-
-// const retrieveAllReferenceFromAnImage = `*[_type == "sanity.imageAsset"]{
-//    ...
-// }`
-const retrieveAllReferenceFromAnImage = `*[_type == "sanity.imageAsset"]{
-  _id,
-  originalFilename,
-  url,
-  "usedIn": *[references(^._id)]{
-    _type,
+const allReviewsQuery = `*[_type == "review"] {
+  ...,
+  voyage->{
     _id,
+    _type,
+    _ref,
     title,
-    name,
-    // If the referencing document is a voyage, also fetch destination names
-    _type == "voyage" => {
-      destinations[]->{
-        title,
-        slug,
-        // Also fetch the regions related to this destination
-        "regions": regions[]->{
-          "title": nom,
-          "slug": slug.current,
-        },
-      }
-    }
+    slug,
   }
 }`
 
-const { data: allReferences } = await useAsyncData(
+const { data: allReviews } = await useAsyncData(
   `all-references-${currentDataset.value}`,
-  () => fetchFromDataset(retrieveAllReferenceFromAnImage),
+  () => fetchFromDataset(allReviewsQuery),
 )
-console.log('allReferences', allReferences.value)
+console.log('allReviews', allReviews.value)
+const mutateAllReviews = () => {
+  const addWeakReferenceToReviews = allReviews.value.map((review) => {
+    return {
+      patch: {
+        id: review._id,
+        set: {
+          voyage: { _type: 'reference', _ref: review.voyage._id, _weak: true },
+        },
+      },
+    }
+  })
+  console.log('addWeakReferenceToReviews', addWeakReferenceToReviews)
+  // const result = await sanity.mutate(addWeakReferenceToReviews)
+  // console.log('result', result)
+}
+if (allReviews.value.length > 0) {
+  console.log('mutating all reviews', allReviews.value)
+  const addWeakReferenceToReviews = allReviews.value.map((review) => {
+    return {
+      patch: {
+        id: review._id,
+        set: {
+          voyage: { _type: 'reference', _ref: review.voyage._ref, _weak: true },
+        },
+      },
+    }
+  })
+  console.log('addWeakReferenceToReviews', addWeakReferenceToReviews)
+  // mutateAllReviews()
+}
 </script>
 
 <style scoped>
 .text-shadow {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 2px 4px rgba(24, 17, 17, 0.8);
 }
 </style>

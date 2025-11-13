@@ -61,7 +61,7 @@
               class="mr-3 icon-responsive"
               :alt="levelIcon.alt"
             />
-            <span class="font-weight-bold mr-2">Niveau {{ difficultyLevel.level }}</span>
+            <span class=" mr-2">Niveau {{ difficultyLevel.level }}</span>
             <v-tooltip
               location="bottom"
               max-width="500"

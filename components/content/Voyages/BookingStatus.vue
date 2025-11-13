@@ -46,7 +46,7 @@ const props = defineProps({
   },
   bookedPlaces: {
     type: Number,
-    required: true,
+    default: 0,
   },
   maxTravellers: {
     type: Number,
@@ -57,7 +57,7 @@ const props = defineProps({
     default: 2,
   },
 })
-
+console.log('props', props)
 const remainingPlaces = computed(() => {
   const remaining = props.maxTravellers - props.bookedPlaces
   return remaining > 1 || remaining === 0 ? `${remaining} places` : `${remaining} place`

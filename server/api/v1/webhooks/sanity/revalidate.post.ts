@@ -25,7 +25,7 @@ export default defineEventHandler(async (event) => {
     if (documentType === 'voyage' && slug) {
       pathsToRevalidate.push(`/voyages/${slug}`)
       // Also revalidate search and destination pages that might list this voyage
-      pathsToRevalidate.push('/search')
+      pathsToRevalidate.push('/voyages')
       pathsToRevalidate.push('/prochains-departs')
     }
     else if (documentType === 'blog' && slug) {
@@ -35,7 +35,7 @@ export default defineEventHandler(async (event) => {
     else if (documentType === 'destination' && slug) {
       pathsToRevalidate.push(`/destinations/${slug}`)
       pathsToRevalidate.push('/destinations') // Destinations index
-      pathsToRevalidate.push('/search') // Search page uses destinations
+      pathsToRevalidate.push('/voyages') // Search page uses destinations
     }
     else if (documentType === 'category' && slug) {
       pathsToRevalidate.push(`/thematiques/${slug}`)
@@ -91,6 +91,8 @@ export default defineEventHandler(async (event) => {
     }
     else if (documentType === 'search') {
       pathsToRevalidate.push('/search')
+      pathsToRevalidate.push('/voyages')
+      pathsToRevalidate.push('/prochains-departs')
     }
     else if (documentType === 'checkout') {
       pathsToRevalidate.push('/checkout')
