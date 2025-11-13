@@ -52,6 +52,7 @@
             cols="10"
             sm="6"
             md="4"
+            class="pr-0 pr-md-16"
           >
             <ReviewTraveller
               :review="review"
@@ -67,7 +68,7 @@
             v-for="review in reviews.slice(0, 3)"
             :key="review.id"
             cols="12"
-            class="pb-0 pr-4 bg-red"
+            class="pb-0"
           >
             <ReviewTraveller
               :review="review"

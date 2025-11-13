@@ -13,7 +13,7 @@
       class="px-2 px-md-0"
     >
       <v-col
-        class="font-weight-black text-h4 mt-4 my-md-4 px-3 px-md-0"
+        class="font-weight-black text-h4 mt-4 my-md-4 "
       >
         {{ dateSections.title }}
       </v-col>
