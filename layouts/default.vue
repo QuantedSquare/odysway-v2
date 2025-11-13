@@ -10,6 +10,8 @@
     </div>
 
     <v-container
+
+      v-once
       :fluid="width > 600"
       class="py-0 my-0 px-2 px-md-9"
     >
@@ -84,6 +86,7 @@ import { useDisplay } from 'vuetify'
 
 const { width } = useDisplay()
 const route = useRoute()
+const sanity = useSanity()
 
 const partenairesQuery = groq`*[_type == "ctas"][0]{
   layoutInfoContainer,
@@ -98,7 +101,6 @@ const { data: partenairesTextes } = await useAsyncData(
   'partenairesTextes',
   async () => {
     try {
-      const sanity = useSanity()
       const result = await sanity.fetch(partenairesQuery)
       return result || null
     }
@@ -116,7 +118,6 @@ const { data: searchContent } = await useAsyncData(
   'search-content',
   async () => {
     try {
-      const sanity = useSanity()
       const result = await sanity.fetch(searchQuery)
       return result || null
     }

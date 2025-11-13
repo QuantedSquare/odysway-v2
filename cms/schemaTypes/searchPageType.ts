@@ -9,6 +9,7 @@ export const searchPageType = defineType({
     {name: 'search_results', title: 'Résultats de Recherche'},
     {name: 'search_hero', title: 'Section Hero'},
     {name: 'info_container', title: 'Container d\'Information'},
+    {name: 'seo', title: 'SEO'},
   ],
   preview: {
     prepare() {
@@ -161,6 +162,13 @@ export const searchPageType = defineType({
           validation: Rule => Rule.required()
         })
       ]
-    })
+    }),
+    defineField({
+      name: 'seo',
+      title: 'SEO Settings',
+      type: 'seo',
+      description: 'Configuration SEO pour le voyage',
+      group: 'seo',
+    }),
   ]
 })

@@ -26,12 +26,6 @@ export const pageVoyageType = defineType({
     }
   },
   fields: [
-      defineField({
-      name: 'seo',
-      title: 'SEO Settings',
-      type: 'seo',
-      description: 'Configuration SEO pour la page catégories thématiques',
-    }),
     // Buttons
     defineField({
       name: 'shareButton',

@@ -151,10 +151,10 @@
         height="45"
         variant="tonal"
         rounded="default"
-        class="text-caption text-md-body-1 d-none d-md-inline"
+        class="text-caption text-md-body-1 d-none d-md-flex"
         @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.button4.text) }"
       >
-        <span class="mt-2">{{ header.button4.text }}</span>
+        <span class="align-center">{{ header.button4.text }}</span>
       </v-btn>
       <v-btn
         v-if="header?.button5?.visible"
