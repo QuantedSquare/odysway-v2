@@ -390,6 +390,7 @@ export const voyageType = defineType({
         {name: 'childrenPromo', type: 'number'} as any,
         {name: 'childrenAge', type: 'number', initialValue: 12} as any,
         {name: 'airportCode', type: 'array', of: [{type: 'string'}]} as any,
+        {name: 'capExploraction', 'type': 'boolean', description: 'Si coché, assurance cap-exploraction sinon cap-explorer', initialValue: false} as any,
       ],
     }),
     defineField({
