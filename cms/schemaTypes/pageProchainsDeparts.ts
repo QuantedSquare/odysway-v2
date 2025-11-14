@@ -1,14 +1,14 @@
 import {defineField, defineType} from 'sanity'
 
-export const pageDestinationsType = defineType({
-  name: 'page_destinations',
-  title: 'Page Destinations',
+export const pageProchainsDeparts = defineType({
+  name: 'page_prochains_departs',
+  title: 'Page Prochains Départs',
   type: 'document',
   preview: {
     prepare() {
       return {
-        title: 'Page Destinations',
-        subtitle: 'Textes pour la page des destinations'
+        title: 'Page Prochains départ',
+        subtitle: 'Textes et Seo pour la page des prochains départs'
       }
     }
   },
@@ -16,7 +16,7 @@ export const pageDestinationsType = defineType({
     // Index page
     defineField({
       name: 'index',
-      title: 'Page Index des Destinations (odysway.com/destinations)',
+      title: 'Page Index des Prochains Départs (odysway.com/prochains-departs)',
       type: 'object',
       fields: [
         defineField({
@@ -47,27 +47,26 @@ export const pageDestinationsType = defineType({
       type: 'string',
     }),
     // Slug page
-    defineField({
-      name: 'slug',
-      title: 'Placeholder pour la recherche',
-      type: 'object',
-      fields: [
+    
         defineField({
-          name: 'noVoyagesFound',
-          title: 'Message quand aucun voyage trouvé',
+          name: 'allTravelsButton',
+          title: 'Texte bouton pour tous les voyages',
           type: 'string',
           validation: Rule => Rule.required()
         }),
         defineField({
-          name: 'modifySearchCriteria',
-          title: 'Texte pour modifier les critères de recherche',
+          name: 'frenchTravelsButton',
+          title: 'Texte bouton pour tous les voyages en France',
           type: 'string',
           validation: Rule => Rule.required()
-        })
-      ]
-    }),
-
-    // Common elements
+        }),
+        defineField({
+          name: 'foreignTravelsButton',
+          title: 'Texte bouton pour tous les voyages à l\'étranger',
+          type: 'string',
+          validation: Rule => Rule.required()
+        }),
+      
     defineField({
       name: 'common',
       title: 'Éléments Communs',
@@ -98,7 +97,8 @@ export const pageDestinationsType = defineType({
       name: 'seo',
       title: 'SEO Settings',
       type: 'seo',
-      description: 'Configuration SEO pour la page destinations',
+      description: 'Configuration SEO pour la page prochains départs',
     }),
+
   ]
 })

@@ -35,7 +35,7 @@
           v-else-if="destination && isNextDepartures"
           class="custom-hero-title"
         >
-          {{ destination.periodFilter === null || destination.periodFilter === 'Toutes périodes' ? 'Découvrez nos voyages de groupe' : `Partez avec un groupe de 8 voyageurs maximum en ${destination.periodFilter.toLowerCase()}` }}
+          {{ destination.periodFilter === null || destination.periodFilter === 'Toutes périodes' ? pageContent?.searchHero?.defaultTitle || 'Trouvez votre prochain voyage' : `Partez avec un groupe de 8 voyageurs maximum en ${destination.periodFilter.toLowerCase()}` }}
         </h1>
         <h1
           v-else

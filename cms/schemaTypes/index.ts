@@ -19,6 +19,7 @@ import {pageContactType} from './pageContactType'
 import {pageDestinationsType} from './pageDestinationsType'
 import {pageExperiencesType} from './pageExperiencesType'
 import {pageThematiquesType} from './pageThematiquesType'
+import {pageProchainsDeparts} from './pageProchainsDeparts'
 import {pageVoyageType} from './pageVoyageType'
 import {newsletterType} from './newsletterType'
 import {partnerType} from './partnerType'
@@ -86,6 +87,7 @@ export const schemaTypes = [
   pageContactType,
   pageDestinationsType,
   pageExperiencesType,
+  pageProchainsDeparts,
   pageThematiquesType,
   pageVoyageType,
   partnerType,

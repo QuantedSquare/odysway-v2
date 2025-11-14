@@ -13,42 +13,17 @@
       <SearchField />
     </SearchHeroSection>
 
-    <ColorContainer
-      v-if="displayedData?.items && !displayedData?.showOnBottom"
-      color=""
-    >
-      <HorizontalCarousel
-        :show-buttons="displayedData?.items.length > 4"
-      >
-        <template #title>
-          <h3 class="custom-title">
-            {{ displayedData?.pageTitle }}
-          </h3>
-        </template>
-        <template #carousel-item>
-          <ThematiqueColCard
-            v-for="item in displayedData?.items"
-            :key="item.id"
-            :slug="item.slug"
-            :image="item.image"
-            :title="item.title"
-            :description="item.discoveryTitle"
-            :type="type"
-          />
-        </template>
-      </HorizontalCarousel>
-    </ColorContainer>
-    <v-divider
-      v-if="displayDivider && !displayedData?.showOnBottom"
-      thickness="2"
-      class="mt-2 mb-4 mb-md-6"
-    />
     <ColorContainer color="">
       <slot name="content" />
       <template
-        v-if="displayedData?.items && displayedData.showOnBottom"
+        v-if="displayedData?.items"
       >
         <div class="mt-8">
+          <v-divider
+            v-if="displayDivider && !displayedData?.showOnBottom"
+            thickness="2"
+            class="mt-2 mb-4 mb-md-6"
+          />
           <HorizontalCarousel
             :show-buttons="displayedData?.items.length > 4"
           >

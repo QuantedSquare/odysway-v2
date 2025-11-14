@@ -5,11 +5,12 @@
   >
     <SearchHeroSection
       :is-next-departures="true"
+      :page-content="pageContent"
       :destination="{
         periodFilter: selectedPeriod,
         image: {
-          src: '/images/homeHero.jpeg',
-          alt: 'Découvrez nos voyages de groupe',
+          src: getImageUrl(pageContent.value?.image?.asset?._ref) || '/images/homeHero.jpeg',
+          alt: pageContent.value?.image?.alt || 'Image principale Hero d\'Odysway',
         },
       }"
       :no-margin-bottom="true"
@@ -95,20 +96,6 @@ const travels = ref([])
 const toggledBtn = ref('all')
 const periodId = useId()
 const selectedPeriod = ref(route.query?.periode || null)
-const toggleBtns = ref([
-  {
-    value: 'all',
-    text: 'Tous',
-  },
-  {
-    value: 'france',
-    text: 'En France',
-  },
-  {
-    value: 'other',
-    text: 'À l\'étranger',
-  },
-])
 
 const fetchTravels = async () => {
   try {
@@ -277,20 +264,34 @@ const dealsLastMinuteFiltered = computed(() => {
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1)
 }
+const pageContentQuery = groq`*[_type == "page_prochains_departs"][0]{
+  ...
+}`
+const sanity = useSanity()
+const { data: pageContent } = await useAsyncData('page-prochains-departs', () =>
+  sanity.fetch(pageContentQuery),
+)
+
+const toggleBtns = computed(() => [
+  {
+    value: 'all',
+    text: pageContent.value?.allTravelsButton || 'Tous',
+  },
+  {
+    value: 'france',
+    text: pageContent.value?.frenchTravelsButton || 'En France',
+  },
+  {
+    value: 'other',
+    text: pageContent.value?.foreignTravelsButton || 'À l\'étranger',
+  },
+])
 // Static seo data with plain text from this file / No data on Sanity
 useSeo({
-  seoData: {
-    metaTitle: 'Prochains départs',
-    metaDescription: 'Prochains départs',
-  },
-  content: {
-    title: 'Prochains départs',
-    description: 'Prochains départs',
-  },
+  seoData: pageContent.value?.seo,
+  content: pageContent.value,
   pageType: 'website',
   slug: 'prochains-departs',
-  baseUrl: '/prochains-departs',
-  structuredData: [createOrganizationSchema()],
 })
 </script>
 
