@@ -9,7 +9,7 @@
       :destination="{
         periodFilter: selectedPeriod,
         image: {
-          src: getImageUrl(pageContent.value?.image?.asset?._ref) || '/images/homeHero.jpeg',
+          src: getImageUrl(pageContent?.image?.asset?._ref) || '/images/homeHero.jpeg',
           alt: pageContent.value?.image?.alt || 'Image principale Hero d\'Odysway',
         },
       }"
