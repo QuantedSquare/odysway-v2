@@ -50,19 +50,52 @@
             <span v-if="description"><EnrichedText :value="description" /></span>
             <div
               v-if="denivellation || road || night"
-              class="d-flex flex-column px-8 mt-4"
+              class="d-flex flex-column  mt-4"
             >
-              <div v-if="denivellation && stegaClean(denivellation).length > 0">
-                <span class="font-weight-bold">Dénivelé:&nbsp;</span>
-                <span>{{ denivellation }}</span>
+              <div
+                v-if="denivellation && stegaClean(denivellation).length > 0"
+                class="d-flex align-start ga-2"
+              >
+                <img
+                  src="/icons/denivele.svg"
+                  alt="Dénivelé"
+                  width="20"
+                  height="20"
+                >
+                <div>
+                  <span class="font-weight-bold">Dénivelé:&nbsp;</span>
+                  <span>{{ denivellation }}</span>
+                </div>
               </div>
-              <div v-if="road && stegaClean(road).length > 0">
-                <span class="font-weight-bold">Temps de trajet:&nbsp;</span>
-                <span>{{ road }}</span>
+              <div
+                v-if="road && stegaClean(road).length > 0"
+                class="d-flex align-start ga-2"
+              >
+                <img
+                  src="/icons/temps.svg"
+                  alt="Temps de trajet"
+                  width="20"
+                  height="20"
+                >
+                <div>
+                  <span class="font-weight-bold">Temps de trajet:&nbsp;</span>
+                  <span>{{ road }}</span>
+                </div>
               </div>
-              <div v-if="night && stegaClean(night).length > 0">
-                <span class="font-weight-bold">Nuit:&nbsp;</span>
-                <span>{{ night }}</span>
+              <div
+                v-if="night && stegaClean(night).length > 0"
+                class="d-flex align-start ga-2"
+              >
+                <img
+                  src="/icons/lune.svg"
+                  alt="Nuit"
+                  width="20"
+                  height="20"
+                >
+                <div>
+                  <span class="font-weight-bold">Nuit:&nbsp;</span>
+                  <span>{{ night }}</span>
+                </div>
               </div>
             </div>
           </ExpandableText>

@@ -157,6 +157,7 @@ export const voyageType = defineType({
       type: 'boolean',
       group: 'basic',
       title: 'Voyage inclut un vol',
+      hidden: true,
     }),
     defineField({name: 'rating', type: 'number', group: 'basic', title: 'Note moyenne'}),
     defineField({
