@@ -1,5 +1,6 @@
 import { getQuery, eventHandler } from 'h3'
 import { createClient } from '@sanity/client'
+import { distance } from 'fastest-levenshtein'
 
 export default eventHandler(async (event) => {
   const config = useRuntimeConfig()
@@ -20,44 +21,125 @@ export default eventHandler(async (event) => {
   const searchTerm = query.keyword?.trim()
 
   if (searchTerm && searchTerm.length > 0) {
-    const lowerCaseSearchTerm = searchTerm.toLowerCase()
-
-    const [destinations, regions, voyages] = await Promise.all([
-      sanityClient.fetch(`*[_type == "destination"]{
-        title,
-        "slug": slug.current
-      }`),
-      sanityClient.fetch(`*[_type == "region"]{
-        nom,
-        "slug": slug.current
-      }`),
-      sanityClient.fetch(`*[_type == "voyage" && (
+    const allVoyages = await sanityClient.fetch(`
+      *[_type == "voyage" && (
         !('custom' in availabilityTypes) ||
         (count(availabilityTypes) > 1)
       )]{
         title,
-        "slug": slug.current
-      }`),
-    ])
+        "slug": slug.current,
+        description,
+        authorNote,
+        destinations[]->{
+          regions[]->{
+            nom,
+            "slug": slug.current,
+          }
+        },
+        experienceType->{
+          badgeTitle
+        },
+        categories[]->{
+          title
+        }
+      }
+    `)
 
-    function filterAndMapData(data, dataSource) {
-      return data
-        .filter((item) => {
-          const name = item.title || item.nom
-          return name.toLowerCase().includes(lowerCaseSearchTerm) || item.slug.includes(lowerCaseSearchTerm)
+    // Helper to extract text from referenced objects for scoring
+    function getReferenceText(item) {
+      const texts = []
+
+      item.destinations?.forEach((d) => {
+        d.regions?.forEach((r) => {
+          texts.push(r.nom)
         })
-        .map(item => ({
-          title: item.title || item.nom,
-          slug: item.slug,
-          dataSource,
-        }))
+      })
+
+      if (item.experienceType?.badgeTitle) {
+        texts.push(item.experienceType.badgeTitle)
+      }
+
+      item.categories?.forEach(c => texts.push(c.title))
+
+      return texts.filter(Boolean).join(' ').toLowerCase()
     }
 
-    const searchResults = [
-      ...filterAndMapData(destinations, 'destinations'),
-      ...filterAndMapData(regions, 'regions'),
-      ...filterAndMapData(voyages, 'voyages'),
-    ]
+    function calculateScore(item, keywords) {
+      let score = 0
+
+      const directText = ([item.title, item.authorNote, item.description].filter(Boolean).join(' ').toLowerCase())
+      const referenceText = getReferenceText(item)
+      const searchableText = directText + ' ' + referenceText
+
+      // Split text into individual words for fuzzy matching
+      const searchableWords = searchableText.split(/\s+/).filter(w => w.length > 0)
+
+      let isMatch = false
+      const MAX_EDIT_DISTANCE = 1 // Allows one typos
+
+      keywords.forEach((keyword) => {
+        let keywordFoundFuzzy = false
+
+        for (const docWord of searchableWords) {
+          // USE THE FASTEST-LEVENSHTEIN FUNCTION
+          const dist = distance(keyword, docWord)
+
+          if (dist === 0) {
+            // Exact match (highest score)
+            score += 5
+            isMatch = true
+            keywordFoundFuzzy = true
+            break // Found an exact match, move to next keyword
+          }
+          else if (dist <= MAX_EDIT_DISTANCE) {
+            // Fuzzy match (medium score)
+            score += 2
+            isMatch = true
+            keywordFoundFuzzy = true
+          }
+        }
+
+        // High relevance boost for title match (Fuzzy check)
+        const titleWords = (item.title || '').toLowerCase().split(/\s+/).filter(w => w.length > 0)
+        if (titleWords.some(tWord => distance(keyword, tWord) <= MAX_EDIT_DISTANCE)) {
+          score += 5
+        }
+
+        // Minor boost if a match (fuzzy or exact) was found in the referenced data
+        if (keywordFoundFuzzy) {
+          score += 2
+        }
+      })
+
+      return { score, isMatch }
+    }
+
+    // --- KEYWORD PREPARATION ---
+    const lowerCaseSearchTerm = searchTerm.toLowerCase()
+    // Keep only letters and numbers
+    const cleanedSearchTerm = lowerCaseSearchTerm.replace(/[^\p{L}\p{N}\s]+/gu, ' ')
+    const keywords = cleanedSearchTerm.split(' ').filter(k => k.length > 0)
+    // ---------------------------
+
+    const initialScoredResults = allVoyages.map((item) => {
+      const { score, isMatch } = calculateScore(item, keywords)
+      return {
+        ...item,
+        score,
+        isMatch,
+      }
+    })
+
+    const filteredAndScoredResults = initialScoredResults.filter(item => item.isMatch)
+
+    // Sort results by score, descending (most relevant first)
+    filteredAndScoredResults.sort((a, b) => b.score - a.score)
+
+    const searchResults = filteredAndScoredResults.map(item => ({
+      title: item.title,
+      slug: item.slug,
+      dataSource: 'voyages',
+    }))
 
     return searchResults
   }
