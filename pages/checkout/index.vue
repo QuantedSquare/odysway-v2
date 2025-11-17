@@ -117,21 +117,20 @@ try {
     // ActiveCampaign deal checkout
     const deal = await apiRequest(`/ac/deals/deal-from-bms?bookedId=${bookedId}`)
     if (!deal) throw new Error(`No deal found with bookedId ${bookedId}`)
-    console.log('==========deal==========', deal)
     dealValues.value = buildDynamicDealValues(deal)
     voyage.value = buildVoyageFromAC(deal, imgSrc.value)
   }
-  else if (dateId && voyageSlug) {
+  else if (dateId) {
     // Sanity voyage checkout
-    const travelSanity = await apiRequest(`/sanity/?slug=${voyageSlug}`)
-
     const fetchedDate = await apiRequest(`/booking/date/${dateId}`)
+    const travelSanity = await apiRequest(`/sanity/?slug=${voyageSlug || fetchedDate.travel_slug}`)
+
     if (fetchedDate && travelSanity) {
       voyage.value = buildVoyageFromSanity(fetchedDate, travelSanity, imgSrc.value)
       dealValues.value = buildDynamicDealValues()
     }
     else {
-      throw new Error(`Date not found for ${voyageSlug}`)
+      throw new Error(`Date not found for ${voyageSlug || fetchedDate.travel_slug}`)
     }
   }
   else {
