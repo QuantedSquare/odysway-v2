@@ -65,13 +65,6 @@ export const voyageType = defineType({
   ],
   fields: [
     defineField({
-      name: 'title',
-      type: 'string',
-      validation: (r) => r.required().min(1),
-      group: ['requiredBMS', 'basic'],
-      title: 'Titre du voyage',
-    }),
-    defineField({
       name: 'bmsLink',
       type: 'url',
       hidden: ({document}) => {
@@ -84,12 +77,27 @@ export const voyageType = defineType({
       title: 'Lien BMS',
     }),
     defineField({
+      name: 'title',
+      type: 'string',
+      validation: (r) => r.required().min(1),
+      group: ['requiredBMS', 'basic'],
+      title: 'Titre du voyage',
+    }),
+    defineField({
       name: 'slug',
       type: 'slug',
       options: {source: 'title'},
       validation: (r) => r.required(),
       group: ['requiredBMS', 'basic'],
       title: 'Slug du voyage',
+    }),
+    defineField({
+      name: 'destinations',
+      title: 'Destinations',
+      type: 'array',
+      of: [{type: 'reference', to: [{type: 'destination'}]}],
+      validation: (r) => r.required().min(1),
+      group: ['basic', 'requiredBMS'],
     }),
     defineField({
       name: 'availabilityTypes',
@@ -184,14 +192,7 @@ export const voyageType = defineType({
       title: 'Image secondaire',
       description: 'Ratio 16:9 (1920x1080 px)'
     }),
-    defineField({
-      name: 'destinations',
-      title: 'Destinations',
-      type: 'array',
-      of: [{type: 'reference', to: [{type: 'destination'}]}],
-      validation: (r) => r.required().min(1),
-      group: ['basic', 'requiredBMS'],
-    }),
+   
     defineField({
       name: 'experienceType',
       title: 'Experiences',

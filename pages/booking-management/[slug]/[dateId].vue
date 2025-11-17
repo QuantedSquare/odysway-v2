@@ -729,7 +729,7 @@ const funnelLinkTypes = [
 ]
 const funnelLink = computed(() => {
   if (!form.value.id) return ''
-  return `${config.public.siteURL}/checkout?date_id=${form.value.id}&type=${funnelLinkType.value}`
+  return `${config.public.siteURL}/checkout?date_id=${form.value.id}&type=${funnelLinkType.value}${funnelLinkType.value === 'deposit' ? `&step=1&voyage=${form.value.travel_slug}` : ''}`
 })
 
 const fetchDetails = async () => {

@@ -78,25 +78,4 @@ function refuseCookies() {
 
   localStorage.setItem('consent', 'denied')
 }
-
-// TODO: add pixels and ga
-// function activePixels() {
-//   if (this.$sendinblue) { this.$sendinblue() }
-//   if (this.$hotjar) { this.$hotjar() }
-
-//   this.consentBar = false
-//   this.$fb.enable()
-//   this.$fb.track('PageView')
-// }
-
-// function captureOutboundLink(link) {
-//   const location = route.fullPath
-
-//   gtag('event',
-//     'click',
-//     {
-//       event_category: 'Header Link',
-//       event_label: `Header link from ${location} to ${link}`,
-//     })
-// }
 </script>

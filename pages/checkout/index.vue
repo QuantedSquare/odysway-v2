@@ -117,7 +117,7 @@ try {
     // ActiveCampaign deal checkout
     const deal = await apiRequest(`/ac/deals/deal-from-bms?bookedId=${bookedId}`)
     if (!deal) throw new Error(`No deal found with bookedId ${bookedId}`)
-
+    console.log('==========deal==========', deal)
     dealValues.value = buildDynamicDealValues(deal)
     voyage.value = buildVoyageFromAC(deal, imgSrc.value)
   }
