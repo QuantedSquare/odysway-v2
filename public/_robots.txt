@@ -7,9 +7,9 @@ Disallow: /booking-management
 Disallow: /checkout
 Disallow: /paiement
 Disallow: /devis
-Sitemap: https://odysway.com/sitemap.xml
-Sitemap: https://odysway.com/sitemap.xml
+Disallow: /preview/enable
 
+Sitemap: https://odysway.com/sitemap.xml
 
 User-agent: AhrefsBot
 Disallow: /

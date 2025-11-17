@@ -215,7 +215,8 @@ export function useSeo(options = {}) {
     twitterImageAlt: normalized.ogImageAlt,
     twitterCard: normalized.twitterCard,
     twitterSite: '@odysway',
-    canonical: canonicalUrl.value,
+    // remove the last / from the canonical url
+    canonical: canonicalUrl.value.replace(/\/$/, ''),
     robots: robotsMeta.value,
     ...customMeta,
   })
