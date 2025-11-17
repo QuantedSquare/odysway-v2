@@ -308,6 +308,7 @@ const submitStepData = async () => {
         promoLastMinute: voyage.promoLastMinute,
         gotLastMinute: voyage.gotLastMinute ? 'Oui' : 'Non',
         linkBms,
+        isCapExploraction: voyage.isCapExploraction ? 'Oui' : 'Non',
         // Contacts
         email: model.value.email,
         phone: model.value.phone,

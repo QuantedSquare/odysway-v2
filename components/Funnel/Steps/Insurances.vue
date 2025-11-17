@@ -61,8 +61,8 @@
       >
         <FunnelStepsDialogLearnMore
           v-if="model"
-          :btn-text="voyage.iso.includes('NP') || voyage.iso.includes('PE') ? page.insurances.accroche_assurance_perou_nepal:page.insurances.accroche_assurance_medicale "
-          :dialog-text="voyage.iso.includes('NP') || voyage.iso.includes('PE') ? page.insurances.details_assurance_medicale_perou_nepal:page.insurances.details_assurance_medicale "
+          :btn-text="voyage.isCapExploraction ? page.insurances.accroche_assurance_perou_nepal:page.insurances.accroche_assurance_medicale "
+          :dialog-text="voyage.isCapExploraction ? page.insurances.details_assurance_medicale_perou_nepal:page.insurances.details_assurance_medicale "
           :page="page"
         />
       </v-col>

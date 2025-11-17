@@ -1,6 +1,7 @@
 import dayjs from 'dayjs'
 // utils/voyageBuilders.js
 export function buildVoyageFromSanity(fetchedDate, travel, imgSrc = null) {
+  console.log('travel', travel)
   return {
     departureDate: fetchedDate.departure_date,
     returnDate: fetchedDate.return_date,
@@ -30,6 +31,7 @@ export function buildVoyageFromSanity(fetchedDate, travel, imgSrc = null) {
     promoValue: 0,
     alreadyPaid: 0,
     totalTravelPrice: +fetchedDate.starting_price * 100,
+    isCapExploraction: travel.pricing?.capExploraction || false,
   }
 }
 
@@ -62,6 +64,7 @@ export function buildVoyageFromAC(deal, imgSrc = null) {
     promoValue: deal.promoValue || 0,
     alreadyPaid: deal.alreadyPaid || 0,
     totalTravelPrice: deal.value,
+    isCapExploraction: deal.isCapExploraction === 'Oui' || deal.iso.includes('NP') || deal.iso.includes('PE') || false,
   }
 }
 

@@ -84,6 +84,7 @@ const customFieldsMapDeal = {
   95: 'promoLastMinute',
   96: 'gotLastMinute',
   93: 'linkBms',
+  113: 'isCapExploraction',
 }
 const customFieldsMapContact = {
   1: 'birthdate',

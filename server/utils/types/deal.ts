@@ -74,6 +74,7 @@ export const FieldSchema = z.array(
     gotEarlybird: z.string().optional(),
     promoLastMinute: z.number().optional(),
     gotLastMinute: z.string().optional(),
+    isCapExploraction: z.string().optional(),
   }).partial(),
 )
 
@@ -159,6 +160,7 @@ export const DealSchema = z.object({
   promoLastMinute: z.number().optional(),
   gotLastMinute: z.string().optional(),
   linkBms: z.string().optional(),
+  isCapExploraction: z.string().optional(),
   // contact fields
   firstname: z.string().optional(),
   lastname: z.string().optional(),

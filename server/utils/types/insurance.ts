@@ -4,6 +4,7 @@ export const InsuranceSchema = z.object({
   pricePerTraveler: z.number(),
   countries: z.string(),
   zoneChapka: z.number().default(0),
+  isCapExploraction: z.boolean().optional(),
   departureDate: z.string(),
   returnDate: z.string(),
   nbTravelers: z.number().min(1),

@@ -214,7 +214,8 @@ const handlePaymentSession = async (session) => {
       pricePerTraveler: Math.ceil((totalPaidAlma / order.nbTravelers) - (deal.insuranceCommissionPrice * deal.nbTravelers)),
     }
     console.log('customFieldsForChapka', customFieldsForChapka)
-    const chapkaNotify = chapka.notify(sessionForChapka, inssuranceItem, customFieldsForChapka, contact)
+    const isCapExploraction = deal.isCapExploraction === 'Oui' || deal.iso.includes('NP') || deal.iso.includes('PE') || false
+    const chapkaNotify = chapka.notify(sessionForChapka, inssuranceItem, customFieldsForChapka, contact, isCapExploraction)
     console.log('===== Chapka notify sent =====', chapkaNotify)
   }
 

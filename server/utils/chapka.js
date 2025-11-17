@@ -15,11 +15,11 @@ const getSignature = (data) => {
 }
 
 const createDataQuote = (data, insuranceType) => {
-  const { pricePerTraveler, countries, departureDate, returnDate, nbTravelers } = data
+  const { pricePerTraveler, countries, departureDate, returnDate, nbTravelers, isCapExploraction } = data
 
   const dataQuote = {
     emetteur: 'ODYSWAY',
-    produit: countries.includes('NP') || countries.includes('PE') ? 'CAP-EXPLORACTION' : 'CAP-EXPLORER',
+    produit: isCapExploraction || countries.includes('NP') || countries.includes('PE') ? 'CAP-EXPLORACTION' : 'CAP-EXPLORER',
     formule: insuranceType === 'rapatriement' ? 'MR' : 'AN',
     provenance: 'FR',
     destination: countries,
@@ -75,6 +75,7 @@ const getQuote = async (data, insuranceType) => {
   }
 
   try {
+    console.log('data in insurance quote', data)
     const dataQuote = createDataQuote(data, insuranceType)
     const res = await axios.post(
       'https://api.chapka.fr/quote/index.php?request=quote',
@@ -106,7 +107,7 @@ const quote = async (body) => {
   }
 }
 
-const notify = async (paymentSession, insuranceItem, dealCustomFields, client) => {
+const notify = async (paymentSession, insuranceItem, dealCustomFields, client, isCapExploraction) => {
   // Input validation
   if (!paymentSession || !insuranceItem || !dealCustomFields || !client) {
     console.log('Missing required parameters for Chapka notification')
@@ -120,7 +121,7 @@ const notify = async (paymentSession, insuranceItem, dealCustomFields, client) =
 
   const data = {
     emetteur: isDev ? 'ODYSWAY-TEST' : 'ODYSWAY',
-    produit: paymentSession.countries.includes('NP') || paymentSession.countries.includes('PE') ? 'CAP-EXPLORACTION' : 'CAP-EXPLORER',
+    produit: isCapExploraction ? 'CAP-EXPLORACTION' : 'CAP-EXPLORER',
     reference: paymentSession.dealId.toString(),
     formule: insuranceType,
     prime: Math.round(insuranceItem.amount_total / 100).toString(),

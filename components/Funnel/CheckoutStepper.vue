@@ -286,6 +286,7 @@ const fetchInsuranceQuote = async () => {
         zoneChapka: +voyage.zoneChapka || 0,
         departureDate: voyage.departureDate,
         returnDate: voyage.returnDate,
+        isCapExploraction: voyage.isCapExploraction,
         nbTravelers: +dynamicDealValues.value.nbAdults + +dynamicDealValues.value.nbChildren,
       },
     })

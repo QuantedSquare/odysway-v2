@@ -462,10 +462,11 @@ const handlePaymentSession = async (session, paymentType) => {
         'Assurance Assistance',
       ].includes(item.description)
     })
+    const isCapExploraction = deal.isCapExploraction === 'Oui' || deal.iso.includes('NP') || deal.iso.includes('PE') || false
     Object.assign(deal, { pricePerTraveler: calculatePricePerPerson(deal) })
     console.log('InssuranceItem', inssuranceItem)
     if (inssuranceItem) {
-      chapka.notify(session.metadata, inssuranceItem, deal, client)
+      chapka.notify(session.metadata, inssuranceItem, deal, client, isCapExploraction)
       console.log('Chapka notify')
     }
   }

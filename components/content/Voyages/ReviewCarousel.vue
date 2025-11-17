@@ -2,7 +2,7 @@
   <ClientOnly>
     <v-container
       id="reviews-container"
-      :fluid="width < 1600"
+      fluid
       class="px-0 py-0"
     >
       <v-row
@@ -103,7 +103,7 @@ defineProps({
   },
 })
 
-const { mdAndUp, smAndUp, width } = useDisplay()
+const { mdAndUp, smAndUp } = useDisplay()
 const scrollContainer = ref(null)
 const scrollElement = ref(null)
 const itemsList = ref(null)
