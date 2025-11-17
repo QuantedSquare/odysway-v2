@@ -75,7 +75,6 @@ function refuseCookies() {
     ad_storage: 'denied',
     analytics_storage: 'denied',
   })
-
   localStorage.setItem('consent', 'denied')
 }
 </script>

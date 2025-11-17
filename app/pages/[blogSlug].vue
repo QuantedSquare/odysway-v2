@@ -68,6 +68,14 @@ const { data: blogSanity } = await useAsyncData('blog', () =>
   }),
 )
 
+// If no blog post found, throw 404 to prevent catch-all from matching static routes
+if (!blogSanity.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Page not found',
+  })
+}
+
 const dataToPage = reactive({
   title: blogSanity.value?.title,
   displayedImg: blogSanity.value?.displayedImg,

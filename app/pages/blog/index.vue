@@ -197,7 +197,6 @@ const sanity = useSanity()
 const { data: pages, status } = await useAsyncData('blog', () =>
   sanity.fetch(blogsQuery),
 )
-console.log('pages', pages.value)
 
 const pageBlogQuery = groq`
   *[_type == "page_blog"][0]{
