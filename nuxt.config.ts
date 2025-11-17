@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxtjs/mdc',
     '@nuxt/fonts',
+    '@nuxtjs/critters',
     '@nuxtjs/seo',
     '@nuxt/image',
     'nuxt-calendly',
@@ -23,6 +24,12 @@ export default defineNuxtConfig({
       })
     },
   ],
+  critters: {
+    config:{
+      preload: 'swap',
+      pruneSource: true
+    }
+  },
   components: [
     '~/components',
     { path: '~/components/content', pathPrefix: false },
@@ -119,6 +126,7 @@ export default defineNuxtConfig({
   },
   compatibilityDate: '2024-11-01',
   nitro: {
+    compressPublicAssets: true,
     imports: {
       dirs: [
         'server/utils/**',
