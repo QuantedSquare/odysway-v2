@@ -1,6 +1,5 @@
 import { defineEventHandler } from 'h3'
-import supabase from '~/server/utils/supabase'
-import activecampaign from '~/server/utils/activecampaign'
+
 
 export default defineEventHandler(async (event) => {
   const { dateId } = event.context.params

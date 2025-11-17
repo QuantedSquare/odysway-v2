@@ -111,7 +111,6 @@ const processedBadges = computed(() => {
 
   return badges.map((badgeItem) => {
     if (!badgeItem.badge) return null
-
     // Start with the badge text
     let displayText = badgeItem.badge.text || ''
 

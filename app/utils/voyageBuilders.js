@@ -1,7 +1,6 @@
 import dayjs from 'dayjs'
 // utils/voyageBuilders.js
 export function buildVoyageFromSanity(fetchedDate, travel, imgSrc = null) {
-  console.log('travel', travel)
   return {
     departureDate: fetchedDate.departure_date,
     returnDate: fetchedDate.return_date,

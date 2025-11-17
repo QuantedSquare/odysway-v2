@@ -1,7 +1,6 @@
 import { defineEventHandler } from 'h3'
 import dayjs from 'dayjs'
 import { createClient } from '@sanity/client'
-import supabase from '~/server/utils/supabase'
 
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()

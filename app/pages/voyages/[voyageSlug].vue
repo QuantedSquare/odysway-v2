@@ -13,7 +13,7 @@
       >
         <HeroVoyageSection :voyage="voyage" />
 
-        <ChipsContainer
+        <LazyChipsContainer
           :badges="voyage.badges"
           :badge-title="voyage.experienceType?.badgeTitle"
           :difficulty-level="voyage.difficultyLevel"
@@ -21,7 +21,7 @@
 
         <StickyContainer>
           <template #left-side>
-            <AuthorNote
+            <LazyAuthorNote
               :author-note="voyage.authorNote"
               :page="page"
             />

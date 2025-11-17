@@ -1,7 +1,5 @@
 import axios from 'axios'
 
-import { stripeCLI } from './stripeCLI'
-
 const config = useRuntimeConfig()
 
 const createCheckoutSession = async (order) => {

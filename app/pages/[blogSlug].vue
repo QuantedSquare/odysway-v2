@@ -3,10 +3,6 @@
     class="pt-4 py-md-0 my-0"
     fluid
   >
-    <!-- <ContentRenderer
-      v-if="data"
-      :value="data"
-    /> -->
     <BlogHeroSection
       v-if="blogSanity"
       :title="blogSanity.title"

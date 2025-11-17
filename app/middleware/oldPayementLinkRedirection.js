@@ -1,4 +1,3 @@
-import supabase from '~/server/utils/supabase'
 
 export default defineNuxtRouteMiddleware(async () => {
   const route = useRoute()

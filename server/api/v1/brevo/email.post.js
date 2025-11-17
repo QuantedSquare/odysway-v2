@@ -1,4 +1,3 @@
-import brevo from '~/server/utils/brevo'
 
 export default defineEventHandler(async (event) => {
   const data = await readBody(event)

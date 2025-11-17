@@ -1,5 +1,4 @@
 import { defineEventHandler } from 'h3'
-import supabase from '~/server/utils/supabase'
 
 export default defineEventHandler(async (event) => {
   const { slug } = event.context.params

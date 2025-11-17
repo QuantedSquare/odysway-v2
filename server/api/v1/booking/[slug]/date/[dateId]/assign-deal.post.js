@@ -1,6 +1,5 @@
 import { defineEventHandler, readBody } from 'h3'
-import supabase from '~/server/utils/supabase'
-import activecampaign from '~/server/utils/activecampaign'
+
 
 // When Assigning an activecampaign deal to a booked_date, we need to update the deal with the paiementLink, slug and redirection to date in the bms.
 // Also update the booked_dates table with the booked_places, is_option and expiracy_date. depending if it's an option or not.

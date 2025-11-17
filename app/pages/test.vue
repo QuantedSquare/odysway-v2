@@ -317,7 +317,7 @@ const testConnection = async () => {
 
 // Webhook testing state
 // #TODO TO change before go on live
-const webhookSecret = ref('mY7f1j2Q1RskslUV6o4wU6tzE32xqTXBx2N4t66jEe8')
+const webhookSecret = ref('')
 const testType = ref('voyage')
 const testSlug = ref('photographie-animaliere-vosges')
 const webhookResponse = ref(null)
