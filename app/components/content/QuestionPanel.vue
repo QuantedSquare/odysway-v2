@@ -7,6 +7,7 @@
     <v-expansion-panel
       eager
       class="my-1 my-md-2 py-md-6 pa-1"
+      v-if="answer && question"
     >
       <v-expansion-panel-title
         class="text-caption text-sm-subtitle-2 font-weight-bold text-md-h6 "

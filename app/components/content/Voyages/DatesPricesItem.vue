@@ -11,12 +11,11 @@
         class="d-flex flex-column align-start ga-1 ga-md-0 "
       >
         <div class="d-flex align-center ga-2">
-          <v-badge
-            inline
-            color="primary"
-            text-color="white"
-            :content="+enrichedDate.index +1"
-          />
+          <div class="text-white custom-number-chip d-flex justify-center align-center ml-1">
+            <span>
+            {{ enrichedDate.index + 1 }}
+          </span>
+          </div>
           <span class="text-body-2 d-flex align-center line-height-2 ga-2">
             <div class="d-flex align-center">
               <span class="d-none d-lg-block">
@@ -342,6 +341,16 @@ watch(enrichedDate, async () => {
 </script>
 
 <style scoped>
+.custom-number-chip{
+  font-size: 11px!important;
+  font-weight: 500!important;
+  padding-left: 1px!important;
+  background-color: rgb(var(--v-theme-primary))!important;
+  color: #ffffff!important;
+  border-radius: 999px!important;
+  width: 20px!important;
+  height: 20px!important;
+}
 .custom-height-card{
     height: fit-content!important;
   }

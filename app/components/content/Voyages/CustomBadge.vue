@@ -1,10 +1,15 @@
 <template>
-  <v-badge
+  <!-- <v-badge
     inline
     :color="color"
     class="custom"
     dot
-  />
+  /> -->
+  <div class="inline-block">
+    <div class="custom-badge">
+      <span class="custom-content"/>
+    </div>
+  </div>
 </template>
 
 <script setup>
@@ -17,6 +22,9 @@ const props = defineProps({
 
 const getBorderColor = computed(() => {
   return `rgba(var(--v-theme-${props.color}-light))`
+})
+const getBackgroundColor = computed(() => {
+  return `rgb(var(--v-theme-${props.color}))`
 })
 </script>
 
@@ -31,5 +39,29 @@ const getBorderColor = computed(() => {
   min-height: 10px !important;
   height: 10px !important;
   width: 10px !important;
+}
+.inline-block{
+  display: inline-block!important;
+}
+.custom-content{
+  min-width: 10px !important;
+  min-height: 10px !important;
+  height: 10px !important;
+  width: 10px !important;
+  background-color: v-bind(getBackgroundColor)!important;
+  border-radius: 999px!important;
+  display: inline-flex!important;
+  align-items: center!important;
+  justify-content: center!important;
+}
+.custom-badge{
+  border-radius: 50%;
+  max-width: 20px;
+  border: 5px solid v-bind(getBorderColor)!important;
+  padding: 0px !important;
+  display: flex!important;
+  align-items: center!important;
+  justify-content: center!important;
+  border-radius: 999px!important;
 }
 </style>

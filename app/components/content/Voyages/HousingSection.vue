@@ -106,13 +106,15 @@
                       class="pb-0"
                     >
                       <h2 class="text-h5 font-weight-bold text-center text-md-left d-flex align-center ga-2">
-                        <v-badge
-                          color="yellow"
-                          inline
-                          :content="index + 1"
-                          text-color="white"
-                        />
+                        
+                        <div class="text-white custom-number-chip">
+                          <span>
+                         {{ index + 1 }}
+                          </span>
+                        </div>
+                        <span>
                         {{ housing.title }}
+                        </span>
                       </h2>
                     </v-col>
 
@@ -216,6 +218,19 @@ const scrollAmount = computed(() => {
 </script>
 
 <style scoped>
+.custom-number-chip{
+  font-size: 12px!important;
+  font-weight: 500!important;
+  display: inline-flex!important;
+  align-items: center!important;
+  justify-content: center!important;
+  background-color: rgb(var(--v-theme-yellow))!important;
+  padding: 4px 6px!important;
+  color: #ffffff!important;
+  border-radius: 999px!important;
+  width: 20px!important;
+  height: 20px!important;
+}
 .housing-text{
 font-size: 16px;
 line-height: 30px;
