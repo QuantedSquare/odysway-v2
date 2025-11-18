@@ -218,6 +218,8 @@ onMounted(() => {
   left:0;
   right: 0;
   bottom: -32px;
+  z-index: 10;
+  pointer-events: auto;
 }
 .custom-hero-title {
 font-weight: 700;
@@ -269,6 +271,20 @@ line-height: 50px;
     margin-bottom: 85px !important;
     font-size: 35px!important;
     line-height: 30px!important;
+  }
+}
+
+/* Ensure v-img content doesn't block pointer events on mobile */
+@media (max-width: 960px) {
+  .gradient-overlay {
+    pointer-events: none;
+  }
+  .h-100.d-flex.align-center.position-relative {
+    pointer-events: none;
+  }
+  /* Ensure v-img doesn't extend beyond its bounds and block clicks */
+  :deep(.v-img) {
+    overflow: hidden;
   }
 }
 </style>

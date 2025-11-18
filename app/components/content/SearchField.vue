@@ -447,6 +447,7 @@ watch([regions, destinations], ([regionsData, destinationsData]) => {
 .search-field-container {
   max-width: 1070px;
   position: relative;
+  z-index: 10;
 }
 
 .search-field-shadow {
@@ -458,5 +459,18 @@ watch([regions, destinations], ([regionsData, destinationsData]) => {
 }
 .no-pointer {
   cursor:default!important;
+}
+
+/* Ensure autocomplete is clickable on mobile */
+@media (max-width: 960px) {
+  :deep(.v-autocomplete) {
+    pointer-events: auto !important;
+  }
+  :deep(.v-autocomplete .v-field) {
+    pointer-events: auto !important;
+  }
+  :deep(.v-autocomplete .v-field__input) {
+    pointer-events: auto !important;
+  }
 }
 </style>
