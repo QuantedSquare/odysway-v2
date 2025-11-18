@@ -53,40 +53,6 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' },
 
   },
-  fonts: {
-    families: [
-      {
-        name: 'Gordita',
-        src: '/fonts/Gordita-Font/subset-Gordita-Regular.woff2',
-        weight: '400',
-        style: 'normal',
-      },
-      {
-        name: 'Gordita',
-        src: '/fonts/Gordita-Font/subset-Gordita-Medium.woff2',
-        weight: '500',
-        style: 'normal',
-      },
-      {
-        name: 'Gordita',
-        src: '/fonts/Gordita-Font/subset-Gordita-MediumItalic.woff2',
-        weight: '500',
-        style: 'italic',
-      },
-      {
-        name: 'Gordita',
-        src: '/fonts/Gordita-Font/subset-Gordita-Bold.woff2',
-        weight: '700',
-        style: 'normal',
-      },
-      {
-        name: 'Gordita',
-        src: '/fonts/Gordita-Font/subset-Gordita-BoldItalic.woff2',
-        weight: '700',
-        style: 'italic',
-      },
-    ],
-  },
   site: {
     url: process.env.BASE_URL || 'https://odysway.com', // TODO: change the first to the dev env
     name: process.env.NUXT_SITE_NAME || 'Odysway',
