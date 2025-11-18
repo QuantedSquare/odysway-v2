@@ -368,12 +368,21 @@ function searchFn() {
   if (date.value.length > 0 && !date.value.includes(0)) {
     query.from = date.value.join(',')
   }
-
   gtag('event', 'search', { eventAction: 'Click', destination: `${destinationChoice.value}`, travelType: `${travelTypeChoice.value}`, from: `${date.value[0]}`, to: `${date.value[1]}` })
-  router.push({
-    path: '/voyages',
-    query,
-  })
+  
+  if(query.destination && query.destination !== 'top-destination' && !query.from && !query.travelType){
+    router.push({
+      path: '/destinations/' + query.destination,
+      
+    })
+   return
+  } else{
+    router.push({
+      path: '/voyages',
+      query,
+    })
+    return 
+  }
 }
 
 function selectDestination(item) {

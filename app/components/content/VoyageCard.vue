@@ -268,7 +268,7 @@ const voyageCardImg = computed(() => {
   }
   .custom-card-width{
   min-width:280px!important;
-  max-width: 280px!important;
+  max-width: 100%!important;
   max-height: 345px!important;
   }
 }

@@ -71,7 +71,10 @@ const destinationFromRegionQuery = `
       image,
       description,
       showOnHome,
-      "voyages": *[_type == "voyage" && references(^._id)]{
+       "voyages": *[_type == "voyage" && references(^._id) && (
+        !('custom' in availabilityTypes) ||
+        (count(availabilityTypes) > 1)
+      )]{
          _id,
       title,
       slug,
@@ -197,7 +200,6 @@ const { data: destinationSanity } = await useAsyncData(
       const data = await sanity.fetch(destinationFromRegionQuery, {
         slug: slug.value,
       })
-      console.log('data', data)
       const voyageFlatMap = _.flatMap(data.destinations.map(destination => destination.voyages))
       return {
         interjection: data.interjection,

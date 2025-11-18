@@ -10,8 +10,8 @@
         :class="leftSticky ? 'd-none d-md-block' : '' "
       >
         <div
-          class="sticky-top pr-md-10"
-          :class="leftSticky ? 'position-sticky ': '' "
+          class="pr-md-10"
+          :class="leftSticky ? 'position-sticky sticky-top': '' "
         >
           <slot name="left-side" />
         </div>
@@ -22,8 +22,7 @@
         :class="rightSticky ? 'd-none d-md-block ' : '' "
       >
         <div
-          class="sticky-top-right"
-          :class="rightSticky ? 'position-sticky': '' "
+          :class="rightSticky ? 'position-sticky sticky-top-right': '' "
         >
           <slot name="right-side" />
         </div>
@@ -60,10 +59,19 @@ defineProps({
 </script>
 
 <style scoped>
-.sticky-top{
-  top: 64px;
+.sticky-top {
+  top: 90px;
 }
-.sticky-top-right{
-  top: 100px;
+.sticky-top-right {
+  top: 90px;
+}
+
+@media (max-width: 960px) {
+  .sticky-top {
+    top: 60px;
+  }
+  .sticky-top-right {
+    top: 60px;
+  }
 }
 </style>
