@@ -42,6 +42,14 @@
             <EnrichedText
               class="custom-include-list-item"
               :value="pricingDetailsBlock.listInclude"
+              :list-aria-attributes="{
+                role: 'list',
+                'aria-label': `${priceDetailsSection.priceInclude} de ${priceDetailsSection.title}`
+              }"
+              :list-item-aria-attributes="(index) => ({ 
+                role: 'listitem',
+                'aria-label': `Item ${index + 1} de ${priceDetailsSection.priceInclude}` 
+              })"
             />
           </v-container>
         </v-list>
@@ -70,6 +78,14 @@
             <EnrichedText
               class="custom-exclude-list-item"
               :value="pricingDetailsBlock.listExclude"
+              :list-aria-attributes="{
+                role: 'list',
+                'aria-label': `${priceDetailsSection.priceExclude} de ${priceDetailsSection.title}`
+              }"
+              :list-item-aria-attributes="(index) => ({ 
+                role: 'listitem',
+                'aria-label': `Item ${index + 1} de ${priceDetailsSection.priceExclude}` 
+              })"
             />
           </v-container>
         </v-list>

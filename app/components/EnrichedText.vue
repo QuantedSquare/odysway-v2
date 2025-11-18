@@ -1,5 +1,8 @@
 <template>
-  <div class="sanity-content">
+  <div
+    ref="contentRef"
+    class="sanity-content"
+  >
     <PortableText
       :value="value"
       :components="components"
@@ -10,17 +13,69 @@
 <script lang="ts" setup>
 import type { PortableTextBlock } from '@portabletext/types'
 import { PortableText } from '@portabletext/vue'
-import { h, resolveComponent } from 'vue'
+import { h, resolveComponent, computed, ref, watch, nextTick, onMounted } from 'vue'
 import ImageContainer from './content/ImageContainer.vue'
 
 interface Props {
   value: PortableTextBlock[]
+  listItemAriaAttributes?: Record<string, string> | ((index: number) => Record<string, string>)
+  listAriaAttributes?: Record<string, string>
 }
 
-defineProps<Props>()
+const props = withDefaults(defineProps<Props>(), {
+  listItemAriaAttributes: undefined,
+  listAriaAttributes: undefined,
+})
+
+const contentRef = ref<HTMLElement | null>(null)
+
+// Add ARIA attributes to lists and list items after render
+const addAriaAttributes = () => {
+  if (!contentRef.value) return
+  
+  // Add ARIA attributes to <ul> and <ol> elements
+  if (props.listAriaAttributes) {
+    const lists = contentRef.value.querySelectorAll('ul, ol')
+    lists.forEach((list) => {
+      Object.entries(props.listAriaAttributes).forEach(([key, value]) => {
+        list.setAttribute(key, value)
+      })
+    })
+  }
+  
+  // Add ARIA attributes to <li> elements
+  if (props.listItemAriaAttributes) {
+    const listItems = contentRef.value.querySelectorAll('li')
+    listItems.forEach((li, index) => {
+      let ariaAttrs: Record<string, string> = {}
+      if (typeof props.listItemAriaAttributes === 'function') {
+        ariaAttrs = props.listItemAriaAttributes(index)
+      } else {
+        ariaAttrs = props.listItemAriaAttributes
+      }
+      
+      Object.entries(ariaAttrs).forEach(([key, value]) => {
+        li.setAttribute(key, value)
+      })
+    })
+  }
+}
+
+// Watch for value changes and add ARIA attributes
+watch(() => props.value, async () => {
+  await nextTick()
+  addAriaAttributes()
+}, { immediate: true, deep: true })
+
+onMounted(() => {
+  nextTick(() => {
+    addAriaAttributes()
+  })
+})
 
 // Custom components for different block types using render functions
-const components = {
+const components = computed(() => {
+  return {
   types: {
     image: ({ value }: { value: { asset?: { url?: string }, url?: string, alt?: string, caption?: string, link?: string | null } }) => {
       return h('div', { class: 'my-6' }, [
@@ -81,6 +136,7 @@ const components = {
   },
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 } as any
+})
 </script>
 
 <style scoped>

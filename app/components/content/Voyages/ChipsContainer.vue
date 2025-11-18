@@ -65,6 +65,8 @@
             <v-tooltip
               location="bottom"
               max-width="500"
+              role="tooltip"
+              :aria-label="`Description du niveau de difficulté: ${difficultyLevel.description}`"
             >
               <template #activator="{ props }">
                 <v-icon v-bind="props">{{ mdiInformationOutline }}</v-icon>
