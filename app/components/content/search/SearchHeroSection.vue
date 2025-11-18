@@ -74,23 +74,15 @@
     </v-row>
     <v-img
       v-else
-      :src="img(destination ? displayedImg : '/images/homeHero.jpeg', { format: 'webp', quality: 80, height: 900, width: 1536 })"
-      :lazy-src="img(destination ? displayedImg : '/images/homeHero.jpeg', { format: 'webp', quality: 10, height: 900, width: 1536 })"
+      :src="img(displayedImg || '/images/homeHero.jpeg', { format: 'webp', quality: 80, height: 900, width: 1536 })"
+      :lazy-src="img(displayedImg || '/images/homeHero.jpeg', { format: 'webp', quality: 10, height: 900, width: 1536 })"
       size="(max-width: 600) 480px, 1500px"
-      :srcset="`${img(destination ? displayedImg : '/images/homeHero.jpeg', { format: 'webp', quality: 80, width: 640 })} 480w, ${img(destination ? destination.image?.src : '/images/homeHero.jpeg', { format: 'webp', quality: 80, width: 1024 })} 1500w`"
+      :srcset="`${img(displayedImg || '/images/homeHero.jpeg', { format: 'webp', quality: 80, width: 640 })} 480w, ${img(displayedImg || '/images/homeHero.jpeg', { format: 'webp', quality: 80, width: 1024 })} 1500w`"
       height="50vh"
-      :alt="destination ? destination.image?.alt : 'Image principale Hero d\'Odysway'"
+      :alt="destination?.image?.alt || 'Image principale Hero d\'Odysway'"
       class="rounded-md"
       cover
     >
-      <template #placeholder>
-        <div class="d-flex align-center justify-center fill-height">
-          <v-progress-circular
-            indeterminate
-            color="primary"
-          />
-        </div>
-      </template>
 
       <!-- Gradient overlay -->
       <div class="gradient-overlay" />
@@ -152,6 +144,7 @@
 <script setup>
 import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
+import { getImageUrl } from '~/utils/getImageUrl'
 
 const img = useImage()
 const { width } = useDisplay()
@@ -192,10 +185,12 @@ const displayedImg = computed(() => {
   }
   else {
     if (destination?.image?.asset?._ref) {
-      return getImageUrl(destination.image.asset._ref)
+      const url = getImageUrl(destination.image.asset._ref)
+      return url || '/images/homeHero.jpeg'
     }
     if (pageContent?.image?.asset?._ref) {
-      return getImageUrl(pageContent.image.asset._ref)
+      const url = getImageUrl(pageContent.image.asset._ref)
+      return url || '/images/homeHero.jpeg'
     }
     else {
       return '/images/homeHero.jpeg'

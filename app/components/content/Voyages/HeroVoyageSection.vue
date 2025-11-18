@@ -78,62 +78,41 @@
         cols="12"
         :sm="voyage.imageSecondary?.asset?._ref ? 9 : 12"
       >
-        <SanityImage
-          v-if="voyage.image?.asset?._ref"
-          :asset-id="voyage.image?.asset?._ref"
-          auto="format"
-        >
-          <template #default="{ src }">
-            <v-img
-              v-if="src"
-              :src="src"
-              :lazy-src="img(src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-              :alt="voyage.image?.alt || `Image principale du voyage ${voyage.title}`"
-              cover
-              class="custom-height"
-              rounded="lg"
-            />
-          </template>
-        </SanityImage>
+        <NuxtImg
+          v-if="mainImageSrcUrl"
+          :src="mainImageSrcUrl"
+          :srcset="mainImageSrcset"
+          sizes="(max-width: 600px) 100vw, (max-width: 960px) 66vw, 75vw"
+          :alt="voyage.image?.alt || `Image principale du voyage ${voyage.title}`"
+          format="webp"
+          loading="lazy"
+          class="custom-height voyage-main-image rounded-lg"
+        />
       </v-col>
       <v-col
         cols="3"
         class="d-none d-sm-flex flex-column ga-7"
       >
-        <SanityImage
-          v-if="voyage.imageSecondary?.asset?._ref"
-          :asset-id="voyage.imageSecondary?.asset?._ref"
-          auto="format"
-        >
-          <template #default="{ src }">
-            <v-img
-              v-if="src"
-              :src="src"
-              :lazy-src="img(src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-              :alt="voyage.imageSecondary.alt || `Image secondaire du voyage ${voyage.title}`"
-              cover
-              height="214"
-              rounded="lg"
-            />
-          </template>
-        </SanityImage>
-        <SanityImage
-          v-if="voyage.photosList?.length > 0 && voyage.photosList[0].asset?._ref"
-          :asset-id="voyage.photosList[0].asset._ref"
-          auto="format"
-        >
-          <template #default="{ src }">
-            <v-img
-              v-if="src"
-              :src="src"
-              :lazy-src="img(src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-              :alt="voyage.photosList[0].alt || `Photo du voyage ${voyage.title}`"
-              cover
-              height="214"
-              rounded="lg"
-            />
-          </template>
-        </SanityImage>
+        <NuxtImg
+          v-if="secondaryImageSrcUrl"
+          :src="secondaryImageSrcUrl"
+          :srcset="secondaryImageSrcset"
+          sizes="(max-width: 960px) 25vw, 200px"
+          :alt="voyage.imageSecondary.alt || `Image secondaire du voyage ${voyage.title}`"
+          format="webp"
+          loading="lazy"
+          class="voyage-secondary-image rounded-lg"
+        />
+        <NuxtImg
+          v-if="photoImageSrcUrl"
+          :src="photoImageSrcUrl"
+          :srcset="photoImageSrcset"
+          sizes="(max-width: 960px) 25vw, 200px"
+          :alt="voyage.photosList[0].alt || `Photo du voyage ${voyage.title}`"
+          format="webp"
+          loading="lazy"
+          class="voyage-secondary-image rounded-lg"
+        />
       </v-col>
     </v-row>
     <v-row class="media-btns-position">
@@ -160,7 +139,7 @@
 
 <script setup>
 import { mdiExportVariant } from '@mdi/js'
-import { useImage } from '#imports'
+import imageUrlBuilder from '@sanity/image-url'
 
 const config = useRuntimeConfig()
 const props = defineProps({
@@ -170,9 +149,97 @@ const props = defineProps({
   },
 })
 
-const img = useImage()
+const builder = imageUrlBuilder({
+  projectId: config.public.sanity.projectId,
+  dataset: config.public.sanity.dataset,
+})
+
 const route = useRoute()
 const snackbar = ref(false)
+
+// Build optimized Sanity URLs for main image (455px desktop, 270px mobile)
+const buildMainImageUrl = (width, height, quality = 75) => {
+  if (!props.voyage?.image?.asset?._ref) return ''
+  return builder
+    .image(props.voyage.image.asset._ref)
+    .width(width)
+    .height(height)
+    .format('webp')
+    .quality(quality)
+    .fit('max')
+    .url()
+}
+
+// Build optimized Sanity URLs for secondary images (214px height)
+const buildSecondaryImageUrl = (width, height, quality = 75) => {
+  if (!props.voyage?.imageSecondary?.asset?._ref) return ''
+  return builder
+    .image(props.voyage.imageSecondary.asset._ref)
+    .width(width)
+    .height(height)
+    .format('webp')
+    .quality(quality)
+    .fit('max')
+    .url()
+}
+
+// Build optimized Sanity URLs for photo from photosList (214px height)
+const buildPhotoImageUrl = (width, height, quality = 75) => {
+  if (!props.voyage?.photosList?.length || !props.voyage.photosList[0]?.asset?._ref) return ''
+  return builder
+    .image(props.voyage.photosList[0].asset._ref)
+    .width(width)
+    .height(height)
+    .format('webp')
+    .quality(quality)
+    .fit('max')
+    .url()
+}
+
+// Main image: 455px height desktop, 270px mobile
+// Assuming 16:9 aspect ratio, but using fit='max' to maintain aspect
+const mainImageSrcUrl = computed(() => {
+  // Default to mobile size (270px height) for mobile-first
+  return buildMainImageUrl(480, 270, 70)
+})
+
+const mainImageSrcset = computed(() => {
+  // Mobile: 270px height, Desktop: 455px height
+  // Widths calculated to maintain reasonable aspect ratios
+  return [
+    `${buildMainImageUrl(480, 270, 65)} 480w`,
+    `${buildMainImageUrl(600, 338, 70)} 600w`,
+    `${buildMainImageUrl(800, 450, 75)} 800w`,
+    `${buildMainImageUrl(1000, 563, 75)} 1000w`,
+  ].join(', ')
+})
+
+// Secondary images: 214px height
+const secondaryImageSrcUrl = computed(() => {
+  return buildSecondaryImageUrl(300, 214, 70)
+})
+
+const secondaryImageSrcset = computed(() => {
+  return [
+    `${buildSecondaryImageUrl(200, 214, 65)} 200w`,
+    `${buildSecondaryImageUrl(300, 214, 70)} 300w`,
+    `${buildSecondaryImageUrl(400, 214, 75)} 400w`,
+  ].join(', ')
+})
+
+// Photo from photosList: 214px height
+const photoImageSrcUrl = computed(() => {
+  return buildPhotoImageUrl(300, 214, 70)
+})
+
+const photoImageSrcset = computed(() => {
+  return [
+    `${buildPhotoImageUrl(200, 214, 65)} 200w`,
+    `${buildPhotoImageUrl(300, 214, 70)} 300w`,
+    `${buildPhotoImageUrl(400, 214, 75)} 400w`,
+  ].join(', ')
+})
+
 const photoCarousel = computed(() => {
   if (!props.voyage) return []
   const photos = []
@@ -197,6 +264,19 @@ function copyUrl() {
 }
 .custom-height{
   height: 455px;
+}
+.voyage-main-image {
+  width: 100%;
+  height: 455px;
+  max-height: 455px;
+  object-fit: cover;
+  object-position: center;
+}
+.voyage-secondary-image {
+  width: 100%;
+  height: 214px;
+  object-fit: cover;
+  object-position: center;
 }
 @media screen and (max-width: 1280px) {
   .media-btns-position{

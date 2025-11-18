@@ -52,27 +52,16 @@
         v-if="author"
         class="d-flex ga-3 mt-md-4 mt-2"
       >
-        <v-avatar
-
-          size="80"
+        <NuxtImg
+          v-if="authorImageSrcUrl"
+          :src="authorImageSrcUrl"
+          :srcset="authorImageSrcset"
+          sizes="(max-width: 600px) 80px, 80px"
           :alt="author.description || 'Photo de l\'auteur'"
-        >
-          <SanityImage
-            :asset-id="author.image.asset._ref"
-            auto="format"
-          >
-            <template #default="{ src }">
-              <v-img
-                :src="img(src, { format: 'webp', quality: 70, width: 320 })"
-                :lazy-src="img(src, { format: 'webp', quality: 10, width: 320 })"
-                :srcset="`${img(src, { format: 'webp', quality: 70, width: 320 })} 70w, ${img(src, { format: 'webp', quality: 70, width: 320 })} 100w`"
-                sizes="(max-width: 600px) 70px, 100px"
-                loading="lazy"
-                :alt="author.description || 'Photo de l\'auteur'"
-              />
-            </template>
-          </SanityImage>
-        </v-avatar>
+          format="webp"
+          loading="lazy"
+          class="author-avatar"
+        />
         <div class="text-subtitle-2 d-flex flex-column justify-center">
           <span class="font-weight-bold mb-1">
             {{ author.name }}
@@ -88,9 +77,10 @@
 
 <script setup>
 import { mdiArrowRight } from '@mdi/js'
-import { useImage } from '#imports'
+import imageUrlBuilder from '@sanity/image-url'
 import { shouldTruncatePortableText } from '~/utils/getPortableTextLength'
 
+const config = useRuntimeConfig()
 const props = defineProps({
   authorNote: {
     type: Object,
@@ -102,9 +92,38 @@ const props = defineProps({
   },
 })
 
-const img = useImage()
+const builder = imageUrlBuilder({
+  projectId: config.public.sanity.projectId,
+  dataset: config.public.sanity.dataset,
+})
 
 const author = computed(() => props.authorNote?.author)
+
+// Build optimized Sanity URLs for author avatar (80px x 80px)
+const buildAuthorImageUrl = (width, height, quality = 75) => {
+  if (!author.value?.image?.asset?._ref) return ''
+  return builder
+    .image(author.value.image.asset._ref)
+    .width(width)
+    .height(height)
+    .format('webp')
+    .quality(quality)
+    .fit('crop')
+    .url()
+}
+
+const authorImageSrcUrl = computed(() => {
+  // Default to 80px for avatar
+  return buildAuthorImageUrl(80, 80, 70)
+})
+
+const authorImageSrcset = computed(() => {
+  // Provide multiple sizes for retina displays
+  return [
+    `${buildAuthorImageUrl(80, 80, 70)} 80w`,
+    `${buildAuthorImageUrl(160, 160, 75)} 160w`,
+  ].join(', ')
+})
 // Client-side state for expansion
 const isExpanded = ref(false)
 const content = ref(null)
@@ -189,5 +208,14 @@ onMounted(() => {
 
 .rotate-180 {
   transform: rotate(180deg);
+}
+
+.author-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  flex-shrink: 0;
 }
 </style>
