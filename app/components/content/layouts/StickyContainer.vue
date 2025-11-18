@@ -6,23 +6,21 @@
     <v-row>
       <v-col
         cols="12"
-        :md="leftSpace"
-        :class="leftSticky ? 'd-none d-md-block' : '' "
+        md="8"
       >
         <div
           class="pr-md-10"
-          :class="leftSticky ? 'position-sticky sticky-top': '' "
         >
           <slot name="left-side" />
         </div>
       </v-col>
       <v-col
         cols="12"
-        :md="rightSpace"
-        :class="rightSticky ? 'd-none d-md-block ' : '' "
+        md="4"
+        class="d-none d-md-block align-self-start"
       >
         <div
-          :class="rightSticky ? 'position-sticky sticky-top-right': '' "
+          class="position-sticky sticky-top-right"
         >
           <slot name="right-side" />
         </div>
@@ -32,30 +30,7 @@
 </template>
 
 <script setup>
-defineProps({
-  leftSpace: {
-    type: Number,
-    default: 8,
-    validator() {
-      return [3, 4, 5, 6, 7, 8, 9]
-    },
-  },
-  rightSpace: {
-    type: Number,
-    default: 4,
-    validator() {
-      return [3, 4, 5, 6, 7, 8, 9]
-    },
-  },
-  leftSticky: {
-    type: Boolean,
-    default: false,
-  },
-  rightSticky: {
-    type: Boolean,
-    default: true,
-  },
-})
+
 </script>
 
 <style scoped>
