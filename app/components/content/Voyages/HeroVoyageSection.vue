@@ -85,7 +85,8 @@
           sizes="(max-width: 600px) 100vw, (max-width: 960px) 66vw, 75vw"
           :alt="voyage.image?.alt || `Image principale du voyage ${voyage.title}`"
           format="webp"
-          loading="lazy"
+          loading="eager"
+          fetchpriority="high"
           class="custom-height voyage-main-image rounded-lg"
         />
       </v-col>
@@ -100,7 +101,8 @@
           sizes="(max-width: 960px) 25vw, 200px"
           :alt="voyage.imageSecondary.alt || `Image secondaire du voyage ${voyage.title}`"
           format="webp"
-          loading="lazy"
+          loading="eager"
+          fetchpriority="high"
           class="voyage-secondary-image rounded-lg"
         />
         <NuxtImg
@@ -110,7 +112,8 @@
           sizes="(max-width: 960px) 25vw, 200px"
           :alt="voyage.photosList[0].alt || `Photo du voyage ${voyage.title}`"
           format="webp"
-          loading="lazy"
+          loading="eager"
+          fetchpriority="high"
           class="voyage-secondary-image rounded-lg"
         />
       </v-col>
