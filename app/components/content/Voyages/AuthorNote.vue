@@ -15,17 +15,13 @@
         v-if="authorNote?.text"
         class="text-subtitle-2 text-md-body-2 line-height-2 text-wrapper"
       >
-        <div
+        <!-- <div
           ref="content"
           :class="{ 'truncated': shouldTruncate && !isExpanded, 'text-content': shouldTruncate }"
           :style="shouldTruncate ? contentStyle : {}"
-        >
+        > -->
           <EnrichedText :value="authorNote.text" />
-          <!-- <MDC
-            tag="article"
-            :value="authorNote.text"
-          /> -->
-        </div>
+        <!-- </div> -->
       </div>
 
       <!-- Expand/collapse button - render consistently but handle client-side logic -->

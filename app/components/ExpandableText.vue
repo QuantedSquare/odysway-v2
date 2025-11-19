@@ -1,13 +1,13 @@
 <template>
   <div :class="wrapperClass">
-    <div
+    <!-- <div
       ref="textContent"
       class="text-content"
       :class="{ truncated: !isExpanded && showReadMore }"
       :style="contentStyle"
-    >
+    > -->
       <slot />
-    </div>
+    <!-- </div> -->
 
     <ReadMoreButton
       v-if="showReadMore"
