@@ -7,7 +7,6 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
     '@nuxtjs/mdc',
-    '@nuxt/scripts',
     '@nuxt/fonts',
     '@nuxtjs/seo',
     '@nuxt/image',
@@ -72,13 +71,6 @@ export default defineNuxtConfig({
   },
   build: {
     transpile: ['vuetify'],
-  },
-  scripts: {
-    registry: {
-      metaPixel: {
-          id: process.env.METAPIXEL_ID || '',
-        },
-    },
   },
   routeRules: {
     // Homepage and main sections
@@ -145,6 +137,16 @@ export default defineNuxtConfig({
         transformAssetUrls,
       },
     },
+    // Uncomment for Nuxt4 upgrade
+    // optimizeDeps: {
+    //   include: ['minimatch', 'brace-expansion', '@sanity/visual-editing'],
+    // },
+    // resolve: {
+    //   alias: {
+    //     'react-compiler-runtime': 'react-compiler-runtime',
+    //     react: 'react',
+    //   },
+    // },
     build: {
       sourcemap: true,
       cssCodeSplit: true, // Enable CSS code splitting for better caching and parallel loading

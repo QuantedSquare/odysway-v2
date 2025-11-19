@@ -10,11 +10,6 @@
 const config = useRuntimeConfig()
 const route = useRoute()
 const { gtag, initialize } = useGtag()
-import { agreedToCookiesScriptConsent } from '#imports'
-
-useScript('https://www.google-analytics.com/analytics.js', {
-  trigger: agreedToCookiesScriptConsent
-})
 
 useHead({
   htmlAttrs: {
@@ -62,48 +57,48 @@ useHead({
   // })
 
   // Load Hotjar after page is interactive
-//   onMounted(() => {
-//     // Wait for idle time or user interaction before loading Hotjar
-//     const loadHotjar = () => {
-//       if (typeof window !== 'undefined' && !window.hj) {
-//         const script = document.createElement('script')
-//         script.innerHTML = `(function(h,o,t,j,a,r){
-//           h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-//           h._hjSettings={hjid:6430819,hjsv:6};
-//           a=o.getElementsByTagName('head')[0];
-//           r=o.createElement('script');r.async=1;
-//           r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-//           a.appendChild(r);
-//         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`
-//         document.head.appendChild(script)
-//       }
-//     }
+  // onMounted(() => {
+    // Wait for idle time or user interaction before loading Hotjar
+    // const loadHotjar = () => {
+    //   if (typeof window !== 'undefined' && !window.hj) {
+    //     const script = document.createElement('script')
+    //     script.innerHTML = `(function(h,o,t,j,a,r){
+    //       h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+    //       h._hjSettings={hjid:6430819,hjsv:6};
+    //       a=o.getElementsByTagName('head')[0];
+    //       r=o.createElement('script');r.async=1;
+    //       r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+    //       a.appendChild(r);
+    //     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`
+    //     document.head.appendChild(script)
+    //   }
+    // }
 
-//     // Load after a short delay or on user interaction
-//     if ('requestIdleCallback' in window) {
-//       requestIdleCallback(loadHotjar, { timeout: 2000 })
-//     }
-//     else {
-//       setTimeout(loadHotjar, 2000)
-//     }
+    // // Load after a short delay or on user interaction
+    // if ('requestIdleCallback' in window) {
+    //   requestIdleCallback(loadHotjar, { timeout: 2000 })
+    // }
+    // else {
+    //   setTimeout(loadHotjar, 2000)
+    // }
 
-//     // Also load on first user interaction as fallback
-//     const events = ['mousedown', 'touchstart', 'keydown']
-//     const loadOnInteraction = () => {
-//       loadHotjar()
-//       events.forEach((event) => {
-//         document.removeEventListener(event, loadOnInteraction)
-//       })
-//     }
-//     events.forEach((event) => {
-//       document.addEventListener(event, loadOnInteraction, { once: true, passive: true })
-//     })
+    // // Also load on first user interaction as fallback
+    // const events = ['mousedown', 'touchstart', 'keydown']
+    // const loadOnInteraction = () => {
+    //   loadHotjar()
+    //   events.forEach((event) => {
+    //     document.removeEventListener(event, loadOnInteraction)
+    //   })
+    // }
+    // events.forEach((event) => {
+    //   document.addEventListener(event, loadOnInteraction, { once: true, passive: true })
+    // })
 //   })
 // }
 
 onMounted(() => {
   const isConsent = localStorage.getItem('consent') === 'granted'
-  // if (isConsent && config.public.environment === 'production') {
+  if (isConsent && config.public.environment === 'production') {
     trackPixel('track', 'PageView')
     initialize()
 
@@ -114,7 +109,7 @@ onMounted(() => {
       analytics_storage: 'granted',
     })
     useTrackEvent('page_view')
-  // }
+  }
 
   const userUTMs = []
 
