@@ -52,32 +52,46 @@ const props = defineProps({
 const isExpanded = ref(false)
 const textContent = ref(null)
 const showReadMore = ref(false)
+const fullScrollHeight = ref(0)
 
-const { readScrollHeight } = useLayoutRead()
-
+// Start with a very large max-height to allow natural sizing for initial measurement
+// This prevents forced reflows when we read scrollHeight
 const contentStyle = ref({
-  maxHeight: `${props.lineHeight * props.clampLines}px`,
+  maxHeight: '9999px', // Large enough to not constrain, but allows overflow: hidden
   overflow: 'hidden',
   transition: 'max-height 0.5s ease',
 })
 
-// Check if content needs truncation after mount using batched layout read
-onMounted(async () => {
+// Read and cache the full scrollHeight once on mount
+// This is the ONLY time we read scrollHeight - we cache it for all future use
+onMounted(() => {
   if (!textContent.value) return
   
-  // Use batched layout read to avoid forced reflow
-  const scrollHeight = await readScrollHeight(textContent.value)
-  showReadMore.value = scrollHeight > props.lineHeight * props.clampLines
+  // Read scrollHeight in the next animation frame
+  // This batches with other layout operations during page load
+  requestAnimationFrame(() => {
+    if (textContent.value) {
+      // Single read during natural page load - this is acceptable
+      fullScrollHeight.value = textContent.value.scrollHeight
+      showReadMore.value = fullScrollHeight.value > props.lineHeight * props.clampLines
+      
+      // Now apply the actual constraint using the cached value
+      // No layout read happens here - we're just setting a style
+      if (showReadMore.value) {
+        contentStyle.value.maxHeight = `${props.lineHeight * props.clampLines}px`
+      }
+    }
+  })
 })
 
-watch(isExpanded, async (newVal) => {
+watch(isExpanded, (newVal) => {
   if (!textContent.value) return
 
-  await nextTick()
+  // Use the cached scrollHeight instead of reading it after DOM changes
+  // This prevents forced reflows
   if (newVal) {
-    // Use batched layout read to avoid forced reflow
-    const scrollHeight = await readScrollHeight(textContent.value)
-    contentStyle.value.maxHeight = scrollHeight + 'px'
+    // Use cached value - no layout read needed
+    contentStyle.value.maxHeight = fullScrollHeight.value + 'px'
   }
   else {
     contentStyle.value.maxHeight = `${props.lineHeight * props.clampLines}px`
