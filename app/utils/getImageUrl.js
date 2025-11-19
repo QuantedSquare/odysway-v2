@@ -15,9 +15,10 @@ export function getImageUrl(ref, vanityName = null) {
   try {
     const imageBuilder = builder
       .image(ref)
-      .auto('format')
+      .format('webp')
       .fit('max')
       .width(1200)
+      
 
     // Add vanity name for SEO if provided
     if (vanityName) {

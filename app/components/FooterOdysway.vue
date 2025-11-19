@@ -9,7 +9,7 @@
       cover
       loading="lazy"
       alt="Odysway texte en fond, en bas de page"
-      width="1024"
+      width="100%"
       height="400"
     />
     <div class="mx-md-5 ">
