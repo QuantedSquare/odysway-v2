@@ -71,69 +71,55 @@
   </v-container>
   <v-container
     fluid
-    class="d-flex align-start align-md-center position-relative px-0 custom-height mb-2 mb-md-0 pt-0 pt-md-4"
+    class="d-flex align-start align-md-center position-relative px-0 custom-height mb-md-0 pt-0 pb-2 pb-md-0"
   >
     <v-row class="align-start ">
       <v-col
         cols="12"
         :sm="voyage.imageSecondary?.asset?._ref ? 9 : 12"
       >
-        <SanityImage
-          v-if="voyage.image?.asset?._ref"
-          :asset-id="voyage.image?.asset?._ref"
-          auto="format"
-        >
-          <template #default="{ src }">
-            <v-img
-              v-if="src"
-              :src="src"
-              :lazy-src="img(src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-              :alt="voyage.image?.alt || `Image principale du voyage ${voyage.title}`"
-              cover
-              class="custom-height"
-              rounded="lg"
-            />
-          </template>
-        </SanityImage>
+        <v-img
+          v-if="imagesSources.mainImage.srcUrl"
+          :src="imagesSources.mainImage.srcUrl"
+          :srcset="imagesSources.mainImage.srcSet"
+          sizes="(max-width: 600px) 100vw, (max-width: 960px) 90vw, (max-width: 1280px) 85vw, 1280px"
+          :lazy-src="img(imagesSources.mainImage.srcUrl, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+          :alt="voyage.image?.alt || `Image principale du voyage ${voyage.title}`"
+          class="hero-image-height"
+          cover
+          rounded="lg"
+          loading="eager"
+          fetchpriority="high"
+        />
       </v-col>
       <v-col
         cols="3"
         class="d-none d-sm-flex flex-column ga-7"
       >
-        <SanityImage
-          v-if="voyage.imageSecondary?.asset?._ref"
-          :asset-id="voyage.imageSecondary?.asset?._ref"
-          auto="format"
-        >
-          <template #default="{ src }">
-            <v-img
-              v-if="src"
-              :src="src"
-              :lazy-src="img(src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-              :alt="voyage.imageSecondary.alt || `Image secondaire du voyage ${voyage.title}`"
-              cover
-              height="214"
-              rounded="lg"
-            />
-          </template>
-        </SanityImage>
-        <SanityImage
-          v-if="voyage.photosList?.length > 0 && voyage.photosList[0].asset?._ref"
-          :asset-id="voyage.photosList[0].asset._ref"
-          auto="format"
-        >
-          <template #default="{ src }">
-            <v-img
-              v-if="src"
-              :src="src"
-              :lazy-src="img(src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-              :alt="voyage.photosList[0].alt || `Photo du voyage ${voyage.title}`"
-              cover
-              height="214"
-              rounded="lg"
-            />
-          </template>
-        </SanityImage>
+        <v-img
+          v-if="imagesSources.secondImage.srcUrl"
+          :src="imagesSources.secondImage.srcUrl"
+          :srcset="imagesSources.secondImage.srcSet"
+          :lazy-src="img(imagesSources.secondImage.srcUrl, { format: 'webp', quality: 10, height: 350, width: 600 })"
+          :alt="voyage.imageSecondary.alt || `Image secondaire du voyage ${voyage.title}`"
+          loading="eager"
+          fetchpriority="high"
+          rounded="lg"
+          height="214"
+          cover
+        />
+        <v-img
+          v-if="imagesSources.thirdImage.srcUrl"
+          :src="imagesSources.thirdImage.srcUrl"
+          :srcset="imagesSources.thirdImage.srcSet"
+          :lazy-src="img(imagesSources.thirdImage.srcUrl, { format: 'webp', quality: 10, height: 350, width: 600 })"
+          :alt="voyage.photosList[0].alt || `Photo du voyage ${voyage.title}`"
+          loading="eager"
+          fetchpriority="high"
+          rounded="lg"
+          height="214"
+          cover
+        />
       </v-col>
     </v-row>
     <v-row class="media-btns-position">
@@ -163,7 +149,7 @@ import { mdiExportVariant } from '@mdi/js'
 import { useImage } from '#imports'
 
 const config = useRuntimeConfig()
-const props = defineProps({
+const { voyage } = defineProps({
   voyage: {
     type: Object,
     required: true,
@@ -174,11 +160,11 @@ const img = useImage()
 const route = useRoute()
 const snackbar = ref(false)
 const photoCarousel = computed(() => {
-  if (!props.voyage) return []
+  if (!voyage) return []
   const photos = []
-  if (props.voyage.image) photos.push(props.voyage.image)
-  if (props.voyage.imageSecondary) photos.push(props.voyage.imageSecondary)
-  if (props.voyage.photosList?.length) photos.push(...props.voyage.photosList)
+  if (voyage.image) photos.push(voyage.image)
+  if (voyage.imageSecondary) photos.push(voyage.imageSecondary)
+  if (voyage.photosList?.length) photos.push(...voyage.photosList)
   return photos
 })
 
@@ -187,6 +173,14 @@ function copyUrl() {
   navigator.clipboard.writeText(copiedUrl)
   snackbar.value = true
 }
+
+const imagesSources = computed(() => {
+  return {
+    mainImage: buildImageUrl(voyage.image),
+    secondImage: buildImageUrl(voyage.imageSecondary, null, 600),
+    thirdImage: buildImageUrl(voyage.photosList[0], null, 600),
+  }
+})
 </script>
 
 <style scoped>
@@ -195,7 +189,19 @@ function copyUrl() {
   bottom: 38px;
   left: 42px;
 }
-.custom-height{
+
+.hero-image {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1536 / 900;
+  display: block;
+  position: relative;
+  z-index: 0;
+  border-radius: 20px;
+}
+
+.hero-image-height{
   height: 455px;
 }
 @media screen and (max-width: 1280px) {
@@ -208,10 +214,10 @@ function copyUrl() {
 @media screen and (max-width: 600px) {
   .media-btns-position{
   position: absolute;
-  bottom: 15px;
+  bottom: 30px;
   left: 15px;
 }
-  .custom-height{
+  .hero-image-height{
   height: 270px;
   }
 }

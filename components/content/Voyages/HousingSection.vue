@@ -88,9 +88,13 @@
                         <v-img
                           rounded="lg"
                           cover
-                          :src="img(getImageUrl(image?.asset?._ref), { format: 'webp', quality: 70, width: 640 })"
+                          :src="buildImageUrl(image, null, 600).srcUrl"
+                          :srcset="buildImageUrl(image, null, 600).srcSet"
                           :alt="'housing image ' + index + 1 || ''"
                           height="100%"
+                          width="100%"
+                          loading="lazy"
+                          fetch-priority="low"
                         />
                       </template>
                     </v-carousel-item>
@@ -176,7 +180,7 @@ const { housingBlock } = defineProps({
     required: true,
   },
 })
-const img = useImage()
+
 const { mdAndUp, sm } = useDisplay()
 const scrollContainer = ref(null)
 const scrollElement = ref(null)

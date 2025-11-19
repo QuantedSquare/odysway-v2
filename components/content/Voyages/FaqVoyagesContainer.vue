@@ -71,8 +71,8 @@ const { faqBlock, backgroundImage } = defineProps({
   },
 })
 const backgroundImageUrl = computed(() => {
-  if (backgroundImage?.asset?._ref) {
-    return img(getImageUrl(backgroundImage.asset?._ref), { format: 'webp', quality: 70, height: 900, width: 1536 })
+  if (backgroundImage.asset?._ref) {
+    return buildImageUrl(backgroundImage).srcUrl
   }
   else {
     return img('/images/b27a23f333a8c96567d46c123d1efb15.jpeg', { format: 'webp', quality: 70, height: 900, width: 1536 })

@@ -139,18 +139,22 @@
                 @click="trackPixel('trackCustom', 'ClicRdv', { voyage: `${voyage.title}` })"
               >
                 <div class="d-flex align-center ga-2">
-                  <SanityImage
-                    :asset-id="stickyBlock.ctaCall.avatar.asset._ref"
-                    auto="format"
+                  <v-avatar
+                    :size="mdAndDown ? 30 : 40"
+                    color="white"
                   >
-                    <template #default="{ src }">
-                      <v-avatar
-                        :size="mdAndDown ? 30 : 40"
-                        :image="src"
-                        color="white"
-                      />
-                    </template>
-                  </SanityImage>
+                    <NuxtImg
+                      v-if="avatarSource.srcUrl"
+                      :src="avatarSource.srcUrl"
+                      :srcset="avatarSource.srcSet"
+                      sizes="(max-width: 600px) 70px, 100px"
+                      alt=" Photo de spécialiste"
+                      height="40"
+                      width="40"
+                      loading="lazy"
+                      fetch-priority="low"
+                    />
+                  </v-avatar>
 
                   <span class="text-caption text-lg-body-2 font-weight-bold text-decoration-none">
                     {{ stickyBlock.ctaCall.text }}
@@ -265,6 +269,10 @@ const displayedDates = computed(() => {
     })
   }
   return []
+})
+
+const avatarSource = computed(() => {
+  return buildImageUrl(stickyBlock.ctaCall.avatar)
 })
 </script>
 

@@ -22,10 +22,6 @@
           :style="shouldTruncate ? contentStyle : {}"
         >
           <EnrichedText :value="authorNote.text" />
-          <!-- <MDC
-            tag="article"
-            :value="authorNote.text"
-          /> -->
         </div>
       </div>
 
@@ -53,25 +49,19 @@
         class="d-flex ga-3 mt-md-4 mt-2"
       >
         <v-avatar
-
           size="80"
-          :alt="author.description || 'Photo de l\'auteur'"
         >
-          <SanityImage
-            :asset-id="author.image.asset._ref"
-            auto="format"
-          >
-            <template #default="{ src }">
-              <v-img
-                :src="img(src, { format: 'webp', quality: 70, width: 320 })"
-                :lazy-src="img(src, { format: 'webp', quality: 10, width: 320 })"
-                :srcset="`${img(src, { format: 'webp', quality: 70, width: 320 })} 70w, ${img(src, { format: 'webp', quality: 70, width: 320 })} 100w`"
-                sizes="(max-width: 600px) 70px, 100px"
-                loading="lazy"
-                :alt="author.description || 'Photo de l\'auteur'"
-              />
-            </template>
-          </SanityImage>
+          <NuxtImg
+            v-if="authorImage.srcUrl"
+            :src="authorImage.srcUrl"
+            :srcset="authorImage.srcSet"
+            :alt="author.description || 'Photo de l\'auteur'"
+            sizes="(max-width: 600px) 70px, 100px"
+            height="100"
+            width="100"
+            loading="lazy"
+            fetch-priority="low"
+          />
         </v-avatar>
         <div class="text-subtitle-2 d-flex flex-column justify-center">
           <span class="font-weight-bold mb-1">
@@ -88,7 +78,6 @@
 
 <script setup>
 import { mdiArrowRight } from '@mdi/js'
-import { useImage } from '#imports'
 import { shouldTruncatePortableText } from '~/utils/getPortableTextLength'
 
 const props = defineProps({
@@ -102,9 +91,11 @@ const props = defineProps({
   },
 })
 
-const img = useImage()
-
 const author = computed(() => props.authorNote?.author)
+const authorImage = computed(() => {
+  return buildImageUrl(author.value.image)
+})
+
 // Client-side state for expansion
 const isExpanded = ref(false)
 const content = ref(null)
