@@ -1,5 +1,4 @@
 <template>
-  <ClientOnly>
     <div
       v-if="authorNote"
       class="text-primary d-flex flex-column px-2"
@@ -72,7 +71,6 @@
         </div>
       </div>
     </div>
-  </ClientOnly>
 </template>
 
 <script setup>
