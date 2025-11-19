@@ -1,12 +1,13 @@
-import {defineConfig, isObjectInputProps, ObjectInputProps} from 'sanity'
-import {Stack} from '@sanity/ui'
-import { RequiredProgress } from './schemaTypes/components/RequiredProgress'
+import {defineConfig} from 'sanity'
+
+import {assist} from '@sanity/assist'
 import {structureTool} from 'sanity/structure'
 
 import {schemaTypes} from './schemaTypes'
-import {media, mediaAssetSource} from 'sanity-plugin-media'
+import {media} from 'sanity-plugin-media'
 import {orderableDocumentListDeskItem} from '@sanity/orderable-document-list'
 import {colorInput} from '@sanity/color-input'
+import {embeddingsIndexReferenceInput, embeddingsIndexDashboard} from '@sanity/embeddings-index-ui'
 
 
 
@@ -20,6 +21,7 @@ export default defineConfig({
     enabled: true,
   },
   plugins: [
+   
     structureTool({
       structure: (S, context) =>
         S.list()
@@ -226,7 +228,12 @@ export default defineConfig({
           ]),
     }),
     media(),
-    colorInput()
+    colorInput(),
+    embeddingsIndexReferenceInput(),
+    assist(),
+    process.env.NODE_ENV === 'development'
+    ? embeddingsIndexDashboard()
+    : {name: 'embeddings-index-dashboard-disabled'}
   ],
   // form: {
   //   components: {

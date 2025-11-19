@@ -93,12 +93,20 @@ export const voyageType = defineType({
     }),
     defineField({
       name: 'destinations',
-      title: 'Destinations',
-      type: 'array',
-      of: [{type: 'reference', to: [{type: 'destination'}]}],
-      validation: (r) => r.required().min(1),
-      group: ['basic', 'requiredBMS'],
-    }),
+     title: 'Destinations',
+     type: 'array',
+     of: [{
+       type: 'reference',
+       to: [{ type: 'destination' }],
+       options: {
+         aiAssist: {
+           embeddingsIndex: 'all-document-index'
+         }
+       }
+     }],
+     validation: (r) => r.required().min(1),
+     group: ['basic', 'requiredBMS'],
+   }),
     defineField({
       name: 'availabilityTypes',
       type: 'array',
@@ -147,6 +155,11 @@ export const voyageType = defineType({
       name: 'difficultyLevel',
       type: 'reference',
       to: [{type: 'difficultyLevel'}],
+      options: {
+        aiAssist: {
+          embeddingsIndex: 'all-document-index'
+        }
+      },
       title: 'Niveau de difficulté',
       group: 'basic',
     }),
@@ -177,16 +190,24 @@ export const voyageType = defineType({
     defineField({
       name: 'image',
       type: 'image',
-      options: {hotspot: true},
+      options: {
+        hotspot: true, 
+        aiAssist: {
+        imageDescriptionField: 'alt',
+      },},
       group: 'basic',
       fields: [{name: 'alt', type: 'string'} as any],
       title: 'Image principale',
-      description: 'Ratio 16:9 (1920x1080 px)'
+      description: 'Ratio 16:9 (1920x1080 px)',
     }),
     defineField({
       name: 'imageSecondary',
       type: 'image',
-      options: {hotspot: true},
+      options: {
+        hotspot: true, 
+        aiAssist: {
+        imageDescriptionField: 'alt',
+      },},
       group: 'basic',
       fields: [{name: 'alt', type: 'string'} as any],
       title: 'Image secondaire',
@@ -198,12 +219,21 @@ export const voyageType = defineType({
       title: 'Experiences',
       type: 'reference',
       to: [{type: 'experience'}],
+      options: {
+        aiAssist: {
+          embeddingsIndex: 'all-document-index'
+        }
+      },
       group: 'basic',
     }),
     defineField({
       name: 'categories',
       type: 'array',
-      of: [{type: 'reference', to: [{type: 'category'}]}],
+      of: [{type: 'reference', to: [{type: 'category'}], options: {
+        aiAssist: {
+          embeddingsIndex: 'all-document-index'
+        }
+      }}],
       group: 'basic',
     }),
     defineField({
@@ -238,7 +268,11 @@ export const voyageType = defineType({
       group: 'voyageDescription',
       fields: [
         {name: 'text', type: 'array', of: [richTextBlock]},
-        {name: 'author', type: 'reference', to: [{type: 'teamMember'}]},
+        {name: 'author', type: 'reference', to: [{type: 'teamMember'}], options: {
+          aiAssist: {
+            embeddingsIndex: 'all-document-index'
+          }
+        }},
         {name: 'affixeAuthor', type: 'string'},
       ],
     }),
@@ -352,7 +386,9 @@ export const voyageType = defineType({
             {name: 'title', type: 'string'} as any,
             {name: 'badgeText', type: 'string'} as any,
             {name: 'description', title: 'Description de la journée', type: 'array', of: [richTextBlock]} as any,
-            {name: 'photo', type: 'image', options: {hotspot: true}} as any,
+            {name: 'photo', type: 'image', options: {hotspot: true, aiAssist: {
+        imageDescriptionField: 'alt',
+      },}} as any,
             {name: 'denivellation', title: 'Denivellation', type: 'string'} as any,
             {name: 'road', title: 'Description du temps de trajet', type: 'string'} as any,
             {name: 'night', title: 'Description de la nuitée', type: 'string'} as any,
@@ -413,7 +449,9 @@ export const voyageType = defineType({
             {name: 'name', title: 'Nom', type: 'string'} as any,
             {name: 'description', title: 'Description', type: 'array', of: [richTextBlock]} as any,
             {name: 'role', title: 'Rôle', type: 'string'} as any,
-            {name: 'image', type: 'image', options: {hotspot: true}} as any,
+            {name: 'image', type: 'image', options: {hotspot: true, aiAssist: {
+        imageDescriptionField: 'alt',
+      },}} as any,
           ],
         },
       ],
@@ -436,7 +474,9 @@ export const voyageType = defineType({
               of: [
                 {
                   type: 'image',
-                  options: {hotspot: true},
+                  options: {hotspot: true, aiAssist: {
+        imageDescriptionField: 'alt',
+      },},
                   fields: [{name: 'alt', type: 'string'} as any],
                 },
               ],
