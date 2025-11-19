@@ -1,13 +1,13 @@
 <template>
   <div :class="wrapperClass">
-    <!-- <div
+    <div
       ref="textContent"
       class="text-content"
       :class="{ truncated: !isExpanded && showReadMore }"
       :style="contentStyle"
-    > -->
+    >
       <slot />
-    <!-- </div> -->
+    </div>
 
     <ReadMoreButton
       v-if="showReadMore"
@@ -51,47 +51,24 @@ const props = defineProps({
 
 const isExpanded = ref(false)
 const textContent = ref(null)
-const showReadMore = ref(false)
-const fullScrollHeight = ref(0)
 
-// Start with a very large max-height to allow natural sizing for initial measurement
-// This prevents forced reflows when we read scrollHeight
+const showReadMore = computed(() => {
+  if (!textContent.value) return false
+  return textContent.value.scrollHeight > props.lineHeight * props.clampLines
+})
+
 const contentStyle = ref({
-  maxHeight: '9999px', // Large enough to not constrain, but allows overflow: hidden
+  maxHeight: `${props.lineHeight * props.clampLines}px`,
   overflow: 'hidden',
   transition: 'max-height 0.5s ease',
 })
 
-// Read and cache the full scrollHeight once on mount
-// This is the ONLY time we read scrollHeight - we cache it for all future use
-onMounted(() => {
-  if (!textContent.value) return
-  
-  // Read scrollHeight in the next animation frame
-  // This batches with other layout operations during page load
-  requestAnimationFrame(() => {
-    if (textContent.value) {
-      // Single read during natural page load - this is acceptable
-      fullScrollHeight.value = textContent.value.scrollHeight
-      showReadMore.value = fullScrollHeight.value > props.lineHeight * props.clampLines
-      
-      // Now apply the actual constraint using the cached value
-      // No layout read happens here - we're just setting a style
-      if (showReadMore.value) {
-        contentStyle.value.maxHeight = `${props.lineHeight * props.clampLines}px`
-      }
-    }
-  })
-})
-
-watch(isExpanded, (newVal) => {
+watch(isExpanded, async (newVal) => {
   if (!textContent.value) return
 
-  // Use the cached scrollHeight instead of reading it after DOM changes
-  // This prevents forced reflows
+  await nextTick()
   if (newVal) {
-    // Use cached value - no layout read needed
-    contentStyle.value.maxHeight = fullScrollHeight.value + 'px'
+    contentStyle.value.maxHeight = textContent.value.scrollHeight + 'px'
   }
   else {
     contentStyle.value.maxHeight = `${props.lineHeight * props.clampLines}px`
