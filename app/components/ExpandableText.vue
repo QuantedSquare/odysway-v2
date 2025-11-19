@@ -51,11 +51,9 @@ const props = defineProps({
 
 const isExpanded = ref(false)
 const textContent = ref(null)
+const showReadMore = ref(false)
 
-const showReadMore = computed(() => {
-  if (!textContent.value) return false
-  return textContent.value.scrollHeight > props.lineHeight * props.clampLines
-})
+const { readScrollHeight } = useLayoutRead()
 
 const contentStyle = ref({
   maxHeight: `${props.lineHeight * props.clampLines}px`,
@@ -63,12 +61,23 @@ const contentStyle = ref({
   transition: 'max-height 0.5s ease',
 })
 
+// Check if content needs truncation after mount using batched layout read
+onMounted(async () => {
+  if (!textContent.value) return
+  
+  // Use batched layout read to avoid forced reflow
+  const scrollHeight = await readScrollHeight(textContent.value)
+  showReadMore.value = scrollHeight > props.lineHeight * props.clampLines
+})
+
 watch(isExpanded, async (newVal) => {
   if (!textContent.value) return
 
   await nextTick()
   if (newVal) {
-    contentStyle.value.maxHeight = textContent.value.scrollHeight + 'px'
+    // Use batched layout read to avoid forced reflow
+    const scrollHeight = await readScrollHeight(textContent.value)
+    contentStyle.value.maxHeight = scrollHeight + 'px'
   }
   else {
     contentStyle.value.maxHeight = `${props.lineHeight * props.clampLines}px`
