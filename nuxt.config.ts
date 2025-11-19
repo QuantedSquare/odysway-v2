@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
     '@nuxtjs/mdc',
+    '@nuxt/scripts',
     '@nuxt/fonts',
     '@nuxtjs/seo',
     '@nuxt/image',
@@ -64,13 +65,20 @@ export default defineNuxtConfig({
       supabaseAnonKey: process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY,
       environment: process.env.VERCEL_ENV || 'development',
       siteURL: process.env.BASE_URL || 'http://localhost:3000',
-      metapixel: {
-        default: { id: process.env.METAPIXEL_ID || '' },
-      },
+      // metapixel: {
+      //   default: { id: process.env.METAPIXEL_ID || '' },
+      // },
     },
   },
   build: {
     transpile: ['vuetify'],
+  },
+  scripts: {
+    registry: {
+      metaPixel: {
+          id: process.env.METAPIXEL_ID || '',
+        },
+    },
   },
   routeRules: {
     // Homepage and main sections

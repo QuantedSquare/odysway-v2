@@ -39,6 +39,8 @@
 const consentBar = ref(true)
 const { gtag, initialize } = useGtag()
 const config = useRuntimeConfig()
+import { agreedToCookiesScriptConsent } from '#imports'
+
 
 onMounted (() => {
   if (!localStorage.getItem('consent') && config.public.environment === 'production') {
@@ -52,29 +54,31 @@ onMounted (() => {
 })
 
 function acceptCookies() {
+  agreedToCookiesScriptConsent.accept()
   consentBar.value = false
 
-  initialize()
-  gtag('consent', 'update', {
-    ad_user_data: 'granted',
-    ad_personalization: 'granted',
-    ad_storage: 'granted',
-    analytics_storage: 'granted',
-  })
-  trackPixel('track', 'PageView')
-  useTrackEvent('page_view')
-  localStorage.setItem('consent', 'granted')
+  // initialize()
+  // gtag('consent', 'update', {
+  //   ad_user_data: 'granted',
+  //   ad_personalization: 'granted',
+  //   ad_storage: 'granted',
+  //   analytics_storage: 'granted',
+  // })
+  // trackPixel('track', 'PageView')
+  // useTrackEvent('page_view')
+  // localStorage.setItem('consent', 'granted')
 }
 
 function refuseCookies() {
   consentBar.value = false
+  agreedToCookiesScriptConsent.refuse()
 
-  gtag('consent', 'update', {
-    ad_user_data: 'denied',
-    ad_personalization: 'denied',
-    ad_storage: 'denied',
-    analytics_storage: 'denied',
-  })
+  // gtag('consent', 'update', {
+  //   ad_user_data: 'denied',
+  //   ad_personalization: 'denied',
+  //   ad_storage: 'denied',
+  //   analytics_storage: 'denied',
+  // })
   localStorage.setItem('consent', 'denied')
 }
 </script>
