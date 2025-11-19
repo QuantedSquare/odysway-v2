@@ -18,7 +18,7 @@
         <LazyTopTravelsTabs />
       </div>
     </v-container>
-    <FooterOdysway />
+    <LazyFooterOdysway />
   </v-app>
 </template>
 
