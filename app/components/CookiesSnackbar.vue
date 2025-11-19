@@ -43,7 +43,9 @@ import { agreedToCookiesScriptConsent } from '#imports'
 
 
 onMounted (() => {
-  if (!localStorage.getItem('consent') && config.public.environment === 'production') {
+  if (!localStorage.getItem('consent')
+  //  && config.public.environment === 'production'
+  ) {
     setTimeout(() => {
       consentBar.value = true
     }, 100)

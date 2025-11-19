@@ -101,34 +101,34 @@ useHead({
 //   })
 // }
 
-// onMounted(() => {
-//   const isConsent = localStorage.getItem('consent') === 'granted'
-//   if (isConsent && config.public.environment === 'production') {
-//     trackPixel('track', 'PageView')
-//     initialize()
+onMounted(() => {
+  const isConsent = localStorage.getItem('consent') === 'granted'
+  // if (isConsent && config.public.environment === 'production') {
+    trackPixel('track', 'PageView')
+    initialize()
 
-//     gtag('consent', 'update', {
-//       ad_user_data: 'granted',
-//       ad_personalization: 'granted',
-//       ad_storage: 'granted',
-//       analytics_storage: 'granted',
-//     })
-//     useTrackEvent('page_view')
-//   }
+    gtag('consent', 'update', {
+      ad_user_data: 'granted',
+      ad_personalization: 'granted',
+      ad_storage: 'granted',
+      analytics_storage: 'granted',
+    })
+    useTrackEvent('page_view')
+  // }
 
-//   const userUTMs = []
+  const userUTMs = []
 
-//   Object.keys(route.query).forEach((queryParam) => {
-//     if (queryParam.toLowerCase().includes('utm')) {
-//       userUTMs.push(queryParam + '=' + route.query[queryParam])
-//     }
-//   })
+  Object.keys(route.query).forEach((queryParam) => {
+    if (queryParam.toLowerCase().includes('utm')) {
+      userUTMs.push(queryParam + '=' + route.query[queryParam])
+    }
+  })
 
-//   if (userUTMs.length) {
-//     // console.log('userUTMs', userUTMs)
-//     localStorage.setItem('utmSource', userUTMs.join('&'))
-//   }
-// })
+  if (userUTMs.length) {
+    // console.log('userUTMs', userUTMs)
+    localStorage.setItem('utmSource', userUTMs.join('&'))
+  }
+})
 </script>
 
 <style>

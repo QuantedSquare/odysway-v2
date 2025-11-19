@@ -14,7 +14,7 @@ export default defineNuxtConfig({
     'nuxt-calendly',
     'nuxt-gtag',
     '@nuxtjs/sanity',
-    'nuxt-meta-pixel',
+    // 'nuxt-meta-pixel',
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
         // @ts-expect-error This come from Vuetify doc.
