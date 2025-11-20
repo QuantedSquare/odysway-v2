@@ -227,7 +227,7 @@ const badgeColor = computed(() => blogType.value ? 'secondary' : null)
 // Use SEO composable - automatically uses blog's SEO fields
 if (categorySanity.value) {
   useSeo({
-    seoData: categorySanity.value.seo || {}, // If {} blog SEO will be detected from content.blog or fallback or generated default
+    seoData: categorySanity.value.seo || categorySanity.value.blog?.seo || {}, // If {} blog SEO will be detected from content.blog or fallback or generated default
     content: categorySanity.value,
     pageType: 'article',
     slug: categorySanity.value.slug?.current,
