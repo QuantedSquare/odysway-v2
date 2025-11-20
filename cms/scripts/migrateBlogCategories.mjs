@@ -39,22 +39,49 @@ export default async function migrateBlogCategories() {
 
   log('📚 Starting blog categories migration (clean slate approach)...\n')
 
-  // Step 1: Fetch all blogs (both with and without legacyCategories)
-  log('Step 1: Fetching all blogs...')
-  const allBlogs = await client.fetch(`
+  // Step 1: Fetch all blogs (both published and drafts, with and without legacyCategories)
+  log('Step 1: Fetching all blogs (including drafts)...')
+  // Fetch all blogs - Sanity queries include both published and drafts by default
+  // But we'll also explicitly fetch drafts to be sure
+  const allBlogsQuery = `
     *[_type == "blog"]{
       _id,
       title,
       legacyCategories,
       "hasCategories": count(categories) > 0
     }
-  `)
+  `
+  const allBlogs = await client.fetch(allBlogsQuery)
+  
+  // Also explicitly fetch drafts to ensure we get them all
+  const draftBlogsQuery = `
+    *[_id match "drafts.blog-*"]{
+      _id,
+      title,
+      legacyCategories,
+      "hasCategories": count(categories) > 0
+    }
+  `
+  const explicitDrafts = await client.fetch(draftBlogsQuery)
+  
+  // Combine and deduplicate by _id
+  const blogMap = new Map()
+  for (const blog of allBlogs) {
+    blogMap.set(blog._id, blog)
+  }
+  for (const blog of explicitDrafts) {
+    blogMap.set(blog._id, blog)
+  }
+  const allBlogsDeduped = Array.from(blogMap.values())
+  
+  const publishedCount = allBlogsDeduped.filter(b => !b._id.startsWith('drafts.')).length
+  const draftCount = allBlogsDeduped.filter(b => b._id.startsWith('drafts.')).length
 
-  const blogsWithLegacyCategories = allBlogs.filter(
+  const blogsWithLegacyCategories = allBlogsDeduped.filter(
     blog => blog.legacyCategories && blog.legacyCategories.trim() !== ''
   )
 
-  log(`   Found ${allBlogs.length} total blogs`)
+  log(`   Found ${allBlogsDeduped.length} total blogs (${publishedCount} published, ${draftCount} drafts)`)
   log(`   Found ${blogsWithLegacyCategories.length} blogs with legacyCategories\n`)
 
   if (blogsWithLegacyCategories.length === 0) {
@@ -62,26 +89,54 @@ export default async function migrateBlogCategories() {
     return
   }
 
-  // Step 2: Unassign all categories from all blogs
+  // Step 2: Unassign all categories from all blogs (published and drafts)
   log('Step 2: Unassigning all categories from blogs...')
-  const blogsWithCategories = allBlogs.filter(blog => blog.hasCategories)
+  const blogsWithCategories = allBlogsDeduped.filter(blog => blog.hasCategories)
+  
+  log(`   Found ${blogsWithCategories.length} blogs with assigned categories`)
   
   if (blogsWithCategories.length > 0) {
-    log(`   Found ${blogsWithCategories.length} blogs with assigned categories`)
-    
-    const unassignMutations = blogsWithCategories.map(blog => ({
-      patch: {
-        id: blog._id,
-        set: {
-          categories: [],
-        },
-      },
-    }))
-
     if (!DRY_RUN) {
       try {
-        await client.mutate(unassignMutations)
+        // Process in batches to avoid overwhelming the API
+        const batchSize = 50
+        let processed = 0
+        
+        for (let i = 0; i < blogsWithCategories.length; i += batchSize) {
+          const batch = blogsWithCategories.slice(i, i + batchSize)
+          const unassignMutations = batch.map(blog => ({
+            patch: {
+              id: blog._id,
+              set: {
+                categories: [],
+              },
+            },
+          }))
+          
+          await client.mutate(unassignMutations)
+          processed += batch.length
+          log(`   Processed ${processed}/${blogsWithCategories.length} blogs...`)
+        }
+        
         log(`   ✅ Successfully unassigned categories from ${blogsWithCategories.length} blog(s)`)
+        
+        // Verify unassignment worked by checking a few blogs
+        log(`   Verifying unassignment...`)
+        const sampleBlogs = await client.fetch(`
+          *[_type == "blog" && _id in $ids]{
+            _id,
+            "categoryCount": count(categories)
+          }
+        `, {
+          ids: blogsWithCategories.slice(0, 10).map(b => b._id)
+        })
+        
+        const stillHasCategories = sampleBlogs.filter(b => b.categoryCount > 0)
+        if (stillHasCategories.length > 0) {
+          log(`   ⚠️  Warning: ${stillHasCategories.length} sample blogs still have categories after unassignment`)
+        } else {
+          log(`   ✓ Verification passed: sample blogs have no categories`)
+        }
       } catch (err) {
         error('   ❌ Error unassigning categories:', err)
         throw err
@@ -93,30 +148,71 @@ export default async function migrateBlogCategories() {
     log(`   ✓ No blogs have categories assigned`)
   }
 
-  // Step 3: Delete all existing blogCategory documents
-  log('\nStep 3: Deleting all existing blogCategory documents...')
+  // Step 3: Check for remaining references and delete all existing blogCategory documents
+  log('\nStep 3: Checking for remaining references and deleting all existing blogCategory documents...')
   const existingCategories = await client.fetch(`
     *[_type == "blogCategory"]{
       _id,
-      title
+      title,
+      "referencedBy": *[references(^._id)]{
+        _id,
+        _type,
+        title
+      }
     }
   `)
 
   log(`   Found ${existingCategories.length} existing blogCategory documents`)
 
+  // Check if any categories still have references
+  const categoriesWithRefs = existingCategories.filter(cat => cat.referencedBy && cat.referencedBy.length > 0)
+  if (categoriesWithRefs.length > 0) {
+    log(`   ⚠️  Warning: ${categoriesWithRefs.length} categories still have references:`)
+    for (const cat of categoriesWithRefs) {
+      const refs = cat.referencedBy.map(r => `${r._type} "${r.title || r._id}"`).join(', ')
+      log(`      - "${cat.title}" (${cat._id}) referenced by: ${refs}`)
+    }
+    log(`   This might indicate that unassignment didn't work for all documents.`)
+  }
+
   if (existingCategories.length > 0) {
     if (!DRY_RUN) {
       try {
+        // Try to delete, but handle errors gracefully
         const deleteMutations = existingCategories.map(cat => ({
           delete: {
             id: cat._id,
           },
         }))
-        await client.mutate(deleteMutations)
-        log(`   ✅ Successfully deleted ${existingCategories.length} blogCategory document(s)`)
+        
+        // Delete in batches to better handle errors
+        const batchSize = 50
+        let deletedCount = 0
+        let failedCount = 0
+
+        for (let i = 0; i < deleteMutations.length; i += batchSize) {
+          const batch = deleteMutations.slice(i, i + batchSize)
+          try {
+            await client.mutate(batch)
+            deletedCount += batch.length
+            log(`   Deleted batch ${Math.floor(i / batchSize) + 1}: ${batch.length} categories`)
+          } catch (batchErr) {
+            failedCount += batch.length
+            error(`   ⚠️  Failed to delete batch ${Math.floor(i / batchSize) + 1}:`, batchErr.message)
+            // Continue with next batch
+          }
+        }
+
+        if (deletedCount > 0) {
+          log(`   ✅ Successfully deleted ${deletedCount} blogCategory document(s)`)
+        }
+        if (failedCount > 0) {
+          log(`   ⚠️  Failed to delete ${failedCount} blogCategory document(s) (may still have references)`)
+        }
       } catch (err) {
         error('   ❌ Error deleting blogCategories:', err)
-        throw err
+        // Don't throw - continue with migration even if some deletions fail
+        log('   Continuing with migration...')
       }
     } else {
       log(`   ⚠️  DRY RUN: Would delete ${existingCategories.length} blogCategory document(s)`)
@@ -213,6 +309,7 @@ export default async function migrateBlogCategories() {
       _key: `category-${generateKey()}`,
       _type: 'reference',
       _ref: id,
+      _weak: true
     }))
 
     blogMutations.push({

@@ -136,7 +136,7 @@ export const blogType = defineType({
       type: 'array',
       title: 'Categories',
       description: 'Sélectionnez les catégories pour ce blog',
-      of: [{type: 'reference', to: [{type: 'blogCategory'}]}],
+      of: [{type: 'reference', to: [{type: 'blogCategory'}], weak: true}],
       group: 'content',
     }),
 

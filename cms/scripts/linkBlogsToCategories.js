@@ -47,6 +47,7 @@ export default async function linkBlogsToCategories(client) {
             blog: {
               _type: 'reference',
               _ref: matchingBlog._id,
+              _weak: true
             },
           },
         })
