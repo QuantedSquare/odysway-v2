@@ -41,7 +41,8 @@
             v-model="selectedCategory"
             :items="categoriesList"
             :label="pageBlogSanity.categoryFilter || 'Filtrer par catégorie'"
-            :item-title="item => item.charAt(0).toUpperCase() + item.slice(1)"
+            item-value="_id"
+            :item-title="item => item.title.charAt(0).toUpperCase() + item.title.slice(1)"
             clearable
             density="comfortable"
             :prepend-inner-icon="mdiFilterOutline"
@@ -74,7 +75,7 @@
       </v-row>
       <v-row v-if="loading">
         <v-col
-          v-for="n in 10"
+          v-for="n in 9"
           :key="n"
           cols="12"
           sm="6"
@@ -85,7 +86,7 @@
           />
         </v-col>
       </v-row>
-      <v-row v-else-if="paginatedBlogs.length === 0">
+      <v-row v-else-if="parsedBlogs.length === 0">
         <v-col
           cols="12"
           class="text-center py-10"
@@ -113,19 +114,19 @@
         v-else
       >
         <v-col
-          v-for="page in paginatedBlogs"
-          :key="page.slug"
+          v-for="blog in parsedBlogs"
+          :key="blog.slug"
           cols="12"
           sm="6"
           lg="4"
         >
           <BlogCard
-            v-bind="page"
+            v-bind="blog"
           />
         </v-col>
         <v-col cols="12">
           <v-pagination
-            v-model="pagination.currentPage"
+            :model-value="currentPage"
             :length="nbPages"
             :total-visible="3"
             variant="flat"
@@ -134,9 +135,7 @@
             active-color="primary"
             elevation="3"
             class="my-4"
-            @click="goTo(scrollTarget, { offset: -100, duration: 1000, easing: 'easeInOutCubic' })"
-            @next="pagination.currentPage = pagination.currentPage++"
-            @prev="pagination.currentPage = pagination.currentPage-- "
+            @update:model-value="goToPage"
           />
         </v-col>
       </v-row>
@@ -165,38 +164,123 @@
 <script setup>
 import dayjs from 'dayjs'
 import { useGoTo } from 'vuetify'
-import _ from 'lodash'
+import { useRoute, useRouter } from 'vue-router'
 import { mdiMagnify, mdiFilterOutline, mdiMagnifyClose } from '@mdi/js'
 import { useImage } from '#imports'
 import { getImageUrl } from '~/utils/getImageUrl'
 
 const img = useImage()
+const route = useRoute()
+const router = useRouter()
 
 const searchId = useId()
 const categoryId = useId()
 const sortId = useId()
 
-// Fetch all published blogs from Sanity
-const blogsQuery = `
-  *[_type == "blog"]|order(orderRank){
-    _id,
-    title,
-    "slug": slug.current,
-    description,
-    displayedImg,
-    publishedAt,
-    tags,
-    blogType,
-    badgeColor,
-    readingTime,
-    legacyCategories
+// Get query parameters from URL
+const currentPage = computed(() => parseInt(route.query.page) || 1)
+const searchQuery = computed(() => route.query.search || '')
+const categoryQuery = computed(() => route.query.category || null)
+const sortQuery = computed(() => route.query.sort || 'desc')
+
+const ITEMS_PER_PAGE = 9
+const WPM = 180 // Words per minute
+const MEAN_WORD_CHAR_COUNT = 5 // Mean word character count
+
+// Build GROQ query with filters, sorting, and pagination
+const buildBlogsQuery = (search, category, sort, page) => {
+  const offset = (page - 1) * ITEMS_PER_PAGE
+  
+  // Build filter conditions
+  let filterParts = ['_type == "blog"']
+  
+  // Category filter - use _id reference
+  if (category) {
+    const categoryEscaped = category.replace(/"/g, '\\"')
+    filterParts.push(`"${categoryEscaped}" in categories[]._ref`)
   }
-`
+  
+  // Search filter (title or SEO keywords)
+  if (search) {
+    const searchEscaped = search.replace(/"/g, '\\"').replace(/\*/g, '\\*').replace(/\$/g, '\\$')
+    filterParts.push(`(
+      title match "*${searchEscaped}*" ||
+      defined(seo.focusKeyword) && seo.focusKeyword match "*${searchEscaped}*" ||
+      defined(seo.keywords) && count(seo.keywords[@ match "*${searchEscaped}*"]) > 0
+    )`)
+  }
+  
+  const filterString = filterParts.join(' && ')
+  
+  // Build sort order
+  let orderBy = 'publishedAt desc'
+  if (sort === 'asc') {
+    orderBy = 'publishedAt asc'
+  } else if (sort === 'readingTimeAsc') {
+    orderBy = 'estimatedReadingTime asc'
+  } else if (sort === 'readingTimeDesc') {
+    orderBy = 'estimatedReadingTime desc'
+  }
+  
+  // Build the query as a string (can't use groq template literal with dynamic interpolation)
+  const query = `
+    {
+      "wpm": ${WPM},
+      "meanWordCharacterCount": ${MEAN_WORD_CHAR_COUNT}
+    }
+    {
+      "total": count(*[${filterString}]),
+      "blogs": *[${filterString}]|order(${orderBy})[${offset}...${offset + ITEMS_PER_PAGE}]{
+        _id,
+        title,
+        "slug": slug.current,
+        description,
+        displayedImg,
+        publishedAt,
+        body,
+        seo{
+          keywords,
+          focusKeyword
+        },
+        categories[]->{
+          _id,
+          title
+        },
+        "numberOfCharacters": length(pt::text(body)),
+        "estimatedWordCount": round(length(pt::text(body)) / ^.meanWordCharacterCount),
+        "estimatedReadingTime": round(length(pt::text(body)) / ^.meanWordCharacterCount / ^.wpm)
+      }
+    }
+  `
+  
+  return query
+}
 
 const sanity = useSanity()
-const { data: pages, status } = await useAsyncData('blog', () =>
-  sanity.fetch(blogsQuery),
+
+// Fetch blogs with pagination
+const { data: blogsData, status, refresh } = await useAsyncData(
+  `blog-${JSON.stringify(route.query)}`,
+  () => sanity.fetch(
+    buildBlogsQuery(searchQuery.value, categoryQuery.value, sortQuery.value, currentPage.value)
+  ),
+  {
+    watch: [() => route.query],
+  }
 )
+
+
+// Fetch all categories for the filter dropdown
+const categoriesQuery = groq`
+  *[_type == "blogCategory"]|order(title asc){
+    _id,
+    title
+  }
+`
+const { data: allCategories } = await useAsyncData('blogCategories', () =>
+  sanity.fetch(categoriesQuery)
+)
+
 
 const pageBlogQuery = groq`
   *[_type == "page_blog"][0]{
@@ -223,112 +307,121 @@ const loading = computed(() => {
   return status.value !== 'success'
 })
 
-const search = ref('')
-const selectedCategory = ref(null)
-const sortOrder = ref(null)
+// Reactive refs for form inputs (synced with URL)
+const search = ref(searchQuery.value)
+const selectedCategory = ref(categoryQuery.value)
+const sortOrder = ref(sortQuery.value)
+
+// Sync form inputs with URL query params
+watch(() => route.query.search, (val) => {
+  search.value = val || ''
+})
+watch(() => route.query.category, (val) => {
+  selectedCategory.value = val || null
+})
+watch(() => route.query.sort, (val) => {
+  sortOrder.value = val || 'desc'
+})
+
 const sortOptions = computed(() => [
-  // Add fallback values
   { title: pageBlogSanity.value?.sortOptions?.newest || 'Plus récent', value: 'desc' },
   { title: pageBlogSanity.value?.sortOptions?.oldest || 'Plus ancien', value: 'asc' },
   { title: pageBlogSanity.value?.sortOptions?.shortest || 'Plus court', value: 'readingTimeAsc' },
   { title: pageBlogSanity.value?.sortOptions?.longest || 'Plus long', value: 'readingTimeDesc' },
 ])
 
-function normalize(str) {
-  return str
-    ? str.normalize('NFD').replace(/\u0300-\u036f/g, '').replace(/-/g, '').toLowerCase()
-    : ''
+// Update URL query parameters
+function updateQueryParams(params) {
+  const query = { ...route.query, ...params }
+  
+  // Remove null/undefined/empty values
+  Object.keys(query).forEach(key => {
+    if (query[key] === null || query[key] === undefined || query[key] === '') {
+      delete query[key]
+    }
+  })
+  
+  // Reset to page 1 when filters change (except when page is explicitly set)
+  if (!params.page && (params.search !== undefined || params.category !== undefined || params.sort !== undefined)) {
+    query.page = 1
+  }
+  
+  router.push({ query })
 }
 
-const parsedPages = computed(() => {
-  if (!pages.value) return []
-  return pages.value.map((page) => {
-    // Parse tags and categories as arrays
-    const tags = Array.isArray(page.tags) ? page.tags : []
-    const categories = typeof page.legacyCategories === 'string'
-      ? page.legacyCategories.split(',').map(c => c.trim()).filter(Boolean)
-      : []
+// Handle search input
+watch(search, (val) => {
+  updateQueryParams({ search: val || undefined })
+})
 
+// Handle category selection
+watch(selectedCategory, (val) => {
+  updateQueryParams({ category: val || undefined })
+})
+
+// Handle sort selection
+watch(sortOrder, (val) => {
+  updateQueryParams({ sort: val || 'desc' })
+})
+
+// Parse blogs data
+const parsedBlogs = computed(() => {
+  if (!blogsData.value?.blogs) return []
+  
+  return blogsData.value.blogs.map((blog) => {
+    // Get categories as array of titles
+    const categories = blog.categories?.map(cat => cat?.title).filter(Boolean) || []
+    
+    // Get first category for blogType
+    const blogType = categories[0] || null
+    
+    // Get SEO keywords
+    const keywords = blog.seo?.keywords || []
+    const focusKeyword = blog.seo?.focusKeyword || ''
+    const allKeywords = [focusKeyword, ...keywords].filter(Boolean)
+    
+    // Use calculated reading time (round to at least 1 minute)
+    const readingTime = Math.max(1, blog.estimatedReadingTime || 0)
+    
     // Convert Sanity image to URL
-    const imageUrl = page.displayedImg?.asset?._ref
-      ? getImageUrl(page.displayedImg.asset._ref, `${page.slug}.jpg`)
+    const imageUrl = blog.displayedImg?.asset?._ref
+      ? getImageUrl(blog.displayedImg.asset._ref, `${blog.slug}.jpg`)
       : ''
 
     return {
-      title: page.title,
-      tags,
-      publishedAt: page.publishedAt,
-      categories,
+      title: blog.title,
+      slug: blog.slug,
+      description: blog.description,
       displayedImg: imageUrl,
-      path: `/${page.slug}`,
+      publishedAt: blog.publishedAt,
+      path: `/blog/${blog.slug}`,
       published: true,
-      blogType: page.blogType,
-      badgeColor: page.badgeColor,
-      readingTime: page.readingTime,
+      type: blogType || 'Actu',
+      blogType,
+      badgeColor: blogType ? 'secondary' : null, // Use default color when category exists
+      categories,
+      keywords: allKeywords,
+      readingTime: readingTime.toString(),
     }
   })
 })
 
-// Extract all unique categories
+// Extract all unique categories for filter dropdown
 const categoriesList = computed(() => {
-  const allCategories = parsedPages.value.flatMap(page => page.categories)
-  return [...new Set(allCategories)].filter(Boolean)
+  if (!allCategories.value) return []
+  return allCategories.value.sort((a, b) => a.title.localeCompare(b.title))
 })
 
-// Filter and sort blogs
-const filteredBlogs = computed(() => {
-  let blogs = parsedPages.value
-  if (search.value) {
-    const keyword = normalize(search.value)
-    blogs = blogs.filter(page =>
-      normalize(page.title).includes(keyword)
-      || page.tags.some(tag => normalize(tag).includes(keyword)),
-    )
-  }
-  if (selectedCategory.value) {
-    blogs = blogs.filter(page => page.categories.includes(selectedCategory.value))
-  }
-  // Sort by publishedAt
-  if (sortOrder.value) {
-    blogs = blogs.slice().sort((a, b) => {
-      if (sortOrder.value === 'readingTimeAsc') {
-      // readingTime is a string, convert to number
-        return Number(a.readingTime) - Number(b.readingTime)
-      }
-      else if (sortOrder.value === 'readingTimeDesc') {
-        return Number(b.readingTime) - Number(a.readingTime)
-      }
-      else if (sortOrder.value === 'asc') {
-        return dayjs(a.publishedAt) - dayjs(b.publishedAt)
-      }
-      else {
-        return dayjs(b.publishedAt) - dayjs(a.publishedAt)
-      }
-    })
-  }
-  return blogs
-})
+// Pagination info
+const totalBlogs = computed(() => blogsData.value?.total || 0)
+const nbPages = computed(() => Math.ceil(totalBlogs.value / ITEMS_PER_PAGE))
 
-// Paginate filtered blogs
-const paginatedBlogs = computed(() => {
-  const start = (pagination.value.currentPage - 1) * pagination.value.itemsPerPage
-  const end = pagination.value.currentPage * pagination.value.itemsPerPage
-  return filteredBlogs.value.slice(start, end)
-})
-
-const nbPages = computed(() => {
-  return Math.ceil(filteredBlogs.value.length / pagination.value.itemsPerPage)
-})
-
-const pagination = ref({
-  currentPage: 1,
-  itemsPerPage: 12,
-})
-
-// Reset to page 1 when filters change
-watch([filteredBlogs], () => {
-  pagination.value.currentPage = 1
-})
+// Handle page change
+function goToPage(page) {
+  updateQueryParams({ page })
+  // Scroll to top
+  goTo(scrollTarget.value, { offset: -100, duration: 1000, easing: 'easeInOutCubic' })
+}
 
 const goTo = useGoTo()
 const scrollTarget = useTemplateRef('scroll-target')

@@ -18,10 +18,12 @@
       >
         <v-chip
           size="x-large"
-          class="text-body-2 text-white font-weight-bold px-5"
-          :class="`bg-${badgeColor}`"
+          class="text-subtitle-2 text-white font-weight-bold px-5 d-flex align-center"
+        variant="tonal"
         >
+        <span class="mb-1 text-shadow">
           {{ type }}
+        </span>
         </v-chip>
       </div>
     </v-img>
@@ -95,11 +97,6 @@ defineProps({
     type: String,
     required: true,
   },
-  // ADD alt TO EACH MAIN BLOG IMAGE
-  // blogImageAlt: {
-  //   type: String,
-  //   required: true,
-  // },
   published: {
     type: Boolean,
     required: true,

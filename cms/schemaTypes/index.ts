@@ -46,7 +46,7 @@ import {textWithIllustrationType} from './objects/textWithIllustrationType'
 import {imageGalleryType} from './objects/imageGalleryType'
 import {formType} from './objects/formType'
 import {heroType} from './objects/heroType'
-
+import {blogCategoryType} from './blogCategoryType'
 // Reusable objects
 import {seoFields} from './objects/seoFields'
 
@@ -65,6 +65,7 @@ export const schemaTypes = [
   badgeType,
   blockContent,
   blogType,
+  blogCategoryType,
   categoryType,
   checkoutType,
   chequesVacancesType,

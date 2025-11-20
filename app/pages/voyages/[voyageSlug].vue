@@ -228,17 +228,21 @@ const voyagePropositionsQuery = `
 const { data: page } = await useAsyncData('voyage-page', () =>
   sanity.fetch(voyagePageQuery),
 )
-
 const { data: voyage } = await useAsyncData('voyage' + route.params.voyageSlug, () =>
-  sanity.fetch(voyageQuery, { slug: route.params.voyageSlug }),
+sanity.fetch(voyageQuery, { slug: route.params.voyageSlug }),
 )
 
-const { data: voyagePropositions } = await useAsyncData('voyage-propositions', () =>
-  sanity.fetch(voyagePropositionsQuery, {
-    slug: route.params.voyageSlug,
-    experienceTypeId: voyage.value?.experienceType?._id,
-  }),
-)
+console.log('voyage', voyage.value)
+const { data: voyagePropositions } = await useAsyncData('voyage-propositions', () => {
+  if(voyage.value?.experienceType?._id){
+    return sanity.fetch(voyagePropositionsQuery, {
+      slug: route.params.voyageSlug,
+      experienceTypeId: voyage.value?.experienceType?._id,
+    })
+    }else{
+      return []
+    }
+})
 // console.log('voyagePropositions', voyagePropositions.value)
 onMounted(() => {
   gtag('event', 'page_view', {

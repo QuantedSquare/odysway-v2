@@ -5,7 +5,13 @@ export const blogType = defineType({
   name: 'blog',
   title: 'Blog Post',
   type: 'document',
-  orderings: [orderRankOrdering],
+  orderings: [
+    {
+      title: 'Date de publication, récent',
+      name: 'publishedAtDesc',
+      by: [{field: 'publishedAt', direction: 'desc'}],
+    },
+  ],
   groups: [
     {name: 'content', title: 'Content'},
     {name: 'badges', title: 'Badges'},
@@ -13,7 +19,9 @@ export const blogType = defineType({
     {name: 'metadata', title: 'Metadata'},
   ],
   fields: [
-    orderRankField({type: 'blog'}),
+    orderRankField({
+      type: 'blog',
+    }),
     // Basic Info
     defineField({
       name: 'title',
@@ -32,14 +40,24 @@ export const blogType = defineType({
       name: 'description',
       type: 'text',
       rows: 3,
-      description: 'Short description for listings',
+      description: 'Courte description du blog utilisé dans le hero section',
       group: 'content',
     }),
-
+    defineField({
+      name: 'publishedAt',
+      type: 'datetime',
+      group: 'metadata',
+    }),
+    defineField({
+      name: 'readingTime',
+      type: 'string',
+      description: 'Estimation du temps de lecture (e.g., "3" pour 3 minutes), si vide, le temps de lecture sera calculé automatiquement',
+      group: 'metadata',
+    }),
     // Featured Image
     defineField({
       name: 'displayedImg',
-      title: 'Featured Image',
+      title: 'Image principale du blog',
       type: 'image',
       options: {hotspot: true},
       fields: [{name: 'alt', type: 'string', title: 'Alt Text'} as any],
@@ -112,11 +130,22 @@ export const blogType = defineType({
       group: 'content',
     }),
 
+    // Categories
+    defineField({
+      name: 'categories',
+      type: 'array',
+      title: 'Categories',
+      description: 'Sélectionnez les catégories pour ce blog',
+      of: [{type: 'reference', to: [{type: 'blogCategory'}]}],
+      group: 'content',
+    }),
+
     // Badges
     defineField({
       name: 'badges',
       type: 'array',
       title: 'Badges du blog',
+      hidden: true,
       description: 'Sélectionnez et personnalisez les badges pour ce blog',
       of: [
         {
@@ -189,15 +218,6 @@ export const blogType = defineType({
       ],
       group: 'badges',
     }),
-
-    defineField({
-      name: 'publishedAt',
-      type: 'datetime',
-      group: 'metadata',
-    }),
-
-
-    // SEO
       // SEO Settings
       defineField({
         name: 'seo',
@@ -207,22 +227,25 @@ export const blogType = defineType({
         description: 'Configuration SEO pour ce blog post',
       }),
 
-    // Blog metadata
-    defineField({
-      name: 'readingTime',
-      type: 'string',
-      description: 'Estimated reading time (e.g., "3 min")',
-      group: 'metadata',
-    }),
+    // Migration metadata - used to link blogs to categories/destinations
+    // Hidden, relicat of the old migration script
     defineField({
       name: 'legacyCategories',
       type: 'string',
       title: 'Legacy Categories',
       description: 'Original category string from Nuxt Content frontmatter',
       group: 'metadata',
+      hidden: true,
     }),
-
-    // Migration metadata - used to link blogs to categories/destinations
+    defineField({
+      name: 'tags',
+      type: 'array',
+      title: 'Tags',
+      description: 'Tags du blog',
+      of: [{type: 'string'}],
+      group: 'metadata',
+      hidden: true,
+    }),
     defineField({
       name: 'categorySlug',
       type: 'string',
@@ -253,7 +276,49 @@ export const blogType = defineType({
       title: "Type de blog",
       description: "Type de blog",
       hidden: true,
-    })
+    }),
+    defineField({
+      name: "badgeColor",
+      type: "string",
+      title: "Type de blog",
+      description: "Type de blog",
+      hidden: true,
+    }),
+    defineField({
+      name: "navigationDescription",
+      type: "string",
+      title: "Type de blog",
+      description: "Type de blog",
+      hidden: true,
+    }),
+    defineField({
+      name: "published",
+      type: "boolean",
+      title: "Publié",
+      description: "Publié",
+      hidden: true,
+    }),
+    defineField({
+      name: "seoDescription",
+      type: "string",
+      title: "Type de blog",
+      description: "Type de blog",
+      hidden: true,
+    }),
+    defineField({
+      name: "seoTitle",
+      type: "string",
+      title: "Type de blog",
+      description: "Type de blog",
+      hidden: true,
+    }),
+    defineField({
+      name: "navigationTitle",
+      type: "string",
+      title: "Type de blog",
+      description: "Type de blog",
+      hidden: true,
+    }),
   ],
   preview: {
     select: {

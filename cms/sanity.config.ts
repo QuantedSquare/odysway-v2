@@ -109,12 +109,7 @@ export default defineConfig({
                 S.list()
                   .title('Blog Posts')
                   .items([
-                    orderableDocumentListDeskItem({
-                      type: 'blog',
-                      title: 'All Blog Posts',
-                      S,
-                      context,
-                    }),
+                    S.documentTypeListItem('blog').title('Tous les articles de blog'),
                     S.listItem()
                       .title('Category Blog Posts')
                       .child(
