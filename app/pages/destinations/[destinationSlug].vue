@@ -22,6 +22,13 @@
         introduction-color="grey"
         title-color="primary"
         avatar-size="60"
+        :blog-type="blogType"
+        :badge-color="badgeColor"
+        :reading-time="readingTime"
+        :published-at="destinationSanity.blog.publishedAt"
+        :author="destinationSanity.blog.author?.name"
+        :author-photo="destinationSanity.blog.author?.image"
+        :author-role="destinationSanity.blog.author?.position"
       >
         <template #title>
           {{ destinationSanity.blog.title }}
@@ -98,8 +105,11 @@ const destinationFromRegionQuery = `
       description,
       displayedImg,
       publishedAt,
-      readingTime,
-      legacyCategories,
+      body,
+      categories[]->{
+        _id,
+        title
+      },
       author->{
         _id,
         name,
@@ -120,7 +130,28 @@ const destinationFromRegionQuery = `
           }
         }
       },
-      seo
+      seo{
+        metaTitle,
+        metaDescription,
+        canonicalUrl,
+        focusKeyword,
+        keywords,
+        robotsIndex,
+        robotsFollow,
+        ogTitle,
+        ogDescription,
+        ogImage{
+          asset->{
+            _id,
+            _ref,
+            url
+          },
+          alt
+        }
+      },
+      "numberOfCharacters": length(pt::text(body)),
+      "estimatedWordCount": round(length(pt::text(body)) / 5),
+      "estimatedReadingTime": round(length(pt::text(body)) / 5 / 180)
     },
   } 
 `
@@ -161,8 +192,11 @@ const destinationQuery = `
       description,
       displayedImg,
       publishedAt,
-      readingTime,
-      legacyCategories,
+      body,
+      categories[]->{
+        _id,
+        title
+      },
       author->{
         _id,
         name,
@@ -183,7 +217,28 @@ const destinationQuery = `
           }
         }
       },
-      seo
+      seo{
+        metaTitle,
+        metaDescription,
+        canonicalUrl,
+        focusKeyword,
+        keywords,
+        robotsIndex,
+        robotsFollow,
+        ogTitle,
+        ogDescription,
+        ogImage{
+          asset->{
+            _id,
+            _ref,
+            url
+          },
+          alt
+        }
+      },
+      "numberOfCharacters": length(pt::text(body)),
+      "estimatedWordCount": round(length(pt::text(body)) / 5),
+      "estimatedReadingTime": round(length(pt::text(body)) / 5 / 180)
     },
   }
 `
@@ -213,7 +268,6 @@ const { data: destinationSanity } = await useAsyncData(
     }
   },
 )
-console.log('destinationSanity', destinationSanity.value)
 
 // Fetch all destinations for carousel and format for ContentLayout
 const destinationsListQuery = `
@@ -245,22 +299,19 @@ const displayedData = computed(() => ({
   showOnBottom: false,
 }))
 
-const dataToBlog = reactive({
-  title: destinationSanity.value?.blog?.title,
-  displayedImg: destinationSanity.value?.blog?.displayedImg,
-  author: destinationSanity.value?.blog?.author?.name,
-  authorPhoto: destinationSanity.value?.blog?.author?.image,
-  authorRole: destinationSanity.value?.blog?.author?.position,
-  published: destinationSanity.value?.blog?.published,
-  publishedAt: destinationSanity.value?.blog?.publishedAt,
-  tags: destinationSanity.value?.blog?.tags,
-  categories: destinationSanity.value?.blog?.legacyCategories,
-  blogType: destinationSanity.value?.blog?.blogType,
-  badgeColor: destinationSanity.value?.blog?.badgeColor,
-  readingTime: destinationSanity.value?.blog?.readingTime,
+// Calculate reading time and blogType from blog data
+const readingTime = computed(() => {
+  if (!destinationSanity.value?.blog) return null
+  const calculated = destinationSanity.value.blog.estimatedReadingTime || 0
+  return Math.max(1, calculated).toString()
 })
 
-provide('page', dataToBlog)
+const blogType = computed(() => {
+  const categories = destinationSanity.value?.blog?.categories || []
+  return categories[0]?.title || null
+})
+
+const badgeColor = computed(() => blogType.value ? 'secondary' : null)
 
 // Use SEO composable - automatically uses blog's SEO fields
 if (destinationSanity.value) {

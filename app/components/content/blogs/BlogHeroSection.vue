@@ -4,15 +4,16 @@
     :title-color="titleColor"
     :introduction-color="introductionColor"
     :avatar-size="avatarSize"
-    :blog-type="page.blogType"
-    :badge-color="page.badgeColor"
-    :reading-time="page.readingTime"
-    :published-at="page.publishedAt"
-    :author="page.author"
-    :author-photo="page.authorPhoto"
-    :author-role="page.authorRole"
-    :displayed-img="page.displayedImg"
-    :title="page.title"
+    :blog-type="blogType"
+    :badge-color="badgeColor"
+    :reading-time="readingTime"
+    :published-at="publishedAt"
+    :author="author"
+    :author-photo="authorPhoto"
+    :author-role="authorRole"
+    :author-description="authorDescription"
+    :displayed-img="image"
+    :title="title"
   >
     <template #title>
       <slot
@@ -27,17 +28,11 @@
 </template>
 
 <script setup>
-import { inject } from 'vue'
-import GenericHeroSection from '../GenericHeroSection.vue'
 
 defineProps({
   backgroundColor: {
     type: String,
     default: 'primary',
-  },
-  author: {
-    type: String,
-    default: null,
   },
   titleColor: {
     type: String,
@@ -51,6 +46,28 @@ defineProps({
     type: String,
     default: '60',
   },
+  // Blog info
+  blogType: {
+    type: String,
+    default: null,
+  },
+  badgeColor: {
+    type: String,
+    default: null,
+  },
+  readingTime: {
+    type: [String, Number],
+    default: null,
+  },
+  publishedAt: {
+    type: String,
+    default: null,
+  },
+  // Author info
+  author: {
+    type: String,
+    default: null,
+  },
   authorPhoto: {
     type: Object,
     default: null,
@@ -59,13 +76,26 @@ defineProps({
     type: String,
     default: null,
   },
-  displayedImg: {
+  authorDescription: {
+    type: String,
+    default: null,
+  },
+  // Image
+  image: {
+    type: [Object, String],
+    default: null,
+  },
+  // Title (for alt)
+  title: {
+    type: String,
+    default: null,
+  },
+  // Description (for backward compatibility)
+  description: {
     type: String,
     default: null,
   },
 })
-
-const page = inject('page')
 </script>
 
 <style scoped>

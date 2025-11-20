@@ -14,7 +14,6 @@ import {embeddingsIndexReferenceInput, embeddingsIndexDashboard} from '@sanity/e
 export default defineConfig({
   name: 'default',
   title: 'Odysway',
-
   projectId: 'nu6yntji',
   dataset: 'production',
   mediaLibrary: {
@@ -25,10 +24,11 @@ export default defineConfig({
     structureTool({
       structure: (S, context) =>
         S.list()
-          .title('Content')
+          .title('Contenu Odysway')
           .items([
             S.listItem()
               .title('Voyages')
+              .icon(() => '🛫')
               .child(
                 S.list()
                   .title('Voyages')
@@ -105,46 +105,55 @@ export default defineConfig({
             S.divider(),
             S.listItem()
               .title('Blog Posts')
+              .icon(() => '📝')
               .child(
                 S.list()
                   .title('Blog Posts')
                   .items([
                     S.documentTypeListItem('blog').title('Tous les articles de blog'),
                     S.listItem()
-                      .title('Category Blog Posts')
+                      .title('Blogs liés à une catégorie/thematique')
                       .child(
                         S.documentList()
-                          .title('Category Blog Posts')
+                          .title('Blogs liés à une catégorie/thematique')
                           .apiVersion('v2025-02-19')
                           .filter('_type == "blog" && _id in *[_type == "category"].blog._ref'),
                       ),
                     S.listItem()
-                      .title('Destination Blog Posts')
+                      .title('Blogs liés à une destination/region')
                       .child(
                         S.documentList()
-                          .title('Destination Blog Posts')
+                          .title('Blogs liés à une destination')
                           .apiVersion('v2025-02-19')
-                          .filter('_type == "blog" && _id in *[_type == "destination"].blog._ref'),
+                          .filter('_type == "blog" && _id in *[_type == "destination" || _type == "region"].blog._ref '),
                       ),
                     S.listItem()
-                      .title('Standalone Blog Posts')
+                      .title('Blogs non liés')
+                      .icon(() => '⛓️‍💥')
                       .child(
                         S.documentList()
-                          .title('Standalone Blog Posts')
+                          .title('Blogs non liés')
                           .apiVersion('v2025-02-19')
                           .filter(
                             '_type == "blog" && !(_id in *[_type == "category"].blog._ref) && !(_id in *[_type == "destination"].blog._ref)',
                           ),
                       ),
+                      S.listItem()
+                        .title('Toutes les categories de blog')
+                        .icon(() => '🔖')
+                        .child(
+                          S.documentTypeList('blogCategory')
+                            .title('Categories de blog')
+                        ),
                   ]),
               ),
             S.divider(),
-            S.documentTypeListItem('destination').title('Destinations'),
-            S.documentTypeListItem('experience').title('Experiences'),
-            S.documentTypeListItem('category').title('Categories'),
-            S.documentTypeListItem('region').title('Regions'),
-            S.documentTypeListItem('badge').title('Badges'),
-            S.documentTypeListItem('difficultyLevel').title('Niveaux de Difficulté'),
+            S.documentTypeListItem('destination').title('Destinations').icon(() => '🌍'),
+            S.documentTypeListItem('experience').title('Experiences').icon(() => '🌟'),
+            S.documentTypeListItem('category').title('Categories').icon(() => '🔖'),
+            S.documentTypeListItem('region').title('Regions').icon(() => '🌍'),
+            S.documentTypeListItem('badge').title('Badges').icon(() => '🏅'),
+            S.documentTypeListItem('difficultyLevel').title('Niveaux de Difficulté').icon(() => '💪'),
             S.divider(),
             orderableDocumentListDeskItem({
               type: 'teamMember',
@@ -153,7 +162,7 @@ export default defineConfig({
               S,
               context,
             }),
-            S.documentTypeListItem('review').title('Reviews'),
+            S.documentTypeListItem('review').title('Reviews').icon(() => '💬'),
             S.divider(),
             S.listItem()
               .title('Textes')

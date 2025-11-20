@@ -24,6 +24,13 @@
           introduction-color="grey"
           title-color="primary"
           avatar-size="60"
+          :blog-type="blogType"
+          :badge-color="badgeColor"
+          :reading-time="readingTime"
+          :published-at="selectedExperience.blog.publishedAt"
+          :author="selectedExperience.blog.author?.name"
+          :author-photo="selectedExperience.blog.author?.image"
+          :author-role="selectedExperience.blog.author?.position"
         >
           <template #title>
             {{ selectedExperience.blog.title }}
@@ -95,8 +102,11 @@ const experienceQuery = `
       description,
       displayedImg,
       publishedAt,
-      readingTime,
-      legacyCategories,
+      body,
+      categories[]->{
+        _id,
+        title
+      },
       author->{
         _id,
         name,
@@ -117,7 +127,28 @@ const experienceQuery = `
           }
         }
       },
-      seo
+      seo{
+        metaTitle,
+        metaDescription,
+        canonicalUrl,
+        focusKeyword,
+        keywords,
+        robotsIndex,
+        robotsFollow,
+        ogTitle,
+        ogDescription,
+        ogImage{
+          asset->{
+            _id,
+            _ref,
+            url
+          },
+          alt
+        }
+      },
+      "numberOfCharacters": length(pt::text(body)),
+      "estimatedWordCount": round(length(pt::text(body)) / 5),
+      "estimatedReadingTime": round(length(pt::text(body)) / 5 / 180)
     },
   }
 `
@@ -155,22 +186,19 @@ const displayedData = computed(() => ({
   showOnBottom: false,
 }))
 
-const dataToBlog = reactive({
-  title: selectedExperience.value?.blog?.title,
-  displayedImg: selectedExperience.value?.blog?.displayedImg,
-  author: selectedExperience.value?.blog?.author?.name,
-  authorPhoto: selectedExperience.value?.blog?.author?.image,
-  authorRole: selectedExperience.value?.blog?.author?.position,
-  published: selectedExperience.value?.blog?.published,
-  publishedAt: selectedExperience.value?.blog?.publishedAt,
-  tags: selectedExperience.value?.blog?.tags,
-  categories: selectedExperience.value?.blog?.legacyCategories,
-  blogType: selectedExperience.value?.blog?.blogType,
-  badgeColor: selectedExperience.value?.blog?.badgeColor,
-  readingTime: selectedExperience.value?.blog?.readingTime,
+// Calculate reading time and blogType from blog data
+const readingTime = computed(() => {
+  if (!selectedExperience.value?.blog) return null
+  const calculated = selectedExperience.value.blog.estimatedReadingTime || 0
+  return Math.max(1, calculated).toString()
 })
 
-provide('page', dataToBlog)
+const blogType = computed(() => {
+  const categories = selectedExperience.value?.blog?.categories || []
+  return categories[0]?.title || null
+})
+
+const badgeColor = computed(() => blogType.value ? 'secondary' : null)
 
 // Use SEO composable - automatically uses blog's SEO fields
 if (selectedExperience.value) {

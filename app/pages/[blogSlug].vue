@@ -12,6 +12,14 @@
       introduction-color="grey"
       title-color="primary"
       avatar-size="60"
+      :blog-type="blogType"
+      :badge-color="badgeColor"
+      :reading-time="readingTime"
+      :published-at="blogSanity.publishedAt"
+      :author="blogSanity.author?.name"
+      :author-photo="blogSanity.author?.image"
+      :author-role="blogSanity.author?.position"
+      :author-description="blogSanity.author?.description"
     >
       <template #title>
         {{ blogSanity.title }}
@@ -46,6 +54,30 @@ const blogQuery = `
       name,
       image,
       position,
+      description
+    },
+    categories[]->{
+      _id,
+      title
+    },
+    seo{
+      metaTitle,
+      metaDescription,
+      canonicalUrl,
+      focusKeyword,
+      keywords,
+      robotsIndex,
+      robotsFollow,
+      ogTitle,
+      ogDescription,
+      ogImage{
+        asset->{
+          _id,
+          _ref,
+          url
+        },
+        alt
+      }
     },
     body[]{
       ...,
@@ -57,7 +89,10 @@ const blogQuery = `
           metadata
         }
       }
-    }
+    },
+    "numberOfCharacters": length(pt::text(body)),
+    "estimatedWordCount": round(length(pt::text(body)) / 5),
+    "estimatedReadingTime": round(length(pt::text(body)) / 5 / 180)
   }
 `
 
@@ -67,7 +102,7 @@ const { data: blogSanity } = await useAsyncData('blog', () =>
     slug: slug.value,
   }),
 )
-
+console.log('blogSanity', blogSanity.value)
 // If no blog post found, throw 404 to prevent catch-all from matching static routes
 if (!blogSanity.value) {
   throw createError({
@@ -76,20 +111,20 @@ if (!blogSanity.value) {
   })
 }
 
-const dataToPage = reactive({
-  title: blogSanity.value?.title,
-  displayedImg: blogSanity.value?.displayedImg,
-  author: blogSanity.value?.author?.name,
-  authorPhoto: blogSanity.value?.author?.image,
-  authorRole: blogSanity.value?.author?.position,
-  published: blogSanity.value?.published,
-  publishedAt: blogSanity.value?.publishedAt,
-  tags: blogSanity.value?.tags,
-  categories: blogSanity.value?.legacyCategories,
-  blogType: blogSanity.value?.blogType,
-  badgeColor: blogSanity.value?.badgeColor,
-  readingTime: blogSanity.value?.readingTime,
+// Calculate reading time (minimum 1 minute)
+const readingTime = computed(() => {
+  const calculated = blogSanity.value?.estimatedReadingTime || 0
+  return Math.max(1, calculated).toString()
 })
+
+// Get first category for blogType
+const blogType = computed(() => {
+  const categories = blogSanity.value?.categories || []
+  return categories[0]?.title || null
+})
+
+// Badge color when category exists
+const badgeColor = computed(() => blogType.value ? 'secondary' : null)
 
 onMounted(() => {
   trackPixel('trackCustom', 'BlogView', { titre: blogSanity.value.title })
@@ -104,7 +139,7 @@ watchEffect(() => {
 
   // Use the SEO composable with BlogPosting structured data
   useSeo({
-    seoData: blogSanity.value, // Uses seoTitle, seoDescription naming
+    seoData: blogSanity.value.seo || {}, // Use seo object from blogType.ts
     content: blogSanity.value,
     pageType: 'article',
     slug: blogSanity.value.slug?.current,
@@ -114,10 +149,8 @@ watchEffect(() => {
     ),
     breadcrumbs: [
       { name: 'Blog', url: 'https://odysway.com/blog' },
-      { name: blogSanity.value.seoTitle || blogSanity.value.title, url: `https://odysway.com${route.path}` },
+      { name: blogSanity.value.seo?.metaTitle || blogSanity.value.title, url: `https://odysway.com${route.path}` },
     ],
   })
 })
-
-provide('page', dataToPage)
 </script>

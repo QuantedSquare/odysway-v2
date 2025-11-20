@@ -26,6 +26,13 @@
         introduction-color="grey"
         title-color="primary"
         avatar-size="60"
+        :blog-type="blogType"
+        :badge-color="badgeColor"
+        :reading-time="readingTime"
+        :published-at="categorySanity.blog.publishedAt"
+        :author="categorySanity.blog.author?.name"
+        :author-photo="categorySanity.blog.author?.image"
+        :author-role="categorySanity.blog.author?.position"
       >
         <template #title>
           {{ categorySanity.blog.title }}
@@ -104,8 +111,11 @@ const categoryQuery = `
       description,
       displayedImg,
       publishedAt,
-      readingTime,
-      legacyCategories,
+      body,
+      categories[]->{
+        _id,
+        title
+      },
       author->{
         _id,
         name,
@@ -126,7 +136,28 @@ const categoryQuery = `
           }
         }
       },
-      seo
+      seo{
+        metaTitle,
+        metaDescription,
+        canonicalUrl,
+        focusKeyword,
+        keywords,
+        robotsIndex,
+        robotsFollow,
+        ogTitle,
+        ogDescription,
+        ogImage{
+          asset->{
+            _id,
+            _ref,
+            url
+          },
+          alt
+        }
+      },
+      "numberOfCharacters": length(pt::text(body)),
+      "estimatedWordCount": round(length(pt::text(body)) / 5),
+      "estimatedReadingTime": round(length(pt::text(body)) / 5 / 180)
     },
   }
 `
@@ -179,22 +210,19 @@ const displayedData = computed(() => ({
   showOnBottom: false,
 }))
 
-const dataToBlog = reactive({
-  title: categorySanity.value?.blog?.title,
-  displayedImg: categorySanity.value?.blog?.displayedImg,
-  author: categorySanity.value?.blog?.author?.name,
-  authorPhoto: categorySanity.value?.blog?.author?.image,
-  authorRole: categorySanity.value?.blog?.author?.position,
-  published: categorySanity.value?.blog?.published,
-  publishedAt: categorySanity.value?.blog?.publishedAt,
-  tags: categorySanity.value?.blog?.tags,
-  categories: categorySanity.value?.blog?.legacyCategories,
-  blogType: categorySanity.value?.blog?.blogType,
-  badgeColor: categorySanity.value?.blog?.badgeColor,
-  readingTime: categorySanity.value?.blog?.readingTime,
+// Calculate reading time and blogType from blog data
+const readingTime = computed(() => {
+  if (!categorySanity.value?.blog) return null
+  const calculated = categorySanity.value.blog.estimatedReadingTime || 0
+  return Math.max(1, calculated).toString()
 })
 
-provide('page', dataToBlog)
+const blogType = computed(() => {
+  const categories = categorySanity.value?.blog?.categories || []
+  return categories[0]?.title || null
+})
+
+const badgeColor = computed(() => blogType.value ? 'secondary' : null)
 
 // Use SEO composable - automatically uses blog's SEO fields
 if (categorySanity.value) {

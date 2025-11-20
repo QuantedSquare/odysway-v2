@@ -66,10 +66,16 @@ export function createWebSiteSchema() {
  * @returns {Object} BlogPosting schema
  */
 export function createBlogPostingSchema(blog, url) {
+  // Use SEO object fields if available, fallback to legacy fields
+  const seo = blog.seo || {}
+  const keywords = seo.keywords || []
+  const focusKeyword = seo.focusKeyword || ''
+  const allKeywords = [focusKeyword, ...keywords].filter(Boolean)
+  
   return {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
-    'headline': blog.seoTitle || blog.title,
+    'headline': seo.metaTitle || blog.title,
     'publisher': {
       '@type': 'TravelAgency',
       'url': 'https://odysway.com/',
@@ -90,14 +96,12 @@ export function createBlogPostingSchema(blog, url) {
       : undefined,
     'datePublished': blog.publishedAt,
     'dateModified': blog.publishedAt,
-    'articleBody': blog.seoDescription || blog.description,
+    'articleBody': seo.metaDescription || blog.description,
     'mainEntityOfPage': {
       '@type': 'WebPage',
       '@id': url,
     },
-    'keywords': Array.isArray(blog.tags)
-      ? blog.tags.join(', ')
-      : blog.tags || '',
+    'keywords': allKeywords.length > 0 ? allKeywords.join(', ') : '',
   }
 }
 

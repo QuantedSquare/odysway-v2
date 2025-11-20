@@ -17,28 +17,25 @@
           class="d-flex flex-column justify-center ga-6 ga-md-8 pl-md-8"
         >
           <div
-            v-if="blogType || badgeColor || readingTime || publishedAt"
+            v-if="stegaClean(blogType) || stegaClean(badgeColor) || stegaClean(readingTime) || stegaClean(publishedAt)"
             class="text-body-2 text-lg-body-1 d-flex align-center ga-3"
           >
             <v-chip
-              v-if="blogType && badgeColor"
               size="x-large"
               class="text-body-2 font-weight-bold px-5"
-              :class="`bg-${badgeColor}`"
+              :class="`bg-${stegaClean(badgeColor) || 'secondary'}`"
             >
               <div class="mb-1">
-                {{ blogType }}
+                {{ stegaClean(blogType) || 'Blog' }}
               </div>
             </v-chip>
             <div
-              v-if="readingTime && badgeColor"
-              class="d-flex align-center ga-2 font-weight-2"
-              :class="`text-${badgeColor ?? 'primary'}`"
+              class="d-flex align-center ga-2 font-weight-2 text-secondary"
             >
               <v-icon size="24px">
                 {{ mdiClockTimeThreeOutline }}
               </v-icon>
-              {{ readingTime }} min
+              {{ stegaClean(readingTime) || '5' }} min
             </div>
             <div
               v-if="publishedAt"
@@ -48,7 +45,7 @@
             </div>
           </div>
           <h1
-            class="text-center text-md-left text-h4 text-lg-h1 font-weight-bold"
+            class="text-left text-h4 text-lg-h1 font-weight-bold"
             :class="`text-${titleColor}`"
           >
             <slot name="title" />
@@ -80,7 +77,7 @@
                 v-if="authorRole"
                 class="text-grey"
               >
-                {{ authorRole }}
+                {{ stegaClean(authorRole) || stegaClean(authorDescription) }}
               </div>
             </div>
           </div>
@@ -94,7 +91,6 @@
         >
           <div class="hero-img-wrapper">
             <SanityImage
-
               :asset-id="displayedImg?.asset?._ref"
               auto="format"
             >
@@ -120,6 +116,8 @@ import { mdiClockTimeThreeOutline } from '@mdi/js'
 import { useDisplay } from 'vuetify'
 import dayjs from 'dayjs'
 import { useImage } from '#imports'
+import { stegaClean } from '@sanity/client/stega'
+
 
 defineProps({
   backgroundColor: { type: String, default: 'primary' },
@@ -127,14 +125,15 @@ defineProps({
   introductionColor: { type: String, default: 'grey' },
   avatarSize: { type: String, default: '60' },
   // Blog info
-  blogType: String,
-  badgeColor: String,
+  blogType: {type: String, default: 'Blog'},
+  badgeColor: {type: String, default: 'secondary'},
   readingTime: [String, Number],
   publishedAt: String,
   // Author info
   author: String,
   authorPhoto: Object,
   authorRole: String,
+  authorDescription: String,
   // Image
   displayedImg: Object,
   // Title (for alt)
