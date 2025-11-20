@@ -171,8 +171,8 @@ export const voyageType = defineType({
       description: 'Ancien champ - À migrer vers difficultyLevel',
       hidden: true,
     }),
-    defineField({name: 'duration', type: 'number', group: 'basic', title: 'Durée du voyage'}),
-    defineField({name: 'nights', type: 'number', group: 'basic', title: 'Nombre de nuits'}),
+    defineField({name: 'duration', type: 'number', group: 'basic', title: 'Durée du voyage', hidden: true}),
+    defineField({name: 'nights', type: 'number', group: 'basic', title: 'Nombre de nuits', hidden: true}),
     defineField({
       name: 'includeFlight',
       type: 'boolean',

@@ -229,6 +229,7 @@ export const blogType = defineType({
       title: 'Category Slug',
       description: 'Folder name of the category this blog belongs to (for migration linking)',
       group: 'metadata',
+      hidden: true,
     }),
     defineField({
       name: 'destinationSlug',
@@ -236,6 +237,7 @@ export const blogType = defineType({
       title: 'Destination Slug',
       description: 'Folder name of the destination this blog belongs to (for migration linking)',
       group: 'metadata',
+      hidden: true,
     }),
     defineField({
       name: 'testMigrationField',
@@ -243,7 +245,15 @@ export const blogType = defineType({
       title: 'Test Migration Field',
       description: 'Test field to verify migration updates work',
       group: 'metadata',
+      hidden: true,
     }),
+    defineField({
+      name: "blogType",
+      type: "string",
+      title: "Type de blog",
+      description: "Type de blog",
+      hidden: true,
+    })
   ],
   preview: {
     select: {

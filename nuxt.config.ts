@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     'nuxt-calendly',
     'nuxt-gtag',
     '@nuxtjs/sanity',
-    // 'nuxt-meta-pixel',
+    'nuxt-meta-pixel',
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
         // @ts-expect-error This come from Vuetify doc.
@@ -64,9 +64,9 @@ export default defineNuxtConfig({
       supabaseAnonKey: process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY,
       environment: process.env.VERCEL_ENV || 'development',
       siteURL: process.env.BASE_URL || 'http://localhost:3000',
-      // metapixel: {
-      //   default: { id: process.env.METAPIXEL_ID || '' },
-      // },
+      metapixel: {
+        default: { id: process.env.METAPIXEL_ID || '' },
+      },
     },
   },
   build: {
