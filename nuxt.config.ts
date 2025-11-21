@@ -111,8 +111,8 @@ export default defineNuxtConfig({
   },
   // Inline critical CSS for better performance
   features: {
-    inlineStyles: false,
-    devLogs: false, // Inline critical CSS to eliminate render-blocking CSS request
+    inlineStyles: true, // Inline critical CSS to eliminate render-blocking CSS request
+    devLogs: false,
   },
   experimental: {
     payloadExtraction: true,
