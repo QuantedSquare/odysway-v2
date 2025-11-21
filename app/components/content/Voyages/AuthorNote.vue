@@ -63,7 +63,7 @@
             {{ author.name }}
           </span>
           <span class="font-weight-regular">
-            {{ author.position }} &nbsp;{{ authorNote?.affixeAuthor }}
+            {{ stegaClean(author.position) ? stegaClean(author.position) + '&nbsp;' : '' }} {{ stegaClean(authorNote?.affixeAuthor) ? stegaClean(authorNote?.affixeAuthor) : '' }}
           </span>
         </div>
       </div>
@@ -74,6 +74,7 @@
 import { mdiArrowRight } from '@mdi/js'
 import imageUrlBuilder from '@sanity/image-url'
 import { shouldTruncatePortableText } from '~/utils/getPortableTextLength'
+import { stegaClean } from '@sanity/client/stega'
 
 const config = useRuntimeConfig()
 const props = defineProps({

@@ -1,32 +1,11 @@
 <template>
-  <div
-    v-if="imageSrc"
-    class="container-image"
-  >
-    <NuxtLink
-      v-if="link"
-      :to="link"
-    >
-      <v-img
-        :src="img(imageSrc, { format: 'webp', quality: 100, width: 1024 })"
-        max-height="800px"
-        :alt="alt"
-        width="100%"
-        cover
-        class="custom-image"
-        rounded="xl"
-      />
+  <div v-if="imageSrc" class="container-image">
+    <NuxtLink v-if="link" :to="link">
+      <v-img :src="img(imageSrc, { format: 'webp', quality: 100, width: 1024 })" max-height="800px" :alt="alt"
+        width="100%" cover class="custom-image" rounded="xl" />
     </NuxtLink>
-    <v-img
-      v-else
-      :src="img(imageSrc, { format: 'webp', quality: 100, width: 1024 })"
-      max-height="800px"
-      :alt="alt"
-      width="100%"
-      cover
-      class="custom-image"
-      rounded="xl"
-    />
+    <v-img v-else :src="img(imageSrc, { format: 'webp', quality: 100, width: 1024 })" max-height="800px" :alt="alt"
+      width="100%" cover class="custom-image" rounded="xl" />
   </div>
 </template>
 

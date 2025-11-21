@@ -9,24 +9,15 @@
       <WhatsAppBtn />
     </div>
 
-    <v-container
-      :fluid="width > 600"
-      class="py-0 my-0 px-2 px-md-9"
-    >
+    <v-container :fluid="width > 600" class="py-0 my-0 px-2 px-md-9">
       <div class="mx-1">
-        <ColorContainer
-          color="white"
-        >
+        <ColorContainer color="white">
           <CommonReviewContainer />
         </ColorContainer>
       </div>
       <LazyFaqContainer />
       <div class="mx-1">
-        <ColorContainer
-          v-if="pageTextes"
-          color="secondary"
-          :white-text="true"
-        >
+        <ColorContainer v-if="pageTextes" color="secondary" :white-text="true">
           <InfoContainer :white-text="true">
             <template #title>
               {{ pageTextes?.layoutInfoContainer?.title }}
@@ -62,17 +53,18 @@ const { data: pageTextes } = await useAsyncData('page-textes-layouts', () =>
 
 <style scoped>
 .main-content {
-  --v-layout-top: 90px!important;
+  --v-layout-top: 90px !important;
   --v-layout-bottom: 0px;
 }
+
 @media (max-width: 960px) {
   .main-content {
-    --v-layout-top: 60px!important;
+    --v-layout-top: 60px !important;
   }
 }
 
 :deep(.v-main) {
-  padding-top: var(--v-layout-top)!important;
-  padding-bottom: var(--v-layout-bottom)!important;
+  padding-top: var(--v-layout-top) !important;
+  padding-bottom: var(--v-layout-bottom) !important;
 }
 </style>
