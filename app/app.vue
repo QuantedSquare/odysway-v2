@@ -96,23 +96,48 @@ useHead({
 //   })
 // }
 
-onMounted(() => {
-  const isConsent = localStorage.getItem('consent') === 'granted'
-  if (isConsent && config.public.environment === 'production') {
-    trackPixel('track', 'PageView')
-    initialize()
+// Handle bfcache restoration for better performance
+if (import.meta.client) {
+  window.addEventListener('pageshow', (event) => {
+    // If page was restored from bfcache, re-initialize analytics if needed
+    if (event.persisted) {
+      const isConsent = localStorage.getItem('consent') === 'granted'
+      if (isConsent && config.public.environment === 'production') {
+        // Re-initialize analytics after bfcache restoration
+        initialize()
+      }
+    }
+  })
+}
 
-    gtag('consent', 'update', {
-      ad_user_data: 'granted',
-      ad_personalization: 'granted',
-      ad_storage: 'granted',
-      analytics_storage: 'granted',
-    })
-    useTrackEvent('page_view')
+onMounted(() => {
+  // Use requestIdleCallback or setTimeout to defer localStorage access
+  // This helps with bfcache compatibility
+  const initAnalytics = () => {
+    const isConsent = localStorage.getItem('consent') === 'granted'
+    if (isConsent && config.public.environment === 'production') {
+      trackPixel('track', 'PageView')
+      initialize()
+
+      gtag('consent', 'update', {
+        ad_user_data: 'granted',
+        ad_personalization: 'granted',
+        ad_storage: 'granted',
+        analytics_storage: 'granted',
+      })
+      useTrackEvent('page_view')
+    }
   }
 
-  const userUTMs = []
+  // Defer analytics initialization slightly to avoid blocking bfcache
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(initAnalytics, { timeout: 100 })
+  } else {
+    setTimeout(initAnalytics, 0)
+  }
 
+  // Handle UTM parameters (can be done synchronously as it's quick)
+  const userUTMs = []
   Object.keys(route.query).forEach((queryParam) => {
     if (queryParam.toLowerCase().includes('utm')) {
       userUTMs.push(queryParam + '=' + route.query[queryParam])
@@ -120,7 +145,6 @@ onMounted(() => {
   })
 
   if (userUTMs.length) {
-    // console.log('userUTMs', userUTMs)
     localStorage.setItem('utmSource', userUTMs.join('&'))
   }
 })

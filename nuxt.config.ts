@@ -149,8 +149,9 @@ export default defineNuxtConfig({
     // },
     build: {
       sourcemap: true,
-      cssCodeSplit: true, // Enable CSS code splitting for better caching and parallel loading
+      cssCodeSplit: false, // Disable CSS code splitting to reduce render-blocking requests and critical request chain length
       minify: 'esbuild', // Use esbuild for fast minification (also handles CSS)
+      cssMinify: 'esbuild', // Explicitly use esbuild for CSS minification
     },
     css: {
       preprocessorOptions: {
@@ -159,6 +160,8 @@ export default defineNuxtConfig({
           quietDeps: true,
         },
       },
+      // Optimize CSS output
+      devSourcemap: false, // Disable sourcemaps in dev for faster builds
     },
   },
   calendly: {
