@@ -17,7 +17,7 @@ import { useDisplay } from 'vuetify'
 
 const { width } = useDisplay()
 
-const drawer = ref(false)
+const drawer = shallowRef(false)
 
 const headerQuery = groq`*[_type == "header"][0]{
   logo,

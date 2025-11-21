@@ -10,14 +10,15 @@
     </div>
 
     <v-container
-
       v-once
+      hydrate-on-visible
       :fluid="width > 600"
       class="py-0 my-0 px-2 px-md-9"
     >
       <div
         v-if="route.path !== '/'"
         class="mx-1"
+        
       >
         <ClientOnly>
           <LazyColorContainer
@@ -54,9 +55,9 @@
         </ColorContainer>
       </div>
 
-      <LazyFaqContainer />
+      <LazyFaqContainer hydrate-on-visible />
 
-      <div class="mx-1">
+      <div class="mx-1" hydrate-on-visible>
         <ColorContainer
           v-if="partenairesTextes"
           color="secondary"
@@ -77,7 +78,7 @@
         <LazyTopTravelsTabs />
       </div>
     </v-container>
-    <LazyFooterOdysway />
+    <LazyFooterOdysway hydrate-on-visible />
   </v-app>
 </template>
 
