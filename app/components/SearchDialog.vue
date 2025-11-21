@@ -41,19 +41,19 @@
           <v-col
             class="text-h5 text-md-h3 text-primary d-flex flex-column ga-6"
           >
-            <div>{{ searchText ? nbVoyageIdeas : 'Commencez votre recherche !' }}</div>
+            <div>{{ searchText ? nbVoyageIdeas : searchDialogField?.searchDialogTitle }}</div>
             <div>
               <v-text-field
                 v-model="searchText"
                 variant="outlined"
-                placeholder="Saisir une envie de voyage..."
+                :placeholder="searchDialogField?.searchDialogPlaceholder || 'Saisir une envie de voyage...'"
                 rounded="sm"
                 hide-details
                 @input="debouncedHandleSearch"
               >
                 <template #prepend-inner>
                   <v-img
-                    :src="img('/icons/Search.svg', { format: 'webp', quality: 70, width: 320, height: 320 })"
+                    :src="img('/icons/Search.svg', { format: 'webp', quality: 70, width: 24, height: 24 })"
                     alt="Search icon"
                     width="24"
                     height="24"
@@ -100,6 +100,18 @@ import _ from 'lodash'
 
 import { useImage } from '#imports'
 import { useTravelsSearch } from '~/composables/useTravelsSearch'
+const sanity = useSanity()
+
+const searchDialogFieldQuery = groq`*[_type == "search"][0]{
+  searchDialogTitle,
+  searchDialogPlaceholder,
+  searchDialogBtnList
+}`
+
+const { data: searchDialogField } = await useAsyncData('search-dialog-field', () =>
+  sanity.fetch(searchDialogFieldQuery),
+)
+
 
 const img = useImage()
 const searchText = ref('') // TODO use route params by default

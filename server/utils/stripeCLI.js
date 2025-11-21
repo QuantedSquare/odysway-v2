@@ -1,5 +1,5 @@
 import Stripe from 'stripe'
 
-export default defineEventHandler(async () => {
-  return new Stripe(process.env.STRIPE_KEY)
-})
+const stripeCLI = new Stripe(process.env.STRIPE_KEY)
+export default stripeCLI
+

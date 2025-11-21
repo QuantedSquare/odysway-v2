@@ -44,7 +44,7 @@ export default defineNuxtConfig({
         { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
         { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
         { rel: 'dns-prefetch', href: 'https://connect.facebook.net' },
-        { rel: 'dns-prefetch', href: 'https://static.hotjar.com' },
+        // { rel: 'dns-prefetch', href: 'https://static.hotjar.com' },
       ],
       // script: [
       //   { src: 'https://embed.small.chat/TD5UA8M5KC05K7GGNJNM.js', async: true },

@@ -6,6 +6,7 @@ export const searchPageType = defineType({
   type: 'document',
   groups: [
     {name: 'search_form', title: 'Formulaire de Recherche'},
+    {name: 'search_dialog', title: 'Dialogue de Recherche'},
     {name: 'search_results', title: 'Résultats de Recherche'},
     {name: 'search_hero', title: 'Section Hero'},
     {name: 'info_container', title: 'Container d\'Information'},
@@ -82,6 +83,70 @@ export const searchPageType = defineType({
           validation: Rule => Rule.required()
         })
       ]
+    }),
+
+    // Search Dialog Fields
+    defineField({
+      name: 'searchDialogTitle',
+      title: 'Titre du dialogue de recherche',
+      type: 'string',
+      group: 'search_dialog',
+      validation: Rule => Rule.required()
+    }),
+    defineField({
+      name: 'searchDialogPlaceholder',
+      title: 'Texte dans la barre de recherche',
+      type: 'string',
+      group: 'search_dialog',
+      validation: Rule => Rule.required()
+    }),
+    defineField({
+      name: 'searchDialogBtnList',
+      title: 'Liste de boutons dans le dialogue de recherche',
+      type: 'array',
+      group: 'search_dialog',
+      of: [{type: 'object', fields: [
+        defineField({
+          name: 'icon',
+          title: 'Icône',
+          type: 'image',
+          options: {
+            hotspot: true,
+          },
+        }),
+        defineField({
+          name: 'text',
+          title: 'Texte du bouton',
+          type: 'string',
+          validation: Rule => Rule.required()
+        }),
+        defineField({
+          name: 'link',
+          title: 'URL du bouton',
+          description: 'Seuls les chemins de site Odysway sont acceptés (ex : "/destinations/cap-vert").',
+          type: 'string',
+          validation: Rule => Rule.required().custom((value) => {
+            if (!value) return true
+            try {
+              // Accept if it's already a path (starts with '/')
+              if (typeof value === 'string' && value.startsWith('/')) return true
+
+              // Try to parse as a URL, and accept if the path is non-empty and matches input
+              const url = new URL(value)
+              if (url.pathname && url.hostname === 'odysway.com') {
+                // Suggest stripping to path if user gives absolute URL
+                return `Veuillez entrer seulement le chemin (ex : "${url.pathname}") sans "https://odysway.com".`
+              }
+              // If not odysway.com, reject
+              return 'Seuls les chemins de site Odysway sont acceptés (ex : "/destinations/cap-vert").'
+            } catch (e) {
+              // Not a valid URL, accept if it looks like a path
+              if (typeof value === 'string' && value.startsWith('/')) return true
+              return 'Veuillez saisir un chemin commençant par "/" (ex : "/destinations/cap-vert").'
+            }
+          })
+        }),
+      ]}]
     }),
 
     // Search Results Fields

@@ -268,6 +268,7 @@ const { data: blogsData, status, refresh } = await useAsyncData(
     watch: [() => route.query],
   }
 )
+console.log('blogsData', blogsData.value)
 
 
 // Fetch all categories for the filter dropdown
