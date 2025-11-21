@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <TopBar />
+    <!-- <TopBar /> -->
 
     <v-main class="main-content mx-0 mx-md-5 px-1">
       <slot />
@@ -9,7 +9,7 @@
       <WhatsAppBtn />
     </div>
 
-    <v-container :fluid="width > 600" class="py-0 my-0 px-2 px-md-9">
+    <!-- <v-container :fluid="width > 600" class="py-0 my-0 px-2 px-md-9">
       <div class="mx-1">
         <ColorContainer color="white">
           <CommonReviewContainer />
@@ -32,8 +32,8 @@
         </ColorContainer>
         <LazyTopTravelsTabs />
       </div>
-    </v-container>
-    <FooterOdysway />
+    </v-container> -->
+    <!-- <FooterOdysway /> -->
   </v-app>
 </template>
 
