@@ -111,7 +111,8 @@ export default defineNuxtConfig({
   },
   // Inline critical CSS for better performance
   features: {
-    inlineStyles: true, // Inline critical CSS to eliminate render-blocking CSS request
+    inlineStyles: false,
+    devLogs: false, // Inline critical CSS to eliminate render-blocking CSS request
   },
   experimental: {
     payloadExtraction: true,
@@ -137,16 +138,6 @@ export default defineNuxtConfig({
         transformAssetUrls,
       },
     },
-    // Uncomment for Nuxt4 upgrade
-    // optimizeDeps: {
-    //   include: ['minimatch', 'brace-expansion', '@sanity/visual-editing'],
-    // },
-    // resolve: {
-    //   alias: {
-    //     'react-compiler-runtime': 'react-compiler-runtime',
-    //     react: 'react',
-    //   },
-    // },
     build: {
       sourcemap: true,
       cssCodeSplit: false, // Disable CSS code splitting to reduce render-blocking requests and critical request chain length
@@ -163,6 +154,9 @@ export default defineNuxtConfig({
       // Optimize CSS output
       devSourcemap: false, // Disable sourcemaps in dev for faster builds
     },
+    ssr:{
+      noExternal: ['vuetify'],
+    }
   },
   calendly: {
     isEnabled: true,
