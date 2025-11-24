@@ -158,7 +158,14 @@ const voyagePageQuery = `
 const voyageQuery = `
   *[_type == "voyage" && slug.current == $slug][0]{
     ...,
-    image,
+    image{
+      asset->{
+       ...
+      },
+      alt,
+      hotspot,
+      crop
+    },
     seo{
       metaTitle,
       metaDescription,

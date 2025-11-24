@@ -52,7 +52,7 @@
               :key="photo.asset._ref + index"
             >
               <SanityImage
-                :asset-id="photo.asset._ref"
+                :asset-id="photo.asset?._ref || photo.asset?._id"
                 auto="format"
               >
                 <template #default="{ src }">

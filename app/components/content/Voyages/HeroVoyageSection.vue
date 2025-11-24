@@ -71,29 +71,31 @@
   </v-container>
   <v-container
     fluid
-    class="d-flex align-start align-md-center position-relative px-0 custom-height mb-2 mb-md-0 pt-0 pt-md-4"
+    class="d-flex align-start align-md-center position-relative px-0 custom-height-container mb-md-0 pt-0 pt-md-4 pb-0 pb-md-4"
   >
     <v-row class="align-start ">
       <v-col
         cols="12"
-        :sm="voyage.imageSecondary?.asset?._ref ? 9 : 12"
+        :md="voyage.imageSecondary?.asset?._ref ? 9 : 12"
       >
-        <NuxtImg
-          v-if="mainImageSrcUrl"
+      <NuxtImg
+          v-if="voyage.image?.asset"
           :src="mainImageSrcUrl"
-          :srcset="mainImageSrcset"
           sizes="(max-width: 600px) 100vw, (max-width: 960px) 66vw, 75vw"
-          :alt="voyage.image?.alt || `Image principale du voyage ${voyage.title}`"
+          :srcset="mainImageSrcset"
+          :alt="stegaClean(voyage.image?.alt) || `Image principale du voyage ${voyage.title}`"
           format="webp"
           preload
           loading="eager"
           fetchpriority="high"
+          width="1000"
+          height="100%"
           class="custom-height voyage-main-image rounded-lg"
         />
       </v-col>
       <v-col
         cols="3"
-        class="d-none d-sm-flex flex-column ga-7"
+        class="d-none d-md-flex flex-column ga-7"
       >
         <div v-if="voyage.imageSecondary?.asset?._ref">
           <SanityImage
@@ -159,6 +161,7 @@
 import { mdiExportVariant } from '@mdi/js'
 import imageUrlBuilder from '@sanity/image-url'
 import { useImage } from '#imports'
+import { stegaClean } from '@sanity/client/stega'
 
 const config = useRuntimeConfig()
 const props = defineProps({
@@ -168,6 +171,7 @@ const props = defineProps({
   },
 })
 
+console.log('props.voyage', props.voyage)
 const builder = imageUrlBuilder({
   projectId: config.public.sanity.projectId,
   dataset: config.public.sanity.dataset,
@@ -175,35 +179,42 @@ const builder = imageUrlBuilder({
 const img = useImage()
 const route = useRoute()
 const snackbar = ref(false)
-
-// Build optimized Sanity URLs for main image (455px desktop, 270px mobile)
-const buildMainImageUrl = (width, height, quality = 75) => {
-  if (!props.voyage?.image?.asset?._ref) return ''
+// Build optimized Sanity URLs for main image with hotspot support
+// The hotspot is automatically applied when passing the full image object to .image()
+// and using .fit('crop') - Sanity will use the hotspot to determine the crop area
+const buildMainImageUrl = (width, height, quality = 90) => {
+  if (!props.voyage?.image) return ''
   return builder
-    .image(props.voyage.image.asset._ref)
+    .image(props.voyage.image) // Pass full image object (includes hotspot & crop data)
     .width(width)
     .height(height)
-    .format('webp')
+    .auto('format')
     .quality(quality)
-    .fit('max')
+    .fit('crop') // This will respect the hotspot automatically
     .url()
 }
+console.log('voyage.image', props.voyage.image)
 
-// Main image: 455px height desktop, 270px mobile
-// Assuming 16:9 aspect ratio, but using fit='max' to maintain aspect
+// Use consistent 16:9 aspect ratio across all breakpoints for hotspot to work correctly
+// This ensures the same focal region stays meaningful at all screen sizes
+// 16:9 ratio: height = width * 9 / 16
 const mainImageSrcUrl = computed(() => {
-  // Default to mobile size (270px height) for mobile-first
-  return buildMainImageUrl(480, 270, 70)
+  // Use a good quality base image for the src (fallback for older browsers)
+  // 1000px width = 563px height at 16:9 - maintains hotspot consistency
+  return buildMainImageUrl(1000, 563, 100)
 })
 
 const mainImageSrcset = computed(() => {
-  // Mobile: 270px height, Desktop: 455px height
-  // Widths calculated to maintain reasonable aspect ratios
+  // All sizes use 16:9 aspect ratio - only width varies
+  // This allows hotspot to work consistently across all breakpoints
+  // IMPORTANT: The width descriptor (e.g., 400w) MUST match the actual image width
+  // Format: buildMainImageUrl(actualWidth, calculatedHeight, quality) actualWidthw
   return [
-    `${buildMainImageUrl(480, 270, 65)} 480w`,
-    `${buildMainImageUrl(600, 338, 70)} 600w`,
-    `${buildMainImageUrl(800, 450, 75)} 800w`,
-    `${buildMainImageUrl(1000, 563, 75)} 1000w`,
+    `${buildMainImageUrl(400, 225, 100)} 400w`,   // 400px image = 225px height (16:9)
+    `${buildMainImageUrl(600, 338, 100)} 600w`,   // 600px image = 338px height (16:9)
+    `${buildMainImageUrl(800, 450, 100)} 800w`,   // 800px image = 450px height (16:9)
+    `${buildMainImageUrl(1000, 563, 100)} 1000w`, // 1000px image = 563px height (16:9)
+    `${buildMainImageUrl(1400, 788, 100)} 1400w`, // 1400px image = 788px height (16:9)
   ].join(', ')
 })
 
@@ -215,7 +226,14 @@ const photoCarousel = computed(() => {
   if (props.voyage.image) photos.push(props.voyage.image)
   if (props.voyage.imageSecondary) photos.push(props.voyage.imageSecondary)
   if (props.voyage.photosList?.length) photos.push(...props.voyage.photosList)
-  return photos
+  console.log('photos', photos)
+  return photos.map(photo => ({
+    ...photo,
+    asset: {
+      _ref: photo.asset._ref || photo.asset._id,
+      _type: 'sanity.imageAsset',
+    },
+  }))
 })
 
 function copyUrl() {
@@ -231,15 +249,26 @@ function copyUrl() {
   bottom: 38px;
   left: 42px;
 }
-.custom-height{
-  height: 455px;
+.custom-height-container{
+  max-height: 460px;
 }
+/* Container - keep flexible, let image control aspect ratio */
+.custom-height {
+  /* Remove fixed height to allow aspect-ratio on image to control sizing */
+  max-height: 460px;
+  min-height: 0;
+}
+
 .voyage-main-image {
   width: 100%;
-  height: 455px;
-  max-height: 455px;
+  /* Use aspect-ratio to match the 16:9 images from Sanity */
+  /* This ensures the rendered box matches the crop ratio, preventing extra cropping */
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: center;
+  min-height: 460px;
+  /* The image maintains 16:9, matching the Sanity crop with hotspot */
+  /* No additional cropping happens because container and image ratios match */
 }
 .voyage-secondary-image {
   width: 100%;
@@ -248,20 +277,26 @@ function copyUrl() {
   object-position: center;
 }
 @media screen and (max-width: 1280px) {
-  .media-btns-position{
-  position: absolute;
-  bottom: 46px;
-  left: 42px;
+    .media-btns-position{
+    position: absolute;
+    bottom: 46px;
+    left: 42px;
+  }
 }
+@media screen and (max-width: 1024px) {
+
 }
 @media screen and (max-width: 600px) {
   .media-btns-position{
   position: absolute;
-  bottom: 15px;
+  bottom: 40px;
   left: 15px;
 }
-  .custom-height{
-  height: 270px;
+  /* Keep 16:9 aspect ratio on mobile too - no height override needed */
+  /* The aspect-ratio CSS property handles this automatically */
+  .voyage-main-image{
+    /* max-height: 280px; */
+    min-height: 100%;
   }
 }
 .custom-btn:deep(button){

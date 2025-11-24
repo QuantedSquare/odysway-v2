@@ -125,7 +125,7 @@ const reviewsQuery = `
   }
 `
 const sanity = useSanity()
-const { data: reviewsSanity } = await useAsyncData('reviews', () =>
+const { data: reviewsSanity } = await useAsyncData('reviews-' + route.params.voyageSlug, () =>
   sanity.fetch(reviewsQuery, {
     voyageSlug: route.params.voyageSlug,
   }),
