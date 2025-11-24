@@ -171,7 +171,6 @@ const props = defineProps({
   },
 })
 
-console.log('props.voyage', props.voyage)
 const builder = imageUrlBuilder({
   projectId: config.public.sanity.projectId,
   dataset: config.public.sanity.dataset,
@@ -193,8 +192,6 @@ const buildMainImageUrl = (width, height, quality = 90) => {
     .fit('crop') // This will respect the hotspot automatically
     .url()
 }
-console.log('voyage.image', props.voyage.image)
-
 // Use consistent 16:9 aspect ratio across all breakpoints for hotspot to work correctly
 // This ensures the same focal region stays meaningful at all screen sizes
 // 16:9 ratio: height = width * 9 / 16
@@ -226,7 +223,6 @@ const photoCarousel = computed(() => {
   if (props.voyage.image) photos.push(props.voyage.image)
   if (props.voyage.imageSecondary) photos.push(props.voyage.imageSecondary)
   if (props.voyage.photosList?.length) photos.push(...props.voyage.photosList)
-  console.log('photos', photos)
   return photos.map(photo => ({
     ...photo,
     asset: {
