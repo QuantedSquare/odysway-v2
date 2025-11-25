@@ -85,7 +85,9 @@
           :srcset="mainImageSrcset"
           :alt="stegaClean(voyage.image?.alt) || `Image principale du voyage ${voyage.title}`"
           format="webp"
-          preload
+          :preload="{
+            fetchpriority: 'high',
+          }"
           loading="eager"
           fetchpriority="high"
           width="1000"

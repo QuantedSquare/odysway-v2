@@ -198,8 +198,49 @@ onMounted(() => {
   trackPixel('trackCustom', 'VoyageView', { titre: route.params.voyageSlug })
 })
 
+const config = useRuntimeConfig()
+import imageUrlBuilder from '@sanity/image-url'
+
+const builder = imageUrlBuilder({
+  projectId: config.public.sanity.projectId,
+  dataset: config.public.sanity.dataset,
+})
+
+const buildMainImageUrl = (image, width, height, quality = 90) => {
+  if (!image) return ''
+  return builder
+    .image(image)
+    .width(width)
+    .height(height)
+    .auto('format')
+    .quality(quality)
+    .fit('crop')
+    .url()
+}
+
 watchEffect(() => {
   if (!voyage.value) return
+
+  const image = voyage.value.image
+  let link = []
+
+  if (image) {
+    const srcset = [
+      `${buildMainImageUrl(image, 400, 225, 100)} 400w`,
+      `${buildMainImageUrl(image, 600, 338, 100)} 600w`,
+      `${buildMainImageUrl(image, 800, 450, 100)} 800w`,
+      `${buildMainImageUrl(image, 1000, 563, 100)} 1000w`,
+      `${buildMainImageUrl(image, 1400, 788, 100)} 1400w`,
+    ].join(', ')
+
+    link.push({
+      rel: 'preload',
+      as: 'image',
+      imagesrcset: srcset,
+      imagesizes: '(max-width: 600px) 100vw, (max-width: 960px) 66vw, 75vw',
+      fetchpriority: 'high',
+    })
+  }
 
   // Use the SEO composable with TouristTrip structured data
   useSeo({
@@ -219,6 +260,10 @@ watchEffect(() => {
         url: `https://odysway.com/voyages/${voyage.value.slug.current}`,
       },
     ],
+  })
+
+  useHead({
+    link,
   })
 })
 </script>
