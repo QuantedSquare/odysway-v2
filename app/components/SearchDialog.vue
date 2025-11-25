@@ -2,6 +2,7 @@
   <v-dialog
     transition="dialog-bottom-transition"
     class="blur"
+ 
   >
     <template #activator="{ props: activatorProps }">
       <v-btn
@@ -12,9 +13,9 @@
         class="border-circle stronger-hover bg-white"
       >
         <img
-          :src="img('/icons/Search.svg', { format: 'webp', quality: 70, width: 320, height: 320 })"
+          :src="img('/icons/Search.svg', { format: 'webp', quality: 100, width: 20, height: 20 })"
           alt="Search icon"
-          :width="20"
+          width="20"
           height="20"
           fetchpriority="high"
         >
@@ -36,7 +37,7 @@
         />
         <v-row
           no-gutters
-          class="flex-grow-0 mb-4"
+          class="flex-grow-0"
         >
           <v-col
             class="text-h5 text-md-h3 text-primary d-flex flex-column ga-6"
@@ -63,8 +64,25 @@
             </div>
           </v-col>
         </v-row>
+        <v-row>
+          <v-col class="d-flex ga-2">
+            <v-btn
+              v-for="btn in searchDialogField?.searchDialogBtnList"
+              :key="btn.text"
+              :icon="btn.icon"
+              :text="btn.text"
+              :to="btn.link"
+              variant="outlined"
+              rounded="default"
+              size="small"
+              class="text-primary"
+            >
+              {{ btn.text }}
+            </v-btn>
+          </v-col>
+        </v-row>
 
-        <v-row class="overflow-auto flex-grow-1">
+        <!-- <v-row class="overflow-auto flex-grow-1">
           <v-col>
             <div
               v-if="!loading && destinations && destinations.length > 0"
@@ -87,7 +105,7 @@
               Aucun résultat trouvé pour votre recherche.
             </div>
           </v-col>
-        </v-row>
+        </v-row> -->
       </v-sheet>
     </template>
   </v-dialog>
@@ -101,7 +119,7 @@ import _ from 'lodash'
 import { useImage } from '#imports'
 import { useTravelsSearch } from '~/composables/useTravelsSearch'
 const sanity = useSanity()
-
+const isActiveFORCED = ref(true)
 const searchDialogFieldQuery = groq`*[_type == "search"][0]{
   searchDialogTitle,
   searchDialogPlaceholder,
@@ -112,14 +130,15 @@ const { data: searchDialogField } = await useAsyncData('search-dialog-field', ()
   sanity.fetch(searchDialogFieldQuery),
 )
 
-
+console.log('searchDialogField', searchDialogField.value.searchDialogBtnList)
 const img = useImage()
 const searchText = ref('') // TODO use route params by default
 
-const { destinations, loading, handleSearch } = useTravelsSearch()
+const { destinations, loading, handleSearch, handleEmbededSearch } = useTravelsSearch()
 
 const debouncedHandleSearch = _.debounce(() => {
-  handleSearch(searchText.value)
+  // handleSearch(searchText.value)
+  handleEmbededSearch(searchText.value)
 }, 200)
 
 onMounted(() => {

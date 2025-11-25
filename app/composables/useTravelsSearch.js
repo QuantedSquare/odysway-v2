@@ -6,6 +6,26 @@ const memoizedSearch = useMemoize(async (searchText) => {
   return { searchResult }
 })
 
+
+const memoizedEmbededSearch = useMemoize(async (searchText) => {
+  const searchResult = await apiRequest(`/search/embedding-search?keyword=${searchText}`)
+  return { searchResult }
+})
+
+async function handleEmbededSearch(searchText) {
+  const searchTerm = searchText?.trim().toLowerCase()
+  try {
+    const { searchResult } = await memoizedEmbededSearch(searchTerm)
+    console.log('searchResult', searchResult)
+    return searchResult
+  }
+  catch (error) {
+    console.error('Embeded search failed:', error)
+    return []
+  }
+}
+
+
 export function useTravelsSearch() {
   const destinations = ref([])
   const loading = ref(true)
@@ -30,5 +50,6 @@ export function useTravelsSearch() {
     destinations,
     loading,
     handleSearch,
+    handleEmbededSearch,
   }
 }
