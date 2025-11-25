@@ -45,9 +45,9 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
-    "sass": "^1.83.4",
+    "sass-embedded": "^1.93.3",
     "sass-loader": "^16.0.4",
-    "vite-plugin-vuetify": "^2.0.4",
-    "vuetify": "^3.7.6"
+    "vite-plugin-vuetify": "^2.1.2",
+    "vuetify": "^3.11.0"
   }
 }
