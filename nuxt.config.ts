@@ -148,8 +148,8 @@ export default defineNuxtConfig({
     //   },
     // },
     build: {
-      sourcemap: true,
-      cssCodeSplit: true, // Enable CSS code splitting for better caching and parallel loading
+      sourcemap: process.env.VERCEL_ENV !== 'production', // Disable sourcemaps in production to reduce payload
+      cssCodeSplit: false, // Disable CSS code splitting to reduce the number of blocking requests
       minify: 'esbuild', // Use esbuild for fast minification (also handles CSS)
     },
     css: {
