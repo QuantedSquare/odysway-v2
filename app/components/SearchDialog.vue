@@ -106,6 +106,14 @@
           </div>
         </div>
       </v-card-text>
+
+      <!-- Algolia Branding -->
+      <div class="d-flex justify-end align-center px-6 pb-4 pt-2 bg-white">
+        <span class="text-caption text-medium-emphasis mr-2">Powered by</span>
+        <NuxtLink to="https://www.algolia.com/" target="_blank">
+          <img src="/icons/Algolia-logo-blue.svg" alt="Algolia" height="16" width="80" />
+        </NuxtLink>
+      </div>
     </v-card>
   </v-dialog>
 </template>
