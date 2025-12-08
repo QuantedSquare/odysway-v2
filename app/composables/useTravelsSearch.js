@@ -12,23 +12,45 @@ const memoizedEmbededSearch = useMemoize(async (searchText) => {
   return { searchResult }
 })
 
-async function handleEmbededSearch(searchText) {
+// Minimum score threshold to filter out irrelevant results (0.7 = 70% relevance)
+const SCORE_THRESHOLD = 0.7
+
+async function handleEmbededSearch(searchText, destinations, loading) {
   const searchTerm = searchText?.trim().toLowerCase()
+
+  // Don't search if empty
+  if (!searchTerm) {
+    destinations.value = []
+    loading.value = false
+    return []
+  }
+
+  loading.value = true
+
   try {
     const { searchResult } = await memoizedEmbededSearch(searchTerm)
     console.log('searchResult', searchResult)
-    return searchResult
+
+    // Filter by score threshold to exclude irrelevant results
+    const filteredResults = searchResult.filter(result => result.score >= SCORE_THRESHOLD)
+
+    destinations.value = filteredResults
+    return filteredResults
   }
   catch (error) {
     console.error('Embeded search failed:', error)
+    destinations.value = []
     return []
+  }
+  finally {
+    loading.value = false
   }
 }
 
 
 export function useTravelsSearch() {
   const destinations = ref([])
-  const loading = ref(true)
+  const loading = ref(false)
 
   async function handleSearch(searchText) {
     const searchTerm = searchText?.trim().toLowerCase()
@@ -50,6 +72,6 @@ export function useTravelsSearch() {
     destinations,
     loading,
     handleSearch,
-    handleEmbededSearch,
+    handleEmbededSearch: (searchText) => handleEmbededSearch(searchText, destinations, loading),
   }
 }

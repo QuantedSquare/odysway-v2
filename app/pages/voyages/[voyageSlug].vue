@@ -3,7 +3,7 @@
     <div v-if="voyage">
       <BottomAppBar :date-sections="page.dateSections" :starting-price="voyage.pricing.startingPrice"
         :no-group-travel="!voyage.availabilityTypes?.includes('groupe')" :slug="voyage.slug.current" />
-      <!-- <v-container fluid class="py-0 my-0 px-3 px-md-4">
+      <v-container fluid class="py-0 my-0 px-3 px-md-4">
         <HeroVoyageSection :voyage="voyage" />
 
         <LazyChipsContainer :badges="voyage.badges" :badge-title="voyage.experienceType?.badgeTitle"
@@ -55,7 +55,7 @@
             </template>
           </LazyHorizontalCarousel>
         </v-container>
-      </v-container> -->
+      </v-container>
     </div>
 
     <ColorContainer v-else color="white">

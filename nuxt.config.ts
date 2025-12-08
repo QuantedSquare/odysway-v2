@@ -67,6 +67,10 @@ export default defineNuxtConfig({
       metapixel: {
         default: { id: process.env.METAPIXEL_ID || '' },
       },
+      algolia: {
+        applicationId: process.env.ALGOLIA_ID,
+        apiKey: process.env.ALGOLIA_API_READ_ID,
+      },
     },
   },
   build: {
