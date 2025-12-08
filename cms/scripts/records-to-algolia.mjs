@@ -7,7 +7,7 @@ import process from 'node:process';
 dotenv.config();
 
 // Algolia client
-const algoliaClient = algoliasearch('1EKY7SKCRG', '85ffb35915229b835cee85dcc1a59508');
+const algoliaClient = algoliasearch(process.env.ALGOLIA_APP_ID, process.env.ALGOLIA_API_KEY);
 
 // Sanity client
 const projectId = process.env.SANITY_PROJECT_ID || 'nu6yntji';
