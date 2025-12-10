@@ -19,7 +19,7 @@
       </v-card-title>
 
       <!-- Search Input -->
-      <v-card-text class="px-6 pt-2 pb-4">
+      <v-card-text class="px-6 pt-2 pb-0 pb-md-4">
         <v-text-field v-model="searchText" variant="outlined"
           :placeholder="searchDialogField?.searchDialogPlaceholder || 'Saisir une envie de voyage...'"
           density="comfortable" hide-details autofocus class="search-input" @input="debouncedHandleSearch">
@@ -29,7 +29,7 @@
         </v-text-field>
 
         <!-- Quick filters -->
-        <div v-if="searchDialogField?.searchDialogBtnList?.length" class="quick-filters mt-4">
+        <div v-if="searchDialogField?.searchDialogBtnList?.length" class="quick-filters mt-md-4">
           <v-chip v-for="btn in searchDialogField.searchDialogBtnList" :key="btn.text" :to="btn.link" size="default"
             class="filter-chip" @click="closeDialog">
             <span class="chip-text">{{ btn.text }}</span>
@@ -140,7 +140,7 @@ onMounted(() => {
 const sanity = useSanity()
 const img = useImage()
 
-const dialogOpen = ref(false)
+const dialogOpen = ref(true)
 const searchText = ref(null)
 
 const searchDialogFieldQuery = groq`*[_type == "search"][0]{
@@ -424,6 +424,10 @@ function closeDialog() {
   .results-grid {
     grid-template-columns: 1fr;
   }
+
+  .quick-filters {
+    display: none;
+  }
 }
 
 /* Result Card */
@@ -556,6 +560,10 @@ function closeDialog() {
 
   .results-area {
     max-height: calc(85vh - 180px);
+  }
+
+  .card-image-wrapper {
+    padding-top: 30.25%;
   }
 }
 </style>

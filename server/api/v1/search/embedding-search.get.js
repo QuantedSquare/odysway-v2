@@ -50,7 +50,12 @@ export default eventHandler(async (event) => {
     }
 
     // Transform Algolia hits to frontend format
-    const allResults = hits.map(hit => ({
+    const allResults = hits.filter(hit => {
+      if (hit.type === 'voyage') {
+        return (hit.availabilityTypes?.includes('groupe') || hit.availabilityTypes?.includes('privatisation'))
+      }
+      return true
+    }).map(hit => ({
       title: hit.title || hit.name,
       slug: hit.slug,
       dataSource: hit.type === 'voyage' ? 'voyages' : hit.type === 'destination' ? 'destinations' : 'regions',
@@ -63,6 +68,7 @@ export default eventHandler(async (event) => {
       objectID: hit.objectID,
       queryID: queryID
     }))
+    console.log('=======allResults=========', allResults)
 
     // RELATIONSHIP EXPANSION: If regions were found, expand to include related destinations and voyages
     const regionHits = hits.filter(hit => hit.type === 'region')
@@ -100,44 +106,44 @@ export default eventHandler(async (event) => {
         `
 
         const expandedResults = await sanityClient.fetch(expansionQuery, { regionIds })
-
+        console.log('=======expandedResults=========', expandedResults)
         // Add expanded destinations with reduced score
-        if (expandedResults.destinations) {
-          expandedResults.destinations.forEach(d => {
-            const alreadyExists = allResults.some(r => r.slug === d.slug && r.dataSource === 'destinations')
-            if (!alreadyExists) {
-              const maxRegionScore = Math.max(...regionHits.map(r => r._score || 1))
-              allResults.push({
-                title: d.title,
-                slug: d.slug,
-                dataSource: 'destinations',
-                image: d.image,
-                description: d.metaDescription,
-                score: maxRegionScore * 0.95
-              })
-            }
-          })
-        }
+        // if (expandedResults.destinations) {
+        //   expandedResults.destinations.forEach(d => {
+        //     const alreadyExists = allResults.some(r => r.slug === d.slug && r.dataSource === 'destinations')
+        //     if (!alreadyExists) {
+        //       const maxRegionScore = Math.max(...regionHits.map(r => r._score || 1))
+        //       allResults.push({
+        //         title: d.title,
+        //         slug: d.slug,
+        //         dataSource: 'destinations',
+        //         image: d.image,
+        //         description: d.metaDescription,
+        //         score: maxRegionScore * 0.95
+        //       })
+        //     }
+        //   })
+        // }
 
         // Add expanded voyages with further reduced score
-        if (expandedResults.voyages) {
-          expandedResults.voyages.forEach(v => {
-            const alreadyExists = allResults.some(r => r.slug === v.slug && r.dataSource === 'voyages')
-            if (!alreadyExists) {
-              const maxRegionScore = Math.max(...regionHits.map(r => r._score || 1))
-              allResults.push({
-                title: v.title,
-                slug: v.slug,
-                dataSource: 'voyages',
-                image: v.image,
-                description: v.description,
-                availabilityTypes: v.availabilityTypes,
-                difficulty: v.difficulty,
-                score: maxRegionScore * 0.9
-              })
-            }
-          })
-        }
+        // if (expandedResults.voyages) {
+        //   expandedResults.voyages.forEach(v => {
+        //     const alreadyExists = allResults.some(r => r.slug === v.slug && r.dataSource === 'voyages')
+        //     if (!alreadyExists) {
+        //       const maxRegionScore = Math.max(...regionHits.map(r => r._score || 1))
+        //       allResults.push({
+        //         title: v.title,
+        //         slug: v.slug,
+        //         dataSource: 'voyages',
+        //         image: v.image,
+        //         description: v.description,
+        //         availabilityTypes: v.availabilityTypes,
+        //         difficulty: v.difficulty,
+        //         score: maxRegionScore * 0.9
+        //       })
+        //     }
+        //   })
+        // }
       }
     }
 

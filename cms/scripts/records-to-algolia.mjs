@@ -7,7 +7,7 @@ import process from 'node:process';
 dotenv.config();
 
 // Algolia client
-const algoliaClient = algoliasearch(process.env.ALGOLIA_APP_ID, process.env.ALGOLIA_API_KEY);
+const algoliaClient = algoliasearch(process.env.ALGOLIA_ID, process.env.ALGOLIA_API_WRITE);
 
 // Sanity client
 const projectId = process.env.SANITY_PROJECT_ID || 'nu6yntji';
@@ -26,13 +26,17 @@ const sanityClient = createClient({
  * Fetch all regions from Sanity
  */
 async function fetchRegions() {
-    const query = `*[_type == "region"] {
+    const query = `*[_type == "region" && !(_id in path('drafts.**'))] {
     _id,
     nom,
     slug,
     meta_description,
     interjection,
     "image": image.asset->url,
+    "destinations": *[_type == "destination" && references(^._id)] {
+      title,
+      slug
+    },
     "voyageCount": count(*[_type == "voyage" && references(*[_type == "destination" && references(^._id)]._id) && (
       !('custom' in availabilityTypes) ||
       (count(availabilityTypes) > 1)
@@ -46,7 +50,7 @@ async function fetchRegions() {
  * Fetch all destinations with their regions from Sanity
  */
 async function fetchDestinations() {
-    const query = `*[_type == "destination"] {
+    const query = `*[_type == "destination" && !(_id in path('drafts.**'))] {
     _id,
     title,
     slug,
@@ -71,7 +75,7 @@ async function fetchDestinations() {
  * Fetch all voyages with their destinations and regions from Sanity
  */
 async function fetchVoyages() {
-    const query = `*[_type == "voyage" && (
+    const query = `*[_type == "voyage" && !(_id in path('drafts.**')) && (
       !('custom' in availabilityTypes) ||
       (count(availabilityTypes) > 1)
     )] {
@@ -80,6 +84,7 @@ async function fetchVoyages() {
     slug,
     description,
     availabilityTypes,
+    monthlyAvailability,
     "difficulty": difficultyLevel->title,
     "image": image.asset->url,
     "destinations": destinations[]-> {
@@ -105,17 +110,21 @@ function transformToAlgoliaRecords(regions, destinations, voyages) {
 
     // Add region records
     regions.forEach(region => {
+        const destinationNames = region.destinations?.map(d => d.title).filter(Boolean) || [];
+        const destinationSlugs = region.destinations?.map(d => d.slug?.current).filter(Boolean) || [];
+
         records.push({
             objectID: `region_${region._id}`,
             type: 'region',
             name: region.nom,
             slug: region.slug?.current,
             title: region.nom,
-            description: region.meta_description,
             interjection: region.interjection,
             image: region.image,
             voyageCount: region.voyageCount || 0,
-            searchableText: `${region.nom} ${region.meta_description || ''} ${region.interjection || ''}`,
+            destinations: destinationNames,
+            destinationSlugs: destinationSlugs,
+            // searchableText: `${region.nom} ${region.meta_description || ''} ${region.interjection || ''} ${destinationNames.join(' ')}`,
         });
     });
 
@@ -130,13 +139,12 @@ function transformToAlgoliaRecords(regions, destinations, voyages) {
             name: destination.title,
             slug: destination.slug?.current,
             title: destination.title,
-            description: destination.metaDescription,
             interjection: destination.interjection,
             image: destination.image,
             voyageCount: destination.voyageCount || 0,
             regions: regionNames,
             regionSlugs: regionSlugs,
-            searchableText: `${destination.title} ${destination.metaDescription || ''} ${destination.interjection || ''} ${regionNames.join(' ')}`,
+            // searchableText: `${destination.title} ${destination.metaDescription || ''} ${destination.interjection || ''} ${regionNames.join(' ')}`,
         });
     });
 
@@ -165,15 +173,15 @@ function transformToAlgoliaRecords(regions, destinations, voyages) {
             name: voyage.title,
             slug: voyage.slug?.current,
             title: voyage.title,
-            description: voyage.description,
             image: voyage.image,
             availabilityTypes: voyage.availabilityTypes || [],
+            monthlyAvailability: voyage.monthlyAvailability || [],
             difficulty: voyage.difficulty,
             destinations: destinationNames,
             destinationSlugs: destinationSlugs,
             regions: regionNames,
             regionSlugs: regionSlugs,
-            searchableText: `${voyage.title} ${voyage.description || ''} ${destinationNames.join(' ')} ${regionNames.join(' ')} ${voyage.difficulty || ''}`,
+            // searchableText: `${voyage.title} ${destinationNames.join(' ')} ${regionNames.join(' ')} ${voyage.difficulty || ''}`,
         });
     });
 
