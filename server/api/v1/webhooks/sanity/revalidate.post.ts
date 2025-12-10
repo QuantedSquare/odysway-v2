@@ -167,6 +167,16 @@ export default defineEventHandler(async (event) => {
       console.log(`⚠️  Unknown document type: ${documentType}`)
     }
 
+    // === Update Algolia Index ===
+    if (['voyage', 'destination', 'region'].includes(documentType)) {
+      console.log('🔄 Triggering Algolia index update for type:', documentType)
+      // We don't await this to avoid timing out the webhook response
+      // But we log errors if possible
+      updateAlgoliaIndex()
+        .then(res => console.log(`✅ Algolia updated: ${res.count} records processed`))
+        .catch(err => console.error('❌ Algolia update failed:', err))
+    }
+
     // Trigger on-demand revalidation using Vercel's bypass token
     // Note: This is NOT the same as VERCEL_AUTOMATION_BYPASS_SECRET
     // VERCEL_BYPASS_TOKEN is a custom secret you create for ISR revalidation
@@ -199,7 +209,7 @@ export default defineEventHandler(async (event) => {
 
           // Consume the response body to ensure request completes
           // For revalidation, we don't need the actual content
-          await response.text().catch(() => {}) // Ignore errors when consuming body
+          await response.text().catch(() => { }) // Ignore errors when consuming body
 
           const cacheStatus = response.headers.get('x-vercel-cache') || 'UNKNOWN'
           const vercelId = response.headers.get('x-vercel-id') || 'UNKNOWN'
