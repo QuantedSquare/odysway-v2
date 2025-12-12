@@ -137,6 +137,12 @@ export const homePageType = defineType({
           of: [{ type: 'string' }],
           validation: (rule) => rule.required(),
         }),
+        defineField({
+          name: 'placeholder',
+          title: 'Placeholder de la recherche',
+          type: 'string',
+          validation: (rule) => rule.required(),
+        }),
       ],
     }),
     defineField({
@@ -182,6 +188,12 @@ export const homePageType = defineType({
           title: 'Mots pour l\'effet typewritter',
           type: 'array',
           of: [{ type: 'string' }],
+          validation: (rule) => rule.required(),
+        }),
+        defineField({
+          name: 'placeholder',
+          title: 'Placeholder de la recherche',
+          type: 'string',
           validation: (rule) => rule.required(),
         }),
       ],
