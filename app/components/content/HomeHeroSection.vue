@@ -86,7 +86,7 @@
               size="24"
               class="mr-3 icon-search"
             />
-            <span class="search-placeholder">Cap Vert, Népal, yoga, trek, février…</span>
+            <span class="search-placeholder">{{ placeholder }}</span>
           </div>
         </template>
       </SearchDialog>
@@ -122,6 +122,10 @@ const heroProps = defineProps({
   noiseLevel: {
     type: Number,
     default: 0.05,
+  },
+  placeholder: {
+    type: String,
+    default: '',
   },
 })
 

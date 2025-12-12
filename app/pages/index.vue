@@ -7,6 +7,7 @@
       :image-mobile="homeSanity.heroSection.imageMobile"
       :image-mobile-test="homeSanity.heroSectionTest.imageMobile"
       :typewriter-words="config.public.environment === 'production' ? homeSanity.heroSection.typewritterWords : homeSanity.heroSectionTest.typewritterWords"
+      :placeholder="config.public.environment === 'production' ? homeSanity.heroSection.placeholder : homeSanity.heroSectionTest.placeholder"
     >
       <template #title>
         <EnrichedText
