@@ -19,26 +19,6 @@
         {{ noiseEnabled ? 'Disable grain' : 'Enable grain' }}
       </button>
     </div>
-    <div class="hero-search">
-      <SearchDialog>
-        <template #activator="{ props }">
-          <div
-            v-bind="props"
-            class="glass-search-trigger"
-            role="button"
-            tabindex="0"
-          >
-            <v-icon
-              :icon="mdiMagnify"
-              color="primary"
-              size="24"
-              class="mr-3 icon-search"
-            />
-            <span class="search-placeholder">Cap Vert, Népal, yoga, trek, février…</span>
-          </div>
-        </template>
-      </SearchDialog>
-    </div>
     <div
       class="hero-image-bg"
       :class="{ 'hero-noise-enabled': noiseEnabled }"
@@ -73,6 +53,24 @@
           {{ currentWord }}<span class="cursor text-secondary">|</span>
         </span>
       </h2>
+      <SearchDialog>
+        <template #activator="{ props }">
+          <div
+            v-bind="props"
+            class="glass-search-trigger mt-10"
+            role="button"
+            tabindex="0"
+          >
+            <v-icon
+              :icon="mdiMagnify"
+              color="primary"
+              size="24"
+              class="mr-3 icon-search"
+            />
+            <span class="search-placeholder">Cap Vert, Népal, yoga, trek, février…</span>
+          </div>
+        </template>
+      </SearchDialog>
     </div>
   </section>
 </template>
@@ -185,7 +183,7 @@ const srcset = computed(() => {
   min-height: 100dvh;
   width: 100vw;
   display: flex;
-  align-items: start;
+  align-items: center;
   justify-content: center;
   overflow: hidden;
   isolation: isolate;
@@ -252,7 +250,7 @@ const srcset = computed(() => {
   /* width:  min(90vw, 1024px); */
   width: 100%;
   margin-inline: auto;
-  margin-top: 20vh;
+  /* margin-top: 20vh; */
   padding: 2rem 2vw;
   display: flex;
   flex-direction: column;
