@@ -33,7 +33,7 @@
       elevation="24"
     >
       <!-- Header -->
-      <v-card-title class="search-header pa-6 pb-4">
+      <v-card-title class="search-header pa-6 pb-md-4 pb-0">
         <div class="d-flex align-center justify-space-between">
           <div class="search-title">
             {{ searchText ? nbVoyageIdeas : (searchDialogField?.searchDialogTitle || 'Rechercher un voyage') }}
@@ -50,7 +50,7 @@
       </v-card-title>
 
       <!-- Search Input -->
-      <v-card-text class="px-6 pt-2 pb-0 pb-md-4 card-text-height">
+      <v-card-text class="px-6 pt-2 pb-0 card-text-height">
         <v-text-field
           v-model="searchText"
           :placeholder="searchDialogField?.searchDialogPlaceholder || 'Saisir une envie de voyage...'"
@@ -73,25 +73,27 @@
         <!-- Quick filters -->
         <div
           v-if="searchDialogField?.searchDialogBtnList?.length"
-          class="quick-filters mt-4"
+          class="quick-filters"
         >
-          <v-chip
-            v-for="btn in searchDialogField.searchDialogBtnList"
-            :key="btn.text"
-            :to="btn.link"
-            size="default"
-            class="filter-chip"
-            color="white"
-            variant="outlined"
-            @click="closeDialog"
-          >
-            <span class="chip-text">{{ btn.text }}</span>
-          </v-chip>
+          <div class="chip-row">
+            <v-chip
+              v-for="btn in searchDialogField.searchDialogBtnList"
+              :key="btn.text"
+              :to="btn.link"
+              size="small"
+              class="filter-chip"
+              color="white"
+              variant="outlined"
+              @click="closeDialog"
+            >
+              <span class="chip-text">{{ btn.text }}</span>
+            </v-chip>
+          </div>
         </div>
       </v-card-text>
 
       <!-- Results Area -->
-      <v-card-text class="results-area px-6 pb-6 text-white">
+      <v-card-text class="results-area px-6 pb-6 text-white pt-0">
         <!-- Empty state -->
         <div
           v-if="!searchText && !loading"
@@ -135,7 +137,7 @@
             v-if="voyageResults.length > 0"
             class="results-section"
           >
-            <div class="section-title mb-3">
+            <div class="section-title">
               Voyages
             </div>
             <div class="results-grid">
@@ -175,9 +177,8 @@
           <div
             v-if="otherResults.length > 0"
             class="results-section"
-            :class="{ 'mt-6': voyageResults.length > 0 }"
           >
-            <div class="section-title mb-3">
+            <div class="section-title">
               Destinations & Régions
             </div>
             <div class="results-grid">
@@ -272,7 +273,6 @@ import { useTravelsSearch } from '~/composables/useTravelsSearch'
 // Initialize Algolia Insights
 onMounted(() => {
   const config = useRuntimeConfig()
-  console.log('🔍 [SearchDialog] aa:', config.public.algolia.applicationId, config.public.algolia.apiKey)
   aa('init', {
     appId: config.public.algolia.applicationId,
     apiKey: config.public.algolia.apiKey,
@@ -415,17 +415,48 @@ function closeDialog() {
 
 /* Quick Filter Chips */
 .quick-filters {
+  display: block;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(var(--v-theme-white), 0.2);
+  padding-bottom: 24px;
+  padding-top: 24px;
+}
+
+@media (max-width: 600px) {
+  .quick-filters {
+    padding-bottom: 12px;
+    padding-top: 12px;
+  }
+  .results-section {
+    padding-top: 12px!important;
+    /* margin-bottom: 0px;
+    padding-top: 12px; */
+  }
+}
+.chip-row {
   display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  padding: 4px 2px;
+}
+.chip-row::-webkit-scrollbar {
+  height: 6px;
+}
+.chip-row::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
 }
 
 .filter-chip {
   background: linear-gradient(135deg, rgba(white, 0.08) 0%, rgba(white, 0.12) 100%) !important;
   /* border: 1.5px solid rgba(var(--v-theme-primary-light-4), 0.2) !important; */
-  border-radius: 24px !important;
-  padding: 8px 18px !important;
-  height: auto !important;
+  border-radius: 14px !important;
+  padding: 6px 10px !important;
+  height: 30px !important;
+  min-height: 30px !important;
+  flex: 0 0 auto;
   font-weight: 500;
   letter-spacing: 0.3px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -464,7 +495,7 @@ function closeDialog() {
 .chip-text {
   color: white;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 12px;
   position: relative;
   z-index: 1;
 }
@@ -556,15 +587,14 @@ function closeDialog() {
 
 .results-section {
   animation: slideUp 0.3s ease;
+  padding-top: 24px;
 }
 
 .section-title {
   font-size: 20px;
   font-weight: 600;
   color: rgb(var(--v-theme-white));
-  margin-bottom: 12px;
-  padding-top: 12px;
-  border-top: 1px solid rgba(var(--v-theme-white), 0.2);
+  margin-bottom: 10px;
 }
 
 /* Results Grid */
@@ -577,10 +607,6 @@ function closeDialog() {
 @media (max-width: 600px) {
   .results-grid {
     grid-template-columns: 1fr;
-  }
-
-  .quick-filters {
-    display: none;
   }
 }
 

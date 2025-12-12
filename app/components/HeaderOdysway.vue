@@ -67,13 +67,16 @@
       </NuxtLink>
       <v-spacer />
 
-      <div class="d-flex align-center ga-4">
+      <div
+        class="d-flex align-center"
+        :class="isTransparent ? '' : 'ga-4'"
+      >
         <v-btn
           v-if="header?.button1?.visible"
           height="45"
           color="primary"
           rounded="default"
-          class="text-caption text-md-body-1 d-none d-md-inline ml-5"
+          class="text-caption text-md-body-1 d-none d-md-inline"
           :class="isTransparent ? 'filter' : ''"
           @click="() => { router.push(header.button1.link); captureOutboundLink(header.button1.text) }"
         >
@@ -89,31 +92,6 @@
         >
           {{ header.button2.text }}
         </v-btn>
-      </div>
-
-      <div class="d-flex align-center ga-4">
-        <!-- <SearchDialog v-if="!isTransparent && y > 700" />
-        <v-btn
-          v-if="header?.button1?.visible"
-          height="45"
-          color="primary"
-          rounded="default"
-          class="text-caption text-md-body-1 d-none d-md-inline ml-5"
-          :class="isTransparent ? 'filter' : ''"
-          @click="() => { router.push(header.button1.link); captureOutboundLink(header.button1.text) }"
-        >
-          {{ header.button1.text }}
-        </v-btn>
-        <v-btn
-          v-if="header?.button2?.visible"
-          color="primary"
-          height="45"
-          :class="isTransparent ? 'filter' : ''"
-          class="text-caption text-md-body-1 d-none d-md-inline"
-          @click="() => { router.push(header.button2.link); captureOutboundLink(header.button2.text) }"
-        >
-          {{ header.button2.text }}
-        </v-btn> -->
         <v-btn
           v-if="header?.button3?.visible"
           color="primary"
@@ -129,9 +107,9 @@
           href="tel: +33184807975"
           color="primary"
           height="45"
-          variant="tonal"
+          :variant="isTransparent ? 'text' : 'tonal'"
           :class="isTransparent ? 'filter' : ''"
-          rounded="default"
+
           class="text-caption text-md-body-1 d-none d-md-flex"
           @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.button4.text) }"
         >
@@ -140,8 +118,7 @@
         <v-btn
           v-if="header?.button5?.visible"
           height="45"
-          :variant="isTransparent ? 'tonal' : 'text'"
-          rounded="default"
+          :variant="isTransparent ? 'text' : 'tonal'"
 
           :class="isTransparent ? 'text-soft-blush text-shadow' : 'bg-primary text-white'"
           class="text-caption text-md-body-1 d-none d-md-inline "

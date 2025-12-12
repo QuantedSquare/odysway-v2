@@ -1,5 +1,4 @@
 import { getQuery, eventHandler } from 'h3'
-import { createClient } from '@sanity/client'
 import { algoliasearch } from 'algoliasearch'
 
 export default eventHandler(async (event) => {
@@ -11,17 +10,7 @@ export default eventHandler(async (event) => {
   }
 
   // Initialize Algolia client
-  console.log('🔍 [Algolia] Algolia applicationId:', config.public.algolia.applicationId)
-  console.log('🔍 [Algolia] Algolia apiKey:', process.env.ALGOLIA_API_READ_ID || config.public.algolia.apiKey)
   const algoliaClient = algoliasearch(config.public.algolia.applicationId, process.env.ALGOLIA_API_READ_ID || config.public.algolia.apiKey)
-  // Initialize Sanity client for relationship expansion only
-  const sanityClient = createClient({
-    projectId: config.public.sanity.projectId,
-    dataset: config.public.sanity.dataset,
-    apiVersion: 'vX',
-    token: process.env.SANITY_WRITE_TOKEN,
-    useCdn: false,
-  })
 
   const query = getQuery(event)
   const searchTerm = query.keyword?.trim()
@@ -70,83 +59,6 @@ export default eventHandler(async (event) => {
       queryID: queryID,
     }))
     // console.log('=======allResults=========', allResults)
-
-    // RELATIONSHIP EXPANSION: If regions were found, expand to include related destinations and voyages
-    const regionHits = hits.filter(hit => hit.type === 'region')
-
-    if (regionHits.length > 0) {
-      // Get region IDs by querying Sanity with slugs
-      const regionSlugs = regionHits.map(r => r.slug)
-      const regionIdsQuery = `*[_type == "region" && slug.current in $regionSlugs]._id`
-      const regionIds = await sanityClient.fetch(regionIdsQuery, { regionSlugs })
-
-      if (regionIds.length > 0) {
-        // Find all destinations that belong to these regions
-        const expansionQuery = `
-        {
-          "destinations": *[_type == "destination" && references(*[_type == "region" && _id in $regionIds]._id)]{
-            _id,
-            title,
-            "slug": slug.current,
-            "image": image.asset->url,
-            metaDescription
-          },
-          "voyages": *[_type == "voyage" && references(*[_type == "destination" && references(*[_type == "region" && _id in $regionIds]._id)]._id) && (
-            !('custom' in availabilityTypes) ||
-            (count(availabilityTypes) > 1)
-          )]{
-            _id,
-            title,
-            "slug": slug.current,
-            "image": image.asset->url,
-            description,
-            availabilityTypes,
-            "difficulty": difficultyLevel->title
-          }
-        }
-        `
-
-        // const expandedResults = await sanityClient.fetch(expansionQuery, { regionIds })
-        // console.log('=======expandedResults=========', expandedResults)
-        // Add expanded destinations with reduced score
-        // if (expandedResults.destinations) {
-        //   expandedResults.destinations.forEach(d => {
-        //     const alreadyExists = allResults.some(r => r.slug === d.slug && r.dataSource === 'destinations')
-        //     if (!alreadyExists) {
-        //       const maxRegionScore = Math.max(...regionHits.map(r => r._score || 1))
-        //       allResults.push({
-        //         title: d.title,
-        //         slug: d.slug,
-        //         dataSource: 'destinations',
-        //         image: d.image,
-        //         description: d.metaDescription,
-        //         score: maxRegionScore * 0.95
-        //       })
-        //     }
-        //   })
-        // }
-
-        // Add expanded voyages with further reduced score
-        // if (expandedResults.voyages) {
-        //   expandedResults.voyages.forEach(v => {
-        //     const alreadyExists = allResults.some(r => r.slug === v.slug && r.dataSource === 'voyages')
-        //     if (!alreadyExists) {
-        //       const maxRegionScore = Math.max(...regionHits.map(r => r._score || 1))
-        //       allResults.push({
-        //         title: v.title,
-        //         slug: v.slug,
-        //         dataSource: 'voyages',
-        //         image: v.image,
-        //         description: v.description,
-        //         availabilityTypes: v.availabilityTypes,
-        //         difficulty: v.difficulty,
-        //         score: maxRegionScore * 0.9
-        //       })
-        //     }
-        //   })
-        // }
-      }
-    }
 
     // Sort by score (descending)
     const sortedResults = allResults.sort((a, b) => (b.score || 0) - (a.score || 0))

@@ -121,7 +121,7 @@ const heroProps = defineProps({
   },
   noiseLevel: {
     type: Number,
-    default: 0.1,
+    default: 0.05,
   },
 })
 
@@ -396,7 +396,7 @@ margin-bottom: 0!important;
     0 8px 32px rgba(0, 0, 0, 0.2);
   /* Deep drop shadow */
 
-  border-radius: 100px;
+  border-radius: 20px;
   padding: 0 28px;
   display: flex;
   align-items: center;
