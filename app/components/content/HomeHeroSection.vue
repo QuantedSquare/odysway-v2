@@ -154,7 +154,9 @@ const buildSanityImageUrl = (width, height, quality = 75) => {
     .height(height)
     .auto('format')
     .quality(quality)
+    // Ensure Sanity hotspot is respected
     .fit('crop')
+    .crop('focalpoint')
     .url()
 }
 
