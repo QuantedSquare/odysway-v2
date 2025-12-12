@@ -122,6 +122,13 @@ export const homePageType = defineType({
           of: [richTextBlock],
           validation: (rule) => rule.required(),
         }),
+        defineField({
+          name: 'typewritterWords',
+          title: 'Mots pour l\'effet typewritter',
+          type: 'array',
+          of: [{ type: 'string' }],
+          validation: (rule) => rule.required(),
+        }),
       ],
     }),
     defineField({
@@ -151,6 +158,13 @@ export const homePageType = defineType({
           title: 'Sous-titre Hero',
           type: 'array',
           of: [richTextBlock],
+          validation: (rule) => rule.required(),
+        }),
+        defineField({
+          name: 'typewritterWords',
+          title: 'Mots pour l\'effet typewritter',
+          type: 'array',
+          of: [{ type: 'string' }],
           validation: (rule) => rule.required(),
         }),
       ],
