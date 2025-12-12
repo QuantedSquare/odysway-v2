@@ -6,13 +6,11 @@ import { createClient } from '@sanity/client'
  */
 export async function updateAlgoliaIndex() {
   const config = useRuntimeConfig()
-
   // Initialize clients
   const algoliaClient = algoliasearch(
     config.public.algolia.applicationId,
     process.env.ALGOLIA_API_WRITE || config.public.algolia.apiKey,
   )
-  console.log('algoliaClient', algoliaClient)
 
   const sanityClient = createClient({
     projectId: config.public.sanity.projectId,

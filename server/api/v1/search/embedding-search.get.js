@@ -11,8 +11,9 @@ export default eventHandler(async (event) => {
   }
 
   // Initialize Algolia client
-  const algoliaClient = algoliasearch(config.public.algolia.applicationId, config.public.algolia.apiKey)
-
+  console.log('🔍 [Algolia] Algolia applicationId:', config.public.algolia.applicationId)
+  console.log('🔍 [Algolia] Algolia apiKey:', process.env.ALGOLIA_API_READ_ID || config.public.algolia.apiKey)
+  const algoliaClient = algoliasearch(config.public.algolia.applicationId, process.env.ALGOLIA_API_READ_ID || config.public.algolia.apiKey)
   // Initialize Sanity client for relationship expansion only
   const sanityClient = createClient({
     projectId: config.public.sanity.projectId,
@@ -50,7 +51,7 @@ export default eventHandler(async (event) => {
     }
 
     // Transform Algolia hits to frontend format
-    const allResults = hits.filter(hit => {
+    const allResults = hits.filter((hit) => {
       if (hit.type === 'voyage') {
         return (hit.availabilityTypes?.includes('groupe') || hit.availabilityTypes?.includes('privatisation'))
       }
@@ -66,9 +67,9 @@ export default eventHandler(async (event) => {
       voyageCount: hit.voyageCount,
       score: hit._score || 1,
       objectID: hit.objectID,
-      queryID: queryID
+      queryID: queryID,
     }))
-    console.log('=======allResults=========', allResults)
+    // console.log('=======allResults=========', allResults)
 
     // RELATIONSHIP EXPANSION: If regions were found, expand to include related destinations and voyages
     const regionHits = hits.filter(hit => hit.type === 'region')
@@ -105,8 +106,8 @@ export default eventHandler(async (event) => {
         }
         `
 
-        const expandedResults = await sanityClient.fetch(expansionQuery, { regionIds })
-        console.log('=======expandedResults=========', expandedResults)
+        // const expandedResults = await sanityClient.fetch(expansionQuery, { regionIds })
+        // console.log('=======expandedResults=========', expandedResults)
         // Add expanded destinations with reduced score
         // if (expandedResults.destinations) {
         //   expandedResults.destinations.forEach(d => {
@@ -151,7 +152,8 @@ export default eventHandler(async (event) => {
     const sortedResults = allResults.sort((a, b) => (b.score || 0) - (a.score || 0))
 
     return sortedResults
-  } catch (error) {
+  }
+  catch (error) {
     console.error('Error getting search results from Algolia:', error)
     return []
   }
