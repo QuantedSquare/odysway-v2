@@ -1,15 +1,35 @@
 <template>
-  <v-container fluid class="px-0 mt-4">
+  <v-container
+    fluid
+    class="px-0 mt-4"
+  >
     <v-row no-gutters>
-      <v-col cols="12" md="8">
+      <v-col
+        cols="12"
+        md="8"
+      >
         <h1 class="d-flex flex-column text-primary text-h3 text-md-h2  font-weight-bold px-2 px-md-0   mb-md-0">
           {{ voyage.title }}
           <div class="d-flex align-center mt-2">
-            <RatingBadge :rating="voyage.rating" :comments="voyage.comments" elevation="2" class="mr-3 d-md-none" />
-            <v-btn ref="shareBtn" color="white" rounded="pill" class="btn-shadow d-md-none custom-copy-btn-height"
-              @click="copyUrl">
+            <RatingBadge
+              :rating="voyage.rating"
+              :comments="voyage.comments"
+              elevation="2"
+              class="mr-3 d-md-none"
+            />
+            <v-btn
+              ref="shareBtn"
+              color="white"
+              rounded="pill"
+              class="btn-shadow d-md-none custom-copy-btn-height"
+              @click="copyUrl"
+            >
               <div class="text-primary text-body-2 font-weight-medium d-flex align-center ga-2">
-                <v-icon :icon="mdiExportVariant" class="custom-copy-btn-icon-height" color="primary" />
+                <v-icon
+                  :icon="mdiExportVariant"
+                  class="custom-copy-btn-icon-height"
+                  color="primary"
+                />
                 <span class="mt-md-1">Partager</span>
               </div>
             </v-btn>
@@ -17,47 +37,101 @@
         </h1>
       </v-col>
       <v-col class="d-none d-md-flex align-start justify-end ga-4 mb-3 mb-md-0 ">
-        <RatingBadge :rating="voyage.rating" :comments="voyage.comments" elevation="2" />
-        <v-btn ref="shareBtn" color="white" rounded="pill" class="btn-shadow custom-copy-btn-height-2" @click="copyUrl">
+        <RatingBadge
+          :rating="voyage.rating"
+          :comments="voyage.comments"
+          elevation="2"
+        />
+        <v-btn
+          ref="shareBtn"
+          color="white"
+          rounded="pill"
+          class="btn-shadow custom-copy-btn-height-2"
+          @click="copyUrl"
+        >
           <div class="text-primary text-body-2 font-weight-medium d-flex align-center ga-md-2 ga-1">
-            <v-icon :icon="mdiExportVariant" class="custom-copy-btn-icon-height-2" color="primary" />
+            <v-icon
+              :icon="mdiExportVariant"
+              class="custom-copy-btn-icon-height-2"
+              color="primary"
+            />
             <span class="mt-1">Partager</span>
           </div>
         </v-btn>
-        <v-snackbar v-model="snackbar" location="top" timeout="2000" color="primary">
+        <v-snackbar
+          v-model="snackbar"
+          location="top"
+          timeout="2000"
+          color="primary"
+        >
           Le lien de ce voyage a été copié avec succès !
         </v-snackbar>
       </v-col>
     </v-row>
   </v-container>
-  <v-container fluid
-    class="d-flex align-start align-md-center position-relative px-0 custom-height-container mb-md-0 pt-0 pt-md-4 pb-0 pb-md-4">
+  <v-container
+    fluid
+    class="d-flex align-start align-md-center position-relative px-0 custom-height-container mb-md-0 pt-0 pt-md-4 pb-0 pb-md-4"
+  >
     <v-row class="align-start ">
-      <v-col cols="12" :md="voyage.imageSecondary?.asset?._ref ? 9 : 12">
-        <NuxtImg v-if="voyage.image?.asset" :src="mainImageSrcUrl"
-          sizes="(max-width: 600px) 100vw, (max-width: 960px) 66vw, 75vw" :srcset="mainImageSrcset"
-          :alt="stegaClean(voyage.image?.alt) || `Image principale du voyage ${voyage.title}`" format="webp" :preload="{
+      <v-col
+        cols="12"
+        :md="voyage.imageSecondary?.asset?._ref ? 9 : 12"
+      >
+        <NuxtImg
+          v-if="voyage.image?.asset"
+          :src="mainImageSrcUrl"
+          sizes="(max-width: 600px) 100vw, (max-width: 960px) 66vw, 75vw"
+          :srcset="mainImageSrcset"
+          :alt="stegaClean(voyage.image?.alt) || `Image principale du voyage ${voyage.title}`"
+          format="webp"
+          :preload="{
             fetchpriority: 'high',
-          }" loading="eager" fetchpriority="high" width="1000" height="100%"
-          class="custom-height voyage-main-image rounded-lg" />
+          }"
+          loading="eager"
+          fetchpriority="high"
+          width="1000"
+          height="100%"
+          class="custom-height voyage-main-image rounded-lg"
+        />
       </v-col>
-      <v-col cols="3" class="d-none d-md-flex flex-column ga-7">
+      <v-col
+        cols="3"
+        class="d-none d-md-flex flex-column ga-7"
+      >
         <div v-if="voyage.imageSecondary?.asset?._ref">
-          <SanityImage :asset-id="voyage.imageSecondary.asset._ref" auto="format">
+          <SanityImage
+            :asset-id="voyage.imageSecondary.asset._ref"
+            auto="format"
+          >
             <template #default="{ src }">
-              <v-img v-if="src" :src="src"
+              <v-img
+                v-if="src"
+                :src="src"
                 :lazy-src="img(src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-                :alt="voyage.imageSecondary.alt || `Image secondaire du voyage ${voyage.title}`" cover height="214"
-                rounded="lg" />
+                :alt="voyage.imageSecondary.alt || `Image secondaire du voyage ${voyage.title}`"
+                cover
+                height="214"
+                rounded="lg"
+              />
             </template>
           </SanityImage>
         </div>
         <div v-if="voyage.photosList?.length > 0 && voyage.photosList[0].asset?._ref">
-          <SanityImage :asset-id="voyage.photosList[0].asset._ref" auto="format">
+          <SanityImage
+            :asset-id="voyage.photosList[0].asset._ref"
+            auto="format"
+          >
             <template #default="{ src }">
-              <v-img v-if="src" :src="src"
+              <v-img
+                v-if="src"
+                :src="src"
                 :lazy-src="img(src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-                :alt="voyage.photosList[0].alt || `Photo du voyage ${voyage.title}`" cover height="214" rounded="lg" />
+                :alt="voyage.photosList[0].alt || `Photo du voyage ${voyage.title}`"
+                cover
+                height="214"
+                rounded="lg"
+              />
             </template>
           </SanityImage>
         </div>
@@ -65,9 +139,16 @@
     </v-row>
     <v-row class="media-btns-position">
       <v-col cols="auto">
-        <PhotoGalleryDialog v-if="voyage.photosList?.length > 0" :photos-list="photoCarousel" />
+        <PhotoGalleryDialog
+          v-if="voyage.photosList?.length > 0"
+          :photos-list="photoCarousel"
+        />
       </v-col>
-      <v-col v-if="voyage.videoLinks?.length > 0" cols="auto" class="pl-1">
+      <v-col
+        v-if="voyage.videoLinks?.length > 0"
+        cols="auto"
+        class="pl-1"
+      >
         <VideoDialog :videos-link="voyage.videoLinks" />
       </v-col>
     </v-row>
@@ -77,8 +158,8 @@
 <script setup>
 import { mdiExportVariant } from '@mdi/js'
 import imageUrlBuilder from '@sanity/image-url'
-import { useImage } from '#imports'
 import { stegaClean } from '@sanity/client/stega'
+import { useImage } from '#imports'
 
 const config = useRuntimeConfig()
 const props = defineProps({
@@ -124,15 +205,13 @@ const mainImageSrcset = computed(() => {
   // IMPORTANT: The width descriptor (e.g., 400w) MUST match the actual image width
   // Format: buildMainImageUrl(actualWidth, calculatedHeight, quality) actualWidthw
   return [
-    `${buildMainImageUrl(400, 225, 100)} 400w`,   // 400px image = 225px height (16:9)
-    `${buildMainImageUrl(600, 338, 100)} 600w`,   // 600px image = 338px height (16:9)
-    `${buildMainImageUrl(800, 450, 100)} 800w`,   // 800px image = 450px height (16:9)
+    `${buildMainImageUrl(400, 225, 100)} 400w`, // 400px image = 225px height (16:9)
+    `${buildMainImageUrl(600, 338, 100)} 600w`, // 600px image = 338px height (16:9)
+    `${buildMainImageUrl(800, 450, 100)} 800w`, // 800px image = 450px height (16:9)
     `${buildMainImageUrl(1000, 563, 100)} 1000w`, // 1000px image = 563px height (16:9)
     `${buildMainImageUrl(1400, 788, 100)} 1400w`, // 1400px image = 788px height (16:9)
   ].join(', ')
 })
-
-
 
 const photoCarousel = computed(() => {
   if (!props.voyage) return []

@@ -25,14 +25,18 @@
     >
       <NuxtImg
         v-if="srcUrl"
+        :key="activeImageKey"
         :src="srcUrl"
         :srcset="srcset"
-        sizes="(max-width: 600px) 100vw, (max-width: 960px) 90vw, (max-width: 1280px) 85vw, 1280px"
+        sizes="(max-width: 600px) 100vw, (max-width: 960px) 90vw, 100vw"
         alt="Image principale Hero d'Odysway"
         class="hero-image"
         :class="{ 'hero-image-dim': noiseEnabled }"
         format="webp"
         loading="eager"
+        :preload="{
+          fetchpriority: 'high',
+        }"
         fetchpriority="high"
         width="1536"
         height="900"
@@ -144,6 +148,7 @@ const builder = imageUrlBuilder({
 })
 
 const activeImage = computed(() => (useTestImage.value ? imageTest : image))
+const activeImageKey = computed(() => activeImage.value?.asset?._ref || '')
 
 // Build optimized Sanity URLs with proper sizes for each breakpoint
 const buildSanityImageUrl = (width, height, quality = 75) => {
@@ -154,26 +159,34 @@ const buildSanityImageUrl = (width, height, quality = 75) => {
     .height(height)
     .auto('format')
     .quality(quality)
-    // Ensure Sanity hotspot is respected
+    // Ensure Sanity hotspot/crop are respected
     .fit('crop')
-    .crop('focalpoint')
     .url()
 }
 
+const heroReady = ref(false)
+
+onMounted(async () => {
+  await nextTick()
+  setTimeout(() => {
+    heroReady.value = true
+  }, 0)
+})
+
 const srcUrl = computed(() => {
-  // Default to 800px as fallback for common desktop viewport
-  return buildSanityImageUrl(1000, 563, 100)
+  if (!heroReady.value) return ''
+  return buildSanityImageUrl(1920, 1080, 100)
 })
 
 const srcset = computed(() => {
-  // Generate srcset matching actual container widths accounting for padding
-  // Heights calculated to maintain 1.7:1 aspect ratio (hero section aspect)
+  if (!heroReady.value) return ''
   return [
-    `${buildSanityImageUrl(400, 225, 100)} 400w`, // 400px image = 225px height (16:9)
-    `${buildSanityImageUrl(600, 338, 100)} 600w`, // 600px image = 338px height (16:9)
-    `${buildSanityImageUrl(800, 450, 100)} 800w`, // 800px image = 450px height (16:9)
-    `${buildSanityImageUrl(1000, 563, 100)} 1000w`, // 1000px image = 563px height (16:9)
-    `${buildSanityImageUrl(1400, 788, 100)} 1400w`, // 1400px image = 788px height (16:9)
+    `${buildSanityImageUrl(640, 360, 90)} 640w`,
+    `${buildSanityImageUrl(960, 540, 90)} 960w`,
+    `${buildSanityImageUrl(1280, 720, 90)} 1280w`,
+    `${buildSanityImageUrl(1600, 900, 90)} 1600w`,
+    `${buildSanityImageUrl(1920, 1080, 90)} 1920w`,
+    `${buildSanityImageUrl(2560, 1440, 100)} 2560w`,
   ].join(', ')
 })
 </script>
@@ -198,6 +211,7 @@ const srcset = computed(() => {
   height: 100%;
   pointer-events: none;
   overflow: hidden;
+
 }
 
 .hero-image-bg::after {
@@ -226,6 +240,13 @@ const srcset = computed(() => {
   border: 0;
   opacity: 1;
   transition: filter .4s;
+
+  /* Use aspect-ratio to match the 16:9 images from Sanity */
+  /* This ensures the rendered box matches the crop ratio, preventing extra cropping */
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  /* object-position: center; */
+  min-height: 460px;
 }
 
 .hero-image-dim {
