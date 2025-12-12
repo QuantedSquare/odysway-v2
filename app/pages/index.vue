@@ -4,17 +4,17 @@
       v-if="homeSanity"
       :image="homeSanity.heroSection.image"
       :image-test="homeSanity.heroSectionTest.image"
+      :image-mobile="homeSanity.heroSection.imageMobile"
+      :image-mobile-test="homeSanity.heroSectionTest.imageMobile"
       :typewriter-words="config.public.environment === 'production' ? homeSanity.heroSection.typewritterWords : homeSanity.heroSectionTest.typewritterWords"
     >
       <template #title>
-        <!-- <p>La rencontre au coeur du voyage</p> -->
         <EnrichedText
           class="text-white"
           :value="config.public.environment === 'production' ? homeSanity.heroSection.title : homeSanity.heroSectionTest.title"
         />
       </template>
       <template #subtitle>
-        <!-- <p>Voyages en petit groupes et privatifs</p> -->
         <EnrichedText
           class="text-white"
           :value="config.public.environment === 'production' ? homeSanity.heroSection.subtitle : homeSanity.heroSectionTest.subtitle"
@@ -331,6 +331,7 @@ const { data: homeSanity } = await useAsyncData('home', () =>
   sanity.fetch(homeQuery),
 )
 if (homeSanity.value) {
+  console.log(homeSanity.value.heroSectionTest)
   // Fallback values for content
   const defaultContent = {
     title: 'Odysway - Voyages en Petits Groupes et Expériences Authentiques',

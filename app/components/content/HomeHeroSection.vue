@@ -18,10 +18,26 @@
       >
         {{ noiseEnabled ? 'Disable grain' : 'Enable grain' }}
       </button>
+      <button
+        class="hero-dev-btn"
+        type="button"
+        @click="adjustNoise(0.05)"
+      >
+        Grain +
+      </button>
+      <button
+        class="hero-dev-btn"
+        type="button"
+        @click="adjustNoise(-0.05)"
+      >
+        Grain -
+      </button>
+      <span class="hero-dev-badge">Grain: {{ (noiseLevelValue * 100).toFixed(0) }}%</span>
     </div>
     <div
       class="hero-image-bg"
       :class="{ 'hero-noise-enabled': noiseEnabled }"
+      :style="{ '--hero-noise-opacity': noiseLevelValue }"
     >
       <NuxtImg
         v-if="srcUrl"
@@ -82,7 +98,7 @@
 import { mdiMagnify } from '@mdi/js'
 import imageUrlBuilder from '@sanity/image-url'
 
-const { image, typewriterWords, imageTest } = defineProps({
+const heroProps = defineProps({
   image: {
     type: Object,
     required: true,
@@ -91,12 +107,25 @@ const { image, typewriterWords, imageTest } = defineProps({
     type: Object,
     required: true,
   },
+  imageMobile: {
+    type: Object,
+    required: true,
+  },
+  imageMobileTest: {
+    type: Object,
+    required: true,
+  },
   typewriterWords: {
     type: Array,
     default: () => [],
   },
+  noiseLevel: {
+    type: Number,
+    default: 0.1,
+  },
 })
 
+const typewriterWords = computed(() => heroProps.typewriterWords || [])
 // Typewriter Logic
 const currentWord = ref('')
 const isDeleting = ref(false)
@@ -104,14 +133,14 @@ const wordIndex = ref(0)
 const typingSpeed = ref(100)
 
 onMounted(() => {
-  if (typewriterWords.length) {
+  if (typewriterWords.value.length) {
     typeLoop()
   }
 })
 
 const typeLoop = () => {
-  const currentIndex = wordIndex.value % typewriterWords.length
-  const fullWord = typewriterWords[currentIndex]
+  const currentIndex = wordIndex.value % typewriterWords.value.length
+  const fullWord = typewriterWords.value[currentIndex]
 
   if (isDeleting.value) {
     currentWord.value = fullWord.substring(0, currentWord.value.length - 1)
@@ -141,20 +170,34 @@ const config = useRuntimeConfig()
 const showControls = computed(() => config.public.environment !== 'production')
 const useTestImage = ref(config.public.environment !== 'production' ? true : false)
 const noiseEnabled = ref(true)
+const clampNoise = (value) => {
+  const parsed = Number(value)
+  if (Number.isNaN(parsed)) return 0.1
+  return Math.min(Math.max(parsed, 0), 1)
+}
+const noiseLevelLocal = ref(clampNoise(heroProps.noiseLevel ?? 0.1))
 
 const builder = imageUrlBuilder({
   projectId: config.public.sanity.projectId,
   dataset: config.public.sanity.dataset,
 })
 
-const activeImage = computed(() => (useTestImage.value ? imageTest : image))
-const activeImageKey = computed(() => activeImage.value?.asset?._ref || '')
+const activeDesktopImage = computed(() => (useTestImage.value ? heroProps.imageTest : heroProps.image))
+const activeMobileImage = computed(() => (useTestImage.value ? heroProps.imageMobileTest : heroProps.imageMobile))
+const activeImageKey = computed(() => `${activeDesktopImage.value?.asset?._ref || ''}-${activeMobileImage.value?.asset?._ref || ''}`)
+const noiseLevelValue = computed(() => {
+  return clampNoise(noiseLevelLocal.value)
+})
+
+const adjustNoise = (delta) => {
+  noiseLevelLocal.value = clampNoise(noiseLevelLocal.value + delta)
+}
 
 // Build optimized Sanity URLs with proper sizes for each breakpoint
-const buildSanityImageUrl = (width, height, quality = 75) => {
-  if (!activeImage.value?.asset?._ref) return ''
+const buildSanityImageUrl = (source, width, height, quality = 75) => {
+  if (!source?.asset?._ref) return ''
   return builder
-    .image(activeImage.value)
+    .image(source)
     .width(width)
     .height(height)
     .auto('format')
@@ -175,19 +218,19 @@ onMounted(async () => {
 
 const srcUrl = computed(() => {
   if (!heroReady.value) return ''
-  return buildSanityImageUrl(1920, 1080, 100)
+  return buildSanityImageUrl(activeDesktopImage.value, 1920, 1080, 100)
 })
 
 const srcset = computed(() => {
   if (!heroReady.value) return ''
   return [
-    `${buildSanityImageUrl(640, 360, 90)} 640w`,
-    `${buildSanityImageUrl(960, 540, 90)} 960w`,
-    `${buildSanityImageUrl(1280, 720, 90)} 1280w`,
-    `${buildSanityImageUrl(1600, 900, 90)} 1600w`,
-    `${buildSanityImageUrl(1920, 1080, 90)} 1920w`,
-    `${buildSanityImageUrl(2560, 1440, 100)} 2560w`,
-  ].join(', ')
+    `${buildSanityImageUrl(activeMobileImage.value, 640, 360, 90)} 640w`,
+    `${buildSanityImageUrl(activeMobileImage.value, 960, 540, 90)} 960w`,
+    `${buildSanityImageUrl(activeDesktopImage.value, 1280, 720, 90)} 1280w`,
+    `${buildSanityImageUrl(activeDesktopImage.value, 1600, 900, 90)} 1600w`,
+    `${buildSanityImageUrl(activeDesktopImage.value, 1920, 1080, 90)} 1920w`,
+    `${buildSanityImageUrl(activeDesktopImage.value, 2560, 1440, 100)} 2560w`,
+  ].filter(Boolean).join(', ')
 })
 </script>
 
@@ -227,7 +270,7 @@ const srcset = computed(() => {
 }
 
 .hero-noise-enabled::after {
-  opacity: 0.1;
+  opacity: var(--hero-noise-opacity, 0.1);
   filter: brightness(0.8) contrast(1.1);
 }
 
@@ -369,6 +412,19 @@ margin-bottom: 0!important;
   position: relative;
   overflow: hidden;
 }
+.glass-search-trigger {
+  width: min(90vw, 600px);
+}
+@media (max-width: 600px) {
+  .glass-search-trigger {
+    width: min(94vw, 480px);
+    height: 45px;
+    padding: 0 16px;
+  }
+  .search-placeholder {
+    font-size: 12px!important;
+  }
+}
 .hero-content h2:deep(p) {
   color: rgba(251, 240, 236, 1)!important;
 }
@@ -484,11 +540,18 @@ margin-bottom: 0!important;
 
 .hero-dev-controls {
   position: absolute;
-  top: 10%;
+  top: 15%;
+  opacity: 50%;
   left: 12px;
   z-index: 10;
   display: flex;
   gap: 8px;
+}
+@media (max-width: 600px) {
+  .hero-dev-controls {
+    top: 90%;
+    opacity: 50%;
+  }
 }
 
 .hero-dev-btn {
@@ -511,5 +574,16 @@ margin-bottom: 0!important;
 .hero-dev-btn:active {
   transform: translateY(0);
   background: rgba(0, 0, 0, 0.7);
+}
+
+.hero-dev-badge {
+  align-self: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  padding: 6px 10px;
+  color: #fff;
+  font-size: 12px;
+  backdrop-filter: blur(4px);
 }
 </style>

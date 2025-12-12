@@ -26,7 +26,6 @@ export const homePageType = defineType({
   },
   type: 'document',
   groups: [
-
     {
       name: 'hero',
       title: 'Hero Section',
@@ -109,6 +108,15 @@ export const homePageType = defineType({
           validation: (rule) => rule.required(),
         }),
         defineField({
+          name: 'imageMobile',
+          title: 'Image Hero Mobile',
+          type: 'image',
+          options: {
+            hotspot: true,
+          },
+          validation: (rule) => rule.required(),
+        }),
+        defineField({
           name: 'title',
           title: 'Titre Hero',
           type: 'array',
@@ -140,6 +148,15 @@ export const homePageType = defineType({
         defineField({
           name: 'image',
           title: 'Image Hero',
+          type: 'image',
+          options: {
+            hotspot: true,
+          },
+          validation: (rule) => rule.required(),
+        }),
+        defineField({
+          name: 'imageMobile',
+          title: 'Image Hero Mobile',
           type: 'image',
           options: {
             hotspot: true,

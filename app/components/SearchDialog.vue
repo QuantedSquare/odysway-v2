@@ -361,13 +361,17 @@ function closeDialog() {
 /* Dialog Card */
 .search-card {
   border-radius: 0px !important;
-  background-color: rgba(102, 102, 102, 0.5)!important;
+  background-color: rgba(184, 182, 182, 0.5)!important;
   backdrop-filter: blur(10px)!important;
   max-height: 85vh;
   display: flex;
 
 }
-
+@media (max-width: 600px) {
+  .search-card {
+    max-height: 100vh!important;
+  }
+}
 .search-title {
   font-size: 24px;
   font-weight: 600;

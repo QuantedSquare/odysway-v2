@@ -1,111 +1,41 @@
 <template>
   <div
-    class="d-sm-none px-4 px-md-9 d-flex align-center height-app-bar custom-app-bar "
-    :class="!model ? 'app-bar-shadow' : ''"
+    class="d-sm-none px-4 px-md-9 d-flex align-center height-app-bar custom-app-bar mobile-header"
+    :class="{
+      'app-bar-shadow': !model,
+      'transparent-app-bar': isTransparent,
+      'white-app-bar': !isTransparent,
+    }"
   >
     <NuxtLink
       :to="'/'"
-      class="header-logo-link"
+      class="header-logo-link mobile-logo"
     >
       <img
-        :src="img('/logos/Logo-Odysway-Bleu.png', { format: 'webp', quality: 90, width: 100 })"
-        :srcset="`${img('/logos/Logo-Odysway-Bleu.png', { format: 'webp', quality: 90, width: 100 })} 100w, ${img('/logos/Logo-Odysway-Bleu.png', { format: 'webp', quality: 90, width: 120 })} 120w`"
-        sizes="100px"
-        width="100"
-        height="25"
+        :src="img(`/logos/Logo-Odysway-${isTransparent ? 'Blanc' : 'Bleu'}.png`, { format: 'webp', quality: 90, width: 110 })"
+        :srcset="`${img(`/logos/Logo-Odysway-${isTransparent ? 'Blanc' : 'Bleu'}.png`, { format: 'webp', quality: 90, width: 110 })} 110w, ${img(`/logos/Logo-Odysway-${isTransparent ? 'Blanc' : 'Bleu'}.png`, { format: 'webp', quality: 90, width: 130 })} 130w`"
+        sizes="110px"
+        width="110"
+        height="30"
         fetchpriority="high"
         :alt="header?.logo?.alt || 'Logo principale d\'Odysway'"
         class="header-logo"
-        style="width: 100px; height: auto; max-width: 100px;"
       >
     </NuxtLink>
-
-    <v-spacer />
-    <div class="d-flex align-center ga-4">
-      <SearchDialog>
-        <template #activator="{ props }">
-          <v-btn
-            v-bind="props"
-            :size="36"
-            icon
-            variant="outlined"
-            class="search-trigger-btn"
-          >
-            <v-img
-              :src="img('/icons/Search.svg', { format: 'webp', quality: 100, width: 20, height: 20 })"
-              alt="Search icon"
-              width="20"
-              height="20"
-              fetchpriority="high"
-            />
-          </v-btn>
-        </template>
-      </SearchDialog>
-
-      <v-btn
-        v-if="header?.button1?.visible"
-        height="45"
-        color="primary"
-        rounded="default"
-        class="text-caption text-md-body-1 d-none d-md-inline"
-        @click="() => { router.push(header.button1.link); captureOutboundLink(header.button1.text) }"
-      >
-        {{ header.button1.text }}
-      </v-btn>
-      <v-btn
-        v-if="header?.button2?.visible"
-        color="primary"
-        height="45"
-        class="text-caption text-md-body-1 d-none d-md-inline"
-        @click="() => { router.push(header.button2.link); captureOutboundLink(header.button2.text) }"
-      >
-        {{ header.button2.text }}
-      </v-btn>
-      <v-btn
-        v-if="header?.button3?.visible"
-        color="primary"
-        height="45"
-        class="text-caption text-md-body-1 d-none d-md-inline"
-        @click="() => { router.push(header.button3.link); captureOutboundLink(header.button3.text) }"
-      >
-        {{ header.button3.text }}
-      </v-btn>
-      <v-btn
-        v-if="header?.button4?.visible"
-        href="tel: +33184807975"
-        color="primary"
-        height="45"
-        variant="tonal"
-        rounded="default"
-        class="text-caption text-md-body-1 d-none d-md-inline"
-        @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.button4.text) }"
-      >
-        <span class="mt-2">{{ header.button4.text }}</span>
-      </v-btn>
-      <v-btn
-        v-if="header?.button5?.visible"
-        height="45"
-        color="white"
-        rounded="default"
-        class="text-caption text-md-body-1 d-none d-md-inline bg-primary"
-        @click="() => { router.push(header.button5.link); trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(header.button5.text) }"
-      >
-        {{ header.button5.text }}
-      </v-btn>
-      <v-btn
-        class="d-inline d-md-none "
-        icon
-        height="35"
-        variant="text"
-        aria-label="Menu"
-        :aria-expanded="model"
-        @click.stop="model = !model"
-      >
-        <v-icon>
-          {{ mdiMenu }}
-        </v-icon>
-      </v-btn>
-    </div>
+    <v-btn
+      class="d-inline d-md-none mobile-menu-btn"
+      :class="isTransparent ? 'filter' : ''"
+      icon
+      height="35"
+      variant="text"
+      aria-label="Menu"
+      :aria-expanded="model"
+      @click.stop="model = !model"
+    >
+      <v-icon>
+        {{ mdiMenu }}
+      </v-icon>
+    </v-btn>
   </div>
   <v-app-bar
     elevation="0"
@@ -118,6 +48,25 @@
     extension-height="90"
   >
     <template #extension>
+      <NuxtLink
+        :to="'/'"
+        class="header-logo-link"
+        :class="isTransparent ? 'filter' : ''"
+      >
+        <img
+          :src="img(`/logos/Logo-Odysway-${isTransparent ? 'Blanc' : 'Bleu'}.png`, { format: 'webp', quality: 90, width: 150 })"
+          :srcset="`${img(`/logos/Logo-Odysway-${isTransparent ? 'Blanc' : 'Bleu'}.png`, { format: 'webp', quality: 90, width: 150 })} 150w, ${img(`/logos/Logo-Odysway-${isTransparent ? 'Blanc' : 'Bleu'}.png`, { format: 'webp', quality: 90, width: 180 })} 180w`"
+          sizes="150px"
+          width="150"
+          height="38"
+          fetchpriority="high"
+          :alt="header?.logo?.alt || 'Logo principale d\'Odysway'"
+          class="header-logo"
+          style="width: 150px; height: auto; max-width: 150px;"
+        >
+      </NuxtLink>
+      <v-spacer />
+
       <div class="d-flex align-center ga-4">
         <v-btn
           v-if="header?.button1?.visible"
@@ -141,25 +90,7 @@
           {{ header.button2.text }}
         </v-btn>
       </div>
-      <v-spacer />
-      <NuxtLink
-        :to="'/'"
-        class="header-logo-link"
-        :class="isTransparent ? 'filter' : ''"
-      >
-        <img
-          :src="img(`/logos/Logo-Odysway-${isTransparent ? 'Blanc' : 'Bleu'}.png`, { format: 'webp', quality: 90, width: 150 })"
-          :srcset="`${img(`/logos/Logo-Odysway-${isTransparent ? 'Blanc' : 'Bleu'}.png`, { format: 'webp', quality: 90, width: 150 })} 150w, ${img(`/logos/Logo-Odysway-${isTransparent ? 'Blanc' : 'Bleu'}.png`, { format: 'webp', quality: 90, width: 180 })} 180w`"
-          sizes="150px"
-          width="150"
-          height="38"
-          fetchpriority="high"
-          :alt="header?.logo?.alt || 'Logo principale d\'Odysway'"
-          class="header-logo"
-          style="width: 150px; height: auto; max-width: 150px;"
-        >
-      </NuxtLink>
-      <v-spacer />
+
       <div class="d-flex align-center ga-4">
         <!-- <SearchDialog v-if="!isTransparent && y > 700" />
         <v-btn
@@ -246,7 +177,7 @@ const router = useRouter()
 const model = defineModel({ type: Boolean, default: false })
 const img = useImage()
 const route = useRoute()
-const searchDialogOpen = ref(false)
+// const searchDialogOpen = ref(false)
 
 const { y } = useWindowScroll()
 
@@ -261,7 +192,6 @@ const { gtag } = useGtag()
 function captureOutboundLink(btn) {
   gtag('event', 'Header Button', { eventAction: 'Click', eventLabel: `Header button "${btn}"` })
 }
-console.log(route)
 const isScrolled = computed(() => y.value > 200)
 const isTransparent = computed(() => !isScrolled.value && route.path === '/')
 </script>
@@ -304,7 +234,11 @@ const isTransparent = computed(() => !isScrolled.value && route.path === '/')
 }
 .transparent-app-bar {
   backdrop-filter: blur(3px) !important;
-  background-color: rgba(159, 75, 49, 0.1) !important;
+  background-color: rgba(160, 131, 122, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.404)
+}
+.white-app-bar {
+  background-color: white !important;
 }
 
 .header-logo-link {
@@ -363,5 +297,18 @@ const isTransparent = computed(() => !isScrolled.value && route.path === '/')
 .filter {
   color: #FBF0EC!important;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, .2) !important;
+}
+
+.mobile-header {
+  transition: all 0.5s ease-in-out !important;
+  justify-content: start;
+  position: fixed !important;
+  left: 0;
+  right: 0;
+}
+
+.mobile-menu-btn {
+  position: absolute;
+  right: 12px;
 }
 </style>
