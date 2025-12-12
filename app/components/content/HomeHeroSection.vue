@@ -66,10 +66,10 @@
         <slot name="subtitle" />
         <span
           v-if="typewriterWords.length"
-          class="typewriter-text text-center text-secondary font-italic"
+          class="typewriter-text text-center   font-italic"
           :class="{ 'typewriter-active': currentWord.length }"
         >
-          {{ currentWord }}<span class="cursor text-secondary">|</span>
+          {{ currentWord }}<span class="cursor">|</span>
         </span>
       </h2>
       <SearchDialog>
@@ -441,7 +441,7 @@ margin-bottom: 0!important;
       transparent,
       rgba(255, 255, 255, 0.2),
       transparent);
-  transform: skewX(-20deg);
+  /* transform: skewX(-20deg); */
   transition: 0.5s;
 }
 
@@ -471,7 +471,7 @@ margin-bottom: 0!important;
   color: rgb(var(--v-theme-primary));
   /* color: rgba(255, 255, 255, 0.95); */
   font-size: 17px;
-  font-weight: 500;
+  font-weight: 200;
   letter-spacing: 0.3px;
   white-space: nowrap;
   overflow: hidden;
@@ -484,7 +484,9 @@ margin-bottom: 0!important;
     left: 200%;
   }
 }
-
+.typewriter-text,  .cursor {
+  color: rgba(var(--v-theme-secondary), 0.8)!important;
+}
 /* Typewriter Cursor */
 .typewriter-text {
   white-space: pre;
@@ -506,7 +508,7 @@ margin-bottom: 0!important;
   right: -5px;
   background: rgba(255, 255, 255, 1);
   border-radius: 6px;
-  transform: skew(-20deg) scaleX(0.96);
+  /* transform: skew(-20deg) scaleX(0.96); */
   transform-origin: left center;
   opacity: 0;
   transition: opacity 180ms ease, transform 180ms ease;
@@ -515,7 +517,7 @@ margin-bottom: 0!important;
 
 .typewriter-active::before {
   opacity: 1;
-  transform:  skew(-20deg) scaleX(0.96);
+  /* transform:  skew(-20deg) scaleX(0.96); */
 }
 
 .cursor {
