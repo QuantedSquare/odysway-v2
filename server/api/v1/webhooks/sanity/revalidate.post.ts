@@ -184,89 +184,80 @@ export default defineEventHandler(async (event) => {
 
     if (bypassToken && pathsToRevalidate.length > 0) {
       const config = useRuntimeConfig()
-      const baseUrl = config.public.environment === 'development' ? 'https://dev.odysway.com' : config.public.siteURL
+      const baseUrls = new Set<string>()
+      const preprodUrl = process.env.PREPROD_SITE_URL || 'https://dev.odysway.com'
 
-      console.log(`Starting revalidation for ${pathsToRevalidate.length} paths with bypass token: ${bypassToken ? 'SET' : 'NOT SET'}`)
+      // Always hit production
+      if (config.public.siteURL) baseUrls.add(config.public.siteURL)
+      // Also hit preprod
+      baseUrls.add(preprodUrl)
+
+      console.log(`Starting revalidation for ${pathsToRevalidate.length} paths across ${baseUrls.size} base URLs with bypass token: ${bypassToken ? 'SET' : 'NOT SET'}`)
 
       const revalidationResults = []
 
-      for (const path of pathsToRevalidate) {
-        try {
-          // Trigger revalidation by making a GET request with the bypass token
-          // Using native fetch instead of axios to ensure headers are sent correctly
-          const url = `${baseUrl}${path}`
+      for (const baseUrl of baseUrls) {
+        for (const path of pathsToRevalidate) {
+          try {
+            const url = `${baseUrl}${path}`
 
-          console.log(`Attempting revalidation for ${path} with bypass token (token length: ${bypassToken?.length || 0})`)
+            console.log(`Attempting revalidation for ${url} (token length: ${bypassToken?.length || 0})`)
 
-          const response = await fetch(url, {
-            method: 'GET',
-            headers: {
-              'x-prerender-revalidate': bypassToken,
-              'Cache-Control': 'no-cache, no-store, must-revalidate, max-age=0',
-            },
-            redirect: 'follow',
-          })
-
-          // Consume the response body to ensure request completes
-          // For revalidation, we don't need the actual content
-          await response.text().catch(() => { }) // Ignore errors when consuming body
-
-          const cacheStatus = response.headers.get('x-vercel-cache') || 'UNKNOWN'
-          const vercelId = response.headers.get('x-vercel-id') || 'UNKNOWN'
-          const isSuccess = cacheStatus === 'BYPASS' || cacheStatus === 'MISS' || cacheStatus === 'STALE'
-
-          console.log(`Revalidation response for ${path}:`, {
-            url,
-            status: response.status,
-            cacheStatus,
-            isSuccess,
-            vercelId,
-            bypassTokenLength: bypassToken?.length || 0,
-            headers: {
-              'x-vercel-cache': cacheStatus,
-              'x-vercel-id': vercelId,
-              'cache-control': response.headers.get('cache-control'),
-            },
-          })
-
-          // IMPORTANT: Nuxt 3 on Vercel has limited support for on-demand revalidation
-          // Even if we get HIT, the page will still be regenerated via ISR (60s max wait)
-          // The x-prerender-revalidate header approach works better for Next.js than Nuxt 3
-          if (cacheStatus === 'HIT') {
-            console.log(`⚠️  Cache HIT for ${path} - bypass token not recognized`)
-            console.log(`   This is a known limitation of Nuxt 3 + Vercel ISR revalidation`)
-            console.log(`   The page will still update within 60 seconds via time-based ISR`)
-            console.log(`   For instant updates, consider using Vercel's Cache Purge API (requires VERCEL_TOKEN)`)
-            revalidationResults.push({
-              path,
-              status: 'warning',
-              cacheStatus,
-              note: 'HIT - will update via 60s ISR fallback',
+            const response = await fetch(url, {
+              method: 'GET',
+              headers: {
+                'x-prerender-revalidate': bypassToken,
+                'Cache-Control': 'no-cache, no-store, must-revalidate, max-age=0',
+              },
+              redirect: 'follow',
             })
-          }
-          else if (isSuccess) {
-            console.log(`✓ Revalidated successfully: ${path} (cache: ${cacheStatus})`)
-            revalidationResults.push({ path, status: 'success', cacheStatus })
-          }
-          else if (response.status === 200) {
-            // Status 200 means request succeeded - may have triggered revalidation
-            console.log(`✓ Request succeeded for ${path} (status: ${response.status}, cache: ${cacheStatus})`)
-            revalidationResults.push({ path, status: 'success', cacheStatus, note: 'Status 200' })
-          }
-          else {
-            console.log(`⚠️  Unexpected revalidation response for ${path}`)
-            revalidationResults.push({ path, status: 'warning', cacheStatus })
-          }
 
-          // Small delay between requests to avoid overwhelming the system
-          if (pathsToRevalidate.length > 1) {
-            await new Promise(resolve => setTimeout(resolve, 100))
+            // Consume the response body to ensure request completes
+            await response.text().catch(() => { })
+
+            const cacheStatus = response.headers.get('x-vercel-cache') || 'UNKNOWN'
+            const vercelId = response.headers.get('x-vercel-id') || 'UNKNOWN'
+            const isSuccess = cacheStatus === 'BYPASS' || cacheStatus === 'MISS' || cacheStatus === 'STALE'
+
+            console.log(`Revalidation response for ${url}:`, {
+              status: response.status,
+              cacheStatus,
+              isSuccess,
+              vercelId,
+              bypassTokenLength: bypassToken?.length || 0,
+              headers: {
+                'x-vercel-cache': cacheStatus,
+                'x-vercel-id': vercelId,
+                'cache-control': response.headers.get('cache-control'),
+              },
+            })
+
+            if (cacheStatus === 'HIT') {
+              console.log(`⚠️  Cache HIT for ${url} - bypass token not recognized (Nuxt 3 ISR limitation)`)
+              revalidationResults.push({
+                baseUrl,
+                path,
+                status: 'warning',
+                cacheStatus,
+                note: 'HIT - will update via 60s ISR fallback',
+              })
+            }
+            else if (isSuccess || response.status === 200) {
+              revalidationResults.push({ baseUrl, path, status: 'success', cacheStatus, note: response.status === 200 ? 'Status 200' : undefined })
+            }
+            else {
+              revalidationResults.push({ baseUrl, path, status: 'warning', cacheStatus })
+            }
+
+            if (pathsToRevalidate.length > 1) {
+              await new Promise(resolve => setTimeout(resolve, 100))
+            }
           }
-        }
-        catch (err) {
-          const errorMessage = err instanceof Error ? err.message : String(err)
-          console.error(`❌ Failed to revalidate ${path}:`, err)
-          revalidationResults.push({ path, status: 'failed', error: errorMessage })
+          catch (err) {
+            const errorMessage = err instanceof Error ? err.message : String(err)
+            console.error(`❌ Failed to revalidate ${path} on ${baseUrl}:`, err)
+            revalidationResults.push({ baseUrl, path, status: 'failed', error: errorMessage })
+          }
         }
       }
 
