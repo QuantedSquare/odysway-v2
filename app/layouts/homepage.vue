@@ -8,7 +8,6 @@
     <div class="whatsapp-button mb-16">
       <WhatsAppBtn />
     </div>
-
     <v-container
       v-once
       :fluid="width > 600"

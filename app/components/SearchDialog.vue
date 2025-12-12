@@ -278,6 +278,7 @@ onMounted(() => {
     useCookie: true,
   })
 })
+console.log('🔍 [SearchDialog] aa:', config.public.algolia.applicationId, config.public.algolia.apiKey)
 
 const sanity = useSanity()
 const img = useImage()
