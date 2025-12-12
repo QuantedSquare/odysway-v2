@@ -33,6 +33,10 @@ export const homePageType = defineType({
       default: true,
     },
     {
+      name: 'heroTest',
+      title: 'Hero Section sur Preprod',
+    },
+    {
       name: 'experienceCarousel',
       title: 'Experience Carousel',
     },
@@ -94,6 +98,37 @@ export const homePageType = defineType({
       title: 'Hero Section',
       type: 'object',
       group: 'hero',
+      fields: [
+        defineField({
+          name: 'image',
+          title: 'Image Hero',
+          type: 'image',
+          options: {
+            hotspot: true,
+          },
+          validation: (rule) => rule.required(),
+        }),
+        defineField({
+          name: 'title',
+          title: 'Titre Hero',
+          type: 'array',
+          of: [richTextBlock],
+          validation: (rule) => rule.required(),
+        }),
+        defineField({
+          name: 'subtitle',
+          title: 'Sous-titre Hero',
+          type: 'array',
+          of: [richTextBlock],
+          validation: (rule) => rule.required(),
+        }),
+      ],
+    }),
+    defineField({
+      name: 'heroSectionTest',
+      title: 'Hero Section sur Preprod',
+      type: 'object',
+      group: 'heroTest',
       fields: [
         defineField({
           name: 'image',

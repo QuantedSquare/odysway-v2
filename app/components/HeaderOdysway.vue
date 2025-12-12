@@ -22,7 +22,26 @@
 
     <v-spacer />
     <div class="d-flex align-center ga-4">
-      <SearchDialog />
+      <SearchDialog>
+        <template #activator="{ props }">
+          <v-btn
+            v-bind="props"
+            :size="36"
+            icon
+            variant="outlined"
+            class="search-trigger-btn"
+          >
+            <v-img
+              :src="img('/icons/Search.svg', { format: 'webp', quality: 100, width: 20, height: 20 })"
+              alt="Search icon"
+              width="20"
+              height="20"
+              fetchpriority="high"
+            />
+          </v-btn>
+        </template>
+      </SearchDialog>
+
       <v-btn
         v-if="header?.button1?.visible"
         height="45"
@@ -99,27 +118,7 @@
     extension-height="90"
   >
     <template #extension>
-      <NuxtLink
-        :to="'/'"
-        class="header-logo-link"
-        :class="isTransparent ? 'filter' : ''"
-      >
-        <img
-          :src="img(`/logos/Logo-Odysway-${isTransparent ? 'Blanc' : 'Bleu'}.png`, { format: 'webp', quality: 90, width: 150 })"
-          :srcset="`${img(`/logos/Logo-Odysway-${isTransparent ? 'Blanc' : 'Bleu'}.png`, { format: 'webp', quality: 90, width: 150 })} 150w, ${img(`/logos/Logo-Odysway-${isTransparent ? 'Blanc' : 'Bleu'}.png`, { format: 'webp', quality: 90, width: 180 })} 180w`"
-          sizes="150px"
-          width="150"
-          height="38"
-          fetchpriority="high"
-          :alt="header?.logo?.alt || 'Logo principale d\'Odysway'"
-          class="header-logo"
-          style="width: 150px; height: auto; max-width: 150px;"
-        >
-      </NuxtLink>
-
-      <v-spacer />
       <div class="d-flex align-center ga-4">
-        <SearchDialog v-if="!isTransparent && y > 700" />
         <v-btn
           v-if="header?.button1?.visible"
           height="45"
@@ -141,6 +140,49 @@
         >
           {{ header.button2.text }}
         </v-btn>
+      </div>
+      <v-spacer />
+      <NuxtLink
+        :to="'/'"
+        class="header-logo-link"
+        :class="isTransparent ? 'filter' : ''"
+      >
+        <img
+          :src="img(`/logos/Logo-Odysway-${isTransparent ? 'Blanc' : 'Bleu'}.png`, { format: 'webp', quality: 90, width: 150 })"
+          :srcset="`${img(`/logos/Logo-Odysway-${isTransparent ? 'Blanc' : 'Bleu'}.png`, { format: 'webp', quality: 90, width: 150 })} 150w, ${img(`/logos/Logo-Odysway-${isTransparent ? 'Blanc' : 'Bleu'}.png`, { format: 'webp', quality: 90, width: 180 })} 180w`"
+          sizes="150px"
+          width="150"
+          height="38"
+          fetchpriority="high"
+          :alt="header?.logo?.alt || 'Logo principale d\'Odysway'"
+          class="header-logo"
+          style="width: 150px; height: auto; max-width: 150px;"
+        >
+      </NuxtLink>
+      <v-spacer />
+      <div class="d-flex align-center ga-4">
+        <!-- <SearchDialog v-if="!isTransparent && y > 700" />
+        <v-btn
+          v-if="header?.button1?.visible"
+          height="45"
+          color="primary"
+          rounded="default"
+          class="text-caption text-md-body-1 d-none d-md-inline ml-5"
+          :class="isTransparent ? 'filter' : ''"
+          @click="() => { router.push(header.button1.link); captureOutboundLink(header.button1.text) }"
+        >
+          {{ header.button1.text }}
+        </v-btn>
+        <v-btn
+          v-if="header?.button2?.visible"
+          color="primary"
+          height="45"
+          :class="isTransparent ? 'filter' : ''"
+          class="text-caption text-md-body-1 d-none d-md-inline"
+          @click="() => { router.push(header.button2.link); captureOutboundLink(header.button2.text) }"
+        >
+          {{ header.button2.text }}
+        </v-btn> -->
         <v-btn
           v-if="header?.button3?.visible"
           color="primary"
@@ -204,6 +246,7 @@ const router = useRouter()
 const model = defineModel({ type: Boolean, default: false })
 const img = useImage()
 const route = useRoute()
+const searchDialogOpen = ref(false)
 
 const { y } = useWindowScroll()
 
@@ -261,7 +304,7 @@ const isTransparent = computed(() => !isScrolled.value && route.path === '/')
 }
 .transparent-app-bar {
   backdrop-filter: blur(3px) !important;
-  background-color: transparent !important;
+  background-color: rgba(159, 75, 49, 0.1) !important;
 }
 
 .header-logo-link {

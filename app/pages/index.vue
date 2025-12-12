@@ -3,6 +3,7 @@
     <HomeHeroSection
       v-if="homeSanity"
       :image="homeSanity.heroSection.image"
+      :image-test="homeSanity.heroSectionTest.image"
       :typewriter-words="['partout dans le monde', 'au Japon', 'au Brésil', 'en France']"
     >
       <template #title>
@@ -209,7 +210,7 @@
 
 <script setup>
 const sanity = useSanity()
-
+const config = useRuntimeConfig()
 definePageMeta({
   layout: 'homepage',
 })

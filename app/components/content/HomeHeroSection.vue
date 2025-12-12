@@ -1,5 +1,24 @@
 <template>
   <section class="hero">
+    <div
+      v-if="showControls"
+      class="hero-dev-controls"
+    >
+      <button
+        class="hero-dev-btn"
+        type="button"
+        @click="useTestImage = !useTestImage"
+      >
+        {{ useTestImage ? 'Use main image' : 'Use test image' }}
+      </button>
+      <button
+        class="hero-dev-btn"
+        type="button"
+        @click="noiseEnabled = !noiseEnabled"
+      >
+        {{ noiseEnabled ? 'Disable grain' : 'Enable grain' }}
+      </button>
+    </div>
     <div class="hero-search">
       <SearchDialog>
         <template #activator="{ props }">
@@ -20,7 +39,10 @@
         </template>
       </SearchDialog>
     </div>
-    <div class="hero-image-bg">
+    <div
+      class="hero-image-bg"
+      :class="{ 'hero-noise-enabled': noiseEnabled }"
+    >
       <NuxtImg
         v-if="srcUrl"
         :src="srcUrl"
@@ -28,6 +50,7 @@
         sizes="(max-width: 600px) 100vw, (max-width: 960px) 90vw, (max-width: 1280px) 85vw, 1280px"
         alt="Image principale Hero d'Odysway"
         class="hero-image"
+        :class="{ 'hero-image-dim': noiseEnabled }"
         format="webp"
         loading="eager"
         fetchpriority="high"
@@ -51,18 +74,6 @@
         </span>
       </h2>
     </div>
-    <!-- <div class="hero-overlay h-100 d-flex align-center">
-      <v-container class="text-white text-h4 text-md-h2 font-weight-bold text-shadow text-center">
-        <v-row justify="center" align="center">
-          <v-col cols="12" md="auto">
-            <h1 class="custom-hero-title">
-              <slot name="title" />
-            </h1>
-            <slot name="subtitle" />
-          </v-col>
-        </v-row>
-      </v-container>
-    </div>  -->
   </section>
 </template>
 
@@ -70,8 +81,12 @@
 import { mdiMagnify } from '@mdi/js'
 import imageUrlBuilder from '@sanity/image-url'
 
-const { image, typewriterWords } = defineProps({
+const { image, typewriterWords, imageTest } = defineProps({
   image: {
+    type: Object,
+    required: true,
+  },
+  imageTest: {
     type: Object,
     required: true,
   },
@@ -122,16 +137,22 @@ const typeLoop = () => {
 }
 
 const config = useRuntimeConfig()
+const showControls = computed(() => config.public.environment !== 'production')
+const useTestImage = ref(false)
+const noiseEnabled = ref(true)
+
 const builder = imageUrlBuilder({
   projectId: config.public.sanity.projectId,
   dataset: config.public.sanity.dataset,
 })
 
+const activeImage = computed(() => (useTestImage.value ? imageTest : image))
+
 // Build optimized Sanity URLs with proper sizes for each breakpoint
 const buildSanityImageUrl = (width, height, quality = 75) => {
-  if (!image?.asset?._ref) return ''
+  if (!activeImage.value?.asset?._ref) return ''
   return builder
-    .image(image)
+    .image(activeImage.value)
     .width(width)
     .height(height)
     .auto('format')
@@ -180,6 +201,23 @@ const srcset = computed(() => {
   overflow: hidden;
 }
 
+.hero-image-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/noise.png');
+  background-repeat: repeat;
+  background-size: auto;
+  opacity: 0;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+.hero-noise-enabled::after {
+  opacity: 0.1;
+  filter: brightness(0.8) contrast(1.1);
+}
+
 .hero-image {
   width: 100vw;
   height: 100vh;
@@ -188,15 +226,17 @@ const srcset = computed(() => {
   object-fit: cover;
   border: 0;
   opacity: 1;
-  /* background: var(--color-primary-beige); */
   transition: filter .4s;
-  /* filter: brightness(.8) contrast(1.1); */
+}
+
+.hero-image-dim {
+  filter: brightness(.8);
 }
 
 .hero-search {
   display: block;
   width: 100%;
-  top: calc(56px + 70%);
+  top: calc(56px + 40%);
   z-index: 3;
   position: absolute;
   left: 50%;
@@ -418,5 +458,36 @@ const srcset = computed(() => {
   50% {
     opacity: 0;
   }
+}
+
+.hero-dev-controls {
+  position: absolute;
+  top: 10%;
+  left: 12px;
+  z-index: 10;
+  display: flex;
+  gap: 8px;
+}
+
+.hero-dev-btn {
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(4px);
+}
+
+.hero-dev-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: translateY(-1px);
+}
+
+.hero-dev-btn:active {
+  transform: translateY(0);
+  background: rgba(0, 0, 0, 0.7);
 }
 </style>

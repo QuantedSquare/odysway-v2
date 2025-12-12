@@ -77,14 +77,14 @@ function captureOutboundLink(btn) {
 
 <style scoped>
 .custom-padding{
-  margin-top: -10px;
+  margin-top: -80px;
   padding-top: 10px;
   padding-bottom: 100px;
   height: 100vh!important;
 }
 @media (max-width: 600px) {
   .custom-padding{
-    margin-top: -46px;
+    margin-top: -136px;
     padding-top: 60px;
   }
 }

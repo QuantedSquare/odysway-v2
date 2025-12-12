@@ -3,7 +3,7 @@
     v-model="dialogOpen"
     max-width="900"
     class="search-dialog"
-    fullscreen="true"
+    :fullscreen="true"
   >
     <template #activator="{ props: activatorProps }">
       <slot
