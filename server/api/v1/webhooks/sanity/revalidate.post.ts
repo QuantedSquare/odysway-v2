@@ -168,14 +168,14 @@ export default defineEventHandler(async (event) => {
     }
 
     // === Update Algolia Index ===
-    if (['voyage', 'destination', 'region'].includes(documentType)) {
-      console.log('🔄 Triggering Algolia index update for type:', documentType)
-      // We don't await this to avoid timing out the webhook response
-      // But we log errors if possible
-      updateAlgoliaIndex()
-        .then(res => console.log(`✅ Algolia updated: ${res.count} records processed`))
-        .catch(err => console.error('❌ Algolia update failed:', err))
-    }
+    // if (['voyage', 'destination', 'region'].includes(documentType)) {
+    //   console.log('🔄 Triggering Algolia index update for type:', documentType)
+    //   // We don't await this to avoid timing out the webhook response
+    //   // But we log errors if possible
+    //   updateAlgoliaIndex()
+    //     .then(res => console.log(`✅ Algolia updated: ${res.count} records processed`))
+    //     .catch(err => console.error('❌ Algolia update failed:', err))
+    // }
 
     // Trigger on-demand revalidation using Vercel's bypass token
     // Note: This is NOT the same as VERCEL_AUTOMATION_BYPASS_SECRET
