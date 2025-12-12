@@ -272,13 +272,13 @@ import { useTravelsSearch } from '~/composables/useTravelsSearch'
 // Initialize Algolia Insights
 onMounted(() => {
   const config = useRuntimeConfig()
+  console.log('🔍 [SearchDialog] aa:', config.public.algolia.applicationId, config.public.algolia.apiKey)
   aa('init', {
     appId: config.public.algolia.applicationId,
     apiKey: config.public.algolia.apiKey,
     useCookie: true,
   })
 })
-console.log('🔍 [SearchDialog] aa:', config.public.algolia.applicationId, config.public.algolia.apiKey)
 
 const sanity = useSanity()
 const img = useImage()
