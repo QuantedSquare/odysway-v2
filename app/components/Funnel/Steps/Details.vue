@@ -1,8 +1,6 @@
 <template>
   <v-container v-if="!loadingDeal">
-    <v-form
-      ref="form"
-    >
+    <v-form ref="form">
       <v-row>
         <v-col cols="12">
           <h2 v-if="!isAdvance">
@@ -14,34 +12,22 @@
         </v-col>
         <v-col cols="12">
           <v-row>
-            <v-col
-              cols="6"
-              md="4"
-            >
+            <v-col cols="6" md="4">
               <div class="text-caption">
                 {{ page.details.nb_adults_label }}
               </div>
-              <v-select
-                v-model="model.nbAdults"
+              <v-select v-model="model.nbAdults"
                 :disabled="route.query.type === 'balance' || route.query.type === 'custom'"
-                :menu-props="{ offsetY: true }"
-                :items="selectOptions(isAdvance ? 1 : 0, 9)"
-              />
+                :menu-props="{ offsetY: true }" :items="selectOptions(isAdvance ? 1 : 0, 9)" />
             </v-col>
             <!-- children -->
-            <v-col
-              cols="6"
-              md="4"
-            >
+            <v-col cols="6" md="4">
               <div class="text-caption text-truncate">
                 {{ childrenLabel }}
               </div>
-              <v-select
-                v-model="model.nbChildren"
+              <v-select v-model="model.nbChildren"
                 :disabled="route.query.type === 'balance' || route.query.type === 'custom'"
-                :menu-props="{ offsetY: true }"
-                :items="selectOptions(0, 9)"
-              />
+                :menu-props="{ offsetY: true }" :items="selectOptions(0, 9)" />
             </v-col>
           </v-row>
           <!--  Contact Details -->
@@ -51,46 +37,22 @@
                 {{ page.details.contact_title }}
               </h2>
             </v-col>
-            <v-col
-              cols="12"
-              md="6"
-            >
-              <v-text-field
-                v-model="model.firstName"
-                :label="page.details.firstname_label"
-                :placeholder="page.details.firstname_placeholder"
-                :rules="[rules.name]"
-                @change="changeAttr('firstname'); saveToLocalStorage()"
-              />
+            <v-col cols="12" md="6">
+              <v-text-field v-model="model.firstName" :label="page.details.firstname_label"
+                :placeholder="page.details.firstname_placeholder" :rules="[rules.name]"
+                @change="changeAttr('firstname'); saveToLocalStorage()" />
             </v-col>
-            <v-col
-              cols="12"
-              md="6"
-            >
-              <v-text-field
-                v-model="model.lastName"
-                :label="page.details.lastname_label"
-                :placeholder="page.details.lastname_placeholder"
-                :rules="[rules.name]"
-                @change="changeAttr('lastname'); saveToLocalStorage()"
-              />
+            <v-col cols="12" md="6">
+              <v-text-field v-model="model.lastName" :label="page.details.lastname_label"
+                :placeholder="page.details.lastname_placeholder" :rules="[rules.name]"
+                @change="changeAttr('lastname'); saveToLocalStorage()" />
             </v-col>
-            <v-col
-              cols="12"
-              md="6"
-            >
-              <v-text-field
-                v-model="model.email"
+            <v-col cols="12" md="6">
+              <v-text-field v-model="model.email"
                 :disabled="route.query.type === 'balance' || route.query.type === 'custom'"
-                :label="page.details.email_label"
-                :placeholder="page.details.email_placeholder"
-                :rules="[rules.email]"
-                @change="saveToLocalStorage()"
-              />
-              <v-checkbox
-                v-model="model.optinNewsletter"
-                :class="model.optinNewsletter ? 'text-primary' : ''"
-              >
+                :label="page.details.email_label" :placeholder="page.details.email_placeholder" :rules="[rules.email]"
+                @change="saveToLocalStorage()" />
+              <v-checkbox v-model="model.optinNewsletter" :class="model.optinNewsletter ? 'text-primary' : ''">
                 <template #label>
                   <div class="text-caption text-no-wrap">
                     {{ page.details.newsletter_text }}
@@ -99,47 +61,28 @@
                 </template>
               </v-checkbox>
             </v-col>
-            <v-col
-              cols="12"
-              md="6"
-            >
-              <PhoneTextField
-                v-model="model.phone"
-                @validity-changed="isPhoneValid = $event"
-              />
+            <v-col cols="12" md="6">
+              <PhoneTextField v-model="model.phone" @validity-changed="isPhoneValid = $event" />
             </v-col>
           </v-row>
         </v-col>
       </v-row>
     </v-form>
     <v-row>
-      <v-col
-        class="d-flex ga-3"
-      >
-        <v-btn
-          class="
-        bg-grey-light font-weight-regular"
-          @click="emit('previous')"
-        >
+      <v-col class="d-flex ga-3">
+        <v-btn class="
+        bg-grey-light font-weight-regular" @click="emit('previous')">
           Précédent
         </v-btn>
-        <v-btn
-          :disabled="!isValid"
-          :loading="buttonLoading"
-          color="secondary"
-          class="font-weight-bold"
-          @click="submitStepData"
-        >
+        <v-btn :disabled="!isValid" :loading="buttonLoading" color="secondary" class="font-weight-bold"
+          @click="submitStepData">
           Suivant
         </v-btn>
       </v-col>
     </v-row>
   </v-container>
 
-  <v-skeleton-loader
-    v-else
-    type="card"
-  />
+  <v-skeleton-loader v-else type="card" />
 </template>
 
 <script setup>
@@ -317,7 +260,8 @@ const submitStepData = async () => {
         optinNewsletter: model.value.optinNewsletter,
       }
       trackPixel('track', 'AddToCart')
-      emit('next')
+      // emit('next')
+      console.log('model', flattenedDeal)
       await createDeal(flattenedDeal)
       buttonLoading.value = false
     }

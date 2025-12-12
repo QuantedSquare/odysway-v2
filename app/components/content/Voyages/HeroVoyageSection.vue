@@ -78,14 +78,16 @@
         cols="12"
         :md="voyage.imageSecondary?.asset?._ref ? 9 : 12"
       >
-      <NuxtImg
+        <NuxtImg
           v-if="voyage.image?.asset"
           :src="mainImageSrcUrl"
           sizes="(max-width: 600px) 100vw, (max-width: 960px) 66vw, 75vw"
           :srcset="mainImageSrcset"
           :alt="stegaClean(voyage.image?.alt) || `Image principale du voyage ${voyage.title}`"
           format="webp"
-          preload
+          :preload="{
+            fetchpriority: 'high',
+          }"
           loading="eager"
           fetchpriority="high"
           width="1000"
@@ -136,9 +138,7 @@
       </v-col>
     </v-row>
     <v-row class="media-btns-position">
-      <v-col
-        cols="auto"
-      >
+      <v-col cols="auto">
         <PhotoGalleryDialog
           v-if="voyage.photosList?.length > 0"
           :photos-list="photoCarousel"
@@ -149,9 +149,7 @@
         cols="auto"
         class="pl-1"
       >
-        <VideoDialog
-          :videos-link="voyage.videoLinks"
-        />
+        <VideoDialog :videos-link="voyage.videoLinks" />
       </v-col>
     </v-row>
   </v-container>
@@ -160,8 +158,8 @@
 <script setup>
 import { mdiExportVariant } from '@mdi/js'
 import imageUrlBuilder from '@sanity/image-url'
-import { useImage } from '#imports'
 import { stegaClean } from '@sanity/client/stega'
+import { useImage } from '#imports'
 
 const config = useRuntimeConfig()
 const props = defineProps({
@@ -207,15 +205,13 @@ const mainImageSrcset = computed(() => {
   // IMPORTANT: The width descriptor (e.g., 400w) MUST match the actual image width
   // Format: buildMainImageUrl(actualWidth, calculatedHeight, quality) actualWidthw
   return [
-    `${buildMainImageUrl(400, 225, 100)} 400w`,   // 400px image = 225px height (16:9)
-    `${buildMainImageUrl(600, 338, 100)} 600w`,   // 600px image = 338px height (16:9)
-    `${buildMainImageUrl(800, 450, 100)} 800w`,   // 800px image = 450px height (16:9)
+    `${buildMainImageUrl(400, 225, 100)} 400w`, // 400px image = 225px height (16:9)
+    `${buildMainImageUrl(600, 338, 100)} 600w`, // 600px image = 338px height (16:9)
+    `${buildMainImageUrl(800, 450, 100)} 800w`, // 800px image = 450px height (16:9)
     `${buildMainImageUrl(1000, 563, 100)} 1000w`, // 1000px image = 563px height (16:9)
     `${buildMainImageUrl(1400, 788, 100)} 1400w`, // 1400px image = 788px height (16:9)
   ].join(', ')
 })
-
-
 
 const photoCarousel = computed(() => {
   if (!props.voyage) return []
@@ -240,14 +236,16 @@ function copyUrl() {
 </script>
 
 <style scoped>
-.media-btns-position{
+.media-btns-position {
   position: absolute;
   bottom: 38px;
   left: 42px;
 }
-.custom-height-container{
+
+.custom-height-container {
   max-height: 460px;
 }
+
 /* Container - keep flexible, let image control aspect ratio */
 .custom-height {
   /* Remove fixed height to allow aspect-ratio on image to control sizing */
@@ -266,74 +264,87 @@ function copyUrl() {
   /* The image maintains 16:9, matching the Sanity crop with hotspot */
   /* No additional cropping happens because container and image ratios match */
 }
+
 .voyage-secondary-image {
   width: 100%;
   height: 214px;
-  object-fit:cover;
+  object-fit: cover;
   object-position: center;
 }
+
 @media screen and (max-width: 1280px) {
-    .media-btns-position{
+  .media-btns-position {
     position: absolute;
     bottom: 46px;
     left: 42px;
   }
 }
-@media screen and (max-width: 1024px) {
 
-}
+@media screen and (max-width: 1024px) {}
+
 @media screen and (max-width: 600px) {
-  .media-btns-position{
-  position: absolute;
-  bottom: 40px;
-  left: 15px;
-}
+  .media-btns-position {
+    position: absolute;
+    bottom: 40px;
+    left: 15px;
+  }
+
   /* Keep 16:9 aspect ratio on mobile too - no height override needed */
   /* The aspect-ratio CSS property handles this automatically */
-  .voyage-main-image{
+  .voyage-main-image {
     /* max-height: 280px; */
     min-height: 100%;
   }
 }
-.custom-btn:deep(button){
-  background-color: transparent!important;
-  color: rgb(var(--v-theme-primary-light-1))!important;
-}
-.custom-btn:deep(svg){
-border-radius: 100%;
-background-color: rgba(255, 255, 255, 0.3);
-}
-.custom-btn:deep(.v-responsive__content){
-display: flex;
-align-items: center;
+
+.custom-btn:deep(button) {
+  background-color: transparent !important;
+  color: rgb(var(--v-theme-primary-light-1)) !important;
 }
 
-.custom-copy-btn-height{
+.custom-btn:deep(svg) {
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.custom-btn:deep(.v-responsive__content) {
+  display: flex;
+  align-items: center;
+}
+
+.custom-copy-btn-height {
   height: 46px;
 }
-.custom-copy-btn-height-2{
+
+.custom-copy-btn-height-2 {
   height: 46px;
 }
-.custom-copy-btn-icon-height{
+
+.custom-copy-btn-icon-height {
   height: 18px;
   width: 18px;
 }
-.custom-copy-btn-icon-height-2{
+
+.custom-copy-btn-icon-height-2 {
   height: 20px;
   width: 20px;
 }
+
 @media screen and (max-width: 600px) {
-  .custom-copy-btn-height{
+  .custom-copy-btn-height {
     height: 30px;
   }
-  .custom-copy-btn-height-2{
+
+  .custom-copy-btn-height-2 {
     height: 36px;
   }
-  .custom-copy-btn-icon-height{
+
+  .custom-copy-btn-icon-height {
     height: 14px;
     width: 14px;
   }
-  .custom-copy-btn-icon-height-2{
+
+  .custom-copy-btn-icon-height-2 {
     height: 16px;
     width: 16px;
   }

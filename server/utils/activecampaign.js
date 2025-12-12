@@ -162,11 +162,19 @@ const apiRequest = async (endpoint, method = 'get', data = null) => {
       headers,
       data,
     })
-    // console.log('===========response in activecampaign.js===========', response.data)
+    // console.log('===========AXIOS RESPONSE===========', response)
     return response.data
   }
   catch (error) {
-    console.error(`API Error in ${endpoint}:`, error, data)
+    // console.log('=======API Error in activecampaign.js=======', error)
+    if (error.response && error.response.status === 422) {
+      console.error(`VALIDATION ERROR in ${endpoint}:`, JSON.stringify(error.response.data, null, 2))
+    }
+    console.error(`API Error in ${endpoint}:`, error.message)
+    if (error.response) {
+      console.error('Response status:', error.response.status)
+      console.error('Response data:', JSON.stringify(error.response.data, null, 2))
+    }
     throw error
   }
 }
@@ -238,6 +246,13 @@ const upsertContactIntoSupabase = async (contactId) => {
 }
 
 // =================== DEAL ===================
+const getDealCustomFieldMeta = async () => {
+  // Fetch all deal custom fields definitions
+  // Pagination might be needed if you have many fields, but usually 100 is enough for a quick check
+  const response = await apiRequest('/dealCustomFieldMeta?limit=100')
+  return response.dealCustomFieldMeta
+}
+
 const getDealById = async id => await apiRequest(`/deals/${id}`)
 
 const getDealCustomFields = async (dealId) => {
@@ -246,9 +261,7 @@ const getDealCustomFields = async (dealId) => {
 }
 
 const createDeal = async (data) => {
-  // #TODO Checker si sendinblue encore nécessaire
-  // sendinBlue.updateContact(data.email, Object.assign({}, data.dealData.deal, this.handleCustomFields(dealData.deal.fields)))
-  // sendinBlue.updateContactListId(data.email, 12) // Prospect
+
   // First upsert contact
   const formatedDeal = transformDealForAPI(data)
   const client = {
@@ -369,17 +382,17 @@ const sendSlackNotification = (id, data) => {
       url: process.env.SLACK_URL_DEVIS,
       method: 'post',
       data:
-        {
-          blocks: [
-            {
-              type: 'section',
-              text: {
-                type: 'mrkdwn',
-                text: `${emoji} <https://odysway90522.activehosted.com/app/deals/${id}|${travelType} - ${data.firstname} ${data.lastname} - pax ${nbTravelers} - ${dealData.title}>`,
-              },
+      {
+        blocks: [
+          {
+            type: 'section',
+            text: {
+              type: 'mrkdwn',
+              text: `${emoji} <https://odysway90522.activehosted.com/app/deals/${id}|${travelType} - ${data.firstname} ${data.lastname} - pax ${nbTravelers} - ${dealData.title}>`,
             },
-          ],
-        },
+          },
+        ],
+      },
     })
   }
   return id
@@ -506,4 +519,5 @@ export default {
   // --- Notification ---
   sendSlackNotification, // OK
   optionNotification,
+  getDealCustomFieldMeta,
 }

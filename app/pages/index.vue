@@ -1,210 +1,226 @@
 <template>
-  <v-container
-    v-once
-    class="py-0 my-0 px-2 px-md-4"
-    fluid
-  >
+  <div>
     <HomeHeroSection
       v-if="homeSanity"
       :image="homeSanity.heroSection.image"
+      :image-test="homeSanity.heroSectionTest.image"
+      :image-mobile="homeSanity.heroSection.imageMobile"
+      :image-mobile-test="homeSanity.heroSectionTest.imageMobile"
+      :typewriter-words="config.public.environment === 'production' ? homeSanity.heroSection.typewritterWords : homeSanity.heroSectionTest.typewritterWords"
+      :placeholder="config.public.environment === 'production' ? homeSanity.heroSection.placeholder : homeSanity.heroSectionTest.placeholder"
     >
       <template #title>
         <EnrichedText
           class="text-white"
-          :value="homeSanity.heroSection.title"
+          :value="config.public.environment === 'production' ? homeSanity.heroSection.title : homeSanity.heroSectionTest.title"
+        />
+      </template>
+      <template #subtitle>
+        <EnrichedText
+          class="text-white"
+          :value="config.public.environment === 'production' ? homeSanity.heroSection.subtitle : homeSanity.heroSectionTest.subtitle"
         />
       </template>
     </HomeHeroSection>
-    <LazyExperienceCarousel
-      v-if="homeSanity && homeSanity.experienceCarousel?.experiences?.length > 0"
-      :experiences-data="homeSanity.experienceCarousel.experiences"
-    >
-      <template #title>
-        {{ homeSanity.experienceCarousel.title }}
-      </template>
-    </LazyExperienceCarousel>
-
-    <LazyColorContainer
+    <v-container
       v-once
-      color="soft-blush"
+      fluid
+      class="mx-0 mx-md-5 px-1"
     >
-      <LazyHorizontalCarousel text-color="primary">
-        <template #title>
-          <span style="color: rgba(43, 76, 82, 1)">
-            {{ homeSanity.franceTrips.title }}
-          </span>
-        </template>
-        <template #carousel-item>
-          <v-col
-            v-for="voyage in homeSanity.franceTrips.voyagesFrance"
-            :key="voyage._id"
-          >
-            <VoyageCard :voyage="voyage" />
-          </v-col>
-        </template>
-      </LazyHorizontalCarousel>
-    </LazyColorContainer>
-
-    <LazyColorContainer color="primary">
-      <LazyCardGrid :categories="homeSanity.followDesires.categoriesFollowDesires">
-        <template #title>
-          <h4 class="text-white">
-            {{ homeSanity.followDesires.title }}
-          </h4>
-        </template>
-      </LazyCardGrid>
-    </LazyColorContainer>
-
-    <LazyColorContainer color="white">
-      <LazyTextImageContainer
-        :display-cta-button="true"
-        :image-desktop-right="true"
-        :image-src="homeSanity.travelDifferently.image"
-      >
-        <template #title>
-          <span style="color: rgba(43, 76, 82, 1)">
-            {{ homeSanity.travelDifferently.title }}
-          </span>
-        </template>
-        <template #content-cols>
-          <IconTextCol
-            v-for="feature in homeSanity.travelDifferently.features"
-            :key="feature._id"
-            :icon="feature.icon"
-            :side-by-side="false"
-          >
-            <template #text>
-              {{ feature.text }}
-            </template>
-          </IconTextCol>
-        </template>
-        <template #cta-button>
-          <CtaButton
-            :color="homeSanity.travelDifferently.ctaButton.color"
-            :link="homeSanity.travelDifferently.ctaButton.link"
-          >
-            <template #text>
-              {{ homeSanity.travelDifferently.ctaButton.text }}
-            </template>
-          </CtaButton>
-        </template>
-      </LazyTextImageContainer>
-    </LazyColorContainer>
-
-    <LazyColorContainer color="grey-light">
-      <LazyHorizontalCarousel :text-color="'primary'">
-        <template #title>
-          <span style="color: rgba(43, 76, 82, 1)">
-            {{ homeSanity.guaranteedDepartures.title }}
-          </span>
-        </template>
-
-        <template #carousel-item>
-          <v-col
-            v-for="voyage in homeSanity.guaranteedDepartures.voyagesGuaranteedDepartures"
-            :key="voyage._id"
-          >
-            <VoyageCard :voyage="voyage" />
-          </v-col>
-        </template>
-      </LazyHorizontalCarousel>
-    </LazyColorContainer>
-
-    <LazyColorContainer color="white">
-      <LazyHorizontalCarousel :text-color="'primary'">
-        <template #title>
-          {{ homeSanity.summerTravel.title }}
-        </template>
-        <template #carousel-item>
-          <v-col
-            v-for="voyage in homeSanity.summerTravel.voyagesSummerTravel"
-            :key="voyage._id"
-          >
-            <VoyageCard :voyage="voyage" />
-          </v-col>
-        </template>
-      </LazyHorizontalCarousel>
-    </LazyColorContainer>
-
-    <LazyColorContainer color="soft-blush">
-      <ClientOnly>
-        <NewsletterContainer v-if="homeSanity.newsletter">
+      <section class="py-0 my-0 px-2 px-md-4">
+        <LazyExperienceCarousel
+          v-if="homeSanity && homeSanity.experienceCarousel?.experiences?.length > 0"
+          :experiences-data="homeSanity.experienceCarousel.experiences"
+        >
           <template #title>
-            <EnrichedText :value="homeSanity.newsletter.title" />
+            {{ homeSanity.experienceCarousel.title }}
           </template>
-          <template #subtitle>
-            <EnrichedText
-              class="text-grey"
-              :value="homeSanity.newsletter.subtitle"
-            />
-          </template>
-        </NewsletterContainer>
-      </ClientOnly>
-    </LazyColorContainer>
+        </LazyExperienceCarousel>
 
-    <LazyColorContainer
-      white-text
-      color="primary"
-    >
-      <LazyHorizontalCarousel
-        :text-color="'white'"
-      >
-        <template #title>
-          {{ homeSanity.unforgettableTravels.title }}
-        </template>
-        <template #carousel-item>
-          <v-col
-            v-for="voyage in homeSanity.unforgettableTravels.voyagesUnforgettableTravels"
-            :key="voyage._id"
-          >
-            <VoyageCard :voyage="voyage" />
-          </v-col>
-        </template>
-      </LazyHorizontalCarousel>
-    </LazyColorContainer>
-
-    <LazyColorContainer color="white">
-      <LazyCommonReviewContainer>
-        <template #title>
-          <span style="color: rgba(43, 76, 82, 1)">
-            {{ homeSanity.reviews.title }}
-          </span>
-        </template>
-        <template #cta>
-          {{ homeSanity.reviews.ctaText }}
-        </template>
-      </LazyCommonReviewContainer>
-    </LazyColorContainer>
-
-    <LazyColorContainer color="grey-light-2">
-      <LazyInfoContainer>
-        <template #top>
-          <AvatarsRowStack />
-        </template>
-        <template #title>
-          {{ homeSanity.contact.title }}
-        </template>
-        <template #description>
-          {{ homeSanity.contact.description }}
-        </template>
-        <template #bottom>
-          <CtaButton
-            :color="homeSanity.contact.ctaButton.color"
-            :link="homeSanity.contact.ctaButton.link"
-          >
-            <template #text>
-              {{ homeSanity.contact.ctaButton.text }}
+        <LazyColorContainer
+          v-once
+          color="soft-blush"
+        >
+          <LazyHorizontalCarousel text-color="primary">
+            <template #title>
+              <span style="color: rgba(43, 76, 82, 1)">
+                {{ homeSanity.franceTrips.title }}
+              </span>
             </template>
-          </CtaButton>
-        </template>
-      </LazyInfoContainer>
-    </LazyColorContainer>
-  </v-container>
+            <template #carousel-item>
+              <v-col
+                v-for="voyage in homeSanity.franceTrips.voyagesFrance"
+                :key="voyage._id"
+              >
+                <VoyageCard :voyage="voyage" />
+              </v-col>
+            </template>
+          </LazyHorizontalCarousel>
+        </LazyColorContainer>
+
+        <LazyColorContainer color="primary">
+          <LazyCardGrid :categories="homeSanity.followDesires.categoriesFollowDesires">
+            <template #title>
+              <h4 class="text-white">
+                {{ homeSanity.followDesires.title }}
+              </h4>
+            </template>
+          </LazyCardGrid>
+        </LazyColorContainer>
+
+        <LazyColorContainer color="white">
+          <LazyTextImageContainer
+            :display-cta-button="true"
+            :image-desktop-right="true"
+            :image-src="homeSanity.travelDifferently.image"
+          >
+            <template #title>
+              <span style="color: rgba(43, 76, 82, 1)">
+                {{ homeSanity.travelDifferently.title }}
+              </span>
+            </template>
+            <template #content-cols>
+              <IconTextCol
+                v-for="feature in homeSanity.travelDifferently.features"
+                :key="feature._id"
+                :icon="feature.icon"
+                :side-by-side="false"
+              >
+                <template #text>
+                  {{ feature.text }}
+                </template>
+              </IconTextCol>
+            </template>
+            <template #cta-button>
+              <CtaButton
+                :color="homeSanity.travelDifferently.ctaButton.color"
+                :link="homeSanity.travelDifferently.ctaButton.link"
+              >
+                <template #text>
+                  {{ homeSanity.travelDifferently.ctaButton.text }}
+                </template>
+              </CtaButton>
+            </template>
+          </LazyTextImageContainer>
+        </LazyColorContainer>
+
+        <LazyColorContainer color="grey-light">
+          <LazyHorizontalCarousel :text-color="'primary'">
+            <template #title>
+              <span style="color: rgba(43, 76, 82, 1)">
+                {{ homeSanity.guaranteedDepartures.title }}
+              </span>
+            </template>
+
+            <template #carousel-item>
+              <v-col
+                v-for="voyage in homeSanity.guaranteedDepartures.voyagesGuaranteedDepartures"
+                :key="voyage._id"
+              >
+                <VoyageCard :voyage="voyage" />
+              </v-col>
+            </template>
+          </LazyHorizontalCarousel>
+        </LazyColorContainer>
+
+        <LazyColorContainer color="white">
+          <LazyHorizontalCarousel :text-color="'primary'">
+            <template #title>
+              {{ homeSanity.summerTravel.title }}
+            </template>
+            <template #carousel-item>
+              <v-col
+                v-for="voyage in homeSanity.summerTravel.voyagesSummerTravel"
+                :key="voyage._id"
+              >
+                <VoyageCard :voyage="voyage" />
+              </v-col>
+            </template>
+          </LazyHorizontalCarousel>
+        </LazyColorContainer>
+
+        <LazyColorContainer color="soft-blush">
+          <ClientOnly>
+            <NewsletterContainer v-if="homeSanity.newsletter">
+              <template #title>
+                <EnrichedText :value="homeSanity.newsletter.title" />
+              </template>
+              <template #subtitle>
+                <EnrichedText
+                  class="text-grey"
+                  :value="homeSanity.newsletter.subtitle"
+                />
+              </template>
+            </NewsletterContainer>
+          </ClientOnly>
+        </LazyColorContainer>
+
+        <LazyColorContainer
+          white-text
+          color="primary"
+        >
+          <LazyHorizontalCarousel :text-color="'white'">
+            <template #title>
+              {{ homeSanity.unforgettableTravels.title }}
+            </template>
+            <template #carousel-item>
+              <v-col
+                v-for="voyage in homeSanity.unforgettableTravels.voyagesUnforgettableTravels"
+                :key="voyage._id"
+              >
+                <VoyageCard :voyage="voyage" />
+              </v-col>
+            </template>
+          </LazyHorizontalCarousel>
+        </LazyColorContainer>
+
+        <LazyColorContainer color="white">
+          <LazyCommonReviewContainer>
+            <template #title>
+              <span style="color: rgba(43, 76, 82, 1)">
+                {{ homeSanity.reviews.title }}
+              </span>
+            </template>
+            <template #cta>
+              {{ homeSanity.reviews.ctaText }}
+            </template>
+          </LazyCommonReviewContainer>
+        </LazyColorContainer>
+
+        <LazyColorContainer color="grey-light-2">
+          <LazyInfoContainer>
+            <template #top>
+              <AvatarsRowStack />
+            </template>
+            <template #title>
+              {{ homeSanity.contact.title }}
+            </template>
+            <template #description>
+              {{ homeSanity.contact.description }}
+            </template>
+            <template #bottom>
+              <CtaButton
+                :color="homeSanity.contact.ctaButton.color"
+                :link="homeSanity.contact.ctaButton.link"
+              >
+                <template #text>
+                  {{ homeSanity.contact.ctaButton.text }}
+                </template>
+              </CtaButton>
+            </template>
+          </LazyInfoContainer>
+        </LazyColorContainer>
+      </section>
+    </v-container>
+  </div>
 </template>
 
 <script setup>
 const sanity = useSanity()
-
+const config = useRuntimeConfig()
+definePageMeta({
+  layout: 'homepage',
+})
 const homeQuery = groq`
   *[_type == "homePage"][0]{
     ...,
@@ -316,6 +332,7 @@ const { data: homeSanity } = await useAsyncData('home', () =>
   sanity.fetch(homeQuery),
 )
 if (homeSanity.value) {
+  console.log(homeSanity.value.heroSectionTest)
   // Fallback values for content
   const defaultContent = {
     title: 'Odysway - Voyages en Petits Groupes et Expériences Authentiques',

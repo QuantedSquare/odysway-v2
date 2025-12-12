@@ -11,7 +11,7 @@
         class="d-flex flex-column align-start ga-1 ga-md-0 "
       >
         <div class="d-flex align-center ga-2">
-          <div class="text-white custom-number-chip d-flex justify-center align-center ml-1">
+          <div class="text-white custom-number-chip d-flex justify-center align-center">
             <span>
             {{ enrichedDate.index + 1 }}
           </span>
@@ -253,6 +253,7 @@ const enrichedDate = computed(() => {
     status: getDateStatus(date),
   }
 })
+console.log('enrichedDate', enrichedDate.value)
 const capitalize = (string) => {
   return string.charAt(0).toUpperCase() + string.slice(1)
 }

@@ -1,106 +1,56 @@
 <template>
   <div>
     <div v-if="voyage">
-      <BottomAppBar
-        :date-sections="page.dateSections"
-        :starting-price="voyage.pricing.startingPrice"
-        :no-group-travel="!voyage.availabilityTypes?.includes('groupe')"
-        :slug="voyage.slug.current"
-      />
-      <v-container
-        fluid
-        class="py-0 my-0 px-3 px-md-4"
-      >
+      <BottomAppBar :date-sections="page.dateSections" :starting-price="voyage.pricing.startingPrice"
+        :no-group-travel="!voyage.availabilityTypes?.includes('groupe')" :slug="voyage.slug.current" />
+      <v-container fluid class="py-0 my-0 px-3 px-md-4">
         <HeroVoyageSection :voyage="voyage" />
 
-        <LazyChipsContainer
-          :badges="voyage.badges"
-          :badge-title="voyage.experienceType?.badgeTitle"
-          :difficulty-level="voyage.difficultyLevel"
-        />
+        <LazyChipsContainer :badges="voyage.badges" :badge-title="voyage.experienceType?.badgeTitle"
+          :difficulty-level="voyage.difficultyLevel" />
 
         <StickyContainer>
           <template #left-side>
-            <LazyAuthorNote
-              :author-note="voyage.authorNote"
-              :page="page"
-            />
+            <LazyAuthorNote :author-note="voyage.authorNote" :page="page" />
 
-            <LazyHighlightsContainer
-              :experiences-block="voyage.experiencesBlock"
-              :page="page.experiencesBlock"
-            />
+            <LazyHighlightsContainer :experiences-block="voyage.experiencesBlock" :page="page.experiencesBlock" />
 
-            <LazyProgrammeContainer
-              :programme-block="voyage.programmeBlock"
-            />
+            <LazyProgrammeContainer :programme-block="voyage.programmeBlock" />
 
-            <LazyAccompanistsContainer
-              :voyage="voyage"
-              :title="page.accompanistsTitle"
-            />
+            <LazyAccompanistsContainer :voyage="voyage" :title="page.accompanistsTitle" />
           </template>
           <template #right-side>
-            <InfoCard
-              :sticky-block="page.stickyBlock"
-              :voyage="voyage"
-            />
+            <InfoCard :sticky-block="page.stickyBlock" :voyage="voyage" />
           </template>
         </StickyContainer>
 
-        <v-container
-          fluid
-          class="px-0"
-        >
-          <LazyHousingSection
-            :housing-block="voyage.housingBlock"
-            :housing-title="page.housingTitle"
-            :housing-type-title="page.housingTypeTitle"
-            :housing-mood-title="page.housingMoodTitle"
-          />
+        <v-container fluid class="px-0">
+          <LazyHousingSection :housing-block="voyage.housingBlock" :housing-title="page.housingTitle"
+            :housing-type-title="page.housingTypeTitle" :housing-mood-title="page.housingMoodTitle" />
 
-          <LazyDatesPricesContainer
-            :date-sections="page.dateSections"
-            :indiv-section="page.indivSection"
+          <LazyDatesPricesContainer :date-sections="page.dateSections" :indiv-section="page.indivSection"
             :is-groupe-available="voyage.availabilityTypes?.includes('groupe')"
             :is-privatisation-available="voyage.availabilityTypes?.includes('privatisation')"
             :last-minute-price="voyage.pricing.lastMinuteReduction"
-            :early-bird-price="voyage.pricing.earlyBirdReduction || 0"
-          />
+            :early-bird-price="voyage.pricing.earlyBirdReduction || 0" />
 
-          <LazyPriceDetailsContainer
-            :pricing-details-block="voyage.pricingDetailsBlock"
-            :price-details-section="page.priceDetailsSection"
-          />
-          <LazyReviewCarousel
-            :reviews-section="page.reviewsSection"
-          />
+          <LazyPriceDetailsContainer :pricing-details-block="voyage.pricingDetailsBlock"
+            :price-details-section="page.priceDetailsSection" />
+          <LazyReviewCarousel :reviews-section="page.reviewsSection" />
 
-          <LazyFaqVoyagesContainer
-            :background-image="voyage.image"
-            :faq-block="voyage.faqBlock"
-          />
+          <LazyFaqVoyagesContainer :background-image="voyage.image" :faq-block="voyage.faqBlock" />
 
           <LazyWhySection :why-section="page.whySection" />
 
-          <LazyHorizontalCarousel
-            v-if="voyagePropositions"
-            v-show="voyagePropositions.length > 0"
-          >
+          <LazyHorizontalCarousel v-if="voyagePropositions" v-show="voyagePropositions.length > 0">
             <template #title>
               <h4 class="text-primary text-custom-size">
                 D'autres idées de voyages
               </h4>
             </template>
             <template #carousel-item>
-              <v-col
-                v-for="voyageProp in voyagePropositions"
-                :key="voyageProp._id"
-                class="pt-0"
-              >
-                <LazyVoyageCard
-                  :voyage="voyageProp"
-                />
+              <v-col v-for="voyageProp in voyagePropositions" :key="voyageProp._id" class="pt-0">
+                <LazyVoyageCard :voyage="voyageProp" />
               </v-col>
             </template>
           </LazyHorizontalCarousel>
@@ -108,30 +58,15 @@
       </v-container>
     </div>
 
-    <ColorContainer
-      v-else
-      color="white"
-    >
-      <v-row
-        justify="center"
-        align="center"
-      >
-        <v-col
-          cols="12"
-          md="8"
-        >
+    <ColorContainer v-else color="white">
+      <v-row justify="center" align="center">
+        <v-col cols="12" md="8">
           <p class="text-center text-primary text-h3">
             {{ page.pageNotFound.description }}
           </p>
         </v-col>
-        <v-col
-          cols="12"
-          class="d-flex justify-center"
-        >
-          <v-btn-secondary
-            :to="page.pageNotFound.buttonTo"
-            class="mt-8 mx-auto text-decoration-none"
-          >
+        <v-col cols="12" class="d-flex justify-center">
+          <v-btn-secondary :to="page.pageNotFound.buttonTo" class="mt-8 mx-auto text-decoration-none">
             {{ page.pageNotFound.buttonText }}
           </v-btn-secondary>
         </v-col>
@@ -232,34 +167,80 @@ const voyagePropositionsQuery = `
     }
   }
 `
-const { data: page } = await useAsyncData('voyage-page', () =>
-  sanity.fetch(voyagePageQuery),
-)
-const { data: voyage } = await useAsyncData('voyage' + route.params.voyageSlug, () =>
-sanity.fetch(voyageQuery, { slug: route.params.voyageSlug }),
-)
+const [{ data: page }, { data: voyage }] = await Promise.all([
+  useAsyncData('voyage-page', () => sanity.fetch(voyagePageQuery)),
+  useAsyncData('voyage' + route.params.voyageSlug, () =>
+    sanity.fetch(voyageQuery, { slug: route.params.voyageSlug }),
+  ),
+])
 
-const { data: voyagePropositions } = await useAsyncData('voyage-propositions', () => {
-  if(voyage.value?.experienceType?._id){
-    return sanity.fetch(voyagePropositionsQuery, {
-      slug: route.params.voyageSlug,
-      experienceTypeId: voyage.value?.experienceType?._id,
-    })
-    }else{
+const { data: voyagePropositions } = await useAsyncData(
+  'voyage-propositions',
+  () => {
+    if (voyage.value?.experienceType?._id) {
+      return sanity.fetch(voyagePropositionsQuery, {
+        slug: route.params.voyageSlug,
+        experienceTypeId: voyage.value?.experienceType?._id,
+      })
+    } else {
       return []
     }
-})
+  },
+  { lazy: true },
+)
 // console.log('voyagePropositions', voyagePropositions.value)
 onMounted(() => {
   gtag('event', 'page_view', {
     eventCategory: 'Voyage',
     eventAction: 'View',
-    eventLabel: voyage.value?.title })
+    eventLabel: voyage.value?.title
+  })
   trackPixel('trackCustom', 'VoyageView', { titre: route.params.voyageSlug })
 })
 
+const config = useRuntimeConfig()
+import imageUrlBuilder from '@sanity/image-url'
+
+const builder = imageUrlBuilder({
+  projectId: config.public.sanity.projectId,
+  dataset: config.public.sanity.dataset,
+})
+
+const buildMainImageUrl = (image, width, height, quality = 90) => {
+  if (!image) return ''
+  return builder
+    .image(image)
+    .width(width)
+    .height(height)
+    .auto('format')
+    .quality(quality)
+    .fit('crop')
+    .url()
+}
+
 watchEffect(() => {
   if (!voyage.value) return
+
+  const image = voyage.value.image
+  let link = []
+
+  if (image) {
+    const srcset = [
+      `${buildMainImageUrl(image, 400, 225, 100)} 400w`,
+      `${buildMainImageUrl(image, 600, 338, 100)} 600w`,
+      `${buildMainImageUrl(image, 800, 450, 100)} 800w`,
+      `${buildMainImageUrl(image, 1000, 563, 100)} 1000w`,
+      `${buildMainImageUrl(image, 1400, 788, 100)} 1400w`,
+    ].join(', ')
+
+    link.push({
+      rel: 'preload',
+      as: 'image',
+      imagesrcset: srcset,
+      imagesizes: '(max-width: 600px) 100vw, (max-width: 960px) 66vw, 75vw',
+      fetchpriority: 'high',
+    })
+  }
 
   // Use the SEO composable with TouristTrip structured data
   useSeo({
@@ -280,13 +261,17 @@ watchEffect(() => {
       },
     ],
   })
+
+  useHead({
+    link,
+  })
 })
 </script>
 
 <style scoped>
 @media (min-width: 1000px) {
-.text-custom-size{
-    font-size: 2.5rem!important;
+  .text-custom-size {
+    font-size: 2.5rem !important;
   }
 }
 </style>

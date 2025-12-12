@@ -1,22 +1,22 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity'
 import BmsLink from './components/BmsLink'
 
 const richTextBlock = {
   type: 'block',
   title: 'Bloc de texte',
   styles: [
-    {title: 'Normal', value: 'normal'},
-    {title: 'H2', value: 'h2'},
-    {title: 'H3', value: 'h3'},
-    {title: 'H4', value: 'h4'},
-    {title: 'Citation', value: 'blockquote'},
+    { title: 'Normal', value: 'normal' },
+    { title: 'H2', value: 'h2' },
+    { title: 'H3', value: 'h3' },
+    { title: 'H4', value: 'h4' },
+    { title: 'Citation', value: 'blockquote' },
   ],
   marks: {
     decorators: [
-      {title: 'Gras', value: 'strong'},
-      {title: 'Italique', value: 'em'},
-      {title: 'Souligné', value: 'underline'},
-      {title: 'Barré', value: 'strike-through'},
+      { title: 'Gras', value: 'strong' },
+      { title: 'Italique', value: 'em' },
+      { title: 'Souligné', value: 'underline' },
+      { title: 'Barré', value: 'strike-through' },
     ],
     annotations: [
       {
@@ -38,8 +38,8 @@ const richTextBlock = {
     ],
   },
   lists: [
-    {title: 'Puces', value: 'bullet'},
-    {title: 'Numéroté', value: 'number'},
+    { title: 'Puces', value: 'bullet' },
+    { title: 'Numéroté', value: 'number' },
   ],
 }
 
@@ -48,31 +48,31 @@ export const voyageType = defineType({
   title: 'Voyage',
   type: 'document',
   groups: [
-    {name: 'requiredBMS', title: 'Champs requis pour une Date'},
-    {name: 'requiredTravelPage', title: 'Champs requis pour afficher la page Voyage'},
-    {name: 'basic', title: 'Informations de Base'},
-    {name: 'photoGallery', title: 'Galerie de Photos'},
-    {name: 'voyageDescription', title: 'Déscriptions du voyage'},
-    {name: 'badges', title: 'Badges'},
-    {name: 'availability', title: 'Disponibilités par Mois'},
-    {name: 'perfectPeriods', title: 'Périodes Idéales'},
-    {name: 'pricing', title: 'Informations sur le prix'},
-    {name: 'accompanists', title: 'Accompagnants'},
-    {name: 'programme', title: 'Programme'},
-    {name: 'housing', title: 'Hébergement'},
-    {name: 'faq', title: 'FAQ'},
-    {name: 'seo', title: 'SEO'},
+    { name: 'requiredBMS', title: 'Champs requis pour une Date' },
+    { name: 'requiredTravelPage', title: 'Champs requis pour afficher la page Voyage' },
+    { name: 'basic', title: 'Informations de Base' },
+    { name: 'photoGallery', title: 'Galerie de Photos' },
+    { name: 'voyageDescription', title: 'Déscriptions du voyage' },
+    { name: 'badges', title: 'Badges' },
+    { name: 'availability', title: 'Disponibilités par Mois' },
+    { name: 'perfectPeriods', title: 'Périodes Idéales' },
+    { name: 'pricing', title: 'Informations sur le prix' },
+    { name: 'accompanists', title: 'Accompagnants' },
+    { name: 'programme', title: 'Programme' },
+    { name: 'housing', title: 'Hébergement' },
+    { name: 'faq', title: 'FAQ' },
+    { name: 'seo', title: 'SEO' },
   ],
   fields: [
     defineField({
       name: 'bmsLink',
       type: 'url',
-      hidden: ({document}) => {
+      hidden: ({ document }) => {
         const doc = document as any
         return !doc?._id || doc._id.startsWith('drafts.') || !doc?.slug?.current
       },
       readOnly: true,
-      components: {input: BmsLink} as any,
+      components: { input: BmsLink } as any,
       group: ['requiredBMS', 'basic'],
       title: 'Lien BMS',
     }),
@@ -86,38 +86,38 @@ export const voyageType = defineType({
     defineField({
       name: 'slug',
       type: 'slug',
-      options: {source: 'title'},
+      options: { source: 'title' },
       validation: (r) => r.required(),
       group: ['requiredBMS', 'basic'],
       title: 'Slug du voyage',
     }),
     defineField({
       name: 'destinations',
-     title: 'Destinations',
-     type: 'array',
-     of: [{
-       type: 'reference',
-       to: [{ type: 'destination' }],
-       options: {
-         aiAssist: {
-           embeddingsIndex: 'all-document-index'
-         }
-       }
-     }],
-     validation: (r) => r.required().min(1),
-     group: ['basic', 'requiredBMS'],
-   }),
+      title: 'Destinations',
+      type: 'array',
+      of: [{
+        type: 'reference',
+        to: [{ type: 'destination' }],
+        options: {
+          aiAssist: {
+            embeddingsIndex: 'all-document-index'
+          }
+        }
+      }],
+      validation: (r) => r.required().min(1),
+      group: ['basic', 'requiredBMS'],
+    }),
     defineField({
       name: 'availabilityTypes',
       type: 'array',
       title: 'Types de disponibilité',
       description: 'Sélectionnez les types de voyage disponibles',
-      of: [{type: 'string'}],
+      of: [{ type: 'string' }],
       options: {
         list: [
-          {title: 'Voyage en groupe', value: 'groupe'},
-          {title: 'Voyage en privatisation', value: 'privatisation'},
-          {title: 'Voyage sur-mesure', value: 'custom'},
+          { title: 'Voyage en groupe', value: 'groupe' },
+          { title: 'Voyage en privatisation', value: 'privatisation' },
+          { title: 'Voyage sur-mesure', value: 'custom' },
         ],
         layout: 'grid',
       },
@@ -154,7 +154,7 @@ export const voyageType = defineType({
     defineField({
       name: 'difficultyLevel',
       type: 'reference',
-      to: [{type: 'difficultyLevel'}],
+      to: [{ type: 'difficultyLevel' }],
       options: {
         aiAssist: {
           embeddingsIndex: 'all-document-index'
@@ -171,8 +171,8 @@ export const voyageType = defineType({
       description: 'Ancien champ - À migrer vers difficultyLevel',
       hidden: true,
     }),
-    defineField({name: 'duration', type: 'number', group: 'basic', title: 'Durée du voyage', hidden: true}),
-    defineField({name: 'nights', type: 'number', group: 'basic', title: 'Nombre de nuits', hidden: true}),
+    defineField({ name: 'duration', type: 'number', group: 'basic', title: 'Durée du voyage', hidden: true }),
+    defineField({ name: 'nights', type: 'number', group: 'basic', title: 'Nombre de nuits', hidden: true }),
     defineField({
       name: 'includeFlight',
       type: 'boolean',
@@ -180,7 +180,7 @@ export const voyageType = defineType({
       title: 'Voyage inclut un vol',
       hidden: true,
     }),
-    defineField({name: 'rating', type: 'number', group: 'basic', title: 'Note moyenne'}),
+    defineField({ name: 'rating', type: 'number', group: 'basic', title: 'Note moyenne' }),
     defineField({
       name: 'comments',
       type: 'number',
@@ -191,12 +191,13 @@ export const voyageType = defineType({
       name: 'image',
       type: 'image',
       options: {
-        hotspot: true, 
+        hotspot: true,
         aiAssist: {
-        imageDescriptionField: 'alt',
-      },},
+          imageDescriptionField: 'alt',
+        },
+      },
       group: 'basic',
-      fields: [{name: 'alt', type: 'string'} as any],
+      fields: [{ name: 'alt', type: 'string' } as any],
       title: 'Image principale',
       description: 'Ratio 16:9 (1920x1080 px)',
     }),
@@ -204,21 +205,22 @@ export const voyageType = defineType({
       name: 'imageSecondary',
       type: 'image',
       options: {
-        hotspot: true, 
+        hotspot: true,
         aiAssist: {
-        imageDescriptionField: 'alt',
-      },},
+          imageDescriptionField: 'alt',
+        },
+      },
       group: 'basic',
-      fields: [{name: 'alt', type: 'string'} as any],
+      fields: [{ name: 'alt', type: 'string' } as any],
       title: 'Image secondaire',
       description: 'Ratio 16:9 (1920x1080 px)'
     }),
-   
+
     defineField({
       name: 'experienceType',
       title: 'Experiences',
       type: 'reference',
-      to: [{type: 'experience'}],
+      to: [{ type: 'experience' }],
       options: {
         aiAssist: {
           embeddingsIndex: 'all-document-index'
@@ -229,33 +231,35 @@ export const voyageType = defineType({
     defineField({
       name: 'categories',
       type: 'array',
-      of: [{type: 'reference', to: [{type: 'category'}], options: {
-        aiAssist: {
-          embeddingsIndex: 'all-document-index'
+      of: [{
+        type: 'reference', to: [{ type: 'category' }], options: {
+          aiAssist: {
+            embeddingsIndex: 'all-document-index'
+          }
         }
-      }}],
+      }],
       group: 'basic',
     }),
     defineField({
       name: 'monthlyAvailability',
       type: 'array',
       title: 'Disponibilités par mois',
-      of: [{type: 'string'}],
+      of: [{ type: 'string' }],
       options: {
         list: [
-          {title: 'Toutes périodes', value: 'toutePeriodes'},
-          {title: 'Janvier', value: 'janvier'},
-          {title: 'Février', value: 'fevrier'},
-          {title: 'Mars', value: 'mars'},
-          {title: 'Avril', value: 'avril'},
-          {title: 'Mai', value: 'mai'},
-          {title: 'Juin', value: 'juin'},
-          {title: 'Juillet', value: 'juillet'},
-          {title: 'Août', value: 'aout'},
-          {title: 'Septembre', value: 'septembre'},
-          {title: 'Octobre', value: 'octobre'},
-          {title: 'Novembre', value: 'novembre'},
-          {title: 'Décembre', value: 'decembre'},
+          { title: 'Toutes périodes', value: 'toutePeriodes' },
+          { title: 'Janvier', value: 'janvier' },
+          { title: 'Février', value: 'fevrier' },
+          { title: 'Mars', value: 'mars' },
+          { title: 'Avril', value: 'avril' },
+          { title: 'Mai', value: 'mai' },
+          { title: 'Juin', value: 'juin' },
+          { title: 'Juillet', value: 'juillet' },
+          { title: 'Août', value: 'aout' },
+          { title: 'Septembre', value: 'septembre' },
+          { title: 'Octobre', value: 'octobre' },
+          { title: 'Novembre', value: 'novembre' },
+          { title: 'Décembre', value: 'decembre' },
         ],
         layout: 'grid',
       },
@@ -267,13 +271,15 @@ export const voyageType = defineType({
       title: "Note de l'auteur",
       group: 'voyageDescription',
       fields: [
-        {name: 'text', type: 'array', of: [richTextBlock]},
-        {name: 'author', type: 'reference', to: [{type: 'teamMember'}], options: {
-          aiAssist: {
-            embeddingsIndex: 'all-document-index'
+        { name: 'text', type: 'array', of: [richTextBlock] },
+        {
+          name: 'author', type: 'reference', to: [{ type: 'teamMember' }], options: {
+            aiAssist: {
+              embeddingsIndex: 'all-document-index'
+            }
           }
-        }},
-        {name: 'affixeAuthor', type: 'string'},
+        },
+        { name: 'affixeAuthor', type: 'string' },
       ],
     }),
     defineField({
@@ -307,7 +313,7 @@ export const voyageType = defineType({
             {
               name: 'badge',
               type: 'reference',
-              to: [{type: 'badge'}],
+              to: [{ type: 'badge' }],
               title: 'Badge',
               validation: (rule: any) => rule.required(),
             } as any,
@@ -338,7 +344,7 @@ export const voyageType = defineType({
               variable2Value: 'variable2Value',
               overrideText: 'overrideText',
             },
-            prepare({badgeText, badgePicto, variable1Value, variable2Value, overrideText}: any) {
+            prepare({ badgeText, badgePicto, variable1Value, variable2Value, overrideText }: any) {
               // Priority: overrideText > variable replacement > default badge text
               let displayText = badgeText || 'Badge'
 
@@ -383,15 +389,19 @@ export const voyageType = defineType({
         {
           type: 'object',
           fields: [
-            {name: 'title', type: 'string'} as any,
-            {name: 'badgeText', type: 'string'} as any,
-            {name: 'description', title: 'Description de la journée', type: 'array', of: [richTextBlock]} as any,
-            {name: 'photo', type: 'image', options: {hotspot: true, aiAssist: {
-        imageDescriptionField: 'alt',
-      },}} as any,
-            {name: 'denivellation', title: 'Denivellation', type: 'string'} as any,
-            {name: 'road', title: 'Description du temps de trajet', type: 'string'} as any,
-            {name: 'night', title: 'Description de la nuitée', type: 'string'} as any,
+            { name: 'title', type: 'string' } as any,
+            { name: 'badgeText', type: 'string' } as any,
+            { name: 'description', title: 'Description de la journée', type: 'array', of: [richTextBlock] } as any,
+            {
+              name: 'photo', type: 'image', options: {
+                hotspot: true, aiAssist: {
+                  imageDescriptionField: 'alt',
+                },
+              }
+            } as any,
+            { name: 'denivellation', title: 'Denivellation', type: 'string' } as any,
+            { name: 'road', title: 'Description du temps de trajet', type: 'string' } as any,
+            { name: 'night', title: 'Description de la nuitée', type: 'string' } as any,
           ],
         },
       ],
@@ -402,8 +412,8 @@ export const voyageType = defineType({
       group: 'pricing',
       title: 'Détails du prix',
       fields: [
-        {name: 'listInclude', type: 'array', title: 'Ce qui est inclus', of: [richTextBlock]} as any,
-        {name: 'listExclude', type: 'array', title: 'Ce qui est exclus', of: [richTextBlock]} as any,
+        { name: 'listInclude', type: 'array', title: 'Ce qui est inclus', of: [richTextBlock] } as any,
+        { name: 'listExclude', type: 'array', title: 'Ce qui est exclus', of: [richTextBlock] } as any,
       ],
     }),
     defineField({
@@ -412,22 +422,22 @@ export const voyageType = defineType({
       group: 'pricing',
       title: 'Prix',
       fields: [
-        {name: 'startingPrice', type: 'number'} as any,
-        {name: 'lastMinuteAvailable', type: 'boolean'} as any,
-        {name: 'lastMinuteReduction', type: 'number'} as any,
-        {name: 'earlyBirdAvailable', type: 'boolean'} as any,
-        {name: 'earlyBirdReduction', type: 'number'} as any,
-        {name: 'maxTravelers', type: 'number'} as any,
-        {name: 'minTravelersToConfirm', type: 'number'} as any,
-        {name: 'indivRoom', type: 'boolean'} as any,
-        {name: 'forcedIndivRoom', type: 'boolean'} as any,
-        {name: 'indivRoomPrice', type: 'number'} as any,
-        {name: 'cseReduction', type: 'number'} as any,
-        {name: 'cseAvailable', type: 'boolean'} as any,
-        {name: 'childrenPromo', type: 'number'} as any,
-        {name: 'childrenAge', type: 'number', initialValue: 12} as any,
-        {name: 'airportCode', type: 'array', of: [{type: 'string'}]} as any,
-        {name: 'capExploraction', 'type': 'boolean', description: 'Si coché, assurance cap-exploraction sinon cap-explorer', initialValue: false} as any,
+        { name: 'startingPrice', type: 'number' } as any,
+        { name: 'lastMinuteAvailable', type: 'boolean' } as any,
+        { name: 'lastMinuteReduction', type: 'number' } as any,
+        { name: 'earlyBirdAvailable', type: 'boolean' } as any,
+        { name: 'earlyBirdReduction', type: 'number' } as any,
+        { name: 'maxTravelers', type: 'number' } as any,
+        { name: 'minTravelersToConfirm', type: 'number' } as any,
+        { name: 'indivRoom', type: 'boolean' } as any,
+        { name: 'forcedIndivRoom', type: 'boolean' } as any,
+        { name: 'indivRoomPrice', type: 'number' } as any,
+        { name: 'cseReduction', type: 'number' } as any,
+        { name: 'cseAvailable', type: 'boolean' } as any,
+        { name: 'childrenPromo', type: 'number' } as any,
+        { name: 'childrenAge', type: 'number', initialValue: 12 } as any,
+        { name: 'airportCode', type: 'array', of: [{ type: 'string' }] } as any,
+        { name: 'capExploraction', 'type': 'boolean', description: 'Si coché, assurance cap-exploraction sinon cap-explorer', initialValue: false } as any,
       ],
     }),
     defineField({
@@ -446,12 +456,16 @@ export const voyageType = defineType({
         {
           type: 'object',
           fields: [
-            {name: 'name', title: 'Nom', type: 'string'} as any,
-            {name: 'description', title: 'Description', type: 'array', of: [richTextBlock]} as any,
-            {name: 'role', title: 'Rôle', type: 'string'} as any,
-            {name: 'image', type: 'image', options: {hotspot: true, aiAssist: {
-        imageDescriptionField: 'alt',
-      },}} as any,
+            { name: 'name', title: 'Nom', type: 'string' } as any,
+            { name: 'description', title: 'Description', type: 'array', of: [richTextBlock] } as any,
+            { name: 'role', title: 'Rôle', type: 'string' } as any,
+            {
+              name: 'image', type: 'image', options: {
+                hotspot: true, aiAssist: {
+                  imageDescriptionField: 'alt',
+                },
+              }
+            } as any,
           ],
         },
       ],
@@ -465,19 +479,21 @@ export const voyageType = defineType({
         {
           type: 'object',
           fields: [
-            {name: 'title', type: 'string'} as any,
-            {name: 'housingType', title: 'Type de logement', type: 'string'} as any,
-            {name: 'housingMood', title: 'Ambiance du logement', type: 'array', of: [richTextBlock]} as any,
+            { name: 'title', type: 'string' } as any,
+            { name: 'housingType', title: 'Type de logement', type: 'string' } as any,
+            { name: 'housingMood', title: 'Ambiance du logement', type: 'array', of: [richTextBlock] } as any,
             {
               name: 'image',
               type: 'array',
               of: [
                 {
                   type: 'image',
-                  options: {hotspot: true, aiAssist: {
-        imageDescriptionField: 'alt',
-      },},
-                  fields: [{name: 'alt', type: 'string'} as any],
+                  options: {
+                    hotspot: true, aiAssist: {
+                      imageDescriptionField: 'alt',
+                    },
+                  },
+                  fields: [{ name: 'alt', type: 'string' } as any],
                 },
               ],
             } as any,
@@ -490,14 +506,14 @@ export const voyageType = defineType({
       type: 'array',
       group: 'photoGallery',
       of: [
-        {type: 'image', options: {hotspot: true}, fields: [{name: 'alt', type: 'string'} as any]},
+        { type: 'image', options: { hotspot: true }, fields: [{ name: 'alt', type: 'string' } as any] },
       ],
       title: 'Liste de photos dans la galerie',
     }),
     defineField({
       name: 'videoLinks',
       type: 'array',
-      of: [{type: 'url'}],
+      of: [{ type: 'url' }],
       group: 'basic',
       title: 'Liens de videos',
     }),
@@ -510,8 +526,8 @@ export const voyageType = defineType({
         {
           type: 'object',
           fields: [
-            {name: 'question', type: 'string'} as any,
-            {name: 'answer', type: 'array', of: [richTextBlock]} as any,
+            { name: 'question', type: 'string' } as any,
+            { name: 'answer', type: 'array', of: [richTextBlock] } as any,
           ],
         },
       ] as any,

@@ -1,0 +1,113 @@
+<template>
+  <ClientOnly>
+    <v-navigation-drawer
+      v-model="model"
+      location="right"
+      disable-resize-watcher
+      mobile
+      :class="[
+        'custom-padding',
+        isTransparent ? 'drawer-transparent' : 'drawer-solid',
+      ]"
+    >
+      <div class="d-flex flex-column ga-4 pa-4">
+        <v-btn-secondary
+          v-if="header?.button5?.visible"
+          block
+          class="text-caption text-sm-subtitle-2"
+          color="primary"
+          @click="() => { router.push(header.button5.link); trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(header.button5.text) }"
+        >
+          {{ header.button5.text }}
+        </v-btn-secondary>
+        <v-btn-secondary
+          v-if="header?.button4?.visible"
+          href="tel: +33184807975"
+          block
+          variant="tonal"
+          class="text-caption text-sm-subtitle-2"
+          color="primary"
+          @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.button4.text) }"
+        >
+          {{ header.button4.text }}
+        </v-btn-secondary>
+        <v-btn-secondary
+          v-if="header?.button3?.visible"
+          color="white"
+          block
+          class="text-caption text-sm-subtitle-2 text-primary"
+          @click="() => { router.push(header.button3.link); captureOutboundLink(header.button3.text) }"
+        >
+          {{ header.button3.text }}
+        </v-btn-secondary>
+        <v-btn-secondary
+          v-if="header?.button2?.visible"
+          color="white"
+          block
+          class="text-caption text-sm-subtitle-2 text-primary"
+          @click="() => { router.push(header.button2.link); captureOutboundLink(header.button2.text) }"
+        >
+          {{ header.button2.text }}
+        </v-btn-secondary>
+        <v-btn-secondary
+          v-if="header?.button1?.visible"
+          color="white"
+          block
+          class="text-caption text-sm-subtitle-2 text-primary"
+          @click="() => { router.push(header.button1.link); captureOutboundLink(header.button1.text) }"
+        >
+          {{ header.button1.text }}
+        </v-btn-secondary>
+      </div>
+    </v-navigation-drawer>
+  </ClientOnly>
+</template>
+
+<script setup>
+import { useWindowScroll } from '@vueuse/core'
+
+const model = defineModel({ type: Boolean, default: false })
+
+const { header } = defineProps({
+  header: {
+    type: Object,
+    required: true,
+  },
+})
+const router = useRouter()
+const { gtag } = useGtag()
+const route = useRoute()
+const { y } = useWindowScroll()
+const isScrolled = computed(() => y.value > 200)
+const isTransparent = computed(() => !isScrolled.value && route.path === '/')
+
+function captureOutboundLink(btn) {
+  gtag('event', 'Header Button', { eventAction: 'Click', eventLabel: `Header button "${btn}"` })
+}
+</script>
+
+<style scoped>
+.custom-padding{
+  margin-top: -80px;
+  padding-top: 10px;
+  padding-bottom: 100px;
+  height: 200vh!important;
+}
+.drawer-solid {
+  background: white !important;
+}
+.drawer-transparent {
+  background: rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(3px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.404)
+}
+@media (max-width: 600px) {
+  .custom-padding{
+    margin-top: -136px;
+    padding-top: 60px;
+  }
+}
+.drawer-shadow{
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.259)!important;
+}
+</style>

@@ -18,7 +18,6 @@ export function getImageUrl(ref, vanityName = null) {
       .format('webp')
       .fit('max')
       .width(1200)
-      
 
     // Add vanity name for SEO if provided
     if (vanityName) {

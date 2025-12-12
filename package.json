@@ -7,7 +7,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "eslint ."
   },
   "dependencies": {
     "@date-io/dayjs": "^3.2.0",
@@ -23,6 +24,7 @@
     "@stripe/stripe-js": "^7.9.0",
     "@supabase/supabase-js": "^2.48.1",
     "@vueuse/core": "^12.5.0",
+    "algoliasearch": "^5.46.0",
     "axios": "^1.7.9",
     "crypto-js": "^4.2.0",
     "dayjs": "^1.11.13",
@@ -36,6 +38,7 @@
     "nuxt-meta-pixel": "^2.0.2",
     "nuxt-security": "^2.2.0",
     "pg": "^8.13.3",
+    "search-insights": "^2.17.3",
     "slugify": "^1.6.6",
     "stripe": "^17.6.0",
     "turndown": "^7.2.0",
@@ -45,9 +48,9 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
-    "sass": "^1.83.4",
+    "sass-embedded": "^1.93.3",
     "sass-loader": "^16.0.4",
-    "vite-plugin-vuetify": "^2.0.4",
-    "vuetify": "^3.7.6"
+    "vite-plugin-vuetify": "^2.1.2",
+    "vuetify": "^3.11.0"
   }
 }

@@ -3,19 +3,16 @@
     v-model="drawer"
     :header="header"
   />
-  <ClientOnly>
-    <Drawer
-      v-if="width < 960 && header"
-      v-model="drawer"
-      :header="header"
-    />
-  </ClientOnly>
+  <HeaderDrawer
+    v-if="header"
+    v-model="drawer"
+    class="d-block d-md-none"
+    :header="header"
+  />
 </template>
 
 <script setup>
 import { useDisplay } from 'vuetify'
-
-const { width } = useDisplay()
 
 const drawer = ref(false)
 
