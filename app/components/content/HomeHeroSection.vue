@@ -135,7 +135,7 @@ const typeLoop = () => {
 
 const config = useRuntimeConfig()
 const showControls = computed(() => config.public.environment !== 'production')
-const useTestImage = ref(false)
+const useTestImage = ref(config.public.environment !== 'production' ? true : false)
 const noiseEnabled = ref(true)
 
 const builder = imageUrlBuilder({
