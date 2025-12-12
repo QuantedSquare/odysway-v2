@@ -1,96 +1,220 @@
 <template>
-  <v-dialog max-width="900" class="search-dialog">
+  <v-dialog
+    v-model="dialogOpen"
+    max-width="900"
+    class="search-dialog"
+    fullscreen="true"
+  >
     <template #activator="{ props: activatorProps }">
-      <v-btn v-bind="activatorProps" :size="36" icon variant="outlined" class="search-trigger-btn">
-        <v-img :src="img('/icons/Search.svg', { format: 'webp', quality: 100, width: 20, height: 20 })"
-          alt="Search icon" width="20" height="20" fetchpriority="high" />
-      </v-btn>
+      <slot
+        name="activator"
+        :props="activatorProps"
+      >
+        <v-btn
+          v-bind="activatorProps"
+          :size="36"
+          icon
+          variant="outlined"
+          class="search-trigger-btn"
+        >
+          <v-img
+            :src="img('/icons/Search.svg', { format: 'webp', quality: 100, width: 20, height: 20 })"
+            alt="Search icon"
+            width="20"
+            height="20"
+            fetchpriority="high"
+          />
+        </v-btn>
+      </slot>
     </template>
 
-    <v-card class="search-card" elevation="24">
+    <v-card
+      class="search-card "
+      elevation="24"
+    >
       <!-- Header -->
       <v-card-title class="search-header pa-6 pb-4">
         <div class="d-flex align-center justify-space-between">
           <div class="search-title">
             {{ searchText ? nbVoyageIdeas : (searchDialogField?.searchDialogTitle || 'Rechercher un voyage') }}
           </div>
-          <v-btn :icon="mdiClose" variant="text" size="small" class="close-btn" @click="closeDialog" />
+          <v-btn
+            :icon="mdiClose"
+            variant="text"
+            size="small"
+            class="close-btn"
+            color="white"
+            @click="closeDialog"
+          />
         </div>
       </v-card-title>
 
       <!-- Search Input -->
-      <v-card-text class="px-6 pt-2 pb-0 pb-md-4">
-        <v-text-field v-model="searchText" variant="outlined"
+      <v-card-text class="px-6 pt-2 pb-0 pb-md-4 card-text-height">
+        <v-text-field
+          v-model="searchText"
           :placeholder="searchDialogField?.searchDialogPlaceholder || 'Saisir une envie de voyage...'"
-          density="comfortable" hide-details autofocus class="search-input" @input="debouncedHandleSearch">
+          density="comfortable"
+          rounded="xl"
+          hide-details
+          autofocus
+          class="search-input"
+          @input="debouncedHandleSearch"
+        >
           <template #prepend-inner>
-            <v-icon :icon="mdiMagnify" size="20" class="search-icon" />
+            <v-icon
+              :icon="mdiMagnify"
+              size="20"
+              class="search-icon"
+            />
           </template>
         </v-text-field>
 
         <!-- Quick filters -->
-        <div v-if="searchDialogField?.searchDialogBtnList?.length" class="quick-filters mt-md-4">
-          <v-chip v-for="btn in searchDialogField.searchDialogBtnList" :key="btn.text" :to="btn.link" size="default"
-            class="filter-chip" @click="closeDialog">
+        <div
+          v-if="searchDialogField?.searchDialogBtnList?.length"
+          class="quick-filters mt-4"
+        >
+          <v-chip
+            v-for="btn in searchDialogField.searchDialogBtnList"
+            :key="btn.text"
+            :to="btn.link"
+            size="default"
+            class="filter-chip"
+            color="white"
+            variant="outlined"
+            @click="closeDialog"
+          >
             <span class="chip-text">{{ btn.text }}</span>
           </v-chip>
         </div>
       </v-card-text>
 
       <!-- Results Area -->
-      <v-card-text class="results-area px-6 pb-6">
+      <v-card-text class="results-area px-6 pb-6 text-white">
         <!-- Empty state -->
-        <div v-if="!searchText && !loading" class="empty-state">
-          <v-icon :icon="mdiMagnify" size="64" class="empty-icon mb-4" />
-          <div class="empty-title mb-2">Recherchez votre prochaine aventure</div>
+        <div
+          v-if="!searchText && !loading"
+          class="empty-state"
+        >
+          <v-icon
+            :icon="mdiMagnify"
+            size="64"
+            class="empty-icon mb-4"
+          />
+          <div class="empty-title mb-2">
+            Recherchez votre prochaine aventure
+          </div>
           <div class="empty-subtitle">
             Saisissez une destination, un type de voyage ou une expérience...
           </div>
         </div>
 
         <!-- Loading state -->
-        <div v-else-if="loading && searchText" class="loading-state">
-          <v-progress-circular indeterminate color="primary" size="48" />
-          <div class="loading-text mt-4">Recherche en cours...</div>
+        <div
+          v-else-if="loading && searchText"
+          class="loading-state"
+        >
+          <v-progress-circular
+            indeterminate
+            color="primary"
+            size="48"
+          />
+          <div class="loading-text mt-4">
+            Recherche en cours...
+          </div>
         </div>
 
         <!-- Results -->
-        <div v-else-if="!loading && destinations && destinations.length > 0" class="results-container">
+        <div
+          v-else-if="!loading && destinations && destinations.length > 0"
+          class="results-container"
+        >
           <!-- Voyages section -->
-          <div v-if="voyageResults.length > 0" class="results-section">
-            <div class="section-title mb-3">Voyages</div>
+          <div
+            v-if="voyageResults.length > 0"
+            class="results-section"
+          >
+            <div class="section-title mb-3">
+              Voyages
+            </div>
             <div class="results-grid">
-              <div v-for="(voyage, index) in voyageResults" :key="index" class="result-card"
-                @click="navigate(voyage, index + 1)">
+              <div
+                v-for="(voyage, index) in voyageResults"
+                :key="index"
+                class="result-card"
+                @click="navigate(voyage, index + 1)"
+              >
                 <div class="card-image-wrapper">
-                  <img v-if="voyage.image" :src="voyage.image" :alt="voyage.title" class="card-image">
-                    <div v-else class="card-placeholder">
-                      <v-icon :icon="mdiImageOutline" size="40" color="white" />
-                    </div>
-                    <div class="card-gradient"></div>
-                    <div class="card-title">{{ voyage.title }}</div>
+                  <img
+                    v-if="voyage.image"
+                    :src="voyage.image"
+                    :alt="voyage.title"
+                    class="card-image"
+                  >
+                  <div
+                    v-else
+                    class="card-placeholder"
+                  >
+                    <v-icon
+                      :icon="mdiImageOutline"
+                      size="40"
+                      color="white"
+                    />
+                  </div>
+                  <div class="card-gradient" />
+                  <div class="card-title">
+                    {{ voyage.title }}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
           <!-- Destinations & Regions section -->
-          <div v-if="otherResults.length > 0" class="results-section" :class="{ 'mt-6': voyageResults.length > 0 }">
-            <div class="section-title mb-3">Destinations & Régions</div>
+          <div
+            v-if="otherResults.length > 0"
+            class="results-section"
+            :class="{ 'mt-6': voyageResults.length > 0 }"
+          >
+            <div class="section-title mb-3">
+              Destinations & Régions
+            </div>
             <div class="results-grid">
-              <div v-for="(destination, index) in otherResults" :key="index" class="result-card"
-                @click="navigate(destination, index + 1 + voyageResults.length)">
+              <div
+                v-for="(destination, index) in otherResults"
+                :key="index"
+                class="result-card"
+                @click="navigate(destination, index + 1 + voyageResults.length)"
+              >
                 <div class="card-image-wrapper">
-                  <img v-if="destination.image" :src="destination.image" :alt="destination.title" class="card-image">
-                    <div v-else class="card-placeholder">
-                      <v-icon :icon="mdiMapMarkerOutline" size="40" color="white" />
-                    </div>
-                    <div class="card-gradient"></div>
-                    <!-- Voyage count badge -->
-                    <div v-if="destination.voyageCount" class="voyage-badge">
-                      {{ destination.voyageCount }} {{ destination.voyageCount === 1 ? 'voyage' : 'voyages' }}
-                    </div>
-                    <div class="card-title">{{ destination.title }}</div>
+                  <img
+                    v-if="destination.image"
+                    :src="destination.image"
+                    :alt="destination.title"
+                    class="card-image"
+                  >
+                  <div
+                    v-else
+                    class="card-placeholder"
+                  >
+                    <v-icon
+                      :icon="mdiMapMarkerOutline"
+                      size="40"
+                      color="white"
+                    />
+                  </div>
+                  <div class="card-gradient" />
+                  <!-- Voyage count badge -->
+                  <div
+                    v-if="destination.voyageCount"
+                    class="voyage-badge"
+                  >
+                    {{ destination.voyageCount }} {{ destination.voyageCount === 1 ? 'voyage' : 'voyages' }}
+                  </div>
+                  <div class="card-title">
+                    {{ destination.title }}
+                  </div>
                 </div>
               </div>
             </div>
@@ -98,9 +222,19 @@
         </div>
 
         <!-- No results state -->
-        <div v-else-if="!loading && searchText && destinations.length === 0" class="no-results-state">
-          <v-icon :icon="mdiMagnifyClose" size="64" class="no-results-icon mb-4" />
-          <div class="no-results-title mb-2">Aucun résultat trouvé</div>
+        <div
+          v-else-if="!loading && searchText && destinations.length === 0"
+          class="no-results-state text-white text-center"
+        >
+          <v-icon
+            :icon="mdiMagnifyClose"
+            size="64"
+            color="white"
+            class="no-results-icon mb-4"
+          />
+          <div class="no-results-title mb-2">
+            Aucun résultat trouvé
+          </div>
           <div class="no-results-subtitle">
             Essayez avec d'autres mots-clés ou une destination différente
           </div>
@@ -108,12 +242,20 @@
       </v-card-text>
 
       <!-- Algolia Branding -->
-      <div class="d-flex justify-end align-center px-6 pb-4 pt-2 bg-white">
+      <v-card-actions class="d-flex justify-end align-center px-6 pb-4 pt-2 custom-bg-action">
         <span class="text-caption text-medium-emphasis mr-2">Powered by</span>
-        <NuxtLink to="https://www.algolia.com/" target="_blank">
-          <img src="/icons/Algolia-logo-blue.svg" alt="Algolia" height="16" width="80" />
+        <NuxtLink
+          to="https://www.algolia.com/"
+          target="_blank"
+        >
+          <img
+            src="/icons/Algolia-logo-blue.svg"
+            alt="Algolia"
+            height="16"
+            width="80"
+          >
         </NuxtLink>
-      </div>
+      </v-card-actions>
     </v-card>
   </v-dialog>
 </template>
@@ -140,7 +282,7 @@ onMounted(() => {
 const sanity = useSanity()
 const img = useImage()
 
-const dialogOpen = ref(true)
+const dialogOpen = ref(false)
 const searchText = ref(null)
 
 const searchDialogFieldQuery = groq`*[_type == "search"][0]{
@@ -181,7 +323,7 @@ function navigate(destination, position = 1) {
       eventName: 'Search Result Clicked',
       queryID: destination.queryID,
       objectIDs: [destination.objectID],
-      positions: [position]
+      positions: [position],
     })
   }
 
@@ -200,44 +342,50 @@ function closeDialog() {
 </script>
 
 <style scoped>
+.custom-bg-action{
+  background-color: rgba(255, 255, 255, 0.4)!important;
+  opacity: 0.8!important;
+}
 /* Trigger Button */
 .search-trigger-btn {
   border-radius: 50% !important;
-  background-color: white;
+  /* background-color: white; */
   transition: all 0.2s ease;
 }
 
 .search-trigger-btn:hover {
-  background-color: #f5f5f5;
+  background-color: #7e94b484;
   transform: scale(1.05);
 }
 
 /* Dialog Card */
 .search-card {
-  border-radius: 16px !important;
+  border-radius: 0px !important;
+  background-color: rgba(102, 102, 102, 0.5)!important;
+  backdrop-filter: blur(10px)!important;
   max-height: 85vh;
   display: flex;
-  flex-direction: column;
-}
 
-/* Header */
-.search-header {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .search-title {
   font-size: 24px;
   font-weight: 600;
-  color: rgb(var(--v-theme-primary));
+  /* color: rgb(var(--v-theme-primary)); */
+  color: rgb(var(--v-theme-white));
 }
 
 .close-btn {
-  opacity: 0.6;
+  opacity: 1;
   transition: opacity 0.2s ease;
 }
 
 .close-btn:hover {
   opacity: 1;
+}
+
+.card-text-height {
+  max-height: fit-content;
 }
 
 /* Search Input */
@@ -268,8 +416,8 @@ function closeDialog() {
 }
 
 .filter-chip {
-  background: linear-gradient(135deg, rgba(var(--v-theme-primary), 0.08) 0%, rgba(var(--v-theme-primary), 0.12) 100%) !important;
-  border: 1.5px solid rgba(var(--v-theme-primary), 0.2) !important;
+  background: linear-gradient(135deg, rgba(white, 0.08) 0%, rgba(white, 0.12) 100%) !important;
+  /* border: 1.5px solid rgba(var(--v-theme-primary-light-4), 0.2) !important; */
   border-radius: 24px !important;
   padding: 8px 18px !important;
   height: auto !important;
@@ -309,7 +457,7 @@ function closeDialog() {
 }
 
 .chip-text {
-  color: rgb(var(--v-theme-primary));
+  color: white;
   font-weight: 600;
   font-size: 13px;
   position: relative;
@@ -319,7 +467,6 @@ function closeDialog() {
 /* Results Area */
 .results-area {
   overflow-y: auto;
-  max-height: calc(85vh - 200px);
 }
 
 /* Scrollbar */
@@ -349,18 +496,18 @@ function closeDialog() {
 
 .empty-icon {
   opacity: 0.3;
-  color: rgb(var(--v-theme-primary));
+  color: rgb(var(--v-theme-white));
 }
 
 .empty-title {
   font-size: 20px;
   font-weight: 600;
-  color: rgb(var(--v-theme-primary));
+  color: rgb(var(--v-theme-white));
 }
 
 .empty-subtitle {
   font-size: 14px;
-  color: #666;
+  color: rgb(var(--v-theme-white));
 }
 
 /* Loading State */
@@ -382,19 +529,19 @@ function closeDialog() {
 }
 
 .no-results-icon {
-  opacity: 0.3;
-  color: #999;
+  opacity: 0.5;
+
 }
 
 .no-results-title {
   font-size: 20px;
   font-weight: 600;
-  color: #666;
+
 }
 
 .no-results-subtitle {
   font-size: 14px;
-  color: #999;
+
 }
 
 /* Results Container */
@@ -407,10 +554,12 @@ function closeDialog() {
 }
 
 .section-title {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
-  color: rgb(var(--v-theme-primary));
+  color: rgb(var(--v-theme-white));
   margin-bottom: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(var(--v-theme-white), 0.2);
 }
 
 /* Results Grid */
@@ -485,7 +634,7 @@ function closeDialog() {
   left: 0;
   right: 0;
   height: 60%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0) 100%);
   pointer-events: none;
 }
 

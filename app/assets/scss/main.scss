@@ -1,12 +1,10 @@
 $border-radius-root: 10px !default;
 
-@use 'vuetify' with (
-  // variables go here
+@use 'vuetify' with ( // variables go here
   $body-font-family: 'Gordita',
   $color-pack: false,
   // $reset: false,
-  $rounded: (
-    0: 0,
+  $rounded: (0: 0,
     "sm": $border-radius-root * 0.5,
     null: $border-radius-root,
     "default": $border-radius-root,
@@ -18,100 +16,85 @@ $border-radius-root: 10px !default;
     "circle": 50%,
     "shaped": $border-radius-root * 6 0,
   ),
-  $typography: (
-    "h1": (
-      "size": 48px,
+  $typography: ("h1": ("size": 48px,
       "weight": 700,
       "line-height": 60px,
       "letter-spacing": normal,
       "text-transform": none,
     ),
-    "h2": (
-      "size": 48px,
+    "h2": ("size": 48px,
       "weight": 700,
       "line-height": 54px,
       "letter-spacing": normal,
       "text-transform": none,
     ),
-    "h3": (
-      "size": 28px,
+    "h3": ("size": 28px,
       "weight": 700,
       "line-height": 32px,
       "letter-spacing": normal,
       "text-transform": none,
     ),
-    "h4": (
-      "size": 24px,
+    "h4": ("size": 24px,
       "weight": 700,
       "line-height": 30px,
       "letter-spacing": normal,
       "text-transform": none,
     ),
-    "h5": (
-      "size": 18px,
+    "h5": ("size": 18px,
       "weight": 700,
       "line-height": 27px,
       "letter-spacing": normal,
       "text-transform": none,
     ),
-    "h6": (
-      "size": 16px,
+    "h6": ("size": 16px,
       "weight": 500,
       "line-height": 20px,
       "letter-spacing": normal,
       "text-transform": none,
     ),
-    "subtitle-1": (
-      "size": 1rem,
+    "subtitle-1": ("size": 1rem,
       "weight": 500,
       "line-height": 30px,
       "letter-spacing": 0.009375em,
       "text-transform": none,
     ),
-    "subtitle-2": (
-      "size": 0.875rem,
+    "subtitle-2": ("size": 0.875rem,
       "weight": 500,
       "line-height": 1.375rem,
       "letter-spacing": normal,
       "text-transform": none,
     ),
-    "body-1": (
-      "size": 18px,
+    "body-1": ("size": 18px,
       "weight": 400,
       "line-height": 20px,
       "letter-spacing": normal,
       "text-transform": none,
     ),
-    "body-2": (
-      "size": 16px,
+    "body-2": ("size": 16px,
       "weight": 400,
       "line-height": 14px,
       "letter-spacing": normal,
       "text-transform": none,
     ),
-    "button": (
-      "size": 14px,
+    "button": ("size": 14px,
       "weight": 500,
       "line-height": 2.25rem,
       "letter-spacing": normal,
       "text-transform": uppercase,
     ),
-    "caption": (
-      "size": 11px,
+    "caption": ("size": 11px,
       "weight": 500,
       "line-height": 1.25rem,
       "letter-spacing": normal,
       "text-transform": none,
     ),
-    "overline": (
-      "size": 0.75rem,
+    "overline": ("size": 0.75rem,
       "weight": 500,
       "line-height": 2rem,
       "letter-spacing": normal,
       "text-transform": uppercase,
     ),
-  )
-);
+  ));
 
 @use 'fonts';
 
@@ -179,34 +162,42 @@ $border-radius-root: 10px !default;
     font-size: 12px !important;
     line-height: 18px !important;
   }
+
   .text-body-1 {
     font-size: 16px !important;
     line-height: 21px !important;
   }
+
   .text-body-2 {
     font-size: 12px !important;
     line-height: 15px !important;
   }
+
   .text-subtitle-1 {
     line-height: 21px !important;
   }
+
   .text-subtitle-2 {
     line-height: 15px !important;
   }
 }
+
 .text-shadow {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, .3) !important;
 }
-.subtle-shadow{
-  box-shadow: 0px 3px 20px 0px rgba(34, 34, 35, 0.06)!important;
+
+.subtle-shadow {
+  box-shadow: 0px 3px 20px 0px rgba(34, 34, 35, 0.06) !important;
 }
+
 .btn-shadow {
-  box-shadow: 0px 1px 6px 0px rgba(34, 34, 35, 0.09)!important;
+  box-shadow: 0px 1px 6px 0px rgba(34, 34, 35, 0.09) !important;
 }
+
 .max-container-width {
-    max-width: 1360px!important;
-    margin-left: auto!important;
-    margin-right: auto!important;
+  max-width: 1360px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 
@@ -215,13 +206,13 @@ $border-radius-root: 10px !default;
 }
 
 a {
-  text-decoration: none; 
+  text-decoration: none;
   text-underline-offset: 0.2em;
   text-decoration-thickness: 1px;
   letter-spacing: 0.01em;
-  
+
   &:hover {
-    text-decoration: underline; 
+    text-decoration: underline;
   }
 }
 
@@ -232,11 +223,12 @@ body {
   text-rendering: optimizeLegibility;
   font-feature-settings: 'kern' 1, 'liga' 1;
 }
+
 html {
   scroll-behavior: smooth;
 }
 
-.v-menu > .v-overlay__content{
+.v-menu>.v-overlay__content {
   border-radius: 10px !important;
 }
 
@@ -262,9 +254,9 @@ html {
 
 @media (max-width: 960px) {
   .whatsapp-button {
-  position: fixed;
-  bottom: 10px;
-  right: 30px;
-  z-index: 10000;
-}
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+    z-index: 10000;
+  }
 }

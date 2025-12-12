@@ -1,15 +1,15 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity'
 
 // Shared block configuration with alignment options
 const richTextBlock = {
   type: 'block',
   title: 'Bloc de texte',
   styles: [
-    {title: 'Normal', value: 'normal'},
-    {title: 'H2', value: 'h2'},
-    {title: 'H3', value: 'h3'},
-    {title: 'H4', value: 'h4'},
-    {title: 'Citation', value: 'blockquote'},
+    { title: 'Normal', value: 'normal' },
+    { title: 'H2', value: 'h2' },
+    { title: 'H3', value: 'h3' },
+    { title: 'H4', value: 'h4' },
+    { title: 'Citation', value: 'blockquote' },
   ],
 }
 
@@ -26,7 +26,7 @@ export const homePageType = defineType({
   },
   type: 'document',
   groups: [
-    
+
     {
       name: 'hero',
       title: 'Hero Section',
@@ -77,7 +77,7 @@ export const homePageType = defineType({
       title: 'SEO',
     },
   ],
-  
+
   fields: [
     // SEO Settings
     defineField({
@@ -111,6 +111,13 @@ export const homePageType = defineType({
           of: [richTextBlock],
           validation: (rule) => rule.required(),
         }),
+        defineField({
+          name: 'subtitle',
+          title: 'Sous-titre Hero',
+          type: 'array',
+          of: [richTextBlock],
+          validation: (rule) => rule.required(),
+        }),
       ],
     }),
 
@@ -131,11 +138,11 @@ export const homePageType = defineType({
           name: 'experiences',
           title: 'Expériences',
           type: 'array',
-          of: [{type: 'reference', to: [{type: 'experience'}]}],
+          of: [{ type: 'reference', to: [{ type: 'experience' }] }],
           validation: (rule) => rule.required(),
         }),
       ],
-    }), 
+    }),
 
     // France Trips Section
     defineField({
@@ -153,7 +160,7 @@ export const homePageType = defineType({
           name: 'voyagesFrance',
           title: 'Voyages',
           type: 'array',
-          of: [{type: 'reference', to: [{type: 'voyage'}]}],
+          of: [{ type: 'reference', to: [{ type: 'voyage' }] }],
         }),
       ],
     }),
@@ -174,7 +181,7 @@ export const homePageType = defineType({
           name: 'categoriesFollowDesires',
           title: 'Catégories',
           type: 'array',
-          of: [{type: 'reference', to: [{type: 'category'}]}],
+          of: [{ type: 'reference', to: [{ type: 'category' }] }],
         }),
       ],
     }),
@@ -265,7 +272,7 @@ export const homePageType = defineType({
           name: 'voyagesGuaranteedDepartures',
           title: 'Liste des voyages garantis',
           type: 'array',
-          of: [{type: 'reference', to: [{type: 'voyage'}]}],
+          of: [{ type: 'reference', to: [{ type: 'voyage' }] }],
         }),
       ],
     }),
@@ -286,7 +293,7 @@ export const homePageType = defineType({
           name: 'voyagesSummerTravel',
           title: 'Liste des voyages',
           type: 'array',
-          of: [{type: 'reference', to: [{type: 'voyage'}]}],
+          of: [{ type: 'reference', to: [{ type: 'voyage' }] }],
         }),
       ],
     }),
@@ -313,7 +320,7 @@ export const homePageType = defineType({
       ],
     }),
 
-   
+
 
     // Unforgettable Travels Section
     defineField({
@@ -331,7 +338,7 @@ export const homePageType = defineType({
           name: 'voyagesUnforgettableTravels',
           title: 'Liste des voyages',
           type: 'array',
-          of: [{type: 'reference', to: [{type: 'voyage'}]}],
+          of: [{ type: 'reference', to: [{ type: 'voyage' }] }],
         }),
       ],
     }),
@@ -352,7 +359,7 @@ export const homePageType = defineType({
           name: 'reviews',
           title: 'Liste des reviews',
           type: 'array',
-          of: [{type: 'reference', to: [{type: 'review'}]}],
+          of: [{ type: 'reference', to: [{ type: 'review' }] }],
         }),
         defineField({
           name: 'ctaText',

@@ -23,7 +23,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TypeDeal> => {
     return response
   }
   catch (err) {
-    console.error('Deal creation error:', err)
+    console.error('=======Deal creation error=======', err)
     throw createError({
       statusCode: 500,
       message: 'Failed to create deal',

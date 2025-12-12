@@ -1,6 +1,6 @@
 <template>
   <div
-    class="d-sm-none px-4 px-md-9 d-flex align-center height-app-bar custom-app-bar bg-white"
+    class="d-sm-none px-4 px-md-9 d-flex align-center height-app-bar custom-app-bar "
     :class="!model ? 'app-bar-shadow' : ''"
   >
     <NuxtLink
@@ -91,116 +91,123 @@
   <v-app-bar
     elevation="0"
     mobile
-    class="d-header-desktop px-4 px-md-9 d-flex align-center height-app-bar mx-0"
-    :class="!model ? 'app-bar-shadow' : ''"
-    :scroll-behavior="scrollBehavior"
-    :scroll-threshold="scrollThreshold"
+    class="d-header-desktop height-app-bar-desktop px-4 px-md-9 d-flex align-center  mx-0 "
+    extended
+    :class="isTransparent ? 'transparent-app-bar' : 'bg-white'"
+    scroll-behavior="fully-hide"
+    scroll-threshold="20"
+    extension-height="90"
   >
-    <NuxtLink
-      :to="'/'"
-      class="header-logo-link"
-    >
-      <img
-        :src="img('/logos/Logo-Odysway-Bleu.png', { format: 'webp', quality: 90, width: 150 })"
-        :srcset="`${img('/logos/Logo-Odysway-Bleu.png', { format: 'webp', quality: 90, width: 150 })} 150w, ${img('/logos/Logo-Odysway-Bleu.png', { format: 'webp', quality: 90, width: 180 })} 180w`"
-        sizes="150px"
-        width="150"
-        height="38"
-        fetchpriority="high"
-        :alt="header?.logo?.alt || 'Logo principale d\'Odysway'"
-        class="header-logo"
-        style="width: 150px; height: auto; max-width: 150px;"
+    <template #extension>
+      <NuxtLink
+        :to="'/'"
+        class="header-logo-link"
+        :class="isTransparent ? 'filter' : ''"
       >
-    </NuxtLink>
+        <img
+          :src="img(`/logos/Logo-Odysway-${isTransparent ? 'Blanc' : 'Bleu'}.png`, { format: 'webp', quality: 90, width: 150 })"
+          :srcset="`${img(`/logos/Logo-Odysway-${isTransparent ? 'Blanc' : 'Bleu'}.png`, { format: 'webp', quality: 90, width: 150 })} 150w, ${img(`/logos/Logo-Odysway-${isTransparent ? 'Blanc' : 'Bleu'}.png`, { format: 'webp', quality: 90, width: 180 })} 180w`"
+          sizes="150px"
+          width="150"
+          height="38"
+          fetchpriority="high"
+          :alt="header?.logo?.alt || 'Logo principale d\'Odysway'"
+          class="header-logo"
+          style="width: 150px; height: auto; max-width: 150px;"
+        >
+      </NuxtLink>
 
-    <v-spacer />
-    <div class="d-flex align-center ga-4">
-      <SearchDialog />
-      <v-btn
-        v-if="header?.button1?.visible"
-        height="45"
-        color="primary"
-        rounded="default"
-        class="text-caption text-md-body-1 d-none d-md-inline ml-5"
-        @click="() => { router.push(header.button1.link); captureOutboundLink(header.button1.text) }"
-      >
-        {{ header.button1.text }}
-      </v-btn>
-      <v-btn
-        v-if="header?.button2?.visible"
-        color="primary"
-        height="45"
-        class="text-caption text-md-body-1 d-none d-md-inline"
-        @click="() => { router.push(header.button2.link); captureOutboundLink(header.button2.text) }"
-      >
-        {{ header.button2.text }}
-      </v-btn>
-      <v-btn
-        v-if="header?.button3?.visible"
-        color="primary"
-        height="45"
-        class="text-caption text-md-body-1 d-none d-md-inline"
-        @click="() => { router.push(header.button3.link); captureOutboundLink(header.button3.text) }"
-      >
-        {{ header.button3.text }}
-      </v-btn>
-      <v-btn
-        v-if="header?.button4?.visible"
-        href="tel: +33184807975"
-        color="primary"
-        height="45"
-        variant="tonal"
-        rounded="default"
-        class="text-caption text-md-body-1 d-none d-md-flex"
-        @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.button4.text) }"
-      >
-        <span class="align-center">{{ header.button4.text }}</span>
-      </v-btn>
-      <v-btn
-        v-if="header?.button5?.visible"
-        height="45"
-        color="white"
-        rounded="default"
-        class="text-caption text-md-body-1 d-none d-md-inline bg-primary"
-        @click="() => { router.push(header.button5.link); trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(header.button5.text) }"
-      >
-        {{ header.button5.text }}
-      </v-btn>
+      <v-spacer />
+      <div class="d-flex align-center ga-4">
+        <SearchDialog v-if="!isTransparent && y > 700" />
+        <v-btn
+          v-if="header?.button1?.visible"
+          height="45"
+          color="primary"
+          rounded="default"
+          class="text-caption text-md-body-1 d-none d-md-inline ml-5"
+          :class="isTransparent ? 'filter' : ''"
+          @click="() => { router.push(header.button1.link); captureOutboundLink(header.button1.text) }"
+        >
+          {{ header.button1.text }}
+        </v-btn>
+        <v-btn
+          v-if="header?.button2?.visible"
+          color="primary"
+          height="45"
+          :class="isTransparent ? 'filter' : ''"
+          class="text-caption text-md-body-1 d-none d-md-inline"
+          @click="() => { router.push(header.button2.link); captureOutboundLink(header.button2.text) }"
+        >
+          {{ header.button2.text }}
+        </v-btn>
+        <v-btn
+          v-if="header?.button3?.visible"
+          color="primary"
+          height="45"
+          :class="isTransparent ? 'filter' : ''"
+          class="text-caption text-md-body-1 d-none d-md-inline"
+          @click="() => { router.push(header.button3.link); captureOutboundLink(header.button3.text) }"
+        >
+          {{ header.button3.text }}
+        </v-btn>
+        <v-btn
+          v-if="header?.button4?.visible"
+          href="tel: +33184807975"
+          color="primary"
+          height="45"
+          variant="tonal"
+          :class="isTransparent ? 'filter' : ''"
+          rounded="default"
+          class="text-caption text-md-body-1 d-none d-md-flex"
+          @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.button4.text) }"
+        >
+          <span class="align-center">{{ header.button4.text }}</span>
+        </v-btn>
+        <v-btn
+          v-if="header?.button5?.visible"
+          height="45"
+          :variant="isTransparent ? 'tonal' : 'text'"
+          rounded="default"
 
-      <v-btn
-        class="d-inline d-md-none "
-        icon
-        height="35"
-        variant="text"
-        aria-label="Menu"
-        :aria-expanded="model"
-        @click.stop="model = !model"
-      >
-        <v-icon>
-          {{ mdiMenu }}
-        </v-icon>
-      </v-btn>
-    </div>
+          :class="isTransparent ? 'text-soft-blush text-shadow' : 'bg-primary text-white'"
+          class="text-caption text-md-body-1 d-none d-md-inline "
+          @click="() => { router.push(header.button5.link); trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(header.button5.text) }"
+        >
+          {{ header.button5.text }}
+        </v-btn>
+
+        <v-btn
+          class="d-inline d-md-none "
+          icon
+          height="35"
+          variant="text"
+          aria-label="Menu"
+          :aria-expanded="model"
+          @click.stop="model = !model"
+        >
+          <v-icon>
+            {{ mdiMenu }}
+          </v-icon>
+        </v-btn>
+      </div>
+    </template>
   </v-app-bar>
 </template>
 
 <script setup>
 import { mdiMenu } from '@mdi/js'
+import { useWindowScroll } from '@vueuse/core'
 import { useImage } from '#imports'
 
 const router = useRouter()
 const model = defineModel({ type: Boolean, default: false })
 const img = useImage()
+const route = useRoute()
+
+const { y } = useWindowScroll()
 
 const { header } = defineProps({
-  scrollBehavior: {
-    type: String,
-    default: 'elevate',
-  },
-  scrollThreshold: {
-    type: Number,
-    default: 5,
-  },
   header: {
     type: Object,
     required: true,
@@ -211,18 +218,24 @@ const { gtag } = useGtag()
 function captureOutboundLink(btn) {
   gtag('event', 'Header Button', { eventAction: 'Click', eventLabel: `Header button "${btn}"` })
 }
+console.log(route)
+const isScrolled = computed(() => y.value > 200)
+const isTransparent = computed(() => !isScrolled.value && route.path === '/')
 </script>
 
 <style scoped>
-.d-header-desktop{
-  display: none!important;
+.d-header-desktop {
+  display: none !important;
+  transition: all 0.5s ease-in-out !important;
 }
+
 @media (min-width: 600px) {
-  .d-header-desktop{
-    display: block!important;
+  .d-header-desktop {
+    display: flex !important;
   }
 }
-.custom-app-bar{
+
+.custom-app-bar {
   position: fixed !important;
   top: 0;
   left: 0;
@@ -230,22 +243,36 @@ function captureOutboundLink(btn) {
   margin-right: 16px;
   width: calc(100% - 36px);
   right: 0;
-  z-index: 1999!important;
+  z-index: 1999 !important;
 }
-.app-bar-shadow:deep(){
-  box-shadow: none!important;
-  z-index: 1999!important;
+
+.app-bar-shadow:deep() {
+  box-shadow: none !important;
+  z-index: 1999 !important;
 }
-.height-app-bar{
+
+.height-app-bar {
   height: 90px;
+  justify-content: center;
+  background-color: white !important;
 }
+.height-app-bar-desktop {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.transparent-app-bar {
+  backdrop-filter: blur(3px) !important;
+  background-color: transparent !important;
+}
+
 .header-logo-link {
   display: flex;
   align-items: center;
 }
-:deep(.v-toolbar__content){
-  height: 100%!important;
+
+:deep(.v-toolbar__content) {
+  height: 100% !important;
 }
+
 .header-logo {
   width: 150px;
   min-width: 100px;
@@ -254,28 +281,33 @@ function captureOutboundLink(btn) {
   transition: width 0.2s;
   display: block;
 }
+
 @media (max-width: 960px) {
-  .app-bar-shadow:deep(){
-    box-shadow: 0px 10px 20px 0px #0000000A!important;
+  .app-bar-shadow:deep() {
+    box-shadow: 0px 10px 20px 0px #0000000A !important;
   }
+
   .header-logo {
     width: 100px;
     min-width: 60px;
     height: 25px;
 
   }
-  .height-app-bar{
-  height: 60px;
-}
-}
-@media (max-width: 600px) {
-  .height-app-bar{
-    height:52px;
-    margin-top: 18px;
-    border-radius: 12px!important;
-    box-shadow: 0px 10px 20px 0px #0000000A!important;
+
+  .height-app-bar {
+    height: 60px;
   }
 }
+
+@media (max-width: 600px) {
+  .height-app-bar {
+    height: 52px;
+    margin-top: 18px;
+    border-radius: 12px !important;
+    box-shadow: 0px 10px 20px 0px #0000000A !important;
+  }
+}
+
 @media (min-width: 960px) and (max-width: 1200px) {
   :deep(.v-btn.text-md-body-1) {
     font-size: 0.9rem !important;
@@ -283,5 +315,10 @@ function captureOutboundLink(btn) {
     padding-left: 12px !important;
     padding-right: 12px !important;
   }
+}
+
+.filter {
+  color: #FBF0EC!important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, .2) !important;
 }
 </style>

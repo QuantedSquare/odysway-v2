@@ -1,6 +1,26 @@
 <template>
-  <div class="mt-8 mt-md-0">
-    <div class="relative-hero-section mb-16 hero-image-wrapper">
+  <section class="mt-8 mt-md-0 hero">
+    <div class="hero-search">
+      <SearchDialog>
+        <template #activator="{ props }">
+          <div
+            v-bind="props"
+            class="glass-search-trigger"
+            role="button"
+            tabindex="0"
+          >
+            <v-icon
+              :icon="mdiMagnify"
+              color="primary"
+              size="24"
+              class="mr-3 icon-search"
+            />
+            <span class="search-placeholder">Cap Vert, Népal, yoga, trek, février…</span>
+          </div>
+        </template>
+      </SearchDialog>
+    </div>
+    <div class="hero-image-bg">
       <NuxtImg
         v-if="srcUrl"
         :src="srcUrl"
@@ -14,40 +34,91 @@
         width="1536"
         height="900"
       />
-      <div class="hero-overlay h-100 d-flex align-center">
-        <v-container class="text-white text-h4 text-md-h2 font-weight-bold text-shadow text-center">
-          <v-row
-            justify="center"
-            align="center"
-          >
-            <v-col
-              cols="12"
-              md="auto"
-            >
-              <h1 class="custom-hero-title">
-                <slot name="title" />
-              </h1>
-              <slot name="subtitle" />
-            </v-col>
-          </v-row>
-        </v-container>
-      </div>
     </div>
-    <div class="searchfield-overlap">
-      <SearchField />
+    <div class="hero-content">
+      <h1>
+        <slot name="title" />
+      </h1>
+      <h2 class="custom-hero-subtitle">
+        <slot name="subtitle" />
+        <span
+          v-if="typewriterWords.length"
+          class="typewriter-text text-center text-secondary font-italic"
+          :class="{ 'typewriter-active': currentWord.length }"
+        >
+          {{ currentWord }}<span class="cursor text-secondary">|</span>
+        </span>
+      </h2>
     </div>
-  </div>
+    <!-- <div class="hero-overlay h-100 d-flex align-center">
+      <v-container class="text-white text-h4 text-md-h2 font-weight-bold text-shadow text-center">
+        <v-row justify="center" align="center">
+          <v-col cols="12" md="auto">
+            <h1 class="custom-hero-title">
+              <slot name="title" />
+            </h1>
+            <slot name="subtitle" />
+          </v-col>
+        </v-row>
+      </v-container>
+    </div>  -->
+  </section>
 </template>
 
 <script setup>
+import { mdiMagnify } from '@mdi/js'
 import imageUrlBuilder from '@sanity/image-url'
 
-const { image } = defineProps({
+const { image, typewriterWords } = defineProps({
   image: {
     type: Object,
     required: true,
   },
+  typewriterWords: {
+    type: Array,
+    default: () => [],
+  },
 })
+
+// Typewriter Logic
+const currentWord = ref('')
+const isDeleting = ref(false)
+const wordIndex = ref(0)
+const typingSpeed = ref(100)
+
+onMounted(() => {
+  if (typewriterWords.length) {
+    typeLoop()
+  }
+})
+
+const typeLoop = () => {
+  const currentIndex = wordIndex.value % typewriterWords.length
+  const fullWord = typewriterWords[currentIndex]
+
+  if (isDeleting.value) {
+    currentWord.value = fullWord.substring(0, currentWord.value.length - 1)
+    typingSpeed.value = 50 // Deleting speed
+  }
+  else {
+    currentWord.value = fullWord.substring(0, currentWord.value.length + 1)
+    typingSpeed.value = 100 // Typing speed
+  }
+
+  if (!isDeleting.value && currentWord.value === fullWord) {
+    // Word complete, pause before deleting
+    typingSpeed.value = 1500
+    isDeleting.value = true
+  }
+  else if (isDeleting.value && currentWord.value === '') {
+    // Word deleted, move to next
+    isDeleting.value = false
+    wordIndex.value++
+    typingSpeed.value = 500
+  }
+
+  setTimeout(typeLoop, typingSpeed.value)
+}
 
 const config = useRuntimeConfig()
 const builder = imageUrlBuilder({
@@ -59,136 +130,280 @@ const builder = imageUrlBuilder({
 const buildSanityImageUrl = (width, height, quality = 75) => {
   if (!image?.asset?._ref) return ''
   return builder
-    .image(image.asset._ref)
+    .image(image)
     .width(width)
     .height(height)
-    .format('webp')
+    .auto('format')
     .quality(quality)
-    .fit('max')
+    .fit('crop')
     .url()
 }
 
 const srcUrl = computed(() => {
   // Default to 800px as fallback for common desktop viewport
-  return buildSanityImageUrl(800, 470, 70)
+  return buildSanityImageUrl(1000, 563, 100)
 })
 
 const srcset = computed(() => {
   // Generate srcset matching actual container widths accounting for padding
   // Heights calculated to maintain 1.7:1 aspect ratio (hero section aspect)
   return [
-    `${buildSanityImageUrl(400, 235, 60)} 400w`,
-    `${buildSanityImageUrl(600, 350, 65)} 600w`,
-    `${buildSanityImageUrl(800, 470, 70)} 800w`,
-    `${buildSanityImageUrl(1000, 590, 75)} 1000w`,
-    `${buildSanityImageUrl(1280, 750, 75)} 1280w`,
+    `${buildSanityImageUrl(400, 225, 100)} 400w`, // 400px image = 225px height (16:9)
+    `${buildSanityImageUrl(600, 338, 100)} 600w`, // 600px image = 338px height (16:9)
+    `${buildSanityImageUrl(800, 450, 100)} 800w`, // 800px image = 450px height (16:9)
+    `${buildSanityImageUrl(1000, 563, 100)} 1000w`, // 1000px image = 563px height (16:9)
+    `${buildSanityImageUrl(1400, 788, 100)} 1400w`, // 1400px image = 788px height (16:9)
   ].join(', ')
 })
 </script>
 
 <style scoped>
-.img-shadow{
-  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
-}
-.title-container {
-  container-type: inline-size;
-}
-.title-container .responsive-title {
-  font-size: 19.2cqw;
-  text-align: start;
-}
-.responsive-subtitle {
-  font-size: 10.9cqw;
-  text-align: start;
-}
-.relative-hero-section {
- position:relative;
- height: 600px;
- width: 100%;
+.hero {
+  position: relative;
+  min-height: 100dvh;
+  width: 100vw;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  overflow: hidden;
+  isolation: isolate;
 }
 
-.hero-image-wrapper {
- position: relative;
- width: 100%;
- height: 100%;
- max-height: 600px;
- border-radius: 24px!important;
- overflow: hidden;
+.hero-image-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
 }
 
 .hero-image {
-  width: 100%;
-  height: 100%;
-  max-height: 600px;
+  width: 100vw;
+  height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
   object-fit: cover;
-  object-position: center;
-  aspect-ratio: 1536 / 900;
+  border: 0;
+  opacity: 1;
+  /* background: var(--color-primary-beige); */
+  transition: filter .4s;
+  /* filter: brightness(.8) contrast(1.1); */
+}
+
+.hero-search {
   display: block;
+  width: 100%;
+  top: calc(56px + 70%);
+  z-index: 3;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.hero-content {
   position: relative;
+  z-index: 2;
+  text-align: center;
+  justify-content: center;
+  color: #fff;
+  /* width:  min(90vw, 1024px); */
+  width: 100%;
+  margin-inline: auto;
+  margin-top: 20vh;
+  padding: 2rem 2vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero-content h1:deep(p) {
+  margin-block: 0 12px;
+  text-wrap: balance;
+  font-size: clamp(40px, 6vw, 76px);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  color: #FBF0EC;
+  animation: fadeSlideUp 0.8s ease-out forwards;
+}
+
+.hero-content h2 {
+  font-size: clamp(18px, 2.5vw, 24px);
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.5);
+  animation: fadeSlideUp 0.8s ease-out 0.2s forwards;
+  max-width: 800px;
+  margin-inline: auto;
+  /* Flexbox to keep text centered but allow dynamic part to grow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glass Search Trigger Styles */
+.glass-search-trigger {
+  width: min(90vw, 600px);
+  height: 64px;
+  /* Slightly taller for more presence */
+  /* background: rgba(255, 255, 255, 0.15); */
+  background: #FBF0EC;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  /* Double border trick using shadow for 3D glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    /* Top inner highlight */
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1),
+    /* Bottom inner shadow */
+    0 8px 32px rgba(0, 0, 0, 0.2);
+  /* Deep drop shadow */
+
+  border-radius: 100px;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  /* Animation */
+  opacity: 0;
+  /* Start hidden for animation */
+  animation: fadeSlideUp 0.8s ease-out 0.4s forwards;
+
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.hero-content h2:deep(p) {
+  color: rgba(251, 240, 236, 1)!important;
+}
+
+/* Shimmer Effect on Hover */
+.glass-search-trigger::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent);
+  transform: skewX(-20deg);
+  transition: 0.5s;
+}
+
+.glass-search-trigger:hover::before {
+  animation: shimmer 1.5s infinite;
+}
+
+.glass-search-trigger:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px) scale(1.01);
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+.glass-search-trigger:active {
+  transform: translateY(0) scale(0.99);
+}
+.glass-search-trigger:hover .icon-search {
+  color:white!important;
+}
+.glass-search-trigger:hover .search-placeholder {
+  color:white!important;
+}
+.search-placeholder {
+  color: rgb(var(--v-theme-primary));
+  /* color: rgba(255, 255, 255, 0.95); */
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow: 0 1px 2px rgba(207, 207, 207, 0.1);
+}
+
+@keyframes shimmer {
+  100% {
+    left: 200%;
+  }
+}
+
+/* Typewriter Cursor */
+.typewriter-text {
+  white-space: pre;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  padding: 6px 14px;
+  margin-left: 6px;
+  text-align: left;
+  min-width: 0;
   z-index: 0;
 }
 
-.hero-overlay {
-  position: absolute !important;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
+.typewriter-text::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  left: -2px;
+  right: -5px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 6px;
+  transform: skew(-20deg) scaleX(0.96);
+  transform-origin: left center;
+  opacity: 0;
+  transition: opacity 180ms ease, transform 180ms ease;
+  z-index: -1;
 }
 
-.custom-hero-title {
-font-weight: 700;
-font-size: 78px;
-line-height: 80px!important;
-margin-bottom: 45px;
+.typewriter-active::before {
+  opacity: 1;
+  transform:  skew(-20deg) scaleX(0.96);
 }
-.custom-hero-title:deep(.sanity-content > p){
-  line-height: 80px!important;
+
+.cursor {
+  display: inline-block;
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.7);
+  animation: blink 1s step-end infinite;
+  margin-left: 2px;
 }
-.searchfield-overlap {
-  max-width: 1070px;
-  margin: -110px auto 0 auto;
-}
-.hero-height {
-  height: 600px;
-}
-@media (max-width: 960px) {
-  .relative-hero-section {
-    height: 70vh;
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
   }
 
-  .custom-hero-title {
-    font-size: 60px!important;
-    line-height: 55px!important;
-    margin-bottom: 85px;
-  }
-  .custom-hero-title:deep(.sanity-content > p){
-  line-height: 55px!important;
-}
-  .searchfield-overlap {
-    margin: -150px auto 0 auto;
-  }
-}
-@media (max-width: 600px) {
-  .relative-hero-section {
-    height: 50vh;
-  }
-  .hero-height {
-    height: 50vh;
-  }
-  .custom-hero-title:deep(p) {
-    font-size: 35px!important;
-    line-height: 30px!important;
-    margin-bottom: 0;
-  }
-  .custom-hero-title:deep(.sanity-content > p){
-  line-height: 35px!important;
-}
-  .searchfield-overlap {
-    margin: -150px auto 0 auto;
+  50% {
+    opacity: 0;
   }
 }
 </style>
