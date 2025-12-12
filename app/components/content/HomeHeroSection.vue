@@ -1,5 +1,5 @@
 <template>
-  <section class="mt-8 mt-md-0 hero">
+  <section class="hero">
     <div class="hero-search">
       <SearchDialog>
         <template #activator="{ props }">
@@ -41,6 +41,7 @@
       </h1>
       <h2 class="custom-hero-subtitle">
         <slot name="subtitle" />
+
         <span
           v-if="typewriterWords.length"
           class="typewriter-text text-center text-secondary font-italic"
@@ -244,6 +245,18 @@ const srcset = computed(() => {
   align-items: center;
   gap: 6px;
   flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .custom-hero-subtitle {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .typewriter-text {
+    margin-left: 0;
+  }
 }
 
 @keyframes fadeSlideUp {

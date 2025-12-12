@@ -139,7 +139,7 @@ const { data: searchContent } = await useAsyncData(
 }
 @media (max-width: 960px) {
   .main-content {
-    --v-layout-top: 60px!important;
+    --v-layout-top: 0!important;
   }
 }
 
