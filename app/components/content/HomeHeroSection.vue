@@ -40,10 +40,10 @@
       :style="{ '--hero-noise-opacity': noiseLevelValue }"
     >
       <NuxtImg
-        v-if="srcUrl"
+        v-if="displayedSrc"
         :key="activeImageKey"
-        :src="srcUrl"
-        :srcset="srcset"
+        :src="displayedSrc"
+        :srcset="displayedSrcset"
         sizes="(max-width: 600px) 100vw, (max-width: 960px) 90vw, 100vw"
         alt="Image principale Hero d'Odysway"
         class="hero-image"
@@ -126,6 +126,10 @@ const heroProps = defineProps({
   placeholder: {
     type: String,
     default: '',
+  },
+  placeholderImage: {
+    type: String,
+    default: '/images/homeHero.jpeg',
   },
 })
 
@@ -236,6 +240,10 @@ const srcset = computed(() => {
     `${buildSanityImageUrl(activeDesktopImage.value, 2560, 1440, 100)} 2560w`,
   ].filter(Boolean).join(', ')
 })
+
+const placeholderSrc = computed(() => buildSanityImageUrl(heroProps.placeholderImage, 1920, 1080, 100))
+const displayedSrc = computed(() => (heroReady.value && srcUrl.value) ? srcUrl.value : placeholderSrc.value)
+const displayedSrcset = computed(() => (heroReady.value && srcset.value) ? srcset.value : '')
 </script>
 
 <style scoped>

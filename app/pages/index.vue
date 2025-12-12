@@ -3,6 +3,7 @@
     <HomeHeroSection
       v-if="homeSanity"
       :image="homeSanity.heroSection.image"
+      :placeholder-image="config.public.environment === 'production' ? homeSanity.heroSection.image : homeSanity.heroSectionTest.image"
       :image-test="homeSanity.heroSectionTest.image"
       :image-mobile="homeSanity.heroSection.imageMobile"
       :image-mobile-test="homeSanity.heroSectionTest.imageMobile"
