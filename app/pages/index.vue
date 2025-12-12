@@ -4,15 +4,21 @@
       v-if="homeSanity"
       :image="homeSanity.heroSection.image"
       :image-test="homeSanity.heroSectionTest.image"
-      :typewriter-words="['partout dans le monde', 'au Japon', 'au Brésil', 'en France']"
+      :typewriter-words="config.public.environment === 'production' ? homeSanity.heroSection.typewritterWords : homeSanity.heroSectionTest.typewritterWords"
     >
       <template #title>
-        <p>La rencontre au coeur du voyage</p>
-        <!-- <EnrichedText class="text-white" :value="homeSanity.heroSection.title" /> -->
+        <!-- <p>La rencontre au coeur du voyage</p> -->
+        <EnrichedText
+          class="text-white"
+          :value="config.public.environment === 'production' ? homeSanity.heroSection.title : homeSanity.heroSectionTest.title"
+        />
       </template>
       <template #subtitle>
-        <p>Voyages en petit groupes et privatifs</p>
-        <!-- <EnrichedText class="text-white" :value="homeSanity.heroSection.subtitle" /> -->
+        <!-- <p>Voyages en petit groupes et privatifs</p> -->
+        <EnrichedText
+          class="text-white"
+          :value="config.public.environment === 'production' ? homeSanity.heroSection.subtitle : homeSanity.heroSectionTest.subtitle"
+        />
       </template>
     </HomeHeroSection>
     <v-container

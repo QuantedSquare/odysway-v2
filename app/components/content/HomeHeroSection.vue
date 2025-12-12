@@ -44,7 +44,6 @@
       </h1>
       <h2 class="custom-hero-subtitle">
         <slot name="subtitle" />
-
         <span
           v-if="typewriterWords.length"
           class="typewriter-text text-center text-secondary font-italic"
@@ -284,7 +283,9 @@ const srcset = computed(() => {
   gap: 6px;
   flex-wrap: wrap;
 }
-
+.custom-hero-subtitle:deep(p) {
+margin-bottom: 0!important;
+}
 @media (max-width: 600px) {
   .custom-hero-subtitle {
     flex-direction: column;
