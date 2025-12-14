@@ -24,9 +24,9 @@
           v-if="header?.button4?.visible"
           href="tel: +33184807975"
           block
-          variant="tonal"
-          class="text-caption text-sm-subtitle-2"
-          color="primary"
+          :variant="isTransparent ? 'flat' : 'tonal'"
+          class="text-caption text-sm-subtitle-2 text-primary"
+          :color="isTransparent ? 'white' : 'primary'"
           @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.button4.text) }"
         >
           {{ header.button4.text }}

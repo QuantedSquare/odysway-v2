@@ -156,7 +156,7 @@ const img = useImage()
 const route = useRoute()
 // const searchDialogOpen = ref(false)
 
-const { y } = useWindowScroll()
+const { y, isScrolling } = useWindowScroll()
 
 const { header } = defineProps({
   header: {
@@ -171,6 +171,9 @@ function captureOutboundLink(btn) {
 }
 const isScrolled = computed(() => y.value > 200)
 const isTransparent = computed(() => !isScrolled.value && route.path === '/')
+watch(isScrolling, (newVal) => {
+  model.value = false
+})
 </script>
 
 <style scoped>
