@@ -15,10 +15,10 @@
       class="py-0 my-0 px-2 px-md-9"
     >
       <div class="mx-1">
-        <LazyTopTravelsTabs />
+        <!-- <LazyTopTravelsTabs /> -->
       </div>
     </v-container>
-    <LazyFooterOdysway />
+    <!-- <LazyFooterOdysway /> -->
   </v-app>
 </template>
 

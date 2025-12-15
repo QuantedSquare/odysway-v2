@@ -12,8 +12,6 @@
 </template>
 
 <script setup>
-import { useDisplay } from 'vuetify'
-
 const drawer = ref(false)
 
 const headerQuery = groq`*[_type == "header"][0]{

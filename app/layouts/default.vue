@@ -10,7 +10,6 @@
     </div>
 
     <v-container
-
       v-once
       :fluid="width > 600"
       class="py-0 my-0 px-2 px-md-9"

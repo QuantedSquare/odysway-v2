@@ -219,7 +219,7 @@ const photoCarousel = computed(() => {
   if (props.voyage.image) photos.push(props.voyage.image)
   if (props.voyage.imageSecondary) photos.push(props.voyage.imageSecondary)
   if (props.voyage.photosList?.length) photos.push(...props.voyage.photosList)
-  return photos.map(photo => ({
+  return photos.filter(photo => photo.asset?._ref || photo.asset?._id).map(photo => ({
     ...photo,
     asset: {
       _ref: photo.asset._ref || photo.asset._id,
