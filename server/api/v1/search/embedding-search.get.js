@@ -14,6 +14,7 @@ export default eventHandler(async (event) => {
 
   const query = getQuery(event)
   const searchTerm = query.keyword?.trim()
+  const optout = query.optout === 'true' ? true : false
 
   if (!searchTerm) {
     return []
@@ -27,7 +28,8 @@ export default eventHandler(async (event) => {
           indexName: 'odysway',
           query: searchTerm,
           hitsPerPage: 50,
-          clickAnalytics: true,
+          clickAnalytics: !optout,
+          analytics: !optout,
         },
       ],
     })

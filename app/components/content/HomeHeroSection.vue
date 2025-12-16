@@ -128,8 +128,8 @@ const heroProps = defineProps({
     default: '',
   },
   placeholderImage: {
-    type: String,
-    default: '/images/homeHero.jpeg',
+    type: Object,
+    required: true,
   },
 })
 

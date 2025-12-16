@@ -285,6 +285,7 @@ const img = useImage()
 
 const dialogOpen = ref(false)
 const searchText = ref(null)
+const cookie = useCookie('odysway_employee_optout')
 
 const searchDialogFieldQuery = groq`*[_type == "search"][0]{
   searchDialogTitle,
@@ -299,7 +300,7 @@ const { data: searchDialogField } = await useAsyncData('search-dialog-field', ()
 const { destinations, loading, handleEmbededSearch } = useTravelsSearch()
 
 const debouncedHandleSearch = _.debounce(() => {
-  handleEmbededSearch(searchText.value)
+  handleEmbededSearch(searchText.value, cookie.value === 1)
 }, 200)
 
 const nbVoyageIdeas = computed(() => {
@@ -318,13 +319,14 @@ const otherResults = computed(() => {
 
 function navigate(destination, position = 1) {
   // Track click with Algolia Insights
-  if (destination.objectID && destination.queryID) {
+  if (destination.objectID && destination.queryID && cookie.value !== 1) {
     aa('clickedObjectIDsAfterSearch', {
       index: 'odysway',
       eventName: 'Search Result Clicked',
       queryID: destination.queryID,
       objectIDs: [destination.objectID],
       positions: [position],
+
     })
   }
 

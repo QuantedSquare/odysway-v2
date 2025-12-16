@@ -6,18 +6,17 @@ const memoizedSearch = useMemoize(async (searchText) => {
   return { searchResult }
 })
 
-
-const memoizedEmbededSearch = useMemoize(async (searchText) => {
-  const searchResult = await apiRequest(`/search/embedding-search?keyword=${searchText}`)
+const memoizedEmbededSearch = useMemoize(async (searchText, optout) => {
+  const searchResult = await apiRequest(`/search/embedding-search?keyword=${searchText}&optout=${optout}`)
   return { searchResult }
 })
 
 // Minimum score threshold to filter out irrelevant results (0.7 = 70% relevance)
 const SCORE_THRESHOLD = 0.7
 
-async function handleEmbededSearch(searchText, destinations, loading) {
+async function handleEmbededSearch(searchText, destinations, loading, optout = false) {
   const searchTerm = searchText?.trim().toLowerCase()
-
+  console.log('optout in embeded search', optout)
   // Don't search if empty
   if (!searchTerm) {
     destinations.value = []
@@ -28,7 +27,7 @@ async function handleEmbededSearch(searchText, destinations, loading) {
   loading.value = true
 
   try {
-    const { searchResult } = await memoizedEmbededSearch(searchTerm)
+    const { searchResult } = await memoizedEmbededSearch(searchTerm, optout)
     console.log('searchResult', searchResult)
 
     // Filter by score threshold to exclude irrelevant results
@@ -46,7 +45,6 @@ async function handleEmbededSearch(searchText, destinations, loading) {
     loading.value = false
   }
 }
-
 
 export function useTravelsSearch() {
   const destinations = ref([])
@@ -72,6 +70,6 @@ export function useTravelsSearch() {
     destinations,
     loading,
     handleSearch,
-    handleEmbededSearch: (searchText) => handleEmbededSearch(searchText, destinations, loading),
+    handleEmbededSearch: (searchText, optout = false) => handleEmbededSearch(searchText, destinations, loading, optout),
   }
 }

@@ -1,14 +1,30 @@
 <template>
-  <v-lazy :options="{ threshold: 0.1 }" transition="fade-transition"
-    class="bg-grey-light-3 rounded-xl custom-height-lazy">
-    <v-card v-if="voyageCardContent" elevation="0" hover class="custom-card-width">
-      <NuxtLink :to="`/voyages/${voyage.slug.current || voyage.slug}`"
-        class="text-decoration-none position-relative text-white">
-        <v-img v-if="voyageCardImg" :src="img(voyageCardImg, { format: 'webp', quality: 75, height: 228, width: 640 })"
+  <v-lazy
+    :options="{ threshold: 0.1 }"
+    transition="fade-transition"
+    class="bg-grey-light-3 rounded-xl custom-height-lazy"
+  >
+    <v-card
+      v-if="voyageCardContent"
+      elevation="0"
+      hover
+      class="custom-card-width"
+    >
+      <NuxtLink
+        :to="`/voyages/${voyage.slug.current || voyage.slug}`"
+        class="text-decoration-none position-relative text-white"
+      >
+        <v-img
+          v-if="voyageCardImg"
+          :src="img(voyageCardImg, { format: 'webp', quality: 75, height: 228, width: 640 })"
           :lazy-src="img(voyageCardImg, { format: 'webp', quality: 10, height: 228, width: 640 })"
           :alt="voyage.image.alt || `Paysage de destination pour le voyage ${voyage.title}`"
           :srcset="`${img(voyageCardImg, { format: 'webp', quality: 75, width: 640 })} 640w, ${img(voyageCardImg, { format: 'webp', quality: 75, width: 1024 })} 1024w`"
-          sizes="(max-width: 600px) 480px, 1024px" class="img-height" cover aspect-ratio="auto">
+          sizes="(max-width: 600px) 480px, 1024px"
+          class="img-height"
+          cover
+          aspect-ratio="auto"
+        >
           <template #default>
             <div class="badge-position">
               <!-- <RatingBadge
@@ -24,80 +40,145 @@
 
       <!--  BOTTOM TEXT -->
       <div>
-        <NuxtLink :to="`/voyages/${voyage.slug.current || voyage.slug}`" class="text-decoration-none">
+        <NuxtLink
+          :to="`/voyages/${voyage.slug.current || voyage.slug}`"
+          class="text-decoration-none"
+        >
           <v-card-text class="py-1">
             <v-container class="px-0 px-md-2">
               <v-row>
                 <v-col class="pt-lg-3 pt-0">
                   <div
-                    class="text-primary text-h5 text-sm-h4 font-weight-bold py-1 px-0 no-white-space title-container">
-                    <v-tooltip v-if="voyage.title.length > 50" :id="`tooltip-${voyage.slug}`" activator="parent"
-                      role="tooltip" :aria-label="`Titre complet du voyage: ${voyage.title}`">
+                    class="text-primary text-h5 text-sm-h4 font-weight-bold py-1 px-0 no-white-space title-container"
+                  >
+                    <v-tooltip
+                      v-if="voyage.title.length > 50"
+                      :id="`tooltip-${voyage.slug}`"
+                      activator="parent"
+                      role="tooltip"
+                      :aria-label="`Titre complet du voyage: ${voyage.title}`"
+                    >
                       <template #activator="{ props: tooltipProps }">
-                        <div :id="`tooltip-${voyage.slug.current || voyage.slug}`" ref="titleRef" class="line-clamp-2"
+                        <div
+                          :id="`tooltip-${voyage.slug.current || voyage.slug}`"
+                          ref="titleRef"
+                          class="line-clamp-2"
                           :aria-describedby="voyage.title.length > 50 ? `tooltip-${voyage.slug.current || voyage.slug}` : undefined"
-                          role="tooltip" :aria-label="`Titre complet du voyage: ${voyage.title}`" v-bind="tooltipProps">
+                          role="tooltip"
+                          :aria-label="`Titre complet du voyage: ${voyage.title}`"
+                          v-bind="tooltipProps"
+                        >
                           {{ voyage.title }}</div>
                       </template>
                       <span>
                         {{ voyage.title }}
                       </span>
                     </v-tooltip>
-                    <div v-else ref="titleRef" class="line-clamp-2">{{ voyage.title }}</div>
+                    <div
+                      v-else
+                      ref="titleRef"
+                      class="line-clamp-2"
+                    >{{ voyage.title }}</div>
                   </div>
                 </v-col>
               </v-row>
               <v-row class="custom-row-height">
                 <v-col cols="4">
-                  <div class="text-grey font-weight-bold text-body-2 text-md-subtitle-2">{{ voyageCardContent?.type ||
-                    'Type'
+                  <div class="text-grey font-weight-bold text-body-2 text-md-subtitle-2">{{ voyageCardContent?.type
+                    || 'Type'
                   }}</div>
-                  <div class="text-h6 font-weight-bold text-primary">{{ voyage.availabilityTypes?.includes('groupe') ?
-                    (voyageCardContent?.groupType || 'Groupe') : (voyageCardContent?.soloType || 'Solo') }}</div>
+                  <div class="text-h6 font-weight-bold text-primary">{{ voyage.availabilityTypes?.includes('groupe')
+                    ? (voyageCardContent?.groupType || 'Groupe') : (voyageCardContent?.soloType || 'Solo') }}</div>
                 </v-col>
-                <v-divider inset vertical />
-                <v-col cols="4" class="text-center">
+                <v-divider
+                  inset
+                  vertical
+                />
+                <v-col
+                  cols="4"
+                  class="text-center"
+                >
                   <div class="text-h6 font-weight-bold text-primary">
                     {{ voyage.duration }}
                   </div>
-                  <div class="text-grey text-body-2 text-md-subtitle-2 font-weight-bold">{{ voyageCardContent?.days ||
-                    'Jours'
+                  <div class="text-grey text-body-2 text-md-subtitle-2 font-weight-bold">{{ voyageCardContent?.days
+                    || 'Jours'
                   }}</div>
                 </v-col>
-                <v-divider inset vertical />
-                <v-col cols="4" class="text-right">
+                <v-divider
+                  inset
+                  vertical
+                />
+                <v-col
+                  cols="4"
+                  class="text-right"
+                >
                   <div class="text-grey text-body-2 text-md-subtitle-2 font-weight-bold">{{
-                    voyageCardContent?.startingFrom ||
-                    'À partir de' }}</div>
-                  <div class="text-h6 font-weight-bold text-primary">{{ voyage.pricing?.startingPrice ??
-                    voyage.startingPrice
+                    voyageCardContent?.startingFrom
+                      || 'À partir de' }}</div>
+                  <div class="text-h6 font-weight-bold text-primary">{{ voyage.pricing?.startingPrice
+                    ?? voyage.startingPrice
                   }}€</div>
                 </v-col>
               </v-row>
             </v-container>
           </v-card-text>
           <v-divider />
-          <v-card-actions v-if="voyage.departureDate"
-            :class="voyage.availabilityTypes?.includes('groupe') ? 'hover-primary' : 'hover-secondary'">
+          <v-card-actions
+            v-if="voyage.departureDate"
+            :class="voyage.availabilityTypes?.includes('groupe') ? 'hover-primary' : 'hover-secondary'"
+          >
             <client-only>
-              <v-btn block color="primary" class="text-body-1">
-                <div class="mr-2">
-                  {{ dayjs(voyage.departureDate).format('DD MMM YYYY') }}
-                </div>
-                <v-icon size="24px">{{ mdiArrowRight }}</v-icon>
-              </v-btn>
+              <div
+                class="text-decoration-none px-4 py-2 w-100 text-primary"
+              >
+                <v-row>
+                  <v-col
+                    v-for="date, index in voyage.dates.slice(0, 3)"
+                    :key="date.id"
+                    cols="4"
+                    class="text-body-2 font-weight-bold text-no-wrap"
+                  >
+                    {{ dayjs(date.departure_date).format('DD MMM YYYY') }}
+                  </v-col>
+                </v-row>
+                <v-row>
+                  <v-col
+                    cols="12"
+                    class="text-subtitle-2 text-secondary font-weight-bold text-center d-flex align-center justify-center ga-2"
+                  >
+                    <span>
+                      {{ voyage.dates.length }} départs à venir
+                    </span>
+                    <v-icon size="20px">{{ mdiArrowRight }}</v-icon>
+                  </v-col>
+                </v-row>
+
+              </div>
             </client-only>
           </v-card-actions>
-          <v-card-actions v-else
-            :class="voyage.availabilityTypes?.includes('groupe') ? 'hover-primary' : 'hover-secondary'">
+          <v-card-actions
+            v-else
+            :class="voyage.availabilityTypes?.includes('groupe') ? 'hover-primary' : 'hover-secondary'"
+          >
             <client-only>
-              <v-btn v-if="voyage.availabilityTypes?.includes('groupe')" block color="primary" class="text-body-1">
+              <v-btn
+                v-if="voyage.availabilityTypes?.includes('groupe')"
+                block
+                color="primary"
+                class="text-body-1"
+              >
                 <div class="mb-md-1 mr-2">
                   {{ voyageCardContent?.discoverDates || 'Découvrir les dates' }}
                 </div>
                 <v-icon size="24px">{{ mdiPlusCircle }}</v-icon>
               </v-btn>
-              <v-btn v-else block color="secondary" class="text-decoration-none text-body-1">
+              <v-btn
+                v-else
+                block
+                color="secondary"
+                class="text-decoration-none text-body-1"
+              >
                 <div class="mb-md-1 mr-2">
                   {{ voyageCardContent?.requestQuote || 'Demander un devis' }}
                 </div>
@@ -113,8 +194,8 @@
 
 <script setup>
 import { mdiPlusCircle, mdiArrowRight } from '@mdi/js'
-import { useImage } from '#imports'
 import dayjs from 'dayjs'
+import { useImage } from '#imports'
 
 const { voyage } = defineProps({
   voyage: {
@@ -136,9 +217,9 @@ const voyageCardContentQuery = groq`*[_type == "voyage_card"][0]{
 const sanity = useSanity()
 const { data: voyageCardContent } = await useAsyncData('voyage-card-content', () =>
   sanity.fetch(voyageCardContentQuery),
-  {
-    dedupe: 'defer', // This ensures all components wait for first request to complete
-  },
+{
+  dedupe: 'defer', // This ensures all components wait for first request to complete
+},
 )
 
 const actionColor = computed(() => voyage.availabilityTypes?.includes('groupe') ? '#f7f8f8' : '#fef9f8')
