@@ -16,7 +16,7 @@ const SCORE_THRESHOLD = 0.7
 
 async function handleEmbededSearch(searchText, destinations, loading, optout = false) {
   const searchTerm = searchText?.trim().toLowerCase()
-  console.log('optout in embeded search', optout)
+
   // Don't search if empty
   if (!searchTerm) {
     destinations.value = []
@@ -28,7 +28,6 @@ async function handleEmbededSearch(searchText, destinations, loading, optout = f
 
   try {
     const { searchResult } = await memoizedEmbededSearch(searchTerm, optout)
-    console.log('searchResult', searchResult)
 
     // Filter by score threshold to exclude irrelevant results
     const filteredResults = searchResult.filter(result => result.score >= SCORE_THRESHOLD)

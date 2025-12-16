@@ -99,8 +99,7 @@ useHead({
 onMounted(() => {
   const isConsent = localStorage.getItem('consent') === 'granted'
   const cookie = useCookie('odysway_employee_optout')
-  console.log('cookie', cookie.value === 1)
-  if (isConsent && config.public.environment === 'production') {
+  if (isConsent && config.public.environment === 'production' && cookie.value !== 1) {
     trackPixel('track', 'PageView')
     initialize()
 
