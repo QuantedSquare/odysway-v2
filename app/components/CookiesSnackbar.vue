@@ -1,6 +1,6 @@
 <template>
   <v-snackbar
-    v-model="consentBar"
+    v-model="model"
     :timeout="-1"
     location="left"
   >
@@ -36,23 +36,12 @@
 </template>
 
 <script setup>
-const consentBar = ref(true)
-const { gtag, initialize } = useGtag()
-const config = useRuntimeConfig()
+const model = defineModel({ type: Boolean, default: false })
 
-onMounted (() => {
-  if (!localStorage.getItem('consent') && config.public.environment === 'production') {
-    setTimeout(() => {
-      consentBar.value = true
-    }, 100)
-  }
-  else {
-    consentBar.value = false
-  }
-})
+const { gtag, initialize } = useGtag()
 
 function acceptCookies() {
-  consentBar.value = false
+  model.value = false
 
   initialize()
   gtag('consent', 'update', {
@@ -67,7 +56,7 @@ function acceptCookies() {
 }
 
 function refuseCookies() {
-  consentBar.value = false
+  model.value = false
 
   gtag('consent', 'update', {
     ad_user_data: 'denied',
