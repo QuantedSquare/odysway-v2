@@ -13,7 +13,7 @@
         <div class="d-flex align-center  ga-1">
           <CustomBadge :color="date.status.color" />
           <span class="text-body-2 text-decoration-none text-primary text-size-14 text-wrap text-start">
-            du <span class="font-weight-bold">{{ dayjs(date.departureDate).format('DD MMMM ') }}</span> au <span class="font-weight-bold">{{ dayjs(date.returnDate).format('DD MMMM') }} {{ dayjs(date.returnDate).format('YYYY') }}</span>
+            du <span class="font-weight-bold">{{ dayjs(date.departureDate).format('DD MMM YY') }}</span> au <span class="font-weight-bold">{{ dayjs(date.returnDate).format('DD MMM YY') }}</span>
           </span>
         </div>
         <div>
