@@ -37,33 +37,40 @@
 
 <script setup>
 const model = defineModel({ type: Boolean, default: false })
-
+const { optOut } = defineProps({
+  optOut: {
+    type: Boolean,
+    default: false,
+  },
+})
 const { gtag, initialize } = useGtag()
 
 function acceptCookies() {
   model.value = false
-
-  initialize()
-  gtag('consent', 'update', {
-    ad_user_data: 'granted',
-    ad_personalization: 'granted',
-    ad_storage: 'granted',
-    analytics_storage: 'granted',
-  })
-  trackPixel('track', 'PageView')
-  useTrackEvent('page_view')
+  if (!optOut) {
+    initialize()
+    gtag('consent', 'update', {
+      ad_user_data: 'granted',
+      ad_personalization: 'granted',
+      ad_storage: 'granted',
+      analytics_storage: 'granted',
+    })
+    trackPixel('track', 'PageView')
+    useTrackEvent('page_view')
+  }
   localStorage.setItem('consent', 'granted')
 }
 
 function refuseCookies() {
   model.value = false
-
-  gtag('consent', 'update', {
-    ad_user_data: 'denied',
-    ad_personalization: 'denied',
-    ad_storage: 'denied',
-    analytics_storage: 'denied',
-  })
+  if (!optOut) {
+    gtag('consent', 'update', {
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      ad_storage: 'denied',
+      analytics_storage: 'denied',
+    })
+  }
   localStorage.setItem('consent', 'denied')
 }
 </script>

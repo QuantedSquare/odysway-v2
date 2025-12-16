@@ -1,7 +1,10 @@
 <template>
   <NuxtLayout>
     <NuxtPage />
-    <CookiesSnackbar v-model="consentBar" />
+    <CookiesSnackbar
+      v-model="consentBar"
+      :opt-out="optOut"
+    />
     <!-- <Maintenance /> -->
   </NuxtLayout>
 </template>
@@ -11,6 +14,7 @@ const config = useRuntimeConfig()
 const route = useRoute()
 const { gtag, initialize } = useGtag()
 const consentBar = ref(false)
+const optOut = ref(false)
 useHead({
   htmlAttrs: {
     lang: 'fr',
@@ -96,6 +100,8 @@ useHead({
 //   })
 // }
 onMounted(() => {
+  const cookie = useCookie('odysway_employee_optout')
+  optOut.value = cookie.value === 1
   const consent = localStorage.getItem('consent')
   if (consent !== 'granted') {
     setTimeout(() => {
@@ -108,8 +114,7 @@ onMounted(() => {
 })
 onMounted(() => {
   const isConsent = localStorage.getItem('consent') === 'granted'
-  const cookie = useCookie('odysway_employee_optout')
-  if (isConsent && config.public.environment === 'production' && cookie.value !== 1) {
+  if (isConsent && config.public.environment === 'production' && !optOut.value) {
     trackPixel('track', 'PageView')
     initialize()
 
