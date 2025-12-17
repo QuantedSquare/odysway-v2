@@ -103,7 +103,15 @@ const fetchTravels = async () => {
     const res = await fetch('/api/v1/booking/travels-by-date')
     const data = await res.json()
 
-    travels.value = data
+    travels.value = data.map((travel) => {
+      const futureDates = travel.dates
+        .filter(dateInfo => dayjs(dateInfo.departure_date).isAfter(dayjs()))
+        .sort((a, b) => dayjs(a.departure_date).valueOf() - dayjs(b.departure_date).valueOf())
+      return {
+        ...travel,
+        departureDate: futureDates[0]?.departure_date || travel.departureDate,
+      }
+    })
     loading.value = false
   }
   catch (error) {

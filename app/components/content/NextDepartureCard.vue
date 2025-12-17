@@ -2,7 +2,7 @@
   <v-lazy
     :options="{ threshold: 0.1 }"
     transition="fade-transition"
-    class="bg-grey-light-3 rounded-xl custom-height-lazy"
+    class="rounded-xl custom-height-lazy"
   >
     <v-card
       v-if="voyageCardContent"
@@ -89,6 +89,7 @@
                   </div>
                 </v-col>
                 <v-col
+                  v-if="statusBadge"
                   cols="4"
                   class="d-flex justify-center align-center"
                 >
@@ -96,7 +97,7 @@
                   <span
                     class="status-chip text-h6 text-wrap font-weight-bold text-primary text-center mb-1"
                   >
-                    {{ statusBadge.text }}
+                    {{ statusBadge?.text }}
                   </span>
                 </v-col>
               </v-row>
@@ -104,12 +105,12 @@
                 justify="center"
                 class="px-3"
               >
-                <div class="w-40 d-flex flex-column flex-md-row align-start align-md-center ga-1">
+                <div class="w-40 d-flex flex-column flex-md-row align-center ga-1">
                   <v-icon
                     size="20px"
                     class="text-primary"
                   >{{ mdiAccountMultiple }}</v-icon>
-                  <div class="text-subtitle-2   text-primary">{{ voyage.availabilityTypes?.includes('groupe')
+                  <div class="text-subtitle-2  text-center text-md-left text-grey">{{ voyage.availabilityTypes?.includes('groupe')
                     ? (voyageCardContent?.groupType || 'Groupe') : (voyageCardContent?.soloType || 'Solo') }}</div>
                 </div>
 
@@ -118,16 +119,16 @@
                   <div class="text-subtitle-2  font-weight-bold text-primary">
                     {{ voyage.duration }}
                   </div>
-                  <div class="text-grey text-subtitle-2  text-md-subtitle-2 font-weight-bold">{{ voyageCardContent?.days
+                  <div class="text-grey text-subtitle-2">{{ voyageCardContent?.days
                     || 'Jours'
                   }}</div>
 
                 </div>
                 <div class="w-40 d-flex flex-column flex-md-row ga-1 justify-md-end align-center">
-                  <div class="text-grey text-subtitle-2  text-md-subtitle-2 font-weight-bold">{{
+                  <div class="text-grey text-subtitle-2  text-md-subtitle-2">{{
                     voyageCardContent?.startingFrom
                       || 'À partir de' }}</div>
-                  <div class="text-subtitle-2  font-weight-bold text-primary">{{ voyage.pricing?.startingPrice
+                  <div class="text-subtitle-2  text-primary">{{ voyage.pricing?.startingPrice
                     ?? voyage.startingPrice
                   }} €</div>
 
@@ -314,7 +315,7 @@ const voyageCardImg = computed(() => {
 }
 
 .img-height {
-  height: 180px;
+  height: 228px;
 }
 
 .line-clamp-2 {
@@ -337,7 +338,7 @@ const voyageCardImg = computed(() => {
     transform 180ms ease,
     box-shadow 180ms ease,
     border-color 180ms ease;
-  border: 1px solid transparent;
+  /* border: 1px solid transparent; */
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
   overflow: hidden;
 }

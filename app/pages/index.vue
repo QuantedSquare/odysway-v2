@@ -53,7 +53,10 @@
                 v-for="voyage in homeSanity.franceTrips.voyagesFrance"
                 :key="voyage._id"
               >
-                <VoyageCard :voyage="voyage" />
+                <VoyageCardWithDates
+                  :voyage="voyage"
+                  :dates-by-slug="datesBySlug"
+                />
               </v-col>
             </template>
           </LazyHorizontalCarousel>
@@ -118,7 +121,10 @@
                 v-for="voyage in homeSanity.guaranteedDepartures.voyagesGuaranteedDepartures"
                 :key="voyage._id"
               >
-                <VoyageCard :voyage="voyage" />
+                <VoyageCardWithDates
+                  :voyage="voyage"
+                  :dates-by-slug="datesBySlug"
+                />
               </v-col>
             </template>
           </LazyHorizontalCarousel>
@@ -134,7 +140,10 @@
                 v-for="voyage in homeSanity.summerTravel.voyagesSummerTravel"
                 :key="voyage._id"
               >
-                <VoyageCard :voyage="voyage" />
+                <VoyageCardWithDates
+                  :voyage="voyage"
+                  :dates-by-slug="datesBySlug"
+                />
               </v-col>
             </template>
           </LazyHorizontalCarousel>
@@ -169,7 +178,10 @@
                 v-for="voyage in homeSanity.unforgettableTravels.voyagesUnforgettableTravels"
                 :key="voyage._id"
               >
-                <VoyageCard :voyage="voyage" />
+                <VoyageCardWithDates
+                  :voyage="voyage"
+                  :dates-by-slug="datesBySlug"
+                />
               </v-col>
             </template>
           </LazyHorizontalCarousel>
@@ -332,6 +344,26 @@ const homeQuery = groq`
 const { data: homeSanity } = await useAsyncData('home', () =>
   sanity.fetch(homeQuery),
 )
+
+const homeVoyages = computed(() => {
+  if (!homeSanity.value) return []
+  const sections = [
+    homeSanity.value.franceTrips?.voyagesFrance || [],
+    homeSanity.value.guaranteedDepartures?.voyagesGuaranteedDepartures || [],
+    homeSanity.value.summerTravel?.voyagesSummerTravel || [],
+    homeSanity.value.unforgettableTravels?.voyagesUnforgettableTravels || [],
+  ]
+  return sections.flat().filter(Boolean)
+})
+
+const homeVoyageSlugs = computed(() => {
+  return [...new Set(homeVoyages.value
+    .map(v => v.slug?.current || v.slug)
+    .filter(Boolean))]
+})
+
+const { datesBySlug } = useTravelDates(homeVoyageSlugs)
+console.log('!! datesBySlug', datesBySlug.value)
 if (homeSanity.value) {
   console.log(homeSanity.value.heroSectionTest)
   // Fallback values for content

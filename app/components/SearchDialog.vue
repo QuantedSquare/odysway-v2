@@ -417,8 +417,8 @@ function closeDialog() {
 
 /* Quick Filter Chips */
 .quick-filters {
-  display: block;
-  overflow-x: auto;
+  display: flex;
+  /* overflow-x: auto; */
   padding-bottom: 12px;
   border-bottom: 1px solid rgba(var(--v-theme-white), 0.2);
   padding-bottom: 24px;
@@ -429,6 +429,7 @@ function closeDialog() {
   .quick-filters {
     padding-bottom: 12px;
     padding-top: 12px;
+
   }
   .results-section {
     padding-top: 12px!important;
@@ -439,8 +440,9 @@ function closeDialog() {
 .chip-row {
   display: flex;
   gap: 8px;
-  overflow-x: auto;
-  scrollbar-width: thin;
+  flex-wrap: wrap;
+  /* overflow-x: auto; */
+  /* scrollbar-width: thin; */
   padding: 4px 2px;
 }
 .chip-row::-webkit-scrollbar {

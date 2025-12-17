@@ -376,7 +376,7 @@ watch(() => route.query.confirmed, (value) => {
 
 <style scoped>
 .reset-btn-size {
-  height: 62px!important;
+  height: 42px!important;
   width: 172px!important;
 }
 @media (max-width: 900px) {
