@@ -47,58 +47,60 @@ useHead({
 // Defer Hotjar loading to improve initial page load
 // if (config.public.environment === 'production') {
 // Preconnect to Hotjar for faster loading when needed
-// useHead({
-//   link: [
-//     {
-//       rel: 'preconnect',
-//       href: 'https://static.hotjar.com',
-//     },
-//     {
-//       rel: 'dns-prefetch',
-//       href: 'https://static.hotjar.com',
-//     },
-//   ],
-// })
+useHead({
+  link: [
+    {
+      rel: 'preconnect',
+      href: 'https://static.hotjar.com',
+    },
+    {
+      rel: 'dns-prefetch',
+      href: 'https://static.hotjar.com',
+    },
+  ],
+})
 
 // Load Hotjar after page is interactive
-// onMounted(() => {
+onMounted(() => {
 // Wait for idle time or user interaction before loading Hotjar
-// const loadHotjar = () => {
-//   if (typeof window !== 'undefined' && !window.hj) {
-//     const script = document.createElement('script')
-//     script.innerHTML = `(function(h,o,t,j,a,r){
-//       h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-//       h._hjSettings={hjid:6430819,hjsv:6};
-//       a=o.getElementsByTagName('head')[0];
-//       r=o.createElement('script');r.async=1;
-//       r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-//       a.appendChild(r);
-//     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`
-//     document.head.appendChild(script)
-//   }
-// }
+  const loadHotjar = () => {
+    if (typeof window !== 'undefined' && !window.hj) {
+      const script = document.createElement('script')
+      script.innerHTML = `(function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:6430819,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`
+      document.head.appendChild(script)
+    }
+  }
 
-// // Load after a short delay or on user interaction
-// if ('requestIdleCallback' in window) {
-//   requestIdleCallback(loadHotjar, { timeout: 2000 })
-// }
-// else {
-//   setTimeout(loadHotjar, 2000)
-// }
+  // Load after a short delay or on user interaction
+  if (config.public.environment !== 'production') {
+    return
+  }
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(loadHotjar, { timeout: 2000 })
+  }
+  else {
+    setTimeout(loadHotjar, 2000)
+  }
 
-// // Also load on first user interaction as fallback
-// const events = ['mousedown', 'touchstart', 'keydown']
-// const loadOnInteraction = () => {
-//   loadHotjar()
-//   events.forEach((event) => {
-//     document.removeEventListener(event, loadOnInteraction)
-//   })
-// }
-// events.forEach((event) => {
-//   document.addEventListener(event, loadOnInteraction, { once: true, passive: true })
-// })
-//   })
-// }
+  // Also load on first user interaction as fallback
+  const events = ['mousedown', 'touchstart', 'keydown']
+  const loadOnInteraction = () => {
+    loadHotjar()
+    events.forEach((event) => {
+      document.removeEventListener(event, loadOnInteraction)
+    })
+  }
+  events.forEach((event) => {
+    document.addEventListener(event, loadOnInteraction, { once: true, passive: true })
+  })
+})
 onMounted(() => {
   const cookie = useCookie('odysway_employee_optout')
   optOut.value = cookie.value === 1
