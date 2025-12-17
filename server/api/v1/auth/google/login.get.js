@@ -8,7 +8,7 @@ export default defineEventHandler((event) => {
   const isDev = config.public.environment !== 'production'
 
   const clientId = process.env.GOOGLE_CLIENT_ID
-  const redirectUri = process.env.GOOGLE_REDIRECT_URI
+  const redirectUri = config.public.environment !== 'production' ? 'http://localhost:3000/api/v1/auth/google/callback' : process.env.GOOGLE_REDIRECT_URI
 
   if (!clientId || !redirectUri) {
     return {
@@ -35,7 +35,6 @@ export default defineEventHandler((event) => {
     include_granted_scopes: 'true',
     state,
     prompt: 'select_account',
-    hd: 'odysway.com', // Hint Google to the allowed domain
   })
 
   return sendRedirect(event, `${GOOGLE_AUTH_URL}?${params.toString()}`)

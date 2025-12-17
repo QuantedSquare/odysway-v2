@@ -73,38 +73,47 @@
               </v-row>
               <v-row
                 no-gutters
-                class="mt-4"
+                class="mt-4 cta-bg rounded pa-2"
               >
                 <v-col
-                  cols="12"
-                  class="cta-bg rounded text-start pa-2 text-grey-darken-2"
+                  cols="8"
+                  class=" text-start text-grey-darken-2"
                 >
                   <div>
                     Prochain départ
                   </div>
-                  <div class="icon d-flex align-center">
+                  <div class="icon d-flex align-center mt-1">
                     <v-icon size="20px">{{ mdiCalendarCheck }}</v-icon>
                     <span class="text-subtitle-2 font-weight-bold ml-1 text-primary">{{ dayjs(voyage.departureDate).format('DD MMM YYYY') }}</span>
-                    <span class=" px-1">·</span>
-                    <!-- Places restantes -->
-                    <span class="ml-1">{{ dateData.max_travelers - dateData.booked_seat }} places restantes</span>
+
                   </div>
+                </v-col>
+                <v-col
+                  cols="4"
+                  class="d-flex justify-center align-center"
+                >
+
+                  <span
+                    class="status-chip text-h6 text-wrap font-weight-bold text-primary text-center mb-1"
+                  >
+                    {{ statusBadge.text }}
+                  </span>
                 </v-col>
               </v-row>
               <v-row
                 justify="center"
                 class="px-3"
               >
-                <div class="w-40 d-flex ga-1">
+                <div class="w-40 d-flex flex-column flex-md-row align-start align-md-center ga-1">
                   <v-icon
                     size="20px"
                     class="text-primary"
                   >{{ mdiAccountMultiple }}</v-icon>
-                  <div class="text-subtitle-2  text-no-wrap text-primary">{{ voyage.availabilityTypes?.includes('groupe')
+                  <div class="text-subtitle-2   text-primary">{{ voyage.availabilityTypes?.includes('groupe')
                     ? (voyageCardContent?.groupType || 'Groupe') : (voyageCardContent?.soloType || 'Solo') }}</div>
                 </div>
 
-                <div class="w-20 d-flex ga-1 justify-center">
+                <div class="w-20 d-flex flex-column flex-md-row ga-1 justify-md-center align-center">
 
                   <div class="text-subtitle-2  font-weight-bold text-primary">
                     {{ voyage.duration }}
@@ -114,7 +123,7 @@
                   }}</div>
 
                 </div>
-                <div class="w-40 d-flex ga-1 justify-end">
+                <div class="w-40 d-flex flex-column flex-md-row ga-1 justify-md-end align-center">
                   <div class="text-grey text-subtitle-2  text-md-subtitle-2 font-weight-bold">{{
                     voyageCardContent?.startingFrom
                       || 'À partir de' }}</div>
@@ -192,6 +201,7 @@
 import { mdiPlusCircle, mdiArrowRight, mdiAccountMultiple, mdiCalendarCheck } from '@mdi/js'
 import dayjs from 'dayjs'
 import { useImage } from '#imports'
+import { getDateStatus } from '~/utils/getDateStatus'
 
 const { voyage } = defineProps({
   voyage: {
@@ -220,7 +230,32 @@ const { data: voyageCardContent } = await useAsyncData('voyage-card-content', ()
 const dateData = computed(() => {
   return voyage.dates.find(date => date.departure_date === voyage.departureDate)
 })
-console.log('dateData', dateData.value)
+const remainingSeats = computed(() => {
+  if (!dateData.value) return null
+  const { max_travelers, booked_seat } = dateData.value
+  if (typeof max_travelers !== 'number' || typeof booked_seat !== 'number') return null
+  return max_travelers - booked_seat
+})
+
+const statusBadge = computed(() => {
+  const date = dateData.value
+  if (!date) return null
+
+  if (typeof remainingSeats.value === 'number' && remainingSeats.value < 4) {
+    return {
+      text: 'Dernières places',
+      color: 'secondary',
+    }
+  }
+
+  const status = getDateStatus(date)
+  if (!status) return null
+
+  return {
+    text: status.text,
+    color: status.color,
+  }
+})
 const actionColor = computed(() => voyage.availabilityTypes?.includes('groupe') ? '#f7f8f8' : '#fef9f8')
 const voyageCardImg = computed(() => {
   return getImageUrl(voyage.image?.asset?._ref)
@@ -243,6 +278,22 @@ const voyageCardImg = computed(() => {
   width: 20%;
   border-right: 1px solid #e0e0e0;
   border-left: 1px solid #e0e0e0;
+}
+.status-chip :deep(.v-chip__underlay) {
+  display: none;
+}
+.status-chip {
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 650px) {
+  .w-40, .w-20 {
+    width:33%;
+  }
+  .w-20 {
+    border-right: none;
+    border-left: none;
+  }
 }
 
 .title-container {
@@ -363,7 +414,6 @@ const voyageCardImg = computed(() => {
   .custom-card-width {
     min-width: 280px !important;
     max-width: 100% !important;
-    max-height: 345px !important;
   }
 }
 

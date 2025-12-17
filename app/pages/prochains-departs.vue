@@ -95,7 +95,7 @@ const loading = ref(false)
 const travels = ref([])
 const toggledBtn = ref('all')
 const periodId = useId()
-const selectedPeriod = ref(route.query?.periode || null)
+const selectedPeriod = ref(route.query?.periode || 'Toutes périodes')
 
 const fetchTravels = async () => {
   try {
