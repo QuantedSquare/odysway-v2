@@ -60,7 +60,15 @@
           </v-chip>
         </div>
         <v-spacer />
-        <div class="d-flex justify-end ml-auto">
+        <div class="d-flex justify-end ml-auto align-center ga-3 flex-wrap">
+          <v-checkbox
+            v-model="confirmedOnly"
+            hide-details
+            color="primary"
+            density="compact"
+            label="Voir tous les départs garantis"
+            class="mt-n2"
+          />
           <v-btn
             color="primary"
             variant="outlined"
@@ -79,7 +87,7 @@
       fluid
     >
       <DisplayVoyagesRow
-        :voyages="voyages"
+        :voyages="filteredVoyages"
         :is-search="true"
       />
     </v-container>
@@ -90,6 +98,7 @@
 import { useDisplay } from 'vuetify'
 import _ from 'lodash'
 import SearchField from '~/components/content/SearchField.vue'
+import { getDateStatus } from '~/utils/getDateStatus'
 
 const { lgAndUp } = useDisplay()
 useSeoMeta({
@@ -102,6 +111,7 @@ useSeoMeta({
 const router = useRouter()
 const route = useRoute()
 const routeQuery = computed(() => route.query)
+const confirmedOnly = ref(route.query.confirmed === 'true')
 
 const sanity = useSanity()
 
@@ -226,6 +236,10 @@ const { data: destinations } = await useAsyncData('destinations', () =>
   sanity.fetch(destinationsQuery),
 )
 
+const { data: travelsByDate } = await useAsyncData('travels-by-date', () =>
+  $fetch('/api/v1/booking/travels-by-date'),
+)
+
 const { data: voyages } = await useAsyncData(
   `search-${JSON.stringify(route.query)}`,
   async () => {
@@ -308,8 +322,31 @@ const { data: voyages } = await useAsyncData(
   { watch: [routeQuery, regions, destinations] },
 )
 
+function filterByConfirmed(voyages, confirmedFilter, travelsWithDates) {
+  if (!confirmedFilter) return voyages
+  if (!Array.isArray(travelsWithDates) || travelsWithDates.length === 0) return voyages
+
+  const confirmedSlugs = new Set()
+
+  travelsWithDates.forEach((travel) => {
+    if (!Array.isArray(travel.dates)) return
+    const hasConfirmedDate = travel.dates.some((date) => {
+      const status = getDateStatus(date)
+      return status?.status === 'confirmed'
+    })
+    if (hasConfirmedDate) confirmedSlugs.add(travel.slug)
+  })
+
+  return voyages.filter(v => confirmedSlugs.has(v.slug))
+}
+
+const filteredVoyages = computed(() => {
+  const baseVoyages = voyages.value || []
+  return filterByConfirmed(baseVoyages, confirmedOnly.value, travelsByDate.value || [])
+})
+
 const nbVoyages = computed(() => {
-  return voyages.value?.length || 0
+  return filteredVoyages.value?.length || 0
 })
 function reinitiliazeFilter() {
   router.push({
@@ -317,6 +354,24 @@ function reinitiliazeFilter() {
     query: null,
   })
 }
+
+watch(confirmedOnly, (newValue) => {
+  const query = { ...route.query }
+  if (newValue) {
+    query.confirmed = 'true'
+  }
+  else {
+    delete query.confirmed
+  }
+  router.push({
+    path: route.path,
+    query: Object.keys(query).length > 0 ? query : undefined,
+  })
+})
+
+watch(() => route.query.confirmed, (value) => {
+  confirmedOnly.value = value === 'true'
+})
 </script>
 
 <style scoped>
