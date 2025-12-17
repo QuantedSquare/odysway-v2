@@ -31,7 +31,11 @@ const allQueries = `
       nights,
       rating,
       comments,
-      pricing
+      availabilityTypes,
+      "startingPrice": pricing.startingPrice,
+      pricing {
+        startingPrice
+      }
     }
   },
   "pageContent": *[_type == "page_destinations"][0]{

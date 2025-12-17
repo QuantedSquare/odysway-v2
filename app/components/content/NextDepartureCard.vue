@@ -242,7 +242,7 @@ const statusBadge = computed(() => {
   const date = dateData.value
   if (!date) return null
 
-  if (typeof remainingSeats.value === 'number' && remainingSeats.value < 4) {
+  if (typeof remainingSeats.value === 'number' && remainingSeats.value < 4 && remainingSeats.value > 0) {
     return {
       text: 'Dernières places',
       color: 'secondary',

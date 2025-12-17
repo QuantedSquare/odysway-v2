@@ -25,7 +25,7 @@ const allQueries = `
     description,
     image,
     "voyages": *[_type == "voyage" && references(^._id) && !('custom' in availabilityTypes)]{
-       _id,
+      _id,
       title,
       slug,
       image,
@@ -33,8 +33,12 @@ const allQueries = `
       nights,
       rating,
       comments,
-      pricing
+      availabilityTypes,
+      "startingPrice": pricing.startingPrice,
+      pricing {
+        startingPrice
       }
+    },
     }
   }
 `

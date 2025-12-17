@@ -23,8 +23,9 @@
           sm="6"
           lg="4"
         >
-          <VoyageCard
+          <VoyageCardWithDates
             :voyage="voyage"
+            :dates-by-slug="datesBySlug"
           />
         </v-col>
       </template>
@@ -48,9 +49,10 @@
         lg="4"
       >
         <CtaCardSheet v-if="voyage.isCta" />
-        <VoyageCard
+        <VoyageCardWithDates
           v-else
           :voyage="voyage"
+          :dates-by-slug="datesBySlug"
         />
       </v-col>
     </TransitionGroup>
@@ -144,6 +146,24 @@ const props = defineProps({
     default: () => {},
   },
 })
+
+const flattenedVoyages = computed(() => {
+  if (!Array.isArray(props.voyages)) return []
+  return props.voyages.flatMap((item) => {
+    if (Array.isArray(item?.voyages)) return item.voyages
+    return item
+  }).filter(v => v && (v.slug?.current || v.slug))
+})
+
+const voyageSlugs = computed(() => [...new Set(
+  flattenedVoyages.value
+    .map(v => v.slug?.current || v.slug)
+    .filter(Boolean),
+)])
+
+const { datesBySlug } = useTravelDates(voyageSlugs)
+console.log('!! voyageSlugs', voyageSlugs.value)
+console.log('!! datesBySlug', datesBySlug.value)
 
 const availableVoyages = computed(() => {
   if (route.name === 'experiences') {

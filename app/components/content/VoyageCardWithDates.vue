@@ -47,5 +47,4 @@ const cardVoyage = computed(() => {
     departureDate: earliestDeparture.value?.departure_date,
   }
 })
-console.log('cardVoyage', cardVoyage.value)
 </script>

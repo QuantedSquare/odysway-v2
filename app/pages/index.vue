@@ -363,7 +363,7 @@ const homeVoyageSlugs = computed(() => {
 })
 
 const { datesBySlug } = useTravelDates(homeVoyageSlugs)
-console.log('!! datesBySlug', datesBySlug.value)
+// console.log('!! datesBySlug', datesBySlug.value)
 if (homeSanity.value) {
   console.log(homeSanity.value.heroSectionTest)
   // Fallback values for content
