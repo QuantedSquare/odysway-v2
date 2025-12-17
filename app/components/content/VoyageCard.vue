@@ -2,13 +2,13 @@
   <v-lazy
     :options="{ threshold: 0.1 }"
     transition="fade-transition"
-    class="bg-grey-light-3 rounded-xl custom-height-lazy"
+    class="rounded-xl custom-height-lazy"
   >
     <v-card
       v-if="voyageCardContent"
       elevation="0"
       hover
-      class="custom-card-width"
+      class="custom-card-width voyage-card"
     >
       <NuxtLink
         :to="`/voyages/${voyage.slug.current || voyage.slug}`"
@@ -82,7 +82,10 @@
                   </div>
                 </v-col>
               </v-row>
-              <v-row class="custom-row-height">
+              <v-row
+                class="custom-row-height"
+                align="center"
+              >
                 <v-col cols="4">
                   <div class="text-grey font-weight-bold text-body-2 text-md-subtitle-2">{{ voyageCardContent?.type
                     || 'Type'
@@ -92,6 +95,7 @@
                 </v-col>
                 <v-divider
                   inset
+                  class="text-grey"
                   vertical
                 />
                 <v-col
@@ -107,6 +111,7 @@
                 </v-col>
                 <v-divider
                   inset
+                  class="text-grey"
                   vertical
                 />
                 <v-col
@@ -123,50 +128,18 @@
               </v-row>
             </v-container>
           </v-card-text>
-          <v-divider />
-          <v-card-actions
-            v-if="voyage.departureDate"
-            :class="voyage.availabilityTypes?.includes('groupe') ? 'hover-primary' : 'hover-secondary'"
-          >
-            <client-only>
-              <div
-                class="text-decoration-none px-4 py-2 w-100 text-primary"
-              >
-                <v-row>
-                  <v-col
-                    v-for="date, index in voyage.dates.slice(0, 3)"
-                    :key="date.id"
-                    cols="4"
-                    class="text-body-2 font-weight-bold text-no-wrap"
-                  >
-                    {{ dayjs(date.departure_date).format('DD MMM YYYY') }}
-                  </v-col>
-                </v-row>
-                <v-row>
-                  <v-col
-                    cols="12"
-                    class="text-subtitle-2 text-secondary font-weight-bold text-center d-flex align-center justify-center ga-2"
-                  >
-                    <span>
-                      {{ voyage.dates.length }} départs à venir
-                    </span>
-                    <v-icon size="20px">{{ mdiArrowRight }}</v-icon>
-                  </v-col>
-                </v-row>
+          <v-divider class="text-grey" />
 
-              </div>
-            </client-only>
-          </v-card-actions>
           <v-card-actions
-            v-else
             :class="voyage.availabilityTypes?.includes('groupe') ? 'hover-primary' : 'hover-secondary'"
           >
             <client-only>
               <v-btn
                 v-if="voyage.availabilityTypes?.includes('groupe')"
                 block
+                height="45"
                 color="primary"
-                class="text-body-1"
+                class="text-body-1 py-2"
               >
                 <div class="mb-md-1 mr-2">
                   {{ voyageCardContent?.discoverDates || 'Découvrir les dates' }}
@@ -176,10 +149,11 @@
               <v-btn
                 v-else
                 block
+                height="45"
                 color="secondary"
-                class="text-decoration-none text-body-1"
+                class="text-decoration-none text-body-1 "
               >
-                <div class="mb-md-1 mr-2">
+                <div class="mb-md-1 mr-2 ">
                   {{ voyageCardContent?.requestQuote || 'Demander un devis' }}
                 </div>
                 <v-icon size="24px">{{ mdiPlusCircle }}</v-icon>
@@ -193,8 +167,8 @@
 </template>
 
 <script setup>
-import { mdiPlusCircle, mdiArrowRight } from '@mdi/js'
-import dayjs from 'dayjs'
+import { mdiPlusCircle } from '@mdi/js'
+
 import { useImage } from '#imports'
 
 const { voyage } = defineProps({
@@ -334,13 +308,45 @@ const voyageCardImg = computed(() => {
 }
 
 .custom-row-height {
-  height: 77px !important;
+  min-height: 100px !important;
+  align-items: center;
 }
 
 .custom-height-lazy {
+  /* height: 100%; */
   min-height: 455px !important;
   min-width: 406px !important;
   max-width: 600px !important;
+}
+
+.voyage-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.voyage-card :deep(.v-card-text) {
+  flex: 1 0 auto;
+}
+
+.voyage-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  border-color: #e0e7ff;
+}
+
+.voyage-card .img-height {
+  transition: transform 220ms ease;
+}
+
+.voyage-card:hover .img-height {
+  transform: scale(1.03);
 }
 
 @media screen and (max-width: 1280px) {

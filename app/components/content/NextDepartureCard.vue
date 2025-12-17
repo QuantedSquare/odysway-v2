@@ -105,16 +105,16 @@
                 justify="center"
                 class="px-3"
               >
-                <div class="w-40 d-flex flex-column flex-md-row align-center ga-1">
+                <div class="w-40 d-flex flex-column  align-center ga-1 justify-start">
                   <v-icon
                     size="20px"
                     class="text-primary"
                   >{{ mdiAccountMultiple }}</v-icon>
-                  <div class="text-subtitle-2  text-center text-md-left text-grey">{{ voyage.availabilityTypes?.includes('groupe')
+                  <div class="text-subtitle-2  text-center text-no-wrap text-md-left text-grey">{{ voyage.availabilityTypes?.includes('groupe')
                     ? (voyageCardContent?.groupType || 'Groupe') : (voyageCardContent?.soloType || 'Solo') }}</div>
                 </div>
 
-                <div class="w-20 d-flex flex-column flex-md-row ga-1 justify-md-center align-center">
+                <div class="w-20 d-flex flex-column  ga-1  align-center justify-start">
 
                   <div class="text-subtitle-2  font-weight-bold text-primary">
                     {{ voyage.duration }}
@@ -124,7 +124,7 @@
                   }}</div>
 
                 </div>
-                <div class="w-40 d-flex flex-column flex-md-row ga-1 justify-md-end align-center">
+                <div class="w-40 d-flex flex-column justify-start ga-1 justify-md-end align-center">
                   <div class="text-grey text-subtitle-2  text-md-subtitle-2">{{
                     voyageCardContent?.startingFrom
                       || 'À partir de' }}</div>
@@ -136,7 +136,7 @@
               </v-row>
             </v-container>
           </v-card-text>
-          <v-divider />
+          <v-divider class="text-grey" />
           <v-card-actions
             v-if="voyage.departureDate"
             :class="voyage.availabilityTypes?.includes('groupe') ? 'hover-primary' : 'hover-secondary'"
@@ -163,35 +163,6 @@
               </div>
             </client-only>
           </v-card-actions>
-          <v-card-actions
-            v-else
-            :class="voyage.availabilityTypes?.includes('groupe') ? 'hover-primary' : 'hover-secondary'"
-          >
-            <client-only>
-              <v-btn
-                v-if="voyage.availabilityTypes?.includes('groupe')"
-                block
-                color="primary"
-                class="text-body-1"
-              >
-                <div class="mb-md-1 mr-2">
-                  {{ voyageCardContent?.discoverDates || 'Découvrir les dates' }}
-                </div>
-                <v-icon size="24px">{{ mdiPlusCircle }}</v-icon>
-              </v-btn>
-              <v-btn
-                v-else
-                block
-                color="secondary"
-                class="text-decoration-none text-body-1"
-              >
-                <div class="mb-md-1 mr-2">
-                  {{ voyageCardContent?.requestQuote || 'Demander un devis' }}
-                </div>
-                <v-icon size="24px">{{ mdiPlusCircle }}</v-icon>
-              </v-btn>
-            </client-only>
-          </v-card-actions>
         </NuxtLink>
       </div>
     </v-card>
@@ -199,7 +170,7 @@
 </template>
 
 <script setup>
-import { mdiPlusCircle, mdiArrowRight, mdiAccountMultiple, mdiCalendarCheck } from '@mdi/js'
+import { mdiArrowRight, mdiAccountMultiple, mdiCalendarCheck } from '@mdi/js'
 import dayjs from 'dayjs'
 import { useImage } from '#imports'
 import { getDateStatus } from '~/utils/getDateStatus'
