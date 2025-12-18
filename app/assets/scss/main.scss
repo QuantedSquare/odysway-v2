@@ -252,6 +252,36 @@ html {
   z-index: 10000;
 }
 
+/* Glassmorphism helpers */
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.18);
+  --glass-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+}
+
+.glass-page {
+  background: radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.04), transparent 25%),
+    radial-gradient(circle at 90% 10%, rgba(255, 255, 255, 0.05), transparent 20%),
+    radial-gradient(circle at 30% 80%, rgba(255, 255, 255, 0.03), transparent 20%);
+}
+
+.glass-surface {
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border) !important;
+  box-shadow: var(--glass-shadow) !important;
+}
+
+.glass-subtle {
+  background: rgba(255, 255, 255, 0.04) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.pill {
+  border-radius: 999px !important;
+}
+
 @media (max-width: 960px) {
   .whatsapp-button {
     position: fixed;

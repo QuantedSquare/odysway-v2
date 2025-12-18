@@ -1,25 +1,70 @@
 <template>
-  <v-container>
-    <v-row justify="center">
+  <v-container
+    fluid
+    class="py-6 glass-page"
+  >
+    <v-row class="align-center mb-6">
       <v-col
         cols="12"
+        md="8"
       >
-        <v-card>
-          <v-card-title>Ajouter une date de voyage</v-card-title>
-          <v-card-text>
-            <v-form @submit.prevent="onSave">
-              <v-switch
-                v-model="form.published"
-                color="green-light"
-                label="Publiée"
-              />
+        <div class="d-flex align-center ga-3">
+          <div>
+            <p class="text-overline text-primary mb-1">
+              Back-office dates
+            </p>
+            <h1 class="text-h5 text-md-h4 font-weight-bold mb-1">
+              Nouvelle date de voyage
+            </h1>
+            <p class="text-body-2 text-medium-emphasis">
+              Sélectionnez un voyage, ajustez les informations et publiez quand c’est prêt.
+            </p>
+          </div>
+          <v-chip
+            v-if="selectedTravel?.availabilityTypes?.includes('custom')"
+            color="purple"
+            label
+          >
+            Voyage sur-mesure
+          </v-chip>
+        </div>
+      </v-col>
+      <v-col
+        cols="12"
+        md="4"
+        class="d-flex justify-end ga-2"
+      >
+        <v-btn
+          variant="text"
+          @click="onCancel"
+        >
+          Retour
+        </v-btn>
+        <v-btn
+          color="primary"
+          variant="flat"
+          :disabled="!form.travel_slug || saving"
+          :loading="saving"
+          @click="onSave"
+        >
+          Enregistrer la date
+        </v-btn>
+      </v-col>
+    </v-row>
 
-              <v-switch
-                v-if="!isCustomTravel"
-                v-model="form.is_indiv_travel"
-                color="green-light"
-                label="Voyage Individuel"
-              />
+    <v-row class="ga-4">
+      <v-col cols="12">
+        <v-form @submit.prevent="onSave">
+          <DateFormCard
+            v-model="form"
+            :status-options="statuses"
+            :allow-individual="!isCustomTravel"
+            :show-custom-display="!isCustomTravel"
+            readonly-booked-seat
+            title="Date & affichage"
+            subtitle="Données publiques et internes"
+          >
+            <template #travel>
               <v-autocomplete
                 v-if="!route.query.slug"
                 v-model="form.travel_slug"
@@ -27,172 +72,151 @@
                 item-title="title"
                 item-value="slug"
                 label="Voyage"
-                required
+                clearable
+                hide-details
+                density="comfortable"
+                class="flex-1"
                 @update:model-value="onTravelSelect"
               />
-              <div v-else>
+              <div
+                v-else
+                class="w-100"
+              >
                 <v-text-field
                   :model-value="travelesMap[form.travel_slug]?.title"
-                  label="Voyage"
+                  label="Voyage sélectionné"
                   readonly
+                  density="comfortable"
                 />
               </div>
-              <v-select
-                v-if="!isCustomTravel"
-                v-model="form.displayed_status"
-                label="Statut affiché"
-                :items="statuses"
-                item-title="label"
-                item-value="value"
-              />
-              <v-text-field
-                v-model="form.departure_date"
-                label="Date de départ"
-                type="date"
-              />
-              <v-text-field
-                v-model="form.return_date"
-                label="Date de retour"
-                type="date"
-              />
-              <v-text-field
-                v-model="form.starting_price"
-                label="Prix de départ"
-                type="number"
-              />
-              <v-text-field
-                v-model="form.max_travelers"
-                label="Voyageurs max"
-                type="number"
-              />
-              <v-text-field
-                v-model="form.min_travelers"
-                label="Voyageurs min"
-                type="number"
-              />
-              <v-divider class="my-2" />
-              <v-row>
-                <v-col cols="6">
-                  <v-switch
-                    v-model="form.early_bird"
-                    color="green-light"
-                    label="Early Bird disponible pour cette date"
-                  />
-                  Réduction définie sur le voyage dans Nuxt Studio
-                </v-col>
-                <v-col cols="6">
-                  <v-switch
-                    v-model="form.last_minute"
-                    color="green-light"
-                    label="Last minute disponible pour cette date"
-                  />
-                  Réduction définie sur le voyage dans Nuxt Studio
-                </v-col>
-              </v-row>
-              <v-row>
-                <v-col cols="6">
-                  <v-switch
-                    v-if="!isCustomTravel"
-                    v-model="includeCustomEvent"
-                    color="green-light"
-                    label="Événement personnalisé (optionnel)"
-                  />
-                </v-col>
-                <v-col cols="6">
-                  <Transition name="slide-fade">
-                    <v-text-field
-                      v-if="includeCustomEvent"
-                      v-model="form.badges"
-                      label="Texte du badge"
-                    />
-                  </Transition>
-                </v-col>
-              </v-row>
-              <v-row>
-                <v-col cols="6">
-                  <v-switch
-                    v-model="form.include_flight"
-                    color="green-light"
-                    label="Vol inclus (optionnel)"
-                  />
-                </v-col>
-                <v-col cols="5">
-                  <Transition name="slide-fade">
-                    <v-text-field
-                      v-if="form.include_flight"
-                      v-model="form.flight_price"
-                      label="Prix du vol"
-                      type="number"
-                    />
-                  </Transition>
-                </v-col>
-              </v-row>
+            </template>
+
+            <template #actions>
               <v-btn
-                type="submit"
-                color="primary"
-                class="mt-4"
-                :loading="saving"
-                :disabled="!form.travel_slug"
-              >
-                Valider
-              </v-btn>
-              <v-btn
-                class="mt-4 ml-2"
+                variant="text"
                 @click="onCancel"
               >
-                Retour
+                Annuler
               </v-btn>
-              <v-alert
-                v-if="saveSuccess"
-                type="success"
-                class="mt-4"
+              <v-btn
+                color="primary"
+                type="submit"
+                :disabled="!form.travel_slug || saving"
+                :loading="saving"
               >
-                Date ajoutée !
-              </v-alert>
-              <v-alert
-                v-if="saveError"
-                type="error"
-                class="mt-4"
-              >
-                {{ saveError }}
-              </v-alert>
-            </v-form>
-          </v-card-text>
-        </v-card>
-        <template v-if="!isCustomTravel">
-          <v-divider class="my-4" />
-          <h2>Prévisualisation</h2>
-          <v-col cols="12">
+                Créer la date
+              </v-btn>
+            </template>
+          </DateFormCard>
+        </v-form>
+      </v-col>
+
+      <v-col
+        cols="12"
+        md="4"
+        class="d-flex flex-column ga-4"
+      >
+        <v-card
+          variant="outlined"
+          rounded="lg"
+          class="pa-4 glass-surface"
+        >
+          <div class="d-flex align-center justify-space-between mb-2">
+            <div class="d-flex flex-column">
+              <span class="text-overline text-primary">Voyage</span>
+              <span class="text-subtitle-1 font-weight-bold">
+                {{ selectedTravel?.title || 'Sélectionnez un voyage' }}
+              </span>
+            </div>
             <v-chip
-              v-if="form.published"
-              color="green-light"
+              v-if="selectedTravel"
+              :color="isCustomTravel ? 'purple' : 'primary'"
+              label
+              size="small"
             >
-              Publié
+              {{ isCustomTravel ? 'Sur-mesure' : 'Catalogue' }}
             </v-chip>
-            <v-chip
-              v-else
-              color="red"
-            >
-              Non publié
-            </v-chip>
-          </v-col>
-          <v-col
-            v-if="form"
-            cols="12"
-            class="mb-16"
+          </div>
+          <p class="text-body-2 text-medium-emphasis mb-3">
+            {{ selectedTravel?.availabilityTypes?.includes('custom') ? 'Non affiché sur le site public.' : 'Sera visible si publié.' }}
+          </p>
+          <v-list
+            v-if="selectedTravel"
+            density="compact"
+            class="rounded-lg bg-grey-lighten-4"
           >
-            <DatesPricesItem :date="form" />
-          </v-col>
-        </template>
+            <v-list-item>
+              <v-list-item-title class="text-body-2">
+                Prix catalogue: {{ selectedTravel?.pricing?.startingPrice || 'N/A' }} €
+              </v-list-item-title>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-title class="text-body-2">
+                Min / Max: {{ selectedTravel?.pricing?.minTravelersToConfirm || 0 }} - {{ selectedTravel?.pricing?.maxTravelers || 0 }}
+              </v-list-item-title>
+            </v-list-item>
+          </v-list>
+          <v-btn
+            v-if="form.travel_slug"
+            class="mt-3"
+            variant="tonal"
+            block
+            :to="`/booking-management/${form.travel_slug}`"
+          >
+            Ouvrir la fiche dates
+          </v-btn>
+        </v-card>
+
+        <v-card
+          v-if="!isCustomTravel && form.travel_slug"
+          rounded="lg"
+          elevation="8"
+          class="pa-4 glass-surface"
+        >
+          <div class="d-flex justify-space-between align-center mb-3">
+            <div class="d-flex flex-column">
+              <span class="text-subtitle-1 font-weight-bold">Prévisualisation</span>
+              <span class="text-caption text-medium-emphasis">Affichage site</span>
+            </div>
+            <v-chip
+              :color="form.published ? 'green-light' : 'warning'"
+              size="small"
+            >
+              {{ form.published ? 'Publiée' : 'Brouillon' }}
+            </v-chip>
+          </div>
+          <DatesPricesItem :date="previewDate" />
+        </v-card>
+
+        <v-alert
+          v-if="saveSuccess"
+          type="success"
+          border="start"
+          variant="tonal"
+          class="mt-2 glass-subtle"
+        >
+          Date ajoutée, redirection en cours...
+        </v-alert>
+        <v-alert
+          v-if="saveError"
+          type="error"
+          border="start"
+          variant="tonal"
+          class="mt-2"
+        >
+          {{ saveError }}
+        </v-alert>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script setup>
-import { ref, onMounted, watch } from 'vue'
+import { ref, onMounted, watch, computed } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import dayjs from 'dayjs'
+import DateFormCard from '~/components/booking/DateFormCard.vue'
+import { BOOKING_STATUSES, DEFAULT_STATUS } from '~/utils/bookingStatuses'
 
 definePageMeta({
   layout: 'booking',
@@ -202,14 +226,13 @@ const router = useRouter()
 const route = useRoute()
 const slugFromQuery = route.query.slug
 
-const includeCustomEvent = ref(false)
 const form = ref({
   index: 0,
   travel_slug: slugFromQuery || '',
   published: false,
   is_indiv_travel: false,
-  displayed_status: 'soon_confirmed',
-  status: 'soon_confirmed',
+  status: DEFAULT_STATUS,
+  displayed_status: DEFAULT_STATUS,
   departure_date: dayjs().format('YYYY-MM-DD'),
   return_date: dayjs().add(1, 'day').format('YYYY-MM-DD'),
   starting_price: 0,
@@ -221,13 +244,10 @@ const form = ref({
   booked_seat: 0,
   flight_price: 0,
   badges: '',
+  displayed_booked_seat: null,
 })
 
-const statuses = ref([
-  { value: 'soon_confirmed', label: 'Bientôt confirmé' },
-  { value: 'confirmed', label: 'Confirmé' },
-  { value: 'guaranteed', label: 'Garanti (Complet)' },
-])
+const statuses = BOOKING_STATUSES
 const saving = ref(false)
 const saveError = ref('')
 const saveSuccess = ref(false)
@@ -247,14 +267,20 @@ const { data: list } = await useAsyncData('travel', () =>
 )
 
 const fetchTravels = () => {
-  console.log('list', list.value)
-  travelesList.value = list.value
-  travelesMap.value = Object.fromEntries(list.value.map(t => [t.slug.current, t]))
+  travelesList.value = list.value?.map(t => ({
+    title: t.title,
+    slug: t.slug.current,
+    availabilityTypes: t.availabilityTypes,
+    pricing: t.pricing,
+  })) || []
+  travelesMap.value = Object.fromEntries(travelesList.value.map(t => [t.slug, t]))
 }
+
+const selectedTravel = computed(() => travelesMap.value[form.value.travel_slug])
 
 const onTravelSelect = (slug) => {
   const travel = travelesMap.value[slug]
-  isCustomTravel.value = travel.availabilityTypes?.includes('custom')
+  isCustomTravel.value = travel?.availabilityTypes?.includes('custom')
   if (travel) {
     form.value.min_travelers = travel.pricing?.minTravelersToConfirm || 2
     form.value.max_travelers = travel.pricing?.maxTravelers || 10
@@ -262,11 +288,9 @@ const onTravelSelect = (slug) => {
   }
 }
 
-watch(includeCustomEvent, (newVal) => {
-  if (!newVal) {
-    form.value.badges = ''
-  }
-})
+const previewDate = computed(() => ({
+  ...form.value,
+}))
 
 const onSave = async () => {
   saveError.value = ''
@@ -278,6 +302,9 @@ const onSave = async () => {
     if (isCustomTravel.value) {
       Object.assign(payload, { is_custom_travel: true })
     }
+    if (!payload.displayed_status) {
+      payload.displayed_status = payload.status
+    }
 
     const res = await fetch('/api/v1/booking/add-date', {
       method: 'POST',
@@ -287,7 +314,7 @@ const onSave = async () => {
     const data = await res.json()
     if (res.ok && !data.error) {
       saveSuccess.value = true
-      setTimeout(() => router.push(`/booking-management/${form.value.travel_slug}`), 1000)
+      setTimeout(() => router.push(`/booking-management/${form.value.travel_slug}`), 600)
     }
     else {
       saveError.value = data.error || 'Erreur lors de l\'ajout.'
@@ -304,30 +331,19 @@ const onSave = async () => {
 const onCancel = () => {
   router.back()
 }
-watch(form.value, (newVal) => {
-  if (newVal.is_indiv_travel) {
-    form.value.published = false
-  }
-})
+
+watch(
+  form,
+  (newVal) => {
+    if (newVal.is_indiv_travel) {
+      form.value.published = false
+    }
+  },
+  { deep: true },
+)
 
 onMounted(() => {
   fetchTravels()
   if (slugFromQuery) onTravelSelect(slugFromQuery)
 })
 </script>
-
-<style scoped>
-.slide-fade-enter-active {
-  transition: all 0.3s ease-out;
-}
-
-.slide-fade-leave-active {
-  transition: all 0.3s ease-in-out;
-}
-
-.slide-fade-enter-from,
-.slide-fade-leave-to {
-  transform: translateY(100px);
-  opacity: 0;
-}
-</style>

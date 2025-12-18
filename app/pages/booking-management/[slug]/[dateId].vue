@@ -1,674 +1,512 @@
 <template>
-  <v-container fluid>
+  <v-container
+    fluid
+    class="py-6 glass-page"
+  >
     <v-row
       v-if="loading"
       justify="center"
       align="center"
       style="min-height: 400px;"
     >
-      <v-col
-        cols="12"
-        class="text-center"
-      >
-        <v-progress-circular
-          indeterminate
-          color="primary"
-          size="64"
-        />
-      </v-col>
+      <v-progress-circular
+        indeterminate
+        color="primary"
+        size="64"
+      />
     </v-row>
-    <v-row v-else>
-      <v-col
-        cols="12"
-        md="8"
-      >
-        <v-card>
-          <v-card-title>Détails de la date</v-card-title>
-          <v-card-text>
-            <v-form @submit.prevent="onSave">
-              <v-row class="d-flex align-center justify-space-between">
-                <v-col cols="6">
-                  <v-switch
-                    v-model="form.published"
-                    color="green-light"
-                    label="Publiée"
-                  />
-                </v-col>
-                <v-col
-                  cols="12"
-                  md="6"
-                  class="d-flex align-center"
-                >
-                  <div class="d-flex flex-column align-start justify-center text-caption">
-                    <v-switch
-                      v-model="form.is_indiv_travel"
-                      color="green-light"
-                      label="Voyage Individuel"
-                    />
 
-                    <!-- Les voyages individuels ne sont pas publiés par défaut -->
-                  </div>
-                </v-col>
-              </v-row>
-              <v-text-field
-                v-model="form.travel_slug"
-                label="Slug du voyage"
-                readonly
-              />
-              <div class="d-flex align-center ga-2 justify-space-between">
-                <v-select
-                  v-model="funnelLinkType"
-                  :items="funnelLinkTypes"
-                  item-title="label"
-                  label="Type de lien funnel"
-                  style="max-width: 200px;"
-                />
+    <template v-else>
+      <v-row class="align-center mb-4">
+        <v-col
+          cols="12"
+          md="8"
+        >
+          <div class="d-flex align-center ga-3">
+            <div>
+              <p class="text-overline text-primary mb-1">
+                Back-office dates
+              </p>
+              <h1 class="text-h5 text-md-h4 font-weight-bold mb-1">
+                {{ voyageTitle || form.travel_slug }} — {{ dayjs(form.departure_date).format('DD MMM YYYY') }}
+              </h1>
+              <p class="text-body-2 text-medium-emphasis">
+                Ajustez les informations, gérez les voyageurs et générez les liens de paiement.
+              </p>
+            </div>
+            <v-chip
+              :color="form.published ? 'green-light' : 'warning'"
+              label
+              size="small"
+            >
+              {{ form.published ? 'Publiée' : 'Brouillon' }}
+            </v-chip>
+          </div>
+        </v-col>
+        <v-col
+          cols="12"
+          md="4"
+          class="d-flex justify-end ga-2"
+        >
+          <v-btn
+            variant="text"
+            @click="onCancel"
+          >
+            Retour
+          </v-btn>
+          <v-btn
+            color="primary"
+            :loading="saving"
+            @click="onSave"
+          >
+            Enregistrer
+          </v-btn>
+        </v-col>
+      </v-row>
+
+      <v-row>
+        <v-col cols="12">
+          <v-alert
+            v-if="saveSuccess"
+            type="success"
+            variant="tonal"
+            border="start"
+            class="mb-2"
+          >
+            Modifications enregistrées.
+          </v-alert>
+          <v-alert
+            v-if="saveError"
+            type="error"
+            variant="tonal"
+            border="start"
+            class="mb-2"
+          >
+            {{ saveError }}
+          </v-alert>
+        </v-col>
+      </v-row>
+
+      <v-row>
+        <v-col
+          cols="12"
+          md="8"
+        >
+          <v-form @submit.prevent="onSave">
+            <DateFormCard
+              v-model="form"
+              :status-options="statuses"
+              :allow-individual="!isCustomTravel"
+              title="Paramètres de la date"
+              subtitle="Informations publiques et opérationnelles"
+              :readonly-booked-seat="true"
+            >
+              <template #top-actions>
+                <v-chip
+                  v-if="form.is_indiv_travel"
+                  color="blue"
+                  size="small"
+                  label
+                >
+                  Voyage individuel
+                </v-chip>
+              </template>
+              <template #travel>
                 <v-text-field
-                  :model-value="funnelLink"
-                  label="Lien funnel"
+                  :model-value="form.travel_slug"
+                  label="Slug du voyage"
                   readonly
+                  density="comfortable"
+                  class="flex-1"
+                />
+              </template>
+              <template #actions>
+                <v-btn
+                  variant="text"
+                  @click="onCancel"
                 >
-                  <template #append-inner>
-                    <v-btn
-                      icon
-                      color="primary"
-                      size="x-small"
-                      @click="copyFunnelLink"
-                    >
-                      <v-icon>
-                        {{ mdiLinkEdit }}
-                      </v-icon>
-                    </v-btn>
-                  </template>
-                </v-text-field>
+                  Annuler
+                </v-btn>
+                <v-btn
+                  color="primary"
+                  type="submit"
+                  :loading="saving"
+                >
+                  Sauvegarder
+                </v-btn>
+              </template>
+            </DateFormCard>
+          </v-form>
+
+          <v-card
+            class="mt-4 glass-surface"
+            rounded="lg"
+            elevation="6"
+          >
+            <v-card-text>
+              <div class="d-flex align-center justify-space-between mb-3">
+                <div class="d-flex align-center ga-2">
+                  <v-chip
+                    color="primary"
+                    label
+                    size="small"
+                  >
+                    Funnel
+                  </v-chip>
+                  <v-select
+                    v-model="funnelLinkType"
+                    :items="funnelLinkTypes"
+                    item-title="label"
+                    item-value="value"
+                    hide-details
+                    density="compact"
+                    style="max-width: 200px;"
+                  />
+                </div>
+                <v-btn
+                  size="small"
+                  variant="tonal"
+                  color="primary"
+                  @click="copyFunnelLink"
+                >
+                  Copier
+                </v-btn>
               </div>
-              <v-select
-                v-model="form.status"
-                label="Statut affiché"
-                :items="statuses"
-                item-title="label"
-                item-value="value"
-              />
               <v-text-field
-                v-model="form.departure_date"
-                label="Date de départ"
-                type="date"
-              />
-              <v-text-field
-                v-model="form.return_date"
-                label="Date de retour"
-                type="date"
-              />
-
-              <v-text-field
-                v-model="form.starting_price"
-                label="Prix de départ"
-                type="number"
-              />
-
-              <v-text-field
-                v-model="form.max_travelers"
-                label="Voyageurs max"
-                type="number"
-              />
-              <v-text-field
-                v-model="form.min_travelers"
-                label="Voyageurs min"
-                type="number"
-              />
-              <v-text-field
-                v-model="form.booked_seat"
-                label="Places réservées (Non modifiable)"
-                type="number"
+                :model-value="funnelLink"
                 readonly
+                label="Lien funnel"
+                density="comfortable"
               />
-              <v-divider class="my-2" />
-              <v-row>
-                <v-col cols="6">
-                  <span class="text-info text-caption"> Le badge EarlyBird ne sera visible que si la date de départ est supérieure à 7 mois</span>
-                  <v-switch
-                    v-model="form.early_bird"
-                    color="green-light"
-                    label="Early Bird disponible pour cette date"
-                  />
-                </v-col>
-                <v-col cols="6">
-                  <span class="text-info text-caption"> Le badge LastMinute ne sera visible que si la date de départ est inférieure à 1 mois</span>
-                  <v-switch
-                    v-model="form.last_minute"
-                    color="green-light"
-                    label="Last minute disponible pour cette date"
-                  />
-                </v-col>
-              </v-row>
-              <v-row>
-                <v-col cols="6">
-                  <v-switch
-                    v-model="includeCustomEvent"
-                    color="green-light"
-                    label="Événement personnalisé (optionnel)"
-                  />
-                </v-col>
-                <v-col cols="6">
-                  <Transition name="slide-fade">
-                    <v-text-field
-                      v-if="includeCustomEvent"
-                      v-model="form.badges"
-                      label="Texte du badge"
-                    />
-                  </Transition>
-                </v-col>
-              </v-row>
-              <v-row>
-                <v-col cols="6">
-                  <v-switch
-                    v-model="form.include_flight"
-                    color="green-light"
-                    label="Vol inclus (optionnel)"
-                  />
-                </v-col>
-                <v-col cols="5">
-                  <Transition name="slide-fade">
-                    <v-text-field
-                      v-if="form.include_flight"
-                      v-model="form.flight_price"
-                      label="Prix du vol"
-                      type="number"
-                    />
-                  </Transition>
-                </v-col>
-              </v-row>
-              <v-divider />
-              <v-row>
-                <v-col cols="12">
-                  <v-switch
-                    v-model="form.custom_display"
-                    color="green-light"
-                    label="Affichage custom de la section date"
-                  />
-                </v-col>
-                <v-col
-                  cols="12"
-                  class="pa-8"
+            </v-card-text>
+          </v-card>
+
+          <v-card
+            class="mt-4 glass-surface"
+            rounded="lg"
+            elevation="6"
+          >
+            <v-card-text>
+              <div class="d-flex align-center justify-space-between mb-2">
+                <div>
+                  <div class="text-subtitle-1 font-weight-bold">
+                    Prévisualisation
+                  </div>
+                  <div class="text-caption text-medium-emphasis">
+                    Affichage site public
+                  </div>
+                </div>
+                <v-chip
+                  :color="form.published && !form.is_indiv_travel ? 'green-light' : 'warning'"
+                  size="small"
                 >
-                  <Transition name="slide-fade">
-                    <div v-if="form.custom_display">
-                      <v-card
-                        class="pa-6 mb-4"
-                        color="#f5f7fa"
-                        elevation="2"
-                        style="border: 1px solid #d1e3f8;"
-                      >
-                        <div
-                          class="text-h6 font-weight-bold mb-4"
-                          style="color: #1976d2;"
-                        >
-                          Affichage personnalisé (section date)
-                        </div>
-                        <v-row dense>
-                          <v-col
-                            cols="12"
-                            md="6"
-                          >
-                            <v-select
-                              v-model="form.displayed_status"
-                              label="Statut affiché (custom)"
-                              :items="statuses"
-                              item-title="label"
-                              item-value="value"
-                              class="mb-2"
-                            />
-                          </v-col>
-                          <v-col
-                            cols="12"
-                            md="6"
-                          >
-                            <v-text-field
-                              v-model="form.displayed_starting_price"
-                              label="Prix de départ (custom)"
-                              type="number"
-                              class="mb-2"
-                            />
-                          </v-col>
-                          <v-col
-                            cols="12"
-                            md="6"
-                          >
-                            <v-text-field
-                              v-model="form.displayed_min_travelers"
-                              label="Voyageurs min (custom)"
-                              type="number"
-                              class="mb-2"
-                            />
-                          </v-col>
-                          <v-col
-                            cols="12"
-                            md="6"
-                          >
-                            <v-text-field
-                              v-model="form.displayed_max_travelers"
-                              label="Voyageurs max (custom)"
-                              type="number"
-                              class="mb-2"
-                            />
-                          </v-col>
-                          <v-col
-                            cols="12"
-                            md="6"
-                          >
-                            <v-text-field
-                              v-model="form.displayed_booked_seat"
-                              label="Places réservées (custom)"
-                              type="number"
-                              class="mb-2"
-                            />
-                          </v-col>
-                          <v-col
-                            cols="12"
-                            md="6"
-                          >
-                            <v-text-field
-                              v-model="form.displayed_badges"
-                              label="Badge (custom)"
-                              class="mb-2"
-                            />
-                          </v-col>
-                          <v-col
-                            cols="12"
-                            md="6"
-                          >
-                            <v-switch
-                              v-model="form.displayed_include_flight"
-                              color="green-light"
-                              label="Vol inclus (custom)"
-                              class="mb-2"
-                            />
-                          </v-col>
-                          <v-col
-                            cols="12"
-                            md="6"
-                          >
-                            <v-switch
-                              v-model="form.displayed_last_minute"
-                              color="green-light"
-                              label="Last minute (custom)"
-                              class="mb-2"
-                            />
-                          </v-col>
-                          <v-col
-                            cols="12"
-                            md="6"
-                          >
-                            <v-switch
-                              v-model="form.displayed_early_bird"
-                              color="green-light"
-                              label="Early bird (custom)"
-                              class="mb-2"
-                            />
-                          </v-col>
-                        </v-row>
-                      </v-card>
-                    </div>
-                  </Transition>
-                </v-col>
-              </v-row>
-              <v-alert
-                v-if="saveSuccess"
-                type="success"
-                class="mt-4"
+                  {{ form.is_indiv_travel ? 'Individuel' : form.published ? 'Publié' : 'Brouillon' }}
+                </v-chip>
+              </div>
+              <DatesPricesItem :date="previewDate" />
+            </v-card-text>
+          </v-card>
+        </v-col>
+
+        <v-col
+          cols="12"
+          md="4"
+          class="d-flex flex-column ga-4"
+        >
+          <v-card
+            rounded="lg"
+            class="pa-4 glass-surface"
+            variant="outlined"
+            elevation="6"
+          >
+            <div class="d-flex justify-space-between align-center mb-3">
+              <div class="d-flex flex-column">
+                <span class="text-subtitle-1 font-weight-bold">Vue d'ensemble</span>
+                <span class="text-caption text-medium-emphasis">Capacité & paiements</span>
+              </div>
+              <v-chip
+                label
+                size="small"
               >
-                Modifications enregistrées !
-              </v-alert>
-              <v-alert
-                v-if="saveError"
-                type="error"
-                class="mt-4"
-              >
-                {{ saveError }}
-              </v-alert>
-              <v-btn
-                type="submit"
-                color="primary"
-                class="mt-4"
-                :loading="saving"
-                :disabled="saving"
-              >
-                Valider
-              </v-btn>
-              <v-btn
-                class="mt-4 ml-2"
-                @click="onCancel"
-              >
-                Retour
-              </v-btn>
-            </v-form>
-          </v-card-text>
-        </v-card>
-      </v-col>
-      <v-col
-        cols="12"
-        md="4"
-      >
-        <v-card class="mb-4">
-          <v-card-title>Voyageurs réservés</v-card-title>
-          <v-card-text>
-            <ul>
-              <li
+                {{ form.booked_seat || 0 }} / {{ form.max_travelers || '?' }}
+              </v-chip>
+            </div>
+            <v-row>
+              <v-col cols="6">
+                <div class="text-caption text-medium-emphasis">
+                  Total payé
+                </div>
+                <div class="text-h6 font-weight-bold">
+                  {{ formatNumber(totalPaid) }} €
+                </div>
+              </v-col>
+              <v-col cols="6">
+                <div class="text-caption text-medium-emphasis">
+                  Reste à encaisser
+                </div>
+                <div class="text-h6 font-weight-bold">
+                  {{ formatNumber(totalRestToPay) }} €
+                </div>
+              </v-col>
+            </v-row>
+            <div class="text-caption text-medium-emphasis">
+              Valeur totale: {{ formatNumber(totalValue) }} €
+            </div>
+          </v-card>
+
+          <v-card
+            rounded="lg"
+            variant="outlined"
+            class="glass-surface"
+            elevation="6"
+          >
+            <v-card-title class="pb-0">
+              Voyageurs
+            </v-card-title>
+            <v-card-text>
+              <div
                 v-for="traveler in bookedTravelers"
                 :key="traveler.id"
-                class="d-flex flex-column"
-                style="list-style: none; margin-bottom: 8px;"
+                class="py-2 d-flex flex-column"
               >
-                <div class="d-flex">
+                <div class="d-flex align-center">
                   <NuxtLink
                     :to="`https://odysway90522.activehosted.com/app/deals/${traveler.deal_id}`"
                     target="_blank"
-                    style="display: flex; align-items: center; color: inherit;"
+                    class="text-body-2 font-weight-medium d-flex align-center ga-2"
                   >
-                    <span style="font-weight: 500;">
-                      {{ traveler.name?.trim() ? traveler.name : traveler.email }}
-                    </span>
-                    <span>
-                      &nbsp;|&nbsp;Voyageurs:
-                    </span>
+                    <span>{{ traveler.name?.trim() ? traveler.name : traveler.email }}</span>
                     <v-badge
                       v-if="traveler.booked_places > 0"
                       :content="traveler.booked_places"
                       color="primary"
                       inline
-                      class="ml-2"
-                      style="margin-left: 8px;"
+                      size="small"
                     />
-
-                    <v-icon>
-                      {{ mdiArrowRight }}
-                    </v-icon>
+                    <v-icon size="x-small">{{ mdiArrowRight }}</v-icon>
                   </NuxtLink>
                   <v-spacer />
-
                   <v-btn
                     icon
-                    color="primary"
                     size="x-small"
-                    class="mx-2"
+                    color="primary"
+                    variant="text"
                     @click="openPaymentDialog(traveler)"
                   >
-                    <v-icon>
-                      {{ mdiLinkEdit }}
-                    </v-icon>
+                    <v-icon>{{ mdiLinkEdit }}</v-icon>
                   </v-btn>
                   <v-btn
                     icon
-                    color="error"
                     size="x-small"
+                    color="error"
+                    variant="text"
                     @click="deleteTraveler(traveler.id)"
                   >
-                    <v-icon>
-                      {{ mdiDelete }}
-                    </v-icon>
+                    <v-icon>{{ mdiDelete }}</v-icon>
                   </v-btn>
                 </div>
-                <div v-if="traveler.is_option">
+                <div
+                  v-if="traveler.is_option"
+                  class="mt-1"
+                >
                   <v-chip
-                    inline
                     color="red"
                     label
-                    size="small"
+                    size="x-small"
                   >
-                    Option, expire le {{ dayjs(traveler.expiracy_date).format('DD/MM/YYYY') }}
+                    Option jusqu'au {{ dayjs(traveler.expiracy_date).format('DD/MM/YYYY') }}
                   </v-chip>
                 </div>
-                <div class="text-caption">
-                  <div>
-                    <span>
-                      <b>Prix payé:</b> {{ formatNumber(traveler.alreadyPaid) }} €
-                    </span>
-                    <span>
-                      <b>Reste à payer:</b> {{ formatNumber(traveler.restToPay) }} €
-                    </span>
-                  </div>
-                  <div>
-                    <span>
-                      <b>Prix total:</b> {{ formatNumber(traveler.price) }} €
-                    </span>
-                  </div>
+                <div class="text-caption text-medium-emphasis">
+                  Prix payé: {{ formatNumber(traveler.alreadyPaid) }} € | Reste: {{ formatNumber(traveler.restToPay) }} € | Total: {{ formatNumber(traveler.price) }} €
                 </div>
-              </li>
-            </ul>
-            <v-divider class="my-2" />
-            <v-expansion-panels>
-              <v-expansion-panel>
-                <v-expansion-panel-title>Assigner un deal AC</v-expansion-panel-title>
-                <v-expansion-panel-text>
-                  <v-form @submit.prevent="onAssignDeal">
-                    <v-text-field
-                      v-model="dealUrl"
-                      label="URL du deal AC"
-                      required
-                    />
-                    <v-btn
-                      type="submit"
-                      color="primary"
-                      :loading="assigningDeal"
-                      :disabled="assigningDeal"
-                    >
-                      Assigner
-                    </v-btn>
-                    <v-alert
-                      v-if="assignDealSuccess"
-                      type="success"
-                      class="mt-2"
-                    >
-                      Deal assigné !
-                    </v-alert>
-                    <v-alert
-                      v-if="assignDealError"
-                      type="error"
-                      class="mt-2 text-white"
-                    >
-                      <div v-if="assignDealError.includes('/booking-management/')">
-                        <NuxtLink
-                          :to="assignDealError"
-                          class="text-white"
-                        >
-                          Deal déjà assigné à la date suivante
-                          <v-icon>
-                            {{ mdiArrowRight }}
-                          </v-icon>
-                        </NuxtLink>
-                      </div>
-                      <div v-else>
-                        {{ assignDealError }}
-                      </div>
-                    </v-alert>
-                  </v-form>
-                </v-expansion-panel-text>
-              </v-expansion-panel>
-            </v-expansion-panels>
-            <div class="mt-2 d-flex flex-column">
-              <span>Valeur totale: {{ formatNumber(totalValue) }} €</span>
-              <span>Total payé: {{ formatNumber(totalPaid) }} €</span>
-              <span>Total restant: {{ formatNumber(totalRestToPay) }} €</span>
-            </div>
-          </v-card-text>
-        </v-card>
-        <v-card
-          v-if="prospectTravelers.length > 0"
-          class="mb-4 pa-2"
-        >
-          <v-card-title class="text-body-1">
-            Voyageurs/Prospects en attente
-          </v-card-title>
-          <v-card-text>
-            <ul>
-              <li
+              </div>
+
+              <v-divider class="my-3" />
+
+              <v-expansion-panels>
+                <v-expansion-panel>
+                  <v-expansion-panel-title>Assigner un deal AC</v-expansion-panel-title>
+                  <v-expansion-panel-text>
+                    <v-form @submit.prevent="onAssignDeal">
+                      <v-text-field
+                        v-model="dealUrl"
+                        label="URL du deal AC"
+                        required
+                        density="comfortable"
+                      />
+                      <v-btn
+                        type="submit"
+                        color="primary"
+                        :loading="assigningDeal"
+                        :disabled="assigningDeal"
+                      >
+                        Assigner
+                      </v-btn>
+                      <v-alert
+                        v-if="assignDealSuccess"
+                        type="success"
+                        class="mt-2"
+                      >
+                        Deal assigné !
+                      </v-alert>
+                      <v-alert
+                        v-if="assignDealError"
+                        type="error"
+                        class="mt-2"
+                      >
+                        <div v-if="assignDealError.includes('/booking-management/')">
+                          <NuxtLink
+                            :to="assignDealError"
+                            class="text-white"
+                          >
+                            Deal déjà assigné à cette date
+                            <v-icon>{{ mdiArrowRight }}</v-icon>
+                          </NuxtLink>
+                        </div>
+                        <div v-else>
+                          {{ assignDealError }}
+                        </div>
+                      </v-alert>
+                    </v-form>
+                  </v-expansion-panel-text>
+                </v-expansion-panel>
+              </v-expansion-panels>
+            </v-card-text>
+          </v-card>
+
+          <v-card
+            v-if="prospectTravelers.length"
+            rounded="lg"
+            variant="outlined"
+            class="glass-surface"
+            elevation="6"
+          >
+            <v-card-title class="pb-0">
+              Prospects en attente
+            </v-card-title>
+            <v-card-text>
+              <div
                 v-for="traveler in prospectTravelers"
                 :key="traveler.id"
-                class="d-flex justify-space-between"
-                style="list-style: none; margin-bottom: 8px;"
+                class="py-2 d-flex align-center"
               >
                 <NuxtLink
                   :to="`https://odysway90522.activehosted.com/app/deals/${traveler.deal_id}`"
                   target="_blank"
-                  style="display: flex; align-items: center; color: inherit;"
+                  class="d-flex align-center ga-2 text-body-2"
                 >
-                  <span style="font-weight: 500;">
-                    {{ traveler.email || 'DEAL AC SUPPRIMÉ' }}
-                  </span>
-                  <span>
-                    &nbsp;|&nbsp;Voyageurs: {{ traveler.nbTravelers }}
-                  </span>
-
-                  <v-tooltip
-                    text="Pas de paiement effectué sur cette date"
-                  >
-                    <template #activator="{ props }">
-                      <v-badge
-                        v-bind="props"
-                        :icon="mdiInformationOutline"
-                        inline
-                        text-color="white"
-                        color="red"
-                      />
-                    </template>
-                  </v-tooltip>
-
-                  <v-icon>
-                    {{ mdiArrowRight }}
-                  </v-icon>
+                  <span>{{ traveler.email || 'DEAL AC SUPPRIMÉ' }}</span>
+                  <v-badge
+                    :icon="mdiInformationOutline"
+                    inline
+                    color="red"
+                    text-color="white"
+                    size="small"
+                  />
+                  <v-icon size="x-small">{{ mdiArrowRight }}</v-icon>
                 </NuxtLink>
                 <v-spacer />
                 <v-btn
                   v-if="traveler.email"
                   icon
-                  color="primary"
                   size="x-small"
-                  class="mx-2"
+                  color="primary"
+                  variant="text"
                   @click="openPaymentDialog(traveler)"
                 >
-                  <v-icon>
-                    {{ mdiLinkEdit }}
-                  </v-icon>
+                  <v-icon>{{ mdiLinkEdit }}</v-icon>
                 </v-btn>
                 <v-btn
                   icon
-                  color="error"
                   size="x-small"
+                  color="error"
+                  variant="text"
                   @click="deleteTraveler(traveler.id)"
                 >
-                  <v-icon>
-                    {{ mdiDelete }}
-                  </v-icon>
+                  <v-icon>{{ mdiDelete }}</v-icon>
                 </v-btn>
-              </li>
-            </ul>
-          </v-card-text>
-        </v-card>
-      </v-col>
-      <v-divider class="my-4" />
-      <h2>
-        Prévisualisation
-      </h2>
-      <v-col cols="12">
-        <v-chip
-          v-if="form.published && !form.is_indiv_travel"
-          color="green-light"
-          class="pb-1"
-        >
-          Publié
-        </v-chip>
-        <v-chip
-          v-else-if="!form.published && !form.is_indiv_travel"
-          color="red"
-          class="pb-1"
-        >
-          Non publié
-        </v-chip>
-        <v-chip
-          v-else-if="form.is_indiv_travel"
-          color="blue"
-          class="pb-1"
-        >
-          Voyage Individuel, la date n'apparaîtra pas sur le site
-        </v-chip>
-      </v-col>
-      <v-col
-        v-if="form"
-        cols="12"
-        class="mb-16"
-      >
-        <DatesPricesItem :date="Object.assign(form, { lastMinutePrice: voyagePricing.pricing?.lastMinuteReduction || 0, earlyBirdPrice: voyagePricing.pricing?.earlyBirdReduction || 0 })" />
-      </v-col>
-    </v-row>
+              </div>
+            </v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
 
-    <!-- Payment Link Dialog -->
-    <v-dialog
-      v-model="paymentDialog"
-      max-width="400"
-    >
-      <v-card>
-        <v-card-title>Générer un lien de paiement</v-card-title>
-        <v-card-text>
-          <div v-if="selectedTraveler">
-            <div><b>Voyageur:</b> {{ selectedTraveler.name || selectedTraveler.email }}</div>
-            <v-select
-              v-model="paymentType"
-              :items="paymentTypes"
-              label="Type de paiement"
-              item-title="label"
-              item-value="value"
-            />
-            <v-text-field
-              v-if="paymentType === 'custom'"
-              v-model="customAmount"
-              label="Montant personnalisé (€)"
-              type="number"
-            />
-            <v-divider class="my-2" />
-            <div v-if="generatedLink">
-              <b>Lien généré :</b>
-              <v-text-field
-                v-model="generatedLink"
-                readonly
-                append-icon="mdi-content-copy"
-                @click:append="copyLink"
+      <!-- Payment Link Dialog -->
+      <v-dialog
+        v-model="paymentDialog"
+        max-width="420"
+      >
+        <v-card>
+          <v-card-title>Générer un lien de paiement</v-card-title>
+          <v-card-text>
+            <div v-if="selectedTraveler">
+              <div class="text-body-2 mb-2">
+                <b>Voyageur:</b> {{ selectedTraveler.name || selectedTraveler.email }}
+              </div>
+              <v-select
+                v-model="paymentType"
+                :items="paymentTypes"
+                label="Type de paiement"
+                item-title="label"
+                item-value="value"
+                density="comfortable"
               />
+              <v-text-field
+                v-if="paymentType === 'custom'"
+                v-model="customAmount"
+                label="Montant personnalisé (€)"
+                type="number"
+                density="comfortable"
+              />
+              <v-divider class="my-2" />
+              <div v-if="generatedLink">
+                <b>Lien généré :</b>
+                <v-text-field
+                  v-model="generatedLink"
+                  readonly
+                  append-icon="mdi-content-copy"
+                  @click:append="copyLink"
+                />
+              </div>
             </div>
-          </div>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn
-            color="primary"
-            @click="generateLink"
-          >
-            Générer
-          </v-btn>
-          <v-btn
-            text
-            @click="closePaymentDialog"
-          >
-            Fermer
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
-    <v-snackbar
-      v-model="snackbar"
-      location="top"
-      timeout="2000"
-      color="primary"
-    >
-      Le lien a été copié
-    </v-snackbar>
+          </v-card-text>
+          <v-card-actions>
+            <v-spacer />
+            <v-btn
+              color="primary"
+              @click="generateLink"
+            >
+              Générer
+            </v-btn>
+            <v-btn
+              text
+              @click="closePaymentDialog"
+            >
+              Fermer
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
+      <v-snackbar
+        v-model="snackbar"
+        location="top"
+        timeout="2000"
+        color="primary"
+      >
+        Le lien a été copié
+      </v-snackbar>
+    </template>
   </v-container>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { mdiArrowRight, mdiDelete, mdiLinkEdit, mdiInformationOutline } from '@mdi/js'
 import dayjs from 'dayjs'
+import DateFormCard from '~/components/booking/DateFormCard.vue'
+import { BOOKING_STATUSES } from '~/utils/bookingStatuses'
 
 definePageMeta({
   layout: 'booking',
@@ -677,32 +515,26 @@ definePageMeta({
 const route = useRoute()
 const router = useRouter()
 const slug = route.params.slug
-const snackbar = ref(false)
 const dateId = route.params.dateId
 const config = useRuntimeConfig()
-console.log('=======config=======', config.public.siteURL)
-const includeCustomEvent = ref(false)
 const form = ref({})
 const bookedTravelers = ref([])
 const prospectTravelers = ref([])
 const loading = ref(true)
 const sanity = useSanity()
+const snackbar = ref(false)
 const voyageQuery = groq`*[_type == "voyage" && slug.current == $slug][0]{
-  pricing
+  title,
+  pricing,
+  availabilityTypes
 }`
 const { data: voyagePricing } = await useAsyncData('voyagePricing', () =>
   sanity.fetch(voyageQuery, { slug }),
 )
-console.log('=======voyagePricing=======', voyagePricing.value)
-
 const saving = ref(false)
 const saveError = ref('')
 const saveSuccess = ref(false)
-const statuses = ref([
-  { value: 'soon_confirmed', label: 'Bientôt confirmé' },
-  { value: 'confirmed', label: 'Confirmé' },
-  { value: 'guaranteed', label: 'Garanti (Complet)' },
-])
+const statuses = BOOKING_STATUSES
 const dealUrl = ref('')
 const assigningDeal = ref(false)
 const assignDealError = ref('')
@@ -723,43 +555,38 @@ const paymentTypes = [
 const funnelLinkType = ref('deposit')
 const funnelLinkTypes = [
   { value: 'deposit', label: 'Acompte' },
-  { value: 'full', label: 'Total' },
-  // { value: 'balance', label: 'Solde' },
-  // { value: 'custom', label: 'Custom' },
+  // { value: 'full', label: 'Total' },
 ]
 const funnelLink = computed(() => {
   if (!form.value.id) return ''
   return `${config.public.siteURL}/checkout?date_id=${form.value.id}&type=${funnelLinkType.value}${funnelLinkType.value === 'deposit' ? `&step=1&voyage=${form.value.travel_slug}` : ''}`
 })
 
+const voyageTitle = computed(() => voyagePricing.value?.title)
+const isCustomTravel = computed(() => voyagePricing.value?.availabilityTypes?.includes('custom'))
+
+const previewDate = computed(() => ({
+  ...form.value,
+  lastMinutePrice: voyagePricing.value?.pricing?.lastMinuteReduction || 0,
+  earlyBirdPrice: voyagePricing.value?.pricing?.earlyBirdReduction || 0,
+}))
+
 const fetchDetails = async () => {
-  // Fetch travel_date details
   const res = await fetch(`/api/v1/booking/date/${dateId}`)
   const data = await res.json()
   form.value = { ...data, index: 0 }
-  console.log('=======form RETRIEVED=======', form.value)
-  // Fetch booked travelers
   const res2 = await fetch(`/api/v1/booking/${slug}/date/${dateId}/booked`)
   const data2 = await res2.json()
-  includeCustomEvent.value = data.badges.length > 0
-  console.log('=======data2=======', data2)
   bookedTravelers.value = data2.filter(traveler => traveler.booked_places > 0)
   prospectTravelers.value = data2.filter(traveler => traveler.booked_places === 0)
   loading.value = false
-  console.log('=======bookedTravelers RETRIEVED=======', bookedTravelers.value)
 }
-watch(includeCustomEvent, (newVal) => {
-  if (!newVal) {
-    form.value.badges = ''
-  }
-})
 
 const onSave = async () => {
   saveError.value = ''
   saveSuccess.value = false
   saving.value = true
   try {
-    console.log('=======form.value=======', form.value)
     const res = await fetch(`/api/v1/booking/${slug}/date/${dateId}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
@@ -791,7 +618,6 @@ const onAssignDeal = async () => {
   assignDealSuccess.value = false
   assigningDeal.value = true
   try {
-    // Extract dealId from URL
     const match = dealUrl.value.match(/deals\/(\d+)$/)
     if (!match) {
       assignDealError.value = 'URL invalide.'
@@ -832,7 +658,6 @@ const deleteTraveler = async (id) => {
 
 function openPaymentDialog(traveler) {
   selectedTraveler.value = traveler
-  console.log('selectedTraveler', selectedTraveler.value)
   paymentType.value = 'full'
   customAmount.value = ''
   generatedLink.value = ''
@@ -849,9 +674,6 @@ function generateLink() {
   if (paymentType.value === 'custom') {
     if (!customAmount.value) return
     amountParam = `&amount=${customAmount.value}`
-  }
-  else {
-    amountParam = ''
   }
   let typeParam = `&type=${paymentType.value}`
   if (paymentType.value === 'full') typeParam = '&type=full'
@@ -873,31 +695,9 @@ function copyFunnelLink() {
   }
 }
 
-const totalPaid = computed(() => {
-  return bookedTravelers.value.reduce((acc, traveler) => acc + traveler.alreadyPaid, 0)
-})
-const totalRestToPay = computed(() => {
-  return bookedTravelers.value.reduce((acc, traveler) => acc + traveler.restToPay, 0)
-})
-const totalValue = computed(() => {
-  return bookedTravelers.value.reduce((acc, traveler) => acc + traveler.price, 0)
-})
+const totalPaid = computed(() => bookedTravelers.value.reduce((acc, traveler) => acc + traveler.alreadyPaid, 0))
+const totalRestToPay = computed(() => bookedTravelers.value.reduce((acc, traveler) => acc + traveler.restToPay, 0))
+const totalValue = computed(() => bookedTravelers.value.reduce((acc, traveler) => acc + traveler.price, 0))
 
 onMounted(fetchDetails)
 </script>
-
-<style scoped>
-.slide-fade-enter-active {
-  transition: all 0.3s ease-out;
-}
-
-.slide-fade-leave-active {
-  transition: all 0.3s ease-in-out;
-}
-
-.slide-fade-enter-from,
-.slide-fade-leave-to {
-  transform: translateY(100px);
-  opacity: 0;
-}
-</style>
