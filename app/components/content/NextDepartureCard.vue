@@ -107,7 +107,7 @@
               >
                 <div class="w-40 d-flex flex-column  align-center ga-1 justify-space-between ">
                   <v-icon
-                    class="text-primary text-h4 text-md-h5"
+                    class="text-primary custom-icon-size"
                   >{{ mdiAccountMultiple }}</v-icon>
                   <div class="text-caption text-md-subtitle-2 text-center text-no-wrap text-md-left text-grey">{{ voyage.availabilityTypes?.includes('groupe')
                     ? (voyageCardContent?.groupType || 'Groupe') : (voyageCardContent?.soloType || 'Solo') }}</div>
@@ -234,6 +234,9 @@ const voyageCardImg = computed(() => {
 </script>
 
 <style scoped>
+  .custom-icon-size{
+    font-size: 22px !important;
+  }
 .cta-bg{
   background-color: #dfe3f07f;
 }

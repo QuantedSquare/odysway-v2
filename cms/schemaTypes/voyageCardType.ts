@@ -26,6 +26,12 @@ export const voyageCardType = defineType({
       validation: Rule => Rule.required()
     }),
     defineField({
+      name: 'indivDescription',
+      title: 'Description Individuel',
+      type: 'string',
+      validation: Rule => Rule.required()
+    }),
+    defineField({
       name: 'soloType',
       title: 'Type Solo',
       type: 'string',

@@ -83,14 +83,18 @@
                 </v-col>
               </v-row>
               <v-row
-                class="custom-row-height"
+                class="custom-row-height pt-0 mt-0"
                 align="center"
+                justify="center"
               >
-                <v-col cols="4">
-                  <div class="text-grey font-weight-bold text-body-2 text-md-subtitle-2">{{ voyageCardContent?.type
-                    || 'Type'
-                  }}</div>
-                  <div class="text-h6 font-weight-bold text-primary">{{ voyage.availabilityTypes?.includes('groupe')
+                <v-col
+                  cols="4"
+                  class="d-flex flex-column  align-center ga-1 justify-center "
+                >
+                  <v-icon
+                    class="text-primary custom-icon-size"
+                  >{{ mdiAccountMultiple }}</v-icon>
+                  <div class="text-caption text-md-subtitle-2 line-height font-weight-bold text-primary text-center">{{ voyage.availabilityTypes?.includes('groupe')
                     ? (voyageCardContent?.groupType || 'Groupe') : (voyageCardContent?.soloType || 'Solo') }}</div>
                 </v-col>
                 <v-divider
@@ -117,14 +121,22 @@
 
                 <v-col
                   cols="4"
-                  class="text-right"
+                  class="d-flex flex-column justify-space-between ga-1 align-center"
                 >
-                  <div class="text-grey text-body-2 text-md-subtitle-2 font-weight-bold">{{
+                  <span class="text-grey text-body-2 text-md-subtitle-2 font-weight-bold">{{
                     voyageCardContent?.startingFrom
-                      || 'À partir de' }}</div>
-                  <div class="text-h6 font-weight-bold text-primary">{{ voyage.pricing?.startingPrice
+                      || 'À partir de' }}</span>
+                  <v-spacer />
+                  <span class="text-h6 font-weight-bold text-primary">{{ voyage.pricing?.startingPrice
                     ?? voyage.startingPrice
-                  }}€</div>
+                  }}€</span>
+                </v-col>
+                <v-col
+                  cols="12"
+                  class="py-0 py-md-1 px-4"
+                >
+                  <span class="line-height text-grey text-body-2 text-md-subtitle-1">
+                    Un séjour à imaginer ensemble, selon vos envies.</span>
                 </v-col>
               </v-row>
             </v-container>
@@ -166,7 +178,7 @@
 </template>
 
 <script setup>
-import { mdiPlusCircle } from '@mdi/js'
+import { mdiPlusCircle, mdiAccountMultiple } from '@mdi/js'
 
 import { useImage } from '#imports'
 
@@ -202,6 +214,9 @@ const voyageCardImg = computed(() => {
 </script>
 
 <style scoped>
+.custom-icon-size{
+    font-size: 22px !important;
+  }
 .badge-position {
   position: absolute;
   top: 25px;
@@ -226,7 +241,9 @@ const voyageCardImg = computed(() => {
 :deep(.v-btn--variant-text .v-btn__overlay) {
   background-color: v-bind(actionColor);
 }
-
+.line-height {
+    line-height: 20px!important;
+  }
 .img-height {
   height: 228px;
 }
@@ -238,7 +255,7 @@ const voyageCardImg = computed(() => {
   -webkit-line-clamp: 2;
   line-clamp: 2;
   line-height: 120% !important;
-  font-size: 28px !important;
+  font-size: 24px !important;
 }
 
 .custom-card-width {

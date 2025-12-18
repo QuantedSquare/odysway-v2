@@ -26,7 +26,7 @@
     "@sanity/embeddings-index-ui": "^3.0.0",
     "@sanity/orderable-document-list": "^1.4.0",
     "@sanity/ui": "^3.0.0",
-    "@sanity/vision": "^4.20.3",
+    "@sanity/vision": "^4.22.0",
     "algoliasearch": "^5.46.0",
     "dotenv": "^17.2.3",
     "js-yaml": "^4.1.0",
@@ -36,7 +36,7 @@
     "react": "^19.1",
     "react-circular-progressbar": "^2.2.0",
     "react-dom": "^19.1",
-    "sanity": "^4.20.3",
+    "sanity": "^4.22.0",
     "sanity-plugin-media": "^4.0.0",
     "styled-components": "^6.1.18"
   },
