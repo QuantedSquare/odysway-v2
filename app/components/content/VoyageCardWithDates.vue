@@ -14,6 +14,8 @@
 </template>
 
 <script setup>
+import { getDateStatus } from '~/utils/getDateStatus'
+
 const props = defineProps({
   voyage: {
     type: Object,
@@ -22,6 +24,10 @@ const props = defineProps({
   datesBySlug: {
     type: Object,
     default: () => ({}),
+  },
+  preferConfirmedDate: {
+    type: Boolean,
+    default: false,
   },
 })
 
@@ -35,6 +41,16 @@ const earliestDeparture = computed(() => {
     .sort((a, b) => new Date(a.departure_date) - new Date(b.departure_date))[0]
 })
 
+const confirmedDeparture = computed(() => {
+  if (!props.preferConfirmedDate || !dates.value.length) return null
+  return dates.value.find((date) => {
+    const status = getDateStatus(date)
+    return status?.status === 'confirmed'
+  }) || null
+})
+
+const selectedDeparture = computed(() => confirmedDeparture.value || earliestDeparture.value)
+
 const isGroupTravel = computed(() => props.voyage.availabilityTypes?.includes('groupe'))
 
 const shouldShowNextCard = computed(() => isGroupTravel.value && dates.value.length > 0)
@@ -44,7 +60,7 @@ const cardVoyage = computed(() => {
   return {
     ...props.voyage,
     dates: dates.value,
-    departureDate: earliestDeparture.value?.departure_date,
+    departureDate: selectedDeparture.value?.departure_date,
   }
 })
 </script>

@@ -89,6 +89,7 @@
       <DisplayVoyagesRow
         :voyages="filteredVoyages"
         :is-search="true"
+        :prefer-confirmed-date="confirmedOnly"
       />
     </v-container>
   </v-container>

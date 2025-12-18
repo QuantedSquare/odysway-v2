@@ -26,6 +26,7 @@
           <VoyageCardWithDates
             :voyage="voyage"
             :dates-by-slug="datesBySlug"
+            :prefer-confirmed-date="props.preferConfirmedDate"
           />
         </v-col>
       </template>
@@ -53,6 +54,7 @@
           v-else
           :voyage="voyage"
           :dates-by-slug="datesBySlug"
+          :prefer-confirmed-date="props.preferConfirmedDate"
         />
       </v-col>
     </TransitionGroup>
@@ -134,6 +136,10 @@ const props = defineProps({
     type: Object,
   },
   isSearch: {
+    type: Boolean,
+    default: false,
+  },
+  preferConfirmedDate: {
     type: Boolean,
     default: false,
   },
