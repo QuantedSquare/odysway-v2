@@ -114,6 +114,7 @@
                   class="text-grey"
                   vertical
                 />
+
                 <v-col
                   cols="4"
                   class="text-right"
@@ -129,7 +130,6 @@
             </v-container>
           </v-card-text>
           <v-divider class="text-grey" />
-
           <v-card-actions
             :class="voyage.availabilityTypes?.includes('groupe') ? 'hover-primary' : 'hover-secondary'"
           >
@@ -137,9 +137,9 @@
               <v-btn
                 v-if="voyage.availabilityTypes?.includes('groupe')"
                 block
-                height="45"
+
                 color="primary"
-                class="text-body-1 py-2"
+                class="text-body-1 py-2 custom-btn-height"
               >
                 <div class="mb-md-1 mr-2">
                   {{ voyageCardContent?.discoverDates || 'Découvrir les dates' }}
@@ -149,9 +149,8 @@
               <v-btn
                 v-else
                 block
-                height="45"
                 color="secondary"
-                class="text-decoration-none text-body-1 "
+                class="text-decoration-none text-body-1 custom-btn-height"
               >
                 <div class="mb-md-1 mr-2 ">
                   {{ voyageCardContent?.requestQuote || 'Demander un devis' }}
@@ -208,7 +207,9 @@ const voyageCardImg = computed(() => {
   top: 25px;
   right: 28px;
 }
-
+.custom-btn-height:deep(){
+  height:45px!important;
+}
 .title-container {
   height: 2.4em;
   /* This sets a fixed height equivalent to 2 lines */
@@ -276,6 +277,7 @@ const voyageCardImg = computed(() => {
   .line-clamp-2 {
     font-size: 18px !important;
   }
+
 }
 
 @media screen and (max-width: 750px) {
@@ -283,13 +285,19 @@ const voyageCardImg = computed(() => {
     min-width: 280px !important;
   }
 }
-
+.custom-row-height {
+  min-height: 125px !important;
+  align-items: center;
+}
 @media screen and (max-width: 600px) {
   .badge-position {
     position: absolute;
     top: 18px;
     right: 18px;
   }
+  .custom-btn-height:deep(){
+  height:37px!important;
+}
 
   .img-height {
     height: 150px;
@@ -305,11 +313,9 @@ const voyageCardImg = computed(() => {
     max-width: 100% !important;
     /* max-height: 345px !important; */
   }
-}
-
-.custom-row-height {
-  min-height: 100px !important;
-  align-items: center;
+  .custom-row-height {
+    min-height: 120px !important;
+  }
 }
 
 .custom-height-lazy {

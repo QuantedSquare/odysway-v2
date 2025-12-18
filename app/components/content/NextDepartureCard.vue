@@ -105,30 +105,29 @@
                 justify="center"
                 class="px-3"
               >
-                <div class="w-40 d-flex flex-column  align-center ga-1 justify-start">
+                <div class="w-40 d-flex flex-column  align-center ga-1 justify-space-between ">
                   <v-icon
-                    size="20px"
-                    class="text-primary"
+                    class="text-primary text-h4 text-md-h5"
                   >{{ mdiAccountMultiple }}</v-icon>
-                  <div class="text-subtitle-2  text-center text-no-wrap text-md-left text-grey">{{ voyage.availabilityTypes?.includes('groupe')
+                  <div class="text-caption text-md-subtitle-2 text-center text-no-wrap text-md-left text-grey">{{ voyage.availabilityTypes?.includes('groupe')
                     ? (voyageCardContent?.groupType || 'Groupe') : (voyageCardContent?.soloType || 'Solo') }}</div>
                 </div>
 
-                <div class="w-20 d-flex flex-column  ga-1  align-center justify-start">
+                <div class="w-20 d-flex flex-column  ga-1  align-center justify-space-between justify-md-start">
 
-                  <div class="text-subtitle-2  font-weight-bold text-primary">
+                  <div class="text-body-2 text-md-subtitle-2  font-weight-bold text-primary">
                     {{ voyage.duration }}
                   </div>
-                  <div class="text-grey text-subtitle-2">{{ voyageCardContent?.days
+                  <div class="text-grey text-caption text-md-subtitle-2">{{ voyageCardContent?.days
                     || 'Jours'
                   }}</div>
 
                 </div>
-                <div class="w-40 d-flex flex-column justify-start ga-1 justify-md-end align-center">
-                  <div class="text-grey text-subtitle-2  text-md-subtitle-2">{{
+                <div class="w-40 d-flex flex-column justify-space-between ga-1 justify-md-end align-center">
+                  <div class="text-grey text-caption text-md-subtitle-2  text-md-subtitle-2">{{
                     voyageCardContent?.startingFrom
                       || 'À partir de' }}</div>
-                  <div class="text-subtitle-2  text-primary">{{ voyage.pricing?.startingPrice
+                  <div class="text-caption text-md-subtitle-2  text-primary">{{ voyage.pricing?.startingPrice
                     ?? voyage.startingPrice
                   }} €</div>
 
@@ -258,15 +257,7 @@ const voyageCardImg = computed(() => {
   line-height: 1.2;
 }
 
-@media screen and (max-width: 650px) {
-  .w-40, .w-20 {
-    width:33%;
-  }
-  .w-20 {
-    border-right: none;
-    border-left: none;
-  }
-}
+/*  */
 
 .title-container {
   height: 2.4em;
