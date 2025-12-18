@@ -73,9 +73,12 @@
             </div>
           </div>
 
-          <v-text-field
+          <v-select
             v-model="localForm.status"
+            :items="statusOptions"
             label="Statut (lecture seule)"
+            item-title="label"
+            item-value="value"
             density="comfortable"
             readonly
           />

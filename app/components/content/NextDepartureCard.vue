@@ -188,7 +188,8 @@ const voyageCardContentQuery = groq`*[_type == "voyage_card"][0]{
   days,
   startingFrom,
   discoverDates,
-  requestQuote
+  requestQuote,
+  indivDescription
 }`
 
 const sanity = useSanity()

@@ -5,4 +5,3 @@ export const BOOKING_STATUSES = [
 ]
 
 export const DEFAULT_STATUS = 'soon_confirmed'
-
