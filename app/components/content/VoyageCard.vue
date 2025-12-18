@@ -136,7 +136,7 @@
                   class="py-0 py-md-1 px-4"
                 >
                   <span class="line-height text-grey text-body-2 text-md-subtitle-1">
-                    Un séjour à imaginer ensemble, selon vos envies.</span>
+                    {{ voyageCardContent?.indivDescription || 'Un séjour à imaginer ensemble, selon vos envies.' }}</span>
                 </v-col>
               </v-row>
             </v-container>
@@ -196,7 +196,8 @@ const voyageCardContentQuery = groq`*[_type == "voyage_card"][0]{
   days,
   startingFrom,
   discoverDates,
-  requestQuote
+  requestQuote,
+  indivDescription
 }`
 
 const sanity = useSanity()
