@@ -128,6 +128,15 @@
               </v-col>
             </template>
           </LazyHorizontalCarousel>
+          <div class="d-flex justify-center">
+            <v-btn
+              color="primary"
+              height="40"
+              @click="navigateTo('/booking-management')"
+            >
+              Prochains départs
+            </v-btn>
+          </div>
         </LazyColorContainer>
 
         <LazyColorContainer color="white">

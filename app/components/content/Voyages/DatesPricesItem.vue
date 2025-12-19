@@ -13,8 +13,8 @@
         <div class="d-flex align-center ga-2">
           <div class="text-white custom-number-chip d-flex justify-center align-center">
             <span>
-            {{ enrichedDate.index + 1 }}
-          </span>
+              {{ enrichedDate.index + 1 }}
+            </span>
           </div>
           <span class="text-body-2 d-flex align-center line-height-2 ga-2">
             <div class="d-flex align-center">
@@ -44,7 +44,7 @@
         </div>
         <BookingStatus
           :status="enrichedDate.status"
-          :booked-places="enrichedDate.status.status === 'full' ? enrichedDate.max_travelers : enrichedDate.booked_seat"
+          :booked-places="enrichedDate.booked_seat"
           :max-travellers="enrichedDate.max_travelers"
           :min-travellers="enrichedDate.min_travelers"
         />
@@ -115,7 +115,7 @@
             v-if="enrichedDate.last_minute || enrichedDate.early_bird"
             class="text-h2 font-weight-black text-green-light"
           >
-            {{ formatNumber((enrichedDate.starting_price - (enrichedDate.last_minute ? enrichedDate.lastMinutePrice : enrichedDate.earlyBirdPrice)) * 100) }}€<span class="text-body-2 font-weight-bold  ">/pers</span>
+            {{ formatNumber((enrichedDate.starting_price - (enrichedDate.last_minute ? (+enrichedDate.lastMinutePrice ? +enrichedDate.lastMinutePrice : 90) : (enrichedDate.earlyBirdPrice ? enrichedDate.earlyBirdPrice : 0))) * 100) }}€<span class="text-body-2 font-weight-bold  ">/pers</span>
           </span>
         </v-row>
       </v-col>
@@ -134,7 +134,7 @@
           v-if="enrichedDate.last_minute || enrichedDate.early_bird"
           class="text-h2 font-weight-black text-green-light"
         >
-          {{ formatNumber((enrichedDate.starting_price - (enrichedDate.last_minute ? enrichedDate.lastMinutePrice : enrichedDate.earlyBirdPrice)) * 100) }}€<span class="text-body-2 font-weight-bold  ">/pers</span>
+          {{ formatNumber((enrichedDate.starting_price - (enrichedDate.last_minute ? (+enrichedDate.lastMinutePrice ? +enrichedDate.lastMinutePrice : 90) : (enrichedDate.earlyBirdPrice ? enrichedDate.earlyBirdPrice : 0))) * 100) }}€<span class="text-body-2 font-weight-bold  ">/pers</span>
         </span>
       </v-col>
       <v-spacer />
@@ -158,7 +158,7 @@
               v-if="enrichedDate.last_minute || enrichedDate.early_bird"
               class="text-h2 font-weight-black text-green-light"
             >
-              {{ formatNumber((enrichedDate.starting_price - (enrichedDate.last_minute ? enrichedDate.lastMinutePrice : enrichedDate.earlyBirdPrice)) * 100) }}€<span class="text-body-2 font-weight-bold  ">/pers</span>
+              {{ formatNumber((enrichedDate.starting_price - (enrichedDate.last_minute ? (+enrichedDate.lastMinutePrice ? +enrichedDate.lastMinutePrice : 90) : (enrichedDate.earlyBirdPrice ? enrichedDate.earlyBirdPrice : 0))) * 100) }}€<span class="text-body-2 font-weight-bold  ">/pers</span>
             </span>
           </v-col>
           <v-col
@@ -240,17 +240,22 @@ const { data: texte } = await useAsyncData('datesPricesItem', () =>
 )
 
 const enrichedDate = computed(() => {
+  const displayedBookedSeat = date.displayed_booked_seat && Number(date.displayed_booked_seat) > 0
+    ? Number(date.displayed_booked_seat)
+    : date.booked_seat
+  const effectiveStatus = date.displayed_status || date.status
   return {
     ...date,
-    min_travelers: date.custom_display ? date.displayed_min_travelers : date.min_travelers,
-    max_travelers: date.custom_display ? date.displayed_max_travelers : date.max_travelers,
-    booked_seat: date.custom_display ? date.displayed_booked_seat : date.booked_seat,
-    include_flight: date.custom_display ? date.displayed_include_flight : date.include_flight,
-    badges: date.custom_display ? (date.displayed_badges || '') : (date.badges || ''),
-    starting_price: date.custom_display ? date.displayed_starting_price : date.starting_price,
-    early_bird: date.custom_display ? date.displayed_early_bird : today.isAfter(dayjs(date.departure_date).add(7, 'month')) ? date.early_bird : false,
-    last_minute: date.custom_display ? date.displayed_last_minute : dayjs(date.departure_date).diff(today, 'day') <= 31 ? date.last_minute : false,
-    status: getDateStatus(date),
+    min_travelers: date.min_travelers,
+    max_travelers: date.max_travelers,
+    booked_seat: displayedBookedSeat,
+    include_flight: date.include_flight,
+    badges: date.badges || '',
+    starting_price: date.starting_price,
+    early_bird: today.isAfter(dayjs(date.departure_date).add(7, 'month')) ? date.early_bird : false,
+    last_minute: dayjs(date.departure_date).diff(today, 'day') <= 31 ? date.last_minute : false,
+    status: getDateStatus({ ...date, status: effectiveStatus }),
+
   }
 })
 console.log('enrichedDate', enrichedDate.value)
