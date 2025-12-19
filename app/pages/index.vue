@@ -132,7 +132,7 @@
             <v-btn
               color="primary"
               height="40"
-              @click="navigateTo('/booking-management')"
+              @click="navigateTo('/prochains-departs')"
             >
               Prochains départs
             </v-btn>
