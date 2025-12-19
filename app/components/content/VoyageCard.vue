@@ -133,7 +133,7 @@
                 </v-col>
                 <v-col
                   cols="12"
-                  class="py-0 py-md-1 px-4"
+                  class="py-0 py-md-1 px-4 d-flex align-center"
                 >
                   <span class="line-height text-grey text-body-2 text-md-subtitle-1">
                     {{ voyageCardContent?.indivDescription }}</span>
@@ -243,8 +243,10 @@ const voyageCardImg = computed(() => {
   background-color: v-bind(actionColor);
 }
 .line-height {
-    line-height: 20px!important;
-  }
+  line-height: 20px !important;
+  min-height: 40px !important; /* reserve space for 2 lines */
+  display: block;
+}
 .img-height {
   height: 228px;
 }
