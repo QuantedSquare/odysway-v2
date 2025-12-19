@@ -113,60 +113,9 @@
 
       <v-col
         cols="12"
-        md="4"
+
         class="d-flex flex-column ga-4"
       >
-        <v-card
-          variant="outlined"
-          rounded="lg"
-          class="pa-4 glass-surface"
-        >
-          <div class="d-flex align-center justify-space-between mb-2">
-            <div class="d-flex flex-column">
-              <span class="text-overline text-primary">Voyage</span>
-              <span class="text-subtitle-1 font-weight-bold">
-                {{ selectedTravel?.title || 'Sélectionnez un voyage' }}
-              </span>
-            </div>
-            <v-chip
-              v-if="selectedTravel"
-              :color="isCustomTravel ? 'purple' : 'primary'"
-              label
-              size="small"
-            >
-              {{ isCustomTravel ? 'Sur-mesure' : 'Catalogue' }}
-            </v-chip>
-          </div>
-          <p class="text-body-2 text-medium-emphasis mb-3">
-            {{ selectedTravel?.availabilityTypes?.includes('custom') ? 'Non affiché sur le site public.' : 'Sera visible si publié.' }}
-          </p>
-          <v-list
-            v-if="selectedTravel"
-            density="compact"
-            class="rounded-lg bg-grey-lighten-4"
-          >
-            <v-list-item>
-              <v-list-item-title class="text-body-2">
-                Prix catalogue: {{ selectedTravel?.pricing?.startingPrice || 'N/A' }} €
-              </v-list-item-title>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-title class="text-body-2">
-                Min / Max: {{ selectedTravel?.pricing?.minTravelersToConfirm || 0 }} - {{ selectedTravel?.pricing?.maxTravelers || 0 }}
-              </v-list-item-title>
-            </v-list-item>
-          </v-list>
-          <v-btn
-            v-if="form.travel_slug"
-            class="mt-3"
-            variant="tonal"
-            block
-            :to="`/booking-management/${form.travel_slug}`"
-          >
-            Ouvrir la fiche dates
-          </v-btn>
-        </v-card>
-
         <v-card
           v-if="!isCustomTravel && form.travel_slug"
           rounded="lg"
@@ -182,7 +131,7 @@
               :color="form.published ? 'green-light' : 'warning'"
               size="small"
             >
-              {{ form.published ? 'Publiée' : 'Brouillon' }}
+              {{ form.published ? 'Publiée' : 'Non publiée' }}
             </v-chip>
           </div>
           <DatesPricesItem :date="previewDate" />

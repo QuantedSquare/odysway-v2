@@ -59,6 +59,7 @@
           <v-chip
             value="ongoing"
             label
+            :class="hasOngoingDates ? 'ongoing-pulse' : ''"
           >
             En cours
           </v-chip>
@@ -127,7 +128,7 @@
                 label
                 size="small"
               >
-                {{ item.is_indiv_travel ? 'Individuel' : item.published ? 'Publiée' : 'Brouillon' }}
+                {{ item.is_indiv_travel ? 'Individuel' : item.published ? 'Publiée' : 'Non publiée' }}
               </v-chip>
             </td>
             <td>{{ dayjs(item.departure_date).format('DD/MM/YYYY') }}</td>
@@ -217,7 +218,7 @@ const headers = [
 const publicationOptions = [
   { label: 'Tous', value: 'all' },
   { label: 'Publiés', value: 'published' },
-  { label: 'Brouillons', value: 'draft' },
+  { label: 'Non publiés', value: 'draft' },
   { label: 'Individuels', value: 'indiv' },
 ]
 const sortOptions = [
@@ -319,6 +320,8 @@ const isPast = (item) => {
   return ret.isBefore(today)
 }
 
+const hasOngoingDates = computed(() => dates.value.some(isOngoing))
+
 const getDateStatus = (item) => {
   const labelMap = {
     soon_confirmed: 'Bientôt confirmé',
@@ -331,3 +334,21 @@ const getDateStatus = (item) => {
 
 onMounted(fetchDates)
 </script>
+
+<style scoped>
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 128, 0, 0.35);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 128, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 128, 0, 0);
+  }
+}
+
+.ongoing-pulse {
+  animation: pulseGlow 1.8s ease-out infinite;
+}
+</style>

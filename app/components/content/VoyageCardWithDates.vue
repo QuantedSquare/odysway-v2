@@ -1,8 +1,4 @@
 <template>
-  <!-- <component
-    :is="shouldShowNextCard ? 'ContentNextDepartureCard' : 'ContentVoyageCard'"
-    :voyage="cardVoyage"
-  /> -->
   <NextDepartureCard
     v-if="shouldShowNextCard"
     :voyage="cardVoyage"

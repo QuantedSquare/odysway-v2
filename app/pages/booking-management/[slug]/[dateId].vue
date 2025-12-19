@@ -39,7 +39,7 @@
               label
               size="small"
             >
-              {{ form.published ? 'Publiée' : 'Brouillon' }}
+              {{ form.published ? 'Publiée' : 'Non publiée' }}
             </v-chip>
           </div>
         </v-col>
@@ -200,7 +200,7 @@
                   :color="form.published && !form.is_indiv_travel ? 'green-light' : 'warning'"
                   size="small"
                 >
-                  {{ form.is_indiv_travel ? 'Individuel' : form.published ? 'Publié' : 'Brouillon' }}
+                  {{ form.is_indiv_travel ? 'Individuel' : form.published ? 'Publiée' : 'Non publiée' }}
                 </v-chip>
               </div>
               <DatesPricesItem :date="previewDate" />

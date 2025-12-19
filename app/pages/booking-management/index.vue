@@ -15,24 +15,6 @@
           Vue unifiée des voyages catalogue et sur-mesure, avec accès rapide aux dates.
         </p>
       </v-col>
-      <v-col
-        cols="12"
-        md="4"
-        class="d-flex justify-end ga-2"
-      >
-        <v-btn
-          variant="text"
-          @click="toggleToCustomTravels"
-        >
-          {{ tab === 'custom' ? 'Voyages groupe/individuel' : 'Voyages sur-mesure' }}
-        </v-btn>
-        <v-btn
-          color="primary"
-          @click="goToAddDate"
-        >
-          + Ajouter une date
-        </v-btn>
-      </v-col>
     </v-row>
 
     <v-card
@@ -41,7 +23,7 @@
       elevation="8"
     >
       <v-card-text>
-        <v-row class="ga-3">
+        <v-row align="center">
           <v-col
             cols="12"
             md="4"
@@ -54,20 +36,27 @@
               density="comfortable"
             />
           </v-col>
+          <v-spacer />
           <v-col
             cols="12"
-            md="4"
+            md="5"
+            class="d-flex justify-end  mb-4"
           >
-            <v-select
-              v-model="tab"
-              :items="tabs"
-              item-title="label"
-              item-value="value"
-              label="Type de voyage"
-              density="comfortable"
-            />
+            <v-btn
+              variant="text"
+              :color="tab === 'custom' ? 'primary' : 'secondary'"
+              @click="toggleToCustomTravels"
+            >
+              {{ tab === 'custom' ? 'Groupe/Individuel' : 'Sur-mesure' }}
+            </v-btn>
+            <v-btn
+              color="primary"
+              @click="goToAddDate"
+            >
+              + Ajouter une date
+            </v-btn>
           </v-col>
-          <v-col
+          <!-- <v-col
             cols="12"
             md="4"
           >
@@ -79,7 +68,7 @@
               label="Trier"
               density="comfortable"
             />
-          </v-col>
+          </v-col> -->
         </v-row>
       </v-card-text>
     </v-card>
@@ -136,6 +125,7 @@
               </v-chip>
             </td>
             <td><span class="font-weight-medium">{{ item.nb_dates || 0 }}</span></td>
+            <td><span class="font-weight-medium">{{ item.ongoing_dates > 0 ? item.ongoing_dates : '-' }}</span></td>
             <td><span class="font-weight-medium">{{ item.booked_seats || 0 }}</span></td>
             <td class="text-right">
               <v-btn
@@ -221,6 +211,7 @@ const headers = [
   { title: 'Voyage', key: 'title', sortable: false },
   { title: 'Type', key: 'type', sortable: false },
   { title: 'Dates', key: 'nb_dates', sortable: true },
+  { title: 'Dates en cours', key: 'ongoing_dates', sortable: true },
   { title: 'Places réservées', key: 'booked_seats', sortable: true },
   { title: '', key: 'actions', sortable: false },
 ]
@@ -243,6 +234,7 @@ const mergedTravels = computed(() => {
       image: travel.image?.asset?.url,
       title: travel.title,
       nb_dates: bookingData?.nb_dates || 0,
+      ongoing_dates: bookingData?.ongoing_dates ?? null,
       booked_seats: bookingData?.booked_seats || 0,
       is_custom_travel: isCustom,
     }

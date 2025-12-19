@@ -43,7 +43,7 @@ function calculateStatusFromBookings(date) {
  */
 export function getDateStatus(date) {
   // If custom display is enabled and a valid status is provided, use it
-  if (date.custom_display && date.displayed_status && STATUS_MAP[date.displayed_status]) {
+  if (date.displayed_status && STATUS_MAP[date.displayed_status]) {
     return STATUS_MAP[date.displayed_status]
   }
   // Otherwise, calculate status based on bookings

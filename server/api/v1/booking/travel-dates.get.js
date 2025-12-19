@@ -30,7 +30,7 @@ export default defineEventHandler(async (event) => {
 
   const { data, error } = await supabase
     .from('travel_dates')
-    .select('travel_slug, booked_seat, departure_date, return_date, early_bird, last_minute, starting_price, max_travelers, min_travelers')
+    .select('travel_slug, booked_seat, displayed_booked_seat, departure_date, return_date, early_bird, last_minute, starting_price, max_travelers, min_travelers, status, displayed_status')
     .in('travel_slug', sanitySlugs)
     .eq('published', true)
     .eq('is_custom_travel', false)
@@ -48,5 +48,3 @@ export default defineEventHandler(async (event) => {
     last_minute: dayjs(date.departure_date).diff(dayjs(), 'day') <= 31 ? date.last_minute : false,
   }))
 })
-
-

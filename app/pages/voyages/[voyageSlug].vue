@@ -234,7 +234,6 @@ const [{ data: page }, { data: voyage }] = await Promise.all([
     sanity.fetch(voyageQuery, { slug: route.params.voyageSlug }),
   ),
 ])
-console.log('voyage', voyage.value)
 const { data: voyagePropositions } = await useAsyncData(
   'voyage-propositions',
   () => {
@@ -250,7 +249,6 @@ const { data: voyagePropositions } = await useAsyncData(
   },
   { lazy: true },
 )
-console.log('voyagePropositions', voyagePropositions.value)
 onMounted(() => {
   gtag('event', 'page_view', {
     eventCategory: 'Voyage',
