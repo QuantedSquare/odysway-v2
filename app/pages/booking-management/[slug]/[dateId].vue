@@ -574,7 +574,7 @@ const previewDate = computed(() => ({
 const fetchDetails = async () => {
   const res = await fetch(`/api/v1/booking/date/${dateId}`)
   const data = await res.json()
-  form.value = { ...data, index: 0 }
+  form.value = { ...data, index: 0, badges: data.badges || data.displayed_badges }
   const res2 = await fetch(`/api/v1/booking/${slug}/date/${dateId}/booked`)
   const data2 = await res2.json()
   bookedTravelers.value = data2.filter(traveler => traveler.booked_places > 0)

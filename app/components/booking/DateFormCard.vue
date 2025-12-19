@@ -332,7 +332,7 @@ const emit = defineEmits(['update:modelValue'])
 const clone = value => JSON.parse(JSON.stringify(value || {}))
 
 const localForm = ref(clone(props.modelValue))
-const hasCustomBadge = ref(!!localForm.value.badges)
+const hasCustomBadge = ref(!!localForm.value.badges || !!localForm.value.displayed_badges)
 const syncingFromProp = ref(false)
 
 watch(
@@ -341,6 +341,7 @@ watch(
     syncingFromProp.value = true
     localForm.value = clone(val)
     hasCustomBadge.value = !!val?.badges
+    localForm.value.displayed_badges = val?.displayed_badges || val?.badges
     nextTick(() => {
       syncingFromProp.value = false
     })

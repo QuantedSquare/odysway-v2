@@ -250,7 +250,7 @@ const enrichedDate = computed(() => {
     max_travelers: date.max_travelers,
     booked_seat: displayedBookedSeat,
     include_flight: date.include_flight,
-    badges: date.badges || '',
+    badges: date.badges || date.displayed_badges,
     starting_price: date.starting_price,
     early_bird: today.isAfter(dayjs(date.departure_date).add(7, 'month')) ? date.early_bird : false,
     last_minute: dayjs(date.departure_date).diff(today, 'day') <= 31 ? date.last_minute : false,

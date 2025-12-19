@@ -128,7 +128,7 @@
               </v-col>
             </template>
           </LazyHorizontalCarousel>
-          <div class="d-flex justify-center">
+          <div class="d-flex justify-center my-4">
             <v-btn
               color="primary"
               height="40"
