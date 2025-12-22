@@ -93,7 +93,7 @@
             </span>
           </v-chip>
           <v-chip
-            v-if="enrichedDate.badges.length > 0"
+            v-if="enrichedDate.badges?.length > 0"
             color="green-light"
           >
             <span class="d-flex align-center ga-1 mb-1">
