@@ -67,8 +67,14 @@
             color="primary"
             density="compact"
             label="Voir tous les départs garantis"
-            class="mt-n2"
-          />
+            content-class="text-subtitle-2 text-sm-body-1"
+          >
+            <template #label>
+              <span class="text-subtitle-2 text-sm-body-1">
+                Voir tous les départs garantis
+              </span>
+            </template>
+          </v-checkbox>
           <v-btn
             color="primary"
             variant="outlined"
@@ -377,8 +383,8 @@ watch(() => route.query.confirmed, (value) => {
 
 <style scoped>
 .reset-btn-size {
-  height: 42px!important;
-  width: 172px!important;
+  height: 35px!important;
+  width: 150px!important;
 }
 @media (max-width: 900px) {
   .reset-btn-size {

@@ -346,7 +346,10 @@ const selectedRegionSlug = useState('selectedRegionSlug', () => null)
 
 function searchFn() {
   const query = {}
-
+  console.log('query', query)
+  if (route.query.confirmed === 'true') {
+    query.confirmed = true
+  }
   if (destinationChoice.value) {
     if (isSelectionARegion.value) {
       // Use the stored region slug
@@ -369,19 +372,20 @@ function searchFn() {
     query.from = date.value.join(',')
   }
   gtag('event', 'search', { eventAction: 'Click', destination: `${destinationChoice.value}`, travelType: `${travelTypeChoice.value}`, from: `${date.value[0]}`, to: `${date.value[1]}` })
-  
-  if(query.destination && query.destination !== 'top-destination' && !query.from && !query.travelType){
+
+  if (query.destination && query.destination !== 'top-destination' && !query.from && !query.travelType) {
     router.push({
       path: '/destinations/' + query.destination,
-      
+
     })
-   return
-  } else{
+    return
+  }
+  else {
     router.push({
       path: '/voyages',
       query,
     })
-    return 
+    return
   }
 }
 

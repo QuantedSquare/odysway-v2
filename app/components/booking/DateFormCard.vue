@@ -63,77 +63,12 @@
             <slot name="travel" />
           </div>
         </v-card>
-
         <v-card
           variant="text"
           class="pa-4 glass-subtle rounded-lg"
         >
           <div class="text-subtitle-2 text-medium-emphasis mb-2">
-            Statuts & affichage
-          </div>
-          <v-row>
-            <v-col
-              cols="12"
-              md="6"
-            >
-              <v-select
-                v-model="localForm.status"
-                :items="statusOptions"
-                item-title="label"
-                item-value="value"
-                label="Statut (lecture seule)"
-                density="comfortable"
-                readonly
-              />
-            </v-col>
-            <v-col
-              cols="12"
-              md="6"
-            >
-              <v-select
-                v-model="localForm.displayed_status"
-                :items="[{ label: '— Utiliser le statut par défaut —', value: null }, ...statusOptions]"
-                item-title="label"
-                item-value="value"
-                label="Statut affiché (override)"
-                density="comfortable"
-                clearable
-              />
-            </v-col>
-            <v-col
-              cols="12"
-              md="6"
-            >
-              <v-text-field
-                v-model="localForm.booked_seat"
-                label="Places réservées (lecture seule)"
-                type="number"
-                min="0"
-                density="comfortable"
-                readonly
-              />
-            </v-col>
-            <v-col
-              cols="12"
-              md="6"
-            >
-              <v-text-field
-                v-model="localForm.displayed_booked_seat"
-                label="Places réservées (override)"
-                type="number"
-                min="0"
-                density="comfortable"
-              />
-            </v-col>
-          </v-row>
-        </v-card>
-
-        <v-card
-          variant="text"
-          class="pa-4 glass-subtle rounded-lg"
-        >
-          <div class="text-subtitle-2 text-medium-emphasis mb-2">
-            Dates & capacité
+            Dates & Prix
           </div>
           <v-row>
             <v-col
@@ -190,6 +125,69 @@
                 v-model="localForm.starting_price"
                 label="Prix de départ"
                 prefix="€"
+                type="number"
+                min="0"
+                density="comfortable"
+              />
+            </v-col>
+          </v-row>
+        </v-card>
+        <v-card
+          variant="text"
+          class="pa-4 glass-subtle rounded-lg"
+        >
+          <div class="text-subtitle-2 text-medium-emphasis mb-2">
+            Statuts & affichage
+          </div>
+          <v-row>
+            <v-col
+              cols="12"
+              md="6"
+            >
+              <v-select
+                v-model="localForm.status"
+                :items="statusOptions"
+                item-title="label"
+                item-value="value"
+                label="Statut (initial / automatique)"
+                density="comfortable"
+                readonly
+              />
+            </v-col>
+            <v-col
+              cols="12"
+              md="6"
+            >
+              <v-select
+                v-model="localForm.displayed_status"
+                :items="[{ label: '— Utiliser le statut par défaut —', value: null }, ...statusOptions]"
+                item-title="label"
+                item-value="value"
+                label="Statut affiché (custom)"
+                density="comfortable"
+                clearable
+              />
+            </v-col>
+            <v-col
+              cols="12"
+              md="6"
+            >
+              <v-text-field
+                v-model="localForm.booked_seat"
+                label="Places réservées (initial / automatique)"
+                type="number"
+                min="0"
+                density="comfortable"
+                readonly
+              />
+            </v-col>
+            <v-col
+              cols="12"
+              md="6"
+            >
+              <v-text-field
+                v-model="localForm.displayed_booked_seat"
+                label="Places réservées (custom)"
                 type="number"
                 min="0"
                 density="comfortable"
