@@ -2,7 +2,7 @@ import { defineEventHandler } from 'h3'
 import dayjs from 'dayjs'
 import { createClient } from '@sanity/client'
 
-export default defineEventHandler(async (event) => {
+export default defineEventHandler(async () => {
   const config = useRuntimeConfig()
 
   const sanityClient = createClient({
@@ -43,7 +43,8 @@ export default defineEventHandler(async (event) => {
     destinations[]-> {
       _id,
       title,
-      iso
+      iso,
+      "slug": slug.current
     }
   }`
 
@@ -60,6 +61,7 @@ export default defineEventHandler(async (event) => {
       availabilityTypes: travel.availabilityTypes,
       startingPrice: travel.startingPrice,
       iso: travel.destinations?.map(destination => destination.iso).filter(Boolean) || [],
+      destinations: travel.destinations || [],
       dates,
       duration: travel.duration,
     }

@@ -19,10 +19,17 @@
     >
       <NextDepartureCard :voyage="deal" />
     </v-col>
+    <v-col
+      v-if="monthNames.length === 0"
+      cols="12"
+      class="text-center my-14 text-h4"
+    >
+      <p>Aucun voyage disponible pour la sélection</p>
+    </v-col>
 
     <!-- Monthly deals section -->
     <template
-      v-for="monthName in paginatedMonthNames"
+      v-for="monthName in monthNames"
       :key="monthName"
     >
       <v-col
@@ -37,6 +44,7 @@
       <v-col
         v-if="dealsToDisplayInMonth(monthName).length === 0"
         cols="12"
+        class="text-center my-14 text-h4"
       >
         <p>Aucun voyage disponible pour le mois de {{ monthName }}</p>
       </v-col>
@@ -52,33 +60,11 @@
         <NextDepartureCard :voyage="deal" />
       </v-col>
     </template>
-
-    <!-- Pagination -->
-    <v-col
-      v-if="nbPages > 1"
-      cols="12"
-    >
-      <v-pagination
-        v-model="pagination.currentPage"
-        :length="nbPages"
-        :total-visible="5"
-        variant="flat"
-        density="comfortable"
-        rounded="circle"
-        active-color="primary"
-        elevation="3"
-        class="my-4"
-        @click="goTo(scrollTarget, { offset: -50 })"
-        @next="pagination.currentPage++"
-        @prev="pagination.currentPage--"
-      />
-    </v-col>
   </v-row>
 </template>
 
 <script setup>
-import { useGoTo } from 'vuetify'
-import { ref, computed, watch } from 'vue'
+import { computed } from 'vue'
 
 const props = defineProps({
   filteredDeals: {
@@ -97,66 +83,15 @@ const props = defineProps({
   },
 })
 
-const goTo = useGoTo()
-const scrollTarget = ref(null)
-
-const pagination = ref({
-  currentPage: 1,
-  itemsPerPage: 9,
-})
-
-const paginatedMonthNames = computed(() => {
+const monthNames = computed(() => {
   const monthNames = Object.keys(props.filteredDeals)
-
-  if (props.selectedPeriod === 'Toutes périodes') {
-    // When 'Toutes périodes', we show exactly one month per "page" in the UI.
-    const start = (pagination.value.currentPage - 1)
-    const end = start + 1 // Always show only one month
-    return monthNames.slice(start, end)
-  }
-
   return monthNames
 })
 
 const dealsToDisplayInMonth = (monthName) => {
   const allDealsInSelectedMonth = props.filteredDeals[monthName] || []
-  console.log(allDealsInSelectedMonth)
-  if (props.selectedPeriod === 'Toutes périodes') {
-    return allDealsInSelectedMonth
-  }
-
-  const start = (pagination.value.currentPage - 1) * pagination.value.itemsPerPage
-  const end = pagination.value.currentPage * pagination.value.itemsPerPage
-  return allDealsInSelectedMonth.slice(start, end)
+  return allDealsInSelectedMonth
 }
-
-const nbPages = computed(() => {
-  if (props.selectedPeriod === 'Toutes périodes' && Object.keys(props.filteredDeals).length > 1) {
-    return Object.keys(props.filteredDeals).length
-  }
-
-  const monthName = Object.keys(props.filteredDeals)[0]
-  const totalDealsInMonth = props.filteredDeals[monthName]?.length || 0
-  return Math.ceil(totalDealsInMonth / pagination.value.itemsPerPage)
-})
-
-watch(
-  () => props.selectedPeriod,
-  (newVal, oldVal) => {
-    if (newVal !== oldVal) {
-      pagination.value.currentPage = 1
-    }
-  },
-)
-
-watch(
-  () => props.toggledBtn,
-  (newVal, oldVal) => {
-    if (newVal !== oldVal) {
-      pagination.value.currentPage = 1
-    }
-  },
-)
 </script>
 
 <style scoped>

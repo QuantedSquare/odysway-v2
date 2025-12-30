@@ -19,52 +19,70 @@
     <v-row
       align="center"
       justify="center"
-      class="bg-white rounded-md filter-wrapper "
+      class="bg-white rounded-md filter-wrapper pa-2 px-4"
     >
-      <v-col
-        cols="12"
-        sm="8"
-      >
-        <v-btn-toggle
-          v-model="toggledBtn"
-          mandatory
-          class="d-flex justify-center justify-md-start ga-2 btn-height "
+      <div class="filter-bar d-flex flex-wrap justify-center align-center ga-2 w-100">
+        <v-btn
+          variant="flat"
+          color="primary"
+          height="50"
+          class="filter-btn"
+          :class="{ 'filter-btn--active': toggledBtn === 'all' }"
+          @click="setToggle('all')"
         >
-          <v-btn
-            v-for="btn of toggleBtns"
-            :key="btn.text"
-            :value="btn.value"
-            height="100%"
-            selected-class="bg-primary border-none"
-            class="text-decoration-none rounded-lg border"
+          <div class="d-flex align-center font-weight-bold">
+            Tous les voyages
+          </div>
+        </v-btn>
+        <v-btn
+          variant="text"
+          color="primary"
+          height="50"
+          class="filter-btn"
+        >
+          <v-checkbox
+            v-model="confirmedOnly"
+            hide-details
+            density="compact"
+            color="primary"
+            class="my-n1"
           >
-            <span class="text-body-1 ">{{ btn.text }}</span>
-          </v-btn>
-        </v-btn-toggle>
-      </v-col>
-      <v-col
-        cols="12"
-        sm="4"
-        class="pl-md-0"
-      >
+            <template #label>
+              <div class="d-flex align-center font-weight-bold">
+                Départs garantis
+              </div>
+            </template>
+          </v-checkbox>
+        </v-btn>
+        <v-select
+          v-model="selectedDestination"
+          :items="destinationOptions"
+          hide-details
+          item-title="title"
+          item-value="value"
+          variant="outlined"
+          density="comfortable"
+          class="filter-select"
+
+          :menu-props="{ maxHeight: 300 }"
+          clearable
+          placeholder="Destination"
+          :prepend-inner-icon="mdiMapMarker"
+        />
         <v-select
           :id="periodId"
           v-model="selectedPeriod"
           hide-details
           :items="sortedMonths"
-          label="Période"
+          variant="outlined"
+          density="comfortable"
+          class="filter-select"
+          min-width="240"
           clearable
-        >
-          <template #prepend-inner>
-            <v-img
-              :src="img('/icons/calendar.svg', { format: 'webp', quality: 70, width: 640 })"
-              alt="Calendar icon"
-              width="24"
-              height="24"
-            />
-          </template>
-        </v-select>
-      </v-col>
+          placeholder="Période 2026"
+          :prepend-inner-icon="mdiCalendarMonth"
+        />
+      </div>
     </v-row>
 
     <VoyageCardsList
@@ -85,17 +103,18 @@
 import dayjs from 'dayjs'
 import customParseFormat from 'dayjs/plugin/customParseFormat.js'
 import 'dayjs/locale/fr'
-import { useImage } from '#imports'
+import { mdiMapMarker, mdiCalendarMonth } from '@mdi/js'
+import { getDateStatus } from '~/utils/getDateStatus'
 
 dayjs.extend(customParseFormat)
-
-const img = useImage()
 const route = useRoute()
 const loading = ref(false)
 const travels = ref([])
 const toggledBtn = ref('all')
 const periodId = useId()
 const selectedPeriod = ref(route.query?.periode || 'Toutes périodes')
+const selectedDestination = ref(route.query?.destination || null)
+const confirmedOnly = ref(route.query?.confirmed === 'true')
 
 const fetchTravels = async () => {
   try {
@@ -121,9 +140,6 @@ const fetchTravels = async () => {
 }
 
 onMounted(() => {
-  nextTick(() => {
-    toggledBtn.value = route.query?.type || 'all'
-  })
   fetchTravels()
 })
 
@@ -142,51 +158,80 @@ watch(selectedPeriod, (newPeriod) => {
   })
 })
 
-watch(toggledBtn, (newType) => {
-  const query = { ...route.query }
+function setToggle(value) {
+  toggledBtn.value = value
+  if (value === 'all') {
+    selectedDestination.value = null
+  }
+}
 
-  if (newType === 'all') {
-    delete query.type
+watch(() => route.query.periode, (newPeriode) => {
+  selectedPeriod.value = newPeriode === 'Toutes périodes' ? null : (newPeriode || null)
+})
+
+watch(selectedDestination, (newDestination) => {
+  const query = { ...route.query }
+  if (!newDestination) {
+    delete query.destination
   }
   else {
-    query.type = newType
+    query.destination = newDestination
   }
-
-  const currentPeriode = query.periode
-  delete query.periode
-
-  if (currentPeriode && selectedPeriod.value !== null && selectedPeriod.value !== 'Toutes périodes') {
-    query.periode = currentPeriode
-  }
-
   navigateTo({
     path: route.path,
     query: Object.keys(query).length > 0 ? query : undefined,
   })
 })
 
-watch(() => route.query.periode, (newPeriode) => {
-  selectedPeriod.value = newPeriode === 'Toutes périodes' ? null : (newPeriode || null)
+watch(() => route.query.destination, (newDestination) => {
+  selectedDestination.value = newDestination || null
 })
 
-watch(() => route.query.type, (newType) => {
-  toggledBtn.value = newType || 'all'
+watch(confirmedOnly, (newValue) => {
+  const query = { ...route.query }
+  if (newValue) {
+    query.confirmed = 'true'
+  }
+  else {
+    delete query.confirmed
+  }
+  navigateTo({
+    path: route.path,
+    query: Object.keys(query).length > 0 ? query : undefined,
+  })
+})
+
+watch(() => route.query.confirmed, (value) => {
+  confirmedOnly.value = value === 'true'
 })
 
 const filteredTravels = computed(() => {
-  const franceDealIso = 'FR'
-  const queryType = toggledBtn.value
   return travels.value.filter((travel) => {
-    const iso = Array.isArray(travel.iso) ? travel.iso[0] : travel.iso
-    if (queryType === 'france') {
-      return iso === franceDealIso && travel.dates.length > 0 && travel.availabilityTypes?.includes('groupe')
+    const hasDates = travel.dates.length > 0 && travel.availabilityTypes?.includes('groupe')
+    if (!hasDates) return false
+
+    const destinations = Array.isArray(travel.destinations) ? travel.destinations : []
+    const slugList = Array.isArray(travel.destinations) ? travel.destinations.map(dest => dest?.slug) : travel.destinations ? [travel.destinations?.slug] : []
+
+    const matchesDestination = (() => {
+      if (!selectedDestination.value) return true
+      const matchDest = destinations.some(dest =>
+        dest?.title === selectedDestination.value || dest?.slug === selectedDestination.value)
+      const matchIso = slugList.includes(selectedDestination.value)
+      return matchDest || matchIso
+    })()
+
+    if (confirmedOnly.value) {
+      const displayedDate = travel.dates.find(date =>
+        dayjs(date.departure_date).isSame(travel.departureDate),
+      )
+      if (!displayedDate) return false
+      const status = getDateStatus(displayedDate)
+      const isGuaranteed = status?.status === 'confirmed' || status?.status === 'full'
+      return matchesDestination && isGuaranteed
     }
-    else if (queryType === 'other') {
-      return iso !== franceDealIso && travel.dates.length > 0 && travel.availabilityTypes?.includes('groupe')
-    }
-    else {
-      return travel.dates.length > 0 && travel.availabilityTypes?.includes('groupe')
-    }
+
+    return matchesDestination
   })
 })
 
@@ -246,6 +291,22 @@ const sortedMonths = computed(() => {
   return months
 })
 
+const destinationOptions = computed(() => {
+  const list = new Map()
+  travels.value.forEach((travel) => {
+    if (Array.isArray(travel.destinations)) {
+      travel.destinations.forEach((dest) => {
+        const key = dest?.slug || dest?.title
+        if (!key || !dest?.title) return
+        list.set(key, dest.title)
+      })
+    }
+  })
+  return Array.from(list.entries())
+    .map(([value, title]) => ({ title, value }))
+    .sort((a, b) => a.title.localeCompare(b.title))
+})
+
 const groupByMonthFiltered = computed(() => {
   if (selectedPeriod.value === null || selectedPeriod.value === 'Toutes périodes') {
     return groupByMonth.value
@@ -280,20 +341,6 @@ const { data: pageContent } = await useAsyncData('page-prochains-departs', () =>
   sanity.fetch(pageContentQuery),
 )
 
-const toggleBtns = computed(() => [
-  {
-    value: 'all',
-    text: pageContent.value?.allTravelsButton || 'Tous',
-  },
-  {
-    value: 'france',
-    text: pageContent.value?.frenchTravelsButton || 'En France',
-  },
-  {
-    value: 'other',
-    text: pageContent.value?.foreignTravelsButton || 'À l\'étranger',
-  },
-])
 // Static seo data with plain text from this file / No data on Sanity
 useSeo({
   seoData: pageContent.value?.seo,
@@ -303,14 +350,62 @@ useSeo({
 })
 </script>
 
-<style scoped>
+<style>
 .filter-wrapper{
   position: relative;
-  width: 550px;
+  width: fit-content;
   height: fit-content;
   box-shadow: 5px 5px 100px 0px rgba(43, 76, 82, 0.5);
   margin: -45px auto 0 auto;
   z-index: 1000!important;
+}
+.filter-bar{
+  min-height: 56px;
+}
+.filter-btn{
+  height: 40px;
+  text-transform: none;
+font-size:16px;
+  border: 1px solid #d7e3ea;
+  background-color: #f6fbff;
+}
+.filter-btn--active{
+  background-color: #1b7c83;
+  color: white!important;
+  border-color: #1b7c83;
+}
+.filter-select{
+  max-width: 230px;
+  min-width: 180px;
+}
+.filter-select:deep(.v-field__input){
+
+  color: rgb(var(--v-theme-primary))!important;
+  opacity: 1!important;
+}
+.filter-select:deep(.v-field__placeholder){
+
+  color: rgb(var(--v-theme-primary))!important;
+  opacity: 1!important;
+}
+
+.filter-select:deep(.v-select__selection){
+  color: rgb(var(--v-theme-primary))!important;
+  opacity: 1!important;
+}
+.filter-select input::placeholder {
+
+  color: rgb(var(--v-theme-primary))!important;
+  opacity: 1;
+}
+.bg-grey-light{
+  background-color: rgb(var(--v-theme-grey-light))!important;
+  color: rgb(var(--v-theme-primary))!important;
+}
+.filter-select .v-label {
+
+  color: rgb(var(--v-theme-primary))!important;
+  opacity: 1!important;
 }
 .absolute {
   position: absolute;
@@ -326,15 +421,24 @@ useSeo({
   .filter-wrapper{
     max-width: calc(100% - 16px);
     margin: -100px auto 0 auto;
-    width: auto;
   }
   .btn-height{
     height: 48px;
+  }
+  .filter-select{
+    min-width: 150px;
   }
 }
 @media (max-width: 600px) {
   .filter-wrapper{
     margin: -110px auto 0 auto;
+  }
+  .filter-bar{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .filter-select{
+    max-width: 100%;
   }
 }
 </style>

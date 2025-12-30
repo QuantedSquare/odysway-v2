@@ -130,9 +130,10 @@
           </LazyHorizontalCarousel>
           <div class="d-flex justify-center my-4">
             <v-btn
-              color="primary"
-              height="40"
-              @click="navigateTo('/prochains-departs')"
+              height="60"
+              variant="tonal"
+              class="bg-primary text-white text-caption text-md-body-1 d-none d-md-inline "
+              @click="() => { navigateTo('/prochains-departs'); trackPixel('trackCustom', 'ClickProchainsDeparts'); captureOutboundLink('Prochains départs') }"
             >
               Prochains départs
             </v-btn>
