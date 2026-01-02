@@ -128,11 +128,11 @@
               </v-col>
             </template>
           </LazyHorizontalCarousel>
-          <div class="d-flex justify-center my-4">
+          <div class="d-flex justify-center mb-5 mt-8 my-md-4">
             <v-btn
               height="60"
               variant="tonal"
-              class="bg-primary text-white text-caption text-md-body-1 d-none d-md-inline "
+              class="bg-primary text-white  text-body-1 d-inline font-weight-bold "
               @click="() => { navigateTo('/prochains-departs'); trackPixel('trackCustom', 'ClickProchainsDeparts'); captureOutboundLink('Prochains départs') }"
             >
               Prochains départs
