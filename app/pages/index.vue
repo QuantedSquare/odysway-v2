@@ -133,9 +133,9 @@
               height="60"
               variant="tonal"
               class="bg-primary text-white  text-body-1 d-inline font-weight-bold "
-              @click="() => { navigateTo('/prochains-departs'); trackPixel('trackCustom', 'ClickProchainsDeparts'); captureOutboundLink('Prochains départs') }"
+              @click="() => { navigateTo(homeSanity.guaranteedDepartures.ctaButton.link); trackPixel('trackCustom', 'ClickProchainsDeparts'); captureOutboundLink('Prochains départs') }"
             >
-              Prochains départs
+              {{ homeSanity.guaranteedDepartures.ctaButton.text }}
             </v-btn>
           </div>
         </LazyColorContainer>
@@ -318,6 +318,10 @@ const homeQuery = groq`
         availabilityTypes,
         duration,
         pricing
+      },
+      ctaButton{
+        text,
+        link
       }
     },
     summerTravel{

@@ -352,6 +352,23 @@ export const homePageType = defineType({
           type: 'array',
           of: [{ type: 'reference', to: [{ type: 'voyage' }] }],
         }),
+        defineField({
+          name: 'ctaButton',
+          title: 'Bouton CTA sur la section',
+          type: 'object',
+          fields: [
+            defineField({
+              name: 'text',
+              title: 'Texte du bouton',
+              type: 'string',
+            }),
+            defineField({
+              name: 'link',
+              title: 'Lien du bouton (commence par /)',
+              type: 'string',
+            }),
+          ],
+        }),
       ],
     }),
 
