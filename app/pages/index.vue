@@ -128,7 +128,7 @@
               </v-col>
             </template>
           </LazyHorizontalCarousel>
-          <div class="d-flex justify-center mb-5 mt-8 my-md-4">
+          <div class="d-flex justify-center mb-5 mt-8 ">
             <v-btn
               height="60"
               variant="tonal"
