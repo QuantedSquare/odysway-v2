@@ -182,7 +182,7 @@ const model = defineModel()
 const emit = defineEmits(['next', 'previous'])
 
 // Values
-const selectedInsurance = ref('none') // possible values: 'rapatriement', 'cancel', 'none'
+const selectedInsurance = ref(null) // possible values: 'rapatriement', 'cancel', 'none'
 
 watch([model, () => currentStep, () => insurances], () => {
   // Only run if we're on the insurance step
