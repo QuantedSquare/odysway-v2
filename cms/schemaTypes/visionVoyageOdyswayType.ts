@@ -92,6 +92,14 @@ export const visionVoyageOdyswayType = defineType({
                 ],
               },
             },
+            {
+              type: 'image',
+              options: {hotspot: true},
+              fields: [
+                {name: 'alt', type: 'string', title: 'Alt Text'},
+                {name: 'caption', type: 'string', title: 'Caption'},
+              ],
+            },
           ],
         }),
       ],
@@ -165,6 +173,14 @@ export const visionVoyageOdyswayType = defineType({
                   },
                 ],
               },
+            },
+            {
+              type: 'image',
+              options: {hotspot: true},
+              fields: [
+                {name: 'alt', type: 'string', title: 'Alt Text'},
+                {name: 'caption', type: 'string', title: 'Caption'},
+              ],
             },
           ],
         }),

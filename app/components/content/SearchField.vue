@@ -278,7 +278,7 @@ const mappedDestinationsToRegions = computed(() => {
       title: region.nom,
       value: region.slug,
       image: region.image,
-      destinations: destinations.value.filter(d => d.regions.some(r => r.nom === region.nom)),
+      destinations: destinations.value?.filter(d => d.regions?.some(r => r.nom === region.nom)),
     }
   })
 
