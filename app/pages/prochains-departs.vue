@@ -74,7 +74,6 @@
           v-model="selectedDatesRaw"
           multiple="range"
           type="text"
-          :display-value="periodLabel"
           color="primary"
           hide-details
           variant="outlined"
@@ -124,13 +123,37 @@ const selectedDestination = ref(route.query?.destination || null)
 const confirmedOnly = ref(route.query?.confirmed === 'true')
 const minDate = dayjs().format('YYYY-MM-DD')
 
+const toYmd = (v) => {
+  if (!v) return null
+  if (typeof v?.format === 'function') {
+    const s = v.format('YYYY-MM-DD')
+    return /^\d{4}-\d{2}-\d{2}$/.test(s) ? s : null
+  }
+  if (v instanceof Date) {
+    const s = dayjs(v).format('YYYY-MM-DD')
+    return /^\d{4}-\d{2}-\d{2}$/.test(s) ? s : null
+  }
+  if (typeof v === 'string') {
+    if (/^\d{4}-\d{2}-\d{2}$/.test(v)) return v
+    const parsed = dayjs(v)
+    if (!parsed.isValid()) return null
+    const s = parsed.format('YYYY-MM-DD')
+    return /^\d{4}-\d{2}-\d{2}$/.test(s) ? s : null
+  }
+  const parsed = dayjs(v)
+  if (!parsed.isValid()) return null
+  const s = parsed.format('YYYY-MM-DD')
+  return /^\d{4}-\d{2}-\d{2}$/.test(s) ? s : null
+}
+
 const normalizeDates = (dates = []) => {
   // Always normalize to ISO date strings to keep comparisons stable
   const normalized = Array.from(
     new Set(
       dates
         .filter(Boolean)
-        .map(d => dayjs(d).format('YYYY-MM-DD')),
+        .map(d => toYmd(d))
+        .filter(Boolean),
     ),
   ).sort()
 
@@ -144,7 +167,9 @@ const setDatesFromQuery = () => {
     const range = []
     let current = start
     while (!current.isAfter(end)) {
-      range.push(current)
+      // Keep dayjs objects for VDateInput (it expects values with .toDate()).
+      // Also keep them away from midnight to avoid any UTC-to-date truncation bugs.
+      range.push(current.hour(12).minute(0).second(0).millisecond(0))
       current = current.add(1, 'days')
     }
     return range
@@ -156,7 +181,7 @@ const setDatesFromQuery = () => {
 
   const daysBetween = getDaysBetween(dayjs(queryDates[0]), dayjs(queryDates[1]))
   if (!arraysAreEqual(queryDates, selectedDates.value)) {
-    selectedDatesRaw.value = daysBetween.map(d => d)
+    selectedDatesRaw.value = daysBetween
   }
 }
 
@@ -214,12 +239,24 @@ const updatePeriodQuery = (dates) => {
 }
 
 watch(selectedDatesRaw, (dates) => {
-  // Ensure the model always contains dayjs instances to satisfy v-date-input expectations
-  const haveDayjs = dates.every(d => d && typeof d.toDate === 'function')
-  const normalized = normalizeDates(dates)
+  const arr = Array.isArray(dates) ? dates.filter(Boolean) : []
+  const haveDayjs = arr.length > 0 && arr.every(d => d && typeof d.toDate === 'function')
 
-  if (!haveDayjs) {
-    selectedDatesRaw.value = dates.filter(Boolean).map(d => dayjs(d))
+  const asDayjs = haveDayjs ? arr : arr.map(d => dayjs(d))
+  // Stabilize values away from midnight so internal Date/ISO conversions can't flip the calendar day in some timezones.
+  const stabilized = asDayjs.map((d) => {
+    const dt = d?.toDate?.()
+    if (dt instanceof Date && dt.getHours() === 0 && dt.getMinutes() === 0 && dt.getSeconds() === 0 && dt.getMilliseconds() === 0) {
+      return d.hour(12).minute(0).second(0).millisecond(0)
+    }
+    return d
+  })
+
+  const needsModelWrite = !haveDayjs || stabilized.some((d, idx) => d !== asDayjs[idx])
+  const normalized = normalizeDates(stabilized)
+
+  if (needsModelWrite) {
+    selectedDatesRaw.value = stabilized
     return
   }
 
@@ -282,7 +319,6 @@ const periodRange = computed(() => {
 
 const periodLabel = computed(() => {
   const normalized = selectedDates.value
-
   if (!normalized.length || normalized[0] === undefined) return 'Toutes périodes'
   const formatDate = date => capitalizeFirstLetter(dayjs(date).locale('fr').format('DD MMM YYYY'))
   if (normalized.length === 1) return formatDate(normalized[0])
