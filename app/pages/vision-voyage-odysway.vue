@@ -40,6 +40,35 @@ definePageMeta({
 
 const visionPageQuery = groq`*[_type == "visionVoyageOdysway"][0]{
   ...,
+  
+  ceQueOnDefend{
+    content[]{
+      ...,
+      _type == "image" => {
+        ...,
+        asset->{
+          _id,
+          _ref,
+          url,
+          metadata
+        }
+      }
+    }
+  },
+  priseDeConscience{
+    content[]{
+      ...,
+      _type == "image" => {
+        ...,
+        asset->{
+          _id,
+          _ref,
+          url,
+          metadata
+        }
+      }
+    }
+  },
   teamSection{
     content[]{
       ...,
