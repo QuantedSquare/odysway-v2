@@ -21,13 +21,14 @@
     <v-row
       align="center"
       justify="center"
-      class="bg-white rounded-md filter-wrapper pa-2 px-4"
+      class="bg-white rounded-md filter-wrapper pa-2 px-sm-4"
     >
       <div class="filter-bar d-flex flex-wrap justify-center align-center ga-2 w-100">
         <v-btn
           variant="flat"
           color="primary"
           height="50"
+          :block="width < 660"
           class="filter-btn"
           :class="{ 'filter-btn--active': toggledBtn === 'all' }"
           @click="setToggle('all')"
@@ -40,6 +41,7 @@
           variant="text"
           color="primary"
           height="50"
+          :block="width < 660"
           class="filter-btn"
         >
           <v-checkbox
@@ -63,6 +65,7 @@
           item-title="title"
           item-value="value"
           variant="outlined"
+          :block="width < 660"
           density="comfortable"
           class="filter-select"
           :menu-props="{ maxHeight: 300 }"
@@ -79,7 +82,7 @@
           variant="outlined"
           density="comfortable"
           class="filter-select"
-          min-width="300"
+          :min-width="width < 660 ? '270' : width < 950 ? '100%' : '300'"
           placeholder="Période"
           :prepend-inner-icon="mdiCalendarMonth"
           :append-icon="null"
@@ -110,8 +113,10 @@
 import dayjs from 'dayjs'
 import 'dayjs/locale/fr'
 import { mdiMapMarker, mdiCalendarMonth } from '@mdi/js'
+import { useDisplay } from 'vuetify'
 import { getDateStatus } from '~/utils/getDateStatus'
 
+const { width } = useDisplay()
 dayjs.locale('fr')
 const route = useRoute()
 const loading = ref(false)
@@ -510,7 +515,7 @@ font-size:16px;
 
 @media (max-width: 960px) {
   .filter-wrapper{
-    max-width: calc(100% - 16px);
+    max-width: calc(100%);
     margin: -100px auto 0 auto;
   }
   .btn-height{
@@ -530,6 +535,8 @@ font-size:16px;
   }
   .filter-select{
     max-width: 100%;
+    width: 100%;
+    min-width: 100%;
   }
 }
 </style>
