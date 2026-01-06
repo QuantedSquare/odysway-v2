@@ -13,7 +13,7 @@ export default defineEventHandler(async () => {
   })
   const { data, error } = await supabase
     .from('travel_dates')
-    .select('travel_slug, booked_seat, departure_date, return_date, early_bird, last_minute, starting_price, max_travelers, min_travelers')
+    .select('travel_slug, booked_seat, displayed_booked_seat, departure_date, return_date, early_bird, last_minute, starting_price, max_travelers, min_travelers, status, displayed_status, displayed_badges')
     .eq('published', true)
     .eq('is_custom_travel', false)
     .gte('departure_date', new Date().toISOString())
@@ -44,12 +44,12 @@ export default defineEventHandler(async () => {
       _id,
       title,
       iso,
+      interjection,
       "slug": slug.current
     }
   }`
 
   const travels = await sanityClient.fetch(travelsQuery)
-
   const travelWithDates = travels.map((travel) => {
     const dates = parsedDatesByExtra.filter(date => date.travel_slug === travel.slug)
     return {

@@ -33,9 +33,10 @@
         </h1>
         <h1
           v-else-if="destination && isNextDepartures"
-          class="custom-hero-title"
+          class="custom-hero-title d-flex flex-column ga-4"
         >
-          {{ destination.periodFilter === null || destination.periodFilter === 'Toutes périodes' ? pageContent?.searchHero?.defaultTitle || 'Trouvez votre prochain voyage' : `Partez avec un groupe de 8 voyageurs maximum en ${destination.periodFilter.toLowerCase()}` }}
+          <span>Prochains départs</span>
+          <span class="text-h3">{{ nextDeparturesTitle }}</span>
         </h1>
         <h1
           v-else
@@ -83,7 +84,6 @@
       class="rounded-md"
       cover
     >
-
       <!-- Gradient overlay -->
       <div class="gradient-overlay" />
 
@@ -120,7 +120,7 @@
                 v-else-if="destination && isNextDepartures"
                 class="custom-hero-title"
               >
-                {{ destination.periodFilter === null || destination.periodFilter === 'Toutes périodes' ? 'Découvrez nos voyages de groupe' : `Partez avec un groupe de 8 voyageurs maximum en ${destination.periodFilter.toLowerCase()}` }}
+                {{ nextDeparturesTitle }}
               </h1>
               <h1
                 v-else
@@ -198,6 +198,24 @@ const displayedImg = computed(() => {
   }
 })
 const isHydrated = ref(false)
+
+const nextDeparturesTitle = computed(() => {
+  if (!isNextDepartures || !destination) return pageContent?.searchHero?.defaultTitle || 'Trouvez votre prochain voyage'
+
+  const dest = destination.destination || destination
+  const period = destination.periodFilter
+  const hasPeriod = destination.isDateFilter && period && period !== 'Toutes périodes'
+
+  const destText = dest?.title
+    ? `${dest.interjection || 'en'} ${dest.title}`
+    : null
+
+  if (destText && hasPeriod) return `${destText} du ${period}`
+  if (destText) return destText
+  if (hasPeriod) return period
+
+  return pageContent?.searchHero?.defaultTitle || 'Trouvez votre prochain voyage'
+})
 onMounted(() => {
   isHydrated.value = true
 })

@@ -15,6 +15,11 @@ const STATUS_MAP = {
     text: 'Complet',
     color: 'secondary',
   },
+  full: {
+    status: 'full',
+    text: 'Complet',
+    color: 'secondary',
+  },
 }
 
 /**
@@ -45,6 +50,10 @@ export function getDateStatus(date) {
   // If custom display is enabled and a valid status is provided, use it
   if (date.displayed_status && STATUS_MAP[date.displayed_status]) {
     return STATUS_MAP[date.displayed_status]
+  }
+  // Fallback to persisted status if provided
+  if (date.status && STATUS_MAP[date.status]) {
+    return STATUS_MAP[date.status]
   }
   // Otherwise, calculate status based on bookings
   return calculateStatusFromBookings(date)

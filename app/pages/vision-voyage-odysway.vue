@@ -40,7 +40,6 @@ definePageMeta({
 
 const visionPageQuery = groq`*[_type == "visionVoyageOdysway"][0]{
   ...,
-  
   ceQueOnDefend{
     content[]{
       ...,

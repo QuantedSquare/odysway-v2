@@ -7,7 +7,9 @@
       :is-next-departures="true"
       :page-content="pageContent"
       :destination="{
-        periodFilter: selectedPeriod,
+        periodFilter: periodLabel,
+        isDateFilter: periodLabel !== 'Toutes périodes',
+        destination: selectedDestination ? destinationOptions.find(option => option.value === selectedDestination) : null,
         image: {
           src: getImageUrl(pageContent?.image?.asset?._ref) || '/images/homeHero.jpeg',
           alt: pageContent.value?.image?.alt || 'Image principale Hero d\'Odysway',
@@ -63,33 +65,39 @@
           variant="outlined"
           density="comfortable"
           class="filter-select"
-
           :menu-props="{ maxHeight: 300 }"
           clearable
           placeholder="Destination"
           :prepend-inner-icon="mdiMapMarker"
         />
-        <v-select
-          :id="periodId"
-          v-model="selectedPeriod"
+        <v-date-input
+          v-model="selectedDatesRaw"
+          multiple="range"
+          type="text"
+          :display-value="periodLabel"
+          color="primary"
           hide-details
-          :items="sortedMonths"
           variant="outlined"
           density="comfortable"
           class="filter-select"
-          min-width="240"
-          clearable
-          placeholder="Période 2026"
+          min-width="300"
+          placeholder="Période"
           :prepend-inner-icon="mdiCalendarMonth"
+          :append-icon="null"
+          :prepend-icon="null"
+          :min="minDate"
+          :text-field-props="{ type: 'text' }"
+          clearable
+          @click:clear="clearPeriod"
         />
       </div>
     </v-row>
 
     <VoyageCardsList
       v-if="!loading && travels.length > 0"
-      :filtered-deals="groupByMonthFiltered"
+      :filtered-deals="groupedDatesByMonth"
       :deals-lastminute="dealsLastMinuteFiltered"
-      :selected-period="selectedPeriod"
+      :selected-period="periodLabel"
       :toggled-btn="toggledBtn"
     />
     <v-skeleton-loader
@@ -101,20 +109,56 @@
 
 <script setup>
 import dayjs from 'dayjs'
-import customParseFormat from 'dayjs/plugin/customParseFormat.js'
 import 'dayjs/locale/fr'
 import { mdiMapMarker, mdiCalendarMonth } from '@mdi/js'
 import { getDateStatus } from '~/utils/getDateStatus'
 
-dayjs.extend(customParseFormat)
+dayjs.locale('fr')
 const route = useRoute()
 const loading = ref(false)
 const travels = ref([])
 const toggledBtn = ref('all')
-const periodId = useId()
-const selectedPeriod = ref(route.query?.periode || 'Toutes périodes')
+const selectedDatesRaw = ref([])
+const selectedDates = computed(() => normalizeDates(selectedDatesRaw.value))
 const selectedDestination = ref(route.query?.destination || null)
 const confirmedOnly = ref(route.query?.confirmed === 'true')
+const minDate = dayjs().format('YYYY-MM-DD')
+
+const normalizeDates = (dates = []) => {
+  // Always normalize to ISO date strings to keep comparisons stable
+  const normalized = Array.from(
+    new Set(
+      dates
+        .filter(Boolean)
+        .map(d => dayjs(d).format('YYYY-MM-DD')),
+    ),
+  ).sort()
+
+  return [normalized[0], normalized[normalized.length - 1]]
+}
+
+const arraysAreEqual = (a = [], b = []) => a.length === b.length && a.every((val, index) => val === b[index])
+
+const setDatesFromQuery = () => {
+  const getDaysBetween = (start, end) => {
+    const range = []
+    let current = start
+    while (!current.isAfter(end)) {
+      range.push(current)
+      current = current.add(1, 'days')
+    }
+    return range
+  }
+  const queryDates = normalizeDates([
+    route.query?.periodFrom,
+    route.query?.periodTo,
+  ].filter(Boolean))
+
+  const daysBetween = getDaysBetween(dayjs(queryDates[0]), dayjs(queryDates[1]))
+  if (!arraysAreEqual(queryDates, selectedDates.value)) {
+    selectedDatesRaw.value = daysBetween.map(d => d)
+  }
+}
 
 const fetchTravels = async () => {
   try {
@@ -124,11 +168,11 @@ const fetchTravels = async () => {
 
     travels.value = data.map((travel) => {
       const futureDates = travel.dates
-        .filter(dateInfo => dayjs(dateInfo.departure_date).isAfter(dayjs()))
+        .filter(dateInfo => dayjs(dateInfo.departure_date).isSame(dayjs(), 'day') || dayjs(dateInfo.departure_date).isAfter(dayjs()))
         .sort((a, b) => dayjs(a.departure_date).valueOf() - dayjs(b.departure_date).valueOf())
       return {
         ...travel,
-        departureDate: futureDates[0]?.departure_date || travel.departureDate,
+        dates: futureDates,
       }
     })
     loading.value = false
@@ -140,22 +184,46 @@ const fetchTravels = async () => {
 }
 
 onMounted(() => {
+  setDatesFromQuery()
   fetchTravels()
 })
 
-watch(selectedPeriod, (newPeriod) => {
+watch(() => [route.query.periodFrom, route.query.periodTo], () => {
+  setDatesFromQuery()
+})
+
+const updatePeriodQuery = (dates) => {
+  const normalized = normalizeDates(dates)
+  const currentQueryDates = normalizeDates([
+    route.query?.periodFrom,
+    route.query?.periodTo,
+  ].filter(Boolean))
+
+  if (arraysAreEqual(normalized, currentQueryDates)) return
+
   const query = { ...route.query }
-
-  delete query.periode
-
-  if (newPeriod !== null && newPeriod !== 'Toutes périodes') {
-    query.periode = newPeriod
-  }
+  delete query.periodFrom
+  delete query.periodTo
+  if (normalized[0]) query.periodFrom = normalized[0]
+  if (normalized[1]) query.periodTo = normalized[normalized.length - 1]
 
   navigateTo({
     path: route.path,
     query: Object.keys(query).length > 0 ? query : undefined,
   })
+}
+
+watch(selectedDatesRaw, (dates) => {
+  // Ensure the model always contains dayjs instances to satisfy v-date-input expectations
+  const haveDayjs = dates.every(d => d && typeof d.toDate === 'function')
+  const normalized = normalizeDates(dates)
+
+  if (!haveDayjs) {
+    selectedDatesRaw.value = dates.filter(Boolean).map(d => dayjs(d))
+    return
+  }
+
+  updatePeriodQuery(normalized)
 })
 
 function setToggle(value) {
@@ -164,10 +232,6 @@ function setToggle(value) {
     selectedDestination.value = null
   }
 }
-
-watch(() => route.query.periode, (newPeriode) => {
-  selectedPeriod.value = newPeriode === 'Toutes périodes' ? null : (newPeriode || null)
-})
 
 watch(selectedDestination, (newDestination) => {
   const query = { ...route.query }
@@ -205,130 +269,121 @@ watch(() => route.query.confirmed, (value) => {
   confirmedOnly.value = value === 'true'
 })
 
-const filteredTravels = computed(() => {
-  return travels.value.filter((travel) => {
-    const hasDates = travel.dates.length > 0 && travel.availabilityTypes?.includes('groupe')
-    if (!hasDates) return false
-
-    const destinations = Array.isArray(travel.destinations) ? travel.destinations : []
-    const slugList = Array.isArray(travel.destinations) ? travel.destinations.map(dest => dest?.slug) : travel.destinations ? [travel.destinations?.slug] : []
-
-    const matchesDestination = (() => {
-      if (!selectedDestination.value) return true
-      const matchDest = destinations.some(dest =>
-        dest?.title === selectedDestination.value || dest?.slug === selectedDestination.value)
-      const matchIso = slugList.includes(selectedDestination.value)
-      return matchDest || matchIso
-    })()
-
-    if (confirmedOnly.value) {
-      const displayedDate = travel.dates.find(date =>
-        dayjs(date.departure_date).isSame(travel.departureDate),
-      )
-      if (!displayedDate) return false
-      const status = getDateStatus(displayedDate)
-      const isGuaranteed = status?.status === 'confirmed' || status?.status === 'full'
-      return matchesDestination && isGuaranteed
-    }
-
-    return matchesDestination
-  })
+const periodRange = computed(() => {
+  const normalized = selectedDates.value
+  const startDate = normalized[0] ? dayjs(normalized[0]).startOf('day') : null
+  const endDate = normalized[normalized.length - 1]
+    ? dayjs(normalized[normalized.length - 1]).endOf('day')
+    : startDate
+      ? dayjs(normalized[normalized.length - 1]).endOf('day')
+      : null
+  return { start: startDate, end: endDate }
 })
 
-const groupByMonth = computed(() => {
-  const today = dayjs()
-  const unsrotedTravels = {}
+const periodLabel = computed(() => {
+  const normalized = selectedDates.value
 
-  filteredTravels.value.forEach((travel) => {
-    // Find the earliest future date for this travel
-    const futureDates = travel.dates.filter(dateInfo =>
-      dayjs(dateInfo.departure_date).isAfter(today),
-    )
-
-    if (futureDates.length === 0) return
-
-    // Sort dates and get the earliest one
-    const earliestDate = futureDates.sort((a, b) =>
-      dayjs(a.departure_date).valueOf() - dayjs(b.departure_date).valueOf(),
-    )[0]
-
-    const departureDate = dayjs(earliestDate.departure_date)
-    const monthYear = capitalizeFirstLetter(departureDate.locale('fr').format('MMMM YYYY'))
-
-    if (!unsrotedTravels[monthYear]) {
-      unsrotedTravels[monthYear] = []
-    }
-
-    // Add the travel once with all its dates
-    unsrotedTravels[monthYear].push({
-      ...travel,
-      departureDate: earliestDate.departure_date,
-    })
-  })
-
-  const monthsArray = Object.keys(unsrotedTravels).map((monthYear) => {
-    const date = dayjs(`01 ${monthYear.toLowerCase()}`, 'DD MMMM YYYY', 'fr')
-    const sortedTravels = unsrotedTravels[monthYear].sort((a, b) => {
-      return dayjs(a.departureDate).valueOf() - dayjs(b.departureDate).valueOf()
-    })
-    return {
-      monthYear,
-      date,
-      travels: sortedTravels,
-    }
-  })
-  monthsArray.sort((a, b) => a.date.valueOf() - b.date.valueOf())
-  const sortedTravels = {}
-  monthsArray.forEach((item) => {
-    sortedTravels[item.monthYear] = item.travels
-  })
-  return sortedTravels
+  if (!normalized.length || normalized[0] === undefined) return 'Toutes périodes'
+  const formatDate = date => capitalizeFirstLetter(dayjs(date).locale('fr').format('DD MMM YYYY'))
+  if (normalized.length === 1) return formatDate(normalized[0])
+  return `${formatDate(normalized[0])} - ${formatDate(normalized[normalized.length - 1])}`
 })
 
-const sortedMonths = computed(() => {
-  const months = Object.keys(groupByMonth.value)
-  months.unshift('Toutes périodes')
-  return months
-})
+const clearPeriod = () => {
+  selectedDatesRaw.value = []
+  updatePeriodQuery([])
+}
 
 const destinationOptions = computed(() => {
   const list = new Map()
+
   travels.value.forEach((travel) => {
     if (Array.isArray(travel.destinations)) {
       travel.destinations.forEach((dest) => {
         const key = dest?.slug || dest?.title
         if (!key || !dest?.title) return
-        list.set(key, dest.title)
+
+        list.set(key, { title: dest.title, interjection: dest.interjection })
       })
     }
   })
   return Array.from(list.entries())
-    .map(([value, title]) => ({ title, value }))
+    .map(([value, { title, interjection }]) => ({ title, value, interjection }))
     .sort((a, b) => a.title.localeCompare(b.title))
 })
 
-const groupByMonthFiltered = computed(() => {
-  if (selectedPeriod.value === null || selectedPeriod.value === 'Toutes périodes') {
-    return groupByMonth.value
-  }
-  const monthName = selectedPeriod.value
-  const dealsForSelectedMonth = groupByMonth.value[monthName] || []
-
-  const singleMonthObject = {
-    [monthName]: dealsForSelectedMonth,
-  }
-  return singleMonthObject
+const travelDateEntries = computed(() => {
+  const today = dayjs()
+  return travels.value.flatMap((travel) => {
+    const hasDates = travel.dates?.length > 0 && travel.availabilityTypes?.includes('groupe')
+    if (!hasDates) return []
+    const futureDates = travel.dates
+      .filter(dateInfo =>
+        dayjs(dateInfo.departure_date).isSame(today, 'day') || dayjs(dateInfo.departure_date).isAfter(today),
+      )
+      .sort((a, b) => dayjs(a.departure_date).valueOf() - dayjs(b.departure_date).valueOf())
+    if (!futureDates.length) return []
+    return futureDates.map(dateInfo => ({
+      ...travel,
+      departureDate: dateInfo.departure_date,
+      selectedDate: dateInfo,
+      dates: futureDates,
+    }))
+  })
 })
 
-const dealsLastMinuteFiltered = computed(() => {
-  const filteredTravels = []
-  for (const month in groupByMonth.value) {
-    for (const travel of groupByMonth.value[month]) {
-      if (travel.dates[0].last_minute) filteredTravels.push(travel)
+const isGuaranteedDeparture = (date) => {
+  const status = getDateStatus(date)
+  return status?.status === 'confirmed' || status?.status === 'full'
+}
+
+const filteredDateEntries = computed(() => {
+  return travelDateEntries.value
+    .filter((entry) => {
+      const destinations = Array.isArray(entry.destinations) ? entry.destinations : []
+      const slugList = Array.isArray(entry.destinations) ? entry.destinations.map(dest => dest?.slug) : entry.destinations ? [entry.destinations?.slug] : []
+
+      const matchesDestination = (() => {
+        if (!selectedDestination.value) return true
+        const matchDest = destinations.some(dest =>
+          dest?.title === selectedDestination.value || dest?.slug === selectedDestination.value)
+        const matchIso = slugList.includes(selectedDestination.value)
+        return matchDest || matchIso
+      })()
+
+      if (!matchesDestination) return false
+
+      if (confirmedOnly.value && entry.selectedDate) {
+        return isGuaranteedDeparture(entry.selectedDate)
+      }
+
+      return true
+    })
+    .filter((entry) => {
+      const { start, end } = periodRange.value
+      if (!start && !end) return true
+      const departureDay = dayjs(entry.departureDate)
+      if (start && end) return departureDay.isBetween(start, end, 'day', '[]')
+      return departureDay.isSame(start || end, 'month')
+    })
+    .sort((a, b) => dayjs(a.departureDate).valueOf() - dayjs(b.departureDate).valueOf())
+})
+
+const groupedDatesByMonth = computed(() => {
+  const ordered = new Map()
+  filteredDateEntries.value.forEach((entry) => {
+    const monthLabel = capitalizeFirstLetter(dayjs(entry.departureDate).locale('fr').format('MMMM YYYY'))
+    if (!ordered.has(monthLabel)) {
+      ordered.set(monthLabel, [])
     }
-  }
-  return filteredTravels
+    ordered.get(monthLabel).push(entry)
+  })
+  return Object.fromEntries(ordered)
 })
+
+const dealsLastMinuteFiltered = computed(() =>
+  filteredDateEntries.value.filter(entry => entry.selectedDate?.last_minute),
+)
 
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1)

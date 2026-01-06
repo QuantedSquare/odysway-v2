@@ -33,7 +33,6 @@
       :key="monthName"
     >
       <v-col
-        v-if="selectedPeriod === 'Toutes périodes'"
         cols="12"
       >
         <h3 class="custom-title font-weight-bold mt-6 mb-2">
