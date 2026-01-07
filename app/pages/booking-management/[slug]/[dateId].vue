@@ -507,6 +507,7 @@ import { mdiArrowRight, mdiDelete, mdiLinkEdit, mdiInformationOutline } from '@m
 import dayjs from 'dayjs'
 import DateFormCard from '~/components/booking/DateFormCard.vue'
 import { BOOKING_STATUSES } from '~/utils/bookingStatuses'
+import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 
 definePageMeta({
   layout: 'booking',
@@ -572,14 +573,18 @@ const previewDate = computed(() => ({
 }))
 
 const fetchDetails = async () => {
-  const res = await fetch(`/api/v1/booking/date/${dateId}`)
-  const data = await res.json()
-  form.value = { ...data, index: 0, badges: data.badges || data.displayed_badges }
-  const res2 = await fetch(`/api/v1/booking/${slug}/date/${dateId}/booked`)
-  const data2 = await res2.json()
-  bookedTravelers.value = data2.filter(traveler => traveler.booked_places > 0)
-  prospectTravelers.value = data2.filter(traveler => traveler.booked_places === 0)
-  loading.value = false
+  try {
+    const [date, travelers] = await Promise.all([
+      bookingApi.getDateById(dateId),
+      bookingApi.getBooked(slug, dateId),
+    ])
+    form.value = { ...date, index: 0, badges: date.badges || date.displayed_badges }
+    bookedTravelers.value = (travelers || []).filter(traveler => traveler.booked_places > 0)
+    prospectTravelers.value = (travelers || []).filter(traveler => traveler.booked_places === 0)
+  }
+  finally {
+    loading.value = false
+  }
 }
 
 const onSave = async () => {
@@ -587,22 +592,12 @@ const onSave = async () => {
   saveSuccess.value = false
   saving.value = true
   try {
-    const res = await fetch(`/api/v1/booking/${slug}/date/${dateId}`, {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(form.value),
-    })
-    const data = await res.json()
-    if (res.ok && !data.error) {
-      saveSuccess.value = true
-      await fetchDetails()
-    }
-    else {
-      saveError.value = data.error || 'Erreur lors de la sauvegarde.'
-    }
+    await bookingApi.updateDate(slug, dateId, form.value)
+    saveSuccess.value = true
+    await fetchDetails()
   }
-  catch {
-    saveError.value = 'Erreur lors de la sauvegarde.'
+  catch (err) {
+    saveError.value = getApiErrorMessage(err, 'Erreur lors de la sauvegarde.')
   }
   finally {
     saving.value = false
@@ -625,23 +620,19 @@ const onAssignDeal = async () => {
       return
     }
     const dealId = match[1]
-    const res = await fetch(`/api/v1/booking/${slug}/date/${dateId}/assign-deal`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ dealId }),
-    })
-    const data = await res.json()
-    if (res.ok && !data.error) {
-      assignDealSuccess.value = true
-      dealUrl.value = ''
-      await fetchDetails()
+    await bookingApi.assignDeal(slug, dateId, { dealId })
+    assignDealSuccess.value = true
+    dealUrl.value = ''
+    await fetchDetails()
+  }
+  catch (err) {
+    const redirectTo = err?.data?.data?.redirectTo || err?.data?.redirectTo
+    if (redirectTo) {
+      assignDealError.value = redirectTo
     }
     else {
-      assignDealError.value = data.error || 'Erreur lors de l\'assignation.'
+      assignDealError.value = getApiErrorMessage(err, 'Erreur lors de l\'assignation.')
     }
-  }
-  catch {
-    assignDealError.value = 'Erreur lors de l\'assignation.'
   }
   finally {
     assigningDeal.value = false
@@ -650,9 +641,7 @@ const onAssignDeal = async () => {
 
 const deleteTraveler = async (id) => {
   if (!confirm('Supprimer ce voyageur ?')) return
-  await fetch(`/api/v1/booking/${slug}/date/${dateId}/booked/${id}`, {
-    method: 'DELETE',
-  })
+  await bookingApi.deleteBooked(slug, dateId, id)
   await fetchDetails()
 }
 

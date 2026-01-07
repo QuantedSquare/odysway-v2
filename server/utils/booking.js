@@ -1,5 +1,15 @@
 import supabase from './supabase'
 
+const computeTravelDateStatus = ({ booked_seat, min_travelers, max_travelers }) => {
+  const booked = Number(booked_seat || 0)
+  const min = Number(min_travelers || 0)
+  const max = Number(max_travelers || 0)
+
+  if (max > 0 && booked >= max) return 'guaranteed'
+  if (min > 0 && booked >= min) return 'confirmed'
+  return 'soon_confirmed'
+}
+
 const retrieveBooking = async (slug) => {
   const query = supabase.from('travel_dates').select()
   try {
@@ -71,15 +81,60 @@ const retrieveBookedPlacesByTravelDateId = async (travel_date_id) => {
 }
 
 const updateTravelDate = async (travel_date_id, totalBooked) => {
+  // Fetch min/max (status is derived from these + booked_seat)
+  const { data: row, error: fetchError } = await supabase
+    .from('travel_dates')
+    .select('id, min_travelers, max_travelers')
+    .eq('id', travel_date_id)
+    .single()
+
+  if (fetchError || !row) {
+    console.error('Supabase retrieve error:', fetchError)
+    return { error: fetchError?.message || 'travel_dates not found' }
+  }
+
+  const nextStatus = computeTravelDateStatus({
+    booked_seat: totalBooked,
+    min_travelers: row.min_travelers,
+    max_travelers: row.max_travelers,
+  })
+
   const { error } = await supabase
     .from('travel_dates')
-    .update({ booked_seat: totalBooked })
+    .update({ booked_seat: totalBooked, status: nextStatus })
     .eq('id', travel_date_id)
+
   if (error) {
     console.error('Supabase upsert error:', error)
     return { error: error.message }
   }
-  return travel_date_id
+  return { id: travel_date_id, booked_seat: totalBooked, status: nextStatus }
+}
+
+const recomputeBookedSeatAndStatus = async (travel_date_id) => {
+  const allBooked = await retrieveBookedPlacesByTravelDateId(travel_date_id)
+  if (allBooked?.error) return { error: allBooked.error }
+  const totalBooked = (allBooked || []).reduce((acc, row) => acc + (row.booked_places || 0), 0)
+  return await updateTravelDate(travel_date_id, totalBooked)
+}
+
+const recomputeStatusOnly = async (travel_date_id) => {
+  const { data: row, error } = await supabase
+    .from('travel_dates')
+    .select('id, booked_seat, min_travelers, max_travelers, status')
+    .eq('id', travel_date_id)
+    .single()
+  if (error || !row) return { error: error?.message || 'travel_dates not found' }
+
+  const nextStatus = computeTravelDateStatus(row)
+  if (row.status === nextStatus) return { id: travel_date_id, status: row.status, updated: false }
+
+  const { error: updateError } = await supabase
+    .from('travel_dates')
+    .update({ status: nextStatus })
+    .eq('id', travel_date_id)
+  if (updateError) return { error: updateError.message }
+  return { id: travel_date_id, status: nextStatus, updated: true }
 }
 
 const deleteBookedDateByDealId = async (dealId) => {
@@ -113,6 +168,8 @@ export default {
   retrieveBookedDateById,
   retrieveBookedPlacesByTravelDateId,
   updateTravelDate,
+  recomputeBookedSeatAndStatus,
+  recomputeStatusOnly,
   deleteBookedDateByDealId,
   deleteBookedDateById,
 }

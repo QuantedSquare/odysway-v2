@@ -1,14 +1,29 @@
-import { defineEventHandler } from 'h3'
-
+import { defineEventHandler, createError } from 'h3'
 
 export default defineEventHandler(async (event) => {
-  const { dateId } = event.context.params
+  const { dateId, slug } = event.context.params
+  if (!dateId || !slug) {
+    throw createError({ statusCode: 400, statusMessage: 'slug et dateId requis' })
+  }
+  // Ensure the date exists and matches slug (avoid returning wrong travelers list)
+  const { data: travelDate, error: travelDateError } = await supabase
+    .from('travel_dates')
+    .select('id')
+    .eq('id', dateId)
+    .eq('travel_slug', slug)
+    .single()
+  if (travelDateError || !travelDate) {
+    throw createError({ statusCode: 404, statusMessage: 'Date introuvable' })
+  }
+
   const { data, error } = await supabase
     .from('booked_dates')
     .select('*')
     .eq('travel_date_id', dateId)
 
-  if (error) return []
+  if (error) {
+    throw createError({ statusCode: 500, statusMessage: error.message })
+  }
 
   // Enrich each traveler with contact info from ActiveCampaign
   const travelers = await Promise.all((data || []).map(async (row) => {
@@ -18,7 +33,6 @@ export default defineEventHandler(async (event) => {
       const deal = await activecampaign.getDealById(row.deal_id)
       customFields = await activecampaign.getDealCustomFields(row.deal_id)
       customFields.price = deal.deal.value
-      console.log('=======customFields=======', customFields)
       if (deal && deal.deal && deal.deal.contact) {
         const contactId = deal.deal.contact
         let contactData = null
@@ -77,6 +91,5 @@ export default defineEventHandler(async (event) => {
       console.log(`Deleted ${travelersToDelete.length} booked_dates entries without valid email`)
     }
   }
-
   return validTravelers
 })

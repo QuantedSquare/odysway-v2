@@ -72,6 +72,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
+import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 
 const search = ref(null)
 const loading = ref(false)
@@ -100,13 +101,18 @@ const router = useRouter()
 
 const fetchTravels = async () => {
   loading.value = true
-  const res = await fetch('/api/v1/booking/travels')
-  const data = await res.json()
-  travels.value = data.filter(travel => travel.is_custom_travel)
-  travelesList.value = await sanity.fetch(travelesListQuery)
-  console.log('travelsList from sanity', travelesList.value)
-  console.log('travels from supabase', travels.value)
-  loading.value = false
+  try {
+    const data = await bookingApi.getTravels()
+    travels.value = (data || []).filter(travel => travel.is_custom_travel)
+    travelesList.value = await sanity.fetch(travelesListQuery)
+  }
+  catch (err) {
+    console.error(getApiErrorMessage(err, 'Erreur chargement'))
+    travels.value = []
+  }
+  finally {
+    loading.value = false
+  }
 }
 
 const goToTravel = (slug) => {

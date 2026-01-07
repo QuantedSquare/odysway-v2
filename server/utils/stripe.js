@@ -416,11 +416,9 @@ const handlePaymentSession = async (session, paymentType) => {
     if (sumAllBookedError) return { error: sumAllBookedError.message }
 
     const totalBooked = (allBooked || []).reduce((acc, row) => acc + (row.booked_places || 0), 0)
-    // Update the travel_dates.booked_seat
-    await supabase
-      .from('travel_dates')
-      .update({ booked_seat: totalBooked })
-      .eq('id', bookedDate.travel_date_id)
+    // Update the travel_dates.booked_seat + derived status
+    const recompute = await booking.updateTravelDate(bookedDate.travel_date_id, totalBooked)
+    if (recompute?.error) return { error: recompute.error }
   }
 
   //   // Fetch Deal Data

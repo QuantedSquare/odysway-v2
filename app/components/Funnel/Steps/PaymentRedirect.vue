@@ -156,6 +156,7 @@
 
 <script setup>
 import { mdiCreditCardOutline, mdiCreditCardClockOutline, mdiCalendarOutline } from '@mdi/js'
+import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 
 const { page, currentStep, ownStep, voyage } = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
 const route = useRoute()
@@ -283,17 +284,16 @@ watch(checkedOption, (value) => {
 const book = async () => {
   loadingSession.value = true
 
-  const res = await fetch(`/api/v1/booking/booked_date/option`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ id: route.query.booked_id, booked_places: +model.value.nbAdults + +model.value.nbChildren }),
-  })
-  const data = await res.json()
-
-  if (data.error && data.error === 'La date est déjà réservée') {
-    alreadyPlacedAnOption.value = true
-    loadingSession.value = false
-    return
+  try {
+    await bookingApi.placeOption({ id: route.query.booked_id, booked_places: +model.value.nbAdults + +model.value.nbChildren })
+  }
+  catch (err) {
+    if (getApiErrorMessage(err) === 'La date est déjà réservée') {
+      alreadyPlacedAnOption.value = true
+      loadingSession.value = false
+      return
+    }
+    console.error(getApiErrorMessage(err, 'Erreur option'))
   }
 
   const dealData = {

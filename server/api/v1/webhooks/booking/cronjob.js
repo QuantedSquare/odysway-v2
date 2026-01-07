@@ -1,7 +1,6 @@
 import { defineEventHandler } from 'h3'
 import axios from 'axios'
 
-
 export default defineEventHandler(async (event) => {
   // Get all booked_dates with is_option == true and expiracy_date < today
   const cronSecret = process.env.CRON_SECRET
@@ -25,27 +24,7 @@ export default defineEventHandler(async (event) => {
 
   if (data && data.length > 0) {
     for (const row of data) {
-      // Delete the booked_date row
-      const { data: travelDate, error: travelDateError } = await supabase
-        .from('travel_dates')
-        .select('*')
-        .eq('id', row.travel_date_id)
-        .single()
-      if (travelDateError) {
-        console.error('Error getting travel_date', row.travel_date_id, travelDateError)
-        continue
-      }
-      else {
-        // Update the travel_date row
-        const { error: updateError } = await supabase
-          .from('travel_dates')
-          .update({ booked_seat: travelDate.booked_seat - row.booked_places })
-          .eq('id', row.travel_date_id)
-        if (updateError) {
-          console.error('Error updating travel_date', row.travel_date_id, updateError)
-          continue
-        }
-      }
+      // Delete the booked_date row first, then recompute booked_seat + status from source of truth (booked_dates)
       const { error: deleteError } = await supabase
         .from('booked_dates')
         .delete()
@@ -53,6 +32,11 @@ export default defineEventHandler(async (event) => {
       if (deleteError) {
         console.error('Error deleting booked_date', row.id, deleteError)
         continue
+      }
+
+      const recompute = await booking.recomputeBookedSeatAndStatus(row.travel_date_id)
+      if (recompute?.error) {
+        console.error('Error recomputing travel_date', row.travel_date_id, recompute.error)
       }
       // Update the deal in ActiveCampaign (set stage to 1)
       if (row.deal_id) {

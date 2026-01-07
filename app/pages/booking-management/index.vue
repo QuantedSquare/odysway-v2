@@ -161,6 +161,7 @@
 import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { mdiMagnify, mdiImageOff } from '@mdi/js'
+import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 
 const search = ref('')
 const loading = ref(false)
@@ -218,10 +219,16 @@ const headers = [
 
 const fetchTravels = async () => {
   loading.value = true
-  const res = await fetch('/api/v1/booking/travels')
-  const data = await res.json()
-  travels.value = data
-  loading.value = false
+  try {
+    travels.value = await bookingApi.getTravels()
+  }
+  catch (err) {
+    console.error(getApiErrorMessage(err, 'Erreur chargement voyages'))
+    travels.value = []
+  }
+  finally {
+    loading.value = false
+  }
 }
 
 const mergedTravels = computed(() => {

@@ -166,6 +166,7 @@ import { useRouter, useRoute } from 'vue-router'
 import dayjs from 'dayjs'
 import DateFormCard from '~/components/booking/DateFormCard.vue'
 import { BOOKING_STATUSES, DEFAULT_STATUS } from '~/utils/bookingStatuses'
+import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 
 definePageMeta({
   layout: 'booking',
@@ -254,23 +255,12 @@ const onSave = async () => {
     if (!payload.displayed_status) {
       payload.displayed_status = payload.status
     }
-
-    const res = await fetch('/api/v1/booking/add-date', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    })
-    const data = await res.json()
-    if (res.ok && !data.error) {
-      saveSuccess.value = true
-      setTimeout(() => router.push(`/booking-management/${form.value.travel_slug}`), 600)
-    }
-    else {
-      saveError.value = data.error || 'Erreur lors de l\'ajout.'
-    }
+    await bookingApi.addDate(payload)
+    saveSuccess.value = true
+    setTimeout(() => router.push(`/booking-management/${form.value.travel_slug}`), 600)
   }
-  catch {
-    saveError.value = 'Erreur lors de l\'ajout.'
+  catch (err) {
+    saveError.value = getApiErrorMessage(err, 'Erreur lors de l\'ajout.')
   }
   finally {
     saving.value = false

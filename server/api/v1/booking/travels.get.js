@@ -1,4 +1,4 @@
-import { defineEventHandler } from 'h3'
+import { defineEventHandler, createError } from 'h3'
 
 export default defineEventHandler(async () => {
   const { data, error } = await supabase
@@ -6,7 +6,10 @@ export default defineEventHandler(async () => {
     .select('travel_slug, booked_seat, is_custom_travel, departure_date, return_date')
 
   if (error) {
-    return []
+    throw createError({
+      statusCode: 500,
+      statusMessage: error.message,
+    })
   }
 
   const today = new Date()

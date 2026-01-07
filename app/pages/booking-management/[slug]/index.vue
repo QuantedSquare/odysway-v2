@@ -191,6 +191,7 @@ import dayjs from 'dayjs'
 import isSameOrAfter from 'dayjs/plugin/isSameOrAfter'
 import isSameOrBefore from 'dayjs/plugin/isSameOrBefore'
 import { mdiContentCopy, mdiDotsVertical, mdiDelete, mdiEye, mdiArrowRight } from '@mdi/js'
+import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 
 const loading = ref(false)
 dayjs.extend(isSameOrAfter)
@@ -236,12 +237,17 @@ const { data: voyageSanity } = await useAsyncData('voyage', () =>
 )
 const fetchDates = async () => {
   loading.value = true
-  const res = await fetch(`/api/v1/booking/${slug}/dates`)
-
-  voyage.value = voyageSanity.value
-  const data = await res.json()
-  dates.value = data
-  loading.value = false
+  try {
+    voyage.value = voyageSanity.value
+    dates.value = await bookingApi.getDatesBySlug(slug)
+  }
+  catch (err) {
+    console.error(getApiErrorMessage(err, 'Erreur chargement dates'))
+    dates.value = []
+  }
+  finally {
+    loading.value = false
+  }
 }
 
 const filteredDates = computed(() => {
@@ -282,28 +288,23 @@ const goToAddDate = () => {
 
 const duplicateDate = async (date) => {
   if (!confirm('Dupliquer cette date ?')) return
-  const res = await fetch(`/api/v1/booking/${slug}/date/${date.id}/duplicate`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-  })
-  if (res.ok) {
+  try {
+    await bookingApi.duplicateDate(slug, date.id)
     await fetchDates()
   }
-  else {
-    alert('Erreur lors de la duplication')
+  catch (err) {
+    alert(getApiErrorMessage(err, 'Erreur lors de la duplication'))
   }
 }
 
 const deleteDate = async (date) => {
   if (!confirm('Supprimer cette date ? Attention, toutes les réservations associées à cette date seront également supprimées.')) return
-  const res = await fetch(`/api/v1/booking/${slug}/date/${date.id}`, {
-    method: 'DELETE',
-  })
-  if (res.ok) {
+  try {
+    await bookingApi.deleteDate(slug, date.id)
     await fetchDates()
   }
-  else {
-    alert('Erreur lors de la suppression')
+  catch (err) {
+    alert(getApiErrorMessage(err, 'Erreur lors de la suppression'))
   }
 }
 

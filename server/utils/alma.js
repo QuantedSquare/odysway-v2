@@ -190,11 +190,9 @@ const handlePaymentSession = async (session) => {
 
     const totalBooked = (allBooked || []).reduce((acc, row) => acc + (row.booked_places || 0), 0)
     console.log('totalBooked', totalBooked)
-    // Update the travel_dates.booked_seat
-    await supabase
-      .from('travel_dates')
-      .update({ booked_seat: totalBooked })
-      .eq('id', bookedDate.travel_date_id)
+    // Update the travel_dates.booked_seat + derived status
+    const recompute = await booking.updateTravelDate(bookedDate.travel_date_id, totalBooked)
+    if (recompute?.error) return { error: recompute.error }
   }
 
   // Chapka notify

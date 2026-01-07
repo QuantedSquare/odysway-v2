@@ -1,15 +1,18 @@
 import { defineEventHandler, createError } from 'h3'
 
 export default defineEventHandler(async (event) => {
-  const { dateId } = event.context.params
+  const { dateId, slug } = event.context.params
+  if (!dateId || !slug) {
+    throw createError({ statusCode: 400, statusMessage: 'slug et dateId requis' })
+  }
   // Fetch the row to get travel_date_id
   const { data: dateRow, error: fetchError } = await supabase
     .from('travel_dates')
     .select('id')
     .eq('id', dateId)
+    .eq('travel_slug', slug)
     .single()
 
-  console.log('======Date à supprimer=======', dateRow, fetchError)
   if (fetchError || !dateRow) {
     throw createError({
       statusCode: 404,
@@ -29,7 +32,6 @@ export default defineEventHandler(async (event) => {
       statusMessage: sumError.message,
     })
   }
-  console.log('======allBookedDeleted=======', allBookedDeleted, sumError)
 
   // Then Delete the row
   const { data: deletedDate, error } = await supabase
@@ -42,7 +44,6 @@ export default defineEventHandler(async (event) => {
       statusMessage: error.message,
     })
   }
-  console.log('======deletedDate=======', deletedDate, error)
 
   return { success: true }
 })

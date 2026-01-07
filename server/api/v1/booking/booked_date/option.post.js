@@ -1,7 +1,13 @@
-import { defineEventHandler, readBody } from 'h3'
+import { defineEventHandler, readBody, createError } from 'h3'
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)
+  if (!body?.id) {
+    throw createError({ statusCode: 400, statusMessage: 'id requis' })
+  }
+  if (body.booked_places === undefined || body.booked_places === null) {
+    throw createError({ statusCode: 400, statusMessage: 'booked_places requis' })
+  }
 
   // Check if the date is already booked
   const { data: bookedDate, error: bookedDateError } = await supabase
@@ -9,8 +15,12 @@ export default defineEventHandler(async (event) => {
     .select('is_option, travel_date_id')
     .eq('id', body.id)
     .single()
-  if (bookedDateError) return { error: bookedDateError.message }
-  if (bookedDate.is_option) return { error: 'La date est déjà réservée' }
+  if (bookedDateError || !bookedDate) {
+    throw createError({ statusCode: 404, statusMessage: bookedDateError?.message || 'Réservation introuvable' })
+  }
+  if (bookedDate.is_option) {
+    throw createError({ statusCode: 409, statusMessage: 'La date est déjà réservée' })
+  }
   else {
     // Convert badges from string to array if needed
 
@@ -27,14 +37,12 @@ export default defineEventHandler(async (event) => {
       .from('booked_dates')
       .select('booked_places')
       .eq('travel_date_id', bookedDate.travel_date_id)
-    if (sumError) return { error: sumError.message }
+    if (sumError) throw createError({ statusCode: 500, statusMessage: sumError.message })
     const totalBooked = (allBooked || []).reduce((acc, row) => acc + (row.booked_places || 0), 0)
-    await supabase
-      .from('travel_dates')
-      .update({ booked_seat: totalBooked })
-      .eq('id', bookedDate.travel_date_id)
+    const recomputeRes = await booking.updateTravelDate(bookedDate.travel_date_id, totalBooked)
+    if (recomputeRes?.error) throw createError({ statusCode: 500, statusMessage: recomputeRes.error })
 
-    if (error) return { error: error.message }
+    if (error) throw createError({ statusCode: 500, statusMessage: error.message })
     return data
   }
 })
