@@ -1,5 +1,58 @@
 import { algoliasearch } from 'algoliasearch'
-import { createClient } from '@sanity/client'
+import { createClient, type SanityClient } from '@sanity/client'
+
+type AlgoliaClient = {
+  saveObjects: (args: { indexName: string, objects: unknown[] }) => Promise<unknown>
+  deleteObjects: (args: { indexName: string, objectIDs: string[] }) => Promise<unknown>
+}
+
+type Slug = { current?: string }
+
+type RegionRef = {
+  _id: string
+  nom?: string
+  slug?: Slug
+}
+
+type DestinationRef = {
+  _id: string
+  title?: string
+  slug?: Slug
+  regions?: RegionRef[]
+}
+
+type RegionDoc = {
+  _id: string
+  nom?: string
+  slug?: Slug
+  meta_description?: string
+  interjection?: string
+  image?: string
+  destinations?: Array<{ title?: string, slug?: Slug }>
+  voyageCount?: number
+}
+
+type DestinationDoc = {
+  _id: string
+  title?: string
+  slug?: Slug
+  metaDescription?: string
+  interjection?: string
+  image?: string
+  regions?: RegionRef[]
+  voyageCount?: number
+}
+
+type VoyageDoc = {
+  _id: string
+  title?: string
+  slug?: Slug
+  availabilityTypes?: string[]
+  monthlyAvailability?: unknown[]
+  difficulty?: string
+  image?: string
+  destinations?: DestinationRef[]
+}
 
 /**
  * Update Algolia index with fresh data from Sanity
@@ -10,7 +63,7 @@ export async function updateAlgoliaIndex() {
   const algoliaClient = algoliasearch(
     config.public.algolia.applicationId,
     process.env.ALGOLIA_API_WRITE || config.public.algolia.apiKey,
-  )
+  ) as unknown as AlgoliaClient
 
   const sanityClient = createClient({
     projectId: config.public.sanity.projectId,
@@ -18,7 +71,7 @@ export async function updateAlgoliaIndex() {
     apiVersion: '2025-01-01',
     token: process.env.SANITY_WRITE_TOKEN,
     useCdn: false,
-  })
+  }) as SanityClient
 
   try {
     console.log('🔍 [Algolia] Fetching data from Sanity...')
@@ -34,12 +87,13 @@ export async function updateAlgoliaIndex() {
     console.log(`✅ [Algolia] Fetched ${destinations.length} destinations`)
     console.log(`✅ [Algolia] Fetched ${voyages.length} voyages`)
 
-    const namibiTravel = voyages.find((voyage: any) => voyage.slug === 'voyage-aventure-namibie')
-    console.log('=======namibiTravel=========', namibiTravel)
     // Transform data into Algolia records
     console.log('🔄 [Algolia] Transforming data into records...')
-    const records = transformToAlgoliaRecords(regions, destinations, voyages)
+    const { records, deleteObjectIDs } = transformToAlgoliaRecords(regions, destinations, voyages)
     console.log(`✅ [Algolia] Created ${records.length} records`)
+    if (deleteObjectIDs.length > 0) {
+      console.log(`🧹 [Algolia] Will delete ${deleteObjectIDs.length} stale voyage records`)
+    }
 
     // Index to Algolia
     console.log('📤 [Algolia] Indexing to Algolia...')
@@ -47,6 +101,14 @@ export async function updateAlgoliaIndex() {
       indexName: 'odysway',
       objects: records,
     })
+
+    if (deleteObjectIDs.length > 0) {
+      console.log('🗑️ [Algolia] Deleting stale voyage records...')
+      await algoliaClient.deleteObjects({
+        indexName: 'odysway',
+        objectIDs: deleteObjectIDs,
+      })
+    }
 
     console.log('✅ [Algolia] Successfully indexed all records!')
     return { success: true, count: records.length }
@@ -57,7 +119,7 @@ export async function updateAlgoliaIndex() {
   }
 }
 
-async function fetchRegions(client: any) {
+async function fetchRegions(client: SanityClient): Promise<RegionDoc[]> {
   const query = `*[_type == "region" && !(_id in path('drafts.**'))] {
     _id,
     nom,
@@ -78,7 +140,7 @@ async function fetchRegions(client: any) {
   return await client.fetch(query)
 }
 
-async function fetchDestinations(client: any) {
+async function fetchDestinations(client: SanityClient): Promise<DestinationDoc[]> {
   const query = `*[_type == "destination" && !(_id in path('drafts.**'))] {
     _id,
     title,
@@ -100,11 +162,9 @@ async function fetchDestinations(client: any) {
   return await client.fetch(query)
 }
 
-async function fetchVoyages(client: any) {
-  const query = `*[_type == "voyage" && !(_id in path('drafts.**')) && (
-    !('custom' in availabilityTypes) ||
-    (count(availabilityTypes) > 1)
-  )] {
+async function fetchVoyages(client: SanityClient): Promise<VoyageDoc[]> {
+  // Fetch ALL voyages (including drafts). Filtering/cleanup is handled at indexing time.
+  const query = `*[_type == "voyage"] {
     _id,
     title,
     slug,
@@ -127,13 +187,14 @@ async function fetchVoyages(client: any) {
   return await client.fetch(query)
 }
 
-function transformToAlgoliaRecords(regions: any[], destinations: any[], voyages: any[]) {
-  const records: any[] = []
+function transformToAlgoliaRecords(regions: RegionDoc[], destinations: DestinationDoc[], voyages: VoyageDoc[]) {
+  const records: Array<Record<string, unknown>> = []
+  const deleteObjectIDs = new Set<string>()
 
   // Add region records
-  regions.forEach((region: any) => {
-    const destinationNames = region.destinations?.map((d: any) => d.title).filter(Boolean) || []
-    const destinationSlugs = region.destinations?.map((d: any) => d.slug?.current).filter(Boolean) || []
+  regions.forEach((region) => {
+    const destinationNames = region.destinations?.map(d => d.title).filter(Boolean) || []
+    const destinationSlugs = region.destinations?.map(d => d.slug?.current).filter(Boolean) || []
 
     records.push({
       objectID: `region_${region._id}`,
@@ -150,9 +211,9 @@ function transformToAlgoliaRecords(regions: any[], destinations: any[], voyages:
   })
 
   // Add destination records
-  destinations.forEach((destination: any) => {
-    const regionNames = destination.regions?.map((r: any) => r.nom).filter(Boolean) || []
-    const regionSlugs = destination.regions?.map((r: any) => r.slug?.current).filter(Boolean) || []
+  destinations.forEach((destination) => {
+    const regionNames = destination.regions?.map(r => r.nom).filter(Boolean) || []
+    const regionSlugs = destination.regions?.map(r => r.slug?.current).filter(Boolean) || []
 
     records.push({
       objectID: `destination_${destination._id}`,
@@ -168,17 +229,46 @@ function transformToAlgoliaRecords(regions: any[], destinations: any[], voyages:
     })
   })
 
+  // If a voyage is in draft, remove the published version from Algolia.
+  // In Sanity, drafts have ids like "drafts.<publishedId>".
+  const draftBaseIds = new Set<string>()
+  voyages.forEach((voyage) => {
+    if (typeof voyage?._id === 'string' && voyage._id.startsWith('drafts.')) {
+      draftBaseIds.add(voyage._id.replace(/^drafts\./, ''))
+    }
+  })
+  draftBaseIds.forEach(baseId => deleteObjectIDs.add(`voyage_${baseId}`))
+
   // Add voyage records
-  voyages.forEach((voyage: any) => {
-    const destinationNames = voyage.destinations?.map((d: any) => d.title).filter(Boolean) || []
-    const destinationSlugs = voyage.destinations?.map((d: any) => d.slug?.current).filter(Boolean) || []
+  voyages.forEach((voyage) => {
+    if (typeof voyage?._id !== 'string') return
+
+    const isDraft = voyage._id.startsWith('drafts.')
+    const baseId = voyage._id.replace(/^drafts\./, '')
+
+    // Never index drafts; instead remove the published record from Algolia.
+    if (isDraft) return
+    if (draftBaseIds.has(baseId)) return
+
+    // If availabilityTypes is exactly ["custom"], remove it from Algolia (and do not index it).
+    const availabilityTypes: string[] = Array.isArray(voyage.availabilityTypes)
+      ? voyage.availabilityTypes.filter(x => typeof x === 'string')
+      : []
+    const isCustomOnly = availabilityTypes.length === 1 && availabilityTypes[0] === 'custom'
+    if (isCustomOnly) {
+      deleteObjectIDs.add(`voyage_${baseId}`)
+      return
+    }
+
+    const destinationNames = voyage.destinations?.map(d => d.title).filter(Boolean) || []
+    const destinationSlugs = voyage.destinations?.map(d => d.slug?.current).filter(Boolean) || []
 
     // Collect all regions from destinations
     const allRegions = new Set()
     const allRegionSlugs = new Set()
 
-    voyage.destinations?.forEach((dest: any) => {
-      dest.regions?.forEach((region: any) => {
+    voyage.destinations?.forEach((dest) => {
+      dest.regions?.forEach((region) => {
         if (region.nom) allRegions.add(region.nom)
         if (region.slug?.current) allRegionSlugs.add(region.slug.current)
       })
@@ -188,13 +278,13 @@ function transformToAlgoliaRecords(regions: any[], destinations: any[], voyages:
     const regionSlugs = Array.from(allRegionSlugs)
 
     records.push({
-      objectID: `voyage_${voyage._id}`,
+      objectID: `voyage_${baseId}`,
       type: 'voyage',
       name: voyage.title,
       slug: voyage.slug?.current,
       title: voyage.title,
       image: voyage.image,
-      availabilityTypes: voyage.availabilityTypes || [],
+      availabilityTypes,
       monthlyAvailability: voyage.monthlyAvailability || [],
       difficulty: voyage.difficulty,
       destinations: destinationNames,
@@ -205,5 +295,5 @@ function transformToAlgoliaRecords(regions: any[], destinations: any[], voyages:
     })
   })
 
-  return records
+  return { records, deleteObjectIDs: Array.from(deleteObjectIDs) }
 }
