@@ -34,6 +34,8 @@ export async function updateAlgoliaIndex() {
     console.log(`✅ [Algolia] Fetched ${destinations.length} destinations`)
     console.log(`✅ [Algolia] Fetched ${voyages.length} voyages`)
 
+    const namibiTravel = voyages.find((voyage: any) => voyage.slug === 'voyage-aventure-namibie')
+    console.log('=======namibiTravel=========', namibiTravel)
     // Transform data into Algolia records
     console.log('🔄 [Algolia] Transforming data into records...')
     const records = transformToAlgoliaRecords(regions, destinations, voyages)

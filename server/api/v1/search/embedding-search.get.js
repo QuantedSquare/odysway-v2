@@ -44,6 +44,7 @@ export default eventHandler(async (event) => {
     // Transform Algolia hits to frontend format
     const allResults = hits.filter((hit) => {
       if (hit.type === 'voyage') {
+        console.log('=======hit=========', hit)
         return (hit.availabilityTypes?.includes('groupe') || hit.availabilityTypes?.includes('privatisation'))
       }
       return true
