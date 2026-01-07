@@ -1,8 +1,5 @@
 import { defineEventHandler, getHeader, createError } from 'h3'
 import axios from 'axios'
-import supabase from '../../../utils/supabase'
-import booking from '../../../utils/booking'
-import activecampaign from '../../../utils/activecampaign'
 
 export default defineEventHandler(async (event) => {
   // Get all booked_dates with is_option == true and expiracy_date < today
