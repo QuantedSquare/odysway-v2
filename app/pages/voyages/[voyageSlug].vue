@@ -58,6 +58,7 @@
           />
 
           <LazyDatesPricesContainer
+            :closing-days="voyage.closingDays"
             :date-sections="page.dateSections"
             :indiv-section="page.indivSection"
             :is-groupe-available="voyage.availabilityTypes?.includes('groupe')"

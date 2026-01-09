@@ -248,7 +248,7 @@ const displayedDates = computed(() => {
     const filteredDates = dates.value.filter(d => getDateStatus(d)?.status !== 'full')
 
     const sortedByDates = filteredDates
-      .filter(date => dayjs(date.departure_date).isAfter(dayjs()))
+      .filter(date => dayjs(date.departure_date).isAfter(dayjs().add(voyage.closingDays, 'day')))
       .sort((a, b) => dayjs(a.departure_date).diff(dayjs(b.departure_date)))
 
     return sortedByDates.slice(0, 4).map((date) => {

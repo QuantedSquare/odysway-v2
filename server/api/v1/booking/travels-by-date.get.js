@@ -32,6 +32,8 @@ export default defineEventHandler(async () => {
   const travelsQuery = `*[_type == "voyage" && (
     !('custom' in availabilityTypes)
   )]{
+    _id,
+    closingDays,
     "slug": slug.current,
     title,
     image,
@@ -64,6 +66,8 @@ export default defineEventHandler(async () => {
       destinations: travel.destinations || [],
       dates,
       duration: travel.duration,
+      closingDays: travel.closingDays,
+      voyage_id: travel._id,
     }
   })
   return travelWithDates

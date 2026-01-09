@@ -198,7 +198,7 @@ const fetchTravels = async () => {
 
     travels.value = data.map((travel) => {
       const futureDates = travel.dates
-        .filter(dateInfo => dayjs(dateInfo.departure_date).isSame(dayjs(), 'day') || dayjs(dateInfo.departure_date).isAfter(dayjs()))
+        .filter(dateInfo => dayjs(dateInfo.departure_date).isAfter(dayjs().add(travel.closingDays, 'day')))
         .sort((a, b) => dayjs(a.departure_date).valueOf() - dayjs(b.departure_date).valueOf())
       return {
         ...travel,

@@ -281,7 +281,8 @@ const homeQuery = groq`
         title,
         availabilityTypes,
         duration,
-        pricing
+        pricing,
+        closingDays
       }
     },
     experienceCarousel{
@@ -358,7 +359,7 @@ const homeQuery = groq`
 const { data: homeSanity } = await useAsyncData('home', () =>
   sanity.fetch(homeQuery),
 )
-
+console.log('!! homeSanity', homeSanity.value)
 const homeVoyages = computed(() => {
   if (!homeSanity.value) return []
   const sections = [

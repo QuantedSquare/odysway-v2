@@ -417,6 +417,14 @@ export const voyageType = defineType({
       ],
     }),
     defineField({
+      name: 'closingDays',
+      type: 'number',
+      group: ['pricing', 'requiredBMS'],
+      title: 'Nombre de jours de fermeture des dates (si valeur = 30, la date sera vue comme complète 30 jours avant le départ)',
+      description: 'Nombre de jours pour la fermeture du voyage',
+      initialValue: 30,
+    }),
+    defineField({
       name: 'pricing',
       type: 'object',
       group: 'pricing',

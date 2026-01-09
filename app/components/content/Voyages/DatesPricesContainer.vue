@@ -85,7 +85,7 @@ const { dates } = useDates()
 const isExpanded = ref(false)
 const route = useRoute()
 
-const { dateSections, indivSection, isGroupeAvailable, isPrivatisationAvailable } = defineProps({
+const { dateSections, indivSection, isGroupeAvailable, isPrivatisationAvailable, closingDays } = defineProps({
   dateSections: {
     type: Object,
     required: true,
@@ -110,6 +110,10 @@ const { dateSections, indivSection, isGroupeAvailable, isPrivatisationAvailable 
     type: Number,
     default: 0,
   },
+  closingDays: {
+    type: Number,
+    default: 30,
+  },
 })
 
 watch(isExpanded, (newValue) => {
@@ -122,7 +126,7 @@ watch(isExpanded, (newValue) => {
 
 const sortedByDates = computed(() => {
   return dates.value
-    .filter(date => dayjs(date.departure_date).isAfter(dayjs()))
+    .filter(date => dayjs(date.departure_date).isAfter(dayjs().add(closingDays, 'day')))
     .sort((a, b) => dayjs(a.departure_date).diff(dayjs(b.departure_date)))
 })
 
