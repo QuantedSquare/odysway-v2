@@ -5,12 +5,21 @@
       location="right"
       disable-resize-watcher
       mobile
+      :style="drawerStyle"
       :class="[
         'custom-padding',
         isTransparent ? 'drawer-transparent' : 'drawer-solid',
       ]"
     >
-      <div class="d-flex flex-column ga-4 pa-4">
+      <div
+        class="d-flex flex-column ga-4 pa-4 mt-10"
+        :style="drawerContentStyle"
+      >
+        <div class="d-flex justify-center">
+          <SearchDialog
+            v-if="route.path !== '/'"
+          />
+        </div>
         <v-btn-secondary
           v-if="header?.button5?.visible"
           block
@@ -81,6 +90,57 @@ const { y } = useWindowScroll()
 const isScrolled = computed(() => y.value > 200)
 const isTransparent = computed(() => !isScrolled.value && route.path === '/')
 
+const headerTopOffset = ref(0)
+const headerHeight = ref(0)
+
+function updateHeaderMetrics() {
+  // HeaderOdysway mobile wrapper uses this class
+  const el = document?.querySelector?.('.mobile-header')
+  if (!el) {
+    headerTopOffset.value = 0
+    headerHeight.value = 0
+    return
+  }
+
+  const rect = el.getBoundingClientRect()
+  headerTopOffset.value = Math.max(0, Math.round(rect.top))
+  headerHeight.value = Math.max(0, Math.round(rect.height))
+}
+
+const drawerStyle = computed(() => {
+  // Align the drawer panel with the floating header top border
+  const top = headerTopOffset.value
+  return {
+    top: `${top}px`,
+    height: `calc(100dvh - ${top}px)`,
+  }
+})
+
+const drawerContentStyle = computed(() => {
+  // Push content below the header height so it visually matches the header top border
+  // (pa-4 already adds padding; we only add the extra header height here)
+  return {
+    paddingTop: `${headerHeight.value}px`,
+  }
+})
+
+onMounted(() => {
+  updateHeaderMetrics()
+  window.addEventListener('scroll', updateHeaderMetrics, { passive: true })
+  window.addEventListener('resize', updateHeaderMetrics, { passive: true })
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', updateHeaderMetrics)
+  window.removeEventListener('resize', updateHeaderMetrics)
+})
+
+watch(model, (isOpen) => {
+  if (isOpen) updateHeaderMetrics()
+})
+
+watch(y, () => updateHeaderMetrics())
+
 function captureOutboundLink(btn) {
   gtag('event', 'Header Button', { eventAction: 'Click', eventLabel: `Header button "${btn}"` })
 }
@@ -88,10 +148,7 @@ function captureOutboundLink(btn) {
 
 <style scoped>
 .custom-padding{
-  margin-top: -80px;
-  padding-top: 10px;
   padding-bottom: 100px;
-  height: 200vh!important;
 }
 .drawer-solid {
   background: white !important;
@@ -103,8 +160,7 @@ function captureOutboundLink(btn) {
 }
 @media (max-width: 600px) {
   .custom-padding{
-    margin-top: -136px;
-    padding-top: 60px;
+    padding-top: 0px;
   }
 }
 .drawer-shadow{

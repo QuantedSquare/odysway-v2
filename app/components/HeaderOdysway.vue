@@ -71,6 +71,7 @@
         class="d-flex align-center"
         :class="isTransparent ? '' : 'ga-4'"
       >
+        <SearchDialog v-if="route.path !== '/'" />
         <v-btn
           v-if="header?.button1?.visible"
           height="45"
@@ -154,9 +155,8 @@ const router = useRouter()
 const model = defineModel({ type: Boolean, default: false })
 const img = useImage()
 const route = useRoute()
-// const searchDialogOpen = ref(false)
 
-const { y, isScrolling } = useWindowScroll()
+const { y } = useWindowScroll()
 
 const { header } = defineProps({
   header: {
@@ -171,9 +171,6 @@ function captureOutboundLink(btn) {
 }
 const isScrolled = computed(() => y.value > 200)
 const isTransparent = computed(() => !isScrolled.value && route.path === '/')
-watch(isScrolling, (newVal) => {
-  model.value = false
-})
 </script>
 
 <style scoped>

@@ -357,7 +357,7 @@ function closeDialog() {
 }
 
 .search-trigger-btn:hover {
-  background-color: #7e94b484;
+  background-color: rgb(var(--v-theme-primary-light-4), 0.1);
   transform: scale(1.05);
 }
 
