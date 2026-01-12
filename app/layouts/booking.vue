@@ -33,6 +33,31 @@
       <v-spacer />
 
       <v-btn
+        v-if="bookingUser"
+        variant="text"
+        class="text-none"
+        :title="bookingUser.email"
+      >
+        <v-avatar
+          size="28"
+          class="mr-2"
+        >
+          <v-img
+            v-if="bookingUser.picture"
+            :src="bookingUser.picture"
+            alt="Avatar"
+          />
+          <span
+            v-else
+            class="text-caption"
+          >
+            {{ (bookingUser.email || '?').slice(0, 1).toUpperCase() }}
+          </span>
+        </v-avatar>
+        <span v-if="mdAndUp">{{ bookingUser.email }}</span>
+      </v-btn>
+
+      <v-btn
         variant="text"
         :prepend-icon="mdiLogout"
         @click="logout"
@@ -47,6 +72,7 @@
 </template>
 
 <script setup>
+import { onMounted, ref } from 'vue'
 import { useDisplay } from 'vuetify'
 import { mdiHome, mdiLogout } from '@mdi/js'
 import { useImage } from '#imports'
@@ -56,6 +82,28 @@ const { header } = useAppConfig()
 const { mdAndUp } = useDisplay()
 const img = useImage()
 const router = useRouter()
+
+const bookingUser = useState('bookingUser', () => null)
+const loadingUser = ref(false)
+
+const loadBookingUser = async () => {
+  if (!import.meta.client) return
+  if (bookingUser.value || loadingUser.value) return
+
+  loadingUser.value = true
+  try {
+    const res = await fetch('/api/v1/auth/check', { credentials: 'include' })
+    const data = await res.json().catch(() => ({}))
+    if (res.ok && data?.success && data?.user?.email) {
+      bookingUser.value = data.user
+    }
+  }
+  finally {
+    loadingUser.value = false
+  }
+}
+
+onMounted(loadBookingUser)
 
 const logout = async () => {
   await fetch('/api/v1/auth/logout', {

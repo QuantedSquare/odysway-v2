@@ -1,6 +1,5 @@
 import { defineEventHandler, getCookie, setCookie } from 'h3'
 import jwt from 'jsonwebtoken'
-// import { isAllowedEmail, getSuperadmins } from '~/server/utils/bookingAuth'
 
 export default defineEventHandler((event) => {
   const token = getCookie(event, 'booking_token')

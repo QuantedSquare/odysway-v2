@@ -10,6 +10,10 @@ export default defineEventHandler(async (event) => {
   }
   const body = await readBody(event)
 
+  const config = useRuntimeConfig()
+  const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
+  const bookingUser = isProdEnv ? requireBookingUser(event) : getBookingUserOrNull(event)
+
   // Only allow editable fields
   const updateFields = {}
   const allowed = [
@@ -30,6 +34,12 @@ export default defineEventHandler(async (event) => {
       statusCode: 400,
       statusMessage: 'Aucun champ à mettre à jour',
     })
+  }
+
+  // Track "save" click: server-side timestamp + editor
+  updateFields.updated_at = new Date().toISOString()
+  if (bookingUser?.email) {
+    updateFields.last_editor = bookingUser.email
   }
 
   // Convert badges from string to array if needed

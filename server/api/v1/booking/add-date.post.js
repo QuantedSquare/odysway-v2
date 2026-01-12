@@ -1,6 +1,10 @@
 import { defineEventHandler, readBody, createError } from 'h3'
 
 export default defineEventHandler(async (event) => {
+  const config = useRuntimeConfig()
+  const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
+  const bookingUser = isProdEnv ? requireBookingUser(event) : getBookingUserOrNull(event)
+
   const body = await readBody(event)
   if (!body?.travel_slug) {
     throw createError({ statusCode: 400, statusMessage: 'travel_slug requis' })
@@ -34,6 +38,12 @@ export default defineEventHandler(async (event) => {
   ]
   for (const key of allowed) {
     if (body[key] !== undefined) insertData[key] = body[key]
+  }
+
+  // Track creation (same logic as "save")
+  insertData.updated_at = new Date().toISOString()
+  if (bookingUser?.email) {
+    insertData.last_editor = bookingUser.email
   }
 
   if (!('booked_seat' in insertData)) insertData.booked_seat = 0

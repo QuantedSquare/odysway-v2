@@ -1,7 +1,6 @@
 import { defineEventHandler, getCookie, getQuery, sendRedirect, setCookie } from 'h3'
 import { createRemoteJWKSet, jwtVerify } from 'jose'
 import jwt from 'jsonwebtoken'
-// import { isAllowedEmail, getSuperadmins } from '~/server/utils/bookingAuth'
 
 const GOOGLE_TOKEN_URL = 'https://oauth2.googleapis.com/token'
 const GOOGLE_JWKS = createRemoteJWKSet(new URL('https://www.googleapis.com/oauth2/v3/certs'))

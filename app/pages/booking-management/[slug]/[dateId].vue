@@ -33,6 +33,13 @@
               <p class="text-body-2 text-medium-emphasis">
                 Ajustez les informations, gérez les voyageurs et générez les liens de paiement.
               </p>
+              <p
+                v-if="form.updated_at"
+                class="text-caption text-medium-emphasis"
+              >
+                Dernière mise à jour : {{ dayjs(form.updated_at).format('DD/MM/YYYY HH:mm') }}
+                <span v-if="form.last_editor"> — {{ form.last_editor }}</span>
+              </p>
             </div>
             <v-chip
               :color="form.published ? 'green-light' : 'warning'"
