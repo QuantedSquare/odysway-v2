@@ -46,6 +46,20 @@ export default defineNuxtConfig({
         { rel: 'dns-prefetch', href: 'https://connect.facebook.net' },
         // { rel: 'dns-prefetch', href: 'https://static.hotjar.com' },
       ],
+      script: [
+        {
+          id: 'stape-gtm',
+          tagPosition: 'head',
+          innerHTML: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src="https://load.sst.odysway.com/28bwtluuzax.js?"+i;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','5qth5h1=EQVHMiEhWTo1Mkk2NiY%2FUQ5cSFtEShAZRQ4eDAYbFQ5WAhUY');`,
+        },
+      ],
+      noscript: [
+        {
+          id: 'stape-gtm-noscript',
+          tagPosition: 'bodyOpen',
+          innerHTML: '<iframe src="https://load.sst.odysway.com/ns.html?id=GTM-MMS3CCJK" height="0" width="0" style="display:none;visibility:hidden"></iframe>',
+        },
+      ],
       // script: [
       //   { src: 'https://embed.small.chat/TD5UA8M5KC05K7GGNJNM.js', async: true },
       // ],
