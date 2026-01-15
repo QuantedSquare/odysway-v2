@@ -563,7 +563,7 @@ const paymentTypes = [
 const funnelLinkType = ref('deposit')
 const funnelLinkTypes = [
   { value: 'deposit', label: 'Acompte' },
-  // { value: 'full', label: 'Total' },
+  { value: 'full', label: 'Total' },
 ]
 const funnelLink = computed(() => {
   if (!form.value.id) return ''

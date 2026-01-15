@@ -249,7 +249,7 @@
         </Transition>
 
         <!-- Full payment required notice -->
-        <FunnelStepsSummaryLine v-if="route.query.type === 'full'">
+        <FunnelStepsSummaryLine v-if="route.query.type === 'full' && voyage.departureDate && dayjs(voyage.departureDate).diff(dayjs(), 'days') < 30">
           <template #left>
             <span class="font-italic text-body-2 ">{{ page.summary.full_payment_required }}</span>
           </template>
