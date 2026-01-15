@@ -282,6 +282,7 @@ onMounted(() => {
 
 const sanity = useSanity()
 const img = useImage()
+const route = useRoute()
 
 const dialogOpen = ref(false)
 const searchText = ref(null)
@@ -342,6 +343,12 @@ function closeDialog() {
   searchText.value = null
   destinations.value = []
 }
+
+watch(() => route.path, () => {
+  if (dialogOpen.value) {
+    closeDialog()
+  }
+})
 </script>
 
 <style scoped>
