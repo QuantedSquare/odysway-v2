@@ -313,8 +313,7 @@ const submitStepData = async () => {
         optinNewsletter: model.value.optinNewsletter,
       }
       trackPixel('track', 'AddToCart')
-      // emit('next')
-      console.log('model', flattenedDeal)
+      emit('next')
       await createDeal(flattenedDeal)
       buttonLoading.value = false
     }
