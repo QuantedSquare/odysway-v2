@@ -201,6 +201,8 @@ const stripePay = async () => {
     insuranceImg: page.assurance_img || 'https://odysway.com/images/default/chapka.png',
     countries: voyage.iso, // Used by chapka to know if it's a CAP-EXPLORACTION or CAP-EXPLORER
     booked_id: route.query.booked_id,
+    departureDate: voyage.departureDate,
+    returnDate: voyage.returnDate,
   }
   if (route.query.type === 'custom') {
     Object.assign(dataForStripeSession, {
@@ -244,6 +246,8 @@ const almaPay = async () => {
     currentUrl: route.fullPath,
     insuranceImg: page.assurance_img || 'https://odysway.com/images/default/chapka.png',
     countries: voyage.iso, // Used by chapka to know if it's a CAP-EXPLORACTION or CAP-EXPLORER
+    departureDate: voyage.departureDate,
+    returnDate: voyage.returnDate,
   }
 
   if (route.query.type === 'custom') {

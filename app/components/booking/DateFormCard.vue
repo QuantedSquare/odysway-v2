@@ -185,12 +185,12 @@
               cols="12"
               md="6"
             >
-              <v-text-field
+              <v-select
                 v-model="localForm.displayed_booked_seat"
+                :items="bookedSeatOptions"
                 label="Places réservées (custom)"
-                type="number"
-                min="0"
                 density="comfortable"
+                clearable
               />
             </v-col>
           </v-row>
@@ -333,6 +333,9 @@ const localForm = ref(clone(props.modelValue))
 const hasCustomBadge = ref(!!localForm.value.badges || !!localForm.value.displayed_badges)
 const syncingFromProp = ref(false)
 
+// Generate options for booked seats (0 to 20)
+const bookedSeatOptions = Array.from({ length: 21 }, (_, i) => i)
+
 watch(
   () => props.modelValue,
   (val) => {
@@ -351,9 +354,24 @@ watch(
   localForm,
   (val) => {
     if (syncingFromProp.value) return
+    // Normalize displayed_booked_seat: null/undefined becomes 0
+    if (val.displayed_booked_seat === null || val.displayed_booked_seat === undefined) {
+      val.displayed_booked_seat = 0
+    }
     emit('update:modelValue', val)
   },
   { deep: true },
+)
+
+// Watch specifically for displayed_booked_seat to normalize null/undefined to 0 immediately when cleared
+watch(
+  () => localForm.value.displayed_booked_seat,
+  (newValue) => {
+    if ((newValue === null || newValue === undefined) && !syncingFromProp.value) {
+      // Set to 0 immediately for better UX (select will show 0 instead of being empty)
+      localForm.value.displayed_booked_seat = 0
+    }
+  },
 )
 
 watch(hasCustomBadge, (enabled) => {
