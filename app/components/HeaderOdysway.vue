@@ -69,7 +69,7 @@
 
       <div
         class="d-flex align-center"
-        :class="isTransparent ? '' : 'ga-4'"
+        :class="isTransparent ? '' : 'ga-'"
       >
         <SearchDialog v-if="route.path !== '/'" />
         <v-btn
@@ -120,8 +120,7 @@
           v-if="header?.button5?.visible"
           height="45"
           :variant="isTransparent ? 'text' : 'tonal'"
-
-          :class="isTransparent ? 'text-soft-blush text-shadow' : 'bg-primary text-white'"
+          :class="isTransparent ? 'text-soft-blush text-shadow' : 'bg-primary text-white ml-3'"
           class="text-caption text-md-body-1 d-none d-md-inline "
           @click="() => { router.push(header.button5.link); trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(header.button5.text) }"
         >
