@@ -7,12 +7,12 @@
       mobile
       :style="drawerStyle"
       :class="[
-        'custom-padding',
+
         isTransparent ? 'drawer-transparent' : 'drawer-solid',
       ]"
     >
       <div
-        class="d-flex flex-column ga-4 pa-4 mt-10"
+        class="d-flex flex-column ga-4 pa-4 mt-8 mt-sm-16 pt-6"
         :style="drawerContentStyle"
       >
         <div class="d-flex justify-center">
@@ -147,9 +147,6 @@ function captureOutboundLink(btn) {
 </script>
 
 <style scoped>
-.custom-padding{
-  padding-bottom: 100px;
-}
 .drawer-solid {
   background: white !important;
 }
@@ -159,9 +156,7 @@ function captureOutboundLink(btn) {
   border: 1px solid rgba(255, 255, 255, 0.404)
 }
 @media (max-width: 600px) {
-  .custom-padding{
-    padding-top: 0px;
-  }
+
 }
 .drawer-shadow{
   box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.259)!important;
