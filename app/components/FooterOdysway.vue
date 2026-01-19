@@ -184,7 +184,7 @@
             md="auto"
             class="d-flex justify-center justify-md-start text-grey py-0"
           >
-            <span class="text-center text-md-left">© Copyright 2025 - Tous droits réservés à Odysway</span>
+            <span class="text-center text-md-left">© Copyright 2026 - Tous droits réservés à Odysway</span>
           </v-col>
           <v-spacer />
           <v-col

@@ -60,5 +60,5 @@ Le site peut utiliser des traceurs ou cookies à des fins statistiques et d’am
 
 Pour toute remarque ou question technique concernant le site, veuillez écrire à : **contact\@odysway.com**.
 
-**© Copyright 2025 – Tous droits réservés à Odysway.**
+**© Copyright 2026 – Tous droits réservés à Odysway.**
 ::
