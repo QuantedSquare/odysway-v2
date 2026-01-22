@@ -18,21 +18,21 @@ Visual representation of how GTM events flow through the application.
                  │
                  ▼
 ┌─────────────────────────────────────────────────────────────┐
-│ 3. Push preload_data event                                  │
+│ 3. Push page_type to dataLayer (NO event key)              │
 │    dataLayer.push({                                         │
-│      event: 'preload_data',                                 │
 │      page_type: 'Homepage'                                  │
 │    })                                                       │
 └────────────────┬────────────────────────────────────────────┘
                  │
                  ▼
 ┌─────────────────────────────────────────────────────────────┐
-│ 4. GTM container loads and processes preload_data          │
+│ 4. GTM container loads and detects page_type               │
 └────────────────┬────────────────────────────────────────────┘
                  │
                  ▼
 ┌─────────────────────────────────────────────────────────────┐
-│ 5. GTM fires page_view event (handled by GTM internally)   │
+│ 5. GTM automatically fires page_view event                  │
+│    (GTM handles this internally based on page_type)         │
 └────────────────┬────────────────────────────────────────────┘
                  │
                  ▼
@@ -46,7 +46,7 @@ Visual representation of how GTM events flow through the application.
 ```
 Homepage Load
      │
-     ├─► preload_data (page_type: 'Homepage')
+     ├─► Push page_type: 'Homepage' (GTM auto-fires page_view)
      │
      └─► Components mount in order:
          │

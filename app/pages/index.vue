@@ -389,7 +389,6 @@ const homeQuery = groq`
 const { data: homeSanity } = await useAsyncData('home', () =>
   sanity.fetch(homeQuery),
 )
-console.log('!! homeSanity', homeSanity.value)
 const homeVoyages = computed(() => {
   if (!homeSanity.value) return []
   const sections = [
@@ -412,23 +411,21 @@ const { datesBySlug } = useTravelDates(homeVoyageSlugs)
 // GTM tracking handlers
 const handleProchainsDepartsClick = () => {
   const link = homeSanity.value?.guaranteedDepartures?.ctaButton?.link || '/prochains-departs'
-  
+
   trackCtaClick({
     ctaId: 'prochains-departs-home',
     ctaLabel: homeSanity.value?.guaranteedDepartures?.ctaButton?.text || 'Prochains départs',
     ctaUrl: link,
   })
-  
+
   // Keep existing tracking
   trackPixel('trackCustom', 'ClickProchainsDeparts')
   captureOutboundLink('Prochains départs')
-  
+
   navigateTo(link)
 }
 
-// console.log('!! datesBySlug', datesBySlug.value)
 if (homeSanity.value) {
-  console.log(homeSanity.value.heroSectionTest)
   // Fallback values for content
   const defaultContent = {
     title: 'Odysway - Voyages en Petits Groupes et Expériences Authentiques',

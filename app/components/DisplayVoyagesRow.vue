@@ -168,8 +168,6 @@ const voyageSlugs = computed(() => [...new Set(
 )])
 
 const { datesBySlug } = useTravelDates(voyageSlugs)
-console.log('!! voyageSlugs', voyageSlugs.value)
-console.log('!! datesBySlug', datesBySlug.value)
 
 const availableVoyages = computed(() => {
   if (route.name === 'experiences') {

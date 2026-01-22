@@ -3,20 +3,49 @@
  * Manages all Google Tag Manager dataLayer push events
  */
 
+import { stegaClean } from '@sanity/client/stega'
+
 export const useGtmTracking = () => {
   /**
+   * Clean Sanity Stega encoding from strings
+   * Recursively cleans all string values in an object
+   * @param {*} value - Value to clean
+   * @returns {*} Cleaned value
+   */
+  const cleanStegaData = (value) => {
+    if (typeof value === 'string') {
+      return stegaClean(value)
+    }
+    if (Array.isArray(value)) {
+      return value.map(item => cleanStegaData(item))
+    }
+    if (value && typeof value === 'object') {
+      const cleaned = {}
+      for (const key in value) {
+        cleaned[key] = cleanStegaData(value[key])
+      }
+      return cleaned
+    }
+    return value
+  }
+
+  /**
    * Push data to GTM dataLayer
+   * Automatically cleans Sanity Stega encoding from all strings
    * @param {Object} data - Data object to push to dataLayer
    */
   const pushToDataLayer = (data) => {
     if (typeof window !== 'undefined' && window.dataLayer) {
-      window.dataLayer.push(data)
-      console.log('📊 GTM Event:', data.event, data)
+      const cleanedData = cleanStegaData(data)
+      window.dataLayer.push(cleanedData)
+      console.log('📊 GTM Event:', cleanedData.event || 'data', cleanedData)
     }
   }
 
   /**
-   * Track preload_data event (must be called BEFORE page_view)
+   * Track preload_data - pushes page_type to dataLayer (NO event key!)
+   * This must be called BEFORE GTM processes the page_view
+   * GTM will automatically fire page_view based on this data
    * @param {string} pageType - Type of page: 'Homepage', 'Page Voyage', 'Blog', 'Page Avis', 'Autres'
    */
   const trackPreloadData = (pageType) => {

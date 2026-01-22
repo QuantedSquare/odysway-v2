@@ -189,6 +189,7 @@ Use these values for `trackPreloadData(pageType)`:
 3. ⚠️ **Always** use `'EUR'` as currency
 4. ⚠️ Use unique `ctaId` for each CTA button
 5. ⚠️ Track list view when it becomes visible (use TrackableVoyageList)
+6. ✅ **Automatic**: Sanity Stega encoding is automatically cleaned from all strings
 
 ## Debugging
 

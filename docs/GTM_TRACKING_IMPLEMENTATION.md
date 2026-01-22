@@ -60,12 +60,17 @@ This plugin handles:
 - Tracks initial page load on `app:mounted`
 - Tracks route changes via `router.afterEach`
 - Only tracks when path changes (not query/hash)
+- **Important**: Pushes `page_type` WITHOUT an `event` key - GTM handles the `page_view` event automatically
 
 ### 3. GTM Tracking Composable
 
 **File**: `app/composables/useGtmTracking.js`
 
-Central composable for all GTM dataLayer events. Includes functions for:
+Central composable for all GTM dataLayer events. 
+
+**Important Feature**: Automatically cleans Sanity Stega encoding from all strings using `stegaClean()`. This prevents invisible Unicode characters from breaking Google Analytics tracking.
+
+Includes functions for:
 
 #### General Events
 - `trackPreloadData(pageType)` - Must be called before page_view
@@ -219,10 +224,11 @@ The homepage (`app/pages/index.vue`) includes tracking for:
 
 ## Data Structure Examples
 
-### preload_data Event
+### preload_data (Page Type Push)
+**Note**: This is NOT an event - it just sets the page_type variable. GTM automatically fires `page_view` based on this.
+
 ```javascript
 {
-  event: 'preload_data',
   page_type: 'Homepage'
 }
 ```
@@ -309,6 +315,15 @@ Use "Google Tag Assistant" Chrome extension to verify:
 - DataLayer structure is correct
 
 ## Important Notes
+
+### Sanity Stega Encoding
+
+✅ **Automatic**: All strings are automatically cleaned of Sanity Stega encoding (invisible Unicode characters used for visual editing) before being pushed to dataLayer. This prevents errors like `ERR_ABORTED 411 (Length Required)` from Google Analytics.
+
+The `cleanStegaData()` function recursively cleans:
+- All string values
+- Nested objects
+- Arrays
 
 ### Event Firing Order
 

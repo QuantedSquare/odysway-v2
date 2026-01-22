@@ -115,9 +115,8 @@
 import { mdiClockTimeThreeOutline } from '@mdi/js'
 import { useDisplay } from 'vuetify'
 import dayjs from 'dayjs'
-import { useImage } from '#imports'
 import { stegaClean } from '@sanity/client/stega'
-
+import { useImage } from '#imports'
 
 defineProps({
   backgroundColor: { type: String, default: 'primary' },
@@ -125,8 +124,8 @@ defineProps({
   introductionColor: { type: String, default: 'grey' },
   avatarSize: { type: String, default: '60' },
   // Blog info
-  blogType: {type: String, default: 'Blog'},
-  badgeColor: {type: String, default: 'secondary'},
+  blogType: { type: String, default: 'Blog' },
+  badgeColor: { type: String, default: 'secondary' },
   readingTime: [String, Number],
   publishedAt: String,
   // Author info
