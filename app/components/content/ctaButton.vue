@@ -9,7 +9,7 @@
       class="text-decoration-none"
       :target="external ? '_blank' : undefined"
       :rel="external ? 'noopener noreferrer' : undefined"
-      @click="trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(link)"
+      @click="handleClick"
     >
       <div
         class="text-body-1 font-weight-bold mx-4"
@@ -39,7 +39,7 @@
 </template>
 
 <script setup>
-defineProps({
+const props = defineProps({
   link: {
     type: String,
     required: true,
@@ -56,10 +56,40 @@ defineProps({
     type: Boolean,
     default: false,
   },
+  ctaId: {
+    type: String,
+    default: null,
+  },
+  ctaLabel: {
+    type: String,
+    default: null,
+  },
 })
+
 const { gtag } = useGtag()
+const { trackRdvClick, trackCtaClick } = useGtmTracking()
 
 function captureOutboundLink(btn) {
   gtag('event', 'Header Button', { eventAction: 'Click', eventLabel: `CTA button "${btn}"` })
+}
+
+const handleClick = () => {
+  // Track RDV click if link contains calendly or rdv keywords
+  if (props.link.includes('calendly') || props.link.toLowerCase().includes('rdv')) {
+    trackRdvClick()
+  }
+  
+  // Track generic CTA click
+  if (props.ctaId || props.ctaLabel) {
+    trackCtaClick({
+      ctaId: props.ctaId || `cta-${props.link}`,
+      ctaLabel: props.ctaLabel || props.link,
+      ctaUrl: props.link,
+    })
+  }
+  
+  // Keep existing tracking
+  trackPixel('trackCustom', 'ClickRDV')
+  captureOutboundLink(props.link)
 }
 </script>

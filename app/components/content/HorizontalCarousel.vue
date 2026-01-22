@@ -26,13 +26,13 @@
           :color="color"
           class="mr-2"
           orientation="left"
-          @click="x -= scrollAmount"
+          @click="handlePrevClick"
         />
         <CustomChevronBtn
           :arrived-state="arrivedState.right"
           :color="color"
           orientation="right"
-          @click="x += scrollAmount"
+          @click="handleNextClick"
         />
       </v-col>
     </v-row>
@@ -94,6 +94,8 @@ const props = defineProps({
   },
 })
 
+const { trackNavSliderClick } = useGtmTracking()
+
 const { mdAndUp, sm, smAndDown } = useDisplay()
 const scrollContainer = ref(null)
 const scrollElement = ref(null)
@@ -140,6 +142,16 @@ const scrollAmount = computed(() => {
     return scrollContainerWidth?.value || 0
   }
 })
+
+const handlePrevClick = () => {
+  x.value -= scrollAmount.value
+  trackNavSliderClick()
+}
+
+const handleNextClick = () => {
+  x.value += scrollAmount.value
+  trackNavSliderClick()
+}
 </script>
 
 <style scoped>

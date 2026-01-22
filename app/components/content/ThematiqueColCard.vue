@@ -12,6 +12,7 @@
       <NuxtLink
         :to="`/${type}/${slug}`"
         class="image-wrapper default-expanded"
+        @click="handleCardClick"
       >
 
         <v-img
@@ -51,7 +52,7 @@ import { useImage } from '#imports'
 
 const imgComp = useImage()
 
-const { image } = defineProps({
+const props = defineProps({
   slug: {
     type: String,
     required: true,
@@ -72,10 +73,24 @@ const { image } = defineProps({
     type: String,
     required: true,
   },
+  promotionName: {
+    type: String,
+    default: null,
+  },
 })
+
+const { trackSelectPromotion } = useGtmTracking()
+
 const imgUrl = computed(() => {
-  return getImageUrl(image?.asset?._ref)
+  return getImageUrl(props.image?.asset?._ref)
 })
+
+const handleCardClick = () => {
+  // Track promotion selection if promotionName is provided
+  if (props.promotionName) {
+    trackSelectPromotion(props.title, props.promotionName)
+  }
+}
 </script>
 
 <style scoped>

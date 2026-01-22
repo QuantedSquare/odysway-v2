@@ -1,0 +1,1415 @@
+Plan de Tracking,,,,,
+,,,,,
+,,,,,
+,,,,,
+"⚠️ Priorité des événements 
+
+Tous les événements doivent être déclenché APRÈS l’événement `preload_data`.
+
+⚠️ Variables
+Si la valeur d’une variable n’est pas disponible comme les 'user_data', nous ne déclarons pas la variable.",,,,,
+,,,,,
+Événement,Interaction utilisateur,DataLayer,DataLayer - Exemple,Statut,Commentaire
+Page View,"Se déclenche à chaque page vue.
+
+Variables à pousser AVANT le chargement du script GTM.","dataLayer.push({
+    'event': 'preload_data',
+    'page_type': '%Catégorie de la page%'
+})
+","dataLayer.push({
+    'page_type': 'Homepage/Page Voyage/Blog/Page Avis/Autres'
+})
+",❌ KO,
+Blog View,Vue de page de blog,Géré depuis GTM,Géré depuis GTM,❌ KO,
+Vue de promotion,L’utilisateur voit une bannière de promotion.,"dataLayer.push({
+    'event': 'view_promotion',
+    'promotion_name': '%Nom de la bannière de promo%'
+})
+","dataLayer.push({
+    'event': 'view_promotion',
+    'promotion_name': 'Expériences à vivre'
+})
+",❌ KO,
+Sélection de promotion,L’utilisateur sélectionne une promotion.,"dataLayer.push({
+    'event': 'select_promotion',
+    'promotion_card_name': '%Nom de la carte sélectionnée dans les promotions%',
+    'promotion_name': '%Nom de la bannière de promo%'
+})
+","dataLayer.push({
+    'event': 'select_promotion',
+    'promotion_card_name': 'Explorer à pied',
+    'promotion_name': 'Expériences à vivre'
+})
+",❌ KO,
+Clic Nav Slider,L’utilisateur clique sur les flèches pour naviguer dans les sliders.,"dataLayer.push({
+    'event': 'clic_nav_slider'
+})
+","dataLayer.push({
+    'event': 'clic_nav_slider'
+})
+",❌ KO,
+Vue de liste produits,L’utilisateur voit une vue de liste de produits.,"dataLayer.push({
+    'event': 'view_item_list',
+    'ecommerce': {
+        'currency': '%Devise%',
+        'items': [
+            {
+                'item_id': '%ID du produit%',
+                'item_name': '%Nom du produit%',
+                'item_category': '%Destination du voyage%',
+                'item_category2': '%Voyage Groupe / Individuel%',
+                'item_category3': '%Période du voyage%',
+                'item_category4': '%Expérience du voyage%',
+                'item_category5': '%Thématique%',
+                'price': %Prix net par unité (incluant les réductions)%,
+                'discount': %Réduction appliquée par unité%,
+                'item_list_name': '%Nom de la liste de produits%'
+            }
+        ]
+    }
+})
+","dataLayer.push({
+    'event': 'view_item_list',
+    'ecommerce': {
+        'currency': 'EUR',
+        'items': [
+            {
+                'item_id': 'item123',
+                'item_name': 'Immersion hivernale au cœur des Pyrénées',
+                'item_category': 'France',
+                'item_category2': 'Groupe',
+                'item_category3': 'Février',
+                'item_category4': 'Explorer à pied',
+                'item_category5': 'Séjours chez l’habitant',
+                'price': 660,
+                'discount': 10,
+                'item_list_name': 'Nos séjours en France'
+            }
+        ]
+    }
+})
+",❌ KO,
+Sélection de produit,L’utilisateur sélectionne un produit depuis une liste.,"dataLayer.push({
+    'event': 'select_item',
+    'ecommerce': {
+        'currency': '%Devise%',
+        'items': [
+            {
+                'item_id': '%ID du produit%',
+                'item_name': '%Nom du produit%',
+                'item_category': '%Destination du voyage%',
+                'item_category2': '%Voyage Groupe / Individuel%',
+                'item_category3': '%Période du voyage%',
+                'item_category4': '%Expérience du voyage%',
+                'item_category5': '%Thématique%',
+                'price': %Prix net par unité (incluant les réductions)%,
+                'discount': %Réduction appliquée par unité%,
+                'item_list_name': '%Nom de la liste de produits%'
+            }
+        ]
+    }
+})
+","dataLayer.push({
+    'event': 'select_item',
+    'ecommerce': {
+        'currency': 'EUR',
+        'items': [
+            {
+                'item_id': 'item123',
+                'item_name': 'Immersion hivernale au cœur des Pyrénées',
+                'item_category': 'France',
+                'item_category2': 'Groupe',
+                'item_category3': 'Février',
+                'item_category4': 'Explorer à pied',
+                'item_category5': 'Séjours chez l’habitant',
+                'price': 660,
+                'discount': 10,
+                'item_list_name': 'Nos séjours en France'
+            }
+        ]
+    }
+})
+",❌ KO,
+Vue Produit,"Vue de page de voyage (donc hors blog, résultats de recherche etc)","dataLayer.push({
+    'event': 'view_item',
+    'ecommerce': {
+        'value': %Montant total TTC%,
+        'currency': '%Devise%',
+        'items': [
+            {
+                'item_id': '%ID du produit%',
+                'item_name': '%Nom du produit%',
+                'item_category': '%Destination du voyage%',
+                'item_category2': '%Voyage Groupe / Individuel%',
+                'item_category3': '%Période du voyage%',
+                'item_category4': '%Expérience du voyage%',
+                'item_category5': '%Thématique%',
+                'price': %Prix net par unité (incluant les réductions)%,
+                'discount': %Réduction appliquée par unité%
+            }
+        ]
+    }
+})
+","dataLayer.push({
+    'event': 'view_item',
+    'ecommerce': {
+        'value': 1320,
+        'currency': 'EUR',
+        'items': [
+            {
+                'item_id': 'item123',
+                'item_name': 'Immersion hivernale au cœur des Pyrénées',
+                'item_category': 'France',
+                'item_category2': 'Groupe',
+                'item_category3': 'Février',
+                'item_category4': 'Explorer à pied',
+                'item_category5': 'Séjours chez l’habitant',
+                'price': 660,
+                'discount': 10
+            }
+        ]
+    }
+})
+",❌ KO,
+Ajout à la liste d’envie,"Lorsque quelqu'un clique sur une date de groupe (début du funnel, avant de rentrer ses informations)","dataLayer.push({
+    'event': 'add_to_wishlist',
+    'ecommerce': {
+        'value': %Montant total TTC%,
+        'currency': '%Devise%',
+        'items': [
+            {
+                'item_id': '%ID du produit%',
+                'item_name': '%Nom du produit%',
+                'item_category': '%Destination du voyage%',
+                'item_category2': '%Voyage Groupe / Individuel%',
+                'item_category3': '%Période du voyage%',
+                'item_category4': '%Expérience du voyage%',
+                'item_category5': '%Thématique%',
+                'price': %Prix net par unité (incluant les réductions)%,
+                'discount': %Réduction appliquée par unité%,
+                'item_variant': '%Variante du produit%',
+                'quantity': %Quantité sélectionnée du produit%
+            }
+        ]
+    }
+})
+","dataLayer.push({
+    'event': 'add_to_wishlist',
+    'ecommerce': {
+        'value': 1320,
+        'currency': 'EUR',
+        'items': [
+            {
+                'item_id': 'item123',
+                'item_name': 'Immersion hivernale au cœur des Pyrénées',
+                'item_category': 'France',
+                'item_category2': 'Groupe',
+                'item_category3': 'Février',
+                'item_category4': 'Explorer à pied',
+                'item_category5': 'Séjours chez l’habitant',
+                'price': 660,
+                'discount': 10,
+                'item_variant': 'Adulte / Enfant',
+                'quantity': 2
+            }
+        ]
+    }
+})
+",❌ KO,
+Search Bar,L’utilisateur effectue une recherche via la barre de recherche principale.,"dataLayer.push({
+    'event': 'search_bar',
+    'destination': '%Destination sélectionnée via la recherche%',
+    'type_voyage': '%Type de voyage sélectionné via la recherche%',
+    'periode': '%Période sélectionnée via la recherche%',
+    'voyage_garanti': '%Filtre “Voyage garanti”%'
+})
+","dataLayer.push({
+    'event': 'search_bar',
+    'destination': 'Espagne',
+    'type_voyage': 'Voyage privatisé',
+    'periode': 'Février',
+    'voyage_garanti': 'true / false'
+})
+",❌ KO,
+Search Term,L’utilisateur effectue une recherche via le moteur de recherche sémantique.,"dataLayer.push({
+    'event': 'search_term',
+    'search_term': '%Termes cherchés via la recherche%'
+})
+","dataLayer.push({
+    'event': 'search_term',
+    'search_term': 'Voyage espagne en été'
+})
+",❌ KO,
+Clic Menu,L’utilisateur clique sur un lien du menu de suggestions.,"dataLayer.push({
+    'event': 'clic_menu',
+    'niv1': '%Niveau 1 du menu en bas%',
+    'niv2': '%Niveau 2 du menu  en bas%',
+    'niv3': '%Niveau 3 du menu en bas%'
+})
+","dataLayer.push({
+    'event': 'clic_menu',
+    'niv1': 'Expériences',
+    'niv2': 'Voyages en petis groupes & privatifs',
+    'niv3': 'Voyages privatisés'
+})
+",❌ KO,
+Inscription alerte,L’utilisateur s’inscrit pour recevoir des alertes sur un voyage.,"dataLayer.push({
+    'event': 'inscription_alerte',
+    'user_data': {
+        'user_mail': '%Mail de l’utilisateur%'
+    }
+})
+","dataLayer.push({
+    'event': 'inscription_alerte',
+    'user_data': {
+        'user_mail': 'user@gmail.com'
+    }
+})
+",❌ KO,
+Reservation - Step 0 - Start,L’utilisateur commence le funnel de Réservation.,"dataLayer.push({
+    'event': 'reservation_step0',
+    'ecommerce': {
+        'value': %Montant total TTC%,
+        'currency': '%Devise%',
+        'items': [
+            {
+                'item_id': '%ID du produit%',
+                'item_name': '%Nom du produit%',
+                'item_category': '%Destination du voyage%',
+                'item_category2': '%Voyage Groupe / Individuel%',
+                'item_category3': '%Période du voyage%',
+                'item_category4': '%Expérience du voyage%',
+                'item_category5': '%Thématique%',
+                'price': %Prix net par unité (incluant les réductions)%,
+                'discount': %Réduction appliquée par unité%
+            }
+        ]
+    }
+})
+","dataLayer.push({
+    'event': 'reservation_step0',
+    'ecommerce': {
+        'value': 1320,
+        'currency': 'EUR',
+        'items': [
+            {
+                'item_id': 'item123',
+                'item_name': 'Immersion hivernale au cœur des Pyrénées',
+                'item_category': 'France',
+                'item_category2': 'Groupe',
+                'item_category3': 'Février',
+                'item_category4': 'Explorer à pied',
+                'item_category5': 'Séjours chez l’habitant',
+                'price': 660,
+                'discount': 10
+            }
+        ]
+    }
+})
+",❌ KO,
+Reservation - Step 1,L’utilisateur sélectionne le parcours de pose d’option/réservation dans le parcours Réservation et clique sur “Suivant”.,"dataLayer.push({
+    'event': 'reservation_step1',
+    'ecommerce': {
+        'value': %Montant total TTC%,
+        'currency': '%Devise%',
+        'items': [
+            {
+                'item_id': '%ID du produit%',
+                'item_name': '%Nom du produit%',
+                'item_category': '%Destination du voyage%',
+                'item_category2': '%Voyage Groupe / Individuel%',
+                'item_category3': '%Période du voyage%',
+                'item_category4': '%Expérience du voyage%',
+                'item_category5': '%Thématique%',
+                'price': %Prix net par unité (incluant les réductions)%,
+                'discount': %Réduction appliquée par unité%
+            }
+        ]
+    }
+})
+","dataLayer.push({
+    'event': 'reservation_step1',
+    'ecommerce': {
+        'value': 1320,
+        'currency': 'EUR',
+        'items': [
+            {
+                'item_id': 'item123',
+                'item_name': 'Immersion hivernale au cœur des Pyrénées',
+                'item_category': 'France',
+                'item_category2': 'Groupe',
+                'item_category3': 'Février',
+                'item_category4': 'Explorer à pied',
+                'item_category5': 'Séjours chez l’habitant',
+                'price': 660,
+                'discount': 10
+            }
+        ]
+    }
+})
+",❌ KO,
+Reservation - Step 2,L’utilisateur complète l’étape 2 - Détails dans le parcours Réservation et clique sur “Suivant”.,"dataLayer.push({
+    'event': 'reservation_step2',
+    'optin_newsletter': '%Si l’utilisateur a coché la case Inscription Newsletter ou non.%',
+    'user_data': {
+        'user_id': '%ID de l’utilisateur%',
+        'user_mail': '%Mail de l’utilisateur%',
+        'user_phone': '%Téléphone de l’utilisateur%',
+        'user_country': '%Pays de l’utilisateur (basé sur l’indicatif téléphone)%'
+    },
+    'ecommerce': {
+        'value': %Montant total TTC%,
+        'currency': '%Devise%',
+        'items': [
+            {
+                'item_id': '%ID du produit%',
+                'item_name': '%Nom du produit%',
+                'item_category': '%Destination du voyage%',
+                'item_category2': '%Voyage Groupe / Individuel%',
+                'item_category3': '%Période du voyage%',
+                'item_category4': '%Expérience du voyage%',
+                'item_category5': '%Thématique%',
+                'price': %Prix net par unité (incluant les réductions)%,
+                'discount': %Réduction appliquée par unité%
+            }
+        ]
+    }
+})
+","dataLayer.push({
+    'event': 'reservation_step2',
+    'optin_newsletter': 'true / false',
+    'user_data': {
+        'user_id': 'user123',
+        'user_mail': 'user@gmail.com',
+        'user_phone': '33612345678',
+        'user_country': 'France'
+    },
+    'ecommerce': {
+        'value': 1320,
+        'currency': 'EUR',
+        'items': [
+            {
+                'item_id': 'item123',
+                'item_name': 'Immersion hivernale au cœur des Pyrénées',
+                'item_category': 'France',
+                'item_category2': 'Groupe',
+                'item_category3': 'Février',
+                'item_category4': 'Explorer à pied',
+                'item_category5': 'Séjours chez l’habitant',
+                'price': 660,
+                'discount': 10
+            }
+        ]
+    }
+})
+",❌ KO,
+Reservation - Step 3,L’utilisateur complète l’étape 3 - Voyageurs dans le parcours Réservation.,"dataLayer.push({
+    'event': 'reservation_step3',
+    'optin_newsletter': '%Si l’utilisateur a coché la case Inscription Newsletter ou non.%',
+    'user_data': {
+        'user_id': '%ID de l’utilisateur%',
+        'user_mail': '%Mail de l’utilisateur%',
+        'user_phone': '%Téléphone de l’utilisateur%',
+        'user_country': '%Pays de l’utilisateur (basé sur l’indicatif téléphone)%'
+    },
+    'ecommerce': {
+        'value': %Montant total TTC%,
+        'currency': '%Devise%',
+        'items': [
+            {
+                'item_id': '%ID du produit%',
+                'item_name': '%Nom du produit%',
+                'item_category': '%Destination du voyage%',
+                'item_category2': '%Voyage Groupe / Individuel%',
+                'item_category3': '%Période du voyage%',
+                'item_category4': '%Expérience du voyage%',
+                'item_category5': '%Thématique%',
+                'price': %Prix net par unité (incluant les réductions)%,
+                'discount': %Réduction appliquée par unité%
+            }
+        ]
+    }
+})
+","dataLayer.push({
+    'event': 'reservation_step3',
+    'optin_newsletter': 'true / false',
+    'user_data': {
+        'user_id': 'user123',
+        'user_mail': 'user@gmail.com',
+        'user_phone': '33612345678',
+        'user_country': 'France'
+    },
+    'ecommerce': {
+        'value': 1320,
+        'currency': 'EUR',
+        'items': [
+            {
+                'item_id': 'item123',
+                'item_name': 'Immersion hivernale au cœur des Pyrénées',
+                'item_category': 'France',
+                'item_category2': 'Groupe',
+                'item_category3': 'Février',
+                'item_category4': 'Explorer à pied',
+                'item_category5': 'Séjours chez l’habitant',
+                'price': 660,
+                'discount': 10
+            }
+        ]
+    }
+})
+",❌ KO,
+Reservation - Step 4,L’utilisateur complète à l’étape 4 - Options dans le parcours Réservation.,"dataLayer.push({
+    'event': 'reservation_step4',
+    'optin_newsletter': '%Si l’utilisateur a coché la case Inscription Newsletter ou non.%',
+    'user_data': {
+        'user_id': '%ID de l’utilisateur%',
+        'user_mail': '%Mail de l’utilisateur%',
+        'user_phone': '%Téléphone de l’utilisateur%',
+        'user_country': '%Pays de l’utilisateur (basé sur l’indicatif téléphone)%'
+    },
+    'ecommerce': {
+        'value': %Montant total TTC%,
+        'currency': '%Devise%',
+        'items': [
+            {
+                'item_id': '%ID du produit%',
+                'item_name': '%Nom du produit%',
+                'item_category': '%Destination du voyage%',
+                'item_category2': '%Voyage Groupe / Individuel%',
+                'item_category3': '%Période du voyage%',
+                'item_category4': '%Expérience du voyage%',
+                'item_category5': '%Thématique%',
+                'price': %Prix net par unité (incluant les réductions)%,
+                'discount': %Réduction appliquée par unité%
+            }
+        ]
+    }
+})
+","dataLayer.push({
+    'event': 'reservation_step4',
+    'optin_newsletter': 'true / false',
+    'user_data': {
+        'user_id': 'user123',
+        'user_mail': 'user@gmail.com',
+        'user_phone': '33612345678',
+        'user_country': 'France'
+    },
+    'ecommerce': {
+        'value': 1320,
+        'currency': 'EUR',
+        'items': [
+            {
+                'item_id': 'item123',
+                'item_name': 'Immersion hivernale au cœur des Pyrénées',
+                'item_category': 'France',
+                'item_category2': 'Groupe',
+                'item_category3': 'Février',
+                'item_category4': 'Explorer à pied',
+                'item_category5': 'Séjours chez l’habitant',
+                'price': 660,
+                'discount': 10
+            }
+        ]
+    }
+})
+",❌ KO,
+Reservation - Step 5,L’utilisateur complète l’étape 5 - Assurances dans le parcours Réservation.,"dataLayer.push({
+    'event': 'reservation_step5',
+    'optin_newsletter': '%Si l’utilisateur a coché la case Inscription Newsletter ou non.%',
+    'user_data': {
+        'user_id': '%ID de l’utilisateur%',
+        'user_mail': '%Mail de l’utilisateur%',
+        'user_phone': '%Téléphone de l’utilisateur%',
+        'user_country': '%Pays de l’utilisateur (basé sur l’indicatif téléphone)%'
+    },
+    'ecommerce': {
+        'value': %Montant total TTC%,
+        'currency': '%Devise%',
+        'items': [
+            {
+                'item_id': '%ID du produit%',
+                'item_name': '%Nom du produit%',
+                'item_category': '%Destination du voyage%',
+                'item_category2': '%Voyage Groupe / Individuel%',
+                'item_category3': '%Période du voyage%',
+                'item_category4': '%Expérience du voyage%',
+                'item_category5': '%Thématique%',
+                'price': %Prix net par unité (incluant les réductions)%,
+                'discount': %Réduction appliquée par unité%
+            }
+        ]
+    }
+})
+","dataLayer.push({
+    'event': 'reservation_step5',
+    'optin_newsletter': 'true / false',
+    'user_data': {
+        'user_id': 'user123',
+        'user_mail': 'user@gmail.com',
+        'user_phone': '33612345678',
+        'user_country': 'France'
+    },
+    'ecommerce': {
+        'value': 1320,
+        'currency': 'EUR',
+        'items': [
+            {
+                'item_id': 'item123',
+                'item_name': 'Immersion hivernale au cœur des Pyrénées',
+                'item_category': 'France',
+                'item_category2': 'Groupe',
+                'item_category3': 'Février',
+                'item_category4': 'Explorer à pied',
+                'item_category5': 'Séjours chez l’habitant',
+                'price': 660,
+                'discount': 10
+            }
+        ]
+    }
+})
+",❌ KO,
+Add payment info,L’utilisateur sélectionne son moyen de paiement.,"dataLayer.push({
+    'event': 'add_payment_info',
+    'optin_newsletter': '%Si l’utilisateur a coché la case Inscription Newsletter ou non.%',
+    'user_data': {
+        'user_id': '%ID de l’utilisateur%',
+        'user_mail': '%Mail de l’utilisateur%',
+        'user_phone': '%Téléphone de l’utilisateur%',
+        'user_country': '%Pays de l’utilisateur (basé sur l’indicatif téléphone)%'
+    },
+    'ecommerce': {
+        'value': %Montant total TTC%,
+        'currency': '%Devise%',
+        'payment_type': '%Mode de paiement sélectionné%',
+        'items': [
+            {
+                'item_id': '%ID du produit%',
+                'item_name': '%Nom du produit%',
+                'item_category': '%Destination du voyage%',
+                'item_category2': '%Voyage Groupe / Individuel%',
+                'item_category3': '%Période du voyage%',
+                'item_category4': '%Expérience du voyage%',
+                'item_category5': '%Thématique%',
+                'price': %Prix net par unité (incluant les réductions)%,
+                'discount': %Réduction appliquée par unité%,
+                'item_variant': '%Variante du produit%',
+                'quantity': %Quantité sélectionnée du produit%
+            }
+        ]
+    }
+})
+","dataLayer.push({
+    'event': 'add_payment_info',
+    'optin_newsletter': 'true / false',
+    'user_data': {
+        'user_id': 'user123',
+        'user_mail': 'user@gmail.com',
+        'user_phone': '33612345678',
+        'user_country': 'France'
+    },
+    'ecommerce': {
+        'value': 1320,
+        'currency': 'EUR',
+        'payment_type': 'CB',
+        'items': [
+            {
+                'item_id': 'item123',
+                'item_name': 'Immersion hivernale au cœur des Pyrénées',
+                'item_category': 'France',
+                'item_category2': 'Groupe',
+                'item_category3': 'Février',
+                'item_category4': 'Explorer à pied',
+                'item_category5': 'Séjours chez l’habitant',
+                'price': 660,
+                'discount': 10,
+                'item_variant': 'Adulte / Enfant',
+                'quantity': 2
+            }
+        ]
+    }
+})
+",❌ KO,
+Achat,Paiement effectué sur le lien de paiement,"dataLayer.push({
+    'event': 'purchase',
+    'optin_newsletter': '%Si l’utilisateur a coché la case Inscription Newsletter ou non.%',
+    'user_data': {
+        'user_id': '%ID de l’utilisateur%',
+        'user_mail': '%Mail de l’utilisateur%',
+        'user_phone': '%Téléphone de l’utilisateur%',
+        'user_country': '%Pays de l’utilisateur (basé sur l’indicatif téléphone)%'
+    },
+    'ecommerce': {
+        'value': %Montant total TTC%,
+        'currency': '%Devise%',
+        'transaction_id': '%ID de commande%',
+        'payment_type': '%Mode de paiement sélectionné%',
+        'items': [
+            {
+                'item_id': '%ID du produit%',
+                'item_name': '%Nom du produit%',
+                'item_category': '%Destination du voyage%',
+                'item_category2': '%Voyage Groupe / Individuel%',
+                'item_category3': '%Période du voyage%',
+                'item_category4': '%Expérience du voyage%',
+                'item_category5': '%Thématique%',
+                'price': %Prix net par unité (incluant les réductions)%,
+                'discount': %Réduction appliquée par unité%,
+                'item_variant': '%Variante du produit%',
+                'quantity': %Quantité sélectionnée du produit%
+            }
+        ]
+    }
+})
+","dataLayer.push({
+    'event': 'purchase',
+    'optin_newsletter': 'true / false',
+    'user_data': {
+        'user_id': 'user123',
+        'user_mail': 'user@gmail.com',
+        'user_phone': '33612345678',
+        'user_country': 'France'
+    },
+    'ecommerce': {
+        'value': 1320,
+        'currency': 'EUR',
+        'transaction_id': 'order123',
+        'payment_type': 'CB',
+        'items': [
+            {
+                'item_id': 'item123',
+                'item_name': 'Immersion hivernale au cœur des Pyrénées',
+                'item_category': 'France',
+                'item_category2': 'Groupe',
+                'item_category3': 'Février',
+                'item_category4': 'Explorer à pied',
+                'item_category5': 'Séjours chez l’habitant',
+                'price': 660,
+                'discount': 10,
+                'item_variant': 'Adulte / Enfant',
+                'quantity': 2
+            }
+        ]
+    }
+})
+",❌ KO,
+Reservation - Pose Option,"Dans le funnel de réservation/groupe, lorsque le prospect choisi de poser une option sur la dernière étape (au lieu de cliquer sur payer)","dataLayer.push({
+    'event': 'reservation_pose_option',
+    'optin_newsletter': '%Si l’utilisateur a coché la case Inscription Newsletter ou non.%',
+    'user_data': {
+        'user_id': '%ID de l’utilisateur%',
+        'user_mail': '%Mail de l’utilisateur%',
+        'user_phone': '%Téléphone de l’utilisateur%',
+        'user_country': '%Pays de l’utilisateur (basé sur l’indicatif téléphone)%'
+    },
+    'ecommerce': {
+        'value': %Montant total TTC%,
+        'currency': '%Devise%',
+        'items': [
+            {
+                'item_id': '%ID du produit%',
+                'item_name': '%Nom du produit%',
+                'item_category': '%Destination du voyage%',
+                'item_category2': '%Voyage Groupe / Individuel%',
+                'item_category3': '%Période du voyage%',
+                'item_category4': '%Expérience du voyage%',
+                'item_category5': '%Thématique%',
+                'price': %Prix net par unité (incluant les réductions)%,
+                'discount': %Réduction appliquée par unité%,
+                'item_variant': '%Variante du produit%',
+                'quantity': %Quantité sélectionnée du produit%
+            }
+        ]
+    }
+})
+","dataLayer.push({
+    'event': 'reservation_pose_option',
+    'optin_newsletter': 'true / false',
+    'user_data': {
+        'user_id': 'user123',
+        'user_mail': 'user@gmail.com',
+        'user_phone': '33612345678',
+        'user_country': 'France'
+    },
+    'ecommerce': {
+        'value': 1320,
+        'currency': 'EUR',
+        'items': [
+            {
+                'item_id': 'item123',
+                'item_name': 'Immersion hivernale au cœur des Pyrénées',
+                'item_category': 'France',
+                'item_category2': 'Groupe',
+                'item_category3': 'Février',
+                'item_category4': 'Explorer à pied',
+                'item_category5': 'Séjours chez l’habitant',
+                'price': 660,
+                'discount': 10,
+                'item_variant': 'Adulte / Enfant',
+                'quantity': 2
+            }
+        ]
+    }
+})
+",❌ KO,
+Reservation - RDV - Step 1 - Infos,L’utilisateur sélectionne la prise de RDV dans le parcours Réservation.,"dataLayer.push({
+    'event': 'reservation_rdv_step1',
+    'ecommerce': {
+        'value': %Montant total TTC%,
+        'currency': '%Devise%',
+        'items': [
+            {
+                'item_id': '%ID du produit%',
+                'item_name': '%Nom du produit%',
+                'item_category': '%Destination du voyage%',
+                'item_category2': '%Voyage Groupe / Individuel%',
+                'item_category3': '%Période du voyage%',
+                'item_category4': '%Expérience du voyage%',
+                'item_category5': '%Thématique%',
+                'price': %Prix net par unité (incluant les réductions)%,
+                'discount': %Réduction appliquée par unité%
+            }
+        ]
+    }
+})
+","dataLayer.push({
+    'event': 'reservation_rdv_step1',
+    'ecommerce': {
+        'value': 1320,
+        'currency': 'EUR',
+        'items': [
+            {
+                'item_id': 'item123',
+                'item_name': 'Immersion hivernale au cœur des Pyrénées',
+                'item_category': 'France',
+                'item_category2': 'Groupe',
+                'item_category3': 'Février',
+                'item_category4': 'Explorer à pied',
+                'item_category5': 'Séjours chez l’habitant',
+                'price': 660,
+                'discount': 10
+            }
+        ]
+    }
+})
+",❌ KO,
+Reservation - RDV - Step 2 - Détails,L’utilisateur sélectionne un créneau de RDV dans le parcours Réservation.,"dataLayer.push({
+    'event': 'reservation_rdv_step2',
+    'ecommerce': {
+        'value': %Montant total TTC%,
+        'currency': '%Devise%',
+        'items': [
+            {
+                'item_id': '%ID du produit%',
+                'item_name': '%Nom du produit%',
+                'item_category': '%Destination du voyage%',
+                'item_category2': '%Voyage Groupe / Individuel%',
+                'item_category3': '%Période du voyage%',
+                'item_category4': '%Expérience du voyage%',
+                'item_category5': '%Thématique%',
+                'price': %Prix net par unité (incluant les réductions)%,
+                'discount': %Réduction appliquée par unité%
+            }
+        ]
+    }
+})
+","dataLayer.push({
+    'event': 'reservation_rdv_step2',
+    'ecommerce': {
+        'value': 1320,
+        'currency': 'EUR',
+        'items': [
+            {
+                'item_id': 'item123',
+                'item_name': 'Immersion hivernale au cœur des Pyrénées',
+                'item_category': 'France',
+                'item_category2': 'Groupe',
+                'item_category3': 'Février',
+                'item_category4': 'Explorer à pied',
+                'item_category5': 'Séjours chez l’habitant',
+                'price': 660,
+                'discount': 10
+            }
+        ]
+    }
+})
+",❌ KO,
+Reservation - RDV - Confirmation,L’utilisateur confirme une prise de RDV dans le parcours Réservation.,"dataLayer.push({
+    'event': 'reservation_rdv_confirmation',
+    'user_data': {
+        'user_id': '%ID de l’utilisateur%',
+        'user_mail': '%Mail de l’utilisateur%',
+        'user_phone': '%Téléphone de l’utilisateur%',
+        'user_country': '%Pays de l’utilisateur (basé sur l’indicatif téléphone)%'
+    },
+    'ecommerce': {
+        'value': %Montant total TTC%,
+        'currency': '%Devise%',
+        'items': [
+            {
+                'item_id': '%ID du produit%',
+                'item_name': '%Nom du produit%',
+                'item_category': '%Destination du voyage%',
+                'item_category2': '%Voyage Groupe / Individuel%',
+                'item_category3': '%Période du voyage%',
+                'item_category4': '%Expérience du voyage%',
+                'item_category5': '%Thématique%',
+                'price': %Prix net par unité (incluant les réductions)%,
+                'discount': %Réduction appliquée par unité%
+            }
+        ]
+    }
+})
+","dataLayer.push({
+    'event': 'reservation_rdv_confirmation',
+    'user_data': {
+        'user_id': 'user123',
+        'user_mail': 'user@gmail.com',
+        'user_phone': '33612345678',
+        'user_country': 'France'
+    },
+    'ecommerce': {
+        'value': 1320,
+        'currency': 'EUR',
+        'items': [
+            {
+                'item_id': 'item123',
+                'item_name': 'Immersion hivernale au cœur des Pyrénées',
+                'item_category': 'France',
+                'item_category2': 'Groupe',
+                'item_category3': 'Février',
+                'item_category4': 'Explorer à pied',
+                'item_category5': 'Séjours chez l’habitant',
+                'price': 660,
+                'discount': 10
+            }
+        ]
+    }
+})
+",❌ KO,
+Clic Mail,L’utilisateur clique sur un lien e-mail de contact.,"dataLayer.push({
+    'event': 'clic_mail'
+})
+","dataLayer.push({
+    'event': 'clic_mail'
+})
+",❌ KO,
+Clic Whatsapp,L’utilisateur clique sur un lien de contact Whatsapp.,"dataLayer.push({
+    'event': 'clic_whatsapp'
+})
+","dataLayer.push({
+    'event': 'clic_whatsapp'
+})
+",❌ KO,
+Clic Appel,Clique sur le numéro de téléphone (en haut à droite du site) pour appeler,"dataLayer.push({
+    'event': 'clic_appel'
+})
+","dataLayer.push({
+    'event': 'clic_appel'
+})
+",❌ KO,
+Clic RDV,"A cliqué sur ""Je souhaite prendre RDV avec un conseiller"" à différents endroits : 
+- Funnel de groupe
+- Funnel de demande de devis
+- Home Page (3 endroits) 
+- Lien direct sur la page du voyage (ou tout autre endroit présentant le lien de prise de RDV)","dataLayer.push({
+    'event': 'clic_rdv'
+})
+","dataLayer.push({
+    'event': 'clic_rdv'
+})
+",❌ KO,
+Prise RDV - Step 0 - Start,L’utilisateur arrive sur le funnel de prise de RDV.,"dataLayer.push({
+    'event': 'rdv_step0'
+})
+","dataLayer.push({
+    'event': 'rdv_step0'
+})
+",❌ KO,
+Prise RDV - Step 1 - Date,L’utilisateur sélectionne un créneau dans le funnel de prise de RDV.,"dataLayer.push({
+    'event': 'rdv_step1'
+})
+","dataLayer.push({
+    'event': 'rdv_step1'
+})
+",❌ KO,
+Prise RDV - Confirmation,"A cliqué sur ""Je souhaite prendre RDV avec un conseiller"" et a validé la prise de RDV","dataLayer.push({
+    'event': 'rdv_confirmation',
+    'user_data': {
+        'user_mail': '%Mail de l’utilisateur%',
+        'user_phone': '%Téléphone de l’utilisateur%'
+    }
+})
+","dataLayer.push({
+    'event': 'rdv_confirmation',
+    'user_data': {
+        'user_mail': 'user@gmail.com',
+        'user_phone': '33612345678'
+    }
+})
+",❌ KO,
+Devis - Step 0 - Start,L’utilisateur commence le funnel de Devis.,"dataLayer.push({
+    'event': 'devis_step0',
+    'ecommerce': {
+        'value': %Montant total TTC%,
+        'currency': '%Devise%',
+        'items': [
+            {
+                'item_id': '%ID du produit%',
+                'item_name': '%Nom du produit%',
+                'item_category': '%Destination du voyage%',
+                'item_category2': '%Voyage Groupe / Individuel%',
+                'item_category3': '%Période du voyage%',
+                'item_category4': '%Expérience du voyage%',
+                'item_category5': '%Thématique%',
+                'price': %Prix net par unité (incluant les réductions)%,
+                'discount': %Réduction appliquée par unité%
+            }
+        ]
+    }
+})
+","dataLayer.push({
+    'event': 'devis_step0',
+    'ecommerce': {
+        'value': 1320,
+        'currency': 'EUR',
+        'items': [
+            {
+                'item_id': 'item123',
+                'item_name': 'Immersion hivernale au cœur des Pyrénées',
+                'item_category': 'France',
+                'item_category2': 'Groupe',
+                'item_category3': 'Février',
+                'item_category4': 'Explorer à pied',
+                'item_category5': 'Séjours chez l’habitant',
+                'price': 660,
+                'discount': 10
+            }
+        ]
+    }
+})
+",❌ KO,
+Devis - Classic - Step 1 - Infos,L’utilisateur sélectionne la demande de devis classique dans le parcours Devis.,"dataLayer.push({
+    'event': 'devis_classic_step1',
+    'ecommerce': {
+        'value': %Montant total TTC%,
+        'currency': '%Devise%',
+        'items': [
+            {
+                'item_id': '%ID du produit%',
+                'item_name': '%Nom du produit%',
+                'item_category': '%Destination du voyage%',
+                'item_category2': '%Voyage Groupe / Individuel%',
+                'item_category3': '%Période du voyage%',
+                'item_category4': '%Expérience du voyage%',
+                'item_category5': '%Thématique%',
+                'price': %Prix net par unité (incluant les réductions)%,
+                'discount': %Réduction appliquée par unité%
+            }
+        ]
+    }
+})
+","dataLayer.push({
+    'event': 'devis_classic_step1',
+    'ecommerce': {
+        'value': 1320,
+        'currency': 'EUR',
+        'items': [
+            {
+                'item_id': 'item123',
+                'item_name': 'Immersion hivernale au cœur des Pyrénées',
+                'item_category': 'France',
+                'item_category2': 'Groupe',
+                'item_category3': 'Février',
+                'item_category4': 'Explorer à pied',
+                'item_category5': 'Séjours chez l’habitant',
+                'price': 660,
+                'discount': 10
+            }
+        ]
+    }
+})
+",❌ KO,
+Devis - Classic - Step 2 - Détails,L’utilisateur complète les détails de son voyage dans le parcours Devis.,"dataLayer.push({
+    'event': 'devis_classic_step2',
+    'ecommerce': {
+        'value': %Montant total TTC%,
+        'currency': '%Devise%',
+        'items': [
+            {
+                'item_id': '%ID du produit%',
+                'item_name': '%Nom du produit%',
+                'item_category': '%Destination du voyage%',
+                'item_category2': '%Voyage Groupe / Individuel%',
+                'item_category3': '%Période du voyage%',
+                'item_category4': '%Expérience du voyage%',
+                'item_category5': '%Thématique%',
+                'price': %Prix net par unité (incluant les réductions)%,
+                'discount': %Réduction appliquée par unité%
+            }
+        ]
+    }
+})
+","dataLayer.push({
+    'event': 'devis_classic_step2',
+    'ecommerce': {
+        'value': 1320,
+        'currency': 'EUR',
+        'items': [
+            {
+                'item_id': 'item123',
+                'item_name': 'Immersion hivernale au cœur des Pyrénées',
+                'item_category': 'France',
+                'item_category2': 'Groupe',
+                'item_category3': 'Février',
+                'item_category4': 'Explorer à pied',
+                'item_category5': 'Séjours chez l’habitant',
+                'price': 660,
+                'discount': 10
+            }
+        ]
+    }
+})
+",❌ KO,
+Devis - Classic - Confirmation,L’utilisateur confirme sa demande de devis dans le parcours Devis.,"dataLayer.push({
+    'event': 'devis_classic_confirmation',
+    'optin_newsletter': '%Si l’utilisateur a coché la case Inscription Newsletter ou non.%',
+    'user_data': {
+        'user_id': '%ID de l’utilisateur%',
+        'user_mail': '%Mail de l’utilisateur%',
+        'user_phone': '%Téléphone de l’utilisateur%',
+        'user_country': '%Pays de l’utilisateur (basé sur l’indicatif téléphone)%'
+    },
+    'ecommerce': {
+        'value': %Montant total TTC%,
+        'currency': '%Devise%',
+        'items': [
+            {
+                'item_id': '%ID du produit%',
+                'item_name': '%Nom du produit%',
+                'item_category': '%Destination du voyage%',
+                'item_category2': '%Voyage Groupe / Individuel%',
+                'item_category3': '%Période du voyage%',
+                'item_category4': '%Expérience du voyage%',
+                'item_category5': '%Thématique%',
+                'price': %Prix net par unité (incluant les réductions)%,
+                'discount': %Réduction appliquée par unité%
+            }
+        ]
+    }
+})
+","dataLayer.push({
+    'event': 'devis_classic_confirmation',
+    'optin_newsletter': 'true / false',
+    'user_data': {
+        'user_id': 'user123',
+        'user_mail': 'user@gmail.com',
+        'user_phone': '33612345678',
+        'user_country': 'France'
+    },
+    'ecommerce': {
+        'value': 1320,
+        'currency': 'EUR',
+        'items': [
+            {
+                'item_id': 'item123',
+                'item_name': 'Immersion hivernale au cœur des Pyrénées',
+                'item_category': 'France',
+                'item_category2': 'Groupe',
+                'item_category3': 'Février',
+                'item_category4': 'Explorer à pied',
+                'item_category5': 'Séjours chez l’habitant',
+                'price': 660,
+                'discount': 10
+            }
+        ]
+    }
+})
+",❌ KO,
+Devis - RDV - Step 1 - Infos,L’utilisateur sélectionne la prise de RDV dans le parcours Devis.,"dataLayer.push({
+    'event': 'devis_rdv_step1',
+    'ecommerce': {
+        'value': %Montant total TTC%,
+        'currency': '%Devise%',
+        'items': [
+            {
+                'item_id': '%ID du produit%',
+                'item_name': '%Nom du produit%',
+                'item_category': '%Destination du voyage%',
+                'item_category2': '%Voyage Groupe / Individuel%',
+                'item_category3': '%Période du voyage%',
+                'item_category4': '%Expérience du voyage%',
+                'item_category5': '%Thématique%',
+                'price': %Prix net par unité (incluant les réductions)%,
+                'discount': %Réduction appliquée par unité%
+            }
+        ]
+    }
+})
+","dataLayer.push({
+    'event': 'devis_rdv_step1',
+    'ecommerce': {
+        'value': 1320,
+        'currency': 'EUR',
+        'items': [
+            {
+                'item_id': 'item123',
+                'item_name': 'Immersion hivernale au cœur des Pyrénées',
+                'item_category': 'France',
+                'item_category2': 'Groupe',
+                'item_category3': 'Février',
+                'item_category4': 'Explorer à pied',
+                'item_category5': 'Séjours chez l’habitant',
+                'price': 660,
+                'discount': 10
+            }
+        ]
+    }
+})
+",❌ KO,
+Devis - RDV - Step 2 - Détails,L’utilisateur sélectionne un créneau de RDV dans le parcours Devis.,"dataLayer.push({
+    'event': 'devis_rdv_step2',
+    'ecommerce': {
+        'value': %Montant total TTC%,
+        'currency': '%Devise%',
+        'items': [
+            {
+                'item_id': '%ID du produit%',
+                'item_name': '%Nom du produit%',
+                'item_category': '%Destination du voyage%',
+                'item_category2': '%Voyage Groupe / Individuel%',
+                'item_category3': '%Période du voyage%',
+                'item_category4': '%Expérience du voyage%',
+                'item_category5': '%Thématique%',
+                'price': %Prix net par unité (incluant les réductions)%,
+                'discount': %Réduction appliquée par unité%
+            }
+        ]
+    }
+})
+","dataLayer.push({
+    'event': 'devis_rdv_step2',
+    'ecommerce': {
+        'value': 1320,
+        'currency': 'EUR',
+        'items': [
+            {
+                'item_id': 'item123',
+                'item_name': 'Immersion hivernale au cœur des Pyrénées',
+                'item_category': 'France',
+                'item_category2': 'Groupe',
+                'item_category3': 'Février',
+                'item_category4': 'Explorer à pied',
+                'item_category5': 'Séjours chez l’habitant',
+                'price': 660,
+                'discount': 10
+            }
+        ]
+    }
+})
+",❌ KO,
+Devis - RDV - Confirmation,L’utilisateur confirme une prise de RDV dans le parcours Devis.,"dataLayer.push({
+    'event': 'devis_rdv_confirmation',
+    'user_data': {
+        'user_id': '%ID de l’utilisateur%',
+        'user_mail': '%Mail de l’utilisateur%',
+        'user_phone': '%Téléphone de l’utilisateur%',
+        'user_country': '%Pays de l’utilisateur (basé sur l’indicatif téléphone)%'
+    },
+    'ecommerce': {
+        'value': %Montant total TTC%,
+        'currency': '%Devise%',
+        'items': [
+            {
+                'item_id': '%ID du produit%',
+                'item_name': '%Nom du produit%',
+                'item_category': '%Destination du voyage%',
+                'item_category2': '%Voyage Groupe / Individuel%',
+                'item_category3': '%Période du voyage%',
+                'item_category4': '%Expérience du voyage%',
+                'item_category5': '%Thématique%',
+                'price': %Prix net par unité (incluant les réductions)%,
+                'discount': %Réduction appliquée par unité%
+            }
+        ]
+    }
+})
+","dataLayer.push({
+    'event': 'devis_rdv_confirmation',
+    'user_data': {
+        'user_id': 'user123',
+        'user_mail': 'user@gmail.com',
+        'user_phone': '33612345678',
+        'user_country': 'France'
+    },
+    'ecommerce': {
+        'value': 1320,
+        'currency': 'EUR',
+        'items': [
+            {
+                'item_id': 'item123',
+                'item_name': 'Immersion hivernale au cœur des Pyrénées',
+                'item_category': 'France',
+                'item_category2': 'Groupe',
+                'item_category3': 'Février',
+                'item_category4': 'Explorer à pied',
+                'item_category5': 'Séjours chez l’habitant',
+                'price': 660,
+                'discount': 10
+            }
+        ]
+    }
+})
+",❌ KO,
+Devis - Sur Mesure - Step 1 - Infos,L’utilisateur sélectionne le devis sur-mesure dans le parcours Devis.,"dataLayer.push({
+    'event': 'devis_surmesure_step1',
+    'ecommerce': {
+        'value': %Montant total TTC%,
+        'currency': '%Devise%',
+        'items': [
+            {
+                'item_id': '%ID du produit%',
+                'item_name': '%Nom du produit%',
+                'item_category': '%Destination du voyage%',
+                'item_category2': '%Voyage Groupe / Individuel%',
+                'item_category3': '%Période du voyage%',
+                'item_category4': '%Expérience du voyage%',
+                'item_category5': '%Thématique%',
+                'price': %Prix net par unité (incluant les réductions)%,
+                'discount': %Réduction appliquée par unité%
+            }
+        ]
+    }
+})
+","dataLayer.push({
+    'event': 'devis_surmesure_step1',
+    'ecommerce': {
+        'value': 1320,
+        'currency': 'EUR',
+        'items': [
+            {
+                'item_id': 'item123',
+                'item_name': 'Immersion hivernale au cœur des Pyrénées',
+                'item_category': 'France',
+                'item_category2': 'Groupe',
+                'item_category3': 'Février',
+                'item_category4': 'Explorer à pied',
+                'item_category5': 'Séjours chez l’habitant',
+                'price': 660,
+                'discount': 10
+            }
+        ]
+    }
+})
+",❌ KO,
+Devis - Sur Mesure - Confirmation,L’utilisateur confirme l’envoi du devis sur-mesure dans le parcours Devis.,"dataLayer.push({
+    'event': 'devis_surmesure_confirmation',
+    'user_data': {
+        'user_id': '%ID de l’utilisateur%',
+        'user_mail': '%Mail de l’utilisateur%',
+        'user_phone': '%Téléphone de l’utilisateur%',
+        'user_country': '%Pays de l’utilisateur (basé sur l’indicatif téléphone)%'
+    },
+    'ecommerce': {
+        'value': %Montant total TTC%,
+        'currency': '%Devise%',
+        'items': [
+            {
+                'item_id': '%ID du produit%',
+                'item_name': '%Nom du produit%',
+                'item_category': '%Destination du voyage%',
+                'item_category2': '%Voyage Groupe / Individuel%',
+                'item_category3': '%Période du voyage%',
+                'item_category4': '%Expérience du voyage%',
+                'item_category5': '%Thématique%',
+                'price': %Prix net par unité (incluant les réductions)%,
+                'discount': %Réduction appliquée par unité%
+            }
+        ]
+    }
+})
+","dataLayer.push({
+    'event': 'devis_surmesure_confirmation',
+    'user_data': {
+        'user_id': 'user123',
+        'user_mail': 'user@gmail.com',
+        'user_phone': '33612345678',
+        'user_country': 'France'
+    },
+    'ecommerce': {
+        'value': 1320,
+        'currency': 'EUR',
+        'items': [
+            {
+                'item_id': 'item123',
+                'item_name': 'Immersion hivernale au cœur des Pyrénées',
+                'item_category': 'France',
+                'item_category2': 'Groupe',
+                'item_category3': 'Février',
+                'item_category4': 'Explorer à pied',
+                'item_category5': 'Séjours chez l’habitant',
+                'price': 660,
+                'discount': 10
+            }
+        ]
+    }
+})
+",❌ KO,
+Newsletter,L’utilisateur s’inscrit à la newsletter.,"dataLayer.push({
+    'event': 'newsletter',
+    'user_data': {
+        'user_mail': '%Mail de l’utilisateur%'
+    }
+})
+","dataLayer.push({
+    'event': 'newsletter',
+    'user_data': {
+        'user_mail': 'user@gmail.com'
+    }
+})
+",❌ KO,
+Clic FAQ,L’utilisateur clique sur un accordéon de type FAQ.,"dataLayer.push({
+    'event': 'clic_faq',
+    'question': '%Nom de la question%'
+})
+","dataLayer.push({
+    'event': 'clic_faq',
+    'question': 'Où vais-je dormir ?'
+})
+",❌ KO,
+Clic CTA,L’utilisateur clique sur un CTA*.,"dataLayer.push({
+    'event': 'clic_cta',
+    'cta_id': '%ID du CTA%',
+    'cta_label': '%Texte du CTA%',
+    'cta_url': '%URL de redirection du CTA%'
+})
+","dataLayer.push({
+    'event': 'clic_cta',
+    'cta_id': 'cta123',
+    'cta_label': 'Prendre RDV',
+    'cta_url': 'https://odysway.com/calendly'
+})
+",❌ KO,
+Clic Social Media,L’utilisateur clique sur une icône des réseaux sociaux.,"dataLayer.push({
+    'event': 'clic_social_media',
+    'social_media': '%Nom du réseau social%'
+})
+","dataLayer.push({
+    'event': 'clic_social_media',
+    'social_media': 'TikTok'
+})
+",❌ KO,
+Clic Partage,L’utilisateur clique sur le lien de partage.,"dataLayer.push({
+    'event': 'clic_partage'
+})
+","dataLayer.push({
+    'event': 'clic_partage'
+})
+",❌ KO,
+Voir photos,L’utilisateur clique sur les photos du voyage.,"dataLayer.push({
+    'event': 'voir_photos'
+})
+","dataLayer.push({
+    'event': 'voir_photos'
+})
+",❌ KO,
+Scroll,"L’utilisateur scroll sur la page - 25,50,75,100",Géré depuis GTM,Géré depuis GTM,❌ KO,

@@ -2,10 +2,12 @@
   <NextDepartureCard
     v-if="shouldShowNextCard"
     :voyage="cardVoyage"
+    :item-list-name="itemListName"
   />
   <VoyageCard
     v-else
     :voyage="cardVoyage"
+    :item-list-name="itemListName"
   />
 </template>
 
@@ -24,6 +26,10 @@ const props = defineProps({
   preferConfirmedDate: {
     type: Boolean,
     default: false,
+  },
+  itemListName: {
+    type: String,
+    default: null,
   },
 })
 

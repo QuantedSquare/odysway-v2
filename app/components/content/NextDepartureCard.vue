@@ -13,6 +13,7 @@
       <NuxtLink
         :to="`/voyages/${voyage.slug.current || voyage.slug}`"
         class="text-decoration-none position-relative text-white"
+        @click="handleCardClick"
       >
         <v-img
           v-if="voyageCardImg"
@@ -174,11 +175,18 @@ import dayjs from 'dayjs'
 import { useImage } from '#imports'
 import { getDateStatus } from '~/utils/getDateStatus'
 
-const { voyage } = defineProps({
+const props = defineProps({
   voyage: {
     type: Object,
   },
+  itemListName: {
+    type: String,
+    default: null,
+  },
 })
+
+const { trackSelectItem } = useGtmTracking()
+const { formatVoyageForGtm } = useGtmVoyageFormatter()
 const img = useImage()
 
 const voyageCardContentQuery = groq`*[_type == "voyage_card"][0]{
@@ -200,7 +208,7 @@ const { data: voyageCardContent } = await useAsyncData('voyage-card-content', ()
 },
 )
 const dateData = computed(() => {
-  return voyage.dates.find(date => date.departure_date === voyage.departureDate)
+  return props.voyage.dates.find(date => date.departure_date === props.voyage.departureDate)
 })
 const remainingSeats = computed(() => {
   if (!dateData.value) return null
@@ -228,10 +236,22 @@ const statusBadge = computed(() => {
     color: status.color,
   }
 })
-const actionColor = computed(() => voyage.availabilityTypes?.includes('groupe') ? '#f7f8f8' : '#fef9f8')
+const actionColor = computed(() => props.voyage.availabilityTypes?.includes('groupe') ? '#f7f8f8' : '#fef9f8')
 const voyageCardImg = computed(() => {
-  return getImageUrl(voyage.image?.asset?._ref)
+  return getImageUrl(props.voyage.image?.asset?._ref)
 })
+
+const handleCardClick = () => {
+  // Track select_item event if itemListName is provided
+  if (props.itemListName) {
+    const formattedItem = formatVoyageForGtm(props.voyage)
+    trackSelectItem({
+      currency: 'EUR',
+      item: formattedItem,
+      itemListName: props.itemListName,
+    })
+  }
+}
 </script>
 
 <style scoped>

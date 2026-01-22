@@ -42,24 +42,30 @@
           v-once
           color="soft-blush"
         >
-          <LazyHorizontalCarousel text-color="primary">
-            <template #title>
-              <span style="color: rgba(43, 76, 82, 1)">
-                {{ homeSanity.franceTrips.title }}
-              </span>
-            </template>
-            <template #carousel-item>
-              <v-col
-                v-for="voyage in homeSanity.franceTrips.voyagesFrance"
-                :key="voyage._id"
-              >
-                <VoyageCardWithDates
-                  :voyage="voyage"
-                  :dates-by-slug="datesBySlug"
-                />
-              </v-col>
-            </template>
-          </LazyHorizontalCarousel>
+          <TrackableVoyageList
+            :voyages="homeSanity.franceTrips.voyagesFrance"
+            :list-name="homeSanity.franceTrips.title"
+          >
+            <LazyHorizontalCarousel text-color="primary">
+              <template #title>
+                <span style="color: rgba(43, 76, 82, 1)">
+                  {{ homeSanity.franceTrips.title }}
+                </span>
+              </template>
+              <template #carousel-item>
+                <v-col
+                  v-for="voyage in homeSanity.franceTrips.voyagesFrance"
+                  :key="voyage._id"
+                >
+                  <VoyageCardWithDates
+                    :voyage="voyage"
+                    :dates-by-slug="datesBySlug"
+                    :item-list-name="homeSanity.franceTrips.title"
+                  />
+                </v-col>
+              </template>
+            </LazyHorizontalCarousel>
+          </TrackableVoyageList>
         </LazyColorContainer>
 
         <LazyColorContainer color="primary">
@@ -99,6 +105,8 @@
               <CtaButton
                 :color="homeSanity.travelDifferently.ctaButton.color"
                 :link="homeSanity.travelDifferently.ctaButton.link"
+                cta-id="travel-differently-home"
+                :cta-label="homeSanity.travelDifferently.ctaButton.text"
               >
                 <template #text>
                   {{ homeSanity.travelDifferently.ctaButton.text }}
@@ -109,31 +117,37 @@
         </LazyColorContainer>
 
         <LazyColorContainer color="grey-light">
-          <LazyHorizontalCarousel :text-color="'primary'">
-            <template #title>
-              <span style="color: rgba(43, 76, 82, 1)">
-                {{ homeSanity.guaranteedDepartures.title }}
-              </span>
-            </template>
+          <TrackableVoyageList
+            :voyages="homeSanity.guaranteedDepartures.voyagesGuaranteedDepartures"
+            :list-name="homeSanity.guaranteedDepartures.title"
+          >
+            <LazyHorizontalCarousel :text-color="'primary'">
+              <template #title>
+                <span style="color: rgba(43, 76, 82, 1)">
+                  {{ homeSanity.guaranteedDepartures.title }}
+                </span>
+              </template>
 
-            <template #carousel-item>
-              <v-col
-                v-for="voyage in homeSanity.guaranteedDepartures.voyagesGuaranteedDepartures"
-                :key="voyage._id"
-              >
-                <VoyageCardWithDates
-                  :voyage="voyage"
-                  :dates-by-slug="datesBySlug"
-                />
-              </v-col>
-            </template>
-          </LazyHorizontalCarousel>
+              <template #carousel-item>
+                <v-col
+                  v-for="voyage in homeSanity.guaranteedDepartures.voyagesGuaranteedDepartures"
+                  :key="voyage._id"
+                >
+                  <VoyageCardWithDates
+                    :voyage="voyage"
+                    :dates-by-slug="datesBySlug"
+                    :item-list-name="homeSanity.guaranteedDepartures.title"
+                  />
+                </v-col>
+              </template>
+            </LazyHorizontalCarousel>
+          </TrackableVoyageList>
           <div class="d-flex justify-center mb-5 mt-8 ">
             <v-btn
               height="60"
               variant="tonal"
               class="bg-primary text-white  text-body-1 d-inline font-weight-bold "
-              @click="() => { navigateTo(homeSanity.guaranteedDepartures.ctaButton.link); trackPixel('trackCustom', 'ClickProchainsDeparts'); captureOutboundLink('Prochains départs') }"
+              @click="handleProchainsDepartsClick"
             >
               {{ homeSanity.guaranteedDepartures.ctaButton.text }}
             </v-btn>
@@ -141,22 +155,28 @@
         </LazyColorContainer>
 
         <LazyColorContainer color="white">
-          <LazyHorizontalCarousel :text-color="'primary'">
-            <template #title>
-              {{ homeSanity.summerTravel.title }}
-            </template>
-            <template #carousel-item>
-              <v-col
-                v-for="voyage in homeSanity.summerTravel.voyagesSummerTravel"
-                :key="voyage._id"
-              >
-                <VoyageCardWithDates
-                  :voyage="voyage"
-                  :dates-by-slug="datesBySlug"
-                />
-              </v-col>
-            </template>
-          </LazyHorizontalCarousel>
+          <TrackableVoyageList
+            :voyages="homeSanity.summerTravel.voyagesSummerTravel"
+            :list-name="homeSanity.summerTravel.title"
+          >
+            <LazyHorizontalCarousel :text-color="'primary'">
+              <template #title>
+                {{ homeSanity.summerTravel.title }}
+              </template>
+              <template #carousel-item>
+                <v-col
+                  v-for="voyage in homeSanity.summerTravel.voyagesSummerTravel"
+                  :key="voyage._id"
+                >
+                  <VoyageCardWithDates
+                    :voyage="voyage"
+                    :dates-by-slug="datesBySlug"
+                    :item-list-name="homeSanity.summerTravel.title"
+                  />
+                </v-col>
+              </template>
+            </LazyHorizontalCarousel>
+          </TrackableVoyageList>
         </LazyColorContainer>
 
         <LazyColorContainer color="soft-blush">
@@ -179,22 +199,28 @@
           white-text
           color="primary"
         >
-          <LazyHorizontalCarousel :text-color="'white'">
-            <template #title>
-              {{ homeSanity.unforgettableTravels.title }}
-            </template>
-            <template #carousel-item>
-              <v-col
-                v-for="voyage in homeSanity.unforgettableTravels.voyagesUnforgettableTravels"
-                :key="voyage._id"
-              >
-                <VoyageCardWithDates
-                  :voyage="voyage"
-                  :dates-by-slug="datesBySlug"
-                />
-              </v-col>
-            </template>
-          </LazyHorizontalCarousel>
+          <TrackableVoyageList
+            :voyages="homeSanity.unforgettableTravels.voyagesUnforgettableTravels"
+            :list-name="homeSanity.unforgettableTravels.title"
+          >
+            <LazyHorizontalCarousel :text-color="'white'">
+              <template #title>
+                {{ homeSanity.unforgettableTravels.title }}
+              </template>
+              <template #carousel-item>
+                <v-col
+                  v-for="voyage in homeSanity.unforgettableTravels.voyagesUnforgettableTravels"
+                  :key="voyage._id"
+                >
+                  <VoyageCardWithDates
+                    :voyage="voyage"
+                    :dates-by-slug="datesBySlug"
+                    :item-list-name="homeSanity.unforgettableTravels.title"
+                  />
+                </v-col>
+              </template>
+            </LazyHorizontalCarousel>
+          </TrackableVoyageList>
         </LazyColorContainer>
 
         <LazyColorContainer color="white">
@@ -225,6 +251,8 @@
               <CtaButton
                 :color="homeSanity.contact.ctaButton.color"
                 :link="homeSanity.contact.ctaButton.link"
+                cta-id="contact-rdv-home"
+                :cta-label="homeSanity.contact.ctaButton.text"
               >
                 <template #text>
                   {{ homeSanity.contact.ctaButton.text }}
@@ -241,6 +269,8 @@
 <script setup>
 const sanity = useSanity()
 const config = useRuntimeConfig()
+const { trackCtaClick } = useGtmTracking()
+
 definePageMeta({
   layout: 'homepage',
 })
@@ -378,6 +408,24 @@ const homeVoyageSlugs = computed(() => {
 })
 
 const { datesBySlug } = useTravelDates(homeVoyageSlugs)
+
+// GTM tracking handlers
+const handleProchainsDepartsClick = () => {
+  const link = homeSanity.value?.guaranteedDepartures?.ctaButton?.link || '/prochains-departs'
+  
+  trackCtaClick({
+    ctaId: 'prochains-departs-home',
+    ctaLabel: homeSanity.value?.guaranteedDepartures?.ctaButton?.text || 'Prochains départs',
+    ctaUrl: link,
+  })
+  
+  // Keep existing tracking
+  trackPixel('trackCustom', 'ClickProchainsDeparts')
+  captureOutboundLink('Prochains départs')
+  
+  navigateTo(link)
+}
+
 // console.log('!! datesBySlug', datesBySlug.value)
 if (homeSanity.value) {
   console.log(homeSanity.value.heroSectionTest)

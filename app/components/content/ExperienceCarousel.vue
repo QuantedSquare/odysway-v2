@@ -20,6 +20,7 @@
           :title="experience.title"
           :description="experience.discoveryTitle"
           type="experiences"
+          promotion-name="Expériences à vivre"
         />
       </template>
     </LazyHorizontalCarousel>
@@ -33,6 +34,9 @@ const props = defineProps({
     required: true,
   },
 })
+
+const { trackViewPromotion } = useGtmTracking()
+
 const experiences = computed(() => {
   return props.experiencesData.map(exp => ({
     id: exp._id,
@@ -42,5 +46,10 @@ const experiences = computed(() => {
     showOnHome: exp.showOnHome,
     image: exp.image,
   }))
+})
+
+// Track view_promotion when component is mounted
+onMounted(() => {
+  trackViewPromotion('Expériences à vivre')
 })
 </script>

@@ -122,6 +122,7 @@ const { data: newsletterContent } = await useAsyncData('newsletter-content', () 
 )
 
 const { gtag } = useGtag()
+const { trackNewsletterSubscription } = useGtmTracking()
 
 const { width, mdAndUp } = useDisplay()
 const email = ref('')
@@ -141,6 +142,10 @@ const subscribeToNewsletter = async () => {
   }
   if (validEmail.value) {
     await apiRequest('/brevo/optin', 'post', newsletterData)
+    
+    // Track GTM newsletter event
+    trackNewsletterSubscription(email.value)
+    
     validEmail.value = false
     emailSentToBrevo.value = true
     dialogEmailSent.value = true
