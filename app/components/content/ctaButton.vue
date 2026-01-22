@@ -78,7 +78,7 @@ const handleClick = () => {
   if (props.link.includes('calendly') || props.link.toLowerCase().includes('rdv')) {
     trackRdvClick()
   }
-  
+
   // Track generic CTA click
   if (props.ctaId || props.ctaLabel) {
     trackCtaClick({
@@ -87,7 +87,7 @@ const handleClick = () => {
       ctaUrl: props.link,
     })
   }
-  
+
   // Keep existing tracking
   trackPixel('trackCustom', 'ClickRDV')
   captureOutboundLink(props.link)

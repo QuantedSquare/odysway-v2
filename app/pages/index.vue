@@ -69,7 +69,10 @@
         </LazyColorContainer>
 
         <LazyColorContainer color="primary">
-          <LazyCardGrid :categories="homeSanity.followDesires.categoriesFollowDesires">
+          <LazyCardGrid
+            :categories="homeSanity.followDesires.categoriesFollowDesires"
+            :promotion-name="homeSanity.followDesires.title"
+          >
             <template #title>
               <h4 class="text-white">
                 {{ homeSanity.followDesires.title }}

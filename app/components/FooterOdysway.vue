@@ -78,9 +78,9 @@
             <v-btn
               color="secondary"
               height="62"
-
               class="custom-btn-width font-weight-bold align-self-center text-decoration-none text-body-1 text-capitalize"
               :to="footer.contact.buttonContact.lien"
+              @click="handleFooterContactClick"
             >
               {{ footer.contact.buttonContact.text }}
             </v-btn>
@@ -271,6 +271,25 @@ const policies = ref([
     link: '/politique-de-confidentialite',
   },
 ])
+
+const { trackRdvClick, trackCtaClick } = useGtmTracking()
+
+const handleFooterContactClick = () => {
+  const buttonText = footer.value?.contact?.buttonContact?.text || 'Contact'
+  const buttonLink = footer.value?.contact?.buttonContact?.lien || '/contact'
+  
+  // Track RDV if it's a calendly/rdv link
+  if (buttonLink.includes('calendly') || buttonLink.toLowerCase().includes('rdv')) {
+    trackRdvClick()
+  }
+  
+  // Track CTA
+  trackCtaClick({
+    ctaId: 'footer-contact-button',
+    ctaLabel: buttonText,
+    ctaUrl: buttonLink,
+  })
+}
 </script>
 
 <style scoped>

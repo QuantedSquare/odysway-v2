@@ -54,6 +54,10 @@ Implemented on `/app/pages/index.vue`:
 - ✅ `view_promotion` on mount
 - ✅ `select_promotion` on card click
 
+#### Follow Your Desires (Thematic Grid)
+- ✅ `view_promotion` on mount
+- ✅ `select_promotion` on card click
+
 #### Voyage Lists (4 sections)
 All sections include:
 - ✅ `view_item_list` when scrolled into view
@@ -80,15 +84,37 @@ Sections:
 
 Updated components with tracking:
 
+**Content Components:**
 - ✅ `HorizontalCarousel.vue` - Slider navigation
 - ✅ `ExperienceCarousel.vue` - Promotion views
 - ✅ `ThematiqueColCard.vue` - Promotion selection
+- ✅ `CategColCard.vue` - Promotion selection (mobile)
+- ✅ `ImageTitleColCard.vue` - Promotion selection (desktop)
+- ✅ `CardGrid.vue` - Promotion views and props passthrough
 - ✅ `VoyageCard.vue` - Product selection
 - ✅ `NextDepartureCard.vue` - Product selection
 - ✅ `VoyageCardWithDates.vue` - Props passthrough
 - ✅ `ctaButton.vue` - CTA tracking
 - ✅ `NewsletterContainer.vue` - Newsletter tracking
 - ✅ `TrackableVoyageList.vue` (NEW) - Automatic list view tracking
+
+**Layout/Global Components:**
+- ✅ `WhatsAppBtn.vue` - WhatsApp clicks
+- ✅ `QuestionPanel.vue` - FAQ accordion clicks
+- ✅ `SocialsContainerButtons.vue` - Social media clicks (Facebook, TikTok, Instagram)
+- ✅ `FooterOdysway.vue` - Footer contact button
+- ✅ `default.vue` layout - RDV CTA button
+- ✅ `homepage.vue` layout - RDV CTA button
+
+**Search Components:**
+- ✅ `SearchDialog.vue` - Search dialog open, search term tracking, result selection, quick filters
+- ✅ `HomeHeroSection.vue` - Uses SearchDialog (tracking inherited)
+- ✅ `HeaderOdysway.vue` - Desktop search button (tracking via SearchDialog)
+- ✅ `HeaderDrawer.vue` - Mobile search button (tracking via SearchDialog)
+
+**Header/Navigation Components:**
+- ✅ `HeaderOdysway.vue` - Desktop header buttons (menu clicks, call, RDV)
+- ✅ `HeaderDrawer.vue` - Mobile drawer buttons (menu clicks, call, RDV)
 
 ### 5. Documentation ✅
 

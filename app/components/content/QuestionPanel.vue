@@ -5,9 +5,10 @@
     variant="accordion"
   >
     <v-expansion-panel
+      v-if="answer && question"
       eager
       class="my-1 my-md-2 py-md-6 pa-1"
-      v-if="answer && question"
+      @group:selected="handleFaqClick"
     >
       <v-expansion-panel-title
         class="text-caption text-sm-subtitle-2 font-weight-bold text-md-h6 "
@@ -41,7 +42,7 @@
 import { mdiMinus, mdiPlus } from '@mdi/js'
 
 const route = useRoute()
-const { item } = defineProps({
+const props = defineProps({
   questionColor: {
     type: String,
     default: 'primary',
@@ -59,11 +60,21 @@ const { item } = defineProps({
     default: false,
   },
 })
+
+const { trackFaqClick } = useGtmTracking()
+
 const question = ref(null)
 const answer = ref(null)
-if (item) {
-  question.value = (item.question)
-  answer.value = (item.answer)
+if (props.item) {
+  question.value = (props.item.question)
+  answer.value = (props.item.answer)
+}
+
+const handleFaqClick = (event) => {
+  // Track only when opening (event.value will be truthy when opening)
+  if (event.value) {
+    trackFaqClick(question.value)
+  }
 }
 </script>
 

@@ -21,6 +21,7 @@
           :subtitle="category.discoveryTitle"
           :image="category.image"
           :link="'/thematiques/' + category.slug.current"
+          :promotion-name="promotionName"
         />
       </v-row>
     </v-container>
@@ -41,6 +42,7 @@
           :title="category.title"
           :description="category.discoveryTitle"
           type="thematiques"
+          :promotion-name="promotionName"
         />
       </template>
     </HorizontalCarousel>
@@ -50,11 +52,24 @@
 <script setup>
 import { useDisplay } from 'vuetify'
 
-defineProps({
+const props = defineProps({
   categories: {
     type: Array,
     required: true,
   },
+  promotionName: {
+    type: String,
+    default: null,
+  },
 })
+
 const { width } = useDisplay()
+const { trackViewPromotion } = useGtmTracking()
+
+// Track view_promotion when component is mounted
+onMounted(() => {
+  if (props.promotionName) {
+    trackViewPromotion(props.promotionName)
+  }
+})
 </script>

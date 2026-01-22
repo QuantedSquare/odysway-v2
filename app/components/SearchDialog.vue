@@ -84,7 +84,7 @@
               class="filter-chip"
               color="white"
               variant="outlined"
-              @click="closeDialog"
+              @click="handleQuickFilterClick(btn)"
             >
               <span class="chip-text">{{ btn.text }}</span>
             </v-chip>
@@ -300,8 +300,28 @@ const { data: searchDialogField } = await useAsyncData('search-dialog-field', ()
 
 const { destinations, loading, handleEmbededSearch } = useTravelsSearch()
 
+// GTM Tracking composables
+const { trackSearchTerm, trackSelectItem, trackCtaClick } = useGtmTracking()
+const { formatVoyageForGtm } = useGtmVoyageFormatter()
+
+// Track when search dialog is opened
+watch(dialogOpen, (isOpen) => {
+  if (isOpen) {
+    trackCtaClick({
+      ctaId: 'search-dialog-open',
+      ctaLabel: 'Ouvrir la recherche',
+      ctaUrl: '#search',
+    })
+  }
+})
+
 const debouncedHandleSearch = _.debounce(() => {
   handleEmbededSearch(searchText.value, cookie.value === 1)
+
+  // Track search term if user has typed something
+  if (searchText.value && searchText.value.trim().length > 0) {
+    trackSearchTerm(searchText.value)
+  }
 }, 200)
 
 const nbVoyageIdeas = computed(() => {
@@ -318,6 +338,15 @@ const otherResults = computed(() => {
     .sort((a, b) => (b.voyageCount || 0) - (a.voyageCount || 0)) || []
 })
 
+function handleQuickFilterClick(btn) {
+  trackCtaClick({
+    ctaId: `search-quick-filter-${btn.text.toLowerCase().replace(/\s+/g, '-')}`,
+    ctaLabel: btn.text,
+    ctaUrl: btn.link,
+  })
+  closeDialog()
+}
+
 function navigate(destination, position = 1) {
   // Track click with Algolia Insights
   if (destination.objectID && destination.queryID && cookie.value !== 1) {
@@ -329,6 +358,12 @@ function navigate(destination, position = 1) {
       positions: [position],
 
     })
+  }
+
+  // Track GTM event for voyage selection
+  if (destination.dataSource === 'voyages') {
+    const formattedVoyage = formatVoyageForGtm(destination)
+    trackSelectItem(formattedVoyage, 'Résultats de recherche')
   }
 
   const page = destination.dataSource === 'destinations' || destination.dataSource === 'regions'

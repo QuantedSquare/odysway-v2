@@ -6,6 +6,7 @@
     height="58"
     width="58"
     color="white"
+    @click="handleWhatsappClick"
   >
     <img
       src="/icons/whatsapp_logo_icon_186881.svg"
@@ -15,3 +16,11 @@
     >
   </v-btn>
 </template>
+
+<script setup>
+const { trackWhatsappClick } = useGtmTracking()
+
+const handleWhatsappClick = () => {
+  trackWhatsappClick()
+}
+</script>

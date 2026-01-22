@@ -12,6 +12,7 @@
       <NuxtLink
         :to="link"
         class="image-wrapper default-expanded"
+        @click="handleCardClick"
       >
         <v-img
           v-if="srcUrl"
@@ -40,7 +41,7 @@
 <script setup>
 import imageUrlBuilder from '@sanity/image-url'
 
-const { image } = defineProps({
+const props = defineProps({
   image: {
     type: Object,
     required: true,
@@ -57,7 +58,13 @@ const { image } = defineProps({
     type: String,
     default: '',
   },
+  promotionName: {
+    type: String,
+    default: null,
+  },
 })
+
+const { trackSelectPromotion } = useGtmTracking()
 
 const config = useRuntimeConfig()
 const builder = imageUrlBuilder({
@@ -67,15 +74,22 @@ const builder = imageUrlBuilder({
 
 // Build optimized Sanity URLs for grid card dimensions
 const buildSanityImageUrl = (width, height, quality = 70) => {
-  if (!image?.asset?._ref) return ''
+  if (!props.image?.asset?._ref) return ''
   return builder
-    .image(image.asset._ref)
+    .image(props.image.asset._ref)
     .width(width)
     .height(height)
     .format('webp')
     .quality(quality)
     .fit('crop')
     .url()
+}
+
+const handleCardClick = () => {
+  // Track promotion selection if promotionName is provided
+  if (props.promotionName) {
+    trackSelectPromotion(props.title, props.promotionName)
+  }
 }
 
 const srcUrl = computed(() => {
