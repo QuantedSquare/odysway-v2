@@ -77,6 +77,8 @@ import { mdiClose } from '@mdi/js'
 import { useImage } from '#imports'
 
 const img = useImage()
+const { trackVoirPhotos } = useGtmTracking()
+
 const { photosList } = defineProps({
   photosList: {
     type: Array,
@@ -85,6 +87,13 @@ const { photosList } = defineProps({
 })
 const dialog = ref(false)
 const currentSlideIndex = ref(0)
+
+// Track when photo gallery opens
+watch(dialog, (isOpen) => {
+  if (isOpen) {
+    trackVoirPhotos()
+  }
+})
 
 const handleCarouselUpdate = (newIndex) => {
   currentSlideIndex.value = newIndex

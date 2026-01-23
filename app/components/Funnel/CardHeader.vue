@@ -37,6 +37,7 @@
             :complete="currentStep + 1 > step.number"
             :step="step.number"
             color="white"
+            :class="currentStep + 1 === step.number ? 'active-step' : ''"
             :value="index + 1"
           >
             <span class="d-none d-md-block font-weight-bold text-white text-caption">
@@ -142,5 +143,9 @@ const isSanityImage = computed(() => {
 <style scoped>
 .height-title {
   min-height: fit-content!important;
+}
+.active-step:deep(.v-avatar) {
+  background-color: rgba(51, 150, 168, 0.5)!important;
+  border: 1px solid white!important;
 }
 </style>

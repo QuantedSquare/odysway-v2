@@ -57,6 +57,9 @@
 </template>
 
 <script setup>
+const { trackViewItemList } = useGtmTracking()
+const { formatVoyagesForGtm } = useGtmVoyageFormatter()
+
 const route = useRoute()
 const slug = computed(() => {
   return route.params.thematiqueSlug
@@ -223,6 +226,15 @@ const blogType = computed(() => {
 })
 
 const badgeColor = computed(() => blogType.value ? 'secondary' : null)
+
+// GTM: Track view_item_list when voyages are displayed
+watch(() => categorySanity.value?.voyages, (voyages) => {
+  if (voyages && voyages.length > 0) {
+    const formattedVoyages = formatVoyagesForGtm(voyages)
+    const listName = `Thematique - ${categorySanity.value?.title || 'Unknown'}`
+    trackViewItemList(formattedVoyages, listName)
+  }
+}, { immediate: true })
 
 // Use SEO composable - automatically uses blog's SEO fields
 if (categorySanity.value) {

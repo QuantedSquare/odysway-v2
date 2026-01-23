@@ -117,6 +117,9 @@ import { useDisplay } from 'vuetify'
 import { getDateStatus } from '~/utils/getDateStatus'
 
 const { width } = useDisplay()
+const { trackSearchBar, trackViewItemList } = useGtmTracking()
+const { formatVoyagesForGtm } = useGtmVoyageFormatter()
+
 dayjs.locale('fr')
 const route = useRoute()
 const loading = ref(false)
@@ -429,6 +432,34 @@ const dealsLastMinuteFiltered = computed(() =>
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1)
 }
+
+// GTM: Track search_bar when filters are applied
+watch([selectedDestination, confirmedOnly, selectedDates], () => {
+  if (selectedDestination.value || confirmedOnly.value || selectedDates.value?.length > 0) {
+    const searchFilters = {
+      destination: selectedDestination.value || null,
+      period: selectedDates.value?.length > 0 ? periodLabel.value : null,
+      confirmed_only: confirmedOnly.value,
+    }
+    trackSearchBar(searchFilters)
+  }
+}, { deep: true })
+
+// GTM: Track view_item_list when results are displayed
+watch(filteredDateEntries, (entries) => {
+  if (entries && entries.length > 0) {
+    // Convert travel entries to voyages format
+    const voyages = entries.map(entry => ({
+      _id: entry._id,
+      title: entry.title,
+      slug: entry.slug,
+      pricing: { startingPrice: entry.startingPrice },
+    }))
+    const formattedVoyages = formatVoyagesForGtm(voyages)
+    trackViewItemList(formattedVoyages, 'Prochains Départs')
+  }
+}, { immediate: true })
+
 const pageContentQuery = groq`*[_type == "page_prochains_departs"][0]{
   ...
 }`

@@ -8,6 +8,8 @@
 definePageMeta({
   layout: 'voyage',
 })
+
+const { trackRdvStep } = useGtmTracking()
 const titre = useRoute().query?.travelTitle || ''
 
 useSeo({
@@ -15,5 +17,10 @@ useSeo({
     robotsIndex: false,
     robotsFollow: false,
   },
+})
+
+// GTM: Track rdv_step0 on page load
+onMounted(() => {
+  trackRdvStep(0)
 })
 </script>

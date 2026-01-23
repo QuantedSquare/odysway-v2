@@ -30,6 +30,7 @@
         >
           <DatesPricesItem
             :date="Object.assign(date, { index, lastMinutePrice, earlyBirdPrice })"
+            :voyage="props.voyage"
           />
         </v-col>
       </TransitionGroup>
@@ -85,7 +86,7 @@ const { dates } = useDates()
 const isExpanded = ref(false)
 const route = useRoute()
 
-const { dateSections, indivSection, isGroupeAvailable, isPrivatisationAvailable, closingDays } = defineProps({
+const props = defineProps({
   dateSections: {
     type: Object,
     required: true,
@@ -114,7 +115,13 @@ const { dateSections, indivSection, isGroupeAvailable, isPrivatisationAvailable,
     type: Number,
     default: 30,
   },
+  voyage: {
+    type: Object,
+    default: null,
+  },
 })
+
+const { dateSections, indivSection, isGroupeAvailable, isPrivatisationAvailable, closingDays } = props
 
 watch(isExpanded, (newValue) => {
   if (!newValue) {

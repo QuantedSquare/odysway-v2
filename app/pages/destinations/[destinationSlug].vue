@@ -55,6 +55,9 @@
 <script setup>
 import _ from 'lodash'
 
+const { trackViewItemList } = useGtmTracking()
+const { formatVoyagesForGtm } = useGtmVoyageFormatter()
+
 const route = useRoute()
 const slug = computed(() => route.params.destinationSlug)
 const isRegionDestination = computed(() => {
@@ -312,6 +315,15 @@ const blogType = computed(() => {
 })
 
 const badgeColor = computed(() => blogType.value ? 'secondary' : null)
+
+// GTM: Track view_item_list when voyages are displayed
+watch(() => destinationSanity.value?.voyages, (voyages) => {
+  if (voyages && voyages.length > 0) {
+    const formattedVoyages = formatVoyagesForGtm(voyages)
+    const listName = `Destination - ${destinationSanity.value?.title || destinationSanity.value?.nom || 'Unknown'}`
+    trackViewItemList(formattedVoyages, listName)
+  }
+}, { immediate: true })
 
 // Use SEO composable - automatically uses blog's SEO fields
 if (destinationSanity.value) {

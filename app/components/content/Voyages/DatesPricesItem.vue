@@ -222,12 +222,21 @@ import { useDisplay } from 'vuetify'
 
 const today = dayjs()
 const { width } = useDisplay()
-const { date } = defineProps({
+const { trackAddToWishlist } = useGtmTracking()
+const { formatVoyageForGtm } = useGtmVoyageFormatter()
+
+const props = defineProps({
   date: {
     type: Object,
     required: true,
   },
+  voyage: {
+    type: Object,
+    default: null,
+  },
 })
+
+const { date } = props
 
 const datesPricesItemQuery = `
   *[_type == "page_voyage"][0]{
@@ -258,7 +267,6 @@ const enrichedDate = computed(() => {
 
   }
 })
-console.log('enrichedDate', enrichedDate.value)
 const capitalize = (string) => {
   return string.charAt(0).toUpperCase() + string.slice(1)
 }
@@ -326,6 +334,17 @@ const handleBookingClick = async () => {
   try {
     isGeneratingLink.value = true
     trackPixel('track', 'AddToWishlist')
+
+    // GTM: Track add_to_wishlist event
+    if (props.voyage) {
+      const formattedVoyage = formatVoyageForGtm(props.voyage)
+      // Add date-specific info as item_variant
+      const voyageWithDate = {
+        ...formattedVoyage,
+        item_variant: `${dayjs(enrichedDate.value.departure_date).format('DD/MM/YY')} - ${dayjs(enrichedDate.value.return_date).format('DD/MM/YY')}`,
+      }
+      trackAddToWishlist(voyageWithDate, 1, props.voyage.pricing?.startingPrice)
+    }
 
     await generateCheckoutLink() // always wait for it
     if (checkoutLink.value) {

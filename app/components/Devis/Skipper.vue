@@ -36,10 +36,16 @@
 </template>
 
 <script setup>
-const { page } = defineProps({
+const { trackDevisStep } = useGtmTracking()
+
+const props = defineProps({
   page: {
     type: Object,
     required: true,
+  },
+  voyage: {
+    type: Object,
+    default: null,
   },
 })
 
@@ -49,6 +55,18 @@ const model = defineModel()
 onMounted(() => {
   if (!model.value) {
     model.value = 'devis' // Set default value
+  }
+})
+
+// GTM: Track when choice is made
+watch(model, (newChoice) => {
+  if (newChoice && props.voyage) {
+    const choiceMap = {
+      devis: 'classic',
+      tally: 'surmesure',
+      call: 'rdv',
+    }
+    trackDevisStep(choiceMap[newChoice], 1, props.voyage)
   }
 })
 </script>

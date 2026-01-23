@@ -91,6 +91,9 @@
 <script setup>
 import dayjs from 'dayjs'
 
+const { trackReservationStep } = useGtmTracking()
+const { formatVoyageForGtm } = useGtmVoyageFormatter()
+
 const { voyage, currentStep, ownStep, page } = defineProps(['voyage', 'currentStep', 'ownStep', 'page', 'initialDealValues'])
 const { updateDeal } = useStepperDeal(ownStep)
 const route = useRoute()
@@ -254,6 +257,20 @@ const submitStepData = () => {
     }
 
     updateDeal(dealData)
+    
+    // GTM: Track reservation_step3 (traveler info submitted)
+    const { getCountryFromPhone } = useGtmTracking()
+    const formattedVoyage = formatVoyageForGtm(voyage)
+    const additionalData = {
+      optin_newsletter: model.value.optinNewsletter,
+      user_data: {
+        email: model.value.email,
+        phone: model.value.phone,
+        user_country: getCountryFromPhone(model.value.phone),
+      },
+    }
+    trackReservationStep(3, formattedVoyage, additionalData)
+    
     emit('next')
   }
   catch (error) {

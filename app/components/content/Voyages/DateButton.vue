@@ -43,12 +43,21 @@ import retrieveExistingBookedDate from '~/utils/retrieveExistingBookedDate.js'
 import trackPixel from '~/utils/trackPixel.js'
 
 const { mdAndDown } = useDisplay()
-const { date } = defineProps({
+const { trackAddToWishlist } = useGtmTracking()
+const { formatVoyageForGtm } = useGtmVoyageFormatter()
+
+const props = defineProps({
   date: {
     type: Object,
     required: true,
   },
+  voyage: {
+    type: Object,
+    default: null,
+  },
 })
+
+const { date } = props
 const isLoading = ref(false)
 // Reactive state to track existing booked dates
 const existingBookedDates = ref(new Map())
@@ -110,6 +119,17 @@ const generateCheckoutLink = async () => {
 const handleDateClick = async () => {
   try {
     trackPixel('track', 'AddToWishlist')
+    
+    // GTM: Track add_to_wishlist event
+    if (props.voyage) {
+      const formattedVoyage = formatVoyageForGtm(props.voyage)
+      // Add date-specific info as item_variant
+      const voyageWithDate = {
+        ...formattedVoyage,
+        item_variant: `${dayjs(date.departureDate).format('DD/MM/YY')} - ${dayjs(date.returnDate).format('DD/MM/YY')}`,
+      }
+      trackAddToWishlist(voyageWithDate, 1, props.voyage.pricing?.startingPrice)
+    }
 
     // Generate link if not already generated
     if (!checkoutLink.value) {

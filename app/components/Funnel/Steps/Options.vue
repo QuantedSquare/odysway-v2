@@ -68,6 +68,9 @@
 </template>
 
 <script setup>
+const { trackReservationStep } = useGtmTracking()
+const { formatVoyageForGtm } = useGtmVoyageFormatter()
+
 const { voyage, ownStep, page } = defineProps(['voyage', 'ownStep', 'page'])
 const { updateDeal } = useStepperDeal(ownStep)
 
@@ -93,6 +96,21 @@ const submitStepData = () => {
 
   try {
     updateDeal(dealData)
+    
+    // GTM: Track reservation_step4 (options selected)
+    const { getCountryFromPhone } = useGtmTracking()
+    const formattedVoyage = formatVoyageForGtm(voyage)
+    const additionalData = {
+      optin_newsletter: model.value.optinNewsletter,
+      user_data: {
+        email: model.value.email,
+        phone: model.value.phone,
+        user_country: getCountryFromPhone(model.value.phone),
+        indiv_room: model.value.indivRoom || forcedIndivRoom.value,
+      },
+    }
+    trackReservationStep(4, formattedVoyage, additionalData)
+    
     emit('next')
   }
   catch (error) {

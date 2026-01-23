@@ -174,7 +174,10 @@
 <script setup>
 import _ from 'lodash'
 
-const { insurances, currentStep, ownStep, page } = defineProps(['insurances', 'voyage', 'currentStep', 'ownStep', 'page'])
+const { trackReservationStep } = useGtmTracking()
+const { formatVoyageForGtm } = useGtmVoyageFormatter()
+
+const { insurances, currentStep, ownStep, page, voyage } = defineProps(['insurances', 'voyage', 'currentStep', 'ownStep', 'page'])
 const isLoadingInsurance = ref(true)
 const { updateDeal } = useStepperDeal(ownStep)
 
@@ -260,6 +263,21 @@ const submitStepData = () => {
 
   try {
     updateDeal(dealData)
+
+    // GTM: Track reservation_step5 (insurance selected)
+    const { getCountryFromPhone } = useGtmTracking()
+    const formattedVoyage = formatVoyageForGtm(voyage)
+    const additionalData = {
+      optin_newsletter: model.value.optinNewsletter,
+      user_data: {
+        email: model.value.email,
+        phone: model.value.phone,
+        user_country: getCountryFromPhone(model.value.phone),
+        insurance_type: insuranceChoice.value.name,
+      },
+    }
+    trackReservationStep(5, formattedVoyage, additionalData)
+
     emit('next')
   }
   catch (error) {

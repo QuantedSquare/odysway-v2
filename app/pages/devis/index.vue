@@ -38,6 +38,7 @@
                       <DevisSkipper
                         v-model="skipperChoice"
                         :page="pageTexts"
+                        :voyage="voyage"
                       />
                     </v-stepper-window-item>
                     <v-stepper-window-item :value="2">
@@ -55,6 +56,8 @@
                         v-if="skipperChoice === 'call'"
                         :travel-title="voyage.title"
                         :text="pageTexts.calendly.text"
+                        :is-funnel="true"
+                        :voyage="voyage"
                       />
                       <FunnelTallyForm v-if="skipperChoice === 'tally'" />
                     </v-stepper-window-item>
@@ -108,6 +111,9 @@
 </template>
 
 <script setup>
+const { trackDevisStep } = useGtmTracking()
+const { formatVoyageForGtm } = useGtmVoyageFormatter()
+
 useSeo({
   seoData: {
     robotsIndex: false,
@@ -180,7 +186,26 @@ const { data: pageTexts, status: pageStatus } = await useAsyncData('devis-texts'
   sanity.fetch(devisQuery),
 )
 
+// GTM: Track devis_step0 on page load
+onMounted(() => {
+  if (voyage.value) {
+    const formattedVoyage = formatVoyageForGtm(voyage.value)
+    trackDevisStep('classic', 0, formattedVoyage)
+  }
+})
+
 const nextStep = () => {
+  // GTM: Track devis_classic_step2 when moving from details to user info
+  if (currentStep.value === 2 && skipperChoice.value === 'devis' && voyage.value) {
+    const formattedVoyage = formatVoyageForGtm(voyage.value)
+    const userData = {
+      travelers_count: +details.value.nbAdults + +details.value.nbChildren,
+      include_dates: details.value.includeDates,
+      include_flight: details.value.includeFlight,
+    }
+    trackDevisStep('classic', 2, formattedVoyage, userData)
+  }
+
   currentStep.value++
 }
 const validateRequiredInfosOnStep2 = computed(() => {
@@ -246,6 +271,20 @@ const submit = async () => {
   await apiRequest('/ac/deals', 'post', voyageBody)
   if (skipperChoice.value === 'devis') {
     trackPixel('track', 'Lead')
+
+    // GTM: Track devis_classic_confirmation
+    const { getCountryFromPhone } = useGtmTracking()
+    const formattedVoyage = formatVoyageForGtm(voyage.value)
+    const additionalData = {
+      optin_newsletter: userInfo.value.subscribeToNewsletter,
+      user_data: {
+        email: userInfo.value.email,
+        phone: userInfo.value.phone,
+        user_country: getCountryFromPhone(userInfo.value.phone),
+      },
+    }
+    trackDevisStep('classic', 'confirmation', formattedVoyage, additionalData)
+
     router.push('/confirmation?voyage=' + voyage.value.slug + '&devis=true')
   }
   else if (skipperChoice.value === 'call') {

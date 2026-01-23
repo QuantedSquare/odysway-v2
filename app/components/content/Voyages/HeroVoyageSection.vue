@@ -162,6 +162,8 @@ import { stegaClean } from '@sanity/client/stega'
 import { useImage } from '#imports'
 
 const config = useRuntimeConfig()
+const { trackShareClick } = useGtmTracking()
+
 const props = defineProps({
   voyage: {
     type: Object,
@@ -232,6 +234,9 @@ function copyUrl() {
   const copiedUrl = `${config.public.siteURL}${route.fullPath}`
   navigator.clipboard.writeText(copiedUrl)
   snackbar.value = true
+
+  // GTM: Track share click
+  trackShareClick()
 }
 </script>
 

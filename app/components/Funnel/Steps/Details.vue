@@ -142,6 +142,9 @@
 import { z } from 'zod'
 import { computed } from 'vue'
 
+const { trackReservationStep } = useGtmTracking()
+const { formatVoyageForGtm } = useGtmVoyageFormatter()
+
 const { ownStep, voyage, page, checkoutType, dateId } = defineProps(['ownStep', 'voyage', 'page', 'initialDealValues', 'checkoutType', 'dateId'])
 
 const emit = defineEmits(['next', 'previous', 'validity-changed'])
@@ -154,6 +157,12 @@ const buttonLoading = ref(false)
 
 const { createDeal, updateDeal } = useStepperDeal(ownStep)
 const route = useRoute()
+
+// GTM: Track reservation_step1 on mount (details page entry)
+onMounted(() => {
+  const formattedVoyage = formatVoyageForGtm(voyage)
+  trackReservationStep(1, formattedVoyage)
+})
 
 // New: Local validation state
 
@@ -313,6 +322,20 @@ const submitStepData = async () => {
         optinNewsletter: model.value.optinNewsletter,
       }
       trackPixel('track', 'AddToCart')
+
+      // GTM: Track reservation_step2 (contact details submitted)
+      const { getCountryFromPhone } = useGtmTracking()
+      const formattedVoyage = formatVoyageForGtm(voyage)
+      const additionalData = {
+        optin_newsletter: model.value.optinNewsletter,
+        user_data: {
+          email: model.value.email,
+          phone: model.value.phone,
+          user_country: getCountryFromPhone(model.value.phone),
+        },
+      }
+      trackReservationStep(2, formattedVoyage, additionalData)
+
       emit('next')
       await createDeal(flattenedDeal)
       buttonLoading.value = false

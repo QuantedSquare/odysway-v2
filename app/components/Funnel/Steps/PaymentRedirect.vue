@@ -158,6 +158,9 @@
 import { mdiCreditCardOutline, mdiCreditCardClockOutline, mdiCalendarOutline } from '@mdi/js'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 
+const { trackAddPaymentInfo, trackReservationPoseOption } = useGtmTracking()
+const { formatVoyageForGtm } = useGtmVoyageFormatter()
+
 const { page, currentStep, ownStep, voyage } = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
 const route = useRoute()
 const config = useRuntimeConfig()
@@ -219,6 +222,11 @@ const stripePay = async () => {
 
   if (checkoutLink) {
     trackPixel('trackCustom', 'ClickCB', { voyage: voyage.title })
+    
+    // GTM: Track add_payment_info (Stripe payment)
+    const formattedVoyage = formatVoyageForGtm(voyage)
+    trackAddPaymentInfo(formattedVoyage, 'stripe')
+    
     if (localStorage.getItem('consent') === 'granted') {
       trackPixel('track', 'InitiateCheckout', {
         currency: 'EUR',
@@ -266,6 +274,11 @@ const almaPay = async () => {
 
   if (checkoutLink.url) {
     trackPixel('trackCustom', 'ClickAlma', { voyage: voyage.title })
+    
+    // GTM: Track add_payment_info (Alma payment)
+    const formattedVoyage = formatVoyageForGtm(voyage)
+    trackAddPaymentInfo(formattedVoyage, 'alma')
+    
     if (localStorage.getItem('consent') === 'granted') {
       trackPixel('track', 'InitiateCheckout', {
         currency: 'EUR',
@@ -322,6 +335,11 @@ const book = async () => {
     })
     trackPixel('trackCustom', 'PoseOption', { voyage: voyage.title })
   }
+  
+  // GTM: Track reservation_pose_option
+  const formattedVoyage = formatVoyageForGtm(voyage)
+  trackReservationPoseOption(formattedVoyage)
+  
   await navigateTo(`/confirmation?voyage=${voyage.slug}&isoption=true`)
 }
 

@@ -102,7 +102,6 @@ const { data: blogSanity } = await useAsyncData('blog', () =>
     slug: slug.value,
   }),
 )
-console.log('blogSanity', blogSanity.value)
 // If no blog post found, throw 404 to prevent catch-all from matching static routes
 if (!blogSanity.value) {
   throw createError({

@@ -89,6 +89,7 @@
                   v-else
                   :travel-title="voyage.title"
                   :is-funnel="true"
+                  :voyage="voyage"
                   @previous="previousStep"
                 />
               </v-stepper-window-item>
@@ -183,6 +184,10 @@ import dayjs from 'dayjs'
 import customParseFormat from 'dayjs/plugin/customParseFormat.js'
 
 dayjs.extend(customParseFormat)
+
+const { trackReservationStep } = useGtmTracking()
+const { formatVoyageForGtm } = useGtmVoyageFormatter()
+
 const { voyage, initialDealValues } = defineProps({
   pageTexts: {
     type: Object,
@@ -201,6 +206,12 @@ const { voyage, initialDealValues } = defineProps({
 // console.log('voyage in stepper', voyage)
 
 const route = useRoute()
+
+// GTM: Track reservation_step0 on mount (funnel entry)
+onMounted(() => {
+  const formattedVoyage = formatVoyageForGtm(voyage)
+  trackReservationStep(0, formattedVoyage)
+})
 
 const { step, date_id } = route.query
 const { addSingleParam } = useParams()

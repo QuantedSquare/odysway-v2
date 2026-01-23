@@ -65,6 +65,7 @@
             :is-privatisation-available="voyage.availabilityTypes?.includes('privatisation')"
             :last-minute-price="voyage.pricing.lastMinuteReduction"
             :early-bird-price="voyage.pricing.earlyBirdReduction || 0"
+            :voyage="voyage"
           />
 
           <LazyPriceDetailsContainer
@@ -146,6 +147,8 @@ const { gtag } = useGtag()
 
 const route = useRoute()
 const sanity = useSanity()
+const { trackViewItem } = useGtmTracking()
+const { formatVoyageForGtm } = useGtmVoyageFormatter()
 
 const voyagePageQuery = `
   *[_type == "page_voyage"][0]{
@@ -257,6 +260,12 @@ onMounted(() => {
     eventLabel: voyage.value?.title,
   })
   trackPixel('trackCustom', 'VoyageView', { titre: route.params.voyageSlug })
+  
+  // GTM: Track view_item event
+  if (voyage.value) {
+    const formattedVoyage = formatVoyageForGtm(voyage.value)
+    trackViewItem(formattedVoyage, voyage.value.pricing?.startingPrice)
+  }
 })
 
 const config = useRuntimeConfig()

@@ -172,6 +172,7 @@ import { getImageUrl } from '~/utils/getImageUrl'
 const img = useImage()
 const route = useRoute()
 const router = useRouter()
+const { trackSearchBar } = useGtmTracking()
 
 const searchId = useId()
 const categoryId = useId()
@@ -190,16 +191,16 @@ const MEAN_WORD_CHAR_COUNT = 5 // Mean word character count
 // Build GROQ query with filters, sorting, and pagination
 const buildBlogsQuery = (search, category, sort, page) => {
   const offset = (page - 1) * ITEMS_PER_PAGE
-  
+
   // Build filter conditions
-  let filterParts = ['_type == "blog"']
-  
+  const filterParts = ['_type == "blog"']
+
   // Category filter - use _id reference
   if (category) {
     const categoryEscaped = category.replace(/"/g, '\\"')
     filterParts.push(`"${categoryEscaped}" in categories[]._ref`)
   }
-  
+
   // Search filter (title or SEO keywords)
   if (search) {
     const searchEscaped = search.replace(/"/g, '\\"').replace(/\*/g, '\\*').replace(/\$/g, '\\$')
@@ -209,19 +210,21 @@ const buildBlogsQuery = (search, category, sort, page) => {
       defined(seo.keywords) && count(seo.keywords[@ match "*${searchEscaped}*"]) > 0
     )`)
   }
-  
+
   const filterString = filterParts.join(' && ')
-  
+
   // Build sort order
   let orderBy = 'publishedAt desc'
   if (sort === 'asc') {
     orderBy = 'publishedAt asc'
-  } else if (sort === 'readingTimeAsc') {
+  }
+  else if (sort === 'readingTimeAsc') {
     orderBy = 'estimatedReadingTime asc'
-  } else if (sort === 'readingTimeDesc') {
+  }
+  else if (sort === 'readingTimeDesc') {
     orderBy = 'estimatedReadingTime desc'
   }
-  
+
   // Build the query as a string (can't use groq template literal with dynamic interpolation)
   const query = `
     {
@@ -252,7 +255,7 @@ const buildBlogsQuery = (search, category, sort, page) => {
       }
     }
   `
-  
+
   return query
 }
 
@@ -262,14 +265,13 @@ const sanity = useSanity()
 const { data: blogsData, status, refresh } = await useAsyncData(
   `blog-${JSON.stringify(route.query)}`,
   () => sanity.fetch(
-    buildBlogsQuery(searchQuery.value, categoryQuery.value, sortQuery.value, currentPage.value)
+    buildBlogsQuery(searchQuery.value, categoryQuery.value, sortQuery.value, currentPage.value),
   ),
   {
     watch: [() => route.query],
-  }
+  },
 )
 console.log('blogsData', blogsData.value)
-
 
 // Fetch all categories for the filter dropdown
 const categoriesQuery = groq`
@@ -279,9 +281,8 @@ const categoriesQuery = groq`
   }
 `
 const { data: allCategories } = await useAsyncData('blogCategories', () =>
-  sanity.fetch(categoriesQuery)
+  sanity.fetch(categoriesQuery),
 )
-
 
 const pageBlogQuery = groq`
   *[_type == "page_blog"][0]{
@@ -334,19 +335,19 @@ const sortOptions = computed(() => [
 // Update URL query parameters
 function updateQueryParams(params) {
   const query = { ...route.query, ...params }
-  
+
   // Remove null/undefined/empty values
-  Object.keys(query).forEach(key => {
+  Object.keys(query).forEach((key) => {
     if (query[key] === null || query[key] === undefined || query[key] === '') {
       delete query[key]
     }
   })
-  
+
   // Reset to page 1 when filters change (except when page is explicitly set)
   if (!params.page && (params.search !== undefined || params.category !== undefined || params.sort !== undefined)) {
     query.page = 1
   }
-  
+
   router.push({ query })
 }
 
@@ -368,22 +369,22 @@ watch(sortOrder, (val) => {
 // Parse blogs data
 const parsedBlogs = computed(() => {
   if (!blogsData.value?.blogs) return []
-  
+
   return blogsData.value.blogs.map((blog) => {
     // Get categories as array of titles
     const categories = blog.categories?.map(cat => cat?.title).filter(Boolean) || []
-    
+
     // Get first category for blogType
     const blogType = categories[0] || null
-    
+
     // Get SEO keywords
     const keywords = blog.seo?.keywords || []
     const focusKeyword = blog.seo?.focusKeyword || ''
     const allKeywords = [focusKeyword, ...keywords].filter(Boolean)
-    
+
     // Use calculated reading time (round to at least 1 minute)
     const readingTime = Math.max(1, blog.estimatedReadingTime || 0)
-    
+
     // Convert Sanity image to URL
     const imageUrl = blog.displayedImg?.asset?._ref
       ? getImageUrl(blog.displayedImg.asset._ref, `${blog.slug}.jpg`)
@@ -426,6 +427,18 @@ function goToPage(page) {
 
 const goTo = useGoTo()
 const scrollTarget = useTemplateRef('scroll-target')
+
+// GTM: Track search_bar when blog filters are applied
+watch([search, selectedCategory, sortOrder], () => {
+  if (search.value || selectedCategory.value || sortOrder.value !== 'desc') {
+    const searchFilters = {
+      search_term: search.value || null,
+      category: selectedCategory.value ? allCategories.value?.find(c => c._id === selectedCategory.value)?.title : null,
+      sort_order: sortOrder.value,
+    }
+    trackSearchBar(searchFilters)
+  }
+}, { deep: true })
 </script>
 
 <style scoped>

@@ -58,6 +58,7 @@
             <DateButton
               v-if="date.status.status !== 'full'"
               :date="date"
+              :voyage="voyage"
             />
           </v-col>
 

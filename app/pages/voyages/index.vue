@@ -108,6 +108,9 @@ import SearchField from '~/components/content/SearchField.vue'
 import { getDateStatus } from '~/utils/getDateStatus'
 
 const { lgAndUp } = useDisplay()
+const { trackSearchBar, trackViewItemList } = useGtmTracking()
+const { formatVoyagesForGtm } = useGtmVoyageFormatter()
+
 useSeoMeta({
   htmlAttrs: {
     lang: 'fr',
@@ -355,6 +358,30 @@ const filteredVoyages = computed(() => {
 const nbVoyages = computed(() => {
   return filteredVoyages.value?.length || 0
 })
+
+// GTM: Track search_bar when filters are applied
+watch([routeQuery, confirmedOnly], () => {
+  if (route.query.destination || route.query.travelType || route.query.from || confirmedOnly.value) {
+    const searchFilters = {
+      destination: route.query.destination || null,
+      travel_type: route.query.travelType || null,
+      dates: route.query.from || null,
+      confirmed_only: confirmedOnly.value,
+    }
+    trackSearchBar(searchFilters)
+  }
+}, { deep: true })
+
+// GTM: Track view_item_list when results are displayed
+watch(filteredVoyages, (newVoyages) => {
+  if (newVoyages && newVoyages.length > 0) {
+    const formattedVoyages = formatVoyagesForGtm(newVoyages)
+    const listName = route.query.destination
+      ? `Search Results - ${route.query.destination}`
+      : 'Search Results - All Voyages'
+    trackViewItemList(formattedVoyages, listName)
+  }
+}, { immediate: true })
 function reinitiliazeFilter() {
   router.push({
     path: '/voyages',
