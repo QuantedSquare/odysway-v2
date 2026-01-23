@@ -18,7 +18,7 @@
 
 <script setup>
 const route = useRoute()
-const { trackReservationRdvStep, trackRdvStep } = useGtmTracking()
+const { trackReservationRdvStep, trackRdvStep, trackDevisStep } = useGtmTracking()
 const { formatVoyageForGtm } = useGtmVoyageFormatter()
 
 const props = defineProps({
@@ -38,18 +38,32 @@ const props = defineProps({
     type: Object,
     default: null,
   },
+  funnelType: {
+    type: String,
+    default: 'checkout', // 'checkout' or 'devis'
+  },
 })
 const emit = defineEmits(['previous'])
 const options = {
   url: 'https://calendly.com/odysway/15min?hide_gdpr_banner=1',
 }
 
+// Determine if we're in devis context
+const isDevisContext = computed(() => props.funnelType === 'devis' || route.path === '/devis')
+
 // GTM: Track when Calendly widget is mounted
 onMounted(() => {
   if (props.isFunnel && props.voyage) {
-    // Funnel context: reservation_rdv_step1
     const formattedVoyage = formatVoyageForGtm(props.voyage)
-    trackReservationRdvStep(1, formattedVoyage)
+
+    if (isDevisContext.value) {
+      // Devis RDV context: devis_rdv_step1
+      trackDevisStep('rdv', 1, formattedVoyage)
+    }
+    else {
+      // Checkout RDV context: reservation_rdv_step1
+      trackReservationRdvStep(1, formattedVoyage)
+    }
   }
   else {
     // Standalone context: rdv_step1
@@ -62,7 +76,15 @@ useCalendlyEventListener({
     // GTM: Track when date/time is selected in Calendly
     if (props.isFunnel && props.voyage) {
       const formattedVoyage = formatVoyageForGtm(props.voyage)
-      trackReservationRdvStep(2, formattedVoyage)
+
+      if (isDevisContext.value) {
+        // Devis RDV context: devis_rdv_step2
+        trackDevisStep('rdv', 2, formattedVoyage)
+      }
+      else {
+        // Checkout RDV context: reservation_rdv_step2
+        trackReservationRdvStep(2, formattedVoyage)
+      }
     }
     // Note: Standalone RDV doesn't have a step2 in the CSV
   },
@@ -71,9 +93,16 @@ useCalendlyEventListener({
 
     // GTM: Track when RDV is confirmed
     if (props.isFunnel && props.voyage) {
-      // Funnel context: reservation_rdv_confirmation
       const formattedVoyage = formatVoyageForGtm(props.voyage)
-      trackReservationRdvStep('confirmation', formattedVoyage)
+
+      if (isDevisContext.value) {
+        // Devis RDV context: devis_rdv_confirmation
+        trackDevisStep('rdv', 'confirmation', formattedVoyage)
+      }
+      else {
+        // Checkout RDV context: reservation_rdv_confirmation
+        trackReservationRdvStep('confirmation', formattedVoyage)
+      }
     }
     else {
       // Standalone context: rdv_confirmation

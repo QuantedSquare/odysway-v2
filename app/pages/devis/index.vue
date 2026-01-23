@@ -58,8 +58,12 @@
                         :text="pageTexts.calendly.text"
                         :is-funnel="true"
                         :voyage="voyage"
+                        funnel-type="devis"
                       />
-                      <FunnelTallyForm v-if="skipperChoice === 'tally'" />
+                      <FunnelTallyForm
+                        v-if="skipperChoice === 'tally'"
+                        :voyage="voyage"
+                      />
                     </v-stepper-window-item>
                     <v-stepper-window-item
                       v-if="skipperChoice === 'devis'"
@@ -186,10 +190,13 @@ const { data: pageTexts, status: pageStatus } = await useAsyncData('devis-texts'
   sanity.fetch(devisQuery),
 )
 
-// GTM: Track devis_step0 on page load
+// GTM: Track devis_step0 on page load (CSV line 950)
+// Note: We start by tracking 'classic' type since user hasn't chosen yet
+// Individual flows (classic/rdv/surmesure) will track their step1 when choice is made
 onMounted(() => {
   if (voyage.value) {
     const formattedVoyage = formatVoyageForGtm(voyage.value)
+    // Track generic devis entry - the CSV doesn't differentiate types at step0
     trackDevisStep('classic', 0, formattedVoyage)
   }
 })
