@@ -15,7 +15,7 @@
           :size="36"
           icon
           variant="outlined"
-          class="search-trigger-btn"
+          class="search-trigger-btn mr-6"
         >
           <v-img
             :src="img('/icons/Search.svg', { format: 'webp', quality: 100, width: 20, height: 20 })"

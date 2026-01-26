@@ -69,9 +69,11 @@
 
       <div
         class="d-flex align-center"
-        :class="isTransparent ? '' : 'ga-'"
+        :class="isTransparent ? '' : ''"
       >
-        <SearchDialog v-if="route.path !== '/'" />
+        <SearchDialog
+          v-if="route.path !== '/'"
+        />
         <v-btn
           v-if="header?.button1?.visible"
           height="45"
@@ -79,7 +81,7 @@
           rounded="default"
           class="text-caption text-md-body-1 d-none d-md-inline"
           :class="isTransparent ? 'filter' : ''"
-          @click="() => { router.push(header.button1.link); captureOutboundLink(header.button1.text) }"
+          @click="handleButton1Click"
         >
           {{ header.button1.text }}
         </v-btn>
@@ -89,7 +91,7 @@
           height="45"
           :class="isTransparent ? 'filter' : ''"
           class="text-caption text-md-body-1 d-none d-md-inline"
-          @click="() => { router.push(header.button2.link); captureOutboundLink(header.button2.text) }"
+          @click="handleButton2Click"
         >
           {{ header.button2.text }}
         </v-btn>
@@ -97,36 +99,36 @@
           v-if="header?.button3?.visible"
           color="primary"
           height="45"
-          :class="isTransparent ? 'filter' : ''"
-          class="text-caption text-md-body-1 d-none d-md-inline"
-          @click="() => { router.push(header.button3.link); captureOutboundLink(header.button3.text) }"
+          :class="isTransparent ? 'filter' : 'mr-2'"
+          class="text-caption text-md-body-1 d-none d-md-inline "
+          @click="handleButton3Click"
         >
           {{ header.button3.text }}
         </v-btn>
-        <v-btn
-          v-if="header?.button4?.visible"
-          href="tel: +33184807975"
-          color="primary"
-          height="45"
-          :variant="isTransparent ? 'text' : 'tonal'"
-          :class="isTransparent ? 'filter' : ''"
-
-          class="text-caption text-md-body-1 d-none d-md-flex"
-          @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.button4.text) }"
-        >
-          <span class="align-center">{{ header.button4.text }}</span>
-        </v-btn>
-        <v-btn
-          v-if="header?.button5?.visible"
-          height="45"
-          :variant="isTransparent ? 'text' : 'tonal'"
-          :class="isTransparent ? 'text-soft-blush text-shadow' : 'bg-primary text-white ml-3 '"
-          class="text-caption text-md-body-1 d-none d-md-inline "
-          @click="() => { router.push(header.button5.link); trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(header.button5.text) }"
-        >
-          {{ header.button5.text }}
-        </v-btn>
-
+        <div class="d-flex align-center ga-2">
+          <v-btn
+            v-if="header?.button4?.visible"
+            href="tel: +33184807975"
+            color="primary"
+            height="45"
+            :variant="isTransparent ? 'text' : 'tonal'"
+            :class="isTransparent ? 'filter' : ''"
+            class="text-caption text-md-body-1 d-none d-md-flex"
+            @click="handleButton4Click"
+          >
+            <span class="align-center">{{ header.button4.text }}</span>
+          </v-btn>
+          <v-btn
+            v-if="header?.button5?.visible"
+            height="45"
+            :variant="isTransparent ? 'text' : 'tonal'"
+            :class="isTransparent ? 'text-soft-blush text-shadow' : 'bg-primary text-white '"
+            class="text-caption text-md-body-1 d-none d-md-inline "
+            @click="handleButton5Click"
+          >
+            {{ header.button5.text }}
+          </v-btn>
+        </div>
         <v-btn
           class="d-inline d-md-none "
           icon
@@ -165,9 +167,46 @@ const { header } = defineProps({
 })
 
 const { gtag } = useGtag()
+// const { trackRdvClick, trackCallClick, trackMenuClick } = useGtmTracking()
+
 function captureOutboundLink(btn) {
   gtag('event', 'Header Button', { eventAction: 'Click', eventLabel: `Header button "${btn}"` })
 }
+
+function handleButton1Click() {
+  // trackMenuClick(header.button1.text, '', '')
+  captureOutboundLink(header.button1.text)
+  router.push(header.button1.link)
+}
+
+function handleButton2Click() {
+  // trackMenuClick(header.button2.text, '', '')
+  captureOutboundLink(header.button2.text)
+  router.push(header.button2.link)
+}
+
+function handleButton3Click() {
+  // trackMenuClick(header.button3.text, '', '')
+  captureOutboundLink(header.button3.text)
+  router.push(header.button3.link)
+}
+
+function handleButton4Click() {
+  // trackCallClick()
+  trackPixel('trackCustom', 'ClickAppel')
+  captureOutboundLink(header.button4.text)
+}
+
+function handleButton5Click() {
+  if (header.button5.link.includes('calendly') || header.button5.link.toLowerCase().includes('rdv')) {
+    // trackRdvClick()
+  }
+  //  trackMenuClick(header.button5.text, '', '')
+  trackPixel('trackCustom', 'ClickRDV')
+  captureOutboundLink(header.button5.text)
+  router.push(header.button5.link)
+}
+
 const isScrolled = computed(() => y.value > 200)
 const isTransparent = computed(() => !isScrolled.value && route.path === '/')
 </script>
