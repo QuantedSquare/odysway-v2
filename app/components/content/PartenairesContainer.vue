@@ -8,8 +8,8 @@
       align="center"
     >
       <v-col
-        v-for="(partenaire, key) in partenaires.partenairesSection.images"
-        :key="key"
+        v-for="(partenaire, index) in partenaires.partenairesSection.images"
+        :key="index"
         cols="6"
         class="d-flex justify-center align-center"
         :md="partenaires.length > 4 ? 2 : 3"
@@ -23,7 +23,8 @@
             :src="img(getImageUrl(partenaire.asset._ref, { format: 'webp', quality: 70, height: 32, width: 320 }))"
             :lazy-src="img(getImageUrl(partenaire.asset._ref, { format: 'webp', quality: 10, height: 32, width: 320 }))"
             alt="logo du partenaire"
-            class="partenaire-img-sizing white-filter"
+            class="partenaire-img-sizing"
+            :class="index !== 1 ? 'white-filter' : ''"
           />
         </v-lazy>
       </v-col>
@@ -46,6 +47,7 @@ const { data: partenaires } = await useAsyncData(
           images
         }
       }`)
+      console.log(result)
       return result || null
     }
     catch (e) {
