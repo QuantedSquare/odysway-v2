@@ -30,6 +30,7 @@
             v-bind="traveler"
             :key="'nb_travelers_' + i"
             :bg-color="colorMap[i]"
+            :iso-contact="traveler.isoContact"
             @change="travelerInfosChanged"
           />
 
@@ -155,7 +156,7 @@ const isBookingLoaded = computed(() => {
 // New: Check that all traveler fields are filled
 const allFieldsFilled = computed(() => {
   return travelers.value.every(
-    t => t.firstname && t.lastname && t.birthdate,
+    t => t.firstname && t.lastname && t.birthdate && t.isoContact,
   )
 })
 
@@ -176,16 +177,21 @@ const initializeTravelersData = () => {
 
     isCouple.value = +model.value.isCouple
 
+    // Get the main contact's country ISO
+    const mainContactIso = model.value.isoContact || ''
+
     travelers.value = Array.from({ length: nbTravelers.value }, (_, index) => {
       const storedTraveler = model.value?.[`traveler${index + 1}`]
 
       if (storedTraveler) {
-        const [firstname, lastname, birthdate] = storedTraveler.split('_')
+        const parts = storedTraveler.split('_')
+        const [firstname, lastname, birthdate, isoContact = ''] = parts
         return {
           id: index + 1,
-          firstname,
-          lastname,
-          birthdate,
+          firstname: firstname || null,
+          lastname: lastname || null,
+          birthdate: birthdate || null,
+          isoContact: isoContact && isoContact.trim() !== '' ? isoContact : mainContactIso, // Use stored value or default to main contact's country
         }
       }
 
@@ -194,6 +200,7 @@ const initializeTravelersData = () => {
         firstname: null,
         lastname: null,
         birthdate: null,
+        isoContact: mainContactIso, // Default to main contact's country
       }
     })
   }
@@ -203,6 +210,7 @@ watch([model, () => currentStep], () => {
   if (currentStep === ownStep) {
     if (model.value) {
       initializeTravelersData()
+      console.log('===========TRAVELERS IN INITIALIZE TRAVELERS DATA===========', travelers.value)
     }
     addSingleParam('step', ownStep)
   }
@@ -213,8 +221,9 @@ watch([model, () => currentStep], () => {
 const travelerInfosChanged = (updatedTraveler) => {
   const index = travelers.value.findIndex(t => t.id === updatedTraveler.id)
   if (index !== -1) {
-    travelers.value.splice(index, 1, updatedTraveler)
-    model.value[`traveler${updatedTraveler.id}`] = `${updatedTraveler.firstname}_${updatedTraveler.lastname}_${updatedTraveler.birthdate}`
+    // Update the traveler object with all properties to ensure reactivity
+    travelers.value[index] = { ...updatedTraveler }
+    model.value[`traveler${updatedTraveler.id}`] = `${updatedTraveler.firstname}_${updatedTraveler.lastname}_${updatedTraveler.birthdate}_${updatedTraveler.isoContact || ''}`
   }
 }
 
@@ -248,7 +257,7 @@ const submitStepData = () => {
     const dealData = {
       isCouple: model.value.isCouple ? 'Oui' : 'Non',
       ...travelers.value.reduce((acc, traveler, index) => {
-        acc[`traveler${index + 1}`] = `${traveler.firstname}_${traveler.lastname}_${traveler.birthdate}`
+        acc[`traveler${index + 1}`] = `${traveler.firstname}_${traveler.lastname}_${traveler.birthdate}_${traveler.isoContact}`
         return acc
       }, {}),
     }

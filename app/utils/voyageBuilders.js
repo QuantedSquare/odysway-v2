@@ -79,6 +79,7 @@ export function buildDynamicDealValues(deal = null) {
     firstName: '',
     lastName: '',
     optinNewsletter: false,
+    isoContact: '',
 
     // Travelers Infos
     isCouple: false,
@@ -117,6 +118,7 @@ export function buildDynamicDealValues(deal = null) {
       firstName: deal.contact.firstName,
       lastName: deal.contact.lastName,
       optinNewsletter: false,
+      isoContact: deal.contact.isoContact || '',
       // Travelers Infos
       isCouple: deal.isCouple === 'Oui',
       ...travelersData,

@@ -17,7 +17,7 @@
     </v-col>
     <v-col
       cols="12"
-      md="4"
+      md="3"
       class="py-0 my-0"
     >
       <v-text-field
@@ -32,7 +32,7 @@
     </v-col>
     <v-col
       cols="12"
-      md="4"
+      md="3"
       class="py-0 my-0"
     >
       <v-text-field
@@ -49,7 +49,7 @@
 
     <v-col
       cols="12"
-      md="4"
+      md="3"
       class="py-0 my-0"
     >
       <v-text-field
@@ -66,6 +66,23 @@
         @change="dataUpdated"
       />
     </v-col>
+    <v-col
+      cols="12"
+      md="3"
+      class="py-0 my-0"
+    >
+      <v-autocomplete
+        :id="`country_${id}`"
+        v-model="i_isoContact"
+        :items="countries"
+        label="Pays de résidence *"
+        placeholder="Sélectionnez un pays"
+        :rules="[rules.required]"
+        item-title="title"
+        item-value="value"
+        @change="dataUpdated"
+      />
+    </v-col>
   </v-row>
 </template>
 
@@ -73,6 +90,7 @@
 import dayjs from 'dayjs'
 import customParseFormat from 'dayjs/plugin/customParseFormat.js'
 import { mdiBagPersonal, mdiCalendarOutline } from '@mdi/js'
+import { countries } from '~/utils/countries'
 
 dayjs.extend(customParseFormat)
 
@@ -81,12 +99,14 @@ const props = defineProps({
   firstname: { type: String, default: '' },
   lastname: { type: String, default: '' },
   birthdate: { type: String, default: '' },
+  isoContact: { type: String, default: '' },
   bgColor: { type: String, default: 'primary' },
 })
 
 const i_firstname = ref(props.firstname)
 const i_lastname = ref(props.lastname)
 const date = ref(props.birthdate || '')
+const i_isoContact = ref(props.isoContact || '')
 const emit = defineEmits(['change'])
 
 const rules = {
@@ -245,6 +265,7 @@ const dataUpdated = () => {
     firstname: i_firstname.value,
     lastname: i_lastname.value,
     birthdate: date.value,
+    isoContact: i_isoContact.value,
   })
 }
 
@@ -255,6 +276,10 @@ watch(() => props.firstname, (newVal) => {
 
 watch(() => props.lastname, (newVal) => {
   i_lastname.value = newVal
+})
+
+watch(() => props.isoContact, (newVal) => {
+  i_isoContact.value = newVal
 })
 </script>
 

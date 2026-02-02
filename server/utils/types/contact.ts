@@ -7,6 +7,7 @@ export const clientFieldSchema = z.array(
     address: z.string().optional(),
     city: z.string().optional(),
     postalCode: z.string().optional(),
+    isoContact: z.string().optional(),
   }),
 )
 export const clientSchema = z.object({

@@ -167,6 +167,7 @@ export const DealSchema = z.object({
   email: z.string().email().optional(),
   phone: z.string().optional(),
   optinNewsletter: z.boolean().optional(),
+  isoContact: z.string().optional(),
 })
 
 // Define DataToPushSchema

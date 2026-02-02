@@ -58,6 +58,7 @@ export function useStepperDeal() {
   }
 
   const updateDeal = (body) => {
+    console.log('===========BODY IN UPDATE DEAL===========', body)
     apiRequest('/ac/deals/update-with-bms?bookedId=' + route.query.booked_id, 'post', body)
   }
 

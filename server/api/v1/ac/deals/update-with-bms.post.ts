@@ -36,7 +36,6 @@ export default defineEventHandler(async (event: H3Event): Promise<TypeDeal> => {
     })
   }
   const parsedBody = await readValidatedBody(event, body => UpdateDealSchema.safeParse(body))
-  console.log('===========Parsed body ============:', parsedBody)
   if (!parsedBody.success) {
     console.error('Validation failed:', parsedBody.error)
     throw createError({
@@ -45,7 +44,6 @@ export default defineEventHandler(async (event: H3Event): Promise<TypeDeal> => {
     })
   }
   try {
-    console.log('===========Updating deal after parsing ============:', dealId, parsedBody.data)
     const response = await activecampaign.updateDeal(dealId, parsedBody.data)
     activecampaign.recalculatTotalValues(dealId)
     return response
