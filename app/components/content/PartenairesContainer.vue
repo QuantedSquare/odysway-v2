@@ -47,7 +47,6 @@ const { data: partenaires } = await useAsyncData(
           images
         }
       }`)
-      console.log(result)
       return result || null
     }
     catch (e) {

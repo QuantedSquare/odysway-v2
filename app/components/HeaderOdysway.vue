@@ -68,11 +68,11 @@
       <v-spacer />
 
       <div
-        class="d-flex align-center"
-        :class="isTransparent ? '' : ''"
+        class="d-flex align-center ga-2 ga-lg-4"
       >
-        <SearchDialog
+        <SearchDialogTrigger
           v-if="route.path !== '/'"
+          :btn-class="isTransparent ? '' : 'test-btn-class'"
         />
         <v-btn
           v-if="header?.button1?.visible"
@@ -105,7 +105,10 @@
         >
           {{ header.button3.text }}
         </v-btn>
-        <div class="d-flex align-center ga-2">
+        <div
+          class="d-flex align-center ga-2"
+          :class="isTransparent ? '' : 'ml-3'"
+        >
           <v-btn
             v-if="header?.button4?.visible"
             href="tel: +33184807975"
@@ -325,5 +328,21 @@ const isTransparent = computed(() => !isScrolled.value && route.path === '/')
 .mobile-menu-btn {
   position: absolute;
   right: 12px;
+}
+</style>
+
+<style>
+.test-btn-class {
+      margin-right: 0!important;
+}
+@media (min-width: 960px) {
+    .test-btn-class {
+      margin-right: 0 !important;
+    }
+}
+@media (min-width: 1080px) {
+    .test-btn-class {
+      margin-right: 80px !important;
+    }
 }
 </style>

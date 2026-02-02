@@ -7,12 +7,11 @@
       mobile
       :style="drawerStyle"
       :class="[
-
         isTransparent ? 'drawer-transparent' : 'drawer-solid',
       ]"
     >
       <div
-        class="d-flex flex-column ga-4 pa-4 mt-8 mt-sm-16 pt-6"
+        class="d-flex flex-column ga-4 pa-4 mt-8 mt-sm-16 pt-8"
         :style="drawerContentStyle"
       >
         <div class="d-flex justify-center">

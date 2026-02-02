@@ -258,7 +258,6 @@ const enrichedDate = computed(() => {
 
   }
 })
-console.log('enrichedDate', enrichedDate.value)
 const capitalize = (string) => {
   return string.charAt(0).toUpperCase() + string.slice(1)
 }

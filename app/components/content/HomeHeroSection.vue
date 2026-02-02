@@ -72,24 +72,21 @@
           {{ currentWord }}<span class="cursor">|</span>
         </span>
       </h2>
-      <SearchDialog>
-        <template #activator="{ props }">
-          <div
-            v-bind="props"
-            class="glass-search-trigger mt-10"
-            role="button"
-            tabindex="0"
-          >
-            <v-icon
-              :icon="mdiMagnify"
-              color="primary"
-              size="24"
-              class="mr-3 icon-search"
-            />
-            <span class="search-placeholder">{{ placeholder }}</span>
-          </div>
-        </template>
-      </SearchDialog>
+      <div
+        class="glass-search-trigger mt-10"
+        role="button"
+        tabindex="0"
+        @click="openSearchDialog"
+        @keydown.enter="openSearchDialog"
+      >
+        <v-icon
+          :icon="mdiMagnify"
+          color="primary"
+          size="24"
+          class="mr-3 icon-search"
+        />
+        <span class="search-placeholder">{{ placeholder }}</span>
+      </div>
     </div>
   </section>
 </template>
@@ -97,6 +94,9 @@
 <script setup>
 import { mdiMagnify } from '@mdi/js'
 import imageUrlBuilder from '@sanity/image-url'
+import { useSearchDialog } from '~/composables/useSearchDialog'
+
+const { openDialog: openSearchDialog } = useSearchDialog()
 
 const heroProps = defineProps({
   image: {
