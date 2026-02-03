@@ -242,7 +242,7 @@ const voyageCardImg = computed(() => {
 })
 
 const handleCardClick = () => {
-  // Track select_item event if itemListName is provided
+  // GTM: Track select_item event if itemListName is provided
   if (props.itemListName) {
     const formattedItem = formatVoyageForGtm(props.voyage)
     trackSelectItem({

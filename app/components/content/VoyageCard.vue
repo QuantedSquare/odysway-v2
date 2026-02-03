@@ -44,6 +44,7 @@
         <NuxtLink
           :to="`/voyages/${voyage.slug.current || voyage.slug}`"
           class="text-decoration-none"
+          @click="handleCardClick"
         >
           <v-card-text class="py-1">
             <v-container class="px-0 px-md-2">
@@ -222,14 +223,26 @@ const voyageCardImg = computed(() => {
 })
 
 const handleCardClick = () => {
-  // Track select_item event if itemListName is provided
+  // GTM: Track select_item event if itemListName is provided
   if (props.itemListName) {
     const formattedItem = formatVoyageForGtm(props.voyage)
+
+    if (import.meta.client && import.meta.dev) {
+      console.log('🔷 GTM select_item:', {
+        itemListName: props.itemListName,
+        voyage: props.voyage.title,
+        formattedItem,
+      })
+    }
+
     trackSelectItem({
       currency: 'EUR',
       item: formattedItem,
       itemListName: props.itemListName,
     })
+  }
+  else if (import.meta.client && import.meta.dev) {
+    console.warn('⚠️ VoyageCard clicked but no itemListName provided for:', props.voyage.title)
   }
 }
 </script>

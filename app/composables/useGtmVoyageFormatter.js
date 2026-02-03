@@ -16,14 +16,14 @@ export const useGtmVoyageFormatter = () => {
 
     // Debug: Log voyage data to see what we're receiving
     if (import.meta.client && import.meta.dev) {
-      console.log('🔍 GTM Formatter - Voyage data:', {
-        title: voyage.title,
-        destinations: voyage.destinations,
-        experienceType: voyage.experienceType,
-        categories: voyage.categories,
-        monthlyAvailability: voyage.monthlyAvailability,
-        availabilityTypes: voyage.availabilityTypes,
-      })
+      // console.log('🔍 GTM Formatter - Voyage data:', {
+      //   title: voyage.title,
+      //   destinations: voyage.destinations,
+      //   experienceType: voyage.experienceType,
+      //   categories: voyage.categories,
+      //   monthlyAvailability: voyage.monthlyAvailability,
+      //   availabilityTypes: voyage.availabilityTypes,
+      // })
     }
 
     // Get base price from pricing object
@@ -88,7 +88,7 @@ export const useGtmVoyageFormatter = () => {
 
     // Debug: Log formatted result
     if (import.meta.client && import.meta.dev) {
-      console.log('✅ GTM Formatter - Formatted item:', formattedItem)
+      // console.log('✅ GTM Formatter - Formatted item:', formattedItem)
     }
 
     return formattedItem

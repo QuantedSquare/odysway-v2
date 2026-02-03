@@ -376,7 +376,18 @@ export const useGtmTracking = () => {
       ecommerce: {
         value: totalValue || (voyage.price * quantity) || 0,
         currency: 'EUR',
-        items: [itemWithQuantity],
+        items: [itemWithQuantity].map(item => ({
+          item_id: item.itemId,
+          item_name: item.itemName,
+          item_category: item.itemCategory,
+          item_category2: item.itemCategory2,
+          item_category3: item.itemCategory3,
+          item_category4: item.itemCategory4,
+          item_category5: item.itemCategory5,
+          quantity: quantity,
+          price: (voyage.price * quantity) || 0,
+          discount: 0,
+        })),
       },
     })
   }

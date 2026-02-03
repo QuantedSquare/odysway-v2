@@ -179,6 +179,7 @@ const img = useImage()
 const router = useRouter()
 const route = useRoute()
 const sanity = useSanity()
+const { trackSearchBar } = useGtmTracking()
 
 const searchFieldQuery = groq`*[_type == "search"][0]{
   destination,
@@ -371,6 +372,23 @@ function searchFn() {
   if (date.value.length > 0 && !date.value.includes(0)) {
     query.from = date.value.join(',')
   }
+
+  // GTM tracking: search_bar event
+  const selectedMonthsNames = date.value.length > 0 && !date.value.includes(0)
+    ? date.value
+        .map(monthValue => months.value.find(m => m.value === monthValue)?.title)
+        .filter(Boolean)
+        .join(', ')
+    : null
+
+  trackSearchBar({
+    destination: destinationChoice.value || null,
+    typeVoyage: travelTypeChoice.value || null,
+    periode: selectedMonthsNames,
+    voyageGaranti: route.query.confirmed === 'true',
+  })
+
+  // Legacy gtag tracking (to be removed later)
   gtag('event', 'search', { eventAction: 'Click', destination: `${destinationChoice.value}`, travelType: `${travelTypeChoice.value}`, from: `${date.value[0]}`, to: `${date.value[1]}` })
 
   if (query.destination && query.destination !== 'top-destination' && !query.from && !query.travelType) {

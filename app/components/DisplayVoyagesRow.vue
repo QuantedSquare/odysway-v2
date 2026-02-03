@@ -5,7 +5,7 @@
       v-for="content in voyages"
       v-show="content.voyages?.length > 0"
       :key="content.id"
-      :voyages="content.voyages"
+      :voyages="content.voyages || []"
       :list-name="getListName(content)"
     >
       <HorizontalCarousel
@@ -60,6 +60,7 @@
           :voyage="voyage"
           :dates-by-slug="datesBySlug"
           :prefer-confirmed-date="props.preferConfirmedDate"
+          :item-list-name="props.itemListName"
         />
       </v-col>
     </TransitionGroup>
@@ -155,6 +156,10 @@ const props = defineProps({
   pageContent: {
     type: Object,
     default: () => {},
+  },
+  itemListName: {
+    type: String,
+    default: null,
   },
 })
 

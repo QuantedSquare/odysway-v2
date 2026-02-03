@@ -96,6 +96,7 @@
         :voyages="filteredVoyages"
         :is-search="true"
         :prefer-confirmed-date="confirmedOnly"
+        :item-list-name="searchListName"
       />
     </v-container>
   </v-container>
@@ -367,30 +368,84 @@ const nbVoyages = computed(() => {
   return filteredVoyages.value?.length || 0
 })
 
-// GTM: Track search_bar when filters are applied
+// GTM: Track search_bar when filters are applied (checkbox or route changes)
 watch([routeQuery, confirmedOnly], () => {
-  if (route.query.destination || route.query.travelType || route.query.from || confirmedOnly.value) {
-    const searchFilters = {
-      destination: route.query.destination || null,
-      travel_type: route.query.travelType || null,
-      dates: route.query.from || null,
-      confirmed_only: confirmedOnly.value,
+  // Get the destination title if available
+  let destinationTitle = null
+  if (route.query.destination) {
+    const dest = destinations.value?.find(d => d.slug === route.query.destination)
+    if (dest) {
+      destinationTitle = dest.title
     }
-    trackSearchBar(searchFilters)
+    else {
+      const region = regions.value?.find(r => r.slug === route.query.destination)
+      if (region) {
+        destinationTitle = region.nom
+      }
+      else {
+        destinationTitle = capitalizeFirstLetter(route.query.destination)
+      }
+    }
   }
+
+  // Format period as comma-separated month names
+  let periodeFormatted = null
+  if (route.query.from) {
+    const monthNumbers = route.query.from.split(',').map(Number).filter(n => n > 0 && n <= 12)
+    if (monthNumbers.length > 0) {
+      periodeFormatted = monthNumbers.map(n => monthNumberToFrench[n]).join(', ')
+    }
+  }
+
+  trackSearchBar({
+    destination: destinationTitle,
+    typeVoyage: route.query.travelType || null,
+    periode: periodeFormatted,
+    voyageGaranti: confirmedOnly.value,
+  })
 }, { deep: true })
+
+// GTM: Build dynamic list name based on search filters
+const searchListName = computed(() => {
+  let listName = 'Search Results'
+  if (route.query.destination) {
+    listName += ` - ${capitalizeFirstLetter(route.query.destination)}`
+  }
+  if (route.query.travelType) {
+    listName += ` - ${route.query.travelType}`
+  }
+  if (route.query.from) {
+    listName += ` - ${parsedDates.value}`
+  }
+  if (confirmedOnly.value) {
+    listName += ' - Départs garantis'
+  }
+  return listName
+})
 
 // GTM: Track view_item_list when results are displayed
 watch(filteredVoyages, (newVoyages) => {
   if (newVoyages && newVoyages.length > 0) {
     const formattedVoyages = formatVoyagesForGtm(newVoyages)
-    const listName = route.query.destination
-      ? `Search Results - ${route.query.destination}`
-      : 'Search Results - All Voyages'
-    trackViewItemList(formattedVoyages, listName)
+
+    if (formattedVoyages && formattedVoyages.length > 0) {
+      trackViewItemList({
+        currency: 'EUR',
+        items: formattedVoyages,
+        itemListName: searchListName.value,
+      })
+    }
   }
 }, { immediate: true })
 function reinitiliazeFilter() {
+  // GTM: Track search_bar event with reset (all null)
+  trackSearchBar({
+    destination: null,
+    typeVoyage: null,
+    periode: null,
+    voyageGaranti: false,
+  })
+
   router.push({
     path: '/voyages',
     query: null,
