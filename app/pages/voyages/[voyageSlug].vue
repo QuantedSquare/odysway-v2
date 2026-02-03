@@ -81,25 +81,31 @@
 
           <LazyWhySection :why-section="page.whySection" />
 
-          <LazyHorizontalCarousel
-            v-if="voyagePropositions"
-            v-show="voyagePropositions.length > 0"
+          <TrackableVoyageList
+            v-if="voyagePropositions && voyagePropositions.length > 0"
+            :voyages="voyagePropositions"
+            list-name="D'autres idées de voyages"
           >
-            <template #title>
-              <h4 class="text-primary text-custom-size">
-                D'autres idées de voyages
-              </h4>
-            </template>
-            <template #carousel-item>
-              <v-col
-                v-for="voyageProp in voyagePropositions"
-                :key="voyageProp._id"
-                class="pt-0"
-              >
-                <LazyVoyageCard :voyage="voyageProp" />
-              </v-col>
-            </template>
-          </LazyHorizontalCarousel>
+            <LazyHorizontalCarousel>
+              <template #title>
+                <h4 class="text-primary text-custom-size">
+                  D'autres idées de voyages
+                </h4>
+              </template>
+              <template #carousel-item>
+                <v-col
+                  v-for="voyageProp in voyagePropositions"
+                  :key="voyageProp._id"
+                  class="pt-0"
+                >
+                  <LazyVoyageCard
+                    :voyage="voyageProp"
+                    item-list-name="D'autres idées de voyages"
+                  />
+                </v-col>
+              </template>
+            </LazyHorizontalCarousel>
+          </TrackableVoyageList>
         </v-container>
       </v-container>
     </div>
@@ -143,7 +149,6 @@ definePageMeta({
   layout: 'voyage',
   middleware: ['old-voyages-link-redirection'],
 })
-const { gtag } = useGtag()
 
 const route = useRoute()
 const sanity = useSanity()
@@ -196,9 +201,18 @@ const voyageQuery = `
       variable2Value,
       overrideText
     },
+    destinations[]->{
+      _id,
+      title
+    },
     experienceType->{
-      badgeTitle,
-      _id
+      _id,
+      title,
+      badgeTitle
+    },
+    categories[]->{
+      _id,
+      title
     },
     authorNote{
       ...,
@@ -221,7 +235,7 @@ const voyagePropositionsQuery = `
       ) && slug.current != $slug && experienceType._ref == $experienceTypeId][0...5]{
     _id,
     title,
-    slug,
+    "slug": slug.current,
     image,
     rating,
     comments,
@@ -229,7 +243,20 @@ const voyagePropositionsQuery = `
     duration,
     pricing{
       startingPrice
-    }
+    },
+    destinations[]->{
+      _id,
+      title
+    },
+    experienceType->{
+      _id,
+      title
+    },
+    categories[]->{
+      _id,
+      title
+    },
+    monthlyAvailability
   }
 `
 const [{ data: page }, { data: voyage }] = await Promise.all([
@@ -254,13 +281,6 @@ const { data: voyagePropositions } = await useAsyncData(
   { lazy: true },
 )
 onMounted(() => {
-  gtag('event', 'page_view', {
-    eventCategory: 'Voyage',
-    eventAction: 'View',
-    eventLabel: voyage.value?.title,
-  })
-  trackPixel('trackCustom', 'VoyageView', { titre: route.params.voyageSlug })
-  
   // GTM: Track view_item event
   if (voyage.value) {
     const formattedVoyage = formatVoyageForGtm(voyage.value)

@@ -1,36 +1,41 @@
 <template>
   <!-- Display carousel with voyages for each type experience/category  -->
   <div v-if="availableVoyages > 0">
-    <HorizontalCarousel
+    <TrackableVoyageCarousel
       v-for="content in voyages"
       v-show="content.voyages?.length > 0"
       :key="content.id"
-      :slug="content.slug"
-      :image="content.image?.src"
-      :title="content.title"
-      :description="content.discoveryTitle"
+      :voyages="content.voyages"
+      :list-name="getListName(content)"
     >
-      <template #title>
-        <h3 class="custom-title">
-          {{ content.discoveryTitle || content.title }}
-        </h3>
-      </template>
-      <template #carousel-item>
-        <v-col
-          v-for="voyage in content.voyages"
-          :key="voyage.id"
-          cols="10"
-          sm="6"
-          lg="4"
-        >
-          <VoyageCardWithDates
-            :voyage="voyage"
-            :dates-by-slug="datesBySlug"
-            :prefer-confirmed-date="props.preferConfirmedDate"
-          />
-        </v-col>
-      </template>
-    </HorizontalCarousel>
+      <HorizontalCarousel
+        :slug="content.slug"
+        :image="content.image?.src"
+        :title="content.title"
+        :description="content.discoveryTitle"
+      >
+        <template #title>
+          <h3 class="custom-title">
+            {{ content.discoveryTitle || content.title }}
+          </h3>
+        </template>
+        <template #carousel-item>
+          <v-col
+            v-for="voyage in content.voyages"
+            :key="voyage.id"
+            cols="10"
+            sm="6"
+            lg="4"
+          >
+            <VoyageCardWithDates
+              :voyage="voyage"
+              :dates-by-slug="datesBySlug"
+              :prefer-confirmed-date="props.preferConfirmedDate"
+            />
+          </v-col>
+        </template>
+      </HorizontalCarousel>
+    </TrackableVoyageCarousel>
   </div>
   <!---------------------------------------------------------------------->
 
@@ -210,6 +215,24 @@ const noVoyagesFoundExperienceText = computed(() => {
   }
   return `Aucun voyage trouvé pour l'expérience "${props.selectedExperience?.title || ''}"`
 })
+
+// GTM: Generate list name based on content type and route
+const getListName = (content) => {
+  const routeName = route.name
+  const title = content.title || content.discoveryTitle || 'Unknown'
+
+  if (routeName === 'experiences') {
+    return `Experience - ${title}`
+  }
+  else if (routeName === 'destinations') {
+    return `Destination - ${title}`
+  }
+  else if (routeName === 'thematiques') {
+    return `Thematique - ${title}`
+  }
+
+  return title
+}
 </script>
 
 <style scoped>

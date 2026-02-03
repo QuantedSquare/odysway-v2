@@ -297,6 +297,14 @@ const { data: voyages } = await useAsyncData(
       destinations[]-> {
         _id,
         title
+      },
+      experienceType->{
+        _id,
+        title
+      },
+      categories[]->{
+        _id,
+        title
       }
     }`
 

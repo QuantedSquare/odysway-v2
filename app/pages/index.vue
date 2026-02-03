@@ -245,20 +245,20 @@
               <AvatarsRowStack />
             </template>
             <template #title>
-              {{ homeSanity.contact.title }}
+              {{ homeSanity.contact?.title }}
             </template>
             <template #description>
-              {{ homeSanity.contact.description }}
+              {{ homeSanity.contact?.description }}
             </template>
             <template #bottom>
               <CtaButton
-                :color="homeSanity.contact.ctaButton.color"
-                :link="homeSanity.contact.ctaButton.link"
+                :color="homeSanity.contact?.ctaButton.color"
+                :link="homeSanity.contact?.ctaButton.link"
                 cta-id="contact-rdv-home"
-                :cta-label="homeSanity.contact.ctaButton.text"
+                :cta-label="homeSanity.contact?.ctaButton.text"
               >
                 <template #text>
-                  {{ homeSanity.contact.ctaButton.text }}
+                  {{ homeSanity.contact?.ctaButton.text }}
                 </template>
               </CtaButton>
             </template>
@@ -280,6 +280,15 @@ definePageMeta({
 const homeQuery = groq`
   *[_type == "homePage"][0]{
     ...,
+    contact{
+      title,
+      description,
+      ctaButton{
+        text,
+        link,
+        color
+      },
+    },
     reviews{
       ctaText,
       title
@@ -307,7 +316,7 @@ const homeQuery = groq`
       title,
       voyagesFrance[]->{
         _id,
-        slug,
+        "slug": slug.current,
         image,
         rating,
         comments,
@@ -315,7 +324,20 @@ const homeQuery = groq`
         availabilityTypes,
         duration,
         pricing,
-        closingDays
+        closingDays,
+        destinations[]->{
+          _id,
+          title
+        },
+        experienceType->{
+          _id,
+          title
+        },
+        categories[]->{
+          _id,
+          title
+        },
+        monthlyAvailability
       }
     },
     experienceCarousel{
@@ -344,14 +366,27 @@ const homeQuery = groq`
       title,
       voyagesGuaranteedDepartures[]->{
         _id,
-        slug,
+        "slug": slug.current,
         image,
         rating,
         comments,
         title,
         availabilityTypes,
         duration,
-        pricing
+        pricing,
+        destinations[]->{
+          _id,
+          title
+        },
+        experienceType->{
+          _id,
+          title
+        },
+        categories[]->{
+          _id,
+          title
+        },
+        monthlyAvailability
       },
       ctaButton{
         text,
@@ -362,34 +397,60 @@ const homeQuery = groq`
       title,
       voyagesSummerTravel[]->{
         _id,
-        slug,
+        "slug": slug.current,
         image,
         rating,
         comments,
         title,
         availabilityTypes,
         duration,
-        pricing
+        pricing,
+        destinations[]->{
+          _id,
+          title
+        },
+        experienceType->{
+          _id,
+          title
+        },
+        categories[]->{
+          _id,
+          title
+        },
+        monthlyAvailability
       }
     },
     unforgettableTravels{
       title,
       voyagesUnforgettableTravels[]->{
         _id,
-        slug,
+        "slug": slug.current,
         image,
         rating,
         comments,
         title,
         availabilityTypes,
         duration,
-        pricing
+        pricing,
+        destinations[]->{
+          _id,
+          title
+        },
+        experienceType->{
+          _id,
+          title
+        },
+        categories[]->{
+          _id,
+          title
+        },
+        monthlyAvailability
       }
     }
   }
 `
 
-const { data: homeSanity } = await useAsyncData('home', () =>
+const { data: homeSanity } = await useAsyncData('test', () =>
   sanity.fetch(homeQuery),
 )
 const homeVoyages = computed(() => {

@@ -14,26 +14,67 @@ export const useGtmVoyageFormatter = () => {
   const formatVoyageForGtm = (voyage, options = {}) => {
     const { discount = 0 } = options
 
+    // Debug: Log voyage data to see what we're receiving
+    if (import.meta.client && import.meta.dev) {
+      console.log('🔍 GTM Formatter - Voyage data:', {
+        title: voyage.title,
+        destinations: voyage.destinations,
+        experienceType: voyage.experienceType,
+        categories: voyage.categories,
+        monthlyAvailability: voyage.monthlyAvailability,
+        availabilityTypes: voyage.availabilityTypes,
+      })
+    }
+
     // Get base price from pricing object
-    const basePrice = voyage.pricing?.pricePerPerson || 0
+    const basePrice = voyage.pricing?.startingPrice || voyage.pricing?.pricePerPerson || 0
 
     // Determine voyage type (Groupe/Individuel)
-    const voyageType = voyage.availabilityTypes?.includes('group') ? 'Groupe' : 'Individuel'
+    const voyageType = voyage.availabilityTypes?.includes('groupe') ? 'Groupe' : 'Individuel'
 
-    // Get period from dates (if available) or default to null
-    const period = voyage.period || null
+    // Get periods from monthlyAvailability (all months as comma-separated string)
+    // Map month codes to French names
+    const monthMap = {
+      janvier: 'Janvier',
+      fevrier: 'Février',
+      mars: 'Mars',
+      avril: 'Avril',
+      mai: 'Mai',
+      juin: 'Juin',
+      juillet: 'Juillet',
+      aout: 'Août',
+      septembre: 'Septembre',
+      octobre: 'Octobre',
+      novembre: 'Novembre',
+      decembre: 'Décembre',
+      toutePeriodes: 'Toute période',
+    }
+    const period = voyage.monthlyAvailability && voyage.monthlyAvailability.length > 0
+      ? voyage.monthlyAvailability
+          .map(month => monthMap[month] || month)
+          .join(', ')
+      : null
 
-    // Get experience from voyage data
-    const experience = voyage.experience?.title || null
+    // Get experience from experienceType reference
+    const experience = voyage.experienceType?.title || null
 
-    // Get thematic
-    const thematic = voyage.thematic?.title || null
+    // Get thematics (all categories as comma-separated string)
+    const thematic = voyage.categories && voyage.categories.length > 0
+      ? voyage.categories.map(cat => cat?.title).filter(Boolean).join(', ')
+      : null
 
-    // Get destination
-    const destination = voyage.destination?.title || null
+    // Get destinations (all destinations as comma-separated string)
+    const destination = voyage.destinations && voyage.destinations.length > 0
+      ? voyage.destinations.map(dest => dest?.title).filter(Boolean).join(', ')
+      : null
 
-    return {
-      itemId: voyage._id || voyage.slug?.current || voyage.slug,
+    // Handle slug - could be string (aliased in GROQ) or object with current property
+    const slugValue = typeof voyage.slug === 'string'
+      ? voyage.slug
+      : voyage.slug?.current || voyage.slug
+
+    const formattedItem = {
+      itemId: slugValue || voyage._id,
       itemName: voyage.title,
       itemCategory: destination,
       itemCategory2: voyageType,
@@ -42,7 +83,15 @@ export const useGtmVoyageFormatter = () => {
       itemCategory5: thematic,
       price: basePrice,
       discount,
+      quantity: 1,
     }
+
+    // Debug: Log formatted result
+    if (import.meta.client && import.meta.dev) {
+      console.log('✅ GTM Formatter - Formatted item:', formattedItem)
+    }
+
+    return formattedItem
   }
 
   /**

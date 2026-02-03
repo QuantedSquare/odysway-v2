@@ -94,7 +94,7 @@ const categoryQuery = `
       )]{
         _id,
       title,
-      slug,
+      "slug": slug.current,
       image,
       duration,
       nights,
@@ -104,7 +104,20 @@ const categoryQuery = `
       "startingPrice": pricing.startingPrice,
       pricing {
         startingPrice
-      }
+      },
+      destinations[]->{
+        _id,
+        title
+      },
+      experienceType->{
+        _id,
+        title
+      },
+      categories[]->{
+        _id,
+        title
+      },
+      monthlyAvailability
     },
     seo,
     blog->{
@@ -232,7 +245,14 @@ watch(() => categorySanity.value?.voyages, (voyages) => {
   if (voyages && voyages.length > 0) {
     const formattedVoyages = formatVoyagesForGtm(voyages)
     const listName = `Thematique - ${categorySanity.value?.title || 'Unknown'}`
-    trackViewItemList(formattedVoyages, listName)
+    
+    if (formattedVoyages && formattedVoyages.length > 0) {
+      trackViewItemList({
+        currency: 'EUR',
+        items: formattedVoyages,
+        itemListName: listName,
+      })
+    }
   }
 }, { immediate: true })
 

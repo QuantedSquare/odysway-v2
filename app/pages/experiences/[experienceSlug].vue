@@ -85,7 +85,7 @@ const experienceQuery = `
       )]{
       _id,
       title,
-      slug,
+      "slug": slug.current,
       image,
       duration,
       nights,
@@ -95,7 +95,20 @@ const experienceQuery = `
       "startingPrice": pricing.startingPrice,
       pricing {
         startingPrice
-      }
+      },
+      destinations[]->{
+        _id,
+        title
+      },
+      experienceType->{
+        _id,
+        title
+      },
+      categories[]->{
+        _id,
+        title
+      },
+      monthlyAvailability
     },
     seo,
     blog->{
@@ -208,7 +221,14 @@ watch(() => selectedExperience.value?.voyages, (voyages) => {
   if (voyages && voyages.length > 0) {
     const formattedVoyages = formatVoyagesForGtm(voyages)
     const listName = `Experience - ${selectedExperience.value?.title || 'Unknown'}`
-    trackViewItemList(formattedVoyages, listName)
+
+    if (formattedVoyages && formattedVoyages.length > 0) {
+      trackViewItemList({
+        currency: 'EUR',
+        items: formattedVoyages,
+        itemListName: listName,
+      })
+    }
   }
 }, { immediate: true })
 

@@ -25,7 +25,7 @@ const allQueries = `
     "voyages": *[_type == "voyage" && references(^._id) && !('custom' in availabilityTypes)]{
       _id,
       title,
-      slug,
+      "slug": slug.current,
       image,
       duration,
       nights,
@@ -35,7 +35,20 @@ const allQueries = `
       "startingPrice": pricing.startingPrice,
       pricing {
         startingPrice
-      }
+      },
+      destinations[]->{
+        _id,
+        title
+      },
+      experienceType->{
+        _id,
+        title
+      },
+      categories[]->{
+        _id,
+        title
+      },
+      monthlyAvailability
     }
   },
   "pageContent": *[_type == "page_destinations"][0]{
