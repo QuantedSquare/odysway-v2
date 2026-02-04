@@ -31,6 +31,13 @@ export function buildVoyageFromSanity(fetchedDate, travel, imgSrc = null) {
     alreadyPaid: 0,
     totalTravelPrice: +fetchedDate.starting_price * 100,
     isCapExploraction: travel.pricing?.capExploraction || false,
+    // GTM tracking fields
+    destinations: travel.destinations,
+    experienceType: travel.experienceType,
+    categories: travel.categories,
+    monthlyAvailability: travel.monthlyAvailability,
+    availabilityTypes: travel.availabilityTypes,
+    pricing: travel.pricing,
   }
 }
 

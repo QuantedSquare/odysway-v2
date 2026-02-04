@@ -69,6 +69,7 @@
                   <SmartLink
                     :to="faqTextes?.faqSection?.faqHomeSubText?.linkOnText2"
                     :link-class="'text-secondary font-weight-medium'"
+                    @click="trackRdvClick"
                   >
                     {{ faqTextes?.faqSection?.faqHomeSubText?.text2 }}
                   </SmartLink>
@@ -99,7 +100,7 @@ const builder = imageUrlBuilder({
 const primaryColor = 'rgba(43, 76, 82, 0)'
 const secondaryColor = 'rgba(43, 76, 82, 0.8)'
 const route = useRoute()
-
+const { trackRdvClick } = useGtmTracking()
 // Compute gradient to avoid reactivity issues during hydration
 const imageGradient = computed(() => `linear-gradient(to top, ${secondaryColor}, ${primaryColor})`)
 

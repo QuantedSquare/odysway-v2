@@ -89,8 +89,6 @@ useCalendlyEventListener({
     // Note: Standalone RDV doesn't have a step2 in the CSV
   },
   onEventScheduled: (_event) => {
-    trackPixel('trackCustom', 'RDVCalendlyPris', { voyage: `RDVCalendlyPris: ${props.travelTitle}` })
-
     // GTM: Track when RDV is confirmed
     if (props.isFunnel && props.voyage) {
       const formattedVoyage = formatVoyageForGtm(props.voyage)

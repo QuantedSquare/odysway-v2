@@ -186,7 +186,6 @@ import customParseFormat from 'dayjs/plugin/customParseFormat.js'
 dayjs.extend(customParseFormat)
 
 const { trackReservationStep } = useGtmTracking()
-const { formatVoyageForGtm } = useGtmVoyageFormatter()
 
 const { voyage, initialDealValues } = defineProps({
   pageTexts: {
@@ -207,13 +206,13 @@ const { voyage, initialDealValues } = defineProps({
 
 const route = useRoute()
 
-// GTM: Track reservation_step0 on mount (funnel entry)
-onMounted(() => {
-  const formattedVoyage = formatVoyageForGtm(voyage)
-  trackReservationStep(0, formattedVoyage)
-})
-
 const { step, date_id } = route.query
+
+// GTM: Track reservation step on mount based on current step
+onMounted(() => {
+  const currentStepNumber = step ? parseInt(step) : 0
+  trackReservationStep(currentStepNumber, voyage, dynamicDealValues.value)
+})
 const { addSingleParam } = useParams()
 
 const stepperHeaderRef = useTemplateRef('stepperHeaderRef')

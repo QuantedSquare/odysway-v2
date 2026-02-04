@@ -78,7 +78,7 @@ const createAlmaSession = async (order) => {
     Object.assign(deal, { insuranceChoice: insuranceItem })
   }
 
-  const successUrl = encodeURI(`${BASE_URL}/confirmation?voyage=${deal.slug}&purchase=true`)
+  const successUrl = encodeURI(`${BASE_URL}/confirmation?voyage=${deal.slug}&purchase=true&booked_id=${order.booked_id}`)
   const cancelUrl = encodeURI(`${BASE_URL}${order.currentUrl}`)
 
   const paymentBody = {
@@ -173,7 +173,13 @@ const handlePaymentSession = async (session) => {
   // BOOKING MANAGEMENT SUPABASE
   const { data: bookedDate, error } = await supabase
     .from('booked_dates')
-    .update({ is_option: false, expiracy_date: null, booked_places: order.nbTravelers })
+    .update({ 
+      is_option: false, 
+      expiracy_date: null, 
+      booked_places: order.nbTravelers,
+      transaction_id: session.id,
+      payment_type: 'alma',
+    })
     .eq('deal_id', order.id)
     .select('*')
     .single()

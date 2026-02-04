@@ -272,7 +272,7 @@ const createCheckoutSession = async (order) => {
 
   // Ensure URLs are properly encoded
   let forcedOrigin = isDev ? 'https://dev.odysway.com' : config.public.siteURL
-  const successUrl = encodeURI(`${forcedOrigin}/confirmation?voyage=${deal.slug}&purchase=true`)
+  const successUrl = encodeURI(`${forcedOrigin}/confirmation?voyage=${deal.slug}&purchase=true&booked_id=${order.booked_id}`)
   const cancelUrl = encodeURI(`${forcedOrigin}${order.currentUrl}`)
 
   console.log('Final URLs:', {
@@ -399,7 +399,13 @@ const handlePaymentSession = async (session, paymentType) => {
   // BOOKING MANAGEMENT SUPABASE
   const { data: bookedDate, error } = await supabase
     .from('booked_dates')
-    .update({ is_option: false, expiracy_date: null, booked_places: deal.nbTravelers })
+    .update({
+      is_option: false,
+      expiracy_date: null,
+      booked_places: deal.nbTravelers,
+      transaction_id: session.payment_intent || session.id,
+      payment_type: paymentType,
+    })
     .eq('deal_id', order.dealId)
     .select('*')
     .single()
@@ -493,7 +499,7 @@ const handlePaymentSession = async (session, paymentType) => {
 
   const note = await activecampaign.addNote(order.dealId, {
     note: {
-      note: `Paiement ${paymentType} -  ${session.customer_details.name} - ${session.customer_details.email} - ${session.amount_total / 100}€`,
+      note: `Paiement ${paymentType} - ${session.payment_intent || session.id} - ${session.customer_details.name} - ${session.customer_details.email} - ${session.amount_total / 100}€`,
     },
   })
   console.log('added note', note)

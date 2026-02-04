@@ -51,17 +51,17 @@ const route = useRoute()
 const router = useRouter()
 const img = useImage()
 const sanity = useSanity()
-
+const { trackRdvClick } = useGtmTracking()
 const ctasQuery = groq`*[_type == "ctas"][0]{
   faqSection
 }`
 
 const { data: faqTextes } = await useAsyncData('faq-textes', () =>
-  sanity.fetch(ctasQuery)
+  sanity.fetch(ctasQuery),
 )
 
 function redirectToCalendly() {
-  trackPixel('trackCustom', 'ClickRDV')
+  trackRdvClick()
 
   // if (route.name === 'search') {
   //   router.push('/calendly?fromSearch')
@@ -75,7 +75,7 @@ function redirectToCalendly() {
   // else {
   //   router.push(`/calendly?travelTitle=${route.params.voyageSlug}`)
   // }
-  if (route.name === 'search') {
+  if (route.name === 'voyages') {
     router.push('/contact')
   }
   else if (route.name.includes('thematiques')) {

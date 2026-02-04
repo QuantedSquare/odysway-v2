@@ -16,7 +16,7 @@ export default defineEventHandler(async (event) => {
   }
   const deal_id = data.deal_id
   const body = await readBody(event)
-  Object.assign(body, { dealId: deal_id })
+  Object.assign(body, { dealId: deal_id, booked_id: bookedId })
   console.log('========ALMA REQUEST BODY=======', body)
 
   if (!body.dealId) {

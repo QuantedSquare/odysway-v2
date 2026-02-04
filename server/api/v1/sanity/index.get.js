@@ -35,7 +35,16 @@ export default eventHandler(async (event) => {
         title,
         iso,
         chapka
-      }
+      },
+      experienceType->{
+        _id,
+        title
+      },
+      categories[]->{
+        _id,
+        title
+      },
+      monthlyAvailability
     }`,
     { slug },
   )

@@ -424,7 +424,8 @@ export const useGtmTracking = () => {
   /**
    * Track reservation steps - Generic funnel step tracking
    * @param {number} step - Step number (0-5)
-   * @param {object} voyage - Formatted voyage data
+   * @param {object} voyage - Raw voyage object (not formatted)
+   * @param {object} dynamicDealValues - Current funnel state with travelers, options, insurance
    * @param {object} additionalData - Additional data for the step (can include user_data, optin_newsletter, etc.)
    *
    * Steps:
@@ -435,13 +436,31 @@ export const useGtmTracking = () => {
    * - Step 4: Options selected (CSV line 364)
    * - Step 5: Insurance selected (CSV line 405)
    */
-  const trackReservationStep = (step, voyage, additionalData = {}) => {
+  const trackReservationStep = (step, voyage, dynamicDealValues = {}, additionalData = {}) => {
+    const { buildCheckoutItems, calculateTotalValue } = useGtmVoyageFormatter()
+
+    // Build dynamic items array based on funnel state
+    const items = buildCheckoutItems(voyage, dynamicDealValues)
+    const totalValue = calculateTotalValue(items)
+
     const dataLayerEvent = {
       event: `reservation_step${step}`,
       ecommerce: {
-        value: voyage?.price || 0,
+        value: totalValue,
         currency: 'EUR',
-        items: voyage ? [voyage] : [],
+        items: items.map(item => ({
+          item_id: item.itemId,
+          item_name: item.itemName,
+          item_variant: item.itemVariant,
+          item_category: item.itemCategory,
+          item_category2: item.itemCategory2,
+          item_category3: item.itemCategory3,
+          item_category4: item.itemCategory4,
+          item_category5: item.itemCategory5,
+          quantity: item.quantity,
+          price: item.price,
+          discount: item.discount || 0,
+        })),
       },
     }
 
@@ -455,14 +474,31 @@ export const useGtmTracking = () => {
    * Track add_payment_info - Payment method selected
    * CSV line 446
    */
-  const trackAddPaymentInfo = (voyage, paymentType, userData = {}) => {
+  const trackAddPaymentInfo = (voyage, dynamicDealValues, paymentType, userData = {}) => {
+    const { buildCheckoutItems, calculateTotalValue } = useGtmVoyageFormatter()
+
+    const items = buildCheckoutItems(voyage, dynamicDealValues)
+    const totalValue = calculateTotalValue(items)
+
     pushToDataLayer({
       event: 'add_payment_info',
       ecommerce: {
         payment_type: paymentType,
-        value: voyage?.price || 0,
+        value: totalValue,
         currency: 'EUR',
-        items: voyage ? [voyage] : [],
+        items: items.map(item => ({
+          item_id: item.itemId,
+          item_name: item.itemName,
+          item_variant: item.itemVariant,
+          item_category: item.itemCategory,
+          item_category2: item.itemCategory2,
+          item_category3: item.itemCategory3,
+          item_category4: item.itemCategory4,
+          item_category5: item.itemCategory5,
+          quantity: item.quantity,
+          price: item.price,
+          discount: item.discount || 0,
+        })),
       },
       user_data: userData,
     })
@@ -472,16 +508,39 @@ export const useGtmTracking = () => {
    * Track reservation_pose_option - Option placement
    * CSV line 487
    */
-  const trackReservationPoseOption = (voyage, userData = {}) => {
-    pushToDataLayer({
+  const trackReservationPoseOption = (voyage, dynamicDealValues, userData = {}) => {
+    const { buildCheckoutItems, calculateTotalValue } = useGtmVoyageFormatter()
+
+    const items = buildCheckoutItems(voyage, dynamicDealValues)
+    const totalValue = calculateTotalValue(items)
+
+    const dataLayerEvent = {
       event: 'reservation_pose_option',
       ecommerce: {
-        value: voyage?.price || 0,
+        value: totalValue,
         currency: 'EUR',
-        items: voyage ? [voyage] : [],
+        items: items.map(item => ({
+          item_id: item.itemId,
+          item_name: item.itemName,
+          item_variant: item.itemVariant,
+          item_category: item.itemCategory,
+          item_category2: item.itemCategory2,
+          item_category3: item.itemCategory3,
+          item_category4: item.itemCategory4,
+          item_category5: item.itemCategory5,
+          quantity: item.quantity,
+          price: item.price,
+          discount: item.discount || 0,
+        })),
       },
-      user_data: userData,
-    })
+    }
+
+    // Add user data if provided
+    if (userData && Object.keys(userData).length > 0) {
+      dataLayerEvent.user_data = userData
+    }
+
+    pushToDataLayer(dataLayerEvent)
   }
 
   /**
@@ -580,6 +639,58 @@ export const useGtmTracking = () => {
     pushToDataLayer(dataLayerEvent)
   }
 
+  /**
+   * Track purchase event - Payment completed
+   * Fired on confirmation page after successful payment
+   * @param {Object} params - Purchase parameters
+   * @param {string} params.transactionId - Transaction ID from payment provider
+   * @param {string} params.paymentType - Payment type: 'CB' (Stripe), 'alma', 'virement'
+   * @param {number} params.totalValue - Total transaction value
+   * @param {boolean} params.optinNewsletter - Newsletter opt-in status
+   * @param {Object} params.userData - User data object
+   * @param {string} params.userData.userId - User ID
+   * @param {string} params.userData.userMail - User email
+   * @param {string} params.userData.userPhone - User phone with country code
+   * @param {string} params.userData.userCountry - User country
+   * @param {Object} params.voyage - Voyage object (raw from Sanity)
+   * @param {Object} params.dynamicDealValues - Deal values with travelers, options, insurance
+   */
+  const trackPurchase = ({ transactionId, paymentType, totalValue, optinNewsletter, userData, voyage, dynamicDealValues }) => {
+    const { buildCheckoutItems } = useGtmVoyageFormatter()
+
+    const items = buildCheckoutItems(voyage, dynamicDealValues)
+
+    pushToDataLayer({
+      event: 'purchase',
+      optin_newsletter: optinNewsletter ? 'true' : 'false',
+      user_data: {
+        user_id: userData.userId,
+        user_mail: userData.userMail,
+        user_phone: userData.userPhone,
+        user_country: userData.userCountry,
+      },
+      ecommerce: {
+        value: totalValue,
+        currency: 'EUR',
+        transaction_id: transactionId,
+        payment_type: paymentType,
+        items: items.map(item => ({
+          item_id: item.itemId,
+          item_name: item.itemName,
+          item_variant: item.itemVariant,
+          item_category: item.itemCategory,
+          item_category2: item.itemCategory2,
+          item_category3: item.itemCategory3,
+          item_category4: item.itemCategory4,
+          item_category5: item.itemCategory5,
+          price: item.price,
+          discount: item.discount || 0,
+          quantity: item.quantity,
+        })),
+      },
+    })
+  }
+
   return {
     pushToDataLayer,
     getCountryFromPhone,
@@ -615,5 +726,7 @@ export const useGtmTracking = () => {
     trackRdvStep,
     // Devis funnel
     trackDevisStep,
+    // Purchase
+    trackPurchase,
   }
 }

@@ -115,9 +115,102 @@ export const useGtmVoyageFormatter = () => {
     return sectionTitle || 'Liste de voyages'
   }
 
+  /**
+   * Build items array for checkout funnel tracking
+   * @param {Object} voyage - Voyage object
+   * @param {Object} dynamicDealValues - Current funnel state with traveler counts, options, insurance
+   * @returns {Array} Array of items for ecommerce tracking
+   */
+  const buildCheckoutItems = (voyage, dynamicDealValues = {}) => {
+    const items = []
+    
+    // Get base formatted voyage data
+    const baseItem = formatVoyageForGtm(voyage)
+    
+    // Calculate prices
+    const basePrice = voyage.pricing?.startingPrice || voyage.startingPrice / 100 || 0
+    const childrenPrice = basePrice - (voyage.promoChildren / 100 || 0)
+    
+    // Add adult items
+    if (dynamicDealValues.nbAdults > 0) {
+      items.push({
+        ...baseItem,
+        itemVariant: 'Adulte',
+        price: basePrice,
+        quantity: dynamicDealValues.nbAdults,
+      })
+    }
+
+    // Add children items (with discount if applicable)
+    if (dynamicDealValues.nbChildren > 0) {
+      items.push({
+        ...baseItem,
+        itemVariant: 'Enfant',
+        price: childrenPrice,
+        quantity: dynamicDealValues.nbChildren,
+        discount: (voyage.promoChildren / 100 || 0),
+      })
+    }
+    
+    // Add individual room option if selected
+    if (dynamicDealValues.indivRoom && voyage.indivRoomPrice > 0) {
+      items.push({
+        itemId: 'option-chambre-individuelle',
+        itemName: 'Chambre individuelle',
+        itemVariant: undefined,
+        itemCategory: baseItem.itemCategory,
+        itemCategory2: 'Option',
+        itemCategory3: baseItem.itemCategory3,
+        itemCategory4: baseItem.itemCategory4,
+        itemCategory5: baseItem.itemCategory5,
+        price: voyage.indivRoomPrice / 100,
+        quantity: 1,
+        discount: 0,
+      })
+    }
+    
+    // Add insurance if selected
+    if (dynamicDealValues.insurance && dynamicDealValues.insuranceCommissionPrice > 0) {
+      const insuranceName = dynamicDealValues.insurance === 'Multirisque' 
+        ? 'Assurance Multirisque' 
+        : dynamicDealValues.insurance === 'Annulation'
+          ? 'Assurance Annulation'
+          : dynamicDealValues.insurance
+      
+      items.push({
+        itemId: `assurance-${dynamicDealValues.insurance?.toLowerCase()}`,
+        itemName: insuranceName,
+        itemVariant: undefined,
+        itemCategory: baseItem.itemCategory,
+        itemCategory2: 'Assurance',
+        itemCategory3: baseItem.itemCategory3,
+        itemCategory4: baseItem.itemCategory4,
+        itemCategory5: baseItem.itemCategory5,
+        price: dynamicDealValues.insuranceCommissionPrice / 100,
+        quantity: dynamicDealValues.nbAdults + dynamicDealValues.nbChildren || 1,
+        discount: 0,
+      })
+    }
+    
+    return items
+  }
+
+  /**
+   * Calculate total value from items array
+   * @param {Array} items - Array of formatted items
+   * @returns {number} Total value
+   */
+  const calculateTotalValue = (items) => {
+    return items.reduce((total, item) => {
+      return total + ((item.price - (item.discount || 0)) * item.quantity)
+    }, 0)
+  }
+
   return {
     formatVoyageForGtm,
     formatVoyagesForGtm,
     getItemListName,
+    buildCheckoutItems,
+    calculateTotalValue,
   }
 }

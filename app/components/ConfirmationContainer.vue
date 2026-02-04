@@ -129,48 +129,80 @@ import { useDisplay } from 'vuetify'
 
 const route = useRoute()
 const sanity = useSanity()
+const { trackPurchase } = useGtmTracking()
+
 const isOption = ref(route.query.isoption === 'true')
 const isDevis = ref(route.query.devis === 'true')
 
+// Enhanced voyage query with all fields needed for GTM tracking
 const voyageQuery = groq`*[_type == "voyage" && slug.current == $slug][0]{
   _id,
   title,
   "slug": slug.current,
-  image
+  image,
+  "destinations": destinations[]-> {
+    _id,
+    title
+  },
+  "experienceType": experienceType-> {
+    _id,
+    title
+  },
+  "categories": categories[]-> {
+    _id,
+    title
+  },
+  monthlyAvailability,
+  availabilityTypes,
+  pricing {
+    startingPrice,
+    pricePerPerson
+  },
+  startingPrice,
+  promoChildren,
+  indivRoomPrice
 }`
 
 const { data: voyage, status } = await useAsyncData(
   `voyage-${route.query.voyage}`,
-  () => sanity.fetch(voyageQuery, { slug: route.query.voyage })
+  () => sanity.fetch(voyageQuery, { slug: route.query.voyage }),
 )
 
 const { mdAndUp } = useDisplay()
-onMounted(() => {
-  // if (route.query.amount) {
-  //     const purchaseData = {
-  //       currency: 'EUR',
-  //       value: +route.query.amount
-  //     }
 
+onMounted(async () => {
+  // Track purchase event for GTM
+  if (route.query.purchase === 'true' && route.query.booked_id && !isOption.value) {
+    try {
+      // Fetch purchase data from API
+      const purchaseData = await $fetch(`/api/v1/booking/purchase-data?booked_id=${route.query.booked_id}`)
+
+      if (!purchaseData.isOption && voyage.value) {
+        // Track GTM purchase event
+        trackPurchase({
+          transactionId: purchaseData.transactionId,
+          paymentType: purchaseData.paymentType,
+          totalValue: purchaseData.totalValue,
+          optinNewsletter: purchaseData.optinNewsletter,
+          userData: purchaseData.userData,
+          voyage: voyage.value,
+          dynamicDealValues: purchaseData.dynamicDealValues,
+        })
+      }
+    }
+    catch (error) {
+      console.error('Error tracking purchase:', error)
+    }
+  }
+
+  // Track Facebook Pixel (existing logic)
   if (!route.query.isoption && localStorage.getItem('consent') === 'granted') {
-    // This could be a nextTick maybe.
-    // It's to counter the fact that this mounted happend after
-    // the default layout monted that enable facebook.
     if (route.query.purchase === 'true') {
       setTimeout(() => {
         trackPixel('track', 'Purchase')
       }, 100)
     }
   }
-
-  //     // if (this.$route.query.amount) {
-  //     this.$ga.event({
-  //       eventCategory: 'Transaction',
-  //       eventAction: 'View_Confirmation',
-  //       eventLabel: this.$route.query.nbVoyageur || 1,
-  //       eventValue: +this.$route.query.amount || 0
-  //     })
-  //   }
 })
 </script>
 
