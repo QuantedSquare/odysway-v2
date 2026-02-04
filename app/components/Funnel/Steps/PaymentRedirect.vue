@@ -223,9 +223,9 @@ const stripePay = async () => {
     // GTM: Track add_payment_info (Stripe payment)
     trackAddPaymentInfo(voyage, model.value, 'stripe')
 
-    // await navigateTo(checkoutLink, {
-    //   external: true,
-    // })
+    await navigateTo(checkoutLink, {
+      external: true,
+    })
   }
   loadingSession.value = false
 }
