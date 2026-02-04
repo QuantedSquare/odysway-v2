@@ -61,6 +61,7 @@
             rounded="md"
             :disabled="emailSentToBrevo"
             block
+            :loading="isLoading"
             @click="subscribeToNewsletter"
           >
             {{ newsletterContent?.subscribeButton || "S'inscrire" }}
@@ -73,16 +74,21 @@
             rounded="md"
             :block="!mdAndUp"
             :disabled="emailSentToBrevo"
+            :loading="isLoading"
             @click="subscribeToNewsletter"
           >
             {{ newsletterContent?.subscribeButton || "S'inscrire" }}
           </v-btn-secondary>
           <v-snackbar
             v-model="dialogEmailSent"
-            :timeout="2000"
+            :timeout="5000"
           >
-            {{ newsletterContent?.successMessage || 'Merci pour votre inscription à notre newsletter, vous recevrez bientôt nos inspirations et idées pour voyager autrement 🌍' }}
-
+            <template v-if="isNewsletterSubscription">
+              {{ newsletterContent?.successMessage || 'Merci pour votre inscription à notre newsletter, vous recevrez bientôt nos inspirations et idées pour voyager autrement 🌍' }}
+            </template>
+            <template v-else>
+              Merci pour votre inscription, nous vous enverrons un email dès que de nouvelles dates seront disponibles pour ce voyage.
+            </template>
             <template #actions>
               <v-btn
                 color="blue"
@@ -103,10 +109,14 @@
 import { useDisplay } from 'vuetify'
 import { z } from 'zod'
 
-defineProps({
+const props = defineProps({
   isOnVoyage: {
     type: Boolean,
     default: false,
+  },
+  voyage: {
+    type: Object,
+    default: null,
   },
 })
 
@@ -121,44 +131,82 @@ const { data: newsletterContent } = await useAsyncData('newsletter-content', () 
 }`),
 )
 
-const { gtag } = useGtag()
-const { trackNewsletterSubscription } = useGtmTracking()
+const { trackNewsletterSubscription, trackInscriptionAlerte } = useGtmTracking()
 
 const { width, mdAndUp } = useDisplay()
 const email = ref('')
 const emailSentToBrevo = ref(false)
 const dialogEmailSent = ref(false)
+const isNewsletterSubscription = ref(true)
+const isLoading = ref(false)
 
 const validEmail = computed(() => {
-  return z.string().email().safeParse(email.value).success
+  return z.string().email().safeParse(email.value).success && !emailSentToBrevo.value
 })
 
 const subscribeToNewsletter = async () => {
+  if (!validEmail.value) return
+
   const newsletterData = {
     email: email.value,
     listIds: [18],
     listName: 'Optin Newsletter',
     state: 'Optin Newsletter',
   }
-  if (validEmail.value) {
-    await apiRequest('/brevo/optin', 'post', newsletterData)
-    
-    // Track GTM newsletter event
-    trackNewsletterSubscription(email.value)
-    
-    validEmail.value = false
-    emailSentToBrevo.value = true
-    dialogEmailSent.value = true
-    gtag('event',
-      'click',
-      {
-        event_category: 'Newsletter',
-        event_action: 'subscribe',
-        event_label: `Newsletter Subscription`,
-        event_value: 1,
-        debug_mode: true,
-      })
+
+  // Track GTM event: inscription_alerte on voyage pages, newsletter otherwise
+  if (props.isOnVoyage) {
+    trackInscriptionAlerte(email.value)
+
+    // Create ActiveCampaign deal for voyage alert subscription
+    if (props.voyage) {
+      isNewsletterSubscription.value = false
+      isLoading.value = true
+      const utmSource = localStorage.getItem('utmSource')
+      const dealData = {
+        value: props.voyage.pricing?.startingPrice * 100 || 0,
+        title: props.voyage.title,
+        currency: 'eur',
+        group: '1',
+        owner: '1',
+        stage: '75', // Alert subscription stage
+        // CustomFields
+        travelType: 'Voyage de Groupe',
+        country: props.voyage.destinations?.[0]?.title || '',
+        iso: props.voyage.destinations?.[0]?.iso || '',
+        zoneChapka: +props.voyage.destinations?.[0]?.chapka || 0,
+        image: getImageUrl(props.voyage.image?.asset?._ref) || '/images/default/Odysway-couverture-mongolie.jpeg',
+        currentStep: 'Inscription alerte départs',
+        alreadyPaid: 0,
+        restToPay: 0,
+        utm: utmSource || '',
+        slug: props.voyage.slug?.current || props.voyage.slug,
+        basePricePerTraveler: props.voyage.pricing?.startingPrice * 100 || 0,
+        source: 'Inscription alerte',
+        // Contact
+        email: email.value,
+      }
+
+      try {
+        console.log('dealData', dealData)
+        await apiRequest('/ac/deals', 'post', dealData)
+      }
+      catch (error) {
+        console.error('Error creating ActiveCampaign deal:', error)
+      }
+      finally {
+        isLoading.value = false
+      }
+    }
   }
+  else {
+    isNewsletterSubscription.value = true
+    trackNewsletterSubscription(email.value)
+    await apiRequest('/brevo/optin', 'post', newsletterData)
+  }
+
+  emailSentToBrevo.value = true
+  dialogEmailSent.value = true
 }
 </script>
 

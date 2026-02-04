@@ -163,44 +163,29 @@ const { header } = defineProps({
   },
 })
 
-const { gtag } = useGtag()
-const { trackRdvClick, trackCallClick, trackMenuClick } = useGtmTracking()
-
-function captureOutboundLink(btn) {
-  gtag('event', 'Header Button', { eventAction: 'Click', eventLabel: `Header button "${btn}"` })
-}
+const { trackRdvClick, trackCallClick } = useGtmTracking()
 
 function handleButton1Click() {
-  trackMenuClick(header.button1.text, '', '')
-  captureOutboundLink(header.button1.text)
   router.push(header.button1.link)
 }
 
 function handleButton2Click() {
-  trackMenuClick(header.button2.text, '', '')
-  captureOutboundLink(header.button2.text)
   router.push(header.button2.link)
 }
 
 function handleButton3Click() {
-  trackMenuClick(header.button3.text, '', '')
-  captureOutboundLink(header.button3.text)
   router.push(header.button3.link)
 }
 
 function handleButton4Click() {
   trackCallClick()
-  trackPixel('trackCustom', 'ClickAppel')
-  captureOutboundLink(header.button4.text)
 }
 
 function handleButton5Click() {
   if (header.button5.link.includes('calendly') || header.button5.link.toLowerCase().includes('rdv')) {
     trackRdvClick()
   }
-  trackMenuClick(header.button5.text, '', '')
-  trackPixel('trackCustom', 'ClickRDV')
-  captureOutboundLink(header.button5.text)
+
   router.push(header.button5.link)
 }
 

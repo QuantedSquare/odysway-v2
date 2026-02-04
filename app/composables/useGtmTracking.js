@@ -231,6 +231,21 @@ export const useGtmTracking = () => {
   }
 
   /**
+   * Track inscription_alerte event - User subscribes to alerts for a trip
+   * @param {string} userMail - User email
+   */
+  const trackInscriptionAlerte = (userMail) => {
+    if (!userMail) return
+
+    pushToDataLayer({
+      event: 'inscription_alerte',
+      user_data: {
+        user_mail: userMail,
+      },
+    })
+  }
+
+  /**
    * Track clic_faq event
    * @param {string} question - FAQ question text
    */
@@ -582,6 +597,7 @@ export const useGtmTracking = () => {
     trackWhatsappClick,
     trackCallClick,
     trackNewsletterSubscription,
+    trackInscriptionAlerte,
     trackFaqClick,
     trackCtaClick,
     trackSocialMediaClick,

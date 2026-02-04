@@ -119,6 +119,7 @@ import { getDateStatus } from '~/utils/getDateStatus'
 const { width } = useDisplay()
 const { trackSearchBar, trackViewItemList } = useGtmTracking()
 const { formatVoyagesForGtm } = useGtmVoyageFormatter()
+const sanity = useSanity()
 
 dayjs.locale('fr')
 const route = useRoute()
@@ -199,13 +200,46 @@ const fetchTravels = async () => {
     const res = await fetch('/api/v1/booking/travels-by-date')
     const data = await res.json()
 
+    // Fetch complete voyage data from Sanity for GTM tracking
+    const voyageSlugs = data.map(travel => travel.slug).filter(Boolean)
+    const voyagesQuery = groq`*[_type == "voyage" && slug.current in $slugs]{
+      "slug": slug.current,
+      destinations[]->{
+        _id,
+        title
+      },
+      experienceType->{
+        _id,
+        title
+      },
+      categories[]->{
+        _id,
+        title
+      },
+      monthlyAvailability
+    }`
+
+    const voyagesData = await sanity.fetch(voyagesQuery, { slugs: voyageSlugs })
+    const voyagesBySlug = Object.fromEntries(
+      voyagesData.map(v => [v.slug, v]),
+    )
+
     travels.value = data.map((travel) => {
       const futureDates = travel.dates
         .filter(dateInfo => dayjs(dateInfo.departure_date).isAfter(dayjs().add(travel.closingDays, 'day')))
         .sort((a, b) => dayjs(a.departure_date).valueOf() - dayjs(b.departure_date).valueOf())
+
+      // Enrich with Sanity data for GTM tracking
+      const sanityData = voyagesBySlug[travel.slug] || {}
+
       return {
         ...travel,
         dates: futureDates,
+        // Add GTM-required fields from Sanity
+        destinations: sanityData.destinations || travel.destinations,
+        experienceType: sanityData.experienceType || travel.experienceType,
+        categories: sanityData.categories || travel.categories,
+        monthlyAvailability: sanityData.monthlyAvailability || travel.monthlyAvailability,
       }
     })
     loading.value = false
@@ -435,35 +469,52 @@ function capitalizeFirstLetter(string) {
 
 // GTM: Track search_bar when filters are applied
 watch([selectedDestination, confirmedOnly, selectedDates], () => {
-  if (selectedDestination.value || confirmedOnly.value || selectedDates.value?.length > 0) {
-    const searchFilters = {
-      destination: selectedDestination.value || null,
-      period: selectedDates.value?.length > 0 ? periodLabel.value : null,
-      confirmed_only: confirmedOnly.value,
-    }
-    trackSearchBar(searchFilters)
+  // Get destination title from destinationOptions
+  let destinationTitle = null
+  if (selectedDestination.value) {
+    const destOption = destinationOptions.value.find(opt => opt.value === selectedDestination.value)
+    destinationTitle = destOption?.title || selectedDestination.value
   }
+
+  trackSearchBar({
+    destination: destinationTitle,
+    typeVoyage: null, // No travel type filter on this page
+    periode: selectedDates.value?.length > 0 ? periodLabel.value : null,
+    voyageGaranti: confirmedOnly.value,
+  })
 }, { deep: true })
 
 // GTM: Track view_item_list when results are displayed
 watch(filteredDateEntries, (entries) => {
   if (entries && entries.length > 0) {
-    // Convert travel entries to voyages format
+    // Convert travel entries to voyages format with all required fields
     const voyages = entries.map(entry => ({
       _id: entry._id,
       title: entry.title,
       slug: entry.slug,
-      pricing: { startingPrice: entry.startingPrice },
+      pricing: { startingPrice: entry.startingPrice || entry.pricing?.startingPrice },
+      availabilityTypes: entry.availabilityTypes,
+      destinations: entry.destinations,
+      experienceType: entry.experienceType,
+      categories: entry.categories,
+      monthlyAvailability: entry.monthlyAvailability,
     }))
+
     const formattedVoyages = formatVoyagesForGtm(voyages)
-    trackViewItemList(formattedVoyages, 'Prochains Départs')
+
+    if (formattedVoyages && formattedVoyages.length > 0) {
+      trackViewItemList({
+        currency: 'EUR',
+        items: formattedVoyages,
+        itemListName: 'Prochains Départs',
+      })
+    }
   }
 }, { immediate: true })
 
 const pageContentQuery = groq`*[_type == "page_prochains_departs"][0]{
   ...
 }`
-const sanity = useSanity()
 const { data: pageContent } = await useAsyncData('page-prochains-departs', () =>
   sanity.fetch(pageContentQuery),
 )

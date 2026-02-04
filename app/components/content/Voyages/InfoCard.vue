@@ -95,7 +95,7 @@
               class="d-flex align-center ga-2 text-secondary font-weight-bold"
             >
               <CustomBadge :color="'red'" />
-              Pas encore de dates indiquées
+              Pas encore de dates disponibles
               <!-- #TODO: add the key in the page schema -->
             </v-alert>
           </v-col>
@@ -191,7 +191,10 @@
                 </span>
               </div>
             </v-col>
-            <NewsletterContainer is-on-voyage />
+            <NewsletterContainer
+              is-on-voyage
+              :voyage="voyage"
+            />
           </v-row>
         </template>
       </v-container>

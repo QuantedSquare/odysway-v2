@@ -44,6 +44,67 @@
       <span class="text-h5 text-md-h4 font-weight-bold mt-4">Voir {{ isExpanded ? 'moins' : 'plus' }} de dates</span>
       <BouncingBtn v-model="isExpanded" />
     </v-row>
+    <template v-else-if="sortedByDates.length === 0 && isGroupeAvailable">
+      <v-row
+        justify="center"
+        align="center"
+        class="my-8"
+      >
+        <v-col
+          cols="12"
+        >
+          <v-card
+            elevation="0"
+            class="pa-8 pa-md-12"
+            color="soft-blush"
+          >
+            <div class="d-flex flex-column align-center text-center ga-6">
+              <!-- Status indicator with icon -->
+              <div class="d-flex align-center ga-3">
+                <CustomBadge :color="'red'" />
+                <h3 class="text-h5 text-md-h4 font-weight-bold text-secondary">
+                  Pas encore de dates disponibles
+                  <!-- #TODO: add the key in the page schema -->
+                </h3>
+              </div>
+
+              <!-- Descriptive text -->
+              <p
+                class="text-body-2 text-primary-light-2 mx-auto"
+                style="max-width: 500px;"
+              >
+                Inscrivez-vous à notre alerte pour être informé dès que de nouvelles dates seront disponibles pour ce voyage.
+              </p>
+
+              <!-- Newsletter form with better spacing -->
+              <div
+                class="w-100"
+                style="max-width: 600px;"
+              >
+                <NewsletterContainer
+                  is-on-voyage
+                  :voyage="props.voyage"
+                />
+              </div>
+
+              <!-- Confirmation message with icon -->
+              <div class="d-flex align-center ga-2 text-primary">
+                <v-icon
+                  size="20"
+                  color="green"
+                >
+                  {{ mdiCheckCircleOutline }}
+                </v-icon>
+                <span class="text-body-2 font-weight-medium">
+                  <!-- #TODO: add the key in the page -->
+                  Vous serez informé dès l'ouverture des réservations
+                </span>
+              </div>
+            </div>
+          </v-card>
+        </v-col>
+      </v-row>
+    </template>
     <v-row v-if="isPrivatisationAvailable && isGroupeAvailable">
       <v-col class="bg-grey-light-3 rounded-lg mx-3 d-flex flex-column align-center justify-center ga-6 my-5 py-10">
         <div class="text-h4 font-weight-bold text-primary text-center">
@@ -79,6 +140,7 @@
 
 <script setup>
 import { useGoTo } from 'vuetify'
+import { mdiCheckCircleOutline } from '@mdi/js'
 import dayjs from 'dayjs'
 
 const goTo = useGoTo()

@@ -87,6 +87,7 @@
                   <SmartLink
                     :to="link.slug.includes('http') ? link.slug : `/${link.slug}`"
                     link-class="line-clamp-2 text-caption text-md-body-2 font-weight-regular pb-2 pb-md-4"
+                    @click="handleLinkClick(data[currentTab].title, section.title, link.title)"
                   >
                     {{ link.title }}
                   </SmartLink>
@@ -103,6 +104,17 @@
 <script setup>
 const currentTab = ref(0)
 const sanity = useSanity()
+const { trackMenuClick } = useGtmTracking()
+
+// Handle link click with GTM tracking
+const handleLinkClick = (tabTitle, sectionTitle, linkTitle) => {
+  trackMenuClick({
+    niv1: tabTitle,
+    niv2: sectionTitle,
+    niv3: linkTitle,
+  })
+}
+
 // Optimized GROQ query - fetch only required fields
 const topsQuery = `
   *[_type == "tops"]|order(orderRank) {

@@ -203,7 +203,9 @@ const voyageQuery = `
     },
     destinations[]->{
       _id,
-      title
+      title,
+      iso,
+      chapka
     },
     experienceType->{
       _id,
