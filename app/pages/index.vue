@@ -482,10 +482,6 @@ const handleProchainsDepartsClick = () => {
     ctaUrl: link,
   })
 
-  // Keep existing tracking
-  trackPixel('trackCustom', 'ClickProchainsDeparts')
-  captureOutboundLink('Prochains départs')
-
   navigateTo(link)
 }
 

@@ -115,7 +115,7 @@
 </template>
 
 <script setup>
-const { trackDevisStep } = useGtmTracking()
+const { trackDevisStep, trackRdvClick } = useGtmTracking()
 const { formatVoyageForGtm } = useGtmVoyageFormatter()
 
 useSeo({
@@ -277,8 +277,6 @@ const submit = async () => {
   }
   await apiRequest('/ac/deals', 'post', voyageBody)
   if (skipperChoice.value === 'devis') {
-    trackPixel('track', 'Lead')
-
     // GTM: Track devis_classic_confirmation
     const { getCountryFromPhone } = useGtmTracking()
     const formattedVoyage = formatVoyageForGtm(voyage.value)
@@ -295,9 +293,7 @@ const submit = async () => {
     router.push('/confirmation?voyage=' + voyage.value.slug + '&devis=true')
   }
   else if (skipperChoice.value === 'call') {
-    trackPixel('trackCustom', 'ClickRDV', {
-      voyage: voyage.value.title,
-    })
+    trackRdvClick()
     showCalendly.value = true
   }
   userInfo.value.loading = false

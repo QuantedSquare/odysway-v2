@@ -137,7 +137,7 @@
                 block
                 rounded="md"
                 :to="`/calendly?travelTitle=${voyage.title}`"
-                @click="trackPixel('trackCustom', 'ClicRdv', { voyage: `${voyage.title}` })"
+                @click="trackRdvClick()"
               >
                 <div class="d-flex align-center ga-2">
                   <SanityImage
@@ -211,7 +211,7 @@
         width="100%"
         class="text-primary text-break d-flex align-center justify-center ga-3"
         :to="`/devis?slug=${voyage.slug.current}`"
-        @click="trackPixel('trackCustom', 'ClicRdv', { voyage: `${voyage.title}` })"
+        @click="trackRdvClick()"
       >
         <v-icon
           size="24"
@@ -235,6 +235,7 @@ import dayjs from 'dayjs'
 const { mdAndDown } = useDisplay()
 const goTo = useGoTo()
 const { dates, isLoading } = useDates()
+const { trackRdvClick } = useGtmTracking()
 
 const { stickyBlock, voyage } = defineProps({
   stickyBlock: {

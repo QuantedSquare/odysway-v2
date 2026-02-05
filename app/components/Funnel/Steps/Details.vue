@@ -319,7 +319,6 @@ const submitStepData = async () => {
         lastname: model.value.lastName,
         optinNewsletter: model.value.optinNewsletter,
       }
-      trackPixel('track', 'AddToCart')
 
       // GTM: Track reservation_step2 (contact details submitted)
       const { getCountryFromPhone } = useGtmTracking()

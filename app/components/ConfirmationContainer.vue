@@ -199,7 +199,7 @@ onMounted(async () => {
   if (!route.query.isoption && localStorage.getItem('consent') === 'granted') {
     if (route.query.purchase === 'true') {
       setTimeout(() => {
-        trackPixel('track', 'Purchase')
+        // ?
       }, 100)
     }
   }

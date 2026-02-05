@@ -125,14 +125,6 @@ const blogType = computed(() => {
 // Badge color when category exists
 const badgeColor = computed(() => blogType.value ? 'secondary' : null)
 
-onMounted(() => {
-  trackPixel('trackCustom', 'BlogView', { titre: blogSanity.value.title })
-  gtag('event', 'page_view', {
-    eventCategory: 'Blog',
-    eventAction: 'View',
-    eventLabel: blogSanity.value.title })
-})
-
 watchEffect(() => {
   if (!blogSanity.value) return
 

@@ -43,20 +43,12 @@ const { optOut } = defineProps({
     default: false,
   },
 })
-const { gtag, initialize } = useGtag()
 
 function acceptCookies() {
   model.value = false
   if (!optOut) {
-    initialize()
-    gtag('consent', 'update', {
-      ad_user_data: 'granted',
-      ad_personalization: 'granted',
-      ad_storage: 'granted',
-      analytics_storage: 'granted',
-    })
-    trackPixel('track', 'PageView')
-    useTrackEvent('page_view')
+
+    // ?
   }
   localStorage.setItem('consent', 'granted')
 }

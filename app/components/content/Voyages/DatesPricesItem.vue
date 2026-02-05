@@ -333,7 +333,6 @@ const isGeneratingLink = ref(false)
 const handleBookingClick = async () => {
   try {
     isGeneratingLink.value = true
-    trackPixel('track', 'AddToWishlist')
 
     // GTM: Track add_to_wishlist event
     if (props.voyage) {

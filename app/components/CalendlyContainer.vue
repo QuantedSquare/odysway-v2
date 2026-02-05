@@ -88,18 +88,40 @@ useCalendlyEventListener({
     }
     // Note: Standalone RDV doesn't have a step2 in the CSV
   },
-  onEventScheduled: (_event) => {
+  onEventScheduled: async (_event) => {
+    console.log('onEventScheduled', _event)
+
+    // Extract invitee URI from the event
+    const inviteeUri = _event.data?.payload?.invitee?.uri
+
+    // Fetch invitee details from our API
+    let userData = {}
+    if (inviteeUri) {
+      try {
+        const inviteeData = await $fetch(`/api/v1/calendly/invitee?invitee_uri=${encodeURIComponent(inviteeUri)}`)
+        userData = {
+          user_mail: inviteeData.email,
+          user_phone: inviteeData.phone,
+          user_name: inviteeData.name,
+        }
+        console.log('Calendly invitee data fetched:', userData)
+      }
+      catch (error) {
+        console.error('Error fetching Calendly invitee data:', error)
+      }
+    }
+
     // GTM: Track when RDV is confirmed
     if (props.isFunnel && props.voyage) {
       const formattedVoyage = formatVoyageForGtm(props.voyage)
 
       if (isDevisContext.value) {
         // Devis RDV context: devis_rdv_confirmation
-        trackDevisStep('rdv', 'confirmation', formattedVoyage)
+        trackDevisStep('rdv', 'confirmation', formattedVoyage, userData)
       }
       else {
         // Checkout RDV context: reservation_rdv_confirmation
-        trackReservationRdvStep('confirmation', formattedVoyage)
+        trackReservationRdvStep('confirmation', formattedVoyage, userData)
       }
     }
     else {

@@ -66,12 +66,7 @@ const props = defineProps({
   },
 })
 
-const { gtag } = useGtag()
 const { trackRdvClick, trackCtaClick } = useGtmTracking()
-
-function captureOutboundLink(btn) {
-  gtag('event', 'Header Button', { eventAction: 'Click', eventLabel: `CTA button "${btn}"` })
-}
 
 const handleClick = () => {
   // Track RDV click if link contains calendly or rdv keywords
@@ -87,9 +82,5 @@ const handleClick = () => {
       ctaUrl: props.link,
     })
   }
-
-  // Keep existing tracking
-  trackPixel('trackCustom', 'ClickRDV')
-  captureOutboundLink(props.link)
 }
 </script>

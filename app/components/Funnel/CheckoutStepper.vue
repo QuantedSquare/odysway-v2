@@ -185,7 +185,7 @@ import customParseFormat from 'dayjs/plugin/customParseFormat.js'
 
 dayjs.extend(customParseFormat)
 
-const { trackReservationStep } = useGtmTracking()
+const { trackReservationStep, trackRdvClick } = useGtmTracking()
 
 const { voyage, initialDealValues } = defineProps({
   pageTexts: {
@@ -251,12 +251,8 @@ const nextStep = () => {
   currentStep.value = nextStepValue
   addSingleParam('step', nextStepValue.toString())
 
-  // Check if we're going on calendly step to fire pixel:
-
   if (nextStepValue === 1 && skipperMode.value === 'quick') {
-    trackPixel('trackCustom', 'ClicRdv', {
-      voyage: voyage.value.title,
-    })
+    trackRdvClick()
   }
 }
 

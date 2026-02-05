@@ -40,7 +40,6 @@
 import { useDisplay } from 'vuetify'
 import dayjs from 'dayjs'
 import retrieveExistingBookedDate from '~/utils/retrieveExistingBookedDate.js'
-import trackPixel from '~/utils/trackPixel.js'
 
 const { mdAndDown } = useDisplay()
 const { trackAddToWishlist } = useGtmTracking()
@@ -118,8 +117,6 @@ const generateCheckoutLink = async () => {
 // Function to handle date button click
 const handleDateClick = async () => {
   try {
-    trackPixel('track', 'AddToWishlist')
-    
     // GTM: Track add_to_wishlist event
     if (props.voyage) {
       const formattedVoyage = formatVoyageForGtm(props.voyage)

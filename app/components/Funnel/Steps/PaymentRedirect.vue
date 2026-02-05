@@ -263,17 +263,9 @@ const almaPay = async () => {
   })
 
   if (checkoutLink.url) {
-    trackPixel('trackCustom', 'ClickAlma', { voyage: voyage.title })
-
     // GTM: Track add_payment_info (Alma payment)
     trackAddPaymentInfo(voyage, model.value, 'alma')
 
-    if (localStorage.getItem('consent') === 'granted') {
-      trackPixel('track', 'InitiateCheckout', {
-        currency: 'EUR',
-        amount: +route.query.amount * 100,
-      })
-    }
     await navigateTo(checkoutLink.url, {
       external: true,
     })
@@ -322,7 +314,6 @@ const book = async () => {
       },
       body: JSON.stringify(dealData),
     })
-    trackPixel('trackCustom', 'PoseOption', { voyage: voyage.title })
   }
 
   // GTM: Track reservation_pose_option
