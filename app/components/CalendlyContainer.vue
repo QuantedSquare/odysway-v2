@@ -89,8 +89,6 @@ useCalendlyEventListener({
     // Note: Standalone RDV doesn't have a step2 in the CSV
   },
   onEventScheduled: async (_event) => {
-    console.log('onEventScheduled', _event)
-
     // Extract invitee URI from the event
     const inviteeUri = _event.data?.payload?.invitee?.uri
 
@@ -104,7 +102,6 @@ useCalendlyEventListener({
           user_phone: inviteeData.phone,
           user_name: inviteeData.name,
         }
-        console.log('Calendly invitee data fetched:', userData)
       }
       catch (error) {
         console.error('Error fetching Calendly invitee data:', error)

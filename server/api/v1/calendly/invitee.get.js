@@ -31,7 +31,7 @@ export default defineEventHandler(async (event) => {
         'Content-Type': 'application/json',
       },
     })
-
+    console.log('inviteeData', inviteeData)
     if (!inviteeData?.resource) {
       throw createError({
         statusCode: 404,
