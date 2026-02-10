@@ -81,11 +81,11 @@ export const useGtmTracking = () => {
    */
   const trackPreloadData = (pageType) => {
     pushToDataLayer({
-      event: 'preload_data',
-      page_type: pageType,
+      ecommerce: null,
     })
     pushToDataLayer({
-      ecommerce: null,
+      event: 'preload_data',
+      page_type: pageType,
     })
   }
 
@@ -388,7 +388,9 @@ export const useGtmTracking = () => {
       ...voyage,
       quantity,
     }
-
+    pushToDataLayer({
+      ecommerce: null,
+    })
     pushToDataLayer({
       event: 'add_to_wishlist',
       ecommerce: {
