@@ -29,7 +29,89 @@ export default defineNuxtPlugin((nuxtApp) => {
    * Returns: 'Homepage', 'Page Voyage', 'Blog', 'Page Avis', or 'Autres'
    */
   const getPageType = (route: RouteLocationNormalized): string => {
-    return route.path as string
+    const path = route.path
+    // Homepage
+    if (path === '/') {
+      return 'Homepage'
+    }
+    // Blog pages
+    if (path.startsWith('/blog') || (path.match(/^\/[^/]+$/) && route.name?.toString().includes('blog'))) {
+      return 'Blog'
+    }
+    // Avis (Reviews) page
+    if (path === '/avis-voyageurs' || path.startsWith('/avis')) {
+      return 'Page Avis'
+    }
+    // Voyage pages (individual trip pages)
+    if (route.name === 'voyages-voyageSlug') {
+      return 'Page Voyage'
+    }
+    console.log('route.path', route.path)
+    if (path.startsWith('/voyages')) {
+      return 'Page Recherche'
+    }
+    // Destination pages
+    if (path.startsWith('/destinations') || path === '/destinations') {
+      return 'Destination'
+    }
+    // Experience pages
+    if (path.startsWith('/experiences') || path === '/experiences') {
+      return 'Experience'
+    }
+    // Thematique pages
+    if (path.startsWith('/thematiques') || path === '/thematiques') {
+      return 'Thematique'
+    }
+    // Devis page
+    if (path === '/devis') {
+      return 'Devis'
+    }
+    // Checkout page
+    if (path === '/checkout') {
+      return 'Checkout'
+    }
+    // Confirmation page
+    if (path === '/confirmation') {
+      return 'Confirmation'
+    }
+    // Offre cadeau page
+    if (path === '/offre-cadeau') {
+      return 'Offre Cadeau'
+    }
+    // Sur mesure page
+    if (path === '/sur-mesure') {
+      return 'Sur Mesure'
+    }
+    // Vision voyage Odysway page
+    if (path === '/vision-voyage-odysway') {
+      return 'Vision Voyage Odysway'
+    }
+    // Entreprise page
+    if (path === '/entreprise') {
+      return 'Entreprise'
+    }
+    // Mentions légales page
+    if (path === '/mentions-legales') {
+      return 'Mentions Légales'
+    }
+    // Conditions générales de vente page
+    if (path === '/conditions-generales-de-vente') {
+      return 'Conditions Générales de Vente'
+    }
+    // FAQ page
+    if (path === '/faq') {
+      return 'FAQ'
+    }
+    // Avis voyageurs page
+    if (path === '/avis-voyageurs') {
+      return 'Avis Voyageurs'
+    }
+    // Chèques vacances page
+    if (path === '/cheques-vacances') {
+      return 'Chèques Vacances'
+    }
+    // All other pages
+    return 'Autres'
   }
 
   /**

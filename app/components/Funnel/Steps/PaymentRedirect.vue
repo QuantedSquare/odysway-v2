@@ -221,7 +221,14 @@ const stripePay = async () => {
 
   if (checkoutLink) {
     // GTM: Track add_payment_info (Stripe payment)
-    trackAddPaymentInfo(voyage, model.value, 'stripe')
+    const { getCountryFromPhone } = useGtmTracking()
+    const userData = {
+      user_id: model.value.email,
+      user_mail: model.value.email,
+      user_phone: model.value.phone,
+      user_country: getCountryFromPhone(model.value.phone) || 'Unknown',
+    }
+    trackAddPaymentInfo(voyage, model.value, 'stripe', userData)
 
     await navigateTo(checkoutLink, {
       external: true,
@@ -264,7 +271,14 @@ const almaPay = async () => {
 
   if (checkoutLink.url) {
     // GTM: Track add_payment_info (Alma payment)
-    trackAddPaymentInfo(voyage, model.value, 'alma')
+    const { getCountryFromPhone } = useGtmTracking()
+    const userData = {
+      user_id: model.value.email,
+      user_mail: model.value.email,
+      user_phone: model.value.phone,
+      user_country: getCountryFromPhone(model.value.phone) || 'Unknown',
+    }
+    trackAddPaymentInfo(voyage, model.value, 'alma', userData)
 
     await navigateTo(checkoutLink.url, {
       external: true,
@@ -317,7 +331,14 @@ const book = async () => {
   }
 
   // GTM: Track reservation_pose_option
-  trackReservationPoseOption(voyage, model.value)
+  const { getCountryFromPhone } = useGtmTracking()
+  const userData = {
+    user_id: model.value.email,
+    user_mail: model.value.email,
+    user_phone: model.value.phone,
+    user_country: getCountryFromPhone(model.value.phone) || 'Unknown',
+  }
+  trackReservationPoseOption(voyage, model.value, userData)
 
   await navigateTo(`/confirmation?voyage=${voyage.slug}&isoption=true`)
 }

@@ -157,11 +157,6 @@ const buttonLoading = ref(false)
 const { createDeal, updateDeal } = useStepperDeal(ownStep)
 const route = useRoute()
 
-// GTM: Track reservation_step1 on mount (details page entry)
-onMounted(() => {
-  trackReservationStep(1, voyage, model.value)
-})
-
 // New: Local validation state
 
 const selectOptions = function (start, end) {

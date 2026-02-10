@@ -156,17 +156,31 @@ const stepperHeaderRef = useTemplateRef('stepperHeaderRef')
 const sanity = useSanity()
 
 const voyageQuery = groq`*[_type == "voyage" && slug.current == $slug][0]{
+  _id,
   title,
   "slug": slug.current,
   image,
   travelType,
-  pricing,
-  destinations[]-> {
+  pricing {
+    startingPrice,
+    pricePerPerson
+  },
+  "destinations": destinations[]-> {
     _id,
     title,
     iso,
     chapka
-  }
+  },
+  "experienceType": experienceType-> {
+    _id,
+    title
+  },
+  "categories": categories[]-> {
+    _id,
+    title
+  },
+  monthlyAvailability,
+  availabilityTypes
 }`
 
 const { data: voyage } = await useAsyncData(`voyages-${route.query.slug}`, () =>
@@ -190,13 +204,15 @@ const { data: pageTexts, status: pageStatus } = await useAsyncData('devis-texts'
   sanity.fetch(devisQuery),
 )
 
-// GTM: Track devis_step0 on page load (CSV line 950)
-// Note: We start by tracking 'classic' type since user hasn't chosen yet
+// GTM: Track devis_step0 on page load
+// Note: The CSV shows 'devis_step0' without type differentiation
 // Individual flows (classic/rdv/surmesure) will track their step1 when choice is made
 onMounted(() => {
   if (voyage.value) {
     const formattedVoyage = formatVoyageForGtm(voyage.value)
-    // Track generic devis entry - the CSV doesn't differentiate types at step0
+    // Track devis_step0 (generic entry point before choice)
+    // We use 'classic' as the type parameter but the event name will be 'devis_classic_step0'
+    // This matches the CSV tracking plan
     trackDevisStep('classic', 0, formattedVoyage)
   }
 })
@@ -205,12 +221,8 @@ const nextStep = () => {
   // GTM: Track devis_classic_step2 when moving from details to user info
   if (currentStep.value === 2 && skipperChoice.value === 'devis' && voyage.value) {
     const formattedVoyage = formatVoyageForGtm(voyage.value)
-    const userData = {
-      travelers_count: +details.value.nbAdults + +details.value.nbChildren,
-      include_dates: details.value.includeDates,
-      include_flight: details.value.includeFlight,
-    }
-    trackDevisStep('classic', 2, formattedVoyage, userData)
+    // Note: Step 2 doesn't require user_data in CSV, but we can include metadata
+    trackDevisStep('classic', 2, formattedVoyage)
   }
 
   currentStep.value++
@@ -281,11 +293,12 @@ const submit = async () => {
     const { getCountryFromPhone } = useGtmTracking()
     const formattedVoyage = formatVoyageForGtm(voyage.value)
     const additionalData = {
-      optin_newsletter: userInfo.value.subscribeToNewsletter,
+      optin_newsletter: userInfo.value.subscribeToNewsletter ? 'true' : 'false',
       user_data: {
-        email: userInfo.value.email,
-        phone: userInfo.value.phone,
-        user_country: getCountryFromPhone(userInfo.value.phone),
+        user_id: userInfo.value.email,
+        user_mail: userInfo.value.email,
+        user_phone: userInfo.value.phone,
+        user_country: getCountryFromPhone(userInfo.value.phone) || 'Unknown',
       },
     }
     trackDevisStep('classic', 'confirmation', formattedVoyage, additionalData)

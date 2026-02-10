@@ -37,6 +37,7 @@
 
 <script setup>
 const { trackDevisStep } = useGtmTracking()
+const { formatVoyageForGtm } = useGtmVoyageFormatter()
 
 const props = defineProps({
   page: {
@@ -58,7 +59,7 @@ onMounted(() => {
   }
 })
 
-// GTM: Track when choice is made
+// GTM: Track when choice is made (step1 events)
 watch(model, (newChoice) => {
   if (newChoice && props.voyage) {
     const choiceMap = {
@@ -66,7 +67,8 @@ watch(model, (newChoice) => {
       tally: 'surmesure',
       call: 'rdv',
     }
-    trackDevisStep(choiceMap[newChoice], 1, props.voyage)
+    const formattedVoyage = formatVoyageForGtm(props.voyage)
+    trackDevisStep(choiceMap[newChoice], 1, formattedVoyage)
   }
 })
 </script>

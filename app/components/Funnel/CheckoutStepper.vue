@@ -211,6 +211,7 @@ const { step, date_id } = route.query
 // GTM: Track reservation step on mount based on current step
 onMounted(() => {
   const currentStepNumber = step ? parseInt(step) : 0
+  console.log('currentStepNumber', step)
   trackReservationStep(currentStepNumber, voyage, dynamicDealValues.value)
 })
 const { addSingleParam } = useParams()

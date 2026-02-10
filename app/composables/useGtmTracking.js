@@ -84,6 +84,9 @@ export const useGtmTracking = () => {
       event: 'preload_data',
       page_type: pageType,
     })
+    pushToDataLayer({
+      ecommerce: null,
+    })
   }
 
   /**
@@ -560,17 +563,36 @@ export const useGtmTracking = () => {
       ? `reservation_rdv_step${step}`
       : 'reservation_rdv_confirmation'
 
-    pushToDataLayer({
+    const dataLayerEvent = {
       event: eventName,
-      ecommerce: voyage
-        ? {
-            value: voyage.price || 0,
-            currency: 'EUR',
-            items: [voyage],
-          }
-        : undefined,
-      user_data: userData,
-    })
+    }
+
+    // Add ecommerce data if voyage is provided
+    if (voyage) {
+      dataLayerEvent.ecommerce = {
+        value: voyage.price || 0,
+        currency: 'EUR',
+        items: [{
+          item_id: voyage.itemId,
+          item_name: voyage.itemName,
+          item_category: voyage.itemCategory,
+          item_category2: voyage.itemCategory2,
+          item_category3: voyage.itemCategory3,
+          item_category4: voyage.itemCategory4,
+          item_category5: voyage.itemCategory5,
+          price: voyage.price,
+          discount: voyage.discount || 0,
+          quantity: voyage.quantity || 1,
+        }],
+      }
+    }
+
+    // Add user data if provided
+    if (userData && Object.keys(userData).length > 0) {
+      dataLayerEvent.user_data = userData
+    }
+
+    pushToDataLayer(dataLayerEvent)
   }
 
   /**
@@ -612,7 +634,8 @@ export const useGtmTracking = () => {
   const trackDevisStep = (type, step, voyage = null, userData = {}) => {
     let eventName
     if (typeof step === 'number') {
-      eventName = `devis_${type}_step${step}`
+      // Step 0 is just 'devis_step0' (no type), all others include type
+      eventName = step === 0 ? `devis_step${step}` : `devis_${type}_step${step}`
     }
     else {
       eventName = `devis_${type}_confirmation`
@@ -627,7 +650,18 @@ export const useGtmTracking = () => {
       dataLayerEvent.ecommerce = {
         value: voyage.price || 0,
         currency: 'EUR',
-        items: [voyage],
+        items: [{
+          item_id: voyage.itemId,
+          item_name: voyage.itemName,
+          item_category: voyage.itemCategory,
+          item_category2: voyage.itemCategory2,
+          item_category3: voyage.itemCategory3,
+          item_category4: voyage.itemCategory4,
+          item_category5: voyage.itemCategory5,
+          price: voyage.price,
+          discount: voyage.discount || 0,
+          quantity: voyage.quantity || 1,
+        }],
       }
     }
 
