@@ -107,6 +107,9 @@ export const useGtmTracking = () => {
    */
   const trackSelectPromotion = (promotionCardName, promotionName) => {
     pushToDataLayer({
+      ecommerce: null,
+    })
+    pushToDataLayer({
       event: 'select_promotion',
       promotion_card_name: promotionCardName,
       promotion_name: promotionName,
@@ -159,6 +162,9 @@ export const useGtmTracking = () => {
    * @param {string} params.itemListName - Name of the item list
    */
   const trackSelectItem = ({ currency = 'EUR', item, itemListName }) => {
+    pushToDataLayer({
+      ecommerce: null,
+    })
     pushToDataLayer({
       event: 'select_item',
       ecommerce: {
@@ -267,6 +273,9 @@ export const useGtmTracking = () => {
    * @param {string} params.ctaUrl - CTA redirect URL
    */
   const trackCtaClick = ({ ctaId, ctaLabel, ctaUrl }) => {
+    pushToDataLayer({
+      ecommerce: null,
+    })
     pushToDataLayer({
       event: 'clic_cta',
       cta_id: ctaId,
@@ -442,6 +451,10 @@ export const useGtmTracking = () => {
    * - Step 5: Insurance selected (CSV line 405)
    */
   const trackReservationStep = (step, voyage, dynamicDealValues = {}, additionalData = {}) => {
+    pushToDataLayer({
+      ecommerce: null,
+    })
+
     const { buildCheckoutItems, calculateTotalValue } = useGtmVoyageFormatter()
 
     // Build dynamic items array based on funnel state
@@ -480,6 +493,10 @@ export const useGtmTracking = () => {
    * CSV line 446
    */
   const trackAddPaymentInfo = (voyage, dynamicDealValues, paymentType, userData = {}) => {
+    pushToDataLayer({
+      ecommerce: null,
+    })
+
     const { buildCheckoutItems, calculateTotalValue } = useGtmVoyageFormatter()
 
     const items = buildCheckoutItems(voyage, dynamicDealValues)
@@ -514,6 +531,9 @@ export const useGtmTracking = () => {
    * CSV line 487
    */
   const trackReservationPoseOption = (voyage, dynamicDealValues, userData = {}) => {
+    pushToDataLayer({
+      ecommerce: null,
+    })
     const { buildCheckoutItems, calculateTotalValue } = useGtmVoyageFormatter()
 
     const items = buildCheckoutItems(voyage, dynamicDealValues)
@@ -561,6 +581,10 @@ export const useGtmTracking = () => {
    * - confirmation: Booking confirmed (CSV line 610)
    */
   const trackReservationRdvStep = (step, voyage, userData = {}) => {
+    pushToDataLayer({
+      ecommerce: null,
+    })
+
     const eventName = typeof step === 'number'
       ? `reservation_rdv_step${step}`
       : 'reservation_rdv_confirmation'
@@ -634,6 +658,10 @@ export const useGtmTracking = () => {
    * For RDV: Uses same Calendly tracking as checkout (rdv_stepX)
    */
   const trackDevisStep = (type, step, voyage = null, userData = {}) => {
+    pushToDataLayer({
+      ecommerce: null,
+    })
+
     let eventName
     if (typeof step === 'number') {
       // Step 0 is just 'devis_step0' (no type), all others include type
@@ -669,7 +697,8 @@ export const useGtmTracking = () => {
 
     // Add user data if provided
     if (Object.keys(userData).length > 0) {
-      dataLayerEvent.user_data = userData
+      dataLayerEvent.user_data = userData.user_data
+      dataLayerEvent.optin_newsletter = userData.optin_newsletter
     }
 
     pushToDataLayer(dataLayerEvent)
@@ -695,7 +724,9 @@ export const useGtmTracking = () => {
     const { buildCheckoutItems } = useGtmVoyageFormatter()
 
     const items = buildCheckoutItems(voyage, dynamicDealValues)
-
+    pushToDataLayer({
+      ecommerce: null,
+    })
     pushToDataLayer({
       event: 'purchase',
       optin_newsletter: optinNewsletter ? 'true' : 'false',

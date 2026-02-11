@@ -255,6 +255,9 @@ const nextStep = () => {
   if (nextStepValue === 1 && skipperMode.value === 'quick') {
     trackRdvClick()
   }
+  else if (nextStepValue === 1) {
+    trackReservationStep(1, voyage, dynamicDealValues.value)
+  }
 }
 
 const previousStep = () => {

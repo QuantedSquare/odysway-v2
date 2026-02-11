@@ -360,7 +360,6 @@ watch(() => destinationSanity.value?.voyages, (voyages) => {
 
 // Use SEO composable - automatically uses blog's SEO fields
 if (destinationSanity.value) {
-  console.log('destinationSanity', destinationSanity.value)
   useSeo({
     seoData: destinationSanity.value.seo || destinationSanity.value.blog?.seo || {}, // If {} blog SEO will be detected from content.blog or fallback or generated default
     content: destinationSanity.value,

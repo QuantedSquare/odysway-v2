@@ -38,7 +38,6 @@
                       <DevisSkipper
                         v-model="skipperChoice"
                         :page="pageTexts"
-                        :voyage="voyage"
                       />
                     </v-stepper-window-item>
                     <v-stepper-window-item :value="2">
@@ -47,11 +46,7 @@
                         v-model="details"
                         :page="pageTexts"
                       />
-                      <!-- <DevisUserInfoForm
-                      v-if="skipperChoice === 'call' && !showCalendly"
-                      v-model="userInfo"
-                      :page="pageTexts"
-                    /> -->
+
                       <CalendlyContainer
                         v-if="skipperChoice === 'call'"
                         :travel-title="voyage.title"
@@ -205,24 +200,29 @@ const { data: pageTexts, status: pageStatus } = await useAsyncData('devis-texts'
 )
 
 // GTM: Track devis_step0 on page load
-// Note: The CSV shows 'devis_step0' without type differentiation
-// Individual flows (classic/rdv/surmesure) will track their step1 when choice is made
+// Note: Step 0 is generic (no type) - devis_step0
 onMounted(() => {
   if (voyage.value) {
     const formattedVoyage = formatVoyageForGtm(voyage.value)
     // Track devis_step0 (generic entry point before choice)
-    // We use 'classic' as the type parameter but the event name will be 'devis_classic_step0'
-    // This matches the CSV tracking plan
     trackDevisStep('classic', 0, formattedVoyage)
   }
 })
 
 const nextStep = () => {
-  // GTM: Track devis_classic_step2 when moving from details to user info
-  if (currentStep.value === 2 && skipperChoice.value === 'devis' && voyage.value) {
-    const formattedVoyage = formatVoyageForGtm(voyage.value)
-    // Note: Step 2 doesn't require user_data in CSV, but we can include metadata
-    trackDevisStep('classic', 2, formattedVoyage)
+  // GTM: Track when choice is made (step1 events)
+
+  const formattedVoyage = formatVoyageForGtm(voyage.value)
+
+  // GTM: Track step transitions when clicking next button
+  if (currentStep.value >= 1 && voyage.value && skipperChoice.value === 'devis') {
+    // Moving from step 1 (skipper choice) to step 2 (details form)
+    // Only for classic flow - surmesure and rdv don't have additional steps
+
+    trackDevisStep('classic', currentStep.value, formattedVoyage)
+  }
+  else if (skipperChoice.value === 'tally') {
+    trackDevisStep('surmesure', currentStep.value, formattedVoyage)
   }
 
   currentStep.value++
