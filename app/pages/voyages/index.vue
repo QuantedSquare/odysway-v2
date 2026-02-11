@@ -369,7 +369,7 @@ const nbVoyages = computed(() => {
 })
 
 // GTM: Track search_bar when filters are applied (checkbox or route changes)
-watch([routeQuery, confirmedOnly], () => {
+watch([confirmedOnly], () => {
   // Get the destination title if available
   let destinationTitle = null
   if (route.query.destination) {
@@ -424,16 +424,27 @@ const searchListName = computed(() => {
 })
 
 // GTM: Track view_item_list when results are displayed
+// Store the last tracked voyage IDs to prevent duplicate tracking
+const lastTrackedVoyageIds = ref(null)
+
 watch(filteredVoyages, (newVoyages) => {
   if (newVoyages && newVoyages.length > 0) {
-    const formattedVoyages = formatVoyagesForGtm(newVoyages)
+    // Create a sorted string of voyage IDs to compare
+    const newVoyageIds = newVoyages.map(v => v._id).sort().join(',')
 
-    if (formattedVoyages && formattedVoyages.length > 0) {
-      trackViewItemList({
-        currency: 'EUR',
-        items: formattedVoyages,
-        itemListName: searchListName.value,
-      })
+    // Only track if the voyage list actually changed
+    if (newVoyageIds !== lastTrackedVoyageIds.value) {
+      lastTrackedVoyageIds.value = newVoyageIds
+
+      const formattedVoyages = formatVoyagesForGtm(newVoyages)
+
+      if (formattedVoyages && formattedVoyages.length > 0) {
+        trackViewItemList({
+          currency: 'EUR',
+          items: formattedVoyages,
+          itemListName: searchListName.value,
+        })
+      }
     }
   }
 }, { immediate: true })

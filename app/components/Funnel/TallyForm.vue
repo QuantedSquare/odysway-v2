@@ -32,34 +32,67 @@ useHead({
   ],
 })
 
+// Track if confirmation has already been sent to avoid duplicates
+const confirmationTracked = ref(false)
+
 onMounted(() => {
   if (typeof window !== 'undefined' && window.Tally) {
     window.Tally.loadEmbeds()
 
-    // Listen for Tally form completion (if supported)
-    // Tally form emits messages when submitted
+    // Listen for Tally messages (form submission, navigation, etc.)
     window.addEventListener('message', handleTallyMessage)
+  }
+
+  // GTM: Track devis_surmesure_confirmation when user navigates away (redirected to Calendly)
+  // This happens when they complete the Tally form
+  if (typeof window !== 'undefined') {
+    window.addEventListener('beforeunload', handlePageExit)
   }
 })
 
 onUnmounted(() => {
   if (typeof window !== 'undefined') {
     window.removeEventListener('message', handleTallyMessage)
+    window.removeEventListener('beforeunload', handlePageExit)
+    alert('unmounted')
   }
 })
 
-// GTM: Track Tally form submission via postMessage API
+// Listen for any Tally messages that might indicate form completion
 const handleTallyMessage = (event) => {
   // Tally sends messages from their domain
-  if (event.origin === 'https://tally.so' && event.data?.event === 'Tally.FormSubmitted') {
-    // Track devis_surmesure_confirmation when form is submitted
-    if (props.voyage) {
-      const { formatVoyageForGtm } = useGtmVoyageFormatter()
-      const formattedVoyage = formatVoyageForGtm(props.voyage)
+  if (event.origin === 'https://tally.so' && event.data) {
+    // Check for any form-related events (submission, navigation, etc.)
+    const eventType = event.data.event || event.data.type
 
-      // Note: We don't have user_data from Tally, so just track the event
-      trackDevisStep('surmesure', 'confirmation', formattedVoyage)
+    // Track when form is submitted or when user is about to be redirected
+    if (eventType && (
+      eventType.includes('Submit')
+      || eventType.includes('Complete')
+      || eventType.includes('Finish')
+    )) {
+      trackConfirmation()
     }
+  }
+}
+
+// GTM: Track when user exits the page (redirected to Calendly after form completion)
+const handlePageExit = () => {
+  // Only track if user is actually leaving (not just refreshing)
+  trackConfirmation()
+}
+
+// Centralized tracking function to avoid duplicates
+const trackConfirmation = () => {
+  if (!confirmationTracked.value && props.voyage) {
+    confirmationTracked.value = true
+
+    const { formatVoyageForGtm } = useGtmVoyageFormatter()
+    const formattedVoyage = formatVoyageForGtm(props.voyage)
+
+    // Track devis_surmesure_confirmation
+    // Note: We don't have user_data from Tally, so just track the event
+    trackDevisStep('surmesure', 'confirmation', formattedVoyage)
   }
 }
 </script>
