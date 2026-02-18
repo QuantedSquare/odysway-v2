@@ -65,14 +65,11 @@ onMounted(() => {
       trackReservationRdvStep(1, formattedVoyage)
     }
   }
-  else {
-    // Standalone context: rdv_step1
-    trackRdvStep(1)
-  }
 })
 
 useCalendlyEventListener({
   onDateAndTimeSelected: (_event) => {
+    console.log('CHECKING DATE AND TIME SELECTED')
     // GTM: Track when date/time is selected in Calendly
     if (props.isFunnel && props.voyage) {
       const formattedVoyage = formatVoyageForGtm(props.voyage)
@@ -86,17 +83,24 @@ useCalendlyEventListener({
         trackReservationRdvStep(2, formattedVoyage)
       }
     }
+    else {
+      trackRdvStep(1)
+    }
     // Note: Standalone RDV doesn't have a step2 in the CSV
   },
   onEventScheduled: async (_event) => {
     // Extract invitee URI from the event
     const inviteeUri = _event.data?.payload?.invitee?.uri
 
+    console.log('Calendly event scheduled:', _event.data?.payload)
+    console.log('Invitee URI:', inviteeUri)
+
     // Fetch invitee details from our API
     let userData = {}
     if (inviteeUri) {
       try {
         const inviteeData = await $fetch(`/api/v1/calendly/invitee?invitee_uri=${encodeURIComponent(inviteeUri)}`)
+        console.log('Invitee data fetched:', inviteeData)
         userData = {
           user_mail: inviteeData.email,
           user_phone: inviteeData.phone,
@@ -106,6 +110,9 @@ useCalendlyEventListener({
       catch (error) {
         console.error('Error fetching Calendly invitee data:', error)
       }
+    }
+    else {
+      console.warn('No invitee URI found in Calendly event payload')
     }
 
     // GTM: Track when RDV is confirmed
@@ -123,7 +130,7 @@ useCalendlyEventListener({
     }
     else {
       // Standalone context: rdv_confirmation
-      trackRdvStep('confirmation')
+      trackRdvStep('confirmation', userData)
     }
   },
 })

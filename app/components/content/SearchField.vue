@@ -196,7 +196,6 @@ const { data: searchFieldContent, status: searchFieldContentStatus } = await use
 )
 
 const isSelectionARegion = useState('isSelectionARegion', () => false)
-const { gtag } = useGtag()
 const destinationId = useId()
 const travelTypeId = useId()
 const dateId = useId()
@@ -387,9 +386,6 @@ function searchFn() {
     periode: selectedMonthsNames,
     voyageGaranti: route.query.confirmed === 'true',
   })
-
-  // Legacy gtag tracking (to be removed later)
-  gtag('event', 'search', { eventAction: 'Click', destination: `${destinationChoice.value}`, travelType: `${travelTypeChoice.value}`, from: `${date.value[0]}`, to: `${date.value[1]}` })
 
   if (query.destination && query.destination !== 'top-destination' && !query.from && !query.travelType) {
     router.push({

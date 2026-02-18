@@ -23,15 +23,30 @@ export default defineEventHandler(async (event) => {
     })
   }
 
+  // Validate that the invitee_uri is a Calendly API URL
+  if (!invitee_uri.startsWith('https://api.calendly.com/')) {
+    console.error('Invalid invitee URI format:', invitee_uri)
+    throw createError({
+      statusCode: 400,
+      statusMessage: 'Invalid invitee_uri format. Expected Calendly API URL.',
+    })
+  }
+
   try {
+    // Log the invitee URI for debugging
+    console.log('Fetching Calendly invitee from URI:', invitee_uri)
+
     // Fetch invitee details from Calendly API
+    // The invitee_uri is the full API URL (e.g., https://api.calendly.com/scheduled_events/{uuid}/invitees/{uuid})
     const inviteeData = await $fetch(invitee_uri, {
       headers: {
         'Authorization': `Bearer ${process.env.CALENDLY_API_TOKEN}`,
         'Content-Type': 'application/json',
       },
     })
-    console.log('inviteeData', inviteeData)
+
+    console.log('Calendly API response:', JSON.stringify(inviteeData, null, 2))
+
     if (!inviteeData?.resource) {
       throw createError({
         statusCode: 404,
@@ -41,31 +56,21 @@ export default defineEventHandler(async (event) => {
 
     const invitee = inviteeData.resource
 
-    // Extract email and phone from questions_and_answers
-    let phone = null
-    if (invitee.questions_and_answers) {
-      const phoneQuestion = invitee.questions_and_answers.find(
-        qa => qa.question.toLowerCase().includes('phone') || qa.question.toLowerCase().includes('téléphone'),
-      )
-      if (phoneQuestion) {
-        phone = phoneQuestion.answer
-      }
-    }
-
     // Return invitee information
     return {
-      email: invitee.email,
-      phone: phone || invitee.phone_number || null,
-      name: invitee.name,
-      timezone: invitee.timezone,
-      created_at: invitee.created_at,
+      email: invitee.email || null,
+      phone: invitee.text_reminder_number || null,
+      name: invitee.name || null,
+      timezone: invitee.timezone || null,
+      created_at: invitee.created_at || null,
+      uri: invitee.uri || null,
     }
   }
   catch (err) {
     console.error('Error fetching Calendly invitee:', err)
     throw createError({
       statusCode: err.statusCode || 500,
-      statusMessage: err.message || 'Error fetching invitee data',
+      statusMessage: err.message || 'Error fetching invitee data from Calendly',
     })
   }
 })

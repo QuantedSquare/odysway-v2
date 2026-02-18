@@ -47,8 +47,7 @@ const { optOut } = defineProps({
 function acceptCookies() {
   model.value = false
   if (!optOut) {
-
-    // ?
+    // #TODO: add code to accept cookies
   }
   localStorage.setItem('consent', 'granted')
 }
@@ -56,12 +55,7 @@ function acceptCookies() {
 function refuseCookies() {
   model.value = false
   if (!optOut) {
-    gtag('consent', 'update', {
-      ad_user_data: 'denied',
-      ad_personalization: 'denied',
-      ad_storage: 'denied',
-      analytics_storage: 'denied',
-    })
+    // #TODO: add code to refuse cookies
   }
   localStorage.setItem('consent', 'denied')
 }

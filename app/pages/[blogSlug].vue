@@ -42,7 +42,6 @@
 
 <script setup>
 const route = useRoute()
-const { gtag } = useGtag()
 
 const slug = computed(() => route.params.blogSlug)
 

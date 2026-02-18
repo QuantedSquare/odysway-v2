@@ -11,7 +11,6 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     '@nuxt/image',
     'nuxt-calendly',
-    'nuxt-gtag',
     '@nuxtjs/sanity',
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
@@ -181,21 +180,6 @@ export default defineNuxtConfig({
     config: {
       stylistic: true,
     },
-  },
-  gtag: {
-    enabled: process.env.VERCEL_ENV === 'production',
-    id: process.env.GTAG_ID || '',
-    initMode: 'manual',
-    initCommands: [
-      // Setup up consent mode
-      ['consent', 'default', {
-        ad_user_data: process.env.VERCEL_ENV === 'production' ? 'denied' : 'granted',
-        ad_personalization: process.env.VERCEL_ENV === 'production' ? 'denied' : 'granted',
-        ad_storage: process.env.VERCEL_ENV === 'production' ? 'denied' : 'granted',
-        analytics_storage: process.env.VERCEL_ENV === 'production' ? 'denied' : 'granted',
-        wait_for_update: 500,
-      }],
-    ],
   },
   image: {
     screens: {

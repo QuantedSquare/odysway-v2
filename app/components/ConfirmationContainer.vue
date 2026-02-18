@@ -195,11 +195,10 @@ onMounted(async () => {
     }
   }
 
-  // Track Facebook Pixel (existing logic)
   if (!route.query.isoption && localStorage.getItem('consent') === 'granted') {
     if (route.query.purchase === 'true') {
       setTimeout(() => {
-        // ?
+        // #TODO: add code to track GTM event
       }, 100)
     }
   }

@@ -625,20 +625,28 @@ export const useGtmTracking = () => {
    * STANDALONE RDV TRACKING (Non-funnel context)
    * Track standalone RDV steps - For /calendly page
    * @param {number} step - Step number (0-1) or 'confirmation'
+   * @param {object} userData - Optional user data for confirmation step
    *
    * Steps:
    * - Step 0: RDV page loaded (CSV line 651)
    * - Step 1: Calendly loaded (CSV line 692)
-   * - confirmation: RDV confirmed (CSV line 733)
+   * - confirmation: RDV confirmed (CSV line 733) - includes user_data
    */
-  const trackRdvStep = (step) => {
+  const trackRdvStep = (step, userData = {}) => {
     const eventName = typeof step === 'number'
       ? `rdv_step${step}`
       : 'rdv_confirmation'
 
-    pushToDataLayer({
+    const dataLayerEvent = {
       event: eventName,
-    })
+    }
+
+    // Add user data if provided (typically for confirmation step)
+    if (userData && Object.keys(userData).length > 0) {
+      dataLayerEvent.user_data = userData
+    }
+
+    pushToDataLayer(dataLayerEvent)
   }
 
   /**
