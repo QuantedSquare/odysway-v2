@@ -705,8 +705,8 @@ export const useGtmTracking = () => {
 
     // Add user data if provided
     if (Object.keys(userData).length > 0) {
-      dataLayerEvent.user_data = userData.user_data
-      dataLayerEvent.optin_newsletter = userData.optin_newsletter
+      dataLayerEvent.user_data = userData.user_data || userData
+      dataLayerEvent.optin_newsletter = userData.optin_newsletter || userData.optin_newsletter
     }
 
     pushToDataLayer(dataLayerEvent)

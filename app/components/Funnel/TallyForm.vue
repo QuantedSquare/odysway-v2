@@ -54,7 +54,6 @@ onUnmounted(() => {
   if (typeof window !== 'undefined') {
     window.removeEventListener('message', handleTallyMessage)
     window.removeEventListener('beforeunload', handlePageExit)
-    alert('unmounted')
   }
 })
 
