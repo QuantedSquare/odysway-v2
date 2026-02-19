@@ -287,6 +287,7 @@ const route = useRoute()
 const dialogOpen = ref(false)
 const searchText = ref(null)
 const cookie = useCookie('odysway_employee_optout')
+console.log('cookie', cookie.value)
 
 const searchDialogFieldQuery = groq`*[_type == "search"][0]{
   searchDialogTitle,

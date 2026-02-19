@@ -35,7 +35,14 @@ export const useGtmTracking = () => {
    * @param {Object} data - Data object to push to dataLayer
    */
   const pushToDataLayer = (data) => {
-    if (typeof window !== 'undefined' && window.dataLayer) {
+    const config = useRuntimeConfig()
+    const environment = config.public.environment
+    // const isEmployee = localStorage.getItem('odysway_employee_optout') === '1'
+    const optOut = useCookie('odysway_employee_optout')
+    if (optOut.value === '1') {
+      return
+    }
+    if (environment === 'production' && typeof window !== 'undefined' && window.dataLayer) {
       const cleanedData = cleanStegaData(data)
       window.dataLayer.push(cleanedData)
       console.log('📊 GTM Event:', cleanedData.event || 'data', cleanedData)

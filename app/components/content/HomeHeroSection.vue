@@ -62,11 +62,11 @@
       <h1>
         <slot name="title" />
       </h1>
-      <h2 class="custom-hero-subtitle">
+      <h2 class="custom-hero-subtitle ">
         <slot name="subtitle" />
         <span
           v-if="typewriterWords.length"
-          class="typewriter-text text-center   font-italic"
+          class="typewriter-text text-center font-italic"
           :class="{ 'typewriter-active': currentWord.length }"
         >
           {{ currentWord }}<span class="cursor">|</span>

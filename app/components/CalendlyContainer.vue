@@ -18,7 +18,7 @@
 
 <script setup>
 const route = useRoute()
-const { trackReservationRdvStep, trackRdvStep, trackDevisStep } = useGtmTracking()
+const { trackReservationRdvStep, trackRdvStep, trackDevisStep, getCountryFromPhone } = useGtmTracking()
 const { formatVoyageForGtm } = useGtmVoyageFormatter()
 
 const props = defineProps({
@@ -105,6 +105,7 @@ useCalendlyEventListener({
           user_mail: inviteeData.email,
           user_phone: inviteeData.phone,
           user_name: inviteeData.name,
+          user_country: getCountryFromPhone(inviteeData.phone),
         }
       }
       catch (error) {

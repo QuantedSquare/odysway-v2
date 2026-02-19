@@ -31,7 +31,7 @@ onMounted(() => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && !hasTracked.value) {
           const formattedItems = formatVoyagesForGtm(props.voyages)
-          
+
           if (formattedItems && formattedItems.length > 0) {
             trackViewItemList({
               currency: 'EUR',
@@ -39,7 +39,7 @@ onMounted(() => {
               itemListName: props.listName,
             })
           }
-          
+
           hasTracked.value = true
           observer.disconnect()
         }
