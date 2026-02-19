@@ -8,6 +8,7 @@ export const InsuranceSchema = z.object({
   departureDate: z.string(),
   returnDate: z.string(),
   nbTravelers: z.number().min(1),
+  isoContact: z.string().optional(),
 })
 
 export type TypeInsurance = z.infer<typeof InsuranceSchema>

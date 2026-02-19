@@ -96,6 +96,7 @@ const customFieldsMapContact = {
   7: 'calendlyDate',
   8: 'whichTravel',
   10: 'gotQuestions',
+  22: 'isoContact',
 }
 
 // =================== Utility Functions ===================
@@ -261,7 +262,6 @@ const getDealCustomFields = async (dealId) => {
 }
 
 const createDeal = async (data) => {
-
   // First upsert contact
   const formatedDeal = transformDealForAPI(data)
   const client = {
@@ -270,9 +270,15 @@ const createDeal = async (data) => {
       firstName: data.firstname,
       lastName: data.lastname,
       phone: `${data.phone}`,
+      fieldValues: [
+        {
+          field: '22', // isoContact field
+          value: data.isoContact || '',
+        },
+      ],
     },
   }
-  // console.log('===========client in activecampaign.js===========', client)
+  console.log('===========client in activecampaign.js===========', client)
   const contact = await upsertContact(client)
 
   const brevoData = {
@@ -313,7 +319,7 @@ const createDeal = async (data) => {
   delete formatedDeal.lastname
   delete formatedDeal.email
   delete formatedDeal.phone
-
+  delete formatedDeal.isoContact
   // console.log('===========formatedDeal after delete in activecampaign.js===========', formatedDeal)
   // console.log('===========formatedDeal after delete in customfields===========', formatedDeal.deal.fields)
   console.log('===========formatedDeal in deal creation in activecampaign.js===========', formatedDeal)
@@ -328,6 +334,7 @@ const createDeal = async (data) => {
 }
 
 const updateDeal = async (dealId, data) => {
+  console.log('==========DATA IN UPDATE DEAL===========', data)
   // #TODO Checker si sendinblue encore nécessaire
   //  sendinBlue.updateContact(data.email, this.handleCustomFields(data.deal.fields))
   const formatedDeal = transformDealForAPI(data)
@@ -338,8 +345,17 @@ const updateDeal = async (dealId, data) => {
         firstName: data.firstname,
         lastName: data.lastname,
         phone: `${data.phone}`,
+        fieldValues: data.isoContact
+          ? [
+              {
+                field: '22', // isoContact field
+                value: data.isoContact,
+              },
+            ]
+          : [],
       },
     }
+    console.log('===========client in updateDeal===========', client)
     // l'user peut s'être trompé d'infos, on update le contact
     const contact = await upsertContact(client)
 

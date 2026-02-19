@@ -430,7 +430,7 @@ const handlePaymentSession = async (session, paymentType) => {
   //   // Fetch Deal Data
   console.log('Passed deal retrieving', deal)
 
-  const { contact: client } = await activecampaign.getClientById(deal.contact)
+  const { contact: client, fieldValues } = await activecampaign.getClientById(deal.contact)
   console.log('Passed client retrieving', client)
 
   if (!isDev) {
@@ -464,8 +464,10 @@ const handlePaymentSession = async (session, paymentType) => {
         'Assurance Assistance',
       ].includes(item.description)
     })
+    const isoContact = fieldValues.find(i => i.field === '22')?.value || 'FR'
     const isCapExploraction = deal.isCapExploraction === 'Oui' || deal.iso.includes('NP') || deal.iso.includes('PE') || false
     Object.assign(deal, { pricePerTraveler: calculatePricePerPerson(deal) })
+    Object.assign(client, { isoContact })
     console.log('InssuranceItem', inssuranceItem)
     if (inssuranceItem) {
       chapka.notify(session.metadata, inssuranceItem, deal, client, isCapExploraction)

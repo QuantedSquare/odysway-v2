@@ -1,33 +1,10 @@
 <template>
   <v-dialog
-    v-model="dialogOpen"
+    v-model="isOpen"
     max-width="900"
     class="search-dialog"
     :fullscreen="true"
   >
-    <template #activator="{ props: activatorProps }">
-      <slot
-        name="activator"
-        :props="activatorProps"
-      >
-        <v-btn
-          v-bind="activatorProps"
-          :size="36"
-          icon
-          variant="outlined"
-          class="search-trigger-btn"
-        >
-          <v-img
-            :src="img('/icons/Search.svg', { format: 'webp', quality: 100, width: 20, height: 20 })"
-            alt="Search icon"
-            width="20"
-            height="20"
-            fetchpriority="high"
-          />
-        </v-btn>
-      </slot>
-    </template>
-
     <v-card
       class="search-card "
       elevation="24"
@@ -267,8 +244,8 @@ import { ref, computed, onMounted } from 'vue'
 import _ from 'lodash'
 import aa from 'search-insights'
 
-import { useImage } from '#imports'
 import { useTravelsSearch } from '~/composables/useTravelsSearch'
+import { useSearchDialog } from '~/composables/useSearchDialog'
 
 // Initialize Algolia Insights
 onMounted(() => {
@@ -281,10 +258,9 @@ onMounted(() => {
 })
 
 const sanity = useSanity()
-const img = useImage()
 const route = useRoute()
 
-const dialogOpen = ref(false)
+const { isOpen, closeDialog: closeSearchDialog } = useSearchDialog()
 const searchText = ref(null)
 const cookie = useCookie('odysway_employee_optout')
 console.log('cookie', cookie.value)
@@ -375,13 +351,13 @@ function navigate(destination, position = 1) {
 }
 
 function closeDialog() {
-  dialogOpen.value = false
+  closeSearchDialog()
   searchText.value = null
   destinations.value = []
 }
 
 watch(() => route.path, () => {
-  if (dialogOpen.value) {
+  if (isOpen.value) {
     closeDialog()
   }
 })

@@ -222,6 +222,7 @@ const insurancesPrice = ref(null)
 
 // We use those 2 ref to compare if we need a loading between steps by comparing the values
 const dynamicDealValues = ref(initialDealValues)
+console.log('dynamicDealValues', dynamicDealValues.value)
 // console.log('dynamicDealValues', dynamicDealValues.value)
 const checkoutType = ref(determinePaymentOptions(voyage.departureDate, route.query))
 // console.log('checkoutType', checkoutType.value)
@@ -298,8 +299,10 @@ const fetchInsuranceQuote = async () => {
         returnDate: voyage.returnDate,
         isCapExploraction: voyage.isCapExploraction,
         nbTravelers: +dynamicDealValues.value.nbAdults + +dynamicDealValues.value.nbChildren,
+        isoContact: dynamicDealValues.value.isoContact,
       },
     })
+    console.log('res in fetchInsuranceQuote', res)
     insurancesPrice.value = res
   }
   catch (e) {

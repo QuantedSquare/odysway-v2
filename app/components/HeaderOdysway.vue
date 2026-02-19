@@ -68,10 +68,12 @@
       <v-spacer />
 
       <div
-        class="d-flex align-center"
-        :class="isTransparent ? '' : 'ga-'"
+        class="d-flex align-center ga-2 ga-lg-4"
       >
-        <SearchDialog v-if="route.path !== '/'" />
+        <SearchDialogTrigger
+          v-if="route.path !== '/'"
+          :btn-class="isTransparent ? '' : 'test-btn-class'"
+        />
         <v-btn
           v-if="header?.button1?.visible"
           height="45"
@@ -97,35 +99,39 @@
           v-if="header?.button3?.visible"
           color="primary"
           height="45"
-          :class="isTransparent ? 'filter' : ''"
-          class="text-caption text-md-body-1 d-none d-md-inline"
+          :class="isTransparent ? 'filter' : 'mr-2'"
+          class="text-caption text-md-body-1 d-none d-md-inline "
           @click="handleButton3Click"
         >
           {{ header.button3.text }}
         </v-btn>
-        <v-btn
-          v-if="header?.button4?.visible"
-          href="tel: +33184807975"
-          color="primary"
-          height="45"
-          :variant="isTransparent ? 'text' : 'tonal'"
-          :class="isTransparent ? 'filter' : ''"
-          class="text-caption text-md-body-1 d-none d-md-flex"
-          @click="handleButton4Click"
+        <div
+          class="d-flex align-center ga-2"
+          :class="isTransparent ? '' : 'ml-3'"
         >
-          <span class="align-center">{{ header.button4.text }}</span>
-        </v-btn>
-        <v-btn
-          v-if="header?.button5?.visible"
-          height="45"
-          :variant="isTransparent ? 'text' : 'tonal'"
-          :class="isTransparent ? 'text-soft-blush text-shadow' : 'bg-primary text-white ml-3 '"
-          class="text-caption text-md-body-1 d-none d-md-inline "
-          @click="handleButton5Click"
-        >
-          {{ header.button5.text }}
-        </v-btn>
-
+          <v-btn
+            v-if="header?.button4?.visible"
+            href="tel: +33184807975"
+            color="primary"
+            height="45"
+            :variant="isTransparent ? 'text' : 'tonal'"
+            :class="isTransparent ? 'filter' : ''"
+            class="text-caption text-md-body-1 d-none d-md-flex"
+            @click="handleButton4Click"
+          >
+            <span class="align-center">{{ header.button4.text }}</span>
+          </v-btn>
+          <v-btn
+            v-if="header?.button5?.visible"
+            height="45"
+            :variant="isTransparent ? 'text' : 'tonal'"
+            :class="isTransparent ? 'text-soft-blush text-shadow' : 'bg-primary text-white '"
+            class="text-caption text-md-body-1 d-none d-md-inline "
+            @click="handleButton5Click"
+          >
+            {{ header.button5.text }}
+          </v-btn>
+        </div>
         <v-btn
           class="d-inline d-md-none "
           icon
@@ -307,5 +313,21 @@ const isTransparent = computed(() => !isScrolled.value && route.path === '/')
 .mobile-menu-btn {
   position: absolute;
   right: 12px;
+}
+</style>
+
+<style>
+.test-btn-class {
+      margin-right: 0!important;
+}
+@media (min-width: 960px) {
+    .test-btn-class {
+      margin-right: 0 !important;
+    }
+}
+@media (min-width: 1080px) {
+    .test-btn-class {
+      margin-right: 80px !important;
+    }
 }
 </style>

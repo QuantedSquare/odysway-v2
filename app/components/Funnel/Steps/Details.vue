@@ -85,6 +85,36 @@
                 :rules="[rules.email]"
                 @change="saveToLocalStorage()"
               />
+            </v-col>
+            <v-col
+              cols="12"
+              md="6"
+            >
+              <v-autocomplete
+                v-model="model.isoContact"
+                :items="countries"
+                :label="page.details.country_label || 'Pays de résidence'"
+                :placeholder="page.details.country_placeholder || 'Sélectionnez votre pays'"
+                :rules="[rules.name]"
+                item-title="title"
+                item-value="value"
+                @change="saveToLocalStorage()"
+              />
+            </v-col>
+            <v-col
+              cols="12"
+              md="6"
+            >
+              <PhoneTextField
+                v-model="model.phone"
+                @validity-changed="isPhoneValid = $event"
+              />
+            </v-col>
+
+            <v-col
+              cols="12"
+              class="pa-0"
+            >
               <v-checkbox
                 v-model="model.optinNewsletter"
                 :class="model.optinNewsletter ? 'text-primary' : ''"
@@ -96,15 +126,6 @@
                   </div>
                 </template>
               </v-checkbox>
-            </v-col>
-            <v-col
-              cols="12"
-              md="6"
-            >
-              <PhoneTextField
-                v-model="model.phone"
-                @validity-changed="isPhoneValid = $event"
-              />
             </v-col>
           </v-row>
         </v-col>
@@ -141,6 +162,7 @@
 <script setup>
 import { z } from 'zod'
 import { computed } from 'vue'
+import { countries } from '~/utils/countries'
 
 const { trackReservationStep } = useGtmTracking()
 
@@ -177,8 +199,9 @@ const isValid = computed(() => {
   const hasValidName = model.value.firstName && model.value.lastName
   const hasValidEmail = rules.email(model.value.email) === true
   const hasValidTravelers = model.value.nbAdults > 0 && model.value.nbAdults + model.value.nbChildren > 0
+  const hasValidCountry = model.value.isoContact && model.value.isoContact.length > 0
 
-  return hasValidName && hasValidEmail && hasValidTravelers && isPhoneValid.value
+  return hasValidName && hasValidEmail && hasValidTravelers && isPhoneValid.value && hasValidCountry
 })
 
 const saveToLocalStorage = () => {
@@ -187,6 +210,7 @@ const saveToLocalStorage = () => {
     lastname: model.value.lastName,
     email: model.value.email,
     phone: model.value.phone,
+    isoContact: model.value.isoContact,
   }
   localStorage.setItem('detailsData', JSON.stringify(dataToStore))
 }
@@ -197,6 +221,7 @@ const loadFromLocalStorage = () => {
     model.value.lastName = storedData.lastname
     model.value.email = storedData.email
     model.value.phone = storedData.phone
+    model.value.isoContact = storedData.isoContact
   }
 }
 onMounted(() => {
@@ -209,11 +234,13 @@ const schemaToRule = useZodSchema()
 const nameSchema = z.string().min(1, { message: 'Cette information est requise.' })
 const emailSchema = z.string().email({ message: 'Adresse email invalide' })
 const phoneSchema = z.string().min(9, { message: 'Numéro de téléphone invalide' })
+const requiredSchema = z.string().min(1, { message: 'Cette information est requise.' })
 
 const rules = {
   name: schemaToRule(nameSchema),
   email: schemaToRule(emailSchema),
   phone: schemaToRule(phoneSchema),
+  required: schemaToRule(requiredSchema),
 }
 
 const nbTravelers = computed(() => +model.value.nbAdults + +model.value.nbChildren)
@@ -231,6 +258,7 @@ const submitStepData = async () => {
       if (checkoutType === 'deposit' || checkoutType === 'full') {
         buttonLoading.value = true
         const utmSource = localStorage.getItem('utmSource')
+        console.log('===========MODEL IN UPDATE DEAL===========', model.value)
         updateDeal({
           nbTravelers: model.value.nbAdults + model.value.nbChildren,
           nbChildren: model.value.nbChildren,
@@ -241,6 +269,7 @@ const submitStepData = async () => {
           phone: model.value.phone,
           firstname: model.value.firstName,
           lastname: model.value.lastName,
+          isoContact: model.value.isoContact,
           utm: utmSource || '',
         })
         buttonLoading.value = false
@@ -251,6 +280,7 @@ const submitStepData = async () => {
           phone: model.value.phone,
           firstname: model.value.firstName,
           lastname: model.value.lastName,
+          isoContact: model.value.isoContact,
         })
         buttonLoading.value = false
       }
@@ -313,6 +343,7 @@ const submitStepData = async () => {
         firstname: model.value.firstName,
         lastname: model.value.lastName,
         optinNewsletter: model.value.optinNewsletter,
+        isoContact: model.value.isoContact,
       }
 
       // GTM: Track reservation_step2 (contact details submitted)

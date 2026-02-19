@@ -5,6 +5,7 @@
       v-model="consentBar"
       :opt-out="optOut"
     />
+    <SearchDialog />
     <!-- <Maintenance /> -->
   </NuxtLayout>
 </template>

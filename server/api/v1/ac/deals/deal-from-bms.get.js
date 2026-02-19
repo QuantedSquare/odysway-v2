@@ -23,13 +23,16 @@ export default defineEventHandler(async (event) => {
     ])
     // const reponse = await activecampaign.getDealById(dealId)
     // const customFields = await activecampaign.getDealCustomFields(dealId)
-    const { contact } = await activecampaign.getClientById(fetchedDeal.deal.contact)
+    const fullContact = await activecampaign.getClientById(fetchedDeal.deal.contact)
+    const contact = fullContact.contact
+
     if (!fetchedDeal.deal || !customFields) {
       throw createError({
         statusCode: 404,
         message: 'Deal not found',
       })
     }
+    console.log('contact in deal-from-bms', contact.fieldValues)
     return {
       ...fetchedDeal.deal,
       ...customFields,
@@ -38,6 +41,7 @@ export default defineEventHandler(async (event) => {
         firstName: contact.firstName,
         lastName: contact.lastName,
         phone: contact.phone,
+        isoContact: fullContact.fieldValues.find(i => i.field === '22')?.value || '',
       },
     }
   }
