@@ -263,7 +263,6 @@ const route = useRoute()
 const { isOpen, closeDialog: closeSearchDialog } = useSearchDialog()
 const searchText = ref(null)
 const cookie = useCookie('odysway_employee_optout')
-console.log('cookie', cookie.value)
 
 const searchDialogFieldQuery = groq`*[_type == "search"][0]{
   searchDialogTitle,
@@ -278,19 +277,8 @@ const { data: searchDialogField } = await useAsyncData('search-dialog-field', ()
 const { destinations, loading, handleEmbededSearch } = useTravelsSearch()
 
 // GTM Tracking composables
-const { trackSearchTerm, trackSelectItem, trackCtaClick } = useGtmTracking()
+const { trackSearchTerm, trackSelectItem } = useGtmTracking()
 const { formatVoyageForGtm } = useGtmVoyageFormatter()
-
-// Track when search dialog is opened
-watch(dialogOpen, (isOpen) => {
-  if (isOpen) {
-    trackCtaClick({
-      ctaId: 'search-dialog-open',
-      ctaLabel: 'Ouvrir la recherche',
-      ctaUrl: '#search',
-    })
-  }
-})
 
 const debouncedHandleSearch = _.debounce(() => {
   handleEmbededSearch(searchText.value, cookie.value === 1)
