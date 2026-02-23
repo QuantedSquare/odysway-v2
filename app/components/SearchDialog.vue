@@ -313,6 +313,7 @@ function handleQuickFilterClick(btn) {
 }
 
 function navigate(destination, position = 1) {
+  console.log('🔍 Destination:', destination)
   // Track click with Algolia Insights
   if (destination.objectID && destination.queryID && cookie.value !== 1) {
     aa('clickedObjectIDsAfterSearch', {
@@ -328,7 +329,10 @@ function navigate(destination, position = 1) {
   // Track GTM event for voyage selection
   if (destination.dataSource === 'voyages') {
     const formattedVoyage = formatVoyageForGtm(destination)
-    trackSelectItem(formattedVoyage, 'Résultats de recherche')
+    trackSelectItem({
+      item: formattedVoyage,
+      itemListName: 'Résultats de recherche',
+    })
   }
 
   const page = destination.dataSource === 'destinations' || destination.dataSource === 'regions'
