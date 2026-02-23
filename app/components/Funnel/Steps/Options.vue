@@ -102,10 +102,10 @@ const submitStepData = () => {
       optin_newsletter: model.value.optinNewsletter,
       user_data: {
         user_id: model.value.email,
-        email: model.value.email,
-        phone: model.value.phone,
+        user_email: model.value.email,
+        user_phone: model.value.phone,
         user_country: getCountryFromPhone(model.value.phone),
-        indiv_room: model.value.indivRoom || forcedIndivRoom.value,
+        // indiv_room: model.value.indivRoom || forcedIndivRoom.value,
       },
     }
     trackReservationStep(4, voyage, model.value, additionalData)
