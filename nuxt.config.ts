@@ -38,11 +38,6 @@ export default defineNuxtConfig({
         // Critical: Preconnect to Sanity CDN for LCP image (must be first)
         { rel: 'preconnect', href: 'https://nu6yntji.apicdn.sanity.io', crossorigin: 'anonymous' },
         { rel: 'preconnect', href: 'https://cdn.sanity.io', crossorigin: 'anonymous' },
-        // Resource hints for external domains (defer actual script loading)
-        { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
-        { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
-        { rel: 'dns-prefetch', href: 'https://connect.facebook.net' },
-        // { rel: 'dns-prefetch', href: 'https://static.hotjar.com' },
       ],
       script: [
         {
