@@ -272,7 +272,7 @@ const submitStepData = () => {
       optin_newsletter: model.value.optinNewsletter,
       user_data: {
         user_id: model.value.email,
-        user_email: model.value.email,
+        user_mail: model.value.email,
         user_phone: model.value.phone,
         user_country: getCountryFromPhone(model.value.phone),
       },
