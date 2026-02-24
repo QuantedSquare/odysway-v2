@@ -89,6 +89,11 @@ export default defineEventHandler(async (event) => {
   const recomputeRes = await booking.updateTravelDate(dateId, totalBooked)
   if (recomputeRes?.error) throw createError({ statusCode: 500, statusMessage: recomputeRes.error })
 
+  // If the deal has already paid, sync it with the departure record deal (pipeline 4)
+  if (bookedPlaceCount > 0 && alreadyPaid > 0) {
+    await departures.handlePaymentForDeparture(bookedDate, deal.title, deal.contact)
+  }
+
   const { data: travel_date, error: slugError } = await supabase
     .from('travel_dates')
     .select('*')

@@ -512,6 +512,63 @@ const recalculatTotalValues = async (dealId) => {
   }
 }
 
+// =================== GESTIONS DÉPARTS ===================
+
+const createDepartureDeal = async ({ travelDate, travelTitle, stageId }) => {
+  const departureFormatted = dayjs(travelDate.departure_date).format('DD/MM/YYYY')
+  const returnFormatted = dayjs(travelDate.return_date).format('DD/MM/YYYY')
+  const title = `${travelTitle} - ${departureFormatted} → ${returnFormatted}`
+
+  // Upsert the internal employee contact so we have a contact ID
+  const employeeContact = await upsertContact({
+    contact: {
+      email: 'contact@odysway.com',
+    },
+  })
+
+  const dealPayload = {
+    deal: {
+      contact: employeeContact.id,
+      currency: 'eur',
+      group: '4',
+      owner: '1',
+      stage: String(stageId),
+      title,
+      value: 0,
+      fields: reverseCustomFieldsMap(
+        {
+          departureDate: travelDate.departure_date,
+          returnDate: travelDate.return_date,
+        },
+        customFieldsMapDeal,
+      ),
+    },
+  }
+
+  const response = await apiRequest('/deals', 'post', dealPayload)
+  return response.deal.id
+}
+
+const addContactToDeal = async (dealId, contactId) => {
+  try {
+    const response = await apiRequest(`/contactDeals`, 'post', {
+      contactDeal: {
+        deal: String(dealId),
+        contact: String(contactId),
+      },
+    })
+    return response
+  }
+  catch (err) {
+    // 422 usually means the association already exists — safe to ignore
+    if (err.response && err.response.status === 422) {
+      console.log(`Contact ${contactId} already associated with deal ${dealId}`)
+      return null
+    }
+    throw err
+  }
+}
+
 export default {
   // --- Utils ---
   handleCustomFields: deal => handleCustomFields(deal, customFieldsMapDeal), // A Checker
@@ -532,6 +589,9 @@ export default {
   addNote,
   recalculatTotalValues,
   deleteDeal,
+  // --- Gestions Départs ---
+  createDepartureDeal,
+  addContactToDeal,
   // --- Notification ---
   sendSlackNotification, // OK
   optionNotification,

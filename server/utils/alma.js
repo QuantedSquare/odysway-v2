@@ -199,6 +199,9 @@ const handlePaymentSession = async (session) => {
     // Update the travel_dates.booked_seat + derived status
     const recompute = await booking.updateTravelDate(bookedDate.travel_date_id, totalBooked)
     if (recompute?.error) return { error: recompute.error }
+
+    // Departure record deal management (pipeline 4 "Gestions Départs")
+    await departures.handlePaymentForDeparture(bookedDate, deal.title, deal.contact)
   }
 
   // Chapka notify
