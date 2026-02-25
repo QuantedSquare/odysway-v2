@@ -284,7 +284,8 @@ const { data: voyages } = await useAsyncData(
       _type == "voyage" && (
         !('custom' in availabilityTypes)
       )
-    ]{
+    ]|order(orderRank){
+      ...,
       _id,
       title,
       "slug": slug.current,
@@ -310,7 +311,6 @@ const { data: voyages } = await useAsyncData(
     }`
 
     let voyages = await sanity.fetch(voyagesQuery)
-
     if (isRegionSearch) {
       let destinationList = []
       if (isTopDestinations) {

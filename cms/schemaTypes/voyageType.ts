@@ -1,4 +1,5 @@
 import { defineField, defineType } from 'sanity'
+import {orderRankField, orderRankOrdering} from '@sanity/orderable-document-list'
 import BmsLink from './components/BmsLink'
 
 const richTextBlock = {
@@ -47,6 +48,7 @@ export const voyageType = defineType({
   name: 'voyage',
   title: 'Voyage',
   type: 'document',
+  orderings: [orderRankOrdering],
   groups: [
     { name: 'requiredBMS', title: 'Champs requis pour une Date' },
     { name: 'requiredTravelPage', title: 'Champs requis pour afficher la page Voyage' },
@@ -64,6 +66,7 @@ export const voyageType = defineType({
     { name: 'seo', title: 'SEO' },
   ],
   fields: [
+    orderRankField({type: 'voyage'}),
     defineField({
       name: 'bmsLink',
       type: 'url',
@@ -90,6 +93,13 @@ export const voyageType = defineType({
       validation: (r) => r.required(),
       group: ['requiredBMS', 'basic'],
       title: 'Slug du voyage',
+    }),
+    defineField({
+      name: 'bmsReference',
+      type: 'string',
+      validation: (r) => r.required().min(1),
+      group: ['requiredBMS', 'basic'],
+      title: 'Référence BMS (Par ex : AS-NEP-1 pour le Népal Trek chez l\'habitant)',
     }),
     defineField({
       name: 'destinations',

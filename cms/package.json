@@ -33,9 +33,9 @@
     "lodash": "^4.17.21",
     "mdast-util-from-markdown": "^2.0.2",
     "mdast-util-to-markdown": "^2.1.2",
-    "react": "^19.1",
+    "react": "^19.2.4",
     "react-circular-progressbar": "^2.2.0",
-    "react-dom": "^19.1",
+    "react-dom": "^19.2.4",
     "sanity": "^4.22.0",
     "sanity-plugin-media": "^4.0.0",
     "styled-components": "^6.1.18"
