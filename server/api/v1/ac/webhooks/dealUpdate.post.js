@@ -45,6 +45,13 @@ export default defineEventHandler(async (event) => {
       })
     }
 
+    // Ignore all deals belonging to the "Gestions Départs" pipeline (ID 4)
+    // — those are internal departure record deals managed separately.
+    const pipelineId = body['deal[group]']
+    if (pipelineId === '4') {
+      return { success: true, skipped: true, reason: 'Gestions Départs pipeline' }
+    }
+
     // Fetch and process contact information
     const contactData = await activecampaign.upsertContactIntoSupabase(contactId)
     if (!contactData) {
