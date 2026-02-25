@@ -90,6 +90,8 @@ export default defineEventHandler(async (event) => {
     else {
       console.log(`Deleted ${travelersToDelete.length} booked_dates entries without valid email`)
     }
+
+    await booking.recomputeBookedSeatAndStatus(dateId)
   }
   return validTravelers
 })
