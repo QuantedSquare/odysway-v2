@@ -21,5 +21,8 @@ export default defineEventHandler(async (event) => {
   const totalBooked = (allBooked || []).reduce((acc, row) => acc + (row.booked_places || 0), 0)
   await booking.updateTravelDate(travel_date_id, totalBooked)
 
+  // Remove departure record deal if no paying clients remain
+  await departures.cleanupDepartureDealIfEmpty(travel_date_id)
+
   console.log(`BMS: Successfully deleted booked reservation ${bookedId}, updated total booked seats to ${totalBooked}`)
 })

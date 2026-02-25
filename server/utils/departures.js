@@ -174,10 +174,61 @@ const handlePaymentForDeparture = async (bookedDate, travelTitle, contactId) => 
   }
 }
 
+/**
+ * After a booked_date is deleted, checks whether any paying clients remain
+ * on the same travel date. If none do and a departure record deal exists,
+ * deletes it from ActiveCampaign and clears travel_dates.departure_id.
+ *
+ * Must be called AFTER the booked_date row has already been removed.
+ */
+const cleanupDepartureDealIfEmpty = async (travelDateId) => {
+  try {
+    const { data: travelDate, error: fetchError } = await supabase
+      .from('travel_dates')
+      .select('id, departure_id')
+      .eq('id', travelDateId)
+      .single()
+
+    if (fetchError || !travelDate || !travelDate.departure_id) return
+
+    const { data: remainingPaid } = await supabase
+      .from('booked_dates')
+      .select('id')
+      .eq('travel_date_id', travelDateId)
+      .gt('booked_places', 0)
+      .limit(1)
+
+    if (remainingPaid && remainingPaid.length > 0) return
+
+    // No paying clients left — remove the departure record deal
+    console.log(`cleanupDepartureDealIfEmpty: no paid bookings left for travel_date ${travelDateId}, deleting departure deal ${travelDate.departure_id}`)
+
+    try {
+      await activecampaign.deleteDeal(travelDate.departure_id)
+    }
+    catch (err) {
+      console.error('cleanupDepartureDealIfEmpty: failed to delete AC departure deal:', err.message)
+    }
+
+    const { error: clearError } = await supabase
+      .from('travel_dates')
+      .update({ departure_id: null })
+      .eq('id', travelDateId)
+
+    if (clearError) {
+      console.error('cleanupDepartureDealIfEmpty: failed to clear departure_id:', clearError)
+    }
+  }
+  catch (err) {
+    console.error('cleanupDepartureDealIfEmpty error:', err)
+  }
+}
+
 export default {
   computeDepartureStage,
   getOrCreateDepartureDeal,
   assignContactToDepartureDeal,
   handlePaymentForDeparture,
+  cleanupDepartureDealIfEmpty,
   STAGES,
 }

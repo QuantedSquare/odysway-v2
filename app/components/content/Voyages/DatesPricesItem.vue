@@ -236,8 +236,6 @@ const props = defineProps({
   },
 })
 
-const { date } = props
-
 const datesPricesItemQuery = `
   *[_type == "page_voyage"][0]{
     dateSections
@@ -249,6 +247,7 @@ const { data: texte } = await useAsyncData('datesPricesItem', () =>
 )
 
 const enrichedDate = computed(() => {
+  const date = props.date
   const displayedBookedSeat = date.displayed_booked_seat && Number(date.displayed_booked_seat) > 0
     ? Number(date.displayed_booked_seat)
     : date.booked_seat
@@ -264,7 +263,6 @@ const enrichedDate = computed(() => {
     early_bird: today.isAfter(dayjs(date.departure_date).add(7, 'month')) ? date.early_bird : false,
     last_minute: dayjs(date.departure_date).diff(today, 'day') <= 31 ? date.last_minute : false,
     status: getDateStatus({ ...date, status: effectiveStatus }),
-
   }
 })
 const capitalize = (string) => {
@@ -295,7 +293,7 @@ const getExistingBookedDate = async (dateId) => {
 // Function to generate checkout link
 const generateCheckoutLink = async () => {
   if (!import.meta.client) {
-    checkoutLink.value = `/checkout?date_id=${enrichedDate.value.id}&type=deposit&voyage=${date.travel_slug}`
+    checkoutLink.value = `/checkout?date_id=${enrichedDate.value.id}&type=deposit&voyage=${props.date.travel_slug}`
     return
   }
 
@@ -310,20 +308,20 @@ const generateCheckoutLink = async () => {
       const existingBookedId = await getExistingBookedDate(enrichedDate.value.id)
 
       if (existingBookedId) {
-        checkoutLink.value = `/checkout?booked_id=${existingBookedId}&type=${checkoutType}&step=1&voyage=${date.travel_slug}`
+        checkoutLink.value = `/checkout?booked_id=${existingBookedId}&type=${checkoutType}&step=1&voyage=${props.date.travel_slug}`
       }
       else {
-        checkoutLink.value = `/checkout?date_id=${enrichedDate.value.id}&type=${checkoutType}&step=0&voyage=${date.travel_slug}`
+        checkoutLink.value = `/checkout?date_id=${enrichedDate.value.id}&type=${checkoutType}&step=0&voyage=${props.date.travel_slug}`
       }
     }
     else {
-      checkoutLink.value = `/checkout?date_id=${enrichedDate.value.id}&type=${checkoutType}&step=0&voyage=${date.travel_slug}`
+      checkoutLink.value = `/checkout?date_id=${enrichedDate.value.id}&type=${checkoutType}&step=0&voyage=${props.date.travel_slug}`
     }
   }
   catch (error) {
     console.error('Error generating checkout link:', error)
     // Fallback to basic link
-    checkoutLink.value = `/checkout?date_id=${enrichedDate.value.id}&type=deposit&step=0&voyage=${date.travel_slug}`
+    checkoutLink.value = `/checkout?date_id=${enrichedDate.value.id}&type=deposit&step=0&voyage=${props.date.travel_slug}`
   }
 }
 

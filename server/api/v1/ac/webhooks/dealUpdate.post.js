@@ -113,6 +113,9 @@ export default defineEventHandler(async (event) => {
           const totalBooked = allBooked.reduce((acc, row) => acc + (row.booked_places || 0), 0)
           await booking.updateTravelDate(travel_date_id, totalBooked)
           console.log('Booked places updated successfully, travel_date_id:', travel_date_id)
+
+          // Remove departure record deal if no paying clients remain
+          await departures.cleanupDepartureDealIfEmpty(travel_date_id)
         }
         catch (bookingError) {
           console.error('Error in booking operations:', bookingError)
@@ -143,6 +146,9 @@ export default defineEventHandler(async (event) => {
           const totalBooked = allBooked.reduce((acc, row) => acc + (row.booked_places || 0), 0)
           await booking.updateTravelDate(travel_date_id, totalBooked)
           console.log('Booked places updated successfully, travel_date_id:', travel_date_id)
+
+          // Remove departure record deal if no paying clients remain
+          await departures.cleanupDepartureDealIfEmpty(travel_date_id)
         }
         catch (bookingError) {
           console.error('Error in booking operations:', bookingError)
