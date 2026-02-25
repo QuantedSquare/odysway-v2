@@ -94,6 +94,45 @@
         </v-col>
       </v-row>
 
+      <!-- Departure record deal banner -->
+      <v-row v-if="form.departure_id">
+        <v-col cols="12">
+          <v-card
+            rounded="lg"
+            elevation="4"
+            class="glass-surface"
+            color="primary"
+          >
+            <v-card-text class="d-flex align-center ga-4 py-3">
+              <v-icon
+                size="32"
+                color="primary"
+              >
+                {{ mdiAirplaneTakeoff }}
+              </v-icon>
+              <div class="flex-grow-1">
+                <div class="text-subtitle-2 font-weight-bold text-primary">
+                  Dossier de voyage · Gestions Départs
+                </div>
+                <div class="text-caption text-medium-emphasis">
+                  Deal record AC #{{ form.departure_id }}
+                </div>
+              </div>
+              <v-btn
+                :href="`https://odysway90522.activehosted.com/app/deals/${form.departure_id}`"
+                target="_blank"
+                color="primary"
+                variant="tonal"
+                size="small"
+                :append-icon="mdiArrowRight"
+              >
+                Voir le deal
+              </v-btn>
+            </v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
+
       <v-row>
         <v-col
           cols="12"
@@ -510,7 +549,7 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { mdiArrowRight, mdiDelete, mdiLinkEdit, mdiInformationOutline } from '@mdi/js'
+import { mdiArrowRight, mdiDelete, mdiLinkEdit, mdiInformationOutline, mdiAirplaneTakeoff } from '@mdi/js'
 import dayjs from 'dayjs'
 import DateFormCard from '~/components/booking/DateFormCard.vue'
 import { BOOKING_STATUSES } from '~/utils/bookingStatuses'

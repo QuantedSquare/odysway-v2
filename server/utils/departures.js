@@ -38,10 +38,51 @@ const computeDepartureStage = (departureDate, returnDate, bookedSeat, minTravele
 }
 
 /**
+ * Fetches all paid booked_dates for a travel date and aggregates their
+ * AC deal values and traveler counts into a single enrichment object.
+ */
+const computeDepartureEnrichment = async (travelDateId, travelDate) => {
+  const config = useRuntimeConfig()
+  const origin = config.public.siteURL
+
+  const bmsLink = `${origin}/booking-management/${travelDate.travel_slug}/${travelDateId}`
+
+  const { data: paidBookings } = await supabase
+    .from('booked_dates')
+    .select('deal_id, booked_places')
+    .eq('travel_date_id', travelDateId)
+    .gt('booked_places', 0)
+
+  let totalValue = 0
+  let totalNbTravelers = 0
+
+  if (paidBookings && paidBookings.length > 0) {
+    const dealData = await Promise.all(
+      paidBookings.map(async (b) => {
+        try {
+          const { deal } = await activecampaign.getDealById(b.deal_id)
+          return {
+            value: Number(deal?.value || 0),
+            nbTravelers: Number(b.booked_places || 0),
+          }
+        }
+        catch {
+          return { value: 0, nbTravelers: Number(b.booked_places || 0) }
+        }
+      }),
+    )
+    totalValue = dealData.reduce((acc, d) => acc + d.value, 0)
+    totalNbTravelers = dealData.reduce((acc, d) => acc + d.nbTravelers, 0)
+  }
+
+  return { totalValue, totalNbTravelers, bmsLink }
+}
+
+/**
  * Returns the existing departure deal ID for a travel date, or creates a new one
  * in pipeline 4 ("Gestions Départs") and stores its ID in travel_dates.departure_id.
  */
-const getOrCreateDepartureDeal = async (travelDateId, travelDate, travelTitle) => {
+const getOrCreateDepartureDeal = async (travelDateId, travelDate, travelTitle, enrichment = {}) => {
   if (travelDate.departure_id) {
     return travelDate.departure_id
   }
@@ -57,6 +98,7 @@ const getOrCreateDepartureDeal = async (travelDateId, travelDate, travelTitle) =
     travelDate,
     travelTitle,
     stageId,
+    ...enrichment,
   })
 
   const { error } = await supabase
@@ -90,7 +132,7 @@ const handlePaymentForDeparture = async (bookedDate, travelTitle, contactId) => 
   try {
     const { data: travelDate, error: fetchError } = await supabase
       .from('travel_dates')
-      .select('id, departure_date, return_date, booked_seat, min_travelers, departure_id')
+      .select('id, travel_slug, departure_date, return_date, booked_seat, min_travelers, departure_id')
       .eq('id', bookedDate.travel_date_id)
       .single()
 
@@ -99,15 +141,20 @@ const handlePaymentForDeparture = async (bookedDate, travelTitle, contactId) => 
       return
     }
 
+    // Aggregate values from all paying clients on this date
+    const enrichment = await computeDepartureEnrichment(travelDate.id, travelDate)
+
     const departureDealId = await getOrCreateDepartureDeal(
       travelDate.id,
       travelDate,
       travelTitle,
+      enrichment,
     )
 
     await assignContactToDepartureDeal(departureDealId, contactId)
 
-    // Sync the stage to reflect the current booking state
+    // Always sync stage + aggregated values so the departure deal stays up to date
+    // as new clients pay (totals grow over time)
     const stageId = computeDepartureStage(
       travelDate.departure_date,
       travelDate.return_date,
@@ -117,6 +164,9 @@ const handlePaymentForDeparture = async (bookedDate, travelTitle, contactId) => 
 
     await activecampaign.updateDeal(departureDealId, {
       stage: String(stageId),
+      value: enrichment.totalValue,
+      nbTravelers: enrichment.totalNbTravelers,
+      linkBms: enrichment.bmsLink,
     })
   }
   catch (err) {

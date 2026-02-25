@@ -514,7 +514,7 @@ const recalculatTotalValues = async (dealId) => {
 
 // =================== GESTIONS DÉPARTS ===================
 
-const createDepartureDeal = async ({ travelDate, travelTitle, stageId }) => {
+const createDepartureDeal = async ({ travelDate, travelTitle, stageId, totalValue = 0, totalNbTravelers = 0, linkBms = '', travelType = 'Voyage de Groupe' }) => {
   const departureFormatted = dayjs(travelDate.departure_date).format('DD/MM/YYYY')
   const returnFormatted = dayjs(travelDate.return_date).format('DD/MM/YYYY')
   const title = `${travelTitle} - ${departureFormatted} → ${returnFormatted}`
@@ -534,11 +534,14 @@ const createDepartureDeal = async ({ travelDate, travelTitle, stageId }) => {
       owner: '1',
       stage: String(stageId),
       title,
-      value: 0,
+      value: totalValue,
       fields: reverseCustomFieldsMap(
         {
           departureDate: travelDate.departure_date,
           returnDate: travelDate.return_date,
+          travelType,
+          nbTravelers: totalNbTravelers,
+          linkBms,
         },
         customFieldsMapDeal,
       ),
