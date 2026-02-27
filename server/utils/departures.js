@@ -83,6 +83,8 @@ const computeDepartureEnrichment = async (travelDateId, travelDate) => {
  * in pipeline 4 ("Gestions Départs") and stores its ID in travel_dates.departure_id.
  */
 const getOrCreateDepartureDeal = async (travelDateId, travelDate, travelTitle, enrichment = {}) => {
+  // Remove when turning live
+  return null
   if (travelDate.departure_id) {
     return travelDate.departure_id
   }
@@ -150,6 +152,8 @@ const handlePaymentForDeparture = async (bookedDate, travelTitle, contactId) => 
       travelTitle,
       enrichment,
     )
+    // Remove when turning live
+    if (!departureDealId) return
 
     await assignContactToDepartureDeal(departureDealId, contactId)
 
