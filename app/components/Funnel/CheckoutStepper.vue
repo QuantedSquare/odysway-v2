@@ -242,10 +242,6 @@ if (route.query.type === 'custom' || route.query.type === 'balance') {
   skipperMode.value = route.query.type === 'custom' ? 'normal' : 'summary'
 }
 
-// const forcedIndivRoom = computed(() => {
-//   return voyage.forcedIndivRoom && voyage.indivRoomPrice > 0 && dynamicDealValues.value.nbAdults === 1 && dynamicDealValues.value.nbChildren === 0
-// })
-
 // 🧱 Step navigation
 const nextStep = () => {
   const nextStepValue = currentStep.value === 3 && !showInsuranceStep.value ? 5 : currentStep.value + 1
