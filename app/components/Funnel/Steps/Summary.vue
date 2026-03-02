@@ -407,7 +407,7 @@ const appliedPrice = computed(() => {
   if (!model.value) return 0
 
   if (model.value.alreadyPaid >= totalValue.value) {
-    return 0
+    return route.query.amount * 100 || 0
   }
   else {
     if (route.query.type === 'deposit') {
