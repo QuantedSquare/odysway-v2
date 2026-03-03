@@ -30,6 +30,7 @@ export const bookingApi = {
     apiRequest(`/booking/travel-dates${encodeQuery({ slugs: Array.isArray(slugs) ? slugs.join(',') : slugs })}`),
 
   // Backoffice (booking-management)
+  getAllDates: () => apiRequest('/booking/all-dates'),
   getDatesBySlug: slug => apiRequest(`/booking/${encodeURIComponent(slug)}/dates`),
   getDateById: dateId => apiRequest(`/booking/date/${encodeURIComponent(dateId)}`),
   updateDate: (slug, dateId, payload) =>
