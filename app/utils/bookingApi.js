@@ -44,6 +44,10 @@ export const bookingApi = {
     apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/booked/${encodeURIComponent(bookedId)}`, 'delete'),
   assignDeal: (slug, dateId, payload) =>
     apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/assign-deal`, 'post', payload),
+  assignDepartureDeal: (slug, dateId, payload) =>
+    apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/assign-departure-deal`, 'post', payload),
+  removeDepartureDeal: (slug, dateId) =>
+    apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/assign-departure-deal`, 'delete'),
   addDate: payload => apiRequest('/booking/add-date', 'post', payload),
 
   // Funnel

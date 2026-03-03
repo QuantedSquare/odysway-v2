@@ -95,9 +95,10 @@
       </v-row>
 
       <!-- Departure record deal banner -->
-      <v-row v-if="form.departure_id">
+      <v-row>
         <v-col cols="12">
           <v-card
+            v-if="form.departure_id"
             rounded="lg"
             elevation="4"
             class="glass-surface"
@@ -128,8 +129,76 @@
               >
                 Voir le deal
               </v-btn>
+              <v-btn
+                icon
+                size="small"
+                color="error"
+                variant="text"
+                :loading="removingDepartureDeal"
+                @click="onRemoveDepartureDeal"
+              >
+                <v-icon>{{ mdiDelete }}</v-icon>
+              </v-btn>
             </v-card-text>
           </v-card>
+
+          <v-expansion-panels
+            v-else
+            variant="accordion"
+          >
+            <v-expansion-panel rounded="lg">
+              <v-expansion-panel-title class="d-flex align-center ga-2">
+                <v-icon
+                  size="20"
+                  color="warning"
+                >
+                  {{ mdiAirplaneTakeoff }}
+                </v-icon>
+                <span class="text-body-2 font-weight-medium">Aucun dossier de départ assigné</span>
+                <v-chip
+                  color="warning"
+                  label
+                  size="x-small"
+                  class="ml-2"
+                >
+                  Assigner
+                </v-chip>
+              </v-expansion-panel-title>
+              <v-expansion-panel-text>
+                <v-form @submit.prevent="onAssignDepartureDeal">
+                  <v-text-field
+                    v-model="departureDealUrl"
+                    label="URL du deal AC (dossier de départ)"
+                    placeholder="https://odysway90522.activehosted.com/app/deals/123"
+                    density="comfortable"
+                    required
+                  />
+                  <v-btn
+                    type="submit"
+                    color="primary"
+                    :loading="assigningDepartureDeal"
+                    :disabled="assigningDepartureDeal"
+                  >
+                    Assigner le dossier de départ
+                  </v-btn>
+                  <v-alert
+                    v-if="assignDepartureDealSuccess"
+                    type="success"
+                    class="mt-2"
+                  >
+                    Dossier de départ assigné !
+                  </v-alert>
+                  <v-alert
+                    v-if="assignDepartureDealError"
+                    type="error"
+                    class="mt-2"
+                  >
+                    {{ assignDepartureDealError }}
+                  </v-alert>
+                </v-form>
+              </v-expansion-panel-text>
+            </v-expansion-panel>
+          </v-expansion-panels>
         </v-col>
       </v-row>
 
@@ -587,6 +656,12 @@ const assigningDeal = ref(false)
 const assignDealError = ref('')
 const assignDealSuccess = ref(false)
 
+const departureDealUrl = ref('')
+const assigningDepartureDeal = ref(false)
+const assignDepartureDealError = ref('')
+const assignDepartureDealSuccess = ref(false)
+const removingDepartureDeal = ref(false)
+
 const paymentDialog = ref(false)
 const selectedTraveler = ref(null)
 const paymentType = ref('full')
@@ -682,6 +757,46 @@ const onAssignDeal = async () => {
   }
   finally {
     assigningDeal.value = false
+  }
+}
+
+const onRemoveDepartureDeal = async () => {
+  if (!confirm('Retirer le dossier de départ de cette date ?')) return
+  removingDepartureDeal.value = true
+  try {
+    await bookingApi.removeDepartureDeal(slug, dateId)
+    await fetchDetails()
+  }
+  catch (err) {
+    saveError.value = getApiErrorMessage(err, 'Erreur lors de la suppression du dossier de départ.')
+  }
+  finally {
+    removingDepartureDeal.value = false
+  }
+}
+
+const onAssignDepartureDeal = async () => {
+  assignDepartureDealError.value = ''
+  assignDepartureDealSuccess.value = false
+  assigningDepartureDeal.value = true
+  try {
+    const match = departureDealUrl.value.match(/deals\/(\d+)$/)
+    if (!match) {
+      assignDepartureDealError.value = 'URL invalide.'
+      assigningDepartureDeal.value = false
+      return
+    }
+    const dealId = match[1]
+    await bookingApi.assignDepartureDeal(slug, dateId, { dealId })
+    assignDepartureDealSuccess.value = true
+    departureDealUrl.value = ''
+    await fetchDetails()
+  }
+  catch (err) {
+    assignDepartureDealError.value = getApiErrorMessage(err, 'Erreur lors de l\'assignation du dossier de départ.')
+  }
+  finally {
+    assigningDepartureDeal.value = false
   }
 }
 
