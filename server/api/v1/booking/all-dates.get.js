@@ -7,7 +7,7 @@ export default defineEventHandler(async () => {
     .from('travel_dates')
     .select('id, travel_slug, departure_date, return_date, departure_id, booked_seat, max_travelers, published, status, displayed_status')
     .gte('booked_seat', 1)
-    .lte('departure_date', now)
+    .gte('departure_date', now)
     .order('departure_date', { ascending: true })
 
   if (error) {
