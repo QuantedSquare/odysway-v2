@@ -23,10 +23,10 @@
     "@sanity/assist": "^5.0.2",
     "@sanity/client": "^7.11.0",
     "@sanity/color-input": "^4.0.6",
-    "@sanity/embeddings-index-ui": "^3.0.0",
-    "@sanity/orderable-document-list": "^1.4.0",
+    "@sanity/embeddings-index-ui": "^3.0.1",
+    "@sanity/orderable-document-list": "^1.5.1",
     "@sanity/ui": "^3.0.0",
-    "@sanity/vision": "^4.22.0",
+    "@sanity/vision": "^4.21.1",
     "algoliasearch": "^5.46.0",
     "dotenv": "^17.2.3",
     "js-yaml": "^4.1.0",
@@ -36,8 +36,8 @@
     "react": "^19.2.4",
     "react-circular-progressbar": "^2.2.0",
     "react-dom": "^19.2.4",
-    "sanity": "^4.22.0",
-    "sanity-plugin-media": "^4.0.0",
+    "sanity": "^3.99.0",
+    "sanity-plugin-media": "^4.1.1",
     "styled-components": "^6.1.18"
   },
   "devDependencies": {
@@ -46,6 +46,10 @@
     "eslint": "^9.28",
     "prettier": "^3.5",
     "typescript": "^5.8"
+  },
+  "overrides": {
+    "prismjs": "1.30.0",
+    "glob@10.2.0 - 10.4.5": "10.5.0"
   },
   "prettier": {
     "semi": false,

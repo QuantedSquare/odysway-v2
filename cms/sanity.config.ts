@@ -35,11 +35,13 @@ export default defineConfig({
                   .items([
                     orderableDocumentListDeskItem({
                       type: 'voyage',
-                      title: 'Tous les Voyages',
-                      icon: () => '✈️',
+                      title: 'Voyages triés',
+                      icon: () => '🔀',
                       S,
                       context,
                     }),
+                    S.divider(),
+                    S.documentTypeListItem('voyage').title('Tous les Voyages').icon(() => '✈️'),
                     S.divider(),
                     S.listItem()
                       .title('Voyages by Category')
