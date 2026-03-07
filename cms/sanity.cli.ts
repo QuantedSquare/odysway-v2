@@ -9,4 +9,5 @@ export default defineCliConfig({
     appId: 'ige2ef30k425yky1yxshkzef',
     autoUpdates: true,
   },
+  studioHost: 'odysway-studio',
 })

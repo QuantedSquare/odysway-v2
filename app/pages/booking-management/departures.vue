@@ -404,7 +404,7 @@ const groups = computed(() => {
     const sortedDates = [...slugDates].sort((a, b) => {
       if (!a.departure_id && b.departure_id) return -1
       if (a.departure_id && !b.departure_id) return 1
-      return dayjs(b.departure_date).valueOf() - dayjs(a.departure_date).valueOf()
+      return dayjs(a.departure_date).valueOf() - dayjs(b.departure_date).valueOf()
     })
 
     return {

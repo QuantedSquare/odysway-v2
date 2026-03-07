@@ -1,4 +1,5 @@
 import dayjs from 'dayjs'
+import { createClient } from '@sanity/client'
 import supabase from './supabase'
 import activecampaign from './activecampaign'
 
@@ -23,7 +24,7 @@ const computeDepartureStage = (departureDate, returnDate, bookedSeat, minTravele
   const departure = dayjs(departureDate)
   const returnDay = dayjs(returnDate)
   const daysUntilDeparture = departure.diff(today, 'day')
-  const isConfirmed = Number(bookedSeat || 0) >= Number(minTravelers || 0)
+  const isConfirmed = Number(bookedSeat || 0) >= Number(minTravelers || 1)
 
   if (today.isAfter(returnDay)) return STAGES.RETOUR_VOYAGE
   if (today.isAfter(departure) || today.isSame(departure, 'day')) return STAGES.VOYAGE_EN_COURS
@@ -83,8 +84,6 @@ const computeDepartureEnrichment = async (travelDateId, travelDate) => {
  * in pipeline 4 ("Gestions Départs") and stores its ID in travel_dates.departure_id.
  */
 const getOrCreateDepartureDeal = async (travelDateId, travelDate, travelTitle, enrichment = {}) => {
-  // Remove when turning live
-  return null
   if (travelDate.departure_id) {
     return travelDate.departure_id
   }
@@ -137,11 +136,39 @@ const handlePaymentForDeparture = async (bookedDate, travelTitle, contactId) => 
       .select('id, travel_slug, departure_date, return_date, booked_seat, min_travelers, departure_id')
       .eq('id', bookedDate.travel_date_id)
       .single()
+    console.log('travelDate in handlePaymentForDeparture', travelDate)
 
+    const config = useRuntimeConfig()
+    const sanityClient = createClient({
+      projectId: config.public.sanity.projectId,
+      dataset: config.public.sanity.dataset,
+      apiVersion: '2025-01-01',
+      token: process.env.SANITY_WRITE_TOKEN,
+      useCdn: false,
+    })
+
+    const groqQuery = `*[_type == "voyage" && slug.current == $slug][0]{
+      bmsReference,
+      title,
+      availabilityTypes
+    }`
     if (fetchError || !travelDate) {
       console.error('handlePaymentForDeparture: could not fetch travel_date', fetchError)
       return
     }
+
+    const voyageFromSanity = await sanityClient.fetch(groqQuery, { slug: travelDate.travel_slug })
+
+    const availabilityType = voyageFromSanity?.availabilityTypes?.[0]
+    const travelTypePrefixMap = {
+      groupe: 'GIR',
+      privatisation: 'PRIVAT',
+      custom: 'SUR-MESURE',
+    }
+
+    const travelTypePrefix = availabilityType ? travelTypePrefixMap[availabilityType] : null
+    const baseTravelTitle = voyageFromSanity?.bmsReference || travelTitle
+    const departureTravelTitle = travelTypePrefix ? `${travelTypePrefix} | ${baseTravelTitle}` : baseTravelTitle
 
     // Aggregate values from all paying clients on this date
     const enrichment = await computeDepartureEnrichment(travelDate.id, travelDate)
@@ -149,11 +176,9 @@ const handlePaymentForDeparture = async (bookedDate, travelTitle, contactId) => 
     const departureDealId = await getOrCreateDepartureDeal(
       travelDate.id,
       travelDate,
-      travelTitle,
+      departureTravelTitle,
       enrichment,
     )
-    // Remove when turning live
-    if (!departureDealId) return
 
     await assignContactToDepartureDeal(departureDealId, contactId)
 
