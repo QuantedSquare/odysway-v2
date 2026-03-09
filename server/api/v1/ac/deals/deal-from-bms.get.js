@@ -21,8 +21,7 @@ export default defineEventHandler(async (event) => {
       activecampaign.getDealById(data.deal_id),
       activecampaign.getDealCustomFields(data.deal_id),
     ])
-    // const reponse = await activecampaign.getDealById(dealId)
-    // const customFields = await activecampaign.getDealCustomFields(dealId)
+
     const fullContact = await activecampaign.getClientById(fetchedDeal.deal.contact)
     const contact = fullContact.contact
 
@@ -32,7 +31,6 @@ export default defineEventHandler(async (event) => {
         message: 'Deal not found',
       })
     }
-    console.log('contact in deal-from-bms', contact.fieldValues)
     return {
       ...fetchedDeal.deal,
       ...customFields,
