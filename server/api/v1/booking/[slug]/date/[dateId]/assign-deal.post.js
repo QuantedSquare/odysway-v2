@@ -4,6 +4,10 @@ import { defineEventHandler, readBody, createError } from 'h3'
 // Also update the booked_dates table with the booked_places, is_option and expiracy_date. depending if it's an option or not.
 
 export default defineEventHandler(async (event) => {
+  const config = useRuntimeConfig()
+  const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
+  if (isProdEnv) requireBookingUser(event)
+
   const { dateId, slug } = event.context.params
   if (!dateId || !slug) {
     throw createError({ statusCode: 400, statusMessage: 'slug et dateId requis' })
@@ -12,7 +16,6 @@ export default defineEventHandler(async (event) => {
   if (!dealId) {
     throw createError({ statusCode: 400, statusMessage: 'dealId requis' })
   }
-  const config = useRuntimeConfig()
   const origin = config.public.siteURL
 
   // Ensure the date exists and matches slug (avoid acting on wrong resource)

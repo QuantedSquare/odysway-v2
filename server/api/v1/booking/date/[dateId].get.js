@@ -1,6 +1,10 @@
 import { defineEventHandler, createError } from 'h3'
 
 export default defineEventHandler(async (event) => {
+  const config = useRuntimeConfig()
+  const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
+  if (isProdEnv) requireBookingUser(event)
+
   const { dateId } = event.context.params
   if (!dateId) {
     throw createError({

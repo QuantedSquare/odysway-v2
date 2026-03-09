@@ -173,25 +173,32 @@ const { mdAndUp } = useDisplay()
 onMounted(async () => {
   // Track purchase event for GTM
   if (route.query.purchase === 'true' && route.query.booked_id && !isOption.value) {
-    try {
-      // Fetch purchase data from API
-      const purchaseData = await $fetch(`/api/v1/booking/purchase-data?booked_id=${route.query.booked_id}`)
+    const sessionKey = `gtm_tracked_${route.query.booked_id}`
+    const alreadyTracked = sessionStorage.getItem(sessionKey)
 
-      if (!purchaseData.isOption && voyage.value) {
-        // Track GTM purchase event
-        trackPurchase({
-          transactionId: purchaseData.transactionId,
-          paymentType: purchaseData.paymentType,
-          totalValue: purchaseData.totalValue,
-          optinNewsletter: purchaseData.optinNewsletter,
-          userData: purchaseData.userData,
-          voyage: voyage.value,
-          dynamicDealValues: purchaseData.dynamicDealValues,
-        })
+    if (!alreadyTracked) {
+      try {
+        // Fetch purchase data from API
+        const purchaseData = await $fetch(`/api/v1/booking/purchase-data?booked_id=${route.query.booked_id}`)
+
+        if (!purchaseData.isOption && purchaseData.shouldTrack && voyage.value) {
+          // Mark as tracked in sessionStorage to prevent re-fire on page refresh
+          sessionStorage.setItem(sessionKey, '1')
+          // Track GTM purchase event
+          trackPurchase({
+            transactionId: purchaseData.transactionId,
+            paymentType: purchaseData.paymentType,
+            totalValue: purchaseData.totalValue,
+            optinNewsletter: purchaseData.optinNewsletter,
+            userData: purchaseData.userData,
+            voyage: voyage.value,
+            dynamicDealValues: purchaseData.dynamicDealValues,
+          })
+        }
       }
-    }
-    catch (error) {
-      console.error('Error tracking purchase:', error)
+      catch (error) {
+        console.error('Error tracking purchase:', error)
+      }
     }
   }
 

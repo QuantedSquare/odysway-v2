@@ -144,9 +144,14 @@ export default defineEventHandler(async (event) => {
       }
     }
 
+    // Only track purchase if this is the first payment (alreadyPaid is 0 or null)
+    const alreadyPaid = parseFloat(deal.alreadyPaid) || 0
+    const shouldTrack = alreadyPaid === 0
+
     // Build response with all necessary data for GTM tracking
     return {
       isOption: false,
+      shouldTrack,
       transactionId: (transactionId.startsWith('pi_') || transactionId.startsWith('al')) ? transactionId : bookedDate.deal_id,
       paymentType,
       totalValue: (deal.totalTravelPrice || 0) / 100, // Convert from cents to euros

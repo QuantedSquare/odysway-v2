@@ -1,6 +1,10 @@
 import { defineEventHandler, createError } from 'h3'
 
 export default defineEventHandler(async (event) => {
+  const config = useRuntimeConfig()
+  const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
+  if (isProdEnv) requireBookingUser(event)
+
   const { dateId, slug } = event.context.params
   if (!dateId || !slug) {
     throw createError({ statusCode: 400, statusMessage: 'slug et dateId requis' })
@@ -23,6 +27,8 @@ export default defineEventHandler(async (event) => {
   delete rest.booked_seat
   // Reset automated counters/status for the new date
   delete rest.status
+  // Never carry over the departure deal — it belongs to the original date only
+  delete rest.departure_id
   const newDate = { ...rest, booked_seat: 0, status: 'soon_confirmed' }
 
   // Insert new row

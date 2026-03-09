@@ -1,6 +1,10 @@
 import { defineEventHandler, readBody, createError } from 'h3'
 
 export default defineEventHandler(async (event) => {
+  const config = useRuntimeConfig()
+  const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
+  if (isProdEnv) requireBookingUser(event)
+
   const { dateId, slug } = event.context.params
   if (!dateId || !slug) {
     throw createError({ statusCode: 400, statusMessage: 'slug et dateId requis' })

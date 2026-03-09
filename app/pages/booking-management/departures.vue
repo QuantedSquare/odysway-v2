@@ -435,13 +435,6 @@ const filteredGroups = computed(() => {
   })
 })
 
-// Auto-open panels that have missing dates
-// watch(groups, (newGroups) => {
-//   openPanels.value = newGroups
-//     .map((g, i) => (g.missingCount > 0 ? i : null))
-//     .filter(i => i !== null)
-// }, { immediate: true })
-
 const onAssign = async (date) => {
   errors[date.id] = ''
   const url = dealUrls[date.id] || ''

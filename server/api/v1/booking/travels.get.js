@@ -1,6 +1,10 @@
 import { defineEventHandler, createError } from 'h3'
 
-export default defineEventHandler(async () => {
+export default defineEventHandler(async (event) => {
+  const config = useRuntimeConfig()
+  const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
+  if (isProdEnv) requireBookingUser(event)
+
   const { data, error } = await supabase
     .from('travel_dates')
     .select('travel_slug, booked_seat, is_custom_travel, departure_date, return_date')
