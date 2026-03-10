@@ -15,9 +15,8 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
   }
 
-  // Fetch all travel_dates that have a departure record deal and whose return
-  // date is within the last 7 days (so we still move finished trips to "Retour Voyage").
-  const cutoff = new Date.now().toISOString()
+  // Fetch all travel_dates that have a departure record deal and whose return date is after today
+  const cutoff = new Date().toISOString()
 
   const { data: rows, error: fetchError } = await supabase
     .from('travel_dates')
