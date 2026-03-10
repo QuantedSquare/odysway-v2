@@ -95,11 +95,13 @@ const getOrCreateDepartureDeal = async (travelDateId, travelDate, travelTitle, e
     travelDate.min_travelers,
   )
 
+  // Create without bmsLink first (we need the deal ID to build it)
   const departureDealId = await activecampaign.createDepartureDeal({
     travelDate,
     travelTitle,
     stageId,
     ...enrichment,
+    linkBms: '',
   })
 
   const { error } = await supabase
@@ -109,6 +111,11 @@ const getOrCreateDepartureDeal = async (travelDateId, travelDate, travelTitle, e
 
   if (error) {
     console.error('Error saving departure_id to travel_dates:', error)
+  }
+
+  // Now update with the bmsLink that includes the travel_date ID
+  if (enrichment.bmsLink) {
+    await activecampaign.updateDeal(departureDealId, { linkBms: enrichment.bmsLink })
   }
 
   return departureDealId
@@ -129,46 +136,56 @@ const assignContactToDepartureDeal = (departureDealId, contactId) => {
  * @param {string} travelTitle - The title of the travel (from the client deal)
  * @param {string|number} contactId - The ActiveCampaign contact ID of the paying traveler
  */
+const travelTypePrefixMap = {
+  groupe: 'GIR',
+  privatisation: 'PRIVAT',
+  custom: 'SUR-MESURE',
+}
+
 const handlePaymentForDeparture = async (bookedDate, travelTitle, contactId) => {
   try {
     const { data: travelDate, error: fetchError } = await supabase
       .from('travel_dates')
-      .select('id, travel_slug, departure_date, return_date, booked_seat, min_travelers, departure_id')
+      .select('id, travel_slug, departure_date, return_date, booked_seat, min_travelers, departure_id, bms_reference, travel_type_prefix')
       .eq('id', bookedDate.travel_date_id)
       .single()
-    console.log('travelDate in handlePaymentForDeparture', travelDate)
 
-    const config = useRuntimeConfig()
-    const sanityClient = createClient({
-      projectId: config.public.sanity.projectId,
-      dataset: config.public.sanity.dataset,
-      apiVersion: '2025-01-01',
-      token: process.env.SANITY_WRITE_TOKEN,
-      useCdn: false,
-    })
-
-    const groqQuery = `*[_type == "voyage" && slug.current == $slug][0]{
-      bmsReference,
-      title,
-      availabilityTypes
-    }`
     if (fetchError || !travelDate) {
       console.error('handlePaymentForDeparture: could not fetch travel_date', fetchError)
       return
     }
 
-    const voyageFromSanity = await sanityClient.fetch(groqQuery, { slug: travelDate.travel_slug })
+    let bmsReference = travelDate.bms_reference
+    let travelTypePrefix = travelDate.travel_type_prefix
 
-    const availabilityType = voyageFromSanity?.availabilityTypes?.[0]
-    const travelTypePrefixMap = {
-      groupe: 'GIR',
-      privatisation: 'PRIVAT',
-      custom: 'SUR-MESURE',
+    // Only fetch from Sanity if not yet cached in travel_dates
+    if (!bmsReference || !travelTypePrefix) {
+      const config = useRuntimeConfig()
+      const sanityClient = createClient({
+        projectId: config.public.sanity.projectId,
+        dataset: config.public.sanity.dataset,
+        apiVersion: '2025-01-01',
+        token: process.env.SANITY_WRITE_TOKEN,
+        useCdn: false,
+      })
+
+      const voyageFromSanity = await sanityClient.fetch(
+        `*[_type == "voyage" && slug.current == $slug][0]{ bmsReference, availabilityTypes }`,
+        { slug: travelDate.travel_slug },
+      )
+
+      bmsReference = voyageFromSanity?.bmsReference || travelTitle
+      const availabilityType = voyageFromSanity?.availabilityTypes?.[0]
+      travelTypePrefix = availabilityType ? (travelTypePrefixMap[availabilityType] ?? null) : null
+
+      // Cache for future payments on this date
+      await supabase
+        .from('travel_dates')
+        .update({ bms_reference: bmsReference, travel_type_prefix: travelTypePrefix })
+        .eq('id', travelDate.id)
     }
 
-    const travelTypePrefix = availabilityType ? travelTypePrefixMap[availabilityType] : null
-    const baseTravelTitle = voyageFromSanity?.bmsReference || travelTitle
-    const departureTravelTitle = travelTypePrefix ? `${travelTypePrefix} | ${baseTravelTitle}` : baseTravelTitle
+    const departureTravelTitle = travelTypePrefix ? `${travelTypePrefix} | ${bmsReference}` : bmsReference
 
     // Aggregate values from all paying clients on this date
     const enrichment = await computeDepartureEnrichment(travelDate.id, travelDate)

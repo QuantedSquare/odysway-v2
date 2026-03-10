@@ -15,14 +15,12 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
   }
 
-  // Fetch all travel_dates that have a departure record deal and whose return date is after today
-  const cutoff = new Date().toISOString()
-
+  // Fetch all travel_dates that have a departure record deal, including past ones so they
+  // can be moved to RETOUR_VOYAGE. The diff check below prevents redundant AC updates.
   const { data: rows, error: fetchError } = await supabase
     .from('travel_dates')
     .select('id, departure_date, return_date, booked_seat, min_travelers, departure_id')
     .not('departure_id', 'is', null)
-    .gte('return_date', cutoff)
 
   if (fetchError) {
     throw createError({ statusCode: 500, statusMessage: fetchError.message })
