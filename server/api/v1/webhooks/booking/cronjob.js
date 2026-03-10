@@ -47,7 +47,7 @@ export default defineEventHandler(async (event) => {
 
         const alreadyPaid = Number(customFields?.alreadyPaid || 0)
         if (alreadyPaid > 0) {
-          const bookedPlaces = Number(customFields?.nbTravelers || row.booked_places || 0)
+          const bookedPlaces = Number(+customFields?.nbTravelers || +row.booked_places || 0)
           const { error: updateBookedError } = await supabase
             .from('booked_dates')
             .update({ is_option: false, expiracy_date: null, booked_places: bookedPlaces })

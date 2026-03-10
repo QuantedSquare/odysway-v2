@@ -204,24 +204,34 @@ function transformToAlgoliaRecords(regions: RegionDoc[], destinations: Destinati
     voyage: new Set<string>(),
   }
 
-  const regionDraftBaseIds = new Set<string>()
+  const regionIds = new Set(regions.map(r => r._id))
+  const regionDraftOnlyBaseIds = new Set<string>()
   regions.forEach((region) => {
-    if (region._id.startsWith('drafts.')) regionDraftBaseIds.add(region._id.replace(/^drafts\./, ''))
+    if (region._id.startsWith('drafts.')) {
+      const baseId = region._id.replace(/^drafts\./, '')
+      // Only mark for deletion if there's no published version
+      if (!regionIds.has(baseId)) regionDraftOnlyBaseIds.add(baseId)
+    }
   })
-  regionDraftBaseIds.forEach(baseId => deleteObjectIDs.add(`region_${baseId}`))
+  regionDraftOnlyBaseIds.forEach(baseId => deleteObjectIDs.add(`region_${baseId}`))
 
-  const destinationDraftBaseIds = new Set<string>()
+  const destinationIds = new Set(destinations.map(d => d._id))
+  const destinationDraftOnlyBaseIds = new Set<string>()
   destinations.forEach((destination) => {
-    if (destination._id.startsWith('drafts.')) destinationDraftBaseIds.add(destination._id.replace(/^drafts\./, ''))
+    if (destination._id.startsWith('drafts.')) {
+      const baseId = destination._id.replace(/^drafts\./, '')
+      // Only mark for deletion if there's no published version
+      if (!destinationIds.has(baseId)) destinationDraftOnlyBaseIds.add(baseId)
+    }
   })
-  destinationDraftBaseIds.forEach(baseId => deleteObjectIDs.add(`destination_${baseId}`))
+  destinationDraftOnlyBaseIds.forEach(baseId => deleteObjectIDs.add(`destination_${baseId}`))
 
   // Add region records
   regions.forEach((region) => {
     const isDraft = region._id.startsWith('drafts.')
     const baseId = region._id.replace(/^drafts\./, '')
     if (isDraft) return
-    if (regionDraftBaseIds.has(baseId)) return
+    if (regionDraftOnlyBaseIds.has(baseId)) return
 
     const destinationNames = region.destinations?.map(d => d.title).filter(Boolean) || []
     const destinationSlugs = region.destinations?.map(d => d.slug?.current).filter(Boolean) || []
@@ -246,7 +256,7 @@ function transformToAlgoliaRecords(regions: RegionDoc[], destinations: Destinati
     const isDraft = destination._id.startsWith('drafts.')
     const baseId = destination._id.replace(/^drafts\./, '')
     if (isDraft) return
-    if (destinationDraftBaseIds.has(baseId)) return
+    if (destinationDraftOnlyBaseIds.has(baseId)) return
 
     const regionNames = destination.regions?.map(r => r.nom).filter(Boolean) || []
     const regionSlugs = destination.regions?.map(r => r.slug?.current).filter(Boolean) || []
@@ -266,15 +276,18 @@ function transformToAlgoliaRecords(regions: RegionDoc[], destinations: Destinati
     indexedObjectIDsByType.destination.add(`destination_${baseId}`)
   })
 
-  // If a voyage is in draft, remove the published version from Algolia.
-  // In Sanity, drafts have ids like "drafts.<publishedId>".
-  const draftBaseIds = new Set<string>()
+  // If a voyage is draft-only (no published version), remove it from Algolia.
+  // If a draft exists alongside a published version, keep the published record.
+  const voyageIds = new Set(voyages.map(v => v._id).filter((id): id is string => typeof id === 'string'))
+  const voyageDraftOnlyBaseIds = new Set<string>()
   voyages.forEach((voyage) => {
     if (typeof voyage?._id === 'string' && voyage._id.startsWith('drafts.')) {
-      draftBaseIds.add(voyage._id.replace(/^drafts\./, ''))
+      const baseId = voyage._id.replace(/^drafts\./, '')
+      // Only mark for deletion if there's no published version
+      if (!voyageIds.has(baseId)) voyageDraftOnlyBaseIds.add(baseId)
     }
   })
-  draftBaseIds.forEach(baseId => deleteObjectIDs.add(`voyage_${baseId}`))
+  voyageDraftOnlyBaseIds.forEach(baseId => deleteObjectIDs.add(`voyage_${baseId}`))
 
   // Add voyage records
   voyages.forEach((voyage) => {
@@ -283,9 +296,9 @@ function transformToAlgoliaRecords(regions: RegionDoc[], destinations: Destinati
     const isDraft = voyage._id.startsWith('drafts.')
     const baseId = voyage._id.replace(/^drafts\./, '')
 
-    // Never index drafts; instead remove the published record from Algolia.
+    // Never index drafts; keep the published version even if a draft exists.
     if (isDraft) return
-    if (draftBaseIds.has(baseId)) return
+    if (voyageDraftOnlyBaseIds.has(baseId)) return
 
     // If availabilityTypes is exactly ["custom"], remove it from Algolia (and do not index it).
     const availabilityTypes: string[] = Array.isArray(voyage.availabilityTypes)

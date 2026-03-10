@@ -26,7 +26,7 @@ export default defineEventHandler(async (event) => {
   const travel_date_id = dateRow.id
 
   // Delete every booked_dates first for this date
-  const { data: allBookedDeleted, error: sumError } = await supabase
+  const { error: sumError } = await supabase
     .from('booked_dates')
     .delete()
     .eq('travel_date_id', travel_date_id)
@@ -38,7 +38,7 @@ export default defineEventHandler(async (event) => {
   }
 
   // Then Delete the row
-  const { data: deletedDate, error } = await supabase
+  const { error } = await supabase
     .from('travel_dates')
     .delete()
     .eq('id', travel_date_id)
