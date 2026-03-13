@@ -1,5 +1,49 @@
 import {defineField, defineType} from 'sanity'
 
+
+
+const richTextBlock = {
+  type: 'block',
+  title: 'Bloc de texte',
+  styles: [
+    { title: 'Normal', value: 'normal' },
+    { title: 'H2', value: 'h2' },
+    { title: 'H3', value: 'h3' },
+    { title: 'H4', value: 'h4' },
+    { title: 'Citation', value: 'blockquote' },
+  ],
+  marks: {
+    decorators: [
+      { title: 'Gras', value: 'strong' },
+      { title: 'Italique', value: 'em' },
+      { title: 'Souligné', value: 'underline' },
+      { title: 'Barré', value: 'strike-through' },
+    ],
+    annotations: [
+      {
+        name: 'link',
+        type: 'object',
+        title: 'Lien',
+        fields: [
+          {
+            name: 'href',
+            type: 'url',
+            title: 'URL',
+            validation: (rule: any) =>
+              rule.uri({
+                scheme: ['http', 'https', 'mailto', 'tel'],
+              }),
+          },
+        ],
+      },
+    ],
+  },
+  lists: [
+    { title: 'Puces', value: 'bullet' },
+    { title: 'Numéroté', value: 'number' },
+  ],
+}
+
 export const pageVoyageType = defineType({
   name: 'page_voyage',
   title: 'Page Voyage',
@@ -534,6 +578,7 @@ export const pageVoyageType = defineType({
         defineField({
           name: 'backgroundColor',
           title: 'Couleur de Fond',
+          hidden: true,
           type: 'string',
           validation: Rule => Rule.required()
         }),
@@ -545,6 +590,7 @@ export const pageVoyageType = defineType({
         }),
         defineField({
           name: 'buttonColor',
+          hidden: true,
           title: 'Couleur Bouton',
           type: 'string',
           validation: Rule => Rule.required()
@@ -573,10 +619,24 @@ export const pageVoyageType = defineType({
           type: 'text',
           rows: 3,
           validation: Rule => Rule.required()
-        })
+        }),
+        defineField({
+          name: 'faqBlock',
+          type: 'array',
+          title: 'Bloc FAQ',
+          description: 'Question et réponses communes à tous les voyages',
+          of: [
+            {
+              type: 'object',
+              fields: [
+                { name: 'question', type: 'string' } as any,
+                { name: 'answer', type: 'array', of: [richTextBlock] } as any,
+              ],
+            },
+          ] as any,
+        }),
       ]
     }),
-
     // Why Section
     defineField({
       name: 'whySection',

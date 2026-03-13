@@ -77,6 +77,7 @@
           <LazyFaqVoyagesContainer
             :background-image="voyage.image"
             :faq-block="voyage.faqBlock"
+            :static-faq="page.faqSection.faqBlock"
           />
 
           <LazyWhySection :why-section="page.whySection" />

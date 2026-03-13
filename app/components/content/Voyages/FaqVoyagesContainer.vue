@@ -24,13 +24,13 @@
         </v-row>
         <v-row>
           <v-col
-            v-if="faqBlock && faqBlock.length > 0"
+            v-if="(faqBlock && faqBlock.length > 0) || staticFaq.length > 0"
             cols="12"
             md="8"
             class="max-height-with-overflow"
           >
             <QuestionPanel
-              v-for="item, index in faqBlock"
+              v-for="item, index in faqBlock.concat(staticFaq)"
               :key="index"
               :item="item"
             />
@@ -52,7 +52,7 @@
 import { useImage } from '#imports'
 
 const img = useImage()
-const { faqBlock, backgroundImage } = defineProps({
+const { faqBlock, backgroundImage, staticFaq } = defineProps({
   backgroundImage: {
     type: Object,
     default: null,
@@ -69,7 +69,12 @@ const { faqBlock, backgroundImage } = defineProps({
     type: Array,
     default: () => [],
   },
+  staticFaq: {
+    type: Array,
+    default: () => [],
+  },
 })
+
 const backgroundImageUrl = computed(() => {
   if (backgroundImage?.asset?._ref) {
     return img(getImageUrl(backgroundImage.asset?._ref), { format: 'webp', quality: 70, height: 900, width: 1536 })
