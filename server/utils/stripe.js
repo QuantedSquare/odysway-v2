@@ -12,12 +12,21 @@ const createCheckoutSession = async (order) => {
   console.log('===========fetchedDeal in stripe.js===========', fetchedDeal)
   const deal = { ...fetchedDeal.deal, ...customFields }
 
+  // Validate custom payment amount against what's actually owed server-side
+  if (order.paymentType === 'custom') {
+    const amount = +order.amount
+    const restToPay = +deal.restToPay
+    if (!amount || amount <= 0) {
+      throw createError({
+        statusCode: 400,
+        statusMessage: `Invalid custom amount: ${amount} (restToPay: ${restToPay})`,
+      })
+    }
+  }
+
   const isDev = config.public.environment !== 'production'
   const origin = config.public.siteURL
-  console.log('======Origin======', origin, 'isDev', isDev)
-  console.log('======Config======', config.public)
-  console.log('======Success URL======', `${origin}/success`)
-  console.log('======Cancel URL======', `${origin}${order.currentUrl}`)
+
   const imageUrl = 'https://dev.odysway.com/logos/Logo-Odysway-Bleu.png'
 
   const lineItems = []
@@ -455,8 +464,12 @@ const handlePaymentSession = async (session, paymentType) => {
     })
   }
   //   // Chapka notify
-  // if (deal.insurance !== 'Aucune Assurance' && !isDev && (order.paymentType === 'full' || order.paymentType === 'deposit')) {
-  if (deal.insurance !== 'Aucune Assurance' && (order.paymentType === 'full' || order.paymentType === 'deposit')) {
+
+  if (deal.insurance
+    && deal.insurance !== 'Aucune Assurance'
+    // We previously notified chapka when payment was full or deposit, now we notify it when the first payment is made
+    && (+deal.alreadyPaid === 0)
+    && !isDev) {
     const { data: lineItems } = await stripeCLI.checkout.sessions.listLineItems(checkoutId)
     session.lineItems = lineItems
     console.log('LineItems', lineItems)

@@ -32,28 +32,47 @@ export default defineEventHandler(async (event) => {
     })
   }
 
-  // If payment_status not equal to paid, it means that the customer choose to pay by bank transfer or do nothing
   if (stripeEvent.type === 'payment_intent.succeeded') {
-    console.log('!!!!! payment type !!!!!', stripeEvent.data.object.charges.data)
-    console.log('???? CHECK type ????', stripeEvent.data.object.charges.data[0].payment_method_details.type)
-    if (stripeEvent.data.object.charges.data[0].payment_method_details.type !== 'customer_balance') {
-      console.log('!!!!!! payment type is not a bank transfer !!!!!')
-      setResponseStatus(event, 200)
+    const paymentIntent = stripeEvent.data.object
+    const latestCharge = paymentIntent.latest_charge
+      ? await stripeCLI.charges.retrieve(paymentIntent.latest_charge)
+      : null
+    const paymentMethodType = latestCharge?.payment_method_details?.type
+
+    if (paymentMethodType !== 'customer_balance') {
+      console.log('Payment type is not a bank transfer, skipping')
     }
     else {
+      // Idempotency: ensure we never process the same Stripe event twice
+      const { error: insertError } = await supabase
+        .from('stripe_processed_events')
+        .insert({ id: stripeEvent.id })
+      if (insertError) {
+        console.log('Duplicate webhook event, skipping:', stripeEvent.id)
+        setResponseStatus(event, 200)
+        return
+      }
+
       console.log('========== payment type is a bank transfer =========')
       try {
-        console.log('========== handlePaymentSession with this session object =========', stripeEvent.data.object)
-        setResponseStatus(event, 200)
-        await stripe.handlePaymentSession(stripeEvent.data.object, 'Virement')
+        await stripe.handlePaymentSession(paymentIntent, 'Virement')
       }
       catch (err) {
-        console.log('Error in payment succeeded webhook', err)
-        throw createError({
-          statusCode: 400,
-          message: 'Error stripeEvent',
-        })
+        console.error('Error processing bank transfer for event', stripeEvent.id, err)
+        await $fetch(process.env.SLACK_URL_PAIEMENTS, {
+          method: 'post',
+          body: {
+            blocks: [{
+              type: 'section',
+              text: {
+                type: 'mrkdwn',
+                text: `:fire: *Webhook Virement payment processing failed* — event \`${stripeEvent.id}\`\n${err?.message || err}`,
+              },
+            }],
+          },
+        }).catch(() => {})
       }
     }
   }
+  setResponseStatus(event, 200)
 })
