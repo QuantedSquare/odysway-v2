@@ -4,7 +4,7 @@
     fluid
     :class="currentStep === 0 ? 'd-none' : 'd-none d-md-block'"
   >
-    <div class="d-flex align-center justify-start  flex-md-row ">
+    <div class="d-flex align-center justify-start flex-md-row">
       <v-avatar
         v-if="!isSanityImage"
         :image="image || 'https://odysway.com/logos/logo_noir.png'"
@@ -34,11 +34,12 @@
           :key="step.number"
         >
           <v-stepper-item
-            :complete="currentStep + 1 > step.number"
+            :complete="currentStep > step.number"
             :step="step.number"
             color="white"
-            :class="currentStep + 1 === step.number ? 'active-step' : ''"
-            :value="index + 1"
+            :class="currentStep === step.number ? 'active-step' : ''"
+            :value="step.number"
+            :aria-current="currentStep === step.number ? 'step' : undefined"
           >
             <span class="d-none d-md-block font-weight-bold text-white text-caption">
               {{ step.label }}
@@ -85,6 +86,16 @@
               </span>
             </v-col>
           </v-row>
+          <span class="text-caption mt-1">
+            <a
+              href="https://calendly.com/odysway"
+              target="_blank"
+              class="text-white"
+              style="text-decoration: underline"
+            >
+              Vous preferez etre rappele ?
+            </a>
+          </span>
         </v-container>
       </v-img>
     </template>
@@ -116,6 +127,16 @@
           </span>
         </v-col>
       </v-row>
+      <span class="text-caption mt-1">
+        <a
+          href="https://calendly.com/odysway"
+          target="_blank"
+          class="text-white"
+          style="text-decoration: underline"
+        >
+          Vous preferez etre rappele ?
+        </a>
+      </span>
     </v-container>
   </v-img>
 </template>

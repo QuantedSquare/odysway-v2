@@ -12,6 +12,8 @@
 </template>
 
 <script setup>
+import { mdiEmailOutline, mdiAccountGroup, mdiCogOutline, mdiCreditCardOutline } from '@mdi/js'
+
 const model = defineModel()
 const props = defineProps({
   page: {
@@ -76,11 +78,22 @@ const stepDefinitions = computed(() => {
   if (props.skipperMode === 'summary') {
     return [
       {
-        number: 5,
-        label: 'Récapitulatif',
+        number: 4,
+        label: 'Recapitulatif',
+        icon: mdiCreditCardOutline,
       },
     ]
   }
+  if (props.skipperMode === 'normal') {
+    return [
+      { number: 1, label: 'Email', icon: mdiEmailOutline },
+      { number: 2, label: 'Voyageurs', icon: mdiAccountGroup },
+      { number: 3, label: 'Options', icon: mdiCogOutline },
+      { number: 4, label: 'Paiement', icon: mdiCreditCardOutline },
+    ]
+  }
+
+  // Fallback for quick and other modes
   const baseSteps = [
     {
       number: 1,
@@ -95,35 +108,11 @@ const stepDefinitions = computed(() => {
     })
   }
 
-  if (props.skipperMode === 'normal') {
-    baseSteps.push({
-      number: 3,
-      label: props.page.fil_dariane_devis.step_3,
-    })
-  }
-
-  // Final step
   baseSteps.push({
-    number: props.skipperMode === 'normal'
-      ? (props.showInsurance ? 4 : 4)
-      : props.skipperMode === 'quick' ? 2 : 3,
-    label: props.skipperMode === 'normal'
-      ? 'Options'
-      : props.page.fil_dariane_devis.step_final_rdv,
+    number: props.skipperMode === 'quick' ? 2 : 3,
+    label: props.page.fil_dariane_devis.step_final_rdv,
   })
 
-  if (props.skipperMode === 'normal' && props.showInsurance) {
-    baseSteps.push({
-      number: 5,
-      label: 'Assurances',
-    })
-  }
-  if (props.skipperMode === 'normal') {
-    baseSteps.push({
-      number: props.showInsurance ? 6 : 5,
-      label: 'Récapitulatif',
-    })
-  }
   return baseSteps
 })
 

@@ -3,41 +3,25 @@
     <v-app-bar
       v-if="!drawer"
       location="bottom"
-      height="100"
-      class="d-md-none elevation-0  "
+      height="70"
+      class="d-md-none elevation-0"
     >
-      <v-container class="py-0 px-0 ">
+      <v-container class="py-0 px-0">
         <v-row
+          class="px-4 elevation-2 py-0"
           no-gutters
         >
           <v-col
-            cols="12"
-            class="d-flex align-center justify-center "
-          >
-            <v-btn
-              :icon="mdiChevronUp"
-              variant="outlined"
-              rounded="circle"
-              height="35"
-              width="35"
-              color="white"
-              class=" bg-secondary font-weight-bold  negative-margin"
-              @click="drawer = true"
-            />
-          </v-col>
-        </v-row>
-        <v-row
-          class="px-4 elevation-2 py-0 "
-        >
-          <v-col
             cols="5"
-            class="d-flex flex-column align-start justify-center "
+            class="d-flex flex-column align-start justify-center"
+            role="button"
+            @click="drawer = true"
           >
-            <span class="text-caption text-grey">
-              Total:
-            </span>
-            <span class="text-h4 font-weight-bold text-primary">
+            <span class="text-h5 font-weight-bold text-primary">
               {{ formatNumber(totalValueFromSummary, 'currency', 'EUR') }}
+            </span>
+            <span class="text-caption text-grey text-truncate" style="max-width: 150px">
+              {{ voyage.title }}
             </span>
           </v-col>
           <v-spacer class="d-block" />
@@ -45,18 +29,16 @@
             cols="6"
             class="d-flex align-center justify-end"
           >
-            <v-btn-secondary
-              density="compact"
-              height="50"
-              width="120"
-              variant="text"
-              rounded="md"
+            <v-btn
               color="secondary"
-              class="text-body-1 font-weight-bold text-decoration-none"
-              @click="drawer = true"
+              height="48"
+              rounded="lg"
+              class="font-weight-bold"
+              :aria-label="continueLabel"
+              @click="emit('continue')"
             >
-              Voir plus
-            </v-btn-secondary>
+              {{ continueLabel }}
+            </v-btn>
           </v-col>
         </v-row>
       </v-container>
@@ -68,17 +50,17 @@
         temporary
         disable-resize-watcher
         mobile
-
-        class="d-block rounded-t-lg d-md-none "
+        class="d-block rounded-t-lg d-md-none"
       >
         <v-container>
-          <div class="pa-4  position-sticky top-0 d-flex justify-space-between align-center mb-4 z-100">
+          <div class="pa-4 position-sticky top-0 d-flex justify-space-between align-center mb-4 z-100">
             <h3 class="text-h6 font-weight-bold">
-              Récapitulatif du prix
+              Recapitulatif du prix
             </h3>
             <v-btn
               icon
               variant="text"
+              aria-label="Fermer le recapitulatif"
               @click="drawer = false"
             >
               <v-icon>{{ mdiClose }}</v-icon>
@@ -92,12 +74,12 @@
             :current-step="currentStep"
             :page="pageTexts"
             :voyage="voyage"
-            :own-step="5"
+            :own-step="4"
           />
           <v-btn
             block
             color="secondary"
-            class="mt-12 text-body-2 border  border-white font-weight-bold text-decoration-none"
+            class="mt-12 text-body-2 border border-white font-weight-bold text-decoration-none"
             @click="drawer = false"
           >
             Fermer
@@ -109,7 +91,7 @@
 </template>
 
 <script setup>
-import { mdiClose, mdiChevronUp } from '@mdi/js'
+import { mdiClose } from '@mdi/js'
 import formatNumber from '@/utils/formatNumber'
 
 const summaryRef = useTemplateRef('summaryRef')
@@ -132,16 +114,23 @@ const props = defineProps({
     type: Object,
     required: true,
   },
-})
-const localDynamicDealValues = computed({
-  get: () => props.dynamicDealValues,
-  set: () => {}, // Read-only in the drawer
+  continueLabel: {
+    type: String,
+    default: 'Continuer',
+  },
 })
 
-// Access the totalValue from the summary component via ref
+const emit = defineEmits(['continue'])
+
+const localDynamicDealValues = computed({
+  get: () => props.dynamicDealValues,
+  set: () => {},
+})
+
 const totalValueFromSummary = computed(() => {
   return summaryRef.value?.totalValue || 0
 })
+
 defineExpose({
   totalValueFromSummary,
 })
@@ -154,8 +143,5 @@ defineExpose({
 }
 .custom-height:deep(.v-navigation-drawer) {
   min-height: 75vh !important;
-}
-.negative-margin{
-  margin-bottom: -30px;
 }
 </style>

@@ -3,148 +3,161 @@
     <v-form ref="form">
       <v-row>
         <v-col cols="12">
-          <h2 v-if="!isAdvance">
-            {{ page.details.select_travelers_title }}
-          </h2>
-          <h2 v-else>
-            {{ page.details.nb_travelers_title }}
-          </h2>
+          <div class="text-body-2 text-grey mb-4">
+            Reservation pour <strong>{{ model.firstName }} {{ model.lastName }}</strong> ({{ model.email }})
+          </div>
+        </v-col>
+
+        <!-- Phone & Country for lead contact -->
+        <v-col
+          cols="12"
+          md="6"
+        >
+          <v-autocomplete
+            v-model="model.isoContact"
+            :items="countries"
+            :label="page.details.country_label || 'Pays de residence'"
+            :placeholder="page.details.country_placeholder || 'Selectionnez votre pays'"
+            :rules="[rules.name]"
+            item-title="title"
+            item-value="value"
+            aria-label="Pays de residence"
+            @change="saveToLocalStorage()"
+          />
+        </v-col>
+        <v-col
+          cols="12"
+          md="6"
+        >
+          <PhoneTextField
+            v-model="model.phone"
+            @validity-changed="isPhoneValid = $event"
+          />
+        </v-col>
+      </v-row>
+
+      <!-- Dynamic Traveler List -->
+      <v-row>
+        <v-col cols="12">
+          <h2>Qui voyage ?</h2>
         </v-col>
         <v-col cols="12">
-          <v-row>
-            <v-col
-              cols="6"
-              md="4"
-            >
-              <div class="text-caption">
-                {{ page.details.nb_adults_label }}
+          <v-card
+            v-for="(traveler, index) in travelers"
+            :key="'traveler_' + traveler.id"
+            variant="outlined"
+            class="mb-3 pa-3"
+            rounded="lg"
+          >
+            <div class="d-flex align-center justify-space-between mb-2">
+              <div class="d-flex align-center ga-2">
+                <v-avatar
+                  :color="colorMap[index] || 'primary'"
+                  size="32"
+                >
+                  <span class="text-white text-body-2 font-weight-bold">{{ index + 1 }}</span>
+                </v-avatar>
+                <span
+                  v-if="traveler.firstname && traveler.lastname"
+                  class="text-body-2 font-weight-bold"
+                >
+                  {{ traveler.firstname }} {{ traveler.lastname }}
+                </span>
+                <span
+                  v-else
+                  class="text-body-2 text-grey"
+                >
+                  Voyageur {{ index + 1 }}
+                </span>
+                <v-icon
+                  v-if="isTravelerComplete(traveler)"
+                  :icon="mdiCheckCircle"
+                  color="success"
+                  size="small"
+                />
               </div>
-              <v-select
-                v-model="model.nbAdults"
-                :disabled="route.query.type === 'balance' || route.query.type === 'custom'"
-                :menu-props="{ offsetY: true }"
-                :items="selectOptions(isAdvance ? 1 : 0, 9)"
+              <v-btn
+                v-if="index > 0"
+                :icon="mdiTrashCanOutline"
+                variant="text"
+                size="small"
+                color="error"
+                aria-label="Supprimer le voyageur"
+                @click="removeTraveler(index)"
               />
-            </v-col>
-            <!-- children -->
-            <v-col
-              cols="6"
-              md="4"
-            >
-              <div class="text-caption text-truncate">
-                {{ childrenLabel }}
-              </div>
-              <v-select
-                v-model="model.nbChildren"
-                :disabled="route.query.type === 'balance' || route.query.type === 'custom'"
-                :menu-props="{ offsetY: true }"
-                :items="selectOptions(0, 9)"
-              />
-            </v-col>
-          </v-row>
-          <!--  Contact Details -->
-          <v-row>
-            <v-col cols="12">
-              <h2>
-                {{ page.details.contact_title }}
-              </h2>
-            </v-col>
-            <v-col
-              cols="12"
-              md="6"
-            >
-              <v-text-field
-                v-model="model.firstName"
-                :label="page.details.firstname_label"
-                :placeholder="page.details.firstname_placeholder"
-                :rules="[rules.name]"
-                @change="changeAttr('firstname'); saveToLocalStorage()"
-              />
-            </v-col>
-            <v-col
-              cols="12"
-              md="6"
-            >
-              <v-text-field
-                v-model="model.lastName"
-                :label="page.details.lastname_label"
-                :placeholder="page.details.lastname_placeholder"
-                :rules="[rules.name]"
-                @change="changeAttr('lastname'); saveToLocalStorage()"
-              />
-            </v-col>
-            <v-col
-              cols="12"
-              md="6"
-            >
-              <v-text-field
-                v-model="model.email"
-                :disabled="route.query.type === 'balance' || route.query.type === 'custom'"
-                :label="page.details.email_label"
-                :placeholder="page.details.email_placeholder"
-                :rules="[rules.email]"
-                @change="saveToLocalStorage()"
-              />
-            </v-col>
-            <v-col
-              cols="12"
-              md="6"
-            >
-              <v-autocomplete
-                v-model="model.isoContact"
-                :items="countries"
-                :label="page.details.country_label || 'Pays de résidence'"
-                :placeholder="page.details.country_placeholder || 'Sélectionnez votre pays'"
-                :rules="[rules.name]"
-                item-title="title"
-                item-value="value"
-                @change="saveToLocalStorage()"
-              />
-            </v-col>
-            <v-col
-              cols="12"
-              md="6"
-            >
-              <PhoneTextField
-                v-model="model.phone"
-                @validity-changed="isPhoneValid = $event"
-              />
-            </v-col>
+            </div>
 
-            <v-col
-              cols="12"
-              class="pa-0"
+            <FunnelStepsTravelerInfosItem
+              v-bind="traveler"
+              :iso-contact="traveler.isoContact"
+              @change="travelerInfosChanged"
+            />
+          </v-card>
+
+          <v-btn
+            variant="text"
+            color="secondary"
+            :prepend-icon="mdiPlus"
+            class="mt-2"
+            aria-label="Ajouter un voyageur"
+            @click="addTraveler"
+          >
+            Ajouter un voyageur
+          </v-btn>
+
+          <!-- Auto-computed adult/child summary -->
+          <div class="text-caption text-grey mt-3">
+            {{ nbAdults }} adulte{{ nbAdults > 1 ? 's' : '' }}
+            <template v-if="nbChildren > 0">
+              &middot; {{ nbChildren }} enfant{{ nbChildren > 1 ? 's' : '' }}
+            </template>
+          </div>
+
+          <!-- Validation errors -->
+          <div
+            v-if="validationErrors.length > 0"
+            class="text-error text-right mt-3"
+            aria-live="polite"
+          >
+            <p
+              v-for="(err, i) in validationErrors"
+              :key="i"
             >
-              <v-checkbox
-                v-model="model.optinNewsletter"
-                :class="model.optinNewsletter ? 'text-primary' : ''"
-              >
-                <template #label>
-                  <div class="text-caption text-no-wrap">
-                    {{ page.details.newsletter_text }}
-                    <br> {{ page.details.newsletter_label }}
-                  </div>
-                </template>
-              </v-checkbox>
-            </v-col>
-          </v-row>
+              - {{ err }}
+            </p>
+          </div>
+        </v-col>
+      </v-row>
+
+      <!-- Couple preference -->
+      <v-row v-if="travelers.length > 1">
+        <v-col
+          cols="12"
+          class="py-2"
+        >
+          <v-switch
+            v-model="model.isCouple"
+            :label="page.travelers_infos?.preference_couple || 'Preference de couple'"
+          />
         </v-col>
       </v-row>
     </v-form>
+
     <v-row>
       <v-col class="d-flex ga-3">
         <v-btn
-          class="
-        bg-grey-light font-weight-regular"
+          class="bg-grey-light font-weight-regular"
+          aria-label="Etape precedente"
           @click="emit('previous')"
         >
-          Précédent
+          Precedent
         </v-btn>
         <v-btn
           :disabled="!isValid"
           :loading="buttonLoading"
           color="secondary"
           class="font-weight-bold"
+          aria-label="Etape suivante"
           @click="submitStepData"
         >
           Suivant
@@ -161,8 +174,12 @@
 
 <script setup>
 import { z } from 'zod'
-import { computed } from 'vue'
+import dayjs from 'dayjs'
+import customParseFormat from 'dayjs/plugin/customParseFormat.js'
+import { mdiPlus, mdiTrashCanOutline, mdiCheckCircle } from '@mdi/js'
 import { countries } from '~/utils/countries'
+
+dayjs.extend(customParseFormat)
 
 const { trackReservationStep } = useGtmTracking()
 
@@ -176,33 +193,170 @@ const model = defineModel()
 const loadingDeal = ref(false)
 const buttonLoading = ref(false)
 
-const { createDeal, updateDeal } = useStepperDeal(ownStep)
+const { updateDeal } = useStepperDeal(ownStep)
 const route = useRoute()
 
-// New: Local validation state
+const isPhoneValid = ref(false)
 
-const selectOptions = function (start, end) {
-  return Array.from({ length: end - start }, (_, i) => i + start)
+const schemaToRule = useZodSchema()
+const nameSchema = z.string().min(1, { message: 'Cette information est requise.' })
+
+const rules = {
+  name: schemaToRule(nameSchema),
 }
 
-const isAdvance = ref(true)
+// ============= Dynamic Traveler List =============
 
-const childrenLabel = computed(() => {
-  if (page?.details?.nb_children_label && voyage?.maxChildrenAge) {
-    return page.details.nb_children_label.replace('{{maxAge}}', Number(voyage.maxChildrenAge))
+const travelers = ref([])
+
+const colorMap = {
+  0: 'green',
+  1: 'blue',
+  2: 'red',
+  3: 'yellow',
+  4: 'purple',
+  5: 'orange',
+  6: 'cyan',
+  7: 'teal',
+  8: 'pink',
+}
+
+const initializeTravelers = () => {
+  if (!model.value) return
+
+  const existingCount = +model.value.nbAdults + +model.value.nbChildren || 1
+  const mainContactIso = model.value.isoContact || ''
+
+  travelers.value = Array.from({ length: existingCount }, (_, index) => {
+    const storedTraveler = model.value?.[`traveler${index + 1}`]
+
+    if (storedTraveler) {
+      const parts = storedTraveler.split('_')
+      const [firstname, lastname, birthdate, isoContact = ''] = parts
+      return {
+        id: index + 1,
+        firstname: firstname || (index === 0 ? model.value.firstName : null),
+        lastname: lastname || (index === 0 ? model.value.lastName : null),
+        birthdate: birthdate || null,
+        isoContact: isoContact && isoContact.trim() !== '' ? isoContact : mainContactIso,
+      }
+    }
+
+    return {
+      id: index + 1,
+      firstname: index === 0 ? model.value.firstName : null,
+      lastname: index === 0 ? model.value.lastName : null,
+      birthdate: null,
+      isoContact: mainContactIso,
+    }
+  })
+}
+
+onMounted(() => {
+  initializeTravelers()
+})
+
+const addTraveler = () => {
+  const newId = travelers.value.length + 1
+  travelers.value.push({
+    id: newId,
+    firstname: null,
+    lastname: null,
+    birthdate: null,
+    isoContact: model.value.isoContact || '',
+  })
+}
+
+const removeTraveler = (index) => {
+  if (index === 0) return
+  travelers.value.splice(index, 1)
+  // Re-index IDs
+  travelers.value.forEach((t, i) => {
+    t.id = i + 1
+  })
+  // Clean up model traveler keys
+  syncTravelersToModel()
+}
+
+const isTravelerComplete = (traveler) => {
+  return traveler.firstname && traveler.lastname && traveler.birthdate && traveler.isoContact
+}
+
+const travelerInfosChanged = (updatedTraveler) => {
+  const index = travelers.value.findIndex(t => t.id === updatedTraveler.id)
+  if (index !== -1) {
+    travelers.value[index] = { ...updatedTraveler }
+    model.value[`traveler${updatedTraveler.id}`] = `${updatedTraveler.firstname}_${updatedTraveler.lastname}_${updatedTraveler.birthdate}_${updatedTraveler.isoContact || ''}`
   }
-  return 'Nombre d\'enfants'
-})
-const isPhoneValid = ref(false)
-// New: Form validation logic
-const isValid = computed(() => {
-  const hasValidName = model.value.firstName && model.value.lastName
-  const hasValidEmail = rules.email(model.value.email) === true
-  const hasValidTravelers = model.value.nbAdults > 0 && model.value.nbAdults + model.value.nbChildren > 0
-  const hasValidCountry = model.value.isoContact && model.value.isoContact.length > 0
+}
 
-  return hasValidName && hasValidEmail && hasValidTravelers && isPhoneValid.value && hasValidCountry
+const syncTravelersToModel = () => {
+  // Clear old traveler keys
+  for (let i = 1; i <= 11; i++) {
+    delete model.value[`traveler${i}`]
+  }
+  travelers.value.forEach((t, i) => {
+    model.value[`traveler${i + 1}`] = `${t.firstname || ''}_${t.lastname || ''}_${t.birthdate || ''}_${t.isoContact || ''}`
+  })
+}
+
+// ============= Auto-compute adult/child from birthdates =============
+
+const nbAdults = computed(() => travelers.value.filter(t => {
+  if (!t.birthdate) return true // assume adult if no birthdate yet
+  const birthdate = dayjs(t.birthdate, 'DD/MM/YYYY', true)
+  if (!birthdate.isValid()) return true
+  const age = dayjs(voyage.departureDate).diff(birthdate, 'year')
+  return age > (+voyage.maxChildrenAge || 12)
+}).length)
+
+const nbChildren = computed(() => travelers.value.filter(t => {
+  if (!t.birthdate) return false
+  const birthdate = dayjs(t.birthdate, 'DD/MM/YYYY', true)
+  if (!birthdate.isValid()) return false
+  const age = dayjs(voyage.departureDate).diff(birthdate, 'year')
+  return age <= (+voyage.maxChildrenAge || 12)
+}).length)
+
+// Sync computed counts back to model for Summary/pricing compatibility
+watch([nbAdults, nbChildren], ([adults, children]) => {
+  model.value.nbAdults = adults
+  model.value.nbChildren = children
+  model.value.nbTravelers = adults + children
+  model.value.nbUnderAge = children
+}, { immediate: true })
+
+// ============= Validation =============
+
+const allFieldsFilled = computed(() => {
+  return travelers.value.every(
+    t => t.firstname && t.lastname && t.birthdate && t.isoContact
+  )
 })
+
+const hasAtLeastOneAdult = computed(() => nbAdults.value > 0)
+
+const validationErrors = computed(() => {
+  const errors = []
+  if (!allFieldsFilled.value) {
+    errors.push(page.travelers_infos?.all_fields_required || 'Veuillez remplir tous les champs de chaque voyageur')
+  }
+  if (!hasAtLeastOneAdult.value && allFieldsFilled.value) {
+    errors.push('Au moins un voyageur adulte est requis')
+  }
+  return errors
+})
+
+const isValid = computed(() => {
+  const hasValidCountry = model.value.isoContact && model.value.isoContact.length > 0
+  return allFieldsFilled.value
+    && hasAtLeastOneAdult.value
+    && isPhoneValid.value
+    && hasValidCountry
+    && travelers.value.length > 0
+})
+
+// ============= localStorage =============
 
 const saveToLocalStorage = () => {
   const dataToStore = {
@@ -214,181 +368,56 @@ const saveToLocalStorage = () => {
   }
   localStorage.setItem('detailsData', JSON.stringify(dataToStore))
 }
-const loadFromLocalStorage = () => {
-  const storedData = JSON.parse(localStorage.getItem('detailsData'))
-  if (storedData) {
-    model.value.firstName = storedData.firstname
-    model.value.lastName = storedData.lastname
-    model.value.email = storedData.email
-    model.value.phone = storedData.phone
-    model.value.isoContact = storedData.isoContact
-  }
-}
-onMounted(() => {
-  if (!route.query.booked_id) {
-    loadFromLocalStorage()
-  }
-})
 
-const schemaToRule = useZodSchema()
-const nameSchema = z.string().min(1, { message: 'Cette information est requise.' })
-const emailSchema = z.string().email({ message: 'Adresse email invalide' })
-const phoneSchema = z.string().min(9, { message: 'Numéro de téléphone invalide' })
-const requiredSchema = z.string().min(1, { message: 'Cette information est requise.' })
-
-const rules = {
-  name: schemaToRule(nameSchema),
-  email: schemaToRule(emailSchema),
-  phone: schemaToRule(phoneSchema),
-  required: schemaToRule(requiredSchema),
-}
-
-const nbTravelers = computed(() => +model.value.nbAdults + +model.value.nbChildren)
+// ============= Submit =============
 
 const submitStepData = async () => {
-  // Validate form
   if (!isValid.value) return false
-  //  #todo soustraire la réduction s'il y en a une
+
+  syncTravelersToModel()
+
   try {
-    // Submit form data
-    if (route.query.booked_id) {
-      // Update deal with this values only after creation.
-      // So only when checkout type is deposit or full`
+    buttonLoading.value = true
+    const utmSource = localStorage.getItem('utmSource')
 
-      if (checkoutType === 'deposit' || checkoutType === 'full') {
-        buttonLoading.value = true
-        const utmSource = localStorage.getItem('utmSource')
-        console.log('===========MODEL IN UPDATE DEAL===========', model.value)
-        updateDeal({
-          nbTravelers: model.value.nbAdults + model.value.nbChildren,
-          nbChildren: model.value.nbChildren,
-          nbAdults: model.value.nbAdults,
-          // nbTeen: nbTeen.value,
-          nbUnderAge: model.value.nbChildren,
-          email: model.value.email,
-          phone: model.value.phone,
-          firstname: model.value.firstName,
-          lastname: model.value.lastName,
-          isoContact: model.value.isoContact,
-          utm: utmSource || '',
-        })
-        buttonLoading.value = false
-      }
-      else {
-        updateDeal({
-          email: model.value.email,
-          phone: model.value.phone,
-          firstname: model.value.firstName,
-          lastname: model.value.lastName,
-          isoContact: model.value.isoContact,
-        })
-        buttonLoading.value = false
-      }
-      emit('next')
-      // console.log('deal updated')
+    const dealData = {
+      nbTravelers: nbAdults.value + nbChildren.value,
+      nbChildren: nbChildren.value,
+      nbAdults: nbAdults.value,
+      nbUnderAge: nbChildren.value,
+      phone: model.value.phone,
+      isoContact: model.value.isoContact,
+      utm: utmSource || '',
+      isCouple: model.value.isCouple ? 'Oui' : 'Non',
+      currentStep: 'A rempli les details voyageurs',
+      ...travelers.value.reduce((acc, traveler, index) => {
+        acc[`traveler${index + 1}`] = `${traveler.firstname}_${traveler.lastname}_${traveler.birthdate}_${traveler.isoContact}`
+        return acc
+      }, {}),
     }
-    // else we update basics and create a deal with it
-    else {
-      const origin = config.public.siteURL
-      const linkBms = `${origin}/booking-management/${voyage.slug}/${dateId}`
 
-      // #TODO: Add a dev column/stage  in ActiveCampaign
-      const stage = (model.value.email === 'test@test.com' || model.value.email === 'ottmann.alex@gmail.com') || config.public.environment === 'development' ? '2' : '2'
-      buttonLoading.value = true
-      const utmSource = localStorage.getItem('utmSource')
-      const flattenedDeal = {
-        value: voyage.startingPrice, // Don't care about this value, we Calculate it in back
-        title: voyage.title,
-        currency: 'eur',
-        group: '1',
-        owner: '1',
-        stage: stage,
-        // CustomFields
-        departureDate: voyage.departureDate,
-        returnDate: voyage.returnDate,
-        travelType: voyage.travelType, // voyage.plan, // #todo à checker
-        nbTravelers: +model.value.nbAdults + +model.value.nbChildren,
-        nbChildren: +model.value.nbChildren,
-        nbAdults: +model.value.nbAdults,
-        // nbTeen: nbTeen.value,
-        nbUnderAge: +model.value.nbChildren,
-        country: voyage.country,
-        iso: voyage.iso,
-        zoneChapka: voyage.zoneChapka,
-        image: voyage.imgSrc || '/images/default/Odysway-couverture-mongolie.jpeg',
-        currentStep: 'Création du Deal',
-        alreadyPaid: 0,
-        restToPay: 0, // Don't care about this value, we Calculate it in back
-        utm: utmSource || '',
-        slug: voyage.slug,
-        basePricePerTraveler: voyage.startingPrice,
-        promoChildren: voyage.promoChildren,
-        maxChildrenAge: voyage.maxChildrenAge,
-        promoTeen: voyage.promoChildren,
-        includeFlight: voyage.includeFlight ? 'Oui' : 'Non',
-        flightPrice: voyage.flightPrice,
-        source: 'Devis',
-        indivRoom: voyage.indivRoom && voyage.indivRoomPrice > 0 ? ['Oui'] : ['Non'],
-        forcedIndivRoom: nbTravelers.value === 1 && voyage.forcedIndivRoom ? 'Oui' : 'Non',
-        indivRoomPrice: voyage.indivRoomPrice,
-        promoEarlybird: voyage.promoEarlybird,
-        gotEarlybird: voyage.gotEarlybird ? 'Oui' : 'Non',
-        promoLastMinute: voyage.promoLastMinute,
-        gotLastMinute: voyage.gotLastMinute ? 'Oui' : 'Non',
-        linkBms,
-        isCapExploraction: voyage.isCapExploraction ? 'Oui' : 'Non',
-        // Contacts
-        email: model.value.email,
-        phone: model.value.phone,
-        firstname: model.value.firstName,
-        lastname: model.value.lastName,
-        optinNewsletter: model.value.optinNewsletter,
-        isoContact: model.value.isoContact,
-      }
+    updateDeal(dealData)
 
-      // GTM: Track reservation_step2 (contact details submitted)
-      const { getCountryFromPhone } = useGtmTracking()
-      const additionalData = {
-        optin_newsletter: model.value.optinNewsletter,
-        user_data: {
-          user_id: model.value.email,
-          user_mail: model.value.email,
-          user_phone: model.value.phone,
-          user_country: getCountryFromPhone(model.value.phone),
-        },
-      }
-      trackReservationStep(2, voyage, model.value, additionalData)
-
-      emit('next')
-      await createDeal(flattenedDeal)
-      buttonLoading.value = false
+    // GTM: Track reservation_step2 (voyageurs details submitted)
+    const { getCountryFromPhone } = useGtmTracking()
+    const additionalData = {
+      optin_newsletter: model.value.optinNewsletter,
+      user_data: {
+        user_id: model.value.email,
+        user_mail: model.value.email,
+        user_phone: model.value.phone,
+        user_country: getCountryFromPhone(model.value.phone),
+      },
     }
+    trackReservationStep(2, voyage, model.value, additionalData)
+
+    buttonLoading.value = false
+    emit('next')
   }
   catch (error) {
-    // Handle errors
-    console.log('error updating or creating deal', error)
+    console.log('error updating deal in Details', error)
+    buttonLoading.value = false
     return false
   }
-}
-
-watch(model, () => {
-  saveToLocalStorage()
-})
-
-const changeAttr = (_dataAttribute) => {
-  // #TODO: Uncomment this when the dataAttribute is not empty and google analytics enabled
-  // const EVENTS = {
-  //   lastname: { eventLabel: 'Groupe Info - Indique prénom' },
-  //   firstname: { eventLabel: 'Groupe Info - Indique nom' },
-  //   email: { eventLabel: 'Groupe Info - Indique nom' },
-  //   phone: { eventLabel: 'Groupe Info - Indique numéro de téléphone' },
-  // }
-  // if (this[dataAttribute] !== '') {
-  //   this.$ga.event({
-  //     eventCategory: 'Devis',
-  //     eventAction: 'Click',
-  //     eventLabel: EVENTS[dataAttribute].eventLabel
-  //   })
-  // }
 }
 </script>

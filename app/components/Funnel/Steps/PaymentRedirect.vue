@@ -1,12 +1,79 @@
 <template>
   <v-container>
-    <!-- Prévoir Promo form -->
-
     <v-card-text v-if="model && +voyage.alreadyPaid < +voyage.totalTravelPrice">
       <v-row>
-        <v-col cols="12">
+        <!-- Summary column (inline) -->
+        <v-col
+          cols="12"
+          md="7"
+        >
+          <v-expansion-panels
+            v-model="summaryPanel"
+            class="d-md-none mb-4"
+          >
+            <v-expansion-panel>
+              <v-expansion-panel-title class="font-weight-bold">
+                Recapitulatif de votre voyage
+              </v-expansion-panel-title>
+              <v-expansion-panel-text>
+                <FunnelStepsSummary
+                  v-model="localModel"
+                  :current-step="currentStep"
+                  :page="page"
+                  :voyage="voyage"
+                  :own-step="4"
+                />
+              </v-expansion-panel-text>
+            </v-expansion-panel>
+          </v-expansion-panels>
+
+          <div class="d-none d-md-block">
+            <FunnelStepsSummary
+              v-model="localModel"
+              :current-step="currentStep"
+              :page="page"
+              :voyage="voyage"
+              :own-step="4"
+            />
+          </div>
+        </v-col>
+
+        <!-- Payment column -->
+        <v-col
+          cols="12"
+          md="5"
+        >
+          <!-- Terms -->
+          <template v-if="!isBooking">
+            <v-checkbox
+              v-model="switch_accept_data_privacy"
+              hide-details
+              class="mb-2"
+            >
+              <template #label>
+                <div
+                  class="text-body-2 pl-1"
+                  @click.stop=""
+                  v-html="page.payment.phrase_dacceptation"
+                />
+              </template>
+            </v-checkbox>
+            <v-checkbox
+              v-model="switch_accept_country"
+              hide-details
+              class="mb-4"
+            >
+              <template #label>
+                <div class="text-body-2 pl-1">
+                  {{ page.payment.accept_country_conditions_text }}
+                </div>
+              </template>
+            </v-checkbox>
+          </template>
+
+          <!-- Option toggle -->
           <template v-if="isBooking">
-            <div class="text-start">
+            <div class="text-start mb-4">
               {{ page.payment.ask_for_option_text }}
             </div>
           </template>
@@ -15,7 +82,7 @@
               v-model="checkedOption"
               inset
               hide-details
-              class="custom-label-position"
+              class="custom-label-position mb-4"
               @click.stop=""
             >
               <template #label>
@@ -25,137 +92,116 @@
               </template>
             </v-switch>
           </template>
-        </v-col>
-        <template v-if="!isBooking">
-          <v-divider
-            v-if="route.query.type === 'deposit'"
-            horizontal
-            class="ma-2"
-          />
-          <v-col cols="12">
-            <v-switch
-              v-model="switch_accept_data_privacy"
-              inset
-              class="custom-label-position"
-              hide-details
-            >
-              <template #label>
-                <div
-                  class="text-body-2 pl-1"
-                  @click.stop=""
-                  v-html="page.payment.phrase_dacceptation"
-                />
-              </template>
-            </v-switch>
-            <v-switch
-              v-model="switch_accept_country"
-              inset
-              class="custom-label-position"
-              hide-details
-            >
-              <template #label>
-                <div class="text-body-2 pl-1">
-                  {{ page.payment.accept_country_conditions_text }}
-                </div>
-              </template>
-            </v-switch>
-          </v-col>
-        </template>
 
-        <!-- Replace btn "Suivant" in parent -->
-        <v-row>
-          <v-col
-            cols="12"
-            class="d-flex flex-column align-center justify-center my-6"
-          >
-            <ClientOnly>
-              <Transition name="list">
+          <!-- Payment Buttons -->
+          <ClientOnly>
+            <Transition name="list">
+              <v-btn
+                v-if="checkedOption"
+                block
+                height="56"
+                rounded="lg"
+                :prepend-icon="mdiCalendarOutline"
+                :loading="loadingSession"
+                :disabled="(!switch_accept_data_privacy || !switch_accept_country || alreadyPlacedAnOption)"
+                class="text-body-1 font-weight-bold mb-3"
+                aria-label="Poser une option"
+                @click="book"
+              >
+                <span class="text-wrap">
+                  {{ page.payment.place_option_button }}
+                </span>
+              </v-btn>
+              <div
+                v-else
+                class="d-flex flex-column ga-3"
+              >
                 <v-btn
-                  v-if="checkedOption"
-                  class=" text-caption text-uppercase font-weight-bold text-md-body-1"
-                  large
-                  height="50"
-                  :prepend-icon="mdiCalendarOutline"
+                  block
+                  height="56"
+                  rounded="lg"
+                  :prepend-icon="mdiCreditCardOutline"
+                  class="bg-secondary font-weight-bold text-body-1"
                   :loading="loadingSession"
-                  :disabled="(!switch_accept_data_privacy || !switch_accept_country || alreadyPlacedAnOption)"
-                  @click="book"
+                  :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
+                  aria-label="Payer par carte"
+                  @click="stripePay"
                 >
                   <span class="text-wrap">
-                    {{ page.payment.place_option_button }}
+                    {{ page.payment.pay_stripe_button }}
                   </span>
                 </v-btn>
-                <div
-                  v-else
-                  class="d-flex flex-column flex-md-row ga-2 flex-wrap justify-center "
-                >
-                  <v-btn
-                    height="50"
-                    :prepend-icon="mdiCreditCardOutline"
-                    class="bg-secondary "
-                    :loading="loadingSession"
-                    :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
-                    @click="stripePay"
-                  >
-                    <span class="text-wrap">
-                      {{ page.payment.pay_stripe_button }}
-                    </span>
-                  </v-btn>
 
-                  <v-btn
-                    v-if="isAlmaPaymentPossible"
-                    height="50"
-                    :prepend-icon="mdiCreditCardClockOutline"
-                    :loading="loadingSession"
-                    :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
-                    @click="almaPay"
-                  >
-                    {{ page.payment.pay_alma_button }}
-                  </v-btn>
-                </div>
-              </Transition>
-              <div
-                v-if="voyage.totalTravelPrice > 400000 && !checkedOption"
-                class="text-caption mt-2"
-              >
-                {{ page.payment.alma_payment_info }}
+                <v-btn
+                  v-if="isAlmaPaymentPossible"
+                  block
+                  height="56"
+                  rounded="lg"
+                  variant="outlined"
+                  :prepend-icon="mdiCreditCardClockOutline"
+                  :loading="loadingSession"
+                  :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
+                  class="font-weight-bold text-body-1"
+                  aria-label="Payer en 3 fois sans frais"
+                  @click="almaPay"
+                >
+                  {{ page.payment.pay_alma_button }}
+                </v-btn>
               </div>
-            </ClientOnly>
-          </v-col>
-          <Transition name="list">
-            <v-col
-              v-if="alreadyPlacedAnOption"
-              cols="12"
+            </Transition>
+
+            <div
+              v-if="voyage.totalTravelPrice > 400000 && !checkedOption"
+              class="text-caption mt-2 text-center"
             >
-              <v-alert
-                class="text-center"
-                color="error"
-                variant="tonal"
-              >
-                {{ page.payment.option_already_placed_error }}
-              </v-alert>
-            </v-col>
+              {{ page.payment.alma_payment_info }}
+            </div>
+          </ClientOnly>
+
+          <!-- Trust badges -->
+          <div class="d-flex align-center justify-center ga-4 mt-6 text-caption text-grey">
+            <div class="d-flex align-center ga-1">
+              <v-icon
+                :icon="mdiLock"
+                size="small"
+              />
+              <span>Paiement 100% securise</span>
+            </div>
+          </div>
+
+          <!-- Already placed option error -->
+          <Transition name="list">
+            <v-alert
+              v-if="alreadyPlacedAnOption"
+              class="text-center mt-4"
+              color="error"
+              variant="tonal"
+            >
+              {{ page.payment.option_already_placed_error }}
+            </v-alert>
           </Transition>
-          <v-col
+
+          <!-- Back button -->
+          <div
             v-if="route.query.type !== 'balance'"
-            cols="12"
-            class="d-flex justify-space-between align-end"
+            class="d-flex justify-start mt-6"
           >
             <v-btn
-              v-if="currentStep === 5"
               class="bg-grey-light"
+              aria-label="Retour a l'etape precedente"
               @click="emit('previous')"
             >
               Retour
             </v-btn>
-          </v-col>
-        </v-row>
+          </div>
+        </v-col>
       </v-row>
     </v-card-text>
   </v-container>
 </template>
 
 <script setup>
-import { mdiCreditCardOutline, mdiCreditCardClockOutline, mdiCalendarOutline } from '@mdi/js'
+import { mdiCreditCardOutline, mdiCreditCardClockOutline, mdiCalendarOutline, mdiLock } from '@mdi/js'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 
 const { trackAddPaymentInfo, trackReservationPoseOption } = useGtmTracking()
@@ -167,17 +213,20 @@ const alreadyPlacedAnOption = ref(false)
 
 const emit = defineEmits(['previous'])
 const model = defineModel()
+const localModel = computed({
+  get: () => model.value,
+  set: () => {},
+})
 const { updateDeal } = useStepperDeal(ownStep)
 const { addSingleParam } = useParams()
-// console.log('....', +voyage.alreadyPaid, +voyage.totalTravelPrice)
-// Data
-// IsBooking à définir si une option dans le stepper uniquement pour poser une option
+
 const isBooking = ref(route.query.type === 'booking')
 const checkedOption = ref(route.query.type === 'booking')
 const switch_accept_data_privacy = ref(route.query.type === 'booking')
 const switch_accept_country = ref(route.query.type === 'booking')
 
 const loadingSession = ref(false)
+const summaryPanel = ref(0) // Expanded by default on mobile
 
 const isAlmaPaymentPossible = computed(() => {
   if (!model.value) return false
@@ -189,7 +238,6 @@ const isAlmaPaymentPossible = computed(() => {
 
 const stripePay = async () => {
   loadingSession.value = true
-  // Defined as metadata after payment is done
   const contact = {
     firstName: model.value.firstName,
     lastName: model.value.lastName,
@@ -201,7 +249,7 @@ const stripePay = async () => {
     contact: contact,
     currentUrl: route.fullPath,
     insuranceImg: page.assurance_img || 'https://odysway.com/images/default/chapka.png',
-    countries: voyage.iso, // Used by chapka to know if it's a CAP-EXPLORACTION or CAP-EXPLORER
+    countries: voyage.iso,
     booked_id: route.query.booked_id,
     departureDate: voyage.departureDate,
     returnDate: voyage.returnDate,
@@ -220,7 +268,6 @@ const stripePay = async () => {
   })
 
   if (checkoutLink) {
-    // GTM: Track add_payment_info (Stripe payment)
     const { getCountryFromPhone } = useGtmTracking()
     const userData = {
       user_id: model.value.email,
@@ -250,7 +297,7 @@ const almaPay = async () => {
     },
     currentUrl: route.fullPath,
     insuranceImg: page.assurance_img || 'https://odysway.com/images/default/chapka.png',
-    countries: voyage.iso, // Used by chapka to know if it's a CAP-EXPLORACTION or CAP-EXPLORER
+    countries: voyage.iso,
     departureDate: voyage.departureDate,
     returnDate: voyage.returnDate,
   }
@@ -270,7 +317,6 @@ const almaPay = async () => {
   })
 
   if (checkoutLink.url) {
-    // GTM: Track add_payment_info (Alma payment)
     const { getCountryFromPhone } = useGtmTracking()
     const userData = {
       user_id: model.value.email,
@@ -300,7 +346,7 @@ const book = async () => {
     await bookingApi.placeOption({ id: route.query.booked_id, booked_places: +model.value.nbAdults + +model.value.nbChildren })
   }
   catch (err) {
-    if (getApiErrorMessage(err) === 'La date est déjà réservée') {
+    if (getApiErrorMessage(err) === 'La date est deja reservee') {
       alreadyPlacedAnOption.value = true
       loadingSession.value = false
       return
@@ -310,7 +356,7 @@ const book = async () => {
 
   const dealData = {
     stage: '27',
-    currentStep: 'A posé une option',
+    currentStep: 'A pose une option',
     title: voyage.title,
     nbTravelers: +model.value.nbAdults + +model.value.nbChildren,
     firstName: model.value.firstName,
@@ -318,7 +364,6 @@ const book = async () => {
   }
 
   updateDeal(dealData)
-  // Check si on ajoute le payment link ici
 
   if (config.public.environment === 'production') {
     await $fetch('/api/v1/slack/notification', {
@@ -330,7 +375,6 @@ const book = async () => {
     })
   }
 
-  // GTM: Track reservation_pose_option
   const { getCountryFromPhone } = useGtmTracking()
   const userData = {
     user_id: model.value.email,
@@ -350,7 +394,6 @@ watch(checkedOption, (value) => {
 
 <style scoped>
 .list-move,
-/* apply transition to moving elements */
 .list-enter-active,
 .list-leave-active {
   transition: all 0.5s ease;
@@ -367,8 +410,6 @@ watch(checkedOption, (value) => {
   transform: translateY(-40px);
 }
 
-/* ensure leaving items are taken out of layout flow so that moving
-   animations can be calculated correctly. */
 .list-leave-active {
   position: absolute;
 }
