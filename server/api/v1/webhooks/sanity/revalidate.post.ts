@@ -177,6 +177,11 @@ export default defineEventHandler(async (event) => {
         .catch(err => console.error('❌ Algolia update failed:', err))
     }
 
+    // Add trailing slash versions for all paths to ensure both variations are revalidated
+    // Vercel's cache often treats `/path` and `/path/` as distinct entries
+    const pathsWithTrailingSlashes = pathsToRevalidate.filter(p => p !== '/').map(p => `${p}/`)
+    pathsToRevalidate.push(...pathsWithTrailingSlashes)
+
     // Trigger on-demand revalidation using Vercel's bypass token
     // Note: This is NOT the same as VERCEL_AUTOMATION_BYPASS_SECRET
     // VERCEL_BYPASS_TOKEN is a custom secret you create for ISR revalidation

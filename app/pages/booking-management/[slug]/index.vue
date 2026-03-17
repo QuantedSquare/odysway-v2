@@ -252,6 +252,7 @@ const fetchDates = async () => {
 
 const filteredDates = computed(() => {
   const today = dayjs().startOf('day')
+  console.log('dates', dates.value)
   const base = dates.value.filter((item) => {
     if (publicationFilter.value === 'published' && !item.published) return false
     if (publicationFilter.value === 'draft' && item.published) return false

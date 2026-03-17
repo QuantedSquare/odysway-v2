@@ -56,5 +56,3 @@ export const bookingApi = {
   bookingExists: bookedId =>
     apiRequest(`/booking/booking-exists${encodeQuery({ booked_id: bookedId })}`),
 }
-
-

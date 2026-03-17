@@ -61,6 +61,7 @@ export default defineNuxtConfig({
     url: process.env.BASE_URL || 'https://odysway.com', // TODO: change the first to the dev env
     name: process.env.NUXT_SITE_NAME || 'Odysway',
     indexable: process.env.VERCEL_ENV === 'production',
+    trailingSlash: false,
   },
   runtimeConfig: {
     public: {
