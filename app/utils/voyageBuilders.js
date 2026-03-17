@@ -1,6 +1,10 @@
 import dayjs from 'dayjs'
 // utils/voyageBuilders.js
 export function buildVoyageFromSanity(fetchedDate, travel, imgSrc = null) {
+  const bookedSeat = Number(fetchedDate.booked_seat || 0)
+  const maxTravelers = Number(fetchedDate.max_traveler ?? fetchedDate.max_travelers ?? 0)
+  const remainingSeats = maxTravelers > 0 ? Math.max(0, maxTravelers - bookedSeat) : null
+
   return {
     departureDate: fetchedDate.departure_date,
     returnDate: fetchedDate.return_date,
@@ -31,6 +35,10 @@ export function buildVoyageFromSanity(fetchedDate, travel, imgSrc = null) {
     alreadyPaid: 0,
     totalTravelPrice: +fetchedDate.starting_price * 100,
     isCapExploraction: travel.pricing?.capExploraction || false,
+    // Capacity (used in checkout to limit pax selection)
+    maxTravelers: maxTravelers || null,
+    bookedSeat: Number.isFinite(bookedSeat) ? bookedSeat : null,
+    remainingSeats,
     // GTM tracking fields
     destinations: travel.destinations,
     experienceType: travel.experienceType,
@@ -71,6 +79,10 @@ export function buildVoyageFromAC(deal, imgSrc = null) {
     alreadyPaid: deal.alreadyPaid || 0,
     totalTravelPrice: deal.value,
     isCapExploraction: deal.isCapExploraction === 'Oui' || deal.iso.includes('NP') || deal.iso.includes('PE') || false,
+    // Capacity not reliably available from AC deal
+    maxTravelers: null,
+    bookedSeat: null,
+    remainingSeats: null,
   }
 }
 

@@ -5,6 +5,7 @@ import {difficultyLevelType} from './difficultyLevelType'
 import {entrepriseType} from './entrepriseType'
 import {homePageType} from './homePageType'
 import {checkoutType} from './checkoutType'
+import {checkoutAlertType} from './checkoutAlertType'
 import {ctasType} from './ctasType'
 import {devisType} from './devisType'
 import {categoryType} from './categoryType'
@@ -68,6 +69,7 @@ export const schemaTypes = [
   blogCategoryType,
   categoryType,
   checkoutType,
+  checkoutAlertType,
   chequesVacancesType,
   conditionsGeneralesVenteType,
   confirmationType,

@@ -1,13 +1,12 @@
 <template>
-  <v-container :class="route.path === '/devis' || route.path === '/checkout' ? '' : 'calendly-container'">
+  <v-container :class="route.path === '/devis' || route.path.startsWith('/checkout') ? '' : 'calendly-container'">
     <div>
       {{ text }}
     </div>
     <CalendlyInlineWidget v-bind="options" />
     <div v-if="isFunnel">
       <v-btn
-        class="
-        bg-grey-light font-weight-regular"
+        class="bg-grey-light font-weight-regular"
         @click="emit('previous')"
       >
         Précédent
@@ -69,7 +68,6 @@ onMounted(() => {
 
 useCalendlyEventListener({
   onDateAndTimeSelected: (_event) => {
-    console.log('CHECKING DATE AND TIME SELECTED')
     // GTM: Track when date/time is selected in Calendly
     if (props.isFunnel && props.voyage) {
       const formattedVoyage = formatVoyageForGtm(props.voyage)
@@ -92,15 +90,11 @@ useCalendlyEventListener({
     // Extract invitee URI from the event
     const inviteeUri = _event.data?.payload?.invitee?.uri
 
-    console.log('Calendly event scheduled:', _event.data?.payload)
-    console.log('Invitee URI:', inviteeUri)
-
     // Fetch invitee details from our API
     let userData = {}
     if (inviteeUri) {
       try {
         const inviteeData = await $fetch(`/api/v1/calendly/invitee?invitee_uri=${encodeURIComponent(inviteeUri)}`)
-        console.log('Invitee data fetched:', inviteeData)
         userData = {
           user_mail: inviteeData.email,
           user_phone: inviteeData.phone,

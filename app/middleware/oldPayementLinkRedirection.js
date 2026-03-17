@@ -1,4 +1,3 @@
-
 export default defineNuxtRouteMiddleware(async () => {
   const route = useRoute()
   let query = buildQuery(route)

@@ -111,44 +111,61 @@ catch (err) {
 }
 
 // 🚀 2. Build voyage (from AC or Sanity)
-try {
-  loading.value = true
-  if (bookedId) {
-    // ActiveCampaign deal checkout
-    const deal = await apiRequest(`/ac/deals/deal-from-bms?bookedId=${bookedId}`)
-    if (!deal) throw new Error(`No deal found with bookedId ${bookedId}`)
-    dealValues.value = buildDynamicDealValues(deal)
-    voyage.value = buildVoyageFromAC(deal, imgSrc.value)
-  }
-  else if (dateId) {
-    // Sanity voyage checkout
-    const fetchedDate = await apiRequest(`/booking/date/${dateId}`)
-    const travelSanity = await apiRequest(`/sanity/?slug=${voyageSlug || fetchedDate.travel_slug}`)
+const initCheckout = async () => {
+  try {
+    loading.value = true
+    if (bookedId) {
+      // ActiveCampaign deal checkout
+      const deal = await apiRequest(`/ac/deals/deal-from-bms?bookedId=${bookedId}`)
+      if (!deal) throw new Error(`No deal found with bookedId ${bookedId}`)
+      dealValues.value = buildDynamicDealValues(deal)
+      voyage.value = buildVoyageFromAC(deal, imgSrc.value)
+    }
+    else if (dateId) {
+      // Sanity voyage checkout
+      const fetchedDate = await apiRequest(`/booking/date/${dateId}`)
+      const bookedSeat = Number(fetchedDate.booked_seat || 0)
+      const maxTravelers = Number(fetchedDate.max_traveler ?? fetchedDate.max_travelers ?? 0)
+      if (maxTravelers > 0 && bookedSeat >= maxTravelers) {
+        await navigateTo({
+          path: '/checkout/complet',
+          query: {
+            voyage: voyageSlug || fetchedDate.travel_slug,
+            date_id: dateId,
+          },
+        })
+        return
+      }
+      const travelSanity = await apiRequest(`/sanity/?slug=${voyageSlug || fetchedDate.travel_slug}`)
 
-    if (fetchedDate && travelSanity) {
-      voyage.value = buildVoyageFromSanity(fetchedDate, travelSanity, imgSrc.value)
-      dealValues.value = buildDynamicDealValues()
+      if (fetchedDate && travelSanity) {
+        voyage.value = buildVoyageFromSanity(fetchedDate, travelSanity, imgSrc.value)
+        dealValues.value = buildDynamicDealValues()
+      }
+      else {
+        throw new Error(`Date not found for ${voyageSlug || fetchedDate.travel_slug}`)
+      }
     }
     else {
-      throw new Error(`Date not found for ${voyageSlug || fetchedDate.travel_slug}`)
+      throw new Error('Missing required query parameters')
     }
+    loading.value = false
   }
-  else {
-    throw new Error('Missing required query parameters')
+  catch (err) {
+    loading.value = false
+    console.error('Error building voyage:', err)
+    error.value = err.message
   }
-  loading.value = false
 }
-catch (err) {
-  loading.value = false
-  console.error('Error building voyage:', err)
-  error.value = err.message
-}
+
+await initCheckout()
 </script>
 
 <style scoped>
 .relative {
   position: relative;
 }
+
 .absolute {
   position: absolute;
   top: 0;

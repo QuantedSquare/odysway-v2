@@ -24,6 +24,7 @@
                 :disabled="route.query.type === 'balance' || route.query.type === 'custom'"
                 :menu-props="{ offsetY: true }"
                 :items="selectOptions(isAdvance ? 1 : 0, 9)"
+                :item-props="adultItemPropsFn"
               />
             </v-col>
             <!-- children -->
@@ -39,7 +40,15 @@
                 :disabled="route.query.type === 'balance' || route.query.type === 'custom'"
                 :menu-props="{ offsetY: true }"
                 :items="selectOptions(0, 9)"
+                :item-props="childrenItemPropsFn"
               />
+            </v-col>
+          </v-row>
+          <v-row v-if="capacityMessage">
+            <v-col cols="12" class="pt-1 pb-0">
+              <div class="text-caption text-medium-emphasis">
+                {{ capacityMessage }}
+              </div>
             </v-col>
           </v-row>
           <!--  Contact Details -->
@@ -183,6 +192,44 @@ const route = useRoute()
 
 const selectOptions = function (start, end) {
   return Array.from({ length: end - start }, (_, i) => i + start)
+}
+
+const maxSelectableTravelers = computed(() => {
+  const remainingSeats = voyage?.remainingSeats
+  if (typeof remainingSeats === 'number' && remainingSeats >= 0) return remainingSeats
+  return null
+})
+
+const capacityMessage = computed(() => {
+  if (maxSelectableTravelers.value === null) return null
+  if (maxSelectableTravelers.value === 0) return 'Ce départ est complet : impossible d’ajouter des voyageurs.'
+  return `Ce départ ne permet plus que ${maxSelectableTravelers.value} voyageur(s). Les options au‑delà sont désactivées.`
+})
+
+const adultItemPropsFn = function (item) {
+  const adults = Number(item)
+  const children = Number(model.value.nbChildren || 0)
+  const limit = maxSelectableTravelers.value
+  const disabledByCapacity = typeof limit === 'number' ? (adults + children) > limit : false
+
+  return {
+    value: item,
+    title: item,
+    disabled: disabledByCapacity,
+  }
+}
+
+const childrenItemPropsFn = function (item) {
+  const children = Number(item)
+  const adults = Number(model.value.nbAdults || 0)
+  const limit = maxSelectableTravelers.value
+  const disabledByCapacity = typeof limit === 'number' ? (adults + children) > limit : false
+
+  return {
+    value: item,
+    title: item,
+    disabled: disabledByCapacity,
+  }
 }
 
 const isAdvance = ref(true)

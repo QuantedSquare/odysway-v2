@@ -183,6 +183,7 @@ export default defineConfig({
                     S.documentTypeListItem('footer').title('Footer'),
                     S.documentTypeListItem('tops').title('Tops'),
                     S.documentTypeListItem('checkout').title('Checkout'),
+                    S.documentTypeListItem('checkoutAlert').title('Checkout Alerte'),
                     S.documentTypeListItem('newsletter').title('Newsletter'),
                     S.documentTypeListItem('ctas').title('CTAs'),
                     S.documentTypeListItem('devis').title('Devis'),
