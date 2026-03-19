@@ -55,10 +55,6 @@
                         :voyage="voyage"
                         funnel-type="devis"
                       />
-                      <FunnelTallyForm
-                        v-if="skipperChoice === 'tally'"
-                        :voyage="voyage"
-                      />
                     </v-stepper-window-item>
                     <v-stepper-window-item
                       v-if="skipperChoice === 'devis'"
@@ -220,9 +216,6 @@ const nextStep = () => {
     // Only for classic flow - surmesure and rdv don't have additional steps
 
     trackDevisStep('classic', currentStep.value, formattedVoyage)
-  }
-  else if (skipperChoice.value === 'tally') {
-    trackDevisStep('surmesure', currentStep.value, formattedVoyage)
   }
 
   currentStep.value++

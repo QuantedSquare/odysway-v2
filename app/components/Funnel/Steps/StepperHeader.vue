@@ -45,18 +45,6 @@ const stepDefinitions = computed(() => {
       },
     ]
   }
-  else if (props.skipperMode === 'tally') {
-    return [
-      {
-        number: 1,
-        label: props.page.fil_dariane_devis.step_1,
-      },
-      {
-        number: 2,
-        label: props.page.fil_dariane_devis.step_4,
-      },
-    ]
-  }
   else if (props.skipperMode === 'call') {
     return [
       {

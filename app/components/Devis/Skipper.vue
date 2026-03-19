@@ -20,11 +20,6 @@
             value="devis"
           />
           <v-radio
-            id="devis-radio-tally"
-            :label="page.first_step.option_2"
-            value="tally"
-          />
-          <v-radio
             id="devis-radio-call"
             :label="page.first_step.option_3"
             value="call"
