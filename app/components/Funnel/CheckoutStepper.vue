@@ -318,8 +318,18 @@ watch(() => [dynamicDealValues.value?.nbAdults, dynamicDealValues.value?.nbChild
 
 // Computed property to determine if insurance step should be shown
 const showInsuranceStep = computed(() => {
-  const v = insurancesPrice.value
-  return v && (v.rapatriement || v.cancel)
+  if (route.query.type === 'custom' || route.query.type === 'full' || route.query.type === 'deposit') {
+    if (+voyage.alreadyPaid === 0) {
+      const v = insurancesPrice.value
+      return v && (v.rapatriement || v.cancel)
+    }
+    else {
+      return false
+    }
+  }
+  else {
+    return false
+  }
 })
 </script>
 
