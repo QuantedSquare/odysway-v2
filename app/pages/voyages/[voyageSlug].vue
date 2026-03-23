@@ -320,6 +320,7 @@ if (voyage.value) {
     structuredData: createTouristTripSchema(
       voyage.value,
       `https://odysway.com/voyages/${voyage.value.slug.current}`,
+      config,
     ),
     breadcrumbs: [
       { name: 'Accueil', url: 'https://odysway.com' },

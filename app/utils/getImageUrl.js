@@ -2,12 +2,12 @@ import imageUrlBuilder from '@sanity/image-url'
 
 // Initialize Sanity image URL builder
 
-export function getImageUrl(ref, vanityName = null) {
-  const config = useRuntimeConfig()
+export function getImageUrl(ref, vanityName = null, config = null) {
+  const runtimeConfig = config || useRuntimeConfig()
   const builder = imageUrlBuilder({
-    // baseUrl: config.public.siteURL || 'https://odysway.com', // Only available for Entreprise account on Sanity
-    projectId: config.public.sanity.projectId,
-    dataset: config.public.sanity.dataset,
+    // baseUrl: runtimeConfig.public.siteURL || 'https://odysway.com', // Only available for Entreprise account on Sanity
+    projectId: runtimeConfig.public.sanity.projectId,
+    dataset: runtimeConfig.public.sanity.dataset,
   })
   if (!ref)
     return ''

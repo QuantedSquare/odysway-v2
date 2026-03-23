@@ -189,11 +189,11 @@ export function useSeo(options = {}) {
 
     if (!imageRef) {
       if (!mainImg) return DEFAULT_IMG
-      return getImageUrl(mainImg, vanityName)
+      return getImageUrl(mainImg, vanityName, config)
     }
 
     // Use getImageUrl utility for Sanity refs
-    return getImageUrl(imageRef, vanityName)
+    return getImageUrl(imageRef, vanityName, config)
   })
 
   // Set SEO meta tags — pass computed refs for reactivity

@@ -360,6 +360,7 @@ watch(() => destinationSanity.value?.voyages, (voyages) => {
 
 // Use SEO composable - automatically uses blog's SEO fields
 if (destinationSanity.value) {
+  const config = useRuntimeConfig()
   useSeo({
     seoData: destinationSanity.value.seo || destinationSanity.value.blog?.seo || {}, // If {} blog SEO will be detected from content.blog or fallback or generated default
     content: destinationSanity.value,
@@ -369,6 +370,7 @@ if (destinationSanity.value) {
       ? createBlogPostingSchema(
           destinationSanity.value.blog,
           `https://odysway.com/destinations/${destinationSanity.value.slug.current}`,
+          config,
         )
       : null,
     breadcrumbs: [

@@ -128,6 +128,7 @@ watchEffect(() => {
   if (!blogSanity.value) return
 
   // Use the SEO composable with BlogPosting structured data
+  const config = useRuntimeConfig()
   useSeo({
     seoData: blogSanity.value.seo || {}, // Use seo object from blogType.ts
     content: blogSanity.value,
@@ -136,6 +137,7 @@ watchEffect(() => {
     structuredData: createBlogPostingSchema(
       blogSanity.value,
       `https://odysway.com${route.path}`,
+      config,
     ),
     breadcrumbs: [
       { name: 'Blog', url: 'https://odysway.com/blog' },

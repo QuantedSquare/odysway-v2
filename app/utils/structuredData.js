@@ -81,7 +81,7 @@ export function createWebSiteSchema() {
  * @param {String} url - Full URL of the blog post
  * @returns {Object} BlogPosting schema
  */
-export function createBlogPostingSchema(blog, url) {
+export function createBlogPostingSchema(blog, url, config = null) {
   // Use SEO object fields if available, fallback to legacy fields
   const seo = blog.seo || {}
   const keywords = seo.keywords || []
@@ -108,7 +108,7 @@ export function createBlogPostingSchema(blog, url) {
         }
       : undefined,
     'image': blog.displayedImg
-      ? getImageUrl(blog.displayedImg.asset?._ref || blog.displayedImg, `${blog.slug?.current || 'blog'}.jpg`)
+      ? getImageUrl(blog.displayedImg.asset?._ref || blog.displayedImg, `${blog.slug?.current || 'blog'}.jpg`, config)
       : undefined,
     'datePublished': blog.publishedAt,
     'dateModified': blog._updatedAt || blog.publishedAt,
@@ -127,14 +127,14 @@ export function createBlogPostingSchema(blog, url) {
  * @param {String} url - Full URL of the voyage
  * @returns {Object} TouristTrip schema
  */
-export function createTouristTripSchema(voyage, url) {
+export function createTouristTripSchema(voyage, url, config = null) {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'TouristTrip',
     'name': voyage.title,
     'description': voyage.metaDescription || voyage.description,
     'image': voyage.image
-      ? [getImageUrl(voyage.image.asset?._ref || voyage.image, `${voyage.slug?.current || 'voyage'}.jpg`)]
+      ? [getImageUrl(voyage.image.asset?._ref || voyage.image, `${voyage.slug?.current || 'voyage'}.jpg`, config)]
       : undefined,
     'touristType': 'Adventure',
     url,
@@ -162,7 +162,7 @@ export function createTouristTripSchema(voyage, url) {
       'name': day.title,
       'description': day.description,
       'image': day.photo
-        ? [getImageUrl(day.photo.asset?._ref || day.photo, `${voyage.slug?.current || 'voyage'}-day-${index + 1}.jpg`)]
+        ? [getImageUrl(day.photo.asset?._ref || day.photo, `${voyage.slug?.current || 'voyage'}-day-${index + 1}.jpg`, config)]
         : undefined,
     }))
   }

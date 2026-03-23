@@ -234,6 +234,7 @@ watch(() => selectedExperience.value?.voyages, (voyages) => {
 
 // Use SEO composable - automatically uses blog's SEO fields
 if (selectedExperience.value) {
+  const config = useRuntimeConfig()
   useSeo({
     seoData: selectedExperience.value.seo || selectedExperience.value.blog?.seo || {}, // If {} blog SEO will be detected from content.blog or fallback or generated default
     content: selectedExperience.value,
@@ -243,6 +244,7 @@ if (selectedExperience.value) {
       ? createBlogPostingSchema(
           selectedExperience.value.blog,
           `https://odysway.com/experiences/${selectedExperience.value.slug.current}`,
+          config,
         )
       : null,
     breadcrumbs: [

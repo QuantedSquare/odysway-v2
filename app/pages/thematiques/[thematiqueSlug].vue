@@ -245,7 +245,7 @@ watch(() => categorySanity.value?.voyages, (voyages) => {
   if (voyages && voyages.length > 0) {
     const formattedVoyages = formatVoyagesForGtm(voyages)
     const listName = `Thematique - ${categorySanity.value?.title || 'Unknown'}`
-    
+
     if (formattedVoyages && formattedVoyages.length > 0) {
       trackViewItemList({
         currency: 'EUR',
@@ -258,6 +258,7 @@ watch(() => categorySanity.value?.voyages, (voyages) => {
 
 // Use SEO composable - automatically uses blog's SEO fields
 if (categorySanity.value) {
+  const config = useRuntimeConfig()
   useSeo({
     seoData: categorySanity.value.seo || categorySanity.value.blog?.seo || {}, // If {} blog SEO will be detected from content.blog or fallback or generated default
     content: categorySanity.value,
@@ -267,6 +268,7 @@ if (categorySanity.value) {
       ? createBlogPostingSchema(
           categorySanity.value.blog,
           `https://odysway.com/thematiques/${categorySanity.value.slug.current}`,
+          config,
         )
       : null,
     breadcrumbs: [
