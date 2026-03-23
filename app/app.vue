@@ -8,6 +8,9 @@
 </template>
 
 <script setup>
+// import './assets/css/main.css'
+import '../app/assets/scss/main.scss'
+
 const config = useRuntimeConfig()
 const route = useRoute()
 
