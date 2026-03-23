@@ -142,11 +142,11 @@ export function useSeo(options = {}) {
   }
 
   const normalized = normalizeSeoData(seoData, content, slug, pageType)
-  // Generate canonical URL
+  // Generate canonical URL (strip trailing slash)
   const canonicalUrl = computed(() => {
-    if (normalized.canonicalUrl) return normalized.canonicalUrl
-    if (baseUrl) return `https://odysway.com${baseUrl}`
-    return `https://odysway.com${route.path}`
+    if (normalized.canonicalUrl) return normalized.canonicalUrl.replace(/\/$/, '')
+    if (baseUrl) return `https://odysway.com${baseUrl}`.replace(/\/$/, '')
+    return `https://odysway.com${route.path}`.replace(/\/$/, '')
   })
 
   // Generate robots meta tag
@@ -183,7 +183,7 @@ export function useSeo(options = {}) {
     }
     const vanityName = slug ? `${slug}.jpg` : 'odysway.jpg'
 
-    const mainImg = content?.image || content?.image?.asset?._ref || content?.image?.src || content?.image || ''
+    const mainImg = content?.image?.asset?._ref || content?.image?.src || content?.image || ''
     // Otherwise, try Sanity image reference
     const imageRef = og?.asset?._ref || ''
 
@@ -192,38 +192,33 @@ export function useSeo(options = {}) {
       return getImageUrl(mainImg, vanityName)
     }
 
-    // Generate vanity name for SEO
-
     // Use getImageUrl utility for Sanity refs
     return getImageUrl(imageRef, vanityName)
   })
 
-  // Set SEO meta tags
+  // Set SEO meta tags — pass computed refs for reactivity
   useSeoMeta({
     title: normalized.metaTitle,
     description: normalized.metaDescription,
     ogTitle: normalized.ogTitle,
     ogDescription: normalized.ogDescription,
-    ogImage: ogImageUrl.value,
+    ogImage: ogImageUrl,
     ogImageAlt: normalized.ogImageAlt,
     ogType: pageType === 'article' ? 'article' : 'website',
-    ogUrl: canonicalUrl.value,
+    ogUrl: canonicalUrl,
     ogSiteName: 'Odysway',
     twitterTitle: normalized.ogTitle,
     twitterDescription: normalized.ogDescription,
-    twitterImage: ogImageUrl.value,
+    twitterImage: ogImageUrl,
     twitterImageAlt: normalized.ogImageAlt,
     twitterCard: normalized.twitterCard,
     twitterSite: '@odysway',
-    // remove the last / from the canonical url
-    canonical: canonicalUrl.value.replace(/\/$/, ''),
-    robots: robotsMeta.value,
+    robots: robotsMeta,
     ...customMeta,
   })
 
-  // Build head configuration
+  // Build head configuration (only for things useSeoMeta can't handle)
   const headConfig = {
-    title: normalized.metaTitle,
     htmlAttrs: {
       lang: 'fr',
     },
@@ -235,7 +230,7 @@ export function useSeo(options = {}) {
       },
       {
         rel: 'canonical',
-        href: canonicalUrl.value,
+        href: canonicalUrl,
       },
     ],
     meta: [],

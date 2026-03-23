@@ -21,7 +21,7 @@
               name="first-phrase"
               mdc-unwrap="p"
             />
-            {{ displayedReviews.length }} avis
+            {{ sortedReviews.length }} avis
           </span>
         </h3>
         <p class="text-center text-body-1">
@@ -48,8 +48,11 @@
           >
             <ClientOnly>
               <v-autocomplete
-                v-model="autocompleteVoyage.selectedVoyage"
-                :items="autocompleteVoyage.items"
+                v-model="autocompleteVoyage.selectedVoyageId"
+                v-model:search="autocompleteVoyage.searchText"
+                :items="voyagesFromReviews"
+                item-title="title"
+                item-value="id"
                 label="Rechercher par voyage"
                 density="comfortable"
                 clearable
@@ -87,8 +90,8 @@
       justify="center"
     >
       <v-col
-        v-for="review, index in paginatedItems"
-        :key="index"
+        v-for="review in paginatedItems"
+        :key="review._id"
         cols="12"
       >
         <ClientOnly>
@@ -109,10 +112,19 @@
           active-color="primary"
           elevation="3"
           class="my-4"
-          @click="goTo(scrollTarget, { offset: -50 })"
-          @next="pagination.currentPage = pagination.currentPage++"
-          @prev="pagination.currentPage = pagination.currentPage-- "
+          @update:model-value="goTo(scrollTarget, { offset: -50 })"
         />
+      </v-col>
+    </v-row>
+    <v-row
+      v-else
+      justify="center"
+    >
+      <v-col
+        cols="12"
+        class="text-center text-body-1 my-6"
+      >
+        Aucun avis ne correspond à votre recherche.
       </v-col>
     </v-row>
   </v-container>
@@ -163,8 +175,8 @@ const reviewFilter = ref({
 })
 
 const autocompleteVoyage = ref({
-  selectedVoyage: null,
-  items: [],
+  selectedVoyageId: null,
+  searchText: '',
 })
 
 const pagination = ref({
@@ -173,41 +185,75 @@ const pagination = ref({
 })
 
 const displayedReviews = computed(() => {
-  return reviews.value.map((a) => {
-    return {
-      ...a,
-      date: a.date ? a.date : new Date(Date.now() - 1000 * 60 * 60 * 24 * 60),
-      rating: a.rating ? a.rating : 5,
-    }
-  }).filter(a => !a.text.includes('Lorem'))
+  // Avoid duplicate reviews if the Sanity query result contains duplicates.
+  const uniqueById = new Map()
+
+  ;(reviews.value || []).forEach((r) => {
+    if (!r?._id || uniqueById.has(r._id)) return
+    uniqueById.set(r._id, r)
+  })
+
+  const normalizeText = s => (typeof s === 'string' ? s : '')
+
+  return Array.from(uniqueById.values())
+    .map((r) => {
+      const voyageTitle = r.voyageTitle || r.voyage?.title || ''
+      const voyageSlug = r.voyageSlug || r.voyage?.slug || ''
+      const voyageId = r.voyage?._id || r.voyage?._ref || null
+
+      return {
+        ...r,
+        text: normalizeText(r.text),
+        author: normalizeText(r.author),
+        authorAge: normalizeText(r.authorAge),
+        date: r.date ? r.date : new Date(Date.now() - 1000 * 60 * 60 * 24 * 60),
+        rating: typeof r.rating === 'number' ? r.rating : 5,
+        voyageTitle,
+        voyageSlug,
+        voyageId,
+      }
+    })
+    .filter(r => !r.text.includes('Lorem'))
 })
 
 const averageNote = computed(() => {
-  return displayedReviews.value.length
-    ? displayedReviews.value.reduce((acc, cur) => acc + cur.rating, 0) / displayedReviews.value.length
+  return sortedReviews.value.length
+    ? sortedReviews.value.reduce((acc, cur) => acc + cur.rating, 0) / sortedReviews.value.length
     : 0
 })
 
 const voyagesFromReviews = computed(() => {
-  const voyagesSet = new Set()
+  // Deduplicate voyages by id (not by object identity).
+  const voyagesById = new Map()
 
   displayedReviews.value.forEach((review) => {
-    if (review.voyageTitle) {
-      voyagesSet.add(review.voyageTitle)
-    }
+    if (!review?.voyageId) return
+    if (voyagesById.has(review.voyageId)) return
+    voyagesById.set(review.voyageId, {
+      id: review.voyageId,
+      title: review.voyageTitle,
+      slug: review.voyageSlug,
+    })
   })
 
-  return Array.from(voyagesSet)
+  return Array.from(voyagesById.values())
 })
 
-autocompleteVoyage.value.items = [...voyagesFromReviews.value]
-
-const filteredReviews = computed (() => {
+const filteredReviews = computed(() => {
   let filteredReviews = [...displayedReviews.value]
 
-  if (autocompleteVoyage.value.selectedVoyage) {
-    filteredReviews = filteredReviews.filter(review => review.voyageTitle === autocompleteVoyage.value.selectedVoyage)
+  const selectedVoyageId = autocompleteVoyage.value.selectedVoyageId
+
+  if (selectedVoyageId) {
+    filteredReviews = filteredReviews.filter(review => review.voyageId === selectedVoyageId)
   }
+  else if (autocompleteVoyage.value.searchText.trim()) {
+    const normalize = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    const q = normalize(autocompleteVoyage.value.searchText.trim())
+
+    filteredReviews = filteredReviews.filter(review => normalize(review.voyageTitle).includes(q))
+  }
+
   return filteredReviews
 })
 
@@ -230,7 +276,7 @@ const sortedReviews = computed(() => {
   else {
     return [...filteredReviews.value].sort((a, b) => {
       return new Date(b.date) - new Date(a.date)
-    }).filter(review => review.rating >= 3 && review.text.length >= 70)
+    }).filter(review => review.rating >= 3 && (review.text || '').length >= 70)
   }
 })
 
@@ -250,7 +296,13 @@ watch(() => reviewFilter.value.selectedFilter, (newVal, oldVal) => {
   }
 })
 
-watch(() => autocompleteVoyage.value.selectedVoyage, (newVal, oldVal) => {
+watch(() => autocompleteVoyage.value.selectedVoyageId, (newVal, oldVal) => {
+  if (newVal !== oldVal) {
+    pagination.value.currentPage = 1
+  }
+})
+
+watch(() => autocompleteVoyage.value.searchText, (newVal, oldVal) => {
   if (newVal !== oldVal) {
     pagination.value.currentPage = 1
   }

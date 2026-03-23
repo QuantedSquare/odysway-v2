@@ -21,6 +21,7 @@ const { getFaqsForSchema } = await useFaqData({
   includeHidden: true, // Include all FAQs on the FAQ page
 })
 // Add SEO with FAQ structured data
+const route = useRoute()
 useSeo({
   seoData: {},
   content: {
@@ -29,6 +30,6 @@ useSeo({
   },
   pageType: 'website',
   slug: 'faq',
-  structuredData: createFAQPageSchema(getFaqsForSchema.value),
+  structuredData: createFAQPageSchema(getFaqsForSchema.value, `https://odysway.com${route.path}`),
 })
 </script>

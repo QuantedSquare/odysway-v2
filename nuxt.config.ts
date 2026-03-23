@@ -305,16 +305,17 @@ export default defineNuxtConfig({
     meta: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      description: 'Odysway est une agence de voyage en ligne, qui propose des expériences de voyage différentes, loin des circuits touristiques classiques.',
+      description: 'Odysway est l\'agence spécialiste des voyages en immersion. Nous proposons un tourisme authentique et responsable qui vous fera voyager différemment.',
       ogType: 'website',
-      ogDescription: 'Odysway est une agence de voyage en ligne, qui propose des expériences de voyage différentes, loin des circuits touristiques classiques.',
+      ogDescription: 'Odysway est l\'agence spécialiste des voyages en immersion. Nous proposons un tourisme authentique et responsable qui vous fera voyager différemment.',
       twitterCreator: '@odysway',
       twitterSite: '@odysway',
-      author: 'Romain Masina',
+      author: 'Odysway',
       colorScheme: 'light',
       applicationName: 'Odysway',
       google: 'nopagereadaloud',
-      googlebot: 'max-snippet',
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      googlebot: 'max-snippet:-1, max-image-preview:large, max-video-preview:-1' as any,
     },
   },
   sitemap: {

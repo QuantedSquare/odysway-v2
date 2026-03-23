@@ -310,6 +310,29 @@ const buildMainImageUrl = (image, width, height, quality = 90) => {
     .url()
 }
 
+// SEO composable — called once during setup (not inside watchEffect)
+if (voyage.value) {
+  useSeo({
+    seoData: voyage.value.seo,
+    content: voyage.value,
+    pageType: 'website',
+    slug: voyage.value.slug?.current,
+    structuredData: createTouristTripSchema(
+      voyage.value,
+      `https://odysway.com/voyages/${voyage.value.slug.current}`,
+    ),
+    breadcrumbs: [
+      { name: 'Accueil', url: 'https://odysway.com' },
+      { name: 'Voyages', url: 'https://odysway.com/voyages' },
+      {
+        name: voyage.value.title,
+        url: `https://odysway.com/voyages/${voyage.value.slug.current}`,
+      },
+    ],
+  })
+}
+
+// Image preload — reactive to handle lazy data
 watchEffect(() => {
   if (!voyage.value) return
 
@@ -333,26 +356,6 @@ watchEffect(() => {
       fetchpriority: 'high',
     })
   }
-
-  // Use the SEO composable with TouristTrip structured data
-  useSeo({
-    seoData: voyage.value.seo,
-    content: voyage.value,
-    pageType: 'website',
-    slug: voyage.value.slug?.current,
-    structuredData: createTouristTripSchema(
-      voyage.value,
-      `https://odysway.com/voyages/${voyage.value.slug.current}`,
-    ),
-    breadcrumbs: [
-      { name: 'Accueil', url: 'https://odysway.com' },
-      { name: 'Voyages', url: 'https://odysway.com/voyages' },
-      {
-        name: voyage.value.title,
-        url: `https://odysway.com/voyages/${voyage.value.slug.current}`,
-      },
-    ],
-  })
 
   useHead({
     link,

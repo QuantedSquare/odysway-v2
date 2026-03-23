@@ -20,11 +20,13 @@ export function createOrganizationSchema(options = {}) {
       'https://www.instagram.com/odysway',
       'https://www.linkedin.com/company/odysway',
     ],
+    aggregateRating = null,
   } = options
 
-  return {
+  const schema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': `${url}/#organization`,
     name,
     url,
     logo,
@@ -39,6 +41,16 @@ export function createOrganizationSchema(options = {}) {
       'availableLanguage': ['French', 'English'],
     },
   }
+
+  // Add aggregate rating if provided
+  if (aggregateRating) {
+    schema.aggregateRating = {
+      '@type': 'AggregateRating',
+      ...aggregateRating,
+    }
+  }
+
+  return schema
 }
 
 /**
@@ -49,8 +61,12 @@ export function createWebSiteSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+    '@id': 'https://odysway.com/#website',
     'name': 'Odysway',
     'url': 'https://odysway.com',
+    'publisher': {
+      '@id': 'https://odysway.com/#organization',
+    },
     'potentialAction': {
       '@type': 'SearchAction',
       'target': 'https://odysway.com/voyages?q={search_term_string}',
@@ -71,7 +87,7 @@ export function createBlogPostingSchema(blog, url) {
   const keywords = seo.keywords || []
   const focusKeyword = seo.focusKeyword || ''
   const allKeywords = [focusKeyword, ...keywords].filter(Boolean)
-  
+
   return {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
@@ -95,7 +111,7 @@ export function createBlogPostingSchema(blog, url) {
       ? getImageUrl(blog.displayedImg.asset?._ref || blog.displayedImg, `${blog.slug?.current || 'blog'}.jpg`)
       : undefined,
     'datePublished': blog.publishedAt,
-    'dateModified': blog.publishedAt,
+    'dateModified': blog._updatedAt || blog.publishedAt,
     'articleBody': seo.metaDescription || blog.description,
     'mainEntityOfPage': {
       '@type': 'WebPage',
@@ -188,33 +204,48 @@ export function createBreadcrumbSchema(crumbs) {
 
 /**
  * Generate FAQPage structured data
- * @param {Array} faqs - Array of FAQ items [{question, answer}] or [{question, answer (Portable Text)}]
+ * @param {Array} faqs - Array of FAQ items [{question, answer}]
+ * @param {String} url - Canonical URL of the page (for @id)
  * @returns {Object} FAQPage schema
  */
-export function createFAQPageSchema(faqs) {
+export function createFAQPageSchema(faqs, url = 'https://odysway.com/faq') {
   if (!faqs || faqs.length === 0) return null
+
+  // Ensure url is clean (no trailing slash) for the @id
+  const cleanUrl = url.replace(/\/$/, '')
+
+  const mainEntity = faqs
+    .map((faq) => {
+      // Handle both plain text answers and Portable Text answers
+      const answerText = typeof faq.answer === 'string'
+        ? faq.answer
+        : Array.isArray(faq.answer)
+          ? portableTextToPlain(faq.answer)
+          : ''
+
+      // Skip if question or answer is effectively empty
+      if (!faq.question?.trim() || !answerText.trim()) return null
+
+      return {
+        '@type': 'Question',
+        'name': faq.question.trim(),
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': answerText.trim(),
+        },
+      }
+    })
+    .filter(Boolean)
+
+  if (mainEntity.length === 0) return null
 
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    'mainEntity': faqs
-      .filter(faq => faq.question && faq.answer) // Only include complete FAQs
-      .map((faq) => {
-        // Handle both plain text answers and Portable Text answers
-        const answerText = typeof faq.answer === 'string'
-          ? faq.answer
-          : Array.isArray(faq.answer)
-            ? portableTextToPlain(faq.answer)
-            : ''
-
-        return {
-          '@type': 'Question',
-          'name': faq.question,
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': answerText,
-          },
-        }
-      }),
+    '@id': `${cleanUrl}/#faq`,
+    'mainEntity': mainEntity,
+    'isPartOf': {
+      '@id': 'https://odysway.com/#website',
+    },
   }
 }
