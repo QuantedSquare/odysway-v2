@@ -1,10 +1,7 @@
 <template>
   <NuxtLayout>
     <NuxtPage />
-    <CookiesSnackbar
-      v-model="consentBar"
-      :opt-out="optOut"
-    />
+    <CookiesSnackbar v-model="consentBar" :opt-out="optOut" />
     <SearchDialog />
     <!-- <Maintenance /> -->
   </NuxtLayout>
@@ -42,6 +39,20 @@ useHead({
       crossorigin: '',
       type: 'font/woff2',
     },
+    {
+      rel: 'preload',
+      href: '/fonts/Gordita-Font/subset-Gordita-MediumItalic.woff2',
+      as: 'font',
+      crossorigin: '',
+      type: 'font/woff2',
+    },
+    {
+      rel: 'preload',
+      href: '/fonts/Gordita-Font/subset-Gordita-BoldItalic.woff2',
+      as: 'font',
+      crossorigin: '',
+      type: 'font/woff2',
+    },
   ],
 })
 
@@ -63,7 +74,7 @@ useHead({
 
 // Load Hotjar after page is interactive
 onMounted(() => {
-// Wait for idle time or user interaction before loading Hotjar
+  // Wait for idle time or user interaction before loading Hotjar
   const loadHotjar = () => {
     if (typeof window !== 'undefined' && !window.hj) {
       const script = document.createElement('script')
@@ -141,6 +152,7 @@ onMounted(() => {
 .page-leave-active {
   transition: all 0.4s;
 }
+
 .page-enter-from,
 .page-leave-to {
   opacity: 0;

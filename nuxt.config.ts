@@ -35,9 +35,9 @@ export default defineNuxtConfig({
     head: {
       titleTemplate: '%s - Odysway',
       link: [
-        // Critical: Preconnect to Sanity CDN for LCP image (must be first)
-        { rel: 'preconnect', href: 'https://nu6yntji.apicdn.sanity.io', crossorigin: 'anonymous' },
         { rel: 'preconnect', href: 'https://cdn.sanity.io', crossorigin: 'anonymous' },
+        { rel: 'preconnect', href: 'https://www.googletagmanager.com', crossorigin: 'anonymous' },
+        { rel: 'preconnect', href: 'https://load.sst.odysway.com', crossorigin: 'anonymous' },
       ],
       htmlAttrs: {
         lang: 'fr',
