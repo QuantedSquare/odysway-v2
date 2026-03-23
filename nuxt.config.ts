@@ -39,6 +39,9 @@ export default defineNuxtConfig({
         { rel: 'preconnect', href: 'https://nu6yntji.apicdn.sanity.io', crossorigin: 'anonymous' },
         { rel: 'preconnect', href: 'https://cdn.sanity.io', crossorigin: 'anonymous' },
       ],
+      htmlAttrs: {
+        lang: 'fr',
+      },
       script: [
         {
           id: 'gtm-script',
