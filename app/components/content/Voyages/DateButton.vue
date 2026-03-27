@@ -1,27 +1,17 @@
 <template>
   <div>
-    <v-btn
-      v-if="!isLoading"
-      :height="mdAndDown ? 80 : 52"
-      color="grey-light-3"
-      rounded="md"
-      block
-      class="w-100 block-btn-without-padding"
-      @click="handleDateClick"
-    >
+    <v-btn v-if="!isLoading" :height="mdAndDown ? 80 : 52" color="grey-light-3" rounded="md" block
+      class="w-100 block-btn-without-padding" @click="handleDateClick">
       <div class="d-inline-flex flex-column flex-lg-row align-center  ga-2 justify-space-between w-100">
         <div class="d-flex align-center  ga-1">
           <CustomBadge :color="date.status.color" />
           <span class="text-body-2 text-decoration-none text-primary text-size-14 text-wrap text-start">
-            du <span class="font-weight-bold">{{ dayjs(date.departureDate).format('DD MMM YY') }}</span> au <span class="font-weight-bold">{{ dayjs(date.returnDate).format('DD MMM YY') }}</span>
+            du <span class="font-weight-bold">{{ dayjs(date.departureDate).format('DD MMM YY') }}</span> au <span
+              class="font-weight-bold">{{ dayjs(date.returnDate).format('DD MMM YY') }}</span>
           </span>
         </div>
         <div>
-          <v-chip
-            variant="flat"
-            :color="date.status.color"
-            rounded="lg"
-          >
+          <v-chip variant="flat" :color="date.status.color" rounded="lg">
             <span class="text-caption font-weight-bold  text-white mb-1 px-1">
               {{ date.status.text }}
             </span>
@@ -29,10 +19,7 @@
         </div>
       </div>
     </v-btn>
-    <v-skeleton-loader
-      v-else-if="isLoading"
-      type="article"
-    />
+    <v-skeleton-loader v-else-if="isLoading" type="article" />
   </div>
 </template>
 
@@ -125,6 +112,7 @@ const handleDateClick = async () => {
         ...formattedVoyage,
         item_variant: `${dayjs(date.departureDate).format('DD/MM/YY')} - ${dayjs(date.returnDate).format('DD/MM/YY')}`,
       }
+      console.log('WHISHLISTED')
       trackAddToWishlist(voyageWithDate, 1, props.voyage.pricing?.startingPrice)
     }
 
@@ -151,7 +139,8 @@ await generateCheckoutLink()
   padding: 0px !important;
   width: 100% !important;
 }
+
 .text-size-14 {
-  font-size: 14px!important;
+  font-size: 14px !important;
 }
 </style>

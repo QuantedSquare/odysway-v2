@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     '@nuxt/image',
     'nuxt-calendly',
-    'nuxt-vitalizer',
+    // 'nuxt-vitalizer',
     '@nuxtjs/sanity',
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
@@ -182,6 +182,11 @@ export default defineNuxtConfig({
       stylistic: true,
     },
   },
+  fonts: {
+    families: [
+      { name: 'Gordita', provider: 'local' },
+    ],
+  },
   image: {
     screens: {
       10: 10,
@@ -329,10 +334,10 @@ export default defineNuxtConfig({
       '/api/__sitemap__/urls',
     ],
   },
-  vitalizer: {
-    // Remove the render-blocking entry CSS
-    disableStylesheets: 'entry',
-    disablePreloadLinks: true,
-    disablePrefetchLinks: true,
-  },
+  // vitalizer: {
+  //   // Remove the render-blocking entry CSS
+  //   disableStylesheets: 'entry',
+  //   // disablePreloadLinks: true,
+  //   disablePrefetchLinks: true,
+  // },
 })

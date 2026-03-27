@@ -1,76 +1,42 @@
 <template>
   <v-card>
     <v-card-text>
-      <v-container
-        fluid
-        class="pa-6"
-      >
+      <v-container fluid class="pa-6">
         <v-row>
-          <v-col
-            cols="5"
-            class="d-flex flex-column align-start"
-          >
+          <v-col cols="5" class="d-flex flex-column align-start">
             <span class="text-caption text-lg-body-2 text-grey">
               {{ stickyBlock.pricePrefix }}
             </span>
             <span class="text-h3 text-lg-h2 font-weight-bold text-primary">
-              {{ voyage.pricing.startingPrice }}€<span class="text-body-2 font-weight-bold">{{ stickyBlock.priceSuffix }}</span>
+              {{ voyage.pricing.startingPrice }}€<span class="text-body-2 font-weight-bold">{{ stickyBlock.priceSuffix
+                }}</span>
             </span>
           </v-col>
           <v-spacer class="d-block" />
-          <v-col
-            cols="5"
-            class="d-flex align-start justify-end"
-          >
-            <RatingBadge
-              :rating="voyage.rating"
-            />
+          <v-col cols="5" class="d-flex align-start justify-end">
+            <RatingBadge :rating="voyage.rating" />
           </v-col>
         </v-row>
         <v-row justify-md="center">
-          <v-col
-            cols="12"
-          >
+          <v-col cols="12">
             <v-divider v-if="voyage.availabilityTypes?.includes('groupe')" />
           </v-col>
         </v-row>
 
         <v-row class="mt-0">
           <v-col cols="12">
-            <span
-              v-if="voyage.availabilityTypes?.includes('groupe')"
-              class="text-h4 font-weight-bold text-primary"
-            >
+            <span v-if="voyage.availabilityTypes?.includes('groupe')" class="text-h4 font-weight-bold text-primary">
               {{ stickyBlock.dateText }}
             </span>
           </v-col>
         </v-row>
-        <v-row
-          v-if="displayedDates.length > 0 && !isLoading"
-          justify-md="center"
-          class="text-center"
-        >
-          <v-col
-            v-for="(date, i) in displayedDates"
-            :key="date.departureDate + i"
-            cols="12"
-          >
-            <DateButton
-              v-if="date.status.status !== 'full'"
-              :date="date"
-              :voyage="voyage"
-            />
+        <v-row v-if="displayedDates.length > 0 && !isLoading" justify-md="center" class="text-center">
+          <v-col v-for="(date, i) in displayedDates" :key="date.departureDate + i" cols="12">
+            <DateButton v-if="date.status.status !== 'full'" :date="date" :voyage="voyage" />
           </v-col>
 
-          <v-col
-            cols="12"
-          >
-            <v-btn
-              height="60"
-              block
-              rounded="md"
-              @click="goTo('#dates-container', { offset: -200 })"
-            >
+          <v-col cols="12">
+            <v-btn height="60" block rounded="md" @click="clickAllDates()">
               <span class="text-body-2 font-weight-bold text-decoration-none">
                 {{ stickyBlock.dateButtonText }}
               </span>
@@ -79,35 +45,22 @@
         </v-row>
         <v-row v-else-if="isLoading">
           <v-col cols="12">
-            <v-skeleton-loader
-              type="article"
-            />
+            <v-skeleton-loader type="article" />
           </v-col>
         </v-row>
         <v-row v-else>
           <v-col
             v-if="voyage.availabilityTypes?.includes('groupe') && !voyage.availabilityTypes?.includes('privatisation')"
-            cols="12"
-          >
-            <v-alert
-              color="#fbefec"
-              rounded="lg"
-              class="d-flex align-center ga-2 text-secondary font-weight-bold"
-            >
+            cols="12">
+            <v-alert color="#fbefec" rounded="lg" class="d-flex align-center ga-2 text-secondary font-weight-bold">
               <CustomBadge :color="'red'" />
               Pas encore de dates disponibles
               <!-- #TODO: add the key in the page schema -->
             </v-alert>
           </v-col>
-          <v-col
-            cols="12"
-          >
-            <v-btn
-              height="60"
-              block
-              rounded="md"
-              :to="`/devis?slug=${typeof voyage.slug === 'object' ? voyage.slug.current : voyage.slug}`"
-            >
+          <v-col cols="12">
+            <v-btn height="60" block rounded="md"
+              :to="`/devis?slug=${typeof voyage.slug === 'object' ? voyage.slug.current : voyage.slug}`">
               <span class="text-body-2 font-weight-bold text-decoration-none">
                 Demander un devis
               </span>
@@ -116,40 +69,20 @@
         </v-row>
         <v-row
           v-if="!voyage.availabilityTypes?.includes('groupe') && !voyage.availabilityTypes?.includes('privatisation')"
-          justify-md="center"
-        >
-          <v-col
-            cols="12"
-          >
+          justify-md="center">
+          <v-col cols="12">
             <v-divider />
           </v-col>
         </v-row>
         <template v-if="displayedDates.length > 0">
-          <v-row
-            justify-md="center"
-            class="text-center"
-          >
-            <v-col
-              cols="12"
-            >
-              <v-btn-secondary
-                height="60"
-                block
-                rounded="md"
-                :to="`/calendly?travelTitle=${voyage.title}`"
-                @click="trackRdvClick()"
-              >
+          <v-row justify-md="center" class="text-center">
+            <v-col cols="12">
+              <v-btn-secondary height="60" block rounded="md" :to="`/calendly?travelTitle=${voyage.title}`"
+                @click="trackRdvClick()">
                 <div class="d-flex align-center ga-2">
-                  <SanityImage
-                    :asset-id="stickyBlock.ctaCall.avatar.asset._ref"
-                    auto="format"
-                  >
+                  <SanityImage :asset-id="stickyBlock.ctaCall.avatar.asset._ref" auto="format">
                     <template #default="{ src }">
-                      <v-avatar
-                        :size="mdAndDown ? 30 : 40"
-                        :image="src"
-                        color="white"
-                      />
+                      <v-avatar :size="mdAndDown ? 30 : 40" :image="src" color="white" />
                     </template>
                   </SanityImage>
 
@@ -161,15 +94,8 @@
             </v-col>
           </v-row>
           <v-row class="text-size-14 text-grey">
-            <v-col
-              cols="12"
-              class="d-flex align-start flex-column ga-1"
-            >
-              <div
-                v-for="item, index in stickyBlock.ctaBottom.list"
-                :key="index"
-                class="d-flex align-center ga-2"
-              >
+            <v-col cols="12" class="d-flex align-start flex-column ga-1">
+              <div v-for="item, index in stickyBlock.ctaBottom.list" :key="index" class="d-flex align-center ga-2">
                 <v-icon>
                   {{ mdiCheckCircleOutline }}
                 </v-icon>
@@ -191,32 +117,17 @@
                 </span>
               </div>
             </v-col>
-            <NewsletterContainer
-              is-on-voyage
-              :voyage="voyage"
-            />
+            <NewsletterContainer is-on-voyage :voyage="voyage" />
           </v-row>
         </template>
       </v-container>
     </v-card-text>
   </v-card>
-  <v-row
-    v-if="voyage.availabilityTypes?.includes('groupe')"
-    class="mt-4"
-  >
-    <v-col
-      cols="12"
-    >
-      <NuxtLink
-        width="100%"
-        class="text-primary text-break d-flex align-center justify-center ga-3"
-        :to="`/devis?slug=${voyage.slug.current}`"
-        @click="trackRdvClick()"
-      >
-        <v-icon
-          size="24"
-          class="bg-primary rounded-lg pa-1"
-        >
+  <v-row v-if="voyage.availabilityTypes?.includes('groupe')" class="mt-4">
+    <v-col cols="12">
+      <NuxtLink width="100%" class="text-primary text-break d-flex align-center justify-center ga-3"
+        :to="`/devis?slug=${voyage.slug.current}`" @click="trackIndivClick()">
+        <v-icon size="24" class="bg-primary rounded-lg pa-1">
           {{ mdiArrowRight }}
         </v-icon>
         <span class="text-left font-weight-bold text-primary">
@@ -232,6 +143,7 @@ import { mdiArrowRight, mdiCheckCircleOutline } from '@mdi/js'
 import { useGoTo, useDisplay } from 'vuetify'
 import dayjs from 'dayjs'
 
+const { trackCtaClick } = useGtmTracking()
 const { mdAndDown } = useDisplay()
 const goTo = useGoTo()
 const { dates, isLoading } = useDates()
@@ -271,6 +183,22 @@ const displayedDates = computed(() => {
   }
   return []
 })
+
+const trackIndivClick = () => {
+  trackCtaClick({
+    ctaId: 'indiv-click-info-card',
+    ctaLabel: stickyBlock.value?.privatisationText || 'Demander un devis',
+    ctaUrl: `/devis?slug=${voyage.slug.current}`,
+  })
+}
+const clickAllDates = () => {
+  trackCtaClick({
+    ctaId: 'all-dates-click-info-card',
+    ctaLabel: stickyBlock.value?.dateButtonText || 'Voir tous les départs',
+    ctaUrl: `/voyage/${voyage.slug.current}`,
+  })
+  goTo('#dates-container', { offset: -200 })
+}
 </script>
 
 <style scoped>
@@ -278,10 +206,12 @@ const displayedDates = computed(() => {
   padding: 0px !important;
   width: 100% !important;
 }
-  .text-size-14 {
-  font-size: 14px!important;
-  }
-  .text-size-11 {
-  font-size: 11px!important;
-  }
+
+.text-size-14 {
+  font-size: 14px !important;
+}
+
+.text-size-11 {
+  font-size: 11px !important;
+}
 </style>

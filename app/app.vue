@@ -1,7 +1,10 @@
 <template>
   <NuxtLayout>
     <NuxtPage />
-    <CookiesSnackbar v-model="consentBar" :opt-out="optOut" />
+    <CookiesSnackbar
+      v-model="consentBar"
+      :opt-out="optOut"
+    />
     <SearchDialog />
     <!-- <Maintenance /> -->
   </NuxtLayout>
@@ -20,43 +23,43 @@ useHead({
   htmlAttrs: {
     lang: 'fr',
   },
-  link: [
-    {
-      rel: 'preload',
-      href: '/fonts/Gordita-Font/subset-Gordita-Medium.woff2',
-      as: 'font',
-      crossorigin: '',
-      type: 'font/woff2',
-    },
-    {
-      rel: 'preload',
-      href: '/fonts/Gordita-Font/subset-Gordita-Regular.woff2',
-      as: 'font',
-      crossorigin: '',
-      type: 'font/woff2',
-    },
-    {
-      rel: 'preload',
-      href: '/fonts/Gordita-Font/subset-Gordita-Bold.woff2',
-      as: 'font',
-      crossorigin: '',
-      type: 'font/woff2',
-    },
-    {
-      rel: 'preload',
-      href: '/fonts/Gordita-Font/subset-Gordita-MediumItalic.woff2',
-      as: 'font',
-      crossorigin: '',
-      type: 'font/woff2',
-    },
-    {
-      rel: 'preload',
-      href: '/fonts/Gordita-Font/subset-Gordita-BoldItalic.woff2',
-      as: 'font',
-      crossorigin: '',
-      type: 'font/woff2',
-    },
-  ],
+  // link: [
+  //   {
+  //     rel: 'preload',
+  //     href: '/fonts/Gordita-Medium.woff2',
+  //     as: 'font',
+  //     crossorigin: '',
+  //     type: 'font/woff2',
+  //   },
+  //   {
+  //     rel: 'preload',
+  //     href: '/fonts/Gordita-Regular.woff2',
+  //     as: 'font',
+  //     crossorigin: '',
+  //     type: 'font/woff2',
+  //   },
+  //   {
+  //     rel: 'preload',
+  //     href: '/fonts/Gordita-Bold.woff2',
+  //     as: 'font',
+  //     crossorigin: '',
+  //     type: 'font/woff2',
+  //   },
+  //   {
+  //     rel: 'preload',
+  //     href: '/fonts/Gordita-MediumItalic.woff2',
+  //     as: 'font',
+  //     crossorigin: '',
+  //     type: 'font/woff2',
+  //   },
+  //   {
+  //     rel: 'preload',
+  //     href: '/fonts/Gordita-BoldItalic.woff2',
+  //     as: 'font',
+  //     crossorigin: '',
+  //     type: 'font/woff2',
+  //   },
+  // ],
 })
 
 // Defer Hotjar loading to improve initial page load
