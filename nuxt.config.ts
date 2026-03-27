@@ -11,7 +11,6 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     '@nuxt/image',
     'nuxt-calendly',
-    'nuxt-vitalizer',
     '@nuxtjs/sanity',
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
@@ -328,11 +327,5 @@ export default defineNuxtConfig({
     sources: [
       '/api/__sitemap__/urls',
     ],
-  },
-  vitalizer: {
-    // Remove the render-blocking entry CSS
-    disableStylesheets: 'entry',
-    disablePreloadLinks: true,
-    disablePrefetchLinks: true,
   },
 })

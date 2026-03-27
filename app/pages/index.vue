@@ -1,32 +1,51 @@
 <template>
   <div>
-    <HomeHeroSection v-if="homeSanity" :image="homeSanity.heroSection.image"
+    <HomeHeroSection
+      v-if="homeSanity"
+      :image="homeSanity.heroSection.image"
       :placeholder-image="config.public.environment === 'production' ? homeSanity.heroSection.image : homeSanity.heroSectionTest.image"
-      :image-test="homeSanity.heroSectionTest.image" :image-mobile="homeSanity.heroSection.imageMobile"
+      :image-test="homeSanity.heroSectionTest.image"
+      :image-mobile="homeSanity.heroSection.imageMobile"
       :image-mobile-test="homeSanity.heroSectionTest.imageMobile"
       :typewriter-words="config.public.environment === 'production' ? homeSanity.heroSection.typewritterWords : homeSanity.heroSectionTest.typewritterWords"
-      :placeholder="config.public.environment === 'production' ? homeSanity.heroSection.placeholder : homeSanity.heroSectionTest.placeholder">
+      :placeholder="config.public.environment === 'production' ? homeSanity.heroSection.placeholder : homeSanity.heroSectionTest.placeholder"
+    >
       <template #title>
-        <EnrichedText class="text-white"
-          :value="config.public.environment === 'production' ? homeSanity.heroSection.title : homeSanity.heroSectionTest.title" />
+        <EnrichedText
+          class="text-white"
+          :value="config.public.environment === 'production' ? homeSanity.heroSection.title : homeSanity.heroSectionTest.title"
+        />
       </template>
       <template #subtitle>
-        <EnrichedText class="text-white"
-          :value="config.public.environment === 'production' ? homeSanity.heroSection.subtitle : homeSanity.heroSectionTest.subtitle" />
+        <EnrichedText
+          class="text-white"
+          :value="config.public.environment === 'production' ? homeSanity.heroSection.subtitle : homeSanity.heroSectionTest.subtitle"
+        />
       </template>
     </HomeHeroSection>
-    <v-container v-once fluid class="mx-0 mx-md-5 px-1">
+    <v-container
+      v-once
+      fluid
+      class="mx-0 mx-md-5 px-1"
+    >
       <section class="py-0 my-0 px-2 px-md-4">
-        <LazyExperienceCarousel v-if="homeSanity && homeSanity.experienceCarousel?.experiences?.length > 0"
-          :experiences-data="homeSanity.experienceCarousel.experiences">
+        <LazyExperienceCarousel
+          v-if="homeSanity && homeSanity.experienceCarousel?.experiences?.length > 0"
+          :experiences-data="homeSanity.experienceCarousel.experiences"
+        >
           <template #title>
             {{ homeSanity.experienceCarousel.title }}
           </template>
         </LazyExperienceCarousel>
 
-        <LazyColorContainer v-once color="soft-blush">
-          <TrackableVoyageList :voyages="homeSanity.franceTrips.voyagesFrance"
-            :list-name="homeSanity.franceTrips.title">
+        <LazyColorContainer
+          v-once
+          color="soft-blush"
+        >
+          <TrackableVoyageList
+            :voyages="homeSanity.franceTrips.voyagesFrance"
+            :list-name="homeSanity.franceTrips.title"
+          >
             <LazyHorizontalCarousel text-color="primary">
               <template #title>
                 <span style="color: rgba(43, 76, 82, 1)">
@@ -34,9 +53,15 @@
                 </span>
               </template>
               <template #carousel-item>
-                <v-col v-for="voyage in homeSanity.franceTrips.voyagesFrance" :key="voyage._id">
-                  <VoyageCardWithDates :voyage="voyage" :dates-by-slug="datesBySlug"
-                    :item-list-name="homeSanity.franceTrips.title" />
+                <v-col
+                  v-for="voyage in homeSanity.franceTrips.voyagesFrance"
+                  :key="voyage._id"
+                >
+                  <VoyageCardWithDates
+                    :voyage="voyage"
+                    :dates-by-slug="datesBySlug"
+                    :item-list-name="homeSanity.franceTrips.title"
+                  />
                 </v-col>
               </template>
             </LazyHorizontalCarousel>
@@ -44,8 +69,10 @@
         </LazyColorContainer>
 
         <LazyColorContainer color="primary">
-          <LazyCardGrid :categories="homeSanity.followDesires.categoriesFollowDesires"
-            :promotion-name="homeSanity.followDesires.title">
+          <LazyCardGrid
+            :categories="homeSanity.followDesires.categoriesFollowDesires"
+            :promotion-name="homeSanity.followDesires.title"
+          >
             <template #title>
               <h4 class="text-white">
                 {{ homeSanity.followDesires.title }}
@@ -55,25 +82,35 @@
         </LazyColorContainer>
 
         <LazyColorContainer color="white">
-          <LazyTextImageContainer :display-cta-button="true" :image-desktop-right="true"
-            :image-src="homeSanity.travelDifferently.image">
+          <LazyTextImageContainer
+            :display-cta-button="true"
+            :image-desktop-right="true"
+            :image-src="homeSanity.travelDifferently.image"
+          >
             <template #title>
               <span style="color: rgba(43, 76, 82, 1)">
                 {{ homeSanity.travelDifferently.title }}
               </span>
             </template>
             <template #content-cols>
-              <IconTextCol v-for="feature in homeSanity.travelDifferently.features" :key="feature._id"
-                :icon="feature.icon" :side-by-side="false">
+              <IconTextCol
+                v-for="feature in homeSanity.travelDifferently.features"
+                :key="feature._id"
+                :icon="feature.icon"
+                :side-by-side="false"
+              >
                 <template #text>
                   {{ feature.text }}
                 </template>
               </IconTextCol>
             </template>
             <template #cta-button>
-              <CtaButton :color="homeSanity.travelDifferently.ctaButton.color"
-                :link="homeSanity.travelDifferently.ctaButton.link" cta-id="travel-differently-home"
-                :cta-label="homeSanity.travelDifferently.ctaButton.text">
+              <CtaButton
+                :color="homeSanity.travelDifferently.ctaButton.color"
+                :link="homeSanity.travelDifferently.ctaButton.link"
+                cta-id="travel-differently-home"
+                :cta-label="homeSanity.travelDifferently.ctaButton.text"
+              >
                 <template #text>
                   {{ homeSanity.travelDifferently.ctaButton.text }}
                 </template>
@@ -83,8 +120,10 @@
         </LazyColorContainer>
 
         <LazyColorContainer color="grey-light">
-          <TrackableVoyageList :voyages="homeSanity.guaranteedDepartures.voyagesGuaranteedDepartures"
-            :list-name="homeSanity.guaranteedDepartures.title">
+          <TrackableVoyageList
+            :voyages="homeSanity.guaranteedDepartures.voyagesGuaranteedDepartures"
+            :list-name="homeSanity.guaranteedDepartures.title"
+          >
             <LazyHorizontalCarousel :text-color="'primary'">
               <template #title>
                 <span style="color: rgba(43, 76, 82, 1)">
@@ -93,32 +132,50 @@
               </template>
 
               <template #carousel-item>
-                <v-col v-for="voyage in homeSanity.guaranteedDepartures.voyagesGuaranteedDepartures" :key="voyage._id">
-                  <VoyageCardWithDates :voyage="voyage" :dates-by-slug="datesBySlug"
-                    :item-list-name="homeSanity.guaranteedDepartures.title" />
+                <v-col
+                  v-for="voyage in homeSanity.guaranteedDepartures.voyagesGuaranteedDepartures"
+                  :key="voyage._id"
+                >
+                  <VoyageCardWithDates
+                    :voyage="voyage"
+                    :dates-by-slug="datesBySlug"
+                    :item-list-name="homeSanity.guaranteedDepartures.title"
+                  />
                 </v-col>
               </template>
             </LazyHorizontalCarousel>
           </TrackableVoyageList>
           <div class="d-flex justify-center mb-5 mt-8 ">
-            <v-btn height="60" variant="tonal" class="bg-primary text-white  text-body-1 d-inline font-weight-bold "
-              @click="handleProchainsDepartsClick">
+            <v-btn
+              height="60"
+              variant="tonal"
+              class="bg-primary text-white  text-body-1 d-inline font-weight-bold "
+              @click="handleProchainsDepartsClick"
+            >
               {{ homeSanity.guaranteedDepartures.ctaButton.text }}
             </v-btn>
           </div>
         </LazyColorContainer>
 
         <LazyColorContainer color="white">
-          <TrackableVoyageList :voyages="homeSanity.summerTravel.voyagesSummerTravel"
-            :list-name="homeSanity.summerTravel.title">
+          <TrackableVoyageList
+            :voyages="homeSanity.summerTravel.voyagesSummerTravel"
+            :list-name="homeSanity.summerTravel.title"
+          >
             <LazyHorizontalCarousel :text-color="'primary'">
               <template #title>
                 {{ homeSanity.summerTravel.title }}
               </template>
               <template #carousel-item>
-                <v-col v-for="voyage in homeSanity.summerTravel.voyagesSummerTravel" :key="voyage._id">
-                  <VoyageCardWithDates :voyage="voyage" :dates-by-slug="datesBySlug"
-                    :item-list-name="homeSanity.summerTravel.title" />
+                <v-col
+                  v-for="voyage in homeSanity.summerTravel.voyagesSummerTravel"
+                  :key="voyage._id"
+                >
+                  <VoyageCardWithDates
+                    :voyage="voyage"
+                    :dates-by-slug="datesBySlug"
+                    :item-list-name="homeSanity.summerTravel.title"
+                  />
                 </v-col>
               </template>
             </LazyHorizontalCarousel>
@@ -132,23 +189,37 @@
                 <EnrichedText :value="homeSanity.newsletter.title" />
               </template>
               <template #subtitle>
-                <EnrichedText class="text-grey" :value="homeSanity.newsletter.subtitle" />
+                <EnrichedText
+                  class="text-grey"
+                  :value="homeSanity.newsletter.subtitle"
+                />
               </template>
             </NewsletterContainer>
           </ClientOnly>
         </LazyColorContainer>
 
-        <LazyColorContainer white-text color="primary">
-          <TrackableVoyageList :voyages="homeSanity.unforgettableTravels.voyagesUnforgettableTravels"
-            :list-name="homeSanity.unforgettableTravels.title">
+        <LazyColorContainer
+          white-text
+          color="primary"
+        >
+          <TrackableVoyageList
+            :voyages="homeSanity.unforgettableTravels.voyagesUnforgettableTravels"
+            :list-name="homeSanity.unforgettableTravels.title"
+          >
             <LazyHorizontalCarousel :text-color="'white'">
               <template #title>
                 {{ homeSanity.unforgettableTravels.title }}
               </template>
               <template #carousel-item>
-                <v-col v-for="voyage in homeSanity.unforgettableTravels.voyagesUnforgettableTravels" :key="voyage._id">
-                  <VoyageCardWithDates :voyage="voyage" :dates-by-slug="datesBySlug"
-                    :item-list-name="homeSanity.unforgettableTravels.title" />
+                <v-col
+                  v-for="voyage in homeSanity.unforgettableTravels.voyagesUnforgettableTravels"
+                  :key="voyage._id"
+                >
+                  <VoyageCardWithDates
+                    :voyage="voyage"
+                    :dates-by-slug="datesBySlug"
+                    :item-list-name="homeSanity.unforgettableTravels.title"
+                  />
                 </v-col>
               </template>
             </LazyHorizontalCarousel>
@@ -180,8 +251,12 @@
               {{ homeSanity.contact?.description }}
             </template>
             <template #bottom>
-              <CtaButton :color="homeSanity.contact?.ctaButton.color" :link="homeSanity.contact?.ctaButton.link"
-                cta-id="contact-rdv-home" :cta-label="homeSanity.contact?.ctaButton.text">
+              <CtaButton
+                :color="homeSanity.contact?.ctaButton.color"
+                :link="homeSanity.contact?.ctaButton.link"
+                cta-id="contact-rdv-home"
+                :cta-label="homeSanity.contact?.ctaButton.text"
+              >
                 <template #text>
                   {{ homeSanity.contact?.ctaButton.text }}
                 </template>
