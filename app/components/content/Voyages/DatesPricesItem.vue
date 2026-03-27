@@ -222,7 +222,7 @@ import { useDisplay } from 'vuetify'
 
 const today = dayjs()
 const { width } = useDisplay()
-const { trackAddToWishlist } = useGtmTracking()
+const { trackAddToWishlist, trackCtaClick } = useGtmTracking()
 const { formatVoyageForGtm } = useGtmVoyageFormatter()
 
 const props = defineProps({
@@ -329,6 +329,11 @@ const generateCheckoutLink = async () => {
 const isGeneratingLink = ref(false)
 
 const handleBookingClick = async () => {
+  trackCtaClick({
+    ctaId: 'dates-price-item',
+    ctaLabel: 'Réserver',
+    ctaUrl: buttonLink,
+  })
   try {
     isGeneratingLink.value = true
 
@@ -345,6 +350,11 @@ const handleBookingClick = async () => {
 
     await generateCheckoutLink() // always wait for it
     if (checkoutLink.value) {
+      trackCtaClick({
+        ctaId: 'dates-price-item',
+        ctaLabel: 'Réserver',
+        ctaUrl: checkoutLink.value,
+      })
       await navigateTo(checkoutLink.value)
     }
   }

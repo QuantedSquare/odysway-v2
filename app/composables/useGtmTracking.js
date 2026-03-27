@@ -283,6 +283,7 @@ export const useGtmTracking = () => {
     pushToDataLayer({
       ecommerce: null,
     })
+
     pushToDataLayer({
       event: 'clic_cta',
       cta_id: ctaId,

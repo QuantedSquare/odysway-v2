@@ -125,6 +125,11 @@ const handleDateClick = async () => {
         ...formattedVoyage,
         item_variant: `${dayjs(date.departureDate).format('DD/MM/YY')} - ${dayjs(date.returnDate).format('DD/MM/YY')}`,
       }
+      trackCtaClick({
+        ctaId: 'dates-button-info-card-item',
+        ctaLabel: 'Réserver',
+        ctaUrl: checkoutLink.value,
+      })
       trackAddToWishlist(voyageWithDate, 1, props.voyage.pricing?.startingPrice)
     }
 

@@ -69,7 +69,7 @@
               height="60"
               block
               rounded="md"
-              @click="goTo('#dates-container', { offset: -200 })"
+              @click="handleAllDeparturesClick()"
             >
               <span class="text-body-2 font-weight-bold text-decoration-none">
                 {{ stickyBlock.dateButtonText }}
@@ -107,6 +107,7 @@
               block
               rounded="md"
               :to="`/devis?slug=${typeof voyage.slug === 'object' ? voyage.slug.current : voyage.slug}`"
+              :click="handleAskDevis()"
             >
               <span class="text-body-2 font-weight-bold text-decoration-none">
                 Demander un devis
@@ -211,7 +212,7 @@
         width="100%"
         class="text-primary text-break d-flex align-center justify-center ga-3"
         :to="`/devis?slug=${voyage.slug.current}`"
-        @click="trackRdvClick()"
+        @click="handleIndivClick()"
       >
         <v-icon
           size="24"
@@ -220,6 +221,7 @@
           {{ mdiArrowRight }}
         </v-icon>
         <span class="text-left font-weight-bold text-primary">
+          <!-- Privatiser ce voyage -->
           {{ stickyBlock.privatisationText }}
         </span>
       </NuxtLink>
@@ -235,7 +237,7 @@ import dayjs from 'dayjs'
 const { mdAndDown } = useDisplay()
 const goTo = useGoTo()
 const { dates, isLoading } = useDates()
-const { trackRdvClick } = useGtmTracking()
+const { trackRdvClick, trackCtaClick } = useGtmTracking()
 
 const { stickyBlock, voyage } = defineProps({
   stickyBlock: {
@@ -271,6 +273,30 @@ const displayedDates = computed(() => {
   }
   return []
 })
+function handleAllDeparturesClick() {
+  trackCtaClick({
+    ctaId: 'button-see-all-dates',
+    ctaLabel: stickyBlock.dateButtonText,
+    ctaUrl: '#dates-container',
+  })
+  goTo('#dates-container', { offset: -200 })
+}
+
+function handleIndivClick() {
+  trackRdvClick()
+  trackCtaClick({
+    ctaId: 'button-indiv-funnel',
+    ctaLabel: stickyBlock.privatisationText,
+    ctaUrl: `/devis?slug=${voyage.slug.current}`,
+  })
+}
+function handleAskDevis() {
+  trackCtaClick({
+    ctaId: 'button-ask-devis',
+    ctaLabel: 'Demander un devis',
+    ctaUrl: `/devis?slug=${typeof voyage.slug === 'object' ? voyage.slug.current : voyage.slug}`,
+  })
+}
 </script>
 
 <style scoped>

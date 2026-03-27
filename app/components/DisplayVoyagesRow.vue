@@ -31,6 +31,7 @@
               :voyage="voyage"
               :dates-by-slug="datesBySlug"
               :prefer-confirmed-date="props.preferConfirmedDate"
+              :item-list-name="props.itemListName || route.path"
             />
           </v-col>
         </template>
@@ -60,7 +61,7 @@
           :voyage="voyage"
           :dates-by-slug="datesBySlug"
           :prefer-confirmed-date="props.preferConfirmedDate"
-          :item-list-name="props.itemListName"
+          :item-list-name="props.itemListName || route.path"
         />
       </v-col>
     </TransitionGroup>
@@ -132,6 +133,7 @@
 
 <script setup>
 const route = useRoute()
+
 // const isExpanded = ref(false)
 
 const props = defineProps({
