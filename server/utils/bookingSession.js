@@ -13,7 +13,7 @@ export const getBookingUserOrNull = (event) => {
 
     const normalized = email.toLowerCase()
     const role = payload?.role || (getSuperadmins().includes(normalized) ? 'superadmin' : 'user')
-
+    console.log('emailpayload', payload)
     return {
       sub: payload?.sub,
       email,

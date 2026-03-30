@@ -267,9 +267,9 @@ const createDeal = async (data) => {
   const client = {
     contact: {
       email: data.email,
-      firstName: data.firstname,
-      lastName: data.lastname,
-      phone: `${data.phone}`,
+      ...(data.firstname && { firstName: data.firstname }),
+      ...(data.lastname && { lastName: data.lastname }),
+      ...(data.phone && { phone: `${data.phone}` }),
       fieldValues: [
         {
           field: '22', // isoContact field

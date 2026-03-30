@@ -321,6 +321,12 @@
               <DatesPricesItem :date="previewDate" />
             </v-card-text>
           </v-card>
+
+          <DateAttachments
+            :slug="slug"
+            :date-id="dateId"
+            class="mt-4"
+          />
         </v-col>
 
         <v-col
@@ -544,6 +550,11 @@
               </div>
             </v-card-text>
           </v-card>
+
+          <DateNotes
+            :slug="slug"
+            :date-id="dateId"
+          />
         </v-col>
       </v-row>
 
@@ -621,6 +632,8 @@ import { useRoute, useRouter } from 'vue-router'
 import { mdiArrowRight, mdiDelete, mdiLinkEdit, mdiInformationOutline, mdiAirplaneTakeoff } from '@mdi/js'
 import dayjs from 'dayjs'
 import DateFormCard from '~/components/booking/DateFormCard.vue'
+import DateAttachments from '~/components/booking/DateAttachments.vue'
+import DateNotes from '~/components/booking/DateNotes.vue'
 import { BOOKING_STATUSES } from '~/utils/bookingStatuses'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 

@@ -51,6 +51,24 @@ export const bookingApi = {
     apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/assign-departure-deal`, 'delete'),
   addDate: payload => apiRequest('/booking/add-date', 'post', payload),
 
+  // Notes
+  getNotes: (slug, dateId) =>
+    apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/notes`),
+  addNote: (slug, dateId, payload) =>
+    apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/notes`, 'post', payload),
+  deleteNote: (slug, dateId, noteId) =>
+    apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/notes/${encodeURIComponent(noteId)}`, 'delete'),
+
+  // Attachments
+  getAttachments: (slug, dateId) =>
+    apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/attachments`),
+  getUploadUrl: (slug, dateId, payload) =>
+    apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/attachments/upload-url`, 'post', payload),
+  deleteAttachment: (slug, dateId, attachmentId) =>
+    apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/attachments/${encodeURIComponent(attachmentId)}`, 'delete'),
+  getAttachmentDownloadUrl: (slug, dateId, attachmentId) =>
+    apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/attachments/${encodeURIComponent(attachmentId)}/download`),
+
   // Funnel
   placeOption: payload => apiRequest('/booking/booked_date/option', 'post', payload),
   bookingExists: bookedId =>
