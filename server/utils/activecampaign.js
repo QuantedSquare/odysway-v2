@@ -472,7 +472,7 @@ const recalculatTotalValues = async (dealId) => {
     - (promoChildren * nbChildren)
     - (promoEarlybird * nbTravelers)
     - (promoLastMinute * nbTravelers)
-
+  console.log('list values', basePrice, nbTravelers, indivRoomPrice, flightPrice, extensionPrice, insurancePrice, promoValue, promoChildren, promoEarlybird, promoLastMinute)
   console.log('======== totalValue:', value, '========')
 
   const restToPay = value - alreadyPaid

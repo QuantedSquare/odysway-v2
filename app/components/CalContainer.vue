@@ -46,7 +46,7 @@ const props = defineProps({
   },
   calLink: {
     type: String,
-    default: 'petit-oni/15and30min',
+    default: 'team/odysway/rdv-odysway',
   },
 })
 const emit = defineEmits(['previous'])
@@ -58,7 +58,7 @@ const { init, onLinkReady, onBookingSuccess, onNavigatedToBooker } = useCalEmbed
 let hasTrackedStep2 = false
 
 onMounted(async () => {
-  const calNs = await init('odysway', props.calLink, '#cal-inline-embed', {
+  const calNs = await init('rdv-odysway', props.calLink, '#cal-inline-embed', {
     useSlotsViewOnSmallScreen: 'true',
   })
 
