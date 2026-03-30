@@ -329,11 +329,6 @@ const generateCheckoutLink = async () => {
 const isGeneratingLink = ref(false)
 
 const handleBookingClick = async () => {
-  trackCtaClick({
-    ctaId: 'dates-price-item',
-    ctaLabel: 'Réserver',
-    ctaUrl: buttonLink,
-  })
   try {
     isGeneratingLink.value = true
 
