@@ -42,7 +42,7 @@ import dayjs from 'dayjs'
 import retrieveExistingBookedDate from '~/utils/retrieveExistingBookedDate.js'
 
 const { mdAndDown } = useDisplay()
-const { trackAddToWishlist } = useGtmTracking()
+const { trackAddToWishlist, trackCtaClick } = useGtmTracking()
 const { formatVoyageForGtm } = useGtmVoyageFormatter()
 
 const props = defineProps({
@@ -125,6 +125,7 @@ const handleDateClick = async () => {
         ...formattedVoyage,
         item_variant: `${dayjs(date.departureDate).format('DD/MM/YY')} - ${dayjs(date.returnDate).format('DD/MM/YY')}`,
       }
+      console.log('track', checkoutLink.value)
       trackCtaClick({
         ctaId: 'dates-button-info-card-item',
         ctaLabel: 'Réserver',
