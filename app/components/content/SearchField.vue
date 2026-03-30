@@ -234,7 +234,7 @@ const months = computed(() => {
   ]
 })
 
-const destinationsQuery = groq`*[_type == "destination"]{
+const destinationsQuery = groq`*[_type == "destination" && count(*[_type == "voyage" && references(^._id) && !('custom' in availabilityTypes)]) > 0]{
   title,
   "slug": slug.current,
   metaDescription,
@@ -272,7 +272,7 @@ const mappedDestinationsToRegions = computed(() => {
     destinations: topDestinations,
   }
 
-  // Normal region mapping
+  // Normal region mapping — exclude regions with no destinations
   const regionGroups = regions.value.map((region) => {
     return {
       title: region.nom,
@@ -280,7 +280,7 @@ const mappedDestinationsToRegions = computed(() => {
       image: region.image,
       destinations: destinations.value?.filter(d => d.regions?.some(r => r.nom === region.nom)),
     }
-  })
+  }).filter(region => region.destinations.length > 0)
 
   // Prepend Top destination region if there are any
   return topDestinations.length > 0 ? [topRegion, ...regionGroups] : regionGroups

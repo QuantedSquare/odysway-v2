@@ -3,7 +3,8 @@
     <div>
       {{ text }}
     </div>
-    <CalendlyInlineWidget v-bind="options" />
+    <!-- <CalendlyInlineWidget v-bind="options" /> -->
+    <CalContainer :travel-title="travelTitle" />
     <div v-if="isFunnel">
       <v-btn
         class="bg-grey-light font-weight-regular"

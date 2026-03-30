@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <!-- <CalContainer :travel-title="titre" /> -->
+    <CalContainer :travel-title="titre" />
   </v-container>
 </template>
 
