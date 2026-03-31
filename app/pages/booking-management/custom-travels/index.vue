@@ -1,19 +1,28 @@
 <template>
-  <v-container>
-    <v-row>
+  <v-container
+    fluid
+    class="py-6"
+  >
+    <v-row class="align-center mb-4">
       <v-col
         cols="12"
+        md="8"
       >
-        <h1>Gestion des voyages sur-mesure</h1>
-        <p>
-          Pour créer un voyage sur mesure, s'assurer de le créer dans Sanity.
-          <br>
-          Et de cocher la case "Voyage sur-mesure" dans Sanity.
+        <h1 class="text-h5 font-weight-bold mb-1">
+          Voyages sur-mesure
+        </h1>
+        <p class="text-body-2 text-medium-emphasis mb-0">
+          Pour creer un voyage sur mesure, s'assurer de le creer dans Sanity et de cocher la case "Voyage sur-mesure".
         </p>
       </v-col>
     </v-row>
-    <v-row>
-      <v-col cols="12">
+
+    <v-card
+      rounded="lg"
+      elevation="0"
+      class="bo-card mb-4"
+    >
+      <v-card-text class="pa-3">
         <v-autocomplete
           v-model="search"
           :items="travelesList"
@@ -21,8 +30,13 @@
           item-title="title"
           item-value="slug"
           clearable
+          density="compact"
+          hide-details
         />
-      </v-col>
+      </v-card-text>
+    </v-card>
+
+    <v-row>
       <v-col
         v-if="loading"
         cols="12"
@@ -35,35 +49,46 @@
         v-else-if="filteredTravels.length > 0"
         :key="travel.slug"
         cols="12"
+        sm="6"
         md="4"
       >
         <v-card
-          class="mb-4"
+          rounded="lg"
+          elevation="0"
+          class="bo-card"
           hover
           @click="goToTravel(travel.slug)"
         >
           <v-img
             :src="travel.image || '/images/IMG_20250101_161727_049.jpg'"
-            height="100"
+            height="140"
             cover
-          />
-          <v-card-title class="text-h5 py-4 text-center">
+            class="rounded-t-lg"
+          >
+            <div
+              style="position: absolute; bottom: 0; left: 0; right: 0; height: 60px; background: linear-gradient(transparent, rgba(0,0,0,0.4));"
+            />
+          </v-img>
+          <v-card-title class="text-subtitle-1 font-weight-bold py-3 text-center">
             {{ travel.title || travel.slug }}
           </v-card-title>
-          <!-- <v-card-text>
-            Nombre de dates: {{ travel.nb_dates }}
-            <br>
-            Nombre de places réservées: {{ travel.booked_seats }}
-          </v-card-text> -->
         </v-card>
       </v-col>
       <v-col
         v-else
         cols="12"
+        class="text-center py-12"
       >
-        <v-alert color="secondary">
-          Aucun voyage trouvé
-        </v-alert>
+        <v-icon
+          size="48"
+          color="secondary"
+          class="mb-3"
+        >
+          {{ mdiCompassOutline }}
+        </v-icon>
+        <div class="text-body-2 text-medium-emphasis">
+          Aucun voyage sur-mesure trouve.
+        </div>
       </v-col>
     </v-row>
   </v-container>
@@ -72,6 +97,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
+import { mdiCompassOutline } from '@mdi/js'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 
 const search = ref(null)
@@ -120,11 +146,11 @@ const goToTravel = (slug) => {
   router.push(`/booking-management/${slug}`)
 }
 
-const goToAddDate = () => {
+const _goToAddDate = () => {
   router.push('/booking-management/add-date')
 }
 
-const goToCustomTravels = () => {
+const _goToCustomTravels = () => {
   router.push('/booking-management/custom-travels')
 }
 

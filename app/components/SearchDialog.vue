@@ -56,7 +56,6 @@
             <v-chip
               v-for="btn in searchDialogField.searchDialogBtnList"
               :key="btn.text"
-              :to="btn.link"
               size="small"
               class="filter-chip"
               color="white"
@@ -259,6 +258,7 @@ onMounted(() => {
 
 const sanity = useSanity()
 const route = useRoute()
+const { trackCtaClick } = useGtmTracking()
 
 const { isOpen, closeDialog: closeSearchDialog } = useSearchDialog()
 const searchText = ref(null)
@@ -310,6 +310,7 @@ function handleQuickFilterClick(btn) {
     ctaUrl: btn.link,
   })
   closeDialog()
+  navigateTo(btn.link)
 }
 
 function navigate(destination, position = 1) {

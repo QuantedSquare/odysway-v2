@@ -3,7 +3,7 @@ import { defineEventHandler, readBody, createError } from 'h3'
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
   const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
-  if (isProdEnv) requireBookingUser(event)
+  const bookingUser = isProdEnv ? requireBookingUser(event) : getBookingUserOrNull(event)
 
   const { dateId, slug } = event.context.params
   if (!dateId || !slug) {
@@ -33,6 +33,8 @@ export default defineEventHandler(async (event) => {
   if (updateError) {
     throw createError({ statusCode: 500, statusMessage: updateError.message })
   }
+
+  await logDateActivity(dateId, bookingUser, 'departure_assigned', { departure_deal_id: dealId })
 
   return { departure_id: dealId }
 })

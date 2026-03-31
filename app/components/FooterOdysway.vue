@@ -277,12 +277,12 @@ const { trackRdvClick, trackCtaClick } = useGtmTracking()
 const handleFooterContactClick = () => {
   const buttonText = footer.value?.contact?.buttonContact?.text || 'Contact'
   const buttonLink = footer.value?.contact?.buttonContact?.lien || '/contact'
-  
+
   // Track RDV if it's a calendly/rdv link
   if (buttonLink.includes('calendly') || buttonLink.toLowerCase().includes('rdv')) {
     trackRdvClick()
   }
-  
+
   // Track CTA
   trackCtaClick({
     ctaId: 'footer-contact-button',

@@ -64,5 +64,8 @@ export default defineEventHandler(async (event) => {
       statusMessage: error.message,
     })
   }
+
+  await logDateActivity(data.id, bookingUser, 'created', insertData)
+
   return data
 })

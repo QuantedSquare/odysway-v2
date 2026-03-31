@@ -282,6 +282,70 @@ html {
   border-radius: 999px !important;
 }
 
+/* Backoffice utilities */
+.bo-card {
+  border: 1px solid rgba(var(--v-theme-on-surface), 0.08) !important;
+  background: rgb(var(--v-theme-surface)) !important;
+  box-shadow: none !important;
+}
+
+.bo-section-title {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(var(--v-theme-on-surface), 0.5);
+  margin-bottom: 8px;
+}
+
+.bo-stat-card {
+  border-left: 3px solid;
+}
+
+.bo-sidebar {
+  background: #0F172A !important;
+}
+
+.bo-sidebar .v-list-item {
+  color: rgba(255, 255, 255, 0.7) !important;
+  border-radius: 8px;
+  margin: 2px 8px;
+}
+
+.bo-sidebar .v-list-item:hover {
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: #FFFFFF !important;
+}
+
+.bo-sidebar .v-list-item--active {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #FFFFFF !important;
+}
+
+.bo-sidebar .v-list-item--active .v-list-item__overlay {
+  opacity: 0 !important;
+}
+
+.bo-toolbar {
+  background: rgb(var(--v-theme-surface-variant)) !important;
+  border-radius: 8px;
+  padding: 4px;
+  display: inline-flex;
+  gap: 2px;
+}
+
+/* In backoffice theme, give inputs a distinct background so they stand out from white cards */
+.v-theme--backoffice .v-field--variant-solo .v-field__overlay,
+.v-theme--backoffice .v-field--variant-solo-filled .v-field__overlay {
+  background: rgb(var(--v-theme-surface-variant)) !important;
+  opacity: 1 !important;
+}
+
+.v-theme--backoffice .v-field--variant-solo,
+.v-theme--backoffice .v-field--variant-solo-filled {
+  background: rgb(var(--v-theme-surface-variant)) !important;
+}
+
 @media (max-width: 960px) {
   .whatsapp-button {
     position: fixed;

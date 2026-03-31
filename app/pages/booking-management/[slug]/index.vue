@@ -8,15 +8,22 @@
         cols="12"
         md="8"
       >
-        <NuxtLink
-          :to="`/voyages/${slug}`"
-          class="text-primary d-inline-flex align-center ga-2"
-        >
-          <span class="text-h5 font-weight-bold">{{ voyage?.title || slug }}</span>
-          <v-icon size="x-small">{{ mdiArrowRight }}</v-icon>
-        </NuxtLink>
+        <div class="d-flex align-center ga-2 mb-1">
+          <h1 class="text-h5 font-weight-bold">
+            {{ voyage?.title || slug }}
+          </h1>
+          <NuxtLink
+            :to="`/voyages/${slug}`"
+            target="_blank"
+            class="text-medium-emphasis"
+          >
+            <v-icon size="16">
+              {{ mdiArrowRight }}
+            </v-icon>
+          </NuxtLink>
+        </div>
         <p class="text-body-2 text-medium-emphasis mb-0">
-          Gérer les départs, dupliquer, supprimer et accéder aux réservations.
+          Gerer les departs, dupliquer, supprimer et acceder aux reservations.
         </p>
       </v-col>
       <v-col
@@ -26,87 +33,87 @@
       >
         <v-btn
           variant="tonal"
+          size="small"
           :loading="loading"
           @click="fetchDates"
         >
-          Rafraîchir
+          Rafraichir
         </v-btn>
         <v-btn
           color="primary"
+          variant="flat"
+          size="small"
+          :prepend-icon="mdiPlus"
           @click="goToAddDate"
         >
-          + Ajouter une date
+          Ajouter une date
         </v-btn>
       </v-col>
     </v-row>
 
-    <v-row class="mb-3">
-      <v-col
-        cols="12"
-        md="4"
+    <!-- Filters bar -->
+    <div class="d-flex align-center ga-3 mb-4 flex-wrap">
+      <v-chip-group
+        v-model="timeframe"
+        selected-class="bg-primary text-white"
       >
-        <v-chip-group
-          v-model="timeframe"
-          selected-class="bg-primary text-white"
-          column
+        <v-chip
+          value="upcoming"
+          label
+          size="small"
         >
-          <v-chip
-            value="upcoming"
-            label
-          >
-            À venir
-          </v-chip>
-          <v-chip
-            value="ongoing"
-            label
-            :class="hasOngoingDates ? 'ongoing-pulse' : ''"
-          >
-            En cours
-          </v-chip>
-          <v-chip
-            value="past"
-            label
-          >
-            Passées
-          </v-chip>
-          <v-chip
-            value="all"
-            label
-          >
-            Toutes
-          </v-chip>
-        </v-chip-group>
-      </v-col>
-      <v-col
-        cols="12"
-        md="8"
-        class="d-flex ga-2 align-center"
-      >
-        <v-select
-          v-model="publicationFilter"
-          :items="publicationOptions"
-          item-title="label"
-          item-value="value"
-          label="Filtrer par publication"
-          density="comfortable"
-          class="flex-1"
-        />
-        <v-select
-          v-model="sortBy"
-          :items="sortOptions"
-          item-title="label"
-          item-value="value"
-          label="Trier"
-          density="comfortable"
-          class="flex-1"
-        />
-      </v-col>
-    </v-row>
+          A venir
+        </v-chip>
+        <v-chip
+          value="ongoing"
+          label
+          size="small"
+          :class="hasOngoingDates ? 'ongoing-pulse' : ''"
+        >
+          En cours
+        </v-chip>
+        <v-chip
+          value="past"
+          label
+          size="small"
+        >
+          Passees
+        </v-chip>
+        <v-chip
+          value="all"
+          label
+          size="small"
+        >
+          Toutes
+        </v-chip>
+      </v-chip-group>
+      <v-spacer />
+      <v-select
+        v-model="publicationFilter"
+        :items="publicationOptions"
+        item-title="label"
+        item-value="value"
+        label="Publication"
+        density="compact"
+        hide-details
+        style="max-width: 180px;"
+      />
+      <v-select
+        v-model="sortBy"
+        :items="sortOptions"
+        item-title="label"
+        item-value="value"
+        label="Trier"
+        density="compact"
+        hide-details
+        style="max-width: 180px;"
+      />
+    </div>
 
     <v-card
       rounded="lg"
-      class="glass-surface"
-      elevation="8"
+      class="bo-card"
+      elevation="0"
     >
       <v-data-table
         :headers="headers"
@@ -116,6 +123,7 @@
         hover
         :items-per-page="12"
         class="elevation-0"
+        density="compact"
       >
         <template #item="{ item }">
           <tr
@@ -124,49 +132,67 @@
           >
             <td>
               <v-chip
-                :color="item.is_indiv_travel ? 'blue' : item.published ? 'green-light' : 'warning'"
+                :color="item.is_indiv_travel ? 'info' : item.published ? 'success' : 'warning'"
                 label
-                size="small"
+                size="x-small"
+                variant="tonal"
               >
-                {{ item.is_indiv_travel ? 'Individuel' : item.published ? 'Publiée' : 'Non publiée' }}
+                {{ item.is_indiv_travel ? 'Individuel' : item.published ? 'Publiee' : 'Brouillon' }}
               </v-chip>
             </td>
-            <td>{{ dayjs(item.departure_date).format('DD/MM/YYYY') }}</td>
-            <td>{{ dayjs(item.return_date).format('DD/MM/YYYY') }}</td>
+            <td class="text-body-2">
+              {{ dayjs(item.departure_date).format('DD/MM/YYYY') }}
+            </td>
+            <td class="text-body-2">
+              {{ dayjs(item.return_date).format('DD/MM/YYYY') }}
+            </td>
             <td>
-              <span class="font-weight-medium">
+              <span class="font-weight-medium text-body-2">
                 {{ getDateStatus(item)?.text || '-' }}
               </span>
-              <v-badge
+              <v-chip
                 v-if="isOngoing(item)"
-                color="green"
-                class="ml-2"
-                content="En cours"
-                inline
-              />
+                color="success"
+                size="x-small"
+                label
+                variant="tonal"
+                class="ml-2 ongoing-pulse"
+              >
+                En cours
+              </v-chip>
             </td>
-            <td>{{ item.booked_seat || 0 }} / {{ item.max_travelers || '?' }}</td>
+            <td class="text-body-2">
+              {{ item.booked_seat || 0 }} / {{ item.max_travelers || '?' }}
+            </td>
             <td class="text-right">
               <v-menu>
                 <template #activator="{ props }">
                   <v-btn
                     :icon="mdiDotsVertical"
                     size="x-small"
+                    variant="text"
                     v-bind="props"
                     @click.stop
                   />
                 </template>
-                <v-list>
-                  <v-list-item @click="goToDate(item.id)">
-                    <v-icon>{{ mdiEye }}</v-icon>
+                <v-list density="compact">
+                  <v-list-item
+                    :prepend-icon="mdiEye"
+                    @click="goToDate(item.id)"
+                  >
                     Modifier
                   </v-list-item>
-                  <v-list-item @click="duplicateDate(item)">
-                    <v-icon>{{ mdiContentCopy }}</v-icon>
+                  <v-list-item
+                    :prepend-icon="mdiContentCopy"
+                    @click="duplicateDate(item)"
+                  >
                     Dupliquer
                   </v-list-item>
-                  <v-list-item @click="deleteDate(item)">
-                    <v-icon>{{ mdiDelete }}</v-icon>
+                  <v-list-item
+                    :prepend-icon="mdiDelete"
+                    class="text-error"
+                    @click="deleteDate(item)"
+                  >
                     Supprimer
                   </v-list-item>
                 </v-list>
@@ -175,7 +201,7 @@
           </tr>
         </template>
         <template #no-data>
-          <div class="text-center py-6">
+          <div class="text-center py-8 text-medium-emphasis">
             Aucune date pour le moment.
           </div>
         </template>
@@ -190,7 +216,7 @@ import { useRoute, useRouter } from 'vue-router'
 import dayjs from 'dayjs'
 import isSameOrAfter from 'dayjs/plugin/isSameOrAfter'
 import isSameOrBefore from 'dayjs/plugin/isSameOrBefore'
-import { mdiContentCopy, mdiDotsVertical, mdiDelete, mdiEye, mdiArrowRight } from '@mdi/js'
+import { mdiContentCopy, mdiDotsVertical, mdiDelete, mdiEye, mdiArrowRight, mdiPlus } from '@mdi/js'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 
 const loading = ref(false)

@@ -3,7 +3,7 @@ import { defineEventHandler, createError } from 'h3'
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
   const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
-  if (isProdEnv) requireBookingUser(event)
+  const bookingUser = isProdEnv ? requireBookingUser(event) : getBookingUserOrNull(event)
 
   const { dateId, slug } = event.context.params
   if (!dateId || !slug) {
@@ -40,5 +40,8 @@ export default defineEventHandler(async (event) => {
   if (insertError) {
     throw createError({ statusCode: 500, statusMessage: insertError.message })
   }
+
+  await logDateActivity(inserted.id, bookingUser, 'duplicated', { source_date_id: dateId })
+
   return inserted
 })

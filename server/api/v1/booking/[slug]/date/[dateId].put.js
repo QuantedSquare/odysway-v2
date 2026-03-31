@@ -42,6 +42,14 @@ export default defineEventHandler(async (event) => {
     updateFields.last_editor = bookingUser.email
   }
 
+  // Fetch current values for activity diff
+  const { data: current } = await supabase
+    .from('travel_dates')
+    .select(allowed.join(','))
+    .eq('id', dateId)
+    .eq('travel_slug', slug)
+    .single()
+
   // Convert badges from string to array if needed
   const { data, error } = await supabase
     .from('travel_dates')
@@ -56,6 +64,20 @@ export default defineEventHandler(async (event) => {
       statusCode: error ? 500 : 404,
       statusMessage: error ? error.message : 'Date introuvable',
     })
+  }
+
+  // Log activity with diff of changed fields
+  if (current) {
+    const changes = {}
+    for (const key of Object.keys(updateFields)) {
+      if (key === 'updated_at' || key === 'last_editor') continue
+      if (JSON.stringify(current[key]) !== JSON.stringify(updateFields[key])) {
+        changes[key] = { old: current[key], new: updateFields[key] }
+      }
+    }
+    if (Object.keys(changes).length) {
+      await logDateActivity(dateId, bookingUser, 'updated', changes)
+    }
   }
 
   // Keep automated status in sync if thresholds changed

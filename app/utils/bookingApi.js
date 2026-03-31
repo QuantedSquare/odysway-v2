@@ -59,6 +59,10 @@ export const bookingApi = {
   deleteNote: (slug, dateId, noteId) =>
     apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/notes/${encodeURIComponent(noteId)}`, 'delete'),
 
+  // Activity log
+  getActivity: (slug, dateId, params) =>
+    apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/activity${encodeQuery(params)}`),
+
   // Attachments
   getAttachments: (slug, dateId) =>
     apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/attachments`),

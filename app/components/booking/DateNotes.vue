@@ -1,11 +1,16 @@
 <template>
   <v-card
     rounded="lg"
-    variant="outlined"
-    class="glass-surface"
-    elevation="6"
+    elevation="0"
+    class="bo-card"
   >
-    <v-card-title class="pb-0">
+    <v-card-title class="pb-0 d-flex align-center ga-2">
+      <v-icon
+        size="18"
+        color="secondary"
+      >
+        {{ mdiFormatListBulleted }}
+      </v-icon>
       Notes & discussion
     </v-card-title>
     <v-card-text>
@@ -31,12 +36,31 @@
         <div
           v-for="note in notes"
           :key="note.id"
-          class="py-2"
+          class="bg-surface-variant rounded-lg pa-3 mb-2"
         >
-          <div class="d-flex align-center justify-space-between">
-            <span class="text-caption font-weight-medium">
-              {{ note.author_name || note.author_email }}
-            </span>
+          <div class="d-flex align-center justify-space-between mb-1">
+            <div class="d-flex align-center ga-2">
+              <v-avatar
+                size="24"
+                color="primary"
+                class="text-white"
+              >
+                <v-img
+                  v-if="note.author_picture"
+                  :src="note.author_picture"
+                  alt="Avatar"
+                />
+                <span
+                  v-else
+                  style="font-size: 11px; font-weight: 600;"
+                >
+                  {{ (note.author_name || note.author_email || '?').slice(0, 1).toUpperCase() }}
+                </span>
+              </v-avatar>
+              <span class="text-caption font-weight-medium">
+                {{ note.author_name || note.author_email }}
+              </span>
+            </div>
             <div class="d-flex align-center ga-1">
               <span class="text-caption text-medium-emphasis">
                 {{ dayjs(note.created_at).format('DD/MM/YYYY HH:mm') }}
@@ -57,15 +81,14 @@
           </div>
           <div
             v-dompurify-html="note.content"
-            class="text-body-2 note-content mt-1"
+            class="text-body-2 note-content"
           />
-          <v-divider class="mt-2" />
         </div>
       </template>
 
       <ClientOnly>
         <div class="mt-3">
-          <div class="d-flex ga-1 mb-1">
+          <div class="bo-toolbar mb-2">
             <v-btn
               size="x-small"
               variant="text"
@@ -110,7 +133,8 @@
           <v-btn
             color="primary"
             size="small"
-            class="mt-10"
+            variant="tonal"
+            class="mt-3"
             :loading="submitting"
             :disabled="submitting"
             @click="submitNote"
@@ -166,7 +190,7 @@ import StarterKit from '@tiptap/starter-kit'
 import Link from '@tiptap/extension-link'
 import { mdiDelete, mdiFormatListBulleted, mdiLinkVariant } from '@mdi/js'
 import dayjs from 'dayjs'
-import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
+import { bookingApi } from '~/utils/bookingApi'
 
 const props = defineProps({
   slug: { type: String, required: true },
@@ -273,11 +297,12 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .tiptap-editor {
-  border: 1px solid rgba(var(--v-border-color), var(--v-border-opacity));
+  border: 1px solid rgba(var(--v-theme-on-surface), 0.08);
   border-radius: 8px;
   padding: 8px 12px;
   min-height: 80px;
   cursor: text;
+  background: rgb(var(--v-theme-surface-variant));
 }
 
 .tiptap-editor :deep(.tiptap) {
@@ -290,6 +315,9 @@ onBeforeUnmount(() => {
 }
 .tiptap-editor :deep(ul) {
   padding-left: 20px;
+}
+.note-content{
+  color:black;
 }
 
 .note-content :deep(a) {

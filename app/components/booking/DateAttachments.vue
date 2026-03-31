@@ -1,11 +1,16 @@
 <template>
   <v-card
     rounded="lg"
-    variant="outlined"
-    class="glass-surface"
-    elevation="6"
+    elevation="0"
+    class="bo-card"
   >
-    <v-card-title class="pb-0">
+    <v-card-title class="pb-0 d-flex align-center ga-2">
+      <v-icon
+        size="18"
+        color="secondary"
+      >
+        {{ mdiPaperclip }}
+      </v-icon>
       Fichiers joints
     </v-card-title>
     <v-card-text>
@@ -29,9 +34,10 @@
         </div>
 
         <div
-          v-for="attachment in attachments"
+          v-for="(attachment, idx) in attachments"
           :key="attachment.id"
-          class="d-flex align-center py-2"
+          class="d-flex align-center py-2 px-2 rounded"
+          :class="idx % 2 === 0 ? 'bg-surface-variant' : ''"
         >
           <v-icon
             size="20"
@@ -76,7 +82,7 @@
         v-model="selectedFile"
         label="Ajouter un fichier"
         accept=".pdf,.jpg,.jpeg,.png,.webp,.doc,.docx,.xls,.xlsx"
-        density="comfortable"
+        density="compact"
         :rules="[fileSizeRule]"
         prepend-icon=""
         :prepend-inner-icon="mdiPaperclip"
@@ -85,6 +91,7 @@
       <v-btn
         color="primary"
         size="small"
+        variant="tonal"
         class="mt-2"
         :loading="uploading"
         :disabled="!selectedFile || uploading"
@@ -175,7 +182,7 @@ async function uploadFile() {
       method: 'PUT',
       headers: {
         'Content-Type': file.type,
-        Authorization: `Bearer ${token}`,
+        'Authorization': `Bearer ${token}`,
       },
       body: file,
     })

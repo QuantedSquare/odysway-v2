@@ -1,20 +1,20 @@
 <template>
   <v-card
-    rounded="xl"
-    elevation="6"
-    class="pa-6 glass-surface"
+    rounded="lg"
+    elevation="0"
+    class="pa-5 bo-card"
   >
     <div class="d-flex align-center justify-space-between mb-4 flex-wrap ga-3">
       <div class="d-flex flex-column">
-        <span class="text-overline text-primary">{{ title }}</span>
-        <span class="text-h6 font-weight-bold">{{ subtitle }}</span>
+        <span class="bo-section-title">{{ title }}</span>
+        <span class="text-subtitle-1 font-weight-bold">{{ subtitle }}</span>
       </div>
       <div class="d-flex ga-2">
         <slot name="top-actions" />
       </div>
     </div>
 
-    <v-row class="">
+    <v-row>
       <v-col
         cols="12"
         md="7"
@@ -22,7 +22,7 @@
       >
         <v-card
           variant="text"
-          class="pa-4 glass-subtle rounded-lg"
+          class="pa-4 rounded-lg"
         >
           <div class="d-flex align-center justify-space-between mb-3">
             <div class="d-flex align-center ga-3">
@@ -31,7 +31,7 @@
                 color="primary"
                 label="Publiée"
                 inset
-                density="comfortable"
+                density="compact"
               />
               <v-chip
                 :color="localForm.published ? 'green-light' : 'warning'"
@@ -58,14 +58,14 @@
               color="green-light"
               label="Voyage individuel"
               inset
-              density="comfortable"
+              density="compact"
             />
             <slot name="travel" />
           </div>
         </v-card>
         <v-card
           variant="text"
-          class="pa-4 glass-subtle rounded-lg"
+          class="pa-4  rounded-lg"
         >
           <div class="text-subtitle-2 text-medium-emphasis mb-2">
             Dates & Prix
@@ -79,7 +79,7 @@
                 v-model="localForm.departure_date"
                 label="Date de départ"
                 type="date"
-                density="comfortable"
+                density="compact"
               />
             </v-col>
             <v-col
@@ -90,7 +90,7 @@
                 v-model="localForm.return_date"
                 label="Date de retour"
                 type="date"
-                density="comfortable"
+                density="compact"
               />
             </v-col>
             <v-col
@@ -102,7 +102,7 @@
                 label="Voyageurs min"
                 type="number"
                 min="0"
-                density="comfortable"
+                density="compact"
               />
             </v-col>
             <v-col
@@ -114,7 +114,7 @@
                 label="Voyageurs max"
                 type="number"
                 min="0"
-                density="comfortable"
+                density="compact"
               />
             </v-col>
             <v-col
@@ -127,14 +127,14 @@
                 prefix="€"
                 type="number"
                 min="0"
-                density="comfortable"
+                density="compact"
               />
             </v-col>
           </v-row>
         </v-card>
         <v-card
           variant="text"
-          class="pa-4 glass-subtle rounded-lg"
+          class="pa-4  rounded-lg"
         >
           <div class="text-subtitle-2 text-medium-emphasis mb-2">
             Statuts & affichage
@@ -150,7 +150,7 @@
                 item-title="label"
                 item-value="value"
                 label="Statut (initial / automatique)"
-                density="comfortable"
+                density="compact"
                 readonly
               />
             </v-col>
@@ -164,7 +164,7 @@
                 item-title="label"
                 item-value="value"
                 label="Statut affiché (custom)"
-                density="comfortable"
+                density="compact"
                 clearable
               />
             </v-col>
@@ -177,7 +177,7 @@
                 label="Places réservées (initial / automatique)"
                 type="number"
                 min="0"
-                density="comfortable"
+                density="compact"
                 readonly
               />
             </v-col>
@@ -189,7 +189,7 @@
                 v-model="localForm.displayed_booked_seat"
                 :items="bookedSeatOptions"
                 label="Places réservées (custom)"
-                density="comfortable"
+                density="compact"
                 clearable
               />
             </v-col>
@@ -204,7 +204,7 @@
       >
         <v-card
           variant="text"
-          class="pa-4 glass-subtle rounded-lg"
+          class="pa-4  rounded-lg"
         >
           <div class="text-subtitle-2 text-medium-emphasis mb-2">
             Badges & options
@@ -261,7 +261,7 @@
                   type="number"
                   min="0"
                   prefix="€"
-                  density="comfortable"
+                  density="compact"
                 />
               </TransitionGroup>
             </v-col>
@@ -282,7 +282,7 @@
                   v-if="hasCustomBadge"
                   v-model="localForm.badges"
                   label="Texte du badge"
-                  density="comfortable"
+                  density="compact"
                 />
               </Transition>
             </v-col>

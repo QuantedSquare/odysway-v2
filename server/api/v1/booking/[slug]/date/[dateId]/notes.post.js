@@ -31,6 +31,7 @@ export default defineEventHandler(async (event) => {
       travel_date_id: dateId,
       author_email: bookingUser?.email || 'unknown',
       author_name: bookingUser?.name || null,
+      author_picture: bookingUser?.picture || null,
       content: content.trim(),
     }])
     .select('*')

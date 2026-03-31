@@ -372,7 +372,7 @@ watch(enrichedDate, async () => {
   font-size: 11px!important;
   font-weight: 500!important;
   padding-left: 1px!important;
-  background-color: rgb(var(--v-theme-primary))!important;
+  background-color: rgba(43, 76, 82, 1)!important;
   color: #ffffff!important;
   border-radius: 999px!important;
   width: 20px!important;
@@ -380,6 +380,7 @@ watch(enrichedDate, async () => {
 }
 .custom-height-card{
     height: fit-content!important;
+    color: rgb(43, 76, 82)!important;
   }
   .custom-chip-height:deep(.v-chip){
     height: 25px!important;

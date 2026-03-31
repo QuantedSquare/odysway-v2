@@ -5,8 +5,8 @@ import { defineEventHandler, readBody, createError } from 'h3'
 
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
-  // const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
-  // if (isProdEnv) requireBookingUser(event)
+  const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
+  const bookingUser = isProdEnv ? requireBookingUser(event) : getBookingUserOrNull(event)
 
   const { dateId, slug } = event.context.params
   if (!dateId || !slug) {
@@ -115,5 +115,8 @@ export default defineEventHandler(async (event) => {
     Object.assign(data_to_update, { paiementLink: `${origin}/checkout?type=balance&booked_id=${bookedDate.id}` })
   }
   await activecampaign.updateDeal(dealId, data_to_update)
+
+  await logDateActivity(dateId, bookingUser, 'deal_assigned', { deal_id: dealId, booked_places: bookedPlaceCount })
+
   return bookedDate
 })

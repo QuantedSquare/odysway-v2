@@ -1,28 +1,98 @@
 <template>
   <v-container
     fluid
-    class="py-6 glass-page"
+    class="py-6"
   >
     <v-row class="align-center mb-4">
       <v-col
         cols="12"
         md="8"
       >
-        <h1 class="text-h5 text-md-h4 font-weight-bold mb-1">
+        <h1 class="text-h5 font-weight-bold mb-1">
           Gestion des voyages
         </h1>
         <p class="text-body-2 text-medium-emphasis mb-0">
-          Vue unifiée des voyages catalogue et sur-mesure, avec accès rapide aux dates.
+          Voyages groupe et sur-mesure, avec accès rapide aux dates.
         </p>
+      </v-col>
+      <v-col
+        cols="12"
+        md="4"
+        class="d-flex justify-end"
+      >
+        <v-btn
+          color="primary"
+          variant="flat"
+          :prepend-icon="mdiPlus"
+          @click="goToAddDate"
+        >
+          Ajouter une date
+        </v-btn>
       </v-col>
     </v-row>
 
+    <!-- Stats -->
+    <v-row class="mb-4">
+      <v-col
+        cols="4"
+        md="3"
+      >
+        <v-card
+          rounded="lg"
+          elevation="0"
+          class="bo-card pa-4"
+        >
+          <div class="text-h5 font-weight-bold">
+            {{ displayedTravels.length }}
+          </div>
+          <div class="text-caption text-medium-emphasis">
+            Voyages
+          </div>
+        </v-card>
+      </v-col>
+      <v-col
+        cols="4"
+        md="3"
+      >
+        <v-card
+          rounded="lg"
+          elevation="0"
+          class="bo-card pa-4"
+        >
+          <div class="text-h5 font-weight-bold">
+            {{ displayedTravels.reduce((sum, t) => sum + (t.nb_dates || 0), 0) }}
+          </div>
+          <div class="text-caption text-medium-emphasis">
+            Dates
+          </div>
+        </v-card>
+      </v-col>
+      <v-col
+        cols="4"
+        md="3"
+      >
+        <v-card
+          rounded="lg"
+          elevation="0"
+          class="bo-card pa-4"
+        >
+          <div class="text-h5 font-weight-bold text-success">
+            {{ displayedTravels.reduce((sum, t) => sum + (t.booked_seats || 0), 0) }}
+          </div>
+          <div class="text-caption text-medium-emphasis">
+            Places reservees
+          </div>
+        </v-card>
+      </v-col>
+    </v-row>
+
+    <!-- Filters -->
     <v-card
       rounded="lg"
-      class="mb-4 glass-surface"
-      elevation="8"
+      class="mb-4 bo-card"
+      elevation="0"
     >
-      <v-card-text>
+      <v-card-text class="pa-3">
         <v-row align="center">
           <v-col
             cols="12"
@@ -33,50 +103,48 @@
               label="Rechercher par titre ou slug"
               :prepend-inner-icon="mdiMagnify"
               clearable
-              density="comfortable"
+              density="compact"
+              hide-details
             />
           </v-col>
           <v-spacer />
           <v-col
             cols="12"
-            md="5"
-            class="d-flex justify-end  mb-4"
-          >
-            <v-btn
-              variant="text"
-              :color="tab === 'custom' ? 'primary' : 'secondary'"
-              @click="toggleToCustomTravels"
-            >
-              {{ tab === 'custom' ? 'Groupe/Individuel' : 'Sur-mesure' }}
-            </v-btn>
-            <v-btn
-              color="primary"
-              @click="goToAddDate"
-            >
-              + Ajouter une date
-            </v-btn>
-          </v-col>
-          <!-- <v-col
-            cols="12"
             md="4"
+            class="d-flex justify-end ga-2"
           >
-            <v-select
-              v-model="sortBy"
-              :items="sortOptions"
-              item-title="label"
-              item-value="value"
-              label="Trier"
-              density="comfortable"
-            />
-          </v-col> -->
+            <v-btn-toggle
+              v-model="tab"
+              mandatory
+              density="compact"
+              variant="outlined"
+              divided
+              rounded="lg"
+              color="primary"
+            >
+              <v-btn
+                value="catalogue"
+                size="small"
+              >
+                Groupe
+              </v-btn>
+              <v-btn
+                value="custom"
+                size="small"
+              >
+                Sur-mesure
+              </v-btn>
+            </v-btn-toggle>
+          </v-col>
         </v-row>
       </v-card-text>
     </v-card>
 
+    <!-- Data table -->
     <v-card
       rounded="lg"
-      class="glass-surface"
-      elevation="8"
+      class="bo-card"
+      elevation="0"
     >
       <v-data-table
         :headers="headers"
@@ -85,6 +153,7 @@
         class="elevation-0"
         :items-per-page="50"
         hover
+        density="compact"
       >
         <template #item="{ item }">
           <tr
@@ -92,11 +161,11 @@
             @click="goToTravel(item.travel_slug)"
           >
             <td>
-              <div class="d-flex align-center ga-3">
+              <div class="d-flex align-center ga-3 py-1">
                 <v-avatar
-                  color="grey-lighten-2"
-                  size="48"
-                  rounded="circle"
+                  color="surface-variant"
+                  size="40"
+                  rounded="lg"
                 >
                   <v-img
                     v-if="item.image"
@@ -105,23 +174,25 @@
                   />
                   <v-icon
                     v-else
-                    size="48"
+                    size="20"
+                    color="secondary"
                     :icon="mdiImageOff"
                   />
                 </v-avatar>
                 <div class="d-flex flex-column">
-                  <span class="font-weight-bold">{{ item.title || item.travel_slug }}</span>
+                  <span class="font-weight-bold text-body-2">{{ item.title || item.travel_slug }}</span>
                   <span class="text-caption text-medium-emphasis">{{ item.travel_slug }}</span>
                 </div>
               </div>
             </td>
             <td>
               <v-chip
-                :color="item.is_custom_travel ? 'purple' : 'primary'"
-                size="small"
+                :color="item.is_custom_travel ? 'info' : 'primary'"
+                size="x-small"
                 label
+                variant="tonal"
               >
-                {{ item.is_custom_travel ? 'Sur-mesure' : 'Groupe/Individuel' }}
+                {{ item.is_custom_travel ? 'Sur-mesure' : 'Groupe' }}
               </v-chip>
             </td>
             <td><span class="font-weight-medium">{{ item.nb_dates || 0 }}</span></td>
@@ -140,12 +211,21 @@
           </tr>
         </template>
         <template #no-data>
-          <div class="text-center py-6">
-            <p class="text-body-2 text-medium-emphasis mb-2">
-              Aucun voyage trouvé
+          <div class="text-center py-8">
+            <v-icon
+              size="40"
+              color="secondary"
+              class="mb-2"
+            >
+              {{ mdiImageOff }}
+            </v-icon>
+            <p class="text-body-2 text-medium-emphasis mb-3">
+              Aucun voyage trouve
             </p>
             <v-btn
               color="primary"
+              variant="tonal"
+              size="small"
               @click="goToAddDate"
             >
               Ajouter une date
@@ -160,7 +240,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
-import { mdiMagnify, mdiImageOff } from '@mdi/js'
+import { mdiMagnify, mdiImageOff, mdiPlus } from '@mdi/js'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 
 const search = ref('')
@@ -169,15 +249,15 @@ const tab = ref('catalogue')
 const sortBy = ref('dates_desc')
 const sanity = useSanity()
 
-const tabs = [
+const _tabs = [
   { label: 'Groupe/Individuel', value: 'catalogue' },
   { label: 'Sur-mesure', value: 'custom' },
 ]
 
-const sortOptions = [
+const _sortOptions = [
   { label: 'Plus de dates', value: 'dates_desc' },
   { label: 'Moins de dates', value: 'dates_asc' },
-  { label: 'Plus de réservations', value: 'booked_desc' },
+  { label: 'Plus de reservations', value: 'booked_desc' },
 ]
 
 const travelesListQuery = groq`*[_type == "voyage"]{
@@ -281,7 +361,7 @@ const goToAddDate = () => {
   router.push('/booking-management/add-date')
 }
 
-const toggleToCustomTravels = () => {
+const _toggleToCustomTravels = () => {
   if (tab.value === 'custom') {
     tab.value = 'catalogue'
   }

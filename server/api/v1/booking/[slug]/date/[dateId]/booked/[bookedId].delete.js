@@ -3,7 +3,7 @@ import { defineEventHandler, createError } from 'h3'
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
   const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
-  if (isProdEnv) requireBookingUser(event)
+  const bookingUser = isProdEnv ? requireBookingUser(event) : getBookingUserOrNull(event)
 
   const { bookedId } = event.context.params
 
@@ -33,6 +33,8 @@ export default defineEventHandler(async (event) => {
 
   // Remove departure record deal if no paying clients remain
   await departures.cleanupDepartureDealIfEmpty(travel_date_id)
+
+  await logDateActivity(travel_date_id, bookingUser, 'deal_removed', { deal_id: bookedRow.deal_id, booked_id: bookedId })
 
   console.log(`BMS: Successfully deleted booked reservation ${bookedId}, updated total booked seats to ${totalBooked}`)
   return { success: true }

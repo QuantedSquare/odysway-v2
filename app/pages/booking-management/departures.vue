@@ -1,22 +1,18 @@
 <template>
   <v-container
     fluid
-    class="py-6 glass-page"
+    class="py-6"
   >
     <v-row class="align-center mb-4">
       <v-col
         cols="12"
         md="8"
       >
-        <p class="text-overline text-primary mb-1">
-          Back-office
-        </p>
-        <h1 class="text-h5 text-md-h4 font-weight-bold mb-1">
-          Dossiers de départ
+        <h1 class="text-h5 font-weight-bold mb-1">
+          Dossiers de depart
         </h1>
         <p class="text-body-2 text-medium-emphasis mb-0">
-          Assignez un deal ActiveCampaign (pipeline Gestions Départs) à chaque date de voyage.
-          Les voyages avec des dates sans dossier apparaissent en premier.
+          Assignez un deal ActiveCampaign (pipeline Gestions Departs) a chaque date de voyage.
         </p>
       </v-col>
       <v-col
@@ -26,10 +22,11 @@
       >
         <v-btn
           variant="tonal"
+          size="small"
           :loading="loading"
           @click="fetchDates"
         >
-          Rafraîchir
+          Rafraichir
         </v-btn>
       </v-col>
     </v-row>
@@ -37,15 +34,16 @@
     <!-- Stats -->
     <v-row class="mb-4">
       <v-col
-        cols="6"
+        cols="4"
         md="3"
       >
         <v-card
           rounded="lg"
-          class="glass-surface pa-4 text-center"
-          elevation="4"
+          class="bo-card bo-stat-card pa-4"
+          elevation="0"
+          style="border-left-color: rgb(var(--v-theme-warning));"
         >
-          <div class="text-h4 font-weight-bold text-warning">
+          <div class="text-h5 font-weight-bold text-warning">
             {{ missingCount }}
           </div>
           <div class="text-caption text-medium-emphasis">
@@ -54,15 +52,16 @@
         </v-card>
       </v-col>
       <v-col
-        cols="6"
+        cols="4"
         md="3"
       >
         <v-card
           rounded="lg"
-          class="glass-surface pa-4 text-center"
-          elevation="4"
+          class="bo-card bo-stat-card pa-4"
+          elevation="0"
+          style="border-left-color: rgb(var(--v-theme-success));"
         >
-          <div class="text-h4 font-weight-bold text-success">
+          <div class="text-h5 font-weight-bold text-success">
             {{ assignedCount }}
           </div>
           <div class="text-caption text-medium-emphasis">
@@ -70,61 +69,64 @@
           </div>
         </v-card>
       </v-col>
+      <v-col
+        cols="4"
+        md="3"
+      >
+        <v-card
+          rounded="lg"
+          class="bo-card bo-stat-card pa-4"
+          elevation="0"
+          style="border-left-color: rgb(var(--v-theme-primary));"
+        >
+          <div class="text-h5 font-weight-bold">
+            {{ dates.length }}
+          </div>
+          <div class="text-caption text-medium-emphasis">
+            Total dates
+          </div>
+        </v-card>
+      </v-col>
     </v-row>
 
     <!-- Filters -->
-    <v-card
-      rounded="lg"
-      class="mb-4 glass-surface"
-      elevation="4"
-    >
-      <v-card-text>
-        <v-row align="center">
-          <v-col
-            cols="12"
-            md="5"
-          >
-            <v-text-field
-              v-model="search"
-              label="Rechercher par titre ou slug"
-              :prepend-inner-icon="mdiMagnify"
-              clearable
-              hide-details
-              density="comfortable"
-            />
-          </v-col>
-          <v-col
-            cols="12"
-            md="7"
-          >
-            <v-chip-group
-              v-model="filter"
-              selected-class="bg-primary text-white"
-              column
-            >
-              <v-chip
-                value="all"
-                label
-              >
-                Toutes
-              </v-chip>
-              <v-chip
-                value="missing"
-                label
-              >
-                Sans dossier
-              </v-chip>
-              <v-chip
-                value="assigned"
-                label
-              >
-                Avec dossier
-              </v-chip>
-            </v-chip-group>
-          </v-col>
-        </v-row>
-      </v-card-text>
-    </v-card>
+    <div class="d-flex align-center ga-3 mb-4 flex-wrap">
+      <v-text-field
+        v-model="search"
+        label="Rechercher par titre ou slug"
+        :prepend-inner-icon="mdiMagnify"
+        clearable
+        hide-details
+        density="compact"
+        style="max-width: 320px;"
+      />
+      <v-chip-group
+        v-model="filter"
+        selected-class="bg-primary text-white"
+      >
+        <v-chip
+          value="all"
+          label
+          size="small"
+        >
+          Toutes
+        </v-chip>
+        <v-chip
+          value="missing"
+          label
+          size="small"
+        >
+          Sans dossier
+        </v-chip>
+        <v-chip
+          value="assigned"
+          label
+          size="small"
+        >
+          Avec dossier
+        </v-chip>
+      </v-chip-group>
+    </div>
 
     <!-- List -->
     <div
@@ -148,8 +150,8 @@
           v-for="group in filteredGroups"
           :key="group.slug"
           rounded="lg"
-          class="mb-3 glass-surface"
-          elevation="4"
+          class="mb-3 bo-card"
+          elevation="0"
         >
           <v-expansion-panel-title class="py-3">
             <div class="d-flex align-center ga-3 w-100">
@@ -478,12 +480,13 @@ onMounted(fetchDates)
 
 <style scoped>
 .date-row {
-  border-bottom: 1px solid rgba(var(--v-border-color), var(--v-border-opacity));
+  border-bottom: 1px solid rgba(var(--v-theme-on-surface), 0.06);
 }
 .date-row:last-child {
   border-bottom: none;
 }
 .border-warning {
   border-left: 3px solid rgb(var(--v-theme-warning));
+  background: rgba(var(--v-theme-warning), 0.03);
 }
 </style>

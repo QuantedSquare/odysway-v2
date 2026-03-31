@@ -1,31 +1,30 @@
 <template>
   <v-container
     fluid
-    class="py-6 glass-page"
+    class="py-6"
   >
-    <v-row class="align-center mb-6">
+    <v-row class="align-center mb-4">
       <v-col
         cols="12"
         md="8"
       >
         <div class="d-flex align-center ga-3">
           <div>
-            <p class="text-overline text-primary mb-1">
-              Back-office dates
-            </p>
-            <h1 class="text-h5 text-md-h4 font-weight-bold mb-1">
+            <h1 class="text-h5 font-weight-bold mb-1">
               Nouvelle date de voyage
             </h1>
-            <p class="text-body-2 text-medium-emphasis">
-              Sélectionnez un voyage, ajustez les informations et publiez quand c’est prêt.
+            <p class="text-body-2 text-medium-emphasis mb-0">
+              Selectionnez un voyage, ajustez les informations et publiez quand c’est pret.
             </p>
           </div>
           <v-chip
             v-if="selectedTravel?.availabilityTypes?.includes('custom')"
-            color="purple"
+            color="info"
             label
+            size="small"
+            variant="tonal"
           >
-            Voyage sur-mesure
+            Sur-mesure
           </v-chip>
         </div>
       </v-col>
@@ -36,6 +35,7 @@
       >
         <v-btn
           variant="text"
+          size="small"
           @click="onCancel"
         >
           Retour
@@ -43,6 +43,7 @@
         <v-btn
           color="primary"
           variant="flat"
+          size="small"
           :disabled="!form.travel_slug || saving"
           :loading="saving"
           @click="onSave"
@@ -52,8 +53,33 @@
       </v-col>
     </v-row>
 
-    <v-row class="ga-4">
-      <v-col cols="12">
+    <!-- Alerts -->
+    <v-alert
+      v-if="saveSuccess"
+      type="success"
+      border="start"
+      variant="tonal"
+      class="mb-4"
+      density="compact"
+    >
+      Date ajoutee, redirection en cours...
+    </v-alert>
+    <v-alert
+      v-if="saveError"
+      type="error"
+      border="start"
+      variant="tonal"
+      class="mb-4"
+      density="compact"
+    >
+      {{ saveError }}
+    </v-alert>
+
+    <v-row>
+      <!-- Left: Form -->
+      <v-col
+        cols="12"
+      >
         <v-form @submit.prevent="onSave">
           <DateFormCard
             v-model="form"
@@ -62,7 +88,7 @@
             :show-custom-display="!isCustomTravel"
             readonly-booked-seat
             title="Date & affichage"
-            subtitle="Données publiques et internes"
+            subtitle="Donnees publiques et internes"
           >
             <template #travel>
               <v-autocomplete
@@ -74,7 +100,7 @@
                 label="Voyage"
                 clearable
                 hide-details
-                density="comfortable"
+                density="compact"
                 class="flex-1"
                 @update:model-value="onTravelSelect"
               />
@@ -84,9 +110,9 @@
               >
                 <v-text-field
                   :model-value="travelesMap[form.travel_slug]?.title"
-                  label="Voyage sélectionné"
+                  label="Voyage selectionne"
                   readonly
-                  density="comfortable"
+                  density="compact"
                 />
               </div>
             </template>
@@ -94,6 +120,7 @@
             <template #actions>
               <v-btn
                 variant="text"
+                size="small"
                 @click="onCancel"
               >
                 Annuler
@@ -101,60 +128,49 @@
               <v-btn
                 color="primary"
                 type="submit"
+                size="small"
                 :disabled="!form.travel_slug || saving"
                 :loading="saving"
               >
-                Créer la date
+                Creer la date
               </v-btn>
             </template>
           </DateFormCard>
         </v-form>
       </v-col>
 
+      <!-- Right: Preview -->
       <v-col
         cols="12"
-
+        md="8"
         class="d-flex flex-column ga-4"
       >
         <v-card
           v-if="!isCustomTravel && form.travel_slug"
           rounded="lg"
-          elevation="8"
-          class="pa-4 glass-surface"
+          elevation="0"
+          class="pa-4 bo-card"
         >
           <div class="d-flex justify-space-between align-center mb-3">
             <div class="d-flex flex-column">
-              <span class="text-subtitle-1 font-weight-bold">Prévisualisation</span>
+              <span class="bo-section-title mb-0">
+                Previsualisation
+              </span>
               <span class="text-caption text-medium-emphasis">Affichage site</span>
             </div>
             <v-chip
-              :color="form.published ? 'green-light' : 'warning'"
-              size="small"
+              :color="form.published ? 'success' : 'warning'"
+              size="x-small"
+              label
+              variant="tonal"
             >
-              {{ form.published ? 'Publiée' : 'Non publiée' }}
+              {{ form.published ? 'Publiee' : 'Non publiee' }}
             </v-chip>
           </div>
-          <DatesPricesItem :date="previewDate" />
+          <v-theme-provider theme="odysway">
+            <DatesPricesItem :date="previewDate" />
+          </v-theme-provider>
         </v-card>
-
-        <v-alert
-          v-if="saveSuccess"
-          type="success"
-          border="start"
-          variant="tonal"
-          class="mt-2 glass-subtle"
-        >
-          Date ajoutée, redirection en cours...
-        </v-alert>
-        <v-alert
-          v-if="saveError"
-          type="error"
-          border="start"
-          variant="tonal"
-          class="mt-2"
-        >
-          {{ saveError }}
-        </v-alert>
       </v-col>
     </v-row>
   </v-container>
