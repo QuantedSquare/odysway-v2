@@ -149,7 +149,7 @@ const notify = async (paymentSession, insuranceItem, dealCustomFields, client, i
   data.sign = getSignature(data)
 
   console.log('Sending data to Chapka:', data)
-
+  if (isDev) return
   try {
     const response = await axios.post(
       'https://api.chapka.fr/notify/?request=create',
