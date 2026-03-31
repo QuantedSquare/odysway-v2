@@ -47,6 +47,9 @@ export default eventHandler(async (event) => {
         console.log('=======hit=========', hit)
         return (hit.availabilityTypes?.includes('groupe') || hit.availabilityTypes?.includes('privatisation'))
       }
+      if (hit.type === 'destination') {
+        return (hit.voyageCount || 0) > 0
+      }
       return true
     }).map(hit => ({
       title: hit.title || hit.name,

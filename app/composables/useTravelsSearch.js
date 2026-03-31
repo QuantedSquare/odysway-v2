@@ -33,6 +33,7 @@ async function handleEmbededSearch(searchText, destinations, loading, optout = f
     const filteredResults = searchResult.filter(result => result.score >= SCORE_THRESHOLD)
 
     destinations.value = filteredResults
+    console.log('destinations', destinations.value)
     return filteredResults
   }
   catch (error) {
@@ -55,6 +56,7 @@ export function useTravelsSearch() {
     try {
       const { searchResult } = await memoizedSearch(searchTerm)
       destinations.value = searchResult
+      console.log('destinations', destinations.value)
     }
     catch (error) {
       console.error('Search failed:', error)
