@@ -396,7 +396,7 @@ const sendSlackNotification = (id, data) => {
     const emoji = travelType === 'Voyage de Groupe' ? ':rocket: ' : ':female-technologist:'
     const additionnalText = travelType === 'Voyage de Groupe' ? ' Aucune date dispo:' : ''
     const displayedUser = data.firstname || data.lastname ? `${data.firstname} ${data.lastname}` : data.email
-    const displayedTravel = nbTravelers ? `pax ${nbTravelers}` : ''
+    const displayedTravelers = nbTravelers ? `- pax ${nbTravelers} -` : ''
 
     axios({
       url: process.env.SLACK_URL_DEVIS,
@@ -408,7 +408,7 @@ const sendSlackNotification = (id, data) => {
             type: 'section',
             text: {
               type: 'mrkdwn',
-              text: `${emoji}${additionnalText} <https://odysway90522.activehosted.com/app/deals/${id}|${travelType} - ${displayedUser} - ${displayedTravel} - ${dealData.title}>`,
+              text: `${emoji} <https://odysway90522.activehosted.com/app/deals/${id}| ${additionnalText} ${travelType} - ${displayedUser} ${displayedTravelers} ${dealData.title}>`,
             },
           },
         ],

@@ -5,12 +5,12 @@
     <v-card-text v-if="model && +voyage.alreadyPaid < +voyage.totalTravelPrice">
       <v-row>
         <v-col cols="12">
-          <template v-if="isBooking">
+          <template v-if="isBooking && !isSurMesure">
             <div class="text-start">
               {{ page.payment.ask_for_option_text }}
             </div>
           </template>
-          <template v-else-if="route.query.type === 'deposit'">
+          <template v-else-if="route.query.type === 'deposit' && !isSurMesure">
             <v-switch
               v-model="checkedOption"
               inset
@@ -172,6 +172,7 @@ const { addSingleParam } = useParams()
 // console.log('....', +voyage.alreadyPaid, +voyage.totalTravelPrice)
 // Data
 // IsBooking à définir si une option dans le stepper uniquement pour poser une option
+const isSurMesure = computed(() => voyage.availabilityTypes?.includes('custom'))
 const isBooking = ref(route.query.type === 'booking')
 const checkedOption = ref(route.query.type === 'booking')
 const switch_accept_data_privacy = ref(route.query.type === 'booking')
