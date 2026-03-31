@@ -617,7 +617,7 @@
           </v-card-title>
           <v-card-text>
             <div v-if="selectedTraveler">
-              <div class="text-body-2 mb-3 pa-2 bg-surface-variant rounded">
+              <div class="text-body-2 mb-3 pa-2 bg-surface-variant text-primary rounded">
                 <strong>Voyageur:</strong> {{ selectedTraveler.name || selectedTraveler.email }}
               </div>
               <v-select

@@ -212,7 +212,7 @@
           <v-row>
             <v-col
               cols="12"
-              md="6"
+              xl="6"
             >
               <v-switch
                 v-model="localForm.early_bird"
@@ -227,7 +227,7 @@
             </v-col>
             <v-col
               cols="12"
-              md="6"
+              xl="6"
             >
               <v-switch
                 v-model="localForm.last_minute"
@@ -245,7 +245,7 @@
           <v-row class="mt-2">
             <v-col
               cols="12"
-              md="6"
+              xl="6"
             >
               <v-switch
                 v-model="localForm.include_flight"
@@ -268,7 +268,7 @@
 
             <v-col
               cols="12"
-              md="6"
+              xl="6"
             >
               <v-switch
                 v-model="hasCustomBadge"
