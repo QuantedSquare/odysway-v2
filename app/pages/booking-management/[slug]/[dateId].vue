@@ -414,6 +414,13 @@
                         required
                         density="compact"
                       />
+                      <v-switch
+                        v-model="assignWithOption"
+                        label="Poser une option"
+                        density="compact"
+                        hide-details
+                        class="mb-2"
+                      />
                       <v-btn
                         type="submit"
                         color="primary"
@@ -492,6 +499,25 @@
                   </v-icon>
                 </NuxtLink>
                 <v-spacer />
+                <v-btn
+                  v-if="traveler.email"
+                  icon
+                  size="x-small"
+                  color="warning"
+                  variant="text"
+                  :loading="placingOptionId === traveler.id"
+                  @click="placeOptionOnProspect(traveler)"
+                >
+                  <v-icon size="14">
+                    {{ mdiCalendarOutline }}
+                  </v-icon>
+                  <v-tooltip
+                    activator="parent"
+                    location="top"
+                  >
+                    Poser une option
+                  </v-tooltip>
+                </v-btn>
                 <v-btn
                   v-if="traveler.email"
                   icon
@@ -684,7 +710,7 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { mdiArrowRight, mdiDelete, mdiLinkEdit, mdiInformationOutline, mdiAirplaneTakeoff } from '@mdi/js'
+import { mdiArrowRight, mdiDelete, mdiLinkEdit, mdiInformationOutline, mdiAirplaneTakeoff, mdiCalendarOutline } from '@mdi/js'
 import dayjs from 'dayjs'
 import DateFormCard from '~/components/booking/DateFormCard.vue'
 import DateAttachments from '~/components/booking/DateAttachments.vue'
@@ -723,6 +749,8 @@ const dealUrl = ref('')
 const assigningDeal = ref(false)
 const assignDealError = ref('')
 const assignDealSuccess = ref(false)
+const assignWithOption = ref(false)
+const placingOptionId = ref(null)
 
 const departureDealUrl = ref('')
 const assigningDepartureDeal = ref(false)
@@ -809,9 +837,15 @@ const onAssignDeal = async () => {
       return
     }
     const dealId = match[1]
-    await bookingApi.assignDeal(slug, dateId, { dealId })
+    const payload = { dealId }
+    if (assignWithOption.value) {
+      payload.is_option = true
+      payload.expiracy_date = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString()
+    }
+    await bookingApi.assignDeal(slug, dateId, payload)
     assignDealSuccess.value = true
     dealUrl.value = ''
+    assignWithOption.value = false
     await fetchDetails()
   }
   catch (err) {
@@ -872,6 +906,25 @@ const deleteTraveler = async (id) => {
   if (!confirm('Supprimer ce voyageur ?')) return
   await bookingApi.deleteBooked(slug, dateId, id)
   await fetchDetails()
+}
+
+const placeOptionOnProspect = async (traveler) => {
+  if (!confirm(`Poser une option pour ${traveler.name || traveler.email} ?`)) return
+  placingOptionId.value = traveler.id
+  try {
+    await bookingApi.placeOption({ id: traveler.id, booked_places: +traveler.nbTravelers || 1 })
+    await $fetch(`/api/v1/ac/deals/update-with-bms?bookedId=${traveler.id}`, {
+      method: 'POST',
+      body: { stage: '27', currentStep: 'A posé une option' },
+    })
+    await fetchDetails()
+  }
+  catch (err) {
+    saveError.value = getApiErrorMessage(err, 'Erreur lors de la pose d\'option.')
+  }
+  finally {
+    placingOptionId.value = null
+  }
 }
 
 function openPaymentDialog(traveler) {

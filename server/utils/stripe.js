@@ -465,9 +465,6 @@ const handlePaymentSession = async (session, paymentType) => {
   }
   // Chapka notify
   // We previously notified chapka when payment was full or deposit, now we notify it when the first payment is made
-  console.log('INSURANCE TEST', deal.insurance, deal.alreadyPaid, deal.insurance
-  && deal.insurance !== 'Aucune Assurance'
-  && (!deal.alreadyPaid || +deal.alreadyPaid === 0))
 
   if (deal.insurance
     && deal.insurance !== 'Aucune Assurance'

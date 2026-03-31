@@ -68,13 +68,13 @@ export default defineEventHandler(async (event) => {
         }
       }
 
-      // Not paid (or no deal_id): delete the booked_date row, then recompute booked_seat + status.
-      const { error: deleteError } = await supabase
+      // Not paid (or no deal_id): convert to prospect (clear option, reset booked_places to 0).
+      const { error: updateError } = await supabase
         .from('booked_dates')
-        .delete()
+        .update({ is_option: false, expiracy_date: null, booked_places: 0 })
         .eq('id', row.id)
-      if (deleteError) {
-        console.error('Error deleting booked_date', row.id, deleteError)
+      if (updateError) {
+        console.error('Error converting expired option to prospect', row.id, updateError)
         continue
       }
 

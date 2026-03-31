@@ -108,6 +108,9 @@ export default defineEventHandler(async (event) => {
     slug: travel_date.travel_slug,
     linkBms: `${origin}/booking-management/${travel_date.travel_slug}/${dateId}`,
   }
+  if (is_option) {
+    Object.assign(data_to_update, { stage: '27', currentStep: 'A posé une option' })
+  }
   if (deal.group === '2') {
     Object.assign(data_to_update, { paiementLink: `${origin}/checkout?type=balance&booked_id=${bookedDate.id}` })
   }
