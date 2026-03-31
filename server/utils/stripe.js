@@ -463,11 +463,11 @@ const handlePaymentSession = async (session, paymentType) => {
         },
     })
   }
-  //   // Chapka notify
+  // Chapka notify
   // We previously notified chapka when payment was full or deposit, now we notify it when the first payment is made
   if (deal.insurance
     && deal.insurance !== 'Aucune Assurance'
-    && (+deal.alreadyPaid === 0)
+    && (!deal.alreadyPaid || +deal.alreadyPaid === 0)
   ) {
     const { data: lineItems } = await stripeCLI.checkout.sessions.listLineItems(checkoutId)
     session.lineItems = lineItems
