@@ -89,7 +89,7 @@ export default defineNuxtPlugin((app) => {
         backoffice: {
           dark: false,
           colors: {
-            'primary': '#3B82F6',
+            'primary': 'rgba(43, 76, 82, 1)',
             'primary-darken-1': '#2563EB',
             'secondary': '#64748B',
             'background': '#F8FAFC',

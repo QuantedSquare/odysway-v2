@@ -515,7 +515,9 @@
                     activator="parent"
                     location="top"
                   >
-                    Poser une option
+                    <div class="text-primary">
+                      Poser une option
+                    </div>
                   </v-tooltip>
                 </v-btn>
                 <v-btn
