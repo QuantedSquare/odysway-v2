@@ -406,9 +406,9 @@ const submitStepData = async () => {
       }
       trackReservationStep(2, voyage, model.value, additionalData)
 
-      emit('next')
       await createDeal(flattenedDeal)
       buttonLoading.value = false
+      emit('next')
     }
   }
   catch (error) {

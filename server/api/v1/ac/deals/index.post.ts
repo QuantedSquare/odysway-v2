@@ -19,7 +19,9 @@ export default defineEventHandler(async (event: H3Event): Promise<TypeDeal> => {
   }
 
   try {
+    const t0 = Date.now()
     const response = await activecampaign.createDeal(parsedBody.data)
+    console.log(`[create-deal] DONE dealId=${response} slug=${parsedBody.data.slug} in ${Date.now() - t0}ms`)
     return response
   }
   catch (err) {

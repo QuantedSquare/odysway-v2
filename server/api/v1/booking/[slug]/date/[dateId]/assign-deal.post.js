@@ -4,6 +4,7 @@ import { defineEventHandler, readBody, createError } from 'h3'
 // Also update the booked_dates table with the booked_places, is_option and expiracy_date. depending if it's an option or not.
 
 export default defineEventHandler(async (event) => {
+  const startTime = Date.now()
   const config = useRuntimeConfig()
   const bookingUser = getBookingUserOrNull(event)
 
@@ -11,11 +12,13 @@ export default defineEventHandler(async (event) => {
   if (!dateId || !slug) {
     throw createError({ statusCode: 400, statusMessage: 'slug et dateId requis' })
   }
-  const { dealId, booked_places, is_option, expiracy_date } = await readBody(event)
+  const { dealId, booked_places, is_option, expiracy_date, nbTravelers: bodyNbTravelers, alreadyPaid: bodyAlreadyPaid } = await readBody(event)
   if (!dealId) {
     throw createError({ statusCode: 400, statusMessage: 'dealId requis' })
   }
   const origin = config.public.siteURL
+  const skipAcFetch = typeof bodyNbTravelers === 'number' && typeof bodyAlreadyPaid === 'number'
+  console.log(`[assign-deal] START dealId=${dealId} dateId=${dateId} slug=${slug} skipAcFetch=${skipAcFetch}`)
 
   // Ensure the date exists and matches slug (avoid acting on wrong resource)
   const { data: travelDate, error: travelDateError } = await supabase
@@ -28,23 +31,34 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 404, statusMessage: 'Date introuvable' })
   }
 
-  // Fetch deal from ActiveCampaign
-  let deal
-  try {
-    const [fetchedDeal, customFields] = await Promise.all([
-      activecampaign.getDealById(dealId),
-      activecampaign.getDealCustomFields(dealId),
-    ])
-    deal = { ...fetchedDeal.deal, ...customFields }
-  }
-  catch {
-    throw createError({ statusCode: 502, statusMessage: 'Erreur lors de la récupération du deal AC' })
-  }
-  if (!deal) throw createError({ statusCode: 404, statusMessage: 'Deal introuvable' })
+  // When client provides nbTravelers/alreadyPaid, skip the AC fetch (~300-400ms saved)
+  let deal = null
+  let nbTravelers, alreadyPaid
 
-  // Extract nbTravelers from deal
-  const nbTravelers = +deal.nbTravelers
-  const alreadyPaid = +deal.alreadyPaid
+  if (skipAcFetch) {
+    nbTravelers = bodyNbTravelers
+    alreadyPaid = bodyAlreadyPaid
+  }
+  else {
+    // Fallback: fetch from AC (BMS / manual assignment flow)
+    const acFetchStart = Date.now()
+    try {
+      const [fetchedDeal, customFields] = await Promise.all([
+        activecampaign.getDealById(dealId),
+        activecampaign.getDealCustomFields(dealId),
+      ])
+      deal = { ...fetchedDeal.deal, ...customFields }
+    }
+    catch {
+      console.error(`[assign-deal] AC fetch FAILED dealId=${dealId} after ${Date.now() - acFetchStart}ms`)
+      throw createError({ statusCode: 502, statusMessage: 'Erreur lors de la récupération du deal AC' })
+    }
+    if (!deal) throw createError({ statusCode: 404, statusMessage: 'Deal introuvable' })
+    nbTravelers = +deal.nbTravelers
+    alreadyPaid = +deal.alreadyPaid
+    console.log(`[assign-deal] AC fetch done dealId=${dealId} in ${Date.now() - acFetchStart}ms`)
+  }
+
   if (!nbTravelers) throw createError({ statusCode: 400, statusMessage: 'Le deal ne contient pas nbTravelers' })
 
   // If user placed an option or already paid, he is counted as a booked traveler, otherwise he is just assigned to the deal temporarily
@@ -61,8 +75,12 @@ export default defineEventHandler(async (event) => {
     }])
     .select('*')
     .single()
+  if (bookedDate) {
+    console.log(`[assign-deal] Supabase insert OK bookedId=${bookedDate.id} dealId=${dealId} in ${Date.now() - startTime}ms`)
+  }
   const alreadyAssigned = error && error.message.includes('duplicate key value violates unique constraint')
   if (alreadyAssigned) {
+    console.warn(`[assign-deal] Duplicate dealId=${dealId} dateId=${dateId}`)
     const { data: existingBookedDate, error: existingError } = await supabase
       .from('booked_dates')
       .select('deal_id, travel_dates(id, travel_slug)')
@@ -79,7 +97,10 @@ export default defineEventHandler(async (event) => {
       },
     })
   }
-  else if (error) throw createError({ statusCode: 500, statusMessage: error.message })
+  else if (error) {
+    console.error(`[assign-deal] Supabase insert FAILED dealId=${dealId}`, error.message)
+    throw createError({ statusCode: 500, statusMessage: error.message })
+  }
 
   // Update travel_dates.booked_seat
   const { data: allBooked, error: sumError } = await supabase
@@ -92,7 +113,7 @@ export default defineEventHandler(async (event) => {
   if (recomputeRes?.error) throw createError({ statusCode: 500, statusMessage: recomputeRes.error })
 
   // If the deal has already paid, sync it with the departure record deal (pipeline 4)
-  if (bookedPlaceCount > 0 && alreadyPaid > 0) {
+  if (bookedPlaceCount > 0 && alreadyPaid > 0 && deal) {
     await departures.handlePaymentForDeparture(bookedDate, deal.title, deal.contact)
   }
 
@@ -110,15 +131,11 @@ export default defineEventHandler(async (event) => {
   if (is_option) {
     Object.assign(data_to_update, { stage: '27', currentStep: 'A posé une option' })
   }
-  if (deal.group === '2') {
-    Object.assign(data_to_update, { paiementLink: `${origin}/checkout?type=balance&booked_id=${bookedDate.id}` })
-  }
-  else {
-    Object.assign(data_to_update, { paiementLink: `${origin}/checkout?type=balance&booked_id=${bookedDate.id}` })
-  }
+  Object.assign(data_to_update, { paiementLink: `${origin}/checkout?type=balance&booked_id=${bookedDate.id}` })
   await activecampaign.updateDeal(dealId, data_to_update)
 
   await logDateActivity(dateId, bookingUser, 'deal_assigned', { deal_id: dealId, booked_places: bookedPlaceCount })
 
+  console.log(`[assign-deal] DONE dealId=${dealId} bookedId=${bookedDate.id} totalTime=${Date.now() - startTime}ms`)
   return bookedDate
 })

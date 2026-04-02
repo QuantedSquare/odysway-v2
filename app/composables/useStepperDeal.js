@@ -30,10 +30,10 @@ export function useStepperDeal() {
 
   const wait = ms => new Promise(resolve => setTimeout(resolve, ms))
 
-  const assignDealWithRetry = async ({ slug, dateId, dealIdToAssign, booked_places = 0, is_option, expiracy_date }, { maxAttempts = 3, baseDelayMs = 700 } = {}) => {
+  const assignDealWithRetry = async ({ slug, dateId, dealIdToAssign, booked_places = 0, is_option, expiracy_date, nbTravelers, alreadyPaid }, { maxAttempts = 3, baseDelayMs = 700 } = {}) => {
     assignStatus.value = 'assigning'
     assignError.value = null
-    pendingAssignPayload.value = { slug, dateId, dealIdToAssign, booked_places, is_option, expiracy_date }
+    pendingAssignPayload.value = { slug, dateId, dealIdToAssign, booked_places, is_option, expiracy_date, nbTravelers, alreadyPaid }
 
     let lastError = null
     for (let attempt = 1; attempt <= maxAttempts; attempt++) {
@@ -43,6 +43,8 @@ export function useStepperDeal() {
           booked_places,
           is_option,
           expiracy_date,
+          nbTravelers,
+          alreadyPaid,
         })
 
         dealId.value = addedBookedDate.deal_id
@@ -89,6 +91,8 @@ export function useStepperDeal() {
         dateId: date_id,
         dealIdToAssign: res,
         booked_places: 0,
+        nbTravelers: body.nbTravelers,
+        alreadyPaid: 0,
       })
 
       if (!addedBookedDate) return false
@@ -99,7 +103,7 @@ export function useStepperDeal() {
         paiementLink,
       }
 
-      updateDeal(bodyWithPaymentLink).catch((error) => {
+      updateDeal(bodyWithPaymentLink, addedBookedDate.id).catch((error) => {
         console.error('Error updating deal with payment link:', error)
       })
 
@@ -113,9 +117,9 @@ export function useStepperDeal() {
     }
   }
 
-  const updateDeal = async (body) => {
+  const updateDeal = async (body, explicitBookedId) => {
     console.log('===========BODY IN UPDATE DEAL===========', body)
-    const currentBookedId = route.query.booked_id || bookedId.value
+    const currentBookedId = explicitBookedId || route.query.booked_id || bookedId.value
     if (!currentBookedId) return false
     await apiRequest('/ac/deals/update-with-bms?bookedId=' + currentBookedId, 'post', body)
     return true
