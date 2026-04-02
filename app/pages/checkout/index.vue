@@ -78,7 +78,7 @@ definePageMeta({ layout: 'funnel' })
 useSeoMeta({
   htmlAttrs: { lang: 'fr' },
   robots: 'noindex, follow',
-  canonical: 'https://www.odysway.com/',
+  canonical: 'https://odysway.com/',
 })
 
 const img = useImage()
