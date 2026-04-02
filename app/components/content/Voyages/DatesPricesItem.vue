@@ -92,17 +92,36 @@
               <strong>Last Minute</strong>
             </span>
           </v-chip>
-          <v-chip
+          <v-tooltip
             v-if="enrichedDate.badges?.length > 0"
-            color="green-light"
+            location="top"
+            :text="enrichedDate.badges"
+            open-delay="300"
           >
-            <span class="d-flex align-center ga-1 mb-1">
-              <v-icon>
-                {{ mdiCalendarHeart }}
-              </v-icon>
-              <strong>{{ enrichedDate.badges }}</strong>
-            </span>
-          </v-chip>
+            <template #activator="{ props }">
+              <v-chip
+                v-bind="props"
+                color="green-light"
+                class="overflow-hidden text-truncate"
+                style="max-width: 170px;"
+              >
+                <span
+                  class="d-flex align-center ga-1 mb-1"
+                  style="min-width: 0;"
+                >
+                  <v-icon>
+                    {{ mdiCalendarHeart }}
+                  </v-icon>
+                  <strong
+                    class="text-truncate"
+                    style="max-width: 110px; display: inline-block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"
+                  >
+                    {{ enrichedDate.badges }}
+                  </strong>
+                </span>
+              </v-chip>
+            </template>
+          </v-tooltip>
         </v-row>
         <v-row class="pl-5 pl-md-2 pt-1 d-none d-sm-flex d-md-none flex-column justify-center align-start  justify-lg-start">
           <span
