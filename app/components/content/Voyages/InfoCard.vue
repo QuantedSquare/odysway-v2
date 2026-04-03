@@ -138,7 +138,7 @@
                 block
                 rounded="md"
                 :to="`/calendly?travelTitle=${voyage.title}`"
-                @click="trackRdvClick()"
+                @click="trackRdvClick('voyage-info-card')"
               >
                 <div class="d-flex align-center ga-2">
                   <SanityImage
@@ -275,7 +275,7 @@ const displayedDates = computed(() => {
 })
 function handleAllDeparturesClick() {
   trackCtaClick({
-    ctaId: 'button-see-all-dates',
+    ctaId: 'button-see-all-dates-side-card-page-voyage',
     ctaLabel: stickyBlock.dateButtonText,
     ctaUrl: '#dates-container',
   })
@@ -283,16 +283,16 @@ function handleAllDeparturesClick() {
 }
 
 function handleIndivClick() {
-  trackRdvClick()
+  trackRdvClick('voyage-info-card-indiv')
   trackCtaClick({
-    ctaId: 'button-indiv-funnel',
+    ctaId: 'button-indiv-funnel-side-card-page-voyage',
     ctaLabel: stickyBlock.privatisationText,
     ctaUrl: `/devis?slug=${voyage.slug.current}`,
   })
 }
 function handleAskDevis() {
   trackCtaClick({
-    ctaId: 'button-ask-devis',
+    ctaId: 'button-ask-devis-side-card-page-voyage',
     ctaLabel: 'Demander un devis',
     ctaUrl: `/devis?slug=${typeof voyage.slug === 'object' ? voyage.slug.current : voyage.slug}`,
   })

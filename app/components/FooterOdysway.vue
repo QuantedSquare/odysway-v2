@@ -280,7 +280,7 @@ const handleFooterContactClick = () => {
 
   // Track RDV if it's a calendly/rdv link
   if (buttonLink.includes('calendly') || buttonLink.toLowerCase().includes('rdv')) {
-    trackRdvClick()
+    trackRdvClick('footer')
   }
 
   // Track CTA

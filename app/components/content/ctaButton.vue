@@ -71,7 +71,7 @@ const { trackRdvClick, trackCtaClick } = useGtmTracking()
 const handleClick = () => {
   // Track RDV click if link contains calendly or rdv keywords
   if (props.link.includes('calendly') || props.link.toLowerCase().includes('rdv')) {
-    trackRdvClick()
+    trackRdvClick(props.ctaId)
   }
 
   // Track generic CTA click

@@ -250,7 +250,7 @@ const nextStep = () => {
   addSingleParam('step', nextStepValue.toString())
 
   if (nextStepValue === 1 && skipperMode.value === 'quick') {
-    trackRdvClick()
+    trackRdvClick('checkout-stepper')
   }
   else if (nextStepValue === 1) {
     trackReservationStep(1, voyage, dynamicDealValues.value)

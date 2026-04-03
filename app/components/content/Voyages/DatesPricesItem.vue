@@ -359,7 +359,7 @@ const handleBookingClick = async () => {
         ...formattedVoyage,
         item_variant: `${dayjs(enrichedDate.value.departure_date).format('DD/MM/YY')} - ${dayjs(enrichedDate.value.return_date).format('DD/MM/YY')}`,
       }
-      trackAddToWishlist(voyageWithDate, 1, props.voyage.pricing?.startingPrice)
+      trackAddToWishlist(voyageWithDate, 1, props.voyage.pricing?.startingPrice, 'dates-prices-item')
     }
 
     await generateCheckoutLink() // always wait for it

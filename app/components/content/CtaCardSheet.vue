@@ -61,7 +61,7 @@ const { data: faqTextes } = await useAsyncData('faq-textes', () =>
 )
 
 function redirectToCalendly() {
-  trackRdvClick()
+  trackRdvClick('cta-card-sheet')
 
   // if (route.name === 'search') {
   //   router.push('/calendly?fromSearch')

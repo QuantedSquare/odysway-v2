@@ -24,6 +24,7 @@
           :link="page.ctaButton.link"
           :external="page.ctaButton.external"
           class="my-8"
+          cta-id="page-entreprise-btn-1"
         >
           <template #text>
             {{ page.ctaButton.text }}
@@ -41,6 +42,7 @@
           :link="page.ctaButton.link"
           :external="page.ctaButton.external"
           class="my-8"
+          cta-id="page-entreprise-btn-2"
         >
           <template #text>
             {{ page.ctaButton.text }}
@@ -58,6 +60,7 @@
           :link="page.ctaButton.link"
           :external="page.ctaButton.external"
           class="my-8"
+          cta-id="page-entreprise-btn-3"
         >
           <template #text>
             {{ page.ctaButton.text }}
@@ -82,6 +85,7 @@
           :link="page.ctaButton.link"
           :external="page.ctaButton.external"
           class="my-8"
+          cta-id="page-entreprise-btn-4"
         >
           <template #text>
             {{ page.ctaButton.text }}
@@ -97,7 +101,6 @@ definePageMeta({
   layout: 'simple-pages',
 })
 
-const route = useRoute()
 // #TODO Page settings à définir
 const entreprisePageQuery = groq`*[_type == "entreprise"][0]{
   ...,

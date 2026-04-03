@@ -126,9 +126,10 @@ export const useGtmTracking = () => {
   /**
    * Track clic_nav_slider event
    */
-  const trackNavSliderClick = () => {
+  const trackNavSliderClick = (location = null) => {
     pushToDataLayer({
       event: 'clic_nav_slider',
+      ...location && { cta_id: location },
     })
   }
 
@@ -198,9 +199,11 @@ export const useGtmTracking = () => {
   /**
    * Track clic_rdv event
    */
-  const trackRdvClick = () => {
+  const trackRdvClick = (location = null) => {
     pushToDataLayer({
       event: 'clic_rdv',
+      // Use the cta_id to hint where the cta is located
+      ...location && { cta_id: location },
     })
   }
 
@@ -225,9 +228,10 @@ export const useGtmTracking = () => {
   /**
    * Track clic_appel event
    */
-  const trackCallClick = () => {
+  const trackCallClick = (location = null) => {
     pushToDataLayer({
       event: 'clic_appel',
+      ...location && { cta_id: location },
     })
   }
 
@@ -398,7 +402,7 @@ export const useGtmTracking = () => {
    * Track add_to_wishlist event - Date selection
    * CSV line 174
    */
-  const trackAddToWishlist = (voyage, quantity = 1, totalValue = null) => {
+  const trackAddToWishlist = (voyage, quantity = 1, totalValue = null, location = null) => {
     if (!voyage) return
 
     const itemWithQuantity = {
@@ -410,6 +414,7 @@ export const useGtmTracking = () => {
     })
     pushToDataLayer({
       event: 'add_to_wishlist',
+      ...location && { cta_id: location },
       ecommerce: {
         value: totalValue || (voyage.price * quantity) || 0,
         currency: 'EUR',

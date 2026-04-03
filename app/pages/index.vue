@@ -46,7 +46,10 @@
             :voyages="homeSanity.franceTrips.voyagesFrance"
             :list-name="homeSanity.franceTrips.title"
           >
-            <LazyHorizontalCarousel text-color="primary">
+            <LazyHorizontalCarousel
+              text-color="primary"
+              slider-name="home-france-trips"
+            >
               <template #title>
                 <span style="color: rgba(43, 76, 82, 1)">
                   {{ homeSanity.franceTrips.title }}
@@ -124,7 +127,10 @@
             :voyages="homeSanity.guaranteedDepartures.voyagesGuaranteedDepartures"
             :list-name="homeSanity.guaranteedDepartures.title"
           >
-            <LazyHorizontalCarousel :text-color="'primary'">
+            <LazyHorizontalCarousel
+              :text-color="'primary'"
+              slider-name="home-departs-garantis"
+            >
               <template #title>
                 <span style="color: rgba(43, 76, 82, 1)">
                   {{ homeSanity.guaranteedDepartures.title }}
@@ -162,7 +168,10 @@
             :voyages="homeSanity.summerTravel.voyagesSummerTravel"
             :list-name="homeSanity.summerTravel.title"
           >
-            <LazyHorizontalCarousel :text-color="'primary'">
+            <LazyHorizontalCarousel
+              :text-color="'primary'"
+              slider-name="home-ete"
+            >
               <template #title>
                 {{ homeSanity.summerTravel.title }}
               </template>
@@ -206,7 +215,10 @@
             :voyages="homeSanity.unforgettableTravels.voyagesUnforgettableTravels"
             :list-name="homeSanity.unforgettableTravels.title"
           >
-            <LazyHorizontalCarousel :text-color="'white'">
+            <LazyHorizontalCarousel
+              :text-color="'white'"
+              slider-name="home-voyages-inoubliables"
+            >
               <template #title>
                 {{ homeSanity.unforgettableTravels.title }}
               </template>

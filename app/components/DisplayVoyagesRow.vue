@@ -13,6 +13,7 @@
         :image="content.image?.src"
         :title="content.title"
         :description="content.discoveryTitle"
+        slider-name="voyages-row"
       >
         <template #title>
           <h3 class="custom-title">

@@ -87,7 +87,7 @@
             :voyages="voyagePropositions"
             list-name="D'autres idées de voyages"
           >
-            <LazyHorizontalCarousel>
+            <LazyHorizontalCarousel slider-name="voyage-autres-idees">
               <template #title>
                 <h4 class="text-primary text-custom-size">
                   D'autres idées de voyages

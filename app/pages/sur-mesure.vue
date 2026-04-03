@@ -21,6 +21,7 @@
           :link="getButtonLink(page.ctaButton.link)"
           :external="page.ctaButton.external"
           class="mt-8"
+          cta-id="cta-btn-page-sur-mesure"
         >
           <template #text>
             {{ page.ctaButton.text }}

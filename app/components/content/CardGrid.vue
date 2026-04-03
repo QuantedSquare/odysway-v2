@@ -28,6 +28,7 @@
     <HorizontalCarousel
       v-else
       :center-title="true"
+      slider-name="card-grid"
     >
       <template #title>
         <slot name="title" />

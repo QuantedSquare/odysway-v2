@@ -92,6 +92,10 @@ const props = defineProps({
     type: String,
     default: 'primary',
   },
+  sliderName: {
+    type: String,
+    default: null,
+  },
 })
 
 const { trackNavSliderClick } = useGtmTracking()
@@ -145,12 +149,12 @@ const scrollAmount = computed(() => {
 
 const handlePrevClick = () => {
   x.value -= scrollAmount.value
-  trackNavSliderClick()
+  trackNavSliderClick(props.sliderName)
 }
 
 const handleNextClick = () => {
   x.value += scrollAmount.value
-  trackNavSliderClick()
+  trackNavSliderClick(props.sliderName)
 }
 </script>
 

@@ -169,7 +169,7 @@ const fallback = {
 const rdvDialog = ref(false)
 
 const openRdv = () => {
-  trackRdvClick()
+  trackRdvClick('checkout-complet')
   rdvDialog.value = true
 }
 

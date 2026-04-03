@@ -69,7 +69,7 @@
                   <SmartLink
                     :to="faqTextes?.faqSection?.faqHomeSubText?.linkOnText2"
                     :link-class="'text-secondary font-weight-medium'"
-                    @click="trackRdvClick"
+                    @click="trackRdvClick('voyage-faq')"
                   >
                     {{ faqTextes?.faqSection?.faqHomeSubText?.text2 }}
                   </SmartLink>

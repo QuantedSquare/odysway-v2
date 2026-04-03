@@ -184,12 +184,12 @@ function handleButton3Click() {
 }
 
 function handleButton4Click() {
-  trackCallClick()
+  trackCallClick('header-desktop')
 }
 
 function handleButton5Click() {
   if (header.button5.link.includes('calendly') || header.button5.link.toLowerCase().includes('rdv')) {
-    trackRdvClick()
+    trackRdvClick('header-desktop')
   }
 
   router.push(header.button5.link)

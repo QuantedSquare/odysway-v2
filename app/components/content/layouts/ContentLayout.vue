@@ -26,6 +26,7 @@
           />
           <HorizontalCarousel
             :show-buttons="displayedData?.items.length > 4"
+            slider-name="content-layout-thematique-carousel"
           >
             <template #title>
               <h3 class="custom-title">

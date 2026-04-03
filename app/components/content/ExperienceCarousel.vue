@@ -6,6 +6,7 @@
     <LazyHorizontalCarousel
       v-if="experiences"
       :show-buttons="experiences.length > 4"
+      slider-name="experiences"
     >
       <template #title>
         <slot name="title" />

@@ -20,6 +20,7 @@
           v-if="page.ctaButton"
           :link="getButtonLink(page.ctaButton.link)"
           class="mt-8"
+          cta-id="cheques-vacances"
         >
           <template #text>
             {{ page.ctaButton.text }}

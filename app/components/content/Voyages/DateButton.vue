@@ -131,7 +131,7 @@ const handleDateClick = async () => {
         ctaLabel: 'Réserver',
         ctaUrl: checkoutLink.value,
       })
-      trackAddToWishlist(voyageWithDate, 1, props.voyage.pricing?.startingPrice)
+      trackAddToWishlist(voyageWithDate, 1, props.voyage.pricing?.startingPrice, 'date-button-info-card')
     }
 
     // Generate link if not already generated
