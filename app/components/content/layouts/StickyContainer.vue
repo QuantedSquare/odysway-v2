@@ -17,13 +17,9 @@
       <v-col
         cols="12"
         md="4"
-        class="d-none d-md-block align-self-start"
+        class="d-none d-md-block align-self-start position-sticky sticky-top-right"
       >
-        <div
-          class="position-sticky sticky-top-right"
-        >
-          <slot name="right-side" />
-        </div>
+        <slot name="right-side" />
       </v-col>
     </v-row>
   </v-container>
