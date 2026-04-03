@@ -32,7 +32,7 @@
             rounded="md"
             color="primary"
             class="text-body-2 font-weight-bold text-decoration-none"
-            @click="noGroupTravel ? navigateTo(`/devis?slug=${slug}`) : goTo('#dates-container', { offset: -200 })"
+            @click="handleClick"
           >
             {{ noGroupTravel ? 'Demander un devis' : dateSections.bookingButtonText }}
           </v-btn-secondary>
@@ -46,8 +46,9 @@
 import { useGoTo } from 'vuetify'
 
 const goTo = useGoTo()
+const { trackCtaClick } = useGtmTracking()
 
-defineProps({
+const props = defineProps({
   dateSections: {
     type: Object,
     required: true,
@@ -65,6 +66,17 @@ defineProps({
     required: true,
   },
 })
+
+const handleClick = () => {
+  if (props.noGroupTravel) {
+    trackCtaClick({ ctaId: 'bottom-bar-devis', ctaLabel: 'Demander un devis', ctaUrl: `/devis?slug=${props.slug}` })
+    navigateTo(`/devis?slug=${props.slug}`)
+  }
+  else {
+    trackCtaClick({ ctaId: 'bottom-bar-book', ctaLabel: props.dateSections.bookingButtonText, ctaUrl: '#dates-container' })
+    goTo('#dates-container', { offset: -200 })
+  }
+}
 </script>
 
 <style scoped>
