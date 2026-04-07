@@ -105,6 +105,36 @@
         </v-col>
       </v-row>
     </template>
+    <v-row v-if="isPrivatisationAvailable && isGroupeAvailable">
+      <v-col class="bg-grey-light-3 rounded-lg mx-3 d-flex flex-column align-center justify-center ga-6 my-5 py-10">
+        <div class="text-h4 font-weight-bold text-primary text-center">
+          {{ indivSection.title }}
+        </div>
+        <v-btn
+          height="54"
+          :to="`/devis?slug=${route.params.voyageSlug}`"
+        >
+          <div class="text-h6 font-weight-bold">
+            {{ indivSection.textButton }}
+          </div>
+        </v-btn>
+      </v-col>
+    </v-row>
+    <v-row v-if="isPrivatisationAvailable && !isGroupeAvailable">
+      <v-col class="bg-grey-light-3 rounded-lg mx-3 d-flex flex-column align-center justify-center ga-6 my-5 py-10">
+        <div class="text-h4 font-weight-bold text-primary text-center">
+          {{ indivSection.titleOnlyPrivatisationAvailable }}
+        </div>
+        <v-btn
+          height="54"
+          :to="`/devis?slug=${route.params.voyageSlug}`"
+        >
+          <div class="text-h6 font-weight-bold">
+            {{ indivSection.textButtonDevis }}
+          </div>
+        </v-btn>
+      </v-col>
+    </v-row>
     <ContactUsSection
       v-if="!isPrivatisationAvailable"
       :contact-section="contactSection"
@@ -120,6 +150,8 @@ import dayjs from 'dayjs'
 const goTo = useGoTo()
 const { dates } = useDates()
 const isExpanded = ref(false)
+const route = useRoute()
+
 const props = defineProps({
   dateSections: {
     type: Object,
@@ -153,9 +185,13 @@ const props = defineProps({
     type: Object,
     default: null,
   },
+  indivSection: {
+    type: Object,
+    default: null,
+  },
 })
 
-const { dateSections, contactSection, isGroupeAvailable, isPrivatisationAvailable, closingDays } = props
+const { dateSections, indivSection, isGroupeAvailable, isPrivatisationAvailable, closingDays } = props
 
 watch(isExpanded, (newValue) => {
   if (!newValue) {

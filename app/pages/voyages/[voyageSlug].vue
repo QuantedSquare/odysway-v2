@@ -71,6 +71,7 @@
             :last-minute-price="voyage.pricing.lastMinuteReduction"
             :early-bird-price="voyage.pricing.earlyBirdReduction || 0"
             :voyage="voyage"
+            :indiv-section="page.indivSection"
           />
 
           <LazyPriceDetailsContainer
