@@ -57,10 +57,15 @@
             :housing-mood-title="page.housingMoodTitle"
           />
 
+          <LazyContactUsSection
+            v-if="!voyage.availabilityTypes?.includes('groupe') && voyage.availabilityTypes?.includes('privatisation')"
+            :contact-section="page.contactSection"
+          />
+
           <LazyDatesPricesContainer
             :closing-days="voyage.closingDays"
+            :contact-section="page.contactSection"
             :date-sections="page.dateSections"
-            :indiv-section="page.indivSection"
             :is-groupe-available="voyage.availabilityTypes?.includes('groupe')"
             :is-privatisation-available="voyage.availabilityTypes?.includes('privatisation')"
             :last-minute-price="voyage.pricing.lastMinuteReduction"
@@ -158,7 +163,15 @@ const { formatVoyageForGtm } = useGtmVoyageFormatter()
 
 const voyagePageQuery = `
   *[_type == "page_voyage"][0]{
-    ...
+    ...,
+    contactSection{
+      ...,
+      teamMembers[]->{
+        _id,
+        name,
+        image
+      }
+    }
   }
 `
 const voyageQuery = `

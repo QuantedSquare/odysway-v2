@@ -294,6 +294,81 @@ export const pageVoyageType = defineType({
       validation: Rule => Rule.required()
     }),
 
+    defineField({
+      name: 'contactSection',
+      title: 'Section Discuter avec nous',
+      type: 'object',
+      group: 'content_sections',
+      fields: [
+        defineField({
+          name: 'title',
+          title: 'Titre',
+          type: 'string',
+        }),
+        defineField({
+          name: 'subtitle',
+          title: 'Sous-titre',
+          type: 'string',
+        }),
+        defineField({
+          name: 'buttonText',
+          title: 'Texte Bouton',
+          type: 'string',
+        }),
+        defineField({
+          name: 'dialogTitle',
+          title: 'Titre Dialog',
+          type: 'string',
+        }),
+        defineField({
+          name: 'dialogSubtitle',
+          title: 'Sous-titre Dialog',
+          type: 'string',
+        }),
+        defineField({
+          name: 'dialogSchedule',
+          title: 'Horaires',
+          type: 'string',
+        }),
+        defineField({
+          name: 'whatsappLabel',
+          title: 'Label WhatsApp',
+          type: 'string',
+        }),
+        defineField({
+          name: 'whatsappUrl',
+          title: 'URL WhatsApp',
+          type: 'url',
+        }),
+        defineField({
+          name: 'whatsappSubtitle',
+          title: 'Sous-titre WhatsApp',
+          type: 'string',
+        }),
+        defineField({
+          name: 'phoneLabel',
+          title: 'Label Téléphone',
+          type: 'string',
+        }),
+        defineField({
+          name: 'phoneNumber',
+          title: 'Numéro Téléphone',
+          type: 'string',
+        }),
+        defineField({
+          name: 'phoneSubtitle',
+          title: 'Sous-titre Téléphone',
+          type: 'string',
+        }),
+        defineField({
+          name: 'teamMembers',
+          title: 'Membres équipe',
+          type: 'array',
+          of: [{type: 'reference', to: [{type: 'teamMember'}]}],
+        }),
+      ]
+    }),
+
     // Date Sections
     defineField({
       name: 'dateSections',
