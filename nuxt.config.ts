@@ -10,7 +10,6 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxtjs/seo',
     '@nuxt/image',
-    'nuxt-calendly',
     '@nuxtjs/sanity',
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
@@ -170,11 +169,6 @@ export default defineNuxtConfig({
         },
       },
     },
-  },
-  calendly: {
-    isEnabled: true,
-    loadWidgetCSS: false,
-    loadWidgetCloseIconSvg: false,
   },
   eslint: {
     config: {

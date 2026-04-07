@@ -94,12 +94,6 @@ export function useCalEmbed() {
     })
   }
 
-  function onRouteChanged(calNs, callback) {
-    on(calNs, '__routeChanged', () => {
-      callback?.()
-    })
-  }
-
   function onNavigatedToBooker(calNs, callback) {
     on(calNs, 'navigatedToBooker', () => {
       callback?.()
@@ -111,7 +105,6 @@ export function useCalEmbed() {
     on,
     onLinkReady,
     onBookingSuccess,
-    onRouteChanged,
     onNavigatedToBooker,
     isReady,
   }

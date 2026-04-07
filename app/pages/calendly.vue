@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <CalendlyContainer :travel-title="titre" />
+    <CalContainer :travel-title="titre" />
   </v-container>
 </template>
 
