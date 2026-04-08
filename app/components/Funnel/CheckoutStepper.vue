@@ -13,7 +13,7 @@
       <v-row class="funnel-stepper d-flex justify-center">
         <v-col
           cols="12"
-          :md="currentStep > 0 ? 7 : 12"
+          :md="7"
           class="d-flex justify-center "
         >
           <v-card
@@ -21,17 +21,6 @@
             :class="skipperMode !== 'summary' && currentStep == 1 ? 'w-100' : ''"
             :elevation="skipperMode !== 'summary' && currentStep < 5 ? 2 : 0"
           >
-            <Transition name="fade">
-              <v-img
-                v-if=" skipperMode !== 'summary' && voyage.imgSrc && currentStep === 0"
-                color="surface-variant"
-                height="100"
-                :src="voyage.imgSrc"
-                :alt="`Paysage de destination pour le voyage ${voyage.title}`"
-                cover
-              />
-            </Transition>
-
             <FunnelCardHeader
               :titre="voyage.title"
               :travel-type="voyage.travelType"
@@ -41,102 +30,55 @@
               :step-definitions="stepperHeaderRef?.stepDefinitions"
               :skipper-mode="skipperMode"
             />
-
             <v-stepper-window
-              :class="currentStep === 5 ? ' mx-0' : ''"
+              :class="currentStep === 4 ? ' mx-0' : ''"
               :model-value="currentStep"
               class="px-md-6 mt-4"
             >
               <v-stepper-window-item>
-                <template v-if="skipperMode === 'summary'">
-                  <FunnelStepsSummary
-                    :current-step="currentStep"
-                    :page="pageTexts"
-                    :voyage="voyage"
-                  />
-
-                  <FunnelStepsPaymentRedirect
-                    v-model="dynamicDealValues"
-                    :page="pageTexts"
-                    :current-step="currentStep"
-                    :voyage="voyage"
-                    :own-step="5"
-                    @previous="previousStep"
-                  />
-                </template>
-                <FunnelStepsSkipper
-                  v-else
-                  v-model="skipperMode"
-                  :page="pageTexts"
-                  :current-step="currentStep"
-                  :own-step="0"
-                  @next="nextStep"
-                />
-              </v-stepper-window-item>
-              <v-stepper-window-item>
                 <FunnelStepsDetails
-                  v-if="skipperMode === 'normal'"
                   v-model="dynamicDealValues"
                   :checkout-type="checkoutType"
                   :voyage="voyage"
                   :date-id="date_id"
+                  :own-step="0"
+                  :page="pageTexts"
+                  @next="nextStep"
+                  @previous="previousStep"
+                />
+              </v-stepper-window-item>
+              <v-stepper-window-item>
+                <FunnelStepsTravelersInfosOptions
+                  v-model="dynamicDealValues"
+                  :current-step="currentStep"
+                  :voyage="voyage"
                   :own-step="1"
                   :page="pageTexts"
                   @next="nextStep"
                   @previous="previousStep"
                 />
-                <CalendlyContainer
-                  v-else
-                  :travel-title="voyage.title"
-                  :is-funnel="true"
-                  :voyage="voyage"
-                  @previous="previousStep"
-                />
               </v-stepper-window-item>
-              <v-stepper-window-item>
-                <FunnelStepsTravelersInfos
-                  v-model="dynamicDealValues"
-                  :current-step="currentStep"
-                  :voyage="voyage"
-                  :own-step="2"
-                  :page="pageTexts"
-                  @next="nextStep"
-                  @previous="previousStep"
-                />
-              </v-stepper-window-item>
-
-              <v-stepper-window-item>
-                <FunnelStepsOptions
-                  v-model="dynamicDealValues"
-                  :voyage="voyage"
-                  :current-step="currentStep"
-                  :page="pageTexts"
-                  :own-step="3"
-                  @next="nextStep"
-                  @previous="previousStep"
-                />
-              </v-stepper-window-item>
-              <v-stepper-window-item v-if="!!showInsuranceStep">
+              <v-stepper-window-item
+                v-if="!!showInsuranceStep"
+              >
                 <FunnelStepsInsurances
                   v-model="dynamicDealValues"
                   :voyage="voyage"
                   :current-step="currentStep"
                   :insurances="insurancesPrice"
                   :page="pageTexts"
-                  :own-step="4"
+                  :own-step="2"
                   @next="nextStep"
                   @previous="previousStep"
                 />
               </v-stepper-window-item>
-              <v-stepper-window-item
-                :value="5"
-              >
+              <v-stepper-window-item>
                 <FunnelStepsPaymentRedirect
                   v-model="dynamicDealValues"
                   :page="pageTexts"
                   :current-step="currentStep"
                   :voyage="voyage"
-                  :own-step="5"
+                  :own-step="3"
                   @previous="previousStep"
                 />
               </v-stepper-window-item>
@@ -145,7 +87,6 @@
         </v-col>
 
         <v-col
-          v-if="currentStep > 0 && (skipperMode === 'normal' || skipperMode === 'summary')"
           cols="12"
           :md="4"
           class="d-none d-md-block"
@@ -155,12 +96,12 @@
             :current-step="currentStep"
             :page="pageTexts"
             :voyage="voyage"
-            :own-step="5"
+            :own-step="3"
           />
         </v-col>
       </v-row>
       <FunnelStepsBottomSummaryBar
-        v-if="currentStep !== 0 && (skipperMode === 'normal' || skipperMode === 'summary')"
+        v-if="skipperMode === 'normal' || skipperMode === 'summary'"
         ref="summaryRef"
         :voyage="voyage"
         :page-texts="pageTexts"
@@ -185,7 +126,7 @@ import customParseFormat from 'dayjs/plugin/customParseFormat.js'
 
 dayjs.extend(customParseFormat)
 
-const { trackReservationStep, trackRdvClick } = useGtmTracking()
+const { trackReservationStep } = useGtmTracking()
 
 const { voyage, initialDealValues } = defineProps({
   pageTexts: {
@@ -202,7 +143,7 @@ const { voyage, initialDealValues } = defineProps({
   },
 })
 // console.log('initialDealValues', initialDealValues)
-// console.log('voyage in stepper', voyage)
+console.log('voyage in stepper', voyage)
 
 const route = useRoute()
 
@@ -210,9 +151,8 @@ const { step, date_id } = route.query
 
 // GTM: Track reservation step on mount based on current step
 onMounted(() => {
-  const currentStepNumber = step ? parseInt(step) : 0
-  console.log('currentStepNumber', step)
-  trackReservationStep(currentStepNumber, voyage, dynamicDealValues.value)
+  const currentStepNumber = step ? parseInt(step) : 1
+  trackReservationStep(currentStepNumber - 1, voyage, dynamicDealValues.value)
 })
 const { addSingleParam } = useParams()
 
@@ -235,32 +175,26 @@ const displayedDates = computed(() => {
 })
 // ================== Stepper Management ==================
 // const loading = ref(false)
-const currentStep = ref(step ? parseInt(step) : 0)
+const currentStep = ref(step ? parseInt(step) : 1)
 const skipperMode = ref('normal')
 if (route.query.type === 'custom' || route.query.type === 'balance') {
-  currentStep.value = route.query.type === 'custom' ? 1 : 5
+  currentStep.value = route.query.type === 'custom' ? 1 : 4
   skipperMode.value = route.query.type === 'custom' ? 'normal' : 'summary'
 }
 
 // 🧱 Step navigation
 const nextStep = () => {
-  const nextStepValue = currentStep.value === 3 && !showInsuranceStep.value ? 5 : currentStep.value + 1
+  const nextStepValue = currentStep.value === 2 && !showInsuranceStep.value ? 4 : currentStep.value + 1
 
   currentStep.value = nextStepValue
   addSingleParam('step', nextStepValue.toString())
-
-  if (nextStepValue === 1 && skipperMode.value === 'quick') {
-    trackRdvClick('checkout-stepper')
-  }
-  else if (nextStepValue === 1) {
-    trackReservationStep(1, voyage, dynamicDealValues.value)
-  }
 }
+console.log('current', currentStep.value)
 
 const previousStep = () => {
   let previousStepValue
-  if (currentStep.value === 5 && !showInsuranceStep.value) {
-    previousStepValue = 3 // Go back to options
+  if (currentStep.value === 4 && !showInsuranceStep.value) {
+    previousStepValue = 2
   }
   else {
     previousStepValue = currentStep.value - 1

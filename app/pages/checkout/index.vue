@@ -83,6 +83,7 @@ useSeoMeta({
 
 const img = useImage()
 const route = useRoute()
+const { travelTitle } = useFunnelHeader()
 
 // 🧠 Extract query parameters
 const dateId = route.query.date_id
@@ -120,6 +121,7 @@ const initCheckout = async () => {
       if (!deal) throw new Error(`No deal found with bookedId ${bookedId}`)
       dealValues.value = buildDynamicDealValues(deal)
       voyage.value = buildVoyageFromAC(deal, imgSrc.value)
+      travelTitle.value = voyage.value?.title || ''
     }
     else if (dateId) {
       // Sanity voyage checkout
@@ -140,6 +142,7 @@ const initCheckout = async () => {
 
       if (fetchedDate && travelSanity) {
         voyage.value = buildVoyageFromSanity(fetchedDate, travelSanity, imgSrc.value)
+        travelTitle.value = voyage.value?.title || ''
         dealValues.value = buildDynamicDealValues()
       }
       else {

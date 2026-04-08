@@ -38,12 +38,12 @@
                 class="custom-list-item"
                 :value="experiencesBlock"
                 :list-aria-attributes="{
-                  role: 'list',
-                  'aria-label': `Points forts de ${page.title}`
+                  'role': 'list',
+                  'aria-label': `Points forts de ${page.title}`,
                 }"
-                :list-item-aria-attributes="(index) => ({ 
-                  role: 'listitem',
-                  'aria-label': `Point fort ${index + 1}` 
+                :list-item-aria-attributes="(index) => ({
+                  'role': 'listitem',
+                  'aria-label': `Point fort ${index + 1}`,
                 })"
               />
             </v-list>

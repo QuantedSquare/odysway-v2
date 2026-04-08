@@ -1,5 +1,8 @@
 <template>
-  <v-container v-if="!loadingDeal">
+  <v-container
+    v-if="!loadingDeal"
+    class="pa-0 pa-sm-8"
+  >
     <v-form ref="form">
       <v-row>
         <v-col cols="12">
@@ -45,7 +48,10 @@
             </v-col>
           </v-row>
           <v-row v-if="capacityMessage">
-            <v-col cols="12" class="pt-1 pb-0">
+            <v-col
+              cols="12"
+              class="pt-1 pb-0"
+            >
               <div class="text-caption text-medium-emphasis">
                 {{ capacityMessage }}
               </div>
@@ -142,13 +148,6 @@
     </v-form>
     <v-row>
       <v-col class="d-flex ga-3">
-        <v-btn
-          class="
-        bg-grey-light font-weight-regular"
-          @click="emit('previous')"
-        >
-          Précédent
-        </v-btn>
         <v-btn
           :disabled="!isValid"
           :loading="buttonLoading"
@@ -404,7 +403,7 @@ const submitStepData = async () => {
           user_country: getCountryFromPhone(model.value.phone),
         },
       }
-      trackReservationStep(2, voyage, model.value, additionalData)
+      trackReservationStep(1, voyage, model.value, additionalData)
 
       await createDeal(flattenedDeal)
       buttonLoading.value = false

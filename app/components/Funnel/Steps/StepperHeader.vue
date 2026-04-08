@@ -84,32 +84,18 @@ const stepDefinitions = computed(() => {
   }
 
   if (props.skipperMode === 'normal') {
-    baseSteps.push({
-      number: 3,
-      label: props.page.fil_dariane_devis.step_3,
-    })
+    if (props.showInsurance) {
+      baseSteps.push({ number: 3, label: 'Assurances' })
+      baseSteps.push({ number: 4, label: 'Récapitulatif' })
+    }
+    else {
+      baseSteps.push({ number: 3, label: 'Récapitulatif' })
+    }
   }
-
-  // Final step
-  baseSteps.push({
-    number: props.skipperMode === 'normal'
-      ? (props.showInsurance ? 4 : 4)
-      : props.skipperMode === 'quick' ? 2 : 3,
-    label: props.skipperMode === 'normal'
-      ? 'Options'
-      : props.page.fil_dariane_devis.step_final_rdv,
-  })
-
-  if (props.skipperMode === 'normal' && props.showInsurance) {
+  else {
     baseSteps.push({
-      number: 5,
-      label: 'Assurances',
-    })
-  }
-  if (props.skipperMode === 'normal') {
-    baseSteps.push({
-      number: props.showInsurance ? 6 : 5,
-      label: 'Récapitulatif',
+      number: props.skipperMode === 'quick' ? 2 : 3,
+      label: props.page.fil_dariane_devis.step_final_rdv,
     })
   }
   return baseSteps

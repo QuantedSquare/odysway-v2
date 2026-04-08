@@ -1,7 +1,7 @@
 <template>
   <v-app>
-    <TopBar />
-    <v-main class="main-content mx-0 mx-md-5">
+    <FunnelLayoutHeader />
+    <v-main class="main-content">
       <slot />
     </v-main>
   </v-app>

@@ -274,7 +274,7 @@ const submitStepData = () => {
         user_country: getCountryFromPhone(model.value.phone),
       },
     }
-    trackReservationStep(5, voyage, model.value, additionalData)
+    trackReservationStep(3, voyage, model.value, additionalData)
 
     emit('next')
   }

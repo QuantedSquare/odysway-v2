@@ -143,6 +143,7 @@
         md="3"
         class="pl-5 pl-md-2 pt-1 d-none d-md-flex flex-column justify-center align-start  justify-lg-start"
       >
+        à partir de
         <span
           class="text-h2 font-weight-black"
           :class="enrichedDate.last_minute || enrichedDate.early_bird ? 'text-decoration-line-through text-grey text-body-2' : ''"
@@ -192,9 +193,16 @@
               rounded="md"
               @click="handleBookingClick"
             >
-              <span class="text-body-1 font-weight-bold text-decoration-none">
-                Réserver
-              </span>
+              <div>
+                <span class="text-body-1 font-weight-bold text-decoration-none">
+                  S'inscrire
+                </span>
+                <span
+                  class="text-decoration-none font-weight-regular text-body-2"
+                >
+                  / option
+                </span>
+              </div>
             </v-btn-secondary>
             <v-btn-secondary
               v-else

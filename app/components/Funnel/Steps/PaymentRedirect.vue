@@ -1,7 +1,8 @@
 <template>
-  <v-container>
+  <v-container
+    class="pa-0 pa-sm-8"
+  >
     <!-- Prévoir Promo form -->
-
     <v-card-text v-if="model && +voyage.alreadyPaid < +voyage.totalTravelPrice">
       <v-row>
         <v-col cols="12">
@@ -36,7 +37,7 @@
             <v-switch
               v-model="switch_accept_data_privacy"
               inset
-              class="custom-label-position"
+              class="custom-label-position mb-4"
               hide-details
             >
               <template #label>
@@ -54,7 +55,7 @@
               hide-details
             >
               <template #label>
-                <div class="text-body-2 pl-1">
+                <div class="text-body-2 pl-1 custom-line-height">
                   {{ page.payment.accept_country_conditions_text }}
                 </div>
               </template>
@@ -91,12 +92,12 @@
                   <v-btn
                     height="50"
                     :prepend-icon="mdiCreditCardOutline"
-                    class="bg-secondary "
+                    class="bg-secondary"
                     :loading="loadingSession"
                     :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
                     @click="stripePay"
                   >
-                    <span class="text-wrap">
+                    <span class="text-wrap text-body-1">
                       {{ page.payment.pay_stripe_button }}
                     </span>
                   </v-btn>
@@ -109,7 +110,9 @@
                     :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
                     @click="almaPay"
                   >
-                    {{ page.payment.pay_alma_button }}
+                    <span class="text-wrap text-body-1">
+                      {{ page.payment.pay_alma_button }}
+                    </span>
                   </v-btn>
                 </div>
               </Transition>
@@ -141,11 +144,11 @@
             class="d-flex justify-space-between align-end"
           >
             <v-btn
-              v-if="currentStep === 5"
-              class="bg-grey-light"
+              v-if="currentStep === 4"
+              class="bg-grey-light font-weight-regular"
               @click="emit('previous')"
             >
-              Retour
+              Précédent
             </v-btn>
           </v-col>
         </v-row>
@@ -378,6 +381,10 @@ watch(checkedOption, (value) => {
   .custom-label-position:deep(.v-selection-control) {
     display: flex;
     flex-direction: column;
+    line-height: 10px!important;
   }
+}
+.text-body-2:deep(){
+  line-height: 20px!important;
 }
 </style>

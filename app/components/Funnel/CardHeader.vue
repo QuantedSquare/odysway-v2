@@ -1,8 +1,7 @@
 <template>
   <v-container
-    class="height-title bg-primary"
+    class="height-title bg-primary d-none d-md-block"
     fluid
-    :class="currentStep === 0 ? 'd-none' : 'd-none d-md-block'"
   >
     <div class="d-flex align-center justify-start  flex-md-row ">
       <v-avatar
@@ -34,10 +33,10 @@
           :key="step.number"
         >
           <v-stepper-item
-            :complete="currentStep + 1 > step.number"
+            :complete="currentStep > step.number"
             :step="step.number"
             color="white"
-            :class="currentStep + 1 === step.number ? 'active-step' : ''"
+            :class="currentStep === step.number ? 'active-step' : ''"
             :value="index + 1"
           >
             <span class="d-none d-md-block font-weight-bold text-white text-caption">
@@ -54,7 +53,7 @@
     </div>
   </v-container>
   <SanityImage
-    v-if="currentStep > 0 && isSanityImage"
+    v-if="isSanityImage"
     :asset-id="image"
     auto="format"
   >
@@ -90,7 +89,7 @@
     </template>
   </SanityImage>
   <v-img
-    v-else-if="currentStep > 0"
+    v-else-if="image"
     :src="image || 'https://odysway.com/logos/logo_noir.png'"
     :alt="`Paysage de destination pour le voyage ${titre}`"
     height="120"
