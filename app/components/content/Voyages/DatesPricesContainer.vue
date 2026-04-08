@@ -106,7 +106,7 @@
       </v-row>
     </template>
     <ContactUsSection
-      v-if="!isPrivatisationAvailable"
+      v-if="isGroupeAvailable"
       :contact-section="contactSection"
     />
   </v-container>
