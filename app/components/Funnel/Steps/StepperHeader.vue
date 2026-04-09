@@ -64,37 +64,37 @@ const stepDefinitions = computed(() => {
   if (props.skipperMode === 'summary') {
     return [
       {
-        number: 5,
+        number: 3,
         label: 'Récapitulatif',
       },
     ]
   }
   const baseSteps = [
     {
-      number: 1,
+      number: 0,
       label: props.page.fil_dariane_devis.step_1,
     },
   ]
 
   if (props.skipperMode !== 'quick') {
     baseSteps.push({
-      number: 2,
+      number: 1,
       label: props.page.fil_dariane_devis.step_2,
     })
   }
 
   if (props.skipperMode === 'normal') {
     if (props.showInsurance) {
-      baseSteps.push({ number: 3, label: 'Assurances' })
-      baseSteps.push({ number: 4, label: 'Récapitulatif' })
+      baseSteps.push({ number: 2, label: 'Assurances' })
+      baseSteps.push({ number: 3, label: 'Récapitulatif' })
     }
     else {
-      baseSteps.push({ number: 3, label: 'Récapitulatif' })
+      baseSteps.push({ number: 2, label: 'Récapitulatif' })
     }
   }
   else {
     baseSteps.push({
-      number: props.skipperMode === 'quick' ? 2 : 3,
+      number: props.skipperMode === 'quick' ? 1 : 2,
       label: props.page.fil_dariane_devis.step_final_rdv,
     })
   }
