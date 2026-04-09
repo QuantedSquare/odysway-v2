@@ -1,0 +1,8 @@
+const a=".hidden-scroll[data-v-66b4be14]{-webkit-overflow-scrolling:touch}.hidden-scroll[data-v-66b4be14]::-webkit-scrollbar{display:none}.carousel-nav-btn[data-v-66b4be14]:disabled{color:#fff!important}.disabled-shadow[data-v-66b4be14]{box-shadow:0 6px 16px #2222231a!important}";
+
+const HorizontalCarouselStyles_BtqVrZFF = [
+  a
+];
+
+export { HorizontalCarouselStyles_BtqVrZFF as default };
+//# sourceMappingURL=HorizontalCarousel-styles.BtqVrZFF.mjs.map

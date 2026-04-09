@@ -85,7 +85,7 @@ function redirectToCalendly() {
     router.push('/contact')
   }
   else {
-    router.push(`/calendly?travelTitle=${route.params.voyageSlug}`)
+    router.push(`/rdv-projet-voyage?travelTitle=${route.params.voyageSlug}`)
   }
 }
 </script>

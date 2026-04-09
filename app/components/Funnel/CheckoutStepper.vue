@@ -85,7 +85,7 @@
                   @next="nextStep"
                   @previous="previousStep"
                 />
-                <CalendlyContainer
+                <CalContainer
                   v-else
                   :travel-title="voyage.title"
                   :is-funnel="true"

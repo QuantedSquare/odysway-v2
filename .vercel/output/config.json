@@ -1,0 +1,248 @@
+{
+  "version": 3,
+  "overrides": {
+    "rdv-projet-voyage/index.html": {
+      "path": "rdv-projet-voyage"
+    }
+  },
+  "routes": [
+    {
+      "headers": {
+        "Content-Type": "application/xslt+xml"
+      },
+      "src": "/__sitemap__/style.xsl"
+    },
+    {
+      "status": 301,
+      "headers": {
+        "Location": "/voyages"
+      },
+      "src": "/search"
+    },
+    {
+      "status": 301,
+      "headers": {
+        "Location": "/rdv-projet-voyage"
+      },
+      "src": "/calendly"
+    },
+    {
+      "headers": {
+        "access-control-allow-origin": "*",
+        "access-control-allow-methods": "*",
+        "access-control-allow-headers": "*",
+        "access-control-max-age": "0"
+      },
+      "src": "/api/(.*)"
+    },
+    {
+      "headers": {
+        "X-Robots-Tag": "noindex"
+      },
+      "src": "/_nuxt"
+    },
+    {
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable",
+        "X-Robots-Tag": "noindex"
+      },
+      "src": "/_nuxt/(.*)"
+    },
+    {
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      },
+      "src": "/_fonts/(.*)"
+    },
+    {
+      "src": "/_fonts(.*)",
+      "headers": {
+        "cache-control": "public,max-age=31536000,immutable"
+      },
+      "continue": true
+    },
+    {
+      "src": "/_nuxt(.*)",
+      "headers": {
+        "cache-control": "public,max-age=31536000,immutable"
+      },
+      "continue": true
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "(?<__isr_route>/)",
+      "dest": "/index-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>//_payload.json)",
+      "dest": "/_payload.json-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/voyages/_payload.json)",
+      "dest": "/voyages/_payload.json-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/prochains-departs/_payload.json)",
+      "dest": "/prochains-departs/_payload.json-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/entreprise/_payload.json)",
+      "dest": "/entreprise/_payload.json-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/sur-mesure/_payload.json)",
+      "dest": "/sur-mesure/_payload.json-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/vision-voyage-odysway/_payload.json)",
+      "dest": "/vision-voyage-odysway/_payload.json-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/contact/_payload.json)",
+      "dest": "/contact/_payload.json-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/faq/_payload.json)",
+      "dest": "/faq/_payload.json-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/avis-voyageurs/_payload.json)",
+      "dest": "/avis-voyageurs/_payload.json-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/offre-cadeau/_payload.json)",
+      "dest": "/offre-cadeau/_payload.json-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/nous-recrutons/_payload.json)",
+      "dest": "/nous-recrutons/_payload.json-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/devis/_payload.json)",
+      "dest": "/devis/_payload.json-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/checkout/_payload.json)",
+      "dest": "/checkout/_payload.json-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/politique-de-confidentialite/_payload.json)",
+      "dest": "/politique-de-confidentialite/_payload.json-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/mentions-legales/_payload.json)",
+      "dest": "/mentions-legales/_payload.json-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/conditions-generales-de-vente/_payload.json)",
+      "dest": "/conditions-generales-de-vente/_payload.json-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/cheques-vacances/_payload.json)",
+      "dest": "/cheques-vacances/_payload.json-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/confirmation/_payload.json)",
+      "dest": "/confirmation/_payload.json-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/__nuxt_error)",
+      "dest": "/__fallback"
+    },
+    {
+      "src": "(?<__isr_route>/voyages)",
+      "dest": "/voyages-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/prochains-departs)",
+      "dest": "/prochains-departs-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/voyages/(?:.*))",
+      "dest": "/voyages/[...]-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/destinations/(?:.*))",
+      "dest": "/destinations/[...]-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/thematiques/(?:.*))",
+      "dest": "/thematiques/[...]-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/experiences/(?:.*))",
+      "dest": "/experiences/[...]-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/blog/(?:.*))",
+      "dest": "/blog/[...]-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/entreprise)",
+      "dest": "/entreprise-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/sur-mesure)",
+      "dest": "/sur-mesure-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/vision-voyage-odysway)",
+      "dest": "/vision-voyage-odysway-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/contact)",
+      "dest": "/contact-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/faq)",
+      "dest": "/faq-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/avis-voyageurs)",
+      "dest": "/avis-voyageurs-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/offre-cadeau)",
+      "dest": "/offre-cadeau-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/nous-recrutons)",
+      "dest": "/nous-recrutons-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/devis)",
+      "dest": "/devis-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/checkout)",
+      "dest": "/checkout-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/politique-de-confidentialite)",
+      "dest": "/politique-de-confidentialite-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/mentions-legales)",
+      "dest": "/mentions-legales-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/conditions-generales-de-vente)",
+      "dest": "/conditions-generales-de-vente-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/cheques-vacances)",
+      "dest": "/cheques-vacances-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "(?<__isr_route>/confirmation)",
+      "dest": "/confirmation-isr?__isr_route=$__isr_route"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/__fallback"
+    }
+  ],
+  "bypassToken": "6P8KA5eMEJlBti4bO0BzXViSk1wEaNDUeK0gz9V3l6o"
+}

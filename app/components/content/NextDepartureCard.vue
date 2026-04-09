@@ -201,7 +201,7 @@ const voyageCardContentQuery = groq`*[_type == "voyage_card"][0]{
 }`
 
 const sanity = useSanity()
-const { data: voyageCardContent } = await useAsyncData('voyage-card-content', () =>
+const { data: voyageCardContent } = await useAsyncData('voyage-card-content-next-departure', () =>
   sanity.fetch(voyageCardContentQuery),
 {
   dedupe: 'defer', // This ensures all components wait for first request to complete

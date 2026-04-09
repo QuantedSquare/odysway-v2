@@ -1,0 +1,10 @@
+import { mergeProps, withCtx, createVNode, useSSRContext } from 'vue';
+import { ssrRenderAttrs, ssrRenderComponent, ssrRenderClass } from 'vue/server-renderer';
+import { $ } from './ssrSlot-D7De7VY4.mjs';
+import { T } from './slot-Dpt2kD0O.mjs';
+import { h as Er, U as we } from './server.mjs';
+
+const k={__name:"CtaButton",__ssrInlineRender:true,props:{link:{type:String,required:true},color:{type:String,default:"primary"},textColor:{type:String,default:"white"},external:{type:Boolean,default:false},ctaId:{type:String,default:null},ctaLabel:{type:String,default:null}},setup(t){const e=t,{trackRdvClick:r,trackCtaClick:C}=Er(),w=()=>{(e.link.includes("calendly")||e.link.toLowerCase().includes("rdv"))&&r(e.ctaId),(e.ctaId||e.ctaLabel)&&C({ctaId:e.ctaId||`cta-${e.link}`,ctaLabel:e.ctaLabel||e.link,ctaUrl:e.link});};return (o,a,d,b)=>{a(`<div${ssrRenderAttrs(mergeProps({class:"d-flex justify-center"},b))}>`),t.external?a(ssrRenderComponent(we,{href:t.link,color:t.color,height:"62",size:"large"},{default:withCtx((y,n,i,l)=>{if(n)n(`<div class="text-white text-decoration-none text-body-1 font-weight-bold mx-4"${l}>`),$(o.$slots,"text",{mdcUnwrap:"p"},null,n,i,l),n("</div>");else return [createVNode("div",{class:"text-white text-decoration-none text-body-1 font-weight-bold mx-4"},[T(o.$slots,"text",{mdcUnwrap:"p"})])]}),_:3},d)):a(ssrRenderComponent(we,{to:t.link,color:t.color,height:"62",size:"large",class:"text-decoration-none",target:t.external?"_blank":void 0,rel:t.external?"noopener noreferrer":void 0,onClick:w},{default:withCtx((y,n,i,l)=>{if(n)n(`<div class="${ssrRenderClass([`text-${t.textColor}`,"text-body-1 font-weight-bold mx-4"])}"${l}>`),$(o.$slots,"text",{mdcUnwrap:"p"},null,n,i,l),n("</div>");else return [createVNode("div",{class:["text-body-1 font-weight-bold mx-4",`text-${t.textColor}`]},[T(o.$slots,"text",{mdcUnwrap:"p"})],2)]}),_:3},d)),a("</div>");}}},g=k.setup;k.setup=(t,e)=>{const r=useSSRContext();return (r.modules||(r.modules=new Set)).add("components/content/ctaButton.vue"),g?g(t,e):void 0};
+
+export { k };
+//# sourceMappingURL=ctaButton-CoL2yy46.mjs.map

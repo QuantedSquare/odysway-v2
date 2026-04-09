@@ -1,0 +1,8 @@
+const t=".main-content[data-v-31769dd6]{--v-layout-top:90px!important;--v-layout-bottom:0px}@media(max-width:960px){.main-content[data-v-31769dd6]{--v-layout-top:60px!important}}[data-v-31769dd6] .v-main{padding-bottom:var(--v-layout-bottom)!important;padding-top:var(--v-layout-top)!important}";
+
+const simplePagesStyles_D6nHEDKQ = [
+  t
+];
+
+export { simplePagesStyles_D6nHEDKQ as default };
+//# sourceMappingURL=simple-pages-styles.D6nHEDKQ.mjs.map
