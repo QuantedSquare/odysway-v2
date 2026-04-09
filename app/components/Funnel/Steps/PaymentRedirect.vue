@@ -5,6 +5,34 @@
     <!-- Prévoir Promo form -->
 
     <v-card-text v-if="model && +voyage.alreadyPaid < +voyage.totalTravelPrice">
+      <!-- Trust bar -->
+      <div class="trust-bar rounded-lg mb-5 pa-3 d-flex justify-center flex-wrap ga-4">
+        <div class="d-flex align-center ga-1">
+          <v-icon
+            :icon="mdiLockOutline"
+            size="18"
+            color="primary"
+          />
+          <span class="text-caption text-grey-darken-2 font-weight-medium">Paiement sécurisé</span>
+        </div>
+        <div class="d-flex align-center ga-1">
+          <v-icon
+            :icon="mdiShieldCheckOutline"
+            size="18"
+            color="primary"
+          />
+          <span class="text-caption text-grey-darken-2 font-weight-medium">Données chiffrées SSL</span>
+        </div>
+        <div class="d-flex align-center ga-1">
+          <v-icon
+            :icon="mdiHeadphones"
+            size="18"
+            color="primary"
+          />
+          <span class="text-caption text-grey-darken-2 font-weight-medium">Support disponible</span>
+        </div>
+      </div>
+
       <v-row v-if="route.query.type === 'balance'">
         <v-col class="text-center text-h6">
           Paiement du solde de votre voyage
@@ -85,7 +113,7 @@
             <v-col
               v-else
               cols="12"
-              class="d-flex flex-column align-center justify-center my-6"
+              class="d-flex flex-column align-center justify-center my-4"
             >
               <ClientOnly>
                 <Transition name="list">
@@ -105,12 +133,12 @@
                   </v-btn>
                   <div
                     v-else
-                    class="d-flex flex-column flex-md-row ga-2 flex-wrap justify-center "
+                    class="d-flex flex-column flex-md-row ga-2 flex-wrap justify-center w-100"
                   >
                     <v-btn
                       height="50"
-                      :prepend-icon="mdiCreditCardOutline"
-                      class="bg-secondary"
+                      :prepend-icon="mdiLockOutline"
+                      class="bg-secondary flex-grow-1"
                       :loading="loadingSession"
                       :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
                       @click="stripePay"
@@ -134,6 +162,17 @@
                     </v-btn>
                   </div>
                 </Transition>
+
+                <!-- Partner mention -->
+                <div class="text-caption text-grey mt-2 text-center">
+                  <template v-if="isAlmaPaymentPossible">
+                    Paiement traité par Stripe (certifié PCI DSS) ou Alma, organisme de crédit agréé
+                  </template>
+                  <template v-else>
+                    Paiement traité par Stripe — certifié PCI DSS
+                  </template>
+                </div>
+
                 <div
                   v-if="voyage.totalTravelPrice > 400000 && !checkedOption"
                   class="text-caption mt-2"
@@ -141,6 +180,43 @@
                   {{ page.payment.alma_payment_info }}
                 </div>
               </ClientOnly>
+
+              <!-- Ce qui se passe ensuite
+              <div
+                v-if="!checkedOption"
+                class="next-steps rounded-lg pa-4 mt-5 w-100 text-white"
+              >
+                <p class="text-caption font-weight-bold text-primary mb-3 text-uppercase letter-spacing">
+                  Ce qui se passe ensuite
+                </p>
+                <div class="d-flex align-start ga-2 mb-2">
+                  <v-icon
+                    :icon="mdiEmailOutline"
+                    size="16"
+                    color="primary"
+                    class="mt-1 flex-shrink-0"
+                  />
+                  <span class="text-caption text-primary">Vous recevez un email de confirmation</span>
+                </div>
+                <div class="d-flex align-start ga-2 mb-2">
+                  <v-icon
+                    :icon="mdiAccountVoice"
+                    size="16"
+                    color="primary"
+                    class="mt-1 flex-shrink-0"
+                  />
+                  <span class="text-caption text-primary">Notre équipe vous contacte sous 24h</span>
+                </div>
+                <div class="d-flex align-start ga-2">
+                  <v-icon
+                    :icon="mdiAirplane"
+                    size="16"
+                    color="primary"
+                    class="mt-1 flex-shrink-0"
+                  />
+                  <span class="text-caption text-primary">Votre aventure peut commencer !</span>
+                </div>
+              </div> -->
             </v-col>
           </Transition>
 
@@ -178,7 +254,7 @@
 </template>
 
 <script setup>
-import { mdiCreditCardOutline, mdiCreditCardClockOutline, mdiCalendarOutline } from '@mdi/js'
+import { mdiCreditCardOutline, mdiCreditCardClockOutline, mdiCalendarOutline, mdiLockOutline, mdiShieldCheckOutline, mdiHeadphones, mdiEmailOutline, mdiAccountVoice, mdiAirplane } from '@mdi/js'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 
 const { trackAddPaymentInfo, trackReservationPoseOption } = useGtmTracking()
@@ -210,6 +286,17 @@ const isAlmaPaymentPossible = computed(() => {
   return route.query.type !== 'custom'
     && voyage.alreadyPaid === 0
     && voyage.totalTravelPrice < 400000
+})
+
+const formattedAmount = computed(() => {
+  let amountInEuros
+  if (route.query.type === 'custom') {
+    amountInEuros = +route.query.amount
+  }
+  else {
+    amountInEuros = (+voyage.totalTravelPrice - +voyage.alreadyPaid) / 100
+  }
+  return new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(amountInEuros)
 })
 
 const stripePay = async () => {
@@ -378,6 +465,23 @@ watch(checkedOption, (value) => {
 </script>
 
 <style scoped>
+.trust-bar {
+  background-color: rgb(var(--v-theme-cream));
+}
+
+.amount-recap {
+  background-color: rgb(var(--v-theme-soft-blush));
+  border-left: 3px solid rgb(var(--v-theme-secondary));
+}
+
+.next-steps {
+  background-color:  rgb(var(--v-theme-cream));
+}
+
+.letter-spacing {
+  letter-spacing: 0.08em;
+}
+
 .list-move,
 /* apply transition to moving elements */
 .list-enter-active,

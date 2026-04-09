@@ -5,6 +5,21 @@
   >
     <v-form ref="form">
       <v-row>
+        <v-col
+          cols="12"
+          class="text-center"
+        >
+          <div class="d-flex align-center justify-center ga-2 mb-2">
+            <v-icon
+              :icon="mdiLock"
+              size="small"
+              color="primary"
+            />
+            <h2 class="text-h6 font-weight-bold">
+              Réservez votre voyage en toute sécurité
+            </h2>
+          </div>
+        </v-col>
         <v-col cols="12">
           <h2 v-if="!isAdvance">
             {{ page.details.select_travelers_title }}
@@ -144,6 +159,18 @@
             </v-col>
           </v-row>
         </v-col>
+        <v-col
+          cols="12"
+          class="text-center"
+        >
+          <div class="d-flex align-center justify-center ga-1 text-caption text-grey mb-4">
+            <v-icon
+              :icon="mdiShieldCheckOutline"
+              size="x-small"
+            />
+            <span>Vos données sont protégées et ne seront jamais partagées</span>
+          </div>
+        </v-col>
       </v-row>
     </v-form>
     <v-row>
@@ -195,6 +222,7 @@
 <script setup>
 import { z } from 'zod'
 import { computed } from 'vue'
+import { mdiLock, mdiShieldCheckOutline } from '@mdi/js'
 import { countries } from '~/utils/countries'
 
 const { trackReservationStep } = useGtmTracking()

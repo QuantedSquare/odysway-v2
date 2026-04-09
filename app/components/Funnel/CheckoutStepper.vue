@@ -105,6 +105,7 @@
             :voyage="voyage"
             :own-step="3"
           />
+          <CtaCardSheet />
         </v-col>
       </v-row>
       <FunnelStepsBottomSummaryBar
@@ -149,7 +150,6 @@ const { voyage, initialDealValues } = defineProps({
     required: true,
   },
 })
-// console.log('initialDealValues', initialDealValues)
 
 const route = useRoute()
 
