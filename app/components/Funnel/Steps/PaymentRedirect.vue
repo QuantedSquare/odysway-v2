@@ -2,8 +2,18 @@
   <v-container
     class="pa-0 pa-sm-8"
   >
+    <!-- Stripe redirect loader -->
+    <div
+      v-if="redirectingToStripe"
+      class="d-flex flex-column align-center justify-center py-10"
+    >
+      <FunnelFlightProgress
+        :loading="true"
+        text="Vous allez être redirigé vers notre partenaire Stripe"
+      />
+    </div>
     <!-- Prévoir Promo form -->
-    <v-card-text v-if="model && +voyage.alreadyPaid < +voyage.totalTravelPrice">
+    <v-card-text v-else-if="model && +voyage.alreadyPaid < +voyage.totalTravelPrice">
       <v-row>
         <v-col cols="12">
           <template v-if="isBooking && !isSurMesure">
@@ -167,6 +177,7 @@ const { page, currentStep, ownStep, voyage } = defineProps(['page', 'voyage', 'c
 const route = useRoute()
 const config = useRuntimeConfig()
 const alreadyPlacedAnOption = ref(false)
+const redirectingToStripe = ref(false)
 
 const emit = defineEmits(['previous'])
 const model = defineModel()
@@ -193,6 +204,7 @@ const isAlmaPaymentPossible = computed(() => {
 
 const stripePay = async () => {
   loadingSession.value = true
+  redirectingToStripe.value = true
   // Defined as metadata after payment is done
   const contact = {
     firstName: model.value.firstName,
@@ -237,6 +249,9 @@ const stripePay = async () => {
     await navigateTo(checkoutLink, {
       external: true,
     })
+  }
+  else {
+    redirectingToStripe.value = false
   }
   loadingSession.value = false
 }

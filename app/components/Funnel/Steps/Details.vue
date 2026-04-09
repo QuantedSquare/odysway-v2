@@ -118,7 +118,7 @@
             </v-col>
             <v-col
               cols="12"
-              md="6"
+              md="8"
             >
               <PhoneTextField
                 v-model="model.phone"
@@ -147,16 +147,41 @@
       </v-row>
     </v-form>
     <v-row>
-      <v-col class="d-flex ga-3">
-        <v-btn
-          :disabled="!isValid"
-          :loading="buttonLoading"
-          color="secondary"
-          class="font-weight-bold"
-          @click="submitStepData"
+      <v-col
+        class="d-flex ga-3 align-center"
+        style="min-height: 56px;"
+      >
+        <Transition
+          name="fade"
+          mode="out-in"
         >
-          Suivant
-        </v-btn>
+          <v-btn
+            v-if="route.query.booked_id"
+            key="next-btn-one"
+            :disabled="!isValid"
+            color="secondary"
+            class="font-weight-bold"
+            @click="submitStepData"
+          >
+            Suivant
+          </v-btn>
+          <v-btn
+            v-else-if="!showProgress"
+            key="next-btn"
+            :disabled="!isValid"
+            color="secondary"
+            class="font-weight-bold"
+            @click="submitStepData"
+          >
+            Suivant
+          </v-btn>
+          <FunnelFlightProgress
+            v-else
+            key="next-progress"
+            :loading="buttonLoading"
+            @finished="onProgressFinished"
+          />
+        </Transition>
       </v-col>
     </v-row>
   </v-container>
@@ -174,7 +199,7 @@ import { countries } from '~/utils/countries'
 
 const { trackReservationStep } = useGtmTracking()
 
-const { ownStep, voyage, page, checkoutType, dateId } = defineProps(['ownStep', 'voyage', 'page', 'initialDealValues', 'checkoutType', 'dateId'])
+const { voyage, page, checkoutType, dateId } = defineProps(['ownStep', 'voyage', 'page', 'initialDealValues', 'checkoutType', 'dateId'])
 
 const emit = defineEmits(['next', 'previous', 'validity-changed'])
 const config = useRuntimeConfig()
@@ -183,8 +208,20 @@ const model = defineModel()
 
 const loadingDeal = ref(false)
 const buttonLoading = ref(false)
+const showProgress = ref(false)
+const shouldAdvance = ref(false)
 
-const { createDeal, updateDeal } = useStepperDeal(ownStep)
+const onProgressFinished = () => {
+  console.log('[Details] onProgressFinished, shouldAdvance =', shouldAdvance.value)
+  showProgress.value = false
+  if (shouldAdvance.value) {
+    console.log('[Details] emitting next')
+    shouldAdvance.value = false
+    emit('next')
+  }
+}
+
+const { createDeal, updateDeal } = useStepperDeal()
 const route = useRoute()
 
 // New: Local validation state
@@ -292,9 +329,21 @@ const rules = {
 const nbTravelers = computed(() => +model.value.nbAdults + +model.value.nbChildren)
 
 const submitStepData = async () => {
+  console.log('[Details] submitStepData called, booked_id =', route.query.booked_id)
   // Validate form
-  if (!isValid.value) return false
+  if (!isValid.value) {
+    console.log('[Details] form invalid, abort')
+    return false
+  }
   //  #todo soustraire la réduction s'il y en a une
+  shouldAdvance.value = true
+  // Only show the flight progress animation for the create-deal flow.
+  // The update-deal flow (when booked_id is in the URL) advances instantly.
+  if (!route.query.booked_id) {
+    showProgress.value = true
+    buttonLoading.value = true
+    console.log('[Details] showProgress + buttonLoading set true')
+  }
   try {
     // Submit form data
     if (route.query.booked_id) {
@@ -302,7 +351,6 @@ const submitStepData = async () => {
       // So only when checkout type is deposit or full`
 
       if (checkoutType === 'deposit' || checkoutType === 'full') {
-        buttonLoading.value = true
         const utmSource = localStorage.getItem('utmSource')
         console.log('===========MODEL IN UPDATE DEAL===========', model.value)
         updateDeal({
@@ -318,7 +366,6 @@ const submitStepData = async () => {
           isoContact: model.value.isoContact,
           utm: utmSource || '',
         })
-        buttonLoading.value = false
       }
       else {
         updateDeal({
@@ -328,9 +375,9 @@ const submitStepData = async () => {
           lastname: model.value.lastName,
           isoContact: model.value.isoContact,
         })
-        buttonLoading.value = false
       }
       emit('next')
+      buttonLoading.value = false
       // console.log('deal updated')
     }
     // else we update basics and create a deal with it
@@ -339,8 +386,7 @@ const submitStepData = async () => {
       const linkBms = `${origin}/booking-management/${voyage.slug}/${dateId}`
 
       // #TODO: Add a dev column/stage  in ActiveCampaign
-      const stage = (model.value.email === 'test@test.com' || model.value.email === 'ottmann.alex@gmail.com') || config.public.environment === 'development' ? '2' : '2'
-      buttonLoading.value = true
+      const stage = (model.value.email === 'test@test.com' || model.value.email === 'ottmann.alex@gmail.com') || config.public.environment === 'development' ? '80' : '2'
       const utmSource = localStorage.getItem('utmSource')
       const flattenedDeal = {
         value: voyage.startingPrice, // Don't care about this value, we Calculate it in back
@@ -405,14 +451,21 @@ const submitStepData = async () => {
       }
       trackReservationStep(1, voyage, model.value, additionalData)
 
+      console.log('[Details] calling createDeal...')
       await createDeal(flattenedDeal)
+      console.log('[Details] createDeal resolved -> buttonLoading = false')
       buttonLoading.value = false
+      showProgress.value = false
+      shouldAdvance.value = false
       emit('next')
     }
   }
   catch (error) {
     // Handle errors
-    console.log('error updating or creating deal', error)
+    console.log('[Details] error updating or creating deal', error)
+    shouldAdvance.value = false
+    buttonLoading.value = false
+    showProgress.value = false
     return false
   }
 }

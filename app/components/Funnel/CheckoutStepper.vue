@@ -35,23 +35,14 @@
               :model-value="currentStep"
               class="px-md-6 mt-4"
             >
-              <v-stepper-window-item>
+              <v-stepper-window-item
+                :value="1"
+              >
                 <FunnelStepsDetails
                   v-model="dynamicDealValues"
                   :checkout-type="checkoutType"
                   :voyage="voyage"
                   :date-id="date_id"
-                  :own-step="0"
-                  :page="pageTexts"
-                  @next="nextStep"
-                  @previous="previousStep"
-                />
-              </v-stepper-window-item>
-              <v-stepper-window-item>
-                <FunnelStepsTravelersInfosOptions
-                  v-model="dynamicDealValues"
-                  :current-step="currentStep"
-                  :voyage="voyage"
                   :own-step="1"
                   :page="pageTexts"
                   @next="nextStep"
@@ -59,7 +50,21 @@
                 />
               </v-stepper-window-item>
               <v-stepper-window-item
+                :value="2"
+              >
+                <FunnelStepsTravelersInfosOptions
+                  v-model="dynamicDealValues"
+                  :current-step="currentStep"
+                  :voyage="voyage"
+                  :own-step="2"
+                  :page="pageTexts"
+                  @next="nextStep"
+                  @previous="previousStep"
+                />
+              </v-stepper-window-item>
+              <v-stepper-window-item
                 v-if="!!showInsuranceStep"
+                :value="3"
               >
                 <FunnelStepsInsurances
                   v-model="dynamicDealValues"
@@ -67,18 +72,20 @@
                   :current-step="currentStep"
                   :insurances="insurancesPrice"
                   :page="pageTexts"
-                  :own-step="2"
+                  :own-step="3"
                   @next="nextStep"
                   @previous="previousStep"
                 />
               </v-stepper-window-item>
-              <v-stepper-window-item>
+              <v-stepper-window-item
+                :value="4"
+              >
                 <FunnelStepsPaymentRedirect
                   v-model="dynamicDealValues"
                   :page="pageTexts"
                   :current-step="currentStep"
                   :voyage="voyage"
-                  :own-step="3"
+                  :own-step="4"
                   @previous="previousStep"
                 />
               </v-stepper-window-item>
@@ -143,7 +150,6 @@ const { voyage, initialDealValues } = defineProps({
   },
 })
 // console.log('initialDealValues', initialDealValues)
-console.log('voyage in stepper', voyage)
 
 const route = useRoute()
 
@@ -152,6 +158,9 @@ const { step, date_id } = route.query
 // GTM: Track reservation step on mount based on current step
 onMounted(() => {
   const currentStepNumber = step ? parseInt(step) : 1
+  // if (currenStepNumber > 4) {
+  //   addSingleParam('step', 4)
+  // }
   trackReservationStep(currentStepNumber - 1, voyage, dynamicDealValues.value)
 })
 const { addSingleParam } = useParams()
@@ -162,7 +171,6 @@ const insurancesPrice = ref(null)
 
 // We use those 2 ref to compare if we need a loading between steps by comparing the values
 const dynamicDealValues = ref(initialDealValues)
-console.log('dynamicDealValues', dynamicDealValues.value)
 // console.log('dynamicDealValues', dynamicDealValues.value)
 const checkoutType = ref(determinePaymentOptions(voyage.departureDate, route.query))
 // console.log('checkoutType', checkoutType.value)
@@ -185,11 +193,10 @@ if (route.query.type === 'custom' || route.query.type === 'balance') {
 // 🧱 Step navigation
 const nextStep = () => {
   const nextStepValue = currentStep.value === 2 && !showInsuranceStep.value ? 4 : currentStep.value + 1
-
   currentStep.value = nextStepValue
+  console.log('NEXT in parent', nextStepValue, currentStep.value)
   addSingleParam('step', nextStepValue.toString())
 }
-console.log('current', currentStep.value)
 
 const previousStep = () => {
   let previousStepValue

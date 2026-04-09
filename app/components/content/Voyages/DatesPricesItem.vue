@@ -338,17 +338,17 @@ const generateCheckoutLink = async () => {
         checkoutLink.value = `/checkout?booked_id=${existingBookedId}&type=${checkoutType}&step=1&voyage=${props.date.travel_slug}`
       }
       else {
-        checkoutLink.value = `/checkout?date_id=${enrichedDate.value.id}&type=${checkoutType}&step=0&voyage=${props.date.travel_slug}`
+        checkoutLink.value = `/checkout?date_id=${enrichedDate.value.id}&type=${checkoutType}&step=1&voyage=${props.date.travel_slug}`
       }
     }
     else {
-      checkoutLink.value = `/checkout?date_id=${enrichedDate.value.id}&type=${checkoutType}&step=0&voyage=${props.date.travel_slug}`
+      checkoutLink.value = `/checkout?date_id=${enrichedDate.value.id}&type=${checkoutType}&step=1&voyage=${props.date.travel_slug}`
     }
   }
   catch (error) {
     console.error('Error generating checkout link:', error)
     // Fallback to basic link
-    checkoutLink.value = `/checkout?date_id=${enrichedDate.value.id}&type=deposit&step=0&voyage=${props.date.travel_slug}`
+    checkoutLink.value = `/checkout?date_id=${enrichedDate.value.id}&type=deposit&step=1&voyage=${props.date.travel_slug}`
   }
 }
 

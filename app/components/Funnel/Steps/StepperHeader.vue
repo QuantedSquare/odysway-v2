@@ -71,30 +71,30 @@ const stepDefinitions = computed(() => {
   }
   const baseSteps = [
     {
-      number: 0,
+      number: 1,
       label: props.page.fil_dariane_devis.step_1,
     },
   ]
 
   if (props.skipperMode !== 'quick') {
     baseSteps.push({
-      number: 1,
+      number: 2,
       label: props.page.fil_dariane_devis.step_2,
     })
   }
 
   if (props.skipperMode === 'normal') {
     if (props.showInsurance) {
-      baseSteps.push({ number: 2, label: 'Assurances' })
-      baseSteps.push({ number: 3, label: 'Récapitulatif' })
+      baseSteps.push({ number: 3, label: 'Assurances' })
+      baseSteps.push({ number: 4, label: 'Récapitulatif' })
     }
     else {
-      baseSteps.push({ number: 2, label: 'Récapitulatif' })
+      baseSteps.push({ number: 4, label: 'Récapitulatif' })
     }
   }
   else {
     baseSteps.push({
-      number: props.skipperMode === 'quick' ? 1 : 2,
+      number: props.skipperMode === 'quick' ? 1 : 4,
       label: props.page.fil_dariane_devis.step_final_rdv,
     })
   }
@@ -110,6 +110,7 @@ defineExpose({
 <style scoped>
 #stepper, .funnel-stepper {
   box-shadow: none !important;
+
 }
 
 #stepper {
@@ -120,5 +121,8 @@ defineExpose({
 }
 #stepper:deep(.v-stepper-header) {
   justify-items:stretch!important;
+}
+#stepper:deep(.active-step > .v-avatar){
+  color: white!important;
 }
 </style>

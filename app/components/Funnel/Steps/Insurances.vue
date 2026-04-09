@@ -178,7 +178,7 @@ const { trackReservationStep } = useGtmTracking()
 
 const { insurances, currentStep, ownStep, page, voyage } = defineProps(['insurances', 'voyage', 'currentStep', 'ownStep', 'page'])
 const isLoadingInsurance = ref(true)
-const { updateDeal } = useStepperDeal(ownStep)
+const { updateDeal } = useStepperDeal()
 
 const model = defineModel()
 const emit = defineEmits(['next', 'previous'])

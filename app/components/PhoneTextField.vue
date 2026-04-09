@@ -1,6 +1,9 @@
 <template>
   <v-row>
-    <v-col cols="5">
+    <v-col
+      cols="4"
+      md="5"
+    >
       <v-select
         v-model="phoneCode"
         :items="phonesSelect"

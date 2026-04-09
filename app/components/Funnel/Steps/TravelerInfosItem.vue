@@ -4,11 +4,10 @@
   >
     <v-col
       cols="12"
-      class="d-flex  justify-center  align-center  justify-md-start align-md-start"
+      class="d-flex  justify-start  align-center"
     >
       <v-avatar
         size="40"
-        class="d-md-none"
         :icon="mdiBagPersonal"
       />
       <h3 class="text-body-1 text-md-body-2 font-weight-bold">
