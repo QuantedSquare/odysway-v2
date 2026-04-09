@@ -1,1 +1,0 @@
-import{d as o,w as s,l as r,L as c,o as n}from"./BL9fbG64.js";const m={__name:"[blogSlug]",async setup(_){let e,t;const a=o();return[e,t]=s(()=>c(`/${a.params.blogSlug}`,{replace:!0})),await e,t(),(l,u)=>(n(),r("div"))}};export{m as default};

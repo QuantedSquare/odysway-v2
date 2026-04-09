@@ -1,4 +1,0 @@
-function f(t,r="decimal",e,m="cent",o=1,n=2){const a={minimumIntegerDigits:o,maximumFractionDigits:n};return `${new Intl.NumberFormat("fr-FR",a).format(m==="cent"?t/100:t)} ${r!=="decimal"?e:""}`.trim()}
-
-export { f };
-//# sourceMappingURL=formatNumber-D8IgVOeu.mjs.map
