@@ -2,18 +2,14 @@
   <v-container
     class="pa-0 pa-sm-8"
   >
-    <!-- Stripe redirect loader -->
-    <div
-      v-if="redirectingToStripe"
-      class="d-flex flex-column align-center justify-center py-10"
-    >
-      <FunnelFlightProgress
-        :loading="true"
-        text="Vous allez être redirigé vers notre partenaire Stripe"
-      />
-    </div>
     <!-- Prévoir Promo form -->
-    <v-card-text v-else-if="model && +voyage.alreadyPaid < +voyage.totalTravelPrice">
+
+    <v-card-text v-if="model && +voyage.alreadyPaid < +voyage.totalTravelPrice">
+      <v-row v-if="route.query.type === 'balance'">
+        <v-col class="text-center text-h6">
+          Paiement du solde de votre voyage
+        </v-col>
+      </v-row>
       <v-row>
         <v-col cols="12">
           <template v-if="isBooking && !isSurMesure">
@@ -74,66 +70,80 @@
         </template>
 
         <!-- Replace btn "Suivant" in parent -->
+        <!-- Stripe redirect loader -->
         <v-row>
-          <v-col
-            cols="12"
-            class="d-flex flex-column align-center justify-center my-6"
-          >
-            <ClientOnly>
-              <Transition name="list">
-                <v-btn
-                  v-if="checkedOption"
-                  class=" text-caption text-uppercase font-weight-bold text-md-body-1"
-                  large
-                  height="50"
-                  :prepend-icon="mdiCalendarOutline"
-                  :loading="loadingSession"
-                  :disabled="(!switch_accept_data_privacy || !switch_accept_country || alreadyPlacedAnOption)"
-                  @click="book"
-                >
-                  <span class="text-wrap">
-                    {{ page.payment.place_option_button }}
-                  </span>
-                </v-btn>
-                <div
-                  v-else
-                  class="d-flex flex-column flex-md-row ga-2 flex-wrap justify-center "
-                >
+          <Transition name="list">
+            <div
+              v-if="redirectingToStripe"
+              class="d-flex flex-column align-center justify-center py-10 w-100"
+            >
+              <FunnelFlightProgress
+                :loading="true"
+                text="Vous allez être redirigé vers notre partenaire Stripe"
+              />
+            </div>
+            <v-col
+              v-else
+              cols="12"
+              class="d-flex flex-column align-center justify-center my-6"
+            >
+              <ClientOnly>
+                <Transition name="list">
                   <v-btn
+                    v-if="checkedOption"
+                    class=" text-caption text-uppercase font-weight-bold text-md-body-1"
+                    large
                     height="50"
-                    :prepend-icon="mdiCreditCardOutline"
-                    class="bg-secondary"
+                    :prepend-icon="mdiCalendarOutline"
                     :loading="loadingSession"
-                    :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
-                    @click="stripePay"
+                    :disabled="(!switch_accept_data_privacy || !switch_accept_country || alreadyPlacedAnOption)"
+                    @click="book"
                   >
-                    <span class="text-wrap text-body-1">
-                      {{ page.payment.pay_stripe_button }}
+                    <span class="text-wrap">
+                      {{ page.payment.place_option_button }}
                     </span>
                   </v-btn>
+                  <div
+                    v-else
+                    class="d-flex flex-column flex-md-row ga-2 flex-wrap justify-center "
+                  >
+                    <v-btn
+                      height="50"
+                      :prepend-icon="mdiCreditCardOutline"
+                      class="bg-secondary"
+                      :loading="loadingSession"
+                      :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
+                      @click="stripePay"
+                    >
+                      <span class="text-wrap text-body-1">
+                        {{ page.payment.pay_stripe_button }}
+                      </span>
+                    </v-btn>
 
-                  <v-btn
-                    v-if="isAlmaPaymentPossible"
-                    height="50"
-                    :prepend-icon="mdiCreditCardClockOutline"
-                    :loading="loadingSession"
-                    :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
-                    @click="almaPay"
-                  >
-                    <span class="text-wrap text-body-1">
-                      {{ page.payment.pay_alma_button }}
-                    </span>
-                  </v-btn>
+                    <v-btn
+                      v-if="isAlmaPaymentPossible"
+                      height="50"
+                      :prepend-icon="mdiCreditCardClockOutline"
+                      :loading="loadingSession"
+                      :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
+                      @click="almaPay"
+                    >
+                      <span class="text-wrap text-body-1">
+                        {{ page.payment.pay_alma_button }}
+                      </span>
+                    </v-btn>
+                  </div>
+                </Transition>
+                <div
+                  v-if="voyage.totalTravelPrice > 400000 && !checkedOption"
+                  class="text-caption mt-2"
+                >
+                  {{ page.payment.alma_payment_info }}
                 </div>
-              </Transition>
-              <div
-                v-if="voyage.totalTravelPrice > 400000 && !checkedOption"
-                class="text-caption mt-2"
-              >
-                {{ page.payment.alma_payment_info }}
-              </div>
-            </ClientOnly>
-          </v-col>
+              </ClientOnly>
+            </v-col>
+          </Transition>
+
           <Transition name="list">
             <v-col
               v-if="alreadyPlacedAnOption"

@@ -183,7 +183,7 @@ const displayedDates = computed(() => {
 })
 // ================== Stepper Management ==================
 // const loading = ref(false)
-const currentStep = ref(step ? parseInt(step) : 1)
+const currentStep = ref(step ? Math.min(parseInt(step), 4) : 1)
 const skipperMode = ref('normal')
 if (route.query.type === 'custom' || route.query.type === 'balance') {
   currentStep.value = route.query.type === 'custom' ? 1 : 4
@@ -213,7 +213,7 @@ const previousStep = () => {
 
 watch(() => route.query.step, (newVal) => {
   if (newVal) {
-    currentStep.value = parseInt(newVal)
+    currentStep.value = Math.min(parseInt(newVal), 4)
   }
 })
 
