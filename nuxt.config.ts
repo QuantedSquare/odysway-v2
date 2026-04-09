@@ -10,7 +10,6 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxtjs/seo',
     '@nuxt/image',
-    'nuxt-calendly',
     '@nuxtjs/sanity',
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
@@ -39,6 +38,8 @@ export default defineNuxtConfig({
         { rel: 'preconnect', href: 'https://cdn.sanity.io', crossorigin: 'anonymous' },
         { rel: 'preconnect', href: 'https://www.googletagmanager.com', crossorigin: 'anonymous' },
         { rel: 'preconnect', href: 'https://load.sst.odysway.com', crossorigin: 'anonymous' },
+        { rel: 'preconnect', href: 'https://app.cal.com', crossorigin: 'anonymous' },
+        { rel: 'dns-prefetch', href: 'https://app.cal.com' },
       ],
       htmlAttrs: {
         lang: 'fr',
@@ -108,6 +109,8 @@ export default defineNuxtConfig({
     '/nous-recrutons': { isr: 60 * 60 * 24 * 5 },
     '/devis': { isr: 60 * 60 * 24 * 5 },
     '/checkout': { isr: 60 * 60 * 24 * 5 },
+    '/rdv-projet-voyage': { prerender: true },
+    '/calendly': { redirect: { to: '/rdv-projet-voyage', statusCode: 301 } },
 
     // Legal pages (rarely updated)
     '/politique-de-confidentialite': { isr: 60 * 60 * 24 * 5 }, // 5 days
@@ -126,6 +129,7 @@ export default defineNuxtConfig({
   experimental: {
     payloadExtraction: true,
     appManifest: false,
+    inlineRouteRules: true,
   },
   compatibilityDate: '2024-11-01',
   nitro: {
@@ -170,11 +174,6 @@ export default defineNuxtConfig({
         },
       },
     },
-  },
-  calendly: {
-    isEnabled: true,
-    loadWidgetCSS: false,
-    loadWidgetCloseIconSvg: false,
   },
   eslint: {
     config: {

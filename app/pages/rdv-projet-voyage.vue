@@ -7,13 +7,10 @@
 <script setup>
 definePageMeta({
   layout: 'voyage',
+  pageTransition: false,
+})
 
-})
-useSeoMeta({
-  htmlAttrs: { lang: 'fr' },
-  robots: 'noindex, follow',
-  canonical: 'https://www.odysway.com/',
-})
+const { trackRdvStep } = useGtmTracking()
 const titre = useRoute().query?.travelTitle || ''
 
 useSeo({
@@ -21,5 +18,16 @@ useSeo({
     robotsIndex: false,
     robotsFollow: false,
   },
+})
+
+useHead({
+  link: [
+    { rel: 'preload', as: 'script', href: 'https://app.cal.com/embed/embed.js', crossorigin: 'anonymous' },
+  ],
+})
+
+// GTM: Track rdv_step0 on page load
+onMounted(() => {
+  trackRdvStep(0)
 })
 </script>

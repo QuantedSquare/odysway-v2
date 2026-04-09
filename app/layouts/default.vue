@@ -35,7 +35,7 @@
               <template #bottom>
                 <CtaButton
                   color="secondary"
-                  link="/calendly"
+                  link="/rdv-projet-voyage"
                   cta-id="layout-rdv-bottom"
                   :cta-label="searchContent?.infoContainer?.buttonText || 'Prendre RDV'"
                 >

@@ -47,7 +47,7 @@
                         :page="pageTexts"
                       />
 
-                      <CalendlyContainer
+                      <CalContainer
                         v-if="skipperChoice === 'call'"
                         :travel-title="voyage.title"
                         :text="pageTexts.calendly.text"

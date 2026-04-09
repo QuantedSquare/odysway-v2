@@ -105,11 +105,6 @@
         </v-col>
       </v-row>
     </template>
-    <v-row v-if="isGroupeAvailable">
-      <ContactUsSection
-        :contact-section="contactSection"
-      />
-    </v-row>
     <v-row v-if="isPrivatisationAvailable && !isGroupeAvailable">
       <v-col class="bg-grey-light-3 rounded-lg mx-3 d-flex flex-column align-center justify-center ga-6 my-5 py-10">
         <div class="text-h4 font-weight-bold text-primary text-center">
@@ -125,6 +120,10 @@
         </v-btn>
       </v-col>
     </v-row>
+    <ContactUsSection
+      v-if="!isPrivatisationAvailable"
+      :contact-section="contactSection"
+    />
   </v-container>
 </template>
 

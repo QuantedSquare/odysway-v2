@@ -112,7 +112,7 @@
           </v-btn>
         </div>
 
-        <CalendlyContainer
+        <CalContainer
           :travel-title="voyageSlug"
           :text="calendlyText"
           :is-funnel="false"

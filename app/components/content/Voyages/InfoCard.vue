@@ -137,7 +137,7 @@
                 height="60"
                 block
                 rounded="md"
-                :to="`/calendly?travelTitle=${voyage.title}`"
+                :to="`/rdv-projet-voyage?travelTitle=${voyage.title}`"
                 @click="trackRdvClick('voyage-info-card')"
               >
                 <div class="d-flex align-center ga-2">
