@@ -172,6 +172,17 @@ const voyagePageQuery = `
         name,
         image
       }
+    },
+    stickyBlock{
+      ...,
+      ctaCall{
+        ...,
+        avatars[]->{
+          _id,
+          name,
+          image
+        }
+      }
     }
   }
 `

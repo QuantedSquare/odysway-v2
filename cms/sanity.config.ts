@@ -7,7 +7,7 @@ import {schemaTypes} from './schemaTypes'
 import {media} from 'sanity-plugin-media'
 import {orderableDocumentListDeskItem} from '@sanity/orderable-document-list'
 import {colorInput} from '@sanity/color-input'
-import {embeddingsIndexReferenceInput, embeddingsIndexDashboard} from '@sanity/embeddings-index-ui'
+// import {embeddingsIndexReferenceInput, embeddingsIndexDashboard} from '@sanity/embeddings-index-ui'
 
 
 
@@ -242,11 +242,11 @@ export default defineConfig({
     }),
     media(),
     colorInput(),
-    embeddingsIndexReferenceInput(),
+    // embeddingsIndexReferenceInput(),
     assist(),
-    process.env.NODE_ENV === 'development'
-    ? embeddingsIndexDashboard()
-    : {name: 'embeddings-index-dashboard-disabled'}
+    // process.env.NODE_ENV === 'development'
+    // ? embeddingsIndexDashboard()
+    // : {name: 'embeddings-index-dashboard-disabled'}
   ],
   // form: {
   //   components: {

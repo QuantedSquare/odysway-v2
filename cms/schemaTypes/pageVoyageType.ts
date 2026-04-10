@@ -156,10 +156,14 @@ export const pageVoyageType = defineType({
               validation: Rule => Rule.required()
             }),
             defineField({
-              name: 'avatar',
-              title: 'Avatar',
-              type: 'image',
-              validation: Rule => Rule.required()
+              name: 'avatars',
+              title: 'Avatars (membres de l\'équipe)',
+              type: 'array',
+              of: [{
+                type: 'reference',
+                to: [{type: 'teamMember'}]
+              }],
+              validation: Rule => Rule.required().min(1)
             }),
             defineField({
               name: 'to',

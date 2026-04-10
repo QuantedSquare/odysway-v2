@@ -180,43 +180,6 @@
                   {{ page.payment.alma_payment_info }}
                 </div>
               </ClientOnly>
-
-              <!-- Ce qui se passe ensuite
-              <div
-                v-if="!checkedOption"
-                class="next-steps rounded-lg pa-4 mt-5 w-100 text-white"
-              >
-                <p class="text-caption font-weight-bold text-primary mb-3 text-uppercase letter-spacing">
-                  Ce qui se passe ensuite
-                </p>
-                <div class="d-flex align-start ga-2 mb-2">
-                  <v-icon
-                    :icon="mdiEmailOutline"
-                    size="16"
-                    color="primary"
-                    class="mt-1 flex-shrink-0"
-                  />
-                  <span class="text-caption text-primary">Vous recevez un email de confirmation</span>
-                </div>
-                <div class="d-flex align-start ga-2 mb-2">
-                  <v-icon
-                    :icon="mdiAccountVoice"
-                    size="16"
-                    color="primary"
-                    class="mt-1 flex-shrink-0"
-                  />
-                  <span class="text-caption text-primary">Notre équipe vous contacte sous 24h</span>
-                </div>
-                <div class="d-flex align-start ga-2">
-                  <v-icon
-                    :icon="mdiAirplane"
-                    size="16"
-                    color="primary"
-                    class="mt-1 flex-shrink-0"
-                  />
-                  <span class="text-caption text-primary">Votre aventure peut commencer !</span>
-                </div>
-              </div> -->
             </v-col>
           </Transition>
 

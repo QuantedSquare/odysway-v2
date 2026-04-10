@@ -17,15 +17,20 @@
           </span>
         </div>
         <div>
-          <v-chip
-            variant="flat"
-            :color="date.status.color"
-            rounded="lg"
+          <div
+            class="px-2 py-1 rounded-lg"
+            :class="`bg-${date.status.color}`"
+            :style="{
+              maxWidth: '150px',
+            }"
           >
-            <span class="text-caption font-weight-bold  text-white mb-1 px-1">
+            <span
+              class="text-caption font-weight-bold text-white  px-1 d-flex "
+              style="line-height:1.2; white-space: normal;  text-align: center; word-break: keep-all; max-width: 90px;"
+            >
               {{ date.status.text }}
             </span>
-          </v-chip>
+          </div>
         </div>
       </div>
     </v-btn>
