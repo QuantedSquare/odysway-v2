@@ -222,7 +222,7 @@ export default defineEventHandler(async (event) => {
 
             const cacheStatus = response.headers.get('x-vercel-cache') || 'UNKNOWN'
             const vercelId = response.headers.get('x-vercel-id') || 'UNKNOWN'
-            const isSuccess = cacheStatus === 'BYPASS' || cacheStatus === 'MISS' || cacheStatus === 'STALE'
+            const isSuccess = cacheStatus === 'BYPASS' || cacheStatus === 'MISS' || cacheStatus === 'STALE' || cacheStatus === 'REVALIDATED'
 
             console.log(`Revalidation response for ${url}:`, {
               status: response.status,
