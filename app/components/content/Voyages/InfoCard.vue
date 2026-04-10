@@ -141,18 +141,24 @@
                 @click="trackRdvClick('voyage-info-card')"
               >
                 <div class="d-flex align-center ga-2">
-                  <SanityImage
-                    :asset-id="stickyBlock.ctaCall.avatar.asset._ref"
-                    auto="format"
+                  <div
+                    v-if="stickyBlock.ctaCall.avatars && stickyBlock.ctaCall.avatars.length > 0"
+                    class="avatar-stack"
                   >
-                    <template #default="{ src }">
-                      <v-avatar
-                        :size="mdAndDown ? 30 : 40"
-                        :image="src"
-                        color="white"
+                    <v-avatar
+                      v-for="(member, i) in stickyBlock.ctaCall.avatars.slice(0, 3)"
+                      :key="member._id || i"
+                      :size="i === 1 ? 40 : 40"
+                      class="avatar-item"
+                      :class="{ 'avatar-center': i === 1 }"
+                    >
+                      <v-img
+                        :src="img(getImageUrl(member.image?.asset?._ref), { format: 'webp', quality: 70, width: 72 })"
+                        :alt="member.name || 'Team member'"
+                        cover
                       />
-                    </template>
-                  </SanityImage>
+                    </v-avatar>
+                  </div>
 
                   <span class="text-caption text-lg-body-2 font-weight-bold text-decoration-none">
                     {{ stickyBlock.ctaCall.text }}
@@ -231,10 +237,9 @@
 
 <script setup>
 import { mdiArrowRight, mdiCheckCircleOutline } from '@mdi/js'
-import { useGoTo, useDisplay } from 'vuetify'
+import { useGoTo } from 'vuetify'
 import dayjs from 'dayjs'
 
-const { mdAndDown } = useDisplay()
 const goTo = useGoTo()
 const { dates, isLoading } = useDates()
 const { trackRdvClick, trackCtaClick } = useGtmTracking()
@@ -249,7 +254,7 @@ const { stickyBlock, voyage } = defineProps({
     required: true,
   },
 })
-
+const img = useImage()
 const displayedDates = computed(() => {
   if (dates.value.length > 0) {
     const filteredDates = dates.value.filter(d => getDateStatus(d)?.status !== 'full')
@@ -300,6 +305,23 @@ function handleAskDevis() {
 </script>
 
 <style scoped>
+.avatar-stack {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-item {
+  border: 2px solid white;
+}
+
+.avatar-item + .avatar-item {
+  margin-left: -8px;
+}
+
+.avatar-center {
+  z-index: 2;
+  margin-left: -8px;
+}
 .block-btn-without-padding:deep(.v-btn__content) {
   padding: 0px !important;
   width: 100% !important;
