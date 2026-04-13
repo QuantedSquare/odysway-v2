@@ -46,7 +46,7 @@ const props = defineProps({
   },
   calLink: {
     type: String,
-    default: 'team/odysway/rdv-odysway',
+    default: 'odysway/rendez-vous',
   },
 })
 const emit = defineEmits(['previous'])

@@ -153,7 +153,7 @@
                       :class="{ 'avatar-center': i === 1 }"
                     >
                       <v-img
-                        :src="img(getImageUrl(member.image?.asset?._ref), { format: 'webp', quality: 70, width: 72 })"
+                        :src="img(getImageUrl(member.image?.asset?._ref), { format: 'webp', quality: 70, width: 40 })"
                         :alt="member.name || 'Team member'"
                         cover
                       />
