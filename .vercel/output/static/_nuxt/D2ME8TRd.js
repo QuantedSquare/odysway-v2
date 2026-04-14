@@ -1,7 +1,0 @@
-import{_ as x}from"./DDKZt3RU.js";import{_ as k}from"./BNmhFpZt.js";import{_ as q}from"./DBHii52w.js";import{_ as B}from"./hzcv8Xke.js";import{u as w,g as C,w as S,l as i,h as t,e as s,f as r,n as c,i as V,a as D,o as a,v as _,t as m,ac as I}from"./C_h2DYOn.js";import{u as N}from"./DFakivn3.js";import"./2eRY76U3.js";import"./B1pha2ri.js";import"./Ndey5mom.js";import"./Dl2u_VAm.js";const T={key:2,class:"d-flex justify-center align-center"},G={__name:"cheques-vacances",async setup(b){let o,u;const p=w(),l=C`*[_type == "chequesVacances" && slug.current == "cheques-vacances"][0]{
-  title,
-  heroImage,
-  content,
-  ctaButton,
-  seo
-}`,{data:e,status:h}=([o,u]=S(()=>D("cheques-vacances",()=>p.fetch(l))),o=await o,u(),o);function y(n){return n?n.startsWith("https://odysway.com")?n.replace("https://odysway.com",""):n:"/"}return e.value&&N({seoData:e.value?.seo,content:e.value,pageType:"website",slug:"cheques-vacances",baseUrl:"/cheques-vacances"}),(n,A)=>{const f=x,g=k,d=q,v=B;return a(),i("div",null,[t(e)?.heroImage?(a(),s(f,{key:0,"image-src":t(e).heroImage},{title:r(()=>[_(m(t(e).title),1)]),_:1},8,["image-src"])):c("",!0),t(e)?(a(),s(v,{key:1},{content:r(()=>[t(e).content?(a(),s(g,{key:0,value:t(e).content},null,8,["value"])):c("",!0),t(e).ctaButton?(a(),s(d,{key:1,link:y(t(e).ctaButton.link),class:"mt-8","cta-id":"cheques-vacances"},{text:r(()=>[_(m(t(e).ctaButton.text),1)]),_:1},8,["link"])):c("",!0)]),_:1})):t(h)==="pending"?(a(),i("div",T,[V(I,{indeterminate:""})])):c("",!0)])}}};export{G as default};

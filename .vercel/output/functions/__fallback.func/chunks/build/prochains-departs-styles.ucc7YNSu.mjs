@@ -1,8 +1,0 @@
-const t=".filter-wrapper{box-shadow:5px 5px 100px #2b4c5280;height:-moz-fit-content;height:fit-content;margin:-45px auto 0;position:relative;width:-moz-fit-content;width:fit-content;z-index:1000!important}.filter-bar{min-height:56px}.filter-btn{background-color:#f6fbff;border:1px solid #d7e3ea;font-size:16px;height:40px;text-transform:none}.filter-btn--active{background-color:#1b7c83;border-color:#1b7c83;color:#fff!important}.filter-select{max-width:230px;min-width:180px}.filter-select:deep(.v-field__input){color:rgb(var(--v-theme-primary))!important;opacity:1!important}.filter-select:deep(.v-field__placeholder){color:rgb(var(--v-theme-primary))!important;opacity:1!important}.filter-select:deep(.v-select__selection){color:rgb(var(--v-theme-primary))!important;opacity:1!important}.filter-select input::-moz-placeholder{color:rgb(var(--v-theme-primary))!important;opacity:1}.filter-select input::placeholder{color:rgb(var(--v-theme-primary))!important;opacity:1}.bg-grey-light{background-color:rgb(var(--v-theme-grey-light))!important}.bg-grey-light,.filter-select .v-label{color:rgb(var(--v-theme-primary))!important}.filter-select .v-label{opacity:1!important}.absolute{left:0;position:absolute;right:0;top:300px}.btn-height{height:56px}@media(max-width:960px){.filter-wrapper{margin:-100px auto 0;max-width:100%}.btn-height{height:48px}.filter-select{min-width:150px}}@media(max-width:600px){.filter-wrapper{margin:-110px auto 0}.filter-bar{align-items:stretch;flex-direction:column}.filter-select{max-width:100%;min-width:100%;width:100%}}";
-
-const prochainsDepartsStyles_ucc7YNSu = [
-  t
-];
-
-export { prochainsDepartsStyles_ucc7YNSu as default };
-//# sourceMappingURL=prochains-departs-styles.ucc7YNSu.mjs.map

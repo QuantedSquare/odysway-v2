@@ -1,1 +1,0 @@
-import{_ as o,o as s,l as t,s as c}from"./C_h2DYOn.js";const r={};function n(e,l){return s(),t("blockquote",null,[c(e.$slots,"default")])}const _=Object.assign(o(r,[["render",n]]),{__name:"ProseBlockquote"});export{_ as default};

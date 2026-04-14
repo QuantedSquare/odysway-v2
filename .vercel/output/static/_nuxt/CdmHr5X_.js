@@ -1,1 +1,0 @@
-import{_ as o,o as s,l as r,s as n}from"./C_h2DYOn.js";const t={};function c(e,a){return s(),r("code",null,[n(e.$slots,"default")])}const _=Object.assign(o(t,[["render",c]]),{__name:"ProseCode"});export{_ as default};

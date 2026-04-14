@@ -36,3 +36,5 @@ cms/migration-reports
 public/images/
 
 cms/.sanity/
+
+.vercel/

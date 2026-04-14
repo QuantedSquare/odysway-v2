@@ -1,8 +1,0 @@
-const e=".white-filter[data-v-1a5aef44]{filter:brightness(0) invert(1)}.partenaire-img-sizing[data-v-1a5aef44]{height:100px;width:150px}@media(max-width:600px){.partenaire-img-sizing[data-v-1a5aef44]{height:50px;width:100px}}";
-
-const PartenairesContainerStyles_DXkvYpmb = [
-  e
-];
-
-export { PartenairesContainerStyles_DXkvYpmb as default };
-//# sourceMappingURL=PartenairesContainer-styles.DXkvYpmb.mjs.map

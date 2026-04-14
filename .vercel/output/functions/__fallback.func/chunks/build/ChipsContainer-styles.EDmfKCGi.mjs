@@ -1,8 +1,0 @@
-const t=".custom-chip-height[data-v-9695d33b] .v-chip{height:25px!important}.text-custom[data-v-9695d33b] .v-chip,.chip-responsive[data-v-9695d33b]{font-size:10px!important}.icon-responsive[data-v-9695d33b]{height:18px!important;width:18px!important}@media screen and (min-width:400px){.custom-chip-height[data-v-9695d33b] .v-chip{height:30px!important}}@media screen and (min-width:900px){.text-custom[data-v-9695d33b] .v-chip,.chip-responsive[data-v-9695d33b]{font-size:16px!important}.icon-responsive[data-v-9695d33b]{height:20px!important;width:20px!important}}@media screen and (min-width:960px){.custom-chip-height[data-v-9695d33b] .v-chip{height:46px!important}}.max-width-200[data-v-9695d33b]{max-width:800px!important}";
-
-const ChipsContainerStyles_EDmfKCGi = [
-  t
-];
-
-export { ChipsContainerStyles_EDmfKCGi as default };
-//# sourceMappingURL=ChipsContainer-styles.EDmfKCGi.mjs.map

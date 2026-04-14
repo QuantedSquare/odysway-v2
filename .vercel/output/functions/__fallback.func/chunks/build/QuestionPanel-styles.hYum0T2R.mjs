@@ -1,8 +1,0 @@
-const t=".v-expansion-panels[data-v-98cd98c8]:not(.v-expansion-panels--variant-accordion)>:not(:first-child):not(:last-child):not(.v-expansion-panel--active):not(.v-expansion-panel--after-active){border-top-left-radius:16px!important;border-top-right-radius:16px!important}[data-v-98cd98c8] .v-expansion-panel-title__overlay{background-color:#fff0!important}.custom-font-size[data-v-98cd98c8]{font-size:12px!important;font-weight:300!important}@media screen and (min-width:600px){.custom-font-size[data-v-98cd98c8]{font-size:14px!important;font-weight:400!important}}@media screen and (min-width:900px){.custom-font-size[data-v-98cd98c8]{font-size:16px!important;font-weight:500!important}}";
-
-const QuestionPanelStyles_hYum0T2R = [
-  t
-];
-
-export { QuestionPanelStyles_hYum0T2R as default };
-//# sourceMappingURL=QuestionPanel-styles.hYum0T2R.mjs.map

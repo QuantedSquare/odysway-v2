@@ -1,6 +1,0 @@
-import { renderSlot } from 'vue';
-
-const p=["p","h1","h2","h3","h4","h5","h6","li"];function f(r,t){return r.type===t||typeof r.type=="object"&&r.type.tag===t||r.tag===t}function u(r){return f(r,"text")||f(r,Symbol.for("v-txt"))}function h(r){return Array.isArray(r.children)||typeof r.children=="string"?r.children:typeof r.children?.default=="function"?r.children.default():[]}function n(r){if(!r)return "";if(Array.isArray(r))return r.map(n).join("");if(u(r))return r.value||r.children||"";const t=h(r);return Array.isArray(t)?t.map(n).filter(Boolean).join(""):""}function y(r,t=[]){if(Array.isArray(r))return r.flatMap(e=>y(e,t));let i=r;return t.some(e=>e==="*"||f(r,e))&&(i=h(r)||r,!Array.isArray(i)&&p.some(e=>f(r,e))&&(i=[i])),i}function a(r,t=[]){return r=Array.isArray(r)?r:[r],t.length?r.flatMap(i=>a(y(i,[t[0]]),t.slice(1))).filter(i=>!(u(i)&&n(i).trim()==="")):r}function A(r,t=[]){return typeof t=="string"&&(t=t.split(/[,\s]/).map(i=>i.trim()).filter(Boolean)),t.length?a(r,t).reduce((i,e)=>(u(e)?typeof i[i.length-1]=="string"?i[i.length-1]+=e.children:i.push(e.children):i.push(e),i),[]):r}const T=(r,t,i,...e)=>r[t]?renderSlot({...r,[t]:()=>A(r[t](),i?.unwrap||i?.mdcUnwrap)},t,i,...e):renderSlot(r,t,i,...e);
-
-export { A, T };
-//# sourceMappingURL=slot-Dpt2kD0O.mjs.map

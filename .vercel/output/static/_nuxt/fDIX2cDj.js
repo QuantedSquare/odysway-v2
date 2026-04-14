@@ -1,1 +1,0 @@
-import{_ as o,o as s,l as r,s as t}from"./C_h2DYOn.js";const n={};function a(e,c){return s(),r("tbody",null,[t(e.$slots,"default")])}const _=Object.assign(o(n,[["render",a]]),{__name:"ProseTbody"});export{_ as default};
