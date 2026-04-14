@@ -1,4 +1,5 @@
 export default async function (date_id) {
+  if (!import.meta.client) return null
   const booking_details = JSON.parse(localStorage.getItem(date_id))
   if (date_id && booking_details) {
     try {

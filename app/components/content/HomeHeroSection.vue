@@ -50,9 +50,6 @@
         :class="{ 'hero-image-dim': noiseEnabled }"
         format="webp"
         loading="eager"
-        :preload="{
-          fetchpriority: 'high',
-        }"
         fetchpriority="high"
         width="1536"
         height="900"
