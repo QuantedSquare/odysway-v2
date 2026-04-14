@@ -1,6 +1,6 @@
 <template>
   <v-snackbar
-    v-model="model"
+    v-model="show"
     :timeout="-1"
     location="left"
   >
@@ -36,25 +36,29 @@
 </template>
 
 <script setup>
-const model = defineModel({ type: Boolean, default: false })
-const { optOut } = defineProps({
-  optOut: {
-    type: Boolean,
-    default: false,
-  },
+const show = ref(false)
+const optOut = ref(false)
+
+onMounted(() => {
+  const cookie = useCookie('odysway_employee_optout')
+  optOut.value = cookie.value === 1
+  const consent = localStorage.getItem('consent')
+  if (consent !== 'granted') {
+    show.value = true
+  }
 })
 
 function acceptCookies() {
-  model.value = false
-  if (!optOut) {
+  show.value = false
+  if (!optOut.value) {
     // #TODO: add code to accept cookies
   }
   localStorage.setItem('consent', 'granted')
 }
 
 function refuseCookies() {
-  model.value = false
-  if (!optOut) {
+  show.value = false
+  if (!optOut.value) {
     // #TODO: add code to refuse cookies
   }
   localStorage.setItem('consent', 'denied')

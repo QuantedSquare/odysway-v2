@@ -2,10 +2,7 @@
   <NuxtLayout>
     <NuxtPage />
     <ClientOnly>
-      <CookiesSnackbar
-        v-model="consentBar"
-        :opt-out="optOut"
-      />
+      <CookiesSnackbar />
     </ClientOnly>
     <SearchDialog />
     <!-- <Maintenance /> -->
@@ -19,8 +16,6 @@ import '../app/assets/scss/main.scss'
 const config = useRuntimeConfig()
 const route = useRoute()
 
-const consentBar = ref(false)
-const optOut = ref(false)
 useHead({
   htmlAttrs: {
     lang: 'fr',
@@ -108,24 +103,6 @@ onMounted(() => {
   })
 })
 onMounted(() => {
-  const cookie = useCookie('odysway_employee_optout')
-  optOut.value = cookie.value === 1
-  const consent = localStorage.getItem('consent')
-  if (consent !== 'granted') {
-    setTimeout(() => {
-      consentBar.value = true
-    }, 100)
-  }
-  else {
-    consentBar.value = false
-  }
-})
-onMounted(() => {
-  const isConsent = localStorage.getItem('consent') === 'granted'
-  if (isConsent && config.public.environment === 'production' && !optOut.value) {
-    // ?
-  }
-
   const userUTMs = []
 
   Object.keys(route.query).forEach((queryParam) => {

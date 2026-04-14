@@ -275,6 +275,7 @@ export default defineNuxtConfig({
         'merchantReturnDays': '30',
         'returnPolicyCategory': 'https://schema.org/MerchantReturnFiniteReturnWindow',
         'applicableCountry': 'FR',
+        'returnPolicyCountry': 'FR',
       },
 
       // Payment Methods
