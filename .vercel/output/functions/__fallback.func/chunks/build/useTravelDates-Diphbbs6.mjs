@@ -1,0 +1,11 @@
+import { a as ae } from './NextDepartureCard-Bp4Rhfac.mjs';
+import Ce from './VoyageCard-C1Obvr8r.mjs';
+import { computed, unref, mergeProps, useSSRContext } from 'vue';
+import { ssrRenderComponent } from 'vue/server-renderer';
+import { o } from './getDateStatus-COvYSwLT.mjs';
+import { a as Jc } from './server.mjs';
+
+const D={__name:"VoyageCardWithDates",__ssrInlineRender:true,props:{voyage:{type:Object,required:true},datesBySlug:{type:Object,default:()=>({})},preferConfirmedDate:{type:Boolean,default:false},itemListName:{type:String,default:null}},setup(n){const e=n,u=computed(()=>e.voyage.slug?.current||e.voyage.slug),s=computed(()=>u.value?e.datesBySlug[u.value]||[]:[]),d=computed(()=>s.value.length?s.value.filter(t=>t.departure_date).sort((t,l)=>new Date(t.departure_date)-new Date(l.departure_date))[0]:null),c=computed(()=>!e.preferConfirmedDate||!s.value.length?null:s.value.find(t=>o(t)?.status==="confirmed")||null),p=computed(()=>c.value||d.value),r=computed(()=>e.voyage.availabilityTypes?.includes("groupe")),m=computed(()=>r.value&&s.value.length>0),o$1=computed(()=>m.value?{...e.voyage,dates:s.value,departureDate:p.value?.departure_date}:e.voyage);return (t,l,v,f)=>{const h=ae,S=Ce;unref(m)?l(ssrRenderComponent(h,mergeProps({voyage:unref(o$1),"item-list-name":n.itemListName},f),null,v)):l(ssrRenderComponent(S,mergeProps({voyage:unref(o$1),"item-list-name":n.itemListName},f),null,v));}}},_=D.setup;D.setup=(n,e)=>{const u=useSSRContext();return (u.modules||(u.modules=new Set)).add("components/content/VoyageCardWithDates.vue"),_?_(n,e):void 0};function R(n){const e=computed(()=>{const r=Array.isArray(unref(n))?unref(n):[];return [...new Set(r.filter(Boolean))]}),u=computed(()=>e.value.length>0),{data:s,pending:d,error:c}=Jc(()=>`travel-dates-${e.value.join(",")}`,()=>u.value?$fetch("/api/v1/booking/travel-dates",{params:{slugs:e.value.join(",")}}):[],{watch:[e],server:true,immediate:true,dedupe:"defer"});return {datesBySlug:computed(()=>{const r={};return (s.value||[]).forEach(o=>{const t=o.travel_slug;t&&(r[t]||(r[t]=[]),r[t].push(o));}),Object.keys(r).forEach(o=>{r[o].sort((t,l)=>new Date(t.departure_date)-new Date(l.departure_date));}),r}),isLoading:d,error:c}}
+
+export { D, R };
+//# sourceMappingURL=useTravelDates-Diphbbs6.mjs.map

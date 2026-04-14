@@ -1,0 +1,66 @@
+import { p as pe, J as Je } from './WhatsAppBtn-cUBjDjPE.mjs';
+import Y from './ColorContainer-CrUITWCx.mjs';
+import T$1 from './InfoContainer-BqMlCkP2.mjs';
+import { i as ie } from './PartenairesContainer-DfzFvUZO.mjs';
+import { withAsyncContext, withCtx, renderSlot, unref, createVNode, createTextVNode, toDisplayString, openBlock, createBlock, createCommentVNode, defineAsyncComponent, useSSRContext } from 'vue';
+import Re from './FooterOdysway-BtVmDlDn.mjs';
+import { ssrRenderComponent, ssrRenderSlot, ssrInterpolate } from 'vue/server-renderer';
+import O from 'groq';
+import { _ as Lu, b as gl, u as lp, a as Jc, V as fi } from './server.mjs';
+import { T, x } from './VMain-BkgRxxw4.mjs';
+import './composables-NwuVgpqi.mjs';
+import '../nitro/nitro.mjs';
+import 'lru-cache';
+import '@unocss/core';
+import '@unocss/preset-wind3';
+import 'devalue';
+import 'consola';
+import 'unhead';
+import 'algoliasearch';
+import '@sanity/client';
+import 'axios';
+import 'jsonwebtoken';
+import 'dayjs';
+import '@supabase/supabase-js';
+import 'stripe';
+import 'crypto';
+import 'zod';
+import 'node:http';
+import 'node:https';
+import 'node:events';
+import 'node:buffer';
+import 'node:fs';
+import 'node:path';
+import 'node:crypto';
+import 'unhead/server';
+import 'unhead/plugins';
+import 'unhead/utils';
+import 'vue-bundle-renderer/runtime';
+import 'fast-xml-parser';
+import 'node:url';
+import 'ipx';
+import '@mdi/js';
+import '@vueuse/core';
+import './VAppBar-NiJvV0UY.mjs';
+import './ssrBoot-755kmDGm.mjs';
+import './VTooltip-CK5X-xBn.mjs';
+import 'vue-router';
+import '@unhead/addons';
+import '@unhead/schema-org/vue';
+import 'vue-dompurify-html';
+import '@date-io/dayjs';
+import 'lodash';
+import 'search-insights';
+import 'perfect-debounce';
+import './getImageUrl-B94zyPkX.mjs';
+import '@sanity/image-url';
+import './VLazy-X1Hg2eeI.mjs';
+import './SmartLink-_QBgY2mU.mjs';
+import './VDivider-CyZet7le.mjs';
+
+const st=defineAsyncComponent(()=>import('./TopTravelsTabs-D0kXLhgc.mjs').then(f=>f.default||f)),v={__name:"no-faq",__ssrInlineRender:true,async setup(f){let p,c;const{width:S}=gl(),O$1=O`*[_type == "ctas"][0]{
+  layoutInfoContainer,
+}`,P=lp(),{data:n}=([p,c]=withAsyncContext(()=>Jc("page-textes-layouts",()=>P.fetch(O$1))),p=await p,c(),p);return (b,Q,W,h)=>{const T$2=pe,g=Je,w=Y,y=T$1,_=ie,I=st,A=Re;Q(ssrRenderComponent(T,h,{default:withCtx((pt,i,d,u)=>{if(i)i(ssrRenderComponent(T$2,null,null,d,u)),i(ssrRenderComponent(x,{class:"main-content mx-0 mx-md-5"},{default:withCtx((j,s,x,C)=>{if(s)ssrRenderSlot(b.$slots,"default",{},null,s,x,C);else return [renderSlot(b.$slots,"default",{},void 0,true)]}),_:3},d,u)),i(`<div class="whatsapp-button mb-16" data-v-23601a24${u}>`),i(ssrRenderComponent(g,null,null,d,u)),i("</div>"),i(ssrRenderComponent(fi,{fluid:unref(S)>600,class:"py-0 my-0 px-2 px-md-9"},{default:withCtx((j,s,x,C)=>{if(s)unref(n)?s(ssrRenderComponent(w,{color:"secondary","white-text":true},{default:withCtx((ut,k,E,G)=>{if(k)k(ssrRenderComponent(y,{"white-text":true},{title:withCtx((q,a,V,$)=>{if(a)a(`${ssrInterpolate(unref(n)?.layoutInfoContainer?.title)}`);else return [createTextVNode(toDisplayString(unref(n)?.layoutInfoContainer?.title),1)]}),description:withCtx((q,a,V,$)=>{if(a)a(`${ssrInterpolate(unref(n)?.layoutInfoContainer?.subtitle)}`);else return [createTextVNode(toDisplayString(unref(n)?.layoutInfoContainer?.subtitle),1)]}),bottom:withCtx((q,a,V,$)=>{if(a)a(ssrRenderComponent(_,null,null,V,$));else return [createVNode(_)]}),_:1},E,G));else return [createVNode(y,{"white-text":true},{title:withCtx(()=>[createTextVNode(toDisplayString(unref(n)?.layoutInfoContainer?.title),1)]),description:withCtx(()=>[createTextVNode(toDisplayString(unref(n)?.layoutInfoContainer?.subtitle),1)]),bottom:withCtx(()=>[createVNode(_)]),_:1})]}),_:1},x,C)):s("<!---->"),s(ssrRenderComponent(I,null,null,x,C));else return [unref(n)?(openBlock(),createBlock(w,{key:0,color:"secondary","white-text":true},{default:withCtx(()=>[createVNode(y,{"white-text":true},{title:withCtx(()=>[createTextVNode(toDisplayString(unref(n)?.layoutInfoContainer?.title),1)]),description:withCtx(()=>[createTextVNode(toDisplayString(unref(n)?.layoutInfoContainer?.subtitle),1)]),bottom:withCtx(()=>[createVNode(_)]),_:1})]),_:1})):createCommentVNode("",true),createVNode(I)]}),_:1},d,u)),i(ssrRenderComponent(A,null,null,d,u));else return [createVNode(T$2),createVNode(x,{class:"main-content mx-0 mx-md-5"},{default:withCtx(()=>[renderSlot(b.$slots,"default",{},void 0,true)]),_:3}),createVNode("div",{class:"whatsapp-button mb-16"},[createVNode(g)]),createVNode(fi,{fluid:unref(S)>600,class:"py-0 my-0 px-2 px-md-9"},{default:withCtx(()=>[unref(n)?(openBlock(),createBlock(w,{key:0,color:"secondary","white-text":true},{default:withCtx(()=>[createVNode(y,{"white-text":true},{title:withCtx(()=>[createTextVNode(toDisplayString(unref(n)?.layoutInfoContainer?.title),1)]),description:withCtx(()=>[createTextVNode(toDisplayString(unref(n)?.layoutInfoContainer?.subtitle),1)]),bottom:withCtx(()=>[createVNode(_)]),_:1})]),_:1})):createCommentVNode("",true),createVNode(I)]),_:1},8,["fluid"]),createVNode(A)]}),_:3},W));}}},M=v.setup;v.setup=(f,p)=>{const c=useSSRContext();return (c.modules||(c.modules=new Set)).add("layouts/no-faq.vue"),M?M(f,p):void 0};const ao=Lu(v,[["__scopeId","data-v-23601a24"]]);
+
+export { ao as default };
+//# sourceMappingURL=no-faq-FRZXiDRS.mjs.map

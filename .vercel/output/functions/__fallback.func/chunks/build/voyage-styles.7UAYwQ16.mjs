@@ -1,0 +1,8 @@
+const t=".main-content[data-v-af3283c6]{--v-layout-top:90px!important;--v-layout-bottom:0px!important;max-width:1440px;padding-bottom:0!important}@media(max-width:960px){.main-content[data-v-af3283c6]{--v-layout-top:60px!important}}[data-v-af3283c6] .v-main{padding-top:var(--v-layout-top)!important}@media(min-width:1600px){.custom-margin-x[data-v-af3283c6]{margin-left:auto!important;margin-right:auto!important}}";
+
+const voyageStyles_7UAYwQ16 = [
+  t
+];
+
+export { voyageStyles_7UAYwQ16 as default };
+//# sourceMappingURL=voyage-styles.7UAYwQ16.mjs.map

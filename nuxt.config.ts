@@ -43,12 +43,6 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'fr',
       },
-      script: [
-        {
-          id: 'gtm-script',
-          innerHTML: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src="https://load.sst.odysway.com/28bwtluuzax.js?"+i;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','5qth5h1=EQVHMiEhWTkoV0kvJ1lSAUVTVERTCBpKFwUDBgINDVkbDhc%3D');`,
-        },
-      ],
       noscript: [
         {
           id: 'gtm-noscript',
@@ -164,6 +158,20 @@ export default defineNuxtConfig({
       sourcemap: process.env.VERCEL_ENV !== 'production', // Disable sourcemaps in production to reduce payload
       cssCodeSplit: true, // Enable CSS code splitting so inlineStyles can inline critical CSS per-route
       minify: 'esbuild', // Use esbuild for fast minification (also handles CSS)
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            // Vue core is extremely stable — split it for long-term cache hits
+            if (id.includes('node_modules/vue/') || id.includes('node_modules/@vue/')) {
+              return 'vendor-vue'
+            }
+            // Vuetify is large (~600KB) and changes only on version bumps
+            if (id.includes('node_modules/vuetify/')) {
+              return 'vendor-vuetify'
+            }
+          },
+        },
+      },
     },
     css: {
       preprocessorOptions: {

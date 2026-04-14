@@ -1,0 +1,1 @@
+import{_ as s,o as a,l as o,s as r}from"./C_h2DYOn.js";const t={};function n(e,l){return a(),o("table",null,[r(e.$slots,"default")])}const _=Object.assign(s(t,[["render",n]]),{__name:"ProseTable"});export{_ as default};

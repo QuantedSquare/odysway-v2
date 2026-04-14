@@ -102,6 +102,48 @@ onMounted(() => {
     document.addEventListener(event, loadOnInteraction, { once: true, passive: true })
   })
 })
+
+onMounted(() => {
+  let gtmLoaded = false
+
+  const loadGtm = () => {
+    console.log('Loading...')
+    if (gtmLoaded || (typeof window !== 'undefined' && window.google_tag_manager)) return
+    gtmLoaded = true
+
+    window.dataLayer = window.dataLayer || []
+    window.dataLayer.push({
+      'gtm.start': new Date().getTime(),
+      'event': 'gtm.js',
+    })
+
+    const script = document.createElement('script')
+    script.async = true
+    script.src = 'https://load.sst.odysway.com/28bwtluuzax.js?5qth5h1=EQVHMiEhWTkoV0kvJ1lSAUVTVERTCBpKFwUDBgINDVkbDhc%3D'
+    document.head.appendChild(script)
+  }
+
+  // if (config.public.environment !== 'production') {
+  //   return
+  // }
+
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(loadGtm, { timeout: 1000 })
+  }
+  else {
+    setTimeout(loadGtm, 1000)
+  }
+
+  const gtmEvents = ['mousedown', 'touchstart', 'keydown']
+  const loadGtmOnInteraction = () => {
+    loadGtm()
+    gtmEvents.forEach(event => document.removeEventListener(event, loadGtmOnInteraction))
+  }
+  gtmEvents.forEach((event) => {
+    document.addEventListener(event, loadGtmOnInteraction, { once: true, passive: true })
+  })
+})
+
 onMounted(() => {
   const userUTMs = []
 
