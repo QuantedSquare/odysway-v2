@@ -1,9 +1,9 @@
 <template>
   <NuxtLayout>
     <NuxtPage />
-    <ClientOnly>
+    <!-- <ClientOnly>
       <CookiesSnackbar />
-    </ClientOnly>
+    </ClientOnly> -->
     <SearchDialog />
     <!-- <Maintenance /> -->
   </NuxtLayout>
