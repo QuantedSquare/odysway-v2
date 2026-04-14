@@ -34,12 +34,10 @@ export default defineNuxtConfig({
     head: {
       titleTemplate: '%s - Odysway',
       link: [
-        { rel: 'preconnect', href: 'https://nu6yntji.apicdn.sanity.io', crossorigin: 'anonymous' },
         { rel: 'preconnect', href: 'https://cdn.sanity.io', crossorigin: 'anonymous' },
-        { rel: 'preconnect', href: 'https://www.googletagmanager.com', crossorigin: 'anonymous' },
         { rel: 'preconnect', href: 'https://load.sst.odysway.com', crossorigin: 'anonymous' },
-        { rel: 'preconnect', href: 'https://app.cal.com', crossorigin: 'anonymous' },
-        { rel: 'dns-prefetch', href: 'https://app.cal.com' },
+        { rel: 'preconnect', href: 'https://sst.odysway.com', crossorigin: 'anonymous' },
+        { rel: 'preconnect', href: 'https://nu6yntji.apicdn.sanity.io', crossorigin: 'anonymous' },
       ],
       htmlAttrs: {
         lang: 'fr',
@@ -163,7 +161,7 @@ export default defineNuxtConfig({
     // },
     build: {
       sourcemap: process.env.VERCEL_ENV !== 'production', // Disable sourcemaps in production to reduce payload
-      cssCodeSplit: false, // Disable CSS code splitting to reduce the number of blocking requests
+      cssCodeSplit: true, // Enable CSS code splitting so inlineStyles can inline critical CSS per-route
       minify: 'esbuild', // Use esbuild for fast minification (also handles CSS)
     },
     css: {

@@ -1,7 +1,9 @@
 <template>
   <NuxtLayout>
     <NuxtPage />
-    <CookiesSnackbar v-model="consentBar" :opt-out="optOut" />
+    <ClientOnly>
+      <CookiesSnackbar v-model="consentBar" :opt-out="optOut" />
+    </ClientOnly>
     <SearchDialog />
     <!-- <Maintenance /> -->
   </NuxtLayout>
@@ -59,21 +61,7 @@ useHead({
   ],
 })
 
-// Defer Hotjar loading to improve initial page load
-// if (config.public.environment === 'production') {
-// Preconnect to Hotjar for faster loading when needed
-useHead({
-  link: [
-    {
-      rel: 'preconnect',
-      href: 'https://static.hotjar.com',
-    },
-    {
-      rel: 'dns-prefetch',
-      href: 'https://static.hotjar.com',
-    },
-  ],
-})
+// Hotjar is loaded lazily via requestIdleCallback — no preconnect needed
 
 // Load Hotjar after page is interactive
 onMounted(() => {

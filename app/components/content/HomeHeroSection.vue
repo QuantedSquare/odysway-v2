@@ -215,35 +215,21 @@ const buildSanityImageUrl = (source, width, height, quality = 75) => {
     .url()
 }
 
-const heroReady = ref(false)
-
-onMounted(async () => {
-  await nextTick()
-  setTimeout(() => {
-    heroReady.value = true
-  }, 0)
+const displayedSrc = computed(() => {
+  return buildSanityImageUrl(activeDesktopImage.value, 1920, 1080, 85)
+    || buildSanityImageUrl(heroProps.placeholderImage, 1920, 1080, 70)
 })
 
-const srcUrl = computed(() => {
-  if (!heroReady.value) return ''
-  return buildSanityImageUrl(activeDesktopImage.value, 1920, 1080, 100)
-})
-
-const srcset = computed(() => {
-  if (!heroReady.value) return ''
+const displayedSrcset = computed(() => {
   return [
-    `${buildSanityImageUrl(activeMobileImage.value, 640, 360, 90)} 640w`,
-    `${buildSanityImageUrl(activeMobileImage.value, 960, 540, 90)} 960w`,
-    `${buildSanityImageUrl(activeDesktopImage.value, 1280, 720, 90)} 1280w`,
-    `${buildSanityImageUrl(activeDesktopImage.value, 1600, 900, 90)} 1600w`,
-    `${buildSanityImageUrl(activeDesktopImage.value, 1920, 1080, 90)} 1920w`,
-    `${buildSanityImageUrl(activeDesktopImage.value, 2560, 1440, 100)} 2560w`,
+    `${buildSanityImageUrl(activeMobileImage.value, 640, 360, 85)} 640w`,
+    `${buildSanityImageUrl(activeMobileImage.value, 960, 540, 85)} 960w`,
+    `${buildSanityImageUrl(activeDesktopImage.value, 1280, 720, 85)} 1280w`,
+    `${buildSanityImageUrl(activeDesktopImage.value, 1600, 900, 85)} 1600w`,
+    `${buildSanityImageUrl(activeDesktopImage.value, 1920, 1080, 85)} 1920w`,
+    `${buildSanityImageUrl(activeDesktopImage.value, 2560, 1440, 85)} 2560w`,
   ].filter(Boolean).join(', ')
 })
-
-const placeholderSrc = computed(() => buildSanityImageUrl(heroProps.placeholderImage, 1920, 1080, 100))
-const displayedSrc = computed(() => (heroReady.value && srcUrl.value) ? srcUrl.value : placeholderSrc.value)
-const displayedSrcset = computed(() => (heroReady.value && srcset.value) ? srcset.value : '')
 </script>
 
 <style scoped>
@@ -273,7 +259,7 @@ const displayedSrcset = computed(() => (heroReady.value && srcset.value) ? srcse
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('/noise.png');
+  background-image: url('/noise.webp');
   background-repeat: repeat;
   background-size: auto;
   opacity: 0;
