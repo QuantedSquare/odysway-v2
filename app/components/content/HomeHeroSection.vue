@@ -213,18 +213,18 @@ const buildSanityImageUrl = (source, width, height, quality = 75) => {
 }
 
 const displayedSrc = computed(() => {
-  return buildSanityImageUrl(activeDesktopImage.value, 1920, 1080, 85)
+  return buildSanityImageUrl(activeDesktopImage.value, 1920, 1080, 70)
     || buildSanityImageUrl(heroProps.placeholderImage, 1920, 1080, 70)
 })
 
 const displayedSrcset = computed(() => {
   return [
-    `${buildSanityImageUrl(activeMobileImage.value, 640, 360, 85)} 640w`,
-    `${buildSanityImageUrl(activeMobileImage.value, 960, 540, 85)} 960w`,
-    `${buildSanityImageUrl(activeDesktopImage.value, 1280, 720, 85)} 1280w`,
-    `${buildSanityImageUrl(activeDesktopImage.value, 1600, 900, 85)} 1600w`,
-    `${buildSanityImageUrl(activeDesktopImage.value, 1920, 1080, 85)} 1920w`,
-    `${buildSanityImageUrl(activeDesktopImage.value, 2560, 1440, 85)} 2560w`,
+    `${buildSanityImageUrl(activeMobileImage.value, 640, 360, 70)} 640w`,
+    `${buildSanityImageUrl(activeMobileImage.value, 960, 540, 70)} 960w`,
+    `${buildSanityImageUrl(activeDesktopImage.value, 1280, 720, 70)} 1280w`,
+    `${buildSanityImageUrl(activeDesktopImage.value, 1600, 900, 70)} 1600w`,
+    `${buildSanityImageUrl(activeDesktopImage.value, 1920, 1080, 70)} 1920w`,
+    `${buildSanityImageUrl(activeDesktopImage.value, 2560, 1440, 70)} 2560w`,
   ].filter(Boolean).join(', ')
 })
 </script>
