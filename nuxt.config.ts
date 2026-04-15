@@ -88,8 +88,6 @@ export default defineNuxtConfig({
     '/': { isr: 60 * 60 * 24 }, // 1 day
     '/voyages': { isr: 60 * 60 * 24 },
     '/prochains-departs': { isr: 60 * 60 * 24 },
-    // Redirect legacy or non-existent index to listing page
-    '/search': { redirect: { to: '/voyages', statusCode: 301 } },
 
     // Dynamic content pages with slugs
     '/voyages/**': { isr: 60 * 60 * 24 }, // 1 day
@@ -110,7 +108,6 @@ export default defineNuxtConfig({
     '/devis': { isr: 60 * 60 * 24 * 5 },
     '/checkout': { isr: 60 * 60 * 24 * 5 },
     '/rdv-projet-voyage': { prerender: true },
-    '/calendly': { redirect: { to: '/rdv-projet-voyage', statusCode: 301 } },
 
     // Legal pages (rarely updated)
     '/politique-de-confidentialite': { isr: 60 * 60 * 24 * 5 }, // 5 days
@@ -118,6 +115,11 @@ export default defineNuxtConfig({
     '/conditions-generales-de-vente': { isr: 60 * 60 * 24 * 5 },
     '/cheques-vacances': { isr: 60 * 60 * 24 * 5 },
     '/confirmation': { isr: 60 * 60 * 24 * 5 },
+
+    // Redirect legacy or non-existent index to listing page
+    '/search': { redirect: { to: '/voyages', statusCode: 301 } },
+    '/calendly': { redirect: { to: '/rdv-projet-voyage', statusCode: 301 } },
+    '/concept': { redirect: { to: '/vision-voyage-odysway', statusCode: 301 } },
 
     // API routes
     '/api/**': { cors: true },
@@ -240,7 +242,7 @@ export default defineNuxtConfig({
       'foundingDate': '2018-01-01',
       'founder': {
         '@type': 'Person',
-        'name': 'Alexandre Ottmann',
+        'name': 'Romain Masina',
       },
 
       // Legal Information
@@ -262,6 +264,7 @@ export default defineNuxtConfig({
         'name': 'Politique d\'annulation standard',
         'merchantReturnDays': '30',
         'returnPolicyCategory': 'https://schema.org/MerchantReturnFiniteReturnWindow',
+        'returnPolicyCountry': 'FR',
         'applicableCountry': 'FR',
       },
 

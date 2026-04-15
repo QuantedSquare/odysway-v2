@@ -162,7 +162,6 @@
 </template>
 
 <script setup>
-import dayjs from 'dayjs'
 import { useGoTo } from 'vuetify'
 import { useRoute, useRouter } from 'vue-router'
 import { mdiMagnify, mdiFilterOutline, mdiMagnifyClose } from '@mdi/js'

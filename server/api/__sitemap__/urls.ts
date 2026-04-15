@@ -33,7 +33,7 @@ export default defineSitemapEventHandler(async () => {
 
   // Blog
   for (const post of blogPosts as any[]) {
-    urls.push({ loc: `/${post.slug}`, lastmod: post._updatedAt, changefreq: 'monthly', priority: 0.7 })
+    urls.push({ loc: `/blog/${post.slug}`, lastmod: post._updatedAt, changefreq: 'monthly', priority: 0.7 })
   }
 
   // Voyages
