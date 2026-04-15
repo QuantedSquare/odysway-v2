@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="voyage">
+    <div v-if="voyage && !customTravel">
       <BottomAppBar
         :date-sections="page.dateSections"
         :starting-price="voyage.pricing.startingPrice"
@@ -292,6 +292,7 @@ const [{ data: page }, { data: voyage }] = await Promise.all([
     sanity.fetch(voyageQuery, { slug: route.params.voyageSlug }),
   ),
 ])
+
 const { data: voyagePropositions } = await useAsyncData(
   'voyage-propositions',
   () => {
@@ -315,6 +316,11 @@ onMounted(() => {
   }
 })
 
+const customTravel = computed(() => {
+  const types = voyage.value?.availabilityTypes
+  return Array.isArray(types) && types.length === 1 && types[0] === 'custom'
+})
+
 const config = useRuntimeConfig()
 
 const builder = imageUrlBuilder({
@@ -335,7 +341,7 @@ const buildMainImageUrl = (image, width, height, quality = 90) => {
 }
 
 // SEO composable — called once during setup (not inside watchEffect)
-if (voyage.value) {
+if (voyage.value && !customTravel.value) {
   useSeo({
     seoData: voyage.value.seo,
     content: voyage.value,
@@ -359,7 +365,7 @@ if (voyage.value) {
 
 // Image preload — reactive to handle lazy data
 watchEffect(() => {
-  if (!voyage.value) return
+  if (!voyage.value || customTravel.value) return
 
   const image = voyage.value.image
   const link = []

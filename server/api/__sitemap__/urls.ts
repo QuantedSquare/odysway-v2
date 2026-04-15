@@ -56,5 +56,8 @@ export default defineSitemapEventHandler(async () => {
     urls.push({ loc: `/thematiques/${cat.slug}`, lastmod: cat._updatedAt, changefreq: 'monthly', priority: 0.8 })
   }
 
+  // llms.txt manifest
+  urls.push({ loc: '/llms.txt', changefreq: 'weekly', priority: 0.9 })
+
   return urls
 })
