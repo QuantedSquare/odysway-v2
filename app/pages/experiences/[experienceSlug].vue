@@ -236,14 +236,19 @@ watch(() => selectedExperience.value?.voyages, (voyages) => {
 if (selectedExperience.value) {
   const config = useRuntimeConfig()
   useSeo({
-    seoData: selectedExperience.value.seo || selectedExperience.value.blog?.seo || {}, // If {} blog SEO will be detected from content.blog or fallback or generated default
+    seoData: {
+      ...(selectedExperience.value.seo || selectedExperience.value.blog?.seo || {}),
+      ...(selectedExperience.value.blog?.slug?.current
+        ? { canonicalUrl: `https://odysway.com/blog/${selectedExperience.value.blog.slug.current}` }
+        : {}),
+    },
     content: selectedExperience.value,
     pageType: 'article',
     slug: selectedExperience.value.slug?.current,
     structuredData: selectedExperience.value.blog
       ? createBlogPostingSchema(
           selectedExperience.value.blog,
-          `https://odysway.com/experiences/${selectedExperience.value.slug.current}`,
+          `https://odysway.com/blog/${selectedExperience.value.blog.slug.current}`,
           config,
         )
       : null,

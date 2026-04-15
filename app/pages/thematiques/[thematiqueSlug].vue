@@ -260,14 +260,19 @@ watch(() => categorySanity.value?.voyages, (voyages) => {
 if (categorySanity.value) {
   const config = useRuntimeConfig()
   useSeo({
-    seoData: categorySanity.value.seo || categorySanity.value.blog?.seo || {}, // If {} blog SEO will be detected from content.blog or fallback or generated default
+    seoData: {
+      ...(categorySanity.value.seo || categorySanity.value.blog?.seo || {}),
+      ...(categorySanity.value.blog?.slug?.current
+        ? { canonicalUrl: `https://odysway.com/blog/${categorySanity.value.blog.slug.current}` }
+        : {}),
+    },
     content: categorySanity.value,
     pageType: 'article',
     slug: categorySanity.value.slug?.current,
     structuredData: categorySanity.value.blog
       ? createBlogPostingSchema(
           categorySanity.value.blog,
-          `https://odysway.com/thematiques/${categorySanity.value.slug.current}`,
+          `https://odysway.com/blog/${categorySanity.value.blog.slug.current}`,
           config,
         )
       : null,
