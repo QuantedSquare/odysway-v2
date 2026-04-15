@@ -237,7 +237,7 @@ if (selectedExperience.value) {
   const config = useRuntimeConfig()
   useSeo({
     seoData: {
-      ...(selectedExperience.value.seo || selectedExperience.value.blog?.seo || {}),
+      ...(selectedExperience.value.seo || {}),
       ...(selectedExperience.value.blog?.slug?.current
         ? { canonicalUrl: `https://odysway.com/blog/${selectedExperience.value.blog.slug.current}` }
         : {}),

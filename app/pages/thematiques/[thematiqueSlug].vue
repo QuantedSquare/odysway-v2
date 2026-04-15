@@ -261,7 +261,7 @@ if (categorySanity.value) {
   const config = useRuntimeConfig()
   useSeo({
     seoData: {
-      ...(categorySanity.value.seo || categorySanity.value.blog?.seo || {}),
+      ...(categorySanity.value.seo || {}),
       ...(categorySanity.value.blog?.slug?.current
         ? { canonicalUrl: `https://odysway.com/blog/${categorySanity.value.blog.slug.current}` }
         : {}),

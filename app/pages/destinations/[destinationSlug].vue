@@ -363,7 +363,7 @@ if (destinationSanity.value) {
   const config = useRuntimeConfig()
   useSeo({
     seoData: {
-      ...(destinationSanity.value.seo || destinationSanity.value.blog?.seo || {}),
+      ...(destinationSanity.value.seo || {}),
       ...(destinationSanity.value.blog?.slug?.current
         ? { canonicalUrl: `https://odysway.com/blog/${destinationSanity.value.blog.slug.current}` }
         : {}),
