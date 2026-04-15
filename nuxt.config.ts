@@ -218,6 +218,11 @@ export default defineNuxtConfig({
       'description': 'Odysway est l\'agence spécialiste des voyages en immersion. Nous proposons un tourisme authentique et responsable qui vous fera voyager différemment.',
       'url': 'https://odysway.com',
       'logo': '/logos/logo_noir.png',
+      'potentialAction': {
+        '@type': 'SearchAction',
+        'target': 'https://odysway.com/voyage?destination={search_term_string}',
+        'query-input': 'required name=search_term_string',
+      },
 
       // Contact Information
       'email': 'contact@odysway.com',
@@ -256,6 +261,32 @@ export default defineNuxtConfig({
         'addressLocality': 'Le Plessis Trévise',
         'postalCode': '94420',
         'addressCountry': 'FR',
+      },
+      'hasOfferCatalog': {
+        '@type': 'OfferCatalog',
+        'name': 'Voyages immersifs',
+        'itemListElement': [
+          {
+            '@type': 'OfferCatalog',
+            'name': 'Destinations',
+            'url': 'https://odysway.com/destinations',
+          },
+          {
+            '@type': 'OfferCatalog',
+            'name': 'Voyages',
+            'url': 'https://odysway.com/voyages',
+          },
+          {
+            '@type': 'OfferCatalog',
+            'name': 'Expériences',
+            'url': 'https://odysway.com/experiences',
+          },
+          {
+            '@type': 'OfferCatalog',
+            'name': 'Thématiques',
+            'url': 'https://odysway.com/thematiques',
+          },
+        ],
       },
 
       // Return & Cancellation Policy
