@@ -20,19 +20,26 @@ definePageMeta({
 const { faqData, getFaqsForSchema } = await useFaqData({
   includeHidden: true, // Include all FAQs on the FAQ page
 })
-// Add SEO with FAQ structured data
+// SEO meta tags
 const route = useRoute()
-watchEffect(() => {
-  if (!getFaqsForSchema.value?.length) return
-  useSeo({
-    seoData: faqData.value?.seo || {},
-    content: {
-      title: 'FAQ - Questions fréquentes',
-      description: 'Retrouvez les réponses aux questions les plus fréquentes sur nos voyages en petits groupes : réservation, organisation, destinations et bien plus.',
-    },
-    pageType: 'website',
-    slug: 'faq',
-    structuredData: createFAQPageSchema(getFaqsForSchema.value, `https://odysway.com${route.path}`),
-  })
+useSeo({
+  seoData: faqData.value?.seo || {},
+  content: {
+    title: 'FAQ - Questions fréquentes',
+    description: 'Retrouvez les réponses aux questions les plus fréquentes sur nos voyages en petits groupes : réservation, organisation, destinations et bien plus.',
+  },
+  pageType: 'website',
+  slug: 'faq',
 })
+
+// FAQPage structured data — computed ref is evaluated synchronously during SSR
+// so the JSON-LD lands in the initial HTML (not deferred to client-side)
+useHead(computed(() => {
+  const schema = getFaqsForSchema.value?.length
+    ? createFAQPageSchema(getFaqsForSchema.value, `https://odysway.com${route.path}`)
+    : null
+  return {
+    script: schema ? [{ type: 'application/ld+json', children: JSON.stringify(schema) }] : [],
+  }
+}))
 </script>
