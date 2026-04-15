@@ -28,7 +28,6 @@
 </template>
 
 <script setup>
-
 defineProps({
   backgroundColor: {
     type: String,

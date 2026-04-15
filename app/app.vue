@@ -123,9 +123,9 @@ onMounted(() => {
     document.head.appendChild(script)
   }
 
-  // if (config.public.environment !== 'production') {
-  //   return
-  // }
+  if (config.public.environment !== 'production') {
+    return
+  }
 
   if ('requestIdleCallback' in window) {
     requestIdleCallback(loadGtm, { timeout: 1000 })

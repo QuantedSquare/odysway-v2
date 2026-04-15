@@ -27,15 +27,8 @@
             />
           </v-col>
         </v-row>
-        <v-row justify-md="center">
-          <v-col
-            cols="12"
-          >
-            <v-divider v-if="voyage.availabilityTypes?.includes('groupe')" />
-          </v-col>
-        </v-row>
 
-        <v-row class="mt-0">
+        <!-- <v-row class="mt-0">
           <v-col cols="12">
             <span
               v-if="voyage.availabilityTypes?.includes('groupe')"
@@ -44,13 +37,13 @@
               {{ stickyBlock.dateText }}
             </span>
           </v-col>
-        </v-row>
+        </v-row> -->
         <v-row
           v-if="displayedDates.length > 0 && !isLoading"
           justify-md="center"
           class="text-center"
         >
-          <v-col
+          <!-- <v-col
             v-for="(date, i) in displayedDates"
             :key="date.departureDate + i"
             cols="12"
@@ -60,7 +53,7 @@
               :date="date"
               :voyage="voyage"
             />
-          </v-col>
+          </v-col> -->
 
           <v-col
             cols="12"
@@ -72,7 +65,8 @@
               @click="handleAllDeparturesClick()"
             >
               <span class="text-body-2 font-weight-bold text-decoration-none">
-                {{ stickyBlock.dateButtonText }}
+                Voir les départs disponibles
+                <!-- {{ stickyBlock.dateButtonText }} -->
               </span>
             </v-btn>
           </v-col>

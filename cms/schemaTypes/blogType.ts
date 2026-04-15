@@ -156,7 +156,6 @@ export const blogType = defineType({
               type: 'reference',
               to: [{type: 'badge'}],
               title: 'Badge',
-              validation: (rule: any) => rule.required(),
             } as any,
             {
               name: 'variable1Value',
