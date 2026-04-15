@@ -236,7 +236,6 @@ export function createFAQPageSchema(faqs, url = 'https://odysway.com/faq') {
       }
     })
     .filter(Boolean)
-
   if (mainEntity.length === 0) return null
 
   return {
