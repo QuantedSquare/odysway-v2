@@ -72,7 +72,16 @@ export function useSeo(options = {}) {
 
     return templates[pageType] || templates.website
   }
-
+  const checkAndRemoveWronglyAddedTitle = (title) => {
+    if (!title) return title
+    if (title.endsWith('| Odysway')) {
+      return title.replace(/\s*\| Odysway$/, '')
+    }
+    if (title.endsWith('- Odysway')) {
+      return title.replace(/\s*-\s*Odysway$/, '')
+    }
+    return title
+  }
   // Normalize SEO field names (handle different naming conventions)
   const normalizeSeoData = (seo, contentFallback, pageSlug, type) => {
     // For blog-referenced pages (destinations, experiences, thematiques)
@@ -81,12 +90,12 @@ export function useSeo(options = {}) {
     const defaultTitle = generateTitleFromSlug(pageSlug)
     const defaultDescription = generateDescriptionFromSlug(pageSlug, type)
     return {
-      metaTitle:
+      metaTitle: checkAndRemoveWronglyAddedTitle(
         seo?.metaTitle // New standard
         || seo?.seoTitle // Blog posts
         || blogSeo?.seoTitle // Blog-referenced content
         || contentFallback?.title // Fallback
-        || defaultTitle, // ← Slug-based default
+        || defaultTitle), // ← Slug-based default
       metaDescription:
         seo?.metaDescription // New standard
         || seo?.seoDescription // Blog posts
@@ -144,7 +153,7 @@ export function useSeo(options = {}) {
   const normalized = normalizeSeoData(seoData, content, slug, pageType)
   // Generate canonical URL — normalize to non-www, no trailing slash
   const siteUrl = config.public.siteURL?.replace(/\/$/, '') || 'https://odysway.com'
-  const normalizeCanonical = (url) => url
+  const normalizeCanonical = url => url
     .replace(/^https?:\/\/www\./, 'https://')
     .replace(/\/$/, '')
 

@@ -32,7 +32,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      titleTemplate: '%s - Odysway',
+      titleTemplate: '%s | Odysway',
       link: [
         { rel: 'preconnect', href: 'https://nu6yntji.apicdn.sanity.io', crossorigin: 'anonymous' },
         { rel: 'preconnect', href: 'https://cdn.sanity.io', crossorigin: 'anonymous' },
