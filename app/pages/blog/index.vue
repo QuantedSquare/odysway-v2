@@ -73,72 +73,69 @@
           </v-select>
         </v-col>
       </v-row>
-      <v-row v-if="loading">
-        <v-col
-          v-for="n in 9"
-          :key="n"
-          cols="12"
-          sm="6"
-          lg="4"
+      <div class="blog-grid-wrapper">
+        <v-progress-linear
+          v-if="loading"
+          indeterminate
+          color="primary"
+          class="blog-progress"
+        />
+        <v-row
+          v-if="!loading && parsedBlogs.length === 0"
         >
-          <v-skeleton-loader
-            type="card"
-          />
-        </v-col>
-      </v-row>
-      <v-row v-else-if="parsedBlogs.length === 0">
-        <v-col
-          cols="12"
-          class="text-center py-10"
-        >
-          <v-icon
-            size="48"
-            color="grey"
+          <v-col
+            cols="12"
+            class="text-center py-10"
           >
-            {{ mdiMagnifyClose }}
-          </v-icon>
-          <div class="text-h6 mt-2 mb-4">
-            {{ pageBlogSanity.noArticlesFound }}
-          </div>
-          <v-btn
-            v-if="search || selectedCategory"
-            color="primary"
-            variant="outlined"
-            @click="() => { search = ''; selectedCategory = null; }"
-          >
-            {{ pageBlogSanity.resetFilters }}
-          </v-btn>
-        </v-col>
-      </v-row>
-      <v-row
-        v-else
-      >
-        <v-col
-          v-for="blog in parsedBlogs"
-          :key="blog.slug"
-          cols="12"
-          sm="6"
-          lg="4"
-        >
-          <BlogCard
-            v-bind="blog"
-          />
-        </v-col>
-        <v-col cols="12">
-          <v-pagination
-            :model-value="currentPage"
-            :length="nbPages"
-            :total-visible="3"
-            variant="flat"
-            density="comfortable"
-            rounded="circle"
-            active-color="primary"
-            elevation="3"
-            class="my-4"
-            @update:model-value="goToPage"
-          />
-        </v-col>
-      </v-row>
+            <v-icon
+              size="48"
+              color="grey"
+            >
+              {{ mdiMagnifyClose }}
+            </v-icon>
+            <div class="text-h6 mt-2 mb-4">
+              {{ pageBlogSanity.noArticlesFound }}
+            </div>
+            <v-btn
+              v-if="search || selectedCategory"
+              color="primary"
+              variant="outlined"
+              @click="() => { search = ''; selectedCategory = null; }"
+            >
+              {{ pageBlogSanity.resetFilters }}
+            </v-btn>
+          </v-col>
+        </v-row>
+        <div :class="{ 'grid-loading': loading }">
+          <v-row v-if="parsedBlogs.length > 0">
+            <v-col
+              v-for="blog in parsedBlogs"
+              :key="blog.slug"
+              cols="12"
+              sm="6"
+              lg="4"
+            >
+              <BlogCard
+                v-bind="blog"
+              />
+            </v-col>
+            <v-col cols="12">
+              <v-pagination
+                :model-value="currentPage"
+                :length="nbPages"
+                :total-visible="3"
+                variant="flat"
+                density="comfortable"
+                rounded="circle"
+                active-color="primary"
+                elevation="3"
+                class="my-4"
+                @update:model-value="goToPage"
+              />
+            </v-col>
+          </v-row>
+        </div>
+      </div>
     </v-container>
   </div>
   <div v-else-if="pageBlogStatus === 'loading'">
@@ -260,17 +257,19 @@ const buildBlogsQuery = (search, category, sort, page) => {
 
 const sanity = useSanity()
 
+// Computed key that changes on any query param change (primitive → reliable watch trigger)
+const queryKey = computed(() => JSON.stringify(route.query))
+
 // Fetch blogs with pagination
-const { data: blogsData, status, refresh } = await useAsyncData(
-  `blog-${JSON.stringify(route.query)}`,
+const { data: blogsData, status } = await useAsyncData(
+  'blog-listings',
   () => sanity.fetch(
     buildBlogsQuery(searchQuery.value, categoryQuery.value, sortQuery.value, currentPage.value),
   ),
   {
-    watch: [() => route.query],
+    watch: [queryKey],
   },
 )
-console.log('blogsData', blogsData.value)
 
 // Fetch all categories for the filter dropdown
 const categoriesQuery = groq`
@@ -451,5 +450,23 @@ watch([search, selectedCategory, sortOrder], () => {
 .hover-scale{
   transform: scale(1);
   transition: transform 0.2s ease-in-out;
+}
+
+.blog-grid-wrapper {
+  position: relative;
+}
+
+.blog-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.grid-loading {
+  opacity: 0.45;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
 }
 </style>
