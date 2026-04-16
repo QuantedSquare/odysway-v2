@@ -39,7 +39,6 @@ const route = useRoute()
 const showHint = ref(false)
 
 watch(() => route.path, () => {
-  console.log('route', route.path)
   if (route.path.includes('/voyages')) showHint.value = true
   setTimeout(() => {
     showHint.value = false
