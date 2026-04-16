@@ -27,34 +27,11 @@
             />
           </v-col>
         </v-row>
-
-        <!-- <v-row class="mt-0">
-          <v-col cols="12">
-            <span
-              v-if="voyage.availabilityTypes?.includes('groupe')"
-              class="text-h4 font-weight-bold text-primary"
-            >
-              {{ stickyBlock.dateText }}
-            </span>
-          </v-col>
-        </v-row> -->
         <v-row
           v-if="displayedDates.length > 0 && !isLoading"
           justify-md="center"
           class="text-center"
         >
-          <!-- <v-col
-            v-for="(date, i) in displayedDates"
-            :key="date.departureDate + i"
-            cols="12"
-          >
-            <DateButton
-              v-if="date.status.status !== 'full'"
-              :date="date"
-              :voyage="voyage"
-            />
-          </v-col> -->
-
           <v-col
             cols="12"
           >
@@ -66,7 +43,9 @@
             >
               <span class="text-body-2 font-weight-bold text-decoration-none">
                 Voir les départs disponibles
-                <!-- {{ stickyBlock.dateButtonText }} -->
+                <v-icon>
+                  {{ mdiArrowDown }}
+                </v-icon>
               </span>
             </v-btn>
           </v-col>
@@ -107,6 +86,30 @@
                 Demander un devis
               </span>
             </v-btn>
+          </v-col>
+        </v-row>
+        <v-row class="text-size-14 text-grey">
+          <v-col
+            cols="12"
+            class="d-flex align-start flex-column ga-1"
+          >
+            <div
+              v-for="item, index in tempListPlaceholder"
+              :key="index"
+              class="d-flex align-center ga-2"
+            >
+              {{ item }}
+            </div>
+            <!-- <div
+              v-for="item, index in stickyBlock.ctaBottom.list"
+              :key="index"
+              class="d-flex align-center ga-2"
+            >
+              <v-icon>
+                {{ mdiCheckCircleOutline }}
+              </v-icon>
+              <span v-dompurify-html="parseBoldText(item)" />
+            </div> -->
           </v-col>
         </v-row>
         <v-row
@@ -161,23 +164,6 @@
               </v-btn-secondary>
             </v-col>
           </v-row>
-          <v-row class="text-size-14 text-grey">
-            <v-col
-              cols="12"
-              class="d-flex align-start flex-column ga-1"
-            >
-              <div
-                v-for="item, index in stickyBlock.ctaBottom.list"
-                :key="index"
-                class="d-flex align-center ga-2"
-              >
-                <v-icon>
-                  {{ mdiCheckCircleOutline }}
-                </v-icon>
-                <span v-dompurify-html="parseBoldText(item)" />
-              </div>
-            </v-col>
-          </v-row>
         </template>
         <template v-else-if="displayedDates.length === 0 && voyage.availabilityTypes?.includes('groupe')">
           <v-row>
@@ -230,7 +216,7 @@
 </template>
 
 <script setup>
-import { mdiArrowRight, mdiCheckCircleOutline } from '@mdi/js'
+import { mdiArrowRight, mdiCheckCircleOutline, mdiArrowDown } from '@mdi/js'
 import { useGoTo } from 'vuetify'
 import dayjs from 'dayjs'
 
@@ -297,6 +283,8 @@ function handleAskDevis() {
     ctaUrl: `/devis?slug=${typeof voyage.slug === 'object' ? voyage.slug.current : voyage.slug}`,
   })
 }
+
+const tempListPlaceholder = [`🔄 Annulation gratuite jusqu'à J-60`, `💳 CB, virement, chèques vacances`, `🔒 Acompte 30% · Solde avant départ`]
 </script>
 
 <style scoped>
