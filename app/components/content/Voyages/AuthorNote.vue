@@ -1,73 +1,72 @@
 <template>
-    <div
-      v-if="authorNote"
-      class="text-primary d-flex flex-column px-2"
+  <div
+    v-if="authorNote"
+    class="text-primary d-flex flex-column px-2"
+  >
+    <h4
+      v-if="page?.authorNote?.title"
+      class="text-h4 font-weight-bold mb-4"
     >
-      <h4
-        v-if="page?.authorNote?.title"
-        class="text-h4 font-weight-bold mb-4"
-      >
-        {{ page.authorNote.title }}
-      </h4>
+      {{ page.authorNote.title }}
+    </h4>
 
-      <!-- Always render the content div, but handle truncation on client -->
+    <!-- Always render the content div, but handle truncation on client -->
+    <div
+      v-if="authorNote?.text"
+      class="text-subtitle-2 text-md-body-2 line-height-2 text-wrapper"
+    >
       <div
-        v-if="authorNote?.text"
-        class="text-subtitle-2 text-md-body-2 line-height-2 text-wrapper"
+        ref="content"
+        :class="{ 'truncated': shouldTruncate && !isExpanded, 'text-content': shouldTruncate }"
+        :style="shouldTruncate ? contentStyle : {}"
       >
-        <div
-          ref="content"
-          :class="{ 'truncated': shouldTruncate && !isExpanded, 'text-content': shouldTruncate }"
-          :style="shouldTruncate ? contentStyle : {}"
-        >
-          <EnrichedText :value="authorNote.text" />
-          
-        </div>
-      </div>
-
-      <!-- Expand/collapse button - render consistently but handle client-side logic -->
-      <div v-if="shouldTruncate">
-        <v-btn
-          variant="text"
-          width="fit-content"
-          class="text-body-2 text-md-body-1 d-flex justify-start align-center pl-0"
-          @click="toggleExpanded"
-        >
-          {{ isExpanded ? 'Lire moins' : 'Lire plus' }}
-          <v-icon
-            :icon="mdiArrowRight"
-            color="primary"
-            class="mt-1"
-            :class="isExpanded ? 'rotate-180' : ''"
-          />
-        </v-btn>
-      </div>
-
-      <!-- Author section with proper loading states -->
-      <div
-        v-if="author"
-        class="d-flex ga-3 mt-md-4 mt-2"
-      >
-        <NuxtImg
-          v-if="authorImageSrcUrl"
-          :src="authorImageSrcUrl"
-          :srcset="authorImageSrcset"
-          sizes="(max-width: 600px) 80px, 80px"
-          :alt="author.description || 'Photo de l\'auteur'"
-          format="webp"
-          loading="lazy"
-          class="author-avatar"
-        />
-        <div class="text-subtitle-2 d-flex flex-column justify-center">
-          <span class="font-weight-bold mb-1">
-            {{ author.name }}
-          </span>
-          <span class="font-weight-regular">
-            {{ author.position }} &nbsp;{{ authorNote?.affixeAuthor }}
-          </span>
-        </div>
+        <EnrichedText :value="authorNote.text" />
       </div>
     </div>
+
+    <!-- Expand/collapse button - render consistently but handle client-side logic -->
+    <div v-if="shouldTruncate">
+      <v-btn
+        variant="text"
+        width="fit-content"
+        class="text-body-2 text-md-body-1 d-flex justify-start align-center pl-0"
+        @click="toggleExpanded"
+      >
+        {{ isExpanded ? 'Lire moins' : 'Lire plus' }}
+        <v-icon
+          :icon="mdiArrowRight"
+          color="primary"
+          class="mt-1"
+          :class="isExpanded ? 'rotate-180' : ''"
+        />
+      </v-btn>
+    </div>
+
+    <!-- Author section with proper loading states -->
+    <div
+      v-if="author"
+      class="d-flex ga-3 mt-md-4 mt-2"
+    >
+      <NuxtImg
+        v-if="authorImageSrcUrl"
+        :src="authorImageSrcUrl"
+        :srcset="authorImageSrcset"
+        sizes="(max-width: 600px) 80px, 80px"
+        :alt="author.description || 'Photo de l\'auteur'"
+        format="webp"
+        loading="lazy"
+        class="author-avatar"
+      />
+      <div class="text-subtitle-2 d-flex flex-column justify-center">
+        <span class="font-weight-bold mb-1">
+          {{ author.name }}
+        </span>
+        <span class="font-weight-regular">
+          {{ author.position }} &nbsp;{{ authorNote?.affixeAuthor }}
+        </span>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup>

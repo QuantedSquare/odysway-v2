@@ -1,7 +1,7 @@
 <template>
   <v-container
     fluid
-    class="px-0 py-0"
+    class="px-0 py-0 mt-4"
   >
     <v-row
       align="center"
@@ -40,7 +40,7 @@
       <v-row
         v-if="isHydrated"
         ref="scrollContainer"
-        class="flex-nowrap overflow-auto hidden-scroll"
+        class="flex-nowrap overflow-auto hidden-scroll "
       >
         <v-col
           v-for="housing, index in housingBlock || []"
@@ -50,7 +50,7 @@
         >
           <v-card
             variant="text"
-            :max-width="770"
+            :max-width="childrenCount > 1 ? 770 : 1500"
           >
             <v-card-text class="text-body-1 text-grey-darken-3 pa-md-6">
               <v-row>
@@ -106,14 +106,13 @@
                       class="pb-0"
                     >
                       <h2 class="text-h5 font-weight-bold text-center text-md-left d-flex align-center ga-2">
-                        
                         <div class="text-white custom-number-chip">
                           <span>
-                         {{ index + 1 }}
+                            {{ index + 1 }}
                           </span>
                         </div>
                         <span>
-                        {{ housing.title }}
+                          {{ housing.title }}
                         </span>
                       </h2>
                     </v-col>

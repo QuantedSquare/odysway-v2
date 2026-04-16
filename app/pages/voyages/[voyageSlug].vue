@@ -37,6 +37,12 @@
               :voyage="voyage"
               :title="page.accompanistsTitle"
             />
+            <LazyHousingSection
+              :housing-block="voyage.housingBlock"
+              :housing-title="page.housingTitle"
+              :housing-type-title="page.housingTypeTitle"
+              :housing-mood-title="page.housingMoodTitle"
+            />
           </template>
           <template #right-side>
             <InfoCard
@@ -50,13 +56,6 @@
           fluid
           class="px-0"
         >
-          <LazyHousingSection
-            :housing-block="voyage.housingBlock"
-            :housing-title="page.housingTitle"
-            :housing-type-title="page.housingTypeTitle"
-            :housing-mood-title="page.housingMoodTitle"
-          />
-
           <LazyContactUsSection
             v-if="!voyage.availabilityTypes?.includes('groupe') && voyage.availabilityTypes?.includes('privatisation')"
             :contact-section="page.contactSection"

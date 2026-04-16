@@ -7,6 +7,7 @@
       v-if="rating"
       color="white"
       rounded="pill"
+
       class="btn-shadow bg-white px-2 px-md-4 custom-rating-height"
     >
       <div class="d-flex align-center">
@@ -84,7 +85,7 @@ const scrollToReviews = () => {
 
 <style scoped>
 .custom-rating-height {
-  height: 46px!important;
+  height: 38px!important;
 }
 .custom-svg-size {
   width: 18px!important;
