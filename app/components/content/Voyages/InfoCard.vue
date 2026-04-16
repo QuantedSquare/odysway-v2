@@ -138,6 +138,9 @@
                   <div
                     v-if="stickyBlock.ctaCall.avatars && stickyBlock.ctaCall.avatars.length > 0"
                     class="avatar-stack"
+                  <div
+                    v-if="stickyBlock.ctaCall.avatars && stickyBlock.ctaCall.avatars.length > 0"
+                    class="avatar-stack"
                   >
                     <v-avatar
                       v-for="(member, i) in stickyBlock.ctaCall.avatars.slice(0, 3)"
@@ -151,6 +154,8 @@
                         :alt="member.name || 'Team member'"
                         cover
                       />
+                    </v-avatar>
+                  </div>
                     </v-avatar>
                   </div>
 
@@ -232,6 +237,7 @@
 <script setup>
 import { mdiArrowRight, mdiCheckCircleOutline } from '@mdi/js'
 import { useGoTo } from 'vuetify'
+import { useGoTo } from 'vuetify'
 import dayjs from 'dayjs'
 
 const img = useImage()
@@ -249,7 +255,7 @@ const { stickyBlock, voyage } = defineProps({
     required: true,
   },
 })
-
+const img = useImage()
 const displayedDates = computed(() => {
   if (dates.value.length > 0) {
     const filteredDates = dates.value.filter(d => getDateStatus(d)?.status !== 'full')

@@ -225,6 +225,14 @@ export const blogType = defineType({
         group: 'seo',
         description: 'Configuration SEO pour ce blog post',
       }),
+    defineField({
+      name: 'markdownContent',
+      title: 'Contenu Markdown (pour LLM)',
+      type: 'text',
+      rows: 20,
+      description: 'Version Markdown de l\'article destinée aux moteurs IA (ChatGPT, Claude, Perplexity…). Peut être généré automatiquement.',
+      group: 'seo',
+    }),
 
     // Migration metadata - used to link blogs to categories/destinations
     // Hidden, relicat of the old migration script

@@ -35,14 +35,16 @@
 
 <script setup>
 const { trackWhatsappClick } = useGtmTracking()
+const route = useRoute()
+const showHint = ref(false)
 
-const showHint = ref(true)
-
-onMounted(() => {
+watch(() => route.path, () => {
+  console.log('route', route.path)
+  if (route.path.includes('/voyages')) showHint.value = true
   setTimeout(() => {
     showHint.value = false
-  }, 7000)
-})
+  }, 5000)
+}, { immediate: true })
 
 const handleWhatsappClick = () => {
   trackWhatsappClick()

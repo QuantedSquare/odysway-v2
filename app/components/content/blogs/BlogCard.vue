@@ -19,11 +19,11 @@
         <v-chip
           size="x-large"
           class="text-subtitle-2 text-white font-weight-bold px-5 d-flex align-center"
-        variant="tonal"
+          variant="tonal"
         >
-        <span class="mb-1 text-shadow">
-          {{ type }}
-        </span>
+          <span class="mb-1 text-shadow">
+            {{ type }}
+          </span>
         </v-chip>
       </div>
     </v-img>

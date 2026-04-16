@@ -142,11 +142,16 @@ export function useSeo(options = {}) {
   }
 
   const normalized = normalizeSeoData(seoData, content, slug, pageType)
-  // Generate canonical URL (strip trailing slash)
+  // Generate canonical URL — normalize to non-www, no trailing slash
+  const siteUrl = config.public.siteURL?.replace(/\/$/, '') || 'https://odysway.com'
+  const normalizeCanonical = (url) => url
+    .replace(/^https?:\/\/www\./, 'https://')
+    .replace(/\/$/, '')
+
   const canonicalUrl = computed(() => {
-    if (normalized.canonicalUrl) return normalized.canonicalUrl.replace(/\/$/, '')
-    if (baseUrl) return `https://odysway.com${baseUrl}`.replace(/\/$/, '')
-    return `https://odysway.com${route.path}`.replace(/\/$/, '')
+    if (normalized.canonicalUrl) return normalizeCanonical(normalized.canonicalUrl)
+    if (baseUrl) return normalizeCanonical(`${siteUrl}${baseUrl}`)
+    return normalizeCanonical(`${siteUrl}${route.path}`)
   })
 
   // Generate robots meta tag

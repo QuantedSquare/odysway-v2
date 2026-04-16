@@ -362,14 +362,19 @@ watch(() => destinationSanity.value?.voyages, (voyages) => {
 if (destinationSanity.value) {
   const config = useRuntimeConfig()
   useSeo({
-    seoData: destinationSanity.value.seo || destinationSanity.value.blog?.seo || {}, // If {} blog SEO will be detected from content.blog or fallback or generated default
+    seoData: {
+      ...(destinationSanity.value.seo || {}),
+      ...(destinationSanity.value.blog?.slug?.current
+        ? { canonicalUrl: `https://odysway.com/blog/${destinationSanity.value.blog.slug.current}` }
+        : {}),
+    },
     content: destinationSanity.value,
     pageType: 'article',
     slug: destinationSanity.value.slug?.current,
     structuredData: destinationSanity.value.blog
       ? createBlogPostingSchema(
           destinationSanity.value.blog,
-          `https://odysway.com/destinations/${destinationSanity.value.slug.current}`,
+          `https://odysway.com/blog/${destinationSanity.value.blog.slug.current}`,
           config,
         )
       : null,

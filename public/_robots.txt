@@ -16,3 +16,86 @@ Disallow: /
 
 User-agent: SemrushBot
 Disallow: /
+
+User-agent: GPTBot
+Allow: /
+Disallow: /api/
+Disallow: /server/api/
+Disallow: /booking-management
+Disallow: /checkout
+Disallow: /paiement
+Disallow: /devis
+Disallow: /preview/enable
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /api/
+Disallow: /server/api/
+Disallow: /booking-management
+Disallow: /checkout
+Disallow: /paiement
+Disallow: /devis
+Disallow: /preview/enable
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /api/
+Disallow: /server/api/
+Disallow: /booking-management
+Disallow: /checkout
+Disallow: /paiement
+Disallow: /devis
+Disallow: /preview/enable
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /api/
+Disallow: /server/api/
+Disallow: /booking-management
+Disallow: /checkout
+Disallow: /paiement
+Disallow: /devis
+Disallow: /preview/enable
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /api/
+Disallow: /server/api/
+Disallow: /booking-management
+Disallow: /checkout
+Disallow: /paiement
+Disallow: /devis
+Disallow: /preview/enable
+
+User-agent: Applebot
+Allow: /
+Disallow: /api/
+Disallow: /server/api/
+Disallow: /booking-management
+Disallow: /checkout
+Disallow: /paiement
+Disallow: /devis
+Disallow: /preview/enable
+
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+Disallow: /server/api/
+Disallow: /booking-management
+Disallow: /checkout
+Disallow: /paiement
+Disallow: /devis
+Disallow: /preview/enable
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /api/
+Disallow: /server/api/
+Disallow: /booking-management
+Disallow: /checkout
+Disallow: /paiement
+Disallow: /devis
+Disallow: /preview/enable
