@@ -153,16 +153,31 @@ export default defineNuxtConfig({
         transformAssetUrls,
       },
     },
-    // Uncomment for Nuxt4 upgrade
-    // optimizeDeps: {
-    //   include: ['minimatch', 'brace-expansion', '@sanity/visual-editing'],
-    // },
-    // resolve: {
-    //   alias: {
-    //     'react-compiler-runtime': 'react-compiler-runtime',
-    //     react: 'react',
-    //   },
-    // },
+    optimizeDeps: {
+      include: [
+        '@nuxtjs/sanity > @sanity/visual-editing > @sanity/insert-menu',
+        '@nuxtjs/sanity > @sanity/visual-editing > @sanity/mutate > lodash/groupBy.js', // CJS
+        '@nuxtjs/sanity > @sanity/visual-editing > @sanity/ui > styled-components',
+        '@nuxtjs/sanity > @sanity/visual-editing > @sanity/visual-editing > react-is', // CJS
+        '@nuxtjs/sanity > @sanity/visual-editing > react', // CJS
+        '@nuxtjs/sanity > @sanity/visual-editing > react/jsx-runtime', // CJS
+        '@nuxtjs/sanity > @sanity/visual-editing > react-dom', // CJS
+        '@nuxtjs/sanity > @sanity/visual-editing > react-dom/client', // CJS
+        '@nuxtjs/sanity > @sanity/visual-editing > react-compiler-runtime', // CJS
+        '@sanity/client',
+        '@nuxtjs/sanity > @sanity/client > @sanity/visual-editing',
+        '@date-io/dayjs',
+        'dayjs', // CJS
+        'dayjs/locale/fr', // CJS
+        'vue-dompurify-html',
+        '@mdi/js',
+        'lodash', // CJS
+        'search-insights',
+        '@vueuse/core',
+        '@sanity/client/stega',
+      ],
+    },
+
     build: {
       sourcemap: process.env.VERCEL_ENV !== 'production', // Disable sourcemaps in production to reduce payload
       cssCodeSplit: false, // Disable CSS code splitting to reduce the number of blocking requests
@@ -194,7 +209,7 @@ export default defineNuxtConfig({
       3072: 3072,
     },
     sanity: {
-      projectId: process.env.SANITY_PROJECT_ID,
+      projectId: process.env.SANITY_PROJECT_ID || '',
     },
   },
   sanity: {

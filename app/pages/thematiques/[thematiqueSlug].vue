@@ -16,42 +16,18 @@
           :page-content="pageContent"
         />
       </div>
-      <BlogHeroSection
+      <BlogTeaserCard
         v-if="categorySanity?.blog"
         class="mt-12"
         :title="categorySanity.blog.title"
         :description="categorySanity.blog.description"
-        :image="categorySanity.blog.displayedImg"
-        :background-color="'soft-blush'"
-        introduction-color="grey"
-        title-color="primary"
-        avatar-size="60"
-        :blog-type="blogType"
-        :badge-color="badgeColor"
-        :reading-time="readingTime"
+        :slug="categorySanity.blog.slug.current"
+        :displayed-img="categorySanity.blog.displayedImg"
         :published-at="categorySanity.blog.publishedAt"
+        :reading-time="readingTime"
+        :category="blogType"
         :author="categorySanity.blog.author?.name"
-        :author-photo="categorySanity.blog.author?.image"
-        :author-role="categorySanity.blog.author?.position"
-      >
-        <template #title>
-          {{ categorySanity.blog.title }}
-        </template>
-        <template #introduction>
-          {{ categorySanity.blog.description }}
-        </template>
-      </BlogHeroSection>
-      <SectionContainer
-        v-if="categorySanity?.blog"
-        :title="categorySanity.blog.title"
-        :subtitle="categorySanity.blog.excerpt"
-      >
-        <template #content>
-          <EnrichedText
-            :value="categorySanity.blog.body"
-          />
-        </template>
-      </SectionContainer>
+      />
     </template>
   </ContentLayout>
 </template>
@@ -127,7 +103,6 @@ const categoryQuery = `
       description,
       displayedImg,
       publishedAt,
-      body,
       categories[]->{
         _id,
         title
@@ -135,44 +110,8 @@ const categoryQuery = `
       author->{
         _id,
         name,
-        image,
-        position
+        image
       },
-      body[]{
-        ...,
-        _type == "image" => {
-          ...,
-          asset->{
-            _id,
-            url,
-            "metadata": {
-              "dimensions": metadata.dimensions,
-              "lqip": metadata.lqip
-            }
-          }
-        }
-      },
-      seo{
-        metaTitle,
-        metaDescription,
-        canonicalUrl,
-        focusKeyword,
-        keywords,
-        robotsIndex,
-        robotsFollow,
-        ogTitle,
-        ogDescription,
-        ogImage{
-          asset->{
-            _id,
-            _ref,
-            url
-          },
-          alt
-        }
-      },
-      "numberOfCharacters": length(pt::text(body)),
-      "estimatedWordCount": round(length(pt::text(body)) / 5),
       "estimatedReadingTime": round(length(pt::text(body)) / 5 / 180)
     },
   }
@@ -238,8 +177,6 @@ const blogType = computed(() => {
   return categories[0]?.title || null
 })
 
-const badgeColor = computed(() => blogType.value ? 'secondary' : null)
-
 // GTM: Track view_item_list when voyages are displayed
 watch(() => categorySanity.value?.voyages, (voyages) => {
   if (voyages && voyages.length > 0) {
@@ -258,24 +195,11 @@ watch(() => categorySanity.value?.voyages, (voyages) => {
 
 // Use SEO composable - automatically uses blog's SEO fields
 if (categorySanity.value) {
-  const config = useRuntimeConfig()
   useSeo({
-    seoData: {
-      ...(categorySanity.value.seo || {}),
-      ...(categorySanity.value.blog?.slug?.current
-        ? { canonicalUrl: `https://odysway.com/blog/${categorySanity.value.blog.slug.current}` }
-        : {}),
-    },
+    seoData: categorySanity.value.seo || {},
     content: categorySanity.value,
     pageType: 'article',
     slug: categorySanity.value.slug?.current,
-    structuredData: categorySanity.value.blog
-      ? createBlogPostingSchema(
-          categorySanity.value.blog,
-          `https://odysway.com/blog/${categorySanity.value.blog.slug.current}`,
-          config,
-        )
-      : null,
     breadcrumbs: [
       { name: 'Accueil', url: 'https://odysway.com' },
       { name: 'Thématiques', url: 'https://odysway.com/thematiques' },

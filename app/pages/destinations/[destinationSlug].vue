@@ -12,42 +12,18 @@
           :voyages="destinationSanity.voyages"
         />
       </div>
-      <BlogHeroSection
+      <BlogTeaserCard
         v-if="destinationSanity.blog"
         class="mt-12"
         :title="destinationSanity.blog.title"
         :description="destinationSanity.blog.description"
-        :image="destinationSanity.blog.displayedImg"
-        :background-color="'soft-blush'"
-        introduction-color="grey"
-        title-color="primary"
-        avatar-size="60"
-        :blog-type="blogType"
-        :badge-color="badgeColor"
-        :reading-time="readingTime"
+        :slug="destinationSanity.blog.slug.current"
+        :displayed-img="destinationSanity.blog.displayedImg"
         :published-at="destinationSanity.blog.publishedAt"
+        :reading-time="readingTime"
+        :category="blogType"
         :author="destinationSanity.blog.author?.name"
-        :author-photo="destinationSanity.blog.author?.image"
-        :author-role="destinationSanity.blog.author?.position"
-      >
-        <template #title>
-          {{ destinationSanity.blog.title }}
-        </template>
-        <template #introduction>
-          {{ destinationSanity.blog.description }}
-        </template>
-      </BlogHeroSection>
-      <SectionContainer
-        v-if="destinationSanity.blog"
-        :title="'categorySanity.blog.title'"
-        :subtitle="'categorySanity.blog.excerpt'"
-      >
-        <template #content>
-          <EnrichedText
-            :value="destinationSanity.blog.body"
-          />
-        </template>
-      </SectionContainer>
+      />
     </template>
   </ContentLayout>
 </template>
@@ -121,7 +97,6 @@ const destinationFromRegionQuery = `
       description,
       displayedImg,
       publishedAt,
-      body,
       categories[]->{
         _id,
         title
@@ -129,47 +104,11 @@ const destinationFromRegionQuery = `
       author->{
         _id,
         name,
-        image,
-        position
+        image
       },
-      body[]{
-        ...,
-        _type == "image" => {
-          ...,
-          asset->{
-            _id,
-            url,
-            "metadata": {
-              "dimensions": metadata.dimensions,
-              "lqip": metadata.lqip
-            }
-          }
-        }
-      },
-      seo{
-        metaTitle,
-        metaDescription,
-        canonicalUrl,
-        focusKeyword,
-        keywords,
-        robotsIndex,
-        robotsFollow,
-        ogTitle,
-        ogDescription,
-        ogImage{
-          asset->{
-            _id,
-            _ref,
-            url
-          },
-          alt
-        }
-      },
-      "numberOfCharacters": length(pt::text(body)),
-      "estimatedWordCount": round(length(pt::text(body)) / 5),
       "estimatedReadingTime": round(length(pt::text(body)) / 5 / 180)
     },
-  } 
+  }
 `
 
 const destinationQuery = `
@@ -221,7 +160,6 @@ const destinationQuery = `
       description,
       displayedImg,
       publishedAt,
-      body,
       categories[]->{
         _id,
         title
@@ -229,44 +167,8 @@ const destinationQuery = `
       author->{
         _id,
         name,
-        image,
-        position
+        image
       },
-      body[]{
-        ...,
-        _type == "image" => {
-          ...,
-          asset->{
-            _id,
-            url,
-            "metadata": {
-              "dimensions": metadata.dimensions,
-              "lqip": metadata.lqip
-            }
-          }
-        }
-      },
-      seo{
-        metaTitle,
-        metaDescription,
-        canonicalUrl,
-        focusKeyword,
-        keywords,
-        robotsIndex,
-        robotsFollow,
-        ogTitle,
-        ogDescription,
-        ogImage{
-          asset->{
-            _id,
-            _ref,
-            url
-          },
-          alt
-        }
-      },
-      "numberOfCharacters": length(pt::text(body)),
-      "estimatedWordCount": round(length(pt::text(body)) / 5),
       "estimatedReadingTime": round(length(pt::text(body)) / 5 / 180)
     },
   }
@@ -340,8 +242,6 @@ const blogType = computed(() => {
   return categories[0]?.title || null
 })
 
-const badgeColor = computed(() => blogType.value ? 'secondary' : null)
-
 // GTM: Track view_item_list when voyages are displayed
 watch(() => destinationSanity.value?.voyages, (voyages) => {
   if (voyages && voyages.length > 0) {
@@ -360,24 +260,11 @@ watch(() => destinationSanity.value?.voyages, (voyages) => {
 
 // Use SEO composable - automatically uses blog's SEO fields
 if (destinationSanity.value) {
-  const config = useRuntimeConfig()
   useSeo({
-    seoData: {
-      ...(destinationSanity.value.seo || {}),
-      ...(destinationSanity.value.blog?.slug?.current
-        ? { canonicalUrl: `https://odysway.com/blog/${destinationSanity.value.blog.slug.current}` }
-        : {}),
-    },
+    seoData: destinationSanity.value.seo || {},
     content: destinationSanity.value,
     pageType: 'article',
     slug: destinationSanity.value.slug?.current,
-    structuredData: destinationSanity.value.blog
-      ? createBlogPostingSchema(
-          destinationSanity.value.blog,
-          `https://odysway.com/blog/${destinationSanity.value.blog.slug.current}`,
-          config,
-        )
-      : null,
     breadcrumbs: [
       { name: 'Accueil', url: 'https://odysway.com' },
       { name: 'Destinations', url: 'https://odysway.com/destinations' },
