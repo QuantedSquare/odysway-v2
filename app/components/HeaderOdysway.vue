@@ -137,6 +137,7 @@
           icon
           height="35"
           variant="text"
+          :color="isTransparent ? 'white' : 'primary'"
           aria-label="Menu"
           :aria-expanded="model"
           @click.stop="model = !model"
