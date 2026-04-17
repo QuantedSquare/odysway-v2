@@ -73,10 +73,11 @@
     fluid
     class="d-flex align-start align-md-center position-relative px-0 custom-height-container mb-md-0 pt-0 pt-md-4 pb-0 pb-md-4"
   >
-    <v-row class="align-start ">
+    <v-row class="align-start">
       <v-col
         cols="12"
         :md="voyage.imageSecondary?.asset?._ref ? 9 : 12"
+        class="px-0 px-sm-4"
       >
         <NuxtImg
           v-if="voyage.image?.asset"
@@ -92,7 +93,7 @@
           fetchpriority="high"
           width="1000"
           height="100%"
-          class="custom-height voyage-main-image rounded-lg"
+          class="custom-height voyage-main-image "
         />
       </v-col>
       <v-col
@@ -268,6 +269,7 @@ function copyUrl() {
   min-height: 460px;
   /* The image maintains 16:9, matching the Sanity crop with hotspot */
   /* No additional cropping happens because container and image ratios match */
+  border-radius: 20px;
 }
 
 .voyage-secondary-image {
@@ -290,7 +292,7 @@ function copyUrl() {
 @media screen and (max-width: 600px) {
   .media-btns-position {
     position: absolute;
-    bottom: 40px;
+    bottom: 20px;
     left: 15px;
   }
 
@@ -299,6 +301,7 @@ function copyUrl() {
   .voyage-main-image {
     /* max-height: 280px; */
     min-height: 100%;
+    border-radius: 0;
   }
 }
 

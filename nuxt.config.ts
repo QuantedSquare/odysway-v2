@@ -125,9 +125,11 @@ export default defineNuxtConfig({
     payloadExtraction: true,
     appManifest: false,
     inlineRouteRules: true,
+    serverAppConfig: false,
   },
   compatibilityDate: '2024-11-01',
   nitro: {
+    devStorage: { cache: { driver: 'memory' } },
     compressPublicAssets: true,
     imports: {
       dirs: [

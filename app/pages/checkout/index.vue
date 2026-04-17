@@ -1,7 +1,7 @@
 <template>
   <v-container
     fluid
-    class="relative"
+    class="relative "
   >
     <!-- Background image -->
     <v-img

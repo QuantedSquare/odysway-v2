@@ -28,13 +28,17 @@
         >
           <v-btn-secondary
             density="compact"
-            height="50"
+            height="40"
             rounded="md"
-            color="primary"
             class="text-body-2 font-weight-bold text-decoration-none"
             @click="handleClick"
           >
-            {{ noGroupTravel ? 'Demander un devis' : dateSections.bookingButtonText }}
+            <span>
+              {{ noGroupTravel ? 'Demander un devis' : dateSections.bookingButtonText }}
+            </span>
+            <v-icon>
+              {{ mdiArrowRight }}
+            </v-icon>
           </v-btn-secondary>
         </v-col>
       </v-row>
@@ -44,6 +48,7 @@
 
 <script setup>
 import { useGoTo } from 'vuetify'
+import { mdiArrowRight } from '@mdi/js'
 
 const goTo = useGoTo()
 const { trackCtaClick } = useGtmTracking()

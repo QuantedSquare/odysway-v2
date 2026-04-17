@@ -19,7 +19,7 @@
           />
         </NuxtLink>
 
-        <!-- Travel title (center) -->
+        <!-- Travel title (center)
         <div class=" text-center px-4 text-truncate d-none d-sm-flex">
           <span
             v-if="travelTitle"
@@ -27,25 +27,35 @@
           >
             {{ travelTitle }}
           </span>
-        </div>
+        </div> -->
 
         <!-- Contact (right) -->
-        <a
-          href="tel:+33184807975"
-          class="text-decoration-none d-flex flex-column align-end justify-center "
-          @click="trackCallClick('funnel-header')"
-        >
+        <div class="d-flex ga-6">
+          <a
+            href="tel:+33184807975"
+            class="text-decoration-none d-flex flex-column align-end justify-center "
+            @click="trackCallClick('funnel-header')"
+          >
 
-          <span class="text-caption text-medium-emphasis">Besoin d'aide ?</span>
-          <span class="text-body-2 font-weight-bold text-primary">
-            <v-icon
-              start
-              size="15"
-            >
-              {{ mdiPhone }}
-            </v-icon>
-            01 84 80 79 75</span>
-        </a>
+            <!-- <span class="text-caption text-medium-emphasis">Besoin d'aide ?</span> -->
+            <span class="text-subtitle-2 text-primary">
+              <v-icon
+                start
+                size="15"
+              >
+                {{ mdiPhone }}
+              </v-icon>
+              +33 1 84 80 79 75</span>
+          </a>
+          <v-btn-secondary
+            height="40"
+            rounded="md"
+          >
+            <span>
+              Prendre RDV 👋
+            </span>
+          </v-btn-secondary>
+        </div>
       </v-container>
     </ClientOnly>
   </v-app-bar>
