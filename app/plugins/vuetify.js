@@ -44,6 +44,7 @@ export default defineNuxtPlugin((app) => {
           colors: {
             'primary': 'rgba(43, 76, 82, 1)',
             'on-background': 'rgba(43, 76, 82, 1)',
+            'surface-panel': '#EAEDEE',
             'on-surface': 'rgba(43, 76, 82, 1)',
             'text': 'rgba(43, 76, 82, 1)',
             'primary-light': 'rgba(43, 76, 82, 0.5)',

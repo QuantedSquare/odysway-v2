@@ -1,5 +1,5 @@
 <template>
-  <div class="phone-field w-100">
+  <div class="phone-field w-100 ">
     <v-select
       v-model="phoneCode"
       :items="phonesSelect"

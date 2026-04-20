@@ -19,18 +19,18 @@
         cover
       >
         <div class="img-overlay" />
-        <v-container class="d-flex flex-column justify-end h-100 position-relative">
-          <div class="pa-lg-2 d-flex flex-column align-start">
-            <span class="text-body-1 font-weight-medium mb-1">{{ voyage.title }}</span>
+        <v-container class="d-flex flex-column justify-end h-100 position-relative ">
+          <div class="d-flex flex-column align-start">
+            <span class="text-body-2 font-weight-medium mb-1">{{ voyage.title }}</span>
             <span
               v-if="voyage.departureDate && voyage.returnDate"
-              class="text-body-2 text-white-70"
+              class="text-caption text-white-70"
             >
               {{ dayjs(voyage.departureDate).format('DD') }} → {{ dayjs(voyage.returnDate).format('DD MMMM YYYY') }} · {{ model?.travelType || voyage.travelType }}
             </span>
             <span
               v-else
-              class="text-body-2 text-white-70"
+              class="text-caption text-white-70"
             >{{ model?.travelType || voyage.travelType }}</span>
           </div>
         </v-container>

@@ -10,24 +10,17 @@
         class="d-flex align-center h-100 px-4 px-md-6 justify-space-between"
       >
         <!-- Logo -->
-        <NuxtLink to="/">
+        <NuxtLink
+          to="/"
+          class="pt-2"
+        >
           <NuxtImg
             src="/logos/Logo-Odysway-Bleu.png"
-            :height="mdAndUp ? 30 : 25"
+            :height="25"
             alt="Odysway"
             format="webp"
           />
         </NuxtLink>
-
-        <!-- Travel title (center)
-        <div class=" text-center px-4 text-truncate d-none d-sm-flex">
-          <span
-            v-if="travelTitle"
-            class="font-weight-bold text-body-2 text-md-body-1 text-primary"
-          >
-            {{ travelTitle }}
-          </span>
-        </div> -->
 
         <!-- Contact (right) -->
         <div class="d-flex ga-6">
@@ -38,18 +31,25 @@
           >
 
             <!-- <span class="text-caption text-medium-emphasis">Besoin d'aide ?</span> -->
-            <span class="text-subtitle-2 text-primary">
+            <span class="text-subtitle-2 text-primary d-flex align-center">
               <v-icon
                 start
-                size="15"
+                size="20"
               >
                 {{ mdiPhone }}
               </v-icon>
-              +33 1 84 80 79 75</span>
+              <span class="d-none d-md-block">
+                +33 1 84 80 79 75
+              </span>
+              <span class="d-block d-md-none">
+                Nous appeler
+              </span>
+            </span>
           </a>
           <v-btn-secondary
             height="40"
             rounded="md"
+            class="d-none d-md-block"
           >
             <span>
               Prendre RDV 👋

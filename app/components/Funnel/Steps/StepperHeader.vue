@@ -5,7 +5,7 @@
     hide-actions
     mobile-breakpoint="md"
     alt-labels
-    class="text-caption"
+    class="text-caption bg-cream"
   >
     <slot />
   </v-stepper>
@@ -21,10 +21,6 @@ const props = defineProps({
   skipperMode: {
     type: String,
     default: 'quick',
-  },
-  showInsurance: {
-    type: Boolean,
-    default: true,
   },
 })
 
@@ -72,29 +68,23 @@ const stepDefinitions = computed(() => {
   const baseSteps = [
     {
       number: 1,
-      label: props.page.fil_dariane_devis.step_1,
+      label: 'Vos infos',
     },
   ]
 
   if (props.skipperMode !== 'quick') {
     baseSteps.push({
       number: 2,
-      label: props.page.fil_dariane_devis.step_2,
+      label: 'Votre voyage',
     })
   }
 
   if (props.skipperMode === 'normal') {
-    if (props.showInsurance) {
-      baseSteps.push({ number: 3, label: 'Assurances' })
-      baseSteps.push({ number: 4, label: 'Récapitulatif' })
-    }
-    else {
-      baseSteps.push({ number: 4, label: 'Récapitulatif' })
-    }
+    baseSteps.push({ number: 3, label: 'Récapitulatif' })
   }
   else {
     baseSteps.push({
-      number: props.skipperMode === 'quick' ? 1 : 4,
+      number: props.skipperMode === 'quick' ? 1 : 3,
       label: props.page.fil_dariane_devis.step_final_rdv,
     })
   }

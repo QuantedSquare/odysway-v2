@@ -1,14 +1,14 @@
 <template>
   <v-col
     v-if="pageTexts && voyage"
-    cols="12"
+    cols="10"
+    class="py-0"
   >
     <FunnelStepsStepperHeader
       ref="stepperHeaderRef"
       v-model="currentStep"
       :page="pageTexts"
       :skipper-mode="skipperMode"
-      :show-insurance="!!showInsuranceStep"
     >
       <v-row class="funnel-stepper d-flex justify-center bg-cream">
         <v-col
@@ -19,10 +19,10 @@
           <v-card
             class="border-width relative no-margin-window mb-4 "
             :class="skipperMode !== 'summary' && currentStep == 1 ? 'w-100' : ''"
-            :elevation="skipperMode !== 'summary' && currentStep < 5 ? 2 : 0"
+            :elevation="skipperMode !== 'summary' && currentStep < 4 ? 2 : 0"
           >
             <v-stepper-window
-              :class="currentStep === 4 ? ' mx-0' : ''"
+              :class="currentStep === 3 ? ' mx-0' : ''"
               :model-value="currentStep"
               class="px-md-6 mt-4"
             >
@@ -43,10 +43,12 @@
               <v-stepper-window-item
                 :value="2"
               >
-                <FunnelStepsTravelersInfosOptions
+                <FunnelStepsVoyageStep
                   v-model="dynamicDealValues"
-                  :current-step="currentStep"
                   :voyage="voyage"
+                  :insurances-price="insurancesPrice"
+                  :show-insurance="!!showInsuranceStep"
+                  :current-step="currentStep"
                   :own-step="2"
                   :page="pageTexts"
                   @next="nextStep"
@@ -54,29 +56,14 @@
                 />
               </v-stepper-window-item>
               <v-stepper-window-item
-                v-if="!!showInsuranceStep"
                 :value="3"
-              >
-                <FunnelStepsInsurances
-                  v-model="dynamicDealValues"
-                  :voyage="voyage"
-                  :current-step="currentStep"
-                  :insurances="insurancesPrice"
-                  :page="pageTexts"
-                  :own-step="3"
-                  @next="nextStep"
-                  @previous="previousStep"
-                />
-              </v-stepper-window-item>
-              <v-stepper-window-item
-                :value="4"
               >
                 <FunnelStepsPaymentRedirect
                   v-model="dynamicDealValues"
                   :page="pageTexts"
                   :current-step="currentStep"
                   :voyage="voyage"
-                  :own-step="4"
+                  :own-step="3"
                   @previous="previousStep"
                 />
               </v-stepper-window-item>
@@ -174,37 +161,29 @@ const displayedDates = computed(() => {
 })
 // ================== Stepper Management ==================
 // const loading = ref(false)
-const currentStep = ref(step ? Math.min(parseInt(step), 4) : 1)
+const currentStep = ref(step ? Math.min(parseInt(step), 3) : 1)
 const skipperMode = ref('normal')
 if (route.query.type === 'custom' || route.query.type === 'balance') {
-  currentStep.value = route.query.type === 'custom' ? 1 : 4
+  currentStep.value = route.query.type === 'custom' ? 1 : 3
   skipperMode.value = route.query.type === 'custom' ? 'normal' : 'summary'
 }
 
 // 🧱 Step navigation
 const nextStep = () => {
-  const nextStepValue = currentStep.value === 2 && !showInsuranceStep.value ? 4 : currentStep.value + 1
+  const nextStepValue = currentStep.value + 1
   currentStep.value = nextStepValue
-  console.log('NEXT in parent', nextStepValue, currentStep.value)
   addSingleParam('step', nextStepValue.toString())
 }
 
 const previousStep = () => {
-  let previousStepValue
-  if (currentStep.value === 4 && !showInsuranceStep.value) {
-    previousStepValue = 2
-  }
-  else {
-    previousStepValue = currentStep.value - 1
-  }
+  const previousStepValue = currentStep.value - 1
   currentStep.value = previousStepValue
-
   addSingleParam('step', previousStepValue.toString())
 }
 
 watch(() => route.query.step, (newVal) => {
   if (newVal) {
-    currentStep.value = Math.min(parseInt(newVal), 4)
+    currentStep.value = Math.min(parseInt(newVal), 3)
   }
 })
 

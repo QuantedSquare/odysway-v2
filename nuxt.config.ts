@@ -148,16 +148,6 @@ export default defineNuxtConfig({
         transformAssetUrls,
       },
     },
-    // Uncomment for Nuxt4 upgrade
-    // optimizeDeps: {
-    //   include: ['minimatch', 'brace-expansion', '@sanity/visual-editing'],
-    // },
-    // resolve: {
-    //   alias: {
-    //     'react-compiler-runtime': 'react-compiler-runtime',
-    //     react: 'react',
-    //   },
-    // },
     build: {
       sourcemap: process.env.VERCEL_ENV !== 'production', // Disable sourcemaps in production to reduce payload
       cssCodeSplit: true, // Enable CSS code splitting so inlineStyles can inline critical CSS per-route

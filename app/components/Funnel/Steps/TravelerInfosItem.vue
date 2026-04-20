@@ -1,94 +1,180 @@
 <template>
-  <v-row
-    class="rounded-xl"
-  >
-    <v-col
-      cols="12"
-      class="d-flex  justify-start  align-center"
-    >
-      <v-avatar
-        size="40"
-        :icon="mdiBagPersonal"
-      />
-      <h3 class="text-body-1 text-md-body-2 font-weight-bold">
-        Voyageur {{ id }}
-      </h3>
-    </v-col>
-    <v-col
-      cols="12"
-      md="3"
-      class="py-0 my-0"
-    >
-      <v-text-field
-        :id="`firstname_${id}`"
-        v-model="i_firstname"
-        outlined
-        label="Prénom *"
-        placeholder="Ex: Indiana"
-        :rules="[rules.required]"
-        @change="dataUpdated"
-      />
-    </v-col>
-    <v-col
-      cols="12"
-      md="3"
-      class="py-0 my-0"
-    >
-      <v-text-field
-        :id="`lastname_${id}`"
-        v-model="i_lastname"
-        type="textbox"
-        label="Nom *"
-        outlined
-        placeholder="Ex: Jones"
-        :rules="[rules.required]"
-        @change="dataUpdated"
-      />
-    </v-col>
+  <!-- Flat mode: first traveler, always visible -->
+  <template v-if="flat">
+    <v-card class=" bg-surface-panel pa-2 text-primary rounded-md">
+      <v-card-title>
+        <div class="text-subtitle-2 font-weight-bold mb-2">
+          Voyageur {{ id }}
+        </div>
+      </v-card-title>
+      <v-row class="rounded-md mx-1 ">
+        <v-col
+          cols="6"
+          class="py-0 my-0"
+        >
+          <div>Prénom *</div>
+          <v-text-field
+            :id="`firstname_${id}`"
+            v-model="i_firstname"
+            outlined
+            placeholder="Ex: Indiana"
+            :rules="[rules.required]"
+            @change="dataUpdated"
+          />
+        </v-col>
+        <v-col
+          cols="6"
+          class="py-0 my-0"
+        >
+          <div>Nom *</div>
+          <v-text-field
+            :id="`lastname_${id}`"
+            v-model="i_lastname"
+            type="textbox"
+            outlined
+            placeholder="Ex: Jones"
+            :rules="[rules.required]"
+            @change="dataUpdated"
+          />
+        </v-col>
+        <v-col
+          cols="6"
+          class="py-0 my-0"
+        >
+          <div>Date de naissance *</div>
+          <v-text-field
+            :id="`birthdate_${id}`"
+            v-model="date"
+            type="text"
+            inputmode="numeric"
+            placeholder="JJ/MM/AAAA"
+            :rules="[rules.required, rules.dateFormat]"
+            :append-inner-icon="mdiCalendarOutline"
+            @input="handleInput"
+            @keydown="handleKeydown"
+            @change="dataUpdated"
+          />
+        </v-col>
+        <v-col
+          cols="6"
+          class="py-0 my-0"
+        >
+          <div>Pays de résidence *</div>
+          <v-autocomplete
+            :id="`country_${id}`"
+            v-model="i_isoContact"
+            :items="countries"
+            placeholder="Sélectionnez un pays"
+            :rules="[rules.required]"
+            item-title="title"
+            item-value="value"
+            @change="dataUpdated"
+          />
+        </v-col>
+      </v-row>
+    </v-card>
+  </template>
 
-    <v-col
-      cols="12"
-      md="3"
-      class="py-0 my-0"
-    >
-      <v-text-field
-        :id="`birthdate_${id}`"
-        v-model="date"
-        label="Date de naissance *"
-        type="text"
-        inputmode="numeric"
-        placeholder="JJ/MM/AAAA"
-        :rules="[rules.required, rules.dateFormat]"
-        :append-inner-icon="mdiCalendarOutline"
-        @input="handleInput"
-        @keydown="handleKeydown"
-        @change="dataUpdated"
-      />
-    </v-col>
-    <v-col
-      cols="12"
-      md="3"
-      class="py-0 my-0"
-    >
-      <v-autocomplete
-        :id="`country_${id}`"
-        v-model="i_isoContact"
-        :items="countries"
-        label="Pays de résidence *"
-        placeholder="Sélectionnez un pays"
-        :rules="[rules.required]"
-        item-title="title"
-        item-value="value"
-        @change="dataUpdated"
-      />
-    </v-col>
-  </v-row>
+  <!-- Panel mode: additional travelers, collapsible -->
+  <v-expansion-panels
+    v-else
+    class="mt-4"
+    elevation="0"
+  >
+    <v-expansion-panel class=" text-primary">
+      <v-expansion-panel-title
+        class="bg-surface-panel rounded-md mb-3"
+        height="10"
+        static
+      >
+        <span class="font-weight-medium">Voyageur {{ id }}</span>
+        <template #actions="{ expanded }">
+          <span class="text-caption ml-2 text-grey">
+            {{ expanded ? 'Replier' : 'Ajouter ses infos' }}
+            <v-icon
+              color="primary"
+              :class="['chevron', { 'chevron--expanded': expanded }]"
+            >
+              {{ mdiChevronDown }}
+            </v-icon>
+          </span>
+        </template>
+      </v-expansion-panel-title>
+      <v-expansion-panel-text class="px-0 mx-0">
+        <v-row class="rounded-md mx-0 px-0">
+          <v-col
+            cols="6"
+            class="py-0 my-0 px-0"
+          >
+            <div>Prénom *</div>
+            <v-text-field
+              :id="`firstname_${id}`"
+              v-model="i_firstname"
+              outlined
+              placeholder="Ex: Indiana"
+              :rules="[rules.required]"
+              @change="dataUpdated"
+            />
+          </v-col>
+          <v-col
+            cols="6"
+            class="py-0 my-0"
+          >
+            <div>Nom *</div>
+            <v-text-field
+              :id="`lastname_${id}`"
+              v-model="i_lastname"
+              type="textbox"
+              outlined
+              placeholder="Ex: Jones"
+              :rules="[rules.required]"
+              @change="dataUpdated"
+            />
+          </v-col>
+          <v-col
+            cols="6"
+            class="py-0 my-0 px-0"
+          >
+            <div>Date de naissance *</div>
+            <v-text-field
+              :id="`birthdate_${id}`"
+              v-model="date"
+              type="text"
+              inputmode="numeric"
+              placeholder="JJ/MM/AAAA"
+              :rules="[rules.required, rules.dateFormat]"
+              :append-inner-icon="mdiCalendarOutline"
+              @input="handleInput"
+              @keydown="handleKeydown"
+              @change="dataUpdated"
+            />
+          </v-col>
+          <v-col
+            cols="6"
+            class="py-0 my-0"
+          >
+            <div>Pays de résidence *</div>
+            <v-autocomplete
+              :id="`country_${id}`"
+              v-model="i_isoContact"
+              :items="countries"
+              placeholder="Sélectionnez un pays"
+              :rules="[rules.required]"
+              item-title="title"
+              item-value="value"
+              @change="dataUpdated"
+            />
+          </v-col>
+        </v-row>
+      </v-expansion-panel-text>
+    </v-expansion-panel>
+  </v-expansion-panels>
 </template>
 
 <script setup>
 import dayjs from 'dayjs'
 import customParseFormat from 'dayjs/plugin/customParseFormat.js'
-import { mdiBagPersonal, mdiCalendarOutline } from '@mdi/js'
+import { mdiCalendarOutline, mdiChevronDown } from '@mdi/js'
 import { countries } from '~/utils/countries'
 
 dayjs.extend(customParseFormat)
@@ -100,6 +186,7 @@ const props = defineProps({
   birthdate: { type: String, default: '' },
   isoContact: { type: String, default: '' },
   bgColor: { type: String, default: 'primary' },
+  flat: { type: Boolean, default: false },
 })
 
 const i_firstname = ref(props.firstname)
@@ -288,5 +375,11 @@ watch(() => props.isoContact, (newVal) => {
 }
 :deep(.v-field__input) {
   color: rgb(var(--v-theme-primary)) !important;
+}
+.chevron {
+  transition: transform 0.2s ease;
+}
+.chevron--expanded {
+  transform: rotate(180deg);
 }
 </style>

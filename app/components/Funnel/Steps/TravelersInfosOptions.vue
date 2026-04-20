@@ -2,16 +2,27 @@
   <v-container>
     <v-form ref="formInfos">
       <v-row>
-        <v-col cols="12">
+        <v-col
+          cols="12"
+          class="d-flex ga-2 pb-0"
+        >
+          <v-divider
+            variant="solid"
+            opacity="1"
+            thickness="3"
+            class="rounded-lg"
+            color="secondary"
+            vertical
+          />
           <h2>{{ page.travelers_infos.title }}</h2>
         </v-col>
         <v-col cols="12">
           <v-alert
             border="start"
             colored-border
-            color="primary"
-            elevation="2"
-            class="text-subtitle-2"
+            color="grey-light"
+            elevation="0"
+            class="text-caption text-blue"
           >
             {{ page.travelers_infos.alert }}
           </v-alert>
@@ -28,20 +39,12 @@
             :key="'nb_travelers_' + i"
             :bg-color="colorMap[i]"
             :iso-contact="traveler.isoContact"
+            :flat="i === 0"
             @change="travelerInfosChanged"
           />
-
-          <div class="text-error text-right mt-6 mt-md-6">
-            <p v-show="!ageValidation.isValid">
-              - {{ ageValidationMessage }}
-            </p>
-            <p v-show="!allFieldsFilled">
-              - {{ page.travelers_infos.all_fields_required }}
-            </p>
-          </div>
         </v-col>
       </v-row>
-
+      <v-divider />
       <v-row>
         <v-col
           v-if="nbTravelers > 1"
@@ -100,21 +103,38 @@
       </v-row>
 
       <v-row>
-        <v-col class="d-flex ga-3">
-          <v-btn
-            class="bg-grey-light font-weight-regular"
-            @click="emit('previous')"
-          >
-            Précédent
-          </v-btn>
+        <v-col
+          cols="12"
+          class="d-flex flex-column ga-4"
+        >
           <v-btn
             :disabled="!formValidation || !isBookingLoaded"
             color="secondary"
             class="font-weight-bold"
+            block
+            height="50"
             @click="submitStepData"
           >
-            Suivant
+            Continuer
           </v-btn>
+          <v-btn
+            class="bg-grey-light font-weight-regular text-primary"
+            block
+            height="50"
+            @click="emit('previous')"
+          >
+            Précédent
+          </v-btn>
+        </v-col>
+        <v-col>
+          <div class="text-error text-right mt-6 mt-md-6">
+            <p v-show="!ageValidation.isValid">
+              - {{ ageValidationMessage }}
+            </p>
+            <p v-show="!allFieldsFilled">
+              - {{ page.travelers_infos.all_fields_required }}
+            </p>
+          </div>
         </v-col>
       </v-row>
     </v-form>

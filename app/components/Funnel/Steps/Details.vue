@@ -136,9 +136,22 @@
             @change="changeAttr('lastname'); saveToLocalStorage()"
           />
         </v-col>
-
         <v-col
-          cols="6"
+          cols="12"
+          md="6"
+        >
+          <div>
+            {{ 'Téléphone *' }}
+          </div>
+          <PhoneTextField
+            v-model="model.phone"
+            @validity-changed="isPhoneValid = $event"
+          />
+        </v-col>
+        <v-col
+          cols="12"
+          md="6"
+          class="pb-5"
         >
           <div>
             {{ page.details.country_label || 'Pays de résidence' }}
@@ -154,34 +167,44 @@
             @change="saveToLocalStorage()"
           />
         </v-col>
-        <v-col
-          cols="12"
-          md="6"
-          class="d-flex align-end"
-        >
-          <PhoneTextField
-            v-model="model.phone"
-            @validity-changed="isPhoneValid = $event"
-          />
-        </v-col>
       </v-row>
       <v-row>
         <v-col
           cols="12"
           class="text-center"
         >
-          <div class="d-flex align-center justify-center ga-1 text-caption text-grey mb-4">
-            <v-icon
+          <div class="d-flex align-center text-left ga-1 text-caption text-grey mb-4">
+            <!-- <v-icon
               :icon="mdiShieldCheckOutline"
               size="x-small"
-            />
-            <span>En renseignant votre email, vous acceptez que nous puissions vous contacter pour finaliser votre réservation. Politique de confidentialité
+            /> -->
+            <span>En renseignant votre email, vous acceptez que nous puissions vous contacter pour finaliser votre réservation.
+              <NuxtLink
+                class="text-grey text-decoration-underline"
+                to="/politique-de-confidentialite"
+                target="_blank"
+              >Politique de confidentialité</NuxtLink>
 
             </span>
           </div>
         </v-col>
       </v-row>
     </v-form>
+    <v-row v-if="!route.query.booked_id && route.query.date_id">
+      <v-col cols="12">
+        <div class="option-block  d-flex ga-4">
+          <v-checkbox
+            v-model="isOptionMode"
+            hide-details
+            density="compact"
+          />
+          <span class="title-2">
+            <strong>⏳ Pas encore prêt</strong> ? Bloquez ce voyage <strong>gratuitement pendant 7 jours</strong>, sans engagement ni paiement.
+          </span>
+        </div>
+      </v-col>
+    </v-row>
+
     <v-row>
       <v-col
         class="d-flex ga-3 align-center"
@@ -201,18 +224,38 @@
           >
             Suivant
           </v-btn>
-          <v-btn
-            v-else-if="!showProgress"
-            key="next-btn"
-            block
-            :disabled="!isValid"
-            color="secondary"
-            class="font-weight-bold"
-            @click="submitStepData"
-          >
-            Continuer ma réservation
-            <v-icon>{{ mdiArrowRight }}</v-icon>
-          </v-btn>
+          <template v-else-if="!showProgress">
+            <v-btn
+              v-if="isOptionMode"
+              key="option-btn"
+              block
+              height="50"
+              :disabled="!isValid"
+              color="primary"
+              class="font-weight-bold text-decoration-none"
+              @click="submitStepData"
+            >
+              <span class="text-body-1 font-weight-bold">
+                {{ 'Confirmer mon option' }}
+                <v-icon>{{ mdiArrowRight }}</v-icon>
+              </span>
+            </v-btn>
+            <v-btn
+              v-else
+              key="next-btn"
+              block
+              height="50"
+              :disabled="!isValid"
+              color="secondary"
+              class="font-weight-bold text-decoration-none"
+              @click="submitStepData"
+            >
+              <span class="text-body-1 font-weight-bold">
+                {{ 'Continuer ma réservation' }}
+                <v-icon>{{ mdiArrowRight }}</v-icon>
+              </span>
+            </v-btn>
+          </template>
           <FunnelFlightProgress
             v-else
             key="next-progress"
@@ -223,24 +266,27 @@
       </v-col>
       <v-col
         cols="12"
-        class="text-grey text-center"
+        class="text-grey text-center d-flex align-center justify-center ga-1 py-0"
       >
         <v-icon>
           {{ mdiLock }}
         </v-icon>
-        Aucun paiement à cette étape
+        <div class="pt-1">
+          Aucun paiement à cette étape
+        </div>
       </v-col>
       <v-col>
         <v-btn
-
           key="previous-page-btn"
           block
-          :disabled="!isValid"
-          color="grey"
+
+          color="grey-light"
           class="font-weight-regular"
         >
-          <v-icon>{{ mdiArrowLeft }}</v-icon>
-          Retour au voyage
+          <div class="text-primary">
+            <v-icon>{{ mdiArrowLeft }}</v-icon>
+            Retour au voyage
+          </div>
         </v-btn>
       </v-col>
     </v-row>
@@ -255,8 +301,9 @@
 <script setup>
 import { z } from 'zod'
 import { computed } from 'vue'
-import { mdiArrowRight, mdiArrowLeft, mdiShieldCheckOutline, mdiLock } from '@mdi/js'
+import { mdiArrowRight, mdiArrowLeft, mdiShieldCheckOutline, mdiLock, mdiClockOutline } from '@mdi/js'
 import { countries } from '~/utils/countries'
+import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 
 const { trackReservationStep } = useGtmTracking()
 
@@ -282,7 +329,8 @@ const onProgressFinished = () => {
   }
 }
 
-const { createDeal, updateDeal } = useStepperDeal()
+const { createDeal, updateDeal, bookedId } = useStepperDeal()
+const isOptionMode = ref(false)
 const route = useRoute()
 
 // New: Local validation state
@@ -518,6 +566,33 @@ const submitStepData = async () => {
       buttonLoading.value = false
       showProgress.value = false
       shouldAdvance.value = false
+
+      if (isOptionMode.value && bookedId.value) {
+        try {
+          await bookingApi.placeOption({ id: bookedId.value, booked_places: +model.value.nbAdults + +model.value.nbChildren })
+        }
+        catch (err) {
+          console.error('[Details] placeOption error', getApiErrorMessage(err))
+        }
+        updateDeal({
+          stage: '27',
+          currentStep: 'A posé une option',
+          title: voyage.title,
+          nbTravelers: +model.value.nbAdults + +model.value.nbChildren,
+          firstName: model.value.firstName,
+          lastName: model.value.lastName,
+        })
+        if (config.public.environment === 'production') {
+          $fetch('/api/v1/slack/notification', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ title: voyage.title, nbTravelers: +model.value.nbAdults + +model.value.nbChildren }),
+          }).catch(console.error)
+        }
+        await navigateTo(`/confirmation?voyage=${voyage.slug}&isoption=true`)
+        return
+      }
+
       emit('next')
     }
   }
@@ -556,5 +631,12 @@ const changeAttr = (_dataAttribute) => {
 <style scoped>
 .remove-message-display:deep(.v-input__details){
 display:none;
+}
+.option-block {
+  background-color: rgba(43,76,82,0.04);
+  border: 1.5px dashed rgba(43,76,82,0.2);
+  border-radius:10px!important;
+  padding: 14px 16px;
+  font-size: 13px!important;
 }
 </style>
