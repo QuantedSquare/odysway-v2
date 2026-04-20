@@ -1,46 +1,53 @@
 <template>
-  <v-row>
-    <v-col
-      cols="4"
-      md="5"
+  <div class="phone-field w-100">
+    <v-select
+      v-model="phoneCode"
+      :items="phonesSelect"
+      :rules="[rules.name]"
+      hide-details
+      aria-label="Code téléphonique du pays"
+      @change="changeAttr('phone')"
     >
-      <v-select
-        v-model="phoneCode"
-        :items="phonesSelect"
-        :rules="[rules.name]"
-        hide-details
-        aria-label="Code téléphonique du pays"
-        @change="changeAttr('phone')"
-      >
-        <template #item="{ props }">
-          <v-list-item
-            v-bind="props"
-            :title="props.title"
-            :prepend-avatar="props.flagSrc"
-            slim
-          />
-        </template>
+      <template #item="{ props }">
+        <v-list-item
+          v-bind="props"
+          :title="props.title"
+          slim
+        >
+          <template #prepend>
+            <v-img
+              :src="props.flagSrc"
+              :alt="`Drapeau ${props.title}`"
+              width="22px"
+              class="mr-2 flex-grow-0"
+            />
+          </template>
+        </v-list-item>
+      </template>
 
-        <template #selection="{ item }">
+      <template #selection="{ item }">
+        <div class="d-flex align-center ga-1">
           <v-img
             :src="item.props.flagSrc"
             :alt="`Drapeau du pays ${item.props.title}`"
-            width="30px"
+            width="22px"
+            class="flex-grow-0 flex-shrink-0"
           />
-        </template>
-      </v-select>
-    </v-col>
-    <v-col cols="">
-      <v-text-field
-        v-model="phoneNumber"
-        :label="'Téléphone *'"
-        placeholder="Ex: 6 00 00 00 01"
-        inputmode="numeric"
-        :rules="[rules.phone]"
-        @change="changeAttr('phone')"
-      />
-    </v-col>
-  </v-row>
+          <span class="d-none d-sm-inline text-no-wrap">{{ item.props.title }}</span>
+        </div>
+      </template>
+    </v-select>
+
+    <v-text-field
+      v-model="phoneNumber"
+      label="Téléphone *"
+      single-line
+      placeholder="Ex: 6 00 00 00 01"
+      inputmode="numeric"
+      :rules="[rules.phone]"
+      @change="changeAttr('phone')"
+    />
+  </div>
 </template>
 
 <script setup>
@@ -174,3 +181,20 @@ const changeAttr = (dataAttribute) => {
   // }
 }
 </script>
+
+<style scoped>
+.phone-field {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.phone-field > :first-child {
+  flex: 0 0 110px;
+}
+
+/* .phone-field__input {
+  flex: 1;
+  min-width: 200px;
+} */
+</style>

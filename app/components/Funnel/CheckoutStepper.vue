@@ -10,7 +10,7 @@
       :skipper-mode="skipperMode"
       :show-insurance="!!showInsuranceStep"
     >
-      <v-row class="funnel-stepper d-flex justify-center">
+      <v-row class="funnel-stepper d-flex justify-center bg-cream">
         <v-col
           cols="12"
           :md="7"
@@ -21,15 +21,6 @@
             :class="skipperMode !== 'summary' && currentStep == 1 ? 'w-100' : ''"
             :elevation="skipperMode !== 'summary' && currentStep < 5 ? 2 : 0"
           >
-            <FunnelCardHeader
-              :titre="voyage.title"
-              :travel-type="voyage.travelType"
-              :image="voyage.imgSrc"
-              :date="displayedDates"
-              :current-step="currentStep"
-              :step-definitions="stepperHeaderRef?.stepDefinitions"
-              :skipper-mode="skipperMode"
-            />
             <v-stepper-window
               :class="currentStep === 4 ? ' mx-0' : ''"
               :model-value="currentStep"
@@ -256,6 +247,13 @@ watch(() => [dynamicDealValues.value?.nbAdults, dynamicDealValues.value?.nbChild
     await fetchInsuranceQuote(voyage.value, dynamicDealValues.value)
   }
 }, { deep: true })
+
+defineExpose({
+  currentStep,
+  skipperMode,
+  displayedDates,
+  stepDefinitions: computed(() => stepperHeaderRef.value?.stepDefinitions),
+})
 
 // Computed property to determine if insurance step should be shown
 const showInsuranceStep = computed(() => {

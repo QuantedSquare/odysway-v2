@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <FunnelLayoutHeader />
-    <v-main class="main-content">
+    <v-main class="main-content bg-cream">
       <slot />
     </v-main>
   </v-app>
@@ -12,12 +12,12 @@
 
 <style scoped>
 .main-content {
-  --v-layout-top: 90px!important;
+  /* --v-layout-top: 90px!important; */
   --v-layout-bottom: 0px;
 }
 @media (max-width: 960px) {
   .main-content {
-    --v-layout-top: 60px!important;
+    /* --v-layout-top: 60px!important; */
   }
 }
 

@@ -2,6 +2,8 @@
 export const countries = [
   { title: 'France', value: 'FR' },
   { title: 'Belgique', value: 'BE' },
+  { title: 'Suisse', value: 'CH' },
+  { title: 'Canada', value: 'CA' },
   { title: 'Afghanistan', value: 'AF' },
   { title: 'Afrique du Sud', value: 'ZA' },
   { title: 'Albanie', value: 'AL' },
@@ -20,8 +22,6 @@ export const countries = [
   { title: 'Bahreïn', value: 'BH' },
   { title: 'Bangladesh', value: 'BD' },
   { title: 'Barbade', value: 'BB' },
-  { title: 'Suisse', value: 'CH' },
-  { title: 'Canada', value: 'CA' },
   { title: 'Belize', value: 'BZ' },
   { title: 'Bénin', value: 'BJ' },
   { title: 'Bhoutan', value: 'BT' },

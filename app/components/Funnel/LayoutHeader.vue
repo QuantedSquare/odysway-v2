@@ -2,7 +2,7 @@
   <v-app-bar
     elevation="0"
     color="white"
-    :height="mdAndUp ? 90 : 60"
+    :height="60"
   >
     <ClientOnly>
       <v-container

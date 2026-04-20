@@ -7,158 +7,165 @@
       <v-row>
         <v-col
           cols="12"
-          class="text-center"
+          class="d-flex ga-2 pb-0"
         >
-          <div class="d-flex align-center justify-center ga-2 mb-2">
-            <v-icon
-              :icon="mdiLock"
-              size="small"
-              color="primary"
-            />
-            <h2 class="text-h6 font-weight-bold">
-              Réservez votre voyage en toute sécurité
-            </h2>
-          </div>
-        </v-col>
-        <v-col cols="12">
-          <h2 v-if="!isAdvance">
-            {{ page.details.select_travelers_title }}
-          </h2>
-          <h2 v-else>
+          <v-divider
+            variant="solid"
+            opacity="1"
+            thickness="3"
+            class="rounded-lg"
+            color="secondary"
+            vertical
+          />
+          <h2>
             {{ page.details.nb_travelers_title }}
           </h2>
         </v-col>
-        <v-col cols="12">
-          <v-row>
-            <v-col
-              cols="6"
-              md="4"
-            >
-              <div class="text-caption">
-                {{ page.details.nb_adults_label }}
-              </div>
-              <v-select
-                v-model="model.nbAdults"
-                :disabled="route.query.type === 'balance' || route.query.type === 'custom'"
-                :menu-props="{ offsetY: true }"
-                :items="selectOptions(isAdvance ? 1 : 0, 9)"
-                :item-props="adultItemPropsFn"
-              />
-            </v-col>
-            <!-- children -->
-            <v-col
-              cols="6"
-              md="4"
-            >
-              <div class="text-caption text-truncate">
-                {{ childrenLabel }}
-              </div>
-              <v-select
-                v-model="model.nbChildren"
-                :disabled="route.query.type === 'balance' || route.query.type === 'custom'"
-                :menu-props="{ offsetY: true }"
-                :items="selectOptions(0, 9)"
-                :item-props="childrenItemPropsFn"
-              />
-            </v-col>
-          </v-row>
-          <v-row v-if="capacityMessage">
-            <v-col
-              cols="12"
-              class="pt-1 pb-0"
-            >
-              <div class="text-caption text-medium-emphasis">
-                {{ capacityMessage }}
-              </div>
-            </v-col>
-          </v-row>
-          <!--  Contact Details -->
-          <v-row>
-            <v-col cols="12">
-              <h2>
-                {{ page.details.contact_title }}
-              </h2>
-            </v-col>
-            <v-col
-              cols="12"
-              md="6"
-            >
-              <v-text-field
-                v-model="model.firstName"
-                :label="page.details.firstname_label"
-                :placeholder="page.details.firstname_placeholder"
-                :rules="[rules.name]"
-                @change="changeAttr('firstname'); saveToLocalStorage()"
-              />
-            </v-col>
-            <v-col
-              cols="12"
-              md="6"
-            >
-              <v-text-field
-                v-model="model.lastName"
-                :label="page.details.lastname_label"
-                :placeholder="page.details.lastname_placeholder"
-                :rules="[rules.name]"
-                @change="changeAttr('lastname'); saveToLocalStorage()"
-              />
-            </v-col>
-            <v-col
-              cols="12"
-              md="6"
-            >
-              <v-text-field
-                v-model="model.email"
-                :disabled="route.query.type === 'balance' || route.query.type === 'custom'"
-                :label="page.details.email_label"
-                :placeholder="page.details.email_placeholder"
-                :rules="[rules.email]"
-                @change="saveToLocalStorage()"
-              />
-            </v-col>
-            <v-col
-              cols="12"
-              md="6"
-            >
-              <v-autocomplete
-                v-model="model.isoContact"
-                :items="countries"
-                :label="page.details.country_label || 'Pays de résidence'"
-                :placeholder="page.details.country_placeholder || 'Sélectionnez votre pays'"
-                :rules="[rules.name]"
-                item-title="title"
-                item-value="value"
-                @change="saveToLocalStorage()"
-              />
-            </v-col>
-            <v-col
-              cols="12"
-              md="8"
-            >
-              <PhoneTextField
-                v-model="model.phone"
-                @validity-changed="isPhoneValid = $event"
-              />
-            </v-col>
 
-            <v-col
-              cols="12"
-              class="pa-0"
-            >
-              <v-checkbox
-                v-model="model.optinNewsletter"
-                :class="model.optinNewsletter ? 'text-primary' : ''"
-              >
-                <template #label>
-                  <div class="text-caption text-no-wrap">
-                    {{ page.details.newsletter_text }}
-                    <br> {{ page.details.newsletter_label }}
-                  </div>
-                </template>
-              </v-checkbox>
-            </v-col>
-          </v-row>
+        <v-col
+          cols="6"
+          md="6"
+          class="pb-0"
+        >
+          <div class="text-caption">
+            {{ page.details.nb_adults_label }}
+          </div>
+          <v-select
+            v-model="model.nbAdults"
+            class="remove-message-display"
+            :disabled="route.query.type === 'balance' || route.query.type === 'custom'"
+            :menu-props="{ offsetY: true }"
+            :items="selectOptions(isAdvance ? 1 : 0, 9)"
+            :item-props="adultItemPropsFn"
+          />
         </v-col>
+        <!-- children -->
+        <v-col
+          cols="6"
+          md="6"
+          class="pb-0"
+        >
+          <div class="text-caption text-truncate">
+            {{ childrenLabel }}
+          </div>
+          <v-select
+            v-model="model.nbChildren"
+            class="remove-message-display"
+            :disabled="route.query.type === 'balance' || route.query.type === 'custom'"
+            :menu-props="{ offsetY: true }"
+            :items="selectOptions(0, 9)"
+            :item-props="childrenItemPropsFn"
+          />
+        </v-col>
+        <v-col
+          cols="12"
+          class="pt-1"
+        >
+          <div
+            v-if="capacityMessage"
+            class="text-caption font-italic text-grey"
+          >
+            {{ capacityMessage }}
+          </div>
+        </v-col>
+      </v-row>
+
+      <v-divider
+        class="my-4"
+        variant="solid"
+        opactiy="1"
+      />
+      <!--  Contact Details -->
+      <v-row>
+        <v-col
+          cols="12"
+          class="d-flex ga-2 pb-0"
+        >
+          <v-divider
+            variant="solid"
+            opacity="1"
+            thickness="3"
+            class="rounded-lg"
+            color="secondary"
+            vertical
+          />
+          <h2>
+            {{ page.details.contact_title }}
+          </h2>
+        </v-col>
+        <v-col
+          cols="12"
+        >
+          <div>
+            ✉️ {{ page.details.email_label }} <span class="text-green-light ml-2">(sauvegardé automatiquement)</span>
+          </div>
+          <v-text-field
+            v-model="model.email"
+            :disabled="route.query.type === 'balance' || route.query.type === 'custom'"
+            :placeholder="page.details.email_placeholder"
+            :rules="[rules.email]"
+            hide-details
+            @change="saveToLocalStorage()"
+          />
+        </v-col>
+        <v-col
+          cols="6"
+        >
+          <div>
+            {{ page.details.firstname_label }}
+          </div>
+          <v-text-field
+            v-model="model.firstName"
+            :placeholder="page.details.firstname_placeholder"
+            :rules="[rules.name]"
+            hide-details
+            @change="changeAttr('firstname'); saveToLocalStorage()"
+          />
+        </v-col>
+        <v-col
+          cols="6"
+        >
+          <div>
+            {{ page.details.lastname_label }}
+          </div>
+          <v-text-field
+            v-model="model.lastName"
+            :placeholder="page.details.lastname_placeholder"
+            :rules="[rules.name]"
+            hide-details
+            @change="changeAttr('lastname'); saveToLocalStorage()"
+          />
+        </v-col>
+
+        <v-col
+          cols="6"
+        >
+          <div>
+            {{ page.details.country_label || 'Pays de résidence' }}
+          </div>
+          <v-autocomplete
+            v-model="model.isoContact"
+            :items="countries"
+            :placeholder="page.details.country_placeholder || 'Sélectionnez votre pays'"
+            :rules="[rules.name]"
+            item-title="title"
+            item-value="value"
+            hide-details
+            @change="saveToLocalStorage()"
+          />
+        </v-col>
+        <v-col
+          cols="12"
+          md="6"
+          class="d-flex align-end"
+        >
+          <PhoneTextField
+            v-model="model.phone"
+            @validity-changed="isPhoneValid = $event"
+          />
+        </v-col>
+      </v-row>
+      <v-row>
         <v-col
           cols="12"
           class="text-center"
@@ -168,7 +175,9 @@
               :icon="mdiShieldCheckOutline"
               size="x-small"
             />
-            <span>Vos données sont protégées et ne seront jamais partagées</span>
+            <span>En renseignant votre email, vous acceptez que nous puissions vous contacter pour finaliser votre réservation. Politique de confidentialité
+
+            </span>
           </div>
         </v-col>
       </v-row>
@@ -176,7 +185,7 @@
     <v-row>
       <v-col
         class="d-flex ga-3 align-center"
-        style="min-height: 56px;"
+        cols="12"
       >
         <Transition
           name="fade"
@@ -195,12 +204,14 @@
           <v-btn
             v-else-if="!showProgress"
             key="next-btn"
+            block
             :disabled="!isValid"
             color="secondary"
             class="font-weight-bold"
             @click="submitStepData"
           >
-            Suivant
+            Continuer ma réservation
+            <v-icon>{{ mdiArrowRight }}</v-icon>
           </v-btn>
           <FunnelFlightProgress
             v-else
@@ -209,6 +220,28 @@
             @finished="onProgressFinished"
           />
         </Transition>
+      </v-col>
+      <v-col
+        cols="12"
+        class="text-grey text-center"
+      >
+        <v-icon>
+          {{ mdiLock }}
+        </v-icon>
+        Aucun paiement à cette étape
+      </v-col>
+      <v-col>
+        <v-btn
+
+          key="previous-page-btn"
+          block
+          :disabled="!isValid"
+          color="grey"
+          class="font-weight-regular"
+        >
+          <v-icon>{{ mdiArrowLeft }}</v-icon>
+          Retour au voyage
+        </v-btn>
       </v-col>
     </v-row>
   </v-container>
@@ -222,7 +255,7 @@
 <script setup>
 import { z } from 'zod'
 import { computed } from 'vue'
-import { mdiLock, mdiShieldCheckOutline } from '@mdi/js'
+import { mdiArrowRight, mdiArrowLeft, mdiShieldCheckOutline, mdiLock } from '@mdi/js'
 import { countries } from '~/utils/countries'
 
 const { trackReservationStep } = useGtmTracking()
@@ -302,7 +335,7 @@ const childrenLabel = computed(() => {
   if (page?.details?.nb_children_label && voyage?.maxChildrenAge) {
     return page.details.nb_children_label.replace('{{maxAge}}', Number(voyage.maxChildrenAge))
   }
-  return 'Nombre d\'enfants'
+  return 'Enfants'
 })
 const isPhoneValid = ref(false)
 // New: Form validation logic
@@ -519,3 +552,9 @@ const changeAttr = (_dataAttribute) => {
   // }
 }
 </script>
+
+<style scoped>
+.remove-message-display:deep(.v-input__details){
+display:none;
+}
+</style>

@@ -1,22 +1,23 @@
 <template>
   <v-container
     fluid
-    class="relative "
+    class="relative px-0 pt-0 bg-cream"
   >
-    <!-- Background image -->
-    <v-img
-      class="footer-bg-img absolute"
-      :src="img('/logos/odysway-text.png', { format: 'webp', quality: 70, width: 1024, height: 400 })"
-      :lazy-src="img('/logos/odysway-text.png', { format: 'webp', quality: 10, width: 1024, height: 400 })"
-      :srcset="`${img('/logos/odysway-text.png', { format: 'webp', quality: 70, width: 1024, height: 400 })} 1024w, ${img('/logos/odysway-text.png', { format: 'webp', quality: 70, width: 640, height: 400 })} 640w`"
-      sizes="(max-width: 600px) 480px, 1024px"
-      cover
-      loading="lazy"
-      alt="Odysway texte en fond, en bas de page"
-      width="100%"
-      height="400"
-    />
-
+    <ClientOnly>
+      <FunnelCardHeader
+        v-if="voyage"
+        :titre="voyage.title"
+        :travel-type="voyage.travelType"
+        :image="voyage.imgSrc"
+        :date="checkoutStepperRef?.displayedDates"
+        :current-step="checkoutStepperRef?.currentStep"
+        :step-definitions="checkoutStepperRef?.stepDefinitions"
+        :skipper-mode="checkoutStepperRef?.skipperMode"
+      />
+      <template #fallback>
+        <div class="w-100 h-50 bg-primary" />
+      </template>
+    </ClientOnly>
     <v-row
       justify="center"
       align="center"
@@ -29,6 +30,7 @@
         <!-- ✅ Funnel component -->
         <FunnelCheckoutStepper
           v-if="pageTexts && voyage && dealValues"
+          ref="checkoutStepperRef"
           :page-texts="pageTexts"
           :voyage="voyage"
           :initial-deal-values="dealValues"
@@ -84,6 +86,8 @@ useSeoMeta({
 const img = useImage()
 const route = useRoute()
 const { travelTitle } = useFunnelHeader()
+
+const checkoutStepperRef = useTemplateRef('checkoutStepperRef')
 
 // 🧠 Extract query parameters
 const dateId = route.query.date_id

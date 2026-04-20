@@ -10,7 +10,7 @@
     >
       <v-img
         v-if="voyage.imgSrc"
-        class="d-none d-md-flex text-white "
+        class="d-none d-md-flex text-white"
         height="140"
         width="100%"
         :src="voyage.imgSrc"
@@ -18,11 +18,20 @@
         :alt="`Paysage de destination pour le voyage ${voyage?.title}`"
         cover
       >
-        <v-container class=" d-flex flex-column justify-center">
-          <div class="pa-lg-2  d-flex flex-column align-start">
-            <span class="text-h5 text-shadow-2 ">Récapitulatif de votre voyage</span>
-            <span class="text-body-1 mb-2 text-shadow-2">{{ voyage.title }}</span>
-            <span class="text-body-2 text-shadow-2">{{ model?.travelType || voyage.travelType }}</span>
+        <div class="img-overlay" />
+        <v-container class="d-flex flex-column justify-end h-100 position-relative">
+          <div class="pa-lg-2 d-flex flex-column align-start">
+            <span class="text-body-1 font-weight-medium mb-1">{{ voyage.title }}</span>
+            <span
+              v-if="voyage.departureDate && voyage.returnDate"
+              class="text-body-2 text-white-70"
+            >
+              {{ dayjs(voyage.departureDate).format('DD') }} → {{ dayjs(voyage.returnDate).format('DD MMMM YYYY') }} · {{ model?.travelType || voyage.travelType }}
+            </span>
+            <span
+              v-else
+              class="text-body-2 text-white-70"
+            >{{ model?.travelType || voyage.travelType }}</span>
           </div>
         </v-container>
       </v-img>
@@ -36,14 +45,14 @@
         class="px-5 text-body-1"
       >
         <!-- Dates Section -->
-        <FunnelStepsSummaryLine v-if="voyage.departureDate && voyage.returnDate">
+        <!-- <FunnelStepsSummaryLine v-if="voyage.departureDate && voyage.returnDate">
           <template #left>
             <span class="text-h6 ">{{ page.summary.dates_confirmed }}</span>
           </template>
           <template #right>
             {{ dayjs(voyage.departureDate).format('DD/MM/YYYY') }} au {{ dayjs(voyage.returnDate).format('DD/MM/YYYY') }}
           </template>
-        </FunnelStepsSummaryLine>
+        </FunnelStepsSummaryLine> -->
 
         <!-- Base Price Section -->
         <FunnelStepsSummaryLine v-if="voyage.startingPrice">
@@ -261,8 +270,11 @@
 
 <script setup>
 import dayjs from 'dayjs'
+import 'dayjs/locale/fr'
 import { mdiInformationOutline } from '@mdi/js'
 import formatNumber from '@/utils/formatNumber'
+
+dayjs.locale('fr')
 
 const { voyage, page } = defineProps(['voyage', 'page'])
 const route = useRoute()
@@ -360,16 +372,16 @@ const totalValue = computed(() => {
 function travelerText(nbTraveler, type) {
   const text = {
     adult: {
-      single: 'Voyageur Adulte',
-      multiple: 'Voyageurs Adultes',
+      single: 'Adulte',
+      multiple: 'Adultes',
     },
     child: {
-      single: 'Voyageur Adolescent',
-      multiple: 'Voyageurs Adolescents',
+      single: 'Adolescent',
+      multiple: 'Adolescents',
     },
     baby: {
-      single: 'Voyageur Enfant',
-      multiple: 'Voyageurs Enfants',
+      single: 'Enfant',
+      multiple: 'Enfants',
     },
     indivRoom: {
       single: 'Chambre Individuelle',
@@ -443,7 +455,13 @@ defineExpose({
   transform: translateY(-20px);
   opacity: 0;
 }
-.text-shadow-2{
-  text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+.img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0) 100%);
+}
+
+.text-white-70 {
+  color: rgba(255, 255, 255, 0.8);
 }
 </style>
