@@ -129,7 +129,10 @@ export default defineNuxtConfig({
     inlineStyles: true, // Inline critical CSS to eliminate render-blocking CSS request
   },
   experimental: {
-    payloadExtraction: true,
+    // Inline payloads in SSR HTML rather than emitting a separate _payload.json per route.
+    // The separate file is served as a static asset on Vercel and can't be busted by the ISR bypass token,
+    // which caused hydration to overwrite freshly-revalidated HTML with stale data.
+    payloadExtraction: false,
     appManifest: false,
     inlineRouteRules: true,
   },
