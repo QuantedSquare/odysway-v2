@@ -8,7 +8,7 @@ export default defineNuxtRouteMiddleware(async (to) => {
       projectId: config.public.sanity.projectId,
       dataset: config.public.sanity.dataset,
       apiVersion: config.public.sanity.apiVersion,
-      useCdn: true,
+      useCdn: false,
     })
 
     const pathSegments = decodeURIComponent(to.path).split('/')
