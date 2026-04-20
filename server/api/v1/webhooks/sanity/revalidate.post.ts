@@ -33,7 +33,7 @@ export default defineEventHandler(async (event) => {
       pathsToRevalidate.push('/prochains-departs')
     }
     else if (documentType === 'blog' && slug) {
-      pathsToRevalidate.push(`/${slug}`) // Blog posts are at root level
+      pathsToRevalidate.push(`/blog/${slug}`) // Blog posts are at root level
       pathsToRevalidate.push('/blog') // Blog index page
     }
     else if (documentType === 'destination' && slug) {
