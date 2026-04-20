@@ -200,6 +200,15 @@ export default defineEventHandler(async (event) => {
       // Sanity mutation → query visibility has a brief lag even without the CDN; wait a moment so ISR regen reads the new doc.
       await new Promise(resolve => setTimeout(resolve, 2000))
 
+      // With experimental.payloadExtraction, each page also has a _payload.json cached as its own ISR entry.
+      // Client-side hydration fetches that payload and overwrites the fresh SSR HTML with stale data if we don't bust it too.
+      const pathsWithPayloads = pathsToRevalidate.flatMap((p) => {
+        const base = p === '/' ? '' : p
+        return [p, `${base}/_payload.json`]
+      })
+      pathsToRevalidate.length = 0
+      pathsToRevalidate.push(...pathsWithPayloads)
+
       console.log(`Starting revalidation for ${pathsToRevalidate.length} paths across ${baseUrls.size} base URLs with bypass token: ${bypassToken ? 'SET' : 'NOT SET'}`)
 
       const revalidationResults = []
