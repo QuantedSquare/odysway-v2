@@ -45,8 +45,11 @@
           />
         </v-col>
       </v-row>
-      <v-divider class="my-3" />
-      <v-row>
+      <v-divider
+        v-if="nbTravelers > 1"
+        class="my-3"
+      />
+      <v-row v-if="nbTravelers > 1">
         <v-col
           cols="12"
           class="d-flex ga-2 pb-0 mt-3"
@@ -62,7 +65,7 @@
           <h2>Votre chambre</h2>
         </v-col>
         <v-col
-          v-if="nbTravelers > 1"
+
           cols="12"
           class="py-2"
         >
@@ -104,7 +107,10 @@
         </v-col>
       </v-row>
 
-      <v-divider class="my-6" />
+      <v-divider
+        v-if="voyage.gotIndivRoomAvailable && voyage.indivRoomPrice > 0"
+        class="my-6"
+      />
 
       <!-- Indiv room option -->
       <v-row

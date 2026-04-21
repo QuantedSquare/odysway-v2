@@ -38,9 +38,15 @@ const onTravelersNext = () => {
   }
 }
 
-watch(() => props.currentStep, (val) => {
+watch(() => props.currentStep, (val, oldVal) => {
   if (val === props.ownStep) {
-    subStep.value = 'travelers'
+    const comingBack = oldVal > val
+    if (comingBack && props.showInsurance) {
+      subStep.value = 'insurance'
+    }
+    else {
+      subStep.value = 'travelers'
+    }
   }
 })
 </script>
