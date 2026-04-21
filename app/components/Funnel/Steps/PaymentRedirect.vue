@@ -126,7 +126,6 @@
                   large
                   height="56"
                   block
-
                   :prepend-icon="mdiCalendarOutline"
                   :loading="loadingSession"
                   :disabled="(!switch_accept_data_privacy || !switch_accept_country || alreadyPlacedAnOption)"
@@ -148,7 +147,6 @@
                 <v-btn
                   height="56"
                   block
-
                   color="primary"
                   class="font-weight-bold text-body-1"
                   :loading="loadingSession"
@@ -178,15 +176,16 @@
                     @click="almaPay"
                   >
                     <span class="text-body-1">Payer en 3 ou 4 fois </span>
-                    <div class="custom-vertical-divider ml-4 " />
-                    <!-- <v-divider
+                    <!-- <div class="custom-vertical-divider ml-4 " /> -->
+                    <v-divider
                       vertical
                       class="mx-2"
-                    /> -->
+                    />
                     <div>
                       <img
-                        src="/images/Partenaires/alma-couleur.png"
-                        height="80"
+                        src="/images/Partenaires/ALMA.png"
+                        height="25"
+                        class="mt-1"
                       >
                     </div>
                   </v-btn>
