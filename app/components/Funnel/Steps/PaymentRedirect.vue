@@ -183,7 +183,7 @@
                     />
                     <div>
                       <img
-                        src="/images/logos/ALMA.png"
+                        src="/logos/ALMA.png"
                         height="25"
                         class="mt-1"
                       >
@@ -204,7 +204,7 @@
                   </div>
                   <div class="d-flex align-center ga-2">
                     <img
-                      src="/images/logos/ancv.png"
+                      src="/logos/ancv.png"
                       height="20"
                     >
                     <span class="text-caption text-grey">
