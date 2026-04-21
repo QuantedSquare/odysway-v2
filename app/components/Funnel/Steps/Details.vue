@@ -1,7 +1,7 @@
 <template>
   <v-container
     v-if="!loadingDeal"
-    class="pa-0 pa-sm-8"
+    class="pa-0 pa-sm-4"
   >
     <v-form ref="form">
       <v-row>
@@ -171,20 +171,15 @@
       <v-row>
         <v-col
           cols="12"
-          class="text-center"
+          class="text-center pt-0"
         >
-          <div class="d-flex align-center text-left ga-1 text-caption text-grey mb-4">
-            <!-- <v-icon
-              :icon="mdiShieldCheckOutline"
-              size="x-small"
-            /> -->
+          <div class="d-flex align-center text-left ga-1 text-caption text-grey">
             <span>En renseignant votre email, vous acceptez que nous puissions vous contacter pour finaliser votre réservation.
               <NuxtLink
                 class="text-grey text-decoration-underline"
                 to="/politique-de-confidentialite"
                 target="_blank"
               >Politique de confidentialité</NuxtLink>
-
             </span>
           </div>
         </v-col>
@@ -207,7 +202,7 @@
 
     <v-row>
       <v-col
-        class="d-flex ga-3 align-center"
+        class="d-flex ga-3 align-center justify-center"
         cols="12"
       >
         <Transition
@@ -219,10 +214,13 @@
             key="next-btn-one"
             :disabled="!isValid"
             color="secondary"
-            class="font-weight-bold"
+            height="50"
+            block
+            class="font-weight-bold custom-btn-shadow"
             @click="submitStepData"
           >
-            Suivant
+            Continuer ma réservation
+            <v-icon>{{ mdiArrowRight }}</v-icon>
           </v-btn>
           <template v-else-if="!showProgress">
             <v-btn
@@ -247,7 +245,7 @@
               height="50"
               :disabled="!isValid"
               color="secondary"
-              class="font-weight-bold text-decoration-none"
+              class="font-weight-bold text-decoration-none custom-btn-shadow"
               @click="submitStepData"
             >
               <span class="text-body-1 font-weight-bold">
@@ -268,20 +266,24 @@
         cols="12"
         class="text-grey text-center d-flex align-center justify-center ga-1 py-0"
       >
-        <v-icon>
-          {{ mdiLock }}
-        </v-icon>
-        <div class="pt-1">
-          Aucun paiement à cette étape
+        <template v-if="!isOptionMode">
+          <v-icon>
+            {{ mdiLock }}
+          </v-icon>
+          <div class="pt-1">
+            Aucun paiement à cette étape
+          </div>
+        </template>
+        <div v-else>
+          Gratuit · Sans engagement · 7 jours pour décider
         </div>
       </v-col>
-      <v-col>
+      <v-col v-if="route.query.voyage">
         <v-btn
           key="previous-page-btn"
           block
-
           color="grey-light"
-          class="font-weight-regular"
+          @click="redirectToTravelPage"
         >
           <div class="text-primary">
             <v-icon>{{ mdiArrowLeft }}</v-icon>
@@ -301,11 +303,11 @@
 <script setup>
 import { z } from 'zod'
 import { computed } from 'vue'
-import { mdiArrowRight, mdiArrowLeft, mdiShieldCheckOutline, mdiLock, mdiClockOutline } from '@mdi/js'
+import { mdiArrowRight, mdiArrowLeft, mdiLock } from '@mdi/js'
 import { countries } from '~/utils/countries'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 
-const { trackReservationStep } = useGtmTracking()
+const { trackReservationStep, trackCtaClick } = useGtmTracking()
 
 const { voyage, page, checkoutType, dateId } = defineProps(['ownStep', 'voyage', 'page', 'initialDealValues', 'checkoutType', 'dateId'])
 
@@ -320,10 +322,8 @@ const showProgress = ref(false)
 const shouldAdvance = ref(false)
 
 const onProgressFinished = () => {
-  console.log('[Details] onProgressFinished, shouldAdvance =', shouldAdvance.value)
   showProgress.value = false
   if (shouldAdvance.value) {
-    console.log('[Details] emitting next')
     shouldAdvance.value = false
     emit('next')
   }
@@ -438,10 +438,8 @@ const rules = {
 const nbTravelers = computed(() => +model.value.nbAdults + +model.value.nbChildren)
 
 const submitStepData = async () => {
-  console.log('[Details] submitStepData called, booked_id =', route.query.booked_id)
   // Validate form
   if (!isValid.value) {
-    console.log('[Details] form invalid, abort')
     return false
   }
   //  #todo soustraire la réduction s'il y en a une
@@ -609,7 +607,10 @@ const submitStepData = async () => {
 watch(model, () => {
   saveToLocalStorage()
 })
-
+const redirectToTravelPage = async () => {
+  trackCtaClick({ ctaId: 'return-travel-page', ctaLabel: 'Retour au voyage', ctaUrl: `/voyages/${voyage.slug}` })
+  await navigateTo(`/voyages/${voyage.slug}`)
+}
 const changeAttr = (_dataAttribute) => {
   // #TODO: Uncomment this when the dataAttribute is not empty and google analytics enabled
   // const EVENTS = {
@@ -638,5 +639,8 @@ display:none;
   border-radius:10px!important;
   padding: 14px 16px;
   font-size: 13px!important;
+}
+.custom-btn-shadow{
+ box-shadow: 0 4px 14px rgba(219,102,68,0.35)!important;
 }
 </style>

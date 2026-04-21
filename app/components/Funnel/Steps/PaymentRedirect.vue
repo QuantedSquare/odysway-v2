@@ -1,223 +1,257 @@
 <template>
-  <v-container
-    class="pa-0 pa-sm-8"
-  >
-    <!-- Prévoir Promo form -->
-
+  <v-container class="pa-0 pa-sm-4">
     <v-card-text v-if="model && +voyage.alreadyPaid < +voyage.totalTravelPrice">
-      <!-- Trust bar -->
-      <div class="trust-bar rounded-lg mb-5 pa-3 d-flex justify-center flex-wrap ga-4">
-        <div class="d-flex align-center ga-1">
-          <v-icon
-            :icon="mdiLockOutline"
-            size="18"
-            color="primary"
-          />
-          <span class="text-caption text-grey-darken-2 font-weight-medium">Paiement sécurisé</span>
-        </div>
-        <div class="d-flex align-center ga-1">
-          <v-icon
-            :icon="mdiShieldCheckOutline"
-            size="18"
-            color="primary"
-          />
-          <span class="text-caption text-grey-darken-2 font-weight-medium">Données chiffrées SSL</span>
-        </div>
-        <div class="d-flex align-center ga-1">
-          <v-icon
-            :icon="mdiHeadphones"
-            size="18"
-            color="primary"
-          />
-          <span class="text-caption text-grey-darken-2 font-weight-medium">Support disponible</span>
-        </div>
-      </div>
-
       <v-row v-if="route.query.type === 'balance'">
         <v-col class="text-center text-h6">
           Paiement du solde de votre voyage
         </v-col>
       </v-row>
+
+      <v-row class="mb-2">
+        <v-col
+          cols="12"
+          class="d-flex align-center justify-space-between ga-2 pb-0"
+        >
+          <div class="d-flex align-center ga-2">
+            <v-divider
+              variant="solid"
+              opacity="1"
+              thickness="3"
+              class="rounded-lg"
+              color="secondary"
+              vertical
+            />
+            <h2>
+              Finaliser ma réservation
+            </h2>
+          </div>
+        </v-col>
+      </v-row>
       <v-row>
-        <v-col cols="12">
+        <v-col>
+          <!-- Option block (only when not already booked and type is deposit) -->
           <template v-if="isBooking && !isSurMesure">
             <div class="text-start">
               {{ page.payment.ask_for_option_text }}
             </div>
           </template>
           <template v-else-if="route.query.type === 'deposit' && !isSurMesure">
+            <div
+              class="option-block d-flex ga-4 align-start mb-4"
+              @click="checkedOption = !checkedOption"
+            >
+              <v-checkbox
+                v-model="checkedOption"
+                hide-details
+                density="compact"
+                @click.stop
+              />
+              <span class="text-body-2">
+                ⏳ <strong>Pas encore prêt ?</strong> Bloquez ce voyage <strong>gratuitement pendant 7 jours</strong>, sans engagement ni paiement.
+              </span>
+            </div>
+          </template>
+          <template v-else-if="isBooking && !isSurMesure">
+            <p class="text-body-2 mb-4">
+              {{ page.payment.ask_for_option_text }}
+            </p>
+          </template>
+
+          <!-- Acceptances (only when not already booked) -->
+          <template v-if="!isBooking">
+            <v-divider class="my-3" />
             <v-switch
-              v-model="checkedOption"
+              v-model="switch_accept_data_privacy"
               inset
+              color="primary"
               hide-details
               class="custom-label-position"
               @click.stop=""
             >
               <template #label>
-                <div class="text-body-2 pl-1">
-                  {{ page.payment.ask_for_option_text }}
-                </div>
-              </template>
-            </v-switch>
-          </template>
-        </v-col>
-        <template v-if="!isBooking">
-          <v-divider
-            v-if="route.query.type === 'deposit'"
-            horizontal
-            class="ma-2"
-          />
-          <v-col cols="12">
-            <v-switch
-              v-model="switch_accept_data_privacy"
-              inset
-              class="custom-label-position mb-4"
-              hide-details
-            >
-              <template #label>
                 <div
-                  class="text-body-2 pl-1"
+                  class="custom-font-switch  pl-1"
                   @click.stop=""
                   v-html="page.payment.phrase_dacceptation"
                 />
               </template>
             </v-switch>
+            <v-divider class="my-2" />
             <v-switch
               v-model="switch_accept_country"
               inset
-              class="custom-label-position"
+              color="primary"
               hide-details
+              class="custom-label-position"
+              @click.stop=""
             >
               <template #label>
-                <div class="text-body-2 pl-1 custom-line-height">
+                <div class="custom-font-switch pl-1 custom-line-height">
                   {{ page.payment.accept_country_conditions_text }}
                 </div>
               </template>
             </v-switch>
-          </v-col>
-        </template>
-
-        <!-- Replace btn "Suivant" in parent -->
-        <!-- Stripe redirect loader -->
-        <v-row>
-          <Transition name="list">
-            <div
-              v-if="redirectingToStripe"
-              class="d-flex flex-column align-center justify-center py-10 w-100"
-            >
-              <FunnelFlightProgress
-                :loading="true"
-                text="Vous allez être redirigé vers notre partenaire Stripe"
-              />
-            </div>
-            <v-col
-              v-else
-              cols="12"
-              class="d-flex flex-column align-center justify-center my-4"
-            >
-              <ClientOnly>
-                <Transition name="list">
-                  <v-btn
-                    v-if="checkedOption"
-                    class=" text-caption text-uppercase font-weight-bold text-md-body-1"
-                    large
-                    height="50"
-                    :prepend-icon="mdiCalendarOutline"
-                    :loading="loadingSession"
-                    :disabled="(!switch_accept_data_privacy || !switch_accept_country || alreadyPlacedAnOption)"
-                    @click="book"
-                  >
-                    <span class="text-wrap">
-                      {{ page.payment.place_option_button }}
-                    </span>
-                  </v-btn>
-                  <div
-                    v-else
-                    class="d-flex flex-column flex-md-row ga-2 flex-wrap justify-center w-100"
-                  >
-                    <v-btn
-                      height="50"
-                      :prepend-icon="mdiLockOutline"
-                      class="bg-secondary flex-grow-1"
-                      :loading="loadingSession"
-                      :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
-                      @click="stripePay"
-                    >
-                      <span class="text-wrap text-body-1">
-                        {{ page.payment.pay_stripe_button }}
-                      </span>
-                    </v-btn>
-
-                    <v-btn
-                      v-if="isAlmaPaymentPossible"
-                      height="50"
-                      :prepend-icon="mdiCreditCardClockOutline"
-                      :loading="loadingSession"
-                      :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
-                      @click="almaPay"
-                    >
-                      <span class="text-wrap text-body-1">
-                        {{ page.payment.pay_alma_button }}
-                      </span>
-                    </v-btn>
-                  </div>
-                </Transition>
-
-                <!-- Partner mention -->
-                <div class="text-caption text-grey mt-2 text-center">
-                  <template v-if="isAlmaPaymentPossible">
-                    Paiement traité par Stripe (certifié PCI DSS) ou Alma, organisme de crédit agréé
-                  </template>
-                  <template v-else>
-                    Paiement traité par Stripe — certifié PCI DSS
-                  </template>
-                </div>
-
-                <div
-                  v-if="voyage.totalTravelPrice > 400000 && !checkedOption"
-                  class="text-caption mt-2"
-                >
-                  {{ page.payment.alma_payment_info }}
-                </div>
-              </ClientOnly>
-            </v-col>
-          </Transition>
-
-          <Transition name="list">
-            <v-col
-              v-if="alreadyPlacedAnOption"
-              cols="12"
-            >
-              <v-alert
-                class="text-center"
-                color="error"
-                variant="tonal"
-              >
-                {{ page.payment.option_already_placed_error }}
-              </v-alert>
-            </v-col>
-          </Transition>
-          <v-col
-            v-if="route.query.type !== 'balance'"
-            cols="12"
-            class="d-flex justify-space-between align-end"
-          >
-            <v-btn
-              v-if="currentStep === 4"
-              class="bg-grey-light font-weight-regular"
-              @click="emit('previous')"
-            >
-              Précédent
-            </v-btn>
-          </v-col>
-        </v-row>
+            <v-divider class="mt-1 mb-5" />
+          </template>
+        </v-col>
       </v-row>
+
+      <!-- Stripe redirect loader -->
+      <Transition name="list">
+        <div
+          v-if="redirectingToStripe"
+          class="d-flex flex-column align-center justify-center py-10 w-100"
+        >
+          <FunnelFlightProgress
+            :loading="true"
+            text="Vous allez être redirigé vers notre partenaire Stripe"
+          />
+        </div>
+
+        <div v-else>
+          <ClientOnly>
+            <Transition
+              name="list"
+              mode="out-in"
+            >
+              <!-- Option mode button -->
+              <div
+                v-if="checkedOption"
+                key="option"
+                class="d-flex flex-column ga-3"
+              >
+                <v-btn
+                  color="primary"
+                  class="font-weight-bold"
+                  large
+                  height="56"
+                  block
+
+                  :prepend-icon="mdiCalendarOutline"
+                  :loading="loadingSession"
+                  :disabled="(!switch_accept_data_privacy || !switch_accept_country || alreadyPlacedAnOption)"
+                  @click="book"
+                >
+                  <span class="text-wrap text-body-1">
+                    {{ page.payment.place_option_button }}
+                  </span>
+                </v-btn>
+              </div>
+
+              <!-- Payment buttons -->
+              <div
+                v-else
+                key="pay"
+                class="d-flex flex-column ga-3"
+              >
+                <!-- Stripe button -->
+                <v-btn
+                  height="56"
+                  block
+
+                  color="primary"
+                  class="font-weight-bold text-body-1"
+                  :loading="loadingSession"
+                  :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
+                  @click="stripePay"
+                >
+                  🔒 {{ route.query.type === 'deposit' ? 'Régler mon acompte' : page.payment.pay_stripe_button }}
+                </v-btn>
+                <p class="text-center ma-0 custom-grey-font">
+                  par carte bancaire ou virement
+                </p>
+
+                <!-- Alma button -->
+                <template v-if="isAlmaPaymentPossible">
+                  <div class="d-flex align-center ga-2">
+                    <v-divider />
+                    <span class="custom-grey-font flex-shrink-0">ou</span>
+                    <v-divider />
+                  </div>
+
+                  <v-btn
+                    height="56"
+                    block
+                    variant="outlined"
+                    :loading="loadingSession"
+                    :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
+                    @click="almaPay"
+                  >
+                    <span class="text-body-1">Payer en 3 ou 4 fois </span>
+                    <div class="custom-vertical-divider ml-4 " />
+                    <!-- <v-divider
+                      vertical
+                      class="mx-2"
+                    /> -->
+                    <div>
+                      <img
+                        src="/images/Partenaires/alma-couleur.png"
+                        height="80"
+                      >
+                    </div>
+                  </v-btn>
+                </template>
+
+                <!-- Trust footer -->
+                <div class="trust-footer mt-2">
+                  <div class="d-flex align-center ga-1 mb-1">
+                    <v-icon
+                      size="16"
+                      color="primary"
+                    >
+                      {{ mdiLockOutline }}
+                    </v-icon>
+                    <span class="text-caption font-weight-bold">Paiement sécurisé</span>
+                  </div>
+                  <div class="d-flex align-center ga-2">
+                    <img
+                      src="/images/Partenaires/ancv.png"
+                      height="20"
+                    >
+                    <span class="text-caption text-grey">
+                      Chèques vacances acceptés
+                      <span class="text-grey-lighten-1">(valable pour le solde · nous contacter)</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </Transition>
+          </ClientOnly>
+        </div>
+      </Transition>
+
+      <Transition name="list">
+        <v-alert
+          v-if="alreadyPlacedAnOption"
+          class="text-center mt-4"
+          color="error"
+          variant="tonal"
+        >
+          {{ page.payment.option_already_placed_error }}
+        </v-alert>
+      </Transition>
+
+      <!-- Précédent -->
+      <div
+        v-if="route.query.type !== 'balance'"
+        class="mt-4"
+      >
+        <v-btn
+          class="bg-grey-light text-primary"
+          block
+          height="50"
+
+          @click="emit('previous')"
+        >
+          ← PRÉCÉDENT
+        </v-btn>
+      </div>
     </v-card-text>
   </v-container>
 </template>
 
 <script setup>
-import { mdiCreditCardOutline, mdiCreditCardClockOutline, mdiCalendarOutline, mdiLockOutline, mdiShieldCheckOutline, mdiHeadphones, mdiEmailOutline, mdiAccountVoice, mdiAirplane } from '@mdi/js'
+import { mdiCalendarOutline, mdiLockOutline } from '@mdi/js'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 
 const { trackAddPaymentInfo, trackReservationPoseOption } = useGtmTracking()
@@ -232,9 +266,7 @@ const emit = defineEmits(['previous'])
 const model = defineModel()
 const { updateDeal } = useStepperDeal(ownStep)
 const { addSingleParam } = useParams()
-// console.log('....', +voyage.alreadyPaid, +voyage.totalTravelPrice)
-// Data
-// IsBooking à définir si une option dans le stepper uniquement pour poser une option
+
 const isSurMesure = computed(() => voyage.availabilityTypes?.includes('custom'))
 const isBooking = ref(route.query.type === 'booking')
 const checkedOption = ref(route.query.type === 'booking')
@@ -245,27 +277,14 @@ const loadingSession = ref(false)
 
 const isAlmaPaymentPossible = computed(() => {
   if (!model.value) return false
-
   return route.query.type !== 'custom'
     && voyage.alreadyPaid === 0
     && voyage.totalTravelPrice < 400000
 })
 
-const formattedAmount = computed(() => {
-  let amountInEuros
-  if (route.query.type === 'custom') {
-    amountInEuros = +route.query.amount
-  }
-  else {
-    amountInEuros = (+voyage.totalTravelPrice - +voyage.alreadyPaid) / 100
-  }
-  return new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(amountInEuros)
-})
-
 const stripePay = async () => {
   loadingSession.value = true
   redirectingToStripe.value = true
-  // Defined as metadata after payment is done
   const contact = {
     firstName: model.value.firstName,
     lastName: model.value.lastName,
@@ -274,29 +293,23 @@ const stripePay = async () => {
   }
   const dataForStripeSession = {
     paymentType: route.query.type,
-    contact: contact,
+    contact,
     currentUrl: route.fullPath,
     insuranceImg: page.assurance_img || 'https://odysway.com/images/default/chapka.png',
-    countries: voyage.iso, // Used by chapka to know if it's a CAP-EXPLORACTION or CAP-EXPLORER
+    countries: voyage.iso,
     booked_id: route.query.booked_id,
     departureDate: voyage.departureDate,
     returnDate: voyage.returnDate,
   }
   if (route.query.type === 'custom') {
-    Object.assign(dataForStripeSession, {
-      amount: +route.query.amount * 100,
-    })
+    Object.assign(dataForStripeSession, { amount: +route.query.amount * 100 })
   }
   const checkoutLink = await $fetch(`/api/v1/stripe?bookedId=${route.query.booked_id}`, {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(dataForStripeSession),
   })
-
   if (checkoutLink) {
-    // GTM: Track add_payment_info (Stripe payment)
     const { getCountryFromPhone } = useGtmTracking()
     const userData = {
       user_id: model.value.email,
@@ -305,10 +318,7 @@ const stripePay = async () => {
       user_country: getCountryFromPhone(model.value.phone) || 'Unknown',
     }
     trackAddPaymentInfo(voyage, model.value, 'stripe', userData)
-
-    await navigateTo(checkoutLink, {
-      external: true,
-    })
+    await navigateTo(checkoutLink, { external: true })
   }
   else {
     redirectingToStripe.value = false
@@ -318,7 +328,6 @@ const stripePay = async () => {
 
 const almaPay = async () => {
   loadingSession.value = true
-
   const dataForAlmaSession = {
     paymentType: route.query.type,
     contact: {
@@ -329,27 +338,19 @@ const almaPay = async () => {
     },
     currentUrl: route.fullPath,
     insuranceImg: page.assurance_img || 'https://odysway.com/images/default/chapka.png',
-    countries: voyage.iso, // Used by chapka to know if it's a CAP-EXPLORACTION or CAP-EXPLORER
+    countries: voyage.iso,
     departureDate: voyage.departureDate,
     returnDate: voyage.returnDate,
   }
-
   if (route.query.type === 'custom') {
-    Object.assign(dataForAlmaSession, {
-      amount: +route.query.amount * 100,
-    })
+    Object.assign(dataForAlmaSession, { amount: +route.query.amount * 100 })
   }
-
   const checkoutLink = await $fetch(`/api/v1/alma?bookedId=${route.query.booked_id}`, {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(dataForAlmaSession),
   })
-
   if (checkoutLink.url) {
-    // GTM: Track add_payment_info (Alma payment)
     const { getCountryFromPhone } = useGtmTracking()
     const userData = {
       user_id: model.value.email,
@@ -358,23 +359,18 @@ const almaPay = async () => {
       user_country: getCountryFromPhone(model.value.phone) || 'Unknown',
     }
     trackAddPaymentInfo(voyage, model.value, 'alma', userData)
-
-    await navigateTo(checkoutLink.url, {
-      external: true,
-    })
+    await navigateTo(checkoutLink.url, { external: true })
   }
   loadingSession.value = false
 }
 
 watch(checkedOption, (value) => {
-  if (!value) {
-    alreadyPlacedAnOption.value = false
-  }
+  if (!value) alreadyPlacedAnOption.value = false
+  addSingleParam('isoption', value)
 })
 
 const book = async () => {
   loadingSession.value = true
-
   try {
     await bookingApi.placeOption({ id: route.query.booked_id, booked_places: +model.value.nbAdults + +model.value.nbChildren })
   }
@@ -386,7 +382,6 @@ const book = async () => {
     }
     console.error(getApiErrorMessage(err, 'Erreur option'))
   }
-
   const dealData = {
     stage: '27',
     currentStep: 'A posé une option',
@@ -395,21 +390,14 @@ const book = async () => {
     firstName: model.value.firstName,
     lastName: model.value.lastName,
   }
-
   updateDeal(dealData)
-  // Check si on ajoute le payment link ici
-
   if (config.public.environment === 'production') {
     await $fetch('/api/v1/slack/notification', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(dealData),
     })
   }
-
-  // GTM: Track reservation_pose_option
   const { getCountryFromPhone } = useGtmTracking()
   const userData = {
     user_id: model.value.email,
@@ -418,53 +406,38 @@ const book = async () => {
     user_country: getCountryFromPhone(model.value.phone) || 'Unknown',
   }
   trackReservationPoseOption(voyage, model.value, userData)
-
   await navigateTo(`/confirmation?voyage=${voyage.slug}&isoption=true`)
 }
-
-watch(checkedOption, (value) => {
-  addSingleParam('isoption', value)
-})
 </script>
 
 <style scoped>
-.trust-bar {
-  background-color: rgb(var(--v-theme-cream));
+.option-block {
+  background-color: rgba(43,76,82,0.04);
+  border: 1.5px dashed rgba(43,76,82,0.2);
+  border-radius: 10px;
+  padding: 14px 16px;
+  cursor: pointer;
 }
 
-.amount-recap {
-  background-color: rgb(var(--v-theme-soft-blush));
-  border-left: 3px solid rgb(var(--v-theme-secondary));
-}
-
-.next-steps {
-  background-color:  rgb(var(--v-theme-cream));
-}
-
-.letter-spacing {
-  letter-spacing: 0.08em;
+.trust-footer {
+  border-top: 1px solid rgba(0,0,0,0.08);
+  padding-top: 12px;
 }
 
 .list-move,
-/* apply transition to moving elements */
 .list-enter-active,
 .list-leave-active {
   transition: all 0.5s ease;
 }
-
 .list-enter-from,
 .list-leave-to {
   opacity: 0;
   transform: translateY(40px);
 }
-
 .list-leave-to {
   opacity: 0;
   transform: translateY(-40px);
 }
-
-/* ensure leaving items are taken out of layout flow so that moving
-   animations can be calculated correctly. */
 .list-leave-active {
   position: absolute;
 }
@@ -473,10 +446,27 @@ watch(checkedOption, (value) => {
   .custom-label-position:deep(.v-selection-control) {
     display: flex;
     flex-direction: column;
-    line-height: 10px!important;
+    line-height: 10px !important;
   }
 }
-.text-body-2:deep(){
-  line-height: 20px!important;
+.text-body-2:deep() {
+  line-height: 20px !important;
+}
+.custom-font-switch:deep(){
+  font-size:13px;
+}
+.custom-font-switch:deep(a){
+  color: rgb(var(--v-theme-primary));
+  text-decoration: underline;
+}
+.custom-grey-font{
+  text-align: center;
+    font-size: 12px;
+    color: #8a9fa2;
+}
+.custom-vertical-divider{
+  width:1px;
+  height:25px;
+  background-color:rgb(var(--v-theme-grey-light));
 }
 </style>

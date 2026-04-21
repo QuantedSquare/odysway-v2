@@ -36,11 +36,11 @@
           <v-col
             cols="12"
           >
-            <v-btn-secondary
+            <v-btn
               height="60"
               block
               rounded="md"
-
+              variant="outlined"
               @click="handleAllDeparturesClick()"
             >
               <span class="text-body-2 font-weight-bold text-decoration-none">
@@ -49,7 +49,7 @@
                   {{ mdiArrowDown }}
                 </v-icon>
               </span>
-            </v-btn-secondary>
+            </v-btn>
           </v-col>
         </v-row>
         <v-row v-else-if="isLoading">
@@ -132,117 +132,15 @@
     </v-card-text>
   </v-card>
 
-  <v-card class="mt-6">
-    <v-card-text>
-      <v-container
-        fluid
-        class="pa-6"
-      >
-        <v-row>
-          <v-col
-            cols="12"
-            lg="3"
-          >
-            <div
-              v-if="stickyBlock.ctaCall.avatars && stickyBlock.ctaCall.avatars.length > 0"
-              class="avatar-stack d-flex justify-center align-center h-100 "
-            >
-              <v-avatar
-                v-for="(member, i) in stickyBlock.ctaCall.avatars.slice(0, 3)"
-                :key="member._id || i"
-                :size="i === 1 ? 40 : 32"
-                class="avatar-item"
-                :class="{ 'avatar-center': i === 1 }"
-              >
-                <v-img
-                  :src="img(getImageUrl(member.image?.asset?._ref), { format: 'webp', quality: 70, width: 72 })"
-                  :alt="member.name || 'Team member'"
-                  cover
-                />
-              </v-avatar>
-            </div>
-          </v-col>
-          <v-col>
-            <div class="text-h6">
-              Vous préférez en parler ?
-            </div>
-            <div class="text-subtitle-2 font-weight-regular">
-              Coralie, Lucia & Marina <br>  Lun - Ven 9h-19h
-            </div>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col
-            cols="12"
-            class="d-flex flex-column align-start pt-0"
-          >
-            <v-btn
-              height="60"
-              block
-              rounded="md"
-              :to="`/rdv-projet-voyage?travelTitle=${voyage.title}`"
-              @click="trackRdvClick('voyage-info-card')"
-            >
-              <div class="d-flex align-center ga-2">
-                <span class="text-caption text-lg-body-2 font-weight-bold text-decoration-none">
-                  <!-- {{ stickyBlock.ctaCall.text }} -->
-                  Prendre RDV - c'est Gratuit
-                </span>
-              </div>
-            </v-btn>
-          </v-col>
-        </v-row>
-        <v-row
-          justify="center"
-          class="text-center"
-          align="center"
-        >
-          <v-col
-            cols="12"
-            class="pb-0 pt-0"
-          >
-            <div class="text-primary text-center">
-              ou 💬 <a
-                href="https://wa.me/+33780919540"
-                class="text-decoration-underline text-primary"
-                @click="handleWhatsappClick"
-              >WhatsApp</a>
-            </div>
-          </v-col>
-          <v-col
-            cols="12"
-            class="pt-0"
-          >
-            <a
-              href="tel:+33184807975"
-              class="text-primary"
-            >+33 1 84 80 79 75</a>
-          </v-col>
-        </v-row>
-        <v-row
-          v-if="voyage.availabilityTypes?.includes('groupe')"
-        >
-          <v-divider />
-          <v-col class="pb-0">
-            <div class="text-center">
-              Groupe privé ?  <NuxtLink
-                width="100%"
-                class="text-"
-                :to="`/devis?slug=${voyage.slug.current}`"
-                @click="handleIndivClick()"
-              >
-
-                <span class="text-left text-decoration-underline text-grey">
-                  <!-- Privatiser ce voyage -->
-                  {{ stickyBlock.privatisationText }}
-                </span>
-              </NuxtLink>
-            </div>
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-card-text>
-  </v-card>
+  <ContactUsCard
+    variant="card"
+    :avatars="stickyBlock.ctaCall.avatars"
+    :rdv-link="`/rdv-projet-voyage?travelTitle=${voyage.title}`"
+    :show-privatisation="voyage.availabilityTypes?.includes('groupe')"
+    :privatisation-text="stickyBlock.privatisationText"
+    :privatisation-link="`/devis?slug=${voyage.slug.current}`"
+    @privatisation-click="handleIndivClick"
+  />
 </template>
 
 <script setup>
@@ -250,10 +148,9 @@ import { mdiCreditCard, mdiSyncCircle, mdiLock, mdiCheckCircleOutline, mdiArrowD
 import { useGoTo } from 'vuetify'
 import dayjs from 'dayjs'
 
-const img = useImage()
 const goTo = useGoTo()
 const { dates, isLoading } = useDates()
-const { trackRdvClick, trackCtaClick, trackWhatsappClick } = useGtmTracking()
+const { trackRdvClick, trackCtaClick } = useGtmTracking()
 
 const { stickyBlock, voyage } = defineProps({
   stickyBlock: {
@@ -313,10 +210,6 @@ function handleAskDevis() {
     ctaUrl: `/devis?slug=${typeof voyage.slug === 'object' ? voyage.slug.current : voyage.slug}`,
   })
 }
-const handleWhatsappClick = () => {
-  trackWhatsappClick()
-}
-
 const tempListPlaceholder = [{
   text: `Annulation gratuite jusqu'à J-60`,
   icon: mdiSyncCircle,

@@ -1,6 +1,6 @@
 <template>
   <v-container
-    class="height-title bg-primary   mb-10"
+    class="height-title bg-primary  mb-10"
     fluid
   >
     <v-row justify="center">
@@ -40,7 +40,7 @@
           >
             <div class="d-flex flex-column align-center">
               <div
-                class="step-circle d-flex align-center justify-center rounded-circle text-caption font-weight-bold"
+                class="step-circle d-flex align-center justify-center rounded-circle text-caption font-weight-bold "
                 :class="{
                   'step-complete': currentStep > step.number,
                   'step-active': currentStep === step.number,
@@ -53,9 +53,12 @@
                 >
                   {{ mdiCheck }}
                 </v-icon>
-                <span v-else>{{ index + 1 }}</span>
+                <span
+                  v-else
+                  class="text-subtitle-2 font-weight-bold"
+                >{{ index + 1 }}</span>
               </div>
-              <span class="text-caption text-white mt-1 text-center step-label">{{ step.label }}</span>
+              <span class="text-caption text-white mt-2 text-center step-label">{{ step.label }}</span>
             </div>
             <div
               v-if="index < stepDefinitions.length - 1"
@@ -96,19 +99,22 @@ defineProps({
   max-height:50px!important;
 }
 .step-circle {
-  width: 28px;
-  height: 28px;
-  border: 2px solid rgba(255, 255, 255, 0.7);
-  color: white;
+  width: 34px;
+  height: 34px;
+  color:rgba(255,255,255,0.35);
+  background-color: rgba(255,255,255,0.3)!important;
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.3);
   flex-shrink: 0;
 }
 .step-active {
-  background-color: rgba(51, 150, 168, 0.5);
+  background-color: white!important;
+  color: rgb(var(--v-theme-primary));
   border-color: white;
 }
 .step-complete {
-  background-color: white;
+  background-color: white!important;
   color: rgb(51, 150, 168);
+  box-shadow: none!important;
   border-color: white;
 }
 .step-pending {

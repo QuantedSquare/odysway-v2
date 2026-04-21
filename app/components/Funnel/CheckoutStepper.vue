@@ -1,7 +1,8 @@
 <template>
   <v-col
     v-if="pageTexts && voyage"
-    cols="10"
+    cols="12"
+    md="10"
     class="py-0"
   >
     <FunnelStepsStepperHeader
@@ -17,7 +18,7 @@
           class="d-flex justify-center "
         >
           <v-card
-            class="border-width relative no-margin-window mb-4 "
+            class="border-width relative no-margin-window mb-4"
             :class="skipperMode !== 'summary' && currentStep == 1 ? 'w-100' : ''"
             :elevation="skipperMode !== 'summary' && currentStep < 4 ? 2 : 0"
           >
@@ -83,7 +84,10 @@
             :voyage="voyage"
             :own-step="3"
           />
-          <CtaCardSheet />
+          <ContactUsCard
+            variant="card"
+            :rdv-link="`/rdv-projet-voyage?travelTitle=${voyage.title}`"
+          />
         </v-col>
       </v-row>
       <FunnelStepsBottomSummaryBar
@@ -269,6 +273,7 @@ const showInsuranceStep = computed(() => {
   margin-right:0!important;
   }
 }
+
 .fade-enter-active {
   transition: all 0.3s ease-out;
 }

@@ -7,14 +7,26 @@
       </v-col>
     </v-row>
   </v-container>
+
   <!-- Insurance options -->
   <v-container v-else-if="insurances && !_.isEmpty(insurances)">
-    <v-row>
+    <!-- Header -->
+    <v-row class="mb-2">
       <v-col
-        class="d-flex align-center"
         cols="12"
+        class="d-flex align-center justify-space-between ga-2 pb-0"
       >
-        <h2>{{ page.insurances.title }}</h2>
+        <div class="d-flex align-center ga-2">
+          <v-divider
+            variant="solid"
+            opacity="1"
+            thickness="3"
+            class="rounded-lg"
+            color="secondary"
+            vertical
+          />
+          <h2>{{ page.insurances.title }}</h2>
+        </div>
         <SanityImage
           :asset-id="page.insurances.assurance_img.asset._ref"
           auto="format"
@@ -22,134 +34,192 @@
           <template #default="{ src }">
             <img
               :src="src"
-              width="90"
-              class="ml-2"
+              width="80"
             >
           </template>
         </SanityImage>
       </v-col>
+      <v-col
+        cols="12"
+        md="11"
+      >
+        <p class="text-subtitle-2">
+          <span class="font-weight-bold">💡 Vous n'êtes pas encore couvert.</span>
+          Choisissez votre protection pour voyager sereinement.
+        </p>
+      </v-col>
     </v-row>
-    <!-- Multirisque Insurance -->
-    <v-row :class="selectedInsurance === 'rapatriement' ? 'text-primary' : 'text-grey'">
+
+    <v-row class="d-flex flex-column ga-3">
+      <!-- Multirisque card -->
       <v-col
         v-if="insurances.rapatriement"
-        cols="8"
+        cols="12"
+        class="pa-0"
       >
-        <v-switch
-          v-model="selectedInsurance"
-          value="rapatriement"
+        <div
+          class="insurance-card"
+          :class="selectedInsurance === 'rapatriement' ? 'insurance-card--selected' : ''"
+          @click="selectedInsurance = 'rapatriement'"
         >
-          <template #label>
-            <div class="text-body-1 d-flex flex-column ga-2 align-start flex-md-row align-md-center">
-              {{ page.insurances.preference_assurance_multirisque }}
-              <v-badge
-                color="secondary"
-                inline
-                :content="page.insurances.conseille_badge"
-              />
+          <div class="d-flex align-start ga-3">
+            <v-icon
+              class="mt-1 flex-shrink-0"
+              :color="selectedInsurance === 'rapatriement' ? 'success' : 'grey-lighten-1'"
+            >
+              {{ selectedInsurance === 'rapatriement' ? mdiRadioboxMarked : mdiRadioboxBlank }}
+            </v-icon>
+            <div class="flex-grow-1">
+              <div class="d-flex align-center ga-2 mb-1">
+                <span class="font-weight-bold text-body-2">{{ page.insurances.preference_assurance_multirisque }}</span>
+                <v-badge
+                  color="secondary"
+                  inline
+                  :content="page.insurances.conseille_badge"
+                />
+              </div>
+              <p class="text-caption text-grey mb-0">
+                Vous couvre pour les aléas avant votre voyage
+              </p>
             </div>
+            <span class="font-weight-bold text-body-1 flex-shrink-0">
+              +{{ formatNumber(insurances.rapatriement * 100, 'currency', '€') }}/pers.
+            </span>
+          </div>
+
+          <template v-if="selectedInsurance === 'rapatriement' && showRapatriementDetails">
+            <v-divider class="my-3" />
+            <ul class="insurance-details text-caption">
+              <EnrichedText :value="multirisqueDetails" />
+            </ul>
           </template>
-        </v-switch>
+          <button
+            class="text-caption text-decoration-underline mt-2 d-block"
+            :class="selectedInsurance !== 'rapatriement' ? 'text-grey' : ''"
+            @click.stop="toggleDetails('rapatriement')"
+          >
+            {{ selectedInsurance === 'rapatriement' && showRapatriementDetails ? 'Masquer ▲' : 'Voir les détails ▾' }}
+          </button>
+        </div>
       </v-col>
 
-      <v-col class="d-flex justify-end align-center text-body-1 font-weight-bold">
-        + {{ formatNumber(insurances.rapatriement * 100, 'currency', '€') }} / pers.
-      </v-col>
+      <!-- Annulation card -->
       <v-col
+        v-if="insurances.cancel"
         cols="12"
-        class="px-16"
+        class="pa-0"
       >
-        <FunnelStepsDialogLearnMore
-          v-if="model"
-          :btn-text="voyage.isCapExploraction ? page.insurances.accroche_assurance_perou_nepal:page.insurances.accroche_assurance_medicale "
-          :dialog-text="voyage.isCapExploraction ? page.insurances.details_assurance_medicale_perou_nepal:page.insurances.details_assurance_medicale "
-          :page="page"
-        />
-      </v-col>
-    </v-row>
+        <div
+          class="insurance-card"
+          :class="selectedInsurance === 'cancel' ? 'insurance-card--selected' : ''"
+          @click="selectedInsurance = 'cancel'"
+        >
+          <div class="d-flex align-start ga-3">
+            <v-icon
+              class="mt-1 flex-shrink-0"
+              :color="selectedInsurance === 'cancel' ? 'success' : 'grey-lighten-1'"
+            >
+              {{ selectedInsurance === 'cancel' ? mdiRadioboxMarked : mdiRadioboxBlank }}
+            </v-icon>
+            <div class="flex-grow-1">
+              <div class="d-flex align-center ga-2 mb-1">
+                <span class="font-weight-bold text-body-2">{{ page.insurances.preference_assurance_annulation }}</span>
+              </div>
+              <p class="text-caption text-grey mb-0">
+                Vous couvre avant et pendant votre voyage
+                <!-- {{ page.insurances.accroche_assurance_annulation }} -->
+              </p>
+            </div>
+            <span class="font-weight-bold text-body-1 flex-shrink-0">
+              +{{ formatNumber(insurances.cancel * 100, 'currency', '€') }}/pers.
+            </span>
+          </div>
 
-    <!-- Cancellation Insurance -->
-    <v-row
-      v-if="insurances.cancel"
-      :class="selectedInsurance === 'cancel' ? 'text-primary' : 'text-grey'"
-    >
-      <v-col
-        cols="8"
-      >
-        <v-switch
-          v-model="selectedInsurance"
-          value="cancel"
-          :label="page.insurances.preference_assurance_annulation"
-        />
+          <template v-if="selectedInsurance === 'cancel' && showCancelDetails">
+            <v-divider class="my-3" />
+            <ul class="insurance-details text-caption">
+              <EnrichedText :value="page.insurances.accroche_assurance_annulation" />
+            </ul>
+          </template>
+          <button
+            class="text-caption text-decoration-underline mt-2 d-block"
+            :class="selectedInsurance !== 'cancel' ? 'text-grey' : ''"
+            @click.stop="toggleDetails('cancel')"
+          >
+            {{ selectedInsurance === 'cancel' && showCancelDetails ? 'Masquer ▲' : 'Voir les détails ▾' }}
+          </button>
+        </div>
       </v-col>
-      <v-col class="d-flex justify-end align-center text-body-1 font-weight-bold">
-        + {{ formatNumber(insurances.cancel * 100, 'currency', '€') }} / pers.
-      </v-col>
-      <v-col
-        cols="12"
-        class="px-16"
-      >
-        <FunnelStepsDialogLearnMore
-          :btn-text="page.insurances.accroche_assurance_annulation"
-          :dialog-text="page.insurances.details_assurance_annulation"
-          :page="page"
-        />
-      </v-col>
-    </v-row>
 
-    <v-divider class="mt-4" />
-    <!-- No Insurance -->
-    <v-row :class="selectedInsurance === 'none' ? '' : 'text-grey'">
+      <!-- No insurance card -->
       <v-col
         v-if="insurances.cancel || insurances.rapatriement"
         cols="12"
+        class="pa-0"
       >
-        <v-switch
-          v-model="selectedInsurance"
-          value="none"
-          :label="page.insurances.no_insurance_label"
-        />
+        <div
+          class="insurance-card insurance-card--dashed"
+          :class="selectedInsurance === 'none' ? 'insurance-card--selected-none' : ''"
+          @click="selectedInsurance = 'none'"
+        >
+          <div class="d-flex align-center ga-3">
+            <v-icon :color="selectedInsurance === 'none' ? 'primary' : 'grey-lighten-1'">
+              {{ selectedInsurance === 'none' ? mdiRadioboxMarked : mdiRadioboxBlank }}
+            </v-icon>
+            <span
+              class="font-weight-bold text-body-2"
+              :class="selectedInsurance === 'none' ? 'text-primary' : 'text-grey'"
+            >
+              {{ page.insurances.no_insurance_label }}
+            </span>
+          </div>
+        </div>
       </v-col>
     </v-row>
-    <!-- Insurance Unavailable Message -->
 
-    <v-row class="text-caption text-primary">
-      <v-col>
-        <v-alert
-          border="start"
-          colored-border
-          color="secondary"
-          elevation="2"
-        >
-          <span
-            class="font-weight-bold"
-            v-html="page.insurances.alert"
-          />
-        </v-alert>
+    <!-- Alert -->
+    <v-row class="mt-2">
+      <v-col cols="12">
+        <p class="text-caption text-center text-grey">
+          {{ page.insurances.alert }}
+        </p>
       </v-col>
     </v-row>
-    <v-row>
+
+    <!-- Actions -->
+    <v-row class="mt-2">
       <v-col
-        class="d-flex ga-3"
+        cols="12"
+        class="d-flex flex-column ga-4"
       >
-        <v-btn
-          class="
-        bg-grey-light font-weight-regular"
-          @click="emit('previous')"
-        >
-          Précédent
-        </v-btn>
         <v-btn
           color="secondary"
           :disabled="!formValidation"
           class="font-weight-bold"
+          block
+          height="50"
           @click="submitStepData"
         >
-          Suivant
+          Continuer
+          <v-icon>
+            {{ mdiArrowRight }}
+          </v-icon>
+        </v-btn>
+        <v-btn
+          class="bg-grey-light text-primary"
+          block
+          height="50"
+          @click="emit('previous')"
+        >
+          <v-icon>
+            {{ mdiArrowLeft }}
+          </v-icon> PRÉCÉDENT
         </v-btn>
       </v-col>
     </v-row>
   </v-container>
+
+  <!-- Insurance unavailable -->
   <v-container
     v-else
     fluid
@@ -162,7 +232,7 @@
           color="secondary"
           elevation="2"
         >
-          <span class="font-weight-bold ">
+          <span class="font-weight-bold">
             {{ page.insurances.unavailable }}
           </span>
         </v-alert>
@@ -173,6 +243,7 @@
 
 <script setup>
 import _ from 'lodash'
+import { mdiRadioboxBlank, mdiRadioboxMarked, mdiArrowLeft, mdiArrowRight } from '@mdi/js'
 
 const { trackReservationStep } = useGtmTracking()
 
@@ -183,15 +254,41 @@ const { updateDeal } = useStepperDeal()
 const model = defineModel()
 const emit = defineEmits(['next', 'previous'])
 
-// Values
-const selectedInsurance = ref(null) // possible values: 'rapatriement', 'cancel', 'none'
+const selectedInsurance = ref(null)
+const showRapatriementDetails = ref(true)
+const showCancelDetails = ref(true)
+
+const toggleDetails = (type) => {
+  if (type === 'rapatriement') {
+    if (selectedInsurance.value !== 'rapatriement') {
+      selectedInsurance.value = 'rapatriement'
+      showRapatriementDetails.value = true
+    }
+    else {
+      showRapatriementDetails.value = !showRapatriementDetails.value
+    }
+  }
+  else if (type === 'cancel') {
+    if (selectedInsurance.value !== 'cancel') {
+      selectedInsurance.value = 'cancel'
+      showCancelDetails.value = true
+    }
+    else {
+      showCancelDetails.value = !showCancelDetails.value
+    }
+  }
+}
+
+const multirisqueDetails = computed(() => {
+  const raw = voyage.isCapExploraction
+    ? page.insurances.accroche_assurance_perou_nepal
+    : page.insurances.accroche_assurance_medicale
+  return raw
+})
 
 watch([model, () => currentStep, () => insurances], () => {
-  // Only run if we're on the insurance step
   if (currentStep !== ownStep) return
-
   isLoadingInsurance.value = true
-
   if (model.value) {
     if (model.value?.insurance) {
       const insuranceType = model.value.insurance?.toLowerCase()
@@ -205,65 +302,41 @@ watch([model, () => currentStep, () => insurances], () => {
         selectedInsurance.value = 'none'
       }
     }
-
     isLoadingInsurance.value = false
   }
 }, { immediate: true })
-const formValidation = computed(() => {
-  return selectedInsurance.value
-})
-// console.log('model', model.value)
-// Analytics
-const handleGAEvent = (event) => {
-  const EVENTS = {
-    rapatriement: { eventLabel: 'Groupe Détail - V-switch assurance médicale' },
-    cancel: { eventLabel: 'Groupe Détail - V-switch assurance annulation' },
-    none: { eventLabel: 'Groupe Détail - V-switch pas d\'assurance' },
-  }
-  return EVENTS[event].eventLabel
-  // #TODO Add Google Analytics
-  // this.$ga.event({
-  //   eventCategory: 'Devis',
-  //   eventAction: 'Click',
-  //   eventLabel: EVENTS[event].eventLabel,
-  // })
-}
+
+const formValidation = computed(() => selectedInsurance.value)
 
 const insuranceChoice = computed(() => {
   switch (selectedInsurance.value) {
     case 'rapatriement':
-      handleGAEvent('rapatriement')
       return { type: 'rapatriement', name: 'Multirisque', price: insurances.rapatriement }
     case 'cancel':
-      handleGAEvent('cancel')
       return { type: 'cancel', name: 'Annulation', price: insurances.cancel }
     default:
-      handleGAEvent('none')
       return { type: 'no_insurance', name: 'Aucune Assurance', price: 0 }
   }
 })
+
 watch(insuranceChoice, () => {
   if (model.value) {
     model.value.insurance = insuranceChoice.value.name
-    model.value.insuranceCommissionPrice = insuranceChoice.value.price * 100 // Prix assurance par pax
-    model.value.insuranceCommissionPerTraveler = insuranceChoice.value.price * 30 // Commision assurnace par pax
+    model.value.insuranceCommissionPrice = insuranceChoice.value.price * 100
+    model.value.insuranceCommissionPerTraveler = insuranceChoice.value.price * 30
   }
 })
 
 const submitStepData = () => {
-  // Validate form
   if (!model.value) return false
   const dealData = {
     insurance: [insuranceChoice.value.name],
-    insuranceCommissionPrice: (insuranceChoice.value.price * 100), // Prix assurance par pax
+    insuranceCommissionPrice: insuranceChoice.value.price * 100,
     currentStep: 'A fait le choix de l\'assurance',
-    insuranceCommissionPerTraveler: insuranceChoice.value.price * 30, // Commision assurnace par pax
+    insuranceCommissionPerTraveler: insuranceChoice.value.price * 30,
   }
-
   try {
     updateDeal(dealData)
-
-    // GTM: Track reservation_step5 (insurance selected)
     const { getCountryFromPhone } = useGtmTracking()
     const additionalData = {
       optin_newsletter: model.value.optinNewsletter,
@@ -275,7 +348,6 @@ const submitStepData = () => {
       },
     }
     trackReservationStep(3, voyage, model.value, additionalData)
-
     emit('next')
   }
   catch (error) {
@@ -284,3 +356,42 @@ const submitStepData = () => {
   }
 }
 </script>
+
+<style scoped>
+.insurance-card {
+  border: 1.5px solid rgb(var(--v-border-color));
+  border-radius: 12px;
+  padding: 16px;
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+.insurance-card--selected {
+  border-color: rgb(var(--v-theme-success));
+  background-color: rgba(var(--v-theme-success), 0.05);
+}
+.insurance-card--dashed {
+  border-style: dashed;
+}
+.insurance-card--selected-none {
+  border-color: rgb(var(--v-theme-primary));
+  border-style: dashed;
+}
+.insurance-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.insurance-details li::before {
+  content: "— ";
+}
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+}
+</style>

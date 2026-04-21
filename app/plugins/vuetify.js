@@ -150,6 +150,7 @@ export default defineNuxtPlugin((app) => {
       VTextField: {
         variant: 'solo',
         rounded: 'default',
+        density: 'comfortable',
         bgColor: 'grey-light',
         color: 'primary',
         elevation: 0,
@@ -160,6 +161,7 @@ export default defineNuxtPlugin((app) => {
       VAutocomplete: {
         variant: 'solo',
         rounded: 'default',
+        density: 'comfortable',
         bgColor: 'grey-light',
         color: 'primary',
         elevation: 0,
@@ -175,6 +177,7 @@ export default defineNuxtPlugin((app) => {
         bgColor: 'grey-light',
         iconColor: 'primary',
         flat: true,
+        density: 'comfortable',
       },
       VExpansionPanel: {
         elevation: 0,

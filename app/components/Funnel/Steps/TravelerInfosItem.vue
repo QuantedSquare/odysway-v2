@@ -16,7 +16,6 @@
           <v-text-field
             :id="`firstname_${id}`"
             v-model="i_firstname"
-            outlined
             placeholder="Ex: Indiana"
             :rules="[rules.required]"
             @change="dataUpdated"
@@ -31,7 +30,6 @@
             :id="`lastname_${id}`"
             v-model="i_lastname"
             type="textbox"
-            outlined
             placeholder="Ex: Jones"
             :rules="[rules.required]"
             @change="dataUpdated"
@@ -110,7 +108,6 @@
             <v-text-field
               :id="`firstname_${id}`"
               v-model="i_firstname"
-              outlined
               placeholder="Ex: Indiana"
               :rules="[rules.required]"
               @change="dataUpdated"
@@ -125,7 +122,6 @@
               :id="`lastname_${id}`"
               v-model="i_lastname"
               type="textbox"
-              outlined
               placeholder="Ex: Jones"
               :rules="[rules.required]"
               @change="dataUpdated"

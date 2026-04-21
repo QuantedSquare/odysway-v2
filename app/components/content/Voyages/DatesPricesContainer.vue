@@ -120,10 +120,7 @@
         </v-btn>
       </v-col>
     </v-row>
-    <ContactUsSection
-      v-if="isGroupeAvailable"
-      :contact-section="contactSection"
-    />
+    <ContactUsCard variant="section" />
   </v-container>
 </template>
 

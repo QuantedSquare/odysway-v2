@@ -20,9 +20,10 @@
           <v-alert
             border="start"
             colored-border
+            density="compact"
             color="grey-light"
             elevation="0"
-            class="text-caption text-blue"
+            class="text-caption text-blue alert"
           >
             {{ page.travelers_infos.alert }}
           </v-alert>
@@ -44,60 +45,132 @@
           />
         </v-col>
       </v-row>
-      <v-divider />
+      <v-divider class="my-3" />
       <v-row>
+        <v-col
+          cols="12"
+          class="d-flex ga-2 pb-0 mt-3"
+        >
+          <v-divider
+            variant="solid"
+            opacity="1"
+            thickness="3"
+            class="rounded-lg"
+            color="secondary"
+            vertical
+          />
+          <h2>Votre chambre</h2>
+        </v-col>
         <v-col
           v-if="nbTravelers > 1"
           cols="12"
           class="py-2"
         >
-          <v-switch
+          <p class="text-caption mb-2">
+            Type de lit
+            <!-- {{ page.travelers_infos.preference_couple }} -->
+          </p>
+          <v-btn-toggle
             v-model="model.isCouple"
-            style="margin-bottom: 5px"
-            :label="page.travelers_infos.preference_couple"
-          />
+            mandatory
+            density="comfortable"
+            class="bed-type-toggle w-100"
+          >
+            <v-btn
+              :value="true"
+              variant="outlined"
+              color="primary"
+              class="bed-type-btn"
+              spaced="end"
+            >
+              <v-icon start>
+                {{ model.isCouple === true ? mdiRadioboxMarked : mdiRadioboxBlank }}
+              </v-icon>
+              Lit double
+            </v-btn>
+            <v-btn
+              :value="false"
+              variant="outlined"
+              color="primary"
+              class="bed-type-btn"
+              spaced="end"
+            >
+              <v-icon start>
+                {{ model.isCouple === false ? mdiRadioboxMarked : mdiRadioboxBlank }}
+              </v-icon>
+              Lits jumeaux
+            </v-btn>
+          </v-btn-toggle>
         </v-col>
       </v-row>
 
-      <!-- Options section -->
-      <v-row v-if="voyage.gotIndivRoomAvailable && voyage.indivRoomPrice > 0">
-        <v-col cols="12">
-          <h2>{{ page.options.indiv_room_title }}</h2>
+      <v-divider class="my-6" />
+
+      <!-- Indiv room option -->
+      <v-row
+        v-if="voyage.gotIndivRoomAvailable && voyage.indivRoomPrice > 0"
+        align="center"
+        class="mb-2"
+      >
+        <v-col>
+          <div class="font-weight-bold text-subtitle-2">
+            {{ page.options.indiv_room_title || 'Chambre individuelle' }}
+          </div>
+          <div class="font-weight-bold text-caption">
+            + {{ formatNumber(voyage.indivRoomPrice, 'currency', '€') }} / pers.
+          </div>
+          <div class="text-caption text-grey">
+            {{ page.options.indiv_room_label }}
+          </div>
         </v-col>
         <v-col
-          cols="8"
-          :class="model.indivRoom ? 'text-primary' : 'text-grey'"
+          cols="auto"
+          class="d-flex align-center"
         >
           <v-switch
             v-model="model.indivRoom"
-            :label="page.options.indiv_room_label"
+            hide-details
             :disabled="forcedIndivRoom"
+            color="success"
+            density="compact"
           />
-          <FunnelStepsDialogLearnMore
-            :btn-text="page.room_indiv_accroche"
-            :dialog-text="page.room_indiv_text"
-            :page="page"
-          />
-        </v-col>
-        <v-col
-          class="d-flex justify-end align-start text-body-1"
-          :class="model.indivRoom ? 'text-primary' : 'text-grey'"
-        >
-          + {{ formatNumber(voyage.indivRoomPrice, 'currency', '€') }} / pers.
         </v-col>
       </v-row>
 
+      <v-divider class="my-6" />
+
+      <!-- Preferences & besoins -->
       <v-row>
-        <v-col cols="12">
-          <h2 class="h2-option">
-            {{ page.options.food_details_title }}
+        <v-col
+          cols="12"
+          class="d-flex ga-2 pb-2"
+        >
+          <v-divider
+            variant="solid"
+            opacity="1"
+            thickness="3"
+            class="rounded-lg"
+            color="secondary"
+            vertical
+          />
+          <h2>
+            Préférences & besoins
+            <!-- {{ page.options.food_details_title }} -->
           </h2>
+          <span class="text-caption text-grey align-self-center">· optionnel</span>
         </v-col>
         <v-col cols="12">
+          <p class="font-weight-bold text-caption mb-2">
+            {{ page.options.special_request_label }}
+          </p>
           <v-textarea
             v-model="model.specialRequest"
-            variant="outlined"
-            :label="page.options.special_request_label"
+            placeholder="Ex : végétarien, allergie aux noix, genoux fragiles..."
+            hide-details
+            flat
+            variant="solo"
+            rounded="md"
+            bg-color="surface-panel"
           />
         </v-col>
       </v-row>
@@ -116,13 +189,19 @@
             @click="submitStepData"
           >
             Continuer
+            <v-icon>
+              {{ mdiArrowRight }}
+            </v-icon>
           </v-btn>
           <v-btn
-            class="bg-grey-light font-weight-regular text-primary"
+            class="bg-grey-light font-weight- text-primary"
             block
             height="50"
             @click="emit('previous')"
           >
+            <v-icon>
+              {{ mdiArrowLeft }}
+            </v-icon>
             Précédent
           </v-btn>
         </v-col>
@@ -143,6 +222,7 @@
 
 <script setup>
 import dayjs from 'dayjs'
+import { mdiRadioboxBlank, mdiRadioboxMarked, mdiArrowLeft, mdiArrowRight } from '@mdi/js'
 
 const { trackReservationStep } = useGtmTracking()
 
@@ -323,3 +403,29 @@ const colorMap = {
   8: 'pink',
 }
 </script>
+
+<style scoped>
+.bed-type-toggle {
+  gap: 12px;
+  background: transparent !important;
+}
+.bed-type-btn {
+  flex: 1;
+  border-radius: 8px !important;
+  border: 1.5px solid rgb(var(--v-theme-primary)) !important;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.bed-type-btn.v-btn--active {
+  border-color: rgb(var(--v-theme-primary)) !important;
+  background: rgb(var(--v-theme-surface)) !important;
+  color: rgb(var(--v-theme-primary)) !important;
+}
+.alert:deep(.v-alert__border){
+  border-inline-start-width:5px!important;
+  opacity: 1;
+}
+.alert:deep(.v-alert__content){
+  margin-left: -10px!important;
+}
+</style>
