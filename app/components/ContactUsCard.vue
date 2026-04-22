@@ -3,59 +3,66 @@
   <v-card
     v-if="variant === 'section'"
     elevation="0"
-    rounded="xl"
+    rounded="md"
     class="pa-4 pa-md-6 d-flex flex-column flex-md-row align-center justify-space-between ga-4 border-custom"
-    color="grey-light-3"
+    color="white"
   >
-    <div class="d-flex align-center ga-4">
-      <div
-        v-if="avatars && avatars.length > 0"
-        class="avatar-stack"
-      >
-        <v-avatar
-          v-for="(member, i) in avatars.slice(0, 3)"
-          :key="member._id || i"
-          :size="i === 1 ? 56 : 44"
-          class="avatar-item"
-          :class="{ 'avatar-center': i === 1 }"
-        >
-          <v-img
-            :src="img(getImageUrl(member.image?.asset?._ref), { format: 'webp', quality: 70, width: 112 })"
-            :alt="member.name || 'Team member'"
-            cover
-          />
-        </v-avatar>
-      </div>
+    <div class="d-flex flex-column align-center align-md-start ga-3">
       <div>
-        <p class="text-body-1 font-weight-bold text-primary mb-1">
+        <p class="text-body-1 font-weight-bold text-primary mb-0">
           {{ title }}
         </p>
+      </div>
+      <div class="d-flex align-center ga-2">
+        <div
+          v-if="avatars && avatars.length > 0"
+          class="avatar-stack flex-shrink-0"
+        >
+          <v-avatar
+            v-for="(member, i) in avatars.slice(0, 3)"
+            :key="member._id || i"
+            :size="50"
+            class="avatar-item"
+          >
+            <v-img
+              :src="img(getImageUrl(member.image?.asset?._ref), { format: 'webp', quality: 70, width: 72 })"
+              :alt="member.name || 'Team member'"
+              cover
+            />
+          </v-avatar>
+        </div>
+
         <p
           v-if="subtitle"
-          class="text-body-2 text-primary-light-2 mb-1"
+          class="text-body-2 text-grey mb-0"
         >
           {{ subtitle }}
         </p>
-        <div class="d-flex align-center ga-3 flex-wrap">
+      </div>
+      <!-- Desktop only: contact links inline -->
+      <div class="d-none d-md-flex align-center ga-2 flex-wrap ml-4">
+        <span>
+          💬
           <a
             href="https://wa.me/+33780919540"
-            class="text-decoration-underline text-primary text-body-2"
+            class="text-decoration-underline text-primary text-body-2 font-weight-bold"
             @click="handleWhatsappClick"
-          >💬 WhatsApp</a>
-          <span class="text-grey">·</span>
-          <a
-            href="tel:+33184807975"
-            class="text-primary text-body-2"
-          >+33 1 84 80 79 75</a>
-          <span class="text-caption text-grey">· Lun-Ven 9h-19h</span>
-        </div>
+          >WhatsApp</a>
+        </span>
+        <span class="text-grey">·</span>
+        <a
+          href="tel:+33184807975"
+          class="text-body-2 font-weight-bold text-primary"
+        >+33 1 84 80 79 75</a>
+        <span class="text-caption text-grey">· Lun-Ven 9h-19h</span>
       </div>
     </div>
     <v-btn
       height="50"
       rounded="md"
+      block
       color="secondary"
-      class="text-none flex-shrink-0"
+      class="text-none flex-shrink-0 d-flex d-md-none"
       :to="rdvLink"
       @click="trackRdvClick('contact-us-card-section')"
     >
@@ -67,6 +74,39 @@
       </v-icon>
       {{ rdvButtonText }}
     </v-btn>
+    <v-btn
+      height="50"
+      rounded="md"
+      color="secondary"
+      class="text-none flex-shrink-0 d-none d-md-flex"
+      :to="rdvLink"
+      @click="trackRdvClick('contact-us-card-section')"
+    >
+      <v-icon
+        start
+        size="20"
+      >
+        {{ mdiCalendar }}
+      </v-icon>
+      {{ rdvButtonText }}
+    </v-btn>
+    <!-- Mobile only: contact links centered below button -->
+    <div class="d-flex flex-column d-md-none justify-center align-center ga-2 flex-wrap text-center">
+      <span>
+        💬
+        <a
+          href="https://wa.me/+33780919540"
+          class="text-decoration-underline text-primary text-body-2 font-weight-bold"
+          @click="handleWhatsappClick"
+        >WhatsApp</a> <span class="text-grey">· </span>
+        <a
+          href="tel:+33184807975"
+          class="text-body-2 font-weight-bold text-primary"
+        >+33 1 84 80 79 75</a>
+      </span>
+
+      <span class="text-caption text-grey">Lun-Ven 9h-19h</span>
+    </div>
   </v-card>
 
   <!-- Card variant: compact vertical layout (voyage page sidebar) -->
@@ -195,15 +235,15 @@ const props = defineProps({
   },
   title: {
     type: String,
-    default: 'Vous préférez en parler ?',
+    default: 'Vous avez des questions ?',
   },
   subtitle: {
     type: String,
-    default: 'Coralie, Lucia & Marina · Lun - Ven 9h-19h',
+    default: 'Nos conseillères vous aident à finaliser.',
   },
   rdvButtonText: {
     type: String,
-    default: 'Prendre RDV — c\'est Gratuit',
+    default: 'Prendre RDV avec un conseiller',
   },
   rdvLink: {
     type: String,
@@ -262,6 +302,6 @@ const handlePrivatisationClick = () => {
 }
 
 .border-custom {
-  border: 2px solid #56a88067;
+  border: 1.5px solid #dde3e4;
 }
 </style>

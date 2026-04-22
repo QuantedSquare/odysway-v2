@@ -48,35 +48,61 @@
         >
           <v-col
             v-for="review in reviews"
-            :key="review.id"
+            :key="review._id"
             cols="10"
             sm="6"
             md="4"
-            class="pr-0 pr-md-16"
+            class="pr-0 pr-md-4"
           >
-            <ReviewTraveller
-              :review="review"
-              :is-travel-page="true"
-            />
+            <VoyageReviewCard :review="review" />
           </v-col>
         </v-row>
         <v-row
           v-else
-          class="mb-8"
+          class="mb-4"
         >
           <v-col
             v-for="review in reviews.slice(0, 3)"
-            :key="review.id"
+            :key="review._id"
             cols="12"
-            class="pb-0"
+            class="pb-2"
           >
-            <ReviewTraveller
-              :review="review"
-              :is-travel-page="true"
-            />
+            <VoyageReviewCard :review="review" />
           </v-col>
         </v-row>
       </div>
+
+      <v-row
+        v-if="reviews.length > 0"
+        justify="center"
+        class="px-2 px-md-0 my-2"
+      >
+        <v-col
+          cols="12"
+        >
+          <v-card
+            rounded="md"
+            border
+            class="px-6 py-4 d-flex align-center justify-center ga-4 bg-white text-primary"
+          >
+            <span class="text-h4 font-weight-bold">4,8</span>
+            <div class="d-inline-flex ga-1">
+              <v-img
+                v-for="i in 5"
+                :key="i"
+                src="/icons/orange-star.svg"
+                alt="étoile"
+                height="15"
+                width="15"
+              />
+            </div>
+            <div class="d-flex flex-column">
+              <span class="text-body-1 font-weight-bold">Avis Google vérifiés</span>
+              <span class="text-body-2 text-medium-emphasis">+800 avis · Agence Odysway</span>
+            </div>
+          </v-card>
+        </v-col>
+      </v-row>
     </v-container>
   </ClientOnly>
 </template>

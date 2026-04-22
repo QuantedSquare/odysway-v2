@@ -3,7 +3,7 @@
     <v-card-text>
       <v-container
         fluid
-        class="pa-6"
+        class="pa-3"
       >
         <v-row c>
           <v-col

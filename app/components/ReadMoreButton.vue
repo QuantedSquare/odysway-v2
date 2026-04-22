@@ -3,7 +3,7 @@
     v-if="showButton"
     variant="text"
     :class="buttonClass"
-    class="pl-0 text-body-2 text-md-body-1"
+    class="pl-0 "
     width="fit-content"
     @click="onToggle"
   >
@@ -40,6 +40,7 @@ defineProps({
     type: String,
     default: 'text-h5 pa-0 mt-2',
   },
+
 })
 
 const emit = defineEmits(['toggle'])

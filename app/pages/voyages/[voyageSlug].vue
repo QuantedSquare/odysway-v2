@@ -188,6 +188,9 @@ const voyagePageQuery = `
           image
         }
       }
+    },
+    indivSection{
+      ...
     }
   }
 `

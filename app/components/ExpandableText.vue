@@ -16,6 +16,7 @@
       :button-class="buttonClass"
       :expanded-text="expandedText"
       :collapsed-text="collapsedText"
+      :button-position="buttonPosition"
       @toggle="toggleExpansion"
     />
   </div>
@@ -37,7 +38,7 @@ const props = defineProps({
   },
   buttonClass: {
     type: String,
-    default: 'text-h5 pa-0',
+    default: 'text-body-2 text-md-body-1',
   },
   expandedText: {
     type: String,
