@@ -1,5 +1,5 @@
 export const BOOKING_STATUSES = [
-  { value: 'soon_confirmed', label: 'Bientôt confirmé' },
+  { value: 'soon_confirmed', label: 'Inscriptions ouvertes' },
   { value: 'confirmed', label: 'Confirmé' },
   { value: 'guaranteed', label: 'Garanti (Complet)' },
 ]

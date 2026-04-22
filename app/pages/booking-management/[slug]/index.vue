@@ -352,7 +352,7 @@ const hasOngoingDates = computed(() => dates.value.some(isOngoing))
 
 const getDateStatus = (item) => {
   const labelMap = {
-    soon_confirmed: 'Bientôt confirmé',
+    soon_confirmed: 'Inscriptions ouvertes',
     confirmed: 'Confirmé',
     guaranteed: 'Garanti (Complet)',
   }
