@@ -1,7 +1,7 @@
 <template>
   <v-container
     fluid
-    class="relative px-0 pt-0 bg-cream"
+    class="relative px-0 pt-0 bg-warm"
   >
     <ClientOnly>
       <FunnelCardHeader
@@ -13,6 +13,9 @@
         :current-step="checkoutStepperRef?.currentStep"
         :step-definitions="checkoutStepperRef?.stepDefinitions"
         :skipper-mode="checkoutStepperRef?.skipperMode"
+        :voyage="voyage"
+        :dynamic-deal-values="checkoutStepperRef?.dynamicDealValues"
+        :page-texts="pageTexts"
       />
       <template #fallback>
         <div class="w-100 h-50 bg-primary" />
@@ -72,7 +75,6 @@
 <script setup>
 import { mdiAlertCircleOutline } from '@mdi/js'
 
-import { useImage } from '#imports'
 import { buildVoyageFromSanity, buildVoyageFromAC } from '~/utils/voyageBuilders'
 
 // 🧭 Layout & SEO
@@ -83,7 +85,6 @@ useSeoMeta({
   canonical: 'https://odysway.com/',
 })
 
-const img = useImage()
 const route = useRoute()
 const { travelTitle } = useFunnelHeader()
 
@@ -102,12 +103,29 @@ const error = ref(null)
 const imgSrc = ref(null)
 // 🧱 1. Fetch page texts (from Sanity)
 const checkoutTextsQuery = groq`*[_type == "checkout"][0]{ ... }`
+const voyagePageStickyQuery = groq`*[_type == "page_voyage"][0]{
+  stickyBlock{
+    ...,
+    ctaCall{
+      ...,
+      avatars[]->{
+        _id,
+        name,
+        image
+      }
+    }
+  }
+}`
 const sanity = useSanity()
 try {
-  const { data: pageTextsData } = await useAsyncData('checkout-page-texts', () =>
-    sanity.fetch(checkoutTextsQuery),
-  )
+  const [{ data: pageTextsData }, { data: voyagePageData }] = await Promise.all([
+    useAsyncData('checkout-page-texts', () => sanity.fetch(checkoutTextsQuery)),
+    useAsyncData('checkout-voyage-page-sticky', () => sanity.fetch(voyagePageStickyQuery)),
+  ])
   pageTexts.value = pageTextsData.value
+  if (pageTexts.value && voyagePageData.value) {
+    pageTexts.value.stickyBlock = voyagePageData.value.stickyBlock
+  }
 
   imgSrc.value = getImageUrl(pageTexts.value.image_checkout?.asset?._ref || null)
 }

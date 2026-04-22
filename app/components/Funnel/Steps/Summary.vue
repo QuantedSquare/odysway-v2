@@ -6,7 +6,7 @@
     <v-card
       elevation="0"
       rounded="xl"
-      class="text-grey-darken-2 pb-6"
+      class="text-grey-darken-2 pb-2"
     >
       <v-img
         v-if="voyage.imgSrc"
@@ -91,7 +91,7 @@
           </template>
         </FunnelStepsSummaryLine>
 
-        <v-divider class="my-6" />
+        <v-divider class="my-4" />
 
         <!-- Travelers Details Header -->
         <FunnelStepsSummaryLine>
@@ -122,7 +122,7 @@
 
         <v-divider
           v-if="forceIndivRoom || model.indivRoom && +voyage.indivRoomPrice > 0"
-          class="my-6"
+          class="my-4"
         />
 
         <!--  Options -->
@@ -176,7 +176,7 @@
 
         <v-divider
           v-if="voyage.promoValue > 0"
-          class="my-6"
+          class="my-4"
         />
 
         <!-- Promo -->
@@ -189,7 +189,7 @@
           </template>
         </FunnelStepsSummaryLine>
 
-        <v-divider class="my-6" />
+        <v-divider class="my-4" />
 
         <!-- Somme déjà réglé -->
         <FunnelStepsSummaryLine v-if="model.alreadyPaid && model.alreadyPaid > 0">
@@ -216,8 +216,41 @@
         </FunnelStepsSummaryLine>
 
         <!-- Prix Appliqué à régler -->
+        <row v-if="route.query.type === 'deposit'">
+          <v-col
+            cols="12"
+            class="gradient-primary rounded-md my-3 d-flex flex-column ga-1 text-white"
+            style="background: linear-gradient(70deg, rgba(43, 76, 82, 1) 0%, rgba(43, 76, 82, 1), 50%, rgba(43,76,82,0.9) 100%);"
+          >
+            <span class="text-caption font-weight-regular">
+              🔒 À régler maintenant
+            </span>
+            <span class="text-h4 font-weight-bold">
+              {{ appliedPrice > 0 ? formatNumber(appliedPrice, 'currency', 'EUR') : '-' }}
+            </span>
+            <span class="text-caption font-weight-regular">
+              Acompte 30% · Solde avant le départ
+              <v-tooltip
+                bottom
+                :aria-label="page.summary.cancel_text"
+              >
+                <template #activator="{ props }">
+                  <v-icon
+                    size="x-small"
+                    v-bind="props"
+                  >
+                    {{ mdiInformationOutline }}
+                  </v-icon>
+                </template>
+                <div>
+                  {{ page.summary.cancel_text }}
+                </div>
+              </v-tooltip>
+            </span>
+          </v-col>
+        </row>
         <Transition name="slide-fade">
-          <FunnelStepsSummaryLine v-if="route.query.isoption !== 'true'">
+          <FunnelStepsSummaryLine v-if="route.query.isoption !== 'true' && route.query.type !== 'deposit'">
             <template #left>
               <v-tooltip
                 bottom
@@ -228,8 +261,7 @@
                     v-if="appliedPrice > 0"
                     class="d-flex align-center ga-2 text-primary"
                   >
-                    <span v-if="route.query.type === 'deposit'">{{ page.summary.deposit_due }}</span>
-                    <span v-else-if="route.query.type === 'balance'">{{ page.summary.balance_due }}</span>
+                    <span v-if="route.query.type === 'balance'">{{ page.summary.balance_due }}</span>
                     <span v-else>{{ page.summary.amount_due }}</span>
                     <v-icon
                       size="x-small"
@@ -263,6 +295,22 @@
             <span class="font-italic text-body-2 ">{{ page.summary.full_payment_required }}</span>
           </template>
         </FunnelStepsSummaryLine>
+
+        <v-divider class="my-3" />
+        <div class="text-custom-size d-flex flex-column ga-2 text-primary font-weight-regular">
+          <span>
+            ⭐ &nbsp;
+            <span class="text-yellow-rating">★★★★★</span> <strong>4,8/5 </strong> · 174 avis Google
+          </span>
+          <span>
+            🔄 &nbsp;
+            Remboursement intégral jusqu'à <strong>J-60</strong>
+          </span>
+          <span>
+            👩‍✈️ &nbsp;
+            Conseillère dédiée <strong>avant, pendant & après</strong>
+          </span>
+        </div>
       </v-card-text>
     </v-card>
   </v-container>
@@ -438,6 +486,7 @@ const appliedPrice = computed(() => {
 })
 defineExpose({
   totalValue,
+  appliedPrice,
 })
 </script>
 
@@ -463,5 +512,8 @@ defineExpose({
 
 .text-white-70 {
   color: rgba(255, 255, 255, 0.8);
+}
+.text-custom-size{
+  font-size: 12.5px;
 }
 </style>

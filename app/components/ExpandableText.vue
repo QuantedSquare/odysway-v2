@@ -16,7 +16,6 @@
       :button-class="buttonClass"
       :expanded-text="expandedText"
       :collapsed-text="collapsedText"
-      :button-position="buttonPosition"
       @toggle="toggleExpansion"
     />
   </div>

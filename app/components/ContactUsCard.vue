@@ -112,12 +112,11 @@
   <!-- Card variant: compact vertical layout (voyage page sidebar) -->
   <v-card
     v-else
-    class="mt-6"
+    class="mt-6 "
   >
-    <v-card-text>
+    <v-card-text class="pa-2">
       <v-container
         fluid
-        class="pa-6"
       >
         <v-row>
           <v-col
@@ -158,7 +157,7 @@
             class="d-flex flex-column align-start pt-0"
           >
             <v-btn
-              height="60"
+              height="50"
               block
               rounded="md"
               color="secondary"
@@ -196,7 +195,7 @@
             <a
               href="tel:+33184807975"
               class="text-primary"
-            >+33 1 84 80 79 75</a>
+            >+33 1 84 80 79 75</a> <span class="text-caption text-grey">Lun-Ven 9h-19h</span>
           </v-col>
         </v-row>
         <v-row v-if="showPrivatisation && privatisationText">

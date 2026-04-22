@@ -1,13 +1,13 @@
 <template>
   <v-container
-    class="height-title bg-primary  mb-10"
+    class="height-title bg-primary  mb-6 mb-md-10"
     fluid
   >
     <v-row justify="center">
       <v-col
         cols="12"
         md="10"
-        class="d-flex align-center justify-start flex-md-row px-10"
+        class="d-flex align-center justify-start flex-md-row px-md-10"
       >
         <SanityImage
           v-if="isSanityImage"
@@ -58,7 +58,10 @@
                   class="text-subtitle-2 font-weight-bold"
                 >{{ index + 1 }}</span>
               </div>
-              <span class="text-caption text-white mt-2 text-center step-label">{{ step.label }}</span>
+              <span
+                class="text-caption text-white mt-2 text-center step-label text-no-wrap"
+                :class="currentStep === step.number ? 'text-white' : 'text-grey-custom'"
+              >{{ step.label }}</span>
             </div>
             <div
               v-if="index < stepDefinitions.length - 1"
@@ -68,13 +71,74 @@
         </div>
       </v-col>
     </v-row>
+
+    <!-- Mobile info strip -->
+    <v-row
+      v-if="voyage && dynamicDealValues"
+      class="d-flex d-md-none px-4 py-2 align-center mt-4 bg-custom-surface rounded-md"
+      no-gutters
+    >
+      <v-col
+        cols="12"
+        sm="8"
+        class="d-flex flex-column"
+      >
+        <span class="text-body-2 font-weight-medium text-white text-truncate py-1">
+          {{ voyage.title }}
+        </span>
+        <span
+          v-if="voyage.departureDate && voyage.returnDate"
+          class="text-caption"
+          style="color:rgba(255,255,255,0.7)"
+        >
+          {{ dayjs(voyage.departureDate).format('DD') }} → {{ dayjs(voyage.returnDate).format('DD MMMM YYYY') }}
+        </span>
+      </v-col>
+
+      <v-col
+        cols="12"
+        sm="4"
+        class="d-flex align-center justify-end pa-0 ga-1"
+      >
+        <span class="text-subtitle-2 font-weight-bold text-white">
+          {{ paymentLabel }}
+        </span>
+        <span class="text-subtitle-2 font-weight-bold text-yellow">
+          {{ formatNumber(drawerRef?.appliedPrice ?? 0, 'currency', '€') }}
+        </span>
+        <v-btn
+          :icon="mdiChevronDown"
+          variant="text"
+          size="x-small"
+          color="white"
+          @click="drawerOpen = true"
+        />
+      </v-col>
+    </v-row>
+
+    <FunnelStepsSummaryDrawer
+      v-if="voyage && dynamicDealValues && pageTexts"
+      ref="drawerRef"
+      v-model="drawerOpen"
+      :voyage="voyage"
+      :page-texts="pageTexts"
+      :dynamic-deal-values="dynamicDealValues"
+      :current-step="currentStep || 1"
+    />
   </v-container>
 </template>
 
 <script setup>
-import { mdiCheck } from '@mdi/js'
+import dayjs from 'dayjs'
+import 'dayjs/locale/fr'
+import { mdiCheck, mdiChevronDown } from '@mdi/js'
+import formatNumber from '@/utils/formatNumber'
 
-defineProps({
+dayjs.locale('fr')
+
+const route = useRoute()
+
+const { voyage, dynamicDealValues, pageTexts } = defineProps({
   titre: String,
   image: String,
   travelType: String,
@@ -90,7 +154,14 @@ defineProps({
     type: Boolean,
     default: false,
   },
+  voyage: Object,
+  dynamicDealValues: Object,
+  pageTexts: Object,
 })
+
+const drawerOpen = ref(false)
+const drawerRef = useTemplateRef('drawerRef')
+const paymentLabel = computed(() => route.query.type === 'deposit' ? 'Acompte' : 'À régler')
 </script>
 
 <style scoped>
@@ -120,6 +191,7 @@ defineProps({
 .step-pending {
   background-color: transparent;
   opacity: 0.6;
+
 }
 .step-line {
   height: 1px;
@@ -130,5 +202,11 @@ defineProps({
   max-width: 72px;
   white-space: normal;
   line-height: 1.2;
+}
+.text-grey-custom{
+  color:rgba(255,255,255,0.35)!important;
+}
+.bg-custom-surface{
+  background-color: rgba(255,255,255,0.12);
 }
 </style>

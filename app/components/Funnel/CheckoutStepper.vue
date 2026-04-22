@@ -11,9 +11,12 @@
       :page="pageTexts"
       :skipper-mode="skipperMode"
     >
-      <v-row class="funnel-stepper d-flex justify-center bg-cream">
+      <v-row
+        class="funnel-stepper  justify-center bg-warm "
+        justify="center"
+      >
         <v-col
-          cols="12"
+          cols="11"
           :md="7"
           class="d-flex justify-center "
         >
@@ -73,8 +76,7 @@
         </v-col>
 
         <v-col
-          cols="12"
-          :md="4"
+          cols="4"
           class="d-none d-md-block"
         >
           <FunnelStepsSummary
@@ -86,18 +88,14 @@
           />
           <ContactUsCard
             variant="card"
+            :avatars="pageTexts?.stickyBlock?.ctaCall?.avatars"
             :rdv-link="`/rdv-projet-voyage?travelTitle=${voyage.title}`"
+            :show-privatisation="false"
+            :privatisation-text="pageTexts?.stickyBlock?.privatisationText"
+            :privatisation-link="`/devis?slug=${typeof voyage.slug === 'object' ? voyage.slug.current : voyage.slug}`"
           />
         </v-col>
       </v-row>
-      <FunnelStepsBottomSummaryBar
-        v-if="skipperMode === 'normal' || skipperMode === 'summary'"
-        ref="summaryRef"
-        :voyage="voyage"
-        :page-texts="pageTexts"
-        :dynamic-deal-values="dynamicDealValues"
-        :current-step="currentStep"
-      />
     </FunnelStepsStepperHeader>
   </v-col>
   <v-col
@@ -236,6 +234,7 @@ defineExpose({
   skipperMode,
   displayedDates,
   stepDefinitions: computed(() => stepperHeaderRef.value?.stepDefinitions),
+  dynamicDealValues,
 })
 
 // Computed property to determine if insurance step should be shown
@@ -263,7 +262,6 @@ const showInsuranceStep = computed(() => {
   }
   .funnel-stepper{
     min-height: 50vh!important;
-    width:100%;
   }
   .no-margin-window {
     max-width: 1440px;

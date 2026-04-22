@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <FunnelLayoutHeader />
-    <v-main class="main-content bg-cream">
+    <v-main class="main-content bg-warm">
       <slot />
     </v-main>
   </v-app>

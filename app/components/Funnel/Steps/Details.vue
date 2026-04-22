@@ -139,6 +139,7 @@
         <v-col
           cols="12"
           md="6"
+          class="pb-0"
         >
           <div>
             {{ 'Téléphone *' }}
@@ -151,7 +152,7 @@
         <v-col
           cols="12"
           md="6"
-          class="pb-5"
+          class="pb-md-5 "
         >
           <div>
             {{ page.details.country_label || 'Pays de résidence' }}
@@ -187,15 +188,27 @@
     </v-form>
     <v-row v-if="!route.query.booked_id && route.query.date_id">
       <v-col cols="12">
-        <div class="option-block  d-flex ga-4">
-          <v-checkbox
-            v-model="isOptionMode"
-            hide-details
-            density="compact"
-          />
-          <span class="title-2">
-            <strong>⏳ Pas encore prêt</strong> ? Bloquez ce voyage <strong>gratuitement pendant 7 jours</strong>, sans engagement ni paiement.
-          </span>
+        <div class="option-block">
+          <div class="d-flex ga-4">
+            <v-checkbox
+              v-model="isOptionMode"
+              hide-details
+              density="compact"
+            />
+            <span class="title-2">
+              <strong>⏳ Pas encore prêt</strong> ? Bloquez ce voyage <strong>gratuitement pendant 7 jours</strong>, sans engagement ni paiement.
+            </span>
+          </div>
+          <v-divider class="my-2 d-block d-md-none" />
+          <div class="d-block d-md-none">
+            Vous préférez poser une question ?
+            💬
+            <a
+              href="https://wa.me/+33780919540"
+              class="text-decoration-underline text-primary"
+              @click="handleWhatsappClick"
+            >Écrivez-nous sur WhatsApp </a>
+          </div>
         </div>
       </v-col>
     </v-row>
@@ -267,15 +280,12 @@
         class="text-grey text-center d-flex align-center justify-center ga-1 py-0"
       >
         <template v-if="!isOptionMode">
-          <v-icon>
-            {{ mdiLock }}
-          </v-icon>
           <div class="pt-1">
-            Aucun paiement à cette étape
+            🔒 Aucun paiement à cette étape · 🔄 Remboursable J-60 · ⭐ 4,8/5
           </div>
         </template>
         <div v-else>
-          Gratuit · Sans engagement · 7 jours pour décider
+          🔒 Aucun paiement · 🔄 Remboursable J-60 · ⭐ 4,8/5
         </div>
       </v-col>
       <v-col v-if="route.query.voyage">

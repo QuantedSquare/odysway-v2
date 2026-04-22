@@ -68,6 +68,7 @@ export default defineNuxtPlugin((app) => {
             'red-light': '#EB9A82',
             'soft-blush': '#FBF0EC',
             'cream': '#f5f5f0', // banner bg
+            'warm': '#FDF6F2', // banner bg
             'dark': '#3e3e3e', // dark grey usually applied on text
             'yellow-rating': 'rgba(246, 191, 75, 1)',
             // Virer les suivants

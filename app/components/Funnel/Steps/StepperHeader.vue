@@ -5,7 +5,7 @@
     hide-actions
     mobile-breakpoint="md"
     alt-labels
-    class="text-caption bg-cream"
+    class="text-caption bg-warm"
   >
     <slot />
   </v-stepper>
@@ -80,7 +80,7 @@ const stepDefinitions = computed(() => {
   }
 
   if (props.skipperMode === 'normal') {
-    baseSteps.push({ number: 3, label: 'Récapitulatif' })
+    baseSteps.push({ number: 3, label: 'Paiement' })
   }
   else {
     baseSteps.push({
