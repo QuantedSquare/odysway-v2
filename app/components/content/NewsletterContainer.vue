@@ -23,26 +23,28 @@
           cols="12"
           :md="isOnVoyage ? 12 : 6"
           :lg="isOnVoyage ? 12 : 5"
-          class="pb-2 "
+          class="pb-2"
+          :class="isOnVoyage ? 'px-0' : ''"
         >
           <div
-            class="d-flex flex-column  align-center rounded-md px-3 pt-md-2"
-            :class="isOnVoyage ? 'bg-grey-light' : 'bg-white flex-md-row'"
+            class="d-flex flex-column  align-center rounded-md px-3 pt-md-2  "
+            :class="isOnVoyage ? '' : 'flex-md-row bg-white'"
           >
             <v-text-field
               id="newsletter"
               v-model="email"
-              variant="solo"
+              :variant="isOnVoyage ? 'outlined' : 'solo'"
               rounded="md"
-              outlined
+              :class="isOnVoyage ? 'border-color-secondary' : ''"
               flat
               hide-details
               :readonly="emailSentToBrevo"
               persistent-hint
               density="comfortable"
-              :bg-color="isOnVoyage ? 'grey-light' : 'white'"
+              :bg-color="isOnVoyage ? 'grey-light-3' : 'white'"
               class="w-100"
               type="email"
+              @keyup.enter="subscribeToNewsletter"
             >
               <template #label>
                 <!-- Vuetify classes does not work for scaling labels -->
@@ -53,22 +55,30 @@
                   {{ newsletterContent?.emailPlaceholder || 'Entrez votre adresse email' }}
                 </h4>
               </template>
+              <template
+                v-if="isOnVoyage"
+                #append-inner
+              >
+                <v-btn
+                  icon
+                  variant="text"
+                  color="secondary"
+                  size="small"
+                  :disabled="emailSentToBrevo"
+                  :loading="isLoading"
+                  @click="subscribeToNewsletter"
+                >
+                  <v-icon
+                    color="secondary"
+                    size="25"
+                  >
+                    {{ mdiArrowRight }}
+                  </v-icon>
+                </v-btn>
+              </template>
             </v-text-field>
             <v-btn-secondary
-              v-if="isOnVoyage"
-              :height="40"
-              :width="100"
-              class="my-3 text-body-1 font-weight-bold"
-              rounded="md"
-              :disabled="emailSentToBrevo"
-              block
-              :loading="isLoading"
-              @click="subscribeToNewsletter"
-            >
-              {{ newsletterContent?.subscribeButton || "S'inscrire" }}
-            </v-btn-secondary>
-            <v-btn-secondary
-              v-else
+              v-if="!isOnVoyage"
               :height="mdAndUp ? 62 : 40"
               :width="mdAndUp ? 161 : 100"
               class="my-3 text-body-1 font-weight-bold"
@@ -110,6 +120,7 @@
 <script setup>
 import { useDisplay } from 'vuetify'
 import { z } from 'zod'
+import { mdiArrowRight } from '@mdi/js'
 
 const props = defineProps({
   isOnVoyage: {
@@ -216,6 +227,10 @@ const subscribeToNewsletter = async () => {
 /* Center placeholder */
 :deep(.v-field-label) {
   font-weight: bold !important;
-  color: rgb(118, 118, 118, 0.7) !important;
+  font-size:12px;
+  color: rgba(var(--v-theme-secondary))!important;
+}
+:deep(.v-field){
+  color: rgba(var(--v-theme-secondary))!important;
 }
 </style>

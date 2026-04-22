@@ -97,7 +97,7 @@
           cols="12"
         >
           <div>
-            ✉️ {{ page.details.email_label }} <span class="text-green-light ml-2">(sauvegardé automatiquement)</span>
+            ✉️ {{ page.details.email_label }}
           </div>
           <v-text-field
             v-model="model.email"
@@ -138,7 +138,7 @@
         </v-col>
         <v-col
           cols="12"
-          md="6"
+          md="7"
           class="pb-0"
         >
           <div>
@@ -151,7 +151,7 @@
         </v-col>
         <v-col
           cols="12"
-          md="6"
+          md="5"
           class="pb-md-5 "
         >
           <div>
@@ -186,7 +186,7 @@
         </v-col>
       </v-row>
     </v-form>
-    <v-row v-if="!route.query.booked_id && route.query.date_id">
+    <v-row v-if="route.query.type === 'deposit' && !isSurMesure">
       <v-col cols="12">
         <div class="option-block">
           <div class="d-flex ga-4">
@@ -288,7 +288,7 @@
           🔒 Aucun paiement · 🔄 Remboursable J-60 · ⭐ 4,8/5
         </div>
       </v-col>
-      <v-col v-if="route.query.voyage">
+      <v-col v-if="route.query.voyage && !isSurMesure && route.query.type !== 'custom' && route.query.type !== 'balance'">
         <v-btn
           key="previous-page-btn"
           block
@@ -302,6 +302,27 @@
         </v-btn>
       </v-col>
     </v-row>
+
+    <!-- <v-row v-if="config.public.environment === 'development'">
+      <v-col cols="12">
+        <v-btn
+          v-if="!showProgress"
+          size="small"
+          variant="tonal"
+          color="grey"
+          block
+          @click="testAnimation"
+        >
+          [DEV] Tester l'animation
+        </v-btn>
+        <FunnelFlightProgress
+          v-else
+          key="next-progress"
+          :loading="buttonLoading"
+          @finished="onProgressFinished"
+        />
+      </v-col>
+    </v-row> -->
   </v-container>
 
   <v-skeleton-loader
@@ -373,7 +394,7 @@ const adultItemPropsFn = function (item) {
     disabled: disabledByCapacity,
   }
 }
-
+const isSurMesure = computed(() => voyage.availabilityTypes?.includes('custom'))
 const childrenItemPropsFn = function (item) {
   const children = Number(item)
   const adults = Number(model.value.nbAdults || 0)
@@ -459,7 +480,6 @@ const submitStepData = async () => {
   if (!route.query.booked_id) {
     showProgress.value = true
     buttonLoading.value = true
-    console.log('[Details] showProgress + buttonLoading set true')
   }
   try {
     // Submit form data
@@ -469,7 +489,6 @@ const submitStepData = async () => {
 
       if (checkoutType === 'deposit' || checkoutType === 'full') {
         const utmSource = localStorage.getItem('utmSource')
-        console.log('===========MODEL IN UPDATE DEAL===========', model.value)
         updateDeal({
           nbTravelers: model.value.nbAdults + model.value.nbChildren,
           nbChildren: model.value.nbChildren,
@@ -568,9 +587,7 @@ const submitStepData = async () => {
       }
       trackReservationStep(1, voyage, model.value, additionalData)
 
-      console.log('[Details] calling createDeal...')
       await createDeal(flattenedDeal)
-      console.log('[Details] createDeal resolved -> buttonLoading = false')
       buttonLoading.value = false
       showProgress.value = false
       shouldAdvance.value = false
@@ -617,6 +634,14 @@ const submitStepData = async () => {
 watch(model, () => {
   saveToLocalStorage()
 })
+const testAnimation = () => {
+  showProgress.value = true
+  buttonLoading.value = true
+  setTimeout(() => {
+    buttonLoading.value = false
+  }, 1000)
+}
+
 const redirectToTravelPage = async () => {
   trackCtaClick({ ctaId: 'return-travel-page', ctaLabel: 'Retour au voyage', ctaUrl: `/voyages/${voyage.slug}` })
   await navigateTo(`/voyages/${voyage.slug}`)

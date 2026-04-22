@@ -216,10 +216,13 @@
         </FunnelStepsSummaryLine>
 
         <!-- Prix Appliqué à régler -->
-        <row v-if="route.query.type === 'deposit'">
+        <v-row
+          v-if="route.query.type === 'deposit'"
+          class="px-2"
+        >
           <v-col
             cols="12"
-            class="gradient-primary rounded-md my-3 d-flex flex-column ga-1 text-white"
+            class="gradient-primary rounded-md my-3 d-flex flex-column ga-1 text-white "
             style="background: linear-gradient(70deg, rgba(43, 76, 82, 1) 0%, rgba(43, 76, 82, 1), 50%, rgba(43,76,82,0.9) 100%);"
           >
             <span class="text-caption font-weight-regular">
@@ -248,7 +251,7 @@
               </v-tooltip>
             </span>
           </v-col>
-        </row>
+        </v-row>
         <Transition name="slide-fade">
           <FunnelStepsSummaryLine v-if="route.query.isoption !== 'true' && route.query.type !== 'deposit'">
             <template #left>
@@ -292,7 +295,7 @@
         <!-- Full payment required notice -->
         <FunnelStepsSummaryLine v-if="route.query.type === 'full' && voyage.departureDate && dayjs(voyage.departureDate).diff(dayjs(), 'days') < 30">
           <template #left>
-            <span class="font-italic text-body-2 ">{{ page.summary.full_payment_required }}</span>
+            <span class="font-italic text-caption">{{ page.summary.full_payment_required }}</span>
           </template>
         </FunnelStepsSummaryLine>
 
@@ -449,14 +452,6 @@ function travelerText(nbTraveler, type) {
   }
 }
 
-// function calculatDepositeValue(data) {
-//     // WE take the total value of the deal, we substract the flight price and the insurance price
-//     const baseToCalculateDepositValue = +data.value - ((data.includeFlight ? data.flightPrice : 0) * data.nbTravelers) - ((data.insuranceCommissionPrice ?? 0) * data.nbTravelers)
-//     // We take 30% of the baseToCalculateDepositValue (which include options and reduction) and add the flight price if it's included
-//     // Insurance is added in another line item
-//     return Math.floor((baseToCalculateDepositValue) * 0.3 + (data.includeFlight ? data.flightPrice : 0) * data.nbTravelers)
-//   }
-
 function calculateDepositValue(data) {
   const nbTravelers = data.nbAdults + data.nbChildren || 0
   const baseToCalculateDepositValue = +totalValue.value - ((voyage.includeFlight ? +voyage.flightPrice : 0) * nbTravelers) - ((data.insuranceCommissionPrice ?? 0) * nbTravelers)
@@ -477,7 +472,7 @@ const appliedPrice = computed(() => {
       return totalValue.value - model.value.alreadyPaid
     }
     else if (route.query.type === 'full') {
-      return totalValue.value - model.value.alreadyPaid
+      return model.value.alreadyPaid ? totalValue.value - +model.value.alreadyPaid : totalValue.value
     }
     else { // type = 'custom'
       return route.query.amount * 100

@@ -34,7 +34,7 @@
   top: 90px;
 }
 .sticky-top-right {
-  top: 90px;
+  top: 20px;
 }
 
 @media (max-width: 960px) {

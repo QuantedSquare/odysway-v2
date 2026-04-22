@@ -359,7 +359,7 @@ const submitStepData = () => {
 
 <style scoped>
 .insurance-card {
-  border: 1.5px solid rgb(var(--v-border-color));
+  border: 1px solid rgb(var(--v-border-color));
   border-radius: 12px;
   padding: 16px;
   cursor: pointer;

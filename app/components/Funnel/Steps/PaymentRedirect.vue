@@ -51,11 +51,11 @@
               </span>
             </div>
           </template>
-          <template v-else-if="isBooking && !isSurMesure">
+          <!-- <template v-else-if="isBooking && !isSurMesure">
             <p class="text-body-2 mb-4">
               {{ page.payment.ask_for_option_text }}
             </p>
-          </template>
+          </template> -->
 
           <!-- Acceptances (only when not already booked) -->
           <template v-if="!isBooking">
@@ -63,7 +63,7 @@
             <v-switch
               v-model="switch_accept_data_privacy"
               inset
-              color="primary"
+              color="success"
               hide-details
               class="custom-label-position"
               @click.stop=""
@@ -80,7 +80,7 @@
             <v-switch
               v-model="switch_accept_country"
               inset
-              color="primary"
+              color="success"
               hide-details
               class="custom-label-position"
               @click.stop=""
@@ -147,17 +147,17 @@
                 <v-btn
                   height="56"
                   block
-                  color="primary"
-                  class="font-weight-bold text-body-1"
+                  color="secondary"
+                  class="font-weight-bold text-h5 custom-btn-shadow"
                   :loading="loadingSession"
                   :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
                   @click="stripePay"
                 >
                   🔒 {{ route.query.type === 'deposit' ? 'Régler mon acompte' : page.payment.pay_stripe_button }}
                 </v-btn>
-                <p class="text-center ma-0 custom-grey-font">
+                <!-- <p class="text-center ma-0 custom-grey-font">
                   par carte bancaire ou virement
-                </p>
+                </p> -->
 
                 <!-- Alma button -->
                 <template v-if="isAlmaPaymentPossible">
@@ -171,11 +171,12 @@
                     height="56"
                     block
                     variant="outlined"
+                    border="sm"
                     :loading="loadingSession"
                     :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
                     @click="almaPay"
                   >
-                    <span class="text-body-1">Payer en 3 ou 4 fois </span>
+                    <span class="text-body-2">Payer en 3 ou 4 fois </span>
                     <!-- <div class="custom-vertical-divider ml-4 " /> -->
                     <v-divider
                       vertical
@@ -194,13 +195,8 @@
                 <!-- Trust footer -->
                 <div class="trust-footer mt-2">
                   <div class="d-flex align-center ga-1 mb-1">
-                    <v-icon
-                      size="16"
-                      color="primary"
-                    >
-                      {{ mdiLockOutline }}
-                    </v-icon>
-                    <span class="text-caption font-weight-bold">Paiement sécurisé</span>
+                    &nbsp;&nbsp; 🔒 &nbsp;&nbsp;
+                    <span class="text-caption text-grey">Paiement sécurisé</span>
                   </div>
                   <div class="d-flex align-center ga-2">
                     <img
@@ -255,7 +251,7 @@ import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 
 const { trackAddPaymentInfo, trackReservationPoseOption } = useGtmTracking()
 
-const { page, currentStep, ownStep, voyage } = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
+const { page, ownStep, voyage } = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
 const route = useRoute()
 const config = useRuntimeConfig()
 const alreadyPlacedAnOption = ref(false)
@@ -461,11 +457,16 @@ const book = async () => {
 .custom-grey-font{
   text-align: center;
     font-size: 12px;
-    color: #8a9fa2;
+    color: #84989a;
+    font-weight: bold;
 }
 .custom-vertical-divider{
   width:1px;
   height:25px;
+
   background-color:rgb(var(--v-theme-grey-light));
+}
+.custom-btn-shadow{
+ box-shadow: 0 4px 14px rgba(219,102,68,0.35)!important;
 }
 </style>

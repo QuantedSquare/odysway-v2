@@ -5,7 +5,7 @@
         fluid
         class="pa-3"
       >
-        <v-row c>
+        <v-row>
           <v-col
             cols="5"
             class="d-flex flex-column align-start"
@@ -40,7 +40,6 @@
               height="60"
               block
               rounded="md"
-              variant="outlined"
               @click="handleAllDeparturesClick()"
             >
               <span class="text-body-2 font-weight-bold text-decoration-none">
@@ -74,21 +73,6 @@
               <!-- #TODO: add the key in the page schema -->
             </v-alert>
           </v-col>
-          <v-col
-            cols="12"
-          >
-            <v-btn
-              height="60"
-              block
-              rounded="md"
-              :to="`/devis?slug=${typeof voyage.slug === 'object' ? voyage.slug.current : voyage.slug}`"
-              :click="handleAskDevis()"
-            >
-              <span class="text-body-2 font-weight-bold text-decoration-none">
-                Demander un devis
-              </span>
-            </v-btn>
-          </v-col>
         </v-row>
 
         <v-row>
@@ -100,32 +84,36 @@
             <div
               v-for="item, index in tempListPlaceholder"
               :key="index"
-              class="d-flex align-center ga-2"
+              class="d-flex align-center ga-2 text-size-12"
             >
-              <v-icon color="secondary">
+              <!-- <v-icon color="secondary">
                 {{ item.icon }}
-              </v-icon>
+              </v-icon> -->
               {{ item.text }}
             </div>
           </v-col>
         </v-row>
         <template v-if="displayedDates.length === 0 && voyage.availabilityTypes?.includes('groupe')">
           <v-row>
-            <v-col cols="12">
-              <div class="d-flex align-center ga-2">
+            <!-- <v-divider class="mb-4" /> -->
+            <NewsletterContainer
+              is-on-voyage
+              :voyage="voyage"
+            />
+            <v-col
+              cols="12"
+              class="p-0"
+            >
+              <div class="d-flex align-center ga-1">
                 <v-icon>
                   {{ mdiCheckCircleOutline }}
                 </v-icon>
-                <span class="text-primary font-weight-bold">
+                <span class="text-grey font-weight-bold text-size-14">
                   <!-- #TODO: add the key in the page -->
                   Je souhaite être tenu informé des départs
                 </span>
               </div>
             </v-col>
-            <NewsletterContainer
-              is-on-voyage
-              :voyage="voyage"
-            />
           </v-row>
         </template>
       </v-container>
@@ -144,7 +132,7 @@
 </template>
 
 <script setup>
-import { mdiCreditCard, mdiSyncCircle, mdiLock, mdiCheckCircleOutline, mdiArrowDown } from '@mdi/js'
+import { mdiCheckCircleOutline, mdiArrowDown } from '@mdi/js'
 import { useGoTo } from 'vuetify'
 import dayjs from 'dayjs'
 
@@ -211,14 +199,14 @@ function handleAskDevis() {
   })
 }
 const tempListPlaceholder = [{
-  text: `Annulation gratuite jusqu'à J-60`,
-  icon: mdiSyncCircle,
+  text: `🔄 Annulation gratuite jusqu'à J-60`,
+
 }, {
-  text: `CB, virement, chèques vacances`,
-  icon: mdiCreditCard,
+  text: `💳 CB, virement, chèques vacances`,
+
 }, {
-  text: `Acompte 30% · Solde avant départ`,
-  icon: mdiLock,
+  text: `🔒 Acompte 30% · Solde avant départ`,
+
 }]
 </script>
 
@@ -250,5 +238,8 @@ const tempListPlaceholder = [{
   }
   .text-size-11 {
   font-size: 11px!important;
+  }
+  .text-size-12 {
+  font-size: 12px!important;
   }
 </style>

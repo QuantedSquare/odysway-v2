@@ -19,7 +19,7 @@
               :src="props.flagSrc"
               :alt="`Drapeau ${props.title}`"
               width="22px"
-              class="mr-2 flex-grow-0"
+              class="mr-1 flex-grow-0"
             />
           </template>
         </v-list-item>

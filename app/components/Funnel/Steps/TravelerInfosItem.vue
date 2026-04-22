@@ -1,91 +1,17 @@
 <template>
-  <!-- Flat mode: first traveler, always visible -->
-  <template v-if="flat">
-    <v-card class=" bg-surface-panel pa-2 text-primary rounded-md">
-      <v-card-title>
-        <div class="text-subtitle-2 font-weight-bold mb-2">
-          Voyageur {{ id }}
-        </div>
-      </v-card-title>
-      <v-row class="rounded-md mx-1 ">
-        <v-col
-          cols="6"
-          class="py-0 my-0"
-        >
-          <div>Prénom *</div>
-          <v-text-field
-            :id="`firstname_${id}`"
-            v-model="i_firstname"
-            placeholder="Ex: Indiana"
-            :rules="[rules.required]"
-            @change="dataUpdated"
-          />
-        </v-col>
-        <v-col
-          cols="6"
-          class="py-0 my-0"
-        >
-          <div>Nom *</div>
-          <v-text-field
-            :id="`lastname_${id}`"
-            v-model="i_lastname"
-            type="textbox"
-            placeholder="Ex: Jones"
-            :rules="[rules.required]"
-            @change="dataUpdated"
-          />
-        </v-col>
-        <v-col
-          cols="6"
-          class="py-0 my-0"
-        >
-          <div>Date de naissance *</div>
-          <v-text-field
-            :id="`birthdate_${id}`"
-            v-model="date"
-            type="text"
-            inputmode="numeric"
-            placeholder="JJ/MM/AAAA"
-            :rules="[rules.required, rules.dateFormat]"
-            :append-inner-icon="mdiCalendarOutline"
-            @input="handleInput"
-            @keydown="handleKeydown"
-            @change="dataUpdated"
-          />
-        </v-col>
-        <v-col
-          cols="6"
-          class="py-0 my-0"
-        >
-          <div>Pays de résidence *</div>
-          <v-autocomplete
-            :id="`country_${id}`"
-            v-model="i_isoContact"
-            :items="countries"
-            placeholder="Sélectionnez un pays"
-            :rules="[rules.required]"
-            item-title="title"
-            item-value="value"
-            @change="dataUpdated"
-          />
-        </v-col>
-      </v-row>
-    </v-card>
-  </template>
-
   <!-- Panel mode: additional travelers, collapsible -->
   <v-expansion-panels
-    v-else
     class="mt-4"
     elevation="0"
+    :model-value="flat ? 0 : undefined"
   >
-    <v-expansion-panel class=" text-primary">
+    <v-expansion-panel class=" text-primary wrapper">
       <v-expansion-panel-title
         class="bg-surface-panel rounded-md mb-3"
         height="10"
         static
       >
-        <span class="font-weight-medium">Voyageur {{ id }}</span>
+        <span class="font-weight-medium text-primary">Voyageur {{ id }}</span>
         <template #actions="{ expanded }">
           <span class="text-caption ml-2 text-grey">
             {{ expanded ? 'Replier' : 'Ajouter ses infos' }}
@@ -99,7 +25,7 @@
         </template>
       </v-expansion-panel-title>
       <v-expansion-panel-text class="px-0 mx-0">
-        <v-row class="rounded-md mx-0 px-0">
+        <v-row class="rounded-md mx-0 px-0 w-100">
           <v-col
             cols="6"
             class="py-0 my-0 px-0"
@@ -377,5 +303,9 @@ watch(() => props.isoContact, (newVal) => {
 }
 .chevron--expanded {
   transform: rotate(180deg);
+}
+.wrapper:deep(.v-expansion-panel-text__wrapper){
+  padding-left: 0!important;
+  padding-right: 0!important;
 }
 </style>

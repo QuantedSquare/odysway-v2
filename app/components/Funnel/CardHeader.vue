@@ -6,7 +6,7 @@
     <v-row justify="center">
       <v-col
         cols="12"
-        md="10"
+        md="8"
         class="d-flex align-center justify-start flex-md-row px-md-10"
       >
         <SanityImage
@@ -79,7 +79,7 @@
       no-gutters
     >
       <v-col
-        cols="12"
+        cols="7"
         sm="8"
         class="d-flex flex-column"
       >
@@ -96,23 +96,29 @@
       </v-col>
 
       <v-col
-        cols="12"
+        cols="5"
         sm="4"
-        class="d-flex align-center justify-end pa-0 ga-1"
+        class="d-flex align-center justify-end pa-0"
       >
-        <span class="text-subtitle-2 font-weight-bold text-white">
-          {{ paymentLabel }}
-        </span>
-        <span class="text-subtitle-2 font-weight-bold text-yellow">
-          {{ formatNumber(drawerRef?.appliedPrice ?? 0, 'currency', '€') }}
-        </span>
         <v-btn
-          :icon="mdiChevronDown"
           variant="text"
-          size="x-small"
+          size="small"
           color="white"
-          @click="drawerOpen = true"
-        />
+          height="40"
+          class="price-btn text-subtitle-2 font-weight-bold text-yellow px-2"
+          @click="drawerOpen = !drawerOpen"
+        >
+          <span class="text-yellow">
+            {{ formatNumber(drawerRef?.appliedPrice ?? 0, 'currency', '€') }}
+          </span>
+          <v-icon
+            :class="{ 'chevron-open': drawerOpen }"
+            class="chevron-icon ml-1"
+            size="20"
+          >
+            {{ mdiChevronDown }}
+          </v-icon>
+        </v-btn>
       </v-col>
     </v-row>
 
@@ -208,5 +214,15 @@ const paymentLabel = computed(() => route.query.type === 'deposit' ? 'Acompte' :
 }
 .bg-custom-surface{
   background-color: rgba(255,255,255,0.12);
+}
+.price-btn :deep(.v-btn__content) {
+  display: flex;
+  align-items: center;
+}
+.chevron-icon {
+  transition: transform 0.2s ease;
+}
+.chevron-open {
+  transform: rotate(180deg);
 }
 </style>

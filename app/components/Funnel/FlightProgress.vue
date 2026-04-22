@@ -14,8 +14,9 @@
         :style="{ left: `${progress}%` }"
       >
         <v-icon
-          :icon="mdiAirplane"
+          :icon="walkIcon"
           color="secondary"
+          class="rotate-icon"
           size="28"
         />
       </div>
@@ -39,7 +40,7 @@
 </template>
 
 <script setup>
-import { mdiAirplane } from '@mdi/js'
+import { mdiRun, mdiWalk } from '@mdi/js'
 
 const props = defineProps({
   loading: {
@@ -56,8 +57,24 @@ const emit = defineEmits(['finished'])
 
 const progress = ref(0)
 const reducedMotion = ref(false)
+const walkIcon = ref(mdiWalk)
 
 let rafId = null
+let walkIntervalId = null
+
+const startWalkCycle = () => {
+  if (walkIntervalId !== null) return
+  walkIntervalId = setInterval(() => {
+    walkIcon.value = walkIcon.value === mdiWalk ? mdiRun : mdiWalk
+  }, 200)
+}
+
+const stopWalkCycle = () => {
+  if (walkIntervalId !== null) {
+    clearInterval(walkIntervalId)
+    walkIntervalId = null
+  }
+}
 let tweenStart = 0
 let tweenFrom = 0
 let tweenTo = 0
@@ -104,14 +121,12 @@ const tween = (to, duration, easing, onDone) => {
 }
 
 const startSlowTween = () => {
-  console.log('[FlightProgress] startSlowTween')
   progress.value = 0
+  startWalkCycle()
   // Phase 1: quick takeoff to mid-course
   tween(55, 1400, easeOutCubic, () => {
-    console.log('[FlightProgress] phase 1 done')
     // Phase 2: cruise smoothly toward 80%
     tween(80, 3200, easeOutCubic, () => {
-      console.log('[FlightProgress] phase 2 done')
       // Phase 3: imperceptible creep so the plane never sits still
       tween(93, 9000, easeOutCubic)
     })
@@ -119,18 +134,15 @@ const startSlowTween = () => {
 }
 
 const finishTween = () => {
-  console.log('[FlightProgress] finishTween from progress=', progress.value)
   tween(100, 600, easeInOutCubic, () => {
-    console.log('[FlightProgress] finishTween done -> emitting finished')
+    stopWalkCycle()
     emit('finished')
   })
 }
 
 watch(() => props.loading, (isLoading) => {
-  console.log('[FlightProgress] watcher loading ->', isLoading)
   if (reducedMotion.value) {
     if (!isLoading) {
-      console.log('[FlightProgress] reducedMotion -> emitting finished immediately')
       emit('finished')
     }
     return
@@ -147,12 +159,10 @@ watch(() => props.loading, (isLoading) => {
 }, { immediate: false })
 
 onMounted(() => {
-  console.log('[FlightProgress] onMounted, props.loading =', props.loading)
   if (typeof window !== 'undefined' && window.matchMedia) {
     reducedMotion.value = window.matchMedia('(prefers-reduced-motion: reduce)').matches
   }
   if (reducedMotion.value) {
-    console.log('[FlightProgress] reducedMotion at mount')
     if (!props.loading) emit('finished')
     return
   }
@@ -160,14 +170,13 @@ onMounted(() => {
     startSlowTween()
   }
   else {
-    console.log('[FlightProgress] mounted with loading=false -> finishTween')
     finishTween()
   }
 })
 
 onBeforeUnmount(() => {
-  console.log('[FlightProgress] onBeforeUnmount, progress=', progress.value)
   cancelTween()
+  stopWalkCycle()
 })
 </script>
 
@@ -214,7 +223,7 @@ onBeforeUnmount(() => {
 .flight-progress__plane {
   position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(10deg);
   transition: left 300ms ease-out;
   filter: drop-shadow(0 4px 8px rgba(219, 102, 68, 0.25));
   pointer-events: none;

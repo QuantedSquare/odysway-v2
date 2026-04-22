@@ -10,7 +10,7 @@
       @update:model-value="$emit('update:modelValue', $event)"
     >
       <v-container>
-        <div class="pa-4 position-sticky top-0 d-flex justify-space-between align-center mb-4 z-100">
+        <div class="pa-4 position-sticky top-0 d-flex justify-space-between align-center  z-100">
           <h3 class="text-h6 font-weight-bold">
             Récapitulatif du prix
           </h3>
@@ -32,10 +32,11 @@
           :voyage="voyage"
           :own-step="5"
         />
+
         <v-btn
           block
           color="secondary"
-          class="mt-12 text-body-2 border border-white font-weight-bold text-decoration-none"
+          class="mt-4 text-body-2 border border-white font-weight-bold text-decoration-none"
           @click="$emit('update:modelValue', false)"
         >
           Fermer
@@ -88,6 +89,6 @@ defineExpose({ totalValue, appliedPrice })
 
 <style scoped>
 .custom-height:deep(.v-navigation-drawer) {
-  min-height: 75vh !important;
+  min-height: 85vh !important;
 }
 </style>

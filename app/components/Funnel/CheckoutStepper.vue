@@ -3,7 +3,7 @@
     v-if="pageTexts && voyage"
     cols="12"
     md="10"
-    class="py-0"
+    class="py-0 px-0 "
   >
     <FunnelStepsStepperHeader
       ref="stepperHeaderRef"
@@ -16,19 +16,18 @@
         justify="center"
       >
         <v-col
-          cols="11"
+          cols="12"
           :md="7"
           class="d-flex justify-center "
         >
           <v-card
-            class="border-width relative no-margin-window mb-4"
-            :class="skipperMode !== 'summary' && currentStep == 1 ? 'w-100' : ''"
+            class="border-width relative no-margin-window mb-4 "
             :elevation="skipperMode !== 'summary' && currentStep < 4 ? 2 : 0"
           >
             <v-stepper-window
               :class="currentStep === 3 ? ' mx-0' : ''"
               :model-value="currentStep"
-              class="px-md-6 mt-4"
+              class="px-md-6 px-0 mt-4"
             >
               <v-stepper-window-item
                 :value="1"
@@ -87,6 +86,7 @@
             :own-step="3"
           />
           <ContactUsCard
+            v-if="currentStep < 3"
             variant="card"
             :avatars="pageTexts?.stickyBlock?.ctaCall?.avatars"
             :rdv-link="`/rdv-projet-voyage?travelTitle=${voyage.title}`"

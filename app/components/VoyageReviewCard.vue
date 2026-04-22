@@ -26,7 +26,7 @@
         expanded-text="Voir moins"
         button-class="text-subtitle-2"
       >
-        <div class="text-caption font-weight-regular pa-0">
+        <div class="text-subtitle-2 font-weight-regular pa-0">
           « {{ formatReviewText(review.text) }} »
         </div>
       </ExpandableText>

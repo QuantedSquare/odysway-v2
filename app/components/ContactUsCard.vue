@@ -78,7 +78,7 @@
       height="50"
       rounded="md"
       color="secondary"
-      class="text-none flex-shrink-0 d-none d-md-flex"
+      class="text-none flex-shrink-0 d-none d-md-flex font-weight-bold"
       :to="rdvLink"
       @click="trackRdvClick('contact-us-card-section')"
     >
@@ -301,6 +301,6 @@ const handlePrivatisationClick = () => {
 }
 
 .border-custom {
-  border: 1.5px solid #dde3e4;
+  /* border: 1.5px solid #dde3e4; */
 }
 </style>

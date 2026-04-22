@@ -17,16 +17,7 @@
           <h2>{{ page.travelers_infos.title }}</h2>
         </v-col>
         <v-col cols="12">
-          <v-alert
-            border="start"
-            colored-border
-            density="compact"
-            color="grey-light"
-            elevation="0"
-            class="text-caption text-blue alert"
-          >
-            {{ page.travelers_infos.alert }}
-          </v-alert>
+          {{ page.travelers_infos.alert }}
         </v-col>
         <v-col cols="12">
           <v-skeleton-loader
@@ -46,11 +37,12 @@
         </v-col>
       </v-row>
       <v-divider
-        v-if="nbTravelers > 1"
+        v-if="voyage.gotIndivRoomAvailable && voyage.indivRoomPrice > 0"
         class="my-3"
       />
-      <v-row v-if="nbTravelers > 1">
+      <v-row v-if=" voyage.gotIndivRoomAvailable && voyage.indivRoomPrice > 0">
         <v-col
+          v-if="voyage.gotIndivRoomAvailable && voyage.indivRoomPrice > 0"
           cols="12"
           class="d-flex ga-2 pb-0 mt-3"
         >
@@ -62,62 +54,9 @@
             color="secondary"
             vertical
           />
-          <h2>Votre chambre</h2>
+          <h2>Options</h2>
         </v-col>
-        <v-col
 
-          cols="12"
-          class="py-2"
-        >
-          <p class="text-caption mb-2">
-            Type de lit
-            <!-- {{ page.travelers_infos.preference_couple }} -->
-          </p>
-          <v-btn-toggle
-            v-model="model.isCouple"
-            mandatory
-            density="comfortable"
-            class="bed-type-toggle w-100"
-          >
-            <v-btn
-              :value="true"
-              variant="outlined"
-              color="primary"
-              class="bed-type-btn"
-              spaced="end"
-            >
-              <v-icon start>
-                {{ model.isCouple === true ? mdiRadioboxMarked : mdiRadioboxBlank }}
-              </v-icon>
-              Lit double
-            </v-btn>
-            <v-btn
-              :value="false"
-              variant="outlined"
-              color="primary"
-              class="bed-type-btn"
-              spaced="end"
-            >
-              <v-icon start>
-                {{ model.isCouple === false ? mdiRadioboxMarked : mdiRadioboxBlank }}
-              </v-icon>
-              Lits jumeaux
-            </v-btn>
-          </v-btn-toggle>
-        </v-col>
-      </v-row>
-
-      <v-divider
-        v-if="voyage.gotIndivRoomAvailable && voyage.indivRoomPrice > 0"
-        class="my-6"
-      />
-
-      <!-- Indiv room option -->
-      <v-row
-        v-if="voyage.gotIndivRoomAvailable && voyage.indivRoomPrice > 0"
-        align="center"
-        class="mb-2"
-      >
         <v-col>
           <div class="font-weight-bold text-subtitle-2">
             {{ page.options.indiv_room_title || 'Chambre individuelle' }}
@@ -141,6 +80,13 @@
             density="compact"
           />
         </v-col>
+
+        <v-divider
+          v-if="voyage.gotIndivRoomAvailable && voyage.indivRoomPrice > 0"
+          class="my-6"
+        />
+
+      <!-- Indiv room option -->
       </v-row>
 
       <v-divider class="my-6" />

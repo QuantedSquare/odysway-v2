@@ -1,7 +1,6 @@
 <template>
-  <v-container
-    fluid
-    class="relative px-0 pt-0 bg-warm"
+  <div
+    class="relative  w-100 px-0 pt-0 bg-warm"
   >
     <ClientOnly>
       <FunnelCardHeader
@@ -21,55 +20,57 @@
         <div class="w-100 h-50 bg-primary" />
       </template>
     </ClientOnly>
-    <v-row
-      justify="center"
-      align="center"
-    >
-      <v-skeleton-loader
-        v-if="loading"
-        type="card"
-      />
-      <ClientOnly>
-        <!-- ✅ Funnel component -->
-        <FunnelCheckoutStepper
-          v-if="pageTexts && voyage && dealValues"
-          ref="checkoutStepperRef"
-          :page-texts="pageTexts"
-          :voyage="voyage"
-          :initial-deal-values="dealValues"
+    <v-container>
+      <v-row
+        justify="center"
+        align="center"
+      >
+        <v-skeleton-loader
+          v-if="loading"
+          type="card"
         />
+        <ClientOnly>
+          <!-- ✅ Funnel component -->
+          <FunnelCheckoutStepper
+            v-if="pageTexts && voyage && dealValues"
+            ref="checkoutStepperRef"
+            :page-texts="pageTexts"
+            :voyage="voyage"
+            :initial-deal-values="dealValues"
+          />
 
-        <!-- ⚠️ Graceful fallback -->
-        <v-card
-          v-else
-          class="pa-8 text-center mt-16 mx-auto"
-          max-width="600"
-        >
-          <v-icon
-            size="64"
-            color="warning"
-            class="mb-4"
+          <!-- ⚠️ Graceful fallback -->
+          <v-card
+            v-else
+            class="pa-8 text-center mt-16 mx-auto"
+            max-width="600"
           >
-            {{ mdiAlertCircleOutline }}
-          </v-icon>
-          <h2 class="text-h5 mb-2 font-weight-bold">
-            Oops !
-          </h2>
-          <p class="text-body-1 mb-4">
-            Nous n’avons pas pu charger les informations de votre voyage.
-            Il se peut que le lien soit expiré ou incomplet.
-          </p>
-          <v-btn
-            color="primary"
-            to="/voyages"
-            rounded
-          >
-            Retourner à la liste des voyages
-          </v-btn>
-        </v-card>
-      </ClientOnly>
-    </v-row>
-  </v-container>
+            <v-icon
+              size="64"
+              color="warning"
+              class="mb-4"
+            >
+              {{ mdiAlertCircleOutline }}
+            </v-icon>
+            <h2 class="text-h5 mb-2 font-weight-bold">
+              Oops !
+            </h2>
+            <p class="text-body-1 mb-4">
+              Nous n’avons pas pu charger les informations de votre voyage.
+              Il se peut que le lien soit expiré ou incomplet.
+            </p>
+            <v-btn
+              color="primary"
+              to="/voyages"
+              rounded
+            >
+              Retourner à la liste des voyages
+            </v-btn>
+          </v-card>
+        </ClientOnly>
+      </v-row>
+    </v-container>
+  </div>
 </template>
 
 <script setup>

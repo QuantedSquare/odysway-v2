@@ -173,9 +173,9 @@ const handlePaymentSession = async (session) => {
   // BOOKING MANAGEMENT SUPABASE
   const { data: bookedDate, error } = await supabase
     .from('booked_dates')
-    .update({ 
-      is_option: false, 
-      expiracy_date: null, 
+    .update({
+      is_option: false,
+      expiracy_date: null,
       booked_places: order.nbTravelers,
       transaction_id: session.id,
       payment_type: 'alma',

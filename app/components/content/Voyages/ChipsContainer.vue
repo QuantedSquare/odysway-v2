@@ -11,7 +11,7 @@
         cols="12"
         class="d-flex ga-2 ga-md-4 flex-wrap"
       >
-        <v-chip
+        <!-- <v-chip
           v-if="badgeTitle"
           variant="flat"
           size="large"
@@ -24,7 +24,7 @@
           >
             {{ badgeTitle }}
           </span>
-        </v-chip>
+        </v-chip> -->
 
         <v-chip
           v-for="(badgeItem, index) in processedBadges"
