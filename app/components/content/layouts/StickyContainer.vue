@@ -17,7 +17,8 @@
       <v-col
         cols="12"
         md="4"
-        class="d-none d-md-block align-self-start position-sticky sticky-top-right"
+        class="d-none d-md-block align-self-start position-sticky sticky-right"
+        :style="{ top: stickyTop }"
       >
         <slot name="right-side" />
       </v-col>
@@ -26,23 +27,29 @@
 </template>
 
 <script setup>
+import { useWindowScroll } from '@vueuse/core'
 
+const { y, directions } = useWindowScroll()
+
+const headerVisible = ref(true)
+
+watch([() => directions.top, () => directions.bottom, y], () => {
+  if (y.value <= 20) {
+    headerVisible.value = true
+  }
+  else if (directions.top) {
+    headerVisible.value = true
+  }
+  else if (directions.bottom) {
+    headerVisible.value = false
+  }
+})
+
+const stickyTop = computed(() => headerVisible.value ? '90px' : '20px')
 </script>
 
 <style scoped>
-.sticky-top {
-  top: 90px;
-}
-.sticky-top-right {
-  top: 20px;
-}
-
-@media (max-width: 960px) {
-  .sticky-top {
-    top: 60px;
-  }
-  .sticky-top-right {
-    top: 60px;
-  }
+.sticky-right {
+  transition: top 0.3s ease-in-out;
 }
 </style>
