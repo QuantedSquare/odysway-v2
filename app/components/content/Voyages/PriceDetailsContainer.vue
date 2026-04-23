@@ -144,8 +144,8 @@
 <script setup>
 import { mdiArrowRight } from '@mdi/js'
 
-const ITEM_LIMIT = 5
-const ITEM_HEIGHT = 34 // px per list item (line-height + margin)
+const ITEM_LIMIT = 3
+const ITEM_HEIGHT = 25 // px per list item (line-height + margin)
 const SUBHEADER_HEIGHT = 60 // px for the chip subheader
 const clampHeight = SUBHEADER_HEIGHT + ITEM_LIMIT * ITEM_HEIGHT
 

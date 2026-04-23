@@ -4,109 +4,140 @@
     v-if="variant === 'section'"
     elevation="0"
     rounded="md"
-    class="pa-4 pa-md-6 d-flex flex-column flex-md-row align-center justify-space-between ga-4 border-custom"
+    class="pa-4 pa-md-6 d-flex flex-column  align-center justify-space-between ga-4 border-custom"
     color="white"
   >
-    <div class="d-flex flex-column align-center align-md-start ga-3">
-      <div>
-        <p class="text-body-1 font-weight-bold text-primary mb-0">
-          {{ title }}
-        </p>
-      </div>
-      <div class="d-flex align-center ga-2">
-        <div
-          v-if="avatars && avatars.length > 0"
-          class="avatar-stack flex-shrink-0"
-        >
-          <v-avatar
-            v-for="(member, i) in avatars.slice(0, 3)"
-            :key="member._id || i"
-            :size="50"
-            class="avatar-item"
+    <div class=" d-flex flex-column flex-md-row align-center justify-space-between ga-4 ">
+      <div class="d-flex flex-column align-center align-md-start ga-3">
+        <div>
+          <p class="text-h5 font-weight-bold text-primary mb-0">
+            {{ title }}
+          </p>
+          <p
+            v-if="subtitle"
+            class="text-subtitle-2 font-weight-regular mb-0"
           >
-            <v-img
-              :src="img(getImageUrl(member.image?.asset?._ref), { format: 'webp', quality: 70, width: 72 })"
-              :alt="member.name || 'Team member'"
-              cover
-            />
-          </v-avatar>
+            {{ subtitle }}
+          </p>
         </div>
-
-        <p
-          v-if="subtitle"
-          class="text-body-2 text-grey mb-0"
-        >
-          {{ subtitle }}
-        </p>
-      </div>
+        <div class="d-flex flex-column flex-md-row align-center justify-center  ga-2">
+          <div
+            v-if="avatars && avatars.length > 0"
+            class="avatar-stack flex-shrink-0"
+          >
+            <v-avatar
+              v-for="(member, i) in avatars.slice(0, 3)"
+              :key="member._id || i"
+              :size="50"
+              class="avatar-item"
+            >
+              <v-img
+                :src="img(getImageUrl(member.image?.asset?._ref), { format: 'webp', quality: 70, width: 72 })"
+                :alt="member.name || 'Team member'"
+                cover
+              />
+            </v-avatar>
+          </div>
+          <v-row class="d-none d-md-flex text-center text-md-start">
+            <v-col
+              cols="12"
+              class="py-0"
+            >
+              <div class="text-primary ">
+                Vous préférez ?
+                💬 <a
+                  href="https://wa.me/+33780919540"
+                  class="text-decoration-underline text-primary"
+                  @click="handleWhatsappClick"
+                >WhatsApp</a> ou
+              </div>
+            </v-col>
+            <v-col
+              cols="12"
+              class="pt-0"
+            >
+              <a
+                href="tel:+33184807975"
+                class="text-primary"
+              >+33 1 84 80 79 75</a> <span class="text-caption text-grey">Lun-Ven 9h-19h</span>
+            </v-col>
+          </v-row>
+        </div>
       <!-- Desktop only: contact links inline -->
-      <div class="d-none d-md-flex align-center ga-2 flex-wrap ml-4">
+      </div>
+      <v-btn
+        height="50"
+        rounded="md"
+        block
+        color="secondary"
+        class="text-none flex-shrink-0 d-flex d-md-none"
+        :to="rdvLink"
+        @click="trackRdvClick('contact-us-card-section')"
+      >
+        <v-icon
+          start
+          size="20"
+        >
+          {{ mdiCalendar }}
+        </v-icon>
+        {{ rdvButtonText }}
+      </v-btn>
+      <v-btn
+        height="50"
+        rounded="md"
+        color="secondary"
+        class="text-none flex-shrink-0 d-none d-md-flex font-weight-bold"
+        :to="rdvLink"
+        @click="trackRdvClick('contact-us-card-section')"
+      >
+        <v-icon
+          start
+          size="20"
+        >
+          {{ mdiCalendar }}
+        </v-icon>
+        {{ rdvButtonText }}
+      </v-btn>
+      <!-- Mobile only: contact links centered below button -->
+      <div class="d-flex flex-column d-md-none justify-center align-center ga-2 flex-wrap text-center">
         <span>
           💬
           <a
             href="https://wa.me/+33780919540"
             class="text-decoration-underline text-primary text-body-2 font-weight-bold"
             @click="handleWhatsappClick"
-          >WhatsApp</a>
+          >WhatsApp</a> <span class="text-grey">· </span>
+          <a
+            href="tel:+33184807975"
+            class="text-body-2 font-weight-bold text-primary"
+          >+33 1 84 80 79 75</a>
         </span>
-        <span class="text-grey">·</span>
-        <a
-          href="tel:+33184807975"
-          class="text-body-2 font-weight-bold text-primary"
-        >+33 1 84 80 79 75</a>
-        <span class="text-caption text-grey">· Lun-Ven 9h-19h</span>
+
+        <span class="text-caption text-grey">Lun-Ven 9h-19h</span>
       </div>
     </div>
-    <v-btn
-      height="50"
-      rounded="md"
-      block
-      color="secondary"
-      class="text-none flex-shrink-0 d-flex d-md-none"
-      :to="rdvLink"
-      @click="trackRdvClick('contact-us-card-section')"
-    >
-      <v-icon
-        start
-        size="20"
-      >
-        {{ mdiCalendar }}
-      </v-icon>
-      {{ rdvButtonText }}
-    </v-btn>
-    <v-btn
-      height="50"
-      rounded="md"
-      color="secondary"
-      class="text-none flex-shrink-0 d-none d-md-flex font-weight-bold"
-      :to="rdvLink"
-      @click="trackRdvClick('contact-us-card-section')"
-    >
-      <v-icon
-        start
-        size="20"
-      >
-        {{ mdiCalendar }}
-      </v-icon>
-      {{ rdvButtonText }}
-    </v-btn>
-    <!-- Mobile only: contact links centered below button -->
-    <div class="d-flex flex-column d-md-none justify-center align-center ga-2 flex-wrap text-center">
-      <span>
-        💬
-        <a
-          href="https://wa.me/+33780919540"
-          class="text-decoration-underline text-primary text-body-2 font-weight-bold"
-          @click="handleWhatsappClick"
-        >WhatsApp</a> <span class="text-grey">· </span>
-        <a
-          href="tel:+33184807975"
-          class="text-body-2 font-weight-bold text-primary"
-        >+33 1 84 80 79 75</a>
-      </span>
 
-      <span class="text-caption text-grey">Lun-Ven 9h-19h</span>
-    </div>
+    <v-row
+      v-if="showPrivatisation && privatisationText"
+      class="w-100"
+    >
+      <v-divider />
+      <v-col
+        cols="12"
+      >
+        <div class="text-center">
+          Groupe privé ?
+          <NuxtLink
+            :to="privatisationLink"
+            @click="handlePrivatisationClick"
+          >
+            <span class="text-decoration-underline text-grey">
+              {{ privatisationText }}
+            </span>
+          </NuxtLink>
+        </div>
+      </v-col>
+    </v-row>
   </v-card>
 
   <!-- Card variant: compact vertical layout (voyage page sidebar) -->
@@ -254,7 +285,7 @@ const props = defineProps({
   },
   privatisationText: {
     type: String,
-    default: '',
+    default: 'Privatiser ce voyage',
   },
   privatisationLink: {
     type: String,

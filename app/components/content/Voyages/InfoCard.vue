@@ -105,12 +105,12 @@
               class="p-0"
             >
               <div class="d-flex align-center ga-1">
-                <v-icon>
+                <v-icon size="18">
                   {{ mdiCheckCircleOutline }}
                 </v-icon>
-                <span class="text-grey font-weight-bold text-size-14">
+                <span class="text-grey font-weight-bold text-size-12">
                   <!-- #TODO: add the key in the page -->
-                  Je souhaite être tenu informé des départs
+                  Vous serez informé dès l'ouverture des réservations
                 </span>
               </div>
             </v-col>

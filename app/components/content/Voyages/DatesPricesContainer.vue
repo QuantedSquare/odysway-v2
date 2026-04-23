@@ -147,15 +147,22 @@
         </v-btn>
       </v-col>
     </v-row>
-    <ContactUsCard
-      variant="section"
-      class="mt-4"
-      :avatars="contactSection?.teamMembers"
-      :rdv-link="`/rdv-projet-voyage?travelTitle=${props.voyage?.title}`"
-      :show-privatisation="props.voyage?.availabilityTypes?.includes('groupe')"
-      :privatisation-text="indivSection?.privatisationText"
-      :privatisation-link="`/devis?slug=${props.voyage?.slug?.current}`"
-    />
+    <v-row justify="center">
+      <v-col
+        cols="11"
+        md="8"
+        lg="7"
+      >
+        <ContactUsCard
+          variant="section"
+          :avatars="contactSection?.teamMembers"
+          :rdv-link="`/rdv-projet-voyage?travelTitle=${props.voyage?.title}`"
+          :show-privatisation="props.voyage?.availabilityTypes?.includes('groupe')"
+          :privatisation-text="indivSection?.privatisationText"
+          :privatisation-link="`/devis?slug=${props.voyage?.slug?.current}`"
+        />
+      </v-col>
+    </v-row>
     <v-row
       v-if="sortedByDates.length > 0"
       class="d-flex d-md-none justify-start ml-1 ga-2 align-center mt-8 mb-0"
