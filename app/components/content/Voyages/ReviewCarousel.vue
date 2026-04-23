@@ -78,7 +78,7 @@
         class="px-2 px-md-0 my-2"
       >
         <v-col
-          cols="12"
+          cols="auto"
         >
           <v-card
             rounded="md"
@@ -96,7 +96,7 @@
                 width="15"
               />
             </div>
-            <div class="d-flex flex-column">
+            <div class="d-flex flex-column ga-1">
               <span class="text-body-1 font-weight-bold">Avis Google vérifiés</span>
               <span class="text-body-2 text-medium-emphasis">+800 avis · Agence Odysway</span>
             </div>
