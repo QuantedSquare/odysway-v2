@@ -4,8 +4,7 @@ import { createClient, type SanityClient } from '@sanity/client'
 type AlgoliaClient = {
   saveObjects: (args: { indexName: string, objects: unknown[] }) => Promise<unknown>
   deleteObjects: (args: { indexName: string, objectIDs: string[] }) => Promise<unknown>
-  // algoliasearch v5 supports browseObjects; we keep this optional to avoid hard coupling to typings
-  browseObjects?: (args: unknown) => Promise<unknown>
+  replaceAllObjects: (args: { indexName: string, objects: unknown[] }) => Promise<unknown>
 }
 
 type Slug = { current?: string }
@@ -90,31 +89,18 @@ export async function updateAlgoliaIndex() {
     console.log(`✅ [Algolia] Fetched ${voyages.length} voyages`)
 
     // Transform data into Algolia records
+    // Drafts, custom-only voyages, and deleted docs are excluded — replaceAllObjects
+    // atomically replaces the entire index so nothing stale can remain.
     console.log('🔄 [Algolia] Transforming data into records...')
-    const { records, deleteObjectIDs, indexedObjectIDsByType } = transformToAlgoliaRecords(regions, destinations, voyages)
+    const { records } = transformToAlgoliaRecords(regions, destinations, voyages)
     console.log(`✅ [Algolia] Created ${records.length} records`)
 
-    // Compute stale deletions for deleted docs (present in Algolia but no longer present/indexable in Sanity)
-    const staleObjectIDs = await findStaleObjectIDsInAlgolia(algoliaClient, indexedObjectIDsByType)
-    const allDeleteObjectIDs = new Set<string>([...deleteObjectIDs, ...staleObjectIDs])
-    if (allDeleteObjectIDs.size > 0) {
-      console.log(`🧹 [Algolia] Will delete ${allDeleteObjectIDs.size} stale records (draft/deleted/unindexable)`)
-    }
-
-    // Index to Algolia
-    console.log('📤 [Algolia] Indexing to Algolia...')
-    await algoliaClient.saveObjects({
+    // Atomically replace the full index — eliminates stale/deleted/draft records without needing browseObjects
+    console.log('📤 [Algolia] Replacing index...')
+    await algoliaClient.replaceAllObjects({
       indexName: 'odysway',
       objects: records,
     })
-
-    if (allDeleteObjectIDs.size > 0) {
-      console.log('🗑️ [Algolia] Deleting stale voyage records...')
-      await algoliaClient.deleteObjects({
-        indexName: 'odysway',
-        objectIDs: Array.from(allDeleteObjectIDs),
-      })
-    }
 
     console.log('✅ [Algolia] Successfully indexed all records!')
     return { success: true, count: records.length }
@@ -205,26 +191,40 @@ function transformToAlgoliaRecords(regions: RegionDoc[], destinations: Destinati
   }
 
   const regionIds = new Set(regions.map(r => r._id))
+  const regionSlugByBaseId = new Map<string, string>()
+  regions.forEach((r) => {
+    const baseId = r._id.replace(/^drafts\./, '')
+    if (r.slug?.current && !regionSlugByBaseId.has(baseId)) regionSlugByBaseId.set(baseId, r.slug.current)
+  })
   const regionDraftOnlyBaseIds = new Set<string>()
   regions.forEach((region) => {
     if (region._id.startsWith('drafts.')) {
       const baseId = region._id.replace(/^drafts\./, '')
-      // Only mark for deletion if there's no published version
       if (!regionIds.has(baseId)) regionDraftOnlyBaseIds.add(baseId)
     }
   })
-  regionDraftOnlyBaseIds.forEach(baseId => deleteObjectIDs.add(`region_${baseId}`))
+  regionDraftOnlyBaseIds.forEach((baseId) => {
+    const slug = regionSlugByBaseId.get(baseId)
+    deleteObjectIDs.add(slug ? `region_${slug}` : `region_${baseId}`)
+  })
 
   const destinationIds = new Set(destinations.map(d => d._id))
+  const destinationSlugByBaseId = new Map<string, string>()
+  destinations.forEach((d) => {
+    const baseId = d._id.replace(/^drafts\./, '')
+    if (d.slug?.current && !destinationSlugByBaseId.has(baseId)) destinationSlugByBaseId.set(baseId, d.slug.current)
+  })
   const destinationDraftOnlyBaseIds = new Set<string>()
   destinations.forEach((destination) => {
     if (destination._id.startsWith('drafts.')) {
       const baseId = destination._id.replace(/^drafts\./, '')
-      // Only mark for deletion if there's no published version
       if (!destinationIds.has(baseId)) destinationDraftOnlyBaseIds.add(baseId)
     }
   })
-  destinationDraftOnlyBaseIds.forEach(baseId => deleteObjectIDs.add(`destination_${baseId}`))
+  destinationDraftOnlyBaseIds.forEach((baseId) => {
+    const slug = destinationSlugByBaseId.get(baseId)
+    deleteObjectIDs.add(slug ? `destination_${slug}` : `destination_${baseId}`)
+  })
 
   // Add region records
   regions.forEach((region) => {
@@ -236,8 +236,9 @@ function transformToAlgoliaRecords(regions: RegionDoc[], destinations: Destinati
     const destinationNames = region.destinations?.map(d => d.title).filter(Boolean) || []
     const destinationSlugs = region.destinations?.map(d => d.slug?.current).filter(Boolean) || []
 
+    const regionObjectID = region.slug?.current ? `region_${region.slug.current}` : `region_${baseId}`
     records.push({
-      objectID: `region_${baseId}`,
+      objectID: regionObjectID,
       type: 'region',
       name: region.nom,
       slug: region.slug?.current,
@@ -248,7 +249,7 @@ function transformToAlgoliaRecords(regions: RegionDoc[], destinations: Destinati
       destinations: destinationNames,
       destinationSlugs: destinationSlugs,
     })
-    indexedObjectIDsByType.region.add(`region_${baseId}`)
+    indexedObjectIDsByType.region.add(regionObjectID)
   })
 
   // Add destination records
@@ -261,8 +262,9 @@ function transformToAlgoliaRecords(regions: RegionDoc[], destinations: Destinati
     const regionNames = destination.regions?.map(r => r.nom).filter(Boolean) || []
     const regionSlugs = destination.regions?.map(r => r.slug?.current).filter(Boolean) || []
 
+    const destinationObjectID = destination.slug?.current ? `destination_${destination.slug.current}` : `destination_${baseId}`
     records.push({
-      objectID: `destination_${baseId}`,
+      objectID: destinationObjectID,
       type: 'destination',
       name: destination.title,
       slug: destination.slug?.current,
@@ -273,21 +275,34 @@ function transformToAlgoliaRecords(regions: RegionDoc[], destinations: Destinati
       regions: regionNames,
       regionSlugs: regionSlugs,
     })
-    indexedObjectIDsByType.destination.add(`destination_${baseId}`)
+    indexedObjectIDsByType.destination.add(destinationObjectID)
+  })
+
+  // Build a baseId -> slug map from all voyages (published + drafts) so we can use
+  // slug-based objectIDs everywhere, matching what was previously indexed in Algolia.
+  const voyageIds = new Set(voyages.map(v => v._id).filter((id): id is string => typeof id === 'string'))
+  const voyageSlugByBaseId = new Map<string, string>()
+  voyages.forEach((voyage) => {
+    if (typeof voyage?._id !== 'string') return
+    const baseId = voyage._id.replace(/^drafts\./, '')
+    if (voyage.slug?.current && !voyageSlugByBaseId.has(baseId)) {
+      voyageSlugByBaseId.set(baseId, voyage.slug.current)
+    }
   })
 
   // If a voyage is draft-only (no published version), remove it from Algolia.
   // If a draft exists alongside a published version, keep the published record.
-  const voyageIds = new Set(voyages.map(v => v._id).filter((id): id is string => typeof id === 'string'))
   const voyageDraftOnlyBaseIds = new Set<string>()
   voyages.forEach((voyage) => {
     if (typeof voyage?._id === 'string' && voyage._id.startsWith('drafts.')) {
       const baseId = voyage._id.replace(/^drafts\./, '')
-      // Only mark for deletion if there's no published version
       if (!voyageIds.has(baseId)) voyageDraftOnlyBaseIds.add(baseId)
     }
   })
-  voyageDraftOnlyBaseIds.forEach(baseId => deleteObjectIDs.add(`voyage_${baseId}`))
+  voyageDraftOnlyBaseIds.forEach((baseId) => {
+    const slug = voyageSlugByBaseId.get(baseId)
+    deleteObjectIDs.add(slug ? `voyage_${slug}` : `voyage_${baseId}`)
+  })
 
   // Add voyage records
   voyages.forEach((voyage) => {
@@ -306,7 +321,8 @@ function transformToAlgoliaRecords(regions: RegionDoc[], destinations: Destinati
       : []
     const isCustomOnly = availabilityTypes.length === 1 && availabilityTypes[0] === 'custom'
     if (isCustomOnly) {
-      deleteObjectIDs.add(`voyage_${baseId}`)
+      const slug = voyage.slug?.current
+      deleteObjectIDs.add(slug ? `voyage_${slug}` : `voyage_${baseId}`)
       return
     }
 
@@ -327,8 +343,9 @@ function transformToAlgoliaRecords(regions: RegionDoc[], destinations: Destinati
     const regionNames = Array.from(allRegions)
     const regionSlugs = Array.from(allRegionSlugs)
 
+    const voyageObjectID = voyage.slug?.current ? `voyage_${voyage.slug.current}` : `voyage_${baseId}`
     records.push({
-      objectID: `voyage_${baseId}`,
+      objectID: voyageObjectID,
       type: 'voyage',
       name: voyage.title,
       slug: voyage.slug?.current,
@@ -343,74 +360,12 @@ function transformToAlgoliaRecords(regions: RegionDoc[], destinations: Destinati
       regionSlugs: regionSlugs,
       searchableText: `${voyage.title} ${destinationNames.join(' ')} ${regionNames.join(' ')} ${voyage.difficulty || ''}`,
     })
-    indexedObjectIDsByType.voyage.add(`voyage_${baseId}`)
+    indexedObjectIDsByType.voyage.add(voyageObjectID)
   })
 
   return {
     records,
     deleteObjectIDs: Array.from(deleteObjectIDs),
     indexedObjectIDsByType,
-  }
-}
-
-async function browseObjectIDsByType(
-  algoliaClient: AlgoliaClient,
-  type: 'region' | 'destination' | 'voyage',
-): Promise<string[]> {
-  if (typeof algoliaClient.browseObjects !== 'function') return []
-
-  const objectIDs: string[] = []
-
-  // algoliasearch v5: browseObjects({ indexName, browseParams, batch })
-  const args = {
-    indexName: 'odysway',
-    browseParams: {
-      query: '',
-      filters: `type:${type}`,
-      attributesToRetrieve: ['objectID'],
-    },
-    batch: (batch: { hits?: Array<{ objectID?: string }> }) => {
-      const hits = batch?.hits || []
-      for (const hit of hits) {
-        if (typeof hit.objectID === 'string') objectIDs.push(hit.objectID)
-      }
-    },
-  }
-
-  await (algoliaClient.browseObjects as (a: unknown) => Promise<unknown>)(args)
-  return objectIDs
-}
-
-async function findStaleObjectIDsInAlgolia(
-  algoliaClient: AlgoliaClient,
-  indexedObjectIDsByType: {
-    region: Set<string>
-    destination: Set<string>
-    voyage: Set<string>
-  },
-): Promise<string[]> {
-  try {
-    const stale = new Set<string>()
-    const [existingRegions, existingDestinations, existingVoyages] = await Promise.all([
-      browseObjectIDsByType(algoliaClient, 'region'),
-      browseObjectIDsByType(algoliaClient, 'destination'),
-      browseObjectIDsByType(algoliaClient, 'voyage'),
-    ])
-
-    for (const id of existingRegions) {
-      if (!indexedObjectIDsByType.region.has(id)) stale.add(id)
-    }
-    for (const id of existingDestinations) {
-      if (!indexedObjectIDsByType.destination.has(id)) stale.add(id)
-    }
-    for (const id of existingVoyages) {
-      if (!indexedObjectIDsByType.voyage.has(id)) stale.add(id)
-    }
-
-    return Array.from(stale)
-  }
-  catch (err) {
-    console.warn('⚠️ [Algolia] Could not browse Algolia index for stale cleanup:', err)
-    return []
   }
 }
