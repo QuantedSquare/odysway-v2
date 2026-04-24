@@ -80,7 +80,7 @@
         </TransitionGroup>
 
         <button
-          v-if="allChips.length > VISIBLE_LIMIT"
+          v-if="isMobile && allChips.length > VISIBLE_LIMIT"
           class="toggle-chip"
           @click="showAll = !showAll"
         >
@@ -100,6 +100,7 @@
 <script setup>
 import { mdiInformationOutline, mdiChevronDown } from '@mdi/js'
 import { PortableText } from '@portabletext/vue'
+import { useDisplay } from 'vuetify'
 import { getImageUrl } from '~/utils/getImageUrl'
 
 const { badges, difficultyLevel, badgeTitle } = defineProps({
@@ -123,6 +124,8 @@ const { badges, difficultyLevel, badgeTitle } = defineProps({
 
 const VISIBLE_LIMIT = 3
 const showAll = ref(false)
+const { mdAndUp } = useDisplay()
+const isMobile = computed(() => !mdAndUp.value)
 
 const processedBadges = computed(() => {
   if (!badges || badges.length === 0) return []
@@ -167,9 +170,13 @@ const allChips = computed(() => {
   return chips
 })
 
-const visibleChips = computed(() =>
-  showAll.value ? allChips.value : allChips.value.slice(0, VISIBLE_LIMIT),
-)
+const visibleChips = computed(() => {
+  if (!isMobile.value) {
+    return allChips.value
+  }
+
+  return showAll.value ? allChips.value : allChips.value.slice(0, VISIBLE_LIMIT)
+})
 
 const hiddenCount = computed(() => Math.max(0, allChips.value.length - VISIBLE_LIMIT))
 

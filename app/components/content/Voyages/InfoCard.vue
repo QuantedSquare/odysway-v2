@@ -122,6 +122,7 @@
 
   <ContactUsCard
     variant="card"
+    :btn-variant="'outlined'"
     :avatars="stickyBlock.ctaCall.avatars"
     :rdv-link="`/rdv-projet-voyage?travelTitle=${voyage.title}`"
     :show-privatisation="voyage.availabilityTypes?.includes('groupe')"

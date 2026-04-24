@@ -21,16 +21,16 @@
         <div class="img-overlay" />
         <v-container class="d-flex flex-column justify-end h-100 position-relative ">
           <div class="d-flex flex-column align-start">
-            <span class="text-body-2 font-weight-medium mb-1">{{ voyage.title }}</span>
+            <span class="text-body-2 font-weight-medium mb-1 custom-line-height">{{ voyage.title }}</span>
             <span
               v-if="voyage.departureDate && voyage.returnDate"
-              class="text-caption text-white-70"
+              class="text-white-70"
             >
               {{ dayjs(voyage.departureDate).format('DD') }} → {{ dayjs(voyage.returnDate).format('DD MMMM YYYY') }} · {{ model?.travelType || voyage.travelType }}
             </span>
             <span
               v-else
-              class="text-caption text-white-70"
+              class="text-white-70"
             >{{ model?.travelType || voyage.travelType }}</span>
           </div>
         </v-container>
@@ -507,8 +507,12 @@ defineExpose({
 
 .text-white-70 {
   color: rgba(255, 255, 255, 0.8);
+  font-size:12.5px;
 }
 .text-custom-size{
   font-size: 12.5px;
+}
+.custom-line-height{
+  line-height: 1.2;
 }
 </style>

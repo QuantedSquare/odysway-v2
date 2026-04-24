@@ -190,6 +190,7 @@
             <v-btn
               height="50"
               block
+              :variant="btnVariant"
               rounded="md"
               color="secondary"
               :to="rdvLink"
@@ -262,6 +263,10 @@ const props = defineProps({
   avatars: {
     type: Array,
     default: () => ['C', 'L', 'M'],
+  },
+  btnVariant: {
+    type: String,
+    default: '',
   },
   title: {
     type: String,

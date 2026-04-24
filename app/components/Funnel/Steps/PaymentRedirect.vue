@@ -58,7 +58,7 @@
           </template> -->
 
           <!-- Acceptances (only when not already booked) -->
-          <template v-if="!isBooking">
+          <template v-if="!isBooking && !checkedOption">
             <v-divider class="my-3" />
             <v-switch
               v-model="switch_accept_data_privacy"
@@ -128,7 +128,7 @@
                   block
                   :prepend-icon="mdiCalendarOutline"
                   :loading="loadingSession"
-                  :disabled="(!switch_accept_data_privacy || !switch_accept_country || alreadyPlacedAnOption)"
+                  :disabled="alreadyPlacedAnOption"
                   @click="book"
                 >
                   <span class="text-wrap text-body-1">
@@ -150,14 +150,10 @@
                   color="secondary"
                   class="font-weight-bold text-h5 custom-btn-shadow"
                   :loading="loadingSession"
-                  :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
                   @click="stripePay"
                 >
                   🔒 {{ route.query.type === 'deposit' ? 'Régler mon acompte' : page.payment.pay_stripe_button }}
                 </v-btn>
-                <!-- <p class="text-center ma-0 custom-grey-font">
-                  par carte bancaire ou virement
-                </p> -->
 
                 <!-- Alma button -->
                 <template v-if="isAlmaPaymentPossible">
@@ -173,11 +169,9 @@
                     variant="outlined"
                     border="sm"
                     :loading="loadingSession"
-                    :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
                     @click="almaPay"
                   >
                     <span class="text-body-2">Payer en 3 ou 4 fois </span>
-                    <!-- <div class="custom-vertical-divider ml-4 " /> -->
                     <v-divider
                       vertical
                       class="mx-2"
@@ -191,7 +185,12 @@
                     </div>
                   </v-btn>
                 </template>
-
+                <div
+                  v-if="warningAcceptText"
+                  class="text-secondary text-center"
+                >
+                  {{ warningAcceptText }}
+                </div>
                 <!-- Trust footer -->
                 <div class="trust-footer mt-2">
                   <div class="d-flex align-center ga-1 mb-1">
@@ -246,7 +245,7 @@
 </template>
 
 <script setup>
-import { mdiCalendarOutline, mdiLockOutline } from '@mdi/js'
+import { mdiCalendarOutline } from '@mdi/js'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 
 const { trackAddPaymentInfo, trackReservationPoseOption } = useGtmTracking()
@@ -267,6 +266,7 @@ const isBooking = ref(route.query.type === 'booking')
 const checkedOption = ref(route.query.type === 'booking')
 const switch_accept_data_privacy = ref(route.query.type === 'booking')
 const switch_accept_country = ref(route.query.type === 'booking')
+const warningAcceptText = ref(null)
 
 const loadingSession = ref(false)
 
@@ -278,6 +278,14 @@ const isAlmaPaymentPossible = computed(() => {
 })
 
 const stripePay = async () => {
+  // User need to check the switches first
+  if (!switch_accept_data_privacy.value && !switch_accept_country.value) {
+    warningAcceptText.value = 'Veuillez confirmer les conditions de vente avant de procéder au paiement'
+    return
+  }
+  else {
+    warningAcceptText.value = null
+  }
   loadingSession.value = true
   redirectingToStripe.value = true
   const contact = {
@@ -322,6 +330,13 @@ const stripePay = async () => {
 }
 
 const almaPay = async () => {
+  if (!switch_accept_data_privacy.value && !switch_accept_country.value) {
+    warningAcceptText.value = 'Veuillez confirmer les conditions de vente avant de procéder au paiement'
+    return
+  }
+  else {
+    warningAcceptText.value = null
+  }
   loadingSession.value = true
   const dataForAlmaSession = {
     paymentType: route.query.type,
