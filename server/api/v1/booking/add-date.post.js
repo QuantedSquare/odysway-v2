@@ -35,6 +35,7 @@ export default defineEventHandler(async (event) => {
     'displayed_status',
     'displayed_booked_seat',
     'displayed_badges',
+    'co_filling',
   ]
   for (const key of allowed) {
     if (body[key] !== undefined) insertData[key] = body[key]
@@ -46,7 +47,8 @@ export default defineEventHandler(async (event) => {
     insertData.last_editor = bookingUser.email
   }
 
-  if (!('booked_seat' in insertData)) insertData.booked_seat = 0
+  if (!('co_filling' in insertData)) insertData.co_filling = 0
+  insertData.booked_seat = Number(insertData.co_filling)
   if (!('published' in insertData)) insertData.published = false
   if (!insertData.displayed_status && insertData.status) insertData.displayed_status = insertData.status
   // if (typeof insertData.badges === 'string') {

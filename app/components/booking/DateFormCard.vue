@@ -17,7 +17,7 @@
     <v-row>
       <v-col
         cols="12"
-        md="7"
+        md="12"
         class="d-flex flex-column ga-4"
       >
         <v-card
@@ -28,7 +28,7 @@
             <div class="d-flex align-center ga-3">
               <v-switch
                 v-model="localForm.published"
-                color="primary"
+                color="success"
                 label="Publiée"
                 inset
                 density="compact"
@@ -40,29 +40,27 @@
               >
                 {{ localForm.published ? 'Visible sur le site' : 'Non publiée' }}
               </v-chip>
-            </div>
-            <v-chip
-              v-if="localForm.is_indiv_travel"
-              color="blue"
-              size="small"
-              variant="flat"
-            >
-              Voyage individuel
-            </v-chip>
-          </div>
 
-          <div class="d-flex align-center ga-3 flex-wrap">
-            <v-switch
-              v-if="allowIndividual"
-              v-model="localForm.is_indiv_travel"
-              color="green-light"
-              label="Voyage individuel"
-              inset
-              density="compact"
-            />
-            <slot name="travel" />
+              <v-switch
+                v-if="allowIndividual"
+                v-model="localForm.is_indiv_travel"
+                color="blue"
+                label="Voyage individuel"
+                inset
+                density="compact"
+              /> <v-chip
+                v-if="localForm.is_indiv_travel"
+                color="blue"
+                size="small"
+                variant="flat"
+              >
+                Voyage individuel
+              </v-chip>
+            </div>
           </div>
+          <slot name="travel" />
         </v-card>
+
         <v-card
           variant="text"
           class="pa-4  rounded-lg"
@@ -134,7 +132,7 @@
         </v-card>
         <v-card
           variant="text"
-          class="pa-4  rounded-lg"
+          class="pa-4  rounded-lg "
         >
           <div class="text-subtitle-2 text-medium-emphasis mb-2">
             Statuts & affichage
@@ -144,15 +142,55 @@
               cols="12"
               md="6"
             >
-              <v-select
-                v-model="localForm.status"
-                :items="statusOptions"
-                item-title="label"
-                item-value="value"
-                label="Statut (initial / automatique)"
-                density="compact"
-                readonly
-              />
+              <v-sheet
+                rounded="lg"
+                class="pa-3 d-flex align-center ga-3"
+                color="grey-lighten-4"
+              >
+                <v-avatar
+                  :color="statusColor(localForm.status)"
+                  size="40"
+                  variant="tonal"
+                >
+                  <v-icon>{{ statusIcon(localForm.status) }}</v-icon>
+                </v-avatar>
+                <div class="d-flex flex-column">
+                  <span class="text-caption text-medium-emphasis">Statut automatique</span>
+                  <span class="text-subtitle-1 font-weight-bold">
+                    {{ statusLabel(localForm.status) }}
+                  </span>
+                </div>
+              </v-sheet>
+            </v-col>
+            <v-col
+              cols="12"
+              md="6"
+            >
+              <v-sheet
+                rounded="lg"
+                class="pa-3 d-flex align-center ga-3"
+                color="grey-lighten-4"
+              >
+                <v-avatar
+                  color="primary"
+                  size="40"
+                  variant="tonal"
+                >
+                  <v-icon>{{ mdiAccountGroup }}</v-icon>
+                </v-avatar>
+                <div class="d-flex flex-column flex-grow-1">
+                  <span class="text-caption text-medium-emphasis">Places réservées (automatique)</span>
+                  <div class="d-flex align-baseline ga-1">
+                    <span class="text-h6 font-weight-bold">{{ localForm.booked_seat ?? 0 }}</span>
+                    <span
+                      v-if="localForm.max_travelers"
+                      class="text-caption text-medium-emphasis"
+                    >
+                      / {{ localForm.max_travelers }}
+                    </span>
+                  </div>
+                </div>
+              </v-sheet>
             </v-col>
             <v-col
               cols="12"
@@ -168,19 +206,7 @@
                 clearable
               />
             </v-col>
-            <v-col
-              cols="12"
-              md="6"
-            >
-              <v-text-field
-                v-model="localForm.booked_seat"
-                label="Places réservées (initial / automatique)"
-                type="number"
-                min="0"
-                density="compact"
-                readonly
-              />
-            </v-col>
+
             <v-col
               cols="12"
               md="6"
@@ -197,12 +223,15 @@
               cols="12"
             >
               <v-select
-                v-model="localForm.displayed_booked_seat"
+                v-model="localForm.co_filling"
                 :items="bookedSeatOptions"
-                label="Co remplissage"
+                label="Co-remplissage"
                 density="compact"
                 clearable
               />
+              <div class="text-caption font-weight-regular">
+                Voyageurs d'autres agences sur ce départ. S'ajoute aux places réservées automatiques.
+              </div>
             </v-col>
           </v-row>
         </v-card>
@@ -210,7 +239,6 @@
 
       <v-col
         cols="12"
-        md="5"
         class="d-flex flex-column ga-4"
       >
         <v-card
@@ -223,11 +251,11 @@
           <v-row>
             <v-col
               cols="12"
-              xl="6"
+              md="6"
             >
               <v-switch
                 v-model="localForm.early_bird"
-                color="green-light"
+                color="success"
                 label="Early Bird"
                 inset
                 density="compact"
@@ -238,11 +266,11 @@
             </v-col>
             <v-col
               cols="12"
-              xl="6"
+              md="6"
             >
               <v-switch
                 v-model="localForm.last_minute"
-                color="green-light"
+                color="success"
                 label="Last Minute"
                 inset
                 density="compact"
@@ -256,12 +284,13 @@
           <v-row class="mt-2">
             <v-col
               cols="12"
-              xl="6"
+              md="6"
             >
               <v-switch
                 v-model="localForm.include_flight"
                 label="Vol inclus"
                 inset
+                color="success"
                 density="compact"
               />
               <TransitionGroup name="slide-fade">
@@ -279,11 +308,11 @@
 
             <v-col
               cols="12"
-              xl="6"
+              md="6"
             >
               <v-switch
                 v-model="hasCustomBadge"
-                color="green-light"
+                color="success"
                 label="Badge"
                 inset
                 density="compact"
@@ -309,6 +338,8 @@
 </template>
 
 <script setup>
+import { mdiAccountGroup, mdiCheckCircle, mdiClockOutline, mdiLock, mdiHelpCircle } from '@mdi/js'
+
 const props = defineProps({
   modelValue: {
     type: Object,
@@ -365,22 +396,31 @@ watch(
   localForm,
   (val) => {
     if (syncingFromProp.value) return
-    // Normalize displayed_booked_seat: null/undefined becomes 0
     if (val.displayed_booked_seat === null || val.displayed_booked_seat === undefined) {
       val.displayed_booked_seat = 0
+    }
+    if (val.co_filling === null || val.co_filling === undefined) {
+      val.co_filling = 0
     }
     emit('update:modelValue', val)
   },
   { deep: true },
 )
 
-// Watch specifically for displayed_booked_seat to normalize null/undefined to 0 immediately when cleared
 watch(
   () => localForm.value.displayed_booked_seat,
   (newValue) => {
     if ((newValue === null || newValue === undefined) && !syncingFromProp.value) {
-      // Set to 0 immediately for better UX (select will show 0 instead of being empty)
       localForm.value.displayed_booked_seat = 0
+    }
+  },
+)
+
+watch(
+  () => localForm.value.co_filling,
+  (newValue) => {
+    if ((newValue === null || newValue === undefined) && !syncingFromProp.value) {
+      localForm.value.co_filling = 0
     }
   },
 )
@@ -390,6 +430,21 @@ watch(hasCustomBadge, (enabled) => {
     localForm.value.badges = ''
   }
 })
+
+const statusColor = s => ({
+  confirmed: 'green',
+  soon_confirmed: 'orange',
+  guaranteed: 'red',
+}[s] || 'grey')
+
+const statusIcon = s => ({
+  confirmed: mdiCheckCircle,
+  soon_confirmed: mdiClockOutline,
+  guaranteed: mdiLock,
+}[s] || mdiHelpCircle)
+
+const statusLabel = s =>
+  props.statusOptions.find(o => o.value === s)?.label || s
 </script>
 
 <style scoped>

@@ -15,7 +15,7 @@
         :class="railMode ? 'justify-center' : ''"
       >
         <NuxtLink
-          to="/"
+          to="/booking-management"
           class="d-flex align-center text-white text-decoration-none"
         >
           <v-avatar

@@ -24,6 +24,7 @@ export default defineEventHandler(async (event) => {
     // Custom display fields
     'displayed_booked_seat',
     'displayed_status',
+    'co_filling',
   ]
   for (const key of allowed) {
     if (body[key] !== undefined) updateFields[key] = body[key]
@@ -80,11 +81,19 @@ export default defineEventHandler(async (event) => {
     }
   }
 
-  // Keep automated status in sync if thresholds changed
-  const statusRes = await booking.recomputeStatusOnly(dateId)
-  if (statusRes?.error) {
-    // Non-blocking: the primary update succeeded; we just couldn't recompute status.
-    console.error('Status recompute failed', statusRes.error)
+  // Keep automated status and booked_seat in sync
+  // co_filling change requires full recalculation; threshold changes only need status recompute
+  if ('co_filling' in updateFields) {
+    const recomputeRes = await booking.recomputeBookedSeatAndStatus(dateId)
+    if (recomputeRes?.error) {
+      console.error('Booked seat recompute failed', recomputeRes.error)
+    }
+  }
+  else {
+    const statusRes = await booking.recomputeStatusOnly(dateId)
+    if (statusRes?.error) {
+      console.error('Status recompute failed', statusRes.error)
+    }
   }
   return data
 })

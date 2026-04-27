@@ -197,6 +197,7 @@ const FIELD_LABELS = {
   is_indiv_travel: 'Voyage individuel',
   displayed_status: 'Statut affiché',
   displayed_booked_seat: 'Places affichées',
+  co_filling: 'Co-remplissage',
 }
 
 function actionLabel(action) {

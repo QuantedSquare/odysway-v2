@@ -211,6 +211,7 @@ const form = ref({
   flight_price: 0,
   badges: '',
   displayed_booked_seat: null,
+  co_filling: 0,
 })
 
 const statuses = BOOKING_STATUSES

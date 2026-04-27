@@ -80,11 +80,11 @@ const retrieveBookedPlacesByTravelDateId = async (travel_date_id) => {
   return allBooked || []
 }
 
-const updateTravelDate = async (travel_date_id, totalBooked) => {
-  // Fetch min/max (status is derived from these + booked_seat)
+const updateTravelDate = async (travel_date_id, totalFromBookings) => {
+  // Fetch min/max + co_filling (status is derived from these + booked_seat)
   const { data: row, error: fetchError } = await supabase
     .from('travel_dates')
-    .select('id, min_travelers, max_travelers')
+    .select('id, min_travelers, max_travelers, co_filling')
     .eq('id', travel_date_id)
     .single()
 
@@ -92,6 +92,8 @@ const updateTravelDate = async (travel_date_id, totalBooked) => {
     console.error('Supabase retrieve error:', fetchError)
     return { error: fetchError?.message || 'travel_dates not found' }
   }
+
+  const totalBooked = totalFromBookings + Number(row.co_filling || 0)
 
   const nextStatus = computeTravelDateStatus({
     booked_seat: totalBooked,

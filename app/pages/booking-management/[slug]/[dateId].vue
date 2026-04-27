@@ -29,7 +29,7 @@
                 {{ voyageTitle || form.travel_slug }} — {{ dayjs(form.departure_date).format('DD MMM YYYY') }}
               </h1>
               <p class="text-body-2 text-medium-emphasis mb-0">
-                Ajustez les informations, gerez les voyageurs et generez les liens de paiement.
+                Ajustez les informations, gérez les voyageurs et générez les liens de paiement.
               </p>
             </div>
             <v-chip
@@ -84,7 +84,7 @@
         class="mb-3"
         density="compact"
       >
-        Modifications enregistrees.
+        Modifications enregistrées.
       </v-alert>
       <v-alert
         v-if="saveError"
@@ -147,17 +147,19 @@
         class="mb-4"
         density="compact"
       >
-        <v-expansion-panels variant="accordion">
+        <v-expansion-panels
+          variant="accordion"
+        >
           <v-expansion-panel
             elevation="0"
             bg-color="transparent"
           >
             <v-expansion-panel-title class="pa-0">
-              <div class="d-flex align-center ga-2">
+              <div class="d-flex align-center ga-2 mx-4">
                 <v-icon size="18">
                   {{ mdiAirplaneTakeoff }}
                 </v-icon>
-                <span class="text-body-2 font-weight-medium">Aucun dossier de depart assigne</span>
+                <span class="text-body-2 font-weight-medium">Aucun dossier de depart assigné</span>
               </div>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
@@ -283,7 +285,7 @@
             <v-row class="mb-2">
               <v-col cols="6">
                 <div class="text-caption text-medium-emphasis">
-                  Total paye
+                  Total payé
                 </div>
                 <div class="text-h5 font-weight-bold text-success">
                   {{ formatNumber(totalPaid) }} €
@@ -641,7 +643,7 @@
           class="bo-card"
         >
           <v-card-title class="text-subtitle-1 font-weight-bold">
-            Generer un lien de paiement
+            Générer un lien de paiement
           </v-card-title>
           <v-card-text>
             <div v-if="selectedTraveler">
@@ -665,7 +667,7 @@
               />
               <v-divider class="my-2" />
               <div v-if="generatedLink">
-                <span class="bo-section-title">Lien genere</span>
+                <span class="bo-section-title">Lien généré</span>
                 <v-text-field
                   v-model="generatedLink"
                   readonly
