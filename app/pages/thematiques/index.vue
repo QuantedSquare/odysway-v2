@@ -29,6 +29,7 @@ const allQueries = `
       title,
       "slug": slug.current,
       image,
+      imageCard,
       duration,
       nights,
       rating,

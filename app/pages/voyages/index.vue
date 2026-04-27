@@ -152,7 +152,7 @@ const { data: fetchedDestination } = useAsyncData('fetchedDestination', () => {
   watch: [routeQuery],
   immediate: true,
 })
-console.log('fetchedDestination', fetchedDestination.value)
+
 const capitalizeFirstLetter = (str) => {
   return str.charAt(0).toUpperCase() + str.slice(1)
 }
@@ -290,6 +290,7 @@ const { data: voyages } = await useAsyncData(
       title,
       "slug": slug.current,
       image,
+      imageCard,
       rating,
       comments,
       duration,

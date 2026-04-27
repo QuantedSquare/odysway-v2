@@ -273,6 +273,7 @@ const voyagePropositionsQuery = `
     title,
     "slug": slug.current,
     image,
+    imageCard,
     rating,
     comments,
     availabilityTypes,
