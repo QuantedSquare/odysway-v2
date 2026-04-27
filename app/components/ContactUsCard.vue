@@ -4,10 +4,10 @@
     v-if="variant === 'section'"
     elevation="0"
     rounded="md"
-    class="pa-4 pa-md-6 d-flex flex-column  align-center justify-space-between ga-4 border-custom"
+    class="pa-4 pa-md-6 px-md-10 d-flex flex-column  align-center justify-space-between ga-4 border-custom"
     color="white"
   >
-    <div class=" d-flex flex-column flex-md-row align-center justify-space-between ga-4 ">
+    <div class=" d-flex flex-column flex-md-row align-center justify-space-between ga-4 w-100 ">
       <div class="d-flex flex-column align-center align-md-start ga-3">
         <div>
           <p class="text-h5 font-weight-bold text-primary mb-0">
@@ -15,7 +15,7 @@
           </p>
           <p
             v-if="subtitle"
-            class="text-subtitle-2 font-weight-regular mb-0"
+            class="text-subtitle-2 font-weight-regular mb-0 text-primary"
           >
             {{ subtitle }}
           </p>
@@ -63,7 +63,8 @@
             </v-col>
           </v-row>
         </div>
-      <!-- Desktop only: contact links inline -->
+        <!-- Desktop only: contact links inline -->
+        <v-spacer />
       </div>
       <v-btn
         height="50"
@@ -86,17 +87,20 @@
         height="50"
         rounded="md"
         color="secondary"
+        variant="outlined"
         class="text-none flex-shrink-0 d-none d-md-flex font-weight-bold"
         :to="rdvLink"
         @click="trackRdvClick('contact-us-card-section')"
       >
-        <v-icon
-          start
-          size="20"
-        >
-          {{ mdiCalendar }}
-        </v-icon>
-        {{ rdvButtonText }}
+        <div class="text-body-2 font-weight-bold text-decoration-none">
+          <v-icon
+            start
+            size="20"
+          >
+            {{ mdiCalendar }}
+          </v-icon>
+          {{ rdvButtonText }}
+        </div>
       </v-btn>
       <!-- Mobile only: contact links centered below button -->
       <div class="d-flex flex-column d-md-none justify-center align-center ga-2 flex-wrap text-center">
@@ -125,7 +129,7 @@
       <v-col
         cols="12"
       >
-        <div class="text-center">
+        <div class="text-center text-primary">
           Groupe privé ?
           <NuxtLink
             :to="privatisationLink"

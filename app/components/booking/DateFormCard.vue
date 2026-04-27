@@ -193,6 +193,17 @@
                 clearable
               />
             </v-col>
+            <v-col
+              cols="12"
+            >
+              <v-select
+                v-model="localForm.displayed_booked_seat"
+                :items="bookedSeatOptions"
+                label="Co remplissage"
+                density="compact"
+                clearable
+              />
+            </v-col>
           </v-row>
         </v-card>
       </v-col>

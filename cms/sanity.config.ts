@@ -33,6 +33,15 @@ export default defineConfig({
                 S.list()
                   .title('Voyages')
                   .items([
+                    S.listItem()
+                    .title('Voyages en ligne')
+                    .icon(() => '✓')
+                    .child(
+                      S.documentList()
+                        .title('Voyages en ligne')
+                        .apiVersion('v2025-02-19')
+                        .filter('_type == "voyage" && ("groupe" in availabilityTypes || "privatisation" in availabilityTypes) && !(_id in path("drafts.**"))')
+                    ),
                     orderableDocumentListDeskItem({
                       type: 'voyage',
                       title: 'Voyages triés',

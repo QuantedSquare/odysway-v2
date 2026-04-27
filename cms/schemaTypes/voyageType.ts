@@ -212,6 +212,20 @@ export const voyageType = defineType({
       description: 'Ratio 16:9 (1920x1080 px)',
     }),
     defineField({
+      name: 'imageCard',
+      type: 'image',
+      options: {
+        hotspot: true,
+        aiAssist: {
+          imageDescriptionField: 'alt',
+        },
+      },
+      group: 'basic',
+      fields: [{ name: 'alt', type: 'string' } as any],
+      title: 'Image carte voyage',
+      description: 'Image affichée sur les cartes voyage (ratio 16:9, 640x360 px). Par défaut = image principale.',
+    }),
+    defineField({
       name: 'imageSecondary',
       type: 'image',
       options: {

@@ -33,11 +33,7 @@ const stepDefinitions = computed(() => {
       },
       {
         number: 2,
-        label: props.page.fil_dariane_devis.step_2,
-      },
-      {
-        number: 3,
-        label: props.page.fil_dariane_devis.step_3,
+        label: props.page.fil_dariane_devis.step_final_rdv,
       },
     ]
   }

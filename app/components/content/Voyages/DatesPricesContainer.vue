@@ -151,7 +151,7 @@
       <v-col
         cols="11"
         md="8"
-        lg="7"
+        lg="12"
       >
         <ContactUsCard
           variant="section"

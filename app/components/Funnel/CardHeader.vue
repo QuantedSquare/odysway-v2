@@ -3,7 +3,10 @@
     class="height-title bg-primary  mb-6 mb-md-10"
     fluid
   >
-    <v-row justify="center">
+    <v-row
+      v-if="skipperMode !== 'devis'"
+      justify="center"
+    >
       <v-col
         cols="12"
         md="8"
@@ -131,6 +134,43 @@
       :dynamic-deal-values="dynamicDealValues"
       :current-step="currentStep || 1"
     />
+
+    <!-- Mobile info strip (devis flow) -->
+    <v-row
+      v-if="skipperMode === 'devis' && voyage"
+      class="d-flex d-md-none px-4 py-4 align-center bg-custom-surface rounded-md"
+      no-gutters
+    >
+      <v-col
+        cols="8"
+        class="d-flex flex-column"
+      >
+        <span class="text-body-2 font-weight-medium text-white text-truncate py-1">
+          {{ voyage.title }}
+        </span>
+        <span
+          class="text-caption"
+          style="color:rgba(255,255,255,0.7)"
+        >
+          {{ travelType || 'Voyage individuel' }}
+        </span>
+      </v-col>
+
+      <v-col
+        cols="4"
+        class="d-flex flex-column align-end pa-0"
+      >
+        <span class="text-subtitle-1 font-weight-bold text-yellow">
+          {{ formatNumber((voyage.pricing?.startingPrice || 0) * 100, 'currency', '€') }}
+        </span>
+        <span
+          class="text-caption"
+          style="color:rgba(255,255,255,0.7)"
+        >
+          /pers. indicatif
+        </span>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
@@ -141,8 +181,6 @@ import { mdiCheck, mdiChevronDown } from '@mdi/js'
 import formatNumber from '@/utils/formatNumber'
 
 dayjs.locale('fr')
-
-const route = useRoute()
 
 const { voyage, dynamicDealValues, pageTexts } = defineProps({
   titre: String,
@@ -167,7 +205,6 @@ const { voyage, dynamicDealValues, pageTexts } = defineProps({
 
 const drawerOpen = ref(false)
 const drawerRef = useTemplateRef('drawerRef')
-const paymentLabel = computed(() => route.query.type === 'deposit' ? 'Acompte' : 'À régler')
 </script>
 
 <style scoped>

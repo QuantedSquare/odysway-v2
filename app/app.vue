@@ -20,15 +20,15 @@ useHead({
   htmlAttrs: {
     lang: 'fr',
   },
-  // script: [
-  //   {
-  //     'src': 'https://eoni-widget-cdn.ottmann-alex.workers.dev/widget.js',
-  //     'data-key': '8ba757b9-e610-4c17-a02e-737df903b5e1',
-  //     'data-color': '#cf7272',
-  //     'data-position': 'bottom-right',
-  //     'async': true,
-  //   },
-  // ],
+  script: [
+    {
+      'src': 'https://eoni-widget-cdn.ottmann-alex.workers.dev/widget.js',
+      'data-key': '8ba757b9-e610-4c17-a02e-737df903b5e1',
+      'data-color': 'rgba(43, 76, 82, 1)',
+      'data-position': 'bottom-right',
+      'async': true,
+    },
+  ],
   link: [
     {
       rel: 'preload',

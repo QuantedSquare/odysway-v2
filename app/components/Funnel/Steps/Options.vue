@@ -40,7 +40,6 @@
         <v-textarea
           v-model="model.specialRequest"
           variant="outlined"
-
           :label="page.options.special_request_label"
         />
       </v-col>

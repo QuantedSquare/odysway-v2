@@ -1,113 +1,134 @@
 <template>
-  <v-container
-    fluid
-    class="mt-10 relative"
-  >
+  <div class="relative w-100 px-0 pt-0 bg-warm">
     <ClientOnly>
-      <v-row justify="center">
-        <v-col
-          v-if="pageStatus === 'success' && voyage"
-          cols="12"
-        >
-          <FunnelStepsStepperHeader
-            ref="stepperHeaderRef"
-            v-model="currentStep"
-            :page="pageTexts"
-            :skipper-mode="skipperChoice"
-          >
-            <v-row class="funnel-stepper d-flex justify-center">
-              <v-col
-                cols="12"
-                class="d-flex justify-center"
-              >
-                <v-card
-                  class="border-width relative w-md-75 w-lg-50 no-margin-window "
-                >
-                  <FunnelCardHeader
-                    :titre="voyage.title"
-                    :travel-type="'Individuel'"
-                    :image="voyage.image?.asset?._ref || '/images/default/Odysway-couverture-mongolie.jpeg'"
-                    :date="null"
-                    :current-step="1"
-                    :step-definitions="stepperHeaderRef?.stepDefinitions"
-                    :skipper-mode="skipperChoice"
-                  />
-
-                  <v-stepper-window :model-value="currentStep">
-                    <v-stepper-window-item :value="1">
-                      <DevisSkipper
-                        v-model="skipperChoice"
-                        :page="pageTexts"
-                      />
-                    </v-stepper-window-item>
-                    <v-stepper-window-item :value="2">
-                      <DevisDetails
-                        v-if="skipperChoice === 'devis'"
-                        v-model="details"
-                        :page="pageTexts"
-                      />
-
-                      <CalContainer
-                        v-if="skipperChoice === 'call'"
-                        :travel-title="voyage.title"
-                        :text="pageTexts.calendly.text"
-                        :is-funnel="true"
-                        :voyage="voyage"
-                        funnel-type="devis"
-                      />
-                    </v-stepper-window-item>
-                    <v-stepper-window-item
-                      v-if="skipperChoice === 'devis'"
-                      :value="3"
-                    >
-                      <DevisUserInfoForm
-                        v-model="userInfo"
-                        :page="pageTexts"
-                        @submit="submit"
-                      />
-                    </v-stepper-window-item>
-                  </v-stepper-window>
-                  <v-card-actions :class="currentStep === 1 ? 'd-flex justify-center' : ''">
-                    <v-stepper-actions
-                      :next-text="pageTexts.buttons.next"
-                      :prev-text="currentStep !== 0 ? pageTexts.buttons.previous : ''"
-                      @click:next="nextStep()"
-                      @click:prev="previousStep()"
-                    >
-                      <template #next>
-                        <div>
-                          <v-btn
-                            v-if="currentStep === 2 && skipperChoice === 'devis'"
-                            color="secondary"
-                            :disabled="!validateRequiredInfosOnStep2"
-                            @click="nextStep"
-                          >
-                            {{ pageTexts.buttons.next }}
-                          </v-btn>
-                          <v-btn
-                            v-else-if="currentStep === 1"
-                            color="secondary"
-                            @click="nextStep"
-                          >
-                            {{ pageTexts.buttons.next }}
-                          </v-btn>
-                        </div>
-                      </template>
-                    </v-stepper-actions>
-                  </v-card-actions>
-                </v-card>
-              </v-col>
-            </v-row>
-          </FunnelStepsStepperHeader>
-        </v-col>
-      </v-row>
+      <FunnelCardHeader
+        v-if="voyage"
+        class="d-block d-md-none"
+        :titre="voyage.title"
+        :travel-type="travelTypeLabel"
+        :image="headerImage"
+        :date="null"
+        :current-step="currentStep"
+        :step-definitions="stepperHeaderRef?.stepDefinitions"
+        skipper-mode="devis"
+        :voyage="voyage"
+        :page-texts="pageTexts"
+      />
+      <template #fallback>
+        <div class="w-100 h-50 bg-primary" />
+      </template>
     </ClientOnly>
-  </v-container>
+    <v-container class="mt-md-10">
+      <v-row
+        justify="center"
+        align="start"
+      >
+        <ClientOnly>
+          <v-col
+            v-if="pageStatus === 'success' && voyage"
+            cols="12"
+            class="py-0 px-0"
+          >
+            <FunnelStepsStepperHeader
+              ref="stepperHeaderRef"
+              v-model="currentStep"
+              :page="pageTexts"
+              skipper-mode="devis"
+            >
+              <v-row
+                class="funnel-stepper justify-center bg-warm"
+                justify="center"
+              >
+                <v-col
+                  cols="12"
+                  md="7"
+                  class="d-flex justify-center"
+                >
+                  <v-card
+                    class="border-width relative no-margin-window mb-4 w-100"
+                    :elevation="currentStep === 1 ? 2 : 0"
+                  >
+                    <v-stepper-window
+                      :model-value="currentStep"
+                      class="px-md-6 px-0 mt-4"
+                    >
+                      <v-stepper-window-item :value="1">
+                        <DevisForm
+                          v-model="formData"
+                          :page="pageTexts"
+                          @submit="submit"
+                        />
+                      </v-stepper-window-item>
+                      <v-stepper-window-item
+                        :value="2"
+                        class="d-flex justify-center flex-column align-center"
+                      >
+                        <v-container class="text-center pt-6 pb-0">
+                          <v-icon
+                            color="success"
+                            size="48"
+                            class="mb-3"
+                          >
+                            {{ mdiCheckCircleOutline }}
+                          </v-icon>
+                          <h2 class="text-h5 font-weight-bold mb-2">
+                            Nous avons bien reçu votre demande de devis !
+                          </h2>
+                          <p class="text-caption font-weight-regular">
+                            {{ pageTexts?.calendly?.text }}
+                          </p>
+                        </v-container>
+                        <CalContainer
+                          :travel-title="voyage.title"
+                          :is-funnel="false"
+                          :voyage="voyage"
+                          funnel-type="devis"
+                        />
+                        <v-btn
+                          variant="outlined"
+                          height="50"
+                          class=""
+                          rounded="md"
+                          @click="returnToTravelPage"
+                        >
+                          Retourner aux voyages
+                        </v-btn>
+                      </v-stepper-window-item>
+                    </v-stepper-window>
+                  </v-card>
+                </v-col>
+
+                <v-col
+                  cols="4"
+                  class="d-none d-md-block"
+                >
+                  <DevisSummary
+                    :voyage="voyage"
+                    :details="formData"
+                  />
+                  <ContactUsCard
+                    v-if="currentStep < 2"
+                    variant="card"
+                    btn-variant="outlined"
+                    :avatars="pageTexts?.stickyBlock?.ctaCall?.avatars"
+                    :rdv-link="`/rdv-projet-voyage?travelTitle=${voyage.title}`"
+                    :show-privatisation="false"
+                    :privatisation-text="pageTexts?.stickyBlock?.privatisationText"
+                  />
+                </v-col>
+              </v-row>
+            </FunnelStepsStepperHeader>
+          </v-col>
+        </ClientOnly>
+      </v-row>
+    </v-container>
+  </div>
 </template>
 
 <script setup>
-const { trackDevisStep, trackRdvClick } = useGtmTracking()
-const { formatVoyageForGtm } = useGtmVoyageFormatter()
+import { mdiCheckCircleOutline } from '@mdi/js'
+
+definePageMeta({ layout: 'funnel' })
 
 useSeo({
   seoData: {
@@ -115,36 +136,32 @@ useSeo({
     robotsFollow: false,
   },
 })
+
+const { trackDevisStep, getCountryFromPhone } = useGtmTracking()
+const { formatVoyageForGtm } = useGtmVoyageFormatter()
+const { travelTitle } = useFunnelHeader()
 const route = useRoute()
-const router = useRouter()
-const skipperChoice = ref('devis')
+const sanity = useSanity()
+
 const currentStep = ref(1)
-const details = ref({
-  includeDates: false,
-  departureDate: '',
-  returnDate: '',
-  nbAdults: route.query.nbAdults || 1,
-  nbChildren: route.query.nbChildren || 0,
-  includeFlight: false,
-  departureAirport: null,
-})
+const stepperHeaderRef = useTemplateRef('stepperHeaderRef')
 
-const showCalendly = ref(false)
+const initialTravelers = (+route.query.nbAdults || 0) + (+route.query.nbChildren || 0) || 1
 
-const userInfo = ref({
+const formData = ref({
   firstname: '',
   lastname: '',
   email: '',
   phone: '',
   validatePhone: false,
-  acceptTerms: false,
-  subscribeToNewsletter: false,
-  departureAirport: '',
+  nbTravelers: initialTravelers,
+  departureMonth: null,
+  departureYear: 2026,
+  includeFlight: false,
+  departureCity: '',
+  message: '',
   loading: false,
 })
-const stepperHeaderRef = useTemplateRef('stepperHeaderRef')
-
-const sanity = useSanity()
 
 const voyageQuery = groq`*[_type == "voyage" && slug.current == $slug][0]{
   _id,
@@ -154,7 +171,9 @@ const voyageQuery = groq`*[_type == "voyage" && slug.current == $slug][0]{
   travelType,
   pricing {
     startingPrice,
-    pricePerPerson
+    pricePerPerson,
+    childrenAge,
+    childrenPromo
   },
   "destinations": destinations[]-> {
     _id,
@@ -174,135 +193,145 @@ const voyageQuery = groq`*[_type == "voyage" && slug.current == $slug][0]{
   availabilityTypes
 }`
 
-const { data: voyage } = await useAsyncData(`voyages-${route.query.slug}`, () =>
-  sanity.fetch(voyageQuery, { slug: route.query.slug }),
-)
-
-const destinations = computed(() => voyage.value?.destinations || [])
-
 const devisQuery = groq`*[_type == "devis"][0]{
   fil_dariane_devis,
-  first_step,
-  second_step,
-  third_step,
   calendly,
   buttons,
   form_labels,
   options
 }`
 
-const { data: pageTexts, status: pageStatus } = await useAsyncData('devis-texts', () =>
-  sanity.fetch(devisQuery),
-)
+const stickyQuery = groq`*[_type == "page_voyage"][0]{
+  stickyBlock{
+    ...,
+    ctaCall{
+      ...,
+      avatars[]->{
+        _id,
+        name,
+        image
+      }
+    }
+  }
+}`
 
-// GTM: Track devis_step0 on page load
-// Note: Step 0 is generic (no type) - devis_step0
+const [
+  { data: voyage },
+  { data: pageTexts, status: pageStatus },
+  { data: voyagePage },
+] = await Promise.all([
+  useAsyncData(`devis-voyage-${route.query.slug}`, () => sanity.fetch(voyageQuery, { slug: route.query.slug })),
+  useAsyncData('devis-texts', () => sanity.fetch(devisQuery)),
+  useAsyncData('devis-sticky', () => sanity.fetch(stickyQuery)),
+])
+
+watchEffect(() => {
+  if (pageTexts.value && voyagePage.value) {
+    pageTexts.value.stickyBlock = voyagePage.value.stickyBlock
+  }
+  if (voyage.value?.title) {
+    travelTitle.value = voyage.value.title
+  }
+})
+
+const headerImage = computed(() => {
+  return getImageUrl(voyage.value?.image?.asset?._ref) || '/images/default/Odysway-couverture-mongolie.jpeg'
+})
+
+const travelTypeLabel = computed(() => {
+  const types = voyage.value?.availabilityTypes || []
+  const parts = []
+  if (types.includes('privatisation')) parts.push('Voyage privatif')
+  else if (types.includes('groupe')) parts.push('Voyage en groupe')
+  else parts.push(voyage.value?.travelType || 'Voyage individuel')
+  if (types.includes('custom')) parts.push('sur mesure')
+  return parts.join(' · ')
+})
+
+const destinations = computed(() => voyage.value?.destinations || [])
+
 onMounted(() => {
   if (voyage.value) {
-    const formattedVoyage = formatVoyageForGtm(voyage.value)
-    // Track devis_step0 (generic entry point before choice)
-    trackDevisStep('classic', 0, formattedVoyage)
+    trackDevisStep('classic', 0, formatVoyageForGtm(voyage.value))
   }
 })
-
-const nextStep = () => {
-  // GTM: Track when choice is made (step1 events)
-
-  const formattedVoyage = formatVoyageForGtm(voyage.value)
-
-  // GTM: Track step transitions when clicking next button
-  if (currentStep.value >= 1 && voyage.value && skipperChoice.value === 'devis') {
-    // Moving from step 1 (skipper choice) to step 2 (details form)
-    // Only for classic flow - surmesure and rdv don't have additional steps
-
-    trackDevisStep('classic', currentStep.value, formattedVoyage)
-  }
-
-  currentStep.value++
-}
-const validateRequiredInfosOnStep2 = computed(() => {
-  if (details.value.includeFlight && !details.value.departureAirport) {
-    return false
-  }
-  else if (details.value.includeDates && (!details.value.departureDate || !details.value.returnDate)) {
-    return false
-  }
-  return true
-})
-const previousStep = () => {
-  currentStep.value--
-  if (showCalendly.value) {
-    showCalendly.value = false
-    currentStep.value = 2
-  }
-}
 
 const submit = async () => {
-  userInfo.value.loading = true
-  const stage = (userInfo.value.email === 'test@test.com' || userInfo.value.email === 'ottmann.alex@gmail.com') ? '75' : '2'
-  const utmSource = localStorage.getItem('utmSource')
-  const voyageBody = {
-    value: voyage.value.pricing.startingPrice * 100,
-    title: voyage.value.title,
-    currency: 'eur',
-    group: '1',
-    owner: '1',
-    stage: stage,
-    // CustomFields
-    specialRequest: details.value.comment + (details.value.includeFlight ? `- Aéroport de départ : ${details.value.departureAirport}` : ''),
-    departureDate: details.value.departureDate.length > 0 ? details.value.departureDate : '',
-    returnDate: details.value.returnDate.length > 0 ? details.value.returnDate : '',
-    travelType: voyage.value.travelType || 'Individuel',
-    nbTravelers: +details.value.nbAdults + +details.value.nbChildren,
-    nbChildren: +details.value.nbChildren,
-    nbAdults: +details.value.nbAdults,
-    nbTeen: 0,
-    nbUnderAge: +details.value.nbChildren,
-    country: destinations.value.map(d => d.iso).join(','),
-    iso: destinations.value.map(d => d.iso).join(','),
-    zoneChapka: +destinations.value[0]?.chapka || 0,
-    image: getImageUrl(voyage.value?.image?.asset?._ref) || '/images/default/Odysway-couverture-mongolie.jpeg',
-    currentStep: skipperChoice.value === 'devis' ? 'Souhaite réserver/planifier un voyage individuel' : 'Souhaite des infos',
-    alreadyPaid: 0,
-    restToPay: 0,
-    utm: utmSource || '',
-    slug: voyage.value.slug,
-    basePricePerTraveler: voyage.value.pricing.startingPrice * 100,
-    includeFlight: details.value.includeFlight ? 'Oui' : 'Non',
-    depositPrice: voyage.value.pricing.startingPrice * 100 * 0.3,
-    maxChildrenAge: voyage.value.pricing.childrenAge || 12,
-    promoChildren: voyage.value.pricing.childrenPromo || 0,
-    // maxTeenAge: voyage.maxTeenAge || 18,
-    source: 'Demande d\'infos',
-    // Contacts
-    email: userInfo.value.email,
-    phone: userInfo.value.phone,
-    firstname: userInfo.value.firstname,
-    lastname: userInfo.value.lastname,
-  }
-  await apiRequest('/ac/deals', 'post', voyageBody)
-  if (skipperChoice.value === 'devis') {
-    // GTM: Track devis_classic_confirmation
-    const { getCountryFromPhone } = useGtmTracking()
-    const formattedVoyage = formatVoyageForGtm(voyage.value)
-    const additionalData = {
-      optin_newsletter: userInfo.value.subscribeToNewsletter ? 'true' : 'false',
-      user_data: {
-        user_id: userInfo.value.email,
-        user_mail: userInfo.value.email,
-        user_phone: userInfo.value.phone,
-        user_country: getCountryFromPhone(userInfo.value.phone) || 'Unknown',
-      },
-    }
-    trackDevisStep('classic', 'confirmation', formattedVoyage, additionalData)
+  formData.value.loading = true
+  try {
+    const stage = (formData.value.email === 'test@test.com' || formData.value.email === 'ottmann.alex@gmail.com') ? '75' : '2'
+    const utmSource = localStorage.getItem('utmSource')
+    const departureDate = formData.value.departureMonth && formData.value.departureYear
+      ? `01/${String(formData.value.departureMonth).padStart(2, '0')}/${formData.value.departureYear}`
+      : ''
 
-    router.push('/confirmation?voyage=' + voyage.value.slug + '&devis=true')
+    const voyageBody = {
+      value: voyage.value.pricing.startingPrice * 100,
+      title: voyage.value.title,
+      currency: 'eur',
+      group: '1',
+      owner: '1',
+      stage,
+      specialRequest: (formData.value.message || '') + (formData.value.includeFlight && formData.value.departureCity ? ` - Aéroport de départ : ${formData.value.departureCity}` : ''),
+      departureDate,
+      returnDate: '',
+      travelType: voyage.value.travelType || 'Individuel',
+      nbTravelers: +formData.value.nbTravelers,
+      nbChildren: 0,
+      nbAdults: +formData.value.nbTravelers,
+      nbTeen: 0,
+      nbUnderAge: 0,
+      country: destinations.value.map(d => d.iso).join(','),
+      iso: destinations.value.map(d => d.iso).join(','),
+      zoneChapka: +destinations.value[0]?.chapka || 0,
+      image: getImageUrl(voyage.value?.image?.asset?._ref) || '/images/default/Odysway-couverture-mongolie.jpeg',
+      currentStep: 'Souhaite réserver/planifier un voyage individuel',
+      alreadyPaid: 0,
+      restToPay: 0,
+      utm: utmSource || '',
+      slug: voyage.value.slug,
+      basePricePerTraveler: voyage.value.pricing.startingPrice * 100,
+      includeFlight: formData.value.includeFlight ? 'Oui' : 'Non',
+      depositPrice: voyage.value.pricing.startingPrice * 100 * 0.3,
+      maxChildrenAge: voyage.value.pricing.childrenAge || 12,
+      promoChildren: voyage.value.pricing.childrenPromo || 0,
+      source: 'Demande d\'infos',
+      email: formData.value.email,
+      phone: formData.value.phone,
+      firstname: formData.value.firstname,
+      lastname: formData.value.lastname,
+    }
+    await apiRequest('/ac/deals', 'post', voyageBody)
+
+    const formattedVoyage = formatVoyageForGtm(voyage.value)
+    trackDevisStep('classic', 'confirmation', formattedVoyage, {
+      optin_newsletter: 'false',
+      user_data: {
+        user_id: formData.value.email,
+        user_mail: formData.value.email,
+        user_phone: formData.value.phone,
+        user_country: getCountryFromPhone(formData.value.phone) || 'Unknown',
+      },
+    })
+    currentStep.value = 2
   }
-  else if (skipperChoice.value === 'call') {
-    trackRdvClick('devis-rdv-choice')
-    showCalendly.value = true
+  finally {
+    formData.value.loading = false
   }
-  userInfo.value.loading = false
+}
+function returnToTravelPage() {
+  // GTM tracking: voyage/recherche redirect
+  const formattedVoyage = formatVoyageForGtm(voyage.value)
+  trackDevisStep('classic', 'retour_voyages', formattedVoyage, {
+    user_data: {
+      user_id: formData.value.email,
+      user_mail: formData.value.email,
+      user_phone: formData.value.phone,
+      user_country: getCountryFromPhone(formData.value.phone) || 'Unknown',
+    },
+  })
+
+  navigateTo('/voyages')
 }
 </script>
 
@@ -310,30 +339,26 @@ const submit = async () => {
 .relative {
   position: relative;
 }
-.absolute {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-.no-margin-window{
+.no-margin-window {
   max-width: 1440px;
 }
 @media screen and (min-width: 768px) {
   .border-width {
-    border-radius: 30px!important;
-    height: fit-content!important;
+    border-radius: 30px !important;
+    height: fit-content !important;
   }
-  .funnel-stepper{
-    min-height: 50vh!important;
-    padding: 2em;
+  .funnel-stepper {
+    min-height: 50vh !important;
+  }
+  .no-margin-window :deep(.v-stepper-window) {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 }
 @media screen and (max-width: 768px) {
-  .no-margin-window .v-stepper-window {
-  margin-left:0!important;
-  margin-right:0!important;
+  .no-margin-window :deep(.v-stepper-window) {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 }
 </style>
