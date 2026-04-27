@@ -96,15 +96,15 @@
         </v-col>
       </v-row>
 
-      <!-- Stripe redirect loader -->
+      <!-- Payment redirect loader -->
       <Transition name="list">
         <div
-          v-if="redirectingToStripe"
+          v-if="redirectingToStripe || redirectingToAlma"
           class="d-flex flex-column align-center justify-center py-10 w-100"
         >
           <FunnelFlightProgress
             :loading="true"
-            text="Vous allez être redirigé vers notre partenaire Stripe"
+            :text="redirectingToAlma ? 'Vous allez être redirigé vers notre partenaire Alma' : 'Vous allez être redirigé vers notre partenaire Stripe'"
           />
         </div>
 
@@ -322,6 +322,7 @@ const route = useRoute()
 const config = useRuntimeConfig()
 const alreadyPlacedAnOption = ref(false)
 const redirectingToStripe = ref(false)
+const redirectingToAlma = ref(false)
 
 const emit = defineEmits(['previous'])
 const model = defineModel()
@@ -426,6 +427,7 @@ const almaPay = async () => {
     warningAcceptText.value = null
   }
   loadingSession.value = true
+  redirectingToAlma.value = true
   const dataForAlmaSession = {
     paymentType: route.query.type,
     contact: {
@@ -459,6 +461,9 @@ const almaPay = async () => {
     }
     trackAddPaymentInfo(voyage, model.value, 'alma', userData)
     await navigateTo(checkoutLink.url, { external: true })
+  }
+  else {
+    redirectingToAlma.value = false
   }
   loadingSession.value = false
 }
