@@ -217,7 +217,7 @@
 
         <!-- Prix Appliqué à régler -->
         <v-row
-          v-if="route.query.type === 'deposit'"
+          v-if="route.query.type === 'deposit' && route.query.isoption !== 'true'"
           class="px-2"
         >
           <v-col

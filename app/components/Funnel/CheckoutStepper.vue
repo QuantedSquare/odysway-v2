@@ -2,7 +2,7 @@
   <v-col
     v-if="pageTexts && voyage"
     cols="12"
-    md="10"
+    md="11"
     class="py-0 px-0 "
   >
     <FunnelStepsStepperHeader
@@ -88,6 +88,7 @@
           <ContactUsCard
             v-if="currentStep < 3"
             variant="card"
+            btn-variant="flat"
             :avatars="pageTexts?.stickyBlock?.ctaCall?.avatars"
             :rdv-link="`/rdv-projet-voyage?travelTitle=${voyage.title}`"
             :show-privatisation="false"

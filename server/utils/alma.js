@@ -63,7 +63,7 @@ const createAlmaSession = async (order) => {
     throw new Error('Missing customer email')
   }
 
-  sendSlackNotification(`:eyes: <https://odysway90522.activehosted.com/app/deals/${deal.dealId}| Nouveau paiement ALMA - ${contact.firstName} ${contact.lastName} - Deal ID : ${deal.dealId}>`)
+  sendSlackNotification(`:eyes: <https://odysway90522.activehosted.com/app/deals/${order.dealId}| Nouveau paiement ALMA - ${contact.firstName} ${contact.lastName} - Deal ID : ${order.dealId}>`)
 
   if (deal.insurance && deal.insurance !== 'Aucune Assurance' && deal.insuranceCommissionPrice && deal.nbTravelers) {
     const insuranceItem = {
@@ -81,9 +81,11 @@ const createAlmaSession = async (order) => {
   const successUrl = encodeURI(`${BASE_URL}/confirmation?voyage=${deal.slug}&purchase=true&booked_id=${order.booked_id}`)
   const cancelUrl = encodeURI(`${BASE_URL}${order.currentUrl}`)
 
+  const installmentsCount = [3, 4].includes(+order.installments) ? +order.installments : 3
+
   const paymentBody = {
     payment: {
-      installments_count: 3,
+      installments_count: installmentsCount,
       deferred_months: 0,
       deferred_days: 0,
       ipn_callback_url: `${BASE_IPN_URL}/api/v1/webhooks/alma/payments`,
@@ -204,8 +206,13 @@ const handlePaymentSession = async (session) => {
     await departures.handlePaymentForDeparture(bookedDate, deal.title, deal.contact)
   }
 
-  // Chapka notify
-  if (deal.insurance !== 'Aucune Assurance' && !isDev) {
+  // Chapka notify — only on first payment to avoid duplicates (mirrors stripe.js)
+  if (
+    deal.insurance
+    && deal.insurance !== 'Aucune Assurance'
+    && (!deal.alreadyPaid || +deal.alreadyPaid === 0)
+    && !isDev
+  ) {
     const inssuranceItem = order.insuranceChoice
 
     const sessionForChapka = {
@@ -226,18 +233,23 @@ const handlePaymentSession = async (session) => {
     console.log('===== Chapka notify sent =====', chapkaNotify)
   }
 
-  const restToPay = +deal.value - totalPaidAlma
+  // AC update — toutes les valeurs monétaires sont en centimes
+  const totalPaid = +(deal.alreadyPaid || 0) + +totalPaidAlma
+  const restToPay = +deal.value - totalPaid
 
   console.log('====CUSTOM FIELDS=====', customFields)
 
   const dealData = {
     group: '2', // '2'= pipeline id of "Voyageurs"
-    stage: +customFields.alreadyPaid > 0 ? '33' : '6', // first payment (full or acompte) => '33' = "Gestion résa (sales)" || '6' ="en attente de départ"
-    alreadyPaid: totalPaidAlma,
+    stage: +restToPay > 0 ? '6' : '33', // '33' = "Gestion résa (sales)" (paid) || '6' = "en attente de départ" (in progress)
+    alreadyPaid: totalPaid,
     restToPay: restToPay,
-    currentStep: totalPaidAlma === +deal.value
-      ? 'Paiement OK'
-      : 'Paiement en cours',
+    currentStep: totalPaid >= +deal.value
+      ? 'Solde réglé'
+      : 'Acompte réglé',
+  }
+  if (totalPaid >= +deal.value) {
+    Object.assign(dealData, { paiementLink: 'Paiement OK' })
   }
 
   console.log('==== Deal data =====', dealData)
@@ -245,7 +257,7 @@ const handlePaymentSession = async (session) => {
   await activecampaign.updateDeal(order.id, dealData)
 
   if (session.processing_status === 'captured') {
-    const addedNote = activecampaign.addNote(order.id, {
+    const addedNote = await activecampaign.addNote(order.id, {
       note: {
         note: `Paiement ${method} -  ${
           contact.firstName} ${contact.lastName} - ${contact.email} - ${totalPaidAlma / 100}€`,
@@ -255,7 +267,7 @@ const handlePaymentSession = async (session) => {
     console.log('addedNote', addedNote)
   }
   if (session.processing_status === 'canceled') {
-    const addedNote = activecampaign.addNote(order.id, {
+    const addedNote = await activecampaign.addNote(order.id, {
       note: {
         note: `Paiement ${method} -  ${
           contact.firstName} ${contact.lastName} - ${contact.email} - ${totalPaidAlma / 100}€ - Paiement annulé`,
@@ -265,21 +277,6 @@ const handlePaymentSession = async (session) => {
     console.log('addedNote', addedNote)
   }
   sendSlackNotification(`:white_check_mark: <https://odysway90522.activehosted.com/app/deals/${order.id}|Confirmation paiement CB - ${method} - ${contact.firstName} ${contact.lastName} - ${order.id}>`)
-
-  // axios({
-  //   url: 'https://www.google-analytics.com/collect',
-  //   method: 'post',
-  //   params: {
-  //     v: 1,
-  //     tid: process.env.NODE_ENV === 'development' ? process.env.GOOGLE_ANALYTICS_TID_TEST : process.env.GOOGLE_ANALYTICS_TID_LIVE,
-  //     cid: '555',
-  //     t: 'event',
-  //     ec: 'Transaction_Server',
-  //     ea: 'Ping_Confirmation',
-  //     el: '' + +order.selectedTravelersToPay,
-  //     ev: +totalAmount,
-  //   },
-  // })
 }
 
 export default {

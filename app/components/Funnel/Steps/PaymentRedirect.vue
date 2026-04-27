@@ -163,15 +163,82 @@
                     <v-divider />
                   </div>
 
+                  <v-btn-toggle
+                    v-model="almaInstallments"
+                    mandatory
+                    color="primary"
+                    density="comfortable"
+                    divided
+                    variant="outlined"
+                    class="align-self-center ga-4"
+                  >
+                    <v-btn
+                      :value="3"
+                      variant="outlined"
+                      color="secondary"
+                      class="flex-grow-1 border-sm"
+                    >
+                      3x
+                    </v-btn>
+                    <v-btn
+                      :value="4"
+                      variant="outlined"
+                      color="secondary"
+                      class="flex-grow-1 border-sm"
+                    >
+                      4x
+                    </v-btn>
+                  </v-btn-toggle>
+
+                  <div class="alma-schedule">
+                    <button
+                      type="button"
+                      class="alma-schedule-toggle d-flex align-center justify-space-between w-100"
+                      :aria-expanded="showAlmaSchedule"
+                      @click="showAlmaSchedule = !showAlmaSchedule"
+                    >
+                      <span class="alma-schedule-title text-body-2 font-weight-medium">
+                        Calendrier de paiement en {{ almaInstallments }} échéances
+                      </span>
+                      <v-icon
+                        :icon="mdiChevronDown"
+                        size="20"
+                        class="alma-schedule-chevron"
+                        :class="{ 'alma-schedule-chevron--open': showAlmaSchedule }"
+                      />
+                    </button>
+                    <v-expand-transition>
+                      <div v-show="showAlmaSchedule">
+                        <div
+                          v-for="(item, idx) in almaSchedule"
+                          :key="idx"
+                          class="alma-schedule-row d-flex justify-space-between align-center"
+                          :class="{ 'alma-schedule-row--first': idx === 0 }"
+                        >
+                          <span>{{ item.label }}</span>
+                          <span>{{ formatEuros(item.amount) }}</span>
+                        </div>
+                        <div class="alma-schedule-total d-flex justify-space-between align-center mt-2 pt-2">
+                          <div class="d-flex flex-column">
+                            <span class="text-body-2">Total</span>
+                            <span class="text-caption text-grey">Odysway vous offre les frais de paiement 🎁</span>
+                          </div>
+                          <span class="font-weight-bold">{{ formatEuros(voyage.totalTravelPrice) }}</span>
+                        </div>
+                      </div>
+                    </v-expand-transition>
+                  </div>
+
                   <v-btn
                     height="56"
                     block
                     variant="outlined"
+                    color="secondary"
                     border="sm"
                     :loading="loadingSession"
                     @click="almaPay"
                   >
-                    <span class="text-body-2">Payer en 3 ou 4 fois </span>
+                    <span class="text-body-1 text-md-body-2 text-primary">Payer en {{ almaInstallments }} fois </span>
                     <v-divider
                       vertical
                       class="mx-2"
@@ -245,7 +312,7 @@
 </template>
 
 <script setup>
-import { mdiCalendarOutline } from '@mdi/js'
+import { mdiCalendarOutline, mdiChevronDown } from '@mdi/js'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 
 const { trackAddPaymentInfo, trackReservationPoseOption } = useGtmTracking()
@@ -269,12 +336,33 @@ const switch_accept_country = ref(route.query.type === 'booking')
 const warningAcceptText = ref(null)
 
 const loadingSession = ref(false)
+const almaInstallments = ref(3)
+const showAlmaSchedule = ref(false)
 
 const isAlmaPaymentPossible = computed(() => {
   if (!model.value) return false
   return route.query.type !== 'custom'
     && voyage.alreadyPaid === 0
     && voyage.totalTravelPrice < 400000
+})
+
+const formatEuros = cents => new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(cents / 100)
+
+const almaSchedule = computed(() => {
+  const installments = almaInstallments.value
+  const total = +voyage.totalTravelPrice || 0
+  const base = Math.floor(total / installments)
+  const remainder = total - base * installments
+  const labelFormatter = new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'long' })
+  const today = new Date()
+  return Array.from({ length: installments }, (_, i) => {
+    const date = new Date(today)
+    date.setMonth(date.getMonth() + i)
+    return {
+      label: i === 0 ? 'Aujourd\'hui' : labelFormatter.format(date),
+      amount: i === installments - 1 ? base + remainder : base,
+    }
+  })
 })
 
 const stripePay = async () => {
@@ -351,6 +439,7 @@ const almaPay = async () => {
     countries: voyage.iso,
     departureDate: voyage.departureDate,
     returnDate: voyage.returnDate,
+    installments: almaInstallments.value,
   }
   if (route.query.type === 'custom') {
     Object.assign(dataForAlmaSession, { amount: +route.query.amount * 100 })
@@ -432,6 +521,41 @@ const book = async () => {
 .trust-footer {
   border-top: 1px solid rgba(0,0,0,0.08);
   padding-top: 12px;
+}
+
+.alma-schedule {
+  background-color: rgba(0,0,0,0.02);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.alma-schedule-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+}
+.alma-schedule-chevron {
+  transition: transform 0.25s ease;
+}
+.alma-schedule-chevron--open {
+  transform: rotate(180deg);
+}
+.alma-schedule-row {
+  padding: 8px 0;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.alma-schedule-row:nth-last-child(2) {
+  border-bottom: none!important;
+
+}
+.alma-schedule-row--first {
+  font-weight: 700;
+}
+.alma-schedule-total {
+  border-top: 1px solid rgba(0,0,0,0.08);
 }
 
 .list-move,

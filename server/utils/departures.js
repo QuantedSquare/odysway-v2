@@ -83,7 +83,7 @@ const computeDepartureEnrichment = async (travelDateId, travelDate) => {
  * Returns the existing departure deal ID for a travel date, or creates a new one
  * in pipeline 4 ("Gestions Départs") and stores its ID in travel_dates.departure_id.
  */
-const getOrCreateDepartureDeal = async (travelDateId, travelDate, travelTitle, enrichment = {}) => {
+const getOrCreateDepartureDeal = async (travelDateId, travelDate, travelTitle, enrichment = {}, contactId) => {
   if (travelDate.departure_id) {
     return travelDate.departure_id
   }
@@ -100,6 +100,7 @@ const getOrCreateDepartureDeal = async (travelDateId, travelDate, travelTitle, e
     travelDate,
     travelTitle,
     stageId,
+    contactId,
     ...enrichment,
     linkBms: '',
   })
@@ -195,6 +196,7 @@ const handlePaymentForDeparture = async (bookedDate, travelTitle, contactId) => 
       travelDate,
       departureTravelTitle,
       enrichment,
+      contactId,
     )
 
     await assignContactToDepartureDeal(departureDealId, contactId)

@@ -222,50 +222,55 @@
           name="fade"
           mode="out-in"
         >
-          <v-btn
+          <!-- <v-btn
             v-if="route.query.booked_id"
             key="next-btn-one"
             :disabled="!isValid"
             color="secondary"
             height="50"
             block
-            class="font-weight-bold custom-btn-shadow"
+            class="font-weight-bold custom-btn-shadow "
             @click="submitStepData"
           >
             Continuer ma réservation
             <v-icon>{{ mdiArrowRight }}</v-icon>
-          </v-btn>
-          <template v-else-if="!showProgress">
-            <v-btn
-              v-if="isOptionMode"
-              key="option-btn"
-              block
-              height="50"
-              :disabled="!isValid"
-              color="primary"
-              class="font-weight-bold text-decoration-none"
-              @click="submitStepData"
+          </v-btn> -->
+          <template v-if="!showProgress">
+            <Transition
+              name="list"
+              type="transition"
             >
-              <span class="text-body-1 font-weight-bold">
-                {{ 'Confirmer mon option' }}
-                <v-icon>{{ mdiArrowRight }}</v-icon>
-              </span>
-            </v-btn>
-            <v-btn
-              v-else
-              key="next-btn"
-              block
-              height="50"
-              :disabled="!isValid"
-              color="secondary"
-              class="font-weight-bold text-decoration-none custom-btn-shadow"
-              @click="submitStepData"
-            >
-              <span class="text-body-1 font-weight-bold">
-                {{ 'Continuer ma réservation' }}
-                <v-icon>{{ mdiArrowRight }}</v-icon>
-              </span>
-            </v-btn>
+              <v-btn
+                v-if="isOptionMode"
+                key="option-btn"
+                block
+                height="50"
+                :disabled="!isValid"
+                color="primary"
+                class="font-weight-bold text-decoration-none"
+                @click="submitStepData"
+              >
+                <span class="text-body-1 font-weight-bold">
+                  {{ 'Confirmer mon option' }}
+                  <v-icon>{{ mdiArrowRight }}</v-icon>
+                </span>
+              </v-btn>
+              <v-btn
+                v-else
+                key="next-btn"
+                block
+                height="50"
+                :disabled="!isValid"
+                color="secondary"
+                class="font-weight-bold text-decoration-none custom-btn-shadow"
+                @click="submitStepData"
+              >
+                <span class="text-body-1 font-weight-bold">
+                  {{ 'Continuer ma réservation' }}
+                  <v-icon>{{ mdiArrowRight }}</v-icon>
+                </span>
+              </v-btn>
+            </Transition>
           </template>
           <FunnelFlightProgress
             v-else
@@ -677,5 +682,22 @@ display:none;
 }
 .custom-btn-shadow{
  box-shadow: 0 4px 14px rgba(219,102,68,0.35)!important;
+}
+.list-move,
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateY(40px);
+}
+.list-leave-to {
+  opacity: 0;
+  transform: translateY(-40px);
+}
+.list-leave-active {
+  position: absolute;
 }
 </style>

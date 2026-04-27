@@ -20,7 +20,7 @@
             {{ subtitle }}
           </p>
         </div>
-        <div class="d-flex flex-column flex-md-row align-center justify-center  ga-2">
+        <div class="d-flex flex-column flex-md-row align-center justify-center  ga-2 ">
           <div
             v-if="avatars && avatars.length > 0"
             class="avatar-stack flex-shrink-0"
@@ -152,11 +152,12 @@
     <v-card-text class="pa-2">
       <v-container
         fluid
+        class="px-3"
       >
         <v-row>
           <v-col
             cols="12"
-            lg="3"
+            lg="4"
           >
             <div
               v-if="avatars && avatars.length > 0"
@@ -178,10 +179,10 @@
             </div>
           </v-col>
           <v-col>
-            <div class="text-h6">
+            <div class="text-subtitle-2">
               {{ title }}
             </div>
-            <div class="text-subtitle-2 font-weight-regular">
+            <div class="text-caption font-weight-regular">
               {{ subtitle }}
             </div>
           </v-col>
@@ -219,18 +220,19 @@
               Vous préférez ?
               💬 <a
                 href="https://wa.me/+33780919540"
-                class="text-decoration-underline text-primary"
+                class="text-decoration-underline text-primary font-weight-bold"
                 @click="handleWhatsappClick"
-              >WhatsApp</a> ou
+              >WhatsApp</a>
             </div>
           </v-col>
           <v-col
             cols="12"
             class="pt-0"
           >
+            ou
             <a
               href="tel:+33184807975"
-              class="text-primary"
+              class="text-grey text-caption "
             >+33 1 84 80 79 75</a> <span class="text-caption text-grey">Lun-Ven 9h-19h</span>
           </v-col>
         </v-row>

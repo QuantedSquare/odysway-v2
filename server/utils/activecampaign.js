@@ -519,21 +519,14 @@ const recalculatTotalValues = async (dealId) => {
 
 // =================== GESTIONS DÉPARTS ===================
 
-const createDepartureDeal = async ({ travelDate, travelTitle, stageId, totalValue = 0, totalNbTravelers = 0, linkBms = '', travelType = 'Voyage de Groupe' }) => {
+const createDepartureDeal = async ({ travelDate, travelTitle, stageId, contactId, totalValue = 0, totalNbTravelers = 0, linkBms = '', travelType = 'Voyage de Groupe' }) => {
   const departureFormatted = dayjs(travelDate.departure_date).format('DD/MM')
   const returnFormatted = dayjs(travelDate.return_date).format('DD/MM/YYYY')
   const title = `${travelTitle} | ${departureFormatted} - ${returnFormatted}`
 
-  // Upsert the internal employee contact so we have a contact ID
-  const employeeContact = await upsertContact({
-    contact: {
-      email: 'contact@odysway.com',
-    },
-  })
-
   const dealPayload = {
     deal: {
-      contact: employeeContact.id,
+      contact: String(contactId),
       currency: 'eur',
       group: '4',
       owner: '1',
