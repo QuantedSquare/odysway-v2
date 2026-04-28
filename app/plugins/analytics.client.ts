@@ -46,7 +46,6 @@ export default defineNuxtPlugin((nuxtApp) => {
     if (route.name === 'voyages-voyageSlug') {
       return 'Page Voyage'
     }
-    console.log('route.path', route.path)
     if (path.startsWith('/voyages')) {
       return 'Page Recherche'
     }

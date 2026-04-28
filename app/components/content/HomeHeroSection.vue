@@ -212,27 +212,52 @@ const buildSanityImageUrl = (source, width, height, quality = 75) => {
     .url()
 }
 
+// Use the mobile-cropped image as the base src so the browser's prefetch
+// heuristic picks a small file on mobile instead of the desktop landscape crop.
 const displayedSrc = computed(() => {
-  return buildSanityImageUrl(activeDesktopImage.value, 1920, 1080, 70)
-    || buildSanityImageUrl(heroProps.placeholderImage, 1920, 1080, 70)
+  return buildSanityImageUrl(activeMobileImage.value, 640, 360, 55)
+    || buildSanityImageUrl(activeDesktopImage.value, 1280, 720, 65)
+    || buildSanityImageUrl(heroProps.placeholderImage, 1280, 720, 65)
 })
 
+// Mobile entries cover DPR up to 3x so phones don't fall through to the
+// desktop landscape crop. Quality steps up with size.
 const displayedSrcset = computed(() => {
   return [
-    `${buildSanityImageUrl(activeMobileImage.value, 640, 360, 70)} 640w`,
-    `${buildSanityImageUrl(activeMobileImage.value, 960, 540, 70)} 960w`,
-    `${buildSanityImageUrl(activeDesktopImage.value, 1280, 720, 70)} 1280w`,
+    `${buildSanityImageUrl(activeMobileImage.value, 640, 360, 55)} 640w`,
+    `${buildSanityImageUrl(activeMobileImage.value, 960, 540, 60)} 960w`,
+    `${buildSanityImageUrl(activeMobileImage.value, 1280, 720, 65)} 1280w`,
     `${buildSanityImageUrl(activeDesktopImage.value, 1600, 900, 70)} 1600w`,
     `${buildSanityImageUrl(activeDesktopImage.value, 1920, 1080, 70)} 1920w`,
     `${buildSanityImageUrl(activeDesktopImage.value, 2560, 1440, 70)} 2560w`,
   ].filter(Boolean).join(', ')
+})
+
+const heroSizes = '(max-width: 600px) 100vw, (max-width: 960px) 90vw, 100vw'
+
+// Preload the LCP hero image so the browser starts the download before
+// CSS parse. imagesrcset/imagesizes mirrors the <img> so the browser only
+// fetches one variant.
+useHead({
+  link: [
+    {
+      rel: 'preload',
+      as: 'image',
+      fetchpriority: 'high',
+      imagesrcset: displayedSrcset,
+      imagesizes: heroSizes,
+      href: displayedSrc,
+    },
+  ],
 })
 </script>
 
 <style scoped>
 .hero {
   position: relative;
-  min-height: 100dvh;
+  /* svh = small viewport height; doesn't recompute when the mobile
+     URL bar collapses, avoiding layout thrash on first paint. */
+  min-height: 100svh;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -267,6 +292,16 @@ const displayedSrcset = computed(() => {
 .hero-noise-enabled::after {
   opacity: var(--hero-noise-opacity, 0.1);
   filter: brightness(0.8) contrast(1.1);
+}
+
+/* Skip the grain layer on mobile: avoids the noise.webp request and
+   the mix-blend-mode compositor layer, which is the more impactful
+   cost on low-power devices. Desktop visual unchanged. */
+@media (max-width: 600px) {
+  .hero-image-bg::after,
+  .hero-noise-enabled::after {
+    display: none;
+  }
 }
 
 .hero-image {
@@ -359,14 +394,14 @@ margin-bottom: 0!important;
   }
 }
 
+/* Animate translate only so the LCP candidate paints immediately
+   instead of waiting on opacity transition. */
 @keyframes fadeSlideUp {
   from {
-    opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
 
   to {
-    opacity: 1;
     transform: translateY(0);
   }
 }
@@ -397,9 +432,7 @@ margin-bottom: 0!important;
   align-items: center;
   cursor: pointer;
 
-  /* Animation */
-  opacity: 0;
-  /* Start hidden for animation */
+  /* Animation (translate only, paints immediately for LCP) */
   animation: fadeSlideUp 0.8s ease-out 0.4s forwards;
 
   transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);

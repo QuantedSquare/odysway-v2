@@ -1,7 +1,6 @@
 import '@/assets/scss/main.scss'
 import { createVuetify } from 'vuetify'
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
-import { VDateInput } from 'vuetify/labs/VDateInput'
 import DayjsAdapter from '@date-io/dayjs'
 import dayjs from 'dayjs'
 import 'dayjs/locale/fr'
@@ -12,6 +11,10 @@ import { VBtn } from 'vuetify/components'
 
 dayjs.locale('fr')
 
+// VDateInput is from vuetify/labs and is only used in the booking funnel
+// + /prochains-departs. Each consuming SFC imports it locally so it stays
+// out of the home/page bundles. The date adapter is kept here because it's
+// a Vuetify-wide config and is light-weight on its own.
 export default defineNuxtPlugin((app) => {
   const vuetify = createVuetify({
     icons: {
@@ -28,9 +31,6 @@ export default defineNuxtPlugin((app) => {
     date: {
       adapter: DayjsAdapter,
       locale: 'fr',
-    },
-    components: {
-      VDateInput,
     },
     display: {
       mobileBreakpoint: 600,

@@ -114,6 +114,7 @@ import dayjs from 'dayjs'
 import 'dayjs/locale/fr'
 import { mdiMapMarker, mdiCalendarMonth } from '@mdi/js'
 import { useDisplay } from 'vuetify'
+import { VDateInput } from 'vuetify/labs/VDateInput'
 import { getDateStatus } from '~/utils/getDateStatus'
 
 const { width } = useDisplay()

@@ -19,14 +19,10 @@ useHead({
   htmlAttrs: {
     lang: 'fr',
   },
+  // Only preload weights that paint above-the-fold on first render.
+  // Italic variants load lazily via font-display: swap when typewriter
+  // first needs them (post-mount), keeping bandwidth for the LCP image.
   link: [
-    {
-      rel: 'preload',
-      href: '/fonts/Gordita-Font/subset-Gordita-Medium.woff2',
-      as: 'font',
-      crossorigin: '',
-      type: 'font/woff2',
-    },
     {
       rel: 'preload',
       href: '/fonts/Gordita-Font/subset-Gordita-Regular.woff2',
@@ -36,21 +32,14 @@ useHead({
     },
     {
       rel: 'preload',
+      href: '/fonts/Gordita-Font/subset-Gordita-Medium.woff2',
+      as: 'font',
+      crossorigin: '',
+      type: 'font/woff2',
+    },
+    {
+      rel: 'preload',
       href: '/fonts/Gordita-Font/subset-Gordita-Bold.woff2',
-      as: 'font',
-      crossorigin: '',
-      type: 'font/woff2',
-    },
-    {
-      rel: 'preload',
-      href: '/fonts/Gordita-Font/subset-Gordita-MediumItalic.woff2',
-      as: 'font',
-      crossorigin: '',
-      type: 'font/woff2',
-    },
-    {
-      rel: 'preload',
-      href: '/fonts/Gordita-Font/subset-Gordita-BoldItalic.woff2',
       as: 'font',
       crossorigin: '',
       type: 'font/woff2',
@@ -106,7 +95,6 @@ onMounted(() => {
   let gtmLoaded = false
 
   const loadGtm = () => {
-    console.log('Loading...')
     if (gtmLoaded || (typeof window !== 'undefined' && window.google_tag_manager)) return
     gtmLoaded = true
 

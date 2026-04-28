@@ -8,6 +8,9 @@ export function useTravelDates(slugsInput) {
 
   const shouldFetch = computed(() => slugs.value.length > 0)
 
+  // Client-only + lazy: dates feed below-the-fold carousels which already
+  // render placeholders without them. Pulling this off the SSR path saves
+  // a Sanity-or-Supabase round trip before HTML flushes.
   const { data, pending, error } = useAsyncData(
     () => `travel-dates-${slugs.value.join(',')}`,
     () => shouldFetch.value
@@ -17,7 +20,8 @@ export function useTravelDates(slugsInput) {
       : [],
     {
       watch: [slugs],
-      server: true,
+      server: false,
+      lazy: true,
       immediate: true,
       dedupe: 'defer',
     },

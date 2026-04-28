@@ -10,7 +10,7 @@
     </div>
     <v-container
       v-once
-      :fluid="width > 600"
+      fluid
       class="py-0 my-0 px-2 px-md-9"
     >
       <div
@@ -19,6 +19,7 @@
       >
         <ClientOnly>
           <LazyColorContainer
+            :hydrate-on-visible="{ rootMargin: '400px' }"
             color="grey-light-2"
           >
             <LazyInfoContainer>
@@ -54,7 +55,7 @@
         </ColorContainer>
       </div>
 
-      <LazyFaqContainer />
+      <LazyFaqContainer :hydrate-on-visible="{ rootMargin: '400px' }" />
 
       <div class="mx-1">
         <ColorContainer
@@ -74,17 +75,14 @@
             </template>
           </InfoContainer>
         </ColorContainer>
-        <LazyTopTravelsTabs />
+        <LazyTopTravelsTabs :hydrate-on-visible="{ rootMargin: '400px' }" />
       </div>
     </v-container>
-    <LazyFooterOdysway />
+    <LazyFooterOdysway :hydrate-on-visible="{ rootMargin: '400px' }" />
   </v-app>
 </template>
 
 <script setup>
-import { useDisplay } from 'vuetify'
-
-const { width } = useDisplay()
 const route = useRoute()
 const sanity = useSanity()
 
@@ -97,7 +95,9 @@ const searchQuery = groq`*[_type == "search"][0]{
   infoContainer
 }`
 
-const { data: partenairesTextes } = await useAsyncData(
+// lazy + below-the-fold: don't block SSR. Both feed sections gated by
+// `v-if="data"` so a late arrival just renders when ready.
+const { data: partenairesTextes } = useAsyncData(
   'partenairesTextes',
   async () => {
     try {
@@ -110,11 +110,12 @@ const { data: partenairesTextes } = await useAsyncData(
     }
   },
   {
+    lazy: true,
     server: true,
   },
 )
 
-const { data: searchContent } = await useAsyncData(
+const { data: searchContent } = useAsyncData(
   'search-content',
   async () => {
     try {
@@ -127,6 +128,7 @@ const { data: searchContent } = await useAsyncData(
     }
   },
   {
+    lazy: true,
     server: true,
   },
 )

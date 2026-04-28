@@ -31,6 +31,7 @@
       <section class="py-0 my-0 px-2 px-md-4">
         <LazyExperienceCarousel
           v-if="homeSanity && homeSanity.experienceCarousel?.experiences?.length > 0"
+          :hydrate-on-visible="{ rootMargin: '400px' }"
           :experiences-data="homeSanity.experienceCarousel.experiences"
         >
           <template #title>
@@ -40,6 +41,7 @@
 
         <LazyColorContainer
           v-once
+          :hydrate-on-visible="{ rootMargin: '400px' }"
           color="soft-blush"
         >
           <TrackableVoyageList
@@ -71,7 +73,10 @@
           </TrackableVoyageList>
         </LazyColorContainer>
 
-        <LazyColorContainer color="primary">
+        <LazyColorContainer
+          :hydrate-on-visible="{ rootMargin: '400px' }"
+          color="primary"
+        >
           <LazyCardGrid
             :categories="homeSanity.followDesires.categoriesFollowDesires"
             :promotion-name="homeSanity.followDesires.title"
@@ -84,7 +89,10 @@
           </LazyCardGrid>
         </LazyColorContainer>
 
-        <LazyColorContainer color="white">
+        <LazyColorContainer
+          :hydrate-on-visible="{ rootMargin: '400px' }"
+          color="white"
+        >
           <LazyTextImageContainer
             :display-cta-button="true"
             :image-desktop-right="true"
@@ -122,7 +130,10 @@
           </LazyTextImageContainer>
         </LazyColorContainer>
 
-        <LazyColorContainer color="grey-light">
+        <LazyColorContainer
+          :hydrate-on-visible="{ rootMargin: '400px' }"
+          color="grey-light"
+        >
           <TrackableVoyageList
             :voyages="homeSanity.guaranteedDepartures.voyagesGuaranteedDepartures"
             :list-name="homeSanity.guaranteedDepartures.title"
@@ -163,7 +174,10 @@
           </div>
         </LazyColorContainer>
 
-        <LazyColorContainer color="white">
+        <LazyColorContainer
+          :hydrate-on-visible="{ rootMargin: '400px' }"
+          color="white"
+        >
           <TrackableVoyageList
             :voyages="homeSanity.summerTravel.voyagesSummerTravel"
             :list-name="homeSanity.summerTravel.title"
@@ -191,7 +205,10 @@
           </TrackableVoyageList>
         </LazyColorContainer>
 
-        <LazyColorContainer color="soft-blush">
+        <LazyColorContainer
+          :hydrate-on-visible="{ rootMargin: '400px' }"
+          color="soft-blush"
+        >
           <ClientOnly>
             <NewsletterContainer v-if="homeSanity.newsletter">
               <template #title>
@@ -208,6 +225,7 @@
         </LazyColorContainer>
 
         <LazyColorContainer
+          :hydrate-on-visible="{ rootMargin: '400px' }"
           white-text
           color="primary"
         >
@@ -238,7 +256,10 @@
           </TrackableVoyageList>
         </LazyColorContainer>
 
-        <LazyColorContainer color="white">
+        <LazyColorContainer
+          :hydrate-on-visible="{ rootMargin: '400px' }"
+          color="white"
+        >
           <LazyCommonReviewContainer>
             <template #title>
               <span style="color: rgba(43, 76, 82, 1)">
@@ -251,7 +272,10 @@
           </LazyCommonReviewContainer>
         </LazyColorContainer>
 
-        <LazyColorContainer color="grey-light-2">
+        <LazyColorContainer
+          :hydrate-on-visible="{ rootMargin: '400px' }"
+          color="grey-light-2"
+        >
           <LazyInfoContainer>
             <template #top>
               <AvatarsRowStack />
@@ -466,7 +490,7 @@ const homeQuery = groq`
   }
 `
 
-const { data: homeSanity } = await useAsyncData('test', () =>
+const { data: homeSanity } = await useAsyncData('home-sanity', () =>
   sanity.fetch(homeQuery),
 )
 const homeVoyages = computed(() => {

@@ -239,11 +239,15 @@ export default defineNuxtConfig({
     apiVersion: '2025-04-01',
     useCdn: true, // Disable CDN for instant updates (recommended for webhooks)
     withCredentials: false,
-    visualEditing: {
-      token: process.env.SANITY_VIEWER_TOKEN,
-      studioUrl: process.env.SANITY_STUDIO_URL,
-      stega: false,
-    },
+    // Visual editing pulls in React + ReactDOM + styled-components (~120KB).
+    // Only enable on non-production deployments where editors actually preview.
+    visualEditing: process.env.VERCEL_ENV === 'production'
+      ? undefined
+      : {
+          token: process.env.SANITY_VIEWER_TOKEN,
+          studioUrl: process.env.SANITY_STUDIO_URL,
+          stega: false,
+        },
   },
   schemaOrg: {
     identity: defineOrganization({
