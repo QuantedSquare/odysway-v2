@@ -53,7 +53,7 @@ export default defineNuxtConfig({
 
     },
     pageTransition: { name: 'page', mode: 'out-in' },
-
+    layoutTransition: { name: 'layout', mode: 'out-in' },
   },
   site: {
     url: process.env.BASE_URL || 'https://odysway.com', // TODO: change the first to the dev env

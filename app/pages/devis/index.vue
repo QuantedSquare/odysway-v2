@@ -143,7 +143,7 @@ const { travelTitle } = useFunnelHeader()
 const route = useRoute()
 const sanity = useSanity()
 
-const currentStep = ref(2)
+const currentStep = ref(1)
 const stepperHeaderRef = useTemplateRef('stepperHeaderRef')
 
 const initialTravelers = (+route.query.nbAdults || 0) + (+route.query.nbChildren || 0) || 1

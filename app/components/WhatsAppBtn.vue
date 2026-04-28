@@ -15,6 +15,7 @@
           v-bind="props"
           href="https://wa.me/+33780919540"
           icon
+          :aria-label="`Icône bouton whatsapp`"
           rounded="circle"
           height="70"
           width="70"
