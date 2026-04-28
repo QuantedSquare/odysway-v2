@@ -235,19 +235,19 @@ const displayedSrcset = computed(() => {
     `${buildSanityImageUrl(activeDesktopImage.value, 2560, 1440, 70)} 2560w`,
   ].filter(Boolean).join(', ')
 })
-const heroSizes = '(max-width: 600px) 100vw, (max-width: 960px) 90vw, 100vw'
-useHead({
-  link: [
-    {
-      rel: 'preload',
-      as: 'image',
-      fetchpriority: 'high',
-      imagesrcset: displayedSrcset,
-      imagesizes: heroSizes,
-      href: displayedSrc,
-    },
-  ],
-})
+// const heroSizes = '(max-width: 600px) 100vw, (max-width: 960px) 90vw, 100vw'
+// useHead({
+//   link: [
+//     {
+//       rel: 'preload',
+//       as: 'image',
+//       fetchpriority: 'high',
+//       imagesrcset: displayedSrcset,
+//       imagesizes: heroSizes,
+//       href: displayedSrc,
+//     },
+//   ],
+// })
 </script>
 
 <style scoped>
