@@ -477,7 +477,6 @@ const homeVoyages = computed(() => {
     homeSanity.value.summerTravel?.voyagesSummerTravel || [],
     homeSanity.value.unforgettableTravels?.voyagesUnforgettableTravels || [],
   ]
-  console.log('test', homeSanity.value.franceTrips)
   return sections.flat().filter(Boolean)
 })
 

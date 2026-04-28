@@ -10,7 +10,6 @@
 </template>
 
 <script setup>
-// import './assets/css/main.css'
 import '../app/assets/scss/main.scss'
 
 const config = useRuntimeConfig()
@@ -20,15 +19,6 @@ useHead({
   htmlAttrs: {
     lang: 'fr',
   },
-  script: [
-    {
-      'src': 'https://eoni-widget-cdn.ottmann-alex.workers.dev/widget.js',
-      'data-key': '8ba757b9-e610-4c17-a02e-737df903b5e1',
-      'data-color': 'rgba(43, 76, 82, 1)',
-      'data-position': 'bottom-right',
-      'async': true,
-    },
-  ],
   link: [
     {
       rel: 'preload',

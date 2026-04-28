@@ -101,7 +101,7 @@ const route = useRoute()
 const model = defineModel()
 
 const { addSingleParam } = useParams()
-console.log('test')
+
 // New: Local validation state
 const emit = defineEmits(['next', 'previous'])
 
