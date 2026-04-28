@@ -31,7 +31,6 @@
       <section class="py-0 my-0 px-2 px-md-4">
         <LazyExperienceCarousel
           v-if="homeSanity && homeSanity.experienceCarousel?.experiences?.length > 0"
-          :hydrate-on-visible="{ rootMargin: '400px' }"
           :experiences-data="homeSanity.experienceCarousel.experiences"
         >
           <template #title>
@@ -41,7 +40,6 @@
 
         <LazyColorContainer
           v-once
-          :hydrate-on-visible="{ rootMargin: '400px' }"
           color="soft-blush"
         >
           <TrackableVoyageList
@@ -74,7 +72,6 @@
         </LazyColorContainer>
 
         <LazyColorContainer
-          :hydrate-on-visible="{ rootMargin: '400px' }"
           color="primary"
         >
           <LazyCardGrid
@@ -90,7 +87,6 @@
         </LazyColorContainer>
 
         <LazyColorContainer
-          :hydrate-on-visible="{ rootMargin: '400px' }"
           color="white"
         >
           <LazyTextImageContainer
@@ -131,7 +127,6 @@
         </LazyColorContainer>
 
         <LazyColorContainer
-          :hydrate-on-visible="{ rootMargin: '400px' }"
           color="grey-light"
         >
           <TrackableVoyageList
@@ -175,7 +170,6 @@
         </LazyColorContainer>
 
         <LazyColorContainer
-          :hydrate-on-visible="{ rootMargin: '400px' }"
           color="white"
         >
           <TrackableVoyageList
@@ -206,7 +200,6 @@
         </LazyColorContainer>
 
         <LazyColorContainer
-          :hydrate-on-visible="{ rootMargin: '400px' }"
           color="soft-blush"
         >
           <ClientOnly>
@@ -225,7 +218,6 @@
         </LazyColorContainer>
 
         <LazyColorContainer
-          :hydrate-on-visible="{ rootMargin: '400px' }"
           white-text
           color="primary"
         >
@@ -257,7 +249,6 @@
         </LazyColorContainer>
 
         <LazyColorContainer
-          :hydrate-on-visible="{ rootMargin: '400px' }"
           color="white"
         >
           <LazyCommonReviewContainer>
@@ -273,7 +264,6 @@
         </LazyColorContainer>
 
         <LazyColorContainer
-          :hydrate-on-visible="{ rootMargin: '400px' }"
           color="grey-light-2"
         >
           <LazyInfoContainer>

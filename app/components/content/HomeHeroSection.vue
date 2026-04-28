@@ -222,6 +222,9 @@ const displayedSrc = computed(() => {
 
 // Mobile entries cover DPR up to 3x so phones don't fall through to the
 // desktop landscape crop. Quality steps up with size.
+// (Image preload via <link rel="preload"> was tried and reverted — on
+// slow 4G it competed with the font preloads, delaying the LCP text
+// element. fetchpriority="high" on the NuxtImg is sufficient.)
 const displayedSrcset = computed(() => {
   return [
     `${buildSanityImageUrl(activeMobileImage.value, 640, 360, 55)} 640w`,
@@ -232,12 +235,7 @@ const displayedSrcset = computed(() => {
     `${buildSanityImageUrl(activeDesktopImage.value, 2560, 1440, 70)} 2560w`,
   ].filter(Boolean).join(', ')
 })
-
 const heroSizes = '(max-width: 600px) 100vw, (max-width: 960px) 90vw, 100vw'
-
-// Preload the LCP hero image so the browser starts the download before
-// CSS parse. imagesrcset/imagesizes mirrors the <img> so the browser only
-// fetches one variant.
 useHead({
   link: [
     {
