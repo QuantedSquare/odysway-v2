@@ -74,7 +74,7 @@
                           <h2 class="text-h5 font-weight-bold mb-2">
                             Nous avons bien reçu votre demande de devis !
                           </h2>
-                          <p class="text-caption font-weight-regular">
+                          <p class="text-subtitle-2 font-weight-regular">
                             {{ pageTexts?.calendly?.text }}
                           </p>
                         </v-container>
@@ -143,7 +143,7 @@ const { travelTitle } = useFunnelHeader()
 const route = useRoute()
 const sanity = useSanity()
 
-const currentStep = ref(1)
+const currentStep = ref(2)
 const stepperHeaderRef = useTemplateRef('stepperHeaderRef')
 
 const initialTravelers = (+route.query.nbAdults || 0) + (+route.query.nbChildren || 0) || 1

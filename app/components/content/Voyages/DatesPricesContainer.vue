@@ -105,33 +105,7 @@
         </v-col>
       </v-row>
     </template>
-    <v-row
-      v-if="sortedByDates.length > 0"
-      class="d-none d-md-flex  ml-0 justify-center ga-4 align-center mb-8"
-    >
-      <span>
-        🔄
-        Remboursement intégral jusqu'à J-60
-      </span>
-      <v-divider
-        class="d-none d-md-flex"
-        vertical
-        color="primary"
-      />
-      <span>
-        💳
-        CB, virement, chèques vacances · 2 ou 3 fois
-      </span>
-      <v-divider
-        class="d-none d-md-flex"
-        vertical
-        color="primary"
-      />
-      <span>
-        👩‍✈️
-        Conseillère dédiée avant, pendant & après
-      </span>
-    </v-row>
+
     <v-row v-if="isPrivatisationAvailable && !isGroupeAvailable">
       <v-col class="bg-grey-light-3 rounded-lg mx-3 d-flex flex-column align-center justify-center ga-6 my-5 py-10">
         <div class="text-h4 font-weight-bold text-primary text-center">
@@ -162,33 +136,6 @@
           :privatisation-link="`/devis?slug=${props.voyage?.slug?.current}`"
         />
       </v-col>
-    </v-row>
-    <v-row
-      v-if="sortedByDates.length > 0"
-      class="d-flex d-md-none justify-start ml-1 ga-2 align-center mt-8 mb-0"
-    >
-      <span>
-        🔄
-        Remboursement intégral jusqu'à J-60
-      </span>
-      <v-divider
-        class="d-none d-md-flex"
-        vertical
-        color="primary"
-      />
-      <span>
-        💳
-        CB, virement, chèques vacances · 2 ou 3 fois
-      </span>
-      <v-divider
-        class="d-none d-md-flex"
-        vertical
-        color="primary"
-      />
-      <span>
-        👩‍✈️
-        Conseillère dédiée avant, pendant & après
-      </span>
     </v-row>
   </v-container>
 </template>

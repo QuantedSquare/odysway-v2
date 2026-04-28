@@ -73,6 +73,18 @@
               <!-- #TODO: add the key in the page schema -->
             </v-alert>
           </v-col>
+          <v-col v-else>
+            <v-btn
+              height="60"
+              block
+              rounded="md"
+              @click="handleAskDevis"
+            >
+              <span class="text-body-2 font-weight-bold text-decoration-none">
+                Demander un devis
+              </span>
+            </v-btn>
+          </v-col>
         </v-row>
 
         <v-row>
@@ -193,11 +205,13 @@ function handleIndivClick() {
   })
 }
 function handleAskDevis() {
+  trackRdvClick('voyage-info-card-indiv')
   trackCtaClick({
     ctaId: 'button-ask-devis-side-card-page-voyage',
     ctaLabel: 'Demander un devis',
     ctaUrl: `/devis?slug=${typeof voyage.slug === 'object' ? voyage.slug.current : voyage.slug}`,
   })
+  navigateTo(`/devis?slug=${typeof voyage.slug === 'object' ? voyage.slug.current : voyage.slug}`)
 }
 const tempListPlaceholder = [{
   text: `🔄 Annulation gratuite jusqu'à J-60`,

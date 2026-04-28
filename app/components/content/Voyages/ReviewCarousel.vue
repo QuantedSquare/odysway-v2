@@ -54,7 +54,10 @@
             md="4"
             class="pr-0 pr-md-4"
           >
-            <VoyageReviewCard :review="review" />
+            <ReviewTraveller
+              :review="review"
+              :is-travel-page="true"
+            />
           </v-col>
         </v-row>
         <v-row
@@ -67,7 +70,10 @@
             cols="12"
             class="pb-2"
           >
-            <VoyageReviewCard :review="review" />
+            <ReviewTraveller
+              :review="review"
+              :is-travel-page="true"
+            />
           </v-col>
         </v-row>
       </div>

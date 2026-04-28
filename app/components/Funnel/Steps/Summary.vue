@@ -303,7 +303,7 @@
         <div class="text-custom-size d-flex flex-column ga-2 text-primary font-weight-regular">
           <span>
             ⭐ &nbsp;
-            <span class="text-yellow-rating">★★★★★</span> <strong>4,8/5 </strong> · 174 avis Google
+            <strong>4,8/5 </strong> · 176 avis Google
           </span>
           <span>
             🔄 &nbsp;

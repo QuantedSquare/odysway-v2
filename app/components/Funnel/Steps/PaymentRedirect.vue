@@ -216,14 +216,18 @@
                           :class="{ 'alma-schedule-row--first': idx === 0 }"
                         >
                           <span>{{ item.label }}</span>
-                          <span>{{ formatEuros(item.amount) }}</span>
+                          <span v-if="idx === 0 ">{{ formatEuros(item.amount + almaFees) }}</span>
+                          <span v-else>{{ formatEuros(item.amount) }}</span>
                         </div>
                         <div class="alma-schedule-total d-flex justify-space-between align-center mt-2 pt-2">
                           <div class="d-flex flex-column">
                             <span class="text-body-2">Total</span>
-                            <span class="text-caption text-grey">Odysway vous offre les frais de paiement 🎁</span>
+                            <span class="text-caption text-grey">Dont frais</span>
                           </div>
-                          <span class="font-weight-bold">{{ formatEuros(voyage.totalTravelPrice) }}</span>
+                          <div class="d-flex flex-column align-end">
+                            <span class="font-weight-bold">{{ formatEuros(+voyage.totalTravelPrice + +almaFees) }}</span>
+                            <span class="text-grey text-subtitle-2 font-weight-regular">{{ formatEuros(almaFees) }}</span>
+                          </div>
                         </div>
                       </div>
                     </v-expand-transition>
@@ -346,6 +350,16 @@ const isAlmaPaymentPossible = computed(() => {
     && voyage.alreadyPaid === 0
     && voyage.totalTravelPrice < 400000
 })
+const almaFees = computed(() => {
+  const total = +voyage.totalTravelPrice || 0
+  if (almaInstallments.value === 3) {
+    return Math.round(total * 0.0173)
+  }
+  if (almaInstallments.value === 4) {
+    return Math.round(total * 0.0258)
+  }
+  return 0
+})
 
 const formatEuros = cents => new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(cents / 100)
 
@@ -368,7 +382,7 @@ const almaSchedule = computed(() => {
 
 const stripePay = async () => {
   // User need to check the switches first
-  if (!switch_accept_data_privacy.value && !switch_accept_country.value) {
+  if (!switch_accept_data_privacy.value || !switch_accept_country.value) {
     warningAcceptText.value = 'Veuillez confirmer les conditions de vente avant de procéder au paiement'
     return
   }
@@ -419,7 +433,7 @@ const stripePay = async () => {
 }
 
 const almaPay = async () => {
-  if (!switch_accept_data_privacy.value && !switch_accept_country.value) {
+  if (!switch_accept_data_privacy.value || !switch_accept_country.value) {
     warningAcceptText.value = 'Veuillez confirmer les conditions de vente avant de procéder au paiement'
     return
   }

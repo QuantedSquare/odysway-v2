@@ -32,6 +32,7 @@
             :bg-color="colorMap[i]"
             :iso-contact="traveler.isoContact"
             :flat="i === 0"
+            :is-single="travelers.length === 1"
             @change="travelerInfosChanged"
           />
         </v-col>

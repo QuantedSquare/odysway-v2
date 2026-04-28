@@ -1,6 +1,7 @@
 <template>
   <!-- Panel mode: additional travelers, collapsible -->
   <v-expansion-panels
+    v-if="!isSingle"
     class="mt-4"
     elevation="0"
     :model-value="flat ? 0 : undefined"
@@ -91,6 +92,72 @@
       </v-expansion-panel-text>
     </v-expansion-panel>
   </v-expansion-panels>
+  <v-row
+    v-else
+    class="rounded-md mx-0 px-0 w-100"
+  >
+    <v-col
+      cols="6"
+      class="py-0 my-0 px-0"
+    >
+      <div>Prénom *</div>
+      <v-text-field
+        :id="`firstname_${id}`"
+        v-model="i_firstname"
+        placeholder="Ex: Indiana"
+        :rules="[rules.required]"
+        @change="dataUpdated"
+      />
+    </v-col>
+    <v-col
+      cols="6"
+      class="py-0 my-0"
+    >
+      <div>Nom *</div>
+      <v-text-field
+        :id="`lastname_${id}`"
+        v-model="i_lastname"
+        type="textbox"
+        placeholder="Ex: Jones"
+        :rules="[rules.required]"
+        @change="dataUpdated"
+      />
+    </v-col>
+    <v-col
+      cols="6"
+      class="py-0 my-0 px-0"
+    >
+      <div>Date de naissance *</div>
+      <v-text-field
+        :id="`birthdate_${id}`"
+        v-model="date"
+        type="text"
+        inputmode="numeric"
+        placeholder="JJ/MM/AAAA"
+        :rules="[rules.required, rules.dateFormat]"
+        :append-inner-icon="mdiCalendarOutline"
+        @input="handleInput"
+        @keydown="handleKeydown"
+        @change="dataUpdated"
+      />
+    </v-col>
+    <v-col
+      cols="6"
+      class="py-0 my-0"
+    >
+      <div>Pays de résidence *</div>
+      <v-autocomplete
+        :id="`country_${id}`"
+        v-model="i_isoContact"
+        :items="countries"
+        placeholder="Sélectionnez un pays"
+        :rules="[rules.required]"
+        item-title="title"
+        item-value="value"
+        @change="dataUpdated"
+      />
+    </v-col>
+  </v-row>
 </template>
 
 <script setup>
@@ -109,6 +176,7 @@ const props = defineProps({
   isoContact: { type: String, default: '' },
   bgColor: { type: String, default: 'primary' },
   flat: { type: Boolean, default: false },
+  isSingle: { type: Boolean, default: false },
 })
 
 const i_firstname = ref(props.firstname)

@@ -120,28 +120,6 @@
         <span class="text-caption text-grey">Lun-Ven 9h-19h</span>
       </div>
     </div>
-
-    <v-row
-      v-if="showPrivatisation && privatisationText"
-      class="w-100"
-    >
-      <v-divider />
-      <v-col
-        cols="12"
-      >
-        <div class="text-center text-primary">
-          Groupe privé ?
-          <NuxtLink
-            :to="privatisationLink"
-            @click="handlePrivatisationClick"
-          >
-            <span class="text-decoration-underline text-grey">
-              {{ privatisationText }}
-            </span>
-          </NuxtLink>
-        </div>
-      </v-col>
-    </v-row>
   </v-card>
 
   <!-- Card variant: compact vertical layout (voyage page sidebar) -->

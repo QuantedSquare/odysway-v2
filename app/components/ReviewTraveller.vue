@@ -39,7 +39,7 @@
     </v-card-item>
 
     <v-card-text
-      class="text-h5 font-weight-bold text-primary  mb-0 mb-md-0 pb-0 line-height  px-2"
+      class="text-h6 font-weight-regular text-primary  mb-0 mb-md-0 pb-0 line-height  px-2"
     >
       <ExpandableText
         :clamp-lines="5"

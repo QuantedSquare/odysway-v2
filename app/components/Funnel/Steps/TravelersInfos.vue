@@ -31,6 +31,7 @@
             :key="'nb_travelers_' + i"
             :bg-color="colorMap[i]"
             :iso-contact="traveler.isoContact"
+            :is-single="travelers.length === 1"
             @change="travelerInfosChanged"
           />
 
@@ -100,7 +101,7 @@ const route = useRoute()
 const model = defineModel()
 
 const { addSingleParam } = useParams()
-
+console.log('test')
 // New: Local validation state
 const emit = defineEmits(['next', 'previous'])
 

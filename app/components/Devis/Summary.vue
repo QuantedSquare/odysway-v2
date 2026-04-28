@@ -32,42 +32,26 @@
           Tarif indicatif à partir de
         </div>
         <div class="text-h5 font-weight-bold text-primary">
-          {{ formattedPrice }}
-        </div>
-        <div class="text-caption font-weight-regular">
-          /pers · ajusté selon votre projet
+          {{ formattedPrice }} <span class="text-caption font-weight-regular">
+            /pers · ajusté selon votre projet
+          </span>
         </div>
 
         <v-divider class="my-3" />
 
-        <div class="d-flex flex-column ga-2 text-subtitle-2 font-weight-regular">
-          <div class="d-flex align-center ga-2">
-            <v-icon
-              size="15"
-              color="primary"
-            >
-              {{ mdiCheckCircle }}
-            </v-icon>
-            <span><strong>4,8/5</strong> · +800 avis voyageurs</span>
-          </div>
-          <div class="d-flex align-center ga-2">
-            <v-icon
-              size="15"
-              color="primary"
-            >
-              {{ mdiCheckCircle }}
-            </v-icon>
-            <span>Annulation gratuite jusqu'à <strong>J-60</strong></span>
-          </div>
-          <div class="d-flex align-center ga-2">
-            <v-icon
-              size="15"
-              color="primary"
-            >
-              {{ mdiCheckCircle }}
-            </v-icon>
-            <span>Conseillère dédiée à votre projet</span>
-          </div>
+        <div class="text-custom-size d-flex flex-column ga-2 text-primary font-weight-regular">
+          <span>
+            ⭐ &nbsp;
+            <strong>4,8/5 </strong> · 176 avis Google
+          </span>
+          <span>
+            🔄 &nbsp;
+            Remboursement intégral jusqu'à <strong>J-60</strong>
+          </span>
+          <span>
+            👩‍✈️ &nbsp;
+            Conseillère dédiée <strong>avant, pendant & après</strong>
+          </span>
         </div>
       </v-card-text>
     </v-card>
@@ -75,7 +59,6 @@
 </template>
 
 <script setup>
-import { mdiCheckCircle } from '@mdi/js'
 import formatNumber from '@/utils/formatNumber'
 
 const props = defineProps({
