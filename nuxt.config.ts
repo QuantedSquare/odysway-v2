@@ -241,13 +241,7 @@ export default defineNuxtConfig({
     withCredentials: false,
     // Visual editing pulls in React + ReactDOM + styled-components (~120KB).
     // Only enable on non-production deployments where editors actually preview.
-    visualEditing: process.env.VERCEL_ENV === 'production'
-      ? undefined
-      : {
-          token: process.env.SANITY_VIEWER_TOKEN,
-          studioUrl: process.env.SANITY_STUDIO_URL,
-          stega: false,
-        },
+    visualEditing: undefined,
   },
   schemaOrg: {
     identity: defineOrganization({
