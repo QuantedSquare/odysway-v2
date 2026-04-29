@@ -1,4 +1,5 @@
 export async function logDateActivity(travelDateId, bookingUser, action, changes = null) {
+  console.log('test', bookingUser)
   const { error } = await supabase.from('date_activity_log').insert([{
     travel_date_id: travelDateId,
     editor_email: bookingUser?.email || 'unknown',

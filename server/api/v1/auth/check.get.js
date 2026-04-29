@@ -37,7 +37,7 @@ export default defineEventHandler((event) => {
       sameSite: 'lax',
       path: '/',
       maxAge: 60 * 60 * 24 * 7,
-      secure: isDev,
+      secure: !isDev,
     })
 
     return {

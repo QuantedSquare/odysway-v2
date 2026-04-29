@@ -97,7 +97,7 @@ export default defineEventHandler(async (event) => {
       sameSite: 'lax',
       path: '/',
       maxAge: 60 * 60 * 24 * 7,
-      secure: isDev,
+      secure: !isDev,
     })
 
     return sendRedirect(event, '/booking-management')

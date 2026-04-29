@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
       sameSite: 'lax',
       path: '/',
       maxAge: 60 * 60 * 24 * 7, // 7 days
-      secure: isDev,
+      secure: !isDev,
     })
     return { success: true }
   }

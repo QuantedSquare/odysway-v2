@@ -7,6 +7,7 @@ export default defineEventHandler(async (event) => {
   const startTime = Date.now()
   const config = useRuntimeConfig()
   const bookingUser = getBookingUserOrNull(event)
+  console.log('=====BookingUser=====', bookingUser)
 
   const { dateId, slug } = event.context.params
   if (!dateId || !slug) {

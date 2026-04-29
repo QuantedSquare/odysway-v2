@@ -159,7 +159,7 @@
                 <v-icon size="18">
                   {{ mdiAirplaneTakeoff }}
                 </v-icon>
-                <span class="text-body-2 font-weight-medium">Aucun dossier de depart assigné</span>
+                <span class="text-body-2 font-weight-medium">Aucun dossier de départ assigné</span>
               </div>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
@@ -438,7 +438,7 @@
                         class="mt-2"
                         density="compact"
                       >
-                        Deal assigne !
+                        Deal assigné !
                       </v-alert>
                       <v-alert
                         v-if="assignDealError"
@@ -450,7 +450,7 @@
                           <NuxtLink
                             :to="assignDealError"
                           >
-                            Deal deja assigne a cette date
+                            Deal déjà assigné à cette date
                             <v-icon size="14">
                               {{ mdiArrowRight }}
                             </v-icon>
@@ -636,20 +636,39 @@
       <!-- Payment Link Dialog -->
       <v-dialog
         v-model="paymentDialog"
-        max-width="420"
+        max-width="460"
       >
         <v-card
           rounded="lg"
           class="bo-card"
         >
           <v-card-title class="text-subtitle-1 font-weight-bold">
-            Générer un lien de paiement
+            Lien de paiement
           </v-card-title>
           <v-card-text>
             <div v-if="selectedTraveler">
-              <div class="text-body-2 mb-3 pa-2 bg-surface-variant text-primary rounded">
-                <strong>Voyageur:</strong> {{ selectedTraveler.name || selectedTraveler.email }}
+              <div class="d-flex align-center ga-3 mb-4 pa-3 bg-surface-variant rounded">
+                <v-avatar
+                  size="36"
+                  color="primary"
+                >
+                  <span style="font-size: 14px; color: white; font-weight: 600;">
+                    {{ (selectedTraveler.name?.trim() ? selectedTraveler.name : selectedTraveler.email || '?').slice(0, 1).toUpperCase() }}
+                  </span>
+                </v-avatar>
+                <div class="flex-grow-1 min-w-0">
+                  <div class="text-body-2 font-weight-medium text-truncate text-primary">
+                    {{ selectedTraveler.name?.trim() ? selectedTraveler.name : selectedTraveler.email }}
+                  </div>
+                  <div
+                    v-if="selectedTraveler.name?.trim() && selectedTraveler.email"
+                    class="text-caption text-medium-emphasis text-truncate"
+                  >
+                    {{ selectedTraveler.email }}
+                  </div>
+                </div>
               </div>
+
               <v-select
                 v-model="paymentType"
                 :items="paymentTypes"
@@ -657,6 +676,9 @@
                 item-title="label"
                 item-value="value"
                 density="compact"
+                :hint="paymentTypeHints[paymentType]"
+                persistent-hint
+                class="mb-2"
               />
               <v-text-field
                 v-if="paymentType === 'custom'"
@@ -664,30 +686,39 @@
                 label="Montant personnalise (€)"
                 type="number"
                 density="compact"
+                autofocus
+                class="mt-3"
               />
-              <v-divider class="my-2" />
-              <div v-if="generatedLink">
-                <span class="bo-section-title">Lien généré</span>
-                <v-text-field
-                  v-model="generatedLink"
-                  readonly
-                  density="compact"
-                  append-icon="mdi-content-copy"
-                  @click:append="copyLink"
-                />
+
+              <v-divider class="my-4" />
+
+              <div class="bo-section-title mb-2">
+                Lien à transmettre
               </div>
+              <v-text-field
+                :model-value="generatedLink"
+                readonly
+                density="compact"
+                hide-details
+                :placeholder="paymentType === 'custom' && !customAmount ? 'Saisissez un montant pour générer le lien' : ''"
+                :disabled="!generatedLink"
+                class="mb-3"
+              />
+              <v-btn
+                color="primary"
+                variant="tonal"
+                size="small"
+                block
+                :prepend-icon="mdiContentCopy"
+                :disabled="!generatedLink"
+                @click="copyLink"
+              >
+                Copier le lien
+              </v-btn>
             </div>
           </v-card-text>
           <v-card-actions>
             <v-spacer />
-            <v-btn
-              color="primary"
-              variant="flat"
-              size="small"
-              @click="generateLink"
-            >
-              Generer
-            </v-btn>
             <v-btn
               variant="text"
               size="small"
@@ -705,7 +736,7 @@
         timeout="2000"
         color="primary"
       >
-        Le lien a ete copie
+        Le lien a été copié
       </v-snackbar>
     </template>
   </v-container>
@@ -714,7 +745,7 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { mdiArrowRight, mdiDelete, mdiLinkEdit, mdiInformationOutline, mdiAirplaneTakeoff, mdiCalendarOutline } from '@mdi/js'
+import { mdiArrowRight, mdiDelete, mdiLinkEdit, mdiInformationOutline, mdiAirplaneTakeoff, mdiCalendarOutline, mdiContentCopy } from '@mdi/js'
 import dayjs from 'dayjs'
 import DateFormCard from '~/components/booking/DateFormCard.vue'
 import DateAttachments from '~/components/booking/DateAttachments.vue'
@@ -766,13 +797,24 @@ const paymentDialog = ref(false)
 const selectedTraveler = ref(null)
 const paymentType = ref('full')
 const customAmount = ref('')
-const generatedLink = ref('')
 const paymentTypes = [
   { value: 'full', label: 'Faire payer entièrement' },
   { value: 'deposit', label: 'Paiement de l\'acompte' },
   { value: 'custom', label: 'Paiement custom' },
   { value: 'balance', label: 'Paiement du solde' },
 ]
+const paymentTypeHints = {
+  full: 'Le voyageur paiera l\'intégralité du voyage.',
+  deposit: 'Paiement de l\'acompte (30% + assurance).',
+  balance: 'Paiement du solde restant dû.',
+  custom: 'Vous définissez un montant libre à payer.',
+}
+const generatedLink = computed(() => {
+  if (!selectedTraveler.value) return ''
+  if (paymentType.value === 'custom' && !customAmount.value) return ''
+  const amountParam = paymentType.value === 'custom' ? `&amount=${customAmount.value}` : ''
+  return `${config.public.siteURL}/checkout?booked_id=${selectedTraveler.value.id}&type=${paymentType.value}${amountParam}`
+})
 
 const funnelLinkType = ref('deposit')
 const funnelLinkTypes = [
@@ -935,31 +977,16 @@ function openPaymentDialog(traveler) {
   selectedTraveler.value = traveler
   paymentType.value = 'full'
   customAmount.value = ''
-  generatedLink.value = ''
   paymentDialog.value = true
 }
 function closePaymentDialog() {
   paymentDialog.value = false
   selectedTraveler.value = null
-  generatedLink.value = ''
-}
-function generateLink() {
-  if (!selectedTraveler.value) return
-  let amountParam = ''
-  if (paymentType.value === 'custom') {
-    if (!customAmount.value) return
-    amountParam = `&amount=${customAmount.value}`
-  }
-  let typeParam = `&type=${paymentType.value}`
-  if (paymentType.value === 'full') typeParam = '&type=full'
-  if (paymentType.value === 'deposit') typeParam = '&type=deposit'
-  if (paymentType.value === 'balance') typeParam = '&type=balance'
-  if (paymentType.value === 'custom') typeParam = '&type=custom'
-  generatedLink.value = `${config.public.siteURL}/checkout?&booked_id=${selectedTraveler.value.id}${amountParam}${typeParam}`
 }
 function copyLink() {
   if (generatedLink.value) {
     navigator.clipboard.writeText(generatedLink.value)
+    snackbar.value = true
   }
 }
 
