@@ -19,7 +19,7 @@ const createDataQuote = (data, insuranceType) => {
 
   const dataQuote = {
     emetteur: 'ODYSWAY',
-    produit: isCapExploraction || countries.includes('NP') || countries.includes('PE') ? 'CAP-EXPLORACTION' : 'CAP-EXPLORER',
+    produit: isCapExploraction || countries.includes('NP') || countries.includes('NEP') || countries.includes('PE') ? 'CAP-EXPLORACTION' : 'CAP-EXPLORER',
     formule: insuranceType === 'rapatriement' ? 'MR' : 'AN',
     provenance: data.isoContact || 'FR',
     destination: countries,

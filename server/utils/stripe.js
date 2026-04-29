@@ -481,7 +481,7 @@ const handlePaymentSession = async (session, paymentType) => {
       ].includes(item.description)
     })
     const isoContact = fieldValues.find(i => i.field === '22')?.value || 'FR'
-    const isCapExploraction = deal.isCapExploraction === 'Oui' || deal.iso.includes('NP') || deal.iso.includes('PE') || false
+    const isCapExploraction = deal.isCapExploraction === 'Oui' || deal.iso.includes('NP') || deal.iso.includes('PE') || deal.iso.includes('NEP') || false
     Object.assign(deal, { pricePerTraveler: calculatePricePerPerson(deal) })
     Object.assign(client, { isoContact })
     console.log('InssuranceItem', inssuranceItem)
