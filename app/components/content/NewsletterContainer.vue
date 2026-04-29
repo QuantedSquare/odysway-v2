@@ -13,9 +13,9 @@
             <h2 class="text-h3 text-center text-md-left pb-3 ">
               <slot name="title" />
             </h2>
-            <h4 class="text-h5 text-center text-md-left text-grey">
+            <h3 class="text-h5 text-center text-md-left text-grey-darken-2">
               <slot name="subtitle" />
-            </h4>
+            </h3>
           </v-col>
           <v-spacer />
         </template>
@@ -48,12 +48,12 @@
             >
               <template #label>
                 <!-- Vuetify classes does not work for scaling labels -->
-                <h3 class="d-none d-md-block">
+                <span class="d-none d-md-block text-h6 text-grey-darken-2">
                   {{ newsletterContent?.emailPlaceholder || 'Entrez votre adresse email' }}
-                </h3>
-                <h4 class="d-md-none">
+                </span>
+                <span class="d-md-none text-body-1 text-grey-darken-2">
                   {{ newsletterContent?.emailPlaceholder || 'Entrez votre adresse email' }}
-                </h4>
+                </span>
               </template>
               <template
                 v-if="isOnVoyage"

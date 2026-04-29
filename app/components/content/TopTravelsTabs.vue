@@ -21,9 +21,9 @@
       fluid
       class="rounded-lg px-md-12 py-md-8 mt-4 mt-md-8 bg-primary max-container-width "
     >
-      <div class="text-h3 font-weight-bold my-4">
+      <h2 class="text-h3 font-weight-bold my-4 text-white">
         Des idées pour vos prochains voyages
-      </div>
+      </h2>
 
       <div class="tabs-container position-relative mb-6 mt-md-10 custom-color ">
         <v-tabs
@@ -76,9 +76,9 @@
               :key="`${section.title}-${index}`"
               md="2"
             >
-              <h5 class="custom-title-size font-weight-bold mb-4 pb-md-16 ">
+              <h3 class="custom-title-size font-weight-bold mb-4 pb-md-16 text-white">
                 {{ section.title }}
-              </h5>
+              </h3>
               <div class="d-flex flex-column ga-md-2">
                 <template
                   v-for="link, i in section.linksList"
@@ -86,7 +86,7 @@
                 >
                   <SmartLink
                     :to="link.slug.includes('http') ? link.slug : `/${link.slug}`"
-                    link-class="line-clamp-2 text-caption text-md-body-2 font-weight-regular pb-2 pb-md-4"
+                    link-class="line-clamp-2 text-caption text-md-body-2 font-weight-regular pb-2 pb-md-4 text-white"
                     @click="handleLinkClick(data[currentTab].title, section.title, link.title)"
                   >
                     {{ link.title }}

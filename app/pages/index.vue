@@ -9,20 +9,9 @@
       :image-mobile-test="homeSanity.heroSectionTest.imageMobile"
       :typewriter-words="config.public.environment === 'production' ? homeSanity.heroSection.typewritterWords : homeSanity.heroSectionTest.typewritterWords"
       :placeholder="config.public.environment === 'production' ? homeSanity.heroSection.placeholder : homeSanity.heroSectionTest.placeholder"
-    >
-      <template #title>
-        <EnrichedText
-          class="text-white"
-          :value="config.public.environment === 'production' ? homeSanity.heroSection.title : homeSanity.heroSectionTest.title"
-        />
-      </template>
-      <template #subtitle>
-        <EnrichedText
-          class="text-white"
-          :value="config.public.environment === 'production' ? homeSanity.heroSection.subtitle : homeSanity.heroSectionTest.subtitle"
-        />
-      </template>
-    </HomeHeroSection>
+      :title-text="heroTitleText"
+      :subtitle-text="heroSubtitleText"
+    />
     <v-container
       v-once
       fluid
@@ -79,9 +68,9 @@
             :promotion-name="homeSanity.followDesires.title"
           >
             <template #title>
-              <h4 class="text-white">
+              <h2 class="text-h4 text-white">
                 {{ homeSanity.followDesires.title }}
-              </h4>
+              </h2>
             </template>
           </LazyCardGrid>
         </LazyColorContainer>
@@ -209,7 +198,7 @@
               </template>
               <template #subtitle>
                 <EnrichedText
-                  class="text-grey"
+                  class="text-grey-darken-2"
                   :value="homeSanity.newsletter.subtitle"
                 />
               </template>
@@ -296,6 +285,8 @@
 </template>
 
 <script setup>
+import { portableTextToPlain } from '~/utils/portableTextToPlain'
+
 const sanity = useSanity()
 const config = useRuntimeConfig()
 const { trackCtaClick } = useGtmTracking()
@@ -483,6 +474,24 @@ const homeQuery = groq`
 const { data: homeSanity } = await useAsyncData('home-sanity', () =>
   sanity.fetch(homeQuery),
 )
+
+// Extract plain-text title/subtitle so the LCP h1/h2 can render directly
+// without the @portabletext/vue runtime, which was the dominant cost in
+// the LCP "element render delay" metric.
+const isProd = computed(() => config.public.environment === 'production')
+const heroTitleText = computed(() => {
+  const blocks = isProd.value
+    ? homeSanity.value?.heroSection?.title
+    : homeSanity.value?.heroSectionTest?.title
+  return portableTextToPlain(blocks)
+})
+const heroSubtitleText = computed(() => {
+  const blocks = isProd.value
+    ? homeSanity.value?.heroSection?.subtitle
+    : homeSanity.value?.heroSectionTest?.subtitle
+  return portableTextToPlain(blocks)
+})
+
 const homeVoyages = computed(() => {
   if (!homeSanity.value) return []
   const sections = [

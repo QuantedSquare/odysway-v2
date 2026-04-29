@@ -56,11 +56,23 @@
       />
     </div>
     <div class="hero-content">
-      <h1>
-        <slot name="title" />
+      <h1 class="text-white">
+        <template v-if="titleText">
+          {{ titleText }}
+        </template>
+        <slot
+          v-else
+          name="title"
+        />
       </h1>
-      <h2 class="custom-hero-subtitle ">
-        <slot name="subtitle" />
+      <h2 class="custom-hero-subtitle text-white">
+        <template v-if="subtitleText">
+          {{ subtitleText }}
+        </template>
+        <slot
+          v-else
+          name="subtitle"
+        />
         <span
           v-if="typewriterWords.length"
           class="typewriter-text text-center font-italic"
@@ -127,6 +139,18 @@ const heroProps = defineProps({
   placeholderImage: {
     type: Object,
     required: true,
+  },
+  // Plain-text title/subtitle. When provided, the h1/h2 render text
+  // directly and skip <EnrichedText>/<PortableText> on the LCP path —
+  // major LCP win because we no longer wait on portable-text hydration.
+  // Slots stay as fallback so existing callers don't break.
+  titleText: {
+    type: String,
+    default: '',
+  },
+  subtitleText: {
+    type: String,
+    default: '',
   },
 })
 
@@ -350,6 +374,7 @@ const displayedSrcset = computed(() => {
   gap: 1rem;
 }
 
+.hero-content h1,
 .hero-content h1:deep(p) {
   margin-block: 0 12px;
   text-wrap: balance;
@@ -376,6 +401,11 @@ const displayedSrcset = computed(() => {
   align-items: center;
   gap: 6px;
   flex-wrap: wrap;
+}
+.hero-content h1 {
+  /* Reset h1 default margins so plain-text rendering matches the
+     :deep(p) variant exactly. */
+  padding: 0;
 }
 .custom-hero-subtitle:deep(p) {
 margin-bottom: 0!important;

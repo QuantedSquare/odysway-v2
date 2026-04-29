@@ -8,6 +8,7 @@
     </span>
     <v-tooltip
       text="Poser une question à Odysway ? ( vous serez redirigé vers WhatsApp )"
+      aria-label="Poser une question à Odysway via WhatsApp"
       location="top"
     >
       <template #activator="{ props }">
@@ -15,7 +16,7 @@
           v-bind="props"
           href="https://wa.me/+33780919540"
           icon
-          :aria-label="`Icône bouton whatsapp`"
+          aria-label="Contacter Odysway sur WhatsApp"
           rounded="circle"
           height="70"
           width="70"
