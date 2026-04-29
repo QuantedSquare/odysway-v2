@@ -88,7 +88,7 @@
           <ContactUsCard
             v-if="currentStep < 3"
             variant="card"
-            btn-variant="flat"
+            btn-variant="outlined"
             :avatars="pageTexts?.stickyBlock?.ctaCall?.avatars"
             :rdv-link="`/rdv-projet-voyage?travelTitle=${voyage.title}`"
             :show-privatisation="false"
