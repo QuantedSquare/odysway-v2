@@ -33,7 +33,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      titleTemplate: '%s - Odysway',
+      titleTemplate: '%s | Odysway',
       link: [
         { rel: 'preconnect', href: 'https://cdn.sanity.io', crossorigin: 'anonymous' },
         { rel: 'preconnect', href: 'https://load.sst.odysway.com', crossorigin: 'anonymous' },
@@ -122,7 +122,10 @@ export default defineNuxtConfig({
     inlineStyles: true, // Inline critical CSS to eliminate render-blocking CSS request
   },
   experimental: {
-    payloadExtraction: true,
+    // Inline payloads in SSR HTML rather than emitting a separate _payload.json per route.
+    // The separate file is served as a static asset on Vercel and can't be busted by the ISR bypass token,
+    // which caused hydration to overwrite freshly-revalidated HTML with stale data.
+    payloadExtraction: process.env.VERCEL_ENV !== 'production',
     appManifest: false,
     inlineRouteRules: true,
     serverAppConfig: false,
@@ -230,14 +233,14 @@ export default defineNuxtConfig({
       3072: 3072,
     },
     sanity: {
-      projectId: process.env.SANITY_PROJECT_ID,
+      projectId: process.env.SANITY_PROJECT_ID || '',
     },
   },
   sanity: {
     projectId: process.env.SANITY_PROJECT_ID,
     dataset: process.env.SANITY_DATASET,
     apiVersion: '2025-04-01',
-    useCdn: true, // Disable CDN for instant updates (recommended for webhooks)
+    useCdn: false, // CDN is ~30-60s stale; ISR regeneration must read strongly-consistent data
     withCredentials: false,
     // Visual editing pulls in React + ReactDOM + styled-components (~120KB).
     // Only enable on non-production deployments where editors actually preview.

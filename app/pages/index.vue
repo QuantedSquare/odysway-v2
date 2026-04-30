@@ -13,7 +13,6 @@
       :subtitle-text="heroSubtitleText"
     />
     <v-container
-      v-once
       fluid
       class="mx-0 mx-md-5 px-1"
     >
@@ -28,12 +27,11 @@
         </LazyExperienceCarousel>
 
         <LazyColorContainer
-          v-once
           color="soft-blush"
         >
           <TrackableVoyageList
-            :voyages="homeSanity.franceTrips.voyagesFrance"
-            :list-name="homeSanity.franceTrips.title"
+            :voyages="homeSanity?.franceTrips?.voyagesFrance"
+            :list-name="homeSanity?.franceTrips?.title"
           >
             <LazyHorizontalCarousel
               text-color="primary"
@@ -41,18 +39,18 @@
             >
               <template #title>
                 <span style="color: rgba(43, 76, 82, 1)">
-                  {{ homeSanity.franceTrips.title }}
+                  {{ homeSanity?.franceTrips?.title }}
                 </span>
               </template>
               <template #carousel-item>
                 <v-col
-                  v-for="voyage in homeSanity.franceTrips.voyagesFrance"
+                  v-for="voyage in homeSanity?.franceTrips?.voyagesFrance"
                   :key="voyage._id"
                 >
                   <VoyageCardWithDates
                     :voyage="voyage"
                     :dates-by-slug="datesBySlug"
-                    :item-list-name="homeSanity.franceTrips.title"
+                    :item-list-name="homeSanity?.franceTrips?.title"
                   />
                 </v-col>
               </template>
@@ -64,8 +62,8 @@
           color="primary"
         >
           <LazyCardGrid
-            :categories="homeSanity.followDesires.categoriesFollowDesires"
-            :promotion-name="homeSanity.followDesires.title"
+            :categories="homeSanity?.followDesires?.categoriesFollowDesires"
+            :promotion-name="homeSanity?.followDesires?.title"
           >
             <template #title>
               <h2 class="text-h4 text-white">
@@ -81,16 +79,16 @@
           <LazyTextImageContainer
             :display-cta-button="true"
             :image-desktop-right="true"
-            :image-src="homeSanity.travelDifferently.image"
+            :image-src="homeSanity?.travelDifferently?.image"
           >
             <template #title>
               <span style="color: rgba(43, 76, 82, 1)">
-                {{ homeSanity.travelDifferently.title }}
+                {{ homeSanity?.travelDifferently?.title }}
               </span>
             </template>
             <template #content-cols>
               <IconTextCol
-                v-for="feature in homeSanity.travelDifferently.features"
+                v-for="feature in homeSanity?.travelDifferently?.features"
                 :key="feature._id"
                 :icon="feature.icon"
                 :side-by-side="false"
@@ -102,13 +100,13 @@
             </template>
             <template #cta-button>
               <CtaButton
-                :color="homeSanity.travelDifferently.ctaButton.color"
-                :link="homeSanity.travelDifferently.ctaButton.link"
+                :color="homeSanity?.travelDifferently?.ctaButton?.color"
+                :link="homeSanity?.travelDifferently?.ctaButton?.link"
                 cta-id="travel-differently-home"
-                :cta-label="homeSanity.travelDifferently.ctaButton.text"
+                :cta-label="homeSanity?.travelDifferently?.ctaButton?.text"
               >
                 <template #text>
-                  {{ homeSanity.travelDifferently.ctaButton.text }}
+                  {{ homeSanity?.travelDifferently?.ctaButton?.text }}
                 </template>
               </CtaButton>
             </template>
@@ -119,8 +117,8 @@
           color="grey-light"
         >
           <TrackableVoyageList
-            :voyages="homeSanity.guaranteedDepartures.voyagesGuaranteedDepartures"
-            :list-name="homeSanity.guaranteedDepartures.title"
+            :voyages="homeSanity?.guaranteedDepartures?.voyagesGuaranteedDepartures"
+            :list-name="homeSanity?.guaranteedDepartures?.title"
           >
             <LazyHorizontalCarousel
               :text-color="'primary'"
@@ -128,19 +126,19 @@
             >
               <template #title>
                 <span style="color: rgba(43, 76, 82, 1)">
-                  {{ homeSanity.guaranteedDepartures.title }}
+                  {{ homeSanity?.guaranteedDepartures?.title }}
                 </span>
               </template>
 
               <template #carousel-item>
                 <v-col
-                  v-for="voyage in homeSanity.guaranteedDepartures.voyagesGuaranteedDepartures"
+                  v-for="voyage in homeSanity?.guaranteedDepartures?.voyagesGuaranteedDepartures"
                   :key="voyage._id"
                 >
                   <VoyageCardWithDates
                     :voyage="voyage"
                     :dates-by-slug="datesBySlug"
-                    :item-list-name="homeSanity.guaranteedDepartures.title"
+                    :item-list-name="homeSanity?.guaranteedDepartures?.title"
                   />
                 </v-col>
               </template>
@@ -153,7 +151,7 @@
               class="bg-primary text-white  text-body-1 d-inline font-weight-bold "
               @click="handleProchainsDepartsClick"
             >
-              {{ homeSanity.guaranteedDepartures.ctaButton.text }}
+              {{ homeSanity?.guaranteedDepartures?.ctaButton?.text }}
             </v-btn>
           </div>
         </LazyColorContainer>
@@ -162,25 +160,25 @@
           color="white"
         >
           <TrackableVoyageList
-            :voyages="homeSanity.summerTravel.voyagesSummerTravel"
-            :list-name="homeSanity.summerTravel.title"
+            :voyages="homeSanity?.summerTravel?.voyagesSummerTravel"
+            :list-name="homeSanity?.summerTravel?.title"
           >
             <LazyHorizontalCarousel
               :text-color="'primary'"
               slider-name="home-ete"
             >
               <template #title>
-                {{ homeSanity.summerTravel.title }}
+                {{ homeSanity?.summerTravel?.title }}
               </template>
               <template #carousel-item>
                 <v-col
-                  v-for="voyage in homeSanity.summerTravel.voyagesSummerTravel"
+                  v-for="voyage in homeSanity?.summerTravel?.voyagesSummerTravel"
                   :key="voyage._id"
                 >
                   <VoyageCardWithDates
                     :voyage="voyage"
                     :dates-by-slug="datesBySlug"
-                    :item-list-name="homeSanity.summerTravel.title"
+                    :item-list-name="homeSanity?.summerTravel?.title"
                   />
                 </v-col>
               </template>
@@ -194,7 +192,7 @@
           <ClientOnly>
             <NewsletterContainer v-if="homeSanity.newsletter">
               <template #title>
-                <EnrichedText :value="homeSanity.newsletter.title" />
+                <EnrichedText :value="homeSanity?.newsletter?.title" />
               </template>
               <template #subtitle>
                 <EnrichedText
@@ -211,25 +209,25 @@
           color="primary"
         >
           <TrackableVoyageList
-            :voyages="homeSanity.unforgettableTravels.voyagesUnforgettableTravels"
-            :list-name="homeSanity.unforgettableTravels.title"
+            :voyages="homeSanity?.unforgettableTravels?.voyagesUnforgettableTravels"
+            :list-name="homeSanity?.unforgettableTravels?.title"
           >
             <LazyHorizontalCarousel
               :text-color="'white'"
               slider-name="home-voyages-inoubliables"
             >
               <template #title>
-                {{ homeSanity.unforgettableTravels.title }}
+                {{ homeSanity?.unforgettableTravels?.title }}
               </template>
               <template #carousel-item>
                 <v-col
-                  v-for="voyage in homeSanity.unforgettableTravels.voyagesUnforgettableTravels"
+                  v-for="voyage in homeSanity?.unforgettableTravels?.voyagesUnforgettableTravels"
                   :key="voyage._id"
                 >
                   <VoyageCardWithDates
                     :voyage="voyage"
                     :dates-by-slug="datesBySlug"
-                    :item-list-name="homeSanity.unforgettableTravels.title"
+                    :item-list-name="homeSanity?.unforgettableTravels?.title"
                   />
                 </v-col>
               </template>
@@ -243,11 +241,11 @@
           <LazyCommonReviewContainer>
             <template #title>
               <span style="color: rgba(43, 76, 82, 1)">
-                {{ homeSanity.reviews.title }}
+                {{ homeSanity?.reviews?.title }}
               </span>
             </template>
             <template #cta>
-              {{ homeSanity.reviews.ctaText }}
+              {{ homeSanity?.reviews?.ctaText }}
             </template>
           </LazyCommonReviewContainer>
         </LazyColorContainer>

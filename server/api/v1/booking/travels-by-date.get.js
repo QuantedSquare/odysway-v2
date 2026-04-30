@@ -9,7 +9,7 @@ export default defineEventHandler(async () => {
     projectId: config.public.sanity.projectId,
     dataset: config.public.sanity.dataset,
     apiVersion: config.public.sanity.apiVersion,
-    useCdn: true,
+    useCdn: false,
   })
   const { data, error } = await supabase
     .from('travel_dates')

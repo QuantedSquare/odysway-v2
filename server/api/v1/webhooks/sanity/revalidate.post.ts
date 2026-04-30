@@ -14,6 +14,11 @@ export default defineEventHandler(async (event) => {
     const body = await readBody(event)
     console.log('✓ Sanity webhook received:', body)
 
+    // Drafts never render on public pages; revalidating on a draft mutation would just re-cache stale published content.
+    if (body._id?.startsWith('drafts.')) {
+      return { success: true, skipped: 'draft', _id: body._id }
+    }
+
     // Extract document type and slug from the webhook payload
     const documentType = body._type
     const slug = body.slug?.current
@@ -28,7 +33,7 @@ export default defineEventHandler(async (event) => {
       pathsToRevalidate.push('/prochains-departs')
     }
     else if (documentType === 'blog' && slug) {
-      pathsToRevalidate.push(`/${slug}`) // Blog posts are at root level
+      pathsToRevalidate.push(`/blog/${slug}`) // Blog posts are at root level
       pathsToRevalidate.push('/blog') // Blog index page
     }
     else if (documentType === 'destination' && slug) {
@@ -89,7 +94,7 @@ export default defineEventHandler(async (event) => {
       pathsToRevalidate.push('/contact')
     }
     else if (documentType === 'search') {
-      pathsToRevalidate.push('/search')
+      // /search is a 301 redirect to /voyages (see nuxt.config routeRules) — don't try to revalidate it.
       pathsToRevalidate.push('/voyages')
       pathsToRevalidate.push('/prochains-departs')
     }
@@ -146,8 +151,8 @@ export default defineEventHandler(async (event) => {
       console.log('⚠️  CTAs updated')
     }
     else if (documentType === 'voyage_card') {
-      // Voyage cards used in listings
-      pathsToRevalidate.push('/search')
+      // Voyage cards used in listings (/search is a 301 → /voyages, so use /voyages directly).
+      pathsToRevalidate.push('/voyages')
       pathsToRevalidate.push('/destinations')
       pathsToRevalidate.push('/thematiques')
       pathsToRevalidate.push('/experiences')
@@ -177,11 +182,6 @@ export default defineEventHandler(async (event) => {
         .catch(err => console.error('❌ Algolia update failed:', err))
     }
 
-    // Add trailing slash versions for all paths to ensure both variations are revalidated
-    // Vercel's cache often treats `/path` and `/path/` as distinct entries
-    const pathsWithTrailingSlashes = pathsToRevalidate.filter(p => p !== '/').map(p => `${p}/`)
-    pathsToRevalidate.push(...pathsWithTrailingSlashes)
-
     // Trigger on-demand revalidation using Vercel's bypass token
     // Note: This is NOT the same as VERCEL_AUTOMATION_BYPASS_SECRET
     // VERCEL_BYPASS_TOKEN is a custom secret you create for ISR revalidation
@@ -196,6 +196,18 @@ export default defineEventHandler(async (event) => {
       if (config.public.siteURL) baseUrls.add(config.public.siteURL)
       // Also hit preprod
       baseUrls.add(preprodUrl)
+
+      // Sanity mutation → query visibility has a brief lag even without the CDN; wait a moment so ISR regen reads the new doc.
+      await new Promise(resolve => setTimeout(resolve, 2000))
+
+      // With experimental.payloadExtraction, each page also has a _payload.json cached as its own ISR entry.
+      // Client-side hydration fetches that payload and overwrites the fresh SSR HTML with stale data if we don't bust it too.
+      const pathsWithPayloads = pathsToRevalidate.flatMap((p) => {
+        const base = p === '/' ? '' : p
+        return [p, `${base}/_payload.json`]
+      })
+      pathsToRevalidate.length = 0
+      pathsToRevalidate.push(...pathsWithPayloads)
 
       console.log(`Starting revalidation for ${pathsToRevalidate.length} paths across ${baseUrls.size} base URLs with bypass token: ${bypassToken ? 'SET' : 'NOT SET'}`)
 

@@ -14,42 +14,18 @@
           :voyages="selectedExperience.voyages"
           :page-content="pageContent"
         />
-        <BlogHeroSection
+        <BlogTeaserCard
           v-if="selectedExperience?.blog"
           class="mt-12"
           :title="selectedExperience.blog.title"
           :description="selectedExperience.blog.description"
-          :image="selectedExperience.blog.displayedImg"
-          :background-color="'soft-blush'"
-          introduction-color="grey"
-          title-color="primary"
-          avatar-size="60"
-          :blog-type="blogType"
-          :badge-color="badgeColor"
-          :reading-time="readingTime"
+          :slug="selectedExperience.blog.slug.current"
+          :displayed-img="selectedExperience.blog.displayedImg"
           :published-at="selectedExperience.blog.publishedAt"
+          :reading-time="readingTime"
+          :category="blogType"
           :author="selectedExperience.blog.author?.name"
-          :author-photo="selectedExperience.blog.author?.image"
-          :author-role="selectedExperience.blog.author?.position"
-        >
-          <template #title>
-            {{ selectedExperience.blog.title }}
-          </template>
-          <template #introduction>
-            {{ selectedExperience.blog.description }}
-          </template>
-        </BlogHeroSection>
-        <SectionContainer
-          v-if="selectedExperience?.blog"
-          :title="selectedExperience.blog.title"
-          :subtitle="selectedExperience.blog.excerpt"
-        >
-          <template #content>
-            <EnrichedText
-              :value="selectedExperience.blog.body"
-            />
-          </template>
-        </SectionContainer>
+        />
       </div>
     </template>
   </ContentLayout>
@@ -119,7 +95,6 @@ const experienceQuery = `
       description,
       displayedImg,
       publishedAt,
-      body,
       categories[]->{
         _id,
         title
@@ -127,44 +102,8 @@ const experienceQuery = `
       author->{
         _id,
         name,
-        image,
-        position
+        image
       },
-      body[]{
-        ...,
-        _type == "image" => {
-          ...,
-          asset->{
-            _id,
-            url,
-            "metadata": {
-              "dimensions": metadata.dimensions,
-              "lqip": metadata.lqip
-            }
-          }
-        }
-      },
-      seo{
-        metaTitle,
-        metaDescription,
-        canonicalUrl,
-        focusKeyword,
-        keywords,
-        robotsIndex,
-        robotsFollow,
-        ogTitle,
-        ogDescription,
-        ogImage{
-          asset->{
-            _id,
-            _ref,
-            url
-          },
-          alt
-        }
-      },
-      "numberOfCharacters": length(pt::text(body)),
-      "estimatedWordCount": round(length(pt::text(body)) / 5),
       "estimatedReadingTime": round(length(pt::text(body)) / 5 / 180)
     },
   }
@@ -215,8 +154,6 @@ const blogType = computed(() => {
   return categories[0]?.title || null
 })
 
-const badgeColor = computed(() => blogType.value ? 'secondary' : null)
-
 // GTM: Track view_item_list when voyages are displayed
 watch(() => selectedExperience.value?.voyages, (voyages) => {
   if (voyages && voyages.length > 0) {
@@ -235,24 +172,11 @@ watch(() => selectedExperience.value?.voyages, (voyages) => {
 
 // Use SEO composable - automatically uses blog's SEO fields
 if (selectedExperience.value) {
-  const config = useRuntimeConfig()
   useSeo({
-    seoData: {
-      ...(selectedExperience.value.seo || {}),
-      ...(selectedExperience.value.blog?.slug?.current
-        ? { canonicalUrl: `https://odysway.com/blog/${selectedExperience.value.blog.slug.current}` }
-        : {}),
-    },
+    seoData: selectedExperience.value.seo || {},
     content: selectedExperience.value,
     pageType: 'article',
     slug: selectedExperience.value.slug?.current,
-    structuredData: selectedExperience.value.blog
-      ? createBlogPostingSchema(
-          selectedExperience.value.blog,
-          `https://odysway.com/blog/${selectedExperience.value.blog.slug.current}`,
-          config,
-        )
-      : null,
     breadcrumbs: [
       { name: 'Accueil', url: 'https://odysway.com' },
       { name: 'Expériences', url: 'https://odysway.com/experiences' },
