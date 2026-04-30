@@ -233,22 +233,6 @@
             </span>
             <span class="text-caption font-weight-regular">
               Acompte 30% · Solde avant le départ
-              <v-tooltip
-                bottom
-                :aria-label="page.summary.cancel_text"
-              >
-                <template #activator="{ props }">
-                  <v-icon
-                    size="x-small"
-                    v-bind="props"
-                  >
-                    {{ mdiInformationOutline }}
-                  </v-icon>
-                </template>
-                <div>
-                  {{ page.summary.cancel_text }}
-                </div>
-              </v-tooltip>
             </span>
           </v-col>
         </v-row>
