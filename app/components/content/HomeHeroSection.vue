@@ -239,9 +239,9 @@ const buildSanityImageUrl = (source, width, height, quality = 75) => {
 // Use the mobile-cropped image as the base src so the browser's prefetch
 // heuristic picks a small file on mobile instead of the desktop landscape crop.
 const displayedSrc = computed(() => {
-  return buildSanityImageUrl(activeMobileImage.value, 640, 360, 55)
-    || buildSanityImageUrl(activeDesktopImage.value, 1280, 720, 65)
-    || buildSanityImageUrl(heroProps.placeholderImage, 1280, 720, 65)
+  return buildSanityImageUrl(activeMobileImage.value, 640, 360, 70)
+    || buildSanityImageUrl(activeDesktopImage.value, 1280, 720, 70)
+    || buildSanityImageUrl(heroProps.placeholderImage, 1280, 720, 70)
 })
 
 // Trimmed from 6 srcset entries down to 3 — the in-between sizes were
@@ -249,8 +249,8 @@ const displayedSrc = computed(() => {
 // triggered 3 extra builder.image() calls per render.
 const displayedSrcset = computed(() => {
   return [
-    `${buildSanityImageUrl(activeMobileImage.value, 640, 360, 55)} 640w`,
-    `${buildSanityImageUrl(activeMobileImage.value, 1280, 720, 65)} 1280w`,
+    `${buildSanityImageUrl(activeMobileImage.value, 640, 360, 70)} 640w`,
+    `${buildSanityImageUrl(activeMobileImage.value, 1280, 720, 70)} 1280w`,
     `${buildSanityImageUrl(activeDesktopImage.value, 1920, 1080, 70)} 1920w`,
   ].filter(Boolean).join(', ')
 })
