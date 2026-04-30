@@ -244,34 +244,40 @@ const displayedSrc = computed(() => {
     || buildSanityImageUrl(heroProps.placeholderImage, 1280, 720, 65)
 })
 
-// Mobile entries cover DPR up to 3x so phones don't fall through to the
-// desktop landscape crop. Quality steps up with size.
-// (Image preload via <link rel="preload"> was tried and reverted — on
-// slow 4G it competed with the font preloads, delaying the LCP text
-// element. fetchpriority="high" on the NuxtImg is sufficient.)
+// Trimmed from 6 srcset entries down to 3 — the in-between sizes were
+// rarely picked by the browser yet inflated the rendered HTML and
+// triggered 3 extra builder.image() calls per render.
 const displayedSrcset = computed(() => {
   return [
     `${buildSanityImageUrl(activeMobileImage.value, 640, 360, 55)} 640w`,
-    `${buildSanityImageUrl(activeMobileImage.value, 960, 540, 60)} 960w`,
     `${buildSanityImageUrl(activeMobileImage.value, 1280, 720, 65)} 1280w`,
-    `${buildSanityImageUrl(activeDesktopImage.value, 1600, 900, 70)} 1600w`,
     `${buildSanityImageUrl(activeDesktopImage.value, 1920, 1080, 70)} 1920w`,
-    `${buildSanityImageUrl(activeDesktopImage.value, 2560, 1440, 70)} 2560w`,
   ].filter(Boolean).join(', ')
 })
-// const heroSizes = '(max-width: 600px) 100vw, (max-width: 960px) 90vw, 100vw'
-// useHead({
-//   link: [
-//     {
-//       rel: 'preload',
-//       as: 'image',
-//       fetchpriority: 'high',
-//       imagesrcset: displayedSrcset,
-//       imagesizes: heroSizes,
-//       href: displayedSrc,
-//     },
-//   ],
-// })
+
+// Preload the LCP image, but only on viewports ≤ 600px. The previous
+// attempt was reverted because preloading the full srcset on slow 4G
+// competed with the 3 font weights — by limiting the preload to a single
+// 640w mobile URL we get the early-discovery win without starving fonts.
+// Desktop falls back to the existing fetchpriority="high" on <NuxtImg>.
+const isMobileViewport = ref(false)
+onMounted(() => {
+  if (typeof window !== 'undefined' && window.matchMedia) {
+    isMobileViewport.value = window.matchMedia('(max-width: 600px)').matches
+  }
+})
+
+useHead(() => {
+  if (!isMobileViewport.value || !displayedSrc.value) return {}
+  return {
+    link: [{
+      rel: 'preload',
+      as: 'image',
+      fetchpriority: 'high',
+      href: displayedSrc.value,
+    }],
+  }
+})
 </script>
 
 <style scoped>

@@ -239,22 +239,26 @@
 
 <script setup>
 import { mdiClose, mdiMapMarkerOutline, mdiImageOutline, mdiMagnifyClose, mdiMagnify } from '@mdi/js'
-import { ref, computed, onMounted } from 'vue'
-import _ from 'lodash'
+import { ref, computed } from 'vue'
+import { useDebounceFn } from '@vueuse/core'
 import aa from 'search-insights'
 
 import { useTravelsSearch } from '~/composables/useTravelsSearch'
 import { useSearchDialog } from '~/composables/useSearchDialog'
 
-// Initialize Algolia Insights
-onMounted(() => {
-  const config = useRuntimeConfig()
+// Algolia Insights init is deferred to the first user input — opening the
+// dialog without typing should stay snappy.
+let algoliaInitialized = false
+const ensureAlgoliaInit = () => {
+  if (algoliaInitialized) return
+  algoliaInitialized = true
+  const cfg = useRuntimeConfig()
   aa('init', {
-    appId: config.public.algolia.applicationId,
-    apiKey: config.public.algolia.apiKey,
+    appId: cfg.public.algolia.applicationId,
+    apiKey: cfg.public.algolia.apiKey,
     useCookie: true,
   })
-})
+}
 
 const sanity = useSanity()
 const route = useRoute()
@@ -270,7 +274,9 @@ const searchDialogFieldQuery = groq`*[_type == "search"][0]{
   searchDialogBtnList
 }`
 
-const { data: searchDialogField } = await useAsyncData('search-dialog-field', () =>
+// Non-blocking: dialog renders immediately with placeholder copy, real
+// strings swap in once the Sanity fetch resolves.
+const { data: searchDialogField } = useAsyncData('search-dialog-field', () =>
   sanity.fetch(searchDialogFieldQuery),
 )
 
@@ -280,10 +286,10 @@ const { destinations, loading, handleEmbededSearch } = useTravelsSearch()
 const { trackSearchTerm, trackSelectItem } = useGtmTracking()
 const { formatVoyageForGtm } = useGtmVoyageFormatter()
 
-const debouncedHandleSearch = _.debounce(() => {
+const debouncedHandleSearch = useDebounceFn(() => {
+  ensureAlgoliaInit()
   handleEmbededSearch(searchText.value, cookie.value === 1)
 
-  // Track search term if user has typed something
   if (searchText.value && searchText.value.trim().length > 0) {
     trackSearchTerm(searchText.value)
   }

@@ -14,11 +14,6 @@
         class="d-flex flex-column ga-4 pa-4 mt-8 mt-sm-16 pt-8"
         :style="drawerContentStyle"
       >
-        <div class="d-flex justify-center">
-          <SearchDialog
-            v-if="route.path !== '/'"
-          />
-        </div>
         <v-btn-secondary
           v-if="header?.button5?.visible"
           block
@@ -89,22 +84,31 @@ const isScrolled = computed(() => y.value > 200)
 const isTransparent = computed(() => !isScrolled.value && route.path === '/')
 
 const { trackRdvClick, trackCallClick } = useGtmTracking()
+const { scheduleLayoutRead } = useLayoutRead()
 
 const headerTopOffset = ref(0)
 const headerHeight = ref(0)
 
+// rAF-throttle the rect read so a fast scroll doesn't trigger
+// getBoundingClientRect() once per scroll event (PageSpeed flagged this
+// callsite at ~28ms forced reflow). We coalesce repeats into a single
+// frame and batch the layout read via useLayoutRead.
+let rafScheduled = false
 function updateHeaderMetrics() {
-  // HeaderOdysway mobile wrapper uses this class
-  const el = document?.querySelector?.('.mobile-header')
-  if (!el) {
-    headerTopOffset.value = 0
-    headerHeight.value = 0
-    return
-  }
-
-  const rect = el.getBoundingClientRect()
-  headerTopOffset.value = Math.max(0, Math.round(rect.top))
-  headerHeight.value = Math.max(0, Math.round(rect.height))
+  if (rafScheduled) return
+  rafScheduled = true
+  scheduleLayoutRead(() => {
+    rafScheduled = false
+    const el = document?.querySelector?.('.mobile-header')
+    if (!el) {
+      headerTopOffset.value = 0
+      headerHeight.value = 0
+      return
+    }
+    const rect = el.getBoundingClientRect()
+    headerTopOffset.value = Math.max(0, Math.round(rect.top))
+    headerHeight.value = Math.max(0, Math.round(rect.height))
+  })
 }
 
 const drawerStyle = computed(() => {
@@ -139,7 +143,8 @@ watch(model, (isOpen) => {
   if (isOpen) updateHeaderMetrics()
 })
 
-watch(y, () => updateHeaderMetrics())
+// `watch(y, …)` was redundant with the scroll listener above and doubled
+// the layout work on every scroll event — removed.
 
 function handleButton1Click() {
   router.push(header.button1.link)

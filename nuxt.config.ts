@@ -148,15 +148,6 @@ export default defineNuxtConfig({
   vite: {
     optimizeDeps: {
       include: [
-        '@nuxtjs/sanity > @sanity/visual-editing > @sanity/insert-menu',
-        '@nuxtjs/sanity > @sanity/visual-editing > @sanity/mutate > lodash/groupBy.js', // CJS
-        '@nuxtjs/sanity > @sanity/visual-editing > @sanity/ui > styled-components',
-        '@nuxtjs/sanity > @sanity/visual-editing > @sanity/visual-editing > react-is', // CJS
-        '@nuxtjs/sanity > @sanity/visual-editing > react', // CJS
-        '@nuxtjs/sanity > @sanity/visual-editing > react/jsx-runtime', // CJS
-        '@nuxtjs/sanity > @sanity/visual-editing > react-dom', // CJS
-        '@nuxtjs/sanity > @sanity/visual-editing > react-dom/client', // CJS
-        '@nuxtjs/sanity > @sanity/visual-editing > react-compiler-runtime', // CJS
         '@sanity/client',
         '@nuxtjs/sanity > @sanity/client > @sanity/visual-editing',
         'vue-dompurify-html',

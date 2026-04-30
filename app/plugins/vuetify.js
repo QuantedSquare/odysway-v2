@@ -38,6 +38,9 @@ export default defineNuxtPlugin((app) => {
     ssr: true,
     theme: {
       defaultTheme: 'odysway',
+      // The `backoffice` theme is registered lazily by app/layouts/booking.vue
+      // via useTheme().themes.value.backoffice = ... — it ships ~15-25 KiB of
+      // CSS utility classes that public visitors don't need.
       themes: {
         odysway: {
           dark: false,
@@ -86,30 +89,6 @@ export default defineNuxtPlugin((app) => {
           },
           variables: {
             'medium-emphasis-opacity': '1',
-          },
-        },
-        backoffice: {
-          dark: false,
-          colors: {
-            'primary': 'rgba(43, 76, 82, 1)',
-            'primary-darken-1': '#2563EB',
-            'secondary': '#64748B',
-            'background': '#F8FAFC',
-            'surface': '#FFFFFF',
-            'surface-variant': '#F1F5F9',
-            'on-background': '#0F172A',
-            'on-surface': '#1E293B',
-            'success': '#10B981',
-            'warning': '#F59E0B',
-            'error': '#EF4444',
-            'info': '#6366F1',
-            'grey': '#94A3B8',
-            'grey-light': '#F1F5F9',
-          },
-          variables: {
-            'medium-emphasis-opacity': 0.6,
-            'border-color': '#E2E8F0',
-            'border-opacity': 1,
           },
         },
       },

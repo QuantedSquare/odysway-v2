@@ -68,7 +68,7 @@
 </template>
 
 <script setup>
-import { useScroll, useElementSize } from '@vueuse/core'
+import { useScroll } from '@vueuse/core'
 import { useDisplay } from 'vuetify'
 
 const props = defineProps({
@@ -99,43 +99,70 @@ const props = defineProps({
 })
 
 const { trackNavSliderClick } = useGtmTracking()
+const { scheduleLayoutRead } = useLayoutRead()
 
 const { mdAndUp, sm, smAndDown } = useDisplay()
 const scrollContainer = ref(null)
 const scrollElement = ref(null)
+const scrollContainerWidth = ref(0)
+// Gate the chevron rendering until we've measured the container post-mount.
+// Otherwise the displayButton computed reads `childrenCount` (an offsetWidth
+// proxy) during hydration and triggers a forced layout — flagged by
+// PageSpeed at 82ms across the 4 carousel instances on the homepage.
+const measured = ref(false)
 
 const itemsList = useTemplateRef('items-list')
 const ctaContainer = useTemplateRef('cta-container')
-
-watch(scrollContainer, () => {
-  nextTick(() => {
-    if (scrollContainer.value) {
-      scrollElement.value = scrollContainer.value.$el
-    }
-  })
-}, { immediate: true, deep: true })
 
 const gotCtaSlot = computed(() => {
   return ctaContainer.value?.children[0]
 })
 
 const childrenCount = computed(() => {
+  if (!measured.value) return 0
   return itemsList.value?.children[0]?.children.length
 })
 
 const displayButton = computed(() => {
-  if (mdAndUp.value) {
-    return childrenCount.value > 3 && props.showButtons
-  }
-  else if (sm.value) {
-    return childrenCount.value > 2 && props.showButtons
-  }
-  else {
-    return childrenCount.value > 1 && props.showButtons
-  }
+  if (!measured.value || !props.showButtons) return false
+  if (mdAndUp.value) return childrenCount.value > 3
+  if (sm.value) return childrenCount.value > 2
+  return childrenCount.value > 1
 })
 const { x, arrivedState } = useScroll(scrollElement, { behavior: 'smooth' })
-const { width: scrollContainerWidth } = useElementSize(scrollContainer)
+
+let resizeObserver = null
+
+onMounted(async () => {
+  if (scrollContainer.value) {
+    scrollElement.value = scrollContainer.value.$el
+  }
+
+  // One-shot batched layout read, then a ResizeObserver for subsequent
+  // resizes. ResizeObserver itself runs in a separate task and doesn't
+  // block the main thread the way useElementSize's reactive watcher does.
+  const el = scrollElement.value
+  if (!el) return
+
+  const width = await scheduleLayoutRead(() => el.offsetWidth)
+  scrollContainerWidth.value = width
+  measured.value = true
+
+  if (typeof ResizeObserver !== 'undefined') {
+    resizeObserver = new ResizeObserver((entries) => {
+      const entry = entries[0]
+      if (entry) scrollContainerWidth.value = entry.contentRect.width
+    })
+    resizeObserver.observe(el)
+  }
+})
+
+onBeforeUnmount(() => {
+  if (resizeObserver) {
+    resizeObserver.disconnect()
+    resizeObserver = null
+  }
+})
 
 const scrollAmount = computed(() => {
   // 892 is a scroll container width on md breakpoint
@@ -143,7 +170,7 @@ const scrollAmount = computed(() => {
     return 400
   }
   else {
-    return scrollContainerWidth?.value || 0
+    return scrollContainerWidth.value || 0
   }
 })
 
