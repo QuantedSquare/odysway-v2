@@ -293,7 +293,7 @@
           🔒 Aucun paiement · 🔄 Remboursable J-60 · ⭐ 4,8/5
         </div>
       </v-col>
-      <!-- <v-col v-if="route.query.voyage && !isSurMesure && route.query.type !== 'custom' && route.query.type !== 'balance'">
+      <v-col v-if="route.query.voyage && !isSurMesure && route.query.type !== 'custom' && route.query.type !== 'balance'">
         <v-btn
           key="previous-page-btn"
           block
@@ -305,7 +305,7 @@
             Retour au voyage
           </div>
         </v-btn>
-      </v-col> -->
+      </v-col>
     </v-row>
 
     <!-- <v-row v-if="config.public.environment === 'development'">

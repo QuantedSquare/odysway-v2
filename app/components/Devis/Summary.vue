@@ -46,7 +46,7 @@
           </span>
           <span>
             🔄 &nbsp;
-            Remboursement intégral jusqu'à <strong>J-60</strong>
+            Annulation gratuite jusqu'à <strong>J-60</strong>
           </span>
           <span>
             👩‍✈️ &nbsp;

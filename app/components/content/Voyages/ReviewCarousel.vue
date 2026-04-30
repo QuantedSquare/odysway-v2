@@ -77,38 +77,6 @@
           </v-col>
         </v-row>
       </div>
-
-      <v-row
-        v-if="reviews.length > 0"
-        justify="center"
-        class="px-2 px-md-0 my-2"
-      >
-        <v-col
-          cols="auto"
-        >
-          <v-card
-            rounded="md"
-            border
-            class="px-6 py-4 d-flex align-center justify-center ga-4 bg-white text-primary"
-          >
-            <span class="text-h4 font-weight-bold">4,8</span>
-            <div class="d-inline-flex ga-1">
-              <v-img
-                v-for="i in 5"
-                :key="i"
-                src="/icons/orange-star.svg"
-                alt="étoile"
-                height="15"
-                width="15"
-              />
-            </div>
-            <div class="d-flex flex-column ga-1">
-              <span class="text-body-1 font-weight-bold">Avis Google vérifiés</span>
-              <span class="text-body-2 text-medium-emphasis">+800 avis · Agence Odysway</span>
-            </div>
-          </v-card>
-        </v-col>
-      </v-row>
     </v-container>
   </ClientOnly>
 </template>

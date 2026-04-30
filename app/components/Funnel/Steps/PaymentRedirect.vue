@@ -59,6 +59,20 @@
 
           <!-- Acceptances (only when not already booked) -->
           <template v-if="!isBooking && !checkedOption">
+            <Transition name="hint-bubble">
+              <div
+                v-if="!switch_accept_data_privacy || !switch_accept_country"
+                class="policy-hint-bubble"
+                role="status"
+              >
+                <v-icon
+                  :icon="mdiArrowDownBold"
+                  size="16"
+                  class="policy-hint-bubble__icon"
+                />
+                <span>Veuillez confirmer les conditions de vente avant de procéder au paiement</span>
+              </div>
+            </Transition>
             <v-divider class="my-3" />
             <v-switch
               v-model="switch_accept_data_privacy"
@@ -316,7 +330,7 @@
 </template>
 
 <script setup>
-import { mdiCalendarOutline, mdiChevronDown } from '@mdi/js'
+import { mdiCalendarOutline, mdiChevronDown, mdiArrowDownBold } from '@mdi/js'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 
 const { trackAddPaymentInfo, trackReservationPoseOption } = useGtmTracking()
@@ -626,5 +640,44 @@ const book = async () => {
 }
 .custom-btn-shadow{
  box-shadow: 0 4px 14px rgba(219,102,68,0.35)!important;
+}
+
+.policy-hint-bubble {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-color: rgb(var(--v-theme-secondary));
+  color: rgb(var(--v-theme-secondary));
+  font-size: 13px;
+  line-height: 1.35;
+  padding: 10px 14px;
+  border-radius: 12px;
+  margin: 8px 0 14px;
+  box-shadow: 0 4px 14px rgba(219,102,68,0.25);
+}
+.policy-hint-bubble::after {
+  content: '';
+  position: absolute;
+  left: 28px;
+  bottom: -6px;
+  width: 14px;
+  height: 14px;
+  background-color: white;
+  transform: rotate(45deg);
+  border-radius: 2px;
+}
+.policy-hint-bubble__icon {
+  flex-shrink: 0;
+}
+
+.hint-bubble-enter-active,
+.hint-bubble-leave-active {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.hint-bubble-enter-from,
+.hint-bubble-leave-to {
+  opacity: 0;
+  transform: translateY(6px);
 }
 </style>
