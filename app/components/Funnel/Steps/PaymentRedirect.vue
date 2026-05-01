@@ -422,7 +422,7 @@ const stripePay = async () => {
     returnDate: voyage.returnDate,
   }
   if (route.query.type === 'custom') {
-    Object.assign(dataForStripeSession, { amount: +route.query.amount * 100 })
+    Object.assign(dataForStripeSession, { amount: Math.round(+route.query.amount * 100) })
   }
   const checkoutLink = await $fetch(`/api/v1/stripe?bookedId=${route.query.booked_id}`, {
     method: 'POST',
@@ -472,7 +472,7 @@ const almaPay = async () => {
     installments: almaInstallments.value,
   }
   if (route.query.type === 'custom') {
-    Object.assign(dataForAlmaSession, { amount: +route.query.amount * 100 })
+    Object.assign(dataForAlmaSession, { amount: Math.round(+route.query.amount * 100) })
   }
   const checkoutLink = await $fetch(`/api/v1/alma?bookedId=${route.query.booked_id}`, {
     method: 'POST',
