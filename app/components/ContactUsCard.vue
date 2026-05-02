@@ -319,8 +319,4 @@ const handlePrivatisationClick = () => {
   z-index: 2;
   margin-left: -8px;
 }
-
-.border-custom {
-  /* border: 1.5px solid #dde3e4; */
-}
 </style>

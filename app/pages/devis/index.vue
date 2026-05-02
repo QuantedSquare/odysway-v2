@@ -301,9 +301,9 @@ const submit = async () => {
       firstname: formData.value.firstname,
       lastname: formData.value.lastname,
     }
-    await apiRequest('/ac/deals', 'post', voyageBody)
-
     const formattedVoyage = formatVoyageForGtm(voyage.value)
+    trackDevisStep('classic', 1, formattedVoyage)
+    await apiRequest('/ac/deals', 'post', voyageBody)
     trackDevisStep('classic', 'confirmation', formattedVoyage, {
       optin_newsletter: 'false',
       user_data: {

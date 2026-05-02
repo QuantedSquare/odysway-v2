@@ -527,7 +527,7 @@ const book = async () => {
     await $fetch('/api/v1/slack/notification', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(dealData),
+      body: JSON.stringify({ ...dealData, bookedId: route.query.booked_id }),
     })
   }
   const { getCountryFromPhone } = useGtmTracking()

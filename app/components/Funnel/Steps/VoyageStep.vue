@@ -19,7 +19,7 @@
         :insurances="insurancesPrice"
         :page="page"
         :own-step="ownStep"
-        @next="emit('next')"
+        @next="emitNext()"
         @previous="subStep = 'travelers'"
       />
     </v-window-item>
@@ -31,15 +31,22 @@ const props = defineProps(['voyage', 'insurancesPrice', 'showInsurance', 'curren
 const model = defineModel()
 const emit = defineEmits(['next', 'previous'])
 
+const { trackReservationStep } = useGtmTracking()
+
 const subStep = ref('travelers')
 const subStepIndex = computed(() => subStep.value === 'travelers' ? 0 : 1)
+
+const emitNext = () => {
+  trackReservationStep(2, props.voyage, model.value)
+  emit('next')
+}
 
 const onTravelersNext = () => {
   if (props.showInsurance) {
     subStep.value = 'insurance'
   }
   else {
-    emit('next')
+    emitNext()
   }
 }
 

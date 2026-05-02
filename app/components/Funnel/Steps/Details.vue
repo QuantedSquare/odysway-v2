@@ -612,13 +612,19 @@ const submitStepData = async () => {
           firstName: model.value.firstName,
           lastName: model.value.lastName,
         })
-        if (config.public.environment === 'production') {
-          $fetch('/api/v1/slack/notification', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ title: voyage.title, nbTravelers: +model.value.nbAdults + +model.value.nbChildren }),
-          }).catch(console.error)
-        }
+        // if (config.public.environment === 'production') {
+        $fetch('/api/v1/slack/notification', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            bookedId: bookedId.value,
+            title: voyage.title,
+            nbTravelers: +model.value.nbAdults + +model.value.nbChildren,
+            firstName: model.value.firstName,
+            lastName: model.value.lastName,
+          }),
+        }).catch(console.error)
+        // }
         await navigateTo(`/confirmation?voyage=${voyage.slug}&isoption=true`)
         return
       }
