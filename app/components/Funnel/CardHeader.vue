@@ -167,7 +167,7 @@
           class="text-caption"
           style="color:rgba(255,255,255,0.7)"
         >
-          /pers. indicatif
+          {{ pageTexts?.navigation?.price_per_person_suffix || "/pers. indicatif" }}
         </span>
       </v-col>
     </v-row>

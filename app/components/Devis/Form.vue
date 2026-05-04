@@ -2,7 +2,7 @@
   <v-container class="devis-form">
     <div class="section-header mb-4">
       <span class="section-bar" />
-      <span class="text-overline font-weight-bold text-primary">VOS COORDONNÉES</span>
+      <span class="text-overline font-weight-bold text-primary">{{ page?.form_sections?.coordinates_title || 'VOS COORDONNÉES' }}</span>
     </div>
     <v-form>
       <v-row>
@@ -11,11 +11,11 @@
           md="6"
         >
           <div class="text-caption mb-1">
-            Prénom
+            {{ page?.form_labels?.firstname || 'Prénom' }}
           </div>
           <v-text-field
             v-model="model.firstname"
-            placeholder="Prénom"
+            :placeholder="page?.form_labels?.firstname || 'Prénom'"
             :rules="[rules.name]"
             hide-details
             required
@@ -26,11 +26,11 @@
           md="6"
         >
           <div class="text-caption mb-1">
-            Nom
+            {{ page?.form_labels?.lastname || 'Nom' }}
           </div>
           <v-text-field
             v-model="model.lastname"
-            placeholder="Nom"
+            :placeholder="page?.form_labels?.lastname || 'Nom'"
             :rules="[rules.name]"
             hide-details
             required
@@ -41,11 +41,11 @@
           md="6"
         >
           <div class="text-caption mb-1">
-            Email
+            {{ page?.form_labels?.email || 'Email' }}
           </div>
           <v-text-field
             v-model="model.email"
-            placeholder="votre@email.com"
+            :placeholder="page?.form_labels?.email_placeholder || 'votre@email.com'"
             :rules="[rules.email]"
             hide-details
             required
@@ -56,7 +56,7 @@
           md="6"
         >
           <div class="text-caption mb-1">
-            Téléphone
+            {{ page?.form_labels?.phone || 'Téléphone' }}
           </div>
           <PhoneTextField
             v-model="model.phone"
@@ -69,7 +69,7 @@
 
       <div class="section-header mb-4">
         <span class="section-bar" />
-        <span class="text-overline font-weight-bold text-primary">VOTRE PROJET</span>
+        <span class="text-overline font-weight-bold text-primary">{{ page?.form_sections?.project_title || 'VOTRE PROJET' }}</span>
       </div>
 
       <v-row>
@@ -78,11 +78,11 @@
           md="6"
         >
           <div class="text-caption mb-1">
-            Mois de départ
+            {{ page?.form_labels?.departure_month || 'Mois de départ' }}
           </div>
           <v-select
             v-model="model.departureMonth"
-            placeholder="Mois..."
+            :placeholder="page?.form_labels?.departure_month_placeholder || 'Mois...'"
             :items="monthItems"
             item-title="label"
             item-value="value"
@@ -94,7 +94,7 @@
           md="6"
         >
           <div class="text-caption mb-1">
-            Année
+            {{ page?.form_labels?.departure_year || 'Année' }}
           </div>
           <v-select
             v-model="model.departureYear"
@@ -107,7 +107,7 @@
           md="6"
         >
           <div class="text-caption mb-1">
-            Nombre de voyageurs
+            {{ page?.form_labels?.nb_travelers || 'Nombre de voyageurs' }}
           </div>
           <v-select
             v-model="model.nbTravelers"
@@ -122,7 +122,7 @@
           md="6"
         >
           <div class="text-caption mb-1">
-            Vol souhaité ?
+            {{ page?.form_labels?.flight_question || 'Vol souhaité ?' }}
           </div>
           <v-btn-toggle
             v-model="model.includeFlight"
@@ -137,7 +137,7 @@
               class="flex-grow-1 border-sm"
               variant="text"
             >
-              Oui
+              {{ page?.form_sections?.flight_yes_label || 'Oui' }}
             </v-btn>
             <v-btn
               :value="false"
@@ -145,27 +145,27 @@
               color="success"
               class="flex-grow-1 border-sm"
             >
-              Non
+              {{ page?.form_sections?.flight_no_label || 'Non' }}
             </v-btn>
           </v-btn-toggle>
         </v-col>
         <v-col cols="12">
           <div class="text-caption mb-1">
-            Ville de départ
+            {{ page?.form_labels?.departure_city || 'Ville de départ' }}
           </div>
           <v-text-field
             v-model="model.departureCity"
-            placeholder="ex. Paris, Lyon, Bordeaux..."
+            :placeholder="page?.form_labels?.departure_city_placeholder || 'ex. Paris, Lyon, Bordeaux...'"
             hide-details
           />
         </v-col>
         <v-col cols="12">
           <div class="text-caption mb-1">
-            Votre message <span class="text-medium-emphasis">(optionnel)</span>
+            {{ page?.form_labels?.message_label || 'Votre message' }} <span class="text-medium-emphasis">{{ page?.form_sections?.message_optional_label || '(optionnel)' }}</span>
           </div>
           <v-textarea
             v-model="model.message"
-            placeholder="Dites-nous en plus sur votre projet : vos envies, vos contraintes, votre niveau de pratique..."
+            :placeholder="page?.form_sections?.message_placeholder || 'Dites-nous en plus sur votre projet : vos envies, vos contraintes, votre niveau de pratique...'"
             rows="3"
             hide-details
             flat
@@ -177,13 +177,13 @@
       </v-row>
 
       <div class="text-caption text-medium-emphasis mt-2 mb-4">
-        En envoyant ce formulaire, vous acceptez notre
+        {{ page?.form_sections?.privacy_text || 'En envoyant ce formulaire, vous acceptez notre' }}
         <NuxtLink
           to="/politique-de-confidentialite"
           class="text-primary"
         >
-          politique de confidentialité
-        </NuxtLink>. Vos données ne sont jamais revendues.
+          {{ page?.form_sections?.privacy_link_text || 'politique de confidentialité' }}
+        </NuxtLink>. {{ page?.form_sections?.no_data_sold_text || 'Vos données ne sont jamais revendues.' }}
       </div>
 
       <v-btn
@@ -196,10 +196,10 @@
         class="text-body-1 font-weight-bold"
         @click="emit('submit')"
       >
-        Envoyer ma demande
+        {{ page?.buttons?.send_form_button || 'Envoyer ma demande' }}
       </v-btn>
       <div class="text-center text-caption text-medium-emphasis mt-2">
-        🔒 Sans engagement · Devis gratuit
+        {{ page?.form_sections?.no_commitment_badge || '🔒 Sans engagement · Devis gratuit' }}
       </div>
     </v-form>
   </v-container>

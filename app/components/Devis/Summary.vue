@@ -29,29 +29,20 @@
 
       <v-card-text class="px-5 py-4">
         <div class="text-overline font-weight-regular">
-          Tarif indicatif à partir de
+          {{ pageTexts?.trust_badges?.starting_price_label || 'Tarif indicatif à partir de' }}
         </div>
         <div class="text-h5 font-weight-bold text-primary">
           {{ formattedPrice }} <span class="text-caption font-weight-regular">
-            /pers · ajusté selon votre projet
+            {{ pageTexts?.trust_badges?.price_per_person_suffix || '/pers · ajusté selon votre projet' }}
           </span>
         </div>
 
         <v-divider class="my-3" />
 
         <div class="text-custom-size d-flex flex-column ga-2 text-primary font-weight-regular">
-          <span>
-            ⭐ &nbsp;
-            <strong>4,8/5 </strong> · 176 avis Google
-          </span>
-          <span>
-            🔄 &nbsp;
-            Annulation gratuite jusqu'à <strong>J-60</strong>
-          </span>
-          <span>
-            👩‍✈️ &nbsp;
-            Conseillère dédiée <strong>avant, pendant & après</strong>
-          </span>
+          <span>{{ pageTexts?.trust_badges?.rating_text || '⭐ 4,8/5 · 176 avis Google' }}</span>
+          <span>{{ pageTexts?.trust_badges?.cancellation_text || "🔄 Annulation gratuite jusqu'à J-60" }}</span>
+          <span>{{ pageTexts?.trust_badges?.advisor_text || '👩‍✈️ Conseillère dédiée avant, pendant & après' }}</span>
         </div>
       </v-card-text>
     </v-card>
@@ -69,6 +60,10 @@ const props = defineProps({
   details: {
     type: Object,
     default: () => ({}),
+  },
+  pageTexts: {
+    type: Object,
+    default: null,
   },
 })
 

@@ -57,26 +57,26 @@ const stepDefinitions = computed(() => {
     return [
       {
         number: 3,
-        label: 'Récapitulatif',
+        label: props.page?.navigation?.step_label_summary || 'Récapitulatif',
       },
     ]
   }
   const baseSteps = [
     {
       number: 1,
-      label: 'Vos infos',
+      label: props.page?.navigation?.step_label_1 || 'Vos infos',
     },
   ]
 
   if (props.skipperMode !== 'quick') {
     baseSteps.push({
       number: 2,
-      label: 'Votre voyage',
+      label: props.page?.navigation?.step_label_2 || 'Votre voyage',
     })
   }
 
   if (props.skipperMode === 'normal') {
-    baseSteps.push({ number: 3, label: 'Paiement' })
+    baseSteps.push({ number: 3, label: props.page?.navigation?.step_label_3 || 'Paiement' })
   }
   else {
     baseSteps.push({

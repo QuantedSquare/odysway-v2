@@ -9,14 +9,14 @@
           cols="12"
           class="d-flex ga-2 pb-0"
         >
-          <!-- <v-divider
+          <v-divider
             variant="solid"
             opacity="1"
             thickness="3"
             class="rounded-lg"
             color="secondary"
             vertical
-          /> -->
+          />
           <h2>
             {{ page.details.nb_travelers_title }}
           </h2>
@@ -81,14 +81,14 @@
           cols="12"
           class="d-flex ga-2 pb-0"
         >
-          <!-- <v-divider
+          <v-divider
             variant="solid"
             opacity="1"
             thickness="3"
             class="rounded-lg"
             color="secondary"
             vertical
-          /> -->
+          />
           <h2>
             {{ page.details.contact_title }}
           </h2>
@@ -142,7 +142,7 @@
           class="pb-0"
         >
           <div>
-            {{ 'Téléphone *' }}
+            {{ page?.details?.phone_label || 'Téléphone *' }}
           </div>
           <PhoneTextField
             v-model="model.phone"
@@ -155,12 +155,12 @@
           class="pb-md-5 "
         >
           <div>
-            {{ page.details.country_label || 'Pays de résidence' }}
+            {{ page?.details?.country_label || 'Pays de résidence' }}
           </div>
           <v-autocomplete
             v-model="model.isoContact"
             :items="countries"
-            :placeholder="page.details.country_placeholder || 'Sélectionnez votre pays'"
+            :placeholder="page?.details?.country_placeholder || 'Sélectionnez votre pays'"
             :rules="[rules.name]"
             item-title="title"
             item-value="value"
@@ -175,12 +175,12 @@
           class="text-center pt-0"
         >
           <div class="d-flex align-center text-left ga-1 text-caption text-grey">
-            <span>En renseignant votre email, vous acceptez que nous puissions vous contacter pour finaliser votre réservation.
+            <span>{{ page?.details?.privacy_text || "En renseignant votre email, vous acceptez que nous puissions vous contacter pour finaliser votre réservation." }}
               <NuxtLink
                 class="text-grey text-decoration-underline"
                 to="/politique-de-confidentialite"
                 target="_blank"
-              >Politique de confidentialité</NuxtLink>
+              >{{ page?.details?.privacy_link_text || "Politique de confidentialité" }}</NuxtLink>
             </span>
           </div>
         </v-col>
@@ -194,20 +194,21 @@
               v-model="isOptionMode"
               hide-details
               density="compact"
+              @click="handleOptionModeClick"
             />
             <span class="title-2">
-              <strong>⏳ Pas encore prêt</strong> ? Bloquez ce voyage <strong>gratuitement pendant 7 jours</strong>, sans engagement ni paiement.
+              {{ page?.details?.option_block_text || '⏳ Pas encore prêt ? Bloquez ce voyage gratuitement pendant 7 jours, sans engagement ni paiement.' }}
             </span>
           </div>
           <v-divider class="my-2 d-block d-md-none" />
           <div class="d-block d-md-none">
-            Vous préférez poser une question ?
+            {{ page?.details?.whatsapp_question_text || "Vous préférez poser une question ?" }}
             💬
             <a
               href="https://wa.me/+33780919540"
               class="text-decoration-underline text-primary"
               @click="handleWhatsappClick"
-            >Écrivez-nous sur WhatsApp </a>
+            >{{ page?.details?.whatsapp_cta_text || "Écrivez-nous sur WhatsApp" }} </a>
           </div>
         </div>
       </v-col>
@@ -222,55 +223,58 @@
           name="fade"
           mode="out-in"
         >
-          <!-- <v-btn
-            v-if="route.query.booked_id"
-            key="next-btn-one"
-            :disabled="!isValid"
-            color="secondary"
-            height="50"
-            block
-            class="font-weight-bold custom-btn-shadow "
-            @click="submitStepData"
-          >
-            Continuer ma réservation
-            <v-icon>{{ mdiArrowRight }}</v-icon>
-          </v-btn> -->
           <template v-if="!showProgress">
-            <Transition
-              name="list"
-              type="transition"
-            >
-              <v-btn
-                v-if="isOptionMode"
-                key="option-btn"
-                block
-                height="50"
-                :disabled="!isValid"
-                color="primary"
-                class="font-weight-bold text-decoration-none"
-                @click="submitStepData"
+            <div class="w-100 d-flex align-center  flex-column ga-2">
+              <Transition
+                name="list"
+                type="transition"
               >
-                <span class="text-body-1 font-weight-bold">
-                  {{ 'Confirmer mon option' }}
-                  <v-icon>{{ mdiArrowRight }}</v-icon>
-                </span>
-              </v-btn>
-              <v-btn
-                v-else
-                key="next-btn"
-                block
-                height="50"
-                :disabled="!isValid"
-                color="secondary"
-                class="font-weight-bold text-decoration-none custom-btn-shadow"
-                @click="submitStepData"
+                <div
+                  v-if="isOptionMode"
+                >
+                  <v-btn
+                    key="option-btn"
+                    block
+                    height="50"
+                    :disabled="!isValid"
+                    color="primary"
+                    class="font-weight-bold text-decoration-none"
+                    @click="submitStepData"
+                  >
+                    <span class="text-body-1 font-weight-bold">
+                      {{ page?.details?.confirm_option_button || 'Confirmer mon option' }}
+                      <v-icon>{{ mdiArrowRight }}</v-icon>
+                    </span>
+                  </v-btn>
+                </div>
+                <v-btn
+                  v-else
+                  key="next-btn"
+                  block
+                  height="50"
+                  :disabled="!isValid"
+                  color="secondary"
+                  class="font-weight-bold text-decoration-none custom-btn-shadow"
+                  @click="submitStepData"
+                >
+                  <span class="text-body-1 font-weight-bold">
+                    {{ page?.details?.continue_button || 'Continuer ma réservation' }}
+                    <v-icon>{{ mdiArrowRight }}</v-icon>
+                  </span>
+                </v-btn>
+              </Transition>
+              <Transition
+                name="option"
+                type="transition"
               >
-                <span class="text-body-1 font-weight-bold">
-                  {{ 'Continuer ma réservation' }}
-                  <v-icon>{{ mdiArrowRight }}</v-icon>
+                <span
+                  v-if="!isValid"
+                  class="text-secondary"
+                >
+                  {{ page?.details?.error_message || 'Veuillez remplir tous les champs obligatoires pour continuer.' }}
                 </span>
-              </v-btn>
-            </Transition>
+              </Transition>
+            </div>
           </template>
           <FunnelFlightProgress
             v-else
@@ -280,56 +284,8 @@
           />
         </Transition>
       </v-col>
-      <v-col
-        cols="12"
-        class="text-grey text-center d-flex align-center justify-center ga-1 py-0"
-      >
-        <template v-if="!isOptionMode">
-          <div class="pt-1">
-            🔒 Aucun paiement à cette étape · 🔄 Remboursable J-60 · ⭐ 4,8/5
-          </div>
-        </template>
-        <div v-else>
-          🔒 Aucun paiement · 🔄 Remboursable J-60 · ⭐ 4,8/5
-        </div>
-      </v-col>
-      <v-col v-if="route.query.voyage && !isSurMesure && route.query.type !== 'custom' && route.query.type !== 'balance'">
-        <v-btn
-          key="previous-page-btn"
-          block
-          color="grey-light"
-          @click="redirectToTravelPage"
-        >
-          <div class="text-primary">
-            <v-icon>{{ mdiArrowLeft }}</v-icon>
-            Retour au voyage
-          </div>
-        </v-btn>
-      </v-col>
     </v-row>
-
-    <!-- <v-row v-if="config.public.environment === 'development'">
-      <v-col cols="12">
-        <v-btn
-          v-if="!showProgress"
-          size="small"
-          variant="tonal"
-          color="grey"
-          block
-          @click="testAnimation"
-        >
-          [DEV] Tester l'animation
-        </v-btn>
-        <FunnelFlightProgress
-          v-else
-          key="next-progress"
-          :loading="buttonLoading"
-          @finished="onProgressFinished"
-        />
-      </v-col>
-    </v-row> -->
   </v-container>
-
   <v-skeleton-loader
     v-else
     type="card"
@@ -339,7 +295,7 @@
 <script setup>
 import { z } from 'zod'
 import { computed } from 'vue'
-import { mdiArrowRight, mdiArrowLeft, mdiLock } from '@mdi/js'
+import { mdiArrowRight } from '@mdi/js'
 import { countries } from '~/utils/countries'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 
@@ -383,8 +339,13 @@ const maxSelectableTravelers = computed(() => {
 
 const capacityMessage = computed(() => {
   if (maxSelectableTravelers.value === null) return null
-  if (maxSelectableTravelers.value === 0) return 'Ce départ est complet : impossible d’ajouter des voyageurs.'
-  return `Ce départ ne permet plus que ${maxSelectableTravelers.value} voyageur(s). Les options au‑delà sont désactivées.`
+  if (maxSelectableTravelers.value === 0) {
+    return page?.details?.capacity_full_text || 'Ce départ est complet : impossible d’ajouter des voyageurs.'
+  }
+  if (page?.details?.capacity_limited_text) {
+    return page.details.capacity_limited_text.split('{count}').join(String(maxSelectableTravelers.value))
+  }
+  return `Ce départ ne permet plus que ${maxSelectableTravelers.value} voyageur(s). Les options au-delà sont désactivées.`
 })
 
 const adultItemPropsFn = function (item) {
@@ -641,38 +602,12 @@ const submitStepData = async () => {
     return false
   }
 }
-
+function handleOptionModeClick() {
+  trackCtaClick({ ctaId: 'option-mode-click', ctaLabel: 'Poser une option (checkbox)', ctaUrl: '/option-mode' })
+}
 watch(model, () => {
   saveToLocalStorage()
 })
-const testAnimation = () => {
-  showProgress.value = true
-  buttonLoading.value = true
-  setTimeout(() => {
-    buttonLoading.value = false
-  }, 1000)
-}
-
-const redirectToTravelPage = async () => {
-  trackCtaClick({ ctaId: 'return-travel-page', ctaLabel: 'Retour au voyage', ctaUrl: `/voyages/${voyage.slug}` })
-  await navigateTo(`/voyages/${voyage.slug}`)
-}
-const changeAttr = (_dataAttribute) => {
-  // #TODO: Uncomment this when the dataAttribute is not empty and google analytics enabled
-  // const EVENTS = {
-  //   lastname: { eventLabel: 'Groupe Info - Indique prénom' },
-  //   firstname: { eventLabel: 'Groupe Info - Indique nom' },
-  //   email: { eventLabel: 'Groupe Info - Indique nom' },
-  //   phone: { eventLabel: 'Groupe Info - Indique numéro de téléphone' },
-  // }
-  // if (this[dataAttribute] !== '') {
-  //   this.$ga.event({
-  //     eventCategory: 'Devis',
-  //     eventAction: 'Click',
-  //     eventLabel: EVENTS[dataAttribute].eventLabel
-  //   })
-  // }
-}
 </script>
 
 <style scoped>
@@ -699,10 +634,17 @@ display:none;
   opacity: 0;
   transform: translateY(40px);
 }
-.list-leave-to {
-  opacity: 0;
-  transform: translateY(-40px);
+.option-move,
+.option-enter-active,
+.option-leave-active {
+  transition: all 0.5s ease;
 }
+.option-enter-from,
+.option-leave-to {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
 .list-leave-active {
   position: absolute;
 }

@@ -41,7 +41,7 @@
       align="center"
       class="flex-column"
     >
-      <span class="text-h5 text-md-h4 font-weight-bold mt-4">Voir {{ isExpanded ? 'moins' : 'plus' }} de dates</span>
+      <span class="text-h5 text-md-h4 font-weight-bold mt-4">{{ isExpanded ? (dateSections?.expand_less_text || 'Voir moins') : (dateSections?.expand_more_text || 'Voir plus') }} de dates</span>
       <BouncingBtn v-model="isExpanded" />
     </v-row>
     <template v-else-if="sortedByDates.length === 0 && isGroupeAvailable">
@@ -63,8 +63,7 @@
               <div class="d-flex align-center ga-3">
                 <CustomBadge :color="'red'" />
                 <h3 class="text-h5 text-md-h4 font-weight-bold text-secondary">
-                  Pas encore de dates disponibles
-                  <!-- #TODO: add the key in the page schema -->
+                  {{ dateSections?.no_dates_title || 'Pas encore de dates disponibles' }}
                 </h3>
               </div>
 
@@ -73,7 +72,7 @@
                 class="text-body-2 text-primary-light-2 mx-auto"
                 style="max-width: 500px;"
               >
-                Inscrivez-vous à notre alerte pour être informé dès que de nouvelles dates seront disponibles pour ce voyage.
+                {{ dateSections?.subscribe_alert_text || 'Inscrivez-vous à notre alerte pour être informé dès que de nouvelles dates seront disponibles pour ce voyage.' }}
               </p>
 
               <!-- Newsletter form with better spacing -->
@@ -96,8 +95,7 @@
                   {{ mdiCheckCircleOutline }}
                 </v-icon>
                 <span class="text-body-2 font-weight-medium">
-                  <!-- #TODO: add the key in the page -->
-                  Vous serez informé dès l'ouverture des réservations
+                  {{ dateSections?.reservation_open_text || "Vous serez informé dès l'ouverture des réservations" }}
                 </span>
               </div>
             </div>

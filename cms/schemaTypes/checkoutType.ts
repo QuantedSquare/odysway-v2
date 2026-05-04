@@ -49,6 +49,7 @@ export const checkoutType = defineType({
     {name: 'breadcrumb', title: 'Fil d\'Ariane'},
     {name: 'first_step', title: 'Première Étape'},
     {name: 'general', title: 'Général'},
+    {name: 'error_state', title: 'État d\'erreur'},
     {name: 'details', title: 'Détails'},
     {name: 'travelers_infos', title: 'Infos Voyageurs'},
     {name: 'options', title: 'Options'},
@@ -184,6 +185,32 @@ export const checkoutType = defineType({
       validation: Rule => Rule.required()
     }),
 
+    // Error State
+    defineField({
+      name: 'error_state',
+      title: 'État d\'erreur',
+      type: 'object',
+      group: 'error_state',
+      fields: [
+        defineField({
+          name: 'title',
+          title: 'Titre',
+          type: 'string'
+        }),
+        defineField({
+          name: 'message',
+          title: 'Message',
+          type: 'text',
+          rows: 3
+        }),
+        defineField({
+          name: 'button_text',
+          title: 'Texte du bouton',
+          type: 'string'
+        })
+      ]
+    }),
+
     // Details
     defineField({
       name: 'details',
@@ -269,6 +296,83 @@ export const checkoutType = defineType({
           title: 'Label Newsletter',
           type: 'string',
           validation: Rule => Rule.required()
+        }),
+        defineField({
+          name: 'phone_label',
+          title: 'Label Téléphone',
+          type: 'string'
+        }),
+        defineField({
+          name: 'country_label',
+          title: 'Label Pays de résidence',
+          type: 'string'
+        }),
+        defineField({
+          name: 'country_placeholder',
+          title: 'Placeholder Pays de résidence',
+          type: 'string'
+        }),
+        defineField({
+          name: 'privacy_text',
+          title: 'Texte politique de confidentialité',
+          type: 'text',
+          rows: 3
+        }),
+        defineField({
+          name: 'privacy_link_text',
+          title: 'Texte lien politique de confidentialité',
+          type: 'string'
+        }),
+        defineField({
+          name: 'option_block_text',
+          title: 'Texte bloc option (Pas encore prêt)',
+          type: 'text',
+          rows: 3
+        }),
+        defineField({
+          name: 'whatsapp_question_text',
+          title: 'Question WhatsApp',
+          type: 'string'
+        }),
+        defineField({
+          name: 'whatsapp_cta_text',
+          title: 'CTA WhatsApp',
+          type: 'string'
+        }),
+        defineField({
+          name: 'confirm_option_button',
+          title: 'Bouton Confirmer mon option',
+          type: 'string'
+        }),
+        defineField({
+          name: 'continue_button',
+          title: 'Bouton Continuer ma réservation',
+          type: 'string'
+        }),
+        defineField({
+          name: 'back_button',
+          title: 'Bouton Retour au voyage',
+          type: 'string'
+        }),
+        defineField({
+          name: 'trust_badge_text',
+          title: 'Badge de confiance (étape normale)',
+          type: 'string'
+        }),
+        defineField({
+          name: 'trust_badge_option_text',
+          title: 'Badge de confiance (mode option)',
+          type: 'string'
+        }),
+        defineField({
+          name: 'capacity_full_text',
+          title: 'Message départ complet',
+          type: 'string'
+        }),
+        defineField({
+          name: 'capacity_limited_text',
+          title: 'Message places limitées (utiliser {{count}} pour le nombre)',
+          type: 'string'
         })
       ]
     }),
@@ -310,6 +414,33 @@ export const checkoutType = defineType({
           title: 'Préférence Couple',
           type: 'string',
           validation: Rule => Rule.required()
+        }),
+        defineField({
+          name: 'travelers_infos_form',
+          title: 'Formulaire infos voyageurs',
+          type: 'object',
+          fields: [
+            defineField({ name: 'traveler_label', title: 'Préfixe voyageur', type: 'string' }),
+            defineField({ name: 'collapse_label', title: 'Label replier', type: 'string' }),
+            defineField({ name: 'expand_label', title: 'Label ajouter ses infos', type: 'string' }),
+            defineField({ name: 'firstname_label', title: 'Label prénom', type: 'string' }),
+            defineField({ name: 'firstname_placeholder', title: 'Placeholder prénom', type: 'string' }),
+            defineField({ name: 'lastname_label', title: 'Label nom', type: 'string' }),
+            defineField({ name: 'lastname_placeholder', title: 'Placeholder nom', type: 'string' }),
+            defineField({ name: 'birthdate_label', title: 'Label date de naissance', type: 'string' }),
+            defineField({ name: 'birthdate_placeholder', title: 'Placeholder date de naissance', type: 'string' }),
+            defineField({ name: 'country_label', title: 'Label pays de résidence', type: 'string' }),
+            defineField({ name: 'country_placeholder', title: 'Placeholder pays de résidence', type: 'string' }),
+            defineField({ name: 'required_error', title: 'Erreur champ requis', type: 'string' }),
+            defineField({ name: 'date_invalid_error', title: 'Erreur date invalide', type: 'string' }),
+            defineField({ name: 'year_invalid_error', title: 'Erreur année invalide', type: 'string' }),
+            defineField({ name: 'options_title', title: 'Titre Options', type: 'string' }),
+            defineField({ name: 'preferences_title', title: 'Titre Préférences & besoins', type: 'string' }),
+            defineField({ name: 'optional_label', title: 'Label optionnel', type: 'string' }),
+            defineField({ name: 'special_request_placeholder', title: 'Placeholder demande spéciale', type: 'string' }),
+            defineField({ name: 'continue_button', title: 'Bouton Continuer', type: 'string' }),
+            defineField({ name: 'previous_button', title: 'Bouton Précédent', type: 'string' })
+          ]
         })
       ]
     }),
@@ -468,7 +599,15 @@ export const checkoutType = defineType({
           name: 'insurances_unavailable',
           title: 'Assurances Indisponibles',
           type: 'string'
-        })
+        }),
+        defineField({ name: 'not_covered_text', title: 'Texte non couvert', type: 'string' }),
+        defineField({ name: 'choose_protection_text', title: 'Texte choisir protection', type: 'string' }),
+        defineField({ name: 'toggle_show_text', title: 'Texte voir les détails', type: 'string' }),
+        defineField({ name: 'toggle_hide_text', title: 'Texte masquer', type: 'string' }),
+        defineField({ name: 'medical_coverage_text', title: 'Texte couverture médicale', type: 'string' }),
+        defineField({ name: 'cancel_coverage_text', title: 'Texte couverture annulation', type: 'string' }),
+        defineField({ name: 'insurances_continue_button', title: 'Bouton Continuer (assurances)', type: 'string' }),
+        defineField({ name: 'insurances_previous_button', title: 'Bouton Précédent (assurances)', type: 'string' })
       ]
     }),
 
@@ -582,7 +721,14 @@ export const checkoutType = defineType({
           title: 'Badge LastMinute',
           type: 'string',
           validation: Rule => Rule.required()
-        })
+        }),
+        defineField({ name: 'payment_now_label', title: 'Label à régler maintenant', type: 'string' }),
+        defineField({ name: 'deposit_balance_text', title: 'Texte acompte + solde', type: 'string' }),
+        defineField({ name: 'rating_text', title: 'Texte note Google', type: 'string' }),
+        defineField({ name: 'cancellation_text', title: 'Texte annulation gratuite', type: 'string' }),
+        defineField({ name: 'advisor_text', title: 'Texte conseillère dédiée', type: 'string' }),
+        defineField({ name: 'summary_drawer_title', title: 'Titre drawer récapitulatif', type: 'string' }),
+        defineField({ name: 'close_button', title: 'Bouton Fermer', type: 'string' })
       ]
     }),
 
@@ -666,7 +812,23 @@ export const checkoutType = defineType({
           type: 'text',
           rows: 3,
           validation: Rule => Rule.required()
-        })
+        }),
+        defineField({ name: 'balance_heading', title: 'Titre paiement du solde', type: 'string' }),
+        defineField({ name: 'finalize_heading', title: 'Titre finaliser ma réservation', type: 'string' }),
+        defineField({ name: 'option_prompt_text', title: 'Texte bloc option (Pas encore prêt)', type: 'text', rows: 3 }),
+        defineField({ name: 'conditions_warning', title: 'Avertissement conditions de vente', type: 'string' }),
+        defineField({ name: 'redirect_alma_text', title: 'Texte redirection Alma', type: 'string' }),
+        defineField({ name: 'redirect_stripe_text', title: 'Texte redirection Stripe', type: 'string' }),
+        defineField({ name: 'pay_deposit_button', title: 'Bouton Régler mon acompte', type: 'string' }),
+        defineField({ name: 'or_divider', title: 'Séparateur "ou"', type: 'string' }),
+        defineField({ name: 'alma_schedule_text', title: 'Texte calendrier Alma (utiliser {{count}} pour le nombre)', type: 'string' }),
+        defineField({ name: 'total_label', title: 'Label Total', type: 'string' }),
+        defineField({ name: 'fees_label', title: 'Label Dont frais', type: 'string' }),
+        defineField({ name: 'alma_pay_button', title: 'Bouton Payer en X fois (utiliser {{count}})', type: 'string' }),
+        defineField({ name: 'secure_payment_label', title: 'Label Paiement sécurisé', type: 'string' }),
+        defineField({ name: 'vacation_vouchers_text', title: 'Texte chèques vacances', type: 'string' }),
+        defineField({ name: 'vacation_vouchers_note', title: 'Note chèques vacances', type: 'string' }),
+        defineField({ name: 'payment_previous_button', title: 'Bouton Précédent (paiement)', type: 'string' })
       ]
     }),
 
@@ -688,7 +850,14 @@ export const checkoutType = defineType({
           title: 'Bouton Précédent',
           type: 'string',
           validation: Rule => Rule.required()
-        })
+        }),
+        defineField({ name: 'step_label_summary', title: 'Label étape Récapitulatif', type: 'string' }),
+        defineField({ name: 'step_label_1', title: 'Label étape 1 (Vos infos)', type: 'string' }),
+        defineField({ name: 'step_label_2', title: 'Label étape 2 (Votre voyage)', type: 'string' }),
+        defineField({ name: 'step_label_3', title: 'Label étape 3 (Paiement)', type: 'string' }),
+        defineField({ name: 'next_skipper_button', title: 'Bouton Suivant (skipper)', type: 'string' }),
+        defineField({ name: 'close_drawer_button', title: 'Bouton Fermer (drawer)', type: 'string' }),
+        defineField({ name: 'price_per_person_suffix', title: 'Suffixe prix par personne', type: 'string' })
       ]
     })
   ]

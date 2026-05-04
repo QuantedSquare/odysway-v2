@@ -6,7 +6,6 @@
       <v-row>
         <v-col cols="12">
           <h2>{{ page.travelers_infos.title }}</h2>
-          <!-- <h2>{{ $t('stepperDevisGroup.travellersDetails') }}</h2> -->
         </v-col>
         <v-col cols="12">
           <v-alert
@@ -32,17 +31,17 @@
             :bg-color="colorMap[i]"
             :iso-contact="traveler.isoContact"
             :is-single="travelers.length === 1"
+            :page="page"
             @change="travelerInfosChanged"
           />
 
-          <!-- Check si c'est suffisant ou si on souhaite afficher un message particulier au nb d'enfants -->
           <div class="text-error text-right mt-6 mt-md-6 ">
             <p
               v-show="!ageValidation.isValid"
             >
               - {{ ageValidationMessage }}
             </p>
-            <!-- New: Error message for missing fields -->
+            <!-- Error message for missing fields -->
             <p
               v-show="!allFieldsFilled"
             >
@@ -74,7 +73,7 @@
             class="bg-grey-light font-weight-regular"
             @click="emit('previous')"
           >
-            Précédent
+            {{ page?.navigation?.previous_button || 'Précédent' }}
           </v-btn>
           <v-btn
             :disabled="!formValidation || !isBookingLoaded"
@@ -82,7 +81,7 @@
             class="font-weight-bold"
             @click="submitStepData"
           >
-            Suivant
+            {{ page?.navigation?.next_skipper_button || 'Suivant' }}
           </v-btn>
         </v-col>
       </v-row>
@@ -213,7 +212,6 @@ watch([model, () => currentStep], () => {
   if (currentStep === ownStep) {
     if (model.value) {
       initializeTravelersData()
-      console.log('===========TRAVELERS IN INITIALIZE TRAVELERS DATA===========', travelers.value)
     }
     addSingleParam('step', ownStep)
   }

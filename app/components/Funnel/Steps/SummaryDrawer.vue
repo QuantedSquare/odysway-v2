@@ -12,7 +12,7 @@
       <v-container>
         <div class="pa-4 position-sticky top-0 d-flex justify-space-between align-center  z-100">
           <h3 class="text-h6 font-weight-bold">
-            Récapitulatif du prix
+            {{ pageTexts?.summary?.summary_drawer_title || 'Récapitulatif du prix' }}
           </h3>
           <v-btn
             icon
@@ -39,7 +39,7 @@
           class="mt-4 text-body-2 border border-white font-weight-bold text-decoration-none"
           @click="$emit('update:modelValue', false)"
         >
-          Fermer
+          {{ pageTexts?.summary?.close_button || 'Fermer' }}
         </v-btn>
       </v-container>
     </v-navigation-drawer>

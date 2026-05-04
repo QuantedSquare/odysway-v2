@@ -72,7 +72,7 @@
                             {{ mdiCheckCircleOutline }}
                           </v-icon>
                           <h2 class="text-h5 font-weight-bold mb-2">
-                            Nous avons bien reçu votre demande de devis !
+                            {{ pageTexts?.calendly?.title || "Nous avons bien reçu votre demande de devis !" }}
                           </h2>
                           <p class="text-subtitle-2 font-weight-regular">
                             {{ pageTexts?.calendly?.text }}
@@ -91,7 +91,7 @@
                           rounded="md"
                           @click="returnToTravelPage"
                         >
-                          Retourner aux voyages
+                          {{ pageTexts?.buttons?.return_to_voyages || "Retourner aux voyages" }}
                         </v-btn>
                       </v-stepper-window-item>
                     </v-stepper-window>
@@ -105,6 +105,7 @@
                   <DevisSummary
                     :voyage="voyage"
                     :details="formData"
+                    :page-texts="pageTexts"
                   />
                   <ContactUsCard
                     v-if="currentStep < 2"
@@ -114,6 +115,16 @@
                     :rdv-link="`/rdv-projet-voyage?travelTitle=${voyage.title}`"
                     :show-privatisation="false"
                     :privatisation-text="pageTexts?.stickyBlock?.privatisationText"
+                    :title="pageTexts?.stickyBlock?.ctaCall?.text"
+                    :subtitle="pageTexts?.stickyBlock?.ctaCall?.subtitle"
+                    :rdv-button-text="pageTexts?.stickyBlock?.ctaCall?.rdvButtonText"
+                    :contact-preference-text="pageTexts?.stickyBlock?.contactPreferenceText"
+                    :whatsapp-label="pageTexts?.stickyBlock?.whatsappLabel"
+                    :whatsapp-url="pageTexts?.stickyBlock?.whatsappUrl"
+                    :phone-number="pageTexts?.stickyBlock?.phoneNumber"
+                    :phone-href="pageTexts?.stickyBlock?.phoneHref"
+                    :business-hours="pageTexts?.stickyBlock?.businessHours"
+                    :private-group-text="pageTexts?.stickyBlock?.privateGroupText"
                   />
                 </v-col>
               </v-row>

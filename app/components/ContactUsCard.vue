@@ -44,12 +44,12 @@
               class="py-0"
             >
               <div class="text-primary ">
-                Vous préférez ?
+                {{ contactPreferenceText }}
                 💬 <a
-                  href="https://wa.me/+33780919540"
+                  :href="whatsappUrl"
                   class="text-decoration-underline text-primary"
                   @click="handleWhatsappClick"
-                >WhatsApp</a> ou
+                >{{ whatsappLabel }}</a> ou
               </div>
             </v-col>
             <v-col
@@ -57,9 +57,9 @@
               class="pt-0"
             >
               <a
-                href="tel:+33184807975"
+                :href="phoneHref"
                 class="text-primary"
-              >+33 1 84 80 79 75</a> <span class="text-caption text-grey">Lun-Ven 9h-19h</span>
+              >{{ phoneNumber }}</a> <span class="text-caption text-grey">{{ businessHours }}</span>
             </v-col>
           </v-row>
         </div>
@@ -107,17 +107,17 @@
         <span>
           💬
           <a
-            href="https://wa.me/+33780919540"
+            :href="whatsappUrl"
             class="text-decoration-underline text-primary text-body-2 font-weight-bold"
             @click="handleWhatsappClick"
-          >WhatsApp</a> <span class="text-grey">· </span>
+          >{{ whatsappLabel }}</a> <span class="text-grey">· </span>
           <a
-            href="tel:+33184807975"
+            :href="phoneHref"
             class="text-body-2 font-weight-bold text-primary"
-          >+33 1 84 80 79 75</a>
+          >{{ phoneNumber }}</a>
         </span>
 
-        <span class="text-caption text-grey">Lun-Ven 9h-19h</span>
+        <span class="text-caption text-grey">{{ businessHours }}</span>
       </div>
     </div>
   </v-card>
@@ -195,12 +195,12 @@
             class="pb-0 pt-0"
           >
             <div class="text-primary text-center">
-              Vous préférez ?
+              {{ contactPreferenceText }}
               💬 <a
-                href="https://wa.me/+33780919540"
+                :href="whatsappUrl"
                 class="text-decoration-underline text-primary font-weight-bold"
                 @click="handleWhatsappClick"
-              >WhatsApp</a>
+              >{{ whatsappLabel }}</a>
             </div>
           </v-col>
           <v-col
@@ -209,16 +209,16 @@
           >
             ou
             <a
-              href="tel:+33184807975"
+              :href="phoneHref"
               class="text-grey text-caption "
-            >+33 1 84 80 79 75</a> <span class="text-caption text-grey">Lun-Ven 9h-19h</span>
+            >{{ phoneNumber }}</a> <span class="text-caption text-grey">{{ businessHours }}</span>
           </v-col>
         </v-row>
         <v-row v-if="showPrivatisation && privatisationText">
           <v-divider />
           <v-col class="pb-0">
             <div class="text-center">
-              Groupe privé ?
+              {{ privateGroupText }}
               <NuxtLink
                 :to="privatisationLink"
                 @click="handlePrivatisationClick"
@@ -279,6 +279,34 @@ const props = defineProps({
   privatisationLink: {
     type: String,
     default: '/devis',
+  },
+  whatsappUrl: {
+    type: String,
+    default: 'https://wa.me/+33780919540',
+  },
+  whatsappLabel: {
+    type: String,
+    default: 'WhatsApp',
+  },
+  phoneNumber: {
+    type: String,
+    default: '+33 1 84 80 79 75',
+  },
+  phoneHref: {
+    type: String,
+    default: 'tel:+33184807975',
+  },
+  businessHours: {
+    type: String,
+    default: 'Lun-Ven 9h-19h',
+  },
+  contactPreferenceText: {
+    type: String,
+    default: 'Vous préférez ?',
+  },
+  privateGroupText: {
+    type: String,
+    default: 'Groupe privé ?',
   },
 })
 

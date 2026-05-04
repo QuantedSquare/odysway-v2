@@ -44,8 +44,8 @@
         md="11"
       >
         <p class="text-subtitle-2">
-          <span class="font-weight-bold">💡 Vous n'êtes pas encore couvert.</span>
-          Choisissez votre protection pour voyager sereinement.
+          <span class="font-weight-bold">{{ page?.insurances?.not_covered_text || "💡 Vous n'êtes pas encore couvert." }}</span>
+          {{ page?.insurances?.choose_protection_text || 'Choisissez votre protection pour voyager sereinement.' }}
         </p>
       </v-col>
     </v-row>
@@ -73,13 +73,13 @@
               <div class="d-flex align-center ga-2 mb-1">
                 <span class="font-weight-bold text-body-2">{{ page.insurances.preference_assurance_multirisque }}</span>
                 <v-badge
-                  color="secondary"
+                  color="primary"
                   inline
                   :content="page.insurances.conseille_badge"
                 />
               </div>
               <p class="text-caption text-grey mb-0">
-                Vous couvre pour les aléas avant votre voyage
+                {{ page?.insurances?.medical_coverage_text || 'Vous couvre pour les aléas avant votre voyage' }}
               </p>
             </div>
             <span class="font-weight-bold text-body-1 flex-shrink-0">
@@ -87,7 +87,7 @@
             </span>
           </div>
 
-          <template v-if="selectedInsurance === 'rapatriement' && showRapatriementDetails">
+          <template v-if="(selectedInsurance === 'rapatriement' && showRapatriementDetails) || (!selectedInsurance && showRapatriementDetails)">
             <v-divider class="my-3" />
             <ul class="insurance-details text-caption">
               <EnrichedText :value="multirisqueDetails" />
@@ -98,7 +98,7 @@
             :class="selectedInsurance !== 'rapatriement' ? 'text-grey' : ''"
             @click.stop="toggleDetails('rapatriement')"
           >
-            {{ selectedInsurance === 'rapatriement' && showRapatriementDetails ? 'Masquer ▲' : 'Voir les détails ▾' }}
+            {{ selectedInsurance === 'rapatriement' && showRapatriementDetails ? (page?.insurances?.toggle_hide_text || 'Masquer ▲') : (page?.insurances?.toggle_show_text || 'Voir les détails ▾') }}
           </button>
         </div>
       </v-col>
@@ -126,7 +126,7 @@
                 <span class="font-weight-bold text-body-2">{{ page.insurances.preference_assurance_annulation }}</span>
               </div>
               <p class="text-caption text-grey mb-0">
-                Vous couvre avant et pendant votre voyage
+                {{ page?.insurances?.cancel_coverage_text || 'Vous couvre avant et pendant votre voyage' }}
                 <!-- {{ page.insurances.accroche_assurance_annulation }} -->
               </p>
             </div>
@@ -200,7 +200,7 @@
           height="50"
           @click="submitStepData"
         >
-          Continuer
+          {{ page?.insurances?.continue_button || 'Continuer' }}
           <v-icon>
             {{ mdiArrowRight }}
           </v-icon>
@@ -213,7 +213,7 @@
         >
           <v-icon>
             {{ mdiArrowLeft }}
-          </v-icon> PRÉCÉDENT
+          </v-icon> {{ page?.insurances?.previous_button || 'PRÉCÉDENT' }}
         </v-btn>
       </v-col>
     </v-row>

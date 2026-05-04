@@ -226,13 +226,13 @@
             style="background: linear-gradient(70deg, rgba(43, 76, 82, 1) 0%, rgba(43, 76, 82, 1), 50%, rgba(43,76,82,0.9) 100%);"
           >
             <span class="text-caption font-weight-regular">
-              🔒 À régler maintenant
+              {{ page?.summary?.payment_now_label || '🔒 À régler maintenant' }}
             </span>
             <span class="text-h4 font-weight-bold">
               {{ appliedPrice > 0 ? formatNumber(appliedPrice, 'currency', 'EUR') : '-' }}
             </span>
             <span class="text-caption font-weight-regular">
-              Acompte 30% · Solde avant le départ
+              {{ page?.summary?.deposit_balance_text || 'Acompte 30% · Solde avant le départ' }}
             </span>
           </v-col>
         </v-row>
@@ -285,18 +285,9 @@
 
         <v-divider class="my-3" />
         <div class="text-custom-size d-flex flex-column ga-2 text-primary font-weight-regular">
-          <span>
-            ⭐ &nbsp;
-            <strong>4,8/5 </strong> · 176 avis Google
-          </span>
-          <span>
-            🔄 &nbsp;
-            Annulation gratuite jusqu'à <strong>J-60</strong>
-          </span>
-          <span>
-            👩‍✈️ &nbsp;
-            Conseillère dédiée <strong>avant, pendant & après</strong>
-          </span>
+          <span>{{ page?.summary?.rating_text || '⭐ 4,8/5 · 176 avis Google' }}</span>
+          <span>{{ page?.summary?.cancellation_text || "🔄 Annulation gratuite jusqu'à J-60" }}</span>
+          <span>{{ page?.summary?.advisor_text || '👩‍✈️ Conseillère dédiée avant, pendant & après' }}</span>
         </div>
       </v-card-text>
     </v-card>

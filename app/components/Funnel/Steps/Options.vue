@@ -52,14 +52,14 @@
           class="bg-grey-light font-weight-regular"
           @click="emit('previous')"
         >
-          Précédent
+          {{ page?.navigation?.previous_button || 'Précédent' }}
         </v-btn>
         <v-btn
           color="secondary"
           class="font-weight-bold"
           @click="submitStepData"
         >
-          Suivant
+          {{ page?.navigation?.next_skipper_button || 'Suivant' }}
         </v-btn>
       </v-col>
     </v-row>

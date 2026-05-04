@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative  w-100 px-0 pt-0 bg-warm"
+    class="relative w-100 px-0 pt-0 bg-warm"
   >
     <ClientOnly>
       <FunnelCardHeader
@@ -53,18 +53,17 @@
               {{ mdiAlertCircleOutline }}
             </v-icon>
             <h2 class="text-h5 mb-2 font-weight-bold">
-              Oops !
+              {{ pageTexts?.error_state?.title || "Oops !" }}
             </h2>
             <p class="text-body-1 mb-4">
-              Nous n’avons pas pu charger les informations de votre voyage.
-              Il se peut que le lien soit expiré ou incomplet.
+              {{ pageTexts?.error_state?.message || "Nous n’avons pas pu charger les informations de votre voyage. Il se peut que le lien soit expiré ou incomplet." }}
             </p>
             <v-btn
               color="primary"
               to="/voyages"
               rounded
             >
-              Retourner à la liste des voyages
+              {{ pageTexts?.error_state?.button_text || "Retourner à la liste des voyages" }}
             </v-btn>
           </v-card>
         </ClientOnly>

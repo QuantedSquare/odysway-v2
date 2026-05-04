@@ -12,10 +12,10 @@
         height="10"
         static
       >
-        <span class="font-weight-medium text-primary">Voyageur {{ id }}</span>
+        <span class="font-weight-medium text-primary">{{ page?.travelers_infos_form?.traveler_label || 'Voyageur' }} {{ id }}</span>
         <template #actions="{ expanded }">
           <span class="text-caption ml-2 text-grey">
-            {{ expanded ? 'Replier' : 'Ajouter ses infos' }}
+            {{ expanded ? (page?.travelers_infos_form?.collapse_label || 'Replier') : (page?.travelers_infos_form?.expand_label || 'Ajouter ses infos') }}
             <v-icon
               color="primary"
               :class="['chevron', { 'chevron--expanded': expanded }]"
@@ -31,11 +31,11 @@
             cols="6"
             class="py-0 my-0 px-0"
           >
-            <div>Prénom *</div>
+            <div>{{ page?.travelers_infos_form?.firstname_label || 'Prénom *' }}</div>
             <v-text-field
               :id="`firstname_${id}`"
               v-model="i_firstname"
-              placeholder="Ex: Indiana"
+              :placeholder="page?.travelers_infos_form?.firstname_placeholder || 'Ex: Indiana'"
               :rules="[rules.required]"
               @change="dataUpdated"
             />
@@ -44,12 +44,12 @@
             cols="6"
             class="py-0 my-0"
           >
-            <div>Nom *</div>
+            <div>{{ page?.travelers_infos_form?.lastname_label || 'Nom *' }}</div>
             <v-text-field
               :id="`lastname_${id}`"
               v-model="i_lastname"
               type="textbox"
-              placeholder="Ex: Jones"
+              :placeholder="page?.travelers_infos_form?.lastname_placeholder || 'Ex: Jones'"
               :rules="[rules.required]"
               @change="dataUpdated"
             />
@@ -58,13 +58,13 @@
             cols="6"
             class="py-0 my-0 px-0"
           >
-            <div>Date de naissance *</div>
+            <div>{{ page?.travelers_infos_form?.birthdate_label || 'Date de naissance *' }}</div>
             <v-text-field
               :id="`birthdate_${id}`"
               v-model="date"
               type="text"
               inputmode="numeric"
-              placeholder="JJ/MM/AAAA"
+              :placeholder="page?.travelers_infos_form?.birthdate_placeholder || 'JJ/MM/AAAA'"
               :rules="[rules.required, rules.dateFormat]"
               :append-inner-icon="mdiCalendarOutline"
               @input="handleInput"
@@ -76,12 +76,12 @@
             cols="6"
             class="py-0 my-0"
           >
-            <div>Pays de résidence *</div>
+            <div>{{ page?.travelers_infos_form?.country_label || 'Pays de résidence *' }}</div>
             <v-autocomplete
               :id="`country_${id}`"
               v-model="i_isoContact"
               :items="countries"
-              placeholder="Sélectionnez un pays"
+              :placeholder="page?.travelers_infos_form?.country_placeholder || 'Sélectionnez un pays'"
               :rules="[rules.required]"
               item-title="title"
               item-value="value"
@@ -100,11 +100,11 @@
       cols="6"
       class="py-0 my-0 px-0"
     >
-      <div>Prénom *</div>
+      <div>{{ page?.travelers_infos_form?.firstname_label || 'Prénom *' }}</div>
       <v-text-field
         :id="`firstname_${id}`"
         v-model="i_firstname"
-        placeholder="Ex: Indiana"
+        :placeholder="page?.travelers_infos_form?.firstname_placeholder || 'Ex: Indiana'"
         :rules="[rules.required]"
         @change="dataUpdated"
       />
@@ -113,12 +113,12 @@
       cols="6"
       class="py-0 my-0"
     >
-      <div>Nom *</div>
+      <div>{{ page?.travelers_infos_form?.lastname_label || 'Nom *' }}</div>
       <v-text-field
         :id="`lastname_${id}`"
         v-model="i_lastname"
         type="textbox"
-        placeholder="Ex: Jones"
+        :placeholder="page?.travelers_infos_form?.lastname_placeholder || 'Ex: Jones'"
         :rules="[rules.required]"
         @change="dataUpdated"
       />
@@ -127,13 +127,13 @@
       cols="6"
       class="py-0 my-0 px-0"
     >
-      <div>Date de naissance *</div>
+      <div>{{ page?.travelers_infos_form?.birthdate_label || 'Date de naissance *' }}</div>
       <v-text-field
         :id="`birthdate_${id}`"
         v-model="date"
         type="text"
         inputmode="numeric"
-        placeholder="JJ/MM/AAAA"
+        :placeholder="page?.travelers_infos_form?.birthdate_placeholder || 'JJ/MM/AAAA'"
         :rules="[rules.required, rules.dateFormat]"
         :append-inner-icon="mdiCalendarOutline"
         @input="handleInput"
@@ -145,12 +145,12 @@
       cols="6"
       class="py-0 my-0"
     >
-      <div>Pays de résidence *</div>
+      <div>{{ page?.travelers_infos_form?.country_label || 'Pays de résidence *' }}</div>
       <v-autocomplete
         :id="`country_${id}`"
         v-model="i_isoContact"
         :items="countries"
-        placeholder="Sélectionnez un pays"
+        :placeholder="page?.travelers_infos_form?.country_placeholder || 'Sélectionnez un pays'"
         :rules="[rules.required]"
         item-title="title"
         item-value="value"
@@ -177,6 +177,7 @@ const props = defineProps({
   bgColor: { type: String, default: 'primary' },
   flat: { type: Boolean, default: false },
   isSingle: { type: Boolean, default: false },
+  page: { type: Object, default: null },
 })
 
 const i_firstname = ref(props.firstname)
@@ -185,21 +186,17 @@ const date = ref(props.birthdate || '')
 const i_isoContact = ref(props.isoContact || '')
 const emit = defineEmits(['change'])
 
-const rules = {
-  required: v => !!v || 'Cette information est requise.',
+const rules = computed(() => ({
+  required: v => !!v || (props.page?.travelers_infos_form?.required_error || 'Cette information est requise.'),
   dateFormat: (v) => {
     if (!v) return true
-
-    // Parse with specific format DD/MM/YYYY
     const dateObj = dayjs(v, 'DD/MM/YYYY', true)
-    if (!dateObj.isValid()) return 'Date invalide'
-
+    if (!dateObj.isValid()) return props.page?.travelers_infos_form?.date_invalid_error || 'Date invalide'
     const year = dateObj.year()
-    if (year < 1925 || year > new Date().getFullYear()) return 'Année invalide'
-
+    if (year < 1925 || year > new Date().getFullYear()) return props.page?.travelers_infos_form?.year_invalid_error || 'Année invalide'
     return true
   },
-}
+}))
 
 // TODO: use different approach to build the date input with computed get() and set(). Ex. mui date field
 

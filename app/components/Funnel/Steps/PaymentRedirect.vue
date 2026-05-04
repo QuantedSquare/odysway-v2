@@ -3,7 +3,7 @@
     <v-card-text v-if="model && +voyage.alreadyPaid < +voyage.totalTravelPrice">
       <v-row v-if="route.query.type === 'balance'">
         <v-col class="text-center text-h6">
-          Paiement du solde de votre voyage
+          {{ page?.payment?.balance_heading || 'Paiement du solde de votre voyage' }}
         </v-col>
       </v-row>
 
@@ -22,7 +22,7 @@
               vertical
             />
             <h2>
-              Finaliser ma réservation
+              {{ page?.payment?.finalize_heading || 'Finaliser ma réservation' }}
             </h2>
           </div>
         </v-col>
@@ -47,7 +47,7 @@
                 @click.stop
               />
               <span class="text-body-2">
-                ⏳ <strong>Pas encore prêt ?</strong> Bloquez ce voyage <strong>gratuitement pendant 7 jours</strong>, sans engagement ni paiement.
+                {{ page?.payment?.option_prompt_text || '⏳ Pas encore prêt ? Bloquez ce voyage gratuitement pendant 7 jours, sans engagement ni paiement.' }}
               </span>
             </div>
           </template>
@@ -70,7 +70,7 @@
                   size="16"
                   class="policy-hint-bubble__icon"
                 />
-                <span>Veuillez confirmer les conditions de vente avant de procéder au paiement</span>
+                <span>{{ conditionsWarningText }}</span>
               </div>
             </Transition>
             <v-divider class="my-3" />
@@ -118,7 +118,7 @@
         >
           <FunnelFlightProgress
             :loading="true"
-            :text="redirectingToAlma ? 'Vous allez être redirigé vers notre partenaire Alma' : 'Vous allez être redirigé vers notre partenaire Stripe'"
+            :text="redirectingToAlma ? (page?.payment?.redirect_alma_text || 'Vous allez être redirigé vers notre partenaire Alma') : (page?.payment?.redirect_stripe_text || 'Vous allez être redirigé vers notre partenaire Stripe')"
           />
         </div>
 
@@ -166,14 +166,14 @@
                   :loading="loadingSession"
                   @click="stripePay"
                 >
-                  🔒 {{ route.query.type === 'deposit' ? 'Régler mon acompte' : page.payment.pay_stripe_button }}
+                  🔒 {{ route.query.type === 'deposit' ? (page?.payment?.pay_deposit_button || 'Régler mon acompte') : page.payment.pay_stripe_button }}
                 </v-btn>
 
                 <!-- Alma button -->
                 <template v-if="isAlmaPaymentPossible">
                   <div class="d-flex align-center ga-2">
                     <v-divider />
-                    <span class="custom-grey-font flex-shrink-0">ou</span>
+                    <span class="custom-grey-font flex-shrink-0">{{ page?.payment?.or_divider || 'ou' }}</span>
                     <v-divider />
                   </div>
 
@@ -204,15 +204,37 @@
                     </v-btn>
                   </v-btn-toggle>
 
+                  <v-btn
+                    height="56"
+                    block
+                    variant="outlined"
+                    color="secondary"
+                    border="sm"
+                    :loading="loadingSession"
+                    @click="almaPay"
+                  >
+                    <span class="text-body-1 text-md-body-2 text-primary">{{ almaPayButton }} </span>
+                    <v-divider
+                      vertical
+                      class="mx-2"
+                    />
+                    <div>
+                      <img
+                        src="/logos/ALMA.png"
+                        height="25"
+                        class="mt-1"
+                      >
+                    </div>
+                  </v-btn>
                   <div class="alma-schedule">
                     <button
                       type="button"
-                      class="alma-schedule-toggle d-flex align-center justify-space-between w-100"
+                      class="alma-schedule-toggle d-flex align-center justify-center w-100"
                       :aria-expanded="showAlmaSchedule"
                       @click="showAlmaSchedule = !showAlmaSchedule"
                     >
-                      <span class="alma-schedule-title text-body-2 font-weight-medium">
-                        Calendrier de paiement en {{ almaInstallments }} échéances
+                      <span class="alma-schedule-title text-body-2 font-weight-medium text-center">
+                        {{ almaScheduleTitle }}
                       </span>
                       <v-icon
                         :icon="mdiChevronDown"
@@ -235,8 +257,8 @@
                         </div>
                         <div class="alma-schedule-total d-flex justify-space-between align-center mt-2 pt-2">
                           <div class="d-flex flex-column">
-                            <span class="text-body-2">Total</span>
-                            <span class="text-caption text-grey">Dont frais</span>
+                            <span class="text-body-2">{{ page?.payment?.total_label || 'Total' }}</span>
+                            <span class="text-caption text-grey">{{ page?.payment?.fees_label || 'Dont frais' }}</span>
                           </div>
                           <div class="d-flex flex-column align-end">
                             <span class="font-weight-bold">{{ formatEuros(+voyage.totalTravelPrice + +almaFees) }}</span>
@@ -246,29 +268,6 @@
                       </div>
                     </v-expand-transition>
                   </div>
-
-                  <v-btn
-                    height="56"
-                    block
-                    variant="outlined"
-                    color="secondary"
-                    border="sm"
-                    :loading="loadingSession"
-                    @click="almaPay"
-                  >
-                    <span class="text-body-1 text-md-body-2 text-primary">Payer en {{ almaInstallments }} fois </span>
-                    <v-divider
-                      vertical
-                      class="mx-2"
-                    />
-                    <div>
-                      <img
-                        src="/logos/ALMA.png"
-                        height="25"
-                        class="mt-1"
-                      >
-                    </div>
-                  </v-btn>
                 </template>
                 <div
                   v-if="warningAcceptText"
@@ -280,7 +279,7 @@
                 <div class="trust-footer mt-2">
                   <div class="d-flex align-center ga-1 mb-1">
                     &nbsp;&nbsp; 🔒 &nbsp;&nbsp;
-                    <span class="text-caption text-grey">Paiement sécurisé</span>
+                    <span class="text-caption text-grey">{{ page?.payment?.secure_payment_label || 'Paiement sécurisé' }}</span>
                   </div>
                   <div class="d-flex align-center ga-2">
                     <img
@@ -288,8 +287,8 @@
                       height="20"
                     >
                     <span class="text-caption text-grey">
-                      Chèques vacances acceptés
-                      <span class="text-grey-lighten-1">(valable pour le solde · nous contacter)</span>
+                      {{ page?.payment?.vacation_vouchers_text || 'Chèques vacances acceptés' }}
+                      <span class="text-grey-lighten-1">{{ page?.payment?.vacation_vouchers_note || '(valable pour le solde · nous contacter)' }}</span>
                     </span>
                   </div>
                 </div>
@@ -322,7 +321,7 @@
 
           @click="emit('previous')"
         >
-          ← PRÉCÉDENT
+          {{ page?.payment?.previous_button || '← PRÉCÉDENT' }}
         </v-btn>
       </div>
     </v-card-text>
@@ -354,9 +353,21 @@ const switch_accept_data_privacy = ref(route.query.type === 'booking')
 const switch_accept_country = ref(route.query.type === 'booking')
 const warningAcceptText = ref(null)
 
+const conditionsWarningText = computed(() => page?.payment?.conditions_warning || 'Veuillez confirmer les conditions de vente avant de procéder au paiement')
+
 const loadingSession = ref(false)
 const almaInstallments = ref(3)
 const showAlmaSchedule = ref(false)
+
+const almaScheduleTitle = computed(() => {
+  const tpl = page?.payment?.alma_schedule_text || 'Calendrier de paiement en {count} échéances'
+  return tpl.replace(/{count}/g, String(almaInstallments.value))
+})
+
+const almaPayButton = computed(() => {
+  const tpl = page?.payment?.alma_pay_button || 'Payer en {count} fois'
+  return tpl.replace(/{count}/g, String(almaInstallments.value))
+})
 
 const isAlmaPaymentPossible = computed(() => {
   if (!model.value) return false
@@ -397,7 +408,7 @@ const almaSchedule = computed(() => {
 const stripePay = async () => {
   // User need to check the switches first
   if (!switch_accept_data_privacy.value || !switch_accept_country.value) {
-    warningAcceptText.value = 'Veuillez confirmer les conditions de vente avant de procéder au paiement'
+    warningAcceptText.value = conditionsWarningText.value
     return
   }
   else {
@@ -448,7 +459,7 @@ const stripePay = async () => {
 
 const almaPay = async () => {
   if (!switch_accept_data_privacy.value || !switch_accept_country.value) {
-    warningAcceptText.value = 'Veuillez confirmer les conditions de vente avant de procéder au paiement'
+    warningAcceptText.value = conditionsWarningText.value
     return
   }
   else {

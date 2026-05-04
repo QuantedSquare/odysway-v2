@@ -33,6 +33,7 @@
             :iso-contact="traveler.isoContact"
             :flat="i === 0"
             :is-single="travelers.length === 1"
+            :page="page"
             @change="travelerInfosChanged"
           />
         </v-col>
@@ -55,7 +56,7 @@
             color="secondary"
             vertical
           />
-          <h2>Options</h2>
+          <h2>{{ page?.travelers_infos_form?.options_title || 'Options' }}</h2>
         </v-col>
 
         <v-col>
@@ -98,19 +99,10 @@
           cols="12"
           class="d-flex ga-2 pb-2"
         >
-          <v-divider
-            variant="solid"
-            opacity="1"
-            thickness="3"
-            class="rounded-lg"
-            color="secondary"
-            vertical
-          />
           <h2>
-            Préférences & besoins
-            <!-- {{ page.options.food_details_title }} -->
+            {{ page?.travelers_infos_form?.preferences_title || 'Préférences & besoins' }}
           </h2>
-          <span class="text-caption text-grey align-self-center">· optionnel</span>
+          <span class="text-caption text-grey align-self-center">{{ page?.travelers_infos_form?.optional_label || '· optionnel' }}</span>
         </v-col>
         <v-col cols="12">
           <p class="font-weight-bold text-caption mb-2">
@@ -118,7 +110,7 @@
           </p>
           <v-textarea
             v-model="model.specialRequest"
-            placeholder="Ex : végétarien, allergie aux noix, genoux fragiles..."
+            :placeholder="page?.travelers_infos_form?.special_request_placeholder || 'Ex : végétarien, allergie aux noix, genoux fragiles...'"
             hide-details
             flat
             variant="solo"
@@ -141,7 +133,7 @@
             height="50"
             @click="submitStepData"
           >
-            Continuer
+            {{ page?.travelers_infos_form?.continue_button || 'Continuer' }}
             <v-icon>
               {{ mdiArrowRight }}
             </v-icon>
@@ -155,7 +147,7 @@
             <v-icon>
               {{ mdiArrowLeft }}
             </v-icon>
-            Précédent
+            {{ page?.travelers_infos_form?.previous_button || 'Précédent' }}
           </v-btn>
         </v-col>
         <v-col>

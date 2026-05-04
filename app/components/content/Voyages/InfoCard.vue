@@ -43,7 +43,7 @@
               @click="handleAllDeparturesClick()"
             >
               <span class="text-body-2 font-weight-bold text-decoration-none">
-                Voir les départs disponibles
+                {{ stickyBlock.dateButtonText || 'Voir les départs disponibles' }}
                 <v-icon>
                   {{ mdiArrowDown }}
                 </v-icon>
@@ -69,8 +69,7 @@
               class="d-flex align-center ga-2 text-secondary font-weight-bold"
             >
               <CustomBadge :color="'red'" />
-              Pas encore de dates disponibles
-              <!-- #TODO: add the key in the page schema -->
+              {{ stickyBlock?.no_dates_title || 'Pas encore de dates disponibles' }}
             </v-alert>
           </v-col>
           <v-col v-else>
@@ -81,7 +80,7 @@
               @click="handleAskDevis"
             >
               <span class="text-body-2 font-weight-bold text-decoration-none">
-                Demander un devis
+                {{ stickyBlock?.ask_quote_button || 'Demander un devis' }}
               </span>
             </v-btn>
           </v-col>
@@ -94,7 +93,7 @@
             class="d-flex align-start flex-column ga-1"
           >
             <div
-              v-for="item, index in tempListPlaceholder"
+              v-for="item, index in (stickyBlock.ctaBottom?.list || tempListPlaceholder)"
               :key="index"
               class="d-flex align-center ga-2 text-size-12"
             >
@@ -121,8 +120,7 @@
                   {{ mdiCheckCircleOutline }}
                 </v-icon>
                 <span class="text-grey font-weight-bold text-size-12">
-                  <!-- #TODO: add the key in the page -->
-                  Vous serez informé dès l'ouverture des réservations
+                  {{ stickyBlock?.reservation_open_text || "Vous serez informé dès l'ouverture des réservations" }}
                 </span>
               </div>
             </v-col>
@@ -140,6 +138,16 @@
     :show-privatisation="voyage.availabilityTypes?.includes('groupe')"
     :privatisation-text="stickyBlock.privatisationText"
     :privatisation-link="`/devis?slug=${voyage.slug.current}`"
+    :title="stickyBlock.ctaCall?.text"
+    :subtitle="stickyBlock.ctaCall?.subtitle"
+    :rdv-button-text="stickyBlock.ctaCall?.rdvButtonText"
+    :contact-preference-text="stickyBlock.contactPreferenceText"
+    :whatsapp-label="stickyBlock.whatsappLabel"
+    :whatsapp-url="stickyBlock.whatsappUrl"
+    :phone-number="stickyBlock.phoneNumber"
+    :phone-href="stickyBlock.phoneHref"
+    :business-hours="stickyBlock.businessHours"
+    :private-group-text="stickyBlock.privateGroupText"
     @privatisation-click="handleIndivClick"
   />
 </template>

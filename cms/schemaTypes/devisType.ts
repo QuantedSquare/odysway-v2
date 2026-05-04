@@ -10,6 +10,8 @@ export const devisType = defineType({
     {name: 'calendly', title: 'Calendly'},
     {name: 'buttons', title: 'Boutons'},
     {name: 'form_labels', title: 'Labels Formulaire'},
+    {name: 'form_sections', title: 'Sections Formulaire'},
+    {name: 'trust_badges', title: 'Badges de confiance'},
     {name: 'options', title: 'Options'},
   ],
   preview: {
@@ -227,6 +229,16 @@ export const devisType = defineType({
           title: 'Texte bouton précédent',
           type: 'string',
           validation: Rule => Rule.required()
+        }),
+        defineField({
+          name: 'return_to_voyages',
+          title: 'Texte bouton retourner aux voyages',
+          type: 'string'
+        }),
+        defineField({
+          name: 'send_form_button',
+          title: 'Texte bouton envoyer le formulaire',
+          type: 'string'
         })
       ]
     }),
@@ -292,6 +304,41 @@ export const devisType = defineType({
           type: 'string',
           validation: Rule => Rule.required()
         })
+      ]
+    }),
+
+    // Form Sections
+    defineField({
+      name: 'form_sections',
+      title: 'Sections du formulaire',
+      type: 'object',
+      group: 'form_sections',
+      fields: [
+        defineField({ name: 'coordinates_title', title: 'Titre section coordonnées', type: 'string' }),
+        defineField({ name: 'project_title', title: 'Titre section votre projet', type: 'string' }),
+        defineField({ name: 'privacy_text', title: 'Texte politique de confidentialité', type: 'text', rows: 3 }),
+        defineField({ name: 'privacy_link_text', title: 'Texte lien politique', type: 'string' }),
+        defineField({ name: 'no_data_sold_text', title: 'Texte données non revendues', type: 'string' }),
+        defineField({ name: 'no_commitment_badge', title: 'Badge sans engagement', type: 'string' }),
+        defineField({ name: 'message_optional_label', title: 'Label optionnel', type: 'string' }),
+        defineField({ name: 'message_placeholder', title: 'Placeholder message', type: 'text', rows: 3 }),
+        defineField({ name: 'flight_yes_label', title: 'Label Oui (vol)', type: 'string' }),
+        defineField({ name: 'flight_no_label', title: 'Label Non (vol)', type: 'string' })
+      ]
+    }),
+
+    // Trust Badges
+    defineField({
+      name: 'trust_badges',
+      title: 'Badges de confiance',
+      type: 'object',
+      group: 'trust_badges',
+      fields: [
+        defineField({ name: 'rating_text', title: 'Texte note Google', type: 'string' }),
+        defineField({ name: 'cancellation_text', title: 'Texte annulation gratuite', type: 'string' }),
+        defineField({ name: 'advisor_text', title: 'Texte conseillère dédiée', type: 'string' }),
+        defineField({ name: 'starting_price_label', title: 'Label tarif indicatif à partir de', type: 'string' }),
+        defineField({ name: 'price_per_person_suffix', title: 'Suffixe prix par personne', type: 'string' })
       ]
     }),
 

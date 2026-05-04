@@ -2,8 +2,8 @@
   <v-col
     v-if="pageTexts && voyage"
     cols="12"
-    md="11"
-    class="py-0 px-0 "
+    xl="8"
+    class="py-0 px-0"
   >
     <FunnelStepsStepperHeader
       ref="stepperHeaderRef"
@@ -17,7 +17,8 @@
       >
         <v-col
           cols="12"
-          :md="7"
+          md="7"
+          xl="7"
           class="d-flex justify-center "
         >
           <v-card
@@ -75,7 +76,8 @@
         </v-col>
 
         <v-col
-          cols="4"
+          md="5"
+          lg="4"
           class="d-none d-md-block"
         >
           <FunnelStepsSummary
@@ -94,6 +96,16 @@
             :show-privatisation="false"
             :privatisation-text="pageTexts?.stickyBlock?.privatisationText"
             :privatisation-link="`/devis?slug=${typeof voyage.slug === 'object' ? voyage.slug.current : voyage.slug}`"
+            :title="pageTexts?.stickyBlock?.ctaCall?.text"
+            :subtitle="pageTexts?.stickyBlock?.ctaCall?.subtitle"
+            :rdv-button-text="pageTexts?.stickyBlock?.ctaCall?.rdvButtonText"
+            :contact-preference-text="pageTexts?.stickyBlock?.contactPreferenceText"
+            :whatsapp-label="pageTexts?.stickyBlock?.whatsappLabel"
+            :whatsapp-url="pageTexts?.stickyBlock?.whatsappUrl"
+            :phone-number="pageTexts?.stickyBlock?.phoneNumber"
+            :phone-href="pageTexts?.stickyBlock?.phoneHref"
+            :business-hours="pageTexts?.stickyBlock?.businessHours"
+            :private-group-text="pageTexts?.stickyBlock?.privateGroupText"
           />
         </v-col>
       </v-row>

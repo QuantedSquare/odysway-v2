@@ -31,7 +31,7 @@
         <v-btn
           @click="emit('next')"
         >
-          Suivant
+          {{ page?.navigation?.next_skipper_button || 'Suivant' }}
         </v-btn>
       </v-col>
     </v-row>

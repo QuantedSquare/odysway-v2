@@ -170,6 +170,16 @@ export const pageVoyageType = defineType({
               title: 'Lien',
               type: 'string',
               validation: Rule => Rule.required()
+            }),
+            defineField({
+              name: 'subtitle',
+              title: 'Sous-titre',
+              type: 'string'
+            }),
+            defineField({
+              name: 'rdvButtonText',
+              title: 'Texte bouton RDV',
+              type: 'string'
             })
           ]
         }),
@@ -192,7 +202,22 @@ export const pageVoyageType = defineType({
           title: 'Texte Privatisation',
           type: 'string',
           validation: Rule => Rule.required()
-        })
+        }),
+        defineField({ name: 'privateGroupText', title: 'Label groupe privé', type: 'string' }),
+        defineField({ name: 'no_dates_title', title: 'Titre pas de dates disponibles', type: 'string' }),
+        defineField({ name: 'ask_quote_button', title: 'Texte bouton demander un devis', type: 'string' }),
+        defineField({ name: 'reservation_open_text', title: 'Texte ouverture réservations', type: 'string' }),
+        defineField({ name: 'contactPreferenceText', title: 'Texte "Vous préférez ?"', type: 'string' }),
+        defineField({ name: 'whatsappLabel', title: 'Label WhatsApp', type: 'string' }),
+        defineField({
+          name: 'whatsappUrl',
+          title: 'URL WhatsApp',
+          type: 'url',
+          validation: Rule => Rule.uri({ scheme: ['https', 'http'] })
+        }),
+        defineField({ name: 'phoneNumber', title: 'Numéro de téléphone affiché', type: 'string' }),
+        defineField({ name: 'phoneHref', title: 'Href téléphone (tel:...)', type: 'string' }),
+        defineField({ name: 'businessHours', title: 'Horaires', type: 'string' })
       ]
     }),
 
@@ -448,6 +473,11 @@ export const pageVoyageType = defineType({
             })
           ]
         }),
+        defineField({ name: 'no_dates_title', title: 'Titre pas de dates disponibles', type: 'string' }),
+        defineField({ name: 'subscribe_alert_text', title: 'Texte alerte inscription', type: 'text', rows: 3 }),
+        defineField({ name: 'reservation_open_text', title: 'Texte ouverture réservations', type: 'string' }),
+        defineField({ name: 'expand_more_text', title: 'Texte voir plus de dates', type: 'string' }),
+        defineField({ name: 'expand_less_text', title: 'Texte voir moins de dates', type: 'string' }),
         defineField({
           name: 'status',
           title: 'Statuts',
@@ -615,7 +645,9 @@ export const pageVoyageType = defineType({
           title: 'Couleur N\'inclut Pas',
           type: 'string',
           validation: Rule => Rule.required()
-        })
+        }),
+        defineField({ name: 'expand_more_text', title: 'Texte voir plus', type: 'string' }),
+        defineField({ name: 'expand_less_text', title: 'Texte voir moins', type: 'string' })
       ]
     }),
 
