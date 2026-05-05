@@ -3,12 +3,12 @@
     <HomeHeroSection
       v-if="homeSanity"
       :image="homeSanity.heroSection.image"
-      :placeholder-image="config.public.environment === 'production' ? homeSanity.heroSection.image : homeSanity.heroSectionTest.image"
+      :placeholder-image="homeSanity.heroSection.image"
       :image-test="homeSanity.heroSectionTest.image"
       :image-mobile="homeSanity.heroSection.imageMobile"
       :image-mobile-test="homeSanity.heroSectionTest.imageMobile"
-      :typewriter-words="config.public.environment === 'production' ? homeSanity.heroSection.typewritterWords : homeSanity.heroSectionTest.typewritterWords"
-      :placeholder="config.public.environment === 'production' ? homeSanity.heroSection.placeholder : homeSanity.heroSectionTest.placeholder"
+      :typewriter-words="homeSanity.heroSection.typewritterWords"
+      :placeholder="homeSanity.heroSection.placeholder"
       :title-text="heroTitleText"
       :subtitle-text="heroSubtitleText"
     />

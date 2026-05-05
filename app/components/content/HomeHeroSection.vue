@@ -1,6 +1,6 @@
 <template>
   <section class="hero">
-    <div
+    <!-- <div
       v-if="showControls"
       class="hero-dev-controls"
     >
@@ -33,7 +33,7 @@
         Grain -
       </button>
       <span class="hero-dev-badge">Grain: {{ (noiseLevelValue * 100).toFixed(0) }}%</span>
-    </div>
+    </div> -->
     <div
       class="hero-image-bg"
       :class="{ 'hero-noise-enabled': noiseEnabled }"
@@ -196,8 +196,8 @@ const typeLoop = () => {
 }
 
 const config = useRuntimeConfig()
-const showControls = computed(() => config.public.environment !== 'production')
-const useTestImage = ref(config.public.environment !== 'production' ? true : false)
+// const showControls = computed(() => config.public.environment !== 'production')
+// const useTestImage = ref(config.public.environment !== 'production' ? true : false)
 const noiseEnabled = ref(true)
 const clampNoise = (value) => {
   const parsed = Number(value)
@@ -211,16 +211,16 @@ const builder = imageUrlBuilder({
   dataset: config.public.sanity.dataset,
 })
 
-const activeDesktopImage = computed(() => (useTestImage.value ? heroProps.imageTest : heroProps.image))
-const activeMobileImage = computed(() => (useTestImage.value ? heroProps.imageMobileTest : heroProps.imageMobile))
+const activeDesktopImage = computed(() => (heroProps.image))
+const activeMobileImage = computed(() => (heroProps.imageMobile))
 const activeImageKey = computed(() => `${activeDesktopImage.value?.asset?._ref || ''}-${activeMobileImage.value?.asset?._ref || ''}`)
 const noiseLevelValue = computed(() => {
   return clampNoise(noiseLevelLocal.value)
 })
 
-const adjustNoise = (delta) => {
-  noiseLevelLocal.value = clampNoise(noiseLevelLocal.value + delta)
-}
+// const adjustNoise = (delta) => {
+//   noiseLevelLocal.value = clampNoise(noiseLevelLocal.value + delta)
+// }
 
 // Build optimized Sanity URLs with proper sizes for each breakpoint
 const buildSanityImageUrl = (source, width, height, quality = 75) => {

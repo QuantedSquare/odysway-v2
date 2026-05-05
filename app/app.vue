@@ -18,6 +18,10 @@ const config = useRuntimeConfig()
 const route = useRoute()
 const { isOpen: isSearchDialogOpen } = useSearchDialog()
 
+if (config.public.environment !== 'production') {
+  useSanityVisualEditing()
+}
+
 useHead({
   htmlAttrs: {
     lang: 'fr',
