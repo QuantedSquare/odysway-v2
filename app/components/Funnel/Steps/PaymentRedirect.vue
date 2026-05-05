@@ -61,7 +61,7 @@
           <template v-if="!isBooking && !checkedOption">
             <Transition name="hint-bubble">
               <div
-                v-if="!switch_accept_data_privacy || !switch_accept_country"
+                v-if="(!switch_accept_data_privacy || !switch_accept_country) && warningAcceptText"
                 class="policy-hint-bubble"
                 role="status"
               >
@@ -416,6 +416,7 @@ const stripePay = async () => {
   }
   loadingSession.value = true
   redirectingToStripe.value = true
+  const bookedId = route.query.booked_id || composableBookedId.value
   const contact = {
     firstName: model.value.firstName,
     lastName: model.value.lastName,
@@ -435,7 +436,6 @@ const stripePay = async () => {
   if (route.query.type === 'custom') {
     Object.assign(dataForStripeSession, { amount: Math.round(+route.query.amount * 100) })
   }
-  const bookedId = route.query.booked_id || composableBookedId.value
   const checkoutLink = await $fetch(`/api/v1/stripe?bookedId=${bookedId}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },

@@ -175,7 +175,7 @@
           class="text-center pt-0"
         >
           <div class="d-flex align-center text-left ga-1 text-caption text-grey">
-            <span>{{ page?.details?.privacy_text || "En renseignant votre email, vous acceptez que nous puissions vous contacter pour finaliser votre réservation." }}
+            <span>{{ page?.details?.privacy_text || "Vos données sont utilisées pour traiter votre réservation." }}
               <NuxtLink
                 class="text-grey text-decoration-underline"
                 to="/politique-de-confidentialite"

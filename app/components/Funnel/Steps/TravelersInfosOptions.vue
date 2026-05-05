@@ -97,10 +97,10 @@
           <h2>
             {{ page?.travelers_infos_form?.preferences_title || 'Préférences & besoins' }}
           </h2>
-          <span class="text-caption text-grey align-self-center">{{ page?.travelers_infos_form?.optional_label || '· optionnel' }}</span>
+          <span class="text-caption text-grey align-self-center">{{ page?.travelers_infos_form?.optional_label || '' }}</span>
         </v-col>
         <v-col cols="12">
-          <p class="font-weight-bold text-caption mb-2">
+          <p class="font-weight-regular text-caption mb-2">
             {{ page.options.special_request_label }}
           </p>
           <v-textarea
