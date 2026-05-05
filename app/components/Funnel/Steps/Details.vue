@@ -321,7 +321,7 @@ const onProgressFinished = () => {
   }
 }
 
-const { createDeal, updateDeal, bookedId } = useStepperDeal()
+const { kickstartDeal, updateDeal, bookedId } = useStepperDeal()
 const isOptionMode = ref(false)
 const route = useRoute()
 
@@ -434,7 +434,7 @@ const rules = {
 
 const nbTravelers = computed(() => +model.value.nbAdults + +model.value.nbChildren)
 
-const submitStepData = async () => {
+const submitStepData = () => {
   // Validate form
   if (!isValid.value) {
     return false
@@ -553,44 +553,57 @@ const submitStepData = async () => {
       }
       trackReservationStep(1, voyage, model.value, additionalData)
 
-      await createDeal(flattenedDeal)
-      buttonLoading.value = false
-      showProgress.value = false
-      shouldAdvance.value = false
-
-      if (isOptionMode.value && bookedId.value) {
-        try {
-          await bookingApi.placeOption({ id: bookedId.value, booked_places: +model.value.nbAdults + +model.value.nbChildren })
-        }
-        catch (err) {
-          console.error('[Details] placeOption error', getApiErrorMessage(err))
-        }
-        updateDeal({
-          stage: '27',
-          currentStep: 'A posé une option',
-          title: voyage.title,
-          nbTravelers: +model.value.nbAdults + +model.value.nbChildren,
-          firstName: model.value.firstName,
-          lastName: model.value.lastName,
-        })
-        // if (config.public.environment === 'production') {
-        $fetch('/api/v1/slack/notification', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            bookedId: bookedId.value,
-            title: voyage.title,
-            nbTravelers: +model.value.nbAdults + +model.value.nbChildren,
-            firstName: model.value.firstName,
-            lastName: model.value.lastName,
-          }),
-        }).catch(console.error)
-        // }
-        await navigateTo(`/confirmation?voyage=${voyage.slug}&isoption=true`)
-        return
+      if (isOptionMode.value) {
+        // Option mode: must wait for bookedId before placing the option
+        kickstartDeal(flattenedDeal, voyage.slug, dateId)
+          .then(async () => {
+            shouldAdvance.value = false
+            if (bookedId.value) {
+              try {
+                await bookingApi.placeOption({ id: bookedId.value, booked_places: +model.value.nbAdults + +model.value.nbChildren })
+              }
+              catch (err) {
+                console.error('[Details] placeOption error', getApiErrorMessage(err))
+              }
+              updateDeal({
+                stage: '27',
+                currentStep: 'A posé une option',
+                title: voyage.title,
+                nbTravelers: +model.value.nbAdults + +model.value.nbChildren,
+                firstName: model.value.firstName,
+                lastName: model.value.lastName,
+              })
+              $fetch('/api/v1/slack/notification', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  bookedId: bookedId.value,
+                  title: voyage.title,
+                  nbTravelers: +model.value.nbAdults + +model.value.nbChildren,
+                  firstName: model.value.firstName,
+                  lastName: model.value.lastName,
+                }),
+              }).catch(console.error)
+            }
+            buttonLoading.value = false
+            await navigateTo(`/confirmation?voyage=${voyage.slug}&isoption=true`)
+          })
+          .catch((err) => {
+            console.error('[Details] kickstartDeal (option) failed', err)
+            shouldAdvance.value = false
+            buttonLoading.value = false
+            showProgress.value = false
+          })
+        // Animation keeps running (buttonLoading stays true) until kickstart resolves
       }
-
-      emit('next')
+      else {
+        // Normal mode: fire kickstart in background, navigate immediately via animation finish
+        kickstartDeal(flattenedDeal, voyage.slug, dateId).catch((err) => {
+          console.error('[Details] kickstartDeal failed', err)
+        })
+        // Setting buttonLoading=false triggers finishTween (600ms) → onProgressFinished → emit('next')
+        buttonLoading.value = false
+      }
     }
   }
   catch (error) {

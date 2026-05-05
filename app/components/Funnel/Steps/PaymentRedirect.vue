@@ -163,7 +163,7 @@
                   block
                   color="secondary"
                   class="font-weight-bold text-h5 custom-btn-shadow"
-                  :loading="loadingSession"
+                  :loading="loadingSession || kickstartLoading"
                   @click="stripePay"
                 >
                   🔒 {{ route.query.type === 'deposit' ? (page?.payment?.pay_deposit_button || 'Régler mon acompte') : page.payment.pay_stripe_button }}
@@ -210,7 +210,7 @@
                     variant="outlined"
                     color="secondary"
                     border="sm"
-                    :loading="loadingSession"
+                    :loading="loadingSession || kickstartLoading"
                     @click="almaPay"
                   >
                     <span class="text-body-1 text-md-body-2 text-primary">{{ almaPayButton }} </span>
@@ -334,7 +334,7 @@ import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 
 const { trackAddPaymentInfo, trackReservationPoseOption } = useGtmTracking()
 
-const { page, ownStep, voyage } = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
+const { page, voyage } = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
 const route = useRoute()
 const config = useRuntimeConfig()
 const alreadyPlacedAnOption = ref(false)
@@ -343,7 +343,7 @@ const redirectingToAlma = ref(false)
 
 const emit = defineEmits(['previous'])
 const model = defineModel()
-const { updateDeal } = useStepperDeal(ownStep)
+const { updateDeal, bookedId: composableBookedId, kickstartLoading } = useStepperDeal()
 const { addSingleParam } = useParams()
 
 const isSurMesure = computed(() => voyage.availabilityTypes?.includes('custom'))
@@ -428,14 +428,15 @@ const stripePay = async () => {
     currentUrl: route.fullPath,
     insuranceImg: page.assurance_img || 'https://odysway.com/images/default/chapka.png',
     countries: voyage.iso,
-    booked_id: route.query.booked_id,
+    booked_id: bookedId,
     departureDate: voyage.departureDate,
     returnDate: voyage.returnDate,
   }
   if (route.query.type === 'custom') {
     Object.assign(dataForStripeSession, { amount: Math.round(+route.query.amount * 100) })
   }
-  const checkoutLink = await $fetch(`/api/v1/stripe?bookedId=${route.query.booked_id}`, {
+  const bookedId = route.query.booked_id || composableBookedId.value
+  const checkoutLink = await $fetch(`/api/v1/stripe?bookedId=${bookedId}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(dataForStripeSession),
@@ -485,7 +486,8 @@ const almaPay = async () => {
   if (route.query.type === 'custom') {
     Object.assign(dataForAlmaSession, { amount: Math.round(+route.query.amount * 100) })
   }
-  const checkoutLink = await $fetch(`/api/v1/alma?bookedId=${route.query.booked_id}`, {
+  const almaBookedId = route.query.booked_id || composableBookedId.value
+  const checkoutLink = await $fetch(`/api/v1/alma?bookedId=${almaBookedId}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(dataForAlmaSession),

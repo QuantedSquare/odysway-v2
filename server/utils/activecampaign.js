@@ -570,6 +570,32 @@ const addContactToDeal = async (dealId, contactId) => {
   }
 }
 
+const createMinimalDeal = async ({ email, firstname, lastname, phone, isoContact, title, stage, currency, owner }) => {
+  const t0 = Date.now()
+  const contact = await upsertContact({
+    contact: {
+      email,
+      ...(firstname && { firstName: firstname }),
+      ...(lastname && { lastName: lastname }),
+      ...(phone && { phone: `${phone}` }),
+      fieldValues: [{ field: '22', value: isoContact || '' }],
+    },
+  })
+  console.log(`[createMinimalDeal] upsertContact done contactId=${contact.id} +${Date.now() - t0}ms`)
+  const res = await apiRequest('/deals', 'post', {
+    deal: {
+      contact: contact.id,
+      title,
+      currency,
+      stage,
+      owner,
+      value: '1',
+    },
+  })
+  console.log(`[createMinimalDeal] POST /deals done dealId=${res.deal.id} +${Date.now() - t0}ms`)
+  return res.deal.id
+}
+
 export default {
   // --- Utils ---
   handleCustomFields: deal => handleCustomFields(deal, customFieldsMapDeal), // A Checker
@@ -586,6 +612,7 @@ export default {
   getAllDeal, // OK
   retrieveOwner,
   createDeal, // OK
+  createMinimalDeal,
   updateDeal,
   addNote,
   recalculatTotalValues,

@@ -49,29 +49,42 @@ const props = defineProps({
   },
 })
 
+const { readScrollHeight } = useLayoutRead()
+
 const isExpanded = ref(false)
 const textContent = ref(null)
+const showReadMore = ref(false)
 
-const showReadMore = computed(() => {
-  if (!textContent.value) return false
-  return textContent.value.scrollHeight > props.lineHeight * props.clampLines
-})
+const clampHeight = props.lineHeight * props.clampLines
 
 const contentStyle = ref({
-  maxHeight: `${props.lineHeight * props.clampLines}px`,
+  maxHeight: `${clampHeight}px`,
   overflow: 'hidden',
   transition: 'max-height 0.5s ease',
 })
 
+onMounted(async () => {
+  if (!textContent.value) return
+  const scrollHeight = await readScrollHeight(textContent.value)
+  if (scrollHeight > clampHeight) {
+    showReadMore.value = true
+  }
+  else if (scrollHeight > 0) {
+    // Content fits within the clamp — remove the style so short content isn't clipped
+    contentStyle.value = {}
+  }
+  // scrollHeight === 0 means layout not ready; leave clamp in place as safe fallback
+})
+
 watch(isExpanded, async (newVal) => {
   if (!textContent.value) return
-
   await nextTick()
   if (newVal) {
-    contentStyle.value.maxHeight = textContent.value.scrollHeight + 'px'
+    const scrollHeight = await readScrollHeight(textContent.value)
+    contentStyle.value = { maxHeight: scrollHeight + 'px', overflow: 'hidden', transition: 'max-height 0.5s ease' }
   }
   else {
-    contentStyle.value.maxHeight = `${props.lineHeight * props.clampLines}px`
+    contentStyle.value = { maxHeight: `${clampHeight}px`, overflow: 'hidden', transition: 'max-height 0.5s ease' }
   }
 })
 

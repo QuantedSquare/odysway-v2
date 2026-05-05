@@ -19,17 +19,31 @@
     </v-card-subtitle>
 
     <div class="text-body-1 text-primary font-italic">
-      <ExpandableText
-        :clamp-lines="3"
-        :line-height="20"
-        collapsed-text="Voir plus"
-        expanded-text="Voir moins"
-        button-class="text-subtitle-2"
+      <div
+        ref="reviewContent"
+        :class="{ 'truncated': shouldTruncate && !isExpanded, 'text-content': shouldTruncate }"
+        :style="shouldTruncate ? contentStyle : {}"
       >
         <div class="text-subtitle-2 font-weight-regular pa-0">
           « {{ formatReviewText(review.text) }} »
         </div>
-      </ExpandableText>
+      </div>
+      <div v-if="shouldTruncate">
+        <v-btn
+          variant="text"
+          width="fit-content"
+          class="text-subtitle-2 d-flex justify-start align-center pl-0"
+          @click="isExpanded = !isExpanded"
+        >
+          {{ isExpanded ? 'Voir moins' : 'Voir plus' }}
+          <v-icon
+            :icon="mdiArrowRight"
+            color="primary"
+            class="mt-1"
+            :class="isExpanded ? 'rotate-180' : ''"
+          />
+        </v-btn>
+      </div>
     </div>
     <v-spacer class="py-0 my-0" />
     <div class="text-caption font-weight-bold text-truncate">
@@ -39,6 +53,7 @@
 </template>
 
 <script setup>
+import { mdiArrowRight } from '@mdi/js'
 import { useImage } from '#imports'
 
 const img = useImage()
@@ -52,7 +67,60 @@ const props = defineProps({
 
 const voyageTitle = computed(() => props.review.voyage?.title || props.review.voyageTitle || null)
 
+const { readScrollHeight } = useLayoutRead()
+const isExpanded = ref(false)
+const reviewContent = ref(null)
+const clampHeight = 60 // 3 lignes × 20px
+
+const shouldTruncate = computed(() => (props.review?.text?.length || 0) > 130)
+
+const contentStyle = ref({
+  maxHeight: `${clampHeight}px`,
+  overflow: 'hidden',
+  transition: 'max-height 0.5s ease',
+})
+
+watch(isExpanded, async (newVal) => {
+  if (import.meta.client && reviewContent.value) {
+    await nextTick()
+    if (newVal) {
+      const scrollHeight = await readScrollHeight(reviewContent.value)
+      contentStyle.value.maxHeight = scrollHeight + 'px'
+    }
+    else {
+      contentStyle.value.maxHeight = `${clampHeight}px`
+    }
+  }
+})
+
+onMounted(() => {
+  if (shouldTruncate.value && !isExpanded.value) {
+    contentStyle.value.maxHeight = `${clampHeight}px`
+  }
+})
+
 function formatReviewText(text) {
   return text.replace(/\\n|\n/g, ' ')
 }
 </script>
+
+<style scoped>
+.text-content {
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  position: relative;
+}
+.text-content.truncated::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2em;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
+}
+.rotate-180 {
+  transform: rotate(180deg);
+}
+</style>

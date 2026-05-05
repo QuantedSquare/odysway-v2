@@ -121,9 +121,7 @@
     </v-row>
     <v-row justify="center">
       <v-col
-        cols="11"
-        md="8"
-        lg="12"
+        cols="12"
       >
         <ContactUsCard
           variant="section"

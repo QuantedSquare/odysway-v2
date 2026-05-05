@@ -121,23 +121,13 @@
                       cols="12"
                       class="housing-text"
                     >
-                      <ExpandableText
+                      <HousingItemText
                         v-if="housing.housingType || housing.housingMood"
-                        :clamp-lines="4"
-                        :line-height="30"
-                        wrapper-class="housing-description"
-                      >
-                        <div v-if="housing.housingType">
-                          <span class="font-weight-bold text-no-wrap">{{ housingTypeTitle }}:</span>
-                          {{ housing.housingType }}
-                        </div>
-                        <div v-if="housing.housingMood">
-                          <span class="font-weight-bold text-no-wrap">{{ housingMoodTitle }}:</span>
-                          <EnrichedText
-                            :value="housing.housingMood"
-                          />
-                        </div>
-                      </ExpandableText>
+                        :housing-type="housing.housingType"
+                        :housing-mood="housing.housingMood"
+                        :housing-type-title="housingTypeTitle"
+                        :housing-mood-title="housingMoodTitle"
+                      />
                     </v-col>
                   </v-row>
                 </v-col>

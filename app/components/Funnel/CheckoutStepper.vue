@@ -224,7 +224,6 @@ const fetchInsuranceQuote = async () => {
         isoContact: dynamicDealValues.value.isoContact,
       },
     })
-    console.log('res in fetchInsuranceQuote', res)
     insurancesPrice.value = res
   }
   catch (e) {

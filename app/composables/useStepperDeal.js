@@ -5,6 +5,8 @@ export function useStepperDeal() {
   const dealId = useState('stepperDeal:dealId', () => null)
   const loadingDeal = useState('stepperDeal:loadingDeal', () => false)
   const bookedId = useState('stepperDeal:bookedId', () => null)
+  const kickstartLoading = useState('stepperDeal:kickstartLoading', () => false)
+  const pendingUpdates = useState('stepperDeal:pendingUpdates', () => [])
   const assignStatus = useState('stepperDeal:assignStatus', () => 'idle')
   const assignError = useState('stepperDeal:assignError', () => null)
   const pendingAssignPayload = useState('stepperDeal:pendingAssignPayload', () => null)
@@ -117,10 +119,35 @@ export function useStepperDeal() {
     }
   }
 
+  const kickstartDeal = async (body, slug, dateId) => {
+    kickstartLoading.value = true
+    try {
+      const res = await apiRequest(`/booking/${slug}/date/${dateId}/kickstart`, 'post', body)
+      dealId.value = res.dealId
+      bookedId.value = res.bookedId
+      localStorage.setItem(dateId, JSON.stringify({ booked_id: res.bookedId, deal_id: res.dealId }))
+      addMultipleParams({ booked_id: res.bookedId, date_id: undefined })
+      // Flush any updateDeal calls that arrived before bookedId was set
+      if (pendingUpdates.value.length > 0) {
+        const toFlush = [...pendingUpdates.value]
+        pendingUpdates.value = []
+        toFlush.forEach(pendingBody =>
+          apiRequest('/ac/deals/update-with-bms?bookedId=' + res.bookedId, 'post', pendingBody).catch(console.error),
+        )
+      }
+      return res
+    }
+    finally {
+      kickstartLoading.value = false
+    }
+  }
+
   const updateDeal = async (body, explicitBookedId) => {
-    console.log('===========BODY IN UPDATE DEAL===========', body)
     const currentBookedId = explicitBookedId || route.query.booked_id || bookedId.value
-    if (!currentBookedId) return false
+    if (!currentBookedId) {
+      pendingUpdates.value.push(body)
+      return false
+    }
     await apiRequest('/ac/deals/update-with-bms?bookedId=' + currentBookedId, 'post', body)
     return true
   }
@@ -129,8 +156,10 @@ export function useStepperDeal() {
     deal,
     dealId,
     bookedId,
+    kickstartLoading,
     fetchDeal,
     createDeal,
+    kickstartDeal,
     updateDeal,
     checkoutType,
     loadingDeal,

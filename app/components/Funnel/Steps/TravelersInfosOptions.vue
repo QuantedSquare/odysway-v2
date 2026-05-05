@@ -83,11 +83,6 @@
           />
         </v-col>
 
-        <v-divider
-          v-if="voyage.gotIndivRoomAvailable && voyage.indivRoomPrice > 0"
-          class="my-6"
-        />
-
       <!-- Indiv room option -->
       </v-row>
 

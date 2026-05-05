@@ -83,9 +83,104 @@ cms/
 
 ## Supabase Tables
 
-- `travel_dates`: departure/return dates, booked_seat, min/max_travelers, status, pricing
-- `booked_dates`: booking records linked to AC deal_id + travel_date_id, payment_type, is_option, expiry
-- `activecampaign_clients`: contact sync (firstname, lastname, email, birthdate, city, zip_code)
+### `travel_dates`
+Departure slots for each voyage. Has two layers of fields: real values (used internally) and `displayed_*` overrides (shown to users).
+- `id` uuid PK
+- `travel_slug` varchar — links to Sanity voyage
+- `departure_date`, `return_date` date
+- `min_travelers`, `max_travelers`, `booked_seat` int
+- `starting_price`, `flight_price` numeric
+- `include_flight`, `early_bird`, `last_minute`, `is_custom_travel`, `is_indiv_travel` bool
+- `badges` text
+- `status`, `displayed_status` text
+- `displayed_min_travelers`, `displayed_max_travelers`, `displayed_booked_seat` int
+- `displayed_starting_price` numeric
+- `displayed_include_flight`, `displayed_early_bird`, `displayed_last_minute` bool
+- `displayed_badges` text
+- `custom_display` bool — when true, use `displayed_*` values instead of real ones
+- `closing_days` bigint — days before departure when booking closes
+- `co_filling` int — co-filling seat count
+- `published`, `deleted`, `is_test` bool
+- `departure_id` text — links to AC departure deal
+- `bms_reference` text
+- `travel_type_prefix` text
+- `last_editor` text, `updated_at` timestamptz
+
+### `booked_dates`
+Booking records — one row per booking linked to an AC deal and a travel date.
+- `id` uuid PK
+- `deal_id` bigint — AC deal ID
+- `travel_date_id` uuid → `travel_dates.id`
+- `booked_places` bigint (default 0)
+- `payment_type` text — deposit / full / balance / custom
+- `transaction_id` text — Stripe or Alma transaction ID
+- `is_option` bool — reservation option (not yet paid)
+- `expiracy_date` date — option expiry
+- `deleted`, `is_test` bool
+
+### `activecampaign_clients`
+Mirror of AC contacts for local lookup.
+- `id` bigint PK
+- `contact` bigint — AC contact ID
+- `email` varchar NOT NULL
+- `firstname`, `lastname`, `city` varchar
+- `zip_code` bigint
+- `birthdate` timestamp
+
+### `activecampaign_deals`
+Mirror of AC deals for reporting and local queries.
+- `id` bigint PK
+- `contact` bigint — AC contact ID
+- `title`, `status`, `stage` varchar
+- `pipeline_id` smallint
+- `total_value`, `price_per_traveler`, `rest_to_pay`, `total_paid` numeric
+- `rest_to_pay_per_traveler`, `applied_promo_per_traveler` numeric
+- `nb_traveler`, `nb_adults`, `nb_children` numeric
+- `travel_type`, `country`, `iso`, `source`, `seller` varchar
+- `indiv_room`, `is_couple` bool
+- `insurance_choice`, `promo_code`, `lost_reason`, `paiement_method` varchar
+- `insurance_price_per_traveler`, `insurance_commission` numeric
+- `margin_per_traveler`, `flight_margin`, `total_margin` numeric
+- `flight_ticket_price_per_traveler` numeric
+- `max_teen_age`, `max_children_age` smallint
+- `children_promo`, `teen_promo` numeric
+- `departure_date`, `return_date`, `conversion_date` timestamp
+
+### `date_notes`
+Internal notes on travel dates (booking management UI).
+- `id` uuid PK, `travel_date_id` uuid FK
+- `author_email`, `author_name`, `author_picture` text
+- `content` text NOT NULL
+
+### `date_activity_log`
+Audit log of changes made to travel dates.
+- `id` uuid PK, `travel_date_id` uuid FK
+- `editor_email`, `editor_name`, `editor_picture` text
+- `action` text NOT NULL
+- `changes` jsonb
+
+### `date_attachments`
+Files attached to travel dates.
+- `id` uuid PK, `travel_date_id` uuid FK
+- `file_name`, `mime_type`, `storage_path` text
+- `file_size` int
+- `uploaded_by` text
+
+### `alma_ids`
+Tracks Alma payment IDs to prevent duplicate processing.
+- `id` text PK
+
+### `stripe_processed_events`
+Idempotency guard for Stripe webhook events.
+- `id` text PK — Stripe event ID
+
+### `webhooks`
+Raw webhook payload log.
+- `id` bigint PK
+- `json` json
+
+### `deals_duplicate`
+Archive/backup table — same schema as `activecampaign_deals`. Not used in active flows.
 
 ## Dev Commands
 

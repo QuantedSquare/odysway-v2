@@ -58,19 +58,41 @@
             cols="6"
             class="py-0 my-0 px-0"
           >
-            <div>{{ page?.travelers_infos_form?.birthdate_label || 'Date de naissance *' }}</div>
-            <v-text-field
-              :id="`birthdate_${id}`"
-              v-model="date"
-              type="text"
-              inputmode="numeric"
-              :placeholder="page?.travelers_infos_form?.birthdate_placeholder || 'JJ/MM/AAAA'"
-              :rules="[rules.required, rules.dateFormat]"
-              :append-inner-icon="mdiCalendarOutline"
-              @input="handleInput"
-              @keydown="handleKeydown"
-              @change="dataUpdated"
-            />
+            <div :id="`date-trigger-${id}`">
+              <div>{{ page?.travelers_infos_form?.birthdate_label || 'Date de naissance *' }}</div>
+              <v-text-field
+                :id="`birthdate_${id}`"
+                v-model="date"
+                type="text"
+                inputmode="numeric"
+                :placeholder="page?.travelers_infos_form?.birthdate_placeholder || 'JJ/MM/AAAA'"
+                :rules="[rules.required, rules.dateFormat]"
+                :append-inner-icon="mdiCalendarOutline"
+                @input="handleInput"
+                @keydown="handleKeydown"
+                @change="dataUpdated"
+                @click:append-inner="menu = !menu"
+              />
+            </div>
+            <v-menu
+              v-model="menu"
+              :activator="`#date-trigger-${id}`"
+              :open-on-click="false"
+              :close-on-content-click="false"
+              location="bottom"
+            >
+              <v-locale-provider locale="fr">
+                <v-date-picker
+                  :model-value="pickerDate"
+                  :max="pickerMax"
+                  :min="pickerMin"
+                  color="primary"
+                  hide-header
+                  show-adjacent-months
+                  @update:model-value="onPickerSelect"
+                />
+              </v-locale-provider>
+            </v-menu>
           </v-col>
           <v-col
             cols="6"
@@ -127,19 +149,41 @@
       cols="6"
       class="py-0 my-0 px-0"
     >
-      <div>{{ page?.travelers_infos_form?.birthdate_label || 'Date de naissance *' }}</div>
-      <v-text-field
-        :id="`birthdate_${id}`"
-        v-model="date"
-        type="text"
-        inputmode="numeric"
-        :placeholder="page?.travelers_infos_form?.birthdate_placeholder || 'JJ/MM/AAAA'"
-        :rules="[rules.required, rules.dateFormat]"
-        :append-inner-icon="mdiCalendarOutline"
-        @input="handleInput"
-        @keydown="handleKeydown"
-        @change="dataUpdated"
-      />
+      <div :id="`date-trigger-${id}`">
+        <div>{{ page?.travelers_infos_form?.birthdate_label || 'Date de naissance *' }}</div>
+        <v-text-field
+          :id="`birthdate_${id}`"
+          v-model="date"
+          type="text"
+          inputmode="numeric"
+          :placeholder="page?.travelers_infos_form?.birthdate_placeholder || 'JJ/MM/AAAA'"
+          :rules="[rules.required, rules.dateFormat]"
+          :append-inner-icon="mdiCalendarOutline"
+          @input="handleInput"
+          @keydown="handleKeydown"
+          @change="dataUpdated"
+          @click:append-inner="menu = !menu"
+        />
+      </div>
+      <v-menu
+        v-model="menu"
+        :activator="`#date-trigger-${id}`"
+        :open-on-click="false"
+        :close-on-content-click="false"
+        location="bottom"
+      >
+        <v-locale-provider locale="fr">
+          <v-date-picker
+            :model-value="pickerDate"
+            :max="pickerMax"
+            :min="pickerMin"
+            color="primary"
+            hide-header
+            show-adjacent-months
+            @update:model-value="onPickerSelect"
+          />
+        </v-locale-provider>
+      </v-menu>
     </v-col>
     <v-col
       cols="6"
@@ -185,6 +229,17 @@ const i_lastname = ref(props.lastname)
 const date = ref(props.birthdate || '')
 const i_isoContact = ref(props.isoContact || '')
 const emit = defineEmits(['change'])
+
+const menu = ref(false)
+const pickerMin = '1925-01-01'
+const pickerMax = dayjs().format('YYYY-MM-DD')
+
+const pickerDate = computed(() => {
+  if (!date.value) return null
+  const parsed = dayjs(date.value, 'DD/MM/YYYY', true)
+  if (!parsed.isValid()) return null
+  return parsed.toDate()
+})
 
 const rules = computed(() => ({
   required: v => !!v || (props.page?.travelers_infos_form?.required_error || 'Cette information est requise.'),
@@ -340,6 +395,14 @@ const dataUpdated = () => {
     birthdate: date.value,
     isoContact: i_isoContact.value,
   })
+}
+
+const onPickerSelect = (val) => {
+  if (val) {
+    date.value = dayjs(val).format('DD/MM/YYYY')
+    menu.value = false
+    dataUpdated()
+  }
 }
 
 // Watch for prop changes
