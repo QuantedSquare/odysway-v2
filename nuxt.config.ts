@@ -242,6 +242,8 @@ export default defineNuxtConfig({
       },
       visualEditing: {
         studioUrl: process.env.SANITY_STUDIO_URL || 'http://localhost:3333',
+        token: process.env.SANITY_VIEWER_TOKEN || '',
+        stega: true,
       },
     }),
   },
