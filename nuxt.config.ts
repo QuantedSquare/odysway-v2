@@ -233,6 +233,7 @@ export default defineNuxtConfig({
     apiVersion: '2025-04-01',
     useCdn: false, // CDN is ~30-60s stale; ISR regeneration must read strongly-consistent data
     withCredentials: false,
+
     // Visual editing (+ stega) pulls in React + ReactDOM + styled-components (~120KB).
     // Only enable on non-production deployments where editors actually preview.
     ...(process.env.VERCEL_ENV !== 'production' && {
@@ -240,7 +241,8 @@ export default defineNuxtConfig({
         enabled: true,
         studioUrl: process.env.SANITY_STUDIO_URL || 'http://localhost:3333',
       },
-      perspective: 'raw',
+      token: process.env.SANITY_VIEWER_TOKEN,
+      perspective: 'drafts',
       visualEditing: {
         studioUrl: process.env.SANITY_STUDIO_URL || 'http://localhost:3333',
         token: process.env.SANITY_VIEWER_TOKEN || '',
