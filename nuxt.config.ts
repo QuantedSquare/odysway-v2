@@ -240,7 +240,7 @@ export default defineNuxtConfig({
         enabled: true,
         studioUrl: process.env.SANITY_STUDIO_URL || 'http://localhost:3333',
       },
-      perspective: 'drafts',
+      perspective: 'raw',
       visualEditing: {
         studioUrl: process.env.SANITY_STUDIO_URL || 'http://localhost:3333',
         token: process.env.SANITY_VIEWER_TOKEN || '',
