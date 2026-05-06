@@ -243,6 +243,7 @@ export default defineNuxtConfig({
       },
       token: process.env.SANITY_VIEWER_TOKEN,
       perspective: 'drafts',
+      // Visual editing only allow on preprod and via the sanity app
       visualEditing: {
         studioUrl: process.env.SANITY_STUDIO_URL || 'http://localhost:3333',
         token: process.env.SANITY_VIEWER_TOKEN || '',
