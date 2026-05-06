@@ -23,16 +23,17 @@ export default defineConfig({
   plugins: [
     presentationTool({
       previewUrl: {
-        origin: process.env.SANITY_STUDIO_PREVIEW_ORIGIN || 'https://dev.odysway.com',
-        initial: process.env.SANITY_STUDIO_PREVIEW_ORIGIN || 'https://dev.odysway.com',
+        origin: process.env.SANITY_STUDIO_PREVIEW_ORIGIN || 'http://localhost:3000',
+        initial: process.env.SANITY_STUDIO_PREVIEW_ORIGIN || 'http://localhost:3000',
         preview: '/',
         previewMode: {
-          enable: '/api/draft-mode/enable',
-          disable: '/api/draft-mode/disable',
+          enable: '/preview/enable',
+          disable: '/preview/disable',
         },
       },
       allowOrigins:[
-        'https://dev.odysway.com'
+        'https://dev.odysway.com',
+        'http://localhost:3000'
       ]
     }),
     structureTool({

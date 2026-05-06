@@ -77,37 +77,42 @@ export default defineNuxtConfig({
     transpile: ['vuetify'],
   },
   routeRules: {
-    // Homepage and main sections
-    '/': { isr: 60 * 60 * 24 }, // 1 day
-    '/voyages': { isr: 60 * 60 * 24 },
-    '/prochains-departs': { isr: 60 * 60 * 24 },
+    // ISR caching is only enabled on production. On preview/dev we want every
+    // request to hit the live Sanity perspective so visual editing reflects
+    // drafts in real time.
+    ...(process.env.VERCEL_ENV === 'production' && {
+      // Homepage and main sections
+      '/': { isr: 60 * 60 * 24 }, // 1 day
+      '/voyages': { isr: 60 * 60 * 24 },
+      '/prochains-departs': { isr: 60 * 60 * 24 },
 
-    // Dynamic content pages with slugs
-    '/voyages/**': { isr: 60 * 60 * 24 }, // 1 day
-    '/destinations/**': { isr: 60 * 60 * 24 },
-    '/thematiques/**': { isr: 60 * 60 * 24 }, // 1 day
-    '/experiences/**': { isr: 60 * 60 * 24 }, // 1 day
-    '/blog/**': { isr: 60 * 60 * 24 }, // 1 day
+      // Dynamic content pages with slugs
+      '/voyages/**': { isr: 60 * 60 * 24 }, // 1 day
+      '/destinations/**': { isr: 60 * 60 * 24 },
+      '/thematiques/**': { isr: 60 * 60 * 24 }, // 1 day
+      '/experiences/**': { isr: 60 * 60 * 24 }, // 1 day
+      '/blog/**': { isr: 60 * 60 * 24 }, // 1 day
 
-    // Singleton pages (static content)
-    '/entreprise': { isr: 60 * 60 * 24 * 5 }, // 5 days - less frequently updated
-    '/sur-mesure': { isr: 60 * 60 * 24 * 5 },
-    '/vision-voyage-odysway': { isr: 60 * 60 * 24 * 5 },
-    '/contact': { isr: 60 * 60 * 24 * 5 },
-    '/faq': { isr: 60 * 60 * 24 * 5 },
-    '/avis-voyageurs': { isr: 60 * 60 * 24 * 5 },
-    '/offre-cadeau': { isr: 60 * 60 * 24 * 5 },
-    '/nous-recrutons': { isr: 60 * 60 * 24 * 5 },
-    '/devis': { isr: 60 * 60 * 24 * 5 },
-    '/checkout': { isr: 60 * 60 * 24 * 5 },
-    '/rdv-projet-voyage': { prerender: true },
+      // Singleton pages (static content)
+      '/entreprise': { isr: 60 * 60 * 24 * 5 }, // 5 days - less frequently updated
+      '/sur-mesure': { isr: 60 * 60 * 24 * 5 },
+      '/vision-voyage-odysway': { isr: 60 * 60 * 24 * 5 },
+      '/contact': { isr: 60 * 60 * 24 * 5 },
+      '/faq': { isr: 60 * 60 * 24 * 5 },
+      '/avis-voyageurs': { isr: 60 * 60 * 24 * 5 },
+      '/offre-cadeau': { isr: 60 * 60 * 24 * 5 },
+      '/nous-recrutons': { isr: 60 * 60 * 24 * 5 },
+      '/devis': { isr: 60 * 60 * 24 * 5 },
+      '/checkout': { isr: 60 * 60 * 24 * 5 },
+      '/rdv-projet-voyage': { prerender: true },
 
-    // Legal pages (rarely updated)
-    '/politique-de-confidentialite': { isr: 60 * 60 * 24 * 5 }, // 5 days
-    '/mentions-legales': { isr: 60 * 60 * 24 * 5 },
-    '/conditions-generales-de-vente': { isr: 60 * 60 * 24 * 5 },
-    '/cheques-vacances': { isr: 60 * 60 * 24 * 5 },
-    '/confirmation': { isr: 60 * 60 * 24 * 5 },
+      // Legal pages (rarely updated)
+      '/politique-de-confidentialite': { isr: 60 * 60 * 24 * 5 }, // 5 days
+      '/mentions-legales': { isr: 60 * 60 * 24 * 5 },
+      '/conditions-generales-de-vente': { isr: 60 * 60 * 24 * 5 },
+      '/cheques-vacances': { isr: 60 * 60 * 24 * 5 },
+      '/confirmation': { isr: 60 * 60 * 24 * 5 },
+    }),
 
     // Redirect legacy or non-existent index to listing page
     '/search': { redirect: { to: '/voyages', statusCode: 301 } },
@@ -243,11 +248,16 @@ export default defineNuxtConfig({
       },
       token: process.env.SANITY_VIEWER_TOKEN,
       perspective: 'drafts',
+      liveContent: {
+        serverToken: process.env.SANITY_VIEWER_TOKEN || '',
+        browserToken: process.env.SANITY_VIEWER_TOKEN || '',
+      },
       // Visual editing only allow on preprod and via the sanity app
       visualEditing: {
         studioUrl: process.env.SANITY_STUDIO_URL || 'http://localhost:3333',
         token: process.env.SANITY_VIEWER_TOKEN || '',
         stega: true,
+        mode: 'live-visual-editing',
       },
     }),
   },

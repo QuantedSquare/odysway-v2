@@ -17,9 +17,14 @@ import '../app/assets/scss/main.scss'
 const config = useRuntimeConfig()
 const route = useRoute()
 const { isOpen: isSearchDialogOpen } = useSearchDialog()
+const environment = useSanityPreviewEnvironment()
+const perspective = useSanityPreviewPerspective()
+const isSanityPresentationTool = useIsSanityPresentationTool()
 
+console.log('TEST', environment, perspective, isSanityPresentationTool)
 if (config.public.environment !== 'production') {
   useSanityVisualEditing()
+  useSanityLiveMode()
 }
 
 useHead({
