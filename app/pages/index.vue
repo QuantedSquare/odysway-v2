@@ -285,7 +285,6 @@
 <script setup>
 import { portableTextToPlain } from '~/utils/portableTextToPlain'
 
-const sanity = useSanity()
 const config = useRuntimeConfig()
 const { trackCtaClick } = useGtmTracking()
 
@@ -469,9 +468,7 @@ const homeQuery = groq`
   }
 `
 
-const { data: homeSanity } = await useAsyncData('home-sanity', () =>
-  sanity.fetch(homeQuery),
-)
+const { data: homeSanity } = await useSanityQuery(homeQuery)
 
 // Extract plain-text title/subtitle so the LCP h1/h2 can render directly
 // without the @portabletext/vue runtime, which was the dominant cost in
