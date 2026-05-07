@@ -278,9 +278,7 @@ const categoriesQuery = groq`
     title
   }
 `
-const { data: allCategories } = await useAsyncData('blogCategories', () =>
-  sanity.fetch(categoriesQuery),
-)
+const { data: allCategories } = await useSanityQuery(categoriesQuery)
 
 const pageBlogQuery = groq`
   *[_type == "page_blog"][0]{
@@ -290,9 +288,7 @@ const pageBlogQuery = groq`
     }
   }
 `
-const { data: pageBlogSanity, status: pageBlogStatus } = await useAsyncData('pageBlog', () =>
-  sanity.fetch(pageBlogQuery),
-)
+const { data: pageBlogSanity, status: pageBlogStatus } = await useSanityQuery(pageBlogQuery)
 
 if (pageBlogSanity.value) {
   useSeo({

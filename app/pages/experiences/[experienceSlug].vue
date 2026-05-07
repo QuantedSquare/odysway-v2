@@ -41,10 +41,7 @@ const slug = computed(() => route.params.experienceSlug)
 const pageContentQuery = groq`*[_type == "page_experiences"][0]{
   ...
 }`
-const sanity = useSanity()
-const { data: pageContent } = await useAsyncData('page-content', () =>
-  sanity.fetch(pageContentQuery),
-)
+const { data: pageContent } = await useSanityQuery(pageContentQuery)
 
 const experienceQuery = `
   *[_type == "experience" && slug.current == $slug][0]{
@@ -109,9 +106,9 @@ const experienceQuery = `
   }
 `
 
-const { data: selectedExperience } = await useAsyncData(
-  () => `selected-experience-${slug.value}`,
-  () => sanity.fetch(experienceQuery, { slug: slug.value }),
+const { data: selectedExperience } = await useSanityQuery(
+  experienceQuery,
+  computed(() => ({ slug: slug.value })),
 )
 // Fetch all experiences for carousel and format for ContentLayout
 const experiencesListQuery = `
@@ -124,9 +121,7 @@ const experiencesListQuery = `
     description
   }
 `
-const { data: experiencesList } = await useAsyncData('experiences-on-content-layout', () =>
-  sanity.fetch(experiencesListQuery),
-)
+const { data: experiencesList } = await useSanityQuery(experiencesListQuery)
 
 const displayedData = computed(() => ({
   items: experiencesList.value?.map(experience => ({

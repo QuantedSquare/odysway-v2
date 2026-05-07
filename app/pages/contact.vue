@@ -12,8 +12,6 @@ definePageMeta({
   layout: 'simple-pages',
 })
 
-const sanity = useSanity()
-
 const query = groq`*[_type == "page_contact"][0]{
   formTitle,
   heroSection,
@@ -23,9 +21,7 @@ const query = groq`*[_type == "page_contact"][0]{
   seo
 }`
 
-const { data: contactContent } = await useAsyncData('contact-content', () =>
-  sanity.fetch(query),
-)
+const { data: contactContent } = await useSanityQuery(query)
 if (contactContent.value) {
   useSeo({
     seoData: contactContent.value?.seo,

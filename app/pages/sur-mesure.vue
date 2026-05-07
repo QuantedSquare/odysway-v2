@@ -44,8 +44,6 @@ definePageMeta({
   layout: 'simple-pages',
 })
 
-const sanity = useSanity()
-
 const surMesureQuery = groq`*[_type == "surMesure" && slug.current == "sur-mesure"][0]{
   title,
   heroImage,
@@ -53,9 +51,7 @@ const surMesureQuery = groq`*[_type == "surMesure" && slug.current == "sur-mesur
   ctaButton
 }`
 
-const { data: page, status } = await useAsyncData('sur-mesure', () =>
-  sanity.fetch(surMesureQuery),
-)
+const { data: page, status } = await useSanityQuery(surMesureQuery)
 
 if (page.value) {
   const defaultContent = {

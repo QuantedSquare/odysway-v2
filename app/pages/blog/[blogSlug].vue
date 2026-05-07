@@ -95,11 +95,9 @@ const blogQuery = `
   }
 `
 
-const sanity = useSanity()
-const { data: blogSanity } = await useAsyncData('blog-detail', () =>
-  sanity.fetch(blogQuery, {
-    slug: slug.value,
-  }),
+const { data: blogSanity } = await useSanityQuery(
+  blogQuery,
+  computed(() => ({ slug: slug.value })),
 )
 // If no blog post found, throw 404
 if (!blogSanity.value) {

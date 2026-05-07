@@ -84,10 +84,7 @@ const visionPageQuery = groq`*[_type == "visionVoyageOdysway"][0]{
   }
 }`
 
-const sanity = useSanity()
-const { data: visionPage } = await useAsyncData('vision-voyage-odysway', () =>
-  sanity.fetch(visionPageQuery),
-)
+const { data: visionPage } = await useSanityQuery(visionPageQuery)
 
 if (visionPage.value) {
   // Set the visionPage title explicitly

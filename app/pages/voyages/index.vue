@@ -124,8 +124,6 @@ const route = useRoute()
 const routeQuery = computed(() => route.query)
 const confirmedOnly = ref(route.query.confirmed === 'true')
 
-const sanity = useSanity()
-
 const searchContentQuery = groq`*[_type == "search"][0]{
   oneTrip,
   multipleTrips,
@@ -134,24 +132,17 @@ const searchContentQuery = groq`*[_type == "search"][0]{
   searchHero
 }`
 
-const { data: searchContent } = await useAsyncData('search-content-page', () =>
-  sanity.fetch(searchContentQuery),
-)
+const { data: searchContent } = await useSanityQuery(searchContentQuery)
 
-const { data: fetchedDestination } = useAsyncData('fetchedDestination', () => {
-  if (route.query.destination) {
-    const query = groq`*[_type == "destination" && slug.current == $slug][0]{
-      title,
-      interjection,
-      image
-    }`
-    return sanity.fetch(query, { slug: route.query.destination })
-  }
-  return null
-}, {
-  watch: [routeQuery],
-  immediate: true,
-})
+const fetchedDestinationQuery = groq`*[_type == "destination" && slug.current == $slug][0]{
+  title,
+  interjection,
+  image
+}`
+const { data: fetchedDestination } = useSanityQuery(
+  fetchedDestinationQuery,
+  computed(() => ({ slug: route.query.destination || '' })),
+)
 
 const capitalizeFirstLetter = (str) => {
   return str.charAt(0).toUpperCase() + str.slice(1)
@@ -180,9 +171,7 @@ const travelTypesQuery = groq`*[_type == "search"][0]{
   travelTypes
 }`
 
-const { data: travelTypes } = await useAsyncData('travelTypes', () =>
-  sanity.fetch(travelTypesQuery),
-)
+const { data: travelTypes } = await useSanityQuery(travelTypesQuery)
 const TRAVEL_TYPES = {
   GROUP: travelTypes.value?.travelTypes?.group,
   INDIVIDUAL: travelTypes.value?.travelTypes?.individual,
@@ -229,9 +218,7 @@ const regionsQuery = groq`*[_type == "region"]{
   "slug": slug.current
 }`
 
-const { data: regions } = await useAsyncData('regions', () =>
-  sanity.fetch(regionsQuery),
-)
+const { data: regions } = await useSanityQuery(regionsQuery)
 
 const destinationsQuery = groq`*[_type == "destination"]{
   _id,
@@ -243,104 +230,98 @@ const destinationsQuery = groq`*[_type == "destination"]{
   }
 }`
 
-const { data: destinations } = await useAsyncData('destinations', () =>
-  sanity.fetch(destinationsQuery),
-)
+const { data: destinations } = await useSanityQuery(destinationsQuery)
 
 const { data: travelsByDate } = await useAsyncData('travels-by-date', () =>
   $fetch('/api/v1/booking/travels-by-date'),
 )
 
-const { data: voyages } = await useAsyncData(
-  `search-${JSON.stringify(route.query)}`,
-  async () => {
-    let destination = null
-    let regionSlug = null
-    let isRegionSearch = false
-    let isTopDestinations = false
+const voyagesQuery = groq`*[
+  _type == "voyage" && (
+    !('custom' in availabilityTypes)
+  )
+]|order(orderRank){
+  ...,
+  _id,
+  title,
+  "slug": slug.current,
+  image,
+  imageCard,
+  rating,
+  comments,
+  duration,
+  pricing,
+  availabilityTypes,
+  monthlyAvailability,
+  destinations[]-> {
+    _id,
+    title
+  },
+  experienceType->{
+    _id,
+    title
+  },
+  categories[]->{
+    _id,
+    title
+  }
+}`
 
-    if (route.query.destination) {
-      // Check if the destination param matches a region slug
-      const region = regions.value.find(r => r.slug === route.query.destination)
-      if (region) {
-        isRegionSearch = true
-        regionSlug = region.slug
-      }
-      else if (route.query.destination === 'top-destination') {
-        isRegionSearch = true
-        isTopDestinations = true
-      }
-      else {
-        // Otherwise, treat as destination slug
-        const found = destinations.value.find(d => d.slug === route.query.destination)
-        if (found) destination = found.title
-      }
+const { data: allVoyages } = await useSanityQuery(voyagesQuery)
+
+const voyages = computed(() => {
+  let list = allVoyages.value || []
+  let destination = null
+  let regionSlug = null
+  let isRegionSearch = false
+  let isTopDestinations = false
+
+  if (route.query.destination) {
+    const region = regions.value?.find(r => r.slug === route.query.destination)
+    if (region) {
+      isRegionSearch = true
+      regionSlug = region.slug
     }
-
-    const travelType = route.query.travelType || null
-    const fromList = route.query.from || null
-
-    const voyagesQuery = groq`*[
-      _type == "voyage" && (
-        !('custom' in availabilityTypes)
-      )
-    ]|order(orderRank){
-      ...,
-      _id,
-      title,
-      "slug": slug.current,
-      image,
-      imageCard,
-      rating,
-      comments,
-      duration,
-      pricing,
-      availabilityTypes,
-      monthlyAvailability,
-      destinations[]-> {
-        _id,
-        title
-      },
-      experienceType->{
-        _id,
-        title
-      },
-      categories[]->{
-        _id,
-        title
-      }
-    }`
-
-    let voyages = await sanity.fetch(voyagesQuery)
-    if (isRegionSearch) {
-      let destinationList = []
-      if (isTopDestinations) {
-        destinationList = destinations.value.filter(d => d.isTopDestination)
-      }
-      else {
-        const region = regions.value.find(r => r.slug === regionSlug)
-        if (region) {
-          destinationList = destinations.value.filter(dest =>
-            dest.regions && dest.regions.some(r => r.nom === region.nom),
-          )
-        }
-      }
-      const destinationNames = destinationList.map(d => d.title)
-      voyages = voyages.filter(v =>
-        v.destinations?.some(d => destinationNames.includes(d.title)),
-      )
+    else if (route.query.destination === 'top-destination') {
+      isRegionSearch = true
+      isTopDestinations = true
     }
     else {
-      voyages = filterByDestination(voyages, destination)
+      const found = destinations.value?.find(d => d.slug === route.query.destination)
+      if (found) destination = found.title
     }
+  }
 
-    voyages = filterByType(voyages, travelType)
-    voyages = filterByDate(voyages, fromList)
+  const travelType = route.query.travelType || null
+  const fromList = route.query.from || null
 
-    return _.uniqBy(voyages, 'slug')
-  },
-  { watch: [routeQuery, regions, destinations] },
-)
+  if (isRegionSearch) {
+    let destinationList = []
+    if (isTopDestinations) {
+      destinationList = (destinations.value || []).filter(d => d.isTopDestination)
+    }
+    else {
+      const region = regions.value?.find(r => r.slug === regionSlug)
+      if (region) {
+        destinationList = (destinations.value || []).filter(dest =>
+          dest.regions && dest.regions.some(r => r.nom === region.nom),
+        )
+      }
+    }
+    const destinationNames = destinationList.map(d => d.title)
+    list = list.filter(v =>
+      v.destinations?.some(d => destinationNames.includes(d.title)),
+    )
+  }
+  else {
+    list = filterByDestination(list, destination)
+  }
+
+  list = filterByType(list, travelType)
+  list = filterByDate(list, fromList)
+
+  return _.uniqBy(list, 'slug')
+})
 
 function filterByConfirmed(voyages, confirmedFilter, travelsWithDates) {
   if (!confirmedFilter) return voyages

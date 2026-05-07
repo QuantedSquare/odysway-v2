@@ -56,17 +56,7 @@ const allQueries = `
     }
   }
 `
-const sanity = useSanity()
-
-const { data: categoriesWithVoyages } = await useAsyncData('categories-with-voyages', async () => {
-  try {
-    const result = await sanity.fetch(allQueries)
-    return result || []
-  }
-  catch {
-    return []
-  }
-})
+const { data: categoriesWithVoyages } = await useSanityQuery(allQueries)
 
 const displayedData = computed(() => ({
   items: categoriesWithVoyages.value?.categories?.map(category => ({

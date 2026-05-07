@@ -133,16 +133,12 @@ const props = defineProps({
   },
 })
 
-const sanity = useSanity()
-
-const { data: newsletterContent } = await useAsyncData('newsletter-content', () =>
-  sanity.fetch(`*[_type == "newsletter"][0]{
+const { data: newsletterContent } = await useSanityQuery(groq`*[_type == "newsletter"][0]{
   emailPlaceholder,
   subscribeButton,
   successMessage,
   closeButton
-}`),
-)
+}`)
 
 const { trackNewsletterSubscription, trackInscriptionAlerte } = useGtmTracking()
 

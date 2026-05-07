@@ -50,8 +50,6 @@ definePageMeta({
   layout: 'simple-pages',
 })
 
-const sanity = useSanity()
-
 const query = groq`*[_type == "offreCadeau"][0]{
   title,
   heroImage,
@@ -65,9 +63,7 @@ const query = groq`*[_type == "offreCadeau"][0]{
   seo
 }`
 
-const { data: page, status } = await useAsyncData('offre-cadeau', () =>
-  sanity.fetch(query),
-)
+const { data: page, status } = await useSanityQuery(query)
 
 if (page.value) {
   useSeo({

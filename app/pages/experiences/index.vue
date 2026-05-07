@@ -56,11 +56,7 @@ const allQueries = `
     }
   }
 `
-const sanity = useSanity()
-
-const { data: experiencesWithVoyages } = await useAsyncData('experiences-with-voyages', () =>
-  sanity.fetch(allQueries),
-)
+const { data: experiencesWithVoyages } = await useSanityQuery(allQueries)
 const displayedData = computed(() => ({
   items: experiencesWithVoyages.value?.experiences?.map(experience => ({
     id: experience._id,

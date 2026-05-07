@@ -91,23 +91,7 @@ const reviewsToDisplayQuery = `
   }
 `
 
-const sanity = useSanity()
-const { data: reviewsToDisplaySanity } = await useAsyncData(
-  'home-reviews',
-  async () => {
-    try {
-      const result = await sanity.fetch(reviewsToDisplayQuery)
-      return result || []
-    }
-    catch (e) {
-      console.error('Error fetching reviews:', e)
-      return []
-    }
-  },
-  {
-    server: true,
-  },
-)
+const { data: reviewsToDisplaySanity } = await useSanityQuery(reviewsToDisplayQuery)
 
 const reviewsToDisplay = computed(() => {
   return reviewsToDisplaySanity.value?.reviews?.reviews?.map(review => ({

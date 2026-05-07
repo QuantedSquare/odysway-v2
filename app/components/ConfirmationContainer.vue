@@ -128,7 +128,6 @@
 import { useDisplay } from 'vuetify'
 
 const route = useRoute()
-const sanity = useSanity()
 const { trackPurchase } = useGtmTracking()
 
 const isOption = ref(route.query.isoption === 'true')
@@ -163,9 +162,9 @@ const voyageQuery = groq`*[_type == "voyage" && slug.current == $slug][0]{
   indivRoomPrice
 }`
 
-const { data: voyage, status } = await useAsyncData(
-  `voyage-${route.query.voyage}`,
-  () => sanity.fetch(voyageQuery, { slug: route.query.voyage }),
+const { data: voyage, status } = await useSanityQuery(
+  voyageQuery,
+  computed(() => ({ slug: route.query.voyage })),
 )
 
 const { mdAndUp } = useDisplay()

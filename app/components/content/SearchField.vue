@@ -178,7 +178,6 @@ import { useImage } from '#imports'
 const img = useImage()
 const router = useRouter()
 const route = useRoute()
-const sanity = useSanity()
 const { trackSearchBar } = useGtmTracking()
 
 const searchFieldQuery = groq`*[_type == "search"][0]{
@@ -191,9 +190,7 @@ const searchFieldQuery = groq`*[_type == "search"][0]{
   travelTypes
 }`
 
-const { data: searchFieldContent, status: searchFieldContentStatus } = await useAsyncData('search-field-content', () =>
-  sanity.fetch(searchFieldQuery),
-)
+const { data: searchFieldContent, status: searchFieldContentStatus } = await useSanityQuery(searchFieldQuery)
 
 const isSelectionARegion = useState('isSelectionARegion', () => false)
 const destinationId = useId()
@@ -247,9 +244,7 @@ const destinationsQuery = groq`*[_type == "destination" && count(*[_type == "voy
   isTopDestination
 }`
 
-const { data: destinations, status: destinationsStatus } = await useAsyncData('destinations-in-search', () =>
-  sanity.fetch(destinationsQuery),
-)
+const { data: destinations, status: destinationsStatus } = await useSanityQuery(destinationsQuery)
 
 const regionsQuery = groq`*[_type == "region"]{
   nom,
@@ -257,9 +252,7 @@ const regionsQuery = groq`*[_type == "region"]{
   meta_description
 }`
 
-const { data: regions, status: regionsStatus } = await useAsyncData('regions', () =>
-  sanity.fetch(regionsQuery),
-)
+const { data: regions, status: regionsStatus } = await useSanityQuery(regionsQuery)
 
 const mappedDestinationsToRegions = computed(() => {
   if (!regions.value || !destinations.value) return []

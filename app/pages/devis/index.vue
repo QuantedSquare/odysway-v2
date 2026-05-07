@@ -152,7 +152,6 @@ const { trackDevisStep, getCountryFromPhone } = useGtmTracking()
 const { formatVoyageForGtm } = useGtmVoyageFormatter()
 const { travelTitle } = useFunnelHeader()
 const route = useRoute()
-const sanity = useSanity()
 
 const currentStep = ref(1)
 const stepperHeaderRef = useTemplateRef('stepperHeaderRef')
@@ -231,9 +230,9 @@ const [
   { data: pageTexts, status: pageStatus },
   { data: voyagePage },
 ] = await Promise.all([
-  useAsyncData(`devis-voyage-${route.query.slug}`, () => sanity.fetch(voyageQuery, { slug: route.query.slug })),
-  useAsyncData('devis-texts', () => sanity.fetch(devisQuery)),
-  useAsyncData('devis-sticky', () => sanity.fetch(stickyQuery)),
+  useSanityQuery(voyageQuery, computed(() => ({ slug: route.query.slug }))),
+  useSanityQuery(devisQuery),
+  useSanityQuery(stickyQuery),
 ])
 
 watchEffect(() => {

@@ -14,24 +14,8 @@ export async function useFaqData(options = {}) {
   } = options
 
   const faqQuery = groq`*[_type == "faq"][0]{ ... }`
-  const sanity = useSanity()
 
-  const { data: faqData } = await useAsyncData(
-    'faq-data',
-    async () => {
-      try {
-        const result = await sanity.fetch(faqQuery)
-        return result || null
-      }
-      catch (e) {
-        console.error('Error fetching FAQ data:', e)
-        return null
-      }
-    },
-    {
-      server: true,
-    },
-  )
+  const { data: faqData } = await useSanityQuery(faqQuery)
 
   /**
    * Get FAQs formatted for structured data (Schema.org)

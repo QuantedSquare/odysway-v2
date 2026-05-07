@@ -50,15 +50,12 @@ import { useImage } from '#imports'
 const route = useRoute()
 const router = useRouter()
 const img = useImage()
-const sanity = useSanity()
 const { trackRdvClick } = useGtmTracking()
 const ctasQuery = groq`*[_type == "ctas"][0]{
   faqSection
 }`
 
-const { data: faqTextes } = await useAsyncData('faq-textes', () =>
-  sanity.fetch(ctasQuery),
-)
+const { data: faqTextes } = await useSanityQuery(ctasQuery)
 
 function redirectToCalendly() {
   trackRdvClick('cta-card-sheet')

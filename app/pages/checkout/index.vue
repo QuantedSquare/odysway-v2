@@ -116,11 +116,10 @@ const voyagePageStickyQuery = groq`*[_type == "page_voyage"][0]{
     }
   }
 }`
-const sanity = useSanity()
 try {
   const [{ data: pageTextsData }, { data: voyagePageData }] = await Promise.all([
-    useAsyncData('checkout-page-texts', () => sanity.fetch(checkoutTextsQuery)),
-    useAsyncData('checkout-voyage-page-sticky', () => sanity.fetch(voyagePageStickyQuery)),
+    useSanityQuery(checkoutTextsQuery),
+    useSanityQuery(voyagePageStickyQuery),
   ])
   pageTexts.value = pageTextsData.value
   if (pageTexts.value && voyagePageData.value) {

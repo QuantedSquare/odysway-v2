@@ -516,9 +516,7 @@ watch(filteredDateEntries, (entries) => {
 const pageContentQuery = groq`*[_type == "page_prochains_departs"][0]{
   ...
 }`
-const { data: pageContent } = await useAsyncData('page-prochains-departs', () =>
-  sanity.fetch(pageContentQuery),
-)
+const { data: pageContent } = await useSanityQuery(pageContentQuery)
 
 // Static seo data with plain text from this file / No data on Sanity
 useSeo({

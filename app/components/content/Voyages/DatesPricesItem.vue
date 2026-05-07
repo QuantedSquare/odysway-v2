@@ -268,10 +268,7 @@ const datesPricesItemQuery = `
     dateSections
   }
 `
-const sanity = useSanity()
-const { data: texte } = await useAsyncData('datesPricesItem', () =>
-  sanity.fetch(datesPricesItemQuery),
-)
+const { data: texte } = await useSanityQuery(datesPricesItemQuery)
 
 const enrichedDate = computed(() => {
   const date = props.date

@@ -153,10 +153,7 @@ const reviewsQuery = `
   }
 `
 
-const sanity = useSanity()
-const { data: reviews } = await useAsyncData('reviews', () =>
-  sanity.fetch(reviewsQuery),
-)
+const { data: reviews } = await useSanityQuery(reviewsQuery)
 
 const scrollTarget = useTemplateRef('scroll-target')
 

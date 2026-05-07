@@ -232,23 +232,7 @@ const footerQuery = groq`*[_type == "footer"][0]{
   linksList
 }`
 
-const { data: footer } = await useAsyncData(
-  'footer',
-  async () => {
-    try {
-      const sanity = useSanity()
-      const result = await sanity.fetch(footerQuery)
-      return result || null
-    }
-    catch (e) {
-      console.error('Error fetching footer:', e)
-      return null
-    }
-  },
-  {
-    server: true,
-  },
-)
+const { data: footer } = await useSanityQuery(footerQuery)
 
 const img = useImage()
 

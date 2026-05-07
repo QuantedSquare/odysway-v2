@@ -209,12 +209,10 @@ const voyageCardContentQuery = groq`*[_type == "voyage_card"][0]{
   indivDescription
 }`
 
-const sanity = useSanity()
-const { data: voyageCardContent } = await useAsyncData('voyage-card-content', () =>
-  sanity.fetch(voyageCardContentQuery),
-{
-  dedupe: 'defer', // This ensures all components wait for first request to complete
-},
+const { data: voyageCardContent } = await useSanityQuery(
+  voyageCardContentQuery,
+  undefined,
+  { dedupe: 'defer' },
 )
 
 const actionColor = computed(() => props.voyage.availabilityTypes?.includes('groupe') ? '#f7f8f8' : '#fef9f8')

@@ -37,27 +37,11 @@ import { getImageUrl } from '~/utils/getImageUrl'
 
 const img = useImage()
 
-const { data: partenaires } = await useAsyncData(
-  'partenairesImg',
-  async () => {
-    try {
-      const sanity = useSanity()
-      const result = await sanity.fetch(groq`*[_type == "ctas"][0]{
-        partenairesSection{
-          images
-        }
-      }`)
-      return result || null
-    }
-    catch (e) {
-      console.error('Error fetching partenaires images:', e)
-      return null
-    }
-  },
-  {
-    server: true,
-  },
-)
+const { data: partenaires } = await useSanityQuery(groq`*[_type == "ctas"][0]{
+  partenairesSection{
+    images
+  }
+}`)
 </script>
 
 <style scoped>
