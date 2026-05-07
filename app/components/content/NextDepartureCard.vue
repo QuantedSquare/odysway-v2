@@ -231,8 +231,12 @@ const statusBadge = computed(() => {
   const status = getDateStatus(date)
   if (!status) return null
 
+  const text = status.status === 'soon_confirmed'
+    ? `Confirmé dès ${date.min_travelers} personne${date.min_travelers > 1 ? 's' : ''}`
+    : status.text
+
   return {
-    text: status.text,
+    text,
     color: status.color,
   }
 })

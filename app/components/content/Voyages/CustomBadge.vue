@@ -1,13 +1,7 @@
 <template>
-  <!-- <v-badge
-    inline
-    :color="color"
-    class="custom"
-    dot
-  /> -->
   <div class="inline-block">
     <div class="custom-badge">
-      <span class="custom-content"/>
+      <span class="custom-content" />
     </div>
   </div>
 </template>

@@ -235,15 +235,15 @@ export default defineNuxtConfig({
     withCredentials: false,
     // Visual editing (+ stega) pulls in React + ReactDOM + styled-components (~120KB).
     // Only enable on non-production deployments where editors actually preview.
-    ...(process.env.VERCEL_ENV !== 'production' && {
-      stega: {
-        enabled: true,
-        studioUrl: process.env.SANITY_STUDIO_URL || 'http://localhost:3333',
-      },
-      visualEditing: {
-        studioUrl: process.env.SANITY_STUDIO_URL || 'http://localhost:3333',
-      },
-    }),
+    // ...(process.env.VERCEL_ENV !== 'production' && {
+    //   stega: {
+    //     enabled: true,
+    //     studioUrl: process.env.SANITY_STUDIO_URL || 'http://localhost:3333',
+    //   },
+    //   visualEditing: {
+    //     studioUrl: process.env.SANITY_STUDIO_URL || 'http://localhost:3333',
+    //   },
+    // }),
   },
   schemaOrg: {
     identity: defineOrganization({

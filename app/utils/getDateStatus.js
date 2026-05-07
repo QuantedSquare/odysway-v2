@@ -2,8 +2,8 @@
 const STATUS_MAP = {
   soon_confirmed: {
     status: 'soon_confirmed',
-    text: 'Inscriptions ouvertes',
-    color: 'yellow',
+    text: 'Confirmé dès X personne',
+    color: 'sky',
   },
   confirmed: {
     status: 'confirmed',

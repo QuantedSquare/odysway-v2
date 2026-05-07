@@ -5,7 +5,7 @@
   >
     <div>
       <CustomBadge :color="status.color" />
-      {{ status.text }}
+      {{ statusText }}
     </div>
 
     <div
@@ -27,12 +27,12 @@
         - Reste {{ remainingPlaces }}
       </span>
     </div>
-    <div
+    <!-- <div
       v-else
       class="font-weight-regular"
     >
       (dès {{ minTravellers }} inscrits)
-    </div>
+    </div> -->
   </v-row>
 </template>
 
@@ -60,5 +60,13 @@ const props = defineProps({
 const remainingPlaces = computed(() => {
   const remaining = props.maxTravellers - props.bookedPlaces
   return remaining > 1 || remaining === 0 ? `${remaining} places` : `${remaining} place`
+})
+const statusText = computed(() => {
+  if (props.status.status === 'soon_confirmed') {
+    return `Confirmé dès ${props.minTravellers} personne` + (props.minTravellers > 1 ? 's' : '')
+  }
+  else {
+    return props.status.text
+  }
 })
 </script>

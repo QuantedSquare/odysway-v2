@@ -8,7 +8,6 @@ export default defineEventHandler(async (event) => {
       statusMessage: 'slug requis',
     })
   }
-  console.log('slug', slug)
 
   const { data, error } = await supabase
     .from('travel_dates')
