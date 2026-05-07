@@ -113,7 +113,7 @@ const categoryQuery = `
 
 const { data: categorySanity } = await useSanityQuery(
   categoryQuery,
-  computed(() => ({ slug: slug.value })),
+  { slug },
 )
 
 // Fetch all categories for carousel and format for ContentLayout

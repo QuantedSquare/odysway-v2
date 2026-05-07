@@ -295,17 +295,16 @@ const voyagePropositionsQuery = `
     monthlyAvailability
   }
 `
+const voyageSlugRef = computed(() => route.params.voyageSlug)
 const [{ data: page }, { data: voyage }] = await Promise.all([
   useSanityQuery(voyagePageQuery),
-  useSanityQuery(voyageQuery, { slug: route.params.voyageSlug }),
+  useSanityQuery(voyageQuery, { slug: voyageSlugRef }),
 ])
 
+const experienceTypeIdRef = computed(() => voyage.value?.experienceType?._id)
 const { data: voyagePropositions } = await useSanityQuery(
   voyagePropositionsQuery,
-  computed(() => ({
-    slug: route.params.voyageSlug,
-    experienceTypeId: voyage.value?.experienceType?._id,
-  })),
+  { slug: voyageSlugRef, experienceTypeId: experienceTypeIdRef },
   { lazy: true },
 )
 onMounted(() => {

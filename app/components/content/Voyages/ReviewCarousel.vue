@@ -124,9 +124,10 @@ const reviewsQuery = `
     }
   }
 `
+const voyageSlugRef = computed(() => route.params.voyageSlug)
 const { data: reviewsSanity } = await useSanityQuery(
   reviewsQuery,
-  computed(() => ({ voyageSlug: route.params.voyageSlug })),
+  { voyageSlug: voyageSlugRef },
 )
 
 const reviews = computed(() => {

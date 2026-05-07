@@ -162,9 +162,10 @@ const voyageQuery = groq`*[_type == "voyage" && slug.current == $slug][0]{
   indivRoomPrice
 }`
 
+const voyageSlugRef = computed(() => route.query.voyage)
 const { data: voyage, status } = await useSanityQuery(
   voyageQuery,
-  computed(() => ({ slug: route.query.voyage })),
+  { slug: voyageSlugRef },
 )
 
 const { mdAndUp } = useDisplay()

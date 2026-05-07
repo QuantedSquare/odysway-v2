@@ -139,9 +139,10 @@ const fetchedDestinationQuery = groq`*[_type == "destination" && slug.current ==
   interjection,
   image
 }`
+const fetchedDestinationSlug = computed(() => route.query.destination || '')
 const { data: fetchedDestination } = useSanityQuery(
   fetchedDestinationQuery,
-  computed(() => ({ slug: route.query.destination || '' })),
+  { slug: fetchedDestinationSlug },
 )
 
 const capitalizeFirstLetter = (str) => {

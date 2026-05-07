@@ -97,7 +97,7 @@ const blogQuery = `
 
 const { data: blogSanity } = await useSanityQuery(
   blogQuery,
-  computed(() => ({ slug: slug.value })),
+  { slug },
 )
 // If no blog post found, throw 404
 if (!blogSanity.value) {

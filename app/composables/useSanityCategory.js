@@ -73,7 +73,7 @@ export function useSanityCategory(slug) {
     refresh,
   } = useSanityQuery(
     categoryQuery,
-    computed(() => ({ slug: unref(slug) })),
+    { slug: computed(() => unref(slug)) },
   )
 
   return {

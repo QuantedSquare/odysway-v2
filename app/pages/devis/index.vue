@@ -230,7 +230,7 @@ const [
   { data: pageTexts, status: pageStatus },
   { data: voyagePage },
 ] = await Promise.all([
-  useSanityQuery(voyageQuery, computed(() => ({ slug: route.query.slug }))),
+  useSanityQuery(voyageQuery, { slug: computed(() => route.query.slug) }),
   useSanityQuery(devisQuery),
   useSanityQuery(stickyQuery),
 ])

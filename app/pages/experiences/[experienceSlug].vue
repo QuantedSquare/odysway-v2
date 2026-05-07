@@ -108,7 +108,7 @@ const experienceQuery = `
 
 const { data: selectedExperience } = await useSanityQuery(
   experienceQuery,
-  computed(() => ({ slug: slug.value })),
+  { slug },
 )
 // Fetch all experiences for carousel and format for ContentLayout
 const experiencesListQuery = `
