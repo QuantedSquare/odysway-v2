@@ -93,19 +93,20 @@
         />
       </v-col>
       <v-col
+        v-if="mdAndUp"
         cols="3"
         class="d-none d-md-flex flex-column ga-7"
       >
         <div v-if="voyage.imageSecondary?.asset?._ref">
           <SanityImage
             :asset-id="voyage.imageSecondary.asset._ref"
+            :w="600"
             auto="format"
           >
             <template #default="{ src }">
               <v-img
                 v-if="src"
                 :src="src"
-                :lazy-src="img(src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
                 :alt="voyage.imageSecondary.alt || `Image secondaire du voyage ${voyage.title}`"
                 cover
                 height="214"
@@ -117,13 +118,13 @@
         <div v-if="voyage.photosList?.length > 0 && voyage.photosList[0].asset?._ref">
           <SanityImage
             :asset-id="voyage.photosList[0].asset._ref"
+            :w="600"
             auto="format"
           >
             <template #default="{ src }">
               <v-img
                 v-if="src"
                 :src="src"
-                :lazy-src="img(src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
                 :alt="voyage.photosList[0].alt || `Photo du voyage ${voyage.title}`"
                 cover
                 height="214"
@@ -156,10 +157,11 @@
 import { mdiExportVariant } from '@mdi/js'
 import imageUrlBuilder from '@sanity/image-url'
 import { stegaClean } from '@sanity/client/stega'
-import { useImage } from '#imports'
+import { useDisplay } from 'vuetify'
 
 const config = useRuntimeConfig()
 const { trackShareClick } = useGtmTracking()
+const { mdAndUp } = useDisplay()
 
 const props = defineProps({
   voyage: {
@@ -172,7 +174,6 @@ const builder = imageUrlBuilder({
   projectId: config.public.sanity.projectId,
   dataset: config.public.sanity.dataset,
 })
-const img = useImage()
 const route = useRoute()
 const snackbar = ref(false)
 // Build optimized Sanity URLs for main image with hotspot support

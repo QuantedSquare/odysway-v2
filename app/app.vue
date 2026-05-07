@@ -84,7 +84,6 @@ onMounted(() => {
     }
   }
 
-  // Load after a short delay or on user interaction
   if (config.public.environment !== 'production') {
     return
   }
@@ -93,15 +92,13 @@ onMounted(() => {
   if (isConstrainedConnection()) {
     return
   }
-  if ('requestIdleCallback' in window) {
-    requestIdleCallback(loadHotjar, { timeout: 5000 })
-  }
-  else {
-    setTimeout(loadHotjar, 5000)
-  }
 
-  // Also load on first user interaction as fallback
-  const events = ['mousedown', 'touchstart', 'keydown']
+  // Hotjar's modules.js costs ~140-200ms CPU + 56KB transfer on Lighthouse
+  // mobile. Defer to first user interaction so it stays out of the metrics
+  // window. A passive user who bounces in <1s won't be recorded — that's
+  // an acceptable tradeoff for session-replay (those sessions aren't
+  // informative anyway). 30s safety net for completely passive readers.
+  const events = ['mousedown', 'touchstart', 'keydown', 'scroll']
   const loadOnInteraction = () => {
     loadHotjar()
     events.forEach((event) => {
@@ -111,6 +108,7 @@ onMounted(() => {
   events.forEach((event) => {
     document.addEventListener(event, loadOnInteraction, { once: true, passive: true })
   })
+  setTimeout(loadHotjar, 30000)
 })
 
 onMounted(() => {

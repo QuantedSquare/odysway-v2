@@ -1,7 +1,8 @@
 <template>
   <div>
     <div v-if="voyage && !customTravel">
-      <BottomAppBar
+      <LazyBottomAppBar
+        :hydrate-on-idle="true"
         :date-sections="page.dateSections"
         :starting-price="voyage.pricing.startingPrice"
         :no-group-travel="!voyage.availabilityTypes?.includes('groupe')"
@@ -14,11 +15,13 @@
       >
         <HeroVoyageSection :voyage="voyage" />
         <LazyChipsContainer
+          :hydrate-on-idle="true"
           :badges="voyage.badges"
           :badge-title="voyage.experienceType?.badgeTitle"
           :difficulty-level="voyage.difficultyLevel"
         />
-        <SubHeaderMobileCTABar
+        <LazySubHeaderMobileCTABar
+          :hydrate-on-idle="true"
           :date-sections="page.dateSections"
           :starting-price="voyage.pricing.startingPrice"
           :no-group-travel="!voyage.availabilityTypes?.includes('groupe')"

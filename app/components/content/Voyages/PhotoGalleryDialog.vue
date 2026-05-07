@@ -5,6 +5,7 @@
     transition="dialog-top-transition"
     class="bg-primary"
     tabindex="0"
+    :eager="false"
     @keydown="handleKeydown"
   >
     <template #activator="{ props: activatorProps }">
@@ -53,12 +54,12 @@
             >
               <SanityImage
                 :asset-id="photo.asset?._ref || photo.asset?._id"
+                :w="1600"
                 auto="format"
               >
                 <template #default="{ src }">
                   <v-img
                     :src="src"
-                    :lazy-src="img(src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
                     :alt="photo.alt || `Photo de galerie du voyage ${index}`"
                     width="100%"
                   />
