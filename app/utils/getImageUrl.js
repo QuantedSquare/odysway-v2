@@ -2,7 +2,7 @@ import imageUrlBuilder from '@sanity/image-url'
 
 // Initialize Sanity image URL builder
 
-export function getImageUrl(ref, vanityName = null, config = null) {
+export function getImageUrl(ref, vanityName = null, config = null, width = 1200) {
   const runtimeConfig = config || useRuntimeConfig()
   const builder = imageUrlBuilder({
     // baseUrl: runtimeConfig.public.siteURL || 'https://odysway.com', // Only available for Entreprise account on Sanity
@@ -17,7 +17,7 @@ export function getImageUrl(ref, vanityName = null, config = null) {
       .image(ref)
       .format('webp')
       .fit('max')
-      .width(1200)
+      .width(width)
 
     // Add vanity name for SEO if provided
     if (vanityName) {

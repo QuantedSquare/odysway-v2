@@ -147,7 +147,7 @@ const processedBadges = computed(() => {
     }
 
     const pictoUrl = badgeItem.badge.picto?.asset?._ref
-      ? getImageUrl(badgeItem.badge.picto.asset._ref)
+      ? getImageUrl(badgeItem.badge.picto.asset._ref, null, null, 64)
       : ''
 
     return {

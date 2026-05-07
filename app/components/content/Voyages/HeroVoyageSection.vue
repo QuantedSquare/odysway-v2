@@ -81,18 +81,14 @@
       >
         <NuxtImg
           v-if="voyage.image?.asset"
-          :src="mainImageSrcUrl"
-          sizes="(max-width: 600px) 100vw, (max-width: 960px) 66vw, 75vw"
+          sizes="(max-width: 600px) 92vw, (max-width: 960px) 60vw, 70vw"
           :srcset="mainImageSrcset"
           :alt="stegaClean(voyage.image?.alt) || `Image principale du voyage ${voyage.title}`"
           format="webp"
-          :preload="{
-            fetchpriority: 'high',
-          }"
           loading="eager"
           fetchpriority="high"
           width="1000"
-          height="100%"
+          height="563"
           class="custom-height voyage-main-image "
         />
       </v-col>
@@ -196,23 +192,14 @@ const buildMainImageUrl = (width, height, quality = 90) => {
 // Use consistent 16:9 aspect ratio across all breakpoints for hotspot to work correctly
 // This ensures the same focal region stays meaningful at all screen sizes
 // 16:9 ratio: height = width * 9 / 16
-const mainImageSrcUrl = computed(() => {
-  // Use a good quality base image for the src (fallback for older browsers)
-  // 1000px width = 563px height at 16:9 - maintains hotspot consistency
-  return buildMainImageUrl(1000, 563, 100)
-})
-
 const mainImageSrcset = computed(() => {
-  // All sizes use 16:9 aspect ratio - only width varies
-  // This allows hotspot to work consistently across all breakpoints
-  // IMPORTANT: The width descriptor (e.g., 400w) MUST match the actual image width
-  // Format: buildMainImageUrl(actualWidth, calculatedHeight, quality) actualWidthw
+  // All sizes use 16:9 aspect ratio - only width varies; q=75 WebP is
+  // visually indistinguishable from q=100 for photographs at ~3x smaller.
   return [
-    `${buildMainImageUrl(400, 225, 100)} 400w`, // 400px image = 225px height (16:9)
-    `${buildMainImageUrl(600, 338, 100)} 600w`, // 600px image = 338px height (16:9)
-    `${buildMainImageUrl(800, 450, 100)} 800w`, // 800px image = 450px height (16:9)
-    `${buildMainImageUrl(1000, 563, 100)} 1000w`, // 1000px image = 563px height (16:9)
-    `${buildMainImageUrl(1400, 788, 100)} 1400w`, // 1400px image = 788px height (16:9)
+    `${buildMainImageUrl(400, 225, 75)} 400w`,
+    `${buildMainImageUrl(600, 338, 75)} 600w`,
+    `${buildMainImageUrl(800, 450, 75)} 800w`,
+    `${buildMainImageUrl(1000, 563, 75)} 1000w`,
   ].join(', ')
 })
 
@@ -250,6 +237,14 @@ function copyUrl() {
 
 .custom-height-container {
   max-height: 460px;
+}
+
+@media screen and (max-width: 600px) {
+  /* Reserve 16:9 vertical space on mobile so the hero doesn't shift
+     when the image finishes decoding (was the source of CLS 0.199). */
+  .custom-height-container {
+    min-height: 56vw;
+  }
 }
 
 /* Container - keep flexible, let image control aspect ratio */
@@ -296,11 +291,12 @@ function copyUrl() {
     left: 15px;
   }
 
-  /* Keep 16:9 aspect ratio on mobile too - no height override needed */
-  /* The aspect-ratio CSS property handles this automatically */
+  /* Keep 16:9 aspect ratio on mobile via aspect-ratio (set above).
+     Drop min-height: 460px (which forced an inconsistent box height on
+     narrow viewports) and let aspect-ratio reserve space. */
   .voyage-main-image {
-    /* max-height: 280px; */
-    min-height: 100%;
+    min-height: 0;
+    height: auto;
     border-radius: 0;
   }
 }

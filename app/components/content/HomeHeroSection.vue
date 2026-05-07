@@ -162,9 +162,12 @@ const wordIndex = ref(0)
 const typingSpeed = ref(100)
 
 onMounted(() => {
-  if (typewriterWords.value.length) {
-    typeLoop()
-  }
+  if (!typewriterWords.value.length) return
+  // Delay 800ms so the typewriter doesn't compete with the LCP paint
+  // for main-thread time on slow devices.
+  setTimeout(() => {
+    requestAnimationFrame(typeLoop)
+  }, 800)
 })
 
 const typeLoop = () => {
@@ -192,7 +195,9 @@ const typeLoop = () => {
     typingSpeed.value = 500
   }
 
-  setTimeout(typeLoop, typingSpeed.value)
+  // rAF aligns DOM updates with the paint cycle so we don't queue
+  // synchronous reflow work between frames.
+  setTimeout(() => requestAnimationFrame(typeLoop), typingSpeed.value)
 }
 
 const config = useRuntimeConfig()
