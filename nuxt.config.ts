@@ -119,6 +119,11 @@ export default defineNuxtConfig({
     '/calendly': { redirect: { to: '/rdv-projet-voyage', statusCode: 301 } },
     '/concept': { redirect: { to: '/vision-voyage-odysway', statusCode: 301 } },
 
+    // Legacy blog redirects
+    '/blog/le-top-10-des-pays-a-visiter-en-2020': { redirect: { to: '/blog/le-top-10-des-pays-a-visiter', statusCode: 301 } },
+    '/blog/sejour-hiver-laponie-2024': { redirect: { to: '/blog/sejour-hiver-laponie', statusCode: 301 } },
+    '/blog/top-10-des-destinations-pour-un-voyage-immersif-en-2024': { redirect: { to: '/blog/top-10-des-destinations-pour-un-voyage-immersif', statusCode: 301 } },
+
     // API routes
     '/api/**': { cors: true },
   },
@@ -236,7 +241,7 @@ export default defineNuxtConfig({
     projectId: process.env.SANITY_PROJECT_ID,
     dataset: process.env.SANITY_DATASET,
     apiVersion: '2025-04-01',
-    useCdn: false, // CDN is ~30-60s stale; ISR regeneration must read strongly-consistent data
+    useCdn: process.env.VERCEL_ENV === 'production', // CDN is ~30-60s stale; ISR regeneration must read strongly-consistent data
     withCredentials: false,
 
     // Visual editing (+ stega) pulls in React + ReactDOM + styled-components (~120KB).
