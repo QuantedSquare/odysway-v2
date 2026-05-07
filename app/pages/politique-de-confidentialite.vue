@@ -16,17 +16,13 @@ definePageMeta({
   layout: 'simple-pages',
 })
 
-const sanity = useSanity()
-
 const privacyPolicyQuery = groq`*[_type == "privacyPolicy" && slug.current == "politique-de-confidentialite"][0]{
   title,
   body,
   seo
 }`
 
-const { data: page } = await useAsyncData('politique-de-confidentialite', () =>
-  sanity.fetch(privacyPolicyQuery),
-)
+const { data: page } = await useSanityQuery(privacyPolicyQuery)
 
 if (page.value) {
   useSeo({

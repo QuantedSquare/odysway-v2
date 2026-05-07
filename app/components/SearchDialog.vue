@@ -260,7 +260,6 @@ const ensureAlgoliaInit = () => {
   })
 }
 
-const sanity = useSanity()
 const route = useRoute()
 const { trackCtaClick } = useGtmTracking()
 
@@ -276,9 +275,7 @@ const searchDialogFieldQuery = groq`*[_type == "search"][0]{
 
 // Non-blocking: dialog renders immediately with placeholder copy, real
 // strings swap in once the Sanity fetch resolves.
-const { data: searchDialogField } = useAsyncData('search-dialog-field', () =>
-  sanity.fetch(searchDialogFieldQuery),
-)
+const { data: searchDialogField } = useSanityQuery(searchDialogFieldQuery)
 
 const { destinations, loading, handleEmbededSearch } = useTravelsSearch()
 

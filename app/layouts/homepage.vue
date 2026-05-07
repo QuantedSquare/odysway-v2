@@ -84,7 +84,6 @@
 
 <script setup>
 const route = useRoute()
-const sanity = useSanity()
 
 const partenairesQuery = groq`*[_type == "ctas"][0]{
   layoutInfoContainer,
@@ -97,41 +96,8 @@ const searchQuery = groq`*[_type == "search"][0]{
 
 // lazy + below-the-fold: don't block SSR. Both feed sections gated by
 // `v-if="data"` so a late arrival just renders when ready.
-const { data: partenairesTextes } = useAsyncData(
-  'partenairesTextes',
-  async () => {
-    try {
-      const result = await sanity.fetch(partenairesQuery)
-      return result || null
-    }
-    catch (e) {
-      console.error('Error fetching partenaires:', e)
-      return null
-    }
-  },
-  {
-    lazy: true,
-    server: true,
-  },
-)
-
-const { data: searchContent } = useAsyncData(
-  'search-content',
-  async () => {
-    try {
-      const result = await sanity.fetch(searchQuery)
-      return result || null
-    }
-    catch (e) {
-      console.error('Error fetching search content:', e)
-      return null
-    }
-  },
-  {
-    lazy: true,
-    server: true,
-  },
-)
+const { data: partenairesTextes } = useSanityQuery(partenairesQuery, undefined, { lazy: true })
+const { data: searchContent } = useSanityQuery(searchQuery, undefined, { lazy: true })
 </script>
 
 <style scoped>

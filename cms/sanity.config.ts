@@ -1,4 +1,5 @@
 import {defineConfig} from 'sanity'
+import {presentationTool} from 'sanity/presentation'
 
 import {assist} from '@sanity/assist'
 import {structureTool} from 'sanity/structure'
@@ -20,7 +21,21 @@ export default defineConfig({
     enabled: true,
   },
   plugins: [
-   
+    presentationTool({
+      previewUrl: {
+        origin: process.env.SANITY_STUDIO_PREVIEW_ORIGIN || 'http://localhost:3000',
+        initial: process.env.SANITY_STUDIO_PREVIEW_ORIGIN || 'http://localhost:3000',
+        preview: '/',
+        previewMode: {
+          enable: '/preview/enable',
+          disable: '/preview/disable',
+        },
+      },
+      allowOrigins:[
+        'https://dev.odysway.com',
+        'http://localhost:3000'
+      ]
+    }),
     structureTool({
       structure: (S, context) =>
         S.list()

@@ -136,7 +136,6 @@ useSeoMeta({
 
 const img = useImage()
 const route = useRoute()
-const sanity = useSanity()
 const { trackRdvClick } = useGtmTracking()
 
 const voyageSlug = computed(() => (route.query.voyage ? String(route.query.voyage) : ''))
@@ -150,10 +149,10 @@ const query = groq`*[_type == "pageCheckoutAlert"][0]{
 
 const checkoutQuery = groq`*[_type == "checkout"][0]{ calendly }`
 
-const { data } = await useAsyncData('checkout-alert-travel-full', () => sanity.fetch(query))
+const { data } = await useSanityQuery(query)
 const content = computed(() => data.value || null)
 
-const { data: checkoutData } = await useAsyncData('checkout-page-texts-for-alert', () => sanity.fetch(checkoutQuery))
+const { data: checkoutData } = await useSanityQuery(checkoutQuery)
 const calendlyText = computed(() => {
   const text = checkoutData.value?.calendly
   if (typeof text === 'string' && text.trim().length > 0) return text

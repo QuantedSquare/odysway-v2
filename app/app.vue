@@ -17,6 +17,14 @@ import '../app/assets/scss/main.scss'
 const config = useRuntimeConfig()
 const route = useRoute()
 const { isOpen: isSearchDialogOpen } = useSearchDialog()
+const isLocalHost = import.meta.client
+  ? ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname)
+  : false
+
+if (config.public.environment !== 'production' && !isLocalHost) {
+  useSanityVisualEditing()
+  useSanityLiveMode()
+}
 
 useHead({
   htmlAttrs: {

@@ -7,12 +7,8 @@
 <script setup>
 const route = useRoute()
 
-const sanity = useSanity()
-
 // Fetch all blog slugs from Sanity
-const { data: blogSlugs } = await useAsyncData('blog-slugs', () =>
-  sanity.fetch(`*[_type == "blog"]{ "slug": slug.current }`),
-)
+const { data: blogSlugs } = await useSanityQuery(groq`*[_type == "blog"]{ "slug": slug.current }`)
 
 const matchedSlug = blogSlugs.value?.find(
   b => b.slug === route.params.blogSlug,

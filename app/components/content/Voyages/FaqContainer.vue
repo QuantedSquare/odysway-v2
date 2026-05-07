@@ -114,23 +114,7 @@ const faqTextesQuery = `
     faqSection
   }
 `
-const sanity = useSanity()
-const { data: faqSanity } = await useAsyncData(
-  'faq-content',
-  async () => {
-    try {
-      const result = await sanity.fetch(faqSanityQuery)
-      return result || null
-    }
-    catch (e) {
-      console.error('Error fetching FAQ content:', e)
-      return null
-    }
-  },
-  {
-    server: true,
-  },
-)
+const { data: faqSanity } = await useSanityQuery(faqSanityQuery)
 
 // Build optimized Sanity URLs with proper sizes for FAQ background
 const buildSanityImageUrl = (width, quality = 60) => {
@@ -162,22 +146,7 @@ const faqBackgroundLazy = computed(() => {
   return buildSanityImageUrl(600, 10)
 })
 
-const { data: faqTextes } = await useAsyncData(
-  'faq-texts',
-  async () => {
-    try {
-      const result = await sanity.fetch(faqTextesQuery)
-      return result || null
-    }
-    catch (e) {
-      console.error('Error fetching FAQ texts:', e)
-      return null
-    }
-  },
-  {
-    server: true,
-  },
-)
+const { data: faqTextes } = await useSanityQuery(faqTextesQuery)
 </script>
 
 <style scoped>

@@ -87,7 +87,6 @@ import { useDisplay } from 'vuetify'
 
 const { width } = useDisplay()
 const route = useRoute()
-const sanity = useSanity()
 
 const partenairesQuery = groq`*[_type == "ctas"][0]{
   layoutInfoContainer,
@@ -98,39 +97,8 @@ const searchQuery = groq`*[_type == "search"][0]{
   infoContainer
 }`
 
-const { data: partenairesTextes } = await useAsyncData(
-  'partenairesTextes',
-  async () => {
-    try {
-      const result = await sanity.fetch(partenairesQuery)
-      return result || null
-    }
-    catch (e) {
-      console.error('Error fetching partenaires:', e)
-      return null
-    }
-  },
-  {
-    server: true,
-  },
-)
-
-const { data: searchContent } = await useAsyncData(
-  'search-content',
-  async () => {
-    try {
-      const result = await sanity.fetch(searchQuery)
-      return result || null
-    }
-    catch (e) {
-      console.error('Error fetching search content:', e)
-      return null
-    }
-  },
-  {
-    server: true,
-  },
-)
+const { data: partenairesTextes } = await useSanityQuery(partenairesQuery)
+const { data: searchContent } = await useSanityQuery(searchQuery)
 </script>
 
 <style scoped>

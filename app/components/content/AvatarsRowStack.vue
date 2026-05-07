@@ -92,22 +92,9 @@ const sanityQuery = `
     image
   }
 `
-const sanity = useSanity()
-const { data: avatars } = await useAsyncData(
-  'team-avatars',
-  async () => {
-    try {
-      const result = await sanity.fetch(sanityQuery)
-      return result.filter(avatar => avatar.image?.asset?._ref) || []
-    }
-    catch (e) {
-      console.error('Error fetching avatars:', e)
-      return []
-    }
-  },
-  {
-    server: true,
-  },
+const { data: avatarsRaw } = await useSanityQuery(sanityQuery)
+const avatars = computed(() =>
+  (avatarsRaw.value || []).filter(avatar => avatar.image?.asset?._ref),
 )
 
 const img = useImage()

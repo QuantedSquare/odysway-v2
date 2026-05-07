@@ -167,10 +167,7 @@ const entreprisePageQuery = groq`*[_type == "entreprise"][0]{
   ctaButton
 }`
 
-const sanity = useSanity()
-const { data: page } = await useAsyncData('entreprise', () =>
-  sanity.fetch(entreprisePageQuery),
-)
+const { data: page } = await useSanityQuery(entreprisePageQuery)
 
 if (page.value) {
   // Fallback values for content

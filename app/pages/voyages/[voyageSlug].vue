@@ -163,7 +163,6 @@ definePageMeta({
 })
 
 const route = useRoute()
-const sanity = useSanity()
 const { trackViewItem } = useGtmTracking()
 const { formatVoyageForGtm } = useGtmVoyageFormatter()
 
@@ -296,26 +295,16 @@ const voyagePropositionsQuery = `
     monthlyAvailability
   }
 `
+const voyageSlugRef = computed(() => route.params.voyageSlug)
 const [{ data: page }, { data: voyage }] = await Promise.all([
-  useAsyncData('voyage-page', () => sanity.fetch(voyagePageQuery)),
-  useAsyncData('voyage' + route.params.voyageSlug, () =>
-    sanity.fetch(voyageQuery, { slug: route.params.voyageSlug }),
-  ),
+  useSanityQuery(voyagePageQuery),
+  useSanityQuery(voyageQuery, { slug: voyageSlugRef }),
 ])
 
-const { data: voyagePropositions } = await useAsyncData(
-  'voyage-propositions',
-  () => {
-    if (voyage.value?.experienceType?._id) {
-      return sanity.fetch(voyagePropositionsQuery, {
-        slug: route.params.voyageSlug,
-        experienceTypeId: voyage.value?.experienceType?._id,
-      })
-    }
-    else {
-      return []
-    }
-  },
+const experienceTypeIdRef = computed(() => voyage.value?.experienceType?._id)
+const { data: voyagePropositions } = await useSanityQuery(
+  voyagePropositionsQuery,
+  { slug: voyageSlugRef, experienceTypeId: experienceTypeIdRef },
   { lazy: true },
 )
 onMounted(() => {

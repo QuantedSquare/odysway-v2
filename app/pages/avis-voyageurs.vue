@@ -31,10 +31,7 @@ const pageQuery = `
     seo
   }
 `
-const sanity = useSanity()
-const { data: page } = await useAsyncData('avis-voyageurs', () =>
-  sanity.fetch(pageQuery),
-)
+const { data: page } = await useSanityQuery(pageQuery)
 
 if (page.value) {
   useSeo({

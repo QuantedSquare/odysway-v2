@@ -54,10 +54,7 @@ const { width } = useDisplay()
 const pageTextesQuery = groq`*[_type == "ctas"][0]{
   layoutInfoContainer
 }`
-const sanity = useSanity()
-const { data: pageTextes } = await useAsyncData('page-textes-layouts', () =>
-  sanity.fetch(pageTextesQuery),
-)
+const { data: pageTextes } = await useSanityQuery(pageTextesQuery)
 </script>
 
 <style scoped>

@@ -43,8 +43,6 @@ definePageMeta({
   layout: 'simple-pages',
 })
 
-const sanity = useSanity()
-
 const query = groq`*[_type == "chequesVacances" && slug.current == "cheques-vacances"][0]{
   title,
   heroImage,
@@ -53,9 +51,7 @@ const query = groq`*[_type == "chequesVacances" && slug.current == "cheques-vaca
   seo
 }`
 
-const { data: page, status } = await useAsyncData('cheques-vacances', () =>
-  sanity.fetch(query),
-)
+const { data: page, status } = await useSanityQuery(query)
 
 function getButtonLink(link) {
   if (!link) return '/'

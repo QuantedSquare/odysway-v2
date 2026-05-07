@@ -66,26 +66,14 @@ export function useSanityCategory(slug) {
    * 2. watch: [slug] for reactive updates when slug changes
    * 3. server: true to enable SSR
    */
-  const sanity = useSanity()
   const {
     data: category,
     error,
     pending,
     refresh,
-  } = useAsyncData(
-    `category-${unref(slug)}`, // Unique key with slug
-    async () => {
-      const result = await sanity.fetch(categoryQuery, {
-        slug: unref(slug),
-      })
-      return result || null
-    },
-    {
-      // Watch slug changes and refetch
-      watch: [slug],
-      // Enable server-side rendering
-      server: true,
-    },
+  } = useSanityQuery(
+    categoryQuery,
+    { slug: computed(() => unref(slug)) },
   )
 
   return {

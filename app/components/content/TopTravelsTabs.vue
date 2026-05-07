@@ -103,7 +103,6 @@
 
 <script setup>
 const currentTab = ref(0)
-const sanity = useSanity()
 const { trackMenuClick } = useGtmTracking()
 
 // Handle link click with GTM tracking
@@ -130,23 +129,9 @@ const topsQuery = `
   }
 `
 
-// Fetch tops data with SSR support
-const { data, error } = await useAsyncData(
-  'tops-tabs',
-  async () => {
-    try {
-      const data = await sanity.fetch(topsQuery)
-      return data || []
-    }
-    catch (e) {
-      console.error('Error fetching tops:', e)
-      return []
-    }
-  },
-  {
-    server: true,
-  },
-)
+const { data, error } = await useSanityQuery(topsQuery, undefined, {
+  default: () => [],
+})
 </script>
 
 <style scoped>

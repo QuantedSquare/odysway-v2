@@ -31,8 +31,6 @@
 </template>
 
 <script setup>
-const sanity = useSanity()
-
 const confirmationQuery = groq`*[_type == "confirmation" && slug.current == "confirmation"][0]{
   titleOption,
   titleDefault,
@@ -43,9 +41,7 @@ const confirmationQuery = groq`*[_type == "confirmation" && slug.current == "con
   accrocheDevis
 }`
 
-const { data: page, status } = await useAsyncData('confirmation-page', () =>
-  sanity.fetch(confirmationQuery),
-)
+const { data: page, status } = await useSanityQuery(confirmationQuery)
 // No indexing for this page
 useSeo({
   seoData: {

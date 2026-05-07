@@ -47,15 +47,8 @@ const pageContentQuery = `
     ...
   }
 `
-const sanity = useSanity()
-const { data: pageContent } = await useAsyncData('page-content', async () => {
-  try {
-    const result = await sanity.fetch(pageContentQuery)
-    return result || {}
-  }
-  catch {
-    return {}
-  }
+const { data: pageContent } = await useSanityQuery(pageContentQuery, undefined, {
+  default: () => ({}),
 })
 
 // Fetch the category with its linked blog post
@@ -118,17 +111,9 @@ const categoryQuery = `
   }
 `
 
-const { data: categorySanity } = await useAsyncData(
-  () => `category-sanity-${slug.value}`,
-  async () => {
-    try {
-      const result = await sanity.fetch(categoryQuery, { slug: slug.value })
-      return result
-    }
-    catch {
-      return null
-    }
-  },
+const { data: categorySanity } = await useSanityQuery(
+  categoryQuery,
+  { slug },
 )
 
 // Fetch all categories for carousel and format for ContentLayout
@@ -142,14 +127,8 @@ const categoriesListQuery = `
     description
   }
 `
-const { data: categoriesList } = await useAsyncData('categories-on-content-layout', async () => {
-  try {
-    const result = await sanity.fetch(categoriesListQuery)
-    return result || []
-  }
-  catch {
-    return []
-  }
+const { data: categoriesList } = await useSanityQuery(categoriesListQuery, undefined, {
+  default: () => [],
 })
 
 const displayedData = computed(() => ({

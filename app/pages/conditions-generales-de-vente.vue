@@ -18,17 +18,13 @@ definePageMeta({
   layout: 'simple-pages',
 })
 
-const sanity = useSanity()
-
 const query = groq`*[_type == "conditionsGeneralesVente" && slug.current == "conditions-generales-de-vente"][0]{
   title,
   body,
   seo
 }`
 
-const { data: page } = await useAsyncData('conditions-generales-de-vente', () =>
-  sanity.fetch(query),
-)
+const { data: page } = await useSanityQuery(query)
 
 if (page.value) {
   useSeo({
