@@ -239,10 +239,10 @@ function copyUrl() {
 .custom-height-container {
   max-height: 460px;
   /* Reserve 16:9 vertical space across ALL viewports so the container
-     doesn't collapse before the hero image decodes. 56vw approximates
-     16:9 of the column's effective width on mobile/tablet; clamped at
-     460px on wider screens to match the image's max-height. */
-  min-height: min(56vw, 460px);
+     doesn't collapse before the hero image decodes. 56.25vw = 100vw * 9/16,
+     matching the explicit image height set below; clamped at 460px on
+     wider screens to match the image's max-height. */
+  min-height: min(56.25vw, 460px);
 }
 
 @media (min-width: 960px) {
@@ -297,8 +297,15 @@ function copyUrl() {
     left: 15px;
   }
 
-  /* Mobile drops the rounded corners; aspect-ratio handles sizing. */
+  /* Belt-and-braces against CLS: the browser was not reliably reserving
+     space via `aspect-ratio` + width/height attrs before the image
+     decoded, leaving the v-row at ~0 height until load. An explicit
+     `height: 56.25vw` (= 100vw * 9/16) forces the <img> box to its
+     final size at first paint. width=1000 height=563 attrs + object-fit
+     keep cropping correct. */
   .voyage-main-image {
+    height: 56.25vw;
+    max-height: 460px;
     border-radius: 0;
   }
 }
