@@ -226,8 +226,18 @@ export default defineNuxtConfig({
     },
   },
   image: {
+    // Include the small breakpoints actually used by the header logo
+    // and inline icons so NuxtImg generates exact-size URLs instead of
+    // rounding up to 320w (was the source of the ssr:warn flood).
     screens: {
       10: 10,
+      20: 20,
+      32: 32,
+      64: 64,
+      110: 110,
+      130: 130,
+      150: 150,
+      180: 180,
       320: 320,
       640: 640,
       768: 768,

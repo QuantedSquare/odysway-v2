@@ -1,3 +1,8 @@
+// Only the upright weights are loaded as real font files. Italic
+// variants are synthesized by the browser from Regular/Bold (see
+// `font-synthesis` in main.scss). This drops 2 woff2 files (~30 KB +
+// 2 critical-chain entries) for negligible visual difference on a
+// sans-serif like Gordita.
 @font-face {
   font-family: 'Gordita';
   src: url('/fonts/Gordita-Font/subset-Gordita-Regular.woff2') format('woff2');
@@ -18,21 +23,5 @@
   src: url('/fonts/Gordita-Font/subset-Gordita-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Gordita';
-  src: url('/fonts/Gordita-Font/subset-Gordita-MediumItalic.woff2') format('woff2');
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Gordita';
-  src: url('/fonts/Gordita-Font/subset-Gordita-BoldItalic.woff2') format('woff2');
-  font-weight: 700;
-  font-style: italic;
   font-display: swap;
 }

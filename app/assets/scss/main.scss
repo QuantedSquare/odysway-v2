@@ -222,6 +222,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   font-feature-settings: 'kern' 1, 'liga' 1;
+  // Italic Gordita woff2 files are not loaded — let the browser slant
+  // the upright weights when CSS asks for italic. This drops two fonts
+  // (~30 KiB) from the critical request chain.
+  font-synthesis: style weight;
 }
 
 html {

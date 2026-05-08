@@ -30,14 +30,22 @@ useHead({
   htmlAttrs: {
     lang: 'fr',
   },
-  // Only preload the two weights that paint above-the-fold for the LCP:
-  // Regular (body) + Bold (h1). Medium (h2) and italic variants stream
-  // in lazily via font-display: swap. Cutting the critical font chain
-  // from 3 → 2 saves ~400ms FCP on slow 4G.
+  // Preload all three upright weights actually used. Medium was loading
+  // CSS-driven (not preloaded) and ended up at the tail of a 1.3s
+  // critical chain on slow 4G — preloading parallelizes it with the
+  // HTML response. Italic variants no longer have woff2 files; they're
+  // synthesized from the upright weights (see font-synthesis in main.scss).
   link: [
     {
       rel: 'preload',
       href: '/fonts/Gordita-Font/subset-Gordita-Regular.woff2',
+      as: 'font',
+      crossorigin: '',
+      type: 'font/woff2',
+    },
+    {
+      rel: 'preload',
+      href: '/fonts/Gordita-Font/subset-Gordita-Medium.woff2',
       as: 'font',
       crossorigin: '',
       type: 'font/woff2',
