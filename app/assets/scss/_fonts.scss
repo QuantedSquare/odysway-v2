@@ -13,7 +13,7 @@
   // the pageview — eliminates font-swap CLS (was driving the 0.2 hero
   // container shift). Repeat visits hit the HTTP cache and always render
   // in Gordita; only first-visit slow connections see fallback.
-  font-display: optional;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Gordita';
@@ -25,7 +25,7 @@
   // the pageview — eliminates font-swap CLS (was driving the 0.2 hero
   // container shift). Repeat visits hit the HTTP cache and always render
   // in Gordita; only first-visit slow connections see fallback.
-  font-display: optional;
+  font-display: swap;
 }
 
 @font-face {
@@ -38,5 +38,5 @@
   // the pageview — eliminates font-swap CLS (was driving the 0.2 hero
   // container shift). Repeat visits hit the HTTP cache and always render
   // in Gordita; only first-visit slow connections see fallback.
-  font-display: optional;
+  font-display: swap;
 }
