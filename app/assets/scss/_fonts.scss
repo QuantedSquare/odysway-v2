@@ -8,14 +8,24 @@
   src: url('/fonts/Gordita-Font/subset-Gordita-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  // `optional` paired with <link rel=preload>: gives Gordita a short
+  // window to be ready before paint, then locks in the font choice for
+  // the pageview — eliminates font-swap CLS (was driving the 0.2 hero
+  // container shift). Repeat visits hit the HTTP cache and always render
+  // in Gordita; only first-visit slow connections see fallback.
+  font-display: optional;
 }
 @font-face {
   font-family: 'Gordita';
   src: url('/fonts/Gordita-Font/subset-Gordita-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
+  // `optional` paired with <link rel=preload>: gives Gordita a short
+  // window to be ready before paint, then locks in the font choice for
+  // the pageview — eliminates font-swap CLS (was driving the 0.2 hero
+  // container shift). Repeat visits hit the HTTP cache and always render
+  // in Gordita; only first-visit slow connections see fallback.
+  font-display: optional;
 }
 
 @font-face {
@@ -23,5 +33,10 @@
   src: url('/fonts/Gordita-Font/subset-Gordita-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
-  font-display: swap;
+  // `optional` paired with <link rel=preload>: gives Gordita a short
+  // window to be ready before paint, then locks in the font choice for
+  // the pageview — eliminates font-swap CLS (was driving the 0.2 hero
+  // container shift). Repeat visits hit the HTTP cache and always render
+  // in Gordita; only first-visit slow connections see fallback.
+  font-display: optional;
 }

@@ -238,34 +238,39 @@ function copyUrl() {
 
 .custom-height-container {
   max-height: 460px;
+  /* Reserve 16:9 vertical space across ALL viewports so the container
+     doesn't collapse before the hero image decodes. 56vw approximates
+     16:9 of the column's effective width on mobile/tablet; clamped at
+     460px on wider screens to match the image's max-height. */
+  min-height: min(56vw, 460px);
 }
 
-@media screen and (max-width: 600px) {
-  /* Reserve 16:9 vertical space on mobile so the hero doesn't shift
-     when the image finishes decoding (was the source of CLS 0.199). */
+@media (min-width: 960px) {
   .custom-height-container {
-    min-height: 56vw;
+    /* Desktop layout has the right-side image col present, so the
+       hero column is ~70% of width — give it the full 460px reserve. */
+    min-height: 460px;
   }
 }
 
-/* Container - keep flexible, let image control aspect ratio */
 .custom-height {
-  /* Remove fixed height to allow aspect-ratio on image to control sizing */
   max-height: 460px;
   min-height: 0;
 }
 
 .voyage-main-image {
   width: 100%;
-  /* Use aspect-ratio to match the 16:9 images from Sanity */
-  /* This ensures the rendered box matches the crop ratio, preventing extra cropping */
+  /* aspect-ratio reserves layout space before the image decodes; the
+     intrinsic ratio from width=1000 height=563 on the <img> matches.
+     `min-height: 460px` was previously fighting aspect-ratio on
+     widths < 818px, leaving the box height ambiguous and contributing
+     to the CLS — removed in favor of pure aspect-ratio + max-height. */
   aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: center;
-  min-height: 460px;
-  /* The image maintains 16:9, matching the Sanity crop with hotspot */
-  /* No additional cropping happens because container and image ratios match */
+  max-height: 460px;
   border-radius: 20px;
+  display: block;
 }
 
 .voyage-secondary-image {
@@ -292,12 +297,8 @@ function copyUrl() {
     left: 15px;
   }
 
-  /* Keep 16:9 aspect ratio on mobile via aspect-ratio (set above).
-     Drop min-height: 460px (which forced an inconsistent box height on
-     narrow viewports) and let aspect-ratio reserve space. */
+  /* Mobile drops the rounded corners; aspect-ratio handles sizing. */
   .voyage-main-image {
-    min-height: 0;
-    height: auto;
     border-radius: 0;
   }
 }
