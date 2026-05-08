@@ -19,6 +19,7 @@
           :badges="voyage.badges"
           :badge-title="voyage.experienceType?.badgeTitle"
           :difficulty-level="voyage.difficultyLevel"
+          :level-badge-order="voyage.levelBadgeOrder"
         />
         <LazySubHeaderMobileCTABar
           :hydrate-on-idle="true"
@@ -237,6 +238,7 @@ const voyageQuery = `
       variable2Value,
       overrideText
     },
+    levelBadgeOrder,
     destinations[]->{
       _id,
       title,

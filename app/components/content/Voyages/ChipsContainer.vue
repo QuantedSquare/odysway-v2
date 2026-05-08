@@ -103,7 +103,7 @@ import { PortableText } from '@portabletext/vue'
 import { useDisplay } from 'vuetify'
 import { getImageUrl } from '~/utils/getImageUrl'
 
-const { badges, difficultyLevel, badgeTitle } = defineProps({
+const { badges, difficultyLevel, badgeTitle, levelBadgeOrder } = defineProps({
   badges: {
     type: Array,
     default: () => [],
@@ -119,6 +119,10 @@ const { badges, difficultyLevel, badgeTitle } = defineProps({
   badgeTitle: {
     type: String,
     default: '',
+  },
+  levelBadgeOrder: {
+    type: Number,
+    default: null,
   },
 })
 
@@ -165,7 +169,13 @@ const allChips = computed(() => {
     ...badge,
   }))
   if (difficultyLevel.level > 0) {
-    chips.push({ key: 'difficulty', type: 'difficulty' })
+    const difficultyChip = { key: 'difficulty', type: 'difficulty' }
+    if (levelBadgeOrder === null || levelBadgeOrder === undefined || levelBadgeOrder === -1) {
+      chips.push(difficultyChip)
+    }
+    else {
+      chips.splice(levelBadgeOrder, 0, difficultyChip)
+    }
   }
   return chips
 })

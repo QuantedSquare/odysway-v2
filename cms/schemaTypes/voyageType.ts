@@ -54,7 +54,7 @@ export const voyageType = defineType({
     { name: 'requiredTravelPage', title: 'Champs requis pour afficher la page Voyage' },
     { name: 'basic', title: 'Informations de Base' },
     { name: 'photoGallery', title: 'Galerie de Photos' },
-    { name: 'voyageDescription', title: 'Déscriptions du voyage' },
+    { name: 'voyageDescription', title: 'Description du voyage' },
     { name: 'badges', title: 'Badges' },
     { name: 'availability', title: 'Disponibilités par Mois' },
     { name: 'perfectPeriods', title: 'Périodes Idéales' },
@@ -324,6 +324,14 @@ export const voyageType = defineType({
       type: 'text',
       group: 'voyageDescription',
       title: 'Description email',
+    }),
+    defineField({
+      name: 'levelBadgeOrder',
+      type: 'number',
+      title: 'Position du badge niveau de difficulté',
+      description: 'Index (commençant à 0) où afficher le badge de niveau de difficulté dans la liste des chips. Laisser vide ou mettre -1 pour l\'afficher à la fin.',
+      group: 'badges',
+      validation: (rule: any) => rule.min(-1).integer(),
     }),
     defineField({
       name: 'badges',
