@@ -194,13 +194,17 @@ const buildMainImageUrl = (width, height, quality = 90) => {
 // This ensures the same focal region stays meaningful at all screen sizes
 // 16:9 ratio: height = width * 9 / 16
 const mainImageSrcset = computed(() => {
-  // All sizes use 16:9 aspect ratio - only width varies; q=75 WebP is
-  // visually indistinguishable from q=100 for photographs at ~3x smaller.
+  // 16:9 aspect ratio across the board. q=80 (was 75) is the threshold
+  // where photographs stop showing visible WebP artifacts; cost is ~15%
+  // bytes for a noticeable sharpness gain.
+  // 1400w added to cover DPR=3 phones at 92vw (≈1076 device px) — without
+  // it the browser had to upscale the 1000w variant.
   return [
-    `${buildMainImageUrl(400, 225, 75)} 400w`,
-    `${buildMainImageUrl(600, 338, 75)} 600w`,
-    `${buildMainImageUrl(800, 450, 75)} 800w`,
-    `${buildMainImageUrl(1000, 563, 75)} 1000w`,
+    `${buildMainImageUrl(400, 225, 80)} 400w`,
+    `${buildMainImageUrl(600, 338, 80)} 600w`,
+    `${buildMainImageUrl(800, 450, 80)} 800w`,
+    `${buildMainImageUrl(1000, 563, 80)} 1000w`,
+    `${buildMainImageUrl(1400, 788, 80)} 1400w`,
   ].join(', ')
 })
 

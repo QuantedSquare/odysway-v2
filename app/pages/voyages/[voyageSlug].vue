@@ -378,10 +378,11 @@ watchEffect(() => {
     // Must mirror the rendered <NuxtImg> srcset/sizes exactly, otherwise
     // the browser downloads a different URL than the preload (waste).
     const srcset = [
-      `${buildMainImageUrl(image, 400, 225, 75)} 400w`,
-      `${buildMainImageUrl(image, 600, 338, 75)} 600w`,
-      `${buildMainImageUrl(image, 800, 450, 75)} 800w`,
-      `${buildMainImageUrl(image, 1000, 563, 75)} 1000w`,
+      `${buildMainImageUrl(image, 400, 225, 80)} 400w`,
+      `${buildMainImageUrl(image, 600, 338, 80)} 600w`,
+      `${buildMainImageUrl(image, 800, 450, 80)} 800w`,
+      `${buildMainImageUrl(image, 1000, 563, 80)} 1000w`,
+      `${buildMainImageUrl(image, 1400, 788, 80)} 1400w`,
     ].join(', ')
 
     link.push({

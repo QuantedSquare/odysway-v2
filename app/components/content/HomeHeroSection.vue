@@ -244,27 +244,29 @@ const buildSanityImageUrl = (source, width, height, quality = 75) => {
 // Use the mobile-cropped image as the base src so the browser's prefetch
 // heuristic picks a small file on mobile instead of the desktop landscape crop.
 const displayedSrc = computed(() => {
-  return buildSanityImageUrl(activeMobileImage.value, 640, 360, 70)
-    || buildSanityImageUrl(activeDesktopImage.value, 1280, 720, 70)
-    || buildSanityImageUrl(heroProps.placeholderImage, 1280, 720, 70)
+  return buildSanityImageUrl(activeMobileImage.value, 640, 360, 78)
+    || buildSanityImageUrl(activeDesktopImage.value, 1280, 720, 78)
+    || buildSanityImageUrl(heroProps.placeholderImage, 1280, 720, 78)
 })
 
-// Trimmed from 6 srcset entries down to 3 — the in-between sizes were
-// rarely picked by the browser yet inflated the rendered HTML and
-// triggered 3 extra builder.image() calls per render.
+// 640w covers DPR=1 phones; 1280w covers DPR=2 (most Android) and DPR=3
+// (iPhone Pro at 100vw ≈ 1170 device px — 1280w lands within ~10% upscale,
+// visually sharp). Desktop fallback stays 1920w with the desktop crop.
+// Width descriptors must stay unique, so we don't add a second 1920w entry.
 const displayedSrcset = computed(() => {
   return [
-    `${buildSanityImageUrl(activeMobileImage.value, 640, 360, 70)} 640w`,
-    `${buildSanityImageUrl(activeMobileImage.value, 1280, 720, 70)} 1280w`,
-    `${buildSanityImageUrl(activeDesktopImage.value, 1920, 1080, 70)} 1920w`,
+    `${buildSanityImageUrl(activeMobileImage.value, 640, 360, 78)} 640w`,
+    `${buildSanityImageUrl(activeMobileImage.value, 1280, 720, 78)} 1280w`,
+    `${buildSanityImageUrl(activeDesktopImage.value, 1920, 1080, 78)} 1920w`,
   ].filter(Boolean).join(', ')
 })
 
-// Preload the LCP image, but only on viewports ≤ 600px. The previous
-// attempt was reverted because preloading the full srcset on slow 4G
-// competed with the 3 font weights — by limiting the preload to a single
-// 640w mobile URL we get the early-discovery win without starving fonts.
-// Desktop falls back to the existing fetchpriority="high" on <NuxtImg>.
+// Preload the LCP image, but only on viewports ≤ 600px. Desktop falls back
+// to the existing fetchpriority="high" on <NuxtImg>.
+// imagesrcset + imagesizes lets the browser pick the right variant for the
+// device's DPR (640w on DPR=1, 1280w on DPR=2/3) instead of always fetching
+// a single fixed URL — the previous href-only preload pinned all phones to
+// the 640w variant, causing visible pixelation on retina screens.
 const isMobileViewport = ref(false)
 onMounted(() => {
   if (typeof window !== 'undefined' && window.matchMedia) {
@@ -273,13 +275,14 @@ onMounted(() => {
 })
 
 useHead(() => {
-  if (!isMobileViewport.value || !displayedSrc.value) return {}
+  if (!isMobileViewport.value || !displayedSrcset.value) return {}
   return {
     link: [{
       rel: 'preload',
       as: 'image',
       fetchpriority: 'high',
-      href: displayedSrc.value,
+      imagesrcset: displayedSrcset.value,
+      imagesizes: '100vw',
     }],
   }
 })
