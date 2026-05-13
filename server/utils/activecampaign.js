@@ -296,6 +296,22 @@ const getDealCustomFields = async (dealId) => {
   return handleCustomFields(response.dealCustomFieldData, customFieldsMapDeal)
 }
 
+// =================== LIST (backfill helpers) ===================
+const listContacts = ({ limit = 100, offset = 0, include = '' } = {}) => {
+  const qs = new URLSearchParams({ limit: String(limit), offset: String(offset) })
+  if (include) qs.set('include', include)
+  return apiRequest(`/contacts?${qs.toString()}`)
+}
+
+const listDeals = ({ limit = 100, offset = 0, include = 'dealCustomFieldData' } = {}) => {
+  const qs = new URLSearchParams({ limit: String(limit), offset: String(offset), include })
+  return apiRequest(`/deals?${qs.toString()}`)
+}
+
+const listStages = () => apiRequest('/dealStages?limit=100')
+const listPipelines = () => apiRequest('/dealGroups?limit=100')
+const listUsers = () => apiRequest('/users?limit=100')
+
 const createDeal = async (data) => {
   // First upsert contact
   const formatedDeal = transformDealForAPI(data)
@@ -659,4 +675,10 @@ export default {
   sendSlackNotification, // OK
   optionNotification,
   getDealCustomFieldMeta,
+  // --- Backfill helpers ---
+  listContacts,
+  listDeals,
+  listStages,
+  listPipelines,
+  listUsers,
 }

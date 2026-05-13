@@ -121,7 +121,7 @@
           class="d-flex flex-column ga-4"
         >
           <v-btn
-            :disabled="!formValidation || !isBookingLoaded"
+            :disabled="!isBookingLoaded"
             color="secondary"
             class="font-weight-bold"
             block
@@ -146,7 +146,10 @@
           </v-btn>
         </v-col>
         <v-col>
-          <div class="text-error text-right mt-6 mt-md-6">
+          <div
+            v-if="showValidationErrors"
+            class="text-error text-right mt-6 mt-md-6"
+          >
             <p v-show="!ageValidation.isValid">
               - {{ ageValidationMessage }}
             </p>
@@ -227,9 +230,7 @@ const allFieldsFilled = computed(() => {
   )
 })
 
-const formValidation = computed(() => {
-  return ageValidation.value.isValid && allFieldsFilled.value
-})
+const showValidationErrors = ref(false)
 
 // Options: forced indiv room
 const forcedIndivRoom = computed(() => {
@@ -277,6 +278,7 @@ const initializeTravelersData = () => {
 
 watch([model, () => currentStep], () => {
   if (currentStep === ownStep) {
+    showValidationErrors.value = false
     if (model.value) {
       initializeTravelersData()
     }
@@ -293,6 +295,7 @@ const travelerInfosChanged = (updatedTraveler) => {
 }
 
 const submitStepData = () => {
+  showValidationErrors.value = true
   if (!model.value) return false
   if (!ageValidation.value.isValid) return false
   if (!allFieldsFilled.value) return false

@@ -42,3 +42,6 @@ cms/.sanity/
 # Supabase CLI cache
 supabase/.temp/
 supabase/.branches/
+
+# Local AC exports (data, not for source control)
+export_ac.*

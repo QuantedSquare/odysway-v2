@@ -36,6 +36,7 @@ A row per CRM deal (booking quote or sale). Source of truth for revenue, margin,
 | `stage` | varchar | Sales stage name (free-form). |
 | `stage_id` | text | AC stage numeric id. |
 | `pipeline_id` | smallint | `1` = main sales pipeline, `3` = trash. Pipeline `4` (Gestions Départs) is excluded from the mirror. |
+| `pipeline_title` | text | Human-readable pipeline name (e.g. "Voyages en cours"). |
 | `owner_id` | text | AC owner id (sales rep). |
 | `seller` | varchar | Display name of sales rep (e.g. "Jean Dupont"). |
 | `currency` | text | Usually `'eur'`. |

@@ -43,7 +43,6 @@
         <v-col
           cols="6"
           md="6"
-          class="pb-0"
         >
           <div class="text-caption text-truncate">
             {{ childrenLabel }}
@@ -56,17 +55,6 @@
             :items="selectOptions(0, 9)"
             :item-props="childrenItemPropsFn"
           />
-        </v-col>
-        <v-col
-          cols="12"
-          class="pt-1"
-        >
-          <div
-            v-if="capacityMessage"
-            class="text-caption font-italic text-grey"
-          >
-            {{ capacityMessage }}
-          </div>
         </v-col>
       </v-row>
 
@@ -335,17 +323,6 @@ const maxSelectableTravelers = computed(() => {
   const remainingSeats = voyage?.remainingSeats
   if (typeof remainingSeats === 'number' && remainingSeats >= 0) return remainingSeats
   return null
-})
-
-const capacityMessage = computed(() => {
-  if (maxSelectableTravelers.value === null) return null
-  if (maxSelectableTravelers.value === 0) {
-    return page?.details?.capacity_full_text || 'Ce départ est complet : impossible d’ajouter des voyageurs.'
-  }
-  if (page?.details?.capacity_limited_text) {
-    return page.details.capacity_limited_text.split('{count}').join(String(maxSelectableTravelers.value))
-  }
-  return `Ce départ ne permet plus que ${maxSelectableTravelers.value} voyageur(s). Les options au-delà sont désactivées.`
 })
 
 const adultItemPropsFn = function (item) {

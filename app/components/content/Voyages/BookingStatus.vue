@@ -7,7 +7,6 @@
       <CustomBadge :color="status.color" />
       {{ statusText }}
     </div>
-
     <div
       v-if="status.status !== 'pending' && bookedPlaces > 0"
       class="d-flex align-center ga-2"
@@ -27,12 +26,6 @@
         - Reste {{ remainingPlaces }}
       </span>
     </div>
-    <!-- <div
-      v-else
-      class="font-weight-regular"
-    >
-      (dès {{ minTravellers }} inscrits)
-    </div> -->
   </v-row>
 </template>
 
@@ -65,8 +58,6 @@ const statusText = computed(() => {
   if (props.status.status === 'soon_confirmed') {
     return `Confirmé dès ${props.minTravellers} personne` + (props.minTravellers > 1 ? 's' : '')
   }
-  else {
-    return props.status.text
-  }
+  return props.status.text
 })
 </script>

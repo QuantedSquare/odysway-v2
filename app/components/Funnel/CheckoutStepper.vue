@@ -1,6 +1,7 @@
 <template>
   <v-col
     v-if="pageTexts && voyage"
+    ref="el"
     cols="12"
     xl="8"
     class="py-0 px-0"
@@ -127,6 +128,8 @@ import customParseFormat from 'dayjs/plugin/customParseFormat.js'
 
 dayjs.extend(customParseFormat)
 
+const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'instant' })
+
 const { trackReservationStep } = useGtmTracking()
 
 const { voyage, initialDealValues } = defineProps({
@@ -185,12 +188,14 @@ if (route.query.type === 'custom' || route.query.type === 'balance') {
 
 // 🧱 Step navigation
 const nextStep = () => {
+  scrollToTop()
   const nextStepValue = currentStep.value + 1
   currentStep.value = nextStepValue
   addSingleParam('step', nextStepValue.toString())
 }
 
 const previousStep = () => {
+  scrollToTop()
   const previousStepValue = currentStep.value - 1
   currentStep.value = previousStepValue
   addSingleParam('step', previousStepValue.toString())

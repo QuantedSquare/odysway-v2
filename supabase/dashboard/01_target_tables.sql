@@ -50,6 +50,7 @@ CREATE TABLE IF NOT EXISTS "public"."activecampaign_deals" (
     "insurance_commission"            numeric,
     "insurance_choice"                character varying,
     "pipeline_id"                     smallint,
+    "pipeline_title"                  text,
     "promo_code"                      character varying,
     "insurance_price_per_traveler"    numeric,
     "country"                         character varying,

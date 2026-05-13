@@ -35,11 +35,13 @@ export default defineEventHandler(async (event) => {
     const contactId = body['deal[contactid]'] || body['contact[id]']
     const isoDate = body['deal[create_date_iso]']
     const owner = body['deal[owner]']
-    const mdate = body['deal[mdate]'] || body['deal[modified_timestamp]'] || null
+    const eventTime = body.date_time || null
 
-    // Idempotency guard — skip if (dealId, mdate) tuple already processed
-    if (mdate) {
-      const eventId = `deal-${dealId}-${mdate}`
+    // Idempotency guard — skip if (dealId, eventTime) tuple already processed.
+    // AC webhooks don't include deal[mdate]; the top-level `date_time` is the
+    // closest stable signature of a unique event.
+    if (eventTime) {
+      const eventId = `deal-${dealId}-${eventTime}`
       const { data: existing } = await supabase
         .from('ac_processed_events')
         .select('id')
@@ -70,7 +72,7 @@ export default defineEventHandler(async (event) => {
 
     // Ignore all deals belonging to the "Gestions Départs" pipeline (ID 4)
     // — those are internal departure record deals managed separately.
-    const pipelineId = body['deal[group]']
+    const pipelineId = body['deal[pipelineid]']
     if (pipelineId === '4') {
       return { success: true, skipped: true, reason: 'Gestions Départs pipeline' }
     }
@@ -180,22 +182,44 @@ export default defineEventHandler(async (event) => {
       }
     }
 
-    // Prepare upsert data with type safety and default values
+    // Build a clean "seller" display label from the body's owner names
+    const ownerFirstname = body['deal[owner_firstname]'] || ''
+    const ownerLastname = body['deal[owner_lastname]'] || ''
+    const sellerLabel = `${ownerFirstname} ${ownerLastname}`.trim() || owner || null
+
+    // total_value: prefer body's value_raw (numeric, no formatting issues).
+    // Fallback to formatPrice on fetchedDeal.value when missing.
+    const valueRaw = body['deal[value_raw]']
+    const totalValue = valueRaw !== undefined && valueRaw !== null && valueRaw !== ''
+      ? +valueRaw
+      : formatPrice(fetchedDeal.value)
+
+    // mdate: canonical "last modified" from the AC REST API; fallback to
+    // webhook event time so the column is never null on real updates.
+    const mdate = fetchedDeal.mdate || eventTime || null
+
+    // Prepare upsert data with type safety and default values.
+    // Source legend (suffix on the right of each line):
+    //   [body]   only present in the flat webhook payload
+    //   [api]    from `reponse.deal` (AC REST API)
+    //   [mapped] from `customFields` via customFieldsMapDeal
     const upsertData = {
-      id: dealId,
-      contact: contactId,
-      title: fetchedDeal.title,
-      status: mapDealStatus(fetchedDeal.status),
-      stage: fetchedDeal.stage_title,
-      stage_id: fetchedDeal.stage || null,
-      pipeline_id: fetchedDeal.pipelineid,
-      owner_id: owner || null,
-      currency: fetchedDeal.currency || null,
-      win_probability: fetchedDeal.winProbability != null ? +fetchedDeal.winProbability : null,
-      next_date: fetchedDeal.nextdate || null,
-      next_task_id: fetchedDeal.nexttaskid || null,
-      total_value: formatPrice(fetchedDeal.value),
-      price_per_traveler: +fetchedDeal.basePricePerTraveler / 100 || 0,
+      id: dealId, // [body]
+      contact: contactId, // [body]
+      title: body['deal[title]'] || fetchedDeal.title, // [body] -> [api]
+      status: mapDealStatus(body['deal[status]'] ?? fetchedDeal.status), // [body] -> [api]
+      stage: body['deal[stage_title]'] || null, // [body] titre
+      stage_id: body['deal[stageid]'] || fetchedDeal.stage || null, // [body] -> [api]
+      pipeline_id: +(body['deal[pipelineid]'] || fetchedDeal.group) || null, // [body] -> [api]
+      pipeline_title: body['deal[pipeline_title]'] || null, // [body]
+      owner_id: owner || fetchedDeal.owner || null, // [body] -> [api]
+      seller: sellerLabel, // [body] composé
+      currency: body['deal[currency]'] || fetchedDeal.currency || null, // [body] -> [api]
+      win_probability: fetchedDeal.winProbability !== undefined && fetchedDeal.winProbability !== null ? +fetchedDeal.winProbability : null, // [api]
+      next_date: fetchedDeal.nextdate || null, // [api]
+      next_task_id: fetchedDeal.nexttaskid || null, // [api]
+      total_value: totalValue, // [body] -> [api]
+      price_per_traveler: +fetchedDeal.basePricePerTraveler / 100 || 0, // [mapped]
       nb_traveler: +fetchedDeal.nbTravelers || 0,
       nb_adults: +fetchedDeal.nbAdults || 0,
       nb_children: +fetchedDeal.nbChildren || 0,
@@ -227,7 +251,7 @@ export default defineEventHandler(async (event) => {
       iso: fetchedDeal.iso || null,
       zone_chapka: +fetchedDeal.zoneChapka || null,
       is_couple: toBool(fetchedDeal.isCouple),
-      lost_reason: fetchedDeal.reasonLost || fetchedDeal.otherReasonLost || null,
+      lost_reason: fetchedDeal.ReasonLost || fetchedDeal.otherReasonLost || null, // [mapped]
       rest_to_pay_per_traveler: +fetchedDeal.restToPayPerTraveler / 100 || 0,
       max_children_age: +fetchedDeal.maxChildrenAge || 12,
       include_flight: toBool(fetchedDeal.includeFlight),
@@ -237,7 +261,6 @@ export default defineEventHandler(async (event) => {
       return_date: fetchedDeal.returnDate || null,
       forecasted_closing_date: fetchedDeal.forecastedClosingDate || null,
       conversion_date: fetchedDeal.conversionDate || null,
-      seller: owner,
       source: fetchedDeal.source || null,
       acquisition_source: fetchedDeal.acquisitionSource || null,
       other_acquisition_source: fetchedDeal.otherAcquisitionSource || null,
@@ -246,8 +269,8 @@ export default defineEventHandler(async (event) => {
       current_step: fetchedDeal.currentStep || null,
       link_bms: fetchedDeal.linkBms || null,
       paiement_method: fetchedDeal.paiementMethod || null,
-      created_at: fetchedDeal.oldCreationDate || isoDate,
-      mdate: mdate || null,
+      created_at: fetchedDeal.oldCreationDate || isoDate, // [mapped] -> [body]
+      mdate, // [api] -> [body]
       updated_at: mdate || new Date().toISOString(),
     }
 
@@ -268,10 +291,12 @@ export default defineEventHandler(async (event) => {
       total_value: upsertData.total_value,
     })
     if (contactData.data && contactData.data.length > 0 && contactData.contact.email !== 'ottmann.alex@gmail.com' && contactData.contact.email !== 'test@gmail.com') {
-      // Upsert deal data to Supabase
+      // Upsert deal data to Supabase. onConflict: 'id' handles the case where
+      // AC reassigns a deal's primary contact (the legacy UNIQUE(id) would
+      // otherwise block an INSERT against the composite PK (id, contact)).
       const { error, data: upsertedData } = await supabase
         .from('activecampaign_deals')
-        .upsert(upsertData)
+        .upsert(upsertData, { onConflict: 'id' })
         .select()
 
       // Log any upsert errors

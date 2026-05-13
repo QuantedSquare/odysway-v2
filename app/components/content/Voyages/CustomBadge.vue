@@ -23,39 +23,29 @@ const getBackgroundColor = computed(() => {
 </script>
 
 <style scoped>
-.custom:deep(.v-badge__wrapper) {
-  border-radius: 50%;
-  border: 5px solid v-bind(getBorderColor)!important;
-  padding: 0px !important;
-}
-.custom:deep(.v-badge__badge) {
-  min-width: 10px !important;
-  min-height: 10px !important;
-  height: 10px !important;
-  width: 10px !important;
-}
 .inline-block{
   display: inline-block!important;
 }
-.custom-content{
-  min-width: 10px !important;
-  min-height: 10px !important;
-  height: 10px !important;
-  width: 10px !important;
-  background-color: v-bind(getBackgroundColor)!important;
-  border-radius: 999px!important;
-  display: inline-flex!important;
-  align-items: center!important;
-  justify-content: center!important;
-}
-.custom-badge{
+.custom-badge {
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  border: 5px solid v-bind(getBorderColor);
+  background: v-bind(getBorderColor);
   border-radius: 50%;
-  max-width: 20px;
-  border: 5px solid v-bind(getBorderColor)!important;
-  padding: 0px !important;
-  display: flex!important;
-  align-items: center!important;
-  justify-content: center!important;
-  border-radius: 999px!important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-content {
+  width: 10px;
+  height: 10px;
+  background-color: v-bind(getBackgroundColor);
+
+  border-radius: 50%;
+
+  display: block;
+  flex: none;
 }
 </style>

@@ -106,6 +106,11 @@
                       class="pb-0"
                     >
                       <h2 class="text-h5 font-weight-bold text-center text-md-left d-flex align-center ga-2">
+                        <div class="text-white custom-number-chip">
+                          <span>
+                            {{ childrenCount > 1 ? index + 1 : '' }}
+                          </span>
+                        </div>
                         <span>
                           {{ housing.title }}
                         </span>
@@ -202,6 +207,19 @@ const scrollAmount = computed(() => {
 </script>
 
 <style scoped>
+.custom-number-chip{
+  font-size: 10px!important;
+  font-weight: 500!important;
+  display: inline-flex!important;
+  align-items: center!important;
+  justify-content: center!important;
+  background-color: rgb(var(--v-theme-yellow))!important;
+  padding: 4px 6px!important;
+  color: #ffffff!important;
+  border-radius: 999px!important;
+  width: 15px!important;
+  height: 15px!important;
+}
 .housing-text{
 font-size: 16px;
 line-height: 30px;

@@ -143,7 +143,6 @@
         md="3"
         class="pl-5 pl-md-2 pt-1 d-none d-md-flex flex-column justify-center align-start  justify-lg-start"
       >
-        à partir de
         <span
           class="text-h2 font-weight-black"
           :class="enrichedDate.last_minute || enrichedDate.early_bird ? 'text-decoration-line-through text-grey text-body-2' : ''"
@@ -276,6 +275,7 @@ const enrichedDate = computed(() => {
     ? Number(date.displayed_booked_seat)
     : date.booked_seat
   const effectiveStatus = date.displayed_status || date.status
+  const isTreatedAsConfirmed = effectiveStatus === 'soon_confirmed' && displayedBookedSeat === date.min_travelers - 1
   return {
     ...date,
     min_travelers: date.min_travelers,
@@ -286,7 +286,7 @@ const enrichedDate = computed(() => {
     starting_price: date.starting_price,
     early_bird: today.isAfter(dayjs(date.departure_date).add(7, 'month')) ? date.early_bird : false,
     last_minute: dayjs(date.departure_date).diff(today, 'day') <= 31 ? date.last_minute : false,
-    status: getDateStatus({ ...date, status: effectiveStatus }),
+    status: getDateStatus({ ...date, status: isTreatedAsConfirmed ? 'confirmed' : effectiveStatus }),
   }
 })
 const capitalize = (string) => {

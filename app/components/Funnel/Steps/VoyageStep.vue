@@ -20,7 +20,7 @@
         :page="page"
         :own-step="ownStep"
         @next="emitNext()"
-        @previous="subStep = 'travelers'"
+        @previous="scrollToTop(); subStep = 'travelers'"
       />
     </v-window-item>
   </v-window>
@@ -41,8 +41,11 @@ const emitNext = () => {
   emit('next')
 }
 
+const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'instant' })
+
 const onTravelersNext = () => {
   if (props.showInsurance) {
+    scrollToTop()
     subStep.value = 'insurance'
   }
   else {

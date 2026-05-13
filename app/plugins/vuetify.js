@@ -67,8 +67,8 @@ export default defineNuxtPlugin((app) => {
             'blue': '#237C8C', // blue
             'blue-light': '#9CC5CC', // blue
             'blue-light-2': '#DFE1F1', // blue
-            'sky': '#9CC5CC',
-            'sky-light': '#E2E5E5',
+            'sky': '#3D7B8A',
+            'sky-light': '#B5D2DA',
             'red': '#DB6644',
             'red-light': '#EB9A82',
             'soft-blush': '#FBF0EC',
