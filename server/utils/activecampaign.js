@@ -107,6 +107,15 @@ const findCustomFieldValue = (fieldValues, fieldId) => {
   return fieldValues.find(i => i.customFieldId === fieldId)?.fieldValue || null
 }
 
+// Contact fieldValues use a different shape than deal customFields:
+// contacts -> { field: '<id>', value: '<value>' }
+// deals    -> { customFieldId: '<id>', fieldValue: '<value>' }
+const findContactFieldValue = (fieldValues, fieldId) => {
+  const match = fieldValues.find(i => i.field === String(fieldId))
+  console.log('[findContactFieldValue]', { fieldId, found: !!match, value: match?.value ?? null, sampleEntry: fieldValues[0] })
+  return match?.value || null
+}
+
 const handleCustomFields = (fields, fieldMap) =>
   fields.reduce((acc, field) => {
     const key = fieldMap[field.customFieldId]
@@ -233,6 +242,7 @@ const upsertContactIntoSupabase = async (contactId) => {
     const contact = acContact.contact
     const fieldValues = contact.fieldValues
     const tags = await getContactTags(contactId)
+    const birthdateRaw = findContactFieldValue(fieldValues, 1)
     const contactToUpsert = {
       id: contactId,
       contact: contactId,
@@ -243,17 +253,14 @@ const upsertContactIntoSupabase = async (contactId) => {
       lastname: contact.lastName || null,
       email: contact.email,
       phone: contact.phone || null,
-      birthdate: fieldValues.find(i => i.field === '1')?.value
-        ? dayjs(fieldValues.find(i => i.field === '1').value, 'YYYY-MM-DD').toISOString()
-        : null,
-      address: findCustomFieldValue(fieldValues, '3'),
-      city: findCustomFieldValue(fieldValues, '4'),
-      zip_code: +findCustomFieldValue(fieldValues, '5') || null,
-      iso_contact: findCustomFieldValue(fieldValues, '22'),
+      birthdate: birthdateRaw ? dayjs(birthdateRaw, 'YYYY-MM-DD').toISOString() : null,
+      address: findContactFieldValue(fieldValues, 3),
+      city: findContactFieldValue(fieldValues, 4),
+      zip_code: +findContactFieldValue(fieldValues, 5) || null,
+      iso_contact: findContactFieldValue(fieldValues, 22),
       tags: tags.length ? tags : null,
     }
     console.log('===========contactToUpsert in activecampaign.js===========', contactToUpsert)
-    // console.log('===========contactToUpsert in activecampaign.js===========', contactToUpsert)
     const { error, data } = await supabase
       .from('activecampaign_clients')
       .upsert(contactToUpsert, {
@@ -261,9 +268,9 @@ const upsertContactIntoSupabase = async (contactId) => {
         ignoreDuplicates: false,
       })
       .select()
-    // console.log('===========data from supabase returned===========', data)
     if (error) console.error('Supabase upsert error:', error)
-    return data
+    console.log('[upsertContactIntoSupabase] returning', { dataLength: data?.length, contactEmail: contact?.email })
+    return { data, contact }
   }
   catch (err) {
     console.error('Contact upsert error:', err)

@@ -252,6 +252,21 @@ export default defineEventHandler(async (event) => {
     }
 
     await activecampaign.recalculatTotalValues(dealId)
+    console.log('[dealUpdate] before upsert gate', {
+      hasContactData: !!contactData,
+      hasDataArray: !!contactData?.data,
+      dataLength: contactData?.data?.length,
+      contactEmail: contactData?.contact?.email,
+      dealId,
+      contactId,
+    })
+    console.log('[dealUpdate] upsertData preview', {
+      id: upsertData.id,
+      contact: upsertData.contact,
+      status: upsertData.status,
+      pipeline_id: upsertData.pipeline_id,
+      total_value: upsertData.total_value,
+    })
     if (contactData.data && contactData.data.length > 0 && contactData.contact.email !== 'ottmann.alex@gmail.com' && contactData.contact.email !== 'test@gmail.com') {
       // Upsert deal data to Supabase
       const { error, data: upsertedData } = await supabase
