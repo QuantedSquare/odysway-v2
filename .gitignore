@@ -38,3 +38,7 @@ public/images/
 cms/.sanity/
 
 .vercel/
+
+# Supabase CLI cache
+supabase/.temp/
+supabase/.branches/

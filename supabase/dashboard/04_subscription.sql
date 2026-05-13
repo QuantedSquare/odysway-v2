@@ -1,0 +1,10 @@
+-- ============================================================================
+-- DEPRECATED. Hosted Supabase blocks CREATE SUBSCRIPTION and the native
+-- Replication > Destinations feature requires a paid plan upgrade.
+--
+-- The replacement is Database Webhooks → Edge Function 'mirror-sync'.
+-- See: supabase/dashboard/05_webhooks_setup.sql and
+--      supabase/dashboard/functions/mirror-sync/index.ts
+--
+-- File kept for traceability; do not execute.
+-- ============================================================================

@@ -1,0 +1,100 @@
+-- ============================================================================
+-- Setup guide: Database Webhooks on PROD → mirror-sync Edge Function on DASHBOARD
+-- This file is documentation. No SQL to execute — everything is configured via UI.
+-- ============================================================================
+--
+-- STEP A — Deploy the Edge Function on the DASHBOARD project
+--
+--   1. Install the Supabase CLI if you don't have it:
+--        npm i -g supabase
+--   2. Link to the dashboard project (run from the repo root):
+--        supabase link --project-ref <DASHBOARD_PROJECT_REF>
+--   3. Deploy:
+--        supabase functions deploy mirror-sync \
+--          --project-ref <DASHBOARD_PROJECT_REF> \
+--          --no-verify-jwt
+--      (--no-verify-jwt because the function verifies via x-webhook-secret,
+--       not via Supabase Auth JWT.)
+--   4. Set the shared secret:
+--        supabase secrets set MIRROR_WEBHOOK_SECRET=<long-random-string> \
+--          --project-ref <DASHBOARD_PROJECT_REF>
+--      SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY are auto-injected.
+--
+-- The function URL will be:
+--   https://<DASHBOARD_PROJECT_REF>.supabase.co/functions/v1/mirror-sync
+--
+-- ============================================================================
+--
+-- STEP B — Create 4 Database Webhooks on the PROD project (UI)
+--
+--   Path: Project Dashboard > Database > Webhooks > Create a new webhook
+--
+--   Create ONE webhook per table. Same config for all 4, except the table:
+--
+--     Name:    mirror-<table>
+--     Table:   public.<table>           (one of the 4 below)
+--     Events:  ☑ Insert  ☑ Update  ☑ Delete
+--     Type:    HTTP Request
+--     Method:  POST
+--     URL:     https://<DASHBOARD_PROJECT_REF>.supabase.co/functions/v1/mirror-sync
+--     HTTP Headers:
+--                Content-Type:       application/json
+--                x-webhook-secret:   <same value as MIRROR_WEBHOOK_SECRET>
+--
+--   The 4 tables:
+--     - public.activecampaign_deals
+--     - public.activecampaign_clients
+--     - public.travel_dates
+--     - public.booked_dates
+--
+-- ============================================================================
+--
+-- STEP C — Initial backfill
+--
+-- Database Webhooks only fire on FUTURE row changes; existing rows are not
+-- replayed. Run a one-shot snapshot via pg_dump → restore, or via this pattern
+-- (faster for our volumes):
+--
+--   On prod, export the 4 tables as CSV (Supabase UI: Table Editor > Export).
+--   On dashboard, import each CSV (Table Editor > Import) into the matching
+--   public.<table>.
+--
+-- Alternative (no manual files), per table, run on PROD's SQL editor:
+--
+--   COPY (SELECT * FROM public.activecampaign_deals)
+--     TO PROGRAM 'curl ...'  -- NOT available on hosted Supabase
+--
+-- → Hosted Supabase doesn't expose COPY TO PROGRAM. Stick with the UI export/import.
+--
+-- After the import, the webhooks keep the mirror in sync going forward.
+--
+-- ============================================================================
+--
+-- STEP D — Verify
+--
+--   1. On prod, insert a test row:
+--        INSERT INTO public.travel_dates (travel_slug, departure_date, return_date)
+--        VALUES ('__mirror_test__', '2099-01-01', '2099-01-08');
+--   2. Within ~2 seconds, check on dashboard:
+--        SELECT * FROM public.travel_dates WHERE travel_slug = '__mirror_test__';
+--   3. On prod, delete it:
+--        DELETE FROM public.travel_dates WHERE travel_slug = '__mirror_test__';
+--   4. On dashboard, the row should be gone too.
+--
+-- Edge Function logs (helpful for debugging):
+--   Dashboard project > Edge Functions > mirror-sync > Logs
+--
+-- ============================================================================
+--
+-- TROUBLESHOOTING
+--
+-- - 401 from mirror-sync          → x-webhook-secret header mismatch.
+-- - 500 with "column ... missing" → schema drift; check that 01_target_tables.sql
+--                                   is up to date with prod.
+-- - Webhook not firing            → check Database > Webhooks > <name> > Logs
+--                                   on prod; payload/HTTP errors are listed.
+-- - Stuck on initial sync         → Database Webhooks have built-in retries
+--                                   (Supabase retries 5x with backoff).
+-- - Cascade deletes (FK with      → Supabase Database Webhooks DO fire on
+--   ON DELETE CASCADE)              cascade-deleted rows. Mirror stays consistent.
+-- ============================================================================

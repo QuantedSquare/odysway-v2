@@ -10,9 +10,15 @@ const mapDealStatus = (status) => {
   const statusMap = {
     0: 'Ouvert',
     1: 'Gagné',
-    default: 'Perdu',
+    2: 'Perdu',
+    3: 'Supprimé',
   }
-  return statusMap[status] || statusMap.default
+  return statusMap[status] ?? 'Inconnu'
+}
+
+const toBool = (val) => {
+  if (val === undefined || val === null || val === '') return null
+  return val === 'Oui' || val === true || val === 'true' || val === '1'
 }
 
 export default defineEventHandler(async (event) => {
@@ -29,6 +35,23 @@ export default defineEventHandler(async (event) => {
     const contactId = body['deal[contactid]'] || body['contact[id]']
     const isoDate = body['deal[create_date_iso]']
     const owner = body['deal[owner]']
+    const mdate = body['deal[mdate]'] || body['deal[modified_timestamp]'] || null
+
+    // Idempotency guard — skip if (dealId, mdate) tuple already processed
+    if (mdate) {
+      const eventId = `deal-${dealId}-${mdate}`
+      const { data: existing } = await supabase
+        .from('ac_processed_events')
+        .select('id')
+        .eq('id', eventId)
+        .maybeSingle()
+      if (existing) {
+        console.log('Webhook already processed, skipping:', eventId)
+        return { success: true, skipped: true, reason: 'duplicate event' }
+      }
+      // Best-effort record (ignore conflict in parallel races)
+      await supabase.from('ac_processed_events').upsert({ id: eventId })
+    }
 
     console.log('===========dealId', dealId, '========')
     console.log('===========contactId', contactId, '========')
@@ -124,7 +147,7 @@ export default defineEventHandler(async (event) => {
       }
       return { success: true }
     }
-    else if (mapDealStatus(fetchedDeal.status) === 'Perdu') {
+    else if (['Perdu', 'Supprimé'].includes(mapDealStatus(fetchedDeal.status))) {
       // Only update Supabase (do not delete ActiveCampaign deal)
       const bookedRow = await booking.retrieveBookedDateByDealId(dealId)
 
@@ -157,8 +180,6 @@ export default defineEventHandler(async (event) => {
       }
     }
 
-    // Retrieve deal owner
-    // const owner = await activecampaign.retrieveOwner(dealId)
     // Prepare upsert data with type safety and default values
     const upsertData = {
       id: dealId,
@@ -166,14 +187,26 @@ export default defineEventHandler(async (event) => {
       title: fetchedDeal.title,
       status: mapDealStatus(fetchedDeal.status),
       stage: fetchedDeal.stage_title,
+      stage_id: fetchedDeal.stage || null,
       pipeline_id: fetchedDeal.pipelineid,
+      owner_id: owner || null,
+      currency: fetchedDeal.currency || null,
+      win_probability: fetchedDeal.winProbability != null ? +fetchedDeal.winProbability : null,
+      next_date: fetchedDeal.nextdate || null,
+      next_task_id: fetchedDeal.nexttaskid || null,
       total_value: formatPrice(fetchedDeal.value),
       price_per_traveler: +fetchedDeal.basePricePerTraveler / 100 || 0,
       nb_traveler: +fetchedDeal.nbTravelers || 0,
       nb_adults: +fetchedDeal.nbAdults || 0,
       nb_children: +fetchedDeal.nbChildren || 0,
+      nb_under_age: +fetchedDeal.nbUnderAge || 0,
+      nb_teen: +fetchedDeal.nbTeen || 0,
       travel_type: fetchedDeal.travelType || null,
-      indiv_room: fetchedDeal.indivRoom === 'Oui',
+      indiv_room: toBool(fetchedDeal.indivRoom),
+      indiv_room_price: +fetchedDeal.indivRoomPrice / 100 || 0,
+      deposit_price: +fetchedDeal.depositPrice / 100 || 0,
+      extension_price: +fetchedDeal.extensionPrice / 100 || 0,
+      agent_cost: +fetchedDeal.agentCost / 100 || 0,
       rest_to_pay: +fetchedDeal.restToPay / 100 || 0,
       total_paid: +fetchedDeal.alreadyPaid / 100 || 0,
       margin_per_traveler: +fetchedDeal.marginPerTraveler / 100 || 0,
@@ -181,28 +214,41 @@ export default defineEventHandler(async (event) => {
       total_margin: +fetchedDeal.totalMargin / 100 || 0,
       insurance_commission: +fetchedDeal.insuranceCommissionPrice / 100 || 0,
       insurance_choice: fetchedDeal.insurance || 'Aucune Assurance',
-      promo_code: fetchedDeal.promoCode || null,
       insurance_price_per_traveler: +fetchedDeal.insuranceCommissionPerTraveler / 100 || 0,
-      country: fetchedDeal.country || 'Non renseigné',
-      is_couple: fetchedDeal.isCouple === 'Oui',
-      lost_reason: fetchedDeal.reasonLost || fetchedDeal.otherReasonLost || null,
+      is_cap_exploraction: toBool(fetchedDeal.isCapExploraction),
+      promo_code: fetchedDeal.promoCode || null,
       applied_promo_per_traveler: +fetchedDeal.promoValue / 100 || 0,
       children_promo: +fetchedDeal.promoChildren / 100 || 80,
-      // teen_promo: +fetchedDeal.promoTeen / 100 || 80,
-      rest_to_pay_per_traveler: +fetchedDeal.restToPayPerTraveler / 100 || 0,
+      promo_earlybird: +fetchedDeal.promoEarlybird / 100 || 0,
+      got_earlybird: toBool(fetchedDeal.gotEarlybird),
+      promo_last_minute: +fetchedDeal.promoLastMinute / 100 || 0,
+      got_last_minute: toBool(fetchedDeal.gotLastMinute),
+      country: fetchedDeal.country || 'Non renseigné',
       iso: fetchedDeal.iso || null,
-      // max_teen_age: +fetchedDeal.maxTeenAge || 18,
+      zone_chapka: +fetchedDeal.zoneChapka || null,
+      is_couple: toBool(fetchedDeal.isCouple),
+      lost_reason: fetchedDeal.reasonLost || fetchedDeal.otherReasonLost || null,
+      rest_to_pay_per_traveler: +fetchedDeal.restToPayPerTraveler / 100 || 0,
       max_children_age: +fetchedDeal.maxChildrenAge || 12,
+      include_flight: toBool(fetchedDeal.includeFlight),
+      flight_ticket_bought: toBool(fetchedDeal.flightTicketBought),
       flight_ticket_price_per_traveler: +fetchedDeal.flightPrice / 100 || 0,
       departure_date: fetchedDeal.departureDate || null,
       return_date: fetchedDeal.returnDate || null,
+      forecasted_closing_date: fetchedDeal.forecastedClosingDate || null,
       conversion_date: fetchedDeal.conversionDate || null,
       seller: owner,
       source: fetchedDeal.source || null,
+      acquisition_source: fetchedDeal.acquisitionSource || null,
+      other_acquisition_source: fetchedDeal.otherAcquisitionSource || null,
+      utm: fetchedDeal.utm || null,
+      slug: fetchedDeal.slug || null,
+      current_step: fetchedDeal.currentStep || null,
+      link_bms: fetchedDeal.linkBms || null,
       paiement_method: fetchedDeal.paiementMethod || null,
-      created_at: isoDate.includes('2023-12-19')
-        ? (fetchedDeal.oldCreationDate || isoDate)
-        : isoDate,
+      created_at: fetchedDeal.oldCreationDate || isoDate,
+      mdate: mdate || null,
+      updated_at: mdate || new Date().toISOString(),
     }
 
     await activecampaign.recalculatTotalValues(dealId)

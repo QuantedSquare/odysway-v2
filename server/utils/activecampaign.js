@@ -79,8 +79,11 @@ const customFieldsMapDeal = {
   80: 'source',
   81: 'forcedIndivRoom',
   82: 'paiementMethod',
+  83: 'acquisitionSource',
+  84: 'otherAcquisitionSource',
   85: 'promoEarlybird',
   86: 'gotEarlybird',
+  88: 'agentCost',
   95: 'promoLastMinute',
   96: 'gotLastMinute',
   93: 'linkBms',
@@ -208,21 +211,46 @@ const deleteDeal = async (dealId) => {
   }
 }
 
+const getContactTags = async (contactId) => {
+  try {
+    const response = await apiRequest(`/contacts/${contactId}/contactTags`)
+    const tagIds = (response.contactTags || []).map(t => t.tag)
+    if (!tagIds.length) return []
+    const tagDetails = await Promise.all(
+      tagIds.map(id => apiRequest(`/tags/${id}`).then(r => r.tag?.tag).catch(() => null)),
+    )
+    return tagDetails.filter(Boolean)
+  }
+  catch (err) {
+    console.error('Error fetching contact tags:', err.message)
+    return []
+  }
+}
+
 const upsertContactIntoSupabase = async (contactId) => {
   try {
     const acContact = await getClientById(contactId)
+    const contact = acContact.contact
+    const fieldValues = contact.fieldValues
+    const tags = await getContactTags(contactId)
     const contactToUpsert = {
       id: contactId,
       contact: contactId,
-      created_at: acContact.contact.cdate,
-      firstname: acContact.contact.firstName || null,
-      lastname: acContact.contact.lastName || null,
-      email: acContact.contact.email,
-      birthdate: acContact.contact.fieldValues.find(i => i.field === '1')?.value
-        ? dayjs(acContact.contact.fieldValues.find(i => i.field === '1').value, 'YYYY-MM-DD').toISOString()
+      created_at: contact.cdate,
+      mdate: contact.mdate || null,
+      updated_at: contact.mdate || null,
+      firstname: contact.firstName || null,
+      lastname: contact.lastName || null,
+      email: contact.email,
+      phone: contact.phone || null,
+      birthdate: fieldValues.find(i => i.field === '1')?.value
+        ? dayjs(fieldValues.find(i => i.field === '1').value, 'YYYY-MM-DD').toISOString()
         : null,
-      city: findCustomFieldValue(acContact.contact.fieldValues, '4'),
-      zip_code: +findCustomFieldValue(acContact.contact.fieldValues, '5') || null,
+      address: findCustomFieldValue(fieldValues, '3'),
+      city: findCustomFieldValue(fieldValues, '4'),
+      zip_code: +findCustomFieldValue(fieldValues, '5') || null,
+      iso_contact: findCustomFieldValue(fieldValues, '22'),
+      tags: tags.length ? tags : null,
     }
     console.log('===========contactToUpsert in activecampaign.js===========', contactToUpsert)
     // console.log('===========contactToUpsert in activecampaign.js===========', contactToUpsert)
