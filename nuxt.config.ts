@@ -117,7 +117,6 @@ export default defineNuxtConfig({
       '/nous-recrutons': { isr: 60 * 60 * 24 * 5 },
       '/devis': { isr: 60 * 60 * 24 * 5 },
       '/checkout': { isr: 60 * 60 * 24 * 5 },
-      '/rdv-projet-voyage': { prerender: true },
 
       // Legal pages (rarely updated)
       '/politique-de-confidentialite': { isr: 60 * 60 * 24 * 5 }, // 5 days
@@ -125,6 +124,15 @@ export default defineNuxtConfig({
       '/conditions-generales-de-vente': { isr: 60 * 60 * 24 * 5 },
       '/cheques-vacances': { isr: 60 * 60 * 24 * 5 },
       '/confirmation': { isr: 60 * 60 * 24 * 5 },
+    }),
+
+    // `prerender: true` builds the page to a static HTML file at build time.
+    // It depends on env vars / external services that only the real Production
+    // env has, so we gate it strictly on the actual VERCEL_ENV. Preview-as-prod
+    // (PERF_PROD_LIKE=1) does NOT enable prerender — it failed on previews
+    // with `[500] Server Error` because Preview env can't satisfy the build.
+    ...(process.env.VERCEL_ENV === 'production' && {
+      '/rdv-projet-voyage': { prerender: true },
     }),
 
     // Redirect legacy or non-existent index to listing page
