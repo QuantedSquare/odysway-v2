@@ -201,8 +201,7 @@ const typeLoop = () => {
 }
 
 const config = useRuntimeConfig()
-// const showControls = computed(() => config.public.environment !== 'production')
-// const useTestImage = ref(config.public.environment !== 'production' ? true : false)
+
 const noiseEnabled = ref(true)
 const clampNoise = (value) => {
   const parsed = Number(value)

@@ -21,10 +21,10 @@ const isLocalHost = import.meta.client
   ? ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname)
   : false
 
-if (config.public.environment !== 'production' && !isLocalHost) {
-  useSanityVisualEditing()
-  useSanityLiveMode()
-}
+// if (config.public.environment !== 'production' && !isLocalHost) {
+//   useSanityVisualEditing()
+//   useSanityLiveMode()
+// }
 
 useHead({
   htmlAttrs: {
