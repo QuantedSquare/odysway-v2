@@ -3,6 +3,13 @@ import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 
 import { defineOrganization } from 'nuxt-schema-org/schema'
 
+// True for the real prod deployment and for any preview where we explicitly
+// want production-like behavior (used to take honest PageSpeed measurements
+// on a preview URL without the dev-only stega/visual-editing/no-CDN penalty).
+// Set `PERF_PROD_LIKE=1` in the Vercel preview env to opt in.
+const isProdLike = process.env.VERCEL_ENV === 'production'
+  || process.env.PERF_PROD_LIKE === '1'
+
 export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
@@ -83,10 +90,10 @@ export default defineNuxtConfig({
     transpile: ['vuetify'],
   },
   routeRules: {
-    // ISR caching is only enabled on production. On preview/dev we want every
-    // request to hit the live Sanity perspective so visual editing reflects
-    // drafts in real time.
-    ...(process.env.VERCEL_ENV === 'production' && {
+    // ISR caching is only enabled on production (or perf-test previews).
+    // On regular preview/dev we want every request to hit the live Sanity
+    // perspective so visual editing reflects drafts in real time.
+    ...(isProdLike && {
       // Homepage and main sections
       '/': { isr: 60 * 60 * 24 }, // 1 day
       '/voyages': { isr: 60 * 60 * 24 },
@@ -141,7 +148,7 @@ export default defineNuxtConfig({
     // Inline payloads in SSR HTML rather than emitting a separate _payload.json per route.
     // The separate file is served as a static asset on Vercel and can't be busted by the ISR bypass token,
     // which caused hydration to overwrite freshly-revalidated HTML with stale data.
-    payloadExtraction: process.env.VERCEL_ENV !== 'production',
+    payloadExtraction: !isProdLike,
     appManifest: false,
     inlineRouteRules: true,
     serverAppConfig: false,
@@ -257,12 +264,12 @@ export default defineNuxtConfig({
     projectId: process.env.SANITY_PROJECT_ID,
     dataset: process.env.SANITY_DATASET,
     apiVersion: '2025-04-01',
-    useCdn: process.env.VERCEL_ENV === 'production', // CDN is ~30-60s stale; ISR regeneration must read strongly-consistent data
+    useCdn: isProdLike, // CDN is ~30-60s stale; ISR regeneration must read strongly-consistent data
     withCredentials: false,
 
     // Visual editing (+ stega) pulls in React + ReactDOM + styled-components (~120KB).
     // Only enable on non-production deployments where editors actually preview.
-    ...(process.env.VERCEL_ENV !== 'production' && {
+    ...(!isProdLike && {
       stega: {
         enabled: true,
         studioUrl: process.env.SANITY_STUDIO_URL || 'http://localhost:3333',

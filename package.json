@@ -48,9 +48,9 @@
     "slugify": "^1.6.6",
     "stripe": "^17.6.0",
     "turndown": "^7.2.0",
-    "vue": "3.5.30",
+    "vue": "^3.5.34",
     "vue-dompurify-html": "^5.2.0",
-    "vue-router": "latest",
+    "vue-router": "^5.0.7",
     "zod": "^3.24.1"
   },
   "devDependencies": {
