@@ -86,6 +86,16 @@ const backgroundImageUrl = computed(() => {
 </script>
 
 <style scoped>
+/* Vuetify v-expansion-panel-title animates `border-*-radius` on its overlay,
+   which PageSpeed flags as non-composited (forces paint on every frame).
+   Override to opacity-only — opacity is GPU-composited, costs ~0 ms TBT. */
+:deep(.v-expansion-panel-title__overlay) {
+  transition-property: opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  will-change: opacity;
+}
+
 .max-height-with-overflow {
   max-height: 900px;
   overflow: auto;

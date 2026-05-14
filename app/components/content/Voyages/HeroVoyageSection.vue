@@ -58,14 +58,10 @@
             <span class="mt-1">Partager</span>
           </div>
         </v-btn>
-        <v-snackbar
+        <LazyShareSnackbar
+          v-if="snackbarMounted"
           v-model="snackbar"
-          location="top"
-          timeout="2000"
-          color="primary"
-        >
-          Le lien de ce voyage a été copié avec succès !
-        </v-snackbar>
+        />
       </v-col>
     </v-row>
   </v-container>
@@ -93,7 +89,6 @@
         />
       </v-col>
       <v-col
-        v-if="mdAndUp"
         cols="3"
         class="d-none d-md-flex flex-column ga-7"
       >
@@ -137,7 +132,7 @@
     </v-row>
     <v-row class="media-btns-position">
       <v-col cols="auto">
-        <PhotoGalleryDialog
+        <LazyPhotoGalleryDialog
           v-if="voyage.photosList?.length > 0"
           :photos-list="photoCarousel"
         />
@@ -147,7 +142,7 @@
         cols="auto"
         class="pl-1"
       >
-        <VideoDialog :videos-link="voyage.videoLinks" />
+        <LazyVideoDialog :videos-link="voyage.videoLinks" />
       </v-col>
     </v-row>
   </v-container>
@@ -157,11 +152,9 @@
 import { mdiExportVariant } from '@mdi/js'
 import imageUrlBuilder from '@sanity/image-url'
 import { stegaClean } from '@sanity/client/stega'
-import { useDisplay } from 'vuetify'
 
 const config = useRuntimeConfig()
 const { trackShareClick } = useGtmTracking()
-const { mdAndUp } = useDisplay()
 
 const props = defineProps({
   voyage: {
@@ -176,6 +169,10 @@ const builder = imageUrlBuilder({
 })
 const route = useRoute()
 const snackbar = ref(false)
+// Defer mounting the snackbar (and its v-snackbar Vuetify dependency)
+// until the user actually triggers it. Keeps it out of the LCP-critical
+// Hero chunk.
+const snackbarMounted = ref(false)
 // Build optimized Sanity URLs for main image with hotspot support
 // The hotspot is automatically applied when passing the full image object to .image()
 // and using .fit('crop') - Sanity will use the hotspot to determine the crop area
@@ -226,6 +223,7 @@ const photoCarousel = computed(() => {
 function copyUrl() {
   const copiedUrl = `${config.public.siteURL}${route.fullPath}`
   navigator.clipboard.writeText(copiedUrl)
+  snackbarMounted.value = true
   snackbar.value = true
 
   // GTM: Track share click

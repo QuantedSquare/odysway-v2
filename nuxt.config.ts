@@ -37,6 +37,9 @@ export default defineNuxtConfig({
       link: [
         { rel: 'preconnect', href: 'https://cdn.sanity.io', crossorigin: 'anonymous' },
         { rel: 'preconnect', href: 'https://nu6yntji.apicdn.sanity.io', crossorigin: 'anonymous' },
+        // Non-CDN Sanity host used for uncached/preview queries. PageSpeed flagged
+        // ~300 ms LCP savings from preconnecting it.
+        { rel: 'preconnect', href: 'https://nu6yntji.api.sanity.io', crossorigin: 'anonymous' },
         // SST/GTM is loaded on first user interaction (see app.vue), so we
         // only need DNS resolution warm — preconnect would waste the slot
         // since we don't open a TLS connection until the user interacts.

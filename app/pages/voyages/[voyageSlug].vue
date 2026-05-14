@@ -164,15 +164,41 @@ import imageUrlBuilder from '@sanity/image-url'
 definePageMeta({
   layout: 'voyage',
   middleware: ['old-voyages-link-redirection'],
+  // The global `out-in` transitions delay hydration ~150-300 ms; disabling
+  // here is a measurable LCP/TBT win for this perf-sensitive route.
+  pageTransition: false,
+  layoutTransition: false,
 })
 
 const route = useRoute()
 const { trackViewItem } = useGtmTracking()
 const { formatVoyageForGtm } = useGtmVoyageFormatter()
 
+// Explicit projection (no `...,` spread) so the singleton's many unused
+// CMS-only fields don't ship in the inlined payload. Fields below are the
+// only ones actually consumed by the template + child components.
 const voyagePageQuery = `
   *[_type == "page_voyage"][0]{
-    ...,
+    dateSections,
+    experiencesBlock,
+    accompanistsTitle,
+    housingTitle,
+    housingTypeTitle,
+    housingMoodTitle,
+    priceDetailsSection,
+    reviewsSection,
+    indivSection,
+    pageNotFound{
+      description,
+      buttonTo,
+      buttonText
+    },
+    authorNote{
+      title
+    },
+    faqSection{
+      faqBlock
+    },
     contactSection{
       ...,
       teamMembers[]->{
@@ -191,15 +217,29 @@ const voyagePageQuery = `
           image
         }
       }
-    },
-    indivSection{
-      ...
     }
   }
 `
-const voyageQuery = `
+// The voyage doc is large. We split it into two queries:
+//
+// 1. `voyageHeroQuery`  — awaited at SSR. Contains everything needed for
+//    LCP-critical UI (Hero, Chips, InfoCard, BottomAppBar), for SEO/JSON-LD,
+//    and for the `<link rel=preload>` image hint. Avoids the `...,` spread
+//    so the inlined Sanity payload stays small.
+//
+// 2. `voyageContentQuery` — fetched with `lazy: true`. Contains heavy rich
+//    blocks (authorNote, experiencesBlock, programmeBlock, accompanists*,
+//    housingBlock, pricingDetailsBlock, faqBlock). All consumers of these
+//    fields are `LazyXxx` with internal `v-if` guards, so they render empty
+//    shells SSR-side and populate once content resolves client-side.
+const voyageHeroQuery = `
   *[_type == "voyage" && slug.current == $slug][0]{
-    ...,
+    _id,
+    _type,
+    slug,
+    title,
+    duration,
+    monthlyAvailability,
     image{
       asset->{
        ...
@@ -208,6 +248,15 @@ const voyageQuery = `
       hotspot,
       crop
     },
+    imageSecondary,
+    photosList,
+    videoLinks,
+    rating,
+    comments,
+    pricing,
+    availabilityTypes,
+    closingDays,
+    levelBadgeOrder,
     seo{
       metaTitle,
       metaDescription,
@@ -238,7 +287,6 @@ const voyageQuery = `
       variable2Value,
       overrideText
     },
-    levelBadgeOrder,
     destinations[]->{
       _id,
       title,
@@ -254,17 +302,29 @@ const voyageQuery = `
       _id,
       title
     },
+    difficultyLevel->{
+      description,
+      level,
+      title
+    }
+  }
+`
+
+const voyageContentQuery = `
+  *[_type == "voyage" && slug.current == $slug][0]{
     authorNote{
       ...,
       author->{
-      ...
+        ...
       }
     },
-    difficultyLevel ->{
-      description,
-      level,
-      title,
-    }
+    experiencesBlock,
+    programmeBlock,
+    accompanistsList,
+    accompanistsDescription,
+    housingBlock,
+    pricingDetailsBlock,
+    faqBlock
   }
 `
 
@@ -301,10 +361,26 @@ const voyagePropositionsQuery = `
   }
 `
 const voyageSlugRef = computed(() => route.params.voyageSlug)
-const [{ data: page }, { data: voyage }] = await Promise.all([
+const [{ data: page }, { data: voyageHero }] = await Promise.all([
   useSanityQuery(voyagePageQuery),
-  useSanityQuery(voyageQuery, { slug: voyageSlugRef }),
+  useSanityQuery(voyageHeroQuery, { slug: voyageSlugRef }),
 ])
+
+// Below-fold heavy content — fetched lazily so the SSR HTML payload stays
+// small. Children read these via the merged `voyage` computed below.
+const { data: voyageContent } = await useSanityQuery(
+  voyageContentQuery,
+  { slug: voyageSlugRef },
+  { lazy: true },
+)
+
+// Merged view that downstream code (HeroVoyageSection, InfoCard, lazy
+// children, useSeo, GTM tracking) consumes as before. Spread order matters:
+// content fields override hero only when present, otherwise stay undefined.
+const voyage = computed(() => {
+  if (!voyageHero.value) return null
+  return { ...voyageHero.value, ...(voyageContent.value || {}) }
+})
 
 const experienceTypeIdRef = computed(() => voyage.value?.experienceType?._id)
 const { data: voyagePropositions } = await useSanityQuery(
@@ -367,37 +443,33 @@ if (voyage.value && !customTravel.value) {
   })
 }
 
-// Image preload — reactive to handle lazy data
-watchEffect(() => {
-  if (!voyage.value || customTravel.value) return
-
+// Image preload — emitted once at SSR so the <link rel=preload> ships in
+// the initial HTML head (the only place where it can race the LCP image
+// fetch). voyage.value is set during the synchronous setup await above and
+// never changes for a given route, so a watchEffect was overkill — it just
+// shifted work to hydration where the preload no longer helps.
+if (voyage.value && !customTravel.value && voyage.value.image) {
   const image = voyage.value.image
-  const link = []
+  // Must mirror the rendered <NuxtImg> srcset/sizes exactly, otherwise the
+  // browser downloads a different URL than the preload (waste).
+  const srcset = [
+    `${buildMainImageUrl(image, 400, 225, 80)} 400w`,
+    `${buildMainImageUrl(image, 600, 338, 80)} 600w`,
+    `${buildMainImageUrl(image, 800, 450, 80)} 800w`,
+    `${buildMainImageUrl(image, 1000, 563, 80)} 1000w`,
+    `${buildMainImageUrl(image, 1400, 788, 80)} 1400w`,
+  ].join(', ')
 
-  if (image) {
-    // Must mirror the rendered <NuxtImg> srcset/sizes exactly, otherwise
-    // the browser downloads a different URL than the preload (waste).
-    const srcset = [
-      `${buildMainImageUrl(image, 400, 225, 80)} 400w`,
-      `${buildMainImageUrl(image, 600, 338, 80)} 600w`,
-      `${buildMainImageUrl(image, 800, 450, 80)} 800w`,
-      `${buildMainImageUrl(image, 1000, 563, 80)} 1000w`,
-      `${buildMainImageUrl(image, 1400, 788, 80)} 1400w`,
-    ].join(', ')
-
-    link.push({
+  useHead({
+    link: [{
       rel: 'preload',
       as: 'image',
       imagesrcset: srcset,
       imagesizes: '(max-width: 600px) 92vw, (max-width: 960px) 60vw, 70vw',
       fetchpriority: 'high',
-    })
-  }
-
-  useHead({
-    link,
+    }],
   })
-})
+}
 </script>
 
 <style scoped>
