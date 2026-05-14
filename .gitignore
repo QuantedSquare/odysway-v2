@@ -30,7 +30,7 @@ mcp.json
 .cursor/
 cursor/
 
-
+.claude/worktrees
 
 cms/migration-reports
 public/images/
