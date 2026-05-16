@@ -291,6 +291,10 @@ const createCheckoutSession = async (order) => {
     currentUrl: order.currentUrl,
   })
 
+  const safeMetadata = Object.fromEntries(
+    Object.entries(order).filter(([, v]) => v !== null && v !== undefined),
+  )
+
   try {
     const session = await stripeCLI.checkout.sessions.create({
       line_items: lineItems,
@@ -300,9 +304,9 @@ const createCheckoutSession = async (order) => {
       invoice_creation: { enabled: true },
       success_url: successUrl,
       cancel_url: cancelUrl,
-      metadata: order,
+      metadata: safeMetadata,
       payment_intent_data: {
-        metadata: order,
+        metadata: safeMetadata,
       },
       after_expiration: {
         recovery: {

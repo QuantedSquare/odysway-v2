@@ -309,6 +309,17 @@
         </v-alert>
       </Transition>
 
+      <Transition name="list">
+        <v-alert
+          v-if="paymentError"
+          class="text-center mt-4"
+          color="error"
+          variant="tonal"
+        >
+          {{ paymentError }}
+        </v-alert>
+      </Transition>
+
       <!-- Précédent -->
       <div
         v-if="route.query.type !== 'balance'"
@@ -355,6 +366,7 @@ const warningAcceptText = ref(null)
 
 const conditionsWarningText = computed(() => page?.payment?.conditions_warning || 'Veuillez confirmer les conditions de vente avant de procéder au paiement')
 
+const paymentError = ref(null)
 const loadingSession = ref(false)
 const almaInstallments = ref(3)
 const showAlmaSchedule = ref(false)
@@ -406,56 +418,63 @@ const almaSchedule = computed(() => {
 })
 
 const stripePay = async () => {
-  // User need to check the switches first
   if (!switch_accept_data_privacy.value || !switch_accept_country.value) {
     warningAcceptText.value = conditionsWarningText.value
     return
   }
-  else {
-    warningAcceptText.value = null
-  }
+  warningAcceptText.value = null
+  paymentError.value = null
   loadingSession.value = true
   redirectingToStripe.value = true
-  const bookedId = route.query.booked_id || composableBookedId.value
-  const contact = {
-    firstName: model.value.firstName,
-    lastName: model.value.lastName,
-    email: model.value.email,
-    phone: model.value.phone,
-  }
-  const dataForStripeSession = {
-    paymentType: route.query.type,
-    contact,
-    currentUrl: route.fullPath,
-    insuranceImg: page.assurance_img || 'https://odysway.com/images/default/chapka.png',
-    countries: voyage.iso,
-    booked_id: bookedId,
-    departureDate: voyage.departureDate,
-    returnDate: voyage.returnDate,
-  }
-  if (route.query.type === 'custom') {
-    Object.assign(dataForStripeSession, { amount: Math.round(+route.query.amount * 100) })
-  }
-  const checkoutLink = await $fetch(`/api/v1/stripe?bookedId=${bookedId}`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(dataForStripeSession),
-  })
-  if (checkoutLink) {
-    const { getCountryFromPhone } = useGtmTracking()
-    const userData = {
-      user_id: model.value.email,
-      user_mail: model.value.email,
-      user_phone: model.value.phone,
-      user_country: getCountryFromPhone(model.value.phone) || 'Unknown',
+  try {
+    const bookedId = route.query.booked_id || composableBookedId.value
+    const contact = {
+      firstName: model.value.firstName,
+      lastName: model.value.lastName,
+      email: model.value.email,
+      phone: model.value.phone,
     }
-    trackAddPaymentInfo(voyage, model.value, 'stripe', userData)
-    await navigateTo(checkoutLink, { external: true })
+    const dataForStripeSession = {
+      paymentType: route.query.type,
+      contact,
+      currentUrl: route.fullPath,
+      insuranceImg: page.assurance_img || 'https://odysway.com/images/default/chapka.png',
+      countries: voyage.iso,
+      booked_id: bookedId,
+      departureDate: voyage.departureDate,
+      returnDate: voyage.returnDate,
+    }
+    if (route.query.type === 'custom') {
+      Object.assign(dataForStripeSession, { amount: Math.round(+route.query.amount * 100) })
+    }
+    console.log('stripe data', dataForStripeSession)
+    const checkoutLink = await $fetch(`/api/v1/stripe?bookedId=${bookedId}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(dataForStripeSession),
+    })
+    if (checkoutLink) {
+      const { getCountryFromPhone } = useGtmTracking()
+      const userData = {
+        user_id: model.value.email,
+        user_mail: model.value.email,
+        user_phone: model.value.phone,
+        user_country: getCountryFromPhone(model.value.phone) || 'Unknown',
+      }
+      trackAddPaymentInfo(voyage, model.value, 'stripe', userData)
+      window.location.href = checkoutLink
+    }
+    else {
+      redirectingToStripe.value = false
+    }
   }
-  else {
+  catch {
     redirectingToStripe.value = false
+    paymentError.value = page?.payment?.payment_error || 'Une erreur est survenue. Veuillez réessayer ou nous contacter.'
   }
-  loadingSession.value = false
+  finally {
+    loadingSession.value = false
+  }
 }
 
 const almaPay = async () => {
@@ -463,50 +482,57 @@ const almaPay = async () => {
     warningAcceptText.value = conditionsWarningText.value
     return
   }
-  else {
-    warningAcceptText.value = null
-  }
+  warningAcceptText.value = null
+  paymentError.value = null
   loadingSession.value = true
   redirectingToAlma.value = true
-  const dataForAlmaSession = {
-    paymentType: route.query.type,
-    contact: {
-      firstName: model.value.firstName,
-      lastName: model.value.lastName,
-      email: model.value.email,
-      phone: model.value.phone,
-    },
-    currentUrl: route.fullPath,
-    insuranceImg: page.assurance_img || 'https://odysway.com/images/default/chapka.png',
-    countries: voyage.iso,
-    departureDate: voyage.departureDate,
-    returnDate: voyage.returnDate,
-    installments: almaInstallments.value,
-  }
-  if (route.query.type === 'custom') {
-    Object.assign(dataForAlmaSession, { amount: Math.round(+route.query.amount * 100) })
-  }
-  const almaBookedId = route.query.booked_id || composableBookedId.value
-  const checkoutLink = await $fetch(`/api/v1/alma?bookedId=${almaBookedId}`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(dataForAlmaSession),
-  })
-  if (checkoutLink.url) {
-    const { getCountryFromPhone } = useGtmTracking()
-    const userData = {
-      user_id: model.value.email,
-      user_mail: model.value.email,
-      user_phone: model.value.phone,
-      user_country: getCountryFromPhone(model.value.phone) || 'Unknown',
+  try {
+    const dataForAlmaSession = {
+      paymentType: route.query.type,
+      contact: {
+        firstName: model.value.firstName,
+        lastName: model.value.lastName,
+        email: model.value.email,
+        phone: model.value.phone,
+      },
+      currentUrl: route.fullPath,
+      insuranceImg: page.assurance_img || 'https://odysway.com/images/default/chapka.png',
+      countries: voyage.iso,
+      departureDate: voyage.departureDate,
+      returnDate: voyage.returnDate,
+      installments: almaInstallments.value,
     }
-    trackAddPaymentInfo(voyage, model.value, 'alma', userData)
-    await navigateTo(checkoutLink.url, { external: true })
+    if (route.query.type === 'custom') {
+      Object.assign(dataForAlmaSession, { amount: Math.round(+route.query.amount * 100) })
+    }
+    const almaBookedId = route.query.booked_id || composableBookedId.value
+    const checkoutLink = await $fetch(`/api/v1/alma?bookedId=${almaBookedId}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(dataForAlmaSession),
+    })
+    if (checkoutLink.url) {
+      const { getCountryFromPhone } = useGtmTracking()
+      const userData = {
+        user_id: model.value.email,
+        user_mail: model.value.email,
+        user_phone: model.value.phone,
+        user_country: getCountryFromPhone(model.value.phone) || 'Unknown',
+      }
+      trackAddPaymentInfo(voyage, model.value, 'alma', userData)
+      window.location.href = checkoutLink.url
+    }
+    else {
+      redirectingToAlma.value = false
+    }
   }
-  else {
+  catch {
     redirectingToAlma.value = false
+    paymentError.value = page?.payment?.payment_error || 'Une erreur est survenue. Veuillez réessayer ou nous contacter.'
   }
-  loadingSession.value = false
+  finally {
+    loadingSession.value = false
+  }
 }
 
 watch(checkedOption, (value) => {
