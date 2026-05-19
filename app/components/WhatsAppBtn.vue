@@ -36,6 +36,7 @@
 </template>
 
 <script setup>
+// Afficher le message quand le mec défile
 const { trackWhatsappClick } = useGtmTracking()
 const route = useRoute()
 const showHint = ref(false)

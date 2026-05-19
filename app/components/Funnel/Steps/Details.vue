@@ -287,7 +287,7 @@ import { mdiArrowRight } from '@mdi/js'
 import { countries } from '~/utils/countries'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 
-const { trackReservationStep, trackCtaClick } = useGtmTracking()
+const { trackReservationStep, trackCtaClick, trackReservationPoseOption } = useGtmTracking()
 
 const { voyage, page, checkoutType, dateId } = defineProps(['ownStep', 'voyage', 'page', 'initialDealValues', 'checkoutType', 'dateId'])
 
@@ -563,6 +563,13 @@ const submitStepData = () => {
               }).catch(console.error)
             }
             buttonLoading.value = false
+            const userData = {
+              user_id: model.value.email,
+              user_mail: model.value.email,
+              user_phone: model.value.phone,
+              user_country: getCountryFromPhone(model.value.phone) || 'Unknown',
+            }
+            trackReservationPoseOption(voyage, model.value, userData)
             await navigateTo(`/confirmation?voyage=${voyage.slug}&isoption=true`)
           })
           .catch((err) => {
