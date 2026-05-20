@@ -107,20 +107,31 @@
           variant="text"
           size="small"
           color="white"
-          height="40"
-          class="price-btn text-subtitle-2 font-weight-bold text-yellow px-2"
+          height="52"
+          class="price-btn px-2"
           @click="drawerOpen = !drawerOpen"
         >
-          <span class="text-yellow">
-            {{ formatNumber(drawerRef?.appliedPrice ?? 0, 'currency', '€') }}
-          </span>
-          <v-icon
+          <div class="d-flex flex-column align-end">
+            <span
+              class="text-caption text-white py-1"
+              style="opacity:0.75;line-height:1.2"
+            >
+              Prix total : {{ formatNumber(drawerRef?.totalValue ?? 0, 'currency', '€') }}
+            </span>
+            <span
+              class="text-subtitle-2 font-weight-bold text-yellow"
+              style="line-height:1.3"
+            >
+              À régler : {{ formatNumber(drawerRef?.appliedPrice ?? 0, 'currency', '€') }}
+            </span>
+          </div>
+          <!-- <v-icon
             :class="{ 'chevron-open': drawerOpen }"
             class="chevron-icon ml-1"
             size="20"
           >
             {{ mdiChevronDown }}
-          </v-icon>
+          </v-icon> -->
         </v-btn>
       </v-col>
     </v-row>

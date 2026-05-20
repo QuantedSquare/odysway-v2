@@ -172,7 +172,9 @@ const { mdAndUp } = useDisplay()
 
 onMounted(async () => {
   // Track purchase event for GTM
+  console.log('isOption', isOption.value)
   if (route.query.purchase === 'true' && route.query.booked_id && !isOption.value) {
+    console.log('tic')
     const sessionKey = `gtm_tracked_${route.query.booked_id}`
     const alreadyTracked = sessionStorage.getItem(sessionKey)
 
