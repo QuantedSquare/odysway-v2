@@ -36,17 +36,41 @@
 </template>
 
 <script setup>
-// Afficher le message quand le mec défile
 const { trackWhatsappClick } = useGtmTracking()
 const route = useRoute()
 const showHint = ref(false)
+let hideTimer = null
+let hasShownOnCurrentPage = false
 
 watch(() => route.path, () => {
-  if (route.path.includes('/voyages')) showHint.value = true
-  setTimeout(() => {
+  hasShownOnCurrentPage = false
+})
+
+const isVoyagePage = () => route.path.includes('/voyages')
+
+const triggerHint = () => {
+  if (!isVoyagePage() || hasShownOnCurrentPage) return
+  hasShownOnCurrentPage = true
+  showHint.value = true
+  clearTimeout(hideTimer)
+  hideTimer = setTimeout(() => {
     showHint.value = false
-  }, 5000)
-}, { immediate: true })
+  }, 4000)
+}
+
+const onScroll = () => {
+  if (window.scrollY > 500) triggerHint()
+}
+
+onMounted(() => {
+  setTimeout(triggerHint, 2000)
+  window.addEventListener('scroll', onScroll, { passive: true })
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', onScroll)
+  clearTimeout(hideTimer)
+})
 
 const handleWhatsappClick = () => {
   trackWhatsappClick()

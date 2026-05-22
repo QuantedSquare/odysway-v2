@@ -124,6 +124,39 @@
           </TrackableVoyageList>
         </v-container>
       </v-container>
+      <!-- Banner variant switcher (remove once a variant is chosen) -->
+      <!-- <div style="position:fixed;bottom:110px;right:16px;z-index:2000">
+        <v-btn-toggle
+          v-model="bannerVariant"
+          mandatory
+          density="compact"
+          rounded="lg"
+          color="primary"
+        >
+          <v-btn
+            value="A"
+            size="small"
+          >
+            A
+          </v-btn>
+          <v-btn
+            value="B"
+            size="small"
+          >
+            B
+          </v-btn>
+          <v-btn
+            value="C"
+            size="small"
+          >
+            C
+          </v-btn>
+        </v-btn-toggle>
+      </div>
+      <CallBannerDelayed
+        :voyage-title="voyage.title"
+        :variant="bannerVariant"
+      /> -->
     </div>
 
     <ColorContainer
@@ -319,6 +352,8 @@ onMounted(() => {
     trackViewItem(formattedVoyage, voyage.value.pricing?.startingPrice)
   }
 })
+
+// const bannerVariant = ref('A')
 
 const customTravel = computed(() => {
   const types = voyage.value?.availabilityTypes
