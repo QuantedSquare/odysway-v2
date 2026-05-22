@@ -66,10 +66,6 @@
             :housing-type-title="page.housingTypeTitle"
             :housing-mood-title="page.housingMoodTitle"
           />
-          <LazyContactUsSection
-            v-if="!voyage.availabilityTypes?.includes('groupe') && voyage.availabilityTypes?.includes('privatisation')"
-            :contact-section="page.contactSection"
-          />
 
           <LazyDatesPricesContainer
             :closing-days="voyage.closingDays"

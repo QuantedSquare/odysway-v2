@@ -572,7 +572,7 @@ export const pageVoyageType = defineType({
       fields: [
         defineField({
           name: 'titleOnlyPrivatisationAvailable',
-          title: 'Titre Seulement Privatisation',
+          title: 'Titre Privatisation only (visible à la place de la section date)',
           type: 'string',
           validation: Rule => Rule.required()
         }),
