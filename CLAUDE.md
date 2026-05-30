@@ -81,6 +81,17 @@ cms/
 5. **Content publishing**: Sanity update -> webhook -> Vercel ISR revalidation + Algolia index sync
 6. **Departure management**: AC pipeline 4 (Gestions Departs), auto-creates departure deals, links travelers
 
+## Pipeline logic — the most important concept
+
+`pipeline_id` is the primary segmentation axis for deals. Understand this before writing any dashboard.
+
+| `pipeline_id` | `pipeline_title` | Meaning |
+|---|---|---|
+| `1` | Prospects | Prospects pipeline. A deal here represents a traveler who has expressed interest (quote request, contact form, etc.) but has not yet paid. |
+| `2` | Voyageurs | Converted client pipeline. A deal moves here when the client makes their **first payment**. This is the authoritative signal for a conversion. |
+| `3` | Corbeille | Trash / archived. Exclude from all reports. |
+| `4` | Gestions Départs | Operational departure management. **these deals do not exist in supabase datatable.** |
+
 ## Supabase Tables
 
 ### `travel_dates`
@@ -108,44 +119,103 @@ Departure slots for each voyage. Has two layers of fields: real values (used int
 
 ### `booked_dates`
 Booking records — one row per booking linked to an AC deal and a travel date.
-- `id` uuid PK
-- `deal_id` bigint — AC deal ID
-- `travel_date_id` uuid → `travel_dates.id`
-- `booked_places` bigint (default 0)
-- `payment_type` text — deposit / full / balance / custom
-- `transaction_id` text — Stripe or Alma transaction ID
-- `is_option` bool — reservation option (not yet paid)
-- `expiracy_date` date — option expiry
-- `deleted`, `is_test` bool
+
+| Column | Type | Description |
+|---|---|---|
+| `id` | uuid | Part of composite PK with `deal_id`. |
+| `deal_id` | bigint | UNIQUE. Joins to `activecampaign_deals.id`. |
+| `travel_date_id` | uuid | Joins to `travel_dates.id`. |
+| `booked_places` | bigint | Seats consumed by this booking. |
+| `payment_type` | text | `'deposit'`, `'full'`, `'balance'`, `'custom'`. |
+| `transaction_id` | text | Stripe or Alma transaction id. |
+| `is_option` | boolean | Reservation option (not yet paid). |
+| `expiracy_date` | date | Option expiry date. |
+| `deleted`, `is_test` | boolean | **Always filter these out.** |
+| `created_at` | timestamptz | Booking creation time. |
+
+---
 
 ### `activecampaign_clients`
 Mirror of AC contacts for local lookup.
-- `id` bigint PK
-- `contact` bigint — AC contact ID
-- `email` varchar NOT NULL
-- `firstname`, `lastname`, `city` varchar
-- `zip_code` bigint
-- `birthdate` timestamp
+
+| Column | Type | Description |
+|---|---|---|
+| `id` | bigint | Internal id. Part of composite PK with `email`. |
+| `contact` | bigint | AC contact id. **Join to `activecampaign_deals.contact` on this column.** Has UNIQUE constraint. |
+| `email` | varchar | Email address. |
+| `firstname`, `lastname` | varchar | Names. |
+| `phone` | text | Phone number. |
+| `birthdate` | timestamp | Date of birth. |
+| `city`, `zip_code`, `address` | varchar/bigint/text | Postal info (often partial). |
+| `iso_contact` | text | Client's country ISO. |
+| `tags` | text[] | AC tag labels assigned to the contact. |
+| `optin_newsletter` | boolean | Newsletter subscription flag. |
+| `created_at`, `mdate`, `updated_at` | timestamptz | Timestamps. |
 
 ### `activecampaign_deals`
 Mirror of AC deals for reporting and local queries.
-- `id` bigint PK
-- `contact` bigint — AC contact ID
-- `title`, `status`, `stage` varchar
-- `pipeline_id` smallint
-- `total_value`, `price_per_traveler`, `rest_to_pay`, `total_paid` numeric
-- `rest_to_pay_per_traveler`, `applied_promo_per_traveler` numeric
-- `nb_traveler`, `nb_adults`, `nb_children` numeric
-- `travel_type`, `country`, `iso`, `source`, `seller` varchar
-- `indiv_room`, `is_couple` bool
-- `insurance_choice`, `promo_code`, `lost_reason`, `paiement_method` varchar
-- `insurance_price_per_traveler`, `insurance_commission` numeric
-- `margin_per_traveler`, `flight_margin`, `total_margin` numeric
-- `flight_ticket_price_per_traveler` numeric
-- `max_teen_age`, `max_children_age` smallint
-- `children_promo`, `teen_promo` numeric
-- `departure_date`, `return_date`, `conversion_date` timestamp
+A row per CRM deal. Source of truth for revenue, margin, conversions, and acquisition channels.
 
+| Column | Type | Description |
+|---|---|---|
+| `id` | bigint | Deal ID. Part of composite PK with `contact`. |
+| `contact` | bigint | FK to `activecampaign_clients.contact`. |
+| `title` | varchar | Deal title (usually voyage name + traveler name). |
+| `status` | varchar | `'Ouvert'`, `'Gagné'`, `'Perdu'`, `'Supprimé'`. |
+| `stage` | varchar | Sales stage name (free-form). |
+| `stage_id` | text | AC stage numeric id. |
+| `pipeline_id` | smallint | See pipeline logic above. |
+| `pipeline_title` | varchar | Human-readable pipeline name (e.g. `'Prospects'`, `'Voyageurs'`). Use `pipeline_id` for filtering; use `pipeline_title` for display. |
+| `owner_id` | text | AC owner id (sales rep). |
+| `seller` | varchar | Display name of sales rep (e.g. `'Jean Dupont'`). |
+| `currency` | text | Usually `'eur'`. |
+| `win_probability` | smallint | 0–100. Set by AC. |
+| `total_value` | numeric | Total deal value in EUR. |
+| `price_per_traveler` | numeric | Base price per traveler. |
+| `deposit_price` | numeric | Down-payment amount per traveler. |
+| `indiv_room_price` | numeric | Single-room supplement per traveler. |
+| `extension_price` | numeric | Optional extension per traveler. |
+| `flight_ticket_price_per_traveler` | numeric | Flight cost per traveler. |
+| `insurance_price_per_traveler` | numeric | Insurance cost per traveler. |
+| `insurance_commission` | numeric | Commission earned on insurance. |
+| `agent_cost` | numeric | Local agent purchase cost. Subtract from total to get true margin. |
+| `nb_traveler` | numeric | Total travelers on the deal. |
+| `nb_adults`, `nb_children`, `nb_teen`, `nb_under_age` | numeric | Demographic breakdown. |
+| `applied_promo_per_traveler` | numeric | Promo applied per traveler. |
+| `children_promo`, `promo_earlybird`, `promo_last_minute` | numeric | Promotion amounts. |
+| `got_earlybird`, `got_last_minute` | boolean | Whether the promo was actually applied. |
+| `promo_code` | varchar | Code used at checkout. |
+| `total_paid` | numeric | Amount already paid by the customer. |
+| `rest_to_pay` | numeric | Outstanding balance. |
+| `rest_to_pay_per_traveler` | numeric | Per-pax outstanding. |
+| `margin_per_traveler` | numeric | Margin per traveler. |
+| `flight_margin` | numeric | Margin on the flight portion. |
+| `total_margin` | numeric | Total deal margin in EUR. |
+| `travel_type` | varchar | `'Voyage de Groupe'`, `'Voyage Individuel'`, etc. |
+| `country` | varchar | Destination country (label). |
+| `iso` | varchar | ISO country code (e.g. `'PE'`, `'JP'`). |
+| `slug` | text | Voyage slug — the logical identifier for a voyage product. Groups all deals for the same trip. |
+| `current_step` | text | Funnel step at last update. |
+| `is_couple` | boolean | Couple booking flag. |
+| `indiv_room` | boolean | Single room requested. |
+| `is_cap_exploraction` | boolean | Premium insurance product chosen. |
+| `include_flight` | boolean | Flight included in the package. |
+| `flight_ticket_bought` | boolean | Operational: tickets purchased? |
+| `insurance_choice` | varchar | Free-form insurance label. |
+| `source` | varchar | Free-form source (legacy). |
+| `acquisition_source` | text | Structured acquisition source. Prefer this over `source`. |
+| `other_acquisition_source` | text | Free-form fallback when `acquisition_source` is "Autre". |
+| `utm` | text | Raw UTM string. |
+| `paiement_method` | varchar | Payment method label. |
+| `lost_reason` | varchar | Set when `status = 'Perdu'`. |
+| `departure_date`, `return_date` | timestamp | Travel dates. |
+| `forecasted_closing_date` | timestamp | Sales forecast date. |
+| `conversion_date` | timestamp | When the deal moved to pipeline 2 ("Gagné"). **Use for revenue cohorts.** |
+| `created_at` | timestamptz | Deal creation time. |
+| `mdate` | timestamptz | Last modification time (source CRM). |
+| `updated_at` | timestamptz | Mirror-side last-updated timestamp. |
+
+---
 ### `date_notes`
 Internal notes on travel dates (booking management UI).
 - `id` uuid PK, `travel_date_id` uuid FK
