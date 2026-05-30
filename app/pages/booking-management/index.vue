@@ -80,7 +80,7 @@
             {{ displayedTravels.reduce((sum, t) => sum + (t.booked_seats || 0), 0) }}
           </div>
           <div class="text-caption text-medium-emphasis">
-            Places reservees
+            Places réservées
           </div>
         </v-card>
       </v-col>

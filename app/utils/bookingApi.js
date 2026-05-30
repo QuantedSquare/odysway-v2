@@ -77,4 +77,33 @@ export const bookingApi = {
   placeOption: payload => apiRequest('/booking/booked_date/option', 'post', payload),
   bookingExists: bookedId =>
     apiRequest(`/booking/booking-exists${encodeQuery({ booked_id: bookedId })}`),
+
+  // Margins — voyage-level PAX table (Pattern A)
+  getMarginsStatus: () => apiRequest('/booking/margins'),
+  getMarginsDashboard: (params = {}) => apiRequest(`/booking/margins/dashboard${encodeQuery(params)}`),
+  getMarginsDashboardVoyage: (slug, params = {}) =>
+    apiRequest(`/booking/margins/dashboard/${encodeURIComponent(slug)}${encodeQuery(params)}`),
+  getVoyageMargin: slug => apiRequest(`/booking/margins/${encodeURIComponent(slug)}`),
+  updateVoyageMargin: (slug, rows) =>
+    apiRequest(`/booking/margins/${encodeURIComponent(slug)}`, 'put', rows),
+  deleteVoyageMarginRow: (slug, pax) =>
+    apiRequest(`/booking/margins/${encodeURIComponent(slug)}${encodeQuery({ pax })}`, 'delete'),
+
+  // Margins — per-date computation + override (Pattern B)
+  getDateMargin: (slug, dateId) =>
+    apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/margin`),
+  updateMarginOverride: (slug, dateId, payload) =>
+    apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/margin-override`, 'put', payload),
+
+  // Invoices (supplier purchase invoices per date)
+  getInvoices: (slug, dateId) =>
+    apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/invoices`),
+  getInvoiceUploadUrl: (slug, dateId, payload) =>
+    apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/invoices/upload-url`, 'post', payload),
+  updateInvoice: (slug, dateId, invoiceId, payload) =>
+    apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/invoices/${encodeURIComponent(invoiceId)}`, 'put', payload),
+  deleteInvoice: (slug, dateId, invoiceId) =>
+    apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/invoices/${encodeURIComponent(invoiceId)}`, 'delete'),
+  getInvoiceDownloadUrl: (slug, dateId, invoiceId) =>
+    apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/invoices/${encodeURIComponent(invoiceId)}/download`),
 }

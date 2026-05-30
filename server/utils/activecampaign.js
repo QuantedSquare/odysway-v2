@@ -27,7 +27,7 @@ const customFieldsMapDeal = {
   13: 'insuranceCommissionPrice', // Prix assurance par pax
   14: 'marginPerTraveler',
   15: 'totalMargin',
-  16: 'flightMargin',
+  70: 'flightMargin',
   17: 'country',
   18: 'pricePerTraveler',
   19: 'indivRoom',

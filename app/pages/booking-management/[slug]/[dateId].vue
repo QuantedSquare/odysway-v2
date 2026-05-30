@@ -630,6 +630,20 @@
             :date-id="dateId"
             class="mt-4"
           />
+
+          <!-- Margin -->
+          <DateMarginCard
+            :slug="slug"
+            :date-id="dateId"
+            class="mt-4"
+          />
+
+          <!-- Supplier invoices -->
+          <DateInvoices
+            :slug="slug"
+            :date-id="dateId"
+            class="mt-4"
+          />
         </v-col>
       </v-row>
 
@@ -750,6 +764,8 @@ import dayjs from 'dayjs'
 import DateFormCard from '~/components/booking/DateFormCard.vue'
 import DateAttachments from '~/components/booking/DateAttachments.vue'
 import DateNotes from '~/components/booking/DateNotes.vue'
+import DateMarginCard from '~/components/booking/DateMarginCard.vue'
+import DateInvoices from '~/components/booking/DateInvoices.vue'
 import { BOOKING_STATUSES } from '~/utils/bookingStatuses'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 
