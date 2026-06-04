@@ -109,8 +109,8 @@
           color="white"
           height="52"
           class="price-btn px-2"
-          @click="drawerOpen = !drawerOpen"
-        >
+          >
+          <!-- @click="drawerOpen = !drawerOpen" -->
           <div class="d-flex flex-column align-end">
             <span
               class="text-caption text-white py-1"
