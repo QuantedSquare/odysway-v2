@@ -115,7 +115,6 @@
             >
              À régler maintenant :{{ formatNumber(drawerRef?.appliedPrice ?? 0, 'currency', '€') }}
             </span>
-         
       </v-col>
     </v-row>
 

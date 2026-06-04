@@ -6,7 +6,7 @@
 
 <script setup>
 definePageMeta({
-  layout: 'voyage',
+  layout: 'no-footer',
   pageTransition: false,
 })
 
