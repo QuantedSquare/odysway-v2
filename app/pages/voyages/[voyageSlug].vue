@@ -21,13 +21,13 @@
           :difficulty-level="voyage.difficultyLevel"
           :level-badge-order="voyage.levelBadgeOrder"
         />
-        <LazySubHeaderMobileCTABar
+        <!-- <LazySubHeaderMobileCTABar
           :hydrate-on-idle="true"
           :date-sections="page.dateSections"
           :starting-price="voyage.pricing.startingPrice"
           :no-group-travel="!voyage.availabilityTypes?.includes('groupe')"
           :slug="voyage.slug.current"
-        />
+        /> -->
         <v-divider class="d-block d-md-none" />
         <StickyContainer>
           <template #left-side>

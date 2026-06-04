@@ -46,3 +46,7 @@ scripts/supabase-enrichement/*
 
 # Local AC exports (data, not for source control)
 export_ac.*
+
+
+app/pages/test.vue
+scripts/*

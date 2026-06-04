@@ -417,6 +417,13 @@
           Aucun voyage correspondant.
         </div>
       </v-card>
+
+      <div
+        v-if="orphanCount > 0"
+        class="text-caption text-medium-emphasis mt-3"
+      >
+        {{ orphanCount }} slug{{ orphanCount > 1 ? 's' : '' }} pr&eacute;sent{{ orphanCount > 1 ? 's' : '' }} dans <code>travel_dates</code> mais absent{{ orphanCount > 1 ? 's' : '' }} de Sanity (voyages supprim&eacute;s du CMS) — exclu{{ orphanCount > 1 ? 's' : '' }} du dashboard.
+      </div>
     </template>
   </div>
 </template>
@@ -516,12 +523,21 @@ const titleBySlug = computed(() => {
   return map
 })
 
+// Drop orphan slugs (present in travel_dates but missing from Sanity — e.g. voyages
+// deleted from the CMS without cleaning up the dates table). Keeps the dashboard
+// count consistent with the Configuration tab and the public site.
 const voyages = computed(() => {
-  return (data.value.voyages || []).map((v) => {
-    const meta = titleBySlug.value.get(v.voyage_slug) || {}
-    return { ...v, title: meta.title, image: meta.image }
-  })
+  return (data.value.voyages || [])
+    .filter(v => titleBySlug.value.has(v.voyage_slug))
+    .map((v) => {
+      const meta = titleBySlug.value.get(v.voyage_slug)
+      return { ...v, title: meta.title, image: meta.image }
+    })
 })
+
+const orphanCount = computed(() =>
+  (data.value.voyages || []).filter(v => !titleBySlug.value.has(v.voyage_slug)).length,
+)
 
 const filteredSortedVoyages = computed(() => {
   const query = search.value?.toLowerCase() || ''

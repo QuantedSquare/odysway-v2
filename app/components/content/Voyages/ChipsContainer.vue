@@ -79,7 +79,7 @@
           </v-chip>
         </TransitionGroup>
 
-        <button
+        <!-- <button
           v-if="isMobile && allChips.length > VISIBLE_LIMIT"
           class="toggle-chip"
           @click="showAll = !showAll"
@@ -91,7 +91,7 @@
           >
             {{ mdiChevronDown }}
           </v-icon>
-        </button>
+        </button> -->
       </v-col>
     </v-row>
   </v-container>
