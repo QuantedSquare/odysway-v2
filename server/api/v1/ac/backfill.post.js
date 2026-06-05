@@ -221,6 +221,7 @@ function buildDealRow(d) {
     rest_to_pay: parseEuroAmount(d['Solde Restant Total']) ?? 0,
     total_paid: parseEuroAmount(d['Total payé']) ?? 0,
     margin_per_traveler: parseEuroAmount(d['Marge par voyageur (base)']) ?? 0,
+    extra_margin_per_traveler: parseEuroAmount(d['Marge supplémentaire par pax']) ?? 0,
     flight_margin: parseEuroAmount(d['Marge vol par voyageur']) ?? 0,
     total_margin: parseEuroAmount(d['Marge totale dossier']) ?? 0,
     insurance_commission: parseEuroAmount(d['Prix Assurance par pax']) ?? 0,

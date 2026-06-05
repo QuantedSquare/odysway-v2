@@ -1,4 +1,4 @@
-import { defineEventHandler, readBody, createError } from 'h3'
+import { defineEventHandler, readBody, getQuery, createError } from 'h3'
 
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
@@ -16,8 +16,13 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, statusMessage: 'Body doit être un tableau de { pax, margin_per_traveler }' })
   }
 
+  const year = Number(getQuery(event).year)
+  if (!year || Number.isNaN(year)) {
+    throw createError({ statusCode: 400, statusMessage: 'year requis (query ?year=2026)' })
+  }
+
   try {
-    const data = await margins.upsertMarginForVoyage(slug, rows, bookingUser?.email)
+    const data = await margins.upsertMarginForVoyage(slug, rows, bookingUser?.email, year)
     return data
   }
   catch (err) {

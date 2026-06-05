@@ -433,6 +433,7 @@ import { ref, reactive, computed, onMounted, h } from 'vue'
 import dayjs from 'dayjs'
 import { mdiMagnify, mdiArrowRight, mdiChevronUp, mdiChevronDown, mdiImageOff, mdiCheckCircle } from '@mdi/js'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
+import { formatEur, formatEurSigned } from '~/utils/formatNumber'
 
 const props = defineProps({
   voyagesList: { type: Array, default: () => [] },
@@ -463,15 +464,6 @@ function emptyGlobals() {
   return { total_estimated: 0, finished_count: 0, total_dates_count: 0 }
 }
 
-function formatEur(amount) {
-  if (amount === null || amount === undefined || amount === '' || Number.isNaN(amount)) return '0 €'
-  return new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(amount)
-}
-function formatEurSigned(amount) {
-  if (amount === null || amount === undefined) return '—'
-  const formatted = formatEur(Math.abs(amount))
-  return amount > 0 ? `+${formatted}` : amount < 0 ? `−${formatted}` : formatted
-}
 function formatPct(ratio) {
   if (ratio === null || ratio === undefined || Number.isNaN(ratio)) return '—'
   return new Intl.NumberFormat('fr-FR', { style: 'percent', maximumFractionDigits: 1 }).format(ratio)

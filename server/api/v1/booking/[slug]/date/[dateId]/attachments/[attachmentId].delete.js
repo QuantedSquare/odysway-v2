@@ -4,7 +4,7 @@ export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
   const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
   const bookingUser = isProdEnv ? requireBookingUser(event) : getBookingUserOrNull(event)
-
+console.log('bookingUser', bookingUser)
   const { dateId, slug, attachmentId } = event.context.params
   if (!dateId || !slug || !attachmentId) {
     throw createError({ statusCode: 400, statusMessage: 'slug, dateId et attachmentId requis' })

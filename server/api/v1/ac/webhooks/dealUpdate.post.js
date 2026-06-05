@@ -234,6 +234,7 @@ export default defineEventHandler(async (event) => {
       rest_to_pay: +fetchedDeal.restToPay / 100 || 0,
       total_paid: +fetchedDeal.alreadyPaid / 100 || 0,
       margin_per_traveler: +fetchedDeal.marginPerTraveler / 100 || 0,
+      extra_margin_per_traveler: +fetchedDeal.extraMarginPerTraveler / 100 || 0,
       flight_margin: +fetchedDeal.flightMargin / 100 || 0,
       total_margin: +fetchedDeal.totalMargin / 100 || 0,
       insurance_commission: +fetchedDeal.insuranceCommissionPrice / 100 || 0,

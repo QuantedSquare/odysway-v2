@@ -83,7 +83,7 @@
         label="Ajouter un fichier"
         accept=".pdf,.jpg,.jpeg,.png,.webp,.doc,.docx,.xls,.xlsx"
         density="compact"
-        :rules="[fileSizeRule]"
+        :rules="[maxFileSizeRule]"
         prepend-icon=""
         :prepend-inner-icon="mdiPaperclip"
         hide-details="auto"
@@ -115,9 +115,10 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { mdiDelete, mdiDownload, mdiPaperclip, mdiFilePdfBox, mdiFileImage, mdiFileWord, mdiFileExcel, mdiFile } from '@mdi/js'
+import { mdiDelete, mdiDownload, mdiPaperclip } from '@mdi/js'
 import dayjs from 'dayjs'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
+import { formatFileSize, maxFileSizeRule, mimeIcon, mimeIconColor } from '~/utils/fileDisplay'
 
 const props = defineProps({
   slug: { type: String, required: true },
@@ -130,30 +131,6 @@ const selectedFile = ref(null)
 const uploading = ref(false)
 const uploadError = ref('')
 const downloadingId = ref(null)
-
-const fileSizeRule = v => !v || v.size <= 10 * 1024 * 1024 || 'Taille maximale : 10 Mo'
-
-function formatFileSize(bytes) {
-  if (bytes < 1024) return `${bytes} o`
-  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} Ko`
-  return `${(bytes / (1024 * 1024)).toFixed(1)} Mo`
-}
-
-function mimeIcon(mime) {
-  if (mime === 'application/pdf') return mdiFilePdfBox
-  if (mime.startsWith('image/')) return mdiFileImage
-  if (mime.includes('word') || mime.includes('document')) return mdiFileWord
-  if (mime.includes('excel') || mime.includes('spreadsheet')) return mdiFileExcel
-  return mdiFile
-}
-
-function mimeIconColor(mime) {
-  if (mime === 'application/pdf') return 'red'
-  if (mime.startsWith('image/')) return 'blue'
-  if (mime.includes('word') || mime.includes('document')) return 'indigo'
-  if (mime.includes('excel') || mime.includes('spreadsheet')) return 'green'
-  return 'grey'
-}
 
 async function fetchAttachments() {
   try {

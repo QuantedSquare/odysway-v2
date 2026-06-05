@@ -202,6 +202,34 @@
         </v-expansion-panels>
       </v-alert>
 
+      <!-- Tabs for Margin and Invoices -->
+      <v-tabs
+        v-model="selectedTab"
+        class="mb-4"
+        density="compact"
+      >
+        <v-tab
+          value="general"
+          class="d-flex align-center ga-2"
+        >
+          <v-icon size="small">{{ mdiCalculator }}</v-icon>
+          Général
+        </v-tab>
+        <v-tab
+          value="margins"
+          class="d-flex align-center ga-2"
+        >
+          <v-icon size="small">{{ mdiFileDocument }}</v-icon>
+          Marges et documents
+        </v-tab>
+      </v-tabs>
+
+      <v-window
+        v-model="selectedTab"
+        class="mb-4"
+      >
+        
+      <v-window-item value="general">
       <!-- Main content -->
       <v-row>
         <!-- Left column -->
@@ -624,28 +652,30 @@
             </v-card-text>
           </v-card>
 
-          <!-- Attachments -->
+       
+
+       
+        </v-col>
+      </v-row>
+      </v-window-item>
+      <v-window-item value="margins">
+          <DateMarginCard
+            ref="marginCard"
+            :slug="slug"
+            :date-id="dateId"
+          />
+          <DateInvoices
+            :slug="slug"
+            :date-id="dateId"
+            @invoices-changed="marginCard?.refresh()"
+          />
           <DateAttachments
             :slug="slug"
             :date-id="dateId"
             class="mt-4"
           />
-
-          <!-- Margin -->
-          <DateMarginCard
-            :slug="slug"
-            :date-id="dateId"
-            class="mt-4"
-          />
-
-          <!-- Supplier invoices -->
-          <DateInvoices
-            :slug="slug"
-            :date-id="dateId"
-            class="mt-4"
-          />
-        </v-col>
-      </v-row>
+        </v-window-item>
+      </v-window>
 
       <!-- Payment Link Dialog -->
       <v-dialog
@@ -759,7 +789,7 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { mdiArrowRight, mdiDelete, mdiLinkEdit, mdiInformationOutline, mdiAirplaneTakeoff, mdiCalendarOutline, mdiContentCopy } from '@mdi/js'
+import { mdiArrowRight, mdiDelete, mdiLinkEdit, mdiInformationOutline, mdiAirplaneTakeoff, mdiCalendarOutline, mdiContentCopy, mdiCalculator, mdiFileDocument } from '@mdi/js'
 import dayjs from 'dayjs'
 import DateFormCard from '~/components/booking/DateFormCard.vue'
 import DateAttachments from '~/components/booking/DateAttachments.vue'
@@ -784,6 +814,8 @@ const prospectTravelers = ref([])
 const loading = ref(true)
 const sanity = useSanity()
 const snackbar = ref(false)
+const selectedTab = ref('general')
+const marginCard = ref(null)
 const voyageQuery = groq`*[_type == "voyage" && slug.current == $slug][0]{
   title,
   pricing,

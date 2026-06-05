@@ -90,6 +90,58 @@
           </div>
         </div>
 
+        <v-divider class="my-2" />
+
+        <!-- KPI Cross-check : CA − Total factures -->
+        <div class="d-flex align-center justify-space-between py-2">
+          <div>
+            <div class="text-body-2 font-weight-bold d-flex align-center ga-1">
+              CA − Factures
+              <v-tooltip location="top">
+                <template #activator="{ props: tipProps }">
+                  <v-icon
+                    v-bind="tipProps"
+                    size="14"
+                    color="grey"
+                  >
+                    {{ mdiInformationOutline }}
+                  </v-icon>
+                </template>
+                CA = somme des `total_value` des deals payés (CA facturé, pas encaissé).<br>
+                Factures = somme des montants saisis dans la section Factures.<br>
+                Différence à comparer avec la marge réelle pour vérifier la cohérence.
+              </v-tooltip>
+              <v-chip
+                v-if="crossCheckColor === 'success'"
+                color="success"
+                label
+                size="x-small"
+                variant="tonal"
+              >
+                Cohérent
+              </v-chip>
+              <v-chip
+                v-else-if="crossCheckColor === 'warning'"
+                color="warning"
+                label
+                size="x-small"
+                variant="tonal"
+              >
+                Écart {{ formatPct(crossCheckRatio) }}
+              </v-chip>
+            </div>
+            <div class="text-caption text-medium-emphasis">
+              CA: {{ formatEur(breakdown.ca) }} · Factures: {{ formatEur(breakdown.total_invoices) }}
+            </div>
+          </div>
+          <div
+            class="text-body-1 font-weight-bold"
+            :style="`color: ${crossCheckColor === 'warning' ? 'rgb(var(--v-theme-warning))' : 'inherit'};`"
+          >
+            {{ formatEur(crossCheckValue) }}
+          </div>
+        </div>
+
         <!-- Détail repliable -->
         <v-expansion-panels
           variant="accordion"
@@ -97,7 +149,7 @@
         >
           <v-expansion-panel>
             <v-expansion-panel-title class="text-caption">
-              Détail du calcul
+              Détail du calcul de la marge réelle
             </v-expansion-panel-title>
             <v-expansion-panel-text>
               <div class="text-body-2">
@@ -110,14 +162,33 @@
                 </div>
                 <div class="d-flex justify-space-between py-1">
                   <span class="text-medium-emphasis">Marge / voyageur (base)</span>
-                  <span>{{ formatEur(breakdown.base_margin_per_pax) }} <span
-                    v-if="breakdown.base_margin_source"
-                    class="text-caption text-medium-emphasis ml-1"
-                  >({{ breakdown.base_margin_source === 'override' ? 'override date' : 'tableau pax' }})</span></span>
+                  <span>
+                    {{ formatEur(breakdown.base_margin_per_pax) }}
+                    <span
+                      v-if="breakdown.base_margin_source"
+                      class="text-caption text-medium-emphasis ml-1"
+                    >({{ baseMarginSourceLabel }})</span>
+                  </span>
                 </div>
                 <div class="d-flex justify-space-between py-1">
-                  <span class="text-medium-emphasis">Marges additionnelles (vol + assur.)</span>
+                  <span class="text-medium-emphasis">+ Base × pax</span>
+                  <span>{{ formatEur((breakdown.base_margin_per_pax || 0) * breakdown.real_pax) }}</span>
+                </div>
+                <div class="d-flex justify-space-between py-1">
+                  <span class="text-medium-emphasis">+ Marges add. (vol + assurance + extra)</span>
                   <span>{{ formatEur(breakdown.additional_margins) }}</span>
+                </div>
+                <div
+                  v-if="breakdown.promo_deductions > 0"
+                  class="d-flex justify-space-between py-1"
+                >
+                  <span class="text-medium-emphasis">− Réductions appliquées</span>
+                  <span>− {{ formatEur(breakdown.promo_deductions) }}</span>
+                </div>
+                <v-divider class="my-1" />
+                <div class="d-flex justify-space-between py-1 font-weight-bold">
+                  <span>= Marge réelle</span>
+                  <span>{{ breakdown.real !== null ? formatEur(breakdown.real) : '—' }}</span>
                 </div>
               </div>
             </v-expansion-panel-text>
@@ -208,8 +279,9 @@
 
 <script setup>
 import { ref, reactive, computed, watch, onMounted } from 'vue'
-import { mdiCurrencyEur, mdiRefresh } from '@mdi/js'
+import { mdiCurrencyEur, mdiRefresh, mdiInformationOutline } from '@mdi/js'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
+import { formatEur } from '~/utils/formatNumber'
 
 const props = defineProps({
   slug: { type: String, required: true },
@@ -225,9 +297,9 @@ const overrideForm = reactive({
   real_traveler_count_override: null,
 })
 
-function formatEur(amount) {
-  if (amount === null || amount === undefined || amount === '') return '—'
-  return new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(amount)
+function formatPct(ratio) {
+  if (ratio === null || ratio === undefined || Number.isNaN(ratio)) return '—'
+  return new Intl.NumberFormat('fr-FR', { style: 'percent', maximumFractionDigits: 0 }).format(Math.abs(ratio))
 }
 
 const hasOverride = computed(() => {
@@ -240,7 +312,36 @@ const hasOverride = computed(() => {
 const realMarginExplanation = computed(() => {
   if (!breakdown.value) return ''
   if (breakdown.value.base_margin_per_pax === null) return 'Tableau de marge non configuré'
-  return `(${formatEur(breakdown.value.base_margin_per_pax)} × ${breakdown.value.real_pax}) + marges add.`
+  return `(${formatEur(breakdown.value.base_margin_per_pax)} × ${breakdown.value.real_pax}) + add. − promo`
+})
+
+const baseMarginSourceLabel = computed(() => {
+  if (!breakdown.value) return ''
+  if (breakdown.value.base_margin_source === 'override') return 'override date'
+  if (breakdown.value.base_margin_source === 'pax') {
+    return breakdown.value.base_margin_source_year
+      ? `tableau pax — saison ${breakdown.value.base_margin_source_year}`
+      : 'tableau pax'
+  }
+  return ''
+})
+
+const crossCheckValue = computed(() => {
+  if (!breakdown.value) return 0
+  return Number(breakdown.value.ca || 0) - Number(breakdown.value.total_invoices || 0)
+})
+
+// Compare CA-Factures to Marge réelle: relative gap vs the real margin.
+const crossCheckRatio = computed(() => {
+  if (!breakdown.value || breakdown.value.real == null || breakdown.value.real === 0) return null
+  return (crossCheckValue.value - breakdown.value.real) / breakdown.value.real
+})
+
+const crossCheckColor = computed(() => {
+  if (!breakdown.value || breakdown.value.real == null) return null
+  if (crossCheckRatio.value == null) return null
+  // ±10% tolerance: within → "Cohérent" chip (green), outside → "Écart" chip (yellow).
+  return Math.abs(crossCheckRatio.value) <= 0.1 ? 'success' : 'warning'
 })
 
 async function fetchMargin() {
@@ -275,6 +376,8 @@ async function saveOverride() {
     overrideSaving.value = false
   }
 }
+
+defineExpose({ refresh: fetchMargin })
 
 watch(() => props.dateId, fetchMargin)
 onMounted(fetchMargin)

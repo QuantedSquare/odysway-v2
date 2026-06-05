@@ -10,9 +10,12 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, statusMessage: 'slug requis' })
   }
 
-  const { pax } = getQuery(event)
+  const { pax, year } = getQuery(event)
   if (!pax) {
     throw createError({ statusCode: 400, statusMessage: 'pax requis (query param)' })
+  }
+  if (!year) {
+    throw createError({ statusCode: 400, statusMessage: 'year requis (query param)' })
   }
 
   const { error } = await supabase
@@ -20,6 +23,7 @@ export default defineEventHandler(async (event) => {
     .delete()
     .eq('voyage_slug', slug)
     .eq('pax', Number(pax))
+    .eq('year', Number(year))
 
   if (error) {
     throw createError({ statusCode: 500, statusMessage: error.message })

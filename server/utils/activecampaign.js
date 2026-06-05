@@ -88,6 +88,7 @@ const customFieldsMapDeal = {
   96: 'gotLastMinute',
   93: 'linkBms',
   113: 'isCapExploraction',
+  117: 'extraMarginPerTraveler', // Marge supplémentaire par pax (extension, early check-in, etc.) — séparée de 14 marginPerTraveler qui est remplacé par le tableau BMS
 }
 const customFieldsMapContact = {
   1: 'birthdate',

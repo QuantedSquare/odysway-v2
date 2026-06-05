@@ -28,10 +28,51 @@
           {{ voyageTitle || slug }}
         </h1>
         <p class="text-body-2 text-medium-emphasis mb-0">
-          Marge par voyageur selon le nombre de pax (Pattern A). Cette grille sert à calculer la marge réelle d'un départ une fois le voyage terminé.
+          Marge par voyageur selon le nombre de pax (Pattern A) et par année. Une date sans marge configurée pour son année hérite automatiquement de l'année la plus proche (pass&eacute;e ou future, l'ann&eacute;e ant&eacute;rieure gagne en cas d'&eacute;galit&eacute;).
         </p>
       </v-col>
     </v-row>
+
+    <!-- Year tabs -->
+    <div class="d-flex align-center ga-2 mb-3 flex-wrap">
+      <v-btn-toggle
+        v-model="activeYear"
+        color="primary"
+        density="compact"
+        mandatory
+        variant="outlined"
+      >
+        <v-btn
+          v-for="y in availableYears"
+          :key="y"
+          :value="y"
+        >
+          Saison {{ y }}
+        </v-btn>
+      </v-btn-toggle>
+      <v-btn
+        size="small"
+        variant="text"
+        color="primary"
+        :prepend-icon="mdiPlus"
+        @click="addPreviousYearTab"
+      >
+        Saison {{ previousYearSuggestion }}
+      </v-btn>
+      <v-btn
+        size="small"
+        variant="text"
+        color="primary"
+        :prepend-icon="mdiPlus"
+        @click="addNextYearTab"
+      >
+        Saison {{ nextYearSuggestion }}
+      </v-btn>
+      <v-spacer />
+      <div class="text-caption text-medium-emphasis">
+        Saison = année calendaire de la date de départ
+      </div>
+    </div>
 
     <v-card
       rounded="lg"
@@ -50,6 +91,16 @@
         </div>
 
         <template v-else>
+          <v-alert
+            v-if="hasFallbackRows"
+            type="info"
+            density="compact"
+            variant="tonal"
+            class="mb-3"
+          >
+            Les paliers vides pour {{ activeYear }} héritent automatiquement de l'année la plus proche configurée (pass&eacute;e ou future). Saisis une valeur pour override la saison.
+          </v-alert>
+
           <v-table density="comfortable">
             <thead>
               <tr>
@@ -76,8 +127,8 @@
                     density="compact"
                     hide-details
                     variant="outlined"
-                    placeholder="0"
-                    style="max-width: 200px;"
+                    :placeholder="row.fallback_value !== null ? `Hérité ${row.fallback_year}: ${row.fallback_value} €` : '0'"
+                    style="max-width: 240px;"
                   />
                 </td>
                 <td class="text-medium-emphasis">
@@ -89,6 +140,7 @@
                     size="x-small"
                     color="error"
                     variant="text"
+                    :disabled="row.margin_per_traveler === null"
                     @click="removeRow(row.pax)"
                   >
                     <v-icon size="16">
@@ -143,7 +195,7 @@
               variant="tonal"
               class="flex-grow-1"
             >
-              Modifications enregistrées.
+              Modifications enregistrées pour la saison {{ activeYear }}.
             </v-alert>
             <v-btn
               color="primary"
@@ -161,9 +213,10 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, watch, onMounted } from 'vue'
 import { mdiArrowLeft, mdiDelete, mdiPlus } from '@mdi/js'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
+import { formatEur } from '~/utils/formatNumber'
 
 definePageMeta({
   layout: 'booking',
@@ -171,6 +224,7 @@ definePageMeta({
 })
 
 const route = useRoute()
+const router = useRouter()
 const slug = route.params.slug
 
 const sanity = useSanity()
@@ -191,37 +245,84 @@ const saveError = ref('')
 const saveSuccess = ref(false)
 const newPax = ref(null)
 
+const DEFAULT_PAX_RANGE = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// All margin rows for this voyage across all years, fetched once.
+const allRows = ref([])
+const currentYear = new Date().getFullYear()
+const activeYear = ref(Number(route.query.year) || currentYear)
+const extraYearTabs = ref([])
+
 const rows = ref([])
 let initialState = ''
 
-const DEFAULT_PAX_RANGE = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const isDirty = computed(() => JSON.stringify(rows.value) !== initialState)
+const hasFallbackRows = computed(() => rows.value.some(r => r.fallback_value !== null && r.margin_per_traveler === null))
 
-function formatEur(amount) {
-  if (amount === null || amount === undefined || amount === '') return '—'
-  return new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(amount)
+// Years available as tabs: years actually configured + current + any extras added by user.
+const availableYears = computed(() => {
+  const set = new Set([currentYear, ...allRows.value.map(r => r.year), ...extraYearTabs.value])
+  return Array.from(set).sort((a, b) => a - b)
+})
+
+const nextYearSuggestion = computed(() => Math.max(...availableYears.value) + 1)
+const previousYearSuggestion = computed(() => Math.min(...availableYears.value) - 1)
+
+function addYearTab(y) {
+  if (!extraYearTabs.value.includes(y)) extraYearTabs.value.push(y)
+  activeYear.value = y
+}
+const addNextYearTab = () => addYearTab(nextYearSuggestion.value)
+const addPreviousYearTab = () => addYearTab(previousYearSuggestion.value)
+
+// Picks the nearest year for the given pax (excluding activeYear itself).
+// Matches the server-side rule in margins.js::pickNearestYearCandidate
+// (nearest distance, prefer older year on equal distance).
+function pickFallbackForPax(pax) {
+  const candidates = allRows.value.filter(r =>
+    r.pax === pax && r.year !== activeYear.value && r.margin_per_traveler != null,
+  )
+  if (!candidates.length) return null
+  return [...candidates].sort((a, b) => {
+    const da = Math.abs(a.year - activeYear.value)
+    const db = Math.abs(b.year - activeYear.value)
+    if (da !== db) return da - db
+    return a.year - b.year
+  })[0]
 }
 
-const isDirty = computed(() => JSON.stringify(rows.value) !== initialState)
+// Rebuild visible `rows` whenever activeYear or allRows changes.
+function rebuildRows() {
+  const byPax = new Map(
+    allRows.value
+      .filter(r => r.year === activeYear.value)
+      .map(r => [r.pax, r.margin_per_traveler]),
+  )
 
-const fetchMargin = async () => {
+  // Build the merged view: pax 1..10 + any palier > 10 configured in any year.
+  // Set dedup on extraPax handles cross-year duplicates (same palier in 2026 and 2027).
+  const extraPax = [...new Set(allRows.value.filter(r => r.pax > 10).map(r => r.pax))]
+  const paxRange = [...DEFAULT_PAX_RANGE, ...extraPax].sort((a, b) => a - b)
+
+  rows.value = paxRange.map((pax) => {
+    const fallback = pickFallbackForPax(pax)
+    return {
+      pax,
+      margin_per_traveler: byPax.has(pax) ? byPax.get(pax) : null,
+      fallback_value: fallback ? Number(fallback.margin_per_traveler) : null,
+      fallback_year: fallback?.year ?? null,
+    }
+  })
+  initialState = JSON.stringify(rows.value)
+}
+
+const fetchAll = async () => {
   loading.value = true
   saveError.value = ''
   saveSuccess.value = false
   try {
-    const data = await bookingApi.getVoyageMargin(slug)
-    const existingByPax = new Map(data.map(d => [d.pax, d]))
-    // Always show at least PAX 1..10 to make the table easy to fill from the Excel.
-    const merged = DEFAULT_PAX_RANGE.map(pax => ({
-      pax,
-      margin_per_traveler: existingByPax.has(pax) ? existingByPax.get(pax).margin_per_traveler : null,
-    }))
-    // Include any extra paliers > 10 already configured
-    for (const d of data) {
-      if (d.pax > 10) merged.push({ pax: d.pax, margin_per_traveler: d.margin_per_traveler })
-    }
-    merged.sort((a, b) => a.pax - b.pax)
-    rows.value = merged
-    initialState = JSON.stringify(rows.value)
+    allRows.value = await bookingApi.getVoyageMargin(slug)
+    rebuildRows()
   }
   catch (err) {
     saveError.value = getApiErrorMessage(err, 'Erreur de chargement.')
@@ -234,18 +335,21 @@ const fetchMargin = async () => {
 const addRow = () => {
   if (!newPax.value) return
   if (rows.value.find(r => r.pax === newPax.value)) return
-  rows.value.push({ pax: Number(newPax.value), margin_per_traveler: null })
+  rows.value.push({
+    pax: Number(newPax.value),
+    margin_per_traveler: null,
+    fallback_value: null,
+    fallback_year: null,
+  })
   rows.value.sort((a, b) => a.pax - b.pax)
   newPax.value = null
 }
 
 const removeRow = async (pax) => {
-  if (!confirm(`Supprimer le palier ${pax} pax ?`)) return
-  rows.value = rows.value.filter(r => r.pax !== pax)
-  // Push delete immediately if it had a value persisted server-side
+  if (!confirm(`Supprimer le palier ${pax} pax pour la saison ${activeYear.value} ?`)) return
   try {
-    await bookingApi.deleteVoyageMarginRow(slug, pax)
-    await fetchMargin()
+    await bookingApi.deleteVoyageMarginRow(slug, pax, activeYear.value)
+    await fetchAll()
   }
   catch (err) {
     saveError.value = getApiErrorMessage(err, 'Erreur lors de la suppression.')
@@ -257,12 +361,11 @@ const save = async () => {
   saveError.value = ''
   saveSuccess.value = false
   try {
-    // Only send rows with a non-null margin
     const payload = rows.value
       .filter(r => r.margin_per_traveler !== null && r.margin_per_traveler !== '')
       .map(r => ({ pax: r.pax, margin_per_traveler: Number(r.margin_per_traveler) }))
-    await bookingApi.updateVoyageMargin(slug, payload)
-    await fetchMargin()
+    await bookingApi.updateVoyageMargin(slug, activeYear.value, payload)
+    await fetchAll()
     saveSuccess.value = true
     setTimeout(() => { saveSuccess.value = false }, 3000)
   }
@@ -274,5 +377,11 @@ const save = async () => {
   }
 }
 
-onMounted(fetchMargin)
+// Sync URL ?year= when tab changes, and rebuild visible rows.
+watch(activeYear, (y) => {
+  router.replace({ query: { ...route.query, year: String(y) } })
+  rebuildRows()
+})
+
+onMounted(fetchAll)
 </script>

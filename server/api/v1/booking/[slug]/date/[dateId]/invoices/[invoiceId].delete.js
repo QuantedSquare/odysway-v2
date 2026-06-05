@@ -21,17 +21,21 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 404, statusMessage: 'Facture introuvable' })
   }
 
-  if (bookingUser?.email !== invoice.uploaded_by && bookingUser?.role !== 'superadmin') {
+  if (!bookingUser) {
     throw createError({ statusCode: 403, statusMessage: 'Non autorisé à supprimer cette facture' })
   }
 
-  const { error: storageError } = await supabase
-    .storage
-    .from('date-invoices')
-    .remove([invoice.storage_path])
+  // Only attempt storage removal for invoices that have an attached file —
+  // exception-case rows (no file) have no storage_path.
+  if (invoice.storage_path) {
+    const { error: storageError } = await supabase
+      .storage
+      .from('date-invoices')
+      .remove([invoice.storage_path])
 
-  if (storageError) {
-    console.error('Error deleting invoice from storage:', storageError)
+    if (storageError) {
+      console.error('Error deleting invoice from storage:', storageError)
+    }
   }
 
   const { error: deleteError } = await supabase

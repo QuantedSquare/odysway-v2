@@ -1,4 +1,4 @@
-import { defineEventHandler, createError } from 'h3'
+import { defineEventHandler, getQuery, createError } from 'h3'
 
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
@@ -10,8 +10,11 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, statusMessage: 'slug requis' })
   }
 
+  const { year } = getQuery(event)
+  const yearNum = year ? Number(year) : null
+
   try {
-    const rows = await margins.getMarginForVoyage(slug)
+    const rows = await margins.getMarginForVoyage(slug, yearNum)
     return rows
   }
   catch (err) {

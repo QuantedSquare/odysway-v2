@@ -83,11 +83,12 @@ export const bookingApi = {
   getMarginsDashboard: (params = {}) => apiRequest(`/booking/margins/dashboard${encodeQuery(params)}`),
   getMarginsDashboardVoyage: (slug, params = {}) =>
     apiRequest(`/booking/margins/dashboard/${encodeURIComponent(slug)}${encodeQuery(params)}`),
-  getVoyageMargin: slug => apiRequest(`/booking/margins/${encodeURIComponent(slug)}`),
-  updateVoyageMargin: (slug, rows) =>
-    apiRequest(`/booking/margins/${encodeURIComponent(slug)}`, 'put', rows),
-  deleteVoyageMarginRow: (slug, pax) =>
-    apiRequest(`/booking/margins/${encodeURIComponent(slug)}${encodeQuery({ pax })}`, 'delete'),
+  getVoyageMargin: (slug, year = null) =>
+    apiRequest(`/booking/margins/${encodeURIComponent(slug)}${encodeQuery(year ? { year } : {})}`),
+  updateVoyageMargin: (slug, year, rows) =>
+    apiRequest(`/booking/margins/${encodeURIComponent(slug)}${encodeQuery({ year })}`, 'put', rows),
+  deleteVoyageMarginRow: (slug, pax, year) =>
+    apiRequest(`/booking/margins/${encodeURIComponent(slug)}${encodeQuery({ pax, year })}`, 'delete'),
 
   // Margins — per-date computation + override (Pattern B)
   getDateMargin: (slug, dateId) =>
@@ -100,6 +101,8 @@ export const bookingApi = {
     apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/invoices`),
   getInvoiceUploadUrl: (slug, dateId, payload) =>
     apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/invoices/upload-url`, 'post', payload),
+  createInvoiceWithoutFile: (slug, dateId, payload) =>
+    apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/invoices`, 'post', payload),
   updateInvoice: (slug, dateId, invoiceId, payload) =>
     apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/invoices/${encodeURIComponent(invoiceId)}`, 'put', payload),
   deleteInvoice: (slug, dateId, invoiceId) =>
