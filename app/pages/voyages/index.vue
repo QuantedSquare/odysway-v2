@@ -1,95 +1,74 @@
 <template>
-  <v-container
-    class="py-0 my-0 px-2 px-md-4"
-    fluid
-  >
-    <SearchHeroSection
-      :destination="fetchedDestination"
-      :page-content="searchContent"
-    >
-      <SearchField />
-    </SearchHeroSection>
-    <v-row class=" pb-0 pt-4 mt-md-12">
-      <v-col
-        cols="12"
-        class="px-4 px-md-12 d-flex ga-2 align-center flex-wrap"
-      >
-        <span class="text-primary text-h3 font-weight-bold mr-2 mr-md-5">{{ nbVoyages <= 1 ? `${nbVoyages} ${searchContent?.oneTrip || 'voyage'}` : `${nbVoyages}
-            ${searchContent?.multipleTrips || 'voyages'}` }}
+  <div class="voyages-search">
+    <v-container class="max-container-width py-6 py-md-8">
+      <p class="crumb">
+        <NuxtLink to="/">
+          Accueil
+        </NuxtLink> › Voyages
+      </p>
+      <h1 class="h1">
+        {{ pageTitle }}
+      </h1>
+      <p class="lead">
+        {{ leadText }}
+      </p>
+
+      <ClientOnly>
+        <VoyageSelectorBar
+          :destinations="destinationsWithCount"
+          :regions="regions || []"
+          :categories="categoriesWithCount"
+          :travel-types="travelTypesNormalized"
+          :all-voyages="allVoyages || []"
+        />
+        <template #fallback>
+          <div class="selector-skeleton" />
+        </template>
+      </ClientOnly>
+
+      <!-- Results bar -->
+      <div class="resbar">
+        <span class="n">
+          {{ nbVoyages }} {{ nbVoyages <= 1 ? (searchContent?.oneTrip || 'voyage') : (searchContent?.multipleTrips || 'voyages') }}
         </span>
-
-        <div class="d-flex align-center flex-wrap ga-2">
-          <!-- Add closable props & logic -->
-          <v-chip
-            v-if="routeQuery.destination"
-            variant="flat"
-            :size="lgAndUp ? 'x-large' : 'large'"
-            color="secondary-light-2"
-            density="comfortable"
-          >
-            <span class="d-flex align-center text-white text-caption text-sm-subtitle-1 px-sm-3 pb-1">
-              {{ capitalizeFirstLetter(routeQuery.destination) }}
-            </span>
-          </v-chip>
-          <!-- Add closable props & logic -->
-
-          <v-chip
-            v-if="routeQuery.travelType"
-            variant="flat"
-            :size="lgAndUp ? 'x-large' : 'large'"
-            color="secondary-light-2"
-            density="comfortable"
-            @click:close="chip = false"
-          >
-            <span class="d-flex align-center text-white text-caption text-sm-subtitle-1 px-3 pb-1">
-              {{ routeQuery.travelType }}
-            </span>
-          </v-chip>
-          <!-- Add closable props & logic -->
-
-          <v-chip
-            v-if="routeQuery.from"
-            variant="flat"
-            :size="lgAndUp ? 'x-large' : 'large'"
-            color="secondary-light-2"
-            density="comfortable"
-          >
-            <span class="d-flex align-center text-white text-caption text-sm-subtitle-1 px-3 pb-1">
-              {{ parsedDates }}
-            </span>
-          </v-chip>
-        </div>
+        <span
+          v-for="chip in activeChips"
+          :key="chip.type + chip.value"
+          class="tag"
+        >
+          {{ chip.label }}
+          <v-icon
+            :icon="mdiClose"
+            size="13"
+            @click="removeChip(chip)"
+          />
+        </span>
         <v-spacer />
-        <div class="d-flex justify-end ml-auto align-center ga-3 flex-wrap">
-          <v-checkbox
-            v-model="confirmedOnly"
-            hide-details
-            color="primary"
-            density="compact"
-            label="Voir tous les départs garantis"
-            content-class="text-subtitle-2 text-sm-body-1"
-          >
-            <template #label>
-              <span class="text-subtitle-2 text-sm-body-1">
-                Voir tous les départs garantis
-              </span>
-            </template>
-          </v-checkbox>
-          <v-btn
-            color="primary"
-            variant="outlined"
-            size="large"
-            class="text-subtitle-2 text-sm-body-1 reset-btn-size"
+        <v-checkbox
+          v-model="confirmedOnly"
+          hide-details
+          color="primary"
+          density="compact"
+          class="garanti-check"
+        >
+          <template #label>
+            <span class="text-subtitle-2">Départs garantis</span>
+          </template>
+        </v-checkbox>
+        <v-btn
+          color="primary"
+          variant="outlined"
+          size="small"
+          class="reset-btn"
+          @click="reinitiliazeFilter"
+        >
+          {{ searchContent?.resetButton || 'Réinitialiser' }}
+        </v-btn>
+      </div>
+    </v-container>
 
-            @click="reinitiliazeFilter"
-          >
-            {{ searchContent?.resetButton || 'Réinitialiser' }}
-          </v-btn>
-        </div>
-      </v-col>
-    </v-row>
     <v-container
-      class=" py-0 px-0 px-md-8 mt-3"
+      class="py-0 px-0 px-md-8 mt-2 max-container-width"
       fluid
     >
       <DisplayVoyagesRow
@@ -99,55 +78,29 @@
         :item-list-name="searchListName"
       />
     </v-container>
-  </v-container>
+  </div>
 </template>
 
 <script setup>
-import { useDisplay } from 'vuetify'
+import { mdiClose } from '@mdi/js'
 import _ from 'lodash'
-import SearchField from '~/components/content/SearchField.vue'
-import { getDateStatus } from '~/utils/getDateStatus'
+import { useVoyageFilters } from '~/composables/useVoyageFilters'
 
-const { lgAndUp } = useDisplay()
 const { trackSearchBar, trackViewItemList } = useGtmTracking()
 const { formatVoyagesForGtm } = useGtmVoyageFormatter()
+const { applyFilters } = useVoyageFilters()
 
 useSeoMeta({
-  htmlAttrs: {
-    lang: 'fr',
-  },
+  htmlAttrs: { lang: 'fr' },
   robots: 'noindex, follow',
   canonical: 'https://www.odysway.com/voyages',
 })
+
 const router = useRouter()
 const route = useRoute()
-const routeQuery = computed(() => route.query)
 const confirmedOnly = ref(route.query.confirmed === 'true')
 
-const searchContentQuery = groq`*[_type == "search"][0]{
-  oneTrip,
-  multipleTrips,
-  resetButton,
-  image,
-  searchHero
-}`
-
-const { data: searchContent } = await useSanityQuery(searchContentQuery)
-
-const fetchedDestinationQuery = groq`*[_type == "destination" && slug.current == $slug][0]{
-  title,
-  interjection,
-  image
-}`
-const fetchedDestinationSlug = computed(() => route.query.destination || '')
-const { data: fetchedDestination } = useSanityQuery(
-  fetchedDestinationQuery,
-  { slug: fetchedDestinationSlug },
-)
-
-const capitalizeFirstLetter = (str) => {
-  return str.charAt(0).toUpperCase() + str.slice(1)
-}
+const leadText = 'Choisissez une destination, un type de voyage et une période : la liste se met à jour en direct. Tous nos séjours se vivent en petit groupe ou en privatisé, au plus près des habitants.'
 
 const monthNumberToFrench = [
   '', // 0 index unused
@@ -155,70 +108,22 @@ const monthNumberToFrench = [
   'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre',
 ]
 
-const parsedDates = computed(() => {
-  if (!routeQuery.value.from) return ''
-  const monthNumbers = routeQuery.value.from.split(',').map(Number).filter(n => n > 0 && n <= 12)
-  if (monthNumbers.length === 0) return ''
-  const monthNames = monthNumbers.map(n => monthNumberToFrench[n])
-  return monthNames.join(' - ')
-})
-
-function filterByDestination(voyages, destination) {
-  if (!destination) return voyages
-  return voyages.filter(v => v.destinations?.some(d => d.title.includes(destination)))
-}
-
-const travelTypesQuery = groq`*[_type == "search"][0]{
+// ---------- Sanity data ----------
+const searchContentQuery = groq`*[_type == "search"][0]{
+  oneTrip,
+  multipleTrips,
+  resetButton,
+  image,
+  searchHero,
   travelTypes
 }`
-
-const { data: travelTypes } = await useSanityQuery(travelTypesQuery)
-const TRAVEL_TYPES = {
-  GROUP: travelTypes.value?.travelTypes?.group,
-  INDIVIDUAL: travelTypes.value?.travelTypes?.individual,
-}
-
-function filterByType(voyages, travelType) {
-  // Early return for falsy values
-  if (!travelType) return voyages
-
-  const typeFilters = {
-    [TRAVEL_TYPES.GROUP]: voyage => voyage.availabilityTypes?.includes('groupe'),
-    [TRAVEL_TYPES.INDIVIDUAL]: voyage => voyage.availabilityTypes?.includes('privatisation'),
-  }
-
-  const filterFn = typeFilters[travelType]
-  return filterFn ? voyages.filter(filterFn) : voyages
-}
-
-function filterByDate(voyages, fromList) {
-  if (!fromList) return voyages
-  const monthNumbers = fromList.split(',').map(Number).filter(n => n > 0 && n <= 12)
-  if (monthNumbers.length === 0) return voyages
-
-  // Map month numbers to keys used in the object
-  const monthKeys = [
-    '', // 0 index unused
-    'janvier', 'fevrier', 'mars', 'avril', 'mai', 'juin',
-    'juillet', 'aout', 'septembre', 'octobre', 'novembre', 'decembre',
-  ]
-  const selectedKeys = monthNumbers.map(n => monthKeys[n])
-
-  return voyages.filter((v) => {
-    const avail = v.monthlyAvailability
-    if (!Array.isArray(avail)) return false
-    // Clean the month strings by removing any invisible characters
-    const cleanedAvail = avail.map(month => month.replace(/[\u200B-\u200F\uFEFF]/g, ''))
-    return selectedKeys.some(key => cleanedAvail.includes(key))
-  })
-}
+const { data: searchContent } = await useSanityQuery(searchContentQuery)
 
 const regionsQuery = groq`*[_type == "region"]{
   _id,
   nom,
   "slug": slug.current
 }`
-
 const { data: regions } = await useSanityQuery(regionsQuery)
 
 const destinationsQuery = groq`*[_type == "destination"]{
@@ -226,12 +131,19 @@ const destinationsQuery = groq`*[_type == "destination"]{
   title,
   "slug": slug.current,
   isTopDestination,
+  image,
   regions[]-> {
     nom
   }
 }`
-
 const { data: destinations } = await useSanityQuery(destinationsQuery)
+
+const categoriesQuery = groq`*[_type == "category"]{
+  _id,
+  title,
+  "slug": slug.current
+}`
+const { data: categories } = await useSanityQuery(categoriesQuery)
 
 const { data: travelsByDate } = await useAsyncData('travels-by-date', () =>
   $fetch('/api/v1/booking/travels-by-date'),
@@ -264,163 +176,170 @@ const voyagesQuery = groq`*[
   },
   categories[]->{
     _id,
-    title
+    title,
+    "slug": slug.current
   }
 }`
-
 const { data: allVoyages } = await useSanityQuery(voyagesQuery)
 
-const voyages = computed(() => {
-  let list = allVoyages.value || []
-  let destination = null
-  let regionSlug = null
-  let isRegionSearch = false
-  let isTopDestinations = false
+// ---------- Normalized travel types ----------
+const travelTypesNormalized = computed(() => ({
+  group: searchContent.value?.travelTypes?.group,
+  individual: searchContent.value?.travelTypes?.individual,
+}))
 
-  if (route.query.destination) {
-    const region = regions.value?.find(r => r.slug === route.query.destination)
-    if (region) {
-      isRegionSearch = true
-      regionSlug = region.slug
-    }
-    else if (route.query.destination === 'top-destination') {
-      isRegionSearch = true
-      isTopDestinations = true
-    }
-    else {
-      const found = destinations.value?.find(d => d.slug === route.query.destination)
-      if (found) destination = found.title
-    }
-  }
-
-  const travelType = route.query.travelType || null
-  const fromList = route.query.from || null
-
-  if (isRegionSearch) {
-    let destinationList = []
-    if (isTopDestinations) {
-      destinationList = (destinations.value || []).filter(d => d.isTopDestination)
-    }
-    else {
-      const region = regions.value?.find(r => r.slug === regionSlug)
-      if (region) {
-        destinationList = (destinations.value || []).filter(dest =>
-          dest.regions && dest.regions.some(r => r.nom === region.nom),
-        )
+// ---------- Counts for the selector ----------
+const destinationsWithCount = computed(() => {
+  const counts = {}
+  ;(allVoyages.value || []).forEach((v) => {
+    const seen = new Set()
+    v.destinations?.forEach((d) => {
+      if (!seen.has(d.title)) {
+        seen.add(d.title)
+        counts[d.title] = (counts[d.title] || 0) + 1
       }
-    }
-    const destinationNames = destinationList.map(d => d.title)
-    list = list.filter(v =>
-      v.destinations?.some(d => destinationNames.includes(d.title)),
-    )
-  }
-  else {
-    list = filterByDestination(list, destination)
-  }
+    })
+  })
+  return (destinations.value || [])
+    .map(d => ({ ...d, count: counts[d.title] || 0 }))
+    .filter(d => d.count > 0)
+})
 
-  list = filterByType(list, travelType)
-  list = filterByDate(list, fromList)
+const categoriesWithCount = computed(() => {
+  const counts = {}
+  ;(allVoyages.value || []).forEach((v) => {
+    v.categories?.forEach((c) => {
+      if (c.slug) counts[c.slug] = (counts[c.slug] || 0) + 1
+    })
+  })
+  return (categories.value || [])
+    .map(c => ({ ...c, count: counts[c.slug] || 0 }))
+    .filter(c => c.count > 0)
+    .sort((a, b) => b.count - a.count)
+})
 
+// ---------- Selections derived from route.query ----------
+const selDest = computed(() => (route.query.destination ? String(route.query.destination).split(',').filter(Boolean) : []))
+const selActivities = computed(() => (route.query.activities ? String(route.query.activities).split(',').filter(Boolean) : []))
+const selMonths = computed(() => (route.query.from ? String(route.query.from).split(',').map(Number).filter(n => n > 0 && n <= 12) : []))
+
+const pageTitle = computed(() => searchContent.value?.searchHero?.defaultTitle || 'Nos voyages en immersion')
+
+const parsedDates = computed(() => {
+  if (!route.query.from) return ''
+  const names = selMonths.value.map(n => monthNumberToFrench[n])
+  return names.join(' - ')
+})
+
+// ---------- Filtering (shared with the selector via useVoyageFilters) ----------
+const filterCtx = computed(() => ({
+  destinations: destinations.value || [],
+  regions: regions.value || [],
+  travelTypes: travelTypesNormalized.value,
+  travelsByDate: travelsByDate.value || [],
+}))
+
+const filteredVoyages = computed(() => {
+  const list = applyFilters(allVoyages.value || [], {
+    destinations: selDest.value,
+    travelType: route.query.travelType || '',
+    from: route.query.from || '',
+    activities: selActivities.value,
+    confirmed: confirmedOnly.value,
+  }, filterCtx.value)
   return _.uniqBy(list, 'slug')
 })
 
-function filterByConfirmed(voyages, confirmedFilter, travelsWithDates) {
-  if (!confirmedFilter) return voyages
-  if (!Array.isArray(travelsWithDates) || travelsWithDates.length === 0) return voyages
+const nbVoyages = computed(() => filteredVoyages.value?.length || 0)
 
-  const confirmedSlugs = new Set()
-
-  travelsWithDates.forEach((travel) => {
-    if (!Array.isArray(travel.dates)) return
-    const hasConfirmedDate = travel.dates.some((date) => {
-      const status = getDateStatus(date)
-      return status?.status === 'confirmed'
-    })
-    if (hasConfirmedDate) confirmedSlugs.add(travel.slug)
-  })
-
-  return voyages.filter(v => confirmedSlugs.has(v.slug))
+// ---------- Labels ----------
+function destLabel(slug) {
+  if (slug === 'top-destination') return 'Top destinations'
+  const r = (regions.value || []).find(x => x.slug === slug)
+  if (r) return r.nom
+  const d = (destinations.value || []).find(x => x.slug === slug)
+  return d ? d.title : slug
+}
+function categoryLabel(slug) {
+  const c = (categories.value || []).find(x => x.slug === slug)
+  return c ? c.title.trim() : slug
+}
+function monthsLabel() {
+  const n = selMonths.value.length
+  if (n === 12) return "Toute l'année"
+  if (n > 3) return `${n} mois`
+  return [...selMonths.value].sort((a, b) => a - b).map(m => monthNumberToFrench[m]).join(' - ')
 }
 
-const filteredVoyages = computed(() => {
-  const baseVoyages = voyages.value || []
-  return filterByConfirmed(baseVoyages, confirmedOnly.value, travelsByDate.value || [])
+// ---------- Removable result chips ----------
+const activeChips = computed(() => {
+  const chips = []
+  selDest.value.forEach(slug => chips.push({ type: 'dest', value: slug, label: destLabel(slug) }))
+  if (route.query.travelType) chips.push({ type: 'type', value: route.query.travelType, label: route.query.travelType })
+  selActivities.value.forEach(slug => chips.push({ type: 'activity', value: slug, label: categoryLabel(slug) }))
+  if (selMonths.value.length) chips.push({ type: 'months', value: 'months', label: monthsLabel() })
+  return chips
 })
 
-const nbVoyages = computed(() => {
-  return filteredVoyages.value?.length || 0
-})
-
-// GTM: Track search_bar when filters are applied (checkbox or route changes)
-watch([confirmedOnly], () => {
-  // Get the destination title if available
-  let destinationTitle = null
-  if (route.query.destination) {
-    const dest = destinations.value?.find(d => d.slug === route.query.destination)
-    if (dest) {
-      destinationTitle = dest.title
-    }
-    else {
-      const region = regions.value?.find(r => r.slug === route.query.destination)
-      if (region) {
-        destinationTitle = region.nom
-      }
-      else {
-        destinationTitle = capitalizeFirstLetter(route.query.destination)
-      }
-    }
+function removeChip(chip) {
+  const q = { ...route.query }
+  if (chip.type === 'dest') {
+    const arr = selDest.value.filter(s => s !== chip.value)
+    if (arr.length) q.destination = arr.join(',')
+    else delete q.destination
   }
-
-  // Format period as comma-separated month names
-  let periodeFormatted = null
-  if (route.query.from) {
-    const monthNumbers = route.query.from.split(',').map(Number).filter(n => n > 0 && n <= 12)
-    if (monthNumbers.length > 0) {
-      periodeFormatted = monthNumbers.map(n => monthNumberToFrench[n]).join(', ')
-    }
+  else if (chip.type === 'type') {
+    delete q.travelType
   }
+  else if (chip.type === 'activity') {
+    const arr = selActivities.value.filter(s => s !== chip.value)
+    if (arr.length) q.activities = arr.join(',')
+    else delete q.activities
+  }
+  else if (chip.type === 'months') {
+    delete q.from
+  }
+  router.push({ path: route.path, query: Object.keys(q).length ? q : undefined })
+}
 
+// ---------- GTM: search_bar on any filter change ----------
+function fireSearchBarTracking() {
+  const destinationTitle = selDest.value.length ? selDest.value.map(destLabel).join(', ') : null
+  const periodeFormatted = selMonths.value.length
+    ? selMonths.value.map(n => monthNumberToFrench[n]).join(', ')
+    : null
   trackSearchBar({
     destination: destinationTitle,
     typeVoyage: route.query.travelType || null,
     periode: periodeFormatted,
     voyageGaranti: confirmedOnly.value,
   })
-}, { deep: true })
+}
 
-// GTM: Build dynamic list name based on search filters
+watch(
+  () => [route.query.destination, route.query.travelType, route.query.from, route.query.activities, confirmedOnly.value].join('|'),
+  () => fireSearchBarTracking(),
+)
+
+// ---------- GTM: dynamic list name ----------
 const searchListName = computed(() => {
-  let listName = 'Search Results'
-  if (route.query.destination) {
-    listName += ` - ${capitalizeFirstLetter(route.query.destination)}`
-  }
-  if (route.query.travelType) {
-    listName += ` - ${route.query.travelType}`
-  }
-  if (route.query.from) {
-    listName += ` - ${parsedDates.value}`
-  }
-  if (confirmedOnly.value) {
-    listName += ' - Départs garantis'
-  }
-  return listName
+  let name = 'Search Results'
+  if (selDest.value.length) name += ` - ${selDest.value.map(destLabel).join(', ')}`
+  if (route.query.travelType) name += ` - ${route.query.travelType}`
+  if (route.query.from) name += ` - ${parsedDates.value}`
+  if (selActivities.value.length) name += ` - ${selActivities.value.map(categoryLabel).join(', ')}`
+  if (confirmedOnly.value) name += ' - Départs garantis'
+  return name
 })
 
-// GTM: Track view_item_list when results are displayed
-// Store the last tracked voyage IDs to prevent duplicate tracking
+// ---------- GTM: view_item_list when results change ----------
 const lastTrackedVoyageIds = ref(null)
-
 watch(filteredVoyages, (newVoyages) => {
   if (newVoyages && newVoyages.length > 0) {
-    // Create a sorted string of voyage IDs to compare
     const newVoyageIds = newVoyages.map(v => v._id).sort().join(',')
-
-    // Only track if the voyage list actually changed
     if (newVoyageIds !== lastTrackedVoyageIds.value) {
       lastTrackedVoyageIds.value = newVoyageIds
-
       const formattedVoyages = formatVoyagesForGtm(newVoyages)
-
       if (formattedVoyages && formattedVoyages.length > 0) {
         trackViewItemList({
           currency: 'EUR',
@@ -431,29 +350,17 @@ watch(filteredVoyages, (newVoyages) => {
     }
   }
 }, { immediate: true })
-function reinitiliazeFilter() {
-  // GTM: Track search_bar event with reset (all null)
-  trackSearchBar({
-    destination: null,
-    typeVoyage: null,
-    periode: null,
-    voyageGaranti: false,
-  })
 
-  router.push({
-    path: '/voyages',
-    query: null,
-  })
+function reinitiliazeFilter() {
+  trackSearchBar({ destination: null, typeVoyage: null, periode: null, voyageGaranti: false })
+  router.push({ path: '/voyages', query: null })
 }
 
+// ---------- confirmedOnly <-> route.query.confirmed sync ----------
 watch(confirmedOnly, (newValue) => {
   const query = { ...route.query }
-  if (newValue) {
-    query.confirmed = 'true'
-  }
-  else {
-    delete query.confirmed
-  }
+  if (newValue) query.confirmed = 'true'
+  else delete query.confirmed
   router.push({
     path: route.path,
     query: Object.keys(query).length > 0 ? query : undefined,
@@ -466,20 +373,77 @@ watch(() => route.query.confirmed, (value) => {
 </script>
 
 <style scoped>
-.reset-btn-size {
-  height: 35px!important;
-  width: 150px!important;
+.wrap {
+  max-width: 1180px!important;
 }
-@media (max-width: 900px) {
-  .reset-btn-size {
-    height: 48px!important;
-    width: 120px!important;
-  }
+.crumb {
+  font-size: 13px;
+  color: #9aa0a1;
+  margin: 0 0 16px;
 }
+.crumb a {
+  text-decoration: none;
+  color: #9aa0a1;
+}
+.h1 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: #222223;
+  letter-spacing: -.01em;
+}
+.lead {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #5d6566;
+  margin: 0 0 26px;
+  max-width: 760px;
+}
+
+.selector-skeleton {
+  height: 76px;
+  border: 1px solid rgba(43, 76, 82, .24);
+  border-radius: 14px;
+  background: #fff;
+}
+
+.resbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 22px 0 4px;
+  flex-wrap: wrap;
+}
+.resbar .n {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(var(--v-theme-primary));
+  margin-right: 6px;
+}
+.tag {
+  font-size: 12px;
+  padding: 4px 8px 4px 11px;
+  border-radius: 20px;
+  background: #E7EEED;
+  color: #2B4C52;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+}
+.tag .v-icon {
+  cursor: pointer;
+}
+.garanti-check {
+  flex: 0 0 auto;
+}
+.reset-btn {
+  flex: 0 0 auto;
+}
+
 @media (max-width: 600px) {
-  .reset-btn-size {
-    height: 38px!important;
-    width: 110px!important;
+  .h1 {
+    font-size: 25px;
   }
 }
 </style>
