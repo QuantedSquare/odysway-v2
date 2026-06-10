@@ -6,7 +6,7 @@
           Accueil
         </NuxtLink> › Voyages
       </p>
-      <h1 class="h1">
+      <h1 class="h1 text-primary">
         {{ pageTitle }}
       </h1>
       <p class="lead">

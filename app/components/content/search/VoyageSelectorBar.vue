@@ -1,8 +1,8 @@
 <template>
-  <div class="selector">
+  <div class="selector ">
     <!-- ============ DESKTOP ============ -->
     <template v-if="mdAndUp">
-      <div class="bar">
+      <div class="bar text-primary">
         <button
           v-for="seg in segments"
           :key="seg.key"
@@ -203,7 +203,7 @@
       <button
         v-for="seg in segments"
         :key="seg.key"
-        class="prow"
+        class="prow "
         type="button"
         @click="sheet = seg.key"
       >
@@ -547,7 +547,7 @@ function toggleSegment(seg) {
   --teal: #2B4C52;
   --or: #DE5E2C;
   --gt: #E7EEED;
-  --t1: #222223;
+  --t1: var(--text-primary);
   --t2: #5d6566;
   --t3: #9aa0a1;
   --bd1: rgba(43, 76, 82, .12);
