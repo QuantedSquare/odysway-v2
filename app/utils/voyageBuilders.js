@@ -4,7 +4,8 @@ export function buildVoyageFromSanity(fetchedDate, travel, imgSrc = null) {
   const bookedSeat = Number(fetchedDate.booked_seat || 0)
   const maxTravelers = Number(fetchedDate.max_traveler ?? fetchedDate.max_travelers ?? 0)
   const remainingSeats = maxTravelers > 0 ? Math.max(0, maxTravelers - bookedSeat) : null
-  const country = travel.destinations.map(d => d.iso).join(',')
+  const country = travel.destinations.map(d => d.title).join(',')
+  const iso = travel.destinations.map(d => d.iso).join(',')
   return {
     departureDate: fetchedDate.departure_date,
     returnDate: fetchedDate.return_date,
@@ -12,7 +13,7 @@ export function buildVoyageFromSanity(fetchedDate, travel, imgSrc = null) {
     imgSrc: travel.image?.asset?.url || imgSrc || '/images/sur-mesure/AdobeStock_557006728.webp',
     country,
     slug: travel.slug,
-    iso: country,
+    iso: iso,
     zoneChapka: +travel.destinations[0]?.chapka || 0,
     privatisation: travel.availabilityTypes?.includes('privatisation') || true,
     startingPrice: fetchedDate.starting_price * 100,

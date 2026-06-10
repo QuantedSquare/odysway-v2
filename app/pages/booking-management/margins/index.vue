@@ -51,7 +51,7 @@ definePageMeta({
 const tab = ref('dashboard')
 
 const sanity = useSanity()
-const voyagesQuery = groq`*[_type == "voyage"]{
+const voyagesQuery = groq`*[_type == "voyage" && ('groupe' in availabilityTypes)]{
   "slug": slug.current,
   title,
   image {
