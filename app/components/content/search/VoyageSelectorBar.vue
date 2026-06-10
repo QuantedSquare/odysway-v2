@@ -469,7 +469,7 @@ function destSlugLabel(slug) {
 }
 
 function regionColor(nom) {
-  return REGION_COLOR[nom] || '#2B4C52'
+  return REGION_COLOR[clean(nom)] || '#2B4C52'
 }
 
 function thumbBg(d) {
@@ -782,6 +782,18 @@ function toggleSegment(seg) {
 .prow .chev { margin-left: auto; color: var(--teal); }
 
 .sheet {
+  /* Vuetify teleports the bottom-sheet out of .selector, so the CSS vars
+     must be re-declared here for borders / backgrounds to resolve. */
+  --teal: #2B4C52;
+  --or: #DE5E2C;
+  --gt: #E7EEED;
+  --t1: #222223;
+  --t2: #5d6566;
+  --t3: #9aa0a1;
+  --bd1: rgba(43, 76, 82, .12);
+  --bd2: rgba(43, 76, 82, .24);
+  --rmd: 9px;
+  --rlg: 14px;
   background: #fff;
   border-radius: 18px 18px 0 0;
   padding: 14px 16px 16px;
@@ -801,7 +813,10 @@ function toggleSegment(seg) {
 .schips {
   display: flex;
   flex-wrap: wrap;
+  align-content: flex-start;
   gap: 7px;
+  flex: 1 1 auto;
+  min-height: 0;
   overflow-y: auto;
 }
 .sdiv { width: 100%; height: 1px; background: var(--bd1); margin: 4px 0; }
@@ -821,5 +836,5 @@ function toggleSegment(seg) {
 .schip.on { border-color: var(--teal); background: var(--gt); color: var(--teal); }
 .schip.scope { border-color: var(--teal); background: var(--teal); color: #fff; }
 .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
-.sheet .go { margin: 16px 0 0; width: 100%; text-align: center; }
+.sheet .go { margin: 16px 0 0; width: 100%; text-align: center; flex: 0 0 auto; }
 </style>
