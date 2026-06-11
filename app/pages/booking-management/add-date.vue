@@ -198,7 +198,7 @@ const form = ref({
   published: false,
   is_indiv_travel: false,
   status: DEFAULT_STATUS,
-  displayed_status: DEFAULT_STATUS,
+  displayed_status: null,
   departure_date: dayjs().format('YYYY-MM-DD'),
   return_date: dayjs().add(1, 'day').format('YYYY-MM-DD'),
   starting_price: 0,
