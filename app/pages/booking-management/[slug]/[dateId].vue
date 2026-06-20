@@ -800,9 +800,9 @@
           </v-card-title>
           <v-card-text>
             <p class="text-body-2 text-medium-emphasis mb-4">
-              Clone un deal ActiveCampaign existant sur un email de test pour pouvoir tester
-              dessus. Le deal source n'est pas modifié. L'identifiant du deal, la réservation
-              (booked_id) et les liens de paiement ne sont pas repris.
+              Clone un deal ActiveCampaign existant sur un email de test, puis l'assigne à
+              cette date pour générer une nouvelle réservation et des liens (BMS + paiement)
+              valides. Le deal source n'est pas modifié.
             </p>
 
             <v-text-field
@@ -854,7 +854,7 @@
               class="mt-3"
             >
               <div class="d-flex align-center ga-2 flex-wrap">
-                <span>Deal dupliqué !</span>
+                <span>Deal dupliqué et assigné à cette date !</span>
                 <v-btn
                   :href="`https://odysway90522.activehosted.com/app/deals/${duplicatedDealId}`"
                   target="_blank"
@@ -1144,6 +1144,15 @@ const onDuplicateDeal = async () => {
       lastname: duplicateLastname.value.trim(),
     })
     duplicatedDealId.value = newDealId
+    // Assign the copy to the current date: creates a booked_date and regenerates
+    // fresh linkBms + paiementLink from the new booked_id (valid, test-ready links).
+    try {
+      await bookingApi.assignDeal(slug, dateId, { dealId: newDealId })
+      await fetchDetails()
+    }
+    catch (assignErr) {
+      duplicateError.value = `Deal dupliqué (#${newDealId}) mais l'assignation à cette date a échoué : ${getApiErrorMessage(assignErr, 'erreur inconnue')}. Assignez-le manuellement.`
+    }
   }
   catch (err) {
     duplicateError.value = getApiErrorMessage(err, 'Erreur lors de la duplication du deal.')
