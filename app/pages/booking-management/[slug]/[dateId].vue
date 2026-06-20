@@ -56,6 +56,15 @@
             Retour
           </v-btn>
           <v-btn
+            variant="tonal"
+            color="info"
+            size="small"
+            :prepend-icon="mdiContentDuplicate"
+            @click="openDuplicateDialog"
+          >
+            Dupliquer un deal
+          </v-btn>
+          <v-btn
             color="primary"
             variant="flat"
             size="small"
@@ -774,6 +783,114 @@
         </v-card>
       </v-dialog>
 
+      <!-- Duplicate Deal Dialog -->
+      <v-dialog
+        v-model="duplicateDialog"
+        max-width="480"
+      >
+        <v-card
+          rounded="lg"
+          class="bo-card"
+        >
+          <v-card-title class="text-subtitle-1 font-weight-bold d-flex align-center ga-2">
+            <v-icon size="20">
+              {{ mdiContentDuplicate }}
+            </v-icon>
+            Dupliquer un deal
+          </v-card-title>
+          <v-card-text>
+            <p class="text-body-2 text-medium-emphasis mb-4">
+              Clone un deal ActiveCampaign existant sur un email de test, puis l'assigne à
+              cette date pour générer une nouvelle réservation et des liens (BMS + paiement)
+              valides. Le deal source n'est pas modifié.
+            </p>
+
+            <v-text-field
+              v-model="duplicateDealUrl"
+              label="URL du deal AC à dupliquer"
+              placeholder="https://odysway90522.activehosted.com/app/deals/123"
+              density="compact"
+              :prepend-inner-icon="mdiLinkVariant"
+              class="mb-2"
+            />
+            <v-text-field
+              v-model="duplicateEmail"
+              label="Email de test"
+              placeholder="test@odysway.com"
+              type="email"
+              density="compact"
+              :prepend-inner-icon="mdiEmailOutline"
+              class="mb-2"
+            />
+            <div class="d-flex ga-2">
+              <v-text-field
+                v-model="duplicateFirstname"
+                label="Prénom (optionnel)"
+                density="compact"
+                hide-details
+              />
+              <v-text-field
+                v-model="duplicateLastname"
+                label="Nom (optionnel)"
+                density="compact"
+                hide-details
+              />
+            </div>
+
+            <v-alert
+              v-if="duplicateError"
+              type="error"
+              variant="tonal"
+              density="compact"
+              class="mt-3"
+            >
+              {{ duplicateError }}
+            </v-alert>
+            <v-alert
+              v-if="duplicatedDealId"
+              type="success"
+              variant="tonal"
+              density="compact"
+              class="mt-3"
+            >
+              <div class="d-flex align-center ga-2 flex-wrap">
+                <span>Deal dupliqué et assigné à cette date !</span>
+                <v-btn
+                  :href="`https://odysway90522.activehosted.com/app/deals/${duplicatedDealId}`"
+                  target="_blank"
+                  color="success"
+                  variant="tonal"
+                  size="x-small"
+                  :append-icon="mdiArrowRight"
+                >
+                  Ouvrir le deal #{{ duplicatedDealId }}
+                </v-btn>
+              </div>
+            </v-alert>
+          </v-card-text>
+          <v-card-actions>
+            <v-spacer />
+            <v-btn
+              variant="text"
+              size="small"
+              @click="duplicateDialog = false"
+            >
+              Fermer
+            </v-btn>
+            <v-btn
+              color="primary"
+              variant="flat"
+              size="small"
+              :loading="duplicating"
+              :disabled="!duplicateDealUrl || !duplicateEmail"
+              @click="onDuplicateDeal"
+            >
+              Dupliquer
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
+
       <v-snackbar
         v-model="snackbar"
         location="top"
@@ -789,7 +906,7 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { mdiArrowRight, mdiDelete, mdiLinkEdit, mdiInformationOutline, mdiAirplaneTakeoff, mdiCalendarOutline, mdiContentCopy, mdiCalculator, mdiFileDocument } from '@mdi/js'
+import { mdiArrowRight, mdiDelete, mdiLinkEdit, mdiInformationOutline, mdiAirplaneTakeoff, mdiCalendarOutline, mdiContentCopy, mdiCalculator, mdiFileDocument, mdiContentDuplicate, mdiLinkVariant, mdiEmailOutline } from '@mdi/js'
 import dayjs from 'dayjs'
 import DateFormCard from '~/components/booking/DateFormCard.vue'
 import DateAttachments from '~/components/booking/DateAttachments.vue'
@@ -840,6 +957,15 @@ const assigningDepartureDeal = ref(false)
 const assignDepartureDealError = ref('')
 const assignDepartureDealSuccess = ref(false)
 const removingDepartureDeal = ref(false)
+
+const duplicateDialog = ref(false)
+const duplicateDealUrl = ref('')
+const duplicateEmail = ref('')
+const duplicateFirstname = ref('')
+const duplicateLastname = ref('')
+const duplicating = ref(false)
+const duplicateError = ref('')
+const duplicatedDealId = ref(null)
 
 const paymentDialog = ref(false)
 const selectedTraveler = ref(null)
@@ -993,6 +1119,46 @@ const onAssignDepartureDeal = async () => {
   }
   finally {
     assigningDepartureDeal.value = false
+  }
+}
+
+function openDuplicateDialog() {
+  duplicateError.value = ''
+  duplicatedDealId.value = null
+  duplicateDialog.value = true
+}
+
+const onDuplicateDeal = async () => {
+  duplicateError.value = ''
+  duplicatedDealId.value = null
+  const match = duplicateDealUrl.value.match(/deals\/(\d+)/)
+  if (!match) {
+    duplicateError.value = 'URL de deal invalide.'
+    return
+  }
+  duplicating.value = true
+  try {
+    const { dealId: newDealId } = await bookingApi.duplicateDeal(match[1], {
+      email: duplicateEmail.value.trim(),
+      firstname: duplicateFirstname.value.trim(),
+      lastname: duplicateLastname.value.trim(),
+    })
+    duplicatedDealId.value = newDealId
+    // Assign the copy to the current date: creates a booked_date and regenerates
+    // fresh linkBms + paiementLink from the new booked_id (valid, test-ready links).
+    try {
+      await bookingApi.assignDeal(slug, dateId, { dealId: newDealId })
+      await fetchDetails()
+    }
+    catch (assignErr) {
+      duplicateError.value = `Deal dupliqué (#${newDealId}) mais l'assignation à cette date a échoué : ${getApiErrorMessage(assignErr, 'erreur inconnue')}. Assignez-le manuellement.`
+    }
+  }
+  catch (err) {
+    duplicateError.value = getApiErrorMessage(err, 'Erreur lors de la duplication du deal.')
+  }
+  finally {
+    duplicating.value = false
   }
 }
 
