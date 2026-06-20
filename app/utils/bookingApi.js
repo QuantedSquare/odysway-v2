@@ -51,6 +51,10 @@ export const bookingApi = {
     apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/assign-departure-deal`, 'delete'),
   addDate: payload => apiRequest('/booking/add-date', 'post', payload),
 
+  // Duplicate an AC deal onto a test email (booking-management testing tool)
+  duplicateDeal: (dealId, payload) =>
+    apiRequest(`/ac/deals/${encodeURIComponent(dealId)}/duplicate`, 'post', payload),
+
   // Notes
   getNotes: (slug, dateId) =>
     apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/notes`),
