@@ -1,39 +1,7 @@
 <template>
-  <section class="hero">
-    <!-- <div
-      v-if="showControls"
-      class="hero-dev-controls"
-    >
-      <button
-        class="hero-dev-btn"
-        type="button"
-        @click="useTestImage = !useTestImage"
-      >
-        {{ useTestImage ? 'Use main image' : 'Use test image' }}
-      </button>
-      <button
-        class="hero-dev-btn"
-        type="button"
-        @click="noiseEnabled = !noiseEnabled"
-      >
-        {{ noiseEnabled ? 'Disable grain' : 'Enable grain' }}
-      </button>
-      <button
-        class="hero-dev-btn"
-        type="button"
-        @click="adjustNoise(0.05)"
-      >
-        Grain +
-      </button>
-      <button
-        class="hero-dev-btn"
-        type="button"
-        @click="adjustNoise(-0.05)"
-      >
-        Grain -
-      </button>
-      <span class="hero-dev-badge">Grain: {{ (noiseLevelValue * 100).toFixed(0) }}%</span>
-    </div> -->
+  <div class="hero-block">
+    <section class="hero">
+   
     <div
       class="hero-image-bg"
       :class="{ 'hero-noise-enabled': noiseEnabled }"
@@ -73,18 +41,12 @@
           v-else
           name="subtitle"
         />
-        <span
-          v-if="typewriterWords.length"
-          class="typewriter-text text-center font-italic"
-          :class="{ 'typewriter-active': currentWord.length }"
-        >
-          {{ currentWord }}<span class="cursor">|</span>
-        </span>
       </h2>
       <div
-        class="glass-search-trigger mt-10"
+        class="glass-search-trigger mt-4"
         role="button"
         tabindex="0"
+        :aria-label="placeholder"
         @click="openSearchDialog"
         @keydown.enter="openSearchDialog"
       >
@@ -94,10 +56,16 @@
           size="24"
           class="mr-3 icon-search"
         />
-        <span class="search-placeholder">{{ placeholder }}</span>
+        <span class="search-placeholder">{{ searchDisplay }}<span
+          v-if="typewriterWords.length"
+          class="search-caret"
+          aria-hidden="true"
+        >|</span></span>
       </div>
     </div>
-  </section>
+    </section>
+    <TrustBand :items="trustItems" />
+  </div>
 </template>
 
 <script setup>
@@ -152,6 +120,12 @@ const heroProps = defineProps({
     type: String,
     default: '',
   },
+  // Réassurance items (CMS). Rendered inside the hero block so they are part of
+  // the 100svh height calculation on desktop. Falls back to TrustBand defaults.
+  trustItems: {
+    type: Array,
+    default: () => [],
+  },
 })
 
 const typewriterWords = computed(() => heroProps.typewriterWords || [])
@@ -160,6 +134,16 @@ const currentWord = ref('')
 const isDeleting = ref(false)
 const wordIndex = ref(0)
 const typingSpeed = ref(100)
+// Tracks whether the typewriter has produced its first character. Until then we
+// show the static placeholder so the search bar never looks empty on first paint.
+const hasStarted = ref(false)
+
+// Text rendered inside the search trigger: the cycling typewriter word once it
+// starts, otherwise the static placeholder (also the fallback when no words).
+const searchDisplay = computed(() => {
+  if (!typewriterWords.value.length) return heroProps.placeholder
+  return hasStarted.value ? currentWord.value : heroProps.placeholder
+})
 
 onMounted(() => {
   if (!typewriterWords.value.length) return
@@ -171,6 +155,7 @@ onMounted(() => {
 })
 
 const typeLoop = () => {
+  hasStarted.value = true
   const currentIndex = wordIndex.value % typewriterWords.value.length
   const fullWord = typewriterWords.value[currentIndex]
 
@@ -289,12 +274,21 @@ useHead(() => {
 </script>
 
 <style scoped>
-.hero {
-  position: relative;
-  /* svh = small viewport height; doesn't recompute when the mobile
-     URL bar collapses, avoiding layout thrash on first paint. */
+/* Hero + trust band share one 100svh block on desktop, so the réassurance
+   bar sits naturally at the bottom of the first screen without scrolling. */
+.hero-block {
+  display: flex;
+  flex-direction: column;
   min-height: 100svh;
   width: 100vw;
+}
+
+.hero {
+  position: relative;
+  /* Grows to fill the block height left after the trust band. */
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -334,6 +328,17 @@ useHead(() => {
    the mix-blend-mode compositor layer, which is the more impactful
    cost on low-power devices. Desktop visual unchanged. */
 @media (max-width: 600px) {
+  /* Mobile: the hero image alone fills the viewport, the trust band flows
+     below it (previous behaviour). */
+  .hero-block {
+    display: block;
+    min-height: 0;
+  }
+
+  .hero {
+    min-height: 100svh;
+  }
+
   .hero-image-bg::after,
   .hero-noise-enabled::after {
     display: none;
@@ -342,7 +347,7 @@ useHead(() => {
 
 .hero-image {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   min-width: 100%;
   min-height: 100%;
   object-fit: cover;
@@ -375,25 +380,25 @@ useHead(() => {
 .hero-content {
   position: relative;
   z-index: 2;
-  text-align: center;
-  justify-content: center;
+  text-align: left;
   color: #fff;
-  /* width:  min(90vw, 1024px); */
   width: 100%;
+  max-width: 1180px;
   margin-inline: auto;
-  /* margin-top: 20vh; */
-  padding: 2rem 2vw;
+  padding: 0 24px;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 1rem;
 }
 
 .hero-content h1,
 .hero-content h1:deep(p) {
   margin-block: 0 12px;
-  text-wrap: balance;
+  /* text-wrap: balance; */
+  max-width: 900px;
   font-size: clamp(40px, 6vw, 76px);
-  line-height: 1.1;
+  line-height: 0.9;
   font-weight: 800;
   letter-spacing: -1.5px;
   color: #FBF0EC;
@@ -407,11 +412,10 @@ useHead(() => {
   letter-spacing: 0.5px;
   text-shadow: 0 2px 24px rgba(0, 0, 0, 0.5);
   animation: fadeSlideUp 0.8s ease-out 0.2s forwards;
-  max-width: 800px;
-  margin-inline: auto;
-  /* Flexbox to keep text centered but allow dynamic part to grow */
+  /* max-width: 760px; */
+  /* Flexbox keeps the static text and dynamic part on one baseline. */
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 6px;
   flex-wrap: wrap;
@@ -428,7 +432,7 @@ margin-bottom: 0!important;
   .custom-hero-subtitle {
     flex-direction: column;
     gap: 10px;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .typewriter-text {
@@ -468,7 +472,7 @@ margin-bottom: 0!important;
     0 8px 32px rgba(0, 0, 0, 0.2);
   /* Deep drop shadow */
 
-  border-radius: 20px;
+  border-radius: 40px;
   padding: 0 28px;
   display: flex;
   align-items: center;
@@ -478,12 +482,12 @@ margin-bottom: 0!important;
   animation: fadeSlideUp 0.8s ease-out 0.4s forwards;
 
   transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-  margin: 0 auto;
+  margin: 0;
   position: relative;
   overflow: hidden;
 }
 .glass-search-trigger {
-  width: min(90vw, 600px);
+  width: min(90vw, 700px);
 }
 @media (max-width: 600px) {
   .glass-search-trigger {
@@ -547,6 +551,17 @@ margin-bottom: 0!important;
   overflow: hidden;
   text-overflow: ellipsis;
   text-shadow: 0 1px 2px rgba(207, 207, 207, 0.1);
+}
+
+.search-caret {
+  display: inline-block;
+  margin-left: 1px;
+  font-weight: 300;
+  color: rgb(var(--v-theme-primary));
+  animation: blink 1s step-end infinite;
+}
+.glass-search-trigger:hover .search-caret {
+  color: white !important;
 }
 
 @keyframes shimmer {

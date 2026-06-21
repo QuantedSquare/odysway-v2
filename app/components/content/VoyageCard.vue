@@ -27,6 +27,16 @@
           aspect-ratio="auto"
         >
           <template #default>
+            <div
+              v-if="travelersCount"
+              class="travelers-badge"
+            >
+              <v-icon
+                :icon="mdiAccountGroup"
+                size="14"
+                class="mr-1"
+              />{{ travelersCount }} voyageurs partis
+            </div>
             <div class="badge-position">
               <!-- <RatingBadge
                 :rating="voyage.rating"
@@ -180,7 +190,7 @@
 </template>
 
 <script setup>
-import { mdiPlusCircle, mdiAccountMultiple } from '@mdi/js'
+import { mdiPlusCircle, mdiAccountMultiple, mdiAccountGroup } from '@mdi/js'
 
 import { useImage } from '#imports'
 
@@ -190,6 +200,12 @@ const props = defineProps({
   },
   itemListName: {
     type: String,
+    default: null,
+  },
+  // Optional "N voyageurs partis" badge (best-sellers section). Sourced from
+  // Supabase booked_dates aggregation; falsy/0 hides the badge.
+  travelersCount: {
+    type: Number,
     default: null,
   },
 })
@@ -254,6 +270,22 @@ const handleCardClick = () => {
   position: absolute;
   top: 25px;
   right: 28px;
+}
+.travelers-badge {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.92);
+  font-size: 12px;
+  font-weight: 600;
+  color: rgb(var(--v-theme-primary));
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 .custom-btn-height:deep(){
   height:45px!important;

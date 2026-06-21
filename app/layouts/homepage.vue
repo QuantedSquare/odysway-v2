@@ -78,6 +78,13 @@
         <LazyTopTravelsTabs :hydrate-on-visible="{ rootMargin: '400px' }" />
       </div>
     </v-container>
+
+    <!-- Texte SEO bas de page (homepage uniquement), juste au-dessus du footer -->
+    <LazySeoTextBlock
+      v-if="route.path === '/'"
+      :data="homeSeoText?.seoText"
+      :hydrate-on-visible="{ rootMargin: '400px' }"
+    />
     <LazyFooterOdysway :hydrate-on-visible="{ rootMargin: '400px' }" />
   </v-app>
 </template>
@@ -94,10 +101,17 @@ const searchQuery = groq`*[_type == "search"][0]{
   infoContainer
 }`
 
+// Homepage SEO text block (rendered just above the footer). seoText is a plain
+// object (title + portable-text content), so the spread brings everything.
+const seoTextQuery = groq`*[_type == "homePage"][0]{
+  seoText
+}`
+
 // lazy + below-the-fold: don't block SSR. Both feed sections gated by
 // `v-if="data"` so a late arrival just renders when ready.
 const { data: partenairesTextes } = useSanityQuery(partenairesQuery, undefined, { lazy: true })
 const { data: searchContent } = useSanityQuery(searchQuery, undefined, { lazy: true })
+const { data: homeSeoText } = useSanityQuery(seoTextQuery, undefined, { lazy: true })
 </script>
 
 <style scoped>

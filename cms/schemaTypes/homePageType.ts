@@ -36,6 +36,18 @@ export const homePageType = defineType({
       title: 'Hero Section sur Preprod',
     },
     {
+      name: 'trustBand',
+      title: 'Bandeau de réassurance',
+    },
+    {
+      name: 'momentSection',
+      title: 'Séjours du moment (mosaïque)',
+    },
+    {
+      name: 'concept',
+      title: 'Concept / manifeste',
+    },
+    {
       name: 'experienceCarousel',
       title: 'Experience Carousel',
     },
@@ -56,6 +68,14 @@ export const homePageType = defineType({
       title: 'Deuxième carousel de voyages',
     },
     {
+      name: 'lastMinute',
+      title: 'Dernières places',
+    },
+    {
+      name: 'bestSellers',
+      title: 'Best-sellers',
+    },
+    {
       name: 'summerTravel',
       title: 'Troisième carousel de voyages',
     },
@@ -74,6 +94,10 @@ export const homePageType = defineType({
     {
       name: 'contact',
       title: 'Section contact',
+    },
+    {
+      name: 'seoText',
+      title: 'Texte SEO (bas de page)',
     },
     {
       name: 'seo',
@@ -235,6 +259,11 @@ export const homePageType = defineType({
           type: 'string',
         }),
         defineField({
+          name: 'eyebrow',
+          title: 'Sur-titre (petit texte au-dessus du titre)',
+          type: 'string',
+        }),
+        defineField({
           name: 'voyagesFrance',
           title: 'Voyages',
           type: 'array',
@@ -253,6 +282,11 @@ export const homePageType = defineType({
         defineField({
           name: 'title',
           title: 'Titre',
+          type: 'string',
+        }),
+        defineField({
+          name: 'eyebrow',
+          title: 'Sur-titre (petit texte au-dessus du titre)',
           type: 'string',
         }),
         defineField({
@@ -344,6 +378,11 @@ export const homePageType = defineType({
         defineField({
           name: 'title',
           title: 'Titre',
+          type: 'string',
+        }),
+        defineField({
+          name: 'eyebrow',
+          title: 'Sur-titre (petit texte au-dessus du titre)',
           type: 'string',
         }),
         defineField({
@@ -451,6 +490,11 @@ export const homePageType = defineType({
           type: 'string',
         }),
         defineField({
+          name: 'eyebrow',
+          title: 'Sur-titre (petit texte au-dessus du titre)',
+          type: 'string',
+        }),
+        defineField({
           name: 'reviews',
           title: 'Liste des reviews',
           type: 'array',
@@ -502,6 +546,198 @@ export const homePageType = defineType({
               type: 'string',
             }),
           ],
+        }),
+      ],
+    }),
+
+    // Trust Band (réassurance)
+    defineField({
+      name: 'trustBand',
+      title: 'Bandeau de réassurance',
+      type: 'object',
+      group: 'trustBand',
+      fields: [
+        defineField({
+          name: 'items',
+          title: 'Éléments de réassurance',
+          type: 'array',
+          of: [
+            {
+              type: 'object',
+              fields: [
+                defineField({
+                  name: 'icon',
+                  title: 'Icône',
+                  type: 'string',
+                  options: {
+                    list: [
+                      { title: 'Étoile (note)', value: 'star' },
+                      { title: 'Bulle (avis)', value: 'message' },
+                      { title: 'Bouclier (garantie)', value: 'shield' },
+                      { title: 'Coche (immatriculation)', value: 'check' },
+                      { title: 'Calendrier (ancienneté)', value: 'calendar' },
+                      { title: 'Cœur', value: 'heart' },
+                    ],
+                  },
+                }),
+                defineField({
+                  name: 'boldText',
+                  title: 'Texte en gras (ex. 4,9/5)',
+                  type: 'string',
+                }),
+                defineField({
+                  name: 'text',
+                  title: 'Texte (ex. sur Trustpilot)',
+                  type: 'string',
+                }),
+              ],
+              preview: {
+                select: { title: 'boldText', subtitle: 'text' },
+              },
+            },
+          ],
+          validation: (rule) => rule.max(6),
+        }),
+      ],
+    }),
+
+    // Moment Section (mosaïque séjours du moment)
+    defineField({
+      name: 'momentSection',
+      title: 'Séjours du moment',
+      type: 'object',
+      group: 'momentSection',
+      fields: [
+        defineField({ name: 'eyebrow', title: 'Sur-titre (ex. Coups de cœur)', type: 'string' }),
+        defineField({ name: 'title', title: 'Titre', type: 'string' }),
+        defineField({ name: 'moreText', title: 'Texte du lien (ex. Voir tous les voyages)', type: 'string' }),
+        defineField({ name: 'moreLink', title: 'Lien (commence par /)', type: 'string' }),
+        defineField({
+          name: 'feature',
+          title: 'Voyage principal (grande carte)',
+          type: 'object',
+          fields: [
+            defineField({ name: 'voyage', title: 'Voyage lié (pour le lien)', type: 'reference', to: [{ type: 'voyage' }] }),
+            defineField({ name: 'image', title: 'Image de fond', type: 'image', options: { hotspot: true } }),
+            defineField({ name: 'pill', title: 'Badge (ex. Le voyage signature)', type: 'string' }),
+            defineField({ name: 'title', title: 'Titre', type: 'string' }),
+            defineField({ name: 'description', title: 'Description', type: 'text', rows: 2 }),
+            defineField({ name: 'duration', title: 'Durée (ex. 15 jours)', type: 'string' }),
+            defineField({ name: 'maxTravelers', title: 'Groupe (ex. 8 max)', type: 'string' }),
+            defineField({ name: 'price', title: 'Prix (ex. dès 2 690 €)', type: 'string' }),
+            defineField({ name: 'link', title: 'Lien manuel (sinon utilise le voyage lié)', type: 'string' }),
+          ],
+        }),
+        defineField({
+          name: 'miniFeatures',
+          title: 'Petites cartes (max 2)',
+          type: 'array',
+          of: [
+            {
+              type: 'object',
+              fields: [
+                defineField({ name: 'voyage', title: 'Voyage lié (pour le lien)', type: 'reference', to: [{ type: 'voyage' }] }),
+                defineField({ name: 'image', title: 'Image de fond', type: 'image', options: { hotspot: true } }),
+                defineField({ name: 'title', title: 'Titre', type: 'string' }),
+                defineField({ name: 'meta', title: 'Sous-texte (ex. 12 j · dès 3 490 €)', type: 'string' }),
+                defineField({ name: 'link', title: 'Lien manuel (sinon utilise le voyage lié)', type: 'string' }),
+              ],
+              preview: { select: { title: 'title', subtitle: 'meta' } },
+            },
+          ],
+          validation: (rule) => rule.max(2),
+        }),
+      ],
+    }),
+
+    // Concept / Manifeste
+    defineField({
+      name: 'concept',
+      title: 'Concept / manifeste',
+      type: 'object',
+      group: 'concept',
+      fields: [
+        defineField({ name: 'eyebrow', title: 'Sur-titre (ex. Notre concept)', type: 'string' }),
+        defineField({ name: 'lead', title: 'Texte principal', type: 'text', rows: 4 }),
+        defineField({
+          name: 'stats',
+          title: 'Statistiques (4 recommandées)',
+          type: 'array',
+          of: [
+            {
+              type: 'object',
+              fields: [
+                defineField({ name: 'num', title: 'Chiffre (ex. 8, 90%, 4,9/5)', type: 'string' }),
+                defineField({ name: 'label', title: 'Libellé', type: 'string' }),
+              ],
+              preview: { select: { title: 'num', subtitle: 'label' } },
+            },
+          ],
+          validation: (rule) => rule.max(4),
+        }),
+        defineField({
+          name: 'ctaButton',
+          title: 'Bouton CTA',
+          type: 'object',
+          fields: [
+            defineField({ name: 'text', title: 'Texte du bouton', type: 'string' }),
+            defineField({ name: 'link', title: 'Lien du bouton', type: 'string' }),
+          ],
+        }),
+      ],
+    }),
+
+    // Last Minute (dernières places)
+    defineField({
+      name: 'lastMinute',
+      title: 'Dernières places',
+      type: 'object',
+      group: 'lastMinute',
+      fields: [
+        defineField({ name: 'eyebrow', title: 'Sur-titre (petit texte au-dessus du titre)', type: 'string' }),
+        defineField({ name: 'title', title: 'Titre', type: 'string' }),
+        defineField({ name: 'subtitle', title: 'Sous-titre', type: 'string' }),
+        defineField({
+          name: 'voyages',
+          title: 'Voyages (peut réutiliser ceux des autres carousels)',
+          type: 'array',
+          of: [{ type: 'reference', to: [{ type: 'voyage' }] }],
+        }),
+      ],
+    }),
+
+    // Best Sellers
+    defineField({
+      name: 'bestSellers',
+      title: 'Best-sellers',
+      type: 'object',
+      group: 'bestSellers',
+      fields: [
+        defineField({ name: 'eyebrow', title: 'Sur-titre (ex. Les plus demandés)', type: 'string' }),
+        defineField({ name: 'title', title: 'Titre', type: 'string' }),
+        defineField({
+          name: 'destinations',
+          title: 'Destinations à l\'honneur',
+          description: 'Cartes portrait : image + préfixe + nom de la destination + nombre de voyageurs partis',
+          type: 'array',
+          of: [{ type: 'reference', to: [{ type: 'destination' }] }],
+        }),
+      ],
+    }),
+
+    // SEO Text Block (bas de page)
+    defineField({
+      name: 'seoText',
+      title: 'Texte SEO (bas de page)',
+      type: 'object',
+      group: 'seoText',
+      fields: [
+        defineField({ name: 'title', title: 'Titre', type: 'string' }),
+        defineField({
+          name: 'content',
+          title: 'Contenu',
+          type: 'array',
+          of: [richTextBlock],
         }),
       ],
     }),

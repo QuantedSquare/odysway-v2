@@ -25,7 +25,42 @@
           class="img-height"
           cover
           aspect-ratio="auto"
-        />
+        >
+          <template #default>
+            <div
+              v-if="travelersCount"
+              class="travelers-badge"
+            >
+              <v-icon
+                :icon="mdiAccountGroup"
+                size="14"
+                class="mr-1"
+              />{{ travelersCount }} voyageurs partis
+            </div>
+            <span
+              v-if="topLeftBadge"
+              class="depart-tag"
+              :class="topLeftBadge.cls"
+            >
+              <v-icon
+                v-if="topLeftBadge.icon"
+                :icon="topLeftBadge.icon"
+                size="13"
+                class="mr-1"
+              />{{ topLeftBadge.text }}
+            </span>
+            <span
+              v-if="seatsBadge"
+              class="depart-seats"
+            >
+              <v-icon
+                :icon="seatsIcon"
+                size="12"
+                class="mr-1"
+              />{{ seatsBadge }}
+            </span>
+          </template>
+        </v-img>
 
       </NuxtLink>
       <!--  BOTTOM TEXT -->
@@ -170,7 +205,7 @@
 </template>
 
 <script setup>
-import { mdiArrowRight, mdiAccountMultiple, mdiCalendarCheck } from '@mdi/js'
+import { mdiArrowRight, mdiAccountMultiple, mdiCalendarCheck, mdiAccountGroup, mdiCheckCircle, mdiFire } from '@mdi/js'
 import dayjs from 'dayjs'
 import { useImage } from '#imports'
 import { getDateStatus } from '~/utils/getDateStatus'
@@ -180,6 +215,17 @@ const props = defineProps({
     type: Object,
   },
   itemListName: {
+    type: String,
+    default: null,
+  },
+  // Optional "N voyageurs partis" badge (best-sellers section).
+  travelersCount: {
+    type: Number,
+    default: null,
+  },
+  // Image-overlay badges depending on the section:
+  // 'guaranteed' -> green "Garanti" + seats ; 'lastMinute' -> orange "J-X" + seats.
+  variant: {
     type: String,
     default: null,
   },
@@ -238,6 +284,34 @@ const statusBadge = computed(() => {
     color: status.color,
   }
 })
+// Image-overlay badges (demo style): driven by `variant` + the date data.
+const isGuaranteed = computed(() => dateData.value && getDateStatus(dateData.value)?.status === 'confirmed')
+
+const daysUntilDeparture = computed(() => {
+  if (!props.voyage.departureDate) return null
+  return dayjs(props.voyage.departureDate).startOf('day').diff(dayjs().startOf('day'), 'day')
+})
+
+const topLeftBadge = computed(() => {
+  if (props.variant === 'guaranteed' && isGuaranteed.value) {
+    return { text: 'Garanti', cls: 'depart-tag--guaranteed', icon: mdiCheckCircle }
+  }
+  if (props.variant === 'lastMinute' && typeof daysUntilDeparture.value === 'number' && daysUntilDeparture.value >= 0) {
+    return { text: `J-${daysUntilDeparture.value}`, cls: 'depart-tag--late', icon: mdiFire }
+  }
+  return null
+})
+
+const seatsBadge = computed(() => {
+  if (!props.variant) return null
+  const n = remainingSeats.value
+  if (typeof n !== 'number' || n <= 0) return null
+  return `${n} place${n > 1 ? 's' : ''}`
+})
+
+// Dernières places uses a flame for the seats badge; guaranteed keeps people.
+const seatsIcon = computed(() => (props.variant === 'lastMinute' ? mdiFire : mdiAccountMultiple))
+
 const actionColor = computed(() => props.voyage.availabilityTypes?.includes('groupe') ? '#f7f8f8' : '#fef9f8')
 const voyageCardImg = computed(() => {
   const ref = props.voyage.imageCard?.asset?._ref || props.voyage.image?.asset?._ref
@@ -268,6 +342,57 @@ const handleCardClick = () => {
   position: absolute;
   top: 25px;
   right: 28px;
+}
+.travelers-badge {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  font-size: 12px;
+  font-weight: 600;
+  color: rgb(var(--v-theme-primary));
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+.depart-tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+.depart-tag--guaranteed {
+  background: #1d9e75;
+}
+.depart-tag--late {
+  background: rgb(var(--v-theme-secondary));
+}
+.depart-seats {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 11px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.95);
+  font-size: 11px;
+  font-weight: 600;
+  color: rgb(var(--v-theme-primary));
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 .w-40{
   width: 40%;

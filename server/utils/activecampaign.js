@@ -508,11 +508,11 @@ const recalculatTotalValues = async (dealId) => {
   const nbChildren = customFields.nbChildren || 0
   // const nbTeens = customFields.nbTeen
 
-  const promoValue = customFields.promoValue || 0
-  const promoChildren = customFields.promoChildren || 0
+  const promoValue = +customFields.promoValue || 0
+  const promoChildren = +customFields.promoChildren || 0
   // const promoTeen = customFields.promoTeen || 0
-  const promoEarlybird = customFields.gotEarlybird === 'Oui' ? customFields.promoEarlybird : 0
-  const promoLastMinute = customFields.gotLastMinute === 'Oui' ? customFields.promoLastMinute : 0
+  const promoEarlybird = customFields.gotEarlybird === 'Oui' ? +customFields.promoEarlybird : 0
+  const promoLastMinute = customFields.gotLastMinute === 'Oui' ? +customFields.promoLastMinute : 0
   const indivRoomPrice = customFields.indivRoom === 'Oui' ? (customFields.indivRoomPrice || 0) : 0
   const flightPrice = customFields.includeFlight === 'Oui' ? (customFields.flightPrice || 0) : 0
   const extensionPrice = customFields.extensionPrice || 0

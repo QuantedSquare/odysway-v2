@@ -3,11 +3,14 @@
     v-if="shouldShowNextCard"
     :voyage="cardVoyage"
     :item-list-name="itemListName"
+    :travelers-count="travelersCount"
+    :variant="variant"
   />
   <VoyageCard
     v-else
     :voyage="cardVoyage"
     :item-list-name="itemListName"
+    :travelers-count="travelersCount"
   />
 </template>
 
@@ -28,6 +31,17 @@ const props = defineProps({
     default: false,
   },
   itemListName: {
+    type: String,
+    default: null,
+  },
+  // Optional "N voyageurs partis" badge (best-sellers section).
+  travelersCount: {
+    type: Number,
+    default: null,
+  },
+  // Image-overlay badge variant forwarded to NextDepartureCard
+  // ('guaranteed' | 'lastMinute').
+  variant: {
     type: String,
     default: null,
   },

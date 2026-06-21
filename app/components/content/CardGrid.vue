@@ -10,9 +10,17 @@
       <v-row>
         <v-col
           cols="12"
-          class="text-center text-h2 font-weight-bold mt-md-4 mb-md-12"
+          class="text-center mt-md-4 mb-md-12"
         >
-          <slot name="title" />
+          <p
+            v-if="eyebrow"
+            class="cardgrid-eyebrow"
+          >
+            {{ eyebrow }}
+          </p>
+          <div class="text-h2 font-weight-bold">
+            <slot name="title" />
+          </div>
         </v-col>
         <ImageTitleColCard
           v-for="category in categories"
@@ -28,6 +36,7 @@
     <HorizontalCarousel
       v-else
       :center-title="true"
+      :eyebrow="eyebrow"
       slider-name="card-grid"
     >
       <template #title>
@@ -62,6 +71,10 @@ const props = defineProps({
     type: String,
     default: null,
   },
+  eyebrow: {
+    type: String,
+    default: '',
+  },
 })
 
 const { width } = useDisplay()
@@ -74,3 +87,14 @@ onMounted(() => {
   }
 })
 </script>
+
+<style scoped>
+.cardgrid-eyebrow {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgb(var(--v-theme-secondary));
+}
+</style>

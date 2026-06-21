@@ -11,6 +11,7 @@ export const destinationType = defineType({
   fields: [
     defineField({name: 'title', type: 'string', validation: (r) => r.required(), group: 'basic'}),
     defineField({name: 'slug', type: 'slug', options: {source: 'title'}, validation: (r) => r.required(), group: 'basic'}),
+    defineField({name: 'bestSellerPrefix', title: 'Préfixe best-seller', type: 'string', description: 'Petit texte au-dessus du nom sur la carte best-seller, ex. "Trek & immersion au" pour "Népal"', group: 'basic'}),
     defineField({name: 'chapka', type: 'string', group: 'basic'}),
     defineField({name: 'iso', type: 'string', group: 'basic'}),
     defineField({name: 'interjection', type: 'string', group: 'basic'}),
