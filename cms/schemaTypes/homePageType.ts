@@ -581,13 +581,18 @@ export const homePageType = defineType({
                   },
                 }),
                 defineField({
+                  name: 'textBefore',
+                  title: 'Texte avant le gras (ex. Garantie, Immatriculée)',
+                  type: 'string',
+                }),
+                defineField({
                   name: 'boldText',
-                  title: 'Texte en gras (ex. 4,9/5)',
+                  title: 'Texte en gras (ex. 4,9/5 ou APST)',
                   type: 'string',
                 }),
                 defineField({
                   name: 'text',
-                  title: 'Texte (ex. sur Trustpilot)',
+                  title: 'Texte après le gras (ex. sur Trustpilot)',
                   type: 'string',
                 }),
               ],

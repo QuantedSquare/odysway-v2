@@ -107,8 +107,8 @@ const stats = computed(() => (merged.value.stats || []).slice(0, 4))
   max-width: 820px;
   margin: 0 auto 34px;
   font-size: 26px;
-  font-weight: 400;
-  line-height: 1.2;
+  font-weight: 500;
+  line-height: 1.4;
   color: #eaf3f0;
 }
 
@@ -116,7 +116,7 @@ const stats = computed(() => (merged.value.stats || []).slice(0, 4))
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-  margin-bottom: 34px;
+  margin-bottom: 40px;
 }
 
 .manifesto__stats .num {
@@ -125,8 +125,8 @@ const stats = computed(() => (merged.value.stats || []).slice(0, 4))
 }
 
 .manifesto__stats .label {
-  margin-top: 4px;
-  font-size: 13.5px;
+  margin-top: 3px;
+  font-size: 15px;
   color: #bcd3ce;
 }
 

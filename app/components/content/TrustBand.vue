@@ -15,9 +15,10 @@
           class="trust__icon"
           size="20"
         />
-        <span>
+        <span class="trust__text">
+          <span v-if="item.textBefore">{{ item.textBefore }}</span>
           <b v-if="item.boldText">{{ item.boldText }}</b>
-          {{ item.text }}
+          <span v-if="item.text">{{ item.text }}</span>
         </span>
       </div>
     </div>
@@ -41,13 +42,14 @@ const props = defineProps({
   },
 })
 
-// Fallback copy used when the CMS field is empty.
+// Fallback copy used when the CMS field is empty. textBefore / boldText / text
+// let the bold part sit before OR after the regular text (demo).
 const defaultItems = [
   { icon: 'star', boldText: '4,9/5', text: 'sur Trustpilot' },
   { icon: 'message', boldText: '172', text: 'avis vérifiés' },
-  { icon: 'shield', boldText: 'APST', text: 'garantie' },
-  { icon: 'check', boldText: 'Atout France', text: 'immatriculée' },
-  { icon: 'calendar', boldText: 'Depuis 2018', text: '' },
+  { icon: 'shield', textBefore: 'Garantie', boldText: 'APST' },
+  { icon: 'check', textBefore: 'Immatriculée', boldText: 'Atout France' },
+  { icon: 'calendar', textBefore: 'Agence', boldText: 'depuis 2018' },
 ]
 
 const displayItems = computed(() => (props.items?.length ? props.items : defaultItems))
@@ -116,6 +118,12 @@ const iconFor = key => icons[key] || mdiCheckCircleOutline
 
 .trust__icon {
   color: rgb(var(--v-theme-primary));
+}
+
+.trust__text {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
 }
 
 .trust__item b {
