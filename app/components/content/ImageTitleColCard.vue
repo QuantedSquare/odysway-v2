@@ -21,6 +21,7 @@
           :srcset="srcset"
           :alt="`Image représentant ${title}`"
           sizes="(max-width: 600px) 200px, (max-width: 960px) 280px, 320px"
+          class="card-img"
           cover
           height="228"
           loading="lazy"
@@ -29,8 +30,14 @@
         <div class="blur-overlay" />
         <div class="image-overlay" />
         <div class="content-overlay">
-          <div class="w-100 d-flex flex-column align-center justify-center">
-            <h3 class="category-title font-weight-bold  text-h3 d-flex align-center text-center text-shadow ">{{ title }}</h3>
+          <div class="category-head">
+            <span class="category-icon">
+              <v-icon
+                :icon="iconPath"
+                size="20"
+              />
+            </span>
+            <h3 class="category-title font-weight-bold text-shadow">{{ title }}</h3>
           </div>
         </div>
       </NuxtLink>
@@ -40,6 +47,7 @@
 
 <script setup>
 import imageUrlBuilder from '@sanity/image-url'
+import { categoryIcon } from '~/utils/categoryIcons'
 
 const props = defineProps({
   image: {
@@ -62,7 +70,13 @@ const props = defineProps({
     type: String,
     default: null,
   },
+  icon: {
+    type: String,
+    default: null,
+  },
 })
+
+const iconPath = computed(() => categoryIcon(props.icon))
 
 const { trackSelectPromotion } = useGtmTracking()
 
@@ -162,53 +176,106 @@ const lazySrc = computed(() => {
 }
 
 .content-overlay {
-  display: flex;
-  justify-content: space-between;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 2rem 1rem;
-  color: white;
-  transform: translateY(calc(100% - 5rem));
-  transition: transform 0.5s ease-in-out;
+  padding: 1.25rem 1rem;
+  color: #fff;
   z-index: 1;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.category-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.category-icon {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  transition:
+    background 0.4s ease,
+    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .category-title {
-  margin: -1.5em 0 0 0;
-  font-size: 32px!important;
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.15;
 }
 
-.category-description {
-  margin: 0.5rem 0 0;
-  font-size: 0.875rem;
+/* Image zoom layer */
+.card-img {
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+/* Hover choreography: lift + image zoom + icon fills with brand colour */
+@media (hover: hover) {
+  .image-wrapper:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 38px rgba(12, 22, 20, 0.3);
+  }
+
+  .image-wrapper:hover .card-img {
+    transform: scale(1.08);
+  }
+
+  .image-wrapper:hover .category-icon {
+    background: rgb(var(--v-theme-secondary));
+    border-color: transparent;
+    transform: scale(1.08);
+  }
+
+  .image-wrapper:hover .content-overlay {
+    transform: translateY(-4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image-wrapper,
+  .card-img,
+  .category-icon,
+  .content-overlay {
+    transition: none;
+  }
 }
 
 @media screen and (max-width: 1280px) {
-  .text-to-wrap {
-    padding-bottom: 10px;
-  }
   .category-title {
-    margin: -60px 0 0 0 !important;
-    font-size: 28px!important;
+    font-size: 20px;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .category-title {
-    margin: -2rem 0 0 0 !important;
-
-    font-size: 1.2rem !important;
-  }
   .image-wrapper {
     height: 16rem;
   }
+  .category-icon {
+    width: 32px;
+    height: 32px;
+  }
+  .category-title {
+    font-size: 1.1rem;
+  }
 }
+
 @media screen and (max-width: 400px) {
   .category-title {
-    font-size: 1rem !important;
-    line-height: 1.4rem !important;
+    font-size: 1rem;
+    line-height: 1.3rem;
   }
 }
 </style>

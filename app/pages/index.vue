@@ -18,7 +18,7 @@
 
     <v-container
       fluid
-      class="mx-0 mx-md-5 px-1"
+      class="mx-0 mx-md-5 px-1 py-0 "
     >
       <section class="py-0 my-0 px-2 px-md-4">
         <!-- Séjours du moment (mosaïque) -->
@@ -113,16 +113,16 @@
         </LazyColorContainer>
 
         <!-- Voyager selon vos envies -->
-        <LazyColorContainer color="primary">
+        <LazyColorContainer color="white">
           <LazyCardGrid
             :categories="homeSanity?.followDesires?.categoriesFollowDesires"
             :promotion-name="homeSanity?.followDesires?.title"
             :eyebrow="followDesiresEyebrow"
           >
             <template #title>
-              <h2 class="text-h4 text-white">
+              <span class="text-primary">
                 {{ homeSanity.followDesires.title }}
-              </h2>
+              </span>
             </template>
           </LazyCardGrid>
         </LazyColorContainer>
@@ -345,7 +345,8 @@ const homeQuery = groq`
         slug,
         discoveryTitle,
         showOnHome,
-        image
+        image,
+        icon
       }
     },
     guaranteedDepartures{

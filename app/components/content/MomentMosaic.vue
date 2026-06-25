@@ -15,7 +15,7 @@
       </div>
       <NuxtLink
         v-if="merged.moreLink"
-        class="more"
+        class="more d-none d-sm-inline"
         :to="merged.moreLink"
       >
         {{ merged.moreText || 'Voir tous les voyages' }}
@@ -109,6 +109,17 @@
           </div>
         </NuxtLink>
       </div>
+      <v-btn-secondary
+       class="d-flex d-sm-none rounded-xl"
+       variant="outlined"
+       height="50"
+      :to="merged.moreLink">
+          {{ merged.moreText || 'Voir tous les voyages' }}
+          <v-icon
+            :icon="mdiArrowRight"
+            size="18"
+          />
+      </v-btn-secondary>
     </div>
   </section>
 </template>
@@ -179,7 +190,7 @@ const bgStyle = (image, width) => {
 
 <style scoped>
 .moment-section {
-  margin-top: var(--gap-section, 4.5rem);
+  margin-top: var(--gap-section, 2.5rem);
   padding-inline: 24px;
 }
 

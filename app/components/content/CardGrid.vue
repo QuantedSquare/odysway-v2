@@ -10,7 +10,7 @@
       <v-row>
         <v-col
           cols="12"
-          class="text-center mt-md-4 mb-md-12"
+          class="my-4"
         >
           <p
             v-if="eyebrow"
@@ -18,9 +18,9 @@
           >
             {{ eyebrow }}
           </p>
-          <div class="text-h2 font-weight-bold">
+          <span class="carousel-titlewrap text-h2">
             <slot name="title" />
-          </div>
+          </span>
         </v-col>
         <ImageTitleColCard
           v-for="category in categories"
@@ -28,6 +28,7 @@
           :title="category.title"
           :subtitle="category.discoveryTitle"
           :image="category.image"
+          :icon="category.icon"
           :link="'/thematiques/' + category.slug.current"
           :promotion-name="promotionName"
         />
@@ -35,12 +36,13 @@
     </v-container>
     <HorizontalCarousel
       v-else
-      :center-title="true"
       :eyebrow="eyebrow"
       slider-name="card-grid"
     >
       <template #title>
+      <span class="carousel-titlewrap text-h2">
         <slot name="title" />
+      </span>
       </template>
       <template #carousel-item>
         <CategColCard
@@ -51,6 +53,7 @@
           :image="category.image"
           :title="category.title"
           :description="category.discoveryTitle"
+          :icon="category.icon"
           type="thematiques"
           :promotion-name="promotionName"
         />
@@ -90,11 +93,16 @@ onMounted(() => {
 
 <style scoped>
 .cardgrid-eyebrow {
-  margin: 0 0 8px;
+  margin: 0 0 6px;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: rgb(var(--v-theme-secondary));
+}
+.carousel-titlewrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
 }
 </style>

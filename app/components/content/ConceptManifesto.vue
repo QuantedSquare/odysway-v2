@@ -1,5 +1,6 @@
 <template>
-  <section class="concept-section max-container-width">
+  <section class="concept-section 
+  padding-inline: 0;max-container-width">
     <div class="manifesto">
       <p
         v-if="merged.eyebrow"
@@ -131,12 +132,21 @@ const stats = computed(() => (merged.value.stats || []).slice(0, 4))
 }
 
 @media (max-width: 768px) {
+  .concept-section{
+    padding-inline: 0;
+  }
   .manifesto {
     padding: 36px 22px;
   }
+  .manifesto__stats .num {
+  font-size: 20px;
+}
 
+.manifesto__stats .label {
+  font-size: 14px;
+}
   .manifesto__lead {
-    font-size: 21px;
+    font-size: 16px;
   }
 
   .manifesto__stats {

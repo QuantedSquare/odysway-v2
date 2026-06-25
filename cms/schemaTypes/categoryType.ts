@@ -32,6 +32,28 @@ export const categoryType = defineType({
       group: 'content',
     }),
     defineField({
+      name: 'icon',
+      title: 'Icône (carte d\'accueil)',
+      type: 'string',
+      description: 'Icône affichée devant le titre sur la carte de la home',
+      options: {
+        list: [
+          {title: 'Trek / randonnée', value: 'trek'},
+          {title: 'Rencontres locales', value: 'rencontres'},
+          {title: 'Faune sauvage', value: 'faune'},
+          {title: 'Déconnexion', value: 'deconnexion'},
+          {title: 'Familles d\'accueil', value: 'familles'},
+          {title: 'Désert', value: 'desert'},
+          {title: 'Montagne', value: 'montagne'},
+          {title: 'Spiritualité', value: 'spiritualite'},
+          {title: 'Gastronomie', value: 'gastronomie'},
+          {title: 'Mer / océan', value: 'mer'},
+          {title: 'Animaux', value: 'animaux'},
+        ],
+      },
+      group: 'content',
+    }),
+    defineField({
       name: 'showOnHome',
       type: 'boolean',
       initialValue: false,
