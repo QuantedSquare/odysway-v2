@@ -107,7 +107,7 @@
             :placeholder="page.details.firstname_placeholder"
             :rules="[rules.name]"
             hide-details
-            @change="changeAttr('firstname'); saveToLocalStorage()"
+            @change="saveToLocalStorage()"
           />
         </v-col>
         <v-col
@@ -121,7 +121,7 @@
             :placeholder="page.details.lastname_placeholder"
             :rules="[rules.name]"
             hide-details
-            @change="changeAttr('lastname'); saveToLocalStorage()"
+            @change="saveToLocalStorage()"
           />
         </v-col>
         <v-col
