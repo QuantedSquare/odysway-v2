@@ -164,6 +164,7 @@
                   color="secondary"
                   class="font-weight-bold text-h5 custom-btn-shadow"
                   :loading="loadingSession || kickstartLoading"
+                  :disabled="!acceptancesValidated"
                   @click="stripePay"
                 >
                   🔒 {{ route.query.type === 'deposit' ? (page?.payment?.pay_deposit_button || 'Régler mon acompte') : page.payment.pay_stripe_button }}
@@ -211,6 +212,7 @@
                     color="secondary"
                     border="sm"
                     :loading="loadingSession || kickstartLoading"
+                    :disabled="!acceptancesValidated"
                     @click="almaPay"
                   >
                     <span class="text-body-1 text-md-body-2 text-primary">{{ almaPayButton }} </span>
@@ -366,6 +368,8 @@ const switch_accept_country = ref(route.query.type === 'booking')
 const warningAcceptText = ref(null)
 
 const conditionsWarningText = computed(() => page?.payment?.conditions_warning || 'Veuillez confirmer les conditions de vente avant de procéder au paiement')
+
+const acceptancesValidated = computed(() => switch_accept_data_privacy.value && switch_accept_country.value)
 
 const paymentError = ref(null)
 const loadingSession = ref(false)

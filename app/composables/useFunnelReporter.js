@@ -7,6 +7,10 @@
 export function useFunnelReporter() {
   const context = useState('funnelReporter:context', () => ({}))
   const { notifyError } = useSnackbar()
+  // Capture the request URL at init. useRequestURL() resolves on both server
+  // and client, so reports fired during SSR (e.g. the checkout init runs while
+  // server-rendering) still carry a URL — window.location is unavailable there.
+  const requestUrl = useRequestURL()
 
   const setContext = (partial = {}) => {
     const next = { ...context.value }
@@ -27,7 +31,10 @@ export function useFunnelReporter() {
     occurredAt: new Date().toISOString(),
     context: {
       ...context.value,
-      url: import.meta.client ? window.location.href : context.value.url,
+      // Prefer the live client URL; fall back to the SSR-captured request URL,
+      // then any url already seeded into context. Guarantees every report — and
+      // especially fatal init errors — always names the URL it happened on.
+      url: (import.meta.client ? window.location.href : requestUrl?.href) || context.value.url,
     },
   })
 

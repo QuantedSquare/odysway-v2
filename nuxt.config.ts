@@ -107,7 +107,10 @@ export default defineNuxtConfig({
       '/offre-cadeau': { isr: 60 * 60 * 24 * 5 },
       '/nous-recrutons': { isr: 60 * 60 * 24 * 5 },
       '/devis': { isr: 60 * 60 * 24 * 5 },
-      '/checkout': { isr: 60 * 60 * 24 * 5 },
+      // /checkout is intentionally NOT ISR-cached: it is a per-request, query-
+      // param-driven funnel page (date_id/booked_id). ISR keys the cache on the
+      // path only, so a cached render runs server-side with an empty route.query
+      // and spuriously throws MISSING_QUERY_PARAMS. Keep it SSR per request.
       '/rdv-projet-voyage': { prerender: true },
 
       // Legal pages (rarely updated)
