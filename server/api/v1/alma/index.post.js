@@ -9,9 +9,12 @@ export default defineEventHandler(async (event) => {
     .single()
 
   if (error) {
-    throw createError({
+    throw funnelReporter.funnelCreateError({
       statusCode: 400,
-      statusMessage: 'Error getting deal from booked_dates',
+      code: 'ALMA_BOOKED_DATE_NOT_FOUND',
+      step: 'payment',
+      origin: { field: 'bookedId', received: bookedId, endpoint: 'booked_dates' },
+      message: 'Impossible de récupérer le deal depuis booked_dates',
     })
   }
   const deal_id = data.deal_id
@@ -20,9 +23,12 @@ export default defineEventHandler(async (event) => {
   console.log('========ALMA REQUEST BODY=======', body)
 
   if (!body.dealId) {
-    throw createError({
+    throw funnelReporter.funnelCreateError({
       statusCode: 400,
-      statusMessage: 'dealId is required',
+      code: 'ALMA_NO_DEALID',
+      step: 'payment',
+      origin: { field: 'dealId', received: null },
+      message: 'dealId is required',
     })
   }
 
@@ -36,10 +42,12 @@ export default defineEventHandler(async (event) => {
   }
   catch (err) {
     console.log('Error creating alma session', err)
-    throw createError({
+    throw funnelReporter.funnelCreateError({
       statusCode: 400,
-      statusMessage: 'Error creating alma session',
-      data: { details: err.message },
+      code: 'ALMA_SESSION_CREATE_FAILED',
+      step: 'payment',
+      origin: { endpoint: 'alma.createAlmaSession' },
+      message: `Échec de création de la session Alma (dealId=${body.dealId}): ${err.message}`,
     })
   }
 })

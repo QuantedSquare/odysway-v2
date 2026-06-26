@@ -91,11 +91,15 @@
 
 <script setup>
 import dayjs from 'dayjs'
+import customParseFormat from 'dayjs/plugin/customParseFormat.js'
+
+dayjs.extend(customParseFormat)
 
 const { trackReservationStep } = useGtmTracking()
 
 const { voyage, currentStep, ownStep, page } = defineProps(['voyage', 'currentStep', 'ownStep', 'page', 'initialDealValues'])
 const { updateDeal } = useStepperDeal(ownStep)
+const { report, reportApiError } = useFunnelReporter()
 const route = useRoute()
 const model = defineModel()
 
@@ -245,12 +249,54 @@ const submitStepData = () => {
         adults: ageValidation.value.adultsCount,
       },
     })
+    // Pinpoint a malformed birthdate (parsing failure) before blaming counts.
+    const badBirthdate = travelers.value.findIndex(
+      t => t.birthdate && !dayjs(t.birthdate, 'DD/MM/YYYY', true).isValid(),
+    )
+    if (badBirthdate !== -1) {
+      report({
+        code: 'BIRTHDATE_PARSE_FAILED',
+        step: 'travelers',
+        severity: 'warning',
+        origin: {
+          field: `traveler${badBirthdate + 1}.birthdate`,
+          expected: 'DD/MM/YYYY',
+          received: travelers.value[badBirthdate].birthdate,
+        },
+        message: 'Date de naissance voyageur au mauvais format',
+      })
+    }
+    else {
+      report({
+        code: 'TRAVELER_AGE_MISMATCH',
+        step: 'travelers',
+        severity: 'warning',
+        origin: {
+          field: 'nbAdults/nbChildren',
+          expected: `adults=${+model.value.nbAdults}, children=${+model.value.nbChildren}`,
+          received: `adults=${ageValidation.value.adultsCount}, children=${ageValidation.value.childrenCount}`,
+        },
+        message: 'Répartition adultes/enfants des voyageurs incohérente avec l\'étape 1',
+      })
+    }
     return false
   }
 
   // Validate all fields are filled
   if (!allFieldsFilled.value) {
     console.error('Not all traveler fields are filled')
+    travelers.value.forEach((t, i) => {
+      const missingField = !t.firstname ? 'firstname' : !t.lastname ? 'lastname' : !t.birthdate ? 'birthdate' : !t.isoContact ? 'isoContact' : null
+      if (missingField) {
+        report({
+          code: 'TRAVELER_FIELDS_INCOMPLETE',
+          step: 'travelers',
+          severity: 'warning',
+          origin: { field: `traveler${i + 1}.${missingField}`, received: t[missingField] ?? null },
+          message: `Champ « ${missingField} » manquant pour le voyageur ${i + 1}`,
+        })
+      }
+    })
     return false
   }
 
@@ -282,6 +328,12 @@ const submitStepData = () => {
   }
   catch (error) {
     console.error('Error updating travelers info', error)
+    reportApiError(error, {
+      code: 'TRAVELERS_SUBMIT_FAILED',
+      step: 'travelers',
+      message: 'Erreur lors de la soumission des informations voyageurs',
+      userMessage: 'Une erreur est survenue, veuillez réessayer.',
+    })
     return false
   }
 }

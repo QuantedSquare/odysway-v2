@@ -11,11 +11,11 @@ export default defineEventHandler(async (event) => {
 
   const { dateId, slug } = event.context.params
   if (!dateId || !slug) {
-    throw createError({ statusCode: 400, statusMessage: 'slug et dateId requis' })
+    throw funnelReporter.funnelCreateError({ statusCode: 400, code: 'ASSIGN_NO_PARAMS', step: 'details', origin: { field: 'slug|dateId', received: { slug, dateId } }, message: 'slug et dateId requis' })
   }
   const { dealId, booked_places, is_option, expiracy_date, nbTravelers: bodyNbTravelers, alreadyPaid: bodyAlreadyPaid } = await readBody(event)
   if (!dealId) {
-    throw createError({ statusCode: 400, statusMessage: 'dealId requis' })
+    throw funnelReporter.funnelCreateError({ statusCode: 400, code: 'ASSIGN_NO_DEALID', step: 'details', origin: { field: 'dealId', received: null }, message: 'dealId requis' })
   }
   const origin = config.public.siteURL
   const skipAcFetch = typeof bodyNbTravelers === 'number' && typeof bodyAlreadyPaid === 'number'
@@ -29,7 +29,7 @@ export default defineEventHandler(async (event) => {
     .eq('travel_slug', slug)
     .single()
   if (travelDateError || !travelDate) {
-    throw createError({ statusCode: 404, statusMessage: 'Date introuvable' })
+    throw funnelReporter.funnelCreateError({ statusCode: 404, code: 'ASSIGN_DATE_NOT_FOUND', step: 'details', origin: { field: 'dateId', received: dateId, endpoint: `/booking/${slug}/date/${dateId}/assign-deal` }, message: 'Date introuvable pour ce slug' })
   }
 
   // When client provides nbTravelers/alreadyPaid, skip the AC fetch (~300-400ms saved)
@@ -52,15 +52,15 @@ export default defineEventHandler(async (event) => {
     }
     catch {
       console.error(`[assign-deal] AC fetch FAILED dealId=${dealId} after ${Date.now() - acFetchStart}ms`)
-      throw createError({ statusCode: 502, statusMessage: 'Erreur lors de la récupération du deal AC' })
+      throw funnelReporter.funnelCreateError({ statusCode: 502, code: 'ASSIGN_AC_FETCH_FAILED', step: 'details', origin: { field: 'dealId', received: dealId }, message: 'Erreur lors de la récupération du deal AC' })
     }
-    if (!deal) throw createError({ statusCode: 404, statusMessage: 'Deal introuvable' })
+    if (!deal) throw funnelReporter.funnelCreateError({ statusCode: 404, code: 'ASSIGN_DEAL_NOT_FOUND', step: 'details', origin: { field: 'deal', received: dealId }, message: 'Deal introuvable' })
     nbTravelers = +deal.nbTravelers
     alreadyPaid = +deal.alreadyPaid
     console.log(`[assign-deal] AC fetch done dealId=${dealId} in ${Date.now() - acFetchStart}ms`)
   }
 
-  if (!nbTravelers) throw createError({ statusCode: 400, statusMessage: 'Le deal ne contient pas nbTravelers' })
+  if (!nbTravelers) throw funnelReporter.funnelCreateError({ statusCode: 400, code: 'ASSIGN_NO_NB_TRAVELERS', step: 'details', origin: { field: 'nbTravelers', received: nbTravelers }, message: 'Le deal ne contient pas nbTravelers' })
 
   // If user placed an option or already paid, he is counted as a booked traveler, otherwise he is just assigned to the deal temporarily
   const bookedPlaceCount = (alreadyPaid > 0 || is_option === true) ? (booked_places || Number(nbTravelers)) : 0
@@ -88,19 +88,20 @@ export default defineEventHandler(async (event) => {
       .eq('deal_id', dealId)
       .single()
     if (existingError || !existingBookedDate?.travel_dates) {
-      throw createError({ statusCode: 409, statusMessage: 'Deal déjà assigné' })
+      throw createError({ statusCode: 409, statusMessage: 'Deal déjà assigné', data: { code: 'ASSIGN_DUPLICATE' } })
     }
     throw createError({
       statusCode: 409,
       statusMessage: 'Deal déjà assigné à une autre date',
       data: {
+        code: 'ASSIGN_DUPLICATE_OTHER_DATE',
         redirectTo: `/booking-management/${existingBookedDate.travel_dates.travel_slug}/${existingBookedDate.travel_dates.id}`,
       },
     })
   }
   else if (error) {
     console.error(`[assign-deal] Supabase insert FAILED dealId=${dealId}`, error.message)
-    throw createError({ statusCode: 500, statusMessage: error.message })
+    throw funnelReporter.funnelCreateError({ statusCode: 500, code: 'ASSIGN_SUPABASE_INSERT_FAILED', step: 'details', origin: { endpoint: 'booked_dates.insert' }, message: error.message })
   }
 
   // Update travel_dates.booked_seat

@@ -310,6 +310,7 @@ const onProgressFinished = () => {
 }
 
 const { kickstartDeal, updateDeal, bookedId } = useStepperDeal()
+const { report, reportApiError, setContext } = useFunnelReporter()
 const isOptionMode = ref(false)
 const route = useRoute()
 
@@ -370,6 +371,20 @@ const isValid = computed(() => {
   return hasValidName && hasValidEmail && hasValidTravelers && isPhoneValid.value && hasValidCountry
 })
 
+// Name every field that fails validation, with its current (bad) value, so the
+// report pinpoints exactly what's missing/invalid — e.g. iso (isoContact) empty.
+const collectMissingDetailsFields = () => {
+  const m = model.value
+  const missing = []
+  if (!m.firstName) missing.push({ field: 'firstName', received: m.firstName ?? null })
+  if (!m.lastName) missing.push({ field: 'lastName', received: m.lastName ?? null })
+  if (rules.email(m.email) !== true) missing.push({ field: 'email', received: m.email ?? null, expected: 'email valide' })
+  if (!(m.nbAdults > 0)) missing.push({ field: 'nbAdults', received: m.nbAdults ?? null, expected: '> 0' })
+  if (!isPhoneValid.value) missing.push({ field: 'phone', received: m.phone ?? null, expected: 'téléphone valide' })
+  if (!(m.isoContact && m.isoContact.length > 0)) missing.push({ field: 'isoContact', received: m.isoContact ?? null, expected: 'pays (iso) renseigné' })
+  return missing
+}
+
 const saveToLocalStorage = () => {
   const dataToStore = {
     firstname: model.value.firstName,
@@ -414,6 +429,18 @@ const nbTravelers = computed(() => +model.value.nbAdults + +model.value.nbChildr
 const submitStepData = () => {
   // Validate form
   if (!isValid.value) {
+    // Report each missing/invalid field precisely (field name + bad value).
+    setContext({ email: model.value.email, voyageSlug: voyage?.slug, dateId })
+    const missing = collectMissingDetailsFields()
+    missing.forEach(({ field, received, expected }) => {
+      report({
+        code: 'DETAILS_FIELDS_INCOMPLETE',
+        step: 'details',
+        severity: 'warning',
+        origin: { field, received, expected },
+        message: `Champ « ${field} » manquant ou invalide à l'étape Détails`,
+      })
+    })
     return false
   }
   //  #todo soustraire la réduction s'il y en a une
@@ -541,6 +568,13 @@ const submitStepData = () => {
               }
               catch (err) {
                 console.error('[Details] placeOption error', getApiErrorMessage(err))
+                reportApiError(err, {
+                  code: 'PLACE_OPTION_FAILED',
+                  step: 'option_booking',
+                  origin: { endpoint: '/booking/booked_date/option' },
+                  message: 'Échec de la pose d\'option',
+                  userMessage: 'Impossible de poser l\'option pour le moment. Veuillez réessayer.',
+                })
               }
               updateDeal({
                 stage: '27',
@@ -593,6 +627,12 @@ const submitStepData = () => {
   catch (error) {
     // Handle errors
     console.log('[Details] error updating or creating deal', error)
+    reportApiError(error, {
+      code: 'DETAILS_SUBMIT_FAILED',
+      step: 'details',
+      message: 'Erreur lors de la soumission de l\'étape Détails',
+      userMessage: 'Une erreur est survenue, veuillez réessayer.',
+    })
     shouldAdvance.value = false
     buttonLoading.value = false
     showProgress.value = false

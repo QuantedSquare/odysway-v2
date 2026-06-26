@@ -13,6 +13,7 @@ export function useStepperDeal() {
 
   const route = useRoute()
   const { addMultipleParams } = useParams()
+  const { report, reportApiError, setContext } = useFunnelReporter()
 
   const fetchDeal = async (id = dealId.value) => {
     loadingDeal.value = true
@@ -51,6 +52,7 @@ export function useStepperDeal() {
 
         dealId.value = addedBookedDate.deal_id
         bookedId.value = addedBookedDate.id
+        setContext({ dealId: addedBookedDate.deal_id, bookedId: addedBookedDate.id, dateId })
         localStorage.setItem(dateId, JSON.stringify({
           booked_id: addedBookedDate.id,
           deal_id: addedBookedDate.deal_id,
@@ -76,6 +78,12 @@ export function useStepperDeal() {
 
     assignStatus.value = 'failed'
     assignError.value = lastError
+    reportApiError(lastError, {
+      code: 'ASSIGN_DEAL_EXHAUSTED',
+      step: 'details',
+      origin: { endpoint: `/booking/${slug}/date/${dateId}/assign-deal` },
+      message: `assign-deal failed after ${maxAttempts} attempts (dealId=${dealIdToAssign}, nbTravelers=${nbTravelers})`,
+    })
     return null
   }
 
@@ -87,6 +95,7 @@ export function useStepperDeal() {
   const createDeal = async (body) => {
     try {
       const res = await apiRequest('/ac/deals', 'post', body)
+      setContext({ dealId: res, email: body?.email, voyageSlug: body?.slug })
       const date_id = route.query.date_id
       const addedBookedDate = await assignDealWithRetry({
         slug: body.slug,
@@ -115,6 +124,12 @@ export function useStepperDeal() {
       console.error('Error creating deal:', error)
       assignStatus.value = 'failed'
       assignError.value = error
+      reportApiError(error, {
+        code: 'CREATE_DEAL_FAILED',
+        step: 'details',
+        origin: { endpoint: '/ac/deals' },
+        message: 'Échec de création du deal ActiveCampaign',
+      })
       return false
     }
   }
@@ -125,6 +140,7 @@ export function useStepperDeal() {
       const res = await apiRequest(`/booking/${slug}/date/${dateId}/kickstart`, 'post', body)
       dealId.value = res.dealId
       bookedId.value = res.bookedId
+      setContext({ dealId: res.dealId, bookedId: res.bookedId, dateId, voyageSlug: slug, email: body?.email })
       localStorage.setItem(dateId, JSON.stringify({ booked_id: res.bookedId, deal_id: res.dealId }))
       addMultipleParams({ booked_id: res.bookedId, date_id: undefined })
       // Flush any updateDeal calls that arrived before bookedId was set
@@ -137,6 +153,15 @@ export function useStepperDeal() {
       }
       return res
     }
+    catch (error) {
+      reportApiError(error, {
+        code: 'KICKSTART_FAILED',
+        step: 'details',
+        origin: { endpoint: `/booking/${slug}/date/${dateId}/kickstart` },
+        message: 'Échec du kickstart deal',
+      })
+      throw error
+    }
     finally {
       kickstartLoading.value = false
     }
@@ -146,6 +171,13 @@ export function useStepperDeal() {
     const currentBookedId = explicitBookedId || route.query.booked_id || bookedId.value
     if (!currentBookedId) {
       pendingUpdates.value.push(body)
+      report({
+        code: 'UPDATE_DEAL_QUEUED_NO_BOOKED_ID',
+        step: 'unknown',
+        severity: 'warning',
+        origin: { field: 'bookedId', received: null },
+        message: 'updateDeal appelé sans bookedId — mise en file d\'attente',
+      })
       return false
     }
     await apiRequest('/ac/deals/update-with-bms?bookedId=' + currentBookedId, 'post', body)

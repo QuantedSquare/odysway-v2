@@ -6,14 +6,14 @@ export default defineEventHandler(async (event) => {
 
   const { dateId, slug } = event.context.params
   if (!dateId || !slug) {
-    throw createError({ statusCode: 400, statusMessage: 'slug et dateId requis' })
+    throw funnelReporter.funnelCreateError({ statusCode: 400, code: 'KICKSTART_NO_PARAMS', step: 'details', origin: { field: 'slug|dateId', received: { slug, dateId } }, message: 'slug et dateId requis' })
   }
 
   const body = await readBody(event)
   const { email, firstname, lastname, phone, isoContact, title, stage, currency, owner } = body
 
   if (!email || !title) {
-    throw createError({ statusCode: 400, statusMessage: 'email et title requis' })
+    throw funnelReporter.funnelCreateError({ statusCode: 400, code: 'KICKSTART_MISSING_FIELDS', step: 'details', origin: { field: !email ? 'email' : 'title', received: !email ? email ?? null : title ?? null }, message: 'email et title requis' })
   }
 
   console.log(`[kickstart] START slug=${slug} dateId=${dateId} email=${email}`)
@@ -26,7 +26,7 @@ export default defineEventHandler(async (event) => {
     .eq('travel_slug', slug)
     .single()
   if (travelDateError || !travelDate) {
-    throw createError({ statusCode: 404, statusMessage: 'Date introuvable' })
+    throw funnelReporter.funnelCreateError({ statusCode: 404, code: 'KICKSTART_DATE_NOT_FOUND', step: 'details', origin: { field: 'dateId', received: dateId }, message: 'Date introuvable pour ce slug' })
   }
   lap('travel_date validated')
 
@@ -38,7 +38,7 @@ export default defineEventHandler(async (event) => {
   }
   catch (err) {
     console.error('[kickstart] createMinimalDeal failed', err)
-    throw createError({ statusCode: 500, statusMessage: 'Erreur lors de la création du deal' })
+    throw funnelReporter.funnelCreateError({ statusCode: 500, code: 'KICKSTART_CREATE_DEAL_FAILED', step: 'details', origin: { endpoint: 'activecampaign.createMinimalDeal' }, message: 'Erreur lors de la création du deal' })
   }
 
   // 3. Insert into booked_dates (booked_places=0 — not counted as reserved until payment)
@@ -49,7 +49,7 @@ export default defineEventHandler(async (event) => {
     .single()
   if (bookedError) {
     console.error('[kickstart] Supabase insert failed', bookedError.message)
-    throw createError({ statusCode: 500, statusMessage: bookedError.message })
+    throw funnelReporter.funnelCreateError({ statusCode: 500, code: 'KICKSTART_SUPABASE_INSERT_FAILED', step: 'details', origin: { endpoint: 'booked_dates.insert' }, message: bookedError.message })
   }
   lap(`booked_dates inserted bookedId=${bookedDate.id}`)
 

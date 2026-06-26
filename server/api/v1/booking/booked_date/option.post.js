@@ -3,10 +3,10 @@ import { defineEventHandler, readBody, createError } from 'h3'
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)
   if (!body?.id) {
-    throw createError({ statusCode: 400, statusMessage: 'id requis' })
+    throw funnelReporter.funnelCreateError({ statusCode: 400, code: 'OPTION_NO_ID', step: 'option_booking', origin: { field: 'id', received: null }, message: 'id requis' })
   }
   if (body.booked_places === undefined || body.booked_places === null) {
-    throw createError({ statusCode: 400, statusMessage: 'booked_places requis' })
+    throw funnelReporter.funnelCreateError({ statusCode: 400, code: 'OPTION_NO_BOOKED_PLACES', step: 'option_booking', origin: { field: 'booked_places', received: body.booked_places ?? null }, message: 'booked_places requis' })
   }
 
   // Check if the date is already booked
@@ -16,10 +16,12 @@ export default defineEventHandler(async (event) => {
     .eq('id', body.id)
     .single()
   if (bookedDateError || !bookedDate) {
-    throw createError({ statusCode: 404, statusMessage: bookedDateError?.message || 'Réservation introuvable' })
+    throw funnelReporter.funnelCreateError({ statusCode: 404, code: 'OPTION_BOOKED_DATE_NOT_FOUND', step: 'option_booking', origin: { field: 'id', received: body.id }, message: bookedDateError?.message || 'Réservation introuvable' })
   }
   if (bookedDate.is_option) {
-    throw createError({ statusCode: 409, statusMessage: 'La date est déjà réservée' })
+    // Expected business case (already-optioned) — tagged so the backstop hook
+    // skips it; the client handles this message explicitly.
+    throw createError({ statusCode: 409, statusMessage: 'La date est déjà réservée', data: { code: 'OPTION_ALREADY_PLACED' } })
   }
   else {
     // Convert badges from string to array if needed

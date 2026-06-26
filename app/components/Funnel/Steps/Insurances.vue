@@ -250,6 +250,7 @@ const { trackReservationStep } = useGtmTracking()
 const { insurances, currentStep, ownStep, page, voyage } = defineProps(['insurances', 'voyage', 'currentStep', 'ownStep', 'page'])
 const isLoadingInsurance = ref(true)
 const { updateDeal } = useStepperDeal()
+const { reportApiError } = useFunnelReporter()
 
 const model = defineModel()
 const emit = defineEmits(['next', 'previous'])
@@ -352,6 +353,11 @@ const submitStepData = () => {
   }
   catch (error) {
     console.log('error updating insurance', error)
+    reportApiError(error, {
+      code: 'INSURANCE_SUBMIT_FAILED',
+      step: 'insurances',
+      message: 'Erreur lors de la soumission du choix d\'assurance',
+    })
     return false
   }
 }

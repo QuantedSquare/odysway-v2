@@ -9,9 +9,12 @@ export default defineEventHandler(async (event) => {
     .eq('id', bookedId)
     .single()
   if (error) {
-    throw createError({
+    throw funnelReporter.funnelCreateError({
       statusCode: 400,
-      statusMessage: 'Error getting deal from booked_dates',
+      code: 'DEAL_FROM_BMS_NOT_FOUND',
+      step: 'init',
+      origin: { field: 'bookedId', received: bookedId, endpoint: 'booked_dates' },
+      message: 'Impossible de récupérer le deal depuis booked_dates',
     })
   }
   try {
@@ -26,9 +29,12 @@ export default defineEventHandler(async (event) => {
     const contact = fullContact.contact
 
     if (!fetchedDeal.deal || !customFields) {
-      throw createError({
+      throw funnelReporter.funnelCreateError({
         statusCode: 404,
-        message: 'Deal not found',
+        code: 'DEAL_FROM_BMS_EMPTY',
+        step: 'init',
+        origin: { field: 'deal', received: data.deal_id },
+        message: 'Deal AC introuvable ou champs personnalisés manquants',
       })
     }
     return {
@@ -45,9 +51,14 @@ export default defineEventHandler(async (event) => {
   }
   catch (err) {
     console.log('Error getting deal from booked_dates', err)
-    throw createError({
+    // Re-throw an already-instrumented funnel error untouched (keeps its code).
+    if (err?.data?.code) throw err
+    throw funnelReporter.funnelCreateError({
       statusCode: 400,
-      statusMessage: 'Error getting deal from booked_dates',
+      code: 'DEAL_FROM_BMS_FETCH_FAILED',
+      step: 'init',
+      origin: { field: 'deal', received: data.deal_id },
+      message: 'Erreur lors de la récupération du deal depuis ActiveCampaign',
     })
   }
 })

@@ -10,9 +10,12 @@ export default defineEventHandler(async (event) => {
     .single()
 
   if (error) {
-    throw createError({
+    throw funnelReporter.funnelCreateError({
       statusCode: 400,
-      statusMessage: 'Error getting deal from booked_dates',
+      code: 'STRIPE_BOOKED_DATE_NOT_FOUND',
+      step: 'payment',
+      origin: { field: 'bookedId', received: bookedId, endpoint: 'booked_dates' },
+      message: 'Impossible de récupérer le deal depuis booked_dates',
     })
   }
   const deal_id = data.deal_id
@@ -32,9 +35,12 @@ export default defineEventHandler(async (event) => {
   }
   catch (err) {
     console.error('create checkout session error:', err)
-    throw createError({
+    throw funnelReporter.funnelCreateError({
       statusCode: 500,
-      message: 'Failed to create checkout session',
+      code: 'STRIPE_SESSION_CREATE_FAILED',
+      step: 'payment',
+      origin: { endpoint: 'stripe.createCheckoutSession', statusCode: 500 },
+      message: `Échec de création de la session Stripe (dealId=${deal_id}, type=${body?.paymentType})`,
     })
   }
 })

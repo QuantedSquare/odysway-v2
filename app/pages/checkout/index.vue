@@ -87,6 +87,7 @@ useSeoMeta({
 
 const route = useRoute()
 const { travelTitle } = useFunnelHeader()
+const { report, reportApiError, setContext } = useFunnelReporter()
 
 const checkoutStepperRef = useTemplateRef('checkoutStepperRef')
 
@@ -134,12 +135,24 @@ catch (err) {
 
 // 🚀 2. Build voyage (from AC or Sanity)
 const initCheckout = async () => {
+  // Seed context so every report from here on carries the funnel identifiers.
+  setContext({ bookedId, dateId, voyageSlug })
   try {
     loading.value = true
     if (bookedId) {
       // ActiveCampaign deal checkout
       const deal = await apiRequest(`/ac/deals/deal-from-bms?bookedId=${bookedId}`)
-      if (!deal) throw new Error(`No deal found with bookedId ${bookedId}`)
+      if (!deal) {
+        report({
+          code: 'AC_DEAL_FROM_BMS_EMPTY',
+          step: 'init',
+          severity: 'fatal',
+          origin: { field: 'deal', endpoint: '/ac/deals/deal-from-bms', received: bookedId },
+          message: `Aucun deal trouvé pour bookedId ${bookedId}`,
+        })
+        throw new Error(`No deal found with bookedId ${bookedId}`)
+      }
+      setContext({ dealId: deal?.id, voyageSlug: deal?.slug })
       dealValues.value = buildDynamicDealValues(deal)
       voyage.value = buildVoyageFromAC(deal, imgSrc.value)
       travelTitle.value = voyage.value?.title || ''
@@ -149,6 +162,18 @@ const initCheckout = async () => {
       const fetchedDate = await apiRequest(`/booking/date/${dateId}`)
       const bookedSeat = Number(fetchedDate.booked_seat || 0)
       const maxTravelers = Number(fetchedDate.max_traveler ?? fetchedDate.max_travelers ?? 0)
+      if (Number.isNaN(bookedSeat) || Number.isNaN(maxTravelers)) {
+        report({
+          code: 'DATE_SEAT_NAN',
+          step: 'init',
+          origin: {
+            field: Number.isNaN(maxTravelers) ? 'max_traveler' : 'booked_seat',
+            received: Number.isNaN(maxTravelers) ? fetchedDate.max_traveler : fetchedDate.booked_seat,
+            expected: 'nombre',
+          },
+          message: 'Valeur de places non numérique sur la date',
+        })
+      }
       if (maxTravelers > 0 && bookedSeat >= maxTravelers) {
         await navigateTo({
           path: '/checkout/complet',
@@ -167,10 +192,24 @@ const initCheckout = async () => {
         dealValues.value = buildDynamicDealValues()
       }
       else {
+        report({
+          code: 'SANITY_TRAVEL_MISSING',
+          step: 'init',
+          severity: 'fatal',
+          origin: { field: 'travelSanity', received: voyageSlug || fetchedDate.travel_slug, endpoint: '/sanity' },
+          message: 'Voyage Sanity introuvable pour le slug',
+        })
         throw new Error(`Date not found for ${voyageSlug || fetchedDate.travel_slug}`)
       }
     }
     else {
+      report({
+        code: 'MISSING_QUERY_PARAMS',
+        step: 'init',
+        severity: 'fatal',
+        origin: { field: 'date_id|booked_id', received: null, expected: 'date_id ou booked_id dans l\'URL' },
+        message: 'Paramètres de requête manquants sur /checkout',
+      })
       throw new Error('Missing required query parameters')
     }
     loading.value = false
@@ -179,6 +218,11 @@ const initCheckout = async () => {
     loading.value = false
     console.error('Error building voyage:', err)
     error.value = err.message
+    // Backstop: report any init failure not already covered above (e.g. a
+    // network failure on one of the fetches) with its API origin.
+    if (err?.__funnel) {
+      reportApiError(err, { code: 'INIT_CHECKOUT_FAILED', step: 'init', message: 'Échec d\'initialisation du checkout' })
+    }
   }
 }
 

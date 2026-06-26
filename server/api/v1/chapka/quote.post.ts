@@ -9,9 +9,12 @@ export default defineEventHandler(async (event: H3Event): Promise<TypeInsuranceQ
   }
   const parsedBody = await readValidatedBody(event, body => InsuranceSchema.safeParse(body))
   if (!parsedBody.success) {
-    throw createError({
+    throw funnelReporter.funnelCreateError({
       statusCode: 400,
-      message: `Validation failed: ${parsedBody.error.message}`,
+      code: 'INSURANCE_ZOD_VALIDATION',
+      step: 'insurances',
+      origin: funnelReporter.zodToOrigin(parsedBody.error),
+      message: `Validation du devis assurance échouée — ${funnelReporter.zodIssuesSummary(parsedBody.error)}`,
     })
   }
   try {
@@ -22,9 +25,12 @@ export default defineEventHandler(async (event: H3Event): Promise<TypeInsuranceQ
   }
   catch (err) {
     console.error('Error Chapka quote:', err)
-    throw createError({
+    throw funnelReporter.funnelCreateError({
       statusCode: 500,
-      message: 'Error Chapka quote',
+      code: 'CHAPKA_QUOTE_FAILED',
+      step: 'insurances',
+      origin: { endpoint: '/chapka/quote' },
+      message: 'Erreur lors de l\'appel Chapka (devis assurance)',
     })
   }
 })
