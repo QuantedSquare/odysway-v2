@@ -174,6 +174,7 @@ const reportFunnelError = async (input) => {
   const redacted = redact(funnelError)
   await Promise.all(transports.map(async (transport) => {
     try {
+      if(isDev) return
       await transport(redacted)
     }
     catch (transportErr) {
