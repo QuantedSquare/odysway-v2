@@ -355,6 +355,7 @@ const redirectingToAlma = ref(false)
 const emit = defineEmits(['previous'])
 const model = defineModel()
 const { updateDeal, bookedId: composableBookedId, kickstartLoading } = useStepperDeal()
+const { reportApiError, setContext } = useFunnelReporter()
 const { addSingleParam } = useParams()
 
 const isSurMesure = computed(() => voyage.availabilityTypes?.includes('custom'))
@@ -468,9 +469,16 @@ const stripePay = async () => {
       redirectingToStripe.value = false
     }
   }
-  catch {
+  catch (err) {
     redirectingToStripe.value = false
     paymentError.value = page?.payment?.payment_error || 'Une erreur est survenue. Veuillez réessayer ou nous contacter.'
+    setContext({ bookedId: route.query.booked_id || composableBookedId.value, email: model.value.email, type: route.query.type })
+    reportApiError(err, {
+      code: 'STRIPE_SESSION_FAILED',
+      step: 'payment',
+      origin: { endpoint: '/api/v1/stripe' },
+      message: `Échec de création de la session Stripe (type=${route.query.type})`,
+    })
   }
   finally {
     loadingSession.value = false
@@ -526,9 +534,16 @@ const almaPay = async () => {
       redirectingToAlma.value = false
     }
   }
-  catch {
+  catch (err) {
     redirectingToAlma.value = false
     paymentError.value = page?.payment?.payment_error || 'Une erreur est survenue. Veuillez réessayer ou nous contacter.'
+    setContext({ bookedId: route.query.booked_id || composableBookedId.value, email: model.value.email, type: route.query.type })
+    reportApiError(err, {
+      code: 'ALMA_SESSION_FAILED',
+      step: 'payment',
+      origin: { endpoint: '/api/v1/alma' },
+      message: `Échec de création de la session Alma (type=${route.query.type})`,
+    })
   }
   finally {
     loadingSession.value = false
@@ -552,6 +567,14 @@ const book = async () => {
       return
     }
     console.error(getApiErrorMessage(err, 'Erreur option'))
+    setContext({ bookedId: route.query.booked_id, voyageSlug: voyage.slug })
+    reportApiError(err, {
+      code: 'PLACE_OPTION_FAILED',
+      step: 'option_booking',
+      origin: { endpoint: '/booking/booked_date/option' },
+      message: 'Échec de la pose d\'option (étape paiement)',
+      userMessage: 'Impossible de poser l\'option pour le moment. Veuillez réessayer.',
+    })
   }
   const dealData = {
     stage: '27',

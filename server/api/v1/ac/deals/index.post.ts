@@ -12,9 +12,14 @@ export default defineEventHandler(async (event: H3Event): Promise<TypeDeal> => {
   if (!parsedBody.success) {
     console.error('Deal creation validation error:', parsedBody.error)
     console.log('error on', parsedBody.data)
-    throw createError({
+    // Precise origin: the exact failing field(s) from Zod, surfaced to the
+    // client (and Slack) instead of a generic "validation failed".
+    throw funnelReporter.funnelCreateError({
       statusCode: 400,
-      message: `Validation failed: ${parsedBody.error.message}`,
+      code: 'ZOD_VALIDATION',
+      step: 'details',
+      origin: funnelReporter.zodToOrigin(parsedBody.error),
+      message: `Validation du deal échouée — ${funnelReporter.zodIssuesSummary(parsedBody.error)}`,
     })
   }
 
@@ -26,9 +31,12 @@ export default defineEventHandler(async (event: H3Event): Promise<TypeDeal> => {
   }
   catch (err) {
     console.error('=======Deal creation error=======', err)
-    throw createError({
+    throw funnelReporter.funnelCreateError({
       statusCode: 500,
-      message: 'Failed to create deal',
+      code: 'AC_CREATE_DEAL_FAILED',
+      step: 'details',
+      origin: { endpoint: '/ac/deals' },
+      message: 'Échec de création du deal côté ActiveCampaign',
     })
   }
 })

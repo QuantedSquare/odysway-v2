@@ -148,6 +148,7 @@ const { voyage, initialDealValues } = defineProps({
 })
 
 const route = useRoute()
+const { reportApiError } = useFunnelReporter()
 
 const { step, date_id } = route.query
 
@@ -233,6 +234,12 @@ const fetchInsuranceQuote = async () => {
   }
   catch (e) {
     console.error('Insurance quote failed:', e)
+    reportApiError(e, {
+      code: 'INSURANCE_QUOTE_FAILED',
+      step: 'insurances',
+      origin: { endpoint: '/api/v1/chapka/quote', field: 'iso', received: voyage.iso },
+      message: 'Échec de récupération du devis assurance Chapka',
+    })
   }
 }
 
