@@ -248,6 +248,10 @@ const handlePaymentSession = async (session) => {
       ? 'Solde réglé'
       : 'Acompte réglé',
   }
+  // Track payment method for sales (AC field 82) — only on a real capture, not a cancel
+  if (session.processing_status !== 'canceled') {
+    Object.assign(dealData, { paiementMethod: method }) // 'Alma'
+  }
   if (totalPaid >= +deal.value) {
     Object.assign(dealData, { paiementLink: 'Paiement OK' })
   }

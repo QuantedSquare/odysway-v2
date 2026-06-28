@@ -505,6 +505,7 @@ const handlePaymentSession = async (session, paymentType) => {
     stage: +restToPay > 0 ? '6' : '33',
     alreadyPaid: totalPaid,
     restToPay: restToPay,
+    paiementMethod: paymentType, // 'CB' or 'Virement' — tracked for sales (AC field 82)
     currentStep: totalPaid >= +deal.value
       ? 'Solde réglé'
       : 'Acompte réglé',
