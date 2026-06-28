@@ -57,8 +57,12 @@ const earliestDeparture = computed(() => {
     .sort((a, b) => new Date(a.departure_date) - new Date(b.departure_date))[0]
 })
 
+// The "guaranteed departures" section should surface the next *confirmed*
+// departure, not just the earliest one.
+const wantsConfirmed = computed(() => props.preferConfirmedDate || props.variant === 'guaranteed')
+
 const confirmedDeparture = computed(() => {
-  if (!props.preferConfirmedDate || !dates.value.length) return null
+  if (!wantsConfirmed.value || !dates.value.length) return null
   return dates.value.find((date) => {
     const status = getDateStatus(date)
     return status?.status === 'confirmed'

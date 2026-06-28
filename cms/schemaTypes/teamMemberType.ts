@@ -14,6 +14,13 @@ export const teamMemberType = defineType({
     defineField({name: 'description', type: 'text'}),
     defineField({name: 'linkedin', type: 'url'}),
     defineField({name: 'position', type: 'string'}),
+    defineField({
+      name: 'visibleOnHomepage',
+      title: 'Visible sur la homepage',
+      type: 'boolean',
+      description: 'Afficher ce membre dans la rangée d\'avatars de la home',
+      initialValue: true,
+    }),
   ],
 })
 

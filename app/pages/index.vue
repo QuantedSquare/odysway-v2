@@ -127,9 +127,9 @@
           </LazyCardGrid>
         </LazyColorContainer>
 
-        <!-- Best-sellers (destinations à l'honneur) -->
+        <!-- Best-sellers (voyages et/ou destinations à l'honneur) -->
         <LazyColorContainer
-          v-if="bestSellerDestinations.length"
+          v-if="bestSellerItems.length"
           color="white"
         >
           <LazyHorizontalCarousel
@@ -142,17 +142,18 @@
             </template>
             <template #carousel-item>
               <v-col
-                v-for="dest in bestSellerDestinations"
-                :key="dest._id"
+                v-for="item in bestSellerItems"
+                :key="item.key"
                 cols="auto"
                 class="pa-2"
               >
                 <BestSellerCard
-                  :title="dest.title"
-                  :prefix="dest.bestSellerPrefix"
-                  :image="dest.image"
-                  :slug="dest.slug"
-                  :count="destinationCount(dest)"
+                  :title="item.title"
+                  :prefix="item.prefix"
+                  :image="item.image"
+                  :to="item.to"
+                  :compact="item.compact"
+                  :count="item.count"
                 />
               </v-col>
             </template>
@@ -218,18 +219,13 @@
           </LazyInfoContainer>
         </LazyColorContainer>
 
-        <!-- Avis -->
+        <!-- Avis (cartes photo plein cadre, style prototype) -->
         <LazyColorContainer color="white">
-          <LazyCommonReviewContainer :eyebrow="reviewsEyebrow">
-            <template #title>
-              <span style="color: rgba(43, 76, 82, 1)">
-                {{ homeSanity?.reviews?.title }}
-              </span>
-            </template>
-            <template #cta>
-              {{ homeSanity?.reviews?.ctaText }}
-            </template>
-          </LazyCommonReviewContainer>
+          <LazyHomeReviewsRail
+            :eyebrow="reviewsEyebrow"
+            :title="homeSanity?.reviews?.title || 'Des voyageurs partagent leurs souvenirs'"
+            :cta-text="homeSanity?.reviews?.ctaText"
+          />
         </LazyColorContainer>
       </section>
     </v-container>
@@ -289,6 +285,13 @@ const homeQuery = groq`
     bestSellers{
       eyebrow,
       title,
+      voyages[]->{
+        _id,
+        title,
+        "slug": slug.current,
+        image,
+        imageCard
+      },
       destinations[]->{
         _id,
         title,
@@ -412,9 +415,13 @@ const defaultBestSellers = [
   { _id: 'bs-srilanka', title: 'Sri Lanka', bestSellerPrefix: 'Île fantastique, le', slug: 'sri-lanka', voyageSlugs: [] },
   { _id: 'bs-laponie', title: 'Laponie', bestSellerPrefix: 'Aurores boréales en', slug: 'laponie', voyageSlugs: [] },
 ]
+const bestSellerVoyages = computed(() => homeSanity.value?.bestSellers?.voyages || [])
 const bestSellerDestinations = computed(() => {
   const dest = homeSanity.value?.bestSellers?.destinations
-  return dest?.length ? dest : defaultBestSellers
+  if (dest?.length) return dest
+  // Only fall back to the demo destinations when no voyage best-seller is set either.
+  if (bestSellerVoyages.value.length) return []
+  return defaultBestSellers
 })
 
 // Eyebrows (CMS value with demo fallback) for the other carousels/sections.
@@ -443,12 +450,35 @@ const { datesBySlug } = useTravelDates(homeVoyageSlugs)
 
 // Best-sellers "N voyageurs partis" badge — counted from Supabase booked_dates,
 // aggregated per destination across all of its voyages (voyageSlugs from GROQ).
-const bestSellerVoyageSlugs = computed(() =>
-  [...new Set(bestSellerDestinations.value.flatMap(d => d.voyageSlugs || []).filter(Boolean))],
-)
+const bestSellerVoyageSlugs = computed(() => [...new Set([
+  ...bestSellerVoyages.value.map(slugOf),
+  ...bestSellerDestinations.value.flatMap(d => d.voyageSlugs || []),
+].filter(Boolean))])
 const { countsBySlug } = useTravelersCount(bestSellerVoyageSlugs)
 const destinationCount = dest =>
   (dest.voyageSlugs || []).reduce((sum, s) => sum + (countsBySlug.value[s] || 0), 0) || null
+
+// Normalised portrait-card items: featured voyages first, then destinations.
+const bestSellerItems = computed(() => [
+  ...bestSellerVoyages.value.map(v => ({
+    key: v._id,
+    to: `/voyages/${slugOf(v)}`,
+    title: v.title,
+    prefix: '',
+    image: v.imageCard || v.image,
+    compact: true,
+    count: countsBySlug.value[slugOf(v)] || null,
+  })),
+  ...bestSellerDestinations.value.map(d => ({
+    key: d._id,
+    to: d.slug ? `/destinations/${d.slug}` : '/destinations',
+    title: d.title,
+    prefix: d.bestSellerPrefix,
+    image: d.image,
+    compact: false,
+    count: destinationCount(d),
+  })),
+])
 
 // GTM tracking handlers
 const handleProchainsDepartsClick = () => {

@@ -329,7 +329,7 @@ const bgStyle = (image, width) => {
 .feature__body {
   position: relative;
   z-index: 2;
-  padding: 30px;
+  padding: 24px 30px 22px;
   max-width: 520px;
 }
 
@@ -347,7 +347,7 @@ const bgStyle = (image, width) => {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin-top: 16px;
+  margin-top: 10px;
   font-size: 14px;
   font-weight: 600;
   color: #fff;
@@ -364,7 +364,7 @@ const bgStyle = (image, width) => {
 
 .feature__body .pill {
   display: inline-block;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   padding: 5px 12px;
   border-radius: 20px;
   background: rgb(var(--v-theme-secondary));
@@ -373,14 +373,14 @@ const bgStyle = (image, width) => {
 }
 
 .feature__body h3 {
-  margin: 0 0 10px;
+  margin: 0 0 6px;
   font-size: 30px;
   font-weight: 600;
   line-height: 1.15;
 }
 
 .feature__body p {
-  margin: 0 0 16px;
+  margin: 0 0 10px;
   font-size: 15px;
   color: #e3ece9;
   line-height: 1.5;

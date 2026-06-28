@@ -1,7 +1,7 @@
 <template>
   <NuxtLink
     class="portrait-card"
-    :to="link"
+    :to="to"
   >
     <div
       class="portrait-card__media"
@@ -17,7 +17,10 @@
         v-if="prefix"
         class="pre"
       >{{ prefix }}</span>
-      <span class="big">{{ title }}</span>
+      <span
+        class="big"
+        :class="{ 'big--voyage': compact }"
+      >{{ title }}</span>
     </div>
   </NuxtLink>
 </template>
@@ -38,17 +41,20 @@ const props = defineProps({
     type: Object,
     default: null,
   },
-  slug: {
+  to: {
     type: String,
-    default: '',
+    default: '/voyages',
   },
   count: {
     type: Number,
     default: null,
   },
+  // Voyage cards (vs destinations): smaller, sentence-case, clamped title.
+  compact: {
+    type: Boolean,
+    default: false,
+  },
 })
-
-const link = computed(() => (props.slug ? `/destinations/${props.slug}` : '/destinations'))
 
 const bgStyle = computed(() => {
   const ref = props.image?.asset?._ref
@@ -128,6 +134,18 @@ const bgStyle = computed(() => {
   line-height: 1.05;
   text-transform: uppercase;
   text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Voyage card: a full voyage title is longer, so keep it readable. */
+.portrait-card__caption .big--voyage {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.15;
+  text-transform: none;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 @media (hover: hover) {

@@ -31,7 +31,10 @@
         <div class="image-overlay" />
         <div class="content-overlay">
           <div class="category-head">
-            <span class="category-icon">
+            <span
+              v-if="iconPath"
+              class="category-icon"
+            >
               <v-icon
                 :icon="iconPath"
                 size="20"
@@ -76,7 +79,9 @@ const props = defineProps({
   },
 })
 
-const iconPath = computed(() => categoryIcon(props.icon))
+// Only show an icon when the category explicitly defines one (no generic
+// fallback — the client preferred no picto over a default one).
+const iconPath = computed(() => (props.icon ? categoryIcon(props.icon) : null))
 
 const { trackSelectPromotion } = useGtmTracking()
 

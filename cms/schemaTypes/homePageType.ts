@@ -721,6 +721,13 @@ export const homePageType = defineType({
         defineField({ name: 'eyebrow', title: 'Sur-titre (ex. Les plus demandés)', type: 'string' }),
         defineField({ name: 'title', title: 'Titre', type: 'string' }),
         defineField({
+          name: 'voyages',
+          title: 'Voyages à l\'honneur',
+          description: 'Cartes portrait voyage : image + titre + nombre de voyageurs partis. Affichées avant les destinations.',
+          type: 'array',
+          of: [{ type: 'reference', to: [{ type: 'voyage' }] }],
+        }),
+        defineField({
           name: 'destinations',
           title: 'Destinations à l\'honneur',
           description: 'Cartes portrait : image + préfixe + nom de la destination + nombre de voyageurs partis',

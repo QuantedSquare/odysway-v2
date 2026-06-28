@@ -1,6 +1,5 @@
 <template>
-  <section class="concept-section 
-  padding-inline: 0;max-container-width">
+  <section class="concept-section max-container-width">
     <div class="manifesto">
       <p
         v-if="merged.eyebrow"
@@ -84,7 +83,9 @@ const stats = computed(() => (merged.value.stats || []).slice(0, 4))
 <style scoped>
 .concept-section {
   margin-top: var(--gap-section, 4.5rem);
-  padding-inline: 24px;
+  /* No extra inset: the teal block spans the same max-container-width box as
+     the carousel colour blocks, so their side edges line up. */
+  padding-inline: 0;
 }
 
 .manifesto {
@@ -121,25 +122,23 @@ const stats = computed(() => (merged.value.stats || []).slice(0, 4))
 }
 
 .manifesto__stats .num {
-  font-size: 38px;
+  font-size: 48px;
   font-weight: 800;
+  line-height: 1.05;
 }
 
 .manifesto__stats .label {
-  margin-top: 3px;
+  margin-top: 6px;
   font-size: 15px;
   color: #bcd3ce;
 }
 
 @media (max-width: 768px) {
-  .concept-section{
-    padding-inline: 0;
-  }
   .manifesto {
     padding: 36px 22px;
   }
   .manifesto__stats .num {
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .manifesto__stats .label {

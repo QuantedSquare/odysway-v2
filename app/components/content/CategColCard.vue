@@ -26,7 +26,10 @@
         class="content-wrapper "
       >
         <div class="categ-head mx-2 mx-md-3">
-          <span class="categ-icon">
+          <span
+            v-if="iconPath"
+            class="categ-icon"
+          >
             <v-icon
               :icon="iconPath"
               size="18"
@@ -79,7 +82,7 @@ const props = defineProps({
   },
 })
 
-const iconPath = computed(() => categoryIcon(props.icon))
+const iconPath = computed(() => (props.icon ? categoryIcon(props.icon) : null))
 
 const { trackSelectPromotion } = useGtmTracking()
 
