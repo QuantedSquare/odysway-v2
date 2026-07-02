@@ -31,9 +31,9 @@
               v-if="travelersCount"
               class="travelers-badge"
             >
-              <v-icon
-                :icon="mdiAccountGroup"
-                size="14"
+              <IconUsers
+                :size="14"
+                :stroke="2"
                 class="mr-1"
               />{{ travelersCount }} voyageurs partis
             </div>
@@ -42,10 +42,11 @@
               class="depart-tag"
               :class="topLeftBadge.cls"
             >
-              <v-icon
+              <component
+                :is="topLeftBadge.icon"
                 v-if="topLeftBadge.icon"
-                :icon="topLeftBadge.icon"
-                size="15"
+                :size="15"
+                :stroke="2"
                 class="mr-1"
               />{{ topLeftBadge.text }}
             </span>
@@ -53,9 +54,10 @@
               v-if="seatsBadge"
               class="depart-seats"
             >
-              <v-icon
-                :icon="seatsIcon"
-                size="14"
+              <component
+                :is="seatsIcon"
+                :size="14"
+                :stroke="2"
                 class="mr-1"
               />{{ seatsBadge }}
             </span>
@@ -112,9 +114,11 @@
                 class="px-3 mt-2"
               >
                 <div class="w-40 d-flex flex-column  align-center ga-1 justify-space-between ">
-                  <v-icon
+                  <IconUsers
                     class="text-primary custom-icon-size"
-                  >{{ mdiAccountMultiple }}</v-icon>
+                    :size="22"
+                    :stroke="1.8"
+                  />
                   <div class="text-caption text-md-subtitle-2 text-center text-no-wrap text-md-left text-grey">{{ voyage.availabilityTypes?.includes('groupe')
                     ? (voyageCardContent?.groupType || 'Groupe') : (voyageCardContent?.soloType || 'Solo') }}</div>
                 </div>
@@ -152,21 +156,23 @@
             v-if="voyage.departureDate"
             :class="voyage.availabilityTypes?.includes('groupe') ? 'hover-primary' : 'hover-secondary'"
           >
-            <div class="depart-footer w-100 px-2 py-1">
+            <div class="depart-footer w-100 px-4 py-2">
               <div class="depart-footer__text">
                 <div class="depart-footer__label">{{ footerLabel }}</div>
                 <div class="depart-footer__date">
-                  <v-icon
-                    size="18"
+                  <IconCalendarCheck
+                    :size="18"
+                    :stroke="1.8"
                     class="text-primary mr-1"
-                  >{{ mdiCalendarCheck }}</v-icon>
+                  />
                   <span>{{ formattedDepartureDate }}</span>
                 </div>
               </div>
-              <v-icon
-                size="24"
+              <IconArrowRight
+                :size="24"
+                :stroke="1.8"
                 class="depart-footer__arrow text-secondary"
-              >{{ mdiArrowRight }}</v-icon>
+              />
             </div>
           </v-card-actions>
         </NuxtLink>
@@ -176,7 +182,7 @@
 </template>
 
 <script setup>
-import { mdiArrowRight, mdiAccountMultiple, mdiCalendarCheck, mdiAccountGroup, mdiCheckCircle, mdiFire } from '@mdi/js'
+import { IconArrowRight, IconUsers, IconCalendarCheck, IconCircleCheck, IconFlame } from '@tabler/icons-vue'
 import dayjs from 'dayjs'
 import { useImage } from '#imports'
 import { getDateStatus } from '~/utils/getDateStatus'
@@ -242,10 +248,10 @@ const daysUntilDeparture = computed(() => {
 
 const topLeftBadge = computed(() => {
   if (props.variant === 'guaranteed' && isGuaranteed.value) {
-    return { text: 'Garanti', cls: 'depart-tag--guaranteed', icon: mdiCheckCircle }
+    return { text: 'Garanti', cls: 'depart-tag--guaranteed', icon: IconCircleCheck }
   }
   if (props.variant === 'lastMinute' && typeof daysUntilDeparture.value === 'number' && daysUntilDeparture.value >= 0) {
-    return { text: `J-${daysUntilDeparture.value}`, cls: 'depart-tag--late', icon: mdiFire }
+    return { text: `J-${daysUntilDeparture.value}`, cls: 'depart-tag--late', icon: IconFlame }
   }
   return null
 })
@@ -258,7 +264,7 @@ const seatsBadge = computed(() => {
 })
 
 // Dernières places uses a flame for the seats badge; guaranteed keeps people.
-const seatsIcon = computed(() => (props.variant === 'lastMinute' ? mdiFire : mdiAccountMultiple))
+const seatsIcon = computed(() => (props.variant === 'lastMinute' ? IconFlame : IconUsers))
 
 // Footer: the selected departure date + a clickable arrow.
 const footerLabel = computed(() => {

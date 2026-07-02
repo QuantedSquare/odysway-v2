@@ -35,9 +35,10 @@
               v-if="iconPath"
               class="category-icon"
             >
-              <v-icon
-                :icon="iconPath"
-                size="20"
+              <component
+                :is="iconPath"
+                :size="20"
+                :stroke="1.8"
               />
             </span>
             <h3 class="category-title font-weight-bold text-shadow">{{ title }}</h3>

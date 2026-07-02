@@ -88,7 +88,7 @@
             <LazyHorizontalCarousel
               text-color="primary"
               slider-name="home-last-minute"
-              :icon="mdiFire"
+              :icon="IconFlame"
               :eyebrow="lastMinuteEyebrow"
               :subtitle="lastMinuteSubtitle"
             >
@@ -136,6 +136,7 @@
             text-color="primary"
             slider-name="home-best-sellers"
             :eyebrow="bestSellersEyebrow"
+            class="best-sellers-carousel"
           >
             <template #title>
               <span style="color: rgba(43, 76, 82, 1)">{{ bestSellersTitle }}</span>
@@ -233,7 +234,7 @@
 </template>
 
 <script setup>
-import { mdiFire } from '@mdi/js'
+import { IconFlame } from '@tabler/icons-vue'
 import { portableTextToPlain } from '~/utils/portableTextToPlain'
 
 const config = useRuntimeConfig()
@@ -285,20 +286,23 @@ const homeQuery = groq`
     bestSellers{
       eyebrow,
       title,
-      voyages[]->{
-        _id,
-        title,
-        "slug": slug.current,
-        image,
-        imageCard
-      },
-      destinations[]->{
-        _id,
-        title,
-        "slug": slug.current,
-        image,
-        bestSellerPrefix,
-        "voyageSlugs": *[_type == "voyage" && references(^._id)].slug.current
+      items[]{
+        travelersCountOverride,
+        voyage->{
+          _id,
+          title,
+          "slug": slug.current,
+          image,
+          imageCard
+        },
+        destination->{
+          _id,
+          title,
+          "slug": slug.current,
+          image,
+          bestSellerPrefix,
+          "voyageSlugs": *[_type == "voyage" && references(^._id)].slug.current
+        }
       }
     },
     contact{
@@ -406,7 +410,9 @@ const lastMinuteSubtitle = computed(() => homeSanity.value?.lastMinute?.subtitle
 const bestSellersTitle = computed(() => homeSanity.value?.bestSellers?.title || 'Nos best-sellers')
 const bestSellersEyebrow = computed(() => homeSanity.value?.bestSellers?.eyebrow || 'Les plus demandés')
 
-// Best-sellers = portrait cards featuring destinations (prefix + name + count).
+// Best-sellers = portrait cards featuring voyages and/or destinations, mixed
+// in a single CMS-ordered list (bestSellers.items[], each entry either a
+// voyage or a destination reference — see homePageType.ts).
 // Fallback demo set so the section is never empty before CMS is filled.
 const defaultBestSellers = [
   { _id: 'bs-nepal', title: 'Népal', bestSellerPrefix: 'Trek & immersion au', slug: 'nepal', voyageSlugs: [] },
@@ -415,14 +421,7 @@ const defaultBestSellers = [
   { _id: 'bs-srilanka', title: 'Sri Lanka', bestSellerPrefix: 'Île fantastique, le', slug: 'sri-lanka', voyageSlugs: [] },
   { _id: 'bs-laponie', title: 'Laponie', bestSellerPrefix: 'Aurores boréales en', slug: 'laponie', voyageSlugs: [] },
 ]
-const bestSellerVoyages = computed(() => homeSanity.value?.bestSellers?.voyages || [])
-const bestSellerDestinations = computed(() => {
-  const dest = homeSanity.value?.bestSellers?.destinations
-  if (dest?.length) return dest
-  // Only fall back to the demo destinations when no voyage best-seller is set either.
-  if (bestSellerVoyages.value.length) return []
-  return defaultBestSellers
-})
+const bestSellerEntries = computed(() => homeSanity.value?.bestSellers?.items || [])
 
 // Eyebrows (CMS value with demo fallback) for the other carousels/sections.
 const guaranteedEyebrow = computed(() => homeSanity.value?.guaranteedDepartures?.eyebrow || 'Réservez l\'esprit tranquille')
@@ -450,35 +449,63 @@ const { datesBySlug } = useTravelDates(homeVoyageSlugs)
 
 // Best-sellers "N voyageurs partis" badge — counted from Supabase booked_dates,
 // aggregated per destination across all of its voyages (voyageSlugs from GROQ).
-const bestSellerVoyageSlugs = computed(() => [...new Set([
-  ...bestSellerVoyages.value.map(slugOf),
-  ...bestSellerDestinations.value.flatMap(d => d.voyageSlugs || []),
-].filter(Boolean))])
+// Entries with a manual travelersCountOverride skip the Supabase lookup entirely.
+const bestSellerVoyageSlugs = computed(() => [...new Set(
+  bestSellerEntries.value
+    .filter(entry => entry.travelersCountOverride == null)
+    .flatMap(entry => entry.voyage
+      ? [slugOf(entry.voyage)]
+      : (entry.destination?.voyageSlugs || []))
+    .filter(Boolean),
+)])
 const { countsBySlug } = useTravelersCount(bestSellerVoyageSlugs)
-const destinationCount = dest =>
+const destinationAutoCount = dest =>
   (dest.voyageSlugs || []).reduce((sum, s) => sum + (countsBySlug.value[s] || 0), 0) || null
 
-// Normalised portrait-card items: featured voyages first, then destinations.
-const bestSellerItems = computed(() => [
-  ...bestSellerVoyages.value.map(v => ({
-    key: v._id,
-    to: `/voyages/${slugOf(v)}`,
-    title: v.title,
-    prefix: '',
-    image: v.imageCard || v.image,
-    compact: true,
-    count: countsBySlug.value[slugOf(v)] || null,
-  })),
-  ...bestSellerDestinations.value.map(d => ({
+// Normalised portrait-card items, in the order set in the CMS. Each entry is
+// either a voyage (compact card) or a destination (prefix + name card); the
+// override, if set, always wins over the computed count.
+const bestSellerItems = computed(() => {
+  if (bestSellerEntries.value.length) {
+    return bestSellerEntries.value.map((entry, i) => {
+      if (entry.voyage) {
+        const v = entry.voyage
+        return {
+          key: v._id || i,
+          to: `/voyages/${slugOf(v)}`,
+          title: v.title,
+          prefix: '',
+          image: v.imageCard || v.image,
+          compact: true,
+          count: entry.travelersCountOverride ?? (countsBySlug.value[slugOf(v)] || null),
+        }
+      }
+      if (entry.destination) {
+        const d = entry.destination
+        return {
+          key: d._id || i,
+          to: d.slug ? `/destinations/${d.slug}` : '/destinations',
+          title: d.title,
+          prefix: d.bestSellerPrefix,
+          image: d.image,
+          compact: false,
+          count: entry.travelersCountOverride ?? destinationAutoCount(d),
+        }
+      }
+      return null
+    }).filter(Boolean)
+  }
+  // Nothing configured in the CMS yet: fall back to the demo destinations.
+  return defaultBestSellers.map(d => ({
     key: d._id,
-    to: d.slug ? `/destinations/${d.slug}` : '/destinations',
+    to: `/destinations/${d.slug}`,
     title: d.title,
     prefix: d.bestSellerPrefix,
-    image: d.image,
+    image: null,
     compact: false,
-    count: destinationCount(d),
-  })),
-])
+    count: null,
+  }))
+})
 
 // GTM tracking handlers
 const handleProchainsDepartsClick = () => {
@@ -522,3 +549,33 @@ if (homeSanity.value) {
   })
 }
 </script>
+
+<style scoped>
+/* The best-seller cards' hover shadow/lift was getting clipped: the
+   carousel's scrolling row needs overflow-auto (via HorizontalCarousel) for
+   the horizontal drag/scroll to work, and that same rule clips vertical
+   overflow too — including a hovered card's shadow bloom. CardGrid's desktop
+   cards never hit this because they sit in a plain v-row with no scroll
+   container at all.
+
+   Fix: give the row 60px of internal padding (inside the clip boundary, so
+   the shadow has room), then pull its margin-top/-bottom in by that same
+   60px so the row's outer position on the page doesn't shift. Vuetify's
+   mt-4/mt-md-10 utility classes are !important, so overriding margin-top
+   needs !important too — and since overflow:auto clips at the padding edge
+   (not the margin edge), that pre-existing margin was never usable as
+   buffer room in the first place; it only set the visual gap above the
+   title, which this keeps net-identical by replacing it with
+   (original margin) − 60px instead of margin-top: -60px outright. */
+.best-sellers-carousel :deep(.v-row.overflow-auto) {
+  padding-block: 60px !important;
+  margin-top: -44px !important; /* 16px (mt-4) - 60px */
+  margin-bottom: -60px !important;
+}
+
+@media (min-width: 960px) {
+  .best-sellers-carousel :deep(.v-row.overflow-auto) {
+    margin-top: -20px !important; /* 40px (mt-md-10) - 60px */
+  }
+}
+</style>

@@ -491,7 +491,7 @@ margin-bottom: 0!important;
 }
 @media (max-width: 600px) {
   .glass-search-trigger {
-    width: min(94vw, 480px);
+    /* width: min(94vw, 480px); */
     height: 45px;
     padding: 0 16px;
   }

@@ -157,7 +157,10 @@ const { data, error } = await useSanityQuery(topsQuery, undefined, {
     line-height: 1.2!important;
   }
 }
-
+.custom-title-size{
+  font-size: 14px;
+  line-height: 1.1;
+}
 .hidden-scroll {
   -webkit-overflow-scrolling: touch;
   overflow-x: scroll;

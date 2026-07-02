@@ -721,18 +721,66 @@ export const homePageType = defineType({
         defineField({ name: 'eyebrow', title: 'Sur-titre (ex. Les plus demandés)', type: 'string' }),
         defineField({ name: 'title', title: 'Titre', type: 'string' }),
         defineField({
-          name: 'voyages',
-          title: 'Voyages à l\'honneur',
-          description: 'Cartes portrait voyage : image + titre + nombre de voyageurs partis. Affichées avant les destinations.',
+          name: 'items',
+          title: 'Voyages / destinations à l\'honneur',
+          description: 'Cartes portrait : image + titre + nombre de voyageurs partis. Pour chaque élément, choisissez soit un voyage, soit une destination.',
           type: 'array',
-          of: [{ type: 'reference', to: [{ type: 'voyage' }] }],
-        }),
-        defineField({
-          name: 'destinations',
-          title: 'Destinations à l\'honneur',
-          description: 'Cartes portrait : image + préfixe + nom de la destination + nombre de voyageurs partis',
-          type: 'array',
-          of: [{ type: 'reference', to: [{ type: 'destination' }] }],
+          of: [
+            {
+              type: 'object',
+              name: 'bestSellerItem',
+              title: 'Élément',
+              fields: [
+                defineField({
+                  name: 'voyage',
+                  title: 'Voyage',
+                  type: 'reference',
+                  to: [{ type: 'voyage' }],
+                  description: 'Choisissez ceci OU une destination ci-dessous, pas les deux.',
+                }),
+                defineField({
+                  name: 'destination',
+                  title: 'Destination',
+                  type: 'reference',
+                  to: [{ type: 'destination' }],
+                  description: 'Choisissez ceci OU un voyage ci-dessus, pas les deux.',
+                }),
+                defineField({
+                  name: 'travelersCountOverride',
+                  title: 'Nombre de voyageurs partis (personnalisé)',
+                  type: 'number',
+                  description: 'Remplace le calcul automatique (basé sur les réservations). Laisser vide pour garder le calcul automatique.',
+                  validation: (rule) => rule.integer().min(0),
+                }),
+              ],
+              validation: (rule) => rule.custom((value: any) => {
+                const hasVoyage = !!value?.voyage
+                const hasDestination = !!value?.destination
+                if (!hasVoyage && !hasDestination) return 'Choisissez un voyage ou une destination'
+                if (hasVoyage && hasDestination) return 'Choisissez uniquement un voyage OU une destination, pas les deux'
+                return true
+              }),
+              preview: {
+                select: {
+                  voyageTitle: 'voyage.title',
+                  voyageImage: 'voyage.imageCard',
+                  voyageImageFallback: 'voyage.image',
+                  destinationTitle: 'destination.title',
+                  destinationImage: 'destination.image',
+                  override: 'travelersCountOverride',
+                },
+                prepare({voyageTitle, voyageImage, voyageImageFallback, destinationTitle, destinationImage, override}: any) {
+                  const kind = voyageTitle ? 'Voyage' : destinationTitle ? 'Destination' : null
+                  const subtitleParts = [kind, override != null ? `${override} voyageurs (custom)` : null].filter(Boolean)
+                  return {
+                    title: voyageTitle || destinationTitle || 'Élément non configuré',
+                    subtitle: subtitleParts.join(' • ') || 'Choisir un voyage ou une destination',
+                    media: voyageImage || voyageImageFallback || destinationImage,
+                  }
+                },
+              },
+            },
+          ],
         }),
       ],
     }),

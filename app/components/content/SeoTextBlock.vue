@@ -1,6 +1,6 @@
 <template>
   <section class="seo-band">
-    <div class="seo max-container-width">
+    <div class="seo">
       <h2>{{ title }}</h2>
       <EnrichedText
         v-if="hasCmsContent"
@@ -46,21 +46,30 @@ const defaultParagraphs = [
 .seo-band {
   background: #f7f8f8;
   padding-block: 3.5rem;
-  margin-top: var(--gap-section, 4.5rem);
+  margin-top: var(--gap-section, 2.5rem);
+  /* Full-bleed breakout: this section sits inside homepage.vue's padded
+     v-container, so its background would otherwise be confined to that
+     container's content box. Stretching to 100vw and re-centering escapes
+     any ancestor width/padding regardless of breakpoint. */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
 
 .seo {
+  max-width: 968px;
+  margin-inline: auto;
   padding-inline: 24px;
 }
 
 .seo h2 {
-  margin: 0 0 14px;
   font-size: 22px;
   font-weight: 700;
   color: rgb(var(--v-theme-primary));
 }
 
 .seo__content {
+  margin-top:20px;
   max-width: 920px;
 }
 
@@ -76,5 +85,17 @@ const defaultParagraphs = [
 .seo__content a {
   color: rgb(var(--v-theme-primary));
   font-weight: 600;
+}
+@media (max-width:600px)  {
+  .seo h2{
+    line-height:1.1!important;
+    font-size:26px;
+  }
+  .seo-band{
+    padding-block:2rem;
+  }
+  .seo__content p {
+    font-size:12px!important;
+  }
 }
 </style>

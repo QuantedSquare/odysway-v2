@@ -22,9 +22,10 @@
             v-if="icon"
             class="carousel-title-icon"
           >
-            <v-icon
-              :icon="icon"
-              size="22"
+            <component
+              :is="icon"
+              :size="22"
+              :stroke="1.8"
             />
           </span>
           <div class="carousel-head__text">
@@ -136,9 +137,9 @@ const props = defineProps({
     type: String,
     default: '',
   },
-  // Optional mdi icon path shown in a circle before the title.
+  // Optional Tabler icon component shown in a circle before the title.
   icon: {
-    type: String,
+    type: [Object, Function],
     default: null,
   },
 })

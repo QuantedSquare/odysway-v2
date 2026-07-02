@@ -10,10 +10,11 @@
         :key="i"
         class="trust__item"
       >
-        <v-icon
-          :icon="iconFor(item.icon)"
+        <component
+          :is="iconFor(item.icon)"
           class="trust__icon"
-          size="20"
+          :size="20"
+          :stroke="1.8"
         />
         <span class="trust__text">
           <span v-if="item.textBefore">{{ item.textBefore }}</span>
@@ -27,13 +28,13 @@
 
 <script setup>
 import {
-  mdiStar,
-  mdiMessageOutline,
-  mdiShieldCheckOutline,
-  mdiCheckCircleOutline,
-  mdiCalendarHeart,
-  mdiHeartOutline,
-} from '@mdi/js'
+  IconStar,
+  IconMessage,
+  IconShieldCheck,
+  IconCircleCheck,
+  IconCalendarHeart,
+  IconHeart,
+} from '@tabler/icons-vue'
 
 const props = defineProps({
   items: {
@@ -55,15 +56,15 @@ const defaultItems = [
 const displayItems = computed(() => (props.items?.length ? props.items : defaultItems))
 
 const icons = {
-  star: mdiStar,
-  message: mdiMessageOutline,
-  shield: mdiShieldCheckOutline,
-  check: mdiCheckCircleOutline,
-  calendar: mdiCalendarHeart,
-  heart: mdiHeartOutline,
+  star: IconStar,
+  message: IconMessage,
+  shield: IconShieldCheck,
+  check: IconCircleCheck,
+  calendar: IconCalendarHeart,
+  heart: IconHeart,
 }
 
-const iconFor = key => icons[key] || mdiCheckCircleOutline
+const iconFor = key => icons[key] || IconCircleCheck
 </script>
 
 <style scoped>

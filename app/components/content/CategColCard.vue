@@ -30,9 +30,10 @@
             v-if="iconPath"
             class="categ-icon"
           >
-            <v-icon
-              :icon="iconPath"
-              size="18"
+            <component
+              :is="iconPath"
+              :size="18"
+              :stroke="1.8"
             />
           </span>
           <h3

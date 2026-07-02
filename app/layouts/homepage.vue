@@ -13,51 +13,19 @@
       fluid
       class="py-0 my-0 px-2 px-md-9"
     >
-      <div
-        v-if="route.path !== '/'"
-        class="mx-1"
-      >
-        <ClientOnly>
-          <LazyColorContainer
-            :hydrate-on-visible="{ rootMargin: '400px' }"
-            color="grey-light-2"
-          >
-            <LazyInfoContainer>
-              <template #top>
-                <AvatarsRowStack />
-              </template>
-              <template #title>
-                {{ searchContent?.infoContainer?.title || 'Vous hésitez encore ?' }}
-              </template>
-              <template #description>
-                {{ searchContent?.infoContainer?.description || 'Prenez un RDV avec un spécialiste qui vous conseillera selon vos envies.' }}
-              </template>
-              <template #bottom>
-                <CtaButton
-                  color="secondary"
-                  link="/calendly"
-                  cta-id="homepage-layout-rdv-bottom"
-                  :cta-label="searchContent?.infoContainer?.buttonText || 'Prendre RDV'"
-                >
-                  <template #text>
-                    {{ searchContent?.infoContainer?.buttonText || 'Prendre RDV' }}
-                  </template>
-                </CtaButton>
-              </template>
-            </LazyInfoContainer>
-          </LazyColorContainer>
-        </ClientOnly>
-        <ColorContainer
-          v-if="route.path !== '/avis-voyageurs'"
-          color="white"
-        >
-          <CommonReviewContainer />
-        </ColorContainer>
-      </div>
-
-      <LazyFaqContainer :hydrate-on-visible="{ rootMargin: '400px' }" />
-
+     <v-container
+    class="rounded-lg py-md-8 px-0  px-md-8 mt-4 mt-md-8 max-container-width">
+    <LazyHomeFaqSection
+      :hydrate-on-visible="{ rootMargin: '400px' }"
+    />
+</v-container>
+     <!-- Texte SEO bas de page (homepage uniquement), juste au-dessus du footer -->
+    <LazySeoTextBlock
+      :data="homeSeoText?.seoText"
+      :hydrate-on-visible="{ rootMargin: '400px' }"
+    />
       <div class="mx-1">
+        
         <ColorContainer
           v-if="partenairesTextes"
           color="secondary"
@@ -79,12 +47,7 @@
       </div>
     </v-container>
 
-    <!-- Texte SEO bas de page (homepage uniquement), juste au-dessus du footer -->
-    <LazySeoTextBlock
-      v-if="route.path === '/'"
-      :data="homeSeoText?.seoText"
-      :hydrate-on-visible="{ rootMargin: '400px' }"
-    />
+   
     <LazyFooterOdysway :hydrate-on-visible="{ rootMargin: '400px' }" />
   </v-app>
 </template>

@@ -19,9 +19,9 @@
         :to="merged.moreLink"
       >
         {{ merged.moreText || 'Voir tous les voyages' }}
-        <v-icon
-          :icon="mdiArrowRight"
-          size="18"
+        <IconArrowRight
+          :size="18"
+          :stroke="1.8"
         />
       </NuxtLink>
     </div>
@@ -53,15 +53,15 @@
           </p>
           <div class="feature__meta">
             <span v-if="feature.duration">
-              <v-icon
-                :icon="mdiClockOutline"
-                size="16"
+              <IconClock
+                :size="16"
+                :stroke="1.8"
               /> {{ feature.duration }}
             </span>
             <span v-if="feature.maxTravelers">
-              <v-icon
-                :icon="mdiAccountGroupOutline"
-                size="16"
+              <IconUsers
+                :size="16"
+                :stroke="1.8"
               /> {{ feature.maxTravelers }}
             </span>
             <span
@@ -71,9 +71,9 @@
           </div>
           <span class="feature__cta">
             Découvrir le voyage
-            <v-icon
-              :icon="mdiArrowRight"
-              size="18"
+            <IconArrowRight
+              :size="18"
+              :stroke="1.8"
             />
           </span>
         </div>
@@ -95,9 +95,9 @@
             class="feature-mini__arrow"
             aria-hidden="true"
           >
-            <v-icon
-              :icon="mdiArrowRight"
-              size="18"
+            <IconArrowRight
+              :size="18"
+              :stroke="1.8"
             />
           </span>
           <div class="feature-mini__body">
@@ -115,9 +115,9 @@
        height="50"
       :to="merged.moreLink">
           {{ merged.moreText || 'Voir tous les voyages' }}
-          <v-icon
-            :icon="mdiArrowRight"
-            size="18"
+          <IconArrowRight
+            :size="18"
+            :stroke="1.8"
           />
       </v-btn-secondary>
     </div>
@@ -125,7 +125,7 @@
 </template>
 
 <script setup>
-import { mdiArrowRight, mdiClockOutline, mdiAccountGroupOutline } from '@mdi/js'
+import { IconArrowRight, IconClock, IconUsers } from '@tabler/icons-vue'
 import { getImageUrl } from '~/utils/getImageUrl'
 
 const props = defineProps({
@@ -295,7 +295,7 @@ const bgStyle = (image, width) => {
     transform: translateY(0);
   }
 
-  .feature:hover .feature__cta .v-icon {
+  .feature:hover .feature__cta svg {
     transform: translateX(5px);
   }
 
@@ -358,7 +358,7 @@ const bgStyle = (image, width) => {
     transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.feature__cta .v-icon {
+.feature__cta svg {
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -444,7 +444,7 @@ const bgStyle = (image, width) => {
   .feature-mini__media,
   .feature__line,
   .feature__cta,
-  .feature__cta .v-icon,
+  .feature__cta svg,
   .feature-mini__body,
   .feature-mini__arrow {
     transition: none;

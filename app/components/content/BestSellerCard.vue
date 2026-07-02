@@ -3,11 +3,13 @@
     class="portrait-card"
     :to="to"
   >
-    <div
-      class="portrait-card__media"
-      :style="bgStyle"
-    />
-    <div class="scrim" />
+    <div class="portrait-card__clip">
+      <div
+        class="portrait-card__media"
+        :style="bgStyle"
+      />
+      <div class="scrim" />
+    </div>
     <span
       v-if="count"
       class="portrait-card__badge"
@@ -70,12 +72,21 @@ const bgStyle = computed(() => {
   width: 250px;
   height: 360px;
   border-radius: 18px;
-  overflow: hidden;
   text-decoration: none;
   box-shadow: 0 4px 14px rgba(43, 76, 82, 0.1);
   transition:
     transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
     box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Clips the image + scrim to the card's rounded shape. Kept off the
+   .portrait-card element itself: overflow:hidden there was clipping its own
+   hover box-shadow flush at the edge instead of letting it bloom outward. */
+.portrait-card__clip {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  overflow: hidden;
 }
 
 .portrait-card__media {

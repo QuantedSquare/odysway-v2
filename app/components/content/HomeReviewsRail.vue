@@ -59,7 +59,7 @@ const reviewsQuery = groq`*[_type == "homePage"][0]{
       photo,
       rating,
       text,
-      voyage->{ slug, title }
+      voyage->{ slug, title, image, imageCard }
     }
   }
 }`
@@ -73,6 +73,7 @@ const reviews = computed(() =>
       ...r,
       voyageSlug: r.voyage?.slug?.current,
       voyageTitle: r.voyage?.title,
+      voyageImage: r.voyage?.imageCard || r.voyage?.image,
     }))
     .slice(0, 9),
 )

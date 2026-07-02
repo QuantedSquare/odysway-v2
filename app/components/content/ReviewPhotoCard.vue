@@ -4,6 +4,7 @@
       class="testimonial-card__media"
       :style="bgStyle"
     />
+    <div class="blur-overlay" />
     <div class="scrim" />
 
     <div class="testimonial-card__caption">
@@ -28,39 +29,48 @@
       <div class="testimonial-card__name">
         {{ review.author }}
       </div>
+      <NuxtLink
+        v-if="review.voyageTitle && review.voyageSlug"
+        :to="`/voyages/${review.voyageSlug}`"
+        class="testimonial-card__trip testimonial-card__trip--link"
+      >
+        {{ review.voyageTitle }}
+      </NuxtLink>
       <div
-        v-if="review.voyageTitle"
+        v-else-if="review.voyageTitle"
         class="testimonial-card__trip"
       >
         {{ review.voyageTitle }}
       </div>
     </div>
 
-    <div
-      v-if="open"
-      class="testimonial-card__full"
-    >
-      <button
-        type="button"
-        class="close"
-        aria-label="Fermer"
-        @click="open = false"
-      >&times;</button>
+    <Transition name="testimonial-full">
       <div
-        class="stars"
-        role="img"
-        :aria-label="`Noté ${stars} sur 5`"
+        v-if="open"
+        class="testimonial-card__full"
       >
-        {{ '★'.repeat(stars) }}
+        <button
+          type="button"
+          class="close"
+          aria-label="Fermer"
+          @click="open = false"
+        >&times;</button>
+        <div
+          class="stars"
+          role="img"
+          :aria-label="`Noté ${stars} sur 5`"
+        >
+          {{ '★'.repeat(stars) }}
+        </div>
+        <div class="text">
+          “{{ quoteText }}”
+        </div>
+        <div class="meta">
+          <b>{{ review.author }}</b>
+          <span v-if="review.voyageTitle">{{ review.voyageTitle }}</span>
+        </div>
       </div>
-      <div class="text">
-        “{{ quoteText }}”
-      </div>
-      <div class="meta">
-        <b>{{ review.author }}</b>
-        <span v-if="review.voyageTitle">{{ review.voyageTitle }}</span>
-      </div>
-    </div>
+    </Transition>
   </article>
 </template>
 
@@ -87,8 +97,11 @@ const quoteText = computed(() => (props.review?.text || '').replace(/\\n|\n/g, '
 // Show "Lire +" only when the quote is long enough to be clamped.
 const canExpand = computed(() => quoteText.value.length > 140)
 
+// Prefer the voyage's own photo (now that we have that data) over the
+// traveller's uploaded photo, since it's more consistently available and
+// visually matches the rest of the site's voyage imagery.
 const bgStyle = computed(() => {
-  const ref = props.review?.photo?.asset?._ref
+  const ref = props.review?.voyageImage?.asset?._ref || props.review?.photo?.asset?._ref
   return ref ? { backgroundImage: `url('${getImageUrl(ref, null, null, 600)}')` } : {}
 })
 </script>
@@ -110,6 +123,19 @@ const bgStyle = computed(() => {
   background-color: rgb(var(--v-theme-primary));
   background-size: cover;
   background-position: center;
+}
+
+/* Bottom-half frosted blur behind the caption, same technique as the
+   "envies" cards (CardGrid / ImageTitleColCard): a masked backdrop-filter so
+   only the lower half of the photo blurs, keeping the top of the image crisp. */
+.blur-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 55%;
+  mask: linear-gradient(transparent, rgb(0, 0, 0), black);
+  backdrop-filter: blur(4px);
 }
 
 .scrim {
@@ -153,9 +179,26 @@ const bgStyle = computed(() => {
 }
 
 .testimonial-card__trip {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   font-size: 12.5px;
   color: #e3ece9;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.testimonial-card__trip--link {
+  text-decoration: underline;
+  text-decoration-color: rgba(227, 236, 233, 0.4);
+  text-underline-offset: 2px;
+  transition: text-decoration-color 0.25s ease, color 0.25s ease;
+}
+
+.testimonial-card__trip--link:hover {
+  color: #fff;
+  text-decoration-color: rgba(255, 255, 255, 0.9);
 }
 
 .testimonial-card__more {
@@ -168,6 +211,20 @@ const bgStyle = computed(() => {
   font-size: 12px;
   font-weight: 600;
   cursor: pointer;
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.25s ease,
+    box-shadow 0.3s ease;
+}
+
+.testimonial-card__more:hover {
+  background: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card__more:active {
+  transform: translateY(0);
 }
 
 .testimonial-card__full {
@@ -179,6 +236,29 @@ const bgStyle = computed(() => {
   background: rgb(var(--v-theme-primary));
   color: #fff;
   z-index: 2;
+}
+
+/* Expand animation for the full-quote panel (triggered by "Lire +"). */
+.testimonial-full-enter-active,
+.testimonial-full-leave-active {
+  transition:
+    opacity 0.35s ease,
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.testimonial-full-enter-from,
+.testimonial-full-leave-to {
+  opacity: 0;
+  transform: scale(0.96) translateY(10px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-card__more,
+  .testimonial-full-enter-active,
+  .testimonial-full-leave-active,
+  .testimonial-card__trip--link {
+    transition: none;
+  }
 }
 
 .testimonial-card__full .close {
