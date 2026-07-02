@@ -228,6 +228,24 @@
             :cta-text="homeSanity?.reviews?.ctaText"
           />
         </LazyColorContainer>
+
+        <!-- Newsletter -->
+        <LazyColorContainer
+          v-if="homeSanity?.newsletter"
+          color="soft-blush"
+        >
+          <LazyNewsletterContainer>
+            <template #title>
+              <EnrichedText :value="homeSanity.newsletter.title" />
+            </template>
+            <template #subtitle>
+              <EnrichedText
+                class="text-grey-darken-2"
+                :value="homeSanity.newsletter.subtitle"
+              />
+            </template>
+          </LazyNewsletterContainer>
+        </LazyColorContainer>
       </section>
     </v-container>
   </div>
