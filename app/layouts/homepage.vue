@@ -25,24 +25,7 @@
       :hydrate-on-visible="{ rootMargin: '400px' }"
     />
       <div class="mx-1">
-        
-        <ColorContainer
-          v-if="partenairesTextes"
-          color="secondary"
-          :white-text="true"
-        >
-          <InfoContainer :white-text="true">
-            <template #title>
-              {{ partenairesTextes?.layoutInfoContainer?.title }}
-            </template>
-            <template #description>
-              {{ partenairesTextes?.layoutInfoContainer?.subtitle }}
-            </template>
-            <template #bottom>
-              <PartenairesContainer />
-            </template>
-          </InfoContainer>
-        </ColorContainer>
+      
         <LazyTopTravelsTabs :hydrate-on-visible="{ rootMargin: '400px' }" />
       </div>
     </v-container>

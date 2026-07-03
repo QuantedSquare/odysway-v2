@@ -29,7 +29,7 @@
 <script setup>
 import {
   IconStar,
-  IconMessage,
+  IconUsers,
   IconShieldCheck,
   IconCircleCheck,
   IconCalendarHeart,
@@ -57,7 +57,7 @@ const displayItems = computed(() => (props.items?.length ? props.items : default
 
 const icons = {
   star: IconStar,
-  message: IconMessage,
+  message: IconUsers,
   shield: IconShieldCheck,
   check: IconCircleCheck,
   calendar: IconCalendarHeart,
