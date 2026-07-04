@@ -151,8 +151,8 @@ const ptComponents = {
   align-items: center;
   gap: 18px;
   max-width: min(760px, calc(100vw - 24px));
-  padding: 8px 10px 8px 26px;
-  border-radius: 999px;
+  padding: 13px 10px 8px 26px;
+  border-radius: 28px;
   overflow: hidden;
   box-shadow:
     0 12px 30px -10px rgba(43, 76, 82, 0.4),
@@ -211,10 +211,10 @@ const ptComponents = {
 }
 
 .site-banner__text :deep(.site-banner__img) {
-  height: 30px;
-  width: 30px;
+  max-height: 300px;
+  max-width: 300px;
   vertical-align: middle;
-  display: inline-block;
+  /* display: inline-block; */
   margin: 0 4px;
   border-radius: 8px;
   object-fit: cover;

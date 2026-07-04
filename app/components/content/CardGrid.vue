@@ -21,7 +21,7 @@
           <span class="carousel-titlewrap text-h2">
             <slot name="title" />
           </span>
-        </v-col>
+        </v-col>  
         <ImageTitleColCard
           v-for="category in categories"
           :key="category._id"

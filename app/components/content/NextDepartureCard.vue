@@ -74,7 +74,7 @@
           <v-card-text class="py-1">
             <v-container class="px-0 px-md-2">
               <v-row>
-                <v-col class="pt-lg-3 pt-0">
+                <v-col class="pt-lg-1 pt-0">
                   <div
                     class="text-primary text-h5 text-sm-h4 font-weight-bold py-1 px-0 no-white-space title-container"
                   >
@@ -125,7 +125,7 @@
 
                 <div class="w-20 d-flex flex-column  ga-1  align-center justify-space-between justify-md-start">
 
-                  <div class="text-body-2 text-md-subtitle-2  font-weight-bold text-primary">
+                  <div class="old-price text-caption  font-weight-bold text-primary">
                     {{ voyage.duration }}
                   </div>
                   <div class="text-grey text-caption text-md-subtitle-2">{{ voyageCardContent?.days
@@ -376,7 +376,7 @@ const handleCardClick = () => {
 .depart-footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 12px;
 }
 .depart-footer__label {
@@ -446,7 +446,7 @@ const handleCardClick = () => {
   -webkit-line-clamp: 2;
   line-clamp: 2;
   line-height: 120% !important;
-  font-size: 24px !important;
+  font-size: 22px !important;
 }
 
 .custom-card-width {
@@ -492,9 +492,11 @@ const handleCardClick = () => {
 
 @media screen and (max-width: 1240px) {
   .line-clamp-2 {
-    font-size: 24px !important;
+    font-size: 20px !important;
   }
-
+  .custom-icon-size{
+    font-size: 20px !important;
+  }
   .title-container {
     height: 2.2em;
     /* This sets a fixed height equivalent to 2 lines */
