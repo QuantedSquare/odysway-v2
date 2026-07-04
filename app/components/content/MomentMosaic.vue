@@ -69,6 +69,7 @@
               class="price"
             >{{ feature.price }}</span>
           </div>
+
           <span class="feature__cta">
             Découvrir le voyage
             <IconArrowRight
@@ -344,10 +345,11 @@ const bgStyle = (image, width) => {
 }
 
 .feature__cta {
-  display: inline-flex;
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
   gap: 6px;
-  margin-top: 10px;
+  margin-top: 12px;
   font-size: 14px;
   font-weight: 600;
   color: #fff;

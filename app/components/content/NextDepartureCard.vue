@@ -74,7 +74,7 @@
           <v-card-text class="py-1">
             <v-container class="px-0 px-md-2">
               <v-row>
-                <v-col class="pt-lg-1 pt-0">
+                <v-col class="pt-lg-1 pt-0 pb-5">
                   <div
                     class="text-primary text-h5 text-sm-h4 font-weight-bold py-1 px-0 no-white-space title-container"
                   >
@@ -114,18 +114,16 @@
                 class="px-3 mt-2"
               >
                 <div class="w-40 d-flex flex-column  align-center ga-1 justify-space-between ">
-                  <IconUsers
+                  <v-icon
                     class="text-primary custom-icon-size"
-                    :size="22"
-                    :stroke="1.8"
-                  />
+                  >{{ mdiAccountMultiple }}</v-icon>
                   <div class="text-caption text-md-subtitle-2 text-center text-no-wrap text-md-left text-grey">{{ voyage.availabilityTypes?.includes('groupe')
                     ? (voyageCardContent?.groupType || 'Groupe') : (voyageCardContent?.soloType || 'Solo') }}</div>
                 </div>
 
                 <div class="w-20 d-flex flex-column  ga-1  align-center justify-space-between justify-md-start">
 
-                  <div class="old-price text-caption  font-weight-bold text-primary">
+                  <div class="text-caption text-md-subtitle-2  font-weight-bold text-primary">
                     {{ voyage.duration }}
                   </div>
                   <div class="text-grey text-caption text-md-subtitle-2">{{ voyageCardContent?.days
@@ -183,6 +181,7 @@
 
 <script setup>
 import { IconArrowRight, IconUsers, IconCalendarCheck, IconCircleCheck, IconFlame } from '@tabler/icons-vue'
+import { mdiArrowRight, mdiAccountMultiple, mdiCalendarCheck } from '@mdi/js'
 import dayjs from 'dayjs'
 import { useImage } from '#imports'
 import { getDateStatus } from '~/utils/getDateStatus'
@@ -494,8 +493,8 @@ const handleCardClick = () => {
   .line-clamp-2 {
     font-size: 20px !important;
   }
-  .custom-icon-size{
-    font-size: 20px !important;
+.custom-icon-size{
+    font-size: 22px !important;
   }
   .title-container {
     height: 2.2em;
@@ -531,7 +530,7 @@ const handleCardClick = () => {
   }
 
   .line-clamp-2 {
-    line-height: 20px !important;
+    line-height: 1.1 !important;
     font-size: 16px !important;
   }
 

@@ -3,14 +3,14 @@
     fluid
     class="pa-0 mx-0 "
   >
-    <v-container
-      v-if="width > 960"
-      fluid
-    >
+    <v-container fluid>
+      <!-- Responsive grid at every breakpoint (prototype: 4 cols desktop,
+           2 cols mobile). ImageTitleColCard sets cols=6 / sm=4 / md=3, so
+           mobile naturally falls into a 2-per-row grid instead of a carousel. -->
       <v-row>
         <v-col
           cols="12"
-          class="my-4"
+          class="mb-4"
         >
           <p
             v-if="eyebrow"
@@ -21,7 +21,7 @@
           <span class="carousel-titlewrap text-h2">
             <slot name="title" />
           </span>
-        </v-col>  
+        </v-col>
         <ImageTitleColCard
           v-for="category in categories"
           :key="category._id"
@@ -34,37 +34,10 @@
         />
       </v-row>
     </v-container>
-    <HorizontalCarousel
-      v-else
-      :eyebrow="eyebrow"
-      slider-name="card-grid"
-    >
-      <template #title>
-      <span class="carousel-titlewrap text-h2">
-        <slot name="title" />
-      </span>
-      </template>
-      <template #carousel-item>
-        <CategColCard
-          v-for="category in categories"
-          v-show="category.showOnHome"
-          :key="category._id"
-          :slug="category.slug.current"
-          :image="category.image"
-          :title="category.title"
-          :description="category.discoveryTitle"
-          :icon="category.icon"
-          type="thematiques"
-          :promotion-name="promotionName"
-        />
-      </template>
-    </HorizontalCarousel>
   </v-container>
 </template>
 
 <script setup>
-import { useDisplay } from 'vuetify'
-
 const props = defineProps({
   categories: {
     type: Array,
@@ -80,7 +53,6 @@ const props = defineProps({
   },
 })
 
-const { width } = useDisplay()
 const { trackViewPromotion } = useGtmTracking()
 
 // Track view_promotion when component is mounted

@@ -4,11 +4,7 @@
     sm="4"
     md="3"
   >
-    <v-lazy
-      :min-height="228"
-      :options="{ threshold: 0.5 }"
-      transition="fade-transition"
-    >
+  
       <NuxtLink
         :to="link"
         class="image-wrapper default-expanded"
@@ -23,7 +19,8 @@
           sizes="(max-width: 600px) 200px, (max-width: 960px) 280px, 320px"
           class="card-img"
           cover
-          height="228"
+          width="100%"
+          height="100%"
           loading="lazy"
         />
 
@@ -31,21 +28,11 @@
         <div class="image-overlay" />
         <div class="content-overlay">
           <div class="category-head">
-            <span
-              v-if="iconPath"
-              class="category-icon"
-            >
-              <component
-                :is="iconPath"
-                :size="20"
-                :stroke="1.8"
-              />
-            </span>
             <h3 class="category-title font-weight-bold text-shadow">{{ title }}</h3>
           </div>
         </div>
       </NuxtLink>
-    </v-lazy>
+   
   </v-col>
 </template>
 
@@ -135,17 +122,15 @@ const lazySrc = computed(() => {
 .image-wrapper {
   position: relative;
   display: flex;
-  height: 228px;
   width: 100%;
+  /* Landscape rectangle matching the prototype's envie tiles (wider than
+     tall, ~5:4). aspect-ratio keeps the proportion consistent across every
+     breakpoint. */
+  aspect-ratio: 5 / 4;
   cursor: pointer;
   overflow: hidden;
   border-radius: 1rem;
   transition: all 0.5s ease-in-out;
-}
-@media (max-width: 500px) {
-  .image-wrapper {
-    max-height: 200px;
-  }
 }
 
 .blur-overlay {
@@ -266,8 +251,9 @@ const lazySrc = computed(() => {
 }
 
 @media screen and (max-width: 600px) {
+  /* Taller portrait on mobile so the 2-up cards read as clear rectangles. */
   .image-wrapper {
-    height: 16rem;
+    aspect-ratio: 35 / 26;
   }
   .category-icon {
     width: 32px;
@@ -279,6 +265,9 @@ const lazySrc = computed(() => {
 }
 
 @media screen and (max-width: 400px) {
+   .image-wrapper {
+    aspect-ratio: 35 / 26;
+  }
   .category-title {
     font-size: 1rem;
     line-height: 1.3rem;
