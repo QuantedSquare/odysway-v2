@@ -15,11 +15,14 @@
             aria-hidden="true"
           />
 
-          <div class="site-banner__content">
+          <div class="site-banner__text">
             <PortableText
               :value="banner.content"
               :components="ptComponents"
             />
+          </div>
+
+          <div class="site-banner__actions">
             <v-btn
               v-if="banner.ctaLabel && banner.ctaHref"
               v-bind="ctaLinkProps"
@@ -30,18 +33,18 @@
             >
               {{ banner.ctaLabel }}
             </v-btn>
-          </div>
 
-          <button
-            type="button"
-            class="site-banner__close"
-            aria-label="Fermer l'annonce"
-            @click="dismiss"
-          >
-            <v-icon size="20">
-              {{ mdiClose }}
-            </v-icon>
-          </button>
+            <button
+              type="button"
+              class="site-banner__close"
+              aria-label="Fermer l'annonce"
+              @click="dismiss"
+            >
+              <v-icon size="20">
+                {{ mdiClose }}
+              </v-icon>
+            </button>
+          </div>
         </aside>
       </div>
     </Transition>
@@ -146,10 +149,9 @@ const ptComponents = {
   pointer-events: auto;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
-  max-width: min(720px, calc(100vw - 24px));
-  padding: 9px 46px 9px 22px;
+  gap: 18px;
+  max-width: min(760px, calc(100vw - 24px));
+  padding: 8px 10px 8px 26px;
   border-radius: 999px;
   overflow: hidden;
   box-shadow:
@@ -176,49 +178,57 @@ const ptComponents = {
   border: 1px solid rgba(43, 76, 82, 0.12);
 }
 
-/* Content ----------------------------------------------------------------- */
-.site-banner__content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 6px 12px;
+/* Text (rich content, centered, grows) ------------------------------------ */
+.site-banner__text {
+  flex: 1 1 auto;
+  min-width: 0;
   text-align: center;
   font-size: 0.9rem;
   font-weight: 500;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
-.site-banner__content :deep(p) {
+/* Links and images come from PortableText render functions, so they don't
+   carry the scoped data-v attribute — reach them with :deep(). */
+.site-banner__text :deep(p) {
   margin: 0;
-  display: inline;
 }
 
-.site-banner__content :deep(strong) {
+.site-banner__text :deep(strong) {
   font-weight: 700;
 }
 
-/* Links and images are produced by PortableText render functions, so they
-   don't carry the scoped data-v attribute — reach them with :deep(). */
-.site-banner__content :deep(.site-banner__link) {
+.site-banner__text :deep(.site-banner__link) {
   color: inherit;
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 2px;
+  transition: opacity 0.2s ease;
 }
 
-.site-banner__content :deep(.site-banner__img) {
-  height: 26px;
-  width: auto;
-  max-width: 120px;
+.site-banner__text :deep(.site-banner__link:hover) {
+  opacity: 0.8;
+}
+
+.site-banner__text :deep(.site-banner__img) {
+  height: 30px;
+  width: 30px;
   vertical-align: middle;
   display: inline-block;
-  margin: 0 2px;
-  border-radius: 6px;
+  margin: 0 4px;
+  border-radius: 8px;
   object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
 }
 
-/* CTA --------------------------------------------------------------------- */
+/* Actions (CTA + close), pinned right -------------------------------------- */
+.site-banner__actions {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 .site-banner__cta {
   background: #fff !important;
   font-weight: 600;
@@ -245,27 +255,23 @@ const ptComponents = {
   color: #fff !important;
 }
 
-/* Close ------------------------------------------------------------------- */
 .site-banner__close {
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  transform: translateY(-50%);
+  flex: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   color: inherit;
-  opacity: 0.75;
+  opacity: 0.7;
   transition: opacity 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
 }
 
 .site-banner__close:hover {
   opacity: 1;
   background-color: rgba(255, 255, 255, 0.18);
-  transform: translateY(-50%) rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .site-banner--soft-blush .site-banner__close:hover {
@@ -340,15 +346,17 @@ const ptComponents = {
   }
 
   .site-banner {
-    padding: 8px 42px 8px 18px;
+    gap: 12px;
+    padding: 7px 8px 7px 18px;
   }
 
-  .site-banner__content {
+  .site-banner__text {
     font-size: 0.82rem;
   }
 
-  .site-banner__content :deep(.site-banner__img) {
-    height: 22px;
+  .site-banner__text :deep(.site-banner__img) {
+    height: 26px;
+    width: 26px;
   }
 }
 
