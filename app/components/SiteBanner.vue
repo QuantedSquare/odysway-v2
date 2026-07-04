@@ -198,20 +198,24 @@ const ptComponents = {
   font-weight: 700;
 }
 
-.site-banner__link {
+/* Links and images are produced by PortableText render functions, so they
+   don't carry the scoped data-v attribute — reach them with :deep(). */
+.site-banner__content :deep(.site-banner__link) {
   color: inherit;
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
-.site-banner__img {
-  height: 24px;
+.site-banner__content :deep(.site-banner__img) {
+  height: 26px;
   width: auto;
+  max-width: 120px;
   vertical-align: middle;
   display: inline-block;
   margin: 0 2px;
-  border-radius: 4px;
+  border-radius: 6px;
+  object-fit: cover;
 }
 
 /* CTA --------------------------------------------------------------------- */
@@ -343,8 +347,8 @@ const ptComponents = {
     font-size: 0.82rem;
   }
 
-  .site-banner__img {
-    height: 20px;
+  .site-banner__content :deep(.site-banner__img) {
+    height: 22px;
   }
 }
 
