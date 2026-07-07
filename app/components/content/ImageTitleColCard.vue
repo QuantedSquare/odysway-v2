@@ -3,6 +3,7 @@
     cols="6"
     sm="4"
     md="3"
+    class="pa-2"
   >
   
       <NuxtLink

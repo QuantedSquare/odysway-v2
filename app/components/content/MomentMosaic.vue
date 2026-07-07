@@ -51,33 +51,35 @@
           <p v-if="feature.description">
             {{ feature.description }}
           </p>
-          <div class="feature__meta">
-            <span v-if="feature.duration">
-              <IconClock
-                :size="16"
+          <div class="d-flex justify-space-between align-center">
+            <div class="feature__meta">
+              <span v-if="feature.duration">
+                <IconClock
+                  :size="16"
+                  :stroke="1.8"
+                /> {{ feature.duration }}
+              </span>
+              <span v-if="feature.maxTravelers">
+                <IconUsers
+                  :size="16"
+                  :stroke="1.8"
+                /> {{ feature.maxTravelers }}
+              </span>
+              <span
+                v-if="feature.price"
+                class="price"
+              >{{ feature.price }}</span>
+            </div>
+            <span class="feature__cta">
+              Découvrir le voyage
+              <IconArrowRight
+                :size="18"
                 :stroke="1.8"
-              /> {{ feature.duration }}
+              />
             </span>
-            <span v-if="feature.maxTravelers">
-              <IconUsers
-                :size="16"
-                :stroke="1.8"
-              /> {{ feature.maxTravelers }}
-            </span>
-            <span
-              v-if="feature.price"
-              class="price"
-            >{{ feature.price }}</span>
+          </div>
           </div>
 
-          <span class="feature__cta">
-            Découvrir le voyage
-            <IconArrowRight
-              :size="18"
-              :stroke="1.8"
-            />
-          </span>
-        </div>
       </NuxtLink>
 
       <div class="moment__side">
@@ -103,10 +105,34 @@
           </span>
           <div class="feature-mini__body">
             <h3>{{ mini.title }}</h3>
-            <span
-              v-if="mini.meta"
-              class="feature-mini__meta"
-            >{{ mini.meta }}</span>
+            <div class="d-flex justify-space-between align-center">
+              <div class="feature__meta">
+                <span v-if="mini.duration">
+                  <IconClock
+                    :size="16"
+                    :stroke="1.8"
+                  /> {{ mini.duration }}
+                </span>
+                <span v-if="mini.maxTravelers">
+                  <IconUsers
+                    :size="16"
+                    :stroke="1.8"
+                  /> {{ mini.maxTravelers }}
+                </span>
+                <span
+                  v-if="mini.price"
+                  class="price"
+                >{{ mini.price }}</span>
+              </div>
+              <span class="feature__cta ml-4">
+              
+                Découvrir le voyage
+                <IconArrowRight
+                  :size="18"
+                  :stroke="1.8"
+                />
+              </span>
+            </div>
           </div>
         </NuxtLink>
       </div>
@@ -153,8 +179,8 @@ const defaultData = {
     link: '/voyages',
   },
   miniFeatures: [
-    { title: 'Safari en Tanzanie', meta: '12 j · dès 3 490 €', link: '/voyages' },
-    { title: 'Açores, volcans et baleines', meta: '8 j · dès 1 690 €', link: '/voyages' },
+    { title: 'Safari en Tanzanie', duration: '12 jours', maxTravelers: '10 max', price: 'dès 3 490 €', link: '/voyages' },
+    { title: 'Açores, volcans et baleines', duration: '8 jours', maxTravelers: '12 max', price: 'dès 1 690 €', link: '/voyages' },
   ],
 }
 
@@ -192,7 +218,6 @@ const bgStyle = (image, width) => {
 <style scoped>
 .moment-section {
   margin-top: var(--gap-section, 2.5rem);
-  padding-inline: 24px;
 }
 
 .section-head {
@@ -291,12 +316,14 @@ const bgStyle = (image, width) => {
     width: 64px;
   }
 
-  .feature:hover .feature__cta {
+  .feature:hover .feature__cta,
+  .feature-mini:hover .feature__cta {
     opacity: 1;
     transform: translateY(0);
   }
 
-  .feature:hover .feature__cta svg {
+  .feature:hover .feature__cta svg,
+  .feature-mini:hover .feature__cta svg {
     transform: translateX(5px);
   }
 
@@ -349,7 +376,6 @@ const bgStyle = (image, width) => {
   justify-content: flex-end;
   align-items: center;
   gap: 6px;
-  margin-top: 12px;
   font-size: 14px;
   font-weight: 600;
   color: #fff;
@@ -456,6 +482,13 @@ const bgStyle = (image, width) => {
 @media (max-width: 768px) {
   .moment {
     grid-template-columns: 1fr;
+  }
+  .eyebrow{
+    margin-bottom: 0;
+  }
+  .moment-section{
+    margin-top: var(--gap-section, 1.5rem);
+    padding-inline: 15px;
   }
 
   .section-head h2 {

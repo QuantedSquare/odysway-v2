@@ -361,8 +361,12 @@ onBeforeUnmount(() => {
 .reveal-ready .concept-cta { transition-delay: 0.72s; }
 
 @media (max-width: 768px) {
+  .concept-section{
+    margin-top: 20px;
+  }
   .manifesto {
     padding: 36px 22px;
+    border-radius:0;
   }
 
   .manifesto__stats {

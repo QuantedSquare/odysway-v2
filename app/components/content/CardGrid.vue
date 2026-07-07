@@ -1,16 +1,16 @@
 <template>
   <v-container
     fluid
-    class="pa-0 mx-0 "
+    class="pa-0 mx-0"
   >
-    <v-container fluid>
+    <v-container fluid class="py-0">
       <!-- Responsive grid at every breakpoint (prototype: 4 cols desktop,
            2 cols mobile). ImageTitleColCard sets cols=6 / sm=4 / md=3, so
            mobile naturally falls into a 2-per-row grid instead of a carousel. -->
       <v-row>
         <v-col
           cols="12"
-          class="mb-4"
+          class="mb-md-4"
         >
           <p
             v-if="eyebrow"

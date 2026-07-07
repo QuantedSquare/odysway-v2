@@ -18,9 +18,9 @@
 
     <v-container
       fluid
-      class="mx-0 mx-md-5 px-1 py-0 "
+      class="px-0 px-sm-4"
     >
-      <section class="py-0 my-0 px-2 px-md-4">
+      <section class="py-0 my-0 px-0 px-md-4">
         <!-- Séjours du moment (mosaïque) -->
         <MomentMosaic
           v-if="homeSanity"

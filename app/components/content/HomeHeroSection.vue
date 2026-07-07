@@ -1,7 +1,40 @@
 <template>
   <div class="hero-block">
     <section class="hero">
-   
+    <!-- <div
+      v-if="showControls"
+      class="hero-dev-controls"
+    >
+      <button
+        class="hero-dev-btn"
+        type="button"
+        @click="useTestImage = !useTestImage"
+      >
+        {{ useTestImage ? 'Use main image' : 'Use test image' }}
+      </button>
+      <button
+        class="hero-dev-btn"
+        type="button"
+        @click="noiseEnabled = !noiseEnabled"
+      >
+        {{ noiseEnabled ? 'Disable grain' : 'Enable grain' }}
+      </button>
+      <button
+        class="hero-dev-btn"
+        type="button"
+        @click="adjustNoise(0.05)"
+      >
+        Grain +
+      </button>
+      <button
+        class="hero-dev-btn"
+        type="button"
+        @click="adjustNoise(-0.05)"
+      >
+        Grain -
+      </button>
+      <span class="hero-dev-badge">Grain: {{ (noiseLevelValue * 100).toFixed(0) }}%</span>
+    </div> -->
     <div
       class="hero-image-bg"
       :class="{ 'hero-noise-enabled': noiseEnabled }"
@@ -43,10 +76,9 @@
         />
       </h2>
       <div
-        class="glass-search-trigger mt-4"
+        class="glass-search-trigger mt-10"
         role="button"
         tabindex="0"
-        :aria-label="placeholder"
         @click="openSearchDialog"
         @keydown.enter="openSearchDialog"
       >
@@ -120,8 +152,8 @@ const heroProps = defineProps({
     type: String,
     default: '',
   },
-  // Réassurance items (CMS). Rendered inside the hero block so they are part of
-  // the 100svh height calculation on desktop. Falls back to TrustBand defaults.
+  // Réassurance items (CMS). Rendered below the hero, inside the hero-block.
+  // Falls back to TrustBand's own defaults when empty.
   trustItems: {
     type: Array,
     default: () => [],
@@ -275,7 +307,7 @@ useHead(() => {
 
 <style scoped>
 /* Hero + trust band share one 100svh block on desktop, so the réassurance
-   bar sits naturally at the bottom of the first screen without scrolling. */
+   bar sits at the bottom of the first screen without scrolling. */
 .hero-block {
   display: flex;
   flex-direction: column;
@@ -285,6 +317,8 @@ useHead(() => {
 
 .hero {
   position: relative;
+  /* svh = small viewport height; doesn't recompute when the mobile
+     URL bar collapses, avoiding layout thrash on first paint. */
   /* Grows to fill the block height left after the trust band. */
   flex: 1 1 auto;
   min-height: 0;
@@ -328,15 +362,15 @@ useHead(() => {
    the mix-blend-mode compositor layer, which is the more impactful
    cost on low-power devices. Desktop visual unchanged. */
 @media (max-width: 600px) {
-  /* Mobile: the hero image alone fills the viewport, the trust band flows
-     below it (previous behaviour). */
+  /* Mobile: hero is only 60svh, trust band flows naturally below it. */
   .hero-block {
     display: block;
     min-height: 0;
   }
 
   .hero {
-    min-height: 100svh;
+    min-height: 60svh;
+    height: 60svh;
   }
 
   .hero-image-bg::after,
@@ -347,7 +381,7 @@ useHead(() => {
 
 .hero-image {
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   min-width: 100%;
   min-height: 100%;
   object-fit: cover;
@@ -361,6 +395,13 @@ useHead(() => {
   object-fit: cover;
   /* object-position: center; */
   min-height: 460px;
+}
+
+@media (max-width: 600px) {
+  .hero-image {
+    height: 100%;
+    min-height: 0;
+  }
 }
 
 .hero-image-dim {
@@ -380,25 +421,25 @@ useHead(() => {
 .hero-content {
   position: relative;
   z-index: 2;
-  text-align: left;
+  text-align: center;
+  justify-content: center;
   color: #fff;
+  /* width:  min(90vw, 1024px); */
   width: 100%;
-  max-width: 1180px;
   margin-inline: auto;
-  padding: 0 24px;
+  /* margin-top: 20vh; */
+  padding: 2rem 2vw;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 1rem;
 }
 
 .hero-content h1,
 .hero-content h1:deep(p) {
   margin-block: 0 12px;
-  /* text-wrap: balance; */
-  max-width: 900px;
+  text-wrap: balance;
   font-size: clamp(40px, 6vw, 76px);
-  line-height: 0.9;
+  line-height: 1.1;
   font-weight: 800;
   letter-spacing: -1.5px;
   color: #FBF0EC;
@@ -412,10 +453,11 @@ useHead(() => {
   letter-spacing: 0.5px;
   text-shadow: 0 2px 24px rgba(0, 0, 0, 0.5);
   animation: fadeSlideUp 0.8s ease-out 0.2s forwards;
-  /* max-width: 760px; */
-  /* Flexbox keeps the static text and dynamic part on one baseline. */
+  max-width: 800px;
+  margin-inline: auto;
+  /* Flexbox to keep text centered but allow dynamic part to grow */
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   gap: 6px;
   flex-wrap: wrap;
@@ -432,7 +474,7 @@ margin-bottom: 0!important;
   .custom-hero-subtitle {
     flex-direction: column;
     gap: 10px;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .typewriter-text {
@@ -472,7 +514,7 @@ margin-bottom: 0!important;
     0 8px 32px rgba(0, 0, 0, 0.2);
   /* Deep drop shadow */
 
-  border-radius: 40px;
+  border-radius: 20px;
   padding: 0 28px;
   display: flex;
   align-items: center;
@@ -482,16 +524,16 @@ margin-bottom: 0!important;
   animation: fadeSlideUp 0.8s ease-out 0.4s forwards;
 
   transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-  margin: 0;
+  margin: 0 auto;
   position: relative;
   overflow: hidden;
 }
 .glass-search-trigger {
-  width: min(90vw, 700px);
+  width: min(90vw, 600px);
 }
 @media (max-width: 600px) {
   .glass-search-trigger {
-    /* width: min(94vw, 480px); */
+    width: min(94vw, 480px);
     height: 45px;
     padding: 0 16px;
   }

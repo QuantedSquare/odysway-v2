@@ -169,5 +169,8 @@ const toggle = i => (openIndex.value = openIndex.value === i ? -1 : i)
   .faq-section__title {
     font-size: 24px;
   }
+  .faq-section {
+  padding-inline: 10px;
+}
 }
 </style>
