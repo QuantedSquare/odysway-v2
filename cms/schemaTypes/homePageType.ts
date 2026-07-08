@@ -724,8 +724,8 @@ export const homePageType = defineType({
         defineField({ name: 'title', title: 'Titre', type: 'string' }),
         defineField({
           name: 'items',
-          title: 'Voyages / destinations à l\'honneur',
-          description: 'Cartes portrait : image + titre + nombre de voyageurs partis. Pour chaque élément, choisissez soit un voyage, soit une destination.',
+          title: 'Voyages / destinations / régions à l\'honneur',
+          description: 'Cartes portrait : image + titre + nombre de voyageurs partis. Pour chaque élément, choisissez soit un voyage, soit une destination, soit une région.',
           type: 'array',
           of: [
             {
@@ -745,7 +745,14 @@ export const homePageType = defineType({
                   title: 'Destination',
                   type: 'reference',
                   to: [{ type: 'destination' }],
-                  description: 'Choisissez ceci OU un voyage ci-dessus, pas les deux.',
+                  description: 'Choisissez ceci OU un voyage / une région, pas les autres.',
+                }),
+                defineField({
+                  name: 'region',
+                  title: 'Région',
+                  type: 'reference',
+                  to: [{ type: 'region' }],
+                  description: 'Choisissez ceci OU un voyage / une destination, pas les autres.',
                 }),
                 defineField({
                   name: 'travelersCountOverride',
@@ -756,10 +763,9 @@ export const homePageType = defineType({
                 }),
               ],
               validation: (rule) => rule.custom((value: any) => {
-                const hasVoyage = !!value?.voyage
-                const hasDestination = !!value?.destination
-                if (!hasVoyage && !hasDestination) return 'Choisissez un voyage ou une destination'
-                if (hasVoyage && hasDestination) return 'Choisissez uniquement un voyage OU une destination, pas les deux'
+                const chosen = [value?.voyage, value?.destination, value?.region].filter(Boolean).length
+                if (chosen === 0) return 'Choisissez un voyage, une destination ou une région'
+                if (chosen > 1) return 'Choisissez uniquement un voyage OU une destination OU une région, pas plusieurs'
                 return true
               }),
               preview: {
@@ -769,15 +775,17 @@ export const homePageType = defineType({
                   voyageImageFallback: 'voyage.image',
                   destinationTitle: 'destination.title',
                   destinationImage: 'destination.image',
+                  regionTitle: 'region.nom',
+                  regionImage: 'region.image',
                   override: 'travelersCountOverride',
                 },
-                prepare({voyageTitle, voyageImage, voyageImageFallback, destinationTitle, destinationImage, override}: any) {
-                  const kind = voyageTitle ? 'Voyage' : destinationTitle ? 'Destination' : null
+                prepare({voyageTitle, voyageImage, voyageImageFallback, destinationTitle, destinationImage, regionTitle, regionImage, override}: any) {
+                  const kind = voyageTitle ? 'Voyage' : destinationTitle ? 'Destination' : regionTitle ? 'Région' : null
                   const subtitleParts = [kind, override != null ? `${override} voyageurs (custom)` : null].filter(Boolean)
                   return {
-                    title: voyageTitle || destinationTitle || 'Élément non configuré',
-                    subtitle: subtitleParts.join(' • ') || 'Choisir un voyage ou une destination',
-                    media: voyageImage || voyageImageFallback || destinationImage,
+                    title: voyageTitle || destinationTitle || regionTitle || 'Élément non configuré',
+                    subtitle: subtitleParts.join(' • ') || 'Choisir un voyage, une destination ou une région',
+                    media: voyageImage || voyageImageFallback || destinationImage || regionImage,
                   }
                 },
               },

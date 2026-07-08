@@ -320,6 +320,14 @@ const homeQuery = groq`
           image,
           bestSellerPrefix,
           "voyageSlugs": *[_type == "voyage" && references(^._id)].slug.current
+        },
+        region->{
+          _id,
+          "title": nom,
+          "slug": slug.current,
+          image,
+          bestSellerPrefix,
+          "voyageSlugs": *[_type == "voyage" && ^._id in destinations[]->regions[]._ref].slug.current
         }
       }
     },
@@ -473,12 +481,14 @@ const bestSellerVoyageSlugs = computed(() => [...new Set(
     .filter(entry => entry.travelersCountOverride == null)
     .flatMap(entry => entry.voyage
       ? [slugOf(entry.voyage)]
-      : (entry.destination?.voyageSlugs || []))
+      : (entry.destination?.voyageSlugs || entry.region?.voyageSlugs || []))
     .filter(Boolean),
 )])
 const { countsBySlug } = useTravelersCount(bestSellerVoyageSlugs)
-const destinationAutoCount = dest =>
-  (dest.voyageSlugs || []).reduce((sum, s) => sum + (countsBySlug.value[s] || 0), 0) || null
+// Aggregate the "voyageurs partis" count across every voyage slug attached to
+// the destination/region (both expose voyageSlugs from the GROQ query).
+const aggregateAutoCount = item =>
+  (item.voyageSlugs || []).reduce((sum, s) => sum + (countsBySlug.value[s] || 0), 0) || null
 
 // Normalised portrait-card items, in the order set in the CMS. Each entry is
 // either a voyage (compact card) or a destination (prefix + name card); the
@@ -507,7 +517,21 @@ const bestSellerItems = computed(() => {
           prefix: d.bestSellerPrefix,
           image: d.image,
           compact: false,
-          count: entry.travelersCountOverride ?? destinationAutoCount(d),
+          count: entry.travelersCountOverride ?? aggregateAutoCount(d),
+        }
+      }
+      if (entry.region) {
+        const r = entry.region
+        return {
+          key: r._id || i,
+          // Regions are served by the destinations route (see
+          // /destinations/[destinationSlug].vue, which detects region slugs).
+          to: r.slug ? `/destinations/${r.slug}` : '/destinations',
+          title: r.title,
+          prefix: r.bestSellerPrefix || '',
+          image: r.image,
+          compact: false,
+          count: entry.travelersCountOverride ?? aggregateAutoCount(r),
         }
       }
       return null
