@@ -1,100 +1,100 @@
 <template>
   <div class="hero-block">
     <section class="hero">
-    <div
-      v-if="showControls"
-      class="hero-dev-controls"
-    >
-      <button
-        class="hero-dev-btn"
-        type="button"
-        @click="useTestImage = !useTestImage"
-      >
-        {{ useTestImage ? 'Use main image' : 'Use test image' }}
-      </button>
-      <button
-        class="hero-dev-btn"
-        type="button"
-        @click="noiseEnabled = !noiseEnabled"
-      >
-        {{ noiseEnabled ? 'Disable grain' : 'Enable grain' }}
-      </button>
-      <button
-        class="hero-dev-btn"
-        type="button"
-        @click="adjustNoise(0.05)"
-      >
-        Grain +
-      </button>
-      <button
-        class="hero-dev-btn"
-        type="button"
-        @click="adjustNoise(-0.05)"
-      >
-        Grain -
-      </button>
-      <span class="hero-dev-badge">Grain: {{ (noiseLevelValue * 100).toFixed(0) }}%</span>
-    </div>
-    <div
-      class="hero-image-bg"
-      :class="{ 'hero-noise-enabled': noiseEnabled }"
-      :style="{ '--hero-noise-opacity': noiseLevelValue }"
-    >
-      <NuxtImg
-        v-if="displayedSrc"
-        :key="activeImageKey"
-        :src="displayedSrc"
-        :srcset="displayedSrcset"
-        sizes="(max-width: 600px) 100vw, (max-width: 960px) 90vw, 100vw"
-        alt="Image principale Hero d'Odysway"
-        class="hero-image"
-        :class="{ 'hero-image-dim': noiseEnabled }"
-        format="webp"
-        loading="eager"
-        fetchpriority="high"
-        width="1536"
-        height="900"
-      />
-    </div>
-    <div class="hero-content">
-      <h1 class="text-white">
-        <template v-if="titleText">
-          {{ titleText }}
-        </template>
-        <slot
-          v-else
-          name="title"
-        />
-      </h1>
-      <h2 class="custom-hero-subtitle text-white">
-        <template v-if="subtitleText">
-          {{ subtitleText }}
-        </template>
-        <slot
-          v-else
-          name="subtitle"
-        />
-      </h2>
       <div
-        class="glass-search-trigger mt-10"
-        role="button"
-        tabindex="0"
-        @click="openSearchDialog"
-        @keydown.enter="openSearchDialog"
+        v-if="showControls"
+        class="hero-dev-controls"
       >
-        <v-icon
-          :icon="mdiMagnify"
-          color="primary"
-          size="24"
-          class="mr-3 icon-search"
-        />
-        <span class="search-placeholder">{{ searchDisplay }}<span
-          v-if="typewriterWords.length"
-          class="search-caret"
-          aria-hidden="true"
-        >|</span></span>
+        <button
+          class="hero-dev-btn"
+          type="button"
+          @click="useTestImage = !useTestImage"
+        >
+          {{ useTestImage ? 'Use main image' : 'Use test image' }}
+        </button>
+        <button
+          class="hero-dev-btn"
+          type="button"
+          @click="noiseEnabled = !noiseEnabled"
+        >
+          {{ noiseEnabled ? 'Disable grain' : 'Enable grain' }}
+        </button>
+        <button
+          class="hero-dev-btn"
+          type="button"
+          @click="adjustNoise(0.05)"
+        >
+          Grain +
+        </button>
+        <button
+          class="hero-dev-btn"
+          type="button"
+          @click="adjustNoise(-0.05)"
+        >
+          Grain -
+        </button>
+        <span class="hero-dev-badge">Grain: {{ (noiseLevelValue * 100).toFixed(0) }}%</span>
       </div>
-    </div>
+      <div
+        class="hero-image-bg"
+        :class="{ 'hero-noise-enabled': noiseEnabled }"
+        :style="{ '--hero-noise-opacity': noiseLevelValue }"
+      >
+        <NuxtImg
+          v-if="displayedSrc"
+          :key="activeImageKey"
+          :src="displayedSrc"
+          :srcset="displayedSrcset"
+          sizes="(max-width: 600px) 100vw, (max-width: 960px) 90vw, 100vw"
+          alt="Image principale Hero d'Odysway"
+          class="hero-image"
+          :class="{ 'hero-image-dim': noiseEnabled }"
+          format="webp"
+          loading="eager"
+          fetchpriority="high"
+          width="1536"
+          height="900"
+        />
+      </div>
+      <div class="hero-content">
+        <h1 class="text-white">
+          <template v-if="titleText">
+            {{ titleText }}
+          </template>
+          <slot
+            v-else
+            name="title"
+          />
+        </h1>
+        <h2 class="custom-hero-subtitle text-white">
+          <template v-if="subtitleText">
+            {{ subtitleText }}
+          </template>
+          <slot
+            v-else
+            name="subtitle"
+          />
+        </h2>
+        <div
+          class="glass-search-trigger mt-10"
+          role="button"
+          tabindex="0"
+          @click="openSearchDialog"
+          @keydown.enter="openSearchDialog"
+        >
+          <v-icon
+            :icon="mdiMagnify"
+            color="primary"
+            size="24"
+            class="mr-3 icon-search"
+          />
+          <span class="search-placeholder">{{ searchDisplay }}<span
+            v-if="typewriterWords.length"
+            class="search-caret"
+            aria-hidden="true"
+          >|</span></span>
+        </div>
+      </div>
     </section>
     <TrustBand :items="trustItems" />
   </div>
@@ -162,10 +162,13 @@ const heroProps = defineProps({
 
 const typewriterWords = computed(() => heroProps.typewriterWords || [])
 // Typewriter Logic
+const TYPING_SPEED = 100 // ms per character while typing
+const DELETING_SPEED = 50 // ms per character while backspacing
+const HOLD_BEFORE_DELETE = 1000 // ms the completed phrase stays before deleting starts
+const PAUSE_BEFORE_NEXT = 500 // ms blank before the next phrase starts typing
 const currentWord = ref('')
 const isDeleting = ref(false)
 const wordIndex = ref(0)
-const typingSpeed = ref(100)
 // Tracks whether the typewriter has produced its first character. Until then we
 // show the static placeholder so the search bar never looks empty on first paint.
 const hasStarted = ref(false)
@@ -193,28 +196,28 @@ const typeLoop = () => {
 
   if (isDeleting.value) {
     currentWord.value = fullWord.substring(0, currentWord.value.length - 1)
-    typingSpeed.value = 50 // Deleting speed
   }
   else {
     currentWord.value = fullWord.substring(0, currentWord.value.length + 1)
-    typingSpeed.value = 100 // Typing speed
   }
 
+  let delay = isDeleting.value ? DELETING_SPEED : TYPING_SPEED
+
   if (!isDeleting.value && currentWord.value === fullWord) {
-    // Word complete, pause before deleting
-    typingSpeed.value = 1500
+    // Phrase complete: hold it on screen for 1s, then start backspacing.
+    delay = HOLD_BEFORE_DELETE
     isDeleting.value = true
   }
   else if (isDeleting.value && currentWord.value === '') {
-    // Word deleted, move to next
+    // Phrase fully deleted: move to the next one after a short blank pause.
     isDeleting.value = false
     wordIndex.value++
-    typingSpeed.value = 500
+    delay = PAUSE_BEFORE_NEXT
   }
 
   // rAF aligns DOM updates with the paint cycle so we don't queue
   // synchronous reflow work between frames.
-  setTimeout(() => requestAnimationFrame(typeLoop), typingSpeed.value)
+  setTimeout(() => requestAnimationFrame(typeLoop), delay)
 }
 
 const config = useRuntimeConfig()
@@ -476,7 +479,9 @@ margin-bottom: 0!important;
     gap: 10px;
     align-items: center;
   }
-
+.hero-content{
+  margin-top:70px;
+}
   .typewriter-text {
     margin-left: 0;
   }
@@ -534,6 +539,7 @@ margin-bottom: 0!important;
 @media (max-width: 600px) {
   .glass-search-trigger {
     width: min(94vw, 480px);
+    max-width:320px;
     height: 45px;
     padding: 0 16px;
   }
