@@ -1,7 +1,7 @@
 <template>
   <Teleport to="body">
     <Transition name="banner">
-      <div
+      <!-- <div
         v-if="visible"
         class="site-banner-wrap"
       >
@@ -46,7 +46,7 @@
             </button>
           </div>
         </aside>
-      </div>
+      </div> -->
     </Transition>
   </Teleport>
 </template>
