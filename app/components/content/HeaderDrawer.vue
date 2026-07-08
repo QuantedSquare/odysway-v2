@@ -12,62 +12,106 @@
       ]"
     >
       <div
-        class="d-flex flex-column ga-4 px-4 pb-4"
+        class="d-flex flex-column px-4 pb-4"
+        :class="isTransparent ? 'drawer-content--transparent' : 'drawer-content--solid'"
         :style="drawerContentStyle"
       >
-        <v-btn-secondary
+        <nav
+          v-if="navigation.length"
+          class="drawer-nav"
+          aria-label="Navigation mobile"
+        >
+          <template
+            v-for="(item, i) in navigation"
+            :key="i"
+          >
+            <!-- Item avec sous-liens : panneau dépliable -->
+            <div
+              v-if="item.children?.length"
+              class="drawer-nav__group"
+            >
+              <button
+                type="button"
+                class="drawer-nav__row drawer-nav__acc"
+                :aria-expanded="openIndex === i"
+                @click="toggle(i)"
+              >
+                <span>{{ item.label }}</span>
+                <v-icon
+                  class="drawer-nav__chevron"
+                  :class="{ 'drawer-nav__chevron--open': openIndex === i }"
+                  size="22"
+                >
+                  {{ mdiChevronDown }}
+                </v-icon>
+              </button>
+              <v-expand-transition>
+                <div
+                  v-show="openIndex === i"
+                  class="drawer-nav__sub"
+                >
+                  <NuxtLink
+                    v-for="(child, j) in item.children"
+                    :key="j"
+                    :to="child.link"
+                    class="drawer-nav__sublink"
+                    :class="{ 'drawer-nav__sublink--highlight': child.highlight }"
+                    @click="handleNavigate"
+                  >
+                    <span>{{ child.label }}</span>
+                    <v-icon
+                      v-if="child.highlight"
+                      class="drawer-nav__sublink-arrow"
+                      size="18"
+                    >
+                      {{ mdiArrowRight }}
+                    </v-icon>
+                  </NuxtLink>
+                </div>
+              </v-expand-transition>
+            </div>
+            <!-- Lien simple -->
+            <NuxtLink
+              v-else
+              :to="item.link"
+              class="drawer-nav__row"
+              @click="handleNavigate"
+            >
+              {{ item.label }}
+            </NuxtLink>
+          </template>
+        </nav>
+
+        <a
+          v-if="header?.button4?.visible"
+          class="drawer-phone"
+          href="tel:+33184807975"
+          @click="handleButton4Click"
+        >
+          <v-icon size="20">
+            {{ mdiPhoneOutline }}
+          </v-icon>
+          {{ header.button4.text }}
+        </a>
+
+        <v-btn
           v-if="header?.button5?.visible"
           block
-          class="text-caption text-sm-subtitle-2"
+          height="52"
+          rounded="pill"
           color="primary"
+          class="drawer-rdv text-subtitle-2"
           @click="handleButton5Click"
         >
           {{ header.button5.text }}
-        </v-btn-secondary>
-        <v-btn-secondary
-          v-if="header?.button4?.visible"
-          href="tel: +33184807975"
-          block
-          :variant="isTransparent ? 'flat' : 'tonal'"
-          class="text-caption text-sm-subtitle-2 text-primary"
-          :color="isTransparent ? 'white' : 'primary'"
-          @click="handleButton4Click"
-        >
-          {{ header.button4.text }}
-        </v-btn-secondary>
-        <v-btn-secondary
-          v-if="header?.button3?.visible"
-          color="white"
-          block
-          class="text-caption text-sm-subtitle-2 text-primary"
-          @click="handleButton3Click"
-        >
-          {{ header.button3.text }}
-        </v-btn-secondary>
-        <v-btn-secondary
-          v-if="header?.button2?.visible"
-          color="white"
-          block
-          class="text-caption text-sm-subtitle-2 text-primary"
-          @click="handleButton2Click"
-        >
-          {{ header.button2.text }}
-        </v-btn-secondary>
-        <v-btn-secondary
-          v-if="header?.button1?.visible"
-          color="white"
-          block
-          class="text-caption text-sm-subtitle-2 text-primary"
-          @click="handleButton1Click"
-        >
-          {{ header.button1.text }}
-        </v-btn-secondary>
+        </v-btn>
       </div>
     </v-navigation-drawer>
   </ClientOnly>
 </template>
 
 <script setup>
+import { mdiArrowRight, mdiChevronDown, mdiPhoneOutline } from '@mdi/js'
 import { useWindowScroll } from '@vueuse/core'
 
 const model = defineModel({ type: Boolean, default: false })
@@ -80,6 +124,19 @@ const { header } = defineProps({
 })
 const router = useRouter()
 const route = useRoute()
+
+const navigation = computed(() => header?.navigation ?? [])
+
+// Which nav panel (Destinations, …) is expanded. Single-open accordion.
+const openIndex = ref(null)
+function toggle(index) {
+  openIndex.value = openIndex.value === index ? null : index
+}
+
+// Close the drawer after following a nav link.
+function handleNavigate() {
+  model.value = false
+}
 const { y } = useWindowScroll()
 const isScrolled = computed(() => y.value > 200)
 const isTransparent = computed(() => !isScrolled.value && route.path === '/')
@@ -162,18 +219,6 @@ watch(y, (currentY) => {
 // `watch(y, …)` was redundant with the scroll listener above and doubled
 // the layout work on every scroll event — removed.
 
-function handleButton1Click() {
-  router.push(header.button1.link)
-}
-
-function handleButton2Click() {
-  router.push(header.button2.link)
-}
-
-function handleButton3Click() {
-  router.push(header.button3.link)
-}
-
 function handleButton4Click() {
   trackCallClick('header-mobile')
 }
@@ -224,5 +269,87 @@ function handleButton5Click() {
 }
 .drawer-shadow{
   box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.259)!important;
+}
+
+/* ===== Navigation (rows + destinations panel) ===== */
+.drawer-nav {
+  display: flex;
+  flex-direction: column;
+}
+.drawer-nav__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  padding: 14px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--drawer-border);
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  color: var(--drawer-ink);
+  cursor: pointer;
+}
+.drawer-nav__chevron {
+  color: var(--drawer-accent);
+  transition: transform 0.2s ease;
+}
+.drawer-nav__chevron--open {
+  transform: rotate(180deg);
+}
+.drawer-nav__sub {
+  padding: 6px 0 10px 12px;
+}
+.drawer-nav__sublink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--drawer-border);
+  font-size: 15px;
+  color: var(--drawer-muted);
+}
+.drawer-nav__sublink:last-child {
+  border-bottom: none;
+}
+.drawer-nav__sublink--highlight {
+  color: var(--drawer-accent);
+  font-weight: 600;
+}
+.drawer-nav__sublink-arrow {
+  color: var(--drawer-accent);
+}
+
+/* ===== Phone + RDV ===== */
+.drawer-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--drawer-accent);
+}
+.drawer-rdv {
+  margin-top: 16px;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+/* Theme tokens: swap ink/border/accent between solid and transparent states */
+.drawer-content--solid {
+  --drawer-ink: #222223;
+  --drawer-muted: #444;
+  --drawer-border: rgba(43, 76, 82, 0.13);
+  --drawer-accent: rgb(43, 76, 82);
+}
+.drawer-content--transparent {
+  --drawer-ink: #fff;
+  --drawer-muted: rgba(255, 255, 255, 0.85);
+  --drawer-border: rgba(255, 255, 255, 0.25);
+  --drawer-accent: #fff;
 }
 </style>

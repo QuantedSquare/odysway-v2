@@ -418,7 +418,7 @@
                 </div>
                 <div
                   v-if="traveler.is_option"
-                  class="mt-1"
+                  class="mt-1 d-flex align-center ga-1"
                 >
                   <v-chip
                     color="error"
@@ -428,6 +428,81 @@
                   >
                     Option jusqu'au {{ dayjs(traveler.expiracy_date).format('DD/MM/YYYY') }}
                   </v-chip>
+                  <v-menu
+                    v-model="extendMenuId[traveler.id]"
+                    :close-on-content-click="false"
+                    location="bottom"
+                  >
+                    <template #activator="{ props: menuProps }">
+                      <v-btn
+                        icon
+                        size="x-small"
+                        color="warning"
+                        variant="text"
+                        v-bind="menuProps"
+                      >
+                        <v-icon size="16">
+                          {{ mdiClockPlusOutline }}
+                        </v-icon>
+                        <v-tooltip
+                          activator="parent"
+                          location="top"
+                        >
+                          <div class="text-primary">
+                            Prolonger l'option
+                          </div>
+                        </v-tooltip>
+                      </v-btn>
+                    </template>
+                    <v-card
+                      min-width="240"
+                      rounded="lg"
+                      elevation="4"
+                    >
+                      <v-card-text class="pb-2">
+                        <div class="text-body-2 font-weight-medium mb-1">
+                          Prolonger l'option
+                        </div>
+                        <div class="text-caption text-medium-emphasis mb-3">
+                          Ajoute des jours à partir de la date d'expiration actuelle.
+                        </div>
+                        <div class="d-flex ga-1 mb-3">
+                          <v-btn
+                            v-for="preset in [3, 7, 14]"
+                            :key="preset"
+                            size="small"
+                            variant="tonal"
+                            color="warning"
+                            :loading="extendingOptionId === traveler.id"
+                            @click="extendOption(traveler, preset)"
+                          >
+                            +{{ preset }}j
+                          </v-btn>
+                        </div>
+                        <div class="d-flex align-center ga-2">
+                          <v-text-field
+                            v-model.number="extendCustomDays"
+                            type="number"
+                            min="1"
+                            max="90"
+                            label="Jours"
+                            density="compact"
+                            hide-details
+                            style="max-width: 90px;"
+                          />
+                          <v-btn
+                            size="small"
+                            color="primary"
+                            :loading="extendingOptionId === traveler.id"
+                            :disabled="!extendCustomDays || extendCustomDays < 1 || extendCustomDays > 90"
+                            @click="extendOption(traveler, extendCustomDays)"
+                          >
+                            Appliquer
+                          </v-btn>
+                        </div>
+                      </v-card-text>
+                    </v-card>
+                  </v-menu>
                 </div>
                 <div class="text-caption text-medium-emphasis mt-1">
                   <span class="text-success">{{ formatNumber(traveler.alreadyPaid) }}€</span>
@@ -906,7 +981,7 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { mdiArrowRight, mdiDelete, mdiLinkEdit, mdiInformationOutline, mdiAirplaneTakeoff, mdiCalendarOutline, mdiContentCopy, mdiCalculator, mdiFileDocument, mdiContentDuplicate, mdiLinkVariant, mdiEmailOutline } from '@mdi/js'
+import { mdiArrowRight, mdiDelete, mdiLinkEdit, mdiInformationOutline, mdiAirplaneTakeoff, mdiCalendarOutline, mdiContentCopy, mdiCalculator, mdiFileDocument, mdiContentDuplicate, mdiLinkVariant, mdiEmailOutline, mdiClockPlusOutline } from '@mdi/js'
 import dayjs from 'dayjs'
 import DateFormCard from '~/components/booking/DateFormCard.vue'
 import DateAttachments from '~/components/booking/DateAttachments.vue'
@@ -951,6 +1026,9 @@ const assignDealError = ref('')
 const assignDealSuccess = ref(false)
 const assignWithOption = ref(false)
 const placingOptionId = ref(null)
+const extendingOptionId = ref(null)
+const extendMenuId = ref({})
+const extendCustomDays = ref(7)
 
 const departureDealUrl = ref('')
 const assigningDepartureDeal = ref(false)
@@ -1184,6 +1262,21 @@ const placeOptionOnProspect = async (traveler) => {
   }
   finally {
     placingOptionId.value = null
+  }
+}
+
+const extendOption = async (traveler, days) => {
+  extendingOptionId.value = traveler.id
+  try {
+    await bookingApi.extendOption({ id: traveler.id, days })
+    extendMenuId.value[traveler.id] = false
+    await fetchDetails()
+  }
+  catch (err) {
+    saveError.value = getApiErrorMessage(err, 'Erreur lors de la prolongation de l\'option.')
+  }
+  finally {
+    extendingOptionId.value = null
   }
 }
 

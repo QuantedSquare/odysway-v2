@@ -79,6 +79,7 @@ export const bookingApi = {
 
   // Funnel
   placeOption: payload => apiRequest('/booking/booked_date/option', 'post', payload),
+  extendOption: payload => apiRequest('/booking/booked_date/extend-option', 'post', payload),
   bookingExists: bookedId =>
     apiRequest(`/booking/booking-exists${encodeQuery({ booked_id: bookedId })}`),
 

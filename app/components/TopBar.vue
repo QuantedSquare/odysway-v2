@@ -17,6 +17,15 @@ const drawer = ref(false)
 const headerQuery = groq`*[_type == "header"][0]{
   logo,
   search,
+  navigation[]{
+    label,
+    link,
+    children[]{
+      label,
+      link,
+      highlight
+    }
+  },
   button1,
   button2,
   button3,
@@ -29,6 +38,7 @@ const { data: header } = await useSanityQuery(headerQuery, undefined, {
   default: () => ({
     logo: { alt: 'Logo Odysway' },
     search: true,
+    navigation: [],
     button1: { visible: false, text: '', link: '' },
     button2: { visible: false, text: '', link: '' },
     button3: { visible: false, text: '', link: '' },

@@ -47,6 +47,79 @@ export const headerType = defineType({
       type: 'boolean'
     }),
     defineField({
+      name: 'navigation',
+      title: 'Navigation (menu mobile)',
+      description: 'Liens de navigation affichés dans le menu mobile. Un lien peut contenir des sous-liens (ex. Destinations) : il devient alors un panneau dépliable.',
+      type: 'array',
+      of: [
+        defineField({
+          name: 'navItem',
+          title: 'Lien',
+          type: 'object',
+          fields: [
+            defineField({
+              name: 'label',
+              title: 'Libellé',
+              type: 'string',
+              validation: (r) => r.required()
+            }),
+            defineField({
+              name: 'link',
+              title: 'URL de redirection',
+              description: 'Laisser vide si ce lien sert uniquement à ouvrir un panneau de sous-liens.',
+              type: 'string'
+            }),
+            defineField({
+              name: 'children',
+              title: 'Sous-liens (panneau dépliable)',
+              type: 'array',
+              of: [
+                defineField({
+                  name: 'childLink',
+                  title: 'Sous-lien',
+                  type: 'object',
+                  fields: [
+                    defineField({
+                      name: 'label',
+                      title: 'Libellé',
+                      type: 'string',
+                      validation: (r) => r.required()
+                    }),
+                    defineField({
+                      name: 'link',
+                      title: 'URL de redirection',
+                      type: 'string',
+                      validation: (r) => r.required()
+                    }),
+                    defineField({
+                      name: 'highlight',
+                      title: 'Mis en avant',
+                      description: 'Affiche le sous-lien en couleur accentuée (ex. « Tous nos voyages »).',
+                      type: 'boolean',
+                      initialValue: false
+                    })
+                  ],
+                  preview: {
+                    select: {title: 'label', subtitle: 'link'}
+                  }
+                })
+              ]
+            })
+          ],
+          preview: {
+            select: {title: 'label', subtitle: 'link', children: 'children'},
+            prepare({title, subtitle, children}: any) {
+              const count = Array.isArray(children) ? children.length : 0
+              return {
+                title,
+                subtitle: count > 0 ? `Panneau · ${count} sous-lien(s)` : subtitle
+              }
+            }
+          }
+        })
+      ]
+    }),
+    defineField({
       name: 'button1',
       title: 'Button 1',
       type: 'object',

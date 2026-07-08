@@ -23,11 +23,13 @@
       >
     </NuxtLink>
     <v-btn
-      class="d-inline d-md-none mobile-menu-btn"
+      class="d-inline d-md-none mobile-menu-btn custom-border"
       :class="isTransparent ? 'filter' : ''"
       icon
-      height="35"
-      variant="text"
+      rounded="circle"
+      height="40"
+      width="40"
+      variant="outlined"
       aria-label="Menu"
       :aria-expanded="model"
       @click.stop="model = !model"
@@ -133,10 +135,12 @@
           </v-btn>
         </div>
         <v-btn
-          class="d-inline d-md-none "
+          class="d-inline d-md-none custom-border"
           icon
-          height="35"
-          variant="text"
+          height="40"
+          width="40"
+          variant="outlined"
+          rounded="circle"
           :color="isTransparent ? 'white' : 'primary'"
           aria-label="Menu"
           :aria-expanded="model"
@@ -314,6 +318,11 @@ const isTransparent = computed(() => !isScrolled.value && route.path === '/')
 .mobile-menu-btn {
   position: absolute;
   right: 12px;
+}
+.custom-border{
+  border-radius: 9999px!important;
+
+  border-color: rgba(255, 255, 255, 0.38);
 }
 </style>
 
