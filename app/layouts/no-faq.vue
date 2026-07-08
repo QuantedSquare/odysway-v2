@@ -3,7 +3,7 @@
     <TopBar />
 
     <v-main class="main-content mx-0 mx-md-5">
-      <SiteBanner />
+      <!-- <SiteBanner /> -->
       <slot />
     </v-main>
     <div class="whatsapp-button mb-16">

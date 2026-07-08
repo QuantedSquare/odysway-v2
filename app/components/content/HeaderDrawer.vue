@@ -2,16 +2,17 @@
   <ClientOnly>
     <v-navigation-drawer
       v-model="model"
-      location="right"
+      location="top"
       disable-resize-watcher
       mobile
       :style="drawerStyle"
+      class="drawer-animated"
       :class="[
         isTransparent ? 'drawer-transparent' : 'drawer-solid',
       ]"
     >
       <div
-        class="d-flex flex-column ga-4 pa-4 mt-8 mt-sm-16 pt-8"
+        class="d-flex flex-column ga-4 px-4 pb-4"
         :style="drawerContentStyle"
       >
         <v-btn-secondary
@@ -112,19 +113,24 @@ function updateHeaderMetrics() {
 }
 
 const drawerStyle = computed(() => {
-  // Align the drawer panel with the floating header top border
-  const top = headerTopOffset.value
+  // Keep the panel anchored at the very top (top: 0) so Vuetify's closed
+  // translateY(-100%) fully retracts it off-screen. Height is content-driven
+  // (auto), capped to the viewport. The header clearance is handled by the
+  // content padding below, not by offsetting the panel.
   return {
-    top: `${top}px`,
-    height: `calc(100dvh - ${top}px)`,
+    height: 'auto',
+    maxHeight: '100dvh',
   }
 })
 
 const drawerContentStyle = computed(() => {
-  // Push content below the header height so it visually matches the header top border
-  // (pa-4 already adds padding; we only add the extra header height here)
+  // Push the content (first button) below the floating header so it sits just
+  // beneath the top bar rather than tucked under it: header top offset +
+  // header height + a small gap. Fall back to a sensible static clearance
+  // before the metrics are first read.
+  const clearance = (headerTopOffset.value || 18) + (headerHeight.value || 52) + 12
   return {
-    paddingTop: `${headerHeight.value}px`,
+    paddingTop: `${clearance}px`,
   }
 })
 
@@ -141,6 +147,16 @@ onBeforeUnmount(() => {
 
 watch(model, (isOpen) => {
   if (isOpen) updateHeaderMetrics()
+})
+
+// Close the drawer when the user scrolls down, mirroring the way the desktop
+// app-bar auto-hides on downward scroll.
+let lastScrollY = 0
+watch(y, (currentY) => {
+  if (model.value && currentY > lastScrollY && currentY > 20) {
+    model.value = false
+  }
+  lastScrollY = currentY
 })
 
 // `watch(y, …)` was redundant with the scroll listener above and doubled
@@ -172,6 +188,29 @@ function handleButton5Click() {
 </script>
 
 <style scoped>
+.drawer-animated {
+  /* Pin to the very top. Vuetify's layout system otherwise reserves space for
+     the (mobile-hidden) desktop app-bar and pushes the top drawer down with an
+     inline `top: <n>px`; overriding it here with !important places the panel
+     correctly. Header clearance is done via content padding instead. */
+  top: 0 !important;
+  /* Drive both the slide (transform) and the color swap between the transparent
+     (home, top of page) and solid states, plus the backdrop blur fade. We
+     must re-declare transform here because this rule replaces Vuetify's own
+     drawer transition. */
+  transition:
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.4s ease,
+    backdrop-filter 0.4s ease,
+    border-color 0.4s ease !important;
+}
+/* When closed, force a full-height retract. Vuetify hardcodes a pixel
+   translate from a stale measurement that ignores our dynamic content padding,
+   which left the last button peeking below the header. translateY(-100%) is
+   always the panel's own full height, so it hides completely. */
+.drawer-animated:not(.v-navigation-drawer--active) {
+  transform: translateY(-100%) !important;
+}
 .drawer-solid {
   background: white !important;
 }

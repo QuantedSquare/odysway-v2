@@ -3,7 +3,7 @@
     <TopBar />
 
     <v-main class="main-content mx-0 mx-md-5 custom-margin-x mb-0 ">
-      <SiteBanner />
+      <!-- <SiteBanner /> -->
       <slot />
     </v-main>
   
