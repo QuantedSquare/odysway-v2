@@ -1,6 +1,7 @@
 <template>
-  <section class="hero">
-    <!-- <div
+  <div class="hero-block">
+    <section class="hero">
+    <div
       v-if="showControls"
       class="hero-dev-controls"
     >
@@ -33,7 +34,7 @@
         Grain -
       </button>
       <span class="hero-dev-badge">Grain: {{ (noiseLevelValue * 100).toFixed(0) }}%</span>
-    </div> -->
+    </div>
     <div
       class="hero-image-bg"
       :class="{ 'hero-noise-enabled': noiseEnabled }"
@@ -73,13 +74,6 @@
           v-else
           name="subtitle"
         />
-        <span
-          v-if="typewriterWords.length"
-          class="typewriter-text text-center font-italic"
-          :class="{ 'typewriter-active': currentWord.length }"
-        >
-          {{ currentWord }}<span class="cursor">|</span>
-        </span>
       </h2>
       <div
         class="glass-search-trigger mt-10"
@@ -94,10 +88,16 @@
           size="24"
           class="mr-3 icon-search"
         />
-        <span class="search-placeholder">{{ placeholder }}</span>
+        <span class="search-placeholder">{{ searchDisplay }}<span
+          v-if="typewriterWords.length"
+          class="search-caret"
+          aria-hidden="true"
+        >|</span></span>
       </div>
     </div>
-  </section>
+    </section>
+    <TrustBand :items="trustItems" />
+  </div>
 </template>
 
 <script setup>
@@ -152,6 +152,12 @@ const heroProps = defineProps({
     type: String,
     default: '',
   },
+  // Réassurance items (CMS). Rendered below the hero, inside the hero-block.
+  // Falls back to TrustBand's own defaults when empty.
+  trustItems: {
+    type: Array,
+    default: () => [],
+  },
 })
 
 const typewriterWords = computed(() => heroProps.typewriterWords || [])
@@ -160,6 +166,16 @@ const currentWord = ref('')
 const isDeleting = ref(false)
 const wordIndex = ref(0)
 const typingSpeed = ref(100)
+// Tracks whether the typewriter has produced its first character. Until then we
+// show the static placeholder so the search bar never looks empty on first paint.
+const hasStarted = ref(false)
+
+// Text rendered inside the search trigger: the cycling typewriter word once it
+// starts, otherwise the static placeholder (also the fallback when no words).
+const searchDisplay = computed(() => {
+  if (!typewriterWords.value.length) return heroProps.placeholder
+  return hasStarted.value ? currentWord.value : heroProps.placeholder
+})
 
 onMounted(() => {
   if (!typewriterWords.value.length) return
@@ -171,6 +187,7 @@ onMounted(() => {
 })
 
 const typeLoop = () => {
+  hasStarted.value = true
   const currentIndex = wordIndex.value % typewriterWords.value.length
   const fullWord = typewriterWords.value[currentIndex]
 
@@ -201,8 +218,8 @@ const typeLoop = () => {
 }
 
 const config = useRuntimeConfig()
-// const showControls = computed(() => config.public.environment !== 'production')
-// const useTestImage = ref(config.public.environment !== 'production' ? true : false)
+const showControls = computed(() => config.public.environment !== 'production')
+const useTestImage = ref(config.public.environment !== 'production' ? true : false)
 const noiseEnabled = ref(true)
 const clampNoise = (value) => {
   const parsed = Number(value)
@@ -223,9 +240,9 @@ const noiseLevelValue = computed(() => {
   return clampNoise(noiseLevelLocal.value)
 })
 
-// const adjustNoise = (delta) => {
-//   noiseLevelLocal.value = clampNoise(noiseLevelLocal.value + delta)
-// }
+const adjustNoise = (delta) => {
+  noiseLevelLocal.value = clampNoise(noiseLevelLocal.value + delta)
+}
 
 // Build optimized Sanity URLs with proper sizes for each breakpoint
 const buildSanityImageUrl = (source, width, height, quality = 75) => {
@@ -289,12 +306,23 @@ useHead(() => {
 </script>
 
 <style scoped>
+/* Hero + trust band share one 100svh block on desktop, so the réassurance
+   bar sits at the bottom of the first screen without scrolling. */
+.hero-block {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  width: 100vw;
+}
+
 .hero {
   position: relative;
   /* svh = small viewport height; doesn't recompute when the mobile
      URL bar collapses, avoiding layout thrash on first paint. */
-  min-height: 100svh;
-  width: 100vw;
+  /* Grows to fill the block height left after the trust band. */
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -334,6 +362,17 @@ useHead(() => {
    the mix-blend-mode compositor layer, which is the more impactful
    cost on low-power devices. Desktop visual unchanged. */
 @media (max-width: 600px) {
+  /* Mobile: hero is only 60svh, trust band flows naturally below it. */
+  .hero-block {
+    display: block;
+    min-height: 0;
+  }
+
+  .hero {
+    min-height: 60svh;
+    height: 60svh;
+  }
+
   .hero-image-bg::after,
   .hero-noise-enabled::after {
     display: none;
@@ -356,6 +395,13 @@ useHead(() => {
   object-fit: cover;
   /* object-position: center; */
   min-height: 460px;
+}
+
+@media (max-width: 600px) {
+  .hero-image {
+    height: 100%;
+    min-height: 0;
+  }
 }
 
 .hero-image-dim {
@@ -547,6 +593,17 @@ margin-bottom: 0!important;
   overflow: hidden;
   text-overflow: ellipsis;
   text-shadow: 0 1px 2px rgba(207, 207, 207, 0.1);
+}
+
+.search-caret {
+  display: inline-block;
+  margin-left: 1px;
+  font-weight: 300;
+  color: rgb(var(--v-theme-primary));
+  animation: blink 1s step-end infinite;
+}
+.glass-search-trigger:hover .search-caret {
+  color: white !important;
 }
 
 @keyframes shimmer {

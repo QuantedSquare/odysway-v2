@@ -15,6 +15,7 @@
         loading="lazy"
         width="100%"
         :alt="`Image de la thématique ${title}`"
+        class="card-img"
         cover
       />
 
@@ -24,12 +25,24 @@
       <div
         class="content-wrapper "
       >
-        <h3
-          key="title"
-          class=" font-weight-bold custom-font-size text-center text-shadow text-line-space mx-2 mx-md-3"
-        >
-          {{ title }}
-        </h3>
+        <div class="categ-head mx-2 mx-md-3">
+          <span
+            v-if="iconPath"
+            class="categ-icon"
+          >
+            <component
+              :is="iconPath"
+              :size="18"
+              :stroke="1.8"
+            />
+          </span>
+          <h3
+            key="title"
+            class="font-weight-bold custom-font-size text-center text-shadow text-line-space"
+          >
+            {{ title }}
+          </h3>
+        </div>
       </div>
     </NuxtLink>
   </v-col>
@@ -37,6 +50,7 @@
 
 <script setup>
 import imageUrlBuilder from '@sanity/image-url'
+import { categoryIcon } from '~/utils/categoryIcons'
 
 const props = defineProps({
   slug: {
@@ -63,7 +77,13 @@ const props = defineProps({
     type: String,
     default: null,
   },
+  icon: {
+    type: String,
+    default: null,
+  },
 })
+
+const iconPath = computed(() => (props.icon ? categoryIcon(props.icon) : null))
 
 const { trackSelectPromotion } = useGtmTracking()
 
@@ -120,7 +140,16 @@ const lazySrc = computed(() => {
   width: 100%;
   cursor: pointer;
   overflow: hidden;
+  border-radius: 1rem;
   aspect-ratio: 4/5; /* Ensures stable card size regardless of image/content */
+  transition:
+    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-img {
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
 }
 
 .blur-overlay {
@@ -171,8 +200,55 @@ const lazySrc = computed(() => {
   z-index: 1;
 }
 
+.categ-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.categ-icon {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  transition:
+    background 0.4s ease,
+    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
 .custom-font-size {
-  font-size: 28px!important;
+  font-size: 22px!important;
+}
+
+@media (hover: hover) {
+  .image-wrapper:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 38px rgba(12, 22, 20, 0.3);
+  }
+  .image-wrapper:hover .card-img {
+    transform: scale(1.08);
+  }
+  .image-wrapper:hover .categ-icon {
+    background: rgb(var(--v-theme-secondary));
+    border-color: transparent;
+    transform: scale(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image-wrapper,
+  .card-img,
+  .categ-icon {
+    transition: none;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -186,6 +262,10 @@ const lazySrc = computed(() => {
   .content-wrapper{
     padding: 0;
     justify-content: center;
+  }
+  /* Keep tiny phone cards uncluttered: drop the icon, shrink the title. */
+  .categ-icon {
+    display: none;
   }
   .custom-font-size {
     font-size: 0.9rem!important;

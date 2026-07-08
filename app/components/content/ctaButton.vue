@@ -10,6 +10,7 @@
       :target="external ? '_blank' : undefined"
       :rel="external ? 'noopener noreferrer' : undefined"
       @click="handleClick"
+      :rounded="roundedValue"
     >
       <div
         class="text-body-1 font-weight-bold mx-4"
@@ -63,6 +64,10 @@ const props = defineProps({
   ctaLabel: {
     type: String,
     default: null,
+  },
+  roundedValue: {
+    type: String,
+    default: 'md',
   },
 })
 

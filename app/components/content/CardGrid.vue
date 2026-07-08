@@ -1,18 +1,26 @@
 <template>
   <v-container
     fluid
-    class="pa-0 mx-0 "
+    class="pa-0 mx-0"
   >
-    <v-container
-      v-if="width > 960"
-      fluid
-    >
+    <v-container fluid class="py-0">
+      <!-- Responsive grid at every breakpoint (prototype: 4 cols desktop,
+           2 cols mobile). ImageTitleColCard sets cols=6 / sm=4 / md=3, so
+           mobile naturally falls into a 2-per-row grid instead of a carousel. -->
       <v-row>
         <v-col
           cols="12"
-          class="text-center text-h2 font-weight-bold mt-md-4 mb-md-12"
+          class="mb-md-4"
         >
-          <slot name="title" />
+          <p
+            v-if="eyebrow"
+            class="cardgrid-eyebrow"
+          >
+            {{ eyebrow }}
+          </p>
+          <span class="carousel-titlewrap text-h2">
+            <slot name="title" />
+          </span>
         </v-col>
         <ImageTitleColCard
           v-for="category in categories"
@@ -20,39 +28,16 @@
           :title="category.title"
           :subtitle="category.discoveryTitle"
           :image="category.image"
+          :icon="category.icon"
           :link="'/thematiques/' + category.slug.current"
           :promotion-name="promotionName"
         />
       </v-row>
     </v-container>
-    <HorizontalCarousel
-      v-else
-      :center-title="true"
-      slider-name="card-grid"
-    >
-      <template #title>
-        <slot name="title" />
-      </template>
-      <template #carousel-item>
-        <CategColCard
-          v-for="category in categories"
-          v-show="category.showOnHome"
-          :key="category._id"
-          :slug="category.slug.current"
-          :image="category.image"
-          :title="category.title"
-          :description="category.discoveryTitle"
-          type="thematiques"
-          :promotion-name="promotionName"
-        />
-      </template>
-    </HorizontalCarousel>
   </v-container>
 </template>
 
 <script setup>
-import { useDisplay } from 'vuetify'
-
 const props = defineProps({
   categories: {
     type: Array,
@@ -62,9 +47,12 @@ const props = defineProps({
     type: String,
     default: null,
   },
+  eyebrow: {
+    type: String,
+    default: '',
+  },
 })
 
-const { width } = useDisplay()
 const { trackViewPromotion } = useGtmTracking()
 
 // Track view_promotion when component is mounted
@@ -74,3 +62,19 @@ onMounted(() => {
   }
 })
 </script>
+
+<style scoped>
+.cardgrid-eyebrow {
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgb(var(--v-theme-secondary));
+}
+.carousel-titlewrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+</style>

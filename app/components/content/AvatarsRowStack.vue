@@ -86,7 +86,7 @@ import { useImage } from '#imports'
 import { getImageUrl } from '~/utils/getImageUrl'
 
 const sanityQuery = `
-  *[_type == "teamMember" && name != 'Salomé']|order(orderRank) {
+  *[_type == "teamMember" && name != 'Salomé' && visibleOnHomepage != false]|order(orderRank) {
     name,
     description,
     image

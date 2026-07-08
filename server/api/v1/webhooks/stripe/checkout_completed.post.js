@@ -32,6 +32,23 @@ export default defineEventHandler(async (event) => {
 
   // If payment_status not equal to paid, it means that the customer choose to pay by bank transfer or do nothing
   if (stripeEvent.type === 'checkout.session.completed' && stripeEvent.data.object.payment_status === 'paid') {
+    // Bank transfer (customer_balance) payments emit BOTH checkout.session.completed
+    // AND payment_intent.succeeded. transfer_completed.js owns those — skip here to
+    // avoid booking the same payment twice (once as CB, once as Virement).
+    const paymentIntentId = stripeEvent.data.object.payment_intent
+    if (paymentIntentId) {
+      const paymentIntent = await stripeCLI.paymentIntents.retrieve(paymentIntentId)
+      const latestCharge = paymentIntent.latest_charge
+        ? await stripeCLI.charges.retrieve(paymentIntent.latest_charge)
+        : null
+      const paymentMethodType = latestCharge?.payment_method_details?.type
+      if (paymentMethodType === 'customer_balance') {
+        console.log('Bank transfer session — handled by transfer_completed.js, skipping')
+        setResponseStatus(event, 200)
+        return
+      }
+    }
+
     // Idempotency: ensure we never process the same Stripe event twice
     const { error: insertError } = await supabase
       .from('stripe_processed_events')

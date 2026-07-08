@@ -32,6 +32,43 @@ export const categoryType = defineType({
       group: 'content',
     }),
     defineField({
+      name: 'icon',
+      title: 'Icône (carte "Voyager selon vos envies")',
+      type: 'string',
+      description: 'Icône affichée devant le titre sur la carte de la home. Laisser vide pour n\'afficher aucun picto.',
+      options: {
+        list: [
+          // Nature & paysages
+          {title: '🏔️ Montagne', value: 'montagne'},
+          {title: '🏜️ Désert', value: 'desert'},
+          {title: '🌊 Mer / océan', value: 'mer'},
+          {title: '🌴 Jungle / forêt tropicale', value: 'jungle'},
+          {title: '🍂 Automne', value: 'automne'},
+          {title: '❄️ Hiver / neige', value: 'hiver'},
+          // Faune & activités
+          {title: '🦌 Faune sauvage', value: 'faune'},
+          {title: '🐾 Animaux', value: 'animaux'},
+          {title: '🥾 Trek / randonnée', value: 'trek'},
+          {title: '🚴 Vélo', value: 'velo'},
+          {title: '⛵ Navigation / voile', value: 'voile'},
+          {title: '🚗 Road trip', value: 'roadtrip'},
+          {title: '📷 Voyage photo', value: 'photo'},
+          // Culture & rencontres
+          {title: '🤝 Rencontres locales', value: 'rencontres'},
+          {title: '🏠 Familles d\'accueil', value: 'familles'},
+          {title: '🍽️ Gastronomie', value: 'gastronomie'},
+          {title: '⛩️ Asie', value: 'asie'},
+          {title: '🏛️ Culture & patrimoine', value: 'culture'},
+          {title: '🙏 Spiritualité', value: 'spiritualite'},
+          {title: '🔭 Astronomie', value: 'astronomie'},
+          // Bien-être
+          {title: '🧘 Déconnexion', value: 'deconnexion'},
+        ],
+        layout: 'dropdown',
+      },
+      group: 'content',
+    }),
+    defineField({
       name: 'showOnHome',
       type: 'boolean',
       initialValue: false,

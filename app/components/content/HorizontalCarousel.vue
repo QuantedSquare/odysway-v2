@@ -11,10 +11,41 @@
       <v-col
         cols="12"
         md="10"
-        class="text-h2 pb-2"
+        class="pb-2"
         :class="{ 'text-md-center text-start': centerTitle }"
       >
-        <slot name="title" />
+        <div
+          class="carousel-head"
+          :class="{ 'justify-center': centerTitle }"
+        >
+          <span
+            v-if="icon"
+            class="carousel-title-icon"
+          >
+            <component
+              :is="icon"
+              :size="22"
+              :stroke="1.8"
+            />
+          </span>
+          <div class="carousel-head__text">
+            <p
+              v-if="eyebrow"
+              class="carousel-eyebrow"
+            >
+              {{ eyebrow }}
+            </p>
+            <span class="carousel-titlewrap text-h2">
+              <slot name="title" />
+            </span>
+            <p
+              v-if="subtitle"
+              class="carousel-subtitle"
+            >
+              {{ subtitle }}
+            </p>
+          </div>
+        </div>
       </v-col>
       <v-col
         v-if="displayButton"
@@ -94,6 +125,21 @@ const props = defineProps({
   },
   sliderName: {
     type: String,
+    default: null,
+  },
+  // Small uppercase line above the title (demo "eyebrow").
+  eyebrow: {
+    type: String,
+    default: '',
+  },
+  // Muted line below the title.
+  subtitle: {
+    type: String,
+    default: '',
+  },
+  // Optional Tabler icon component shown in a circle before the title.
+  icon: {
+    type: [Object, Function],
     default: null,
   },
 })
@@ -186,6 +232,46 @@ const handleNextClick = () => {
 </script>
 
 <style scoped>
+.carousel-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.carousel-eyebrow {
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgb(var(--v-theme-secondary));
+}
+
+.carousel-titlewrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.carousel-title-icon {
+  flex: 0 0 auto;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgb(var(--v-theme-secondary));
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-subtitle {
+  margin: 8px 0 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #5d6566;
+}
+
 .hidden-scroll {
   -webkit-overflow-scrolling: touch;
 }

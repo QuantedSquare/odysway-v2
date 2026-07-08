@@ -204,6 +204,7 @@ export default defineConfig({
                   .title('Textes')
                   .items([
                     S.documentTypeListItem('header').title('Header'),
+                    S.documentTypeListItem('siteBanner').title('Bannière du site'),
                     S.documentTypeListItem('footer').title('Footer'),
                     S.documentTypeListItem('tops').title('Tops'),
                     S.documentTypeListItem('checkout').title('Checkout'),

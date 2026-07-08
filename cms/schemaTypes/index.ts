@@ -36,6 +36,7 @@ import {visionVoyageOdyswayType} from './visionVoyageOdyswayType'
 import {regionType} from './regionType'
 import {reviewType} from './reviewType'
 import {searchPageType} from './searchPageType'
+import {siteBannerType} from './siteBannerType'
 import {teamMemberType} from './teamMemberType'
 import {topsType} from './topsType'
 import {voyageCardType} from './voyageCardType'
@@ -99,6 +100,7 @@ export const schemaTypes = [
   regionType,
   reviewType,
   searchPageType,
+  siteBannerType,
   surMesureType,
   teamMemberType,
   topsType,

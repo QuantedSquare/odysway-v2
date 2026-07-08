@@ -12,6 +12,7 @@ export const regionType = defineType({
     defineField({name: 'nom', type: 'string', validation: (r) => r.required(), group: 'basic'}),
     defineField({name: 'meta_description', type: 'text', group: 'basic', title: 'Description'}),
     defineField({name: 'slug', type: 'slug', options: {source: 'nom'}, validation: (r) => r.required(), group: 'basic'}),
+    defineField({name: 'bestSellerPrefix', title: 'Préfixe best-seller', type: 'string', description: 'Petit texte au-dessus du nom sur la carte best-seller, ex. "Escapade en" pour "France"', group: 'basic'}),
     defineField({name: 'interjection', type: 'string', group: 'basic'}),
     defineField({
       name: 'image',

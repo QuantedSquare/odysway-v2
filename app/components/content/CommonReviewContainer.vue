@@ -9,9 +9,17 @@
       <v-col
         v-if="route.name === 'index'"
         cols="12"
-        class="text-h2 my-4"
+        class="my-4"
       >
-        <slot name="title" />
+        <p
+          v-if="eyebrow"
+          class="review-eyebrow"
+        >
+          {{ eyebrow }}
+        </p>
+        <div class="text-h2">
+          <slot name="title" />
+        </div>
       </v-col>
       <v-col
         v-else
@@ -69,6 +77,13 @@
 </template>
 
 <script setup>
+defineProps({
+  eyebrow: {
+    type: String,
+    default: '',
+  },
+})
+
 const route = useRoute()
 
 const reviewsToDisplayQuery = `
@@ -101,3 +116,14 @@ const reviewsToDisplay = computed(() => {
   })).slice(0, 3)
 })
 </script>
+
+<style scoped>
+.review-eyebrow {
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgb(var(--v-theme-secondary));
+}
+</style>

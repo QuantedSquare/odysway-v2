@@ -49,7 +49,7 @@
             md="4"
             class="rounded-lg px-md-0"
           >
-            <v-img
+            <!-- <v-img
               v-if="footer?.team?.image?.asset"
               rounded="lg"
               :src="img(getImageUrl(footer?.team?.image?.asset), { format: 'webp', quality: 70, width: 320, height: 270 })"
@@ -57,7 +57,7 @@
               loading="lazy"
               alt="Image de l'équipe"
               class="max-height-300"
-            />
+            /> -->
           </v-col>
           <v-col
             cols="12"

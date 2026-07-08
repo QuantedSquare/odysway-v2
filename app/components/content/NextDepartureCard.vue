@@ -25,7 +25,44 @@
           class="img-height"
           cover
           aspect-ratio="auto"
-        />
+        >
+          <template #default>
+            <div
+              v-if="travelersCount"
+              class="travelers-badge"
+            >
+              <IconUsers
+                :size="14"
+                :stroke="2"
+                class="mr-1"
+              />{{ travelersCount }} voyageurs partis
+            </div>
+            <span
+              v-if="topLeftBadge"
+              class="depart-tag"
+              :class="topLeftBadge.cls"
+            >
+              <component
+                :is="topLeftBadge.icon"
+                v-if="topLeftBadge.icon"
+                :size="15"
+                :stroke="2"
+                class="mr-1"
+              />{{ topLeftBadge.text }}
+            </span>
+            <span
+              v-if="seatsBadge"
+              class="depart-seats"
+            >
+              <component
+                :is="seatsIcon"
+                :size="14"
+                :stroke="2"
+                class="mr-1"
+              />{{ seatsBadge }}
+            </span>
+          </template>
+        </v-img>
 
       </NuxtLink>
       <!--  BOTTOM TEXT -->
@@ -37,7 +74,7 @@
           <v-card-text class="py-1">
             <v-container class="px-0 px-md-2">
               <v-row>
-                <v-col class="pt-lg-3 pt-0">
+                <v-col class="pt-lg-1 pt-0 pb-5">
                   <div
                     class="text-primary text-h5 text-sm-h4 font-weight-bold py-1 px-0 no-white-space title-container"
                   >
@@ -73,38 +110,8 @@
                 </v-col>
               </v-row>
               <v-row
-                no-gutters
-                class="mt-4 cta-bg rounded pa-2"
-              >
-                <v-col
-                  cols="8"
-                  class=" text-start text-grey-darken-2"
-                >
-                  <div>
-                    Prochain départ
-                  </div>
-                  <div class="icon d-flex align-center mt-1">
-                    <v-icon size="20px">{{ mdiCalendarCheck }}</v-icon>
-                    <span class="text-subtitle-2 font-weight-bold ml-1 text-primary">{{ dayjs(voyage.departureDate).format('DD MMM YYYY') }}</span>
-
-                  </div>
-                </v-col>
-                <v-col
-                  v-if="statusBadge"
-                  cols="4"
-                  class="d-flex justify-center align-center"
-                >
-
-                  <span
-                    class="status-chip text-h6 text-wrap font-weight-bold text-primary text-center mb-1"
-                  >
-                    {{ statusBadge?.text }}
-                  </span>
-                </v-col>
-              </v-row>
-              <v-row
                 justify="center"
-                class="px-3"
+                class="px-3 mt-2"
               >
                 <div class="w-40 d-flex flex-column  align-center ga-1 justify-space-between ">
                   <v-icon
@@ -116,7 +123,7 @@
 
                 <div class="w-20 d-flex flex-column  ga-1  align-center justify-space-between justify-md-start">
 
-                  <div class="text-body-2 text-md-subtitle-2  font-weight-bold text-primary">
+                  <div class="text-caption text-md-subtitle-2  font-weight-bold text-primary">
                     {{ voyage.duration }}
                   </div>
                   <div class="text-grey text-caption text-md-subtitle-2">{{ voyageCardContent?.days
@@ -125,13 +132,19 @@
 
                 </div>
                 <div class="w-40 d-flex flex-column justify-space-between ga-1 justify-md-end align-center">
-                  <div class="text-grey text-caption text-md-subtitle-2  text-md-subtitle-2">{{
+                  <div class="text-grey text-caption text-md-subtitle-2">{{
                     voyageCardContent?.startingFrom
                       || 'À partir de' }}</div>
-                  <div class="text-caption text-md-subtitle-2  text-primary">{{ voyage.pricing?.startingPrice
-                    ?? voyage.startingPrice
-                  }} €</div>
-
+                  <div class="d-flex align-center ga-1">
+                    <span
+                      v-if="hasPromo"
+                      class="old-price text-caption"
+                    >{{ basePrice }} €</span>
+                    <span
+                      class="text-caption text-md-subtitle-2 font-weight-bold"
+                      :class="hasPromo ? 'text-secondary' : 'text-primary'"
+                    >{{ displayPrice }} €</span>
+                  </div>
                 </div>
               </v-row>
             </v-container>
@@ -141,27 +154,24 @@
             v-if="voyage.departureDate"
             :class="voyage.availabilityTypes?.includes('groupe') ? 'hover-primary' : 'hover-secondary'"
           >
-            <client-only>
-              <div
-                class="text-decoration-none px-4 py-2 w-100 text-primary1"
-              >
-                <v-row>
-                  <v-col
-                    cols="12"
-                    class="text-subtitle-1 text-primary-light-1 font-weight-bold text-center d-flex align-center justify-center ga-2"
-                  >
-                    <span class="text-primary">
-                      {{ voyage.dates.length }} départs à venir
-                    </span>
-                    <v-icon
-                      size="20px"
-                      class="text-secondary"
-                    >{{ mdiArrowRight }}</v-icon>
-                  </v-col>
-                </v-row>
-
+            <div class="depart-footer w-100 px-4 py-2">
+              <div class="depart-footer__text">
+                <div class="depart-footer__label">{{ footerLabel }}</div>
+                <div class="depart-footer__date">
+                  <IconCalendarCheck
+                    :size="18"
+                    :stroke="1.8"
+                    class="text-primary mr-1"
+                  />
+                  <span>{{ formattedDepartureDate }}</span>
+                </div>
               </div>
-            </client-only>
+              <IconArrowRight
+                :size="24"
+                :stroke="1.8"
+                class="depart-footer__arrow text-secondary"
+              />
+            </div>
           </v-card-actions>
         </NuxtLink>
       </div>
@@ -170,6 +180,7 @@
 </template>
 
 <script setup>
+import { IconArrowRight, IconUsers, IconCalendarCheck, IconCircleCheck, IconFlame } from '@tabler/icons-vue'
 import { mdiArrowRight, mdiAccountMultiple, mdiCalendarCheck } from '@mdi/js'
 import dayjs from 'dayjs'
 import { useImage } from '#imports'
@@ -180,6 +191,17 @@ const props = defineProps({
     type: Object,
   },
   itemListName: {
+    type: String,
+    default: null,
+  },
+  // Optional "N voyageurs partis" badge (best-sellers section).
+  travelersCount: {
+    type: Number,
+    default: null,
+  },
+  // Image-overlay badges depending on the section:
+  // 'guaranteed' -> green "Garanti" + seats ; 'lastMinute' -> orange "J-X" + seats.
+  variant: {
     type: String,
     default: null,
   },
@@ -215,29 +237,57 @@ const remainingSeats = computed(() => {
   return max_travelers - booked_seat
 })
 
-const statusBadge = computed(() => {
-  const date = dateData.value
-  if (!date) return null
+// Image-overlay badges (demo style): driven by `variant` + the date data.
+const isGuaranteed = computed(() => dateData.value && getDateStatus(dateData.value)?.status === 'confirmed')
 
-  if (typeof remainingSeats.value === 'number' && remainingSeats.value < 4 && remainingSeats.value > 0) {
-    return {
-      text: 'Dernières places',
-      color: 'secondary',
-    }
-  }
-
-  const status = getDateStatus(date)
-  if (!status) return null
-
-  const text = status.status === 'soon_confirmed'
-    ? `Confirmé dès ${date.min_travelers} personne${date.min_travelers > 1 ? 's' : ''}`
-    : status.text
-
-  return {
-    text,
-    color: status.color,
-  }
+const daysUntilDeparture = computed(() => {
+  if (!props.voyage.departureDate) return null
+  return dayjs(props.voyage.departureDate).startOf('day').diff(dayjs().startOf('day'), 'day')
 })
+
+const topLeftBadge = computed(() => {
+  if (props.variant === 'guaranteed' && isGuaranteed.value) {
+    return { text: 'Garanti', cls: 'depart-tag--guaranteed', icon: IconCircleCheck }
+  }
+  if (props.variant === 'lastMinute' && typeof daysUntilDeparture.value === 'number' && daysUntilDeparture.value >= 0) {
+    return { text: `J-${daysUntilDeparture.value}`, cls: 'depart-tag--late', icon: IconFlame }
+  }
+  return null
+})
+
+const seatsBadge = computed(() => {
+  if (!props.variant) return null
+  const n = remainingSeats.value
+  if (typeof n !== 'number' || n <= 0) return null
+  return `${n} place${n > 1 ? 's' : ''}`
+})
+
+// Dernières places uses a flame for the seats badge; guaranteed keeps people.
+const seatsIcon = computed(() => (props.variant === 'lastMinute' ? IconFlame : IconUsers))
+
+// Footer: the selected departure date + a clickable arrow.
+const footerLabel = computed(() => {
+  if (props.variant === 'guaranteed') return 'Prochain départ garanti'
+  if (props.variant === 'lastMinute') return 'Départ'
+  return 'Prochain départ'
+})
+const formattedDepartureDate = computed(() =>
+  props.voyage.departureDate ? dayjs(props.voyage.departureDate).format('DD MMM YYYY') : '',
+)
+
+// Optional strike-through promo on last-minute dates: when the date's own
+// starting_price is lower than the voyage's base price.
+const basePrice = computed(() => props.voyage.pricing?.startingPrice ?? props.voyage.startingPrice)
+const datePrice = computed(() => dateData.value?.starting_price)
+const hasPromo = computed(() =>
+  props.variant === 'lastMinute'
+  && Number.isFinite(Number(datePrice.value))
+  && Number.isFinite(Number(basePrice.value))
+  && Number(datePrice.value) > 0
+  && Number(datePrice.value) < Number(basePrice.value),
+)
+const displayPrice = computed(() => (hasPromo.value ? datePrice.value : basePrice.value))
+
 const actionColor = computed(() => props.voyage.availabilityTypes?.includes('groupe') ? '#f7f8f8' : '#fef9f8')
 const voyageCardImg = computed(() => {
   const ref = props.voyage.imageCard?.asset?._ref || props.voyage.image?.asset?._ref
@@ -268,6 +318,87 @@ const handleCardClick = () => {
   position: absolute;
   top: 25px;
   right: 28px;
+}
+.travelers-badge {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  font-size: 12px;
+  font-weight: 600;
+  color: rgb(var(--v-theme-primary));
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+.depart-tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 15px;
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+.depart-tag--guaranteed {
+  background: #1d9e75;
+}
+.depart-tag--late {
+  background: rgb(var(--v-theme-secondary));
+}
+.depart-seats {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.95);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: rgb(var(--v-theme-primary));
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.14);
+}
+
+/* Bottom footer: selected departure date + clickable arrow */
+.depart-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.depart-footer__label {
+  font-size: 12px;
+  color: #7a8587;
+}
+.depart-footer__date {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: rgb(var(--v-theme-primary));
+  margin-top: 2px;
+}
+.depart-footer__arrow {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.next-departure-card:hover .depart-footer__arrow {
+  transform: translateX(5px);
+}
+.old-price {
+  color: #9aa0a1;
+  text-decoration: line-through;
 }
 .w-40{
   width: 40%;
@@ -314,7 +445,7 @@ const handleCardClick = () => {
   -webkit-line-clamp: 2;
   line-clamp: 2;
   line-height: 120% !important;
-  font-size: 24px !important;
+  font-size: 22px !important;
 }
 
 .custom-card-width {
@@ -360,9 +491,11 @@ const handleCardClick = () => {
 
 @media screen and (max-width: 1240px) {
   .line-clamp-2 {
-    font-size: 24px !important;
+    font-size: 20px !important;
   }
-
+.custom-icon-size{
+    font-size: 22px !important;
+  }
   .title-container {
     height: 2.2em;
     /* This sets a fixed height equivalent to 2 lines */
@@ -397,7 +530,7 @@ const handleCardClick = () => {
   }
 
   .line-clamp-2 {
-    line-height: 20px !important;
+    line-height: 1.1 !important;
     font-size: 16px !important;
   }
 
