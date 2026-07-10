@@ -62,6 +62,9 @@ export default defineNuxtConfig({
   site: {
     url: process.env.BASE_URL || 'https://odysway.com', // TODO: change the first to the dev env
     name: process.env.NUXT_SITE_NAME || 'Odysway',
+    // @nuxtjs/seo (nuxt-seo-utils) forces <html lang> from siteConfig.defaultLocale
+    // and falls back to 'en' when unset — which overrode our app.head lang:'fr'.
+    defaultLocale: 'fr',
     indexable: process.env.VERCEL_ENV === 'production',
     trailingSlash: false,
   },

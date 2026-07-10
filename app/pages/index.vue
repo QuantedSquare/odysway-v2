@@ -453,7 +453,7 @@ const bestSellerEntries = computed(() => homeSanity.value?.bestSellers?.items ||
 const guaranteedEyebrow = computed(() => homeSanity.value?.guaranteedDepartures?.eyebrow || 'Réservez l\'esprit tranquille')
 const franceEyebrow = computed(() => homeSanity.value?.franceTrips?.eyebrow || 'Près de chez vous')
 const followDesiresEyebrow = computed(() => homeSanity.value?.followDesires?.eyebrow || 'Par où commencer')
-const reviewsEyebrow = computed(() => homeSanity.value?.reviews?.eyebrow || 'Ils en parlent mieux que nous')
+const reviewsEyebrow = computed(() => homeSanity.value?.reviews?.eyebrow || '')
 
 const slugOf = voyage => voyage?.slug?.current || voyage?.slug
 

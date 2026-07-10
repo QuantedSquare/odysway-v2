@@ -201,7 +201,7 @@ function handleButton5Click() {
 }
 
 const isScrolled = computed(() => y.value > 200)
-const isTransparent = computed(() => !isScrolled.value && route.path === '/')
+const isTransparent = computed(() => !isScrolled.value && route.path === '/' && !model.value)
 </script>
 
 <style scoped>

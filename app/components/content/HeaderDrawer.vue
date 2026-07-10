@@ -139,7 +139,7 @@ function handleNavigate() {
 }
 const { y } = useWindowScroll()
 const isScrolled = computed(() => y.value > 200)
-const isTransparent = computed(() => !isScrolled.value && route.path === '/')
+const isTransparent = false // computed(() => !isScrolled.value && route.path === '/')
 
 const { trackRdvClick, trackCallClick } = useGtmTracking()
 const { scheduleLayoutRead } = useLayoutRead()
