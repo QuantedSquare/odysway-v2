@@ -347,8 +347,26 @@ const handlePaymentSession = async (session, paymentType) => {
     const checkoutSession = await stripeCLI.checkout.sessions.list({
       payment_intent: session.id,
     })
-    checkoutId = checkoutSession.data[0].id
-    session = checkoutSession.data[0]
+    let matchedSession = checkoutSession.data[0]
+
+    // Bank-transfer funds land on the customer's cash balance and Stripe settles the
+    // invoice with a *derivative* payment_intent (distinct from the checkout session's
+    // own payment_intent), so the lookup above can come back empty. Fall back to
+    // matching the checkout session by its `invoice` id via the customer's sessions.
+    if (!matchedSession && session.invoice && session.customer) {
+      const customerSessions = await stripeCLI.checkout.sessions.list({
+        customer: session.customer,
+        limit: 20,
+      })
+      matchedSession = customerSessions.data.find((s) => s.invoice === session.invoice)
+    }
+
+    if (!matchedSession) {
+      throw new Error(`No checkout session found for bank transfer payment_intent ${session.id} (invoice ${session.invoice})`)
+    }
+
+    checkoutId = matchedSession.id
+    session = matchedSession
   }
   else {
     checkoutId = session.id
