@@ -1,9 +1,21 @@
-import { defineEventHandler, getQuery } from 'h3'
+import { defineEventHandler, getQuery, getHeader, createError } from 'h3'
 import { algoliasearch } from 'algoliasearch'
 import { createClient } from '@sanity/client'
 
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
+
+  // Destructive debug endpoint (delete/reindex with write key): never reachable in production,
+  // and token-protected everywhere else.
+  if (config.public.environment === 'production') {
+    throw createError({ statusCode: 404, statusMessage: 'Not Found' })
+  }
+  const debugToken = process.env.ALGOLIA_DEBUG_TOKEN
+  const providedToken = getHeader(event, 'x-debug-token') || (getQuery(event).token as string)
+  if (!debugToken || providedToken !== debugToken) {
+    throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
+  }
+
   const query = getQuery(event)
   const slugToInspect = (query.slug as string) || null
 
