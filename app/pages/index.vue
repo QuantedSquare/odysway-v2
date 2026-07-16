@@ -291,7 +291,14 @@ const voyageProjection = `
 
 const homeQuery = groq`
   *[_type == "homePage"][0]{
-    ...,
+    // Explicit top-level fields (was a full-document "..." spread that pulled
+    // every unused homePage field into the SSR HTML). Objects are fetched whole
+    // to keep every sub-field the components read.
+    heroSection,
+    heroSectionTest,
+    concept,
+    trustBand,
+    newsletter,
     momentSection{
       ...,
       feature{
