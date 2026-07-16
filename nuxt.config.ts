@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     '@nuxt/image',
     'nuxt-vitalizer',
+    'nuxt-security',
     '@nuxtjs/sanity',
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
@@ -149,6 +150,37 @@ export default defineNuxtConfig({
     appManifest: false,
     inlineRouteRules: true,
     serverAppConfig: false,
+  },
+  // Security headers only. The enforcing CSP is intentionally disabled here and
+  // shipped in Report-Only mode via server/middleware/csp-report-only.ts until the
+  // whitelist is validated against production traffic. All request-inspecting
+  // middleware (rate limiter, request-size limiter, CORS handler, xss validator)
+  // are disabled to avoid interfering with normal browsing and webhook payloads.
+  security: {
+    rateLimiter: false,
+    requestSizeLimiter: false,
+    corsHandler: false,
+    xssValidator: false,
+    headers: {
+      contentSecurityPolicy: false,
+      crossOriginEmbedderPolicy: false, // COEP require-corp breaks Sanity CDN / third-party assets
+      crossOriginResourcePolicy: 'cross-origin',
+      crossOriginOpenerPolicy: 'same-origin-allow-popups', // allow Stripe / Google OAuth popups
+      // Only in production: outside prod the Sanity Studio must be able to iframe the
+      // site for visual editing (see server/middleware/visual-editing-headers.ts).
+      xFrameOptions: process.env.VERCEL_ENV === 'production' ? 'SAMEORIGIN' : false,
+      xContentTypeOptions: 'nosniff',
+      referrerPolicy: 'strict-origin-when-cross-origin',
+      strictTransportSecurity: {
+        maxAge: 15552000,
+        includeSubdomains: true,
+      },
+      permissionsPolicy: {
+        camera: [],
+        microphone: [],
+        geolocation: [],
+      },
+    },
   },
   compatibilityDate: '2024-11-01',
   nitro: {
