@@ -90,12 +90,6 @@ const { trackSearchBar, trackViewItemList } = useGtmTracking()
 const { formatVoyagesForGtm } = useGtmVoyageFormatter()
 const { applyFilters } = useVoyageFilters()
 
-useSeoMeta({
-  htmlAttrs: { lang: 'fr' },
-  robots: 'noindex, follow',
-  canonical: 'https://www.odysway.com/voyages',
-})
-
 const router = useRouter()
 const route = useRoute()
 const confirmedOnly = ref(route.query.confirmed === 'true')
@@ -224,6 +218,20 @@ const selActivities = computed(() => (route.query.activities ? String(route.quer
 const selMonths = computed(() => (route.query.from ? String(route.query.from).split(',').map(Number).filter(n => n > 0 && n <= 12) : []))
 
 const pageTitle = computed(() => searchContent.value?.searchHero?.defaultTitle || 'Nos voyages en immersion')
+
+// /voyages is a key indexable page (sitemap priority 0.9). It was previously
+// noindex via a manual useSeoMeta — use the shared composable so it is indexable
+// with a proper canonical/OG. searchContent is already awaited above, so
+// pageTitle is resolved during SSR.
+useSeo({
+  content: {
+    title: pageTitle.value,
+    description: leadText,
+  },
+  pageType: 'website',
+  slug: 'voyages',
+  baseUrl: '/voyages',
+})
 
 const parsedDates = computed(() => {
   if (!route.query.from) return ''
