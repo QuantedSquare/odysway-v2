@@ -51,7 +51,7 @@
     "turndown": "^7.2.0",
     "vue": "^3.5.34",
     "vue-dompurify-html": "^5.2.0",
-    "vue-router": "latest",
+    "vue-router": "^5.1.0",
     "zod": "^3.24.1"
   },
   "devDependencies": {
