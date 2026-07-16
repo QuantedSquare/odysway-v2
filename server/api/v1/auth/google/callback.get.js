@@ -30,7 +30,7 @@ export default defineEventHandler(async (event) => {
     sameSite: 'lax',
     path: '/',
     maxAge: 0,
-    secure: isDev,
+    secure: !isDev,
   })
 
   if (!stateFromCookie || stateFromCookie !== stateFromQuery) {

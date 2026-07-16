@@ -8,7 +8,7 @@ export default defineEventHandler((event) => {
     sameSite: 'lax',
     path: '/',
     maxAge: 0,
-    secure: isDev,
+    secure: !isDev,
   })
   return { success: true }
 })
