@@ -203,6 +203,68 @@ export function createBreadcrumbSchema(crumbs) {
 }
 
 /**
+ * Generate AggregateRating + Review structured data from first-party reviews.
+ * Attaches to the global Organization identity (@id "#identity", set by
+ * nuxt-schema-org) so Google/LLMs read the rating against the brand entity.
+ *
+ * @param {Array} reviews - Review items [{author, rating, text, date, voyageTitle}]
+ * @param {Object} [opts]
+ * @param {Number} [opts.maxNote=5] - Rating scale maximum
+ * @param {Number} [opts.maxReviews=20] - Cap on individual Review nodes emitted
+ * @param {String} [opts.orgId='https://odysway.com/#identity'] - Organization @id to attach to
+ * @returns {Object|null} Organization schema carrying aggregateRating + review, or null
+ */
+export function createReviewAggregateSchema(reviews, opts = {}) {
+  const {
+    maxNote = 5,
+    maxReviews = 20,
+    orgId = 'https://odysway.com/#identity',
+  } = opts
+
+  const valid = (reviews || []).filter(
+    r => typeof r?.rating === 'number' && (r?.text || '').trim().length > 0,
+  )
+  if (valid.length === 0) return null
+
+  const average = valid.reduce((acc, r) => acc + r.rating, 0) / valid.length
+
+  const reviewNodes = valid
+    .slice()
+    .sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0))
+    .slice(0, maxReviews)
+    .map(r => ({
+      '@type': 'Review',
+      'reviewRating': {
+        '@type': 'Rating',
+        'ratingValue': r.rating,
+        'bestRating': maxNote,
+      },
+      'author': {
+        '@type': 'Person',
+        'name': (r.author || 'Voyageur Odysway').trim(),
+      },
+      ...(r.date ? { datePublished: new Date(r.date).toISOString().split('T')[0] } : {}),
+      'reviewBody': r.text.trim(),
+      ...(r.voyageTitle ? { name: r.voyageTitle } : {}),
+    }))
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': orgId,
+    'name': 'ODYSWAY',
+    'aggregateRating': {
+      '@type': 'AggregateRating',
+      'ratingValue': Math.round(average * 10) / 10,
+      'bestRating': maxNote,
+      'ratingCount': valid.length,
+      'reviewCount': valid.length,
+    },
+    'review': reviewNodes,
+  }
+}
+
+/**
  * Generate FAQPage structured data
  * @param {Array} faqs - Array of FAQ items [{question, answer}]
  * @param {String} url - Canonical URL of the page (for @id)
