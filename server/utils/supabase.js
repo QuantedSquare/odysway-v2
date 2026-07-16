@@ -1,8 +1,14 @@
 import { createClient } from '@supabase/supabase-js'
 
-const supabase = createClient('https://ufyskkwszklmrgcifanb.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVmeXNra3dzemtsbXJnY2lmYW5iIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcwMzg0NjIzMiwiZXhwIjoyMDE5NDIyMjMyfQ.vmgpkt8l3RJ2nsJgRe9inj_JEn-zdL8a2asfhhCxdx4',
-  {
-    auth: { persistSession: false },
-  })
+const supabaseUrl = (process.env.NUXT_PUBLIC_SUPABASE_URL || 'https://ufyskkwszklmrgcifanb.supabase.co').replace(/\/$/, '')
+const supabaseKey = process.env.SUPABASE_API_KEY
+
+if (!supabaseKey) {
+  throw new Error('Missing SUPABASE_API_KEY environment variable (Supabase service_role key)')
+}
+
+const supabase = createClient(supabaseUrl, supabaseKey, {
+  auth: { persistSession: false },
+})
 
 export default supabase
