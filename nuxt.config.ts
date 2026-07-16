@@ -136,7 +136,8 @@ export default defineNuxtConfig({
     '/blog/top-10-des-destinations-pour-un-voyage-immersif-en-2024': { redirect: { to: '/blog/top-10-des-destinations-pour-un-voyage-immersif', statusCode: 301 } },
 
     // API routes
-    '/api/**': { cors: true },
+    // CORS is handled by nuxt-security's corsHandler (see security config), which
+    // restricts allowed origins in production. No blanket cors:true wildcard here.
   },
   // Inline critical CSS for better performance
   features: {
@@ -159,7 +160,15 @@ export default defineNuxtConfig({
   security: {
     rateLimiter: false,
     requestSizeLimiter: false,
-    corsHandler: false,
+    // Restrict cross-origin API access to Odysway origins in production. In
+    // dev/preview it stays permissive so same-origin calls and Sanity visual
+    // editing are unaffected.
+    corsHandler: process.env.VERCEL_ENV === 'production'
+      ? {
+          origin: ['https://odysway.com', 'https://www.odysway.com'],
+          methods: ['GET', 'HEAD', 'POST', 'OPTIONS'],
+        }
+      : false,
     xssValidator: false,
     headers: {
       contentSecurityPolicy: false,
