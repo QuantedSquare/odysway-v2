@@ -278,7 +278,7 @@ export function useSeo(options = {}) {
       if (schema) {
         headConfig.script.push({
           type: 'application/ld+json',
-          children: JSON.stringify(schema),
+          innerHTML: JSON.stringify(schema),
         })
       }
     })
@@ -298,7 +298,7 @@ export function useSeo(options = {}) {
     }
     headConfig.script.push({
       type: 'application/ld+json',
-      children: JSON.stringify(breadcrumbSchema),
+      innerHTML: JSON.stringify(breadcrumbSchema),
     })
   }
 
