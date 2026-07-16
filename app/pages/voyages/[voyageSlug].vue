@@ -382,11 +382,20 @@ if (voyage.value && !customTravel.value) {
     content: voyage.value,
     pageType: 'website',
     slug: voyage.value.slug?.current,
-    structuredData: createTouristTripSchema(
-      voyage.value,
-      `https://odysway.com/voyages/${voyage.value.slug.current}`,
-      config,
-    ),
+    structuredData: [
+      createTouristTripSchema(
+        voyage.value,
+        `https://odysway.com/voyages/${voyage.value.slug.current}`,
+        config,
+      ),
+      createFAQPageSchema(
+        [
+          ...(voyage.value.faqBlock || []),
+          ...(page.value?.faqSection?.faqBlock || []),
+        ],
+        `https://odysway.com/voyages/${voyage.value.slug.current}`,
+      ),
+    ],
     breadcrumbs: [
       { name: 'Accueil', url: 'https://odysway.com' },
       { name: 'Voyages', url: 'https://odysway.com/voyages' },
