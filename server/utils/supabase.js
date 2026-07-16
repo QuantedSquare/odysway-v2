@@ -1,6 +1,8 @@
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = (process.env.NUXT_PUBLIC_SUPABASE_URL || 'https://ufyskkwszklmrgcifanb.supabase.co').replace(/\/$/, '')
+// NB: must be the same project as SUPABASE_API_KEY (ufyskkwszklmrgcifanb).
+// Do NOT use NUXT_PUBLIC_SUPABASE_URL here — that points to a different project.
+const supabaseUrl = (process.env.SUPABASE_URL || 'https://ufyskkwszklmrgcifanb.supabase.co').replace(/\/$/, '')
 const supabaseKey = process.env.SUPABASE_API_KEY
 
 if (!supabaseKey) {
