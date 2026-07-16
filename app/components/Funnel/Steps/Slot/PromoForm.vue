@@ -48,7 +48,7 @@
       </v-col>
       <!-- Insurance Unavailable Message -->
       <v-col v-else>
-        <div v-html="page.insurances_unavailable " />
+        <div v-dompurify-html="page.insurances_unavailable" />
       </v-col>
     </v-row>
     <v-row class="text-caption text-primary">

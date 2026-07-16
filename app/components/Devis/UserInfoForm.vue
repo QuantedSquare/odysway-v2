@@ -61,7 +61,7 @@
             <template #label>
               <div
                 class="text-body-2"
-                v-html="page.third_step.sub_1"
+                v-dompurify-html="page.third_step.sub_1"
               />
             </template>
           </v-checkbox>

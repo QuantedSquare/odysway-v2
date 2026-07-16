@@ -86,7 +86,7 @@
                 <div
                   class="custom-font-switch  pl-1"
                   @click.stop=""
-                  v-html="page.payment.phrase_dacceptation"
+                  v-dompurify-html="page.payment.phrase_dacceptation"
                 />
               </template>
             </v-switch>
