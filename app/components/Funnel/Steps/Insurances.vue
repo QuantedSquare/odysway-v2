@@ -9,7 +9,7 @@
   </v-container>
 
   <!-- Insurance options -->
-  <v-container v-else-if="insurances && !_.isEmpty(insurances)">
+  <v-container v-else-if="insurances && !isEmpty(insurances)">
     <!-- Header -->
     <v-row class="mb-2">
       <v-col
@@ -242,7 +242,7 @@
 </template>
 
 <script setup>
-import _ from 'lodash'
+import isEmpty from 'lodash/isEmpty'
 import { mdiRadioboxBlank, mdiRadioboxMarked, mdiArrowLeft, mdiArrowRight } from '@mdi/js'
 
 const { trackReservationStep } = useGtmTracking()

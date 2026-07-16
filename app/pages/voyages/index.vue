@@ -83,7 +83,7 @@
 
 <script setup>
 import { mdiClose } from '@mdi/js'
-import _ from 'lodash'
+import uniqBy from 'lodash/uniqBy'
 import { useVoyageFilters } from '~/composables/useVoyageFilters'
 
 const { trackSearchBar, trackViewItemList } = useGtmTracking()
@@ -255,7 +255,7 @@ const filteredVoyages = computed(() => {
     activities: selActivities.value,
     confirmed: confirmedOnly.value,
   }, filterCtx.value)
-  return _.uniqBy(list, 'slug')
+  return uniqBy(list, 'slug')
 })
 
 const nbVoyages = computed(() => filteredVoyages.value?.length || 0)
