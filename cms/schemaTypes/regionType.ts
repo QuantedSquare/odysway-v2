@@ -10,7 +10,8 @@ export const regionType = defineType({
   ],
   fields: [
     defineField({name: 'nom', type: 'string', validation: (r) => r.required(), group: 'basic'}),
-    defineField({name: 'meta_description', type: 'text', group: 'basic', title: 'Description'}),
+    // LEGACY #
+    defineField({name: 'meta_description', type: 'text', group: 'basic', title: 'Description', hidden: true}),
     defineField({name: 'slug', type: 'slug', options: {source: 'nom'}, validation: (r) => r.required(), group: 'basic'}),
     defineField({name: 'bestSellerPrefix', title: 'Préfixe best-seller', type: 'string', description: 'Petit texte au-dessus du nom sur la carte best-seller, ex. "Escapade en" pour "France"', group: 'basic'}),
     defineField({name: 'interjection', type: 'string', group: 'basic'}),
@@ -29,7 +30,8 @@ export const regionType = defineType({
       description: 'Blog post associé à cette région',
       group: 'basic',
     }),
-    defineField({name: 'seo', type: 'seo', group: 'seo'}),
+    // LEGACY #
+    defineField({name: 'seo', type: 'seo', group: 'seo', hidden: true}),
   ],
 })
 

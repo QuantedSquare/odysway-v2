@@ -36,22 +36,28 @@ export const devisType = defineType({
           type: 'string',
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'step_2',
           title: 'Étape 2',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'step_3',
           title: 'Étape 3',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'step_4',
           title: 'Étape 4',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         }),
         defineField({
@@ -206,28 +212,36 @@ export const devisType = defineType({
       type: 'object',
       group: 'buttons',
       fields: [
+        // LEGACY #
         defineField({
           name: 'send_devis_request',
           title: 'Texte bouton envoyer demande de devis',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'take_appointment',
           title: 'Texte bouton prendre rendez-vous',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'next',
           title: 'Texte bouton suivant',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'previous',
           title: 'Texte bouton précédent',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         }),
         defineField({
