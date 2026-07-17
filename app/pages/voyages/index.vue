@@ -1,11 +1,6 @@
 <template>
   <div class="voyages-search">
     <v-container class="max-container-width py-6 py-md-8">
-      <p class="crumb">
-        <NuxtLink to="/">
-          Accueil
-        </NuxtLink> › Voyages
-      </p>
       <h1 class="h1 text-primary">
         {{ pageTitle }}
       </h1>
@@ -375,15 +370,6 @@ watch(() => route.query.confirmed, (value) => {
 <style scoped>
 .wrap {
   max-width: 1180px!important;
-}
-.crumb {
-  font-size: 13px;
-  color: #9aa0a1;
-  margin: 0 0 16px;
-}
-.crumb a {
-  text-decoration: none;
-  color: #9aa0a1;
 }
 .h1 {
   font-size: 30px;
