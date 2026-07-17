@@ -18,12 +18,14 @@ export const offreCadeauType = defineType({
       validation: (rule) => rule.required(),
       title: 'Titre',
     }),
+    // LEGACY #
     defineField({
       name: 'slug',
       type: 'slug',
       options: {source: 'title'},
       validation: (rule) => rule.required(),
       title: 'Slug',
+      hidden: true,
     }),
     defineField({
       name: 'heroImage',

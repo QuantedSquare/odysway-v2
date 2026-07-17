@@ -68,12 +68,14 @@ export const categoryType = defineType({
       },
       group: 'content',
     }),
+    // LEGACY #
     defineField({
       name: 'showOnHome',
       type: 'boolean',
       initialValue: false,
       description: 'Display this category on the homepage',
       group: 'settings',
+      hidden: true,
     }),
     defineField({
       name: 'blog',
