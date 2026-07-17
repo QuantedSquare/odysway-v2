@@ -71,11 +71,13 @@ export const pageVoyageType = defineType({
   },
   fields: [
     // Buttons
+    // LEGACY #
     defineField({
       name: 'shareButton',
       title: 'Bouton Partager',
       type: 'object',
       group: 'buttons',
+      hidden: true,
       fields: [
         defineField({
           name: 'text',
@@ -92,11 +94,13 @@ export const pageVoyageType = defineType({
       ]
     }),
 
+    // LEGACY #
     defineField({
       name: 'photoButton',
       title: 'Bouton Photos',
       type: 'object',
       group: 'buttons',
+      hidden: true,
       fields: [
         defineField({
           name: 'text',
@@ -132,10 +136,12 @@ export const pageVoyageType = defineType({
           type: 'string',
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'dateText',
           title: 'Texte Dates',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         }),
         defineField({
@@ -165,10 +171,12 @@ export const pageVoyageType = defineType({
               }],
               validation: Rule => Rule.required().min(1)
             }),
+            // LEGACY #
             defineField({
               name: 'to',
               title: 'Lien',
               type: 'string',
+              hidden: true,
               validation: Rule => Rule.required()
             }),
             defineField({
@@ -249,32 +257,40 @@ export const pageVoyageType = defineType({
           type: 'string',
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'icon',
           title: 'Icône',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'iconColor',
           title: 'Couleur Icône',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'backgroundColor',
           title: 'Couleur de Fond',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         })
       ]
     }),
 
+    // LEGACY #
     defineField({
       name: 'programmeBlock',
       title: 'Bloc Programme',
       type: 'object',
       group: 'content_sections',
+      hidden: true,
       fields: [
         defineField({
           name: 'title',
@@ -329,65 +345,89 @@ export const pageVoyageType = defineType({
       type: 'object',
       group: 'content_sections',
       fields: [
+        // LEGACY #
         defineField({
           name: 'title',
           title: 'Titre',
           type: 'string',
+          hidden: true,
         }),
+        // LEGACY #
         defineField({
           name: 'subtitle',
           title: 'Sous-titre',
           type: 'string',
+          hidden: true,
         }),
+        // LEGACY #
         defineField({
           name: 'buttonText',
           title: 'Texte Bouton',
           type: 'string',
+          hidden: true,
         }),
+        // LEGACY #
         defineField({
           name: 'dialogTitle',
           title: 'Titre Dialog',
           type: 'string',
+          hidden: true,
         }),
+        // LEGACY #
         defineField({
           name: 'dialogSubtitle',
           title: 'Sous-titre Dialog',
           type: 'string',
+          hidden: true,
         }),
+        // LEGACY #
         defineField({
           name: 'dialogSchedule',
           title: 'Horaires',
           type: 'string',
+          hidden: true,
         }),
+        // LEGACY #
         defineField({
           name: 'whatsappLabel',
           title: 'Label WhatsApp',
           type: 'string',
+          hidden: true,
         }),
+        // LEGACY #
         defineField({
           name: 'whatsappUrl',
           title: 'URL WhatsApp',
           type: 'url',
+          hidden: true,
         }),
+        // LEGACY #
         defineField({
           name: 'whatsappSubtitle',
           title: 'Sous-titre WhatsApp',
           type: 'string',
+          hidden: true,
         }),
+        // LEGACY #
         defineField({
           name: 'phoneLabel',
           title: 'Label Téléphone',
           type: 'string',
+          hidden: true,
         }),
+        // LEGACY #
         defineField({
           name: 'phoneNumber',
           title: 'Numéro Téléphone',
           type: 'string',
+          hidden: true,
         }),
+        // LEGACY #
         defineField({
           name: 'phoneSubtitle',
           title: 'Sous-titre Téléphone',
           type: 'string',
+          hidden: true,
         }),
         defineField({
           name: 'teamMembers',
@@ -429,34 +469,44 @@ export const pageVoyageType = defineType({
           type: 'string',
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'bookingButtonColor',
           title: 'Couleur Bouton Réservation',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'optionButtonText',
           title: 'Texte Bouton Option',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'optionButtonColor',
           title: 'Couleur Bouton Option',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'disabledButtonText',
           title: 'Texte Bouton Désactivé',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'disabledButtonColor',
           title: 'Couleur Bouton Désactivé',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         }),
         defineField({
@@ -478,10 +528,12 @@ export const pageVoyageType = defineType({
         defineField({ name: 'reservation_open_text', title: 'Texte ouverture réservations', type: 'string' }),
         defineField({ name: 'expand_more_text', title: 'Texte voir plus de dates', type: 'string' }),
         defineField({ name: 'expand_less_text', title: 'Texte voir moins de dates', type: 'string' }),
+        // LEGACY #
         defineField({
           name: 'status',
           title: 'Statuts',
           type: 'object',
+          hidden: true,
           fields: [
             defineField({
               name: 'partiallyBooked',
@@ -576,22 +628,28 @@ export const pageVoyageType = defineType({
           type: 'string',
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'title',
           title: 'Titre',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'backgroundColor',
           title: 'Couleur de Fond',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'textButton',
           title: 'Texte Bouton',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         }),
         defineField({
@@ -600,10 +658,12 @@ export const pageVoyageType = defineType({
           type: 'string',
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'buttonColor',
           title: 'Couleur Bouton',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         })
       ]
@@ -628,10 +688,12 @@ export const pageVoyageType = defineType({
           type: 'string',
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'colorInclude',
           title: 'Couleur Inclut',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         }),
         defineField({
@@ -640,14 +702,18 @@ export const pageVoyageType = defineType({
           type: 'string',
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'colorExclude',
           title: 'Couleur N\'inclut Pas',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         }),
-        defineField({ name: 'expand_more_text', title: 'Texte voir plus', type: 'string' }),
-        defineField({ name: 'expand_less_text', title: 'Texte voir moins', type: 'string' })
+        // LEGACY #
+        defineField({ name: 'expand_more_text', title: 'Texte voir plus', type: 'string', hidden: true }),
+        // LEGACY #
+        defineField({ name: 'expand_less_text', title: 'Texte voir moins', type: 'string', hidden: true })
       ]
     }),
 
@@ -664,10 +730,12 @@ export const pageVoyageType = defineType({
           type: 'string',
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'ratingColor',
           title: 'Couleur Note',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         })
       ]
@@ -680,12 +748,15 @@ export const pageVoyageType = defineType({
       type: 'object',
       group: 'faq_section',
       fields: [
+        // LEGACY #
         defineField({
           name: 'title',
           title: 'Titre',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'backgroundColor',
           title: 'Couleur de Fond',
@@ -693,12 +764,15 @@ export const pageVoyageType = defineType({
           type: 'string',
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'textButton',
           title: 'Texte Bouton',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'buttonColor',
           hidden: true,
@@ -706,29 +780,37 @@ export const pageVoyageType = defineType({
           type: 'string',
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'to',
           title: 'Lien',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'avatar',
           title: 'Avatar',
           type: 'image',
+          hidden: true,
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'subtitle',
           title: 'Sous-titre',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'description',
           title: 'Description',
           type: 'text',
           rows: 3,
+          hidden: true,
           validation: Rule => Rule.required()
         }),
         defineField({
@@ -749,11 +831,13 @@ export const pageVoyageType = defineType({
       ]
     }),
     // Why Section
+    // LEGACY #
     defineField({
       name: 'whySection',
       title: 'Section Pourquoi',
       type: 'object',
       group: 'why_section',
+      hidden: true,
       fields: [
         defineField({
           name: 'title',
@@ -802,11 +886,13 @@ export const pageVoyageType = defineType({
     }),
 
     // Other Sections
+    // LEGACY #
     defineField({
       name: 'otherIdeas',
       title: 'Autres Idées',
       type: 'string',
       group: 'other_sections',
+      hidden: true,
       validation: Rule => Rule.required()
     }),
 
