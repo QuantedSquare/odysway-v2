@@ -32,6 +32,14 @@
           class="panel"
         >
           <div class="panel-body">
+          <Transition
+            name="seg-fade"
+            mode="out-in"
+          >
+          <div
+            :key="openSegment"
+            class="seg-inner"
+          >
           <!-- Destination -->
         <template v-if="openSegment === 'dest'">
           <div class="quick">
@@ -49,47 +57,57 @@
           <p class="affine">
             Affinez par destination :
           </p>
-          <template
-            v-for="grp in destinationsByRegion"
-            :key="grp.nom"
+          <Transition
+            name="dest-fade"
+            mode="out-in"
           >
-            <p class="reg">
-              {{ clean(grp.nom) === 'France' ? 'France · régions' : grp.nom }}
-            </p>
-            <div class="grid">
-              <button
-                v-for="d in grp.destinations"
-                :key="d.slug"
-                class="thumb"
-                :class="{ on: selDest.includes(d.slug) }"
-                type="button"
-                @click="toggleDest(d.slug)"
+            <div
+              :key="scope"
+              class="dest-groups"
+            >
+              <template
+                v-for="grp in destinationsByRegion"
+                :key="grp.nom"
               >
-                <span
-                  class="ph"
-                  :style="thumbBg(d)"
-                >
-                  <v-icon
-                    v-if="!d.image?.asset?._ref"
-                    :icon="mdiMapMarker"
-                  />
-                </span>
-                <span class="scrim" />
-                <span class="badge">{{ d.count }} voyage{{ d.count > 1 ? 's' : '' }}</span>
-                <span
-                  v-if="selDest.includes(d.slug)"
-                  class="chk"
-                >
-                  <v-icon
-                    :icon="mdiCheck"
-                    size="14"
-                    color="white"
-                  />
-                </span>
-                <span class="name">{{ d.title }}</span>
-              </button>
+                <p class="reg">
+                  {{ clean(grp.nom) === 'France' ? 'France · régions' : grp.nom }}
+                </p>
+                <div class="grid">
+                  <button
+                    v-for="d in grp.destinations"
+                    :key="d.slug"
+                    class="thumb"
+                    :class="{ on: selDest.includes(d.slug) }"
+                    type="button"
+                    @click="toggleDest(d.slug)"
+                  >
+                    <span
+                      class="ph"
+                      :style="thumbBg(d)"
+                    >
+                      <v-icon
+                        v-if="!d.image?.asset?._ref"
+                        :icon="mdiMapMarker"
+                      />
+                    </span>
+                    <span class="scrim" />
+                    <span class="badge">{{ d.count }} voyage{{ d.count > 1 ? 's' : '' }}</span>
+                    <span
+                      v-if="selDest.includes(d.slug)"
+                      class="chk"
+                    >
+                      <v-icon
+                        :icon="mdiCheck"
+                        size="14"
+                        color="white"
+                      />
+                    </span>
+                    <span class="name">{{ d.title }}</span>
+                  </button>
+                </div>
+              </template>
             </div>
-          </template>
+          </Transition>
         </template>
 
         <!-- Type de voyage -->
@@ -127,7 +145,7 @@
             <button
               v-for="c in categories"
               :key="c.slug"
-              class="citem"
+              class="citem center"
               :class="{ on: selActivities.includes(c.slug) }"
               type="button"
               @click="toggleActivity(c.slug)"
@@ -175,6 +193,8 @@
             </button>
           </div>
         </template>
+          </div>
+          </Transition>
 
           </div>
 
@@ -429,14 +449,43 @@ function visibleRegionNoms() {
   return [scope.value]
 }
 
-const destinationsByRegion = computed(() =>
-  visibleRegionNoms().map(nom => ({
-    nom,
-    destinations: props.destinations
+// A destination tagged with the "France" region is a French region. It must
+// only appear under the France group — never leak into Europe / Hors France,
+// even when it also carries another region (e.g. Europe).
+const isFrench = d => d.regions?.some(r => clean(r.nom) === 'France')
+
+// In the Europe scope, France is surfaced as a single destination-like card
+// (rather than exploding into every French region). Clicking it filters on the
+// whole France region slug. The thumbnail borrows a French destination image.
+const franceRegion = computed(() => props.regions.find(r => clean(r.nom) === 'France'))
+const franceCard = computed(() => {
+  const fr = franceRegion.value
+  if (!fr) return null
+  const withImage = props.destinations.find(d => isFrench(d) && d.image?.asset?._ref)
+  return {
+    slug: fr.slug,
+    title: 'France',
+    image: withImage?.image,
+    count: countMatching(props.allVoyages, { destinations: [fr.slug] }, ctx.value),
+  }
+})
+
+const destinationsByRegion = computed(() => {
+  const europeScope = clean(scope.value) === 'Europe'
+  return visibleRegionNoms().map((nom) => {
+    const isFranceGroup = clean(nom) === 'France'
+    const destinations = props.destinations
       .filter(d => d.regions?.some(r => r.nom === nom))
-      .sort((a, b) => a.title.localeCompare(b.title)),
-  })).filter(g => g.destinations.length > 0),
-)
+      .filter(d => isFranceGroup || !isFrench(d))
+      .sort((a, b) => a.title.localeCompare(b.title))
+    // Europe scope: surface France as a single card inside the Europe grid
+    // (not in its own section), ahead of the European destinations.
+    if (europeScope && clean(nom) === 'Europe' && franceCard.value) {
+      destinations.unshift(franceCard.value)
+    }
+    return { nom, destinations }
+  }).filter(g => g.destinations.length > 0)
+})
 
 const mobileDests = computed(() =>
   destinationsByRegion.value.flatMap(g => g.destinations.map(d => ({ ...d, regionNom: g.nom }))),
@@ -563,6 +612,7 @@ function toggleSegment(seg) {
   border: 1px solid var(--bd2);
   border-radius: var(--rlg);
   overflow: hidden;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, .1);
 }
 .seg {
   flex: 1;
@@ -580,7 +630,7 @@ function toggleSegment(seg) {
 .seg.on { background: var(--gt); }
 .seg .lead-i { font-size: 19px; color: var(--teal); }
 .seg-txt { display: flex; flex-direction: column; }
-.c { font-size: 11px; color: var(--t3); display: block; margin-bottom: 1px; }
+.c { font-size: 13px; color: var(--t3); display: block; margin-bottom: 1px; }
 .v { font-weight: 600; font-size: 14px; color: var(--t1); }
 .chev { margin-left: auto; font-size: 18px; color: var(--teal); }
 
@@ -617,6 +667,46 @@ function toggleSegment(seg) {
 @media (prefers-reduced-motion: reduce) {
   .panel-enter-active,
   .panel-leave-active {
+    transition: none;
+  }
+}
+
+/* Segment switch (Destination <-> Type <-> Période) */
+.seg-fade-enter-active,
+.seg-fade-leave-active {
+  transition: opacity .18s ease, transform .18s ease;
+}
+.seg-fade-enter-from {
+  opacity: 0;
+  transform: translateY(7px);
+}
+.seg-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-7px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .seg-fade-enter-active,
+  .seg-fade-leave-active {
+    transition: none;
+  }
+}
+
+/* Destination scope switch (Toutes / France / Europe / …) */
+.dest-fade-enter-active,
+.dest-fade-leave-active {
+  transition: opacity .16s ease, transform .16s ease;
+}
+.dest-fade-enter-from {
+  opacity: 0;
+  transform: translateY(6px);
+}
+.dest-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-6px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .dest-fade-enter-active,
+  .dest-fade-leave-active {
     transition: none;
   }
 }
@@ -726,12 +816,27 @@ function toggleSegment(seg) {
   border-radius: var(--rmd);
   background: #fff;
   font-size: 13px;
+  font-weight: 500;
   color: var(--t1);
   cursor: pointer;
   font-family: inherit;
+  transition: border-color .18s ease, background .18s ease, color .18s ease,
+    transform .18s ease, box-shadow .18s ease;
 }
-.citem.center { justify-content: center; }
-.citem.on { border-color: var(--teal); background: var(--gt); color: var(--teal); }
+.citem.center { justify-content: center; text-align: center; }
+.citem:hover {
+  border-color: var(--teal);
+  color: var(--teal);
+  background: var(--gt);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px -6px rgba(43, 76, 82, .45);
+}
+.citem.on {
+  border-color: var(--teal);
+  background: var(--teal);
+  color: #fff;
+}
+.citem.on:hover { color: #fff; }
 
 .foot {
   display: flex;
@@ -777,6 +882,7 @@ function toggleSegment(seg) {
   cursor: pointer;
   text-align: left;
   font-family: inherit;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, .1);
 }
 .prow .lead-i { font-size: 20px; color: var(--teal); }
 .prow .chev { margin-left: auto; color: var(--teal); }
