@@ -8,13 +8,17 @@ export const promotionType = defineType({
   type: 'document',
   title: 'Promotion',
   fields: [
+    // LEGACY #
     defineField({
       name: 'title',
       type: 'string',
+      hidden: true,
     }),
+    // LEGACY #
     defineField({
       name: 'link',
       type: 'url',
+      hidden: true,
     }),
   ],
   icon: StarIcon,

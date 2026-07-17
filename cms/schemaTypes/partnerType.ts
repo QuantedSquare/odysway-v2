@@ -6,10 +6,14 @@ export const partnerType = defineType({
   type: 'document',
   hidden: true,
   fields: [
-    defineField({name: 'img', title: 'Image', type: 'image', options: {hotspot: true}}),
-    defineField({name: 'description', type: 'string'}),
-    defineField({name: 'isOnHome', type: 'boolean'}),
-    defineField({name: 'whiteFilter', type: 'boolean'}),
+    // LEGACY #
+    defineField({name: 'img', title: 'Image', type: 'image', options: {hotspot: true}, hidden: true}),
+    // LEGACY #
+    defineField({name: 'description', type: 'string', hidden: true}),
+    // LEGACY #
+    defineField({name: 'isOnHome', type: 'boolean', hidden: true}),
+    // LEGACY #
+    defineField({name: 'whiteFilter', type: 'boolean', hidden: true}),
   ],
 })
 

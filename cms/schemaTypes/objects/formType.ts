@@ -7,18 +7,24 @@ export const formType = defineType({
   name: 'form',
   type: 'object',
   fields: [
+    // LEGACY #
     defineField({
       name: 'label',
       type: 'string',
+      hidden: true,
     }),
+    // LEGACY #
     defineField({
       name: 'heading',
       type: 'string',
+      hidden: true,
     }),
+    // LEGACY #
     defineField({
       name: 'form',
       type: 'string',
       description: 'Select form type',
+      hidden: true,
       options: {
         list: ['newsletter', 'register', 'contact'],
       },
