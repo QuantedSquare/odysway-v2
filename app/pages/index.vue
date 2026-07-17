@@ -313,8 +313,7 @@ const homeQuery = groq`
     lastMinute{
       title,
       eyebrow,
-      subtitle,
-      voyages[]->{ ${voyageProjection} }
+      subtitle
     },
     bestSellers{
       eyebrow,
@@ -436,14 +435,10 @@ const heroSubtitleText = computed(() => {
   return portableTextToPlain(blocks)
 })
 
-// Dernières places / Best-sellers reuse curated CMS lists. If the dedicated
-// fields are empty, fall back to existing carousels so the sections still
-// render without new data entry.
-const lastMinuteVoyages = computed(() => {
-  const dedicated = homeSanity.value?.lastMinute?.voyages
-  if (dedicated?.length) return dedicated
-  return homeSanity.value?.summerTravel?.voyagesSummerTravel || []
-})
+// Dernières places: the voyages whose next bookable departure is the closest in
+// time and still has seats left, resolved live from Supabase (one entry per
+// voyage). Title/eyebrow/subtitle stay editable in Sanity.
+const { lastMinuteVoyages } = useLastMinuteVoyages()
 const lastMinuteTitle = computed(() => homeSanity.value?.lastMinute?.title || 'Dernières places')
 const lastMinuteEyebrow = computed(() => homeSanity.value?.lastMinute?.eyebrow || '')
 const lastMinuteSubtitle = computed(() => homeSanity.value?.lastMinute?.subtitle || 'Il reste quelques places, le départ est proche.')
