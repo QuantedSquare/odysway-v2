@@ -69,11 +69,13 @@ export const checkoutType = defineType({
   },
   fields: [
     // Breadcrumb
+    // LEGACY #
     defineField({
       name: 'fil_dariane_devis',
       title: 'Fil d\'Ariane Devis',
       type: 'object',
       group: 'breadcrumb',
+      hidden: true,
       fields: [
         defineField({
           name: 'step_1',
@@ -153,35 +155,43 @@ export const checkoutType = defineType({
       group: 'general',
       validation: Rule => Rule.required()
     }),
+    // LEGACY #
     defineField({
       name: 'room_indiv_accroche',
       title: 'Accroche Chambre Individuelle',
       type: 'text',
       rows: 3,
       group: 'general',
+      hidden: true,
       validation: Rule => Rule.required()
     }),
+    // LEGACY #
     defineField({
       name: 'room_indiv_text',
       title: 'Texte Chambre Individuelle',
       type: 'text',
       rows: 3,
       group: 'general',
+      hidden: true,
       validation: Rule => Rule.required()
     }),
+    // LEGACY #
     defineField({
       name: 'forced_indiv_room_text',
       title: 'Texte Chambre Individuelle Forcée',
       type: 'text',
       rows: 3,
-      group: 'general'
+      group: 'general',
+      hidden: true
     }),
+    // LEGACY #
     defineField({
       name: 'cancel_text',
       title: 'Texte d\'Annulation',
       type: 'text',
       group: 'general',
       rows: 3,
+      hidden: true,
       validation: Rule => Rule.required()
     }),
 
@@ -218,10 +228,12 @@ export const checkoutType = defineType({
       type: 'object',
       group: 'details',
       fields: [
+        // LEGACY #
         defineField({
           name: 'select_travelers_title',
           title: 'Titre Sélection Voyageurs',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         }),
         defineField({
@@ -284,17 +296,21 @@ export const checkoutType = defineType({
           type: 'string',
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'newsletter_text',
           title: 'Texte Newsletter',
           type: 'text',
           rows: 3,
+          hidden: true,
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'newsletter_label',
           title: 'Label Newsletter',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         }),
         defineField({
@@ -349,30 +365,40 @@ export const checkoutType = defineType({
           title: 'Bouton Continuer ma réservation',
           type: 'string'
         }),
+        // LEGACY #
         defineField({
           name: 'back_button',
           title: 'Bouton Retour au voyage',
-          type: 'string'
+          type: 'string',
+          hidden: true
         }),
+        // LEGACY #
         defineField({
           name: 'trust_badge_text',
           title: 'Badge de confiance (étape normale)',
-          type: 'string'
+          type: 'string',
+          hidden: true
         }),
+        // LEGACY #
         defineField({
           name: 'trust_badge_option_text',
           title: 'Badge de confiance (mode option)',
-          type: 'string'
+          type: 'string',
+          hidden: true
         }),
+        // LEGACY #
         defineField({
           name: 'capacity_full_text',
           title: 'Message départ complet',
-          type: 'string'
+          type: 'string',
+          hidden: true
         }),
+        // LEGACY #
         defineField({
           name: 'capacity_limited_text',
           title: 'Message places limitées (utiliser {{count}} pour le nombre)',
-          type: 'string'
+          type: 'string',
+          hidden: true
         })
       ]
     }),
@@ -660,10 +686,12 @@ export const checkoutType = defineType({
           type: 'string',
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'deposit_due',
           title: 'Accompte à Régler',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         }),
         defineField({
@@ -800,17 +828,21 @@ export const checkoutType = defineType({
           type: 'string',
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'pay_alma_button',
           title: 'Bouton Payer Alma',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'alma_payment_info',
           title: 'Info Paiement Alma',
           type: 'text',
           rows: 3,
+          hidden: true,
           validation: Rule => Rule.required()
         }),
         defineField({ name: 'balance_heading', title: 'Titre paiement du solde', type: 'string' }),
@@ -828,7 +860,8 @@ export const checkoutType = defineType({
         defineField({ name: 'secure_payment_label', title: 'Label Paiement sécurisé', type: 'string' }),
         defineField({ name: 'vacation_vouchers_text', title: 'Texte chèques vacances', type: 'string' }),
         defineField({ name: 'vacation_vouchers_note', title: 'Note chèques vacances', type: 'string' }),
-        defineField({ name: 'payment_previous_button', title: 'Bouton Précédent (paiement)', type: 'string' })
+        // LEGACY #
+        defineField({ name: 'payment_previous_button', title: 'Bouton Précédent (paiement)', type: 'string', hidden: true })
       ]
     }),
 
@@ -839,16 +872,20 @@ export const checkoutType = defineType({
       type: 'object',
       group: 'navigation',
       fields: [
+        // LEGACY #
         defineField({
           name: 'next_button',
           title: 'Bouton Suivant',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'prev_button',
           title: 'Bouton Précédent',
           type: 'string',
+          hidden: true,
           validation: Rule => Rule.required()
         }),
         defineField({ name: 'step_label_summary', title: 'Label étape Récapitulatif', type: 'string' }),
@@ -856,7 +893,8 @@ export const checkoutType = defineType({
         defineField({ name: 'step_label_2', title: 'Label étape 2 (Votre voyage)', type: 'string' }),
         defineField({ name: 'step_label_3', title: 'Label étape 3 (Paiement)', type: 'string' }),
         defineField({ name: 'next_skipper_button', title: 'Bouton Suivant (skipper)', type: 'string' }),
-        defineField({ name: 'close_drawer_button', title: 'Bouton Fermer (drawer)', type: 'string' }),
+        // LEGACY #
+        defineField({ name: 'close_drawer_button', title: 'Bouton Fermer (drawer)', type: 'string', hidden: true }),
         defineField({ name: 'price_per_person_suffix', title: 'Suffixe prix par personne', type: 'string' })
       ]
     })

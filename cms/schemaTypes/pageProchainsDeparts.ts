@@ -14,10 +14,12 @@ export const pageProchainsDeparts = defineType({
   },
   fields: [
     // Index page
+    // LEGACY #
     defineField({
       name: 'index',
       title: 'Page Index des Prochains Départs (odysway.com/prochains-departs)',
       type: 'object',
+      hidden: true,
       fields: [
         defineField({
           name: 'pageTitle',
@@ -47,35 +49,43 @@ export const pageProchainsDeparts = defineType({
       type: 'string',
     }),
     // Slug page
-    
+
+        // LEGACY #
         defineField({
           name: 'allTravelsButton',
           title: 'Texte bouton pour tous les voyages',
           type: 'string',
-          validation: Rule => Rule.required()
+          validation: Rule => Rule.required(),
+          hidden: true,
         }),
+        // LEGACY #
         defineField({
           name: 'frenchTravelsButton',
           title: 'Texte bouton pour tous les voyages en France',
           type: 'string',
-          validation: Rule => Rule.required()
+          validation: Rule => Rule.required(),
+          hidden: true,
         }),
+        // LEGACY #
         defineField({
           name: 'foreignTravelsButton',
           title: 'Texte bouton pour tous les voyages à l\'étranger',
           type: 'string',
-          validation: Rule => Rule.required()
+          validation: Rule => Rule.required(),
+          hidden: true,
         }),
-      
+
     defineField({
       name: 'common',
       title: 'Éléments Communs',
       type: 'object',
       fields: [
+        // LEGACY #
         defineField({
           name: 'expandButton',
           title: 'Bouton d\'expansion',
           type: 'object',
+          hidden: true,
           fields: [
             defineField({
               name: 'showMore',

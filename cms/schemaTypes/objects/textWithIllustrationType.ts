@@ -8,22 +8,30 @@ export const textWithIllustrationType = defineType({
   type: 'object',
   title: 'Text with Illustration',
   fields: [
+    // LEGACY #
     defineField({
       name: 'heading',
       type: 'string',
+      hidden: true,
     }),
+    // LEGACY #
     defineField({
       name: 'tagline',
       type: 'string',
+      hidden: true,
     }),
+    // LEGACY #
     defineField({
       name: 'excerpt',
       type: 'text',
+      hidden: true,
     }),
+    // LEGACY #
     defineField({
       name: 'image',
       type: 'image',
       options: {hotspot: true},
+      hidden: true,
       fields: [
         defineField({
           name: 'alt',

@@ -106,6 +106,7 @@ export const searchPageType = defineType({
       type: 'array',
       group: 'search_dialog',
       of: [{type: 'object', fields: [
+        // LEGACY #
         defineField({
           name: 'icon',
           title: 'Icône',
@@ -113,6 +114,7 @@ export const searchPageType = defineType({
           options: {
             hotspot: true,
           },
+          hidden: true,
         }),
         defineField({
           name: 'text',
@@ -171,12 +173,14 @@ export const searchPageType = defineType({
       group: 'search_results',
       validation: Rule => Rule.required()
     }),
+    // LEGACY #
     defineField({
       name: 'image',
       title:'Image dans le Hero',
       type: 'image',
       options: {hotspot: true},
       fields: [{name: 'alt', type: 'string'} as any],
+      hidden: true,
     }),
     // Search Hero Section
     defineField({
@@ -228,12 +232,14 @@ export const searchPageType = defineType({
         })
       ]
     }),
+    // LEGACY #
     defineField({
       name: 'seo',
       title: 'SEO Settings',
       type: 'seo',
       description: 'Configuration SEO pour le voyage',
       group: 'seo',
+      hidden: true,
     }),
   ]
 })

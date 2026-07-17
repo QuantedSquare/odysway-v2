@@ -5,11 +5,13 @@ export const blockContent = defineType({
   name: 'blockContent',
   type: 'object',
   fields: [
+    // LEGACY #
     defineField({
       name: 'body',
       title: 'Content',
       type: 'array',
       description: 'Blog post content',
+      hidden: true,
       of: [
         {
           type: 'block',

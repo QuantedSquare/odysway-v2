@@ -12,11 +12,13 @@ export const confirmationType = defineType({
     },
   },
   fields: [
+    // LEGACY #
     defineField({
       name: 'title',
       type: 'string',
       validation: (rule) => rule.required(),
       title: 'Titre',
+      hidden: true,
     }),
     defineField({
       name: 'slug',

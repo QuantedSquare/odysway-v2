@@ -21,17 +21,22 @@ export const pageType = defineType({
     collapsed: false,
   },
   fields: [
-    defineField({name: 'title', type: 'string'}),
+    // LEGACY #
+    defineField({name: 'title', type: 'string', hidden: true}),
+    // LEGACY #
     defineField({
       name: 'slug',
       type: 'slug',
       validation: (r) => r.required(),
       title: 'Slug de la page',
+      hidden: true,
     }),
+    // LEGACY #
     defineField({
       name: 'blocks',
       type: 'array',
       title: 'Page builder',
+      hidden: true,
       options: {
         layout: 'list',
         insertMenu: {

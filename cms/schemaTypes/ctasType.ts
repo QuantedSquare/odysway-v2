@@ -59,11 +59,13 @@ export const ctasType = defineType({
                   type: 'string',
                   validation: Rule => Rule.required()
                 }),
+                // LEGACY #
                 defineField({
                   name: 'to',
                   title: 'Lien du bouton',
                   type: 'string',
-                  validation: Rule => Rule.required()
+                  validation: Rule => Rule.required(),
+                  hidden: true,
                 })
               ]
             })
@@ -86,11 +88,13 @@ export const ctasType = defineType({
               type: 'string',
               validation: Rule => Rule.required()
             }),
+            // LEGACY #
             defineField({
               name: 'linkOnText',
               title: 'Lien du bouton',
               type: 'string',
-              validation: Rule => Rule.required()
+              validation: Rule => Rule.required(),
+              hidden: true,
             }),
             defineField({
               name: 'subtitle',
@@ -122,17 +126,21 @@ export const ctasType = defineType({
       type: 'object',
       group: 'partenaires_section',
       fields: [
+        // LEGACY #
         defineField({
           name: 'title',
           title: 'Titre de la section',
           type: 'string',
-          validation: Rule => Rule.required()
+          validation: Rule => Rule.required(),
+          hidden: true,
         }),
+        // LEGACY #
         defineField({
           name: 'subtitle',
           title: 'Sous-titre de la section',
           type: 'string',
-          validation: Rule => Rule.required()
+          validation: Rule => Rule.required(),
+          hidden: true,
         }),
         defineField({
           name: 'images',

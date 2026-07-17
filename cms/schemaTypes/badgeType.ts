@@ -12,12 +12,14 @@ export const badgeType = defineType({
       description: 'Nom interne pour identifier le badge (ex: "Badge Groupe", "Badge Durée")',
       validation: (rule) => rule.required(),
     }),
+    // LEGACY #
     defineField({
       name: 'slug',
       type: 'slug',
       title: 'Slug',
       description: 'Identifiant unique pour la migration (ex: "groupe", "duree", "vol-inclus")',
-      options: {source: 'title'}
+      options: {source: 'title'},
+      hidden: true,
     }),
     defineField({
       name: 'text',
@@ -26,13 +28,16 @@ export const badgeType = defineType({
       description: 'Utilisez {var1} et/ou {var2} pour les valeurs dynamiques (ex: "Groupe de {var1} à {var2}")',
       validation: (rule) => rule.required(),
     }),
+    // LEGACY #
     defineField({
       name: 'hasVariable',
       type: 'boolean',
       title: 'Contient des variables',
       description: 'Ce badge nécessite des valeurs dynamiques',
       initialValue: false,
+      hidden: true,
     }),
+    // LEGACY #
     defineField({
       name: 'variable1Label',
       type: 'string',
@@ -40,6 +45,7 @@ export const badgeType = defineType({
       description: 'Ex: "Nombre min", "Durée", etc.',
       hidden: ({document}) => !document?.hasVariable,
     }),
+    // LEGACY #
     defineField({
       name: 'variable2Label',
       type: 'string',
@@ -56,6 +62,7 @@ export const badgeType = defineType({
         hotspot: true,
       },
     }),
+    // LEGACY #
     defineField({
       name: 'color',
       type: 'color',
@@ -70,7 +77,9 @@ export const badgeType = defineType({
         ],
       },
       validation: (rule) => rule.required(),
+      hidden: true,
     }),
+    // LEGACY #
     defineField({
       name: 'textColor',
       type: 'string',
@@ -85,6 +94,7 @@ export const badgeType = defineType({
       },
       initialValue: '#2B4C52',
       validation: (rule) => rule.required(),
+      hidden: true,
     }),
   ],
   preview: {

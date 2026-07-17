@@ -67,6 +67,7 @@ export const voyageType = defineType({
   ],
   fields: [
     orderRankField({type: 'voyage'}),
+    // LEGACY #
     defineField({
       name: 'bmsLink',
       type: 'url',
@@ -134,6 +135,7 @@ export const voyageType = defineType({
       validation: (r) => r.required().min(1),
       group: ['requiredBMS', 'basic'],
     }),
+    // LEGACY #
     defineField({
       name: 'groupeAvailable',
       type: 'boolean',
@@ -143,6 +145,7 @@ export const voyageType = defineType({
       hidden: true,
       initialValue: false,
     }),
+    // LEGACY #
     defineField({
       name: 'privatisationAvailable',
       type: 'boolean',
@@ -152,6 +155,7 @@ export const voyageType = defineType({
       hidden: true,
       initialValue: false,
     }),
+    // LEGACY #
     defineField({
       name: 'customAvailable',
       type: 'boolean',
@@ -173,6 +177,7 @@ export const voyageType = defineType({
       title: 'Niveau de difficulté',
       group: 'basic',
     }),
+    // LEGACY #
     defineField({
       name: 'level',
       type: 'string',
@@ -182,7 +187,9 @@ export const voyageType = defineType({
       hidden: true,
     }),
     defineField({ name: 'duration', type: 'number', group: 'basic', title: 'Durée du voyage'}),
+    // LEGACY #
     defineField({ name: 'nights', type: 'number', group: 'basic', title: 'Nombre de nuits', hidden: true }),
+    // LEGACY #
     defineField({
       name: 'includeFlight',
       type: 'boolean',
@@ -319,11 +326,13 @@ export const voyageType = defineType({
       group: 'voyageDescription',
       title: 'Description du voyage',
     }),
+    // LEGACY #
     defineField({
       name: 'emailDescription',
       type: 'text',
       group: 'voyageDescription',
       title: 'Description email',
+      hidden: true,
     }),
     defineField({
       name: 'levelBadgeOrder',
@@ -463,20 +472,25 @@ export const voyageType = defineType({
       title: 'Prix',
       fields: [
         { name: 'startingPrice', type: 'number' } as any,
-        { name: 'lastMinuteAvailable', type: 'boolean' } as any,
+        // LEGACY #
+        { name: 'lastMinuteAvailable', type: 'boolean', hidden: true } as any,
         { name: 'lastMinuteReduction', type: 'number' } as any,
-        { name: 'earlyBirdAvailable', type: 'boolean' } as any,
+        // LEGACY #
+        { name: 'earlyBirdAvailable', type: 'boolean', hidden: true } as any,
         { name: 'earlyBirdReduction', type: 'number' } as any,
         { name: 'maxTravelers', type: 'number' } as any,
         { name: 'minTravelersToConfirm', type: 'number' } as any,
         { name: 'indivRoom', type: 'boolean' } as any,
         { name: 'forcedIndivRoom', type: 'boolean' } as any,
         { name: 'indivRoomPrice', type: 'number' } as any,
-        { name: 'cseReduction', type: 'number' } as any,
-        { name: 'cseAvailable', type: 'boolean' } as any,
+        // LEGACY #
+        { name: 'cseReduction', type: 'number', hidden: true } as any,
+        // LEGACY #
+        { name: 'cseAvailable', type: 'boolean', hidden: true } as any,
         { name: 'childrenPromo', type: 'number' } as any,
         { name: 'childrenAge', type: 'number', initialValue: 12 } as any,
-        { name: 'airportCode', type: 'array', of: [{ type: 'string' }] } as any,
+        // LEGACY #
+        { name: 'airportCode', type: 'array', of: [{ type: 'string' }], hidden: true } as any,
         { name: 'capExploraction', 'type': 'boolean', description: 'Si coché, assurance cap-exploraction sinon cap-explorer', initialValue: false } as any,
       ],
     }),

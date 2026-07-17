@@ -25,11 +25,13 @@ export const pageThematiquesType = defineType({
           type: 'string',
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'metaDescription',
           title: 'Description',
           type: 'text',
           rows: 3,
+          hidden: true,
           validation: Rule => Rule.required()
         })
       ]
@@ -78,16 +80,20 @@ export const pageThematiquesType = defineType({
           title: 'Bouton d\'expansion',
           type: 'object',
           fields: [
+            // LEGACY #
             defineField({
               name: 'showMore',
               title: 'Texte "Voir plus"',
               type: 'string',
+              hidden: true,
               validation: Rule => Rule.required()
             }),
+            // LEGACY #
             defineField({
               name: 'showLess',
               title: 'Texte "Voir moins"',
               type: 'string',
+              hidden: true,
               validation: Rule => Rule.required()
             })
           ]

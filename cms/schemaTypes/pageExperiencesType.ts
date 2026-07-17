@@ -25,12 +25,14 @@ export const pageExperiencesType = defineType({
           type: 'string',
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'metaDescription',
           title: 'Description',
           type: 'text',
           rows: 3,
-          validation: Rule => Rule.required()
+          validation: Rule => Rule.required(),
+          hidden: true,
         })
       ]
     }),
@@ -39,7 +41,8 @@ export const pageExperiencesType = defineType({
       title:'Image dans le Hero',
       type: 'image',
       options: {hotspot: true},
-      fields: [{name: 'alt', type: 'string'} as any],
+      // LEGACY #
+      fields: [{name: 'alt', type: 'string', hidden: true} as any],
     }),
     defineField({
       name: 'heroText',
@@ -78,17 +81,21 @@ export const pageExperiencesType = defineType({
           title: 'Bouton d\'expansion',
           type: 'object',
           fields: [
+            // LEGACY #
             defineField({
               name: 'showMore',
               title: 'Texte "Voir plus"',
               type: 'string',
-              validation: Rule => Rule.required()
+              validation: Rule => Rule.required(),
+              hidden: true,
             }),
+            // LEGACY #
             defineField({
               name: 'showLess',
               title: 'Texte "Voir moins"',
               type: 'string',
-              validation: Rule => Rule.required()
+              validation: Rule => Rule.required(),
+              hidden: true,
             })
           ]
         })

@@ -18,7 +18,9 @@ export const reviewType = defineType({
       to: [{type: 'voyage'}],
       weak: true,
     }),
-    defineField({name: 'voyageTitle', type: 'string'}),
+    // LEGACY #
+    defineField({name: 'voyageTitle', type: 'string', hidden: true}),
+    // LEGACY #
     defineField({name: 'isOnHome', type: 'boolean', hidden: true}),
   ],
 })

@@ -15,12 +15,14 @@ export const blogCategoryType = defineType({
       validation: (rule) => rule.required(),
       group: 'content',
     }),
+    // LEGACY #
     defineField({
       name: 'image',
       type: 'image',
       options: {hotspot: true},
       fields: [{name: 'alt', type: 'string', title: 'Alt Text'} as any],
       group: 'content',
+      hidden: true,
     }),
   ],
   preview: {

@@ -24,11 +24,13 @@ export const footerType = defineType({
       type: 'object',
       group: 'main',
       fields: [
+        // LEGACY #
         defineField({
           name: 'image',
           title: 'Logo Odysway',
           type: 'image',
-          options: {hotspot: true}
+          options: {hotspot: true},
+          hidden: true,
         }),
         defineField({
           name: 'description',
@@ -43,11 +45,13 @@ export const footerType = defineType({
       type: 'object',
       group: 'main',
       fields: [
+        // LEGACY #
         defineField({
           name: 'image',
           title: 'Photo de groupe de l\'équipe',
           type: 'image',
-          options: {hotspot: true}
+          options: {hotspot: true},
+          hidden: true,
         })
       ]
     }),
@@ -91,11 +95,13 @@ export const footerType = defineType({
         })
       ]
     }),
+    // LEGACY #
     defineField({
       name: 'social',
       title: 'Social Media Links',
       type: 'object',
       group: 'social',
+      hidden: true,
           fields: [
             defineField({
               name: 'facebook',

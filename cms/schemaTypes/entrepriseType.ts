@@ -212,10 +212,12 @@ export const entrepriseType = defineType({
             group: 'seo',
             description: 'Configuration SEO pour la page entreprise (og:type = "website", structuredData = "Organization")',
           }),
+          // LEGACY #
           defineField({
             name: 'pageBuilder',
             title: 'Page Builder',
             type: 'pageBuilder',
+            hidden: true,
           }),
   ],
 })

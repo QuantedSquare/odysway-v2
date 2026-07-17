@@ -39,10 +39,12 @@ export const visionVoyageOdyswayType = defineType({
           type: 'string',
           validation: (Rule) => Rule.required(),
         }),
+        // LEGACY #
         defineField({
           name: 'titleColor',
           title: 'Title Color',
           type: 'string',
+          hidden: true,
           initialValue: 'white',
         }),
       ],

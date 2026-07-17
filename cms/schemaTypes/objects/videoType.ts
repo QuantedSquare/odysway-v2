@@ -7,14 +7,18 @@ export const videoType = defineType({
   name: 'video',
   type: 'object',
   fields: [
+    // LEGACY #
     defineField({
       name: 'videoLabel',
       type: 'string',
+      hidden: true,
     }),
+    // LEGACY #
     defineField({
       name: 'url',
       type: 'string',
       title: 'URL',
+      hidden: true,
     }),
   ],
   icon: DocumentVideoIcon,

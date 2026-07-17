@@ -8,18 +8,24 @@ export const heroType = defineType({
   type: 'object',
   title: 'Hero',
   fields: [
+    // LEGACY #
     defineField({
       name: 'heading',
       type: 'string',
+      hidden: true,
     }),
+    // LEGACY #
     defineField({
       name: 'tagline',
       type: 'string',
+      hidden: true,
     }),
+    // LEGACY #
     defineField({
       name: 'image',
       type: 'image',
       options: {hotspot: true},
+      hidden: true,
       fields: [
         defineField({
           name: 'alt',

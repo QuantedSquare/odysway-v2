@@ -8,9 +8,11 @@ export const imageGalleryType = defineType({
   type: 'object',
   title: 'Gallery',
   fields: [
+    // LEGACY #
     {
       name: 'images',
       type: 'array',
+      hidden: true,
       of: [
         defineField({
           name: 'image',
