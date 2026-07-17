@@ -21,12 +21,14 @@ export const pageContactType = defineType({
   },
   fields: [
     // General
+    // LEGACY #
     defineField({
       name: 'formTitle',
       title: 'Titre du formulaire de contact',
       type: 'string',
       group: 'general',
-      validation: Rule => Rule.required()
+      validation: Rule => Rule.required(),
+      hidden: true,
     }),
     defineField({
       name: 'heroSection',
@@ -221,11 +223,13 @@ export const pageContactType = defineType({
           type: 'string',
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'formTitle',
           title: 'Titre du formulaire',
           type: 'string',
-          validation: Rule => Rule.required()
+          validation: Rule => Rule.required(),
+          hidden: true,
         }),
         defineField({
           name: 'successMessage',
@@ -307,17 +311,21 @@ export const pageContactType = defineType({
           type: 'string',
           validation: Rule => Rule.required()
         }),
+        // LEGACY #
         defineField({
           name: 'minMessageCharacters',
           title: 'Message validation vingt caractères minimum',
           type: 'string',
-          validation: Rule => Rule.required()
+          validation: Rule => Rule.required(),
+          hidden: true,
         }),
+        // LEGACY #
         defineField({
           name: 'gdprRequired',
           title: 'Message validation RGPD requis',
           type: 'string',
-          validation: Rule => Rule.required()
+          validation: Rule => Rule.required(),
+          hidden: true,
         })
       ]
     }),

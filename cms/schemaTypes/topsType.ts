@@ -13,10 +13,12 @@ export const topsType = defineType({
       type: 'string',
       validation: (rule) => rule.required(),
     }),
+    // LEGACY #
     defineField({
       name: 'description',
       type: 'text',
       rows: 3,
+      hidden: true,
     }),
     defineField({
       name: 'contenuOnglet',

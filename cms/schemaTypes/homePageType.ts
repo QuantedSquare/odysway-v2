@@ -207,28 +207,34 @@ export const homePageType = defineType({
           of: [richTextBlock],
           validation: (rule) => rule.required(),
         }),
+        // LEGACY #
         defineField({
           name: 'typewritterWords',
           title: 'Mots pour l\'effet typewritter',
           type: 'array',
           of: [{ type: 'string' }],
           validation: (rule) => rule.required(),
+          hidden: true,
         }),
+        // LEGACY #
         defineField({
           name: 'placeholder',
           title: 'Placeholder de la recherche',
           type: 'string',
           validation: (rule) => rule.required(),
+          hidden: true,
         }),
       ],
     }),
 
     // Experience Carousel
+    // LEGACY #
     defineField({
       name: 'experienceCarousel',
       title: "Carousel d'Expériences",
       type: 'object',
       group: 'experienceCarousel',
+      hidden: true,
       fields: [
         defineField({
           name: 'title',
@@ -299,11 +305,13 @@ export const homePageType = defineType({
     }),
 
     // Travel Differently Section
+    // LEGACY #
     defineField({
       name: 'travelDifferently',
       title: 'Voyager, autrement',
       type: 'object',
       group: 'travelDifferently',
+      hidden: true,
       fields: [
         defineField({
           name: 'title',
@@ -418,10 +426,12 @@ export const homePageType = defineType({
       type: 'object',
       group: 'summerTravel',
       fields: [
+        // LEGACY #
         defineField({
           name: 'title',
           title: 'Titre',
           type: 'string',
+          hidden: true,
         }),
         defineField({
           name: 'voyagesSummerTravel',
@@ -457,11 +467,13 @@ export const homePageType = defineType({
 
 
     // Unforgettable Travels Section
+    // LEGACY #
     defineField({
       name: 'unforgettableTravels',
       title: 'Voyages Inoubliables',
       type: 'object',
       group: 'unforgettableTravels',
+      hidden: true,
       fields: [
         defineField({
           name: 'title',

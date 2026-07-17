@@ -9,10 +9,12 @@ export const teamMemberType = defineType({
   fields: [
     orderRankField({type: 'teamMember'}),
     defineField({name: 'name', type: 'string'}),
-    defineField({name: 'slug', type: 'slug', options: {source: 'name'}}),
+    // LEGACY #
+    defineField({name: 'slug', type: 'slug', options: {source: 'name'}, hidden: true}),
     defineField({name: 'image', type: 'image', options: {hotspot: true}}),
     defineField({name: 'description', type: 'text'}),
-    defineField({name: 'linkedin', type: 'url'}),
+    // LEGACY #
+    defineField({name: 'linkedin', type: 'url', hidden: true}),
     defineField({name: 'position', type: 'string'}),
     defineField({
       name: 'visibleOnHomepage',

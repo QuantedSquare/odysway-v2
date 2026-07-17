@@ -17,16 +17,20 @@ export const headerType = defineType({
       title: 'Logo',
       type: 'object',
       fields: [
+        // LEGACY #
         defineField({
           name: 'desktop',
           title: 'Logo sur grand écran',
           type: 'image',
+          hidden: true,
           options: {hotspot: true}
         }),
+        // LEGACY #
         defineField({
           name: 'mobile',
           title: 'Logo sur téléphone',
           type: 'image',
+          hidden: true,
           options: {hotspot: true}
         }),
         defineField({
@@ -34,17 +38,21 @@ export const headerType = defineType({
           title: 'Alt',
           type: 'string'
         }),
+        // LEGACY #
         defineField({
           name: 'to',
           title: 'URL de redirection au click du logo',
-          type: 'string'
+          type: 'string',
+          hidden: true
         })
       ]
     }),
+    // LEGACY #
     defineField({
       name: 'search',
       title: 'Search',
-      type: 'boolean'
+      type: 'boolean',
+      hidden: true
     }),
     defineField({
       name: 'navigation',
@@ -200,10 +208,12 @@ export const headerType = defineType({
           title: 'Visible',
           type: 'boolean'
         }),
+        // LEGACY #
         defineField({
           name: 'link',
           title: 'URL de redirection',
-          type: 'string'
+          type: 'string',
+          hidden: true
         })
       ]
     }),

@@ -48,11 +48,13 @@ export const blogType = defineType({
       type: 'datetime',
       group: 'metadata',
     }),
+    // LEGACY #
     defineField({
       name: 'readingTime',
       type: 'string',
       description: 'Estimation du temps de lecture (e.g., "3" pour 3 minutes), si vide, le temps de lecture sera calculé automatiquement',
       group: 'metadata',
+      hidden: true,
     }),
     // Featured Image
     defineField({
@@ -141,6 +143,7 @@ export const blogType = defineType({
     }),
 
     // Badges
+    // LEGACY #
     defineField({
       name: 'badges',
       type: 'array',
@@ -225,6 +228,7 @@ export const blogType = defineType({
         group: 'seo',
         description: 'Configuration SEO pour ce blog post',
       }),
+    // LEGACY #
     defineField({
       name: 'markdownContent',
       title: 'Contenu Markdown (pour LLM)',
@@ -232,10 +236,12 @@ export const blogType = defineType({
       rows: 20,
       description: 'Version Markdown de l\'article destinée aux moteurs IA (ChatGPT, Claude, Perplexity…). Peut être généré automatiquement.',
       group: 'seo',
+      hidden: true,
     }),
 
     // Migration metadata - used to link blogs to categories/destinations
     // Hidden, relicat of the old migration script
+    // LEGACY #
     defineField({
       name: 'legacyCategories',
       type: 'string',
@@ -253,6 +259,7 @@ export const blogType = defineType({
       group: 'metadata',
       hidden: true,
     }),
+    // LEGACY #
     defineField({
       name: 'categorySlug',
       type: 'string',
@@ -261,6 +268,7 @@ export const blogType = defineType({
       group: 'metadata',
       hidden: true,
     }),
+    // LEGACY #
     defineField({
       name: 'destinationSlug',
       type: 'string',
@@ -269,6 +277,7 @@ export const blogType = defineType({
       group: 'metadata',
       hidden: true,
     }),
+    // LEGACY #
     defineField({
       name: 'testMigrationField',
       type: 'string',
@@ -277,6 +286,7 @@ export const blogType = defineType({
       group: 'metadata',
       hidden: true,
     }),
+    // LEGACY #
     defineField({
       name: "blogType",
       type: "string",
@@ -284,6 +294,7 @@ export const blogType = defineType({
       description: "Type de blog",
       hidden: true,
     }),
+    // LEGACY #
     defineField({
       name: "badgeColor",
       type: "string",
@@ -291,6 +302,7 @@ export const blogType = defineType({
       description: "Type de blog",
       hidden: true,
     }),
+    // LEGACY #
     defineField({
       name: "navigationDescription",
       type: "string",
@@ -298,6 +310,7 @@ export const blogType = defineType({
       description: "Type de blog",
       hidden: true,
     }),
+    // LEGACY #
     defineField({
       name: "published",
       type: "boolean",
@@ -305,6 +318,7 @@ export const blogType = defineType({
       description: "Publié",
       hidden: true,
     }),
+    // LEGACY #
     defineField({
       name: "seoDescription",
       type: "string",
@@ -312,6 +326,7 @@ export const blogType = defineType({
       description: "Type de blog",
       hidden: true,
     }),
+    // LEGACY #
     defineField({
       name: "seoTitle",
       type: "string",
@@ -319,6 +334,7 @@ export const blogType = defineType({
       description: "Type de blog",
       hidden: true,
     }),
+    // LEGACY #
     defineField({
       name: "navigationTitle",
       type: "string",

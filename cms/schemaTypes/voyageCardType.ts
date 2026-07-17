@@ -13,10 +13,12 @@ export const voyageCardType = defineType({
     }
   },
   fields: [
+    // LEGACY #
     defineField({
       name: 'type',
       title: 'Label Type',
       type: 'string',
+      hidden: true,
       validation: Rule => Rule.required()
     }),
     defineField({
