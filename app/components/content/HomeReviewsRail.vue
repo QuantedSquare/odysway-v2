@@ -23,7 +23,9 @@
 
     <div class="d-flex justify-center mt-8">
       <v-btn
-        to="/avis-voyageurs"
+        href="https://fr.trustpilot.com/review/odysway.com"
+        target="_blank"
+        rel="noopener noreferrer"
         color="primary"
         height="60"
         size="large"
