@@ -8,9 +8,10 @@
       >
         <v-col
           ref="scroll-target"
-          class="font-weight-black text-h2 my-4 "
         >
-          {{ pageBlogSanity.pageTitle }}
+          <h1 class="font-weight-black text-h2 my-4">
+            {{ pageBlogSanity.pageTitle }}
+          </h1>
         </v-col>
       </v-row>
     </v-container>

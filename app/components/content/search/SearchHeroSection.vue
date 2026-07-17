@@ -1,4 +1,7 @@
 <template>
+  <!-- SEO/crawler H1: rendered server-side (unlike the visual hero below, which is
+       gated on isHydrated). Visually hidden so the hero design is unchanged. -->
+  <h1 class="hero-seo-title">{{ heroTitle }}</h1>
   <v-container
     v-if="isHydrated"
     fluid
@@ -13,37 +16,37 @@
         md="4"
         class="d-flex align-center"
       >
-        <h1
+        <span
           v-if="destination && !isCategory && !isExperience && !isNextDepartures"
           class="custom-hero-title"
         >
           {{ `${pageContent?.searchHero?.voyagePrefix || 'Nos voyages'} ${destination.interjection || 'en'} ${destination.title || destination.nom}` }}
-        </h1>
-        <h1
+        </span>
+        <span
           v-else-if="destination && isCategory"
           class="custom-hero-title"
         >
           {{ destination.discoveryTitle || destination.title }}
-        </h1>
-        <h1
+        </span>
+        <span
           v-else-if="destination && isExperience"
           class="custom-hero-title"
         >
           {{ destination.discoveryTitle || destination.title }}
-        </h1>
-        <h1
+        </span>
+        <span
           v-else-if="destination && isNextDepartures"
           class="custom-hero-title d-flex flex-column ga-4"
         >
           <span>Prochains départs</span>
           <span class="text-h3">{{ nextDeparturesTitle }}</span>
-        </h1>
-        <h1
+        </span>
+        <span
           v-else
           class="custom-hero-title"
         >
           {{ pageContent?.heroText || pageContent?.searchHero?.defaultTitle || 'Trouvez votre prochain voyage' }}
-        </h1>
+        </span>
       </v-col>
       <v-col
         cols="12"
@@ -98,36 +101,36 @@
               cols="12"
               md="auto"
             >
-              <h1
+              <span
                 v-if="destination && !isCategory && !isExperience && !isNextDepartures"
                 class="custom-hero-title"
               >
                 {{ `${pageContent?.searchHero?.voyagePrefix || 'Nos voyages'} ${destination.interjection || 'en'} ${destination.title}` }}
-              </h1>
-              <h1
+              </span>
+              <span
                 v-else-if="destination && isCategory"
                 class="custom-hero-title"
               >
                 {{ destination.discoveryTitle || destination.title }}
-              </h1>
-              <h1
+              </span>
+              <span
                 v-else-if="destination && isExperience"
                 class="custom-hero-title"
               >
                 {{ destination.discoveryTitle || destination.title }}
-              </h1>
-              <h1
+              </span>
+              <span
                 v-else-if="destination && isNextDepartures"
                 class="custom-hero-title"
               >
                 {{ nextDeparturesTitle }}
-              </h1>
-              <h1
+              </span>
+              <span
                 v-else
                 class="custom-hero-title ml-3"
               >
                 {{ pageContent?.searchHero?.defaultTitle || 'Trouvez votre prochain voyage' }}
-              </h1>
+              </span>
               <slot name="subtitle" />
             </v-col>
           </v-row>
@@ -216,12 +219,41 @@ const nextDeparturesTitle = computed(() => {
 
   return pageContent?.searchHero?.defaultTitle || 'Trouvez votre prochain voyage'
 })
+// Single source of truth for the page H1, rendered server-side (see template).
+// It only depends on props/content — never on client-only `width` — so it is
+// hydration-safe outside the isHydrated gate.
+const heroTitle = computed(() => {
+  if (destination && !isCategory && !isExperience && !isNextDepartures) {
+    return `${pageContent?.searchHero?.voyagePrefix || 'Nos voyages'} ${destination.interjection || 'en'} ${destination.title || destination.nom}`
+  }
+  if (destination && (isCategory || isExperience)) {
+    return destination.discoveryTitle || destination.title
+  }
+  if (destination && isNextDepartures) {
+    return `Prochains départs ${nextDeparturesTitle.value}`
+  }
+  return pageContent?.heroText || pageContent?.searchHero?.defaultTitle || 'Trouvez votre prochain voyage'
+})
+
 onMounted(() => {
   isHydrated.value = true
 })
 </script>
 
 <style scoped>
+/* Visually-hidden but present for crawlers/screen readers (SSR H1). */
+.hero-seo-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .relative-hero-section {
  position:relative;
  height: 348px;

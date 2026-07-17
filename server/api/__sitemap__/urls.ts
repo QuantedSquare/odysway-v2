@@ -12,18 +12,30 @@ export default defineSitemapEventHandler(async () => {
     useCdn: false,
   })
 
+  // Only published (drafts require a token, which we don't pass) documents with a
+  // defined slug. Custom voyages (availabilityTypes === ['custom']) are excluded:
+  // they are noindex on the page itself, so they must not appear in the sitemap.
+  const notDraft = '!(_id in path("drafts.**")) && defined(slug.current)'
   const [blogPosts, voyages, destinations, experiences, categories] = await Promise.all([
-    sanityClient.fetch(`*[_type == "blog"]{ "slug": slug.current, _updatedAt }`),
-    sanityClient.fetch(`*[_type == "voyage"]{ "slug": slug.current, _updatedAt }`),
-    sanityClient.fetch(`*[_type == "destination"]{ "slug": slug.current, _updatedAt }`),
-    sanityClient.fetch(`*[_type == "experience"]{ "slug": slug.current, _updatedAt }`),
-    sanityClient.fetch(`*[_type == "category"]{ "slug": slug.current, _updatedAt }`),
+    sanityClient.fetch(`*[_type == "blog" && ${notDraft}]{ "slug": slug.current, _updatedAt }`),
+    sanityClient.fetch(`*[_type == "voyage" && ${notDraft} && !(count(availabilityTypes) == 1 && "custom" in availabilityTypes)]{ "slug": slug.current, _updatedAt }`),
+    sanityClient.fetch(`*[_type == "destination" && ${notDraft}]{ "slug": slug.current, _updatedAt }`),
+    sanityClient.fetch(`*[_type == "experience" && ${notDraft}]{ "slug": slug.current, _updatedAt }`),
+    sanityClient.fetch(`*[_type == "category" && ${notDraft}]{ "slug": slug.current, _updatedAt }`),
   ])
 
   const urls: SitemapUrlInput[] = [
     // Static key pages
     { loc: '/', changefreq: 'daily', priority: 1.0 },
     { loc: '/voyages', changefreq: 'daily', priority: 0.9 },
+    { loc: '/destinations', changefreq: 'weekly', priority: 0.8 },
+    { loc: '/thematiques', changefreq: 'weekly', priority: 0.8 },
+    { loc: '/experiences', changefreq: 'weekly', priority: 0.8 },
+    { loc: '/prochains-departs', changefreq: 'daily', priority: 0.8 },
+    { loc: '/blog', changefreq: 'weekly', priority: 0.7 },
+    { loc: '/avis-voyageurs', changefreq: 'weekly', priority: 0.7 },
+    { loc: '/entreprise', changefreq: 'monthly', priority: 0.7 },
+    { loc: '/faq', changefreq: 'monthly', priority: 0.7 },
     { loc: '/contact', changefreq: 'monthly', priority: 0.8 },
     { loc: '/sur-mesure', changefreq: 'monthly', priority: 0.8 },
     { loc: '/nous-recrutons', changefreq: 'monthly', priority: 0.7 },

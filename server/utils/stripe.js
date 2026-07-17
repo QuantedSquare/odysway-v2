@@ -22,6 +22,13 @@ const createCheckoutSession = async (order) => {
         statusMessage: `Invalid custom amount: ${amount} (restToPay: ${restToPay})`,
       })
     }
+    // Never let the client-supplied amount exceed what is actually owed
+    if (Number.isFinite(restToPay) && restToPay > 0 && amount > restToPay) {
+      throw createError({
+        statusCode: 400,
+        statusMessage: `Custom amount ${amount} exceeds amount due (restToPay: ${restToPay})`,
+      })
+    }
   }
 
   const isDev = config.public.environment !== 'production'

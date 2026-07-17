@@ -172,7 +172,6 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { mdiEarth, mdiMapMarker, mdiThumbUpOutline } from '@mdi/js'
-import _ from 'lodash'
 import { useImage } from '#imports'
 
 const img = useImage()

@@ -1,5 +1,12 @@
 export default defineEventHandler(async (event) => {
-  const session = await readBody(event)
+  const parsed = await readValidatedBody(event, body => slackNotificationSchema.safeParse(body))
+  if (!parsed.success) {
+    throw createError({
+      statusCode: 400,
+      statusMessage: `Validation failed: ${parsed.error.message}`,
+    })
+  }
+  const session = parsed.data
   try {
     if (session.bookedId) {
       const { data } = await supabase

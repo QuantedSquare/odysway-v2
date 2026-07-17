@@ -1,6 +1,12 @@
-
 export default defineEventHandler(async (event) => {
-  const data = await readBody(event)
+  const parsed = await readValidatedBody(event, body => brevoEmailSchema.safeParse(body))
+  if (!parsed.success) {
+    throw createError({
+      statusCode: 400,
+      statusMessage: `Validation failed: ${parsed.error.message}`,
+    })
+  }
+  const data = parsed.data
   try {
     // 1. Send the contact email to yourself
     await brevo.sendContactEmail(data)

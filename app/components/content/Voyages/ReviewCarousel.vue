@@ -84,7 +84,7 @@
 <script setup>
 import { useScroll, useElementSize } from '@vueuse/core'
 import { useDisplay } from 'vuetify'
-import _ from 'lodash'
+import uniqBy from 'lodash/uniqBy'
 
 const route = useRoute()
 
@@ -131,7 +131,7 @@ const { data: reviewsSanity } = await useSanityQuery(
 )
 
 const reviews = computed(() => {
-  return _.uniqBy(reviewsSanity.value, 'text') || []
+  return uniqBy(reviewsSanity.value, 'text') || []
 })
 // Initialize scroll setup function
 const setupScrollElement = () => {

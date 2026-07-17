@@ -34,7 +34,8 @@
         />
 
         <!-- Départs garantis -->
-        <LazyColorContainer color="grey-light">
+        <LazyColorContainer
+          :hydrate-on-visible="{ rootMargin: '400px' }" color="grey-light">
           <TrackableVoyageList
             :voyages="homeSanity?.guaranteedDepartures?.voyagesGuaranteedDepartures"
             :list-name="homeSanity?.guaranteedDepartures?.title"
@@ -78,6 +79,7 @@
 
         <!-- Dernières places -->
         <LazyColorContainer
+          :hydrate-on-visible="{ rootMargin: '400px' }"
           v-if="lastMinuteVoyages.length"
           color="soft-blush"
         >
@@ -113,7 +115,8 @@
         </LazyColorContainer>
 
         <!-- Voyager selon vos envies -->
-        <LazyColorContainer color="white">
+        <LazyColorContainer
+          :hydrate-on-visible="{ rootMargin: '400px' }" color="white">
           <LazyCardGrid
             :categories="homeSanity?.followDesires?.categoriesFollowDesires"
             :promotion-name="homeSanity?.followDesires?.title"
@@ -129,6 +132,7 @@
 
         <!-- Best-sellers (voyages et/ou destinations à l'honneur) -->
         <LazyColorContainer
+          :hydrate-on-visible="{ rootMargin: '400px' }"
           v-if="bestSellerItems.length"
           color="white"
         >
@@ -162,7 +166,8 @@
         </LazyColorContainer>
 
         <!-- Séjours en France -->
-        <LazyColorContainer color="soft-blush">
+        <LazyColorContainer
+          :hydrate-on-visible="{ rootMargin: '400px' }" color="soft-blush">
           <TrackableVoyageList
             :voyages="homeSanity?.franceTrips?.voyagesFrance"
             :list-name="homeSanity?.franceTrips?.title"
@@ -194,7 +199,8 @@
         </LazyColorContainer>
 
         <!-- Conseiller / envie de partir -->
-        <LazyColorContainer color="grey-light-2">
+        <LazyColorContainer
+          :hydrate-on-visible="{ rootMargin: '400px' }" color="grey-light-2">
           <LazyInfoContainer>
             <template #top>
               <AvatarsRowStack />
@@ -221,7 +227,8 @@
         </LazyColorContainer>
 
         <!-- Avis (cartes photo plein cadre, style prototype) -->
-        <LazyColorContainer color="white">
+        <LazyColorContainer
+          :hydrate-on-visible="{ rootMargin: '400px' }" color="white">
           <LazyHomeReviewsRail
             :eyebrow="reviewsEyebrow"
             :title="homeSanity?.reviews?.title || 'Des voyageurs partagent leurs souvenirs'"
@@ -231,6 +238,7 @@
 
         <!-- Newsletter -->
         <LazyColorContainer
+          :hydrate-on-visible="{ rootMargin: '400px' }"
           v-if="homeSanity?.newsletter"
           color="soft-blush"
         >
@@ -283,7 +291,14 @@ const voyageProjection = `
 
 const homeQuery = groq`
   *[_type == "homePage"][0]{
-    ...,
+    // Explicit top-level fields (was a full-document "..." spread that pulled
+    // every unused homePage field into the SSR HTML). Objects are fetched whole
+    // to keep every sub-field the components read.
+    heroSection,
+    heroSectionTest,
+    concept,
+    trustBand,
+    newsletter,
     momentSection{
       ...,
       feature{

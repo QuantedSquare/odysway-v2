@@ -8,7 +8,7 @@
       :to="link"
     >
       <v-img
-        :src="img(imageSrc, { format: 'webp', quality: 100, width: 1024 })"
+        :src="img(imageSrc, { format: 'webp', quality: 75, width: 1024 })"
         max-height="800px"
         :alt="alt"
         width="100%"
@@ -19,7 +19,7 @@
     </NuxtLink>
     <v-img
       v-else
-      :src="img(imageSrc, { format: 'webp', quality: 100, width: 1024 })"
+      :src="img(imageSrc, { format: 'webp', quality: 75, width: 1024 })"
       max-height="800px"
       :alt="alt"
       width="100%"

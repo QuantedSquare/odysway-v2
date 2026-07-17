@@ -29,7 +29,7 @@
 </template>
 
 <script setup>
-import _ from 'lodash'
+import flatMap from 'lodash/flatMap'
 
 const { trackViewItemList } = useGtmTracking()
 const { formatVoyagesForGtm } = useGtmVoyageFormatter()
@@ -187,7 +187,7 @@ const { data: destinationSanity } = await useAsyncData(
       const data = await sanity.fetch(destinationFromRegionQuery, {
         slug: slug.value,
       })
-      const voyageFlatMap = _.flatMap(data.destinations.map(destination => destination.voyages))
+      const voyageFlatMap = flatMap(data.destinations.map(destination => destination.voyages))
       return {
         interjection: data.interjection,
         meta_description: data.meta_description,

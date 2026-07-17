@@ -83,18 +83,12 @@
 
 <script setup>
 import { mdiClose } from '@mdi/js'
-import _ from 'lodash'
+import uniqBy from 'lodash/uniqBy'
 import { useVoyageFilters } from '~/composables/useVoyageFilters'
 
 const { trackSearchBar, trackViewItemList } = useGtmTracking()
 const { formatVoyagesForGtm } = useGtmVoyageFormatter()
 const { applyFilters } = useVoyageFilters()
-
-useSeoMeta({
-  htmlAttrs: { lang: 'fr' },
-  robots: 'noindex, follow',
-  canonical: 'https://www.odysway.com/voyages',
-})
 
 const router = useRouter()
 const route = useRoute()
@@ -225,6 +219,20 @@ const selMonths = computed(() => (route.query.from ? String(route.query.from).sp
 
 const pageTitle = computed(() => searchContent.value?.searchHero?.defaultTitle || 'Nos voyages en immersion')
 
+// /voyages is a key indexable page (sitemap priority 0.9). It was previously
+// noindex via a manual useSeoMeta — use the shared composable so it is indexable
+// with a proper canonical/OG. searchContent is already awaited above, so
+// pageTitle is resolved during SSR.
+useSeo({
+  content: {
+    title: pageTitle.value,
+    description: leadText,
+  },
+  pageType: 'website',
+  slug: 'voyages',
+  baseUrl: '/voyages',
+})
+
 const parsedDates = computed(() => {
   if (!route.query.from) return ''
   const names = selMonths.value.map(n => monthNumberToFrench[n])
@@ -247,7 +255,7 @@ const filteredVoyages = computed(() => {
     activities: selActivities.value,
     confirmed: confirmedOnly.value,
   }, filterCtx.value)
-  return _.uniqBy(list, 'slug')
+  return uniqBy(list, 'slug')
 })
 
 const nbVoyages = computed(() => filteredVoyages.value?.length || 0)

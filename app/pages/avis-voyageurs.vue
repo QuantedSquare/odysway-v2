@@ -23,6 +23,8 @@
 </template>
 
 <script setup>
+import { createReviewAggregateSchema } from '~/utils/structuredData'
+
 const pageQuery = `
   *[_type == "avisVoyageurs"][0]{
     heroSection,
@@ -33,6 +35,29 @@ const pageQuery = `
 `
 const { data: page } = await useSanityQuery(pageQuery)
 
+// Same query string as AvisContainer, so useSanityQuery shares the cached payload
+// (no extra request). Used only to emit AggregateRating + Review structured data.
+const reviewsQuery = `
+  *[_type == "review"]{
+    author,
+    date,
+    rating,
+    text,
+    voyage->{ title }
+  }
+`
+const { data: reviews } = await useSanityQuery(reviewsQuery)
+
+const reviewSchema = computed(() => createReviewAggregateSchema(
+  (reviews.value || []).map(r => ({
+    author: r.author,
+    date: r.date,
+    rating: r.rating,
+    text: typeof r.text === 'string' ? r.text : '',
+    voyageTitle: r.voyage?.title || '',
+  })),
+))
+
 if (page.value) {
   useSeo({
     seoData: page.value?.seo,
@@ -40,6 +65,7 @@ if (page.value) {
     pageType: 'website',
     slug: 'avis-voyageurs',
     baseUrl: '/avis-voyageurs',
+    structuredData: reviewSchema.value,
   })
 }
 </script>
