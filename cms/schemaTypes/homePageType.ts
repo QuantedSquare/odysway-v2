@@ -25,97 +25,80 @@ export const homePageType = defineType({
     }
   },
   type: 'document',
+  // Groups are ordered to match the on-page display order in app/pages/index.vue.
   groups: [
     {
       name: 'hero',
-      title: 'Hero Section',
+      title: '1. Hero Section',
       default: true,
     },
     {
       name: 'heroTest',
-      title: 'Hero Section sur Preprod',
+      title: '1b. Hero Section sur Preprod',
     },
     {
       name: 'trustBand',
-      title: 'Bandeau de réassurance',
+      title: '2. Bandeau de réassurance',
     },
     {
       name: 'momentSection',
-      title: 'Séjours du moment (mosaïque)',
+      title: '3. Séjours du moment (mosaïque)',
     },
     {
       name: 'concept',
-      title: 'Concept / manifeste',
-    },
-    {
-      name: 'experienceCarousel',
-      title: 'Experience Carousel',
-    },
-    {
-      name: 'franceTrips',
-      title: 'Premier carousel de voyages',
-    },
-    {
-      name: 'followDesires',
-      title: 'Section suivez vos envies / catégories thématiques',
-    },
-    {
-      name: 'travelDifferently',
-      title: 'Section voyager, autrement, icons et textes',
+      title: '4. Concept / manifeste',
     },
     {
       name: 'guaranteedDepartures',
-      title: 'Deuxième carousel de voyages',
+      title: '5. Départs garantis (carousel)',
     },
     {
       name: 'lastMinute',
-      title: 'Dernières places',
+      title: '6. Dernières places',
+    },
+    {
+      name: 'followDesires',
+      title: '7. Suivez vos envies / catégories thématiques',
     },
     {
       name: 'bestSellers',
-      title: 'Best-sellers',
+      title: '8. Best-sellers',
     },
     {
-      name: 'summerTravel',
-      title: 'Troisième carousel de voyages',
-    },
-    {
-      name: 'newsletter',
-      title: 'Section newsletter',
-    },
-    {
-      name: 'unforgettableTravels',
-      title: 'Quatrième carousel de voyages',
-    },
-    {
-      name: 'reviews',
-      title: 'Section reviews',
+      name: 'franceTrips',
+      title: '9. Séjours en France (carousel)',
     },
     {
       name: 'contact',
-      title: 'Section contact',
+      title: '10. Section contact',
+    },
+    {
+      name: 'reviews',
+      title: '11. Section reviews',
+    },
+    {
+      name: 'newsletter',
+      title: '12. Section newsletter',
     },
     {
       name: 'seoText',
-      title: 'Texte SEO (bas de page)',
+      title: '13. Texte SEO (bas de page)',
     },
     {
       name: 'seo',
       title: 'SEO',
     },
+    // Groupes obsolètes / non affichés (masqués).
+    {
+      name: 'legacy',
+      title: '⚠️ Sections obsolètes (non affichées)',
+    },
   ],
 
   fields: [
-    // SEO Settings
-    defineField({
-      name: 'seo',
-      title: 'SEO Settings',
-      type: 'seo',
-      group: 'seo',
-      description: 'Configuration SEO pour la page d\'accueil (og:type = "website", structuredData = "Organization")',
-    }),
-
-    // Hero Section
+    // ----------------------------------------------------------------
+    // 1. Hero Section
+    // ----------------------------------------------------------------
     defineField({
       name: 'heroSection',
       title: 'Hero Section',
@@ -169,6 +152,10 @@ export const homePageType = defineType({
         }),
       ],
     }),
+
+    // ----------------------------------------------------------------
+    // 1b. Hero Section (Preprod)
+    // ----------------------------------------------------------------
     defineField({
       name: 'heroSectionTest',
       title: 'Hero Section sur Preprod',
@@ -227,342 +214,9 @@ export const homePageType = defineType({
       ],
     }),
 
-    // Experience Carousel
-    // LEGACY #
-    defineField({
-      name: 'experienceCarousel',
-      title: "Carousel d'Expériences",
-      type: 'object',
-      group: 'experienceCarousel',
-      hidden: true,
-      fields: [
-        defineField({
-          name: 'title',
-          title: 'Titre',
-          type: 'string',
-          validation: (rule) => rule.required(),
-        }),
-        defineField({
-          name: 'experiences',
-          title: 'Expériences',
-          type: 'array',
-          of: [{ type: 'reference', to: [{ type: 'experience' }] }],
-          validation: (rule) => rule.required(),
-        }),
-      ],
-    }),
-
-    // France Trips Section
-    defineField({
-      name: 'franceTrips',
-      title: 'Séjours en France',
-      type: 'object',
-      group: 'franceTrips',
-      fields: [
-        defineField({
-          name: 'title',
-          title: 'Titre',
-          type: 'string',
-        }),
-        defineField({
-          name: 'eyebrow',
-          title: 'Sur-titre (petit texte au-dessus du titre)',
-          type: 'string',
-        }),
-        defineField({
-          name: 'voyagesFrance',
-          title: 'Voyages',
-          type: 'array',
-          of: [{ type: 'reference', to: [{ type: 'voyage' }] }],
-        }),
-      ],
-    }),
-
-    // Follow Your Desires Section
-    defineField({
-      name: 'followDesires',
-      title: 'Suivez vos envies',
-      type: 'object',
-      group: 'followDesires',
-      fields: [
-        defineField({
-          name: 'title',
-          title: 'Titre',
-          type: 'string',
-        }),
-        defineField({
-          name: 'eyebrow',
-          title: 'Sur-titre (petit texte au-dessus du titre)',
-          type: 'string',
-        }),
-        defineField({
-          name: 'categoriesFollowDesires',
-          title: 'Catégories',
-          type: 'array',
-          of: [{ type: 'reference', to: [{ type: 'category' }] }],
-        }),
-      ],
-    }),
-
-    // Travel Differently Section
-    // LEGACY #
-    defineField({
-      name: 'travelDifferently',
-      title: 'Voyager, autrement',
-      type: 'object',
-      group: 'travelDifferently',
-      hidden: true,
-      fields: [
-        defineField({
-          name: 'title',
-          title: 'Titre',
-          type: 'string',
-        }),
-        defineField({
-          name: 'image',
-          title: 'Image principale',
-          type: 'image',
-          options: {
-            hotspot: true,
-          },
-        }),
-        defineField({
-          name: 'features',
-          title: "Section d'icons et textes",
-          type: 'array',
-          of: [
-            {
-              type: 'object',
-              fields: [
-                defineField({
-                  name: 'icon',
-                  title: 'Icône',
-                  type: 'image',
-                  options: {
-                    hotspot: true,
-                  },
-                }),
-                defineField({
-                  name: 'text',
-                  title: "Texte à côté de l'icône",
-                  type: 'string',
-                }),
-              ],
-            },
-          ],
-        }),
-        defineField({
-          name: 'ctaButton',
-          title: 'Bouton CTA',
-          type: 'object',
-          fields: [
-            defineField({
-              name: 'text',
-              title: 'Texte du bouton',
-              type: 'string',
-            }),
-            defineField({
-              name: 'link',
-              title: 'Lien du bouton',
-              type: 'string',
-            }),
-            defineField({
-              name: 'color',
-              title: 'Couleur du bouton',
-              type: 'string',
-            }),
-          ],
-        }),
-      ],
-    }),
-
-    // Guaranteed Departures Section
-    defineField({
-      name: 'guaranteedDepartures',
-      title: 'Départs Garantis',
-      type: 'object',
-      group: 'guaranteedDepartures',
-      fields: [
-        defineField({
-          name: 'title',
-          title: 'Titre',
-          type: 'string',
-        }),
-        defineField({
-          name: 'eyebrow',
-          title: 'Sur-titre (petit texte au-dessus du titre)',
-          type: 'string',
-        }),
-        defineField({
-          name: 'voyagesGuaranteedDepartures',
-          title: 'Liste des voyages garantis',
-          type: 'array',
-          of: [{ type: 'reference', to: [{ type: 'voyage' }] }],
-        }),
-        defineField({
-          name: 'ctaButton',
-          title: 'Bouton CTA sur la section',
-          type: 'object',
-          fields: [
-            defineField({
-              name: 'text',
-              title: 'Texte du bouton',
-              type: 'string',
-            }),
-            defineField({
-              name: 'link',
-              title: 'Lien du bouton (commence par /)',
-              type: 'string',
-            }),
-          ],
-        }),
-      ],
-    }),
-
-    // Summer Travel Section
-    defineField({
-      name: 'summerTravel',
-      title: 'Voyager cet été',
-      type: 'object',
-      group: 'summerTravel',
-      fields: [
-        // LEGACY #
-        defineField({
-          name: 'title',
-          title: 'Titre',
-          type: 'string',
-          hidden: true,
-        }),
-        defineField({
-          name: 'voyagesSummerTravel',
-          title: 'Liste des voyages',
-          type: 'array',
-          of: [{ type: 'reference', to: [{ type: 'voyage' }] }],
-        }),
-      ],
-    }),
-
-    // Newsletter Section
-    defineField({
-      name: 'newsletter',
-      title: 'Newsletter',
-      type: 'object',
-      group: 'newsletter',
-      fields: [
-        defineField({
-          name: 'title',
-          title: 'Texte dans la section Newsletter',
-          type: 'array',
-          of: [richTextBlock],
-        }),
-        defineField({
-          name: 'subtitle',
-          title: 'Sous-titre dans la section Newsletter',
-          type: 'array',
-          of: [richTextBlock],
-        }),
-      ],
-    }),
-
-
-
-    // Unforgettable Travels Section
-    // LEGACY #
-    defineField({
-      name: 'unforgettableTravels',
-      title: 'Voyages Inoubliables',
-      type: 'object',
-      group: 'unforgettableTravels',
-      hidden: true,
-      fields: [
-        defineField({
-          name: 'title',
-          title: 'Titre dans la section',
-          type: 'string',
-        }),
-        defineField({
-          name: 'voyagesUnforgettableTravels',
-          title: 'Liste des voyages',
-          type: 'array',
-          of: [{ type: 'reference', to: [{ type: 'voyage' }] }],
-        }),
-      ],
-    }),
-
-    // Reviews Section
-    defineField({
-      name: 'reviews',
-      title: 'Témoignages',
-      type: 'object',
-      group: 'reviews',
-      fields: [
-        defineField({
-          name: 'title',
-          title: 'Titre',
-          type: 'string',
-        }),
-        defineField({
-          name: 'eyebrow',
-          title: 'Sur-titre (petit texte au-dessus du titre)',
-          type: 'string',
-        }),
-        defineField({
-          name: 'reviews',
-          title: 'Liste des reviews',
-          type: 'array',
-          of: [{ type: 'reference', to: [{ type: 'review' }] }],
-        }),
-        defineField({
-          name: 'ctaText',
-          title: 'Texte CTA',
-          type: 'string',
-        }),
-      ],
-    }),
-
-    // Contact Section
-    defineField({
-      name: 'contact',
-      title: 'Section Contact',
-      type: 'object',
-      group: 'contact',
-      fields: [
-        defineField({
-          name: 'title',
-          title: 'Titre',
-          type: 'string',
-        }),
-        defineField({
-          name: 'description',
-          title: 'Description',
-          type: 'string',
-        }),
-        defineField({
-          name: 'ctaButton',
-          title: 'Bouton CTA',
-          type: 'object',
-          fields: [
-            defineField({
-              name: 'text',
-              title: 'Texte du bouton',
-              type: 'string',
-            }),
-            defineField({
-              name: 'link',
-              title: 'Lien du bouton',
-              type: 'string',
-            }),
-            defineField({
-              name: 'color',
-              title: 'Couleur du bouton',
-              type: 'string',
-            }),
-          ],
-        }),
-      ],
-    }),
-
-    // Trust Band (réassurance)
+    // ----------------------------------------------------------------
+    // 2. Trust Band (réassurance)
+    // ----------------------------------------------------------------
     defineField({
       name: 'trustBand',
       title: 'Bandeau de réassurance',
@@ -618,7 +272,9 @@ export const homePageType = defineType({
       ],
     }),
 
-    // Moment Section (mosaïque séjours du moment)
+    // ----------------------------------------------------------------
+    // 3. Moment Section (mosaïque séjours du moment)
+    // ----------------------------------------------------------------
     defineField({
       name: 'momentSection',
       title: 'Séjours du moment',
@@ -669,7 +325,9 @@ export const homePageType = defineType({
       ],
     }),
 
-    // Concept / Manifeste
+    // ----------------------------------------------------------------
+    // 4. Concept / Manifeste
+    // ----------------------------------------------------------------
     defineField({
       name: 'concept',
       title: 'Concept / manifeste',
@@ -706,7 +364,54 @@ export const homePageType = defineType({
       ],
     }),
 
-    // Last Minute (dernières places)
+    // ----------------------------------------------------------------
+    // 5. Guaranteed Departures Section
+    // ----------------------------------------------------------------
+    defineField({
+      name: 'guaranteedDepartures',
+      title: 'Départs Garantis',
+      type: 'object',
+      group: 'guaranteedDepartures',
+      fields: [
+        defineField({
+          name: 'title',
+          title: 'Titre',
+          type: 'string',
+        }),
+        defineField({
+          name: 'eyebrow',
+          title: 'Sur-titre (petit texte au-dessus du titre)',
+          type: 'string',
+        }),
+        defineField({
+          name: 'voyagesGuaranteedDepartures',
+          title: 'Liste des voyages garantis',
+          type: 'array',
+          of: [{ type: 'reference', to: [{ type: 'voyage' }] }],
+        }),
+        defineField({
+          name: 'ctaButton',
+          title: 'Bouton CTA sur la section',
+          type: 'object',
+          fields: [
+            defineField({
+              name: 'text',
+              title: 'Texte du bouton',
+              type: 'string',
+            }),
+            defineField({
+              name: 'link',
+              title: 'Lien du bouton (commence par /)',
+              type: 'string',
+            }),
+          ],
+        }),
+      ],
+    }),
+
+    // ----------------------------------------------------------------
+    // 6. Last Minute (dernières places)
+    // ----------------------------------------------------------------
     defineField({
       name: 'lastMinute',
       title: 'Dernières places',
@@ -725,7 +430,37 @@ export const homePageType = defineType({
       ],
     }),
 
-    // Best Sellers
+    // ----------------------------------------------------------------
+    // 7. Follow Your Desires Section
+    // ----------------------------------------------------------------
+    defineField({
+      name: 'followDesires',
+      title: 'Suivez vos envies',
+      type: 'object',
+      group: 'followDesires',
+      fields: [
+        defineField({
+          name: 'title',
+          title: 'Titre',
+          type: 'string',
+        }),
+        defineField({
+          name: 'eyebrow',
+          title: 'Sur-titre (petit texte au-dessus du titre)',
+          type: 'string',
+        }),
+        defineField({
+          name: 'categoriesFollowDesires',
+          title: 'Catégories',
+          type: 'array',
+          of: [{ type: 'reference', to: [{ type: 'category' }] }],
+        }),
+      ],
+    }),
+
+    // ----------------------------------------------------------------
+    // 8. Best Sellers
+    // ----------------------------------------------------------------
     defineField({
       name: 'bestSellers',
       title: 'Best-sellers',
@@ -807,7 +542,138 @@ export const homePageType = defineType({
       ],
     }),
 
-    // SEO Text Block (bas de page)
+    // ----------------------------------------------------------------
+    // 9. France Trips Section
+    // ----------------------------------------------------------------
+    defineField({
+      name: 'franceTrips',
+      title: 'Séjours en France',
+      type: 'object',
+      group: 'franceTrips',
+      fields: [
+        defineField({
+          name: 'title',
+          title: 'Titre',
+          type: 'string',
+        }),
+        defineField({
+          name: 'eyebrow',
+          title: 'Sur-titre (petit texte au-dessus du titre)',
+          type: 'string',
+        }),
+        defineField({
+          name: 'voyagesFrance',
+          title: 'Voyages',
+          type: 'array',
+          of: [{ type: 'reference', to: [{ type: 'voyage' }] }],
+        }),
+      ],
+    }),
+
+    // ----------------------------------------------------------------
+    // 10. Contact Section
+    // ----------------------------------------------------------------
+    defineField({
+      name: 'contact',
+      title: 'Section Contact',
+      type: 'object',
+      group: 'contact',
+      fields: [
+        defineField({
+          name: 'title',
+          title: 'Titre',
+          type: 'string',
+        }),
+        defineField({
+          name: 'description',
+          title: 'Description',
+          type: 'string',
+        }),
+        defineField({
+          name: 'ctaButton',
+          title: 'Bouton CTA',
+          type: 'object',
+          fields: [
+            defineField({
+              name: 'text',
+              title: 'Texte du bouton',
+              type: 'string',
+            }),
+            defineField({
+              name: 'link',
+              title: 'Lien du bouton',
+              type: 'string',
+            }),
+            defineField({
+              name: 'color',
+              title: 'Couleur du bouton',
+              type: 'string',
+            }),
+          ],
+        }),
+      ],
+    }),
+
+    // ----------------------------------------------------------------
+    // 11. Reviews Section
+    // ----------------------------------------------------------------
+    defineField({
+      name: 'reviews',
+      title: 'Témoignages',
+      type: 'object',
+      group: 'reviews',
+      fields: [
+        defineField({
+          name: 'title',
+          title: 'Titre',
+          type: 'string',
+        }),
+        defineField({
+          name: 'eyebrow',
+          title: 'Sur-titre (petit texte au-dessus du titre)',
+          type: 'string',
+        }),
+        defineField({
+          name: 'reviews',
+          title: 'Liste des reviews',
+          type: 'array',
+          of: [{ type: 'reference', to: [{ type: 'review' }] }],
+        }),
+        defineField({
+          name: 'ctaText',
+          title: 'Texte CTA',
+          type: 'string',
+        }),
+      ],
+    }),
+
+    // ----------------------------------------------------------------
+    // 12. Newsletter Section
+    // ----------------------------------------------------------------
+    defineField({
+      name: 'newsletter',
+      title: 'Newsletter',
+      type: 'object',
+      group: 'newsletter',
+      fields: [
+        defineField({
+          name: 'title',
+          title: 'Texte dans la section Newsletter',
+          type: 'array',
+          of: [richTextBlock],
+        }),
+        defineField({
+          name: 'subtitle',
+          title: 'Sous-titre dans la section Newsletter',
+          type: 'array',
+          of: [richTextBlock],
+        }),
+      ],
+    }),
+
+    // ----------------------------------------------------------------
+    // 13. SEO Text Block (bas de page)
+    // ----------------------------------------------------------------
     defineField({
       name: 'seoText',
       title: 'Texte SEO (bas de page)',
@@ -820,6 +686,162 @@ export const homePageType = defineType({
           title: 'Contenu',
           type: 'array',
           of: [richTextBlock],
+        }),
+      ],
+    }),
+
+    // ----------------------------------------------------------------
+    // SEO Settings
+    // ----------------------------------------------------------------
+    defineField({
+      name: 'seo',
+      title: 'SEO Settings',
+      type: 'seo',
+      group: 'seo',
+      description: 'Configuration SEO pour la page d\'accueil (og:type = "website", structuredData = "Organization")',
+    }),
+
+    // ================================================================
+    // Sections obsolètes / non affichées sur la page d'accueil.
+    // Conservées (masquées) pour ne pas perdre les données existantes.
+    // ================================================================
+
+    // LEGACY # Experience Carousel — non affiché
+    defineField({
+      name: 'experienceCarousel',
+      title: "Carousel d'Expériences",
+      type: 'object',
+      group: 'legacy',
+      hidden: true,
+      fields: [
+        defineField({
+          name: 'title',
+          title: 'Titre',
+          type: 'string',
+          validation: (rule) => rule.required(),
+        }),
+        defineField({
+          name: 'experiences',
+          title: 'Expériences',
+          type: 'array',
+          of: [{ type: 'reference', to: [{ type: 'experience' }] }],
+          validation: (rule) => rule.required(),
+        }),
+      ],
+    }),
+
+    // LEGACY # Travel Differently — non affiché
+    defineField({
+      name: 'travelDifferently',
+      title: 'Voyager, autrement',
+      type: 'object',
+      group: 'legacy',
+      hidden: true,
+      fields: [
+        defineField({
+          name: 'title',
+          title: 'Titre',
+          type: 'string',
+        }),
+        defineField({
+          name: 'image',
+          title: 'Image principale',
+          type: 'image',
+          options: {
+            hotspot: true,
+          },
+        }),
+        defineField({
+          name: 'features',
+          title: "Section d'icons et textes",
+          type: 'array',
+          of: [
+            {
+              type: 'object',
+              fields: [
+                defineField({
+                  name: 'icon',
+                  title: 'Icône',
+                  type: 'image',
+                  options: {
+                    hotspot: true,
+                  },
+                }),
+                defineField({
+                  name: 'text',
+                  title: "Texte à côté de l'icône",
+                  type: 'string',
+                }),
+              ],
+            },
+          ],
+        }),
+        defineField({
+          name: 'ctaButton',
+          title: 'Bouton CTA',
+          type: 'object',
+          fields: [
+            defineField({
+              name: 'text',
+              title: 'Texte du bouton',
+              type: 'string',
+            }),
+            defineField({
+              name: 'link',
+              title: 'Lien du bouton',
+              type: 'string',
+            }),
+            defineField({
+              name: 'color',
+              title: 'Couleur du bouton',
+              type: 'string',
+            }),
+          ],
+        }),
+      ],
+    }),
+
+    // LEGACY # Summer Travel — fetché en GROQ mais non affiché sur la page
+    defineField({
+      name: 'summerTravel',
+      title: 'Voyager cet été',
+      type: 'object',
+      group: 'legacy',
+      hidden: true,
+      fields: [
+        defineField({
+          name: 'title',
+          title: 'Titre',
+          type: 'string',
+          hidden: true,
+        }),
+        defineField({
+          name: 'voyagesSummerTravel',
+          title: 'Liste des voyages',
+          type: 'array',
+          of: [{ type: 'reference', to: [{ type: 'voyage' }] }],
+        }),
+      ],
+    }),
+
+    // LEGACY # Unforgettable Travels — non affiché
+    defineField({
+      name: 'unforgettableTravels',
+      title: 'Voyages Inoubliables',
+      type: 'object',
+      group: 'legacy',
+      hidden: true,
+      fields: [
+        defineField({
+          name: 'title',
+          title: 'Titre dans la section',
+          type: 'string',
+        }),
+        defineField({
+          name: 'voyagesUnforgettableTravels',
+          title: 'Liste des voyages',
+          type: 'array',
+          of: [{ type: 'reference', to: [{ type: 'voyage' }] }],
         }),
       ],
     }),
