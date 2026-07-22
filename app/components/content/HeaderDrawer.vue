@@ -17,10 +17,61 @@
         :style="drawerContentStyle"
       >
         <nav
-          v-if="navigation.length"
+          v-if="navigation.length || zones.length"
           class="drawer-nav"
           aria-label="Navigation mobile"
         >
+          <!-- Destinations : liste des continents -->
+          <div
+            v-if="zones.length"
+            class="drawer-nav__group"
+          >
+            <button
+              type="button"
+              class="drawer-nav__row drawer-nav__acc"
+              :aria-expanded="destOpen"
+              @click="destOpen = !destOpen"
+            >
+              <span>Destinations</span>
+              <v-icon
+                class="drawer-nav__chevron"
+                :class="{ 'drawer-nav__chevron--open': destOpen }"
+                size="22"
+              >
+                {{ mdiChevronDown }}
+              </v-icon>
+            </button>
+            <v-expand-transition>
+              <div
+                v-show="destOpen"
+                class="drawer-nav__sub"
+              >
+                <NuxtLink
+                  v-for="zone in zones"
+                  :key="zone.id"
+                  :to="`/destinations/${zone.slug}`"
+                  class="drawer-nav__sublink"
+                  @click="handleNavigate"
+                >
+                  <span>{{ zone.name }}</span>
+                </NuxtLink>
+                <NuxtLink
+                  to="/destinations"
+                  class="drawer-nav__sublink drawer-nav__sublink--highlight"
+                  @click="handleNavigate"
+                >
+                  <span>Toutes nos destinations</span>
+                  <v-icon
+                    class="drawer-nav__sublink-arrow"
+                    size="18"
+                  >
+                    {{ mdiArrowRight }}
+                  </v-icon>
+                </NuxtLink>
+              </div>
+            </v-expand-transition>
+          </div>
+
           <template
             v-for="(item, i) in navigation"
             :key="i"
@@ -125,7 +176,17 @@ const { header } = defineProps({
 const router = useRouter()
 const route = useRoute()
 
-const navigation = computed(() => header?.navigation ?? [])
+// Drop any CMS "Destinations" nav item: our dedicated continent accordion
+// (below) replaces it with the full destinations list. Strip non-letters first
+// so Sanity stega (invisible zero-width chars appended in dev) can't defeat the
+// match.
+const navigation = computed(() =>
+  (header?.navigation ?? []).filter(item => item?.label?.replace(/[^\p{L}]/gu, '').toLowerCase() !== 'destinations'),
+)
+
+// Destinations continents list, shared with the desktop mega-menu.
+const { zones } = useDestinationsMenu()
+const destOpen = ref(false)
 
 // Which nav panel (Destinations, …) is expanded. Single-open accordion.
 const openIndex = ref(null)

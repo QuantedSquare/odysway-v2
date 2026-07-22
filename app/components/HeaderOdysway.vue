@@ -67,15 +67,39 @@
           style="width: 150px; height: auto; max-width: 150px;"
         >
       </NuxtLink>
+
+      <nav
+        class="d-header-nav d-none d-md-flex align-center ga-1 ga-lg-2 ml-4 ml-lg-6"
+        aria-label="Navigation principale"
+      >
+        <DestinationsMegaMenu :is-transparent="isTransparent" />
+        <v-btn
+          v-if="header?.button2?.visible"
+          height="45"
+          color="primary"
+          class="text-caption text-md-body-1"
+          :class="isTransparent ? 'filter' : ''"
+          @click="handleButton2Click"
+        >
+          {{ header.button2.text }}
+        </v-btn>
+        <v-btn
+          v-if="header?.button3?.visible"
+          height="45"
+          color="primary"
+          class="text-caption text-md-body-1"
+          :class="isTransparent ? 'filter' : ''"
+          @click="handleButton3Click"
+        >
+          {{ header.button3.text }}
+        </v-btn>
+      </nav>
+
       <v-spacer />
 
       <div
         class="d-flex align-center ga-2 ga-lg-4"
       >
-        <SearchDialogTrigger
-          v-if="route.path !== '/'"
-          :btn-class="isTransparent ? '' : 'test-btn-class'"
-        />
         <v-btn
           v-if="header?.button1?.visible"
           height="45"
@@ -87,36 +111,21 @@
         >
           {{ header.button1.text }}
         </v-btn>
-        <v-btn
-          v-if="header?.button2?.visible"
-          color="primary"
-          height="45"
-          :class="isTransparent ? 'filter' : ''"
-          class="text-caption text-md-body-1 d-none d-md-inline"
-          @click="handleButton2Click"
-        >
-          {{ header.button2.text }}
-        </v-btn>
-        <v-btn
-          v-if="header?.button3?.visible"
-          color="primary"
-          height="45"
-          :class="isTransparent ? 'filter' : 'mr-2'"
-          class="text-caption text-md-body-1 d-none d-md-inline "
-          @click="handleButton3Click"
-        >
-          {{ header.button3.text }}
-        </v-btn>
         <div
           class="d-flex align-center ga-2"
           :class="isTransparent ? '' : 'ml-3'"
         >
+          <SearchDialogTrigger
+            v-if="route.path !== '/'"
+            btn-class=""
+          />
           <v-btn
             v-if="header?.button4?.visible"
             href="tel: +33184807975"
             color="primary"
             height="45"
-            :variant="isTransparent ? 'text' : 'tonal'"
+            rounded="pill"
+            :variant="isTransparent ? 'text' : 'outlined'"
             :class="isTransparent ? 'filter' : ''"
             class="text-caption text-md-body-1 d-none d-md-flex"
             @click="handleButton4Click"
@@ -126,6 +135,7 @@
           <v-btn
             v-if="header?.button5?.visible"
             height="45"
+            rounded="pill"
             :variant="isTransparent ? 'text' : 'tonal'"
             :class="isTransparent ? 'text-soft-blush text-shadow' : 'bg-primary text-white '"
             class="text-caption text-md-body-1 d-none d-md-inline "
