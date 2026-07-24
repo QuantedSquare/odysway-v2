@@ -587,17 +587,6 @@ if (homeSanity.value) {
     pageType: 'website',
     slug: 'home',
     baseUrl: '/',
-    structuredData: [
-      createOrganizationSchema({
-        description: homeSanity.value.seo?.metaDescription || defaultContent.description,
-        aggregateRating: {
-          ratingValue: '4.9',
-          reviewCount: '156',
-          bestRating: '5',
-        },
-      }),
-      createWebSiteSchema(),
-    ],
   })
 }
 </script>

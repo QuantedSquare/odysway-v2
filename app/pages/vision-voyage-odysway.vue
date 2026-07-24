@@ -100,12 +100,6 @@ if (visionPage.value) {
     pageType: 'website',
     slug: 'vision-voyage-odysway',
     baseUrl: '/vision-voyage-odysway',
-    structuredData: [
-      createOrganizationSchema({
-        description: visionPage.value?.seo?.metaDescription || defaultContent.description,
-      }),
-      createWebSiteSchema(),
-    ],
   })
 }
 </script>

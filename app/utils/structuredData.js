@@ -4,76 +4,10 @@
 
 import { portableTextToPlain } from './portableTextToPlain'
 
-/**
- * Generate Organization structured data
- * @param {Object} options - Organization options
- * @returns {Object} Organization schema
- */
-export function createOrganizationSchema(options = {}) {
-  const {
-    name = 'Odysway',
-    url = 'https://odysway.com',
-    logo = 'https://odysway.com/logos/logo_noir.png',
-    description = '',
-    sameAs = [
-      'https://www.facebook.com/odysway',
-      'https://www.instagram.com/odysway',
-      'https://www.linkedin.com/company/odysway',
-    ],
-    aggregateRating = null,
-  } = options
-
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    '@id': `${url}/#organization`,
-    name,
-    url,
-    logo,
-    description,
-    sameAs,
-    'contactPoint': {
-      '@type': 'ContactPoint',
-      'contactType': 'Customer Service',
-      'telephone': '+33-1-84-88-37-91',
-      'email': 'contact@odysway.com',
-      'areaServed': 'FR',
-      'availableLanguage': ['French', 'English'],
-    },
-  }
-
-  // Add aggregate rating if provided
-  if (aggregateRating) {
-    schema.aggregateRating = {
-      '@type': 'AggregateRating',
-      ...aggregateRating,
-    }
-  }
-
-  return schema
-}
-
-/**
- * Generate WebSite structured data with search action
- * @returns {Object} WebSite schema
- */
-export function createWebSiteSchema() {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    '@id': 'https://odysway.com/#website',
-    'name': 'Odysway',
-    'url': 'https://odysway.com',
-    'publisher': {
-      '@id': 'https://odysway.com/#organization',
-    },
-    'potentialAction': {
-      '@type': 'SearchAction',
-      'target': 'https://odysway.com/voyages?q={search_term_string}',
-      'query-input': 'required name=search_term_string',
-    },
-  }
-}
+// Organization + WebSite identity are emitted globally by nuxt-schema-org
+// (schemaOrg.identity in nuxt.config -> #identity / #website). Do NOT create
+// competing Organization/WebSite nodes here; attach page-specific data (e.g.
+// review ratings) to the identity via useSchemaOrg(defineOrganization(...)).
 
 /**
  * Generate BlogPosting structured data
@@ -160,7 +94,13 @@ export function createTouristTripSchema(voyage, url, config = null) {
     schema.itinerary = voyage.programmeBlock.map((day, index) => ({
       '@type': 'TouristAttraction',
       'name': day.title,
-      'description': day.description,
+      // description may be Portable Text (array of blocks); Schema.org expects
+      // a plain string, otherwise Google reports "Invalid object type for field".
+      'description': typeof day.description === 'string'
+        ? day.description
+        : Array.isArray(day.description)
+          ? portableTextToPlain(day.description)
+          : undefined,
       'image': day.photo
         ? [getImageUrl(day.photo.asset?._ref || day.photo, `${voyage.slug?.current || 'voyage'}-day-${index + 1}.jpg`, config)]
         : undefined,
@@ -221,8 +161,14 @@ export function createReviewAggregateSchema(reviews, opts = {}) {
     orgId = 'https://odysway.com/#identity',
   } = opts
 
+  // Only keep ratings within the [1, maxNote] scale — values outside the range
+  // (e.g. stray 0 or 6 in the CMS) make Google reject the reviewRating as
+  // "out of range" and skew the aggregate.
   const valid = (reviews || []).filter(
-    r => typeof r?.rating === 'number' && (r?.text || '').trim().length > 0,
+    r => typeof r?.rating === 'number'
+      && r.rating >= 1
+      && r.rating <= maxNote
+      && (r?.text || '').trim().length > 0,
   )
   if (valid.length === 0) return null
 
@@ -237,6 +183,7 @@ export function createReviewAggregateSchema(reviews, opts = {}) {
       'reviewRating': {
         '@type': 'Rating',
         'ratingValue': r.rating,
+        'worstRating': 1,
         'bestRating': maxNote,
       },
       'author': {
@@ -245,7 +192,6 @@ export function createReviewAggregateSchema(reviews, opts = {}) {
       },
       ...(r.date ? { datePublished: new Date(r.date).toISOString().split('T')[0] } : {}),
       'reviewBody': r.text.trim(),
-      ...(r.voyageTitle ? { name: r.voyageTitle } : {}),
     }))
 
   return {
@@ -256,6 +202,7 @@ export function createReviewAggregateSchema(reviews, opts = {}) {
     'aggregateRating': {
       '@type': 'AggregateRating',
       'ratingValue': Math.round(average * 10) / 10,
+      'worstRating': 1,
       'bestRating': maxNote,
       'ratingCount': valid.length,
       'reviewCount': valid.length,
