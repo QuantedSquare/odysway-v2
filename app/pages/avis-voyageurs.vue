@@ -48,15 +48,14 @@ const reviewsQuery = `
 `
 const { data: reviews } = await useSanityQuery(reviewsQuery)
 
-const reviewSchema = computed(() => createReviewAggregateSchema(
+const reviewRating = createReviewAggregateSchema(
   (reviews.value || []).map(r => ({
     author: r.author,
     date: r.date,
     rating: r.rating,
     text: typeof r.text === 'string' ? r.text : '',
-    voyageTitle: r.voyage?.title || '',
   })),
-))
+)
 
 if (page.value) {
   useSeo({
@@ -65,7 +64,18 @@ if (page.value) {
     pageType: 'website',
     slug: 'avis-voyageurs',
     baseUrl: '/avis-voyageurs',
-    structuredData: reviewSchema.value,
   })
+}
+
+// Attach the first-party rating + reviews to the single Organization identity
+// (#identity, emitted globally by nuxt-schema-org) so the brand carries exactly
+// one aggregateRating site-wide instead of a competing raw Organization node.
+if (reviewRating) {
+  useSchemaOrg([
+    defineOrganization({
+      aggregateRating: reviewRating.aggregateRating,
+      review: reviewRating.review,
+    }),
+  ])
 }
 </script>

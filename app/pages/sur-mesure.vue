@@ -65,12 +65,6 @@ if (page.value) {
     pageType: 'website',
     slug: 'sur-mesure',
     baseUrl: '/sur-mesure',
-    structuredData: [
-      createOrganizationSchema({
-        description: page.value?.seo?.metaDescription || defaultContent.description,
-      }),
-      createWebSiteSchema(),
-    ],
   })
 }
 function getButtonLink(link) {

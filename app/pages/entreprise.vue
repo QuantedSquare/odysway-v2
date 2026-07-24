@@ -183,12 +183,6 @@ if (page.value) {
     pageType: 'website',
     slug: 'entreprise',
     baseUrl: '/entreprise',
-    structuredData: [
-      createOrganizationSchema({
-        description: page.value?.seo?.metaDescription || defaultContent.description,
-      }),
-      createWebSiteSchema(),
-    ],
   })
 }
 </script>
