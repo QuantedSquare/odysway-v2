@@ -180,7 +180,7 @@
 </template>
 
 <script setup>
-import { IconArrowRight, IconUsers, IconCalendarCheck, IconCircleCheck, IconFlame } from '@tabler/icons-vue'
+import { IconArrowRight, IconUsers, IconCalendarCheck, IconFlame } from '@tabler/icons-vue'
 import { mdiArrowRight, mdiAccountMultiple, mdiCalendarCheck } from '@mdi/js'
 import dayjs from 'dayjs'
 import { useImage } from '#imports'
@@ -246,9 +246,9 @@ const daysUntilDeparture = computed(() => {
 })
 
 const topLeftBadge = computed(() => {
-  if (props.variant === 'guaranteed' && isGuaranteed.value) {
-    return { text: 'Garanti', cls: 'depart-tag--guaranteed', icon: IconCircleCheck }
-  }
+  // The "Garanti" badge is intentionally omitted here: on the homepage
+  // "Nos départs garantis" section the label is redundant with the section
+  // title. Only the last-minute "J-X" badge remains.
   if (props.variant === 'lastMinute' && typeof daysUntilDeparture.value === 'number' && daysUntilDeparture.value >= 0) {
     return { text: `J-${daysUntilDeparture.value}`, cls: 'depart-tag--late', icon: IconFlame }
   }
