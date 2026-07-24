@@ -4,7 +4,7 @@
     class="trust"
     aria-label="Garanties et réassurance"
   >
-    <div class="trust__inner">
+    <div class="trust__inner max-container-width">
       <div
         v-for="(item, i) in displayItems"
         :key="i"
@@ -74,7 +74,6 @@ const iconFor = key => icons[key] || IconCircleCheck
 }
 
 .trust__inner {
-  max-width: 1180px;
   margin-inline: auto;
   padding: 16px 24px;
   display: flex;

@@ -50,7 +50,7 @@ const destinationFromRegionQuery = `
     image,
     interjection,
     showOnHome,
-    "destinations": *[_type == "destination" && references(^._id)]{
+    "destinations": *[_type == "destination" && references(^._id) && count(*[_type == "voyage" && references(^._id) && !('custom' in availabilityTypes)]) > 0]{
       _id,
       title,
       slug,
@@ -113,7 +113,7 @@ const destinationFromRegionQuery = `
 `
 
 const destinationQuery = `
-  *[_type == "destination" && slug.current == $slug][0]{
+  *[_type == "destination" && slug.current == $slug ][0]{
     _id,
     title,
     badgeTitle,
@@ -203,7 +203,7 @@ const { data: destinationSanity } = await useAsyncData(
 
 // Fetch all destinations for carousel and format for ContentLayout
 const destinationsListQuery = `
-  *[_type == "destination"]{
+  *[_type == "destination" && count(*[_type == "voyage" && references(^._id) && !('custom' in availabilityTypes)]) > 0]{
     _id,
     title,
     nom,
