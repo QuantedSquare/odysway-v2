@@ -90,7 +90,6 @@
             <LazyHorizontalCarousel
               text-color="primary"
               slider-name="home-last-minute"
-              :icon="IconFlame"
               :eyebrow="lastMinuteEyebrow"
               :subtitle="lastMinuteSubtitle"
             >
@@ -260,7 +259,6 @@
 </template>
 
 <script setup>
-import { IconFlame } from '@tabler/icons-vue'
 import { portableTextToPlain } from '~/utils/portableTextToPlain'
 
 const config = useRuntimeConfig()

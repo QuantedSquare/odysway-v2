@@ -5,6 +5,8 @@
     offset="10"
     :close-on-content-click="true"
     transition="fade-transition"
+    scroll-strategy="close"
+    content-class="dest-mega-menu"
   >
     <template #activator="{ props: menuProps }">
       <button
@@ -27,51 +29,53 @@
     <v-card
       class="dest-mega"
       elevation="8"
-      rounded="lg"
+      rounded="0"
     >
-      <div class="dest-mega__cols">
-        <div
-          v-for="zone in zones"
-          :key="zone.id"
-          class="dest-mega__col"
-        >
-          <h3>
-            <v-icon size="15">
-              {{ mdiMapMarkerOutline }}
-            </v-icon>
-            {{ zone.name }}
-          </h3>
-          <NuxtLink
-            v-for="destination in zone.destinations.slice(0, 6)"
-            :key="destination._id"
-            :to="`/destinations/${destination.slug}`"
+      <div class="dest-mega__inner">
+        <div class="dest-mega__cols">
+          <div
+            v-for="zone in zones"
+            :key="zone.id"
+            class="dest-mega__col"
           >
-            {{ destination.title }}
-          </NuxtLink>
-          <NuxtLink
-            class="dest-mega__all"
-            :to="`/destinations/${zone.slug}`"
-          >
-            Voir tout {{ zone.name }} →
-          </NuxtLink>
+            <h3>
+              <v-icon size="15">
+                {{ mdiMapMarkerOutline }}
+              </v-icon>
+              {{ zone.name }}
+            </h3>
+            <NuxtLink
+              v-for="destination in zone.destinations.slice(0, 6)"
+              :key="destination._id"
+              :to="`/destinations/${destination.slug}`"
+            >
+              {{ destination.title }}
+            </NuxtLink>
+            <NuxtLink
+              class="dest-mega__all"
+              :to="`/destinations/${zone.slug}`"
+            >
+              Voir tout {{ zone.name }} →
+            </NuxtLink>
+          </div>
         </div>
-      </div>
-      <div class="dest-mega__foot">
-        <p>Pas encore d'idée ? <b>Parcourez tous les voyages</b> et filtrez par envie.</p>
-        <v-btn
-          color="secondary"
-          rounded="pill"
-          class="dest-mega__cta text-none"
-          to="/voyages"
-        >
-          Tous nos voyages
-          <v-icon
-            end
-            size="18"
+        <div class="dest-mega__foot">
+          <p>Pas encore d'idée ? <b>Parcourez toutes nos destinations</b> et laissez-vous inspirer.</p>
+          <v-btn
+            color="secondary"
+            rounded="pill"
+            class="dest-mega__cta text-none"
+            to="/destinations"
           >
-            {{ mdiArrowRight }}
-          </v-icon>
-        </v-btn>
+            Toutes nos destinations
+            <v-icon
+              end
+              size="18"
+            >
+              {{ mdiArrowRight }}
+            </v-icon>
+          </v-btn>
+        </div>
       </div>
     </v-card>
   </v-menu>
@@ -122,8 +126,13 @@ const { zones } = useDestinationsMenu()
 }
 
 .dest-mega {
-  max-width: 940px;
-  padding: 22px 24px 16px;
+  width: 100vw;
+  border-top: 1px solid rgba(43, 76, 82, 0.13);
+}
+.dest-mega__inner {
+  max-width: 1180px;
+  margin-inline: auto;
+  padding: 26px 24px 18px;
 }
 .dest-mega__cols {
   display: grid;
@@ -176,5 +185,18 @@ const { zones } = useDestinationsMenu()
 }
 .dest-mega__cta {
   margin-left: auto;
+}
+</style>
+
+<!-- Non-scoped: the v-menu content is teleported to the overlay root, so the
+     full-width positioning override can't live in the scoped block. Vuetify
+     anchors the content to the activator with inline left/max-width; force it
+     to span the viewport instead (the inner wrapper re-centers the content). -->
+<style>
+.dest-mega-menu {
+  left: 0 !important;
+  right: 0 !important;
+  max-width: 100vw !important;
+  width: 100vw !important;
 }
 </style>

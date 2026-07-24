@@ -14,7 +14,7 @@ const destinationsMenuQuery = groq`*[_type == "region"]{
   nom,
   "slug": slug.current,
   image,
-  "destinations": *[_type == "destination" && references(^._id)] | order(title asc){
+  "destinations": *[_type == "destination" && references(^._id) && count(*[_type == "voyage" && references(^._id) && !('custom' in availabilityTypes)]) > 0] | order(title asc){
     _id,
     title,
     "slug": slug.current,

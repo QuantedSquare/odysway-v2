@@ -194,8 +194,8 @@ const voyagesWithCta = computed(() => {
   const result = [...original]
   const cta = { id: 'cta', isCta: true }
 
-  if (original.length >= 2) {
-    result.splice(2, 0, cta)
+  if (original.length >= 5) {
+    result.splice(5, 0, cta)
   }
   else {
     result.push(cta)
