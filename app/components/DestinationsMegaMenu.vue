@@ -2,7 +2,8 @@
   <v-menu
     v-model="open"
     location="bottom"
-    offset="10"
+    offset="31"
+    scrim
     :close-on-content-click="true"
     transition="fade-transition"
     scroll-strategy="close"
@@ -91,7 +92,7 @@ defineProps({
   },
 })
 
-const open = ref(false)
+const open = defineModel('open', { type: Boolean, default: false })
 const { zones } = useDestinationsMenu()
 </script>
 
@@ -198,5 +199,11 @@ const { zones } = useDestinationsMenu()
   right: 0 !important;
   max-width: 100vw !important;
   width: 100vw !important;
+}
+/* Dim the page behind the open mega menu, but keep the topbar bright so the
+   solid header and the white panel still read as one continuous surface. */
+.v-overlay:has(> .dest-mega-menu) > .v-overlay__scrim {
+  top: 91px !important;
+  background: white !important;
 }
 </style>

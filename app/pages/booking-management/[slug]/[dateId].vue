@@ -221,14 +221,18 @@
           value="general"
           class="d-flex align-center ga-2"
         >
-          <v-icon size="small">{{ mdiCalculator }}</v-icon>
+          <v-icon size="small">
+            {{ mdiCalculator }}
+          </v-icon>
           Général
         </v-tab>
         <v-tab
           value="margins"
           class="d-flex align-center ga-2"
         >
-          <v-icon size="small">{{ mdiFileDocument }}</v-icon>
+          <v-icon size="small">
+            {{ mdiFileDocument }}
+          </v-icon>
           Marges et documents
         </v-tab>
       </v-tabs>
@@ -237,512 +241,507 @@
         v-model="selectedTab"
         class="mb-4"
       >
-        
-      <v-window-item value="general">
-      <!-- Main content -->
-      <v-row>
-        <!-- Left column -->
-        <v-col
-          cols="12"
-          md="8"
-        >
-          <v-form @submit.prevent="onSave">
-            <DateFormCard
-              v-model="form"
-              :status-options="statuses"
-              :allow-individual="!isCustomTravel"
-              title="Parametres de la date"
-              subtitle="Informations publiques et operationnelles"
-              :readonly-booked-seat="true"
+        <v-window-item value="general">
+          <!-- Main content -->
+          <v-row>
+            <!-- Left column -->
+            <v-col
+              cols="12"
+              md="8"
             >
-              <template #top-actions>
-                <v-chip
-                  v-if="form.is_indiv_travel"
-                  color="info"
-                  size="x-small"
-                  label
-                  variant="tonal"
+              <v-form @submit.prevent="onSave">
+                <DateFormCard
+                  v-model="form"
+                  :status-options="statuses"
+                  :allow-individual="!isCustomTravel"
+                  title="Parametres de la date"
+                  subtitle="Informations publiques et operationnelles"
+                  :readonly-booked-seat="true"
                 >
-                  Individuel
-                </v-chip>
-              </template>
-              <template #travel>
-                <v-text-field
-                  :model-value="form.travel_slug"
-                  label="Slug du voyage"
-                  readonly
-                  density="compact"
-                  class="flex-1"
-                />
-              </template>
-              <template #actions>
-                <v-btn
-                  variant="text"
-                  size="small"
-                  @click="onCancel"
-                >
-                  Annuler
-                </v-btn>
-                <v-btn
-                  color="primary"
-                  type="submit"
-                  size="small"
-                  :loading="saving"
-                >
-                  Sauvegarder
-                </v-btn>
-              </template>
-            </DateFormCard>
-          </v-form>
-        </v-col>
-
-        <!-- Right column -->
-        <v-col
-          cols="12"
-          md="4"
-          class="d-flex flex-column ga-4"
-        >
-          <!-- Overview -->
-          <v-card
-            rounded="lg"
-            class="pa-4 bo-card"
-            elevation="0"
-          >
-            <div class="d-flex justify-space-between align-center mb-3">
-              <span class="bo-section-title mb-0">Vue d'ensemble</span>
-              <v-chip
-                label
-                size="x-small"
-                variant="tonal"
-                color="primary"
-              >
-                {{ form.booked_seat || 0 }} / {{ form.max_travelers || '?' }}
-              </v-chip>
-            </div>
-            <v-row class="mb-2">
-              <v-col cols="6">
-                <div class="text-caption text-medium-emphasis">
-                  Total payé
-                </div>
-                <div class="text-h5 font-weight-bold text-success">
-                  {{ formatNumber(totalPaid) }} €
-                </div>
-              </v-col>
-              <v-col cols="6">
-                <div class="text-caption text-medium-emphasis">
-                  Reste a encaisser
-                </div>
-                <div class="text-h5 font-weight-bold text-warning">
-                  {{ formatNumber(totalRestToPay) }} €
-                </div>
-              </v-col>
-            </v-row>
-            <div
-              class="text-caption text-medium-emphasis pa-2 rounded bg-surface-variant"
-            >
-              Valeur totale: <strong>{{ formatNumber(totalValue) }} €</strong>
-            </div>
-          </v-card>
-
-          <!-- Travelers -->
-          <v-card
-            rounded="lg"
-            class="bo-card"
-            elevation="0"
-          >
-            <v-card-title class="pb-0 text-subtitle-2">
-              Voyageurs
-            </v-card-title>
-            <v-card-text>
-              <div
-                v-for="(traveler, idx) in bookedTravelers"
-                :key="traveler.id"
-                class="py-2 d-flex flex-column"
-                :class="idx % 2 === 0 ? 'bg-surface-variant rounded px-2' : 'px-2'"
-              >
-                <div class="d-flex align-center">
-                  <v-avatar
-                    size="24"
-                    color="primary"
-                    class="mr-2"
-                  >
-                    <span style="font-size: 10px; color: white; font-weight: 600;">
-                      {{ (traveler.name?.trim() ? traveler.name : traveler.email || '?').slice(0, 1).toUpperCase() }}
-                    </span>
-                  </v-avatar>
-                  <NuxtLink
-                    :to="`https://odysway90522.activehosted.com/app/deals/${traveler.deal_id}`"
-                    target="_blank"
-                    class="text-body-2 font-weight-medium d-flex align-center ga-1"
-                  >
-                    <span
-                      class="text-truncate"
-                      style="max-width: 140px;"
+                  <template #top-actions>
+                    <v-chip
+                      v-if="form.is_indiv_travel"
+                      color="info"
+                      size="x-small"
+                      label
+                      variant="tonal"
                     >
-                      {{ traveler.name?.trim() ? traveler.name : traveler.email }}
-                    </span>
-                    <v-badge
-                      v-if="traveler.booked_places > 0"
-                      :content="traveler.booked_places"
-                      color="primary"
-                      inline
-                      size="small"
+                      Individuel
+                    </v-chip>
+                  </template>
+                  <template #travel>
+                    <v-text-field
+                      :model-value="form.travel_slug"
+                      label="Slug du voyage"
+                      readonly
+                      density="compact"
+                      class="flex-1"
                     />
-                    <v-icon size="12">
-                      {{ mdiArrowRight }}
-                    </v-icon>
-                  </NuxtLink>
-                  <v-spacer />
-                  <v-btn
-                    icon
-                    size="x-small"
-                    color="primary"
-                    variant="text"
-                    @click="openPaymentDialog(traveler)"
-                  >
-                    <v-icon size="14">
-                      {{ mdiLinkEdit }}
-                    </v-icon>
-                  </v-btn>
-                  <v-btn
-                    icon
-                    size="x-small"
-                    color="error"
-                    variant="text"
-                    @click="deleteTraveler(traveler.id)"
-                  >
-                    <v-icon size="14">
-                      {{ mdiDelete }}
-                    </v-icon>
-                  </v-btn>
-                </div>
-                <div
-                  v-if="traveler.is_option"
-                  class="mt-1 d-flex align-center ga-1"
-                >
+                  </template>
+                  <template #actions>
+                    <v-btn
+                      variant="text"
+                      size="small"
+                      @click="onCancel"
+                    >
+                      Annuler
+                    </v-btn>
+                    <v-btn
+                      color="primary"
+                      type="submit"
+                      size="small"
+                      :loading="saving"
+                    >
+                      Sauvegarder
+                    </v-btn>
+                  </template>
+                </DateFormCard>
+              </v-form>
+            </v-col>
+
+            <!-- Right column -->
+            <v-col
+              cols="12"
+              md="4"
+              class="d-flex flex-column ga-4"
+            >
+              <!-- Overview -->
+              <v-card
+                rounded="lg"
+                class="pa-4 bo-card"
+                elevation="0"
+              >
+                <div class="d-flex justify-space-between align-center mb-3">
+                  <span class="bo-section-title mb-0">Vue d'ensemble</span>
                   <v-chip
-                    color="error"
                     label
                     size="x-small"
                     variant="tonal"
+                    color="primary"
                   >
-                    Option jusqu'au {{ dayjs(traveler.expiracy_date).format('DD/MM/YYYY') }}
+                    {{ form.booked_seat || 0 }} / {{ form.max_travelers || '?' }}
                   </v-chip>
-                  <v-menu
-                    v-model="extendMenuId[traveler.id]"
-                    :close-on-content-click="false"
-                    location="bottom"
+                </div>
+                <v-row class="mb-2">
+                  <v-col cols="6">
+                    <div class="text-caption text-medium-emphasis">
+                      Total payé
+                    </div>
+                    <div class="text-h5 font-weight-bold text-success">
+                      {{ formatNumber(totalPaid) }} €
+                    </div>
+                  </v-col>
+                  <v-col cols="6">
+                    <div class="text-caption text-medium-emphasis">
+                      Reste a encaisser
+                    </div>
+                    <div class="text-h5 font-weight-bold text-warning">
+                      {{ formatNumber(totalRestToPay) }} €
+                    </div>
+                  </v-col>
+                </v-row>
+                <div
+                  class="text-caption text-medium-emphasis pa-2 rounded bg-surface-variant"
+                >
+                  Valeur totale: <strong>{{ formatNumber(totalValue) }} €</strong>
+                </div>
+              </v-card>
+
+              <!-- Travelers -->
+              <v-card
+                rounded="lg"
+                class="bo-card"
+                elevation="0"
+              >
+                <v-card-title class="pb-0 text-subtitle-2">
+                  Voyageurs
+                </v-card-title>
+                <v-card-text>
+                  <div
+                    v-for="(traveler, idx) in bookedTravelers"
+                    :key="traveler.id"
+                    class="py-2 d-flex flex-column"
+                    :class="idx % 2 === 0 ? 'bg-surface-variant rounded px-2' : 'px-2'"
                   >
-                    <template #activator="{ props: menuProps }">
+                    <div class="d-flex align-center">
+                      <v-avatar
+                        size="24"
+                        color="primary"
+                        class="mr-2"
+                      >
+                        <span style="font-size: 10px; color: white; font-weight: 600;">
+                          {{ (traveler.name?.trim() ? traveler.name : traveler.email || '?').slice(0, 1).toUpperCase() }}
+                        </span>
+                      </v-avatar>
+                      <NuxtLink
+                        :to="`https://odysway90522.activehosted.com/app/deals/${traveler.deal_id}`"
+                        target="_blank"
+                        class="text-body-2 font-weight-medium d-flex align-center ga-1"
+                      >
+                        <span
+                          class="text-truncate"
+                          style="max-width: 140px;"
+                        >
+                          {{ traveler.name?.trim() ? traveler.name : traveler.email }}
+                        </span>
+                        <v-badge
+                          v-if="traveler.booked_places > 0"
+                          :content="traveler.booked_places"
+                          color="primary"
+                          inline
+                          size="small"
+                        />
+                        <v-icon size="12">
+                          {{ mdiArrowRight }}
+                        </v-icon>
+                      </NuxtLink>
+                      <v-spacer />
                       <v-btn
                         icon
                         size="x-small"
-                        color="warning"
+                        color="primary"
                         variant="text"
-                        v-bind="menuProps"
+                        @click="openPaymentDialog(traveler)"
                       >
-                        <v-icon size="16">
-                          {{ mdiClockPlusOutline }}
+                        <v-icon size="14">
+                          {{ mdiLinkEdit }}
                         </v-icon>
-                        <v-tooltip
-                          activator="parent"
-                          location="top"
-                        >
-                          <div class="text-primary">
-                            Prolonger l'option
-                          </div>
-                        </v-tooltip>
                       </v-btn>
-                    </template>
-                    <v-card
-                      min-width="240"
-                      rounded="lg"
-                      elevation="4"
+                      <v-btn
+                        icon
+                        size="x-small"
+                        color="error"
+                        variant="text"
+                        @click="deleteTraveler(traveler.id)"
+                      >
+                        <v-icon size="14">
+                          {{ mdiDelete }}
+                        </v-icon>
+                      </v-btn>
+                    </div>
+                    <div
+                      v-if="traveler.is_option"
+                      class="mt-1 d-flex align-center ga-1"
                     >
-                      <v-card-text class="pb-2">
-                        <div class="text-body-2 font-weight-medium mb-1">
-                          Prolonger l'option
-                        </div>
-                        <div class="text-caption text-medium-emphasis mb-3">
-                          Ajoute des jours à partir de la date d'expiration actuelle.
-                        </div>
-                        <div class="d-flex ga-1 mb-3">
+                      <v-chip
+                        color="error"
+                        label
+                        size="x-small"
+                        variant="tonal"
+                      >
+                        Option jusqu'au {{ dayjs(traveler.expiracy_date).format('DD/MM/YYYY') }}
+                      </v-chip>
+                      <v-menu
+                        v-model="extendMenuId[traveler.id]"
+                        :close-on-content-click="false"
+                        location="bottom"
+                      >
+                        <template #activator="{ props: menuProps }">
                           <v-btn
-                            v-for="preset in [3, 7, 14]"
-                            :key="preset"
-                            size="small"
-                            variant="tonal"
+                            icon
+                            size="x-small"
                             color="warning"
-                            :loading="extendingOptionId === traveler.id"
-                            @click="extendOption(traveler, preset)"
+                            variant="text"
+                            v-bind="menuProps"
                           >
-                            +{{ preset }}j
+                            <v-icon size="16">
+                              {{ mdiClockPlusOutline }}
+                            </v-icon>
+                            <v-tooltip
+                              activator="parent"
+                              location="top"
+                            >
+                              <div class="text-primary">
+                                Prolonger l'option
+                              </div>
+                            </v-tooltip>
                           </v-btn>
-                        </div>
-                        <div class="d-flex align-center ga-2">
+                        </template>
+                        <v-card
+                          min-width="240"
+                          rounded="lg"
+                          elevation="4"
+                        >
+                          <v-card-text class="pb-2">
+                            <div class="text-body-2 font-weight-medium mb-1">
+                              Prolonger l'option
+                            </div>
+                            <div class="text-caption text-medium-emphasis mb-3">
+                              Ajoute des jours à partir de la date d'expiration actuelle.
+                            </div>
+                            <div class="d-flex ga-1 mb-3">
+                              <v-btn
+                                v-for="preset in [3, 7, 14]"
+                                :key="preset"
+                                size="small"
+                                variant="tonal"
+                                color="warning"
+                                :loading="extendingOptionId === traveler.id"
+                                @click="extendOption(traveler, preset)"
+                              >
+                                +{{ preset }}j
+                              </v-btn>
+                            </div>
+                            <div class="d-flex align-center ga-2">
+                              <v-text-field
+                                v-model.number="extendCustomDays"
+                                type="number"
+                                min="1"
+                                max="90"
+                                label="Jours"
+                                density="compact"
+                                hide-details
+                                style="max-width: 90px;"
+                              />
+                              <v-btn
+                                size="small"
+                                color="primary"
+                                :loading="extendingOptionId === traveler.id"
+                                :disabled="!extendCustomDays || extendCustomDays < 1 || extendCustomDays > 90"
+                                @click="extendOption(traveler, extendCustomDays)"
+                              >
+                                Appliquer
+                              </v-btn>
+                            </div>
+                          </v-card-text>
+                        </v-card>
+                      </v-menu>
+                    </div>
+                    <div class="text-caption text-medium-emphasis mt-1">
+                      <span class="text-success">{{ formatNumber(traveler.alreadyPaid) }}€</span>
+                      <span class="mx-1">·</span>
+                      <span class="text-warning">{{ formatNumber(traveler.restToPay) }}€ reste</span>
+                      <span class="mx-1">·</span>
+                      <span>{{ formatNumber(traveler.price) }}€ total</span>
+                    </div>
+                  </div>
+
+                  <v-divider class="my-3" />
+
+                  <v-expansion-panels>
+                    <v-expansion-panel elevation="0">
+                      <v-expansion-panel-title class="text-body-2">
+                        Assigner un deal AC
+                      </v-expansion-panel-title>
+                      <v-expansion-panel-text>
+                        <v-form @submit.prevent="onAssignDeal">
                           <v-text-field
-                            v-model.number="extendCustomDays"
-                            type="number"
-                            min="1"
-                            max="90"
-                            label="Jours"
+                            v-model="dealUrl"
+                            label="URL du deal AC"
+                            required
+                            density="compact"
+                          />
+                          <v-switch
+                            v-model="assignWithOption"
+                            label="Poser une option"
                             density="compact"
                             hide-details
-                            style="max-width: 90px;"
+                            class="mb-2"
                           />
                           <v-btn
-                            size="small"
+                            type="submit"
                             color="primary"
-                            :loading="extendingOptionId === traveler.id"
-                            :disabled="!extendCustomDays || extendCustomDays < 1 || extendCustomDays > 90"
-                            @click="extendOption(traveler, extendCustomDays)"
+                            size="small"
+                            :loading="assigningDeal"
+                            :disabled="assigningDeal"
                           >
-                            Appliquer
+                            Assigner
                           </v-btn>
-                        </div>
-                      </v-card-text>
-                    </v-card>
-                  </v-menu>
-                </div>
-                <div class="text-caption text-medium-emphasis mt-1">
-                  <span class="text-success">{{ formatNumber(traveler.alreadyPaid) }}€</span>
-                  <span class="mx-1">·</span>
-                  <span class="text-warning">{{ formatNumber(traveler.restToPay) }}€ reste</span>
-                  <span class="mx-1">·</span>
-                  <span>{{ formatNumber(traveler.price) }}€ total</span>
-                </div>
-              </div>
-
-              <v-divider class="my-3" />
-
-              <v-expansion-panels>
-                <v-expansion-panel elevation="0">
-                  <v-expansion-panel-title class="text-body-2">
-                    Assigner un deal AC
-                  </v-expansion-panel-title>
-                  <v-expansion-panel-text>
-                    <v-form @submit.prevent="onAssignDeal">
-                      <v-text-field
-                        v-model="dealUrl"
-                        label="URL du deal AC"
-                        required
-                        density="compact"
-                      />
-                      <v-switch
-                        v-model="assignWithOption"
-                        label="Poser une option"
-                        density="compact"
-                        hide-details
-                        class="mb-2"
-                      />
-                      <v-btn
-                        type="submit"
-                        color="primary"
-                        size="small"
-                        :loading="assigningDeal"
-                        :disabled="assigningDeal"
-                      >
-                        Assigner
-                      </v-btn>
-                      <v-alert
-                        v-if="assignDealSuccess"
-                        type="success"
-                        class="mt-2"
-                        density="compact"
-                      >
-                        Deal assigné !
-                      </v-alert>
-                      <v-alert
-                        v-if="assignDealError"
-                        type="error"
-                        class="mt-2"
-                        density="compact"
-                      >
-                        <div v-if="assignDealError.includes('/booking-management/')">
-                          <NuxtLink
-                            :to="assignDealError"
+                          <v-alert
+                            v-if="assignDealSuccess"
+                            type="success"
+                            class="mt-2"
+                            density="compact"
                           >
-                            Deal déjà assigné à cette date
-                            <v-icon size="14">
-                              {{ mdiArrowRight }}
-                            </v-icon>
-                          </NuxtLink>
-                        </div>
-                        <div v-else>
-                          {{ assignDealError }}
-                        </div>
-                      </v-alert>
-                    </v-form>
-                  </v-expansion-panel-text>
-                </v-expansion-panel>
-              </v-expansion-panels>
-            </v-card-text>
-          </v-card>
+                            Deal assigné !
+                          </v-alert>
+                          <v-alert
+                            v-if="assignDealError"
+                            type="error"
+                            class="mt-2"
+                            density="compact"
+                          >
+                            <div v-if="assignDealError.includes('/booking-management/')">
+                              <NuxtLink
+                                :to="assignDealError"
+                              >
+                                Deal déjà assigné à cette date
+                                <v-icon size="14">
+                                  {{ mdiArrowRight }}
+                                </v-icon>
+                              </NuxtLink>
+                            </div>
+                            <div v-else>
+                              {{ assignDealError }}
+                            </div>
+                          </v-alert>
+                        </v-form>
+                      </v-expansion-panel-text>
+                    </v-expansion-panel>
+                  </v-expansion-panels>
+                </v-card-text>
+              </v-card>
 
-          <!-- Prospects -->
-          <v-card
-            v-if="prospectTravelers.length"
-            rounded="lg"
-            class="bo-card"
-            elevation="0"
-          >
-            <v-card-title class="pb-0 text-subtitle-2">
-              Prospects en attente
-            </v-card-title>
-            <v-card-text>
-              <div
-                v-for="traveler in prospectTravelers"
-                :key="traveler.id"
-                class="py-2 d-flex align-center"
+              <!-- Prospects -->
+              <v-card
+                v-if="prospectTravelers.length"
+                rounded="lg"
+                class="bo-card"
+                elevation="0"
               >
-                <NuxtLink
-                  :to="`https://odysway90522.activehosted.com/app/deals/${traveler.deal_id}`"
-                  target="_blank"
-                  class="d-flex align-center ga-2 text-body-2"
-                >
-                  <span>{{ traveler.email || 'DEAL AC SUPPRIME' }}</span>
-                  <v-badge
-                    :icon="mdiInformationOutline"
-                    inline
-                    color="error"
-                    text-color="white"
-                    size="small"
-                  />
-                  <v-icon size="12">
-                    {{ mdiArrowRight }}
-                  </v-icon>
-                </NuxtLink>
-                <v-spacer />
-                <v-btn
-                  v-if="traveler.email"
-                  icon
-                  size="x-small"
-                  color="warning"
-                  variant="text"
-                  :loading="placingOptionId === traveler.id"
-                  @click="placeOptionOnProspect(traveler)"
-                >
-                  <v-icon size="14">
-                    {{ mdiCalendarOutline }}
-                  </v-icon>
-                  <v-tooltip
-                    activator="parent"
-                    location="top"
+                <v-card-title class="pb-0 text-subtitle-2">
+                  Prospects en attente
+                </v-card-title>
+                <v-card-text>
+                  <div
+                    v-for="traveler in prospectTravelers"
+                    :key="traveler.id"
+                    class="py-2 d-flex align-center"
                   >
-                    <div class="text-primary">
-                      Poser une option
-                    </div>
-                  </v-tooltip>
-                </v-btn>
-                <v-btn
-                  v-if="traveler.email"
-                  icon
-                  size="x-small"
-                  color="primary"
-                  variant="text"
-                  @click="openPaymentDialog(traveler)"
-                >
-                  <v-icon size="14">
-                    {{ mdiLinkEdit }}
-                  </v-icon>
-                </v-btn>
-                <v-btn
-                  icon
-                  size="x-small"
-                  color="error"
-                  variant="text"
-                  @click="deleteTraveler(traveler.id)"
-                >
-                  <v-icon size="14">
-                    {{ mdiDelete }}
-                  </v-icon>
-                </v-btn>
-              </div>
-            </v-card-text>
-          </v-card>
-
-          <!-- Notes -->
-          <DateNotes
-            :slug="slug"
-            :date-id="dateId"
-          />
-        </v-col>
-        <v-col>
-          <!-- Funnel link -->
-          <v-card
-            class="mt-4 bo-card"
-            rounded="lg"
-            elevation="0"
-          >
-            <v-card-text class="pa-4">
-              <div class="d-flex align-center justify-space-between mb-2">
-                <div class="d-flex align-center ga-2">
-                  <span class="bo-section-title mb-0">Funnel</span>
-                  <v-select
-                    v-model="funnelLinkType"
-                    :items="funnelLinkTypes"
-                    item-title="label"
-                    item-value="value"
-                    hide-details
-                    density="compact"
-                    style="max-width: 160px;"
-                  />
-                </div>
-                <v-btn
-                  size="x-small"
-                  variant="tonal"
-                  color="primary"
-                  @click="copyFunnelLink"
-                >
-                  Copier
-                </v-btn>
-              </div>
-              <v-text-field
-                :model-value="funnelLink"
-                readonly
-                label="Lien funnel"
-                density="compact"
-                hide-details
-              />
-            </v-card-text>
-          </v-card>
-
-          <!-- Preview -->
-          <v-card
-            class="mt-4 bo-card"
-            rounded="lg"
-            elevation="0"
-          >
-            <v-card-text class="pa-4">
-              <div class="d-flex align-center justify-space-between mb-3">
-                <div>
-                  <span class="bo-section-title mb-0">Previsualisation</span>
-                  <div class="text-caption text-medium-emphasis">
-                    Affichage site public
+                    <NuxtLink
+                      :to="`https://odysway90522.activehosted.com/app/deals/${traveler.deal_id}`"
+                      target="_blank"
+                      class="d-flex align-center ga-2 text-body-2"
+                    >
+                      <span>{{ traveler.email || 'DEAL AC SUPPRIME' }}</span>
+                      <v-badge
+                        :icon="mdiInformationOutline"
+                        inline
+                        color="error"
+                        text-color="white"
+                        size="small"
+                      />
+                      <v-icon size="12">
+                        {{ mdiArrowRight }}
+                      </v-icon>
+                    </NuxtLink>
+                    <v-spacer />
+                    <v-btn
+                      v-if="traveler.email"
+                      icon
+                      size="x-small"
+                      color="warning"
+                      variant="text"
+                      :loading="placingOptionId === traveler.id"
+                      @click="placeOptionOnProspect(traveler)"
+                    >
+                      <v-icon size="14">
+                        {{ mdiCalendarOutline }}
+                      </v-icon>
+                      <v-tooltip
+                        activator="parent"
+                        location="top"
+                      >
+                        <div class="text-primary">
+                          Poser une option
+                        </div>
+                      </v-tooltip>
+                    </v-btn>
+                    <v-btn
+                      v-if="traveler.email"
+                      icon
+                      size="x-small"
+                      color="primary"
+                      variant="text"
+                      @click="openPaymentDialog(traveler)"
+                    >
+                      <v-icon size="14">
+                        {{ mdiLinkEdit }}
+                      </v-icon>
+                    </v-btn>
+                    <v-btn
+                      icon
+                      size="x-small"
+                      color="error"
+                      variant="text"
+                      @click="deleteTraveler(traveler.id)"
+                    >
+                      <v-icon size="14">
+                        {{ mdiDelete }}
+                      </v-icon>
+                    </v-btn>
                   </div>
-                </div>
-                <v-chip
-                  :color="form.published && !form.is_indiv_travel ? 'success' : 'warning'"
-                  size="x-small"
-                  label
-                  variant="tonal"
-                >
-                  {{ form.is_indiv_travel ? 'Individuel' : form.published ? 'Publiee' : 'Non publiee' }}
-                </v-chip>
-              </div>
-              <v-theme-provider theme="odysway">
-                <DatesPricesItem :date="previewDate" />
-              </v-theme-provider>
-            </v-card-text>
-          </v-card>
+                </v-card-text>
+              </v-card>
 
-       
+              <!-- Notes -->
+              <DateNotes
+                :slug="slug"
+                :date-id="dateId"
+              />
+            </v-col>
+            <v-col>
+              <!-- Funnel link -->
+              <v-card
+                class="mt-4 bo-card"
+                rounded="lg"
+                elevation="0"
+              >
+                <v-card-text class="pa-4">
+                  <div class="d-flex align-center justify-space-between mb-2">
+                    <div class="d-flex align-center ga-2">
+                      <span class="bo-section-title mb-0">Funnel</span>
+                      <v-select
+                        v-model="funnelLinkType"
+                        :items="funnelLinkTypes"
+                        item-title="label"
+                        item-value="value"
+                        hide-details
+                        density="compact"
+                        style="max-width: 160px;"
+                      />
+                    </div>
+                    <v-btn
+                      size="x-small"
+                      variant="tonal"
+                      color="primary"
+                      @click="copyFunnelLink"
+                    >
+                      Copier
+                    </v-btn>
+                  </div>
+                  <v-text-field
+                    :model-value="funnelLink"
+                    readonly
+                    label="Lien funnel"
+                    density="compact"
+                    hide-details
+                  />
+                </v-card-text>
+              </v-card>
 
-       
-        </v-col>
-      </v-row>
-      </v-window-item>
-      <v-window-item value="margins">
+              <!-- Preview -->
+              <v-card
+                class="mt-4 bo-card"
+                rounded="lg"
+                elevation="0"
+              >
+                <v-card-text class="pa-4">
+                  <div class="d-flex align-center justify-space-between mb-3">
+                    <div>
+                      <span class="bo-section-title mb-0">Previsualisation</span>
+                      <div class="text-caption text-medium-emphasis">
+                        Affichage site public
+                      </div>
+                    </div>
+                    <v-chip
+                      :color="form.published && !form.is_indiv_travel ? 'success' : 'warning'"
+                      size="x-small"
+                      label
+                      variant="tonal"
+                    >
+                      {{ form.is_indiv_travel ? 'Individuel' : form.published ? 'Publiee' : 'Non publiee' }}
+                    </v-chip>
+                  </div>
+                  <v-theme-provider theme="odysway">
+                    <DatesPricesItem :date="previewDate" />
+                  </v-theme-provider>
+                </v-card-text>
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-window-item>
+        <v-window-item value="margins">
           <DateMarginCard
             ref="marginCard"
             :slug="slug"

@@ -72,7 +72,10 @@
         class="d-header-nav d-none d-md-flex align-center ga-1 ga-lg-2 ml-4 ml-lg-6"
         aria-label="Navigation principale"
       >
-        <DestinationsMegaMenu :is-transparent="isTransparent" />
+        <DestinationsMegaMenu
+          v-model:open="destMenuOpen"
+          :is-transparent="isTransparent"
+        />
         <v-btn
           v-if="header?.button2?.visible"
           height="45"
@@ -210,8 +213,9 @@ function handleButton5Click() {
   router.push(header.button5.link)
 }
 
+const destMenuOpen = ref(false)
 const isScrolled = computed(() => y.value > 200)
-const isTransparent = computed(() => !isScrolled.value && route.path === '/' && !model.value)
+const isTransparent = computed(() => !isScrolled.value && route.path === '/' && !model.value && !destMenuOpen.value)
 </script>
 
 <style scoped>
