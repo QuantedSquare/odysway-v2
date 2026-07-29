@@ -54,7 +54,9 @@
           class="close"
           aria-label="Fermer"
           @click="open = false"
-        >&times;</button>
+        >
+          &times;
+        </button>
         <div
           class="stars"
           role="img"
@@ -97,11 +99,8 @@ const quoteText = computed(() => (props.review?.text || '').replace(/\\n|\n/g, '
 // Show "Lire +" only when the quote is long enough to be clamped.
 const canExpand = computed(() => quoteText.value.length > 140)
 
-// Prefer the voyage's own photo (now that we have that data) over the
-// traveller's uploaded photo, since it's more consistently available and
-// visually matches the rest of the site's voyage imagery.
 const bgStyle = computed(() => {
-  const ref = props.review?.voyageImage?.asset?._ref || props.review?.photo?.asset?._ref
+  const ref = props.review?.photo?.asset?._ref || props.review?.voyageImage?.asset?._ref
   return ref ? { backgroundImage: `url('${getImageUrl(ref, null, null, 600)}')` } : {}
 })
 </script>

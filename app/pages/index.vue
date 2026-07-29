@@ -35,7 +35,9 @@
 
         <!-- Départs garantis -->
         <LazyColorContainer
-          :hydrate-on-visible="{ rootMargin: '400px' }" color="grey-light">
+          :hydrate-on-visible="{ rootMargin: '400px' }"
+          color="grey-light"
+        >
           <TrackableVoyageList
             :voyages="homeSanity?.guaranteedDepartures?.voyagesGuaranteedDepartures"
             :list-name="homeSanity?.guaranteedDepartures?.title"
@@ -79,8 +81,8 @@
 
         <!-- Dernières places -->
         <LazyColorContainer
-          :hydrate-on-visible="{ rootMargin: '400px' }"
           v-if="lastMinuteVoyages.length"
+          :hydrate-on-visible="{ rootMargin: '400px' }"
           color="soft-blush"
         >
           <TrackableVoyageList
@@ -115,7 +117,9 @@
 
         <!-- Voyager selon vos envies -->
         <LazyColorContainer
-          :hydrate-on-visible="{ rootMargin: '400px' }" color="white">
+          :hydrate-on-visible="{ rootMargin: '400px' }"
+          color="white"
+        >
           <LazyCardGrid
             :categories="homeSanity?.followDesires?.categoriesFollowDesires"
             :promotion-name="homeSanity?.followDesires?.title"
@@ -131,8 +135,8 @@
 
         <!-- Best-sellers (voyages et/ou destinations à l'honneur) -->
         <LazyColorContainer
-          :hydrate-on-visible="{ rootMargin: '400px' }"
           v-if="bestSellerItems.length"
+          :hydrate-on-visible="{ rootMargin: '400px' }"
           color="white"
         >
           <LazyHorizontalCarousel
@@ -166,7 +170,9 @@
 
         <!-- Séjours en France -->
         <LazyColorContainer
-          :hydrate-on-visible="{ rootMargin: '400px' }" color="soft-blush">
+          :hydrate-on-visible="{ rootMargin: '400px' }"
+          color="soft-blush"
+        >
           <TrackableVoyageList
             :voyages="homeSanity?.franceTrips?.voyagesFrance"
             :list-name="homeSanity?.franceTrips?.title"
@@ -199,7 +205,9 @@
 
         <!-- Conseiller / envie de partir -->
         <LazyColorContainer
-          :hydrate-on-visible="{ rootMargin: '400px' }" color="grey-light-2">
+          :hydrate-on-visible="{ rootMargin: '400px' }"
+          color="grey-light-2"
+        >
           <LazyInfoContainer>
             <template #top>
               <AvatarsRowStack />
@@ -227,7 +235,9 @@
 
         <!-- Avis (cartes photo plein cadre, style prototype) -->
         <LazyColorContainer
-          :hydrate-on-visible="{ rootMargin: '400px' }" color="white">
+          :hydrate-on-visible="{ rootMargin: '400px' }"
+          color="white"
+        >
           <LazyHomeReviewsRail
             :eyebrow="reviewsEyebrow"
             :title="homeSanity?.reviews?.title || 'Des voyageurs partagent leurs souvenirs'"
@@ -237,8 +247,8 @@
 
         <!-- Newsletter -->
         <LazyColorContainer
-          :hydrate-on-visible="{ rootMargin: '400px' }"
           v-if="homeSanity?.newsletter"
+          :hydrate-on-visible="{ rootMargin: '400px' }"
           color="soft-blush"
         >
           <LazyNewsletterContainer>

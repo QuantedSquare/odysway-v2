@@ -37,7 +37,7 @@ const { formatVoyagesForGtm } = useGtmVoyageFormatter()
 const route = useRoute()
 const slug = computed(() => route.params.destinationSlug)
 const isRegionDestination = computed(() => {
-  const regionsList = ['europe', 'afrique', 'asie', 'amerique-du-sud', 'amerique-du-nord', 'amerique-centrale', 'moyen-orient', 'france']
+  const regionsList = ['europe', 'afrique', 'asie', 'ameriques', 'amerique-du-sud', 'amerique-du-nord', 'amerique-centrale', 'moyen-orient', 'france']
   return regionsList.includes(slug.value)
 })
 // #TODO OPTI LE SELECT DES PROPS NECESSAIRES

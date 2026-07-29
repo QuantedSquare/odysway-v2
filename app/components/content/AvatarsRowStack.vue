@@ -3,6 +3,7 @@
     <v-row
       justify="center"
       class="avatar-row-wrapper"
+      :style="sizeVars"
     >
       <div class="avatar-scroll-container">
         <v-lazy
@@ -85,6 +86,15 @@ import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 import { getImageUrl } from '~/utils/getImageUrl'
 
+const props = defineProps({
+  // Smaller avatars (used inside text columns, e.g. the vision page).
+  // Left off, the stack keeps its original 100px / 70px sizing everywhere else.
+  compact: {
+    type: Boolean,
+    default: false,
+  },
+})
+
 const sanityQuery = `
   *[_type == "teamMember" && name != 'Salomé' && visibleOnHomepage != false]|order(orderRank) {
     name,
@@ -101,25 +111,36 @@ const img = useImage()
 const hoveredIndex = ref(null)
 const { width } = useDisplay()
 
+// Avatar diameter + horizontal step, per breakpoint. The default values are the
+// historical ones (100/60 desktop, 70/40 mobile) so every existing caller keeps
+// its exact rendering; `compact` scales the whole stack down.
+const metrics = computed(() => {
+  const isMobile = width.value <= 600
+  if (props.compact) {
+    return isMobile ? { size: 48, step: 30 } : { size: 60, step: 38 }
+  }
+  return isMobile ? { size: 70, step: 40 } : { size: 100, step: 60 }
+})
+
+// Only emitted in compact mode: the CSS falls back to the original hard-coded
+// sizes when these custom properties are absent.
+const sizeVars = computed(() => {
+  if (!props.compact) return {}
+  return {
+    '--avatar-size': `${metrics.value.size}px`,
+    '--avatar-step': `${metrics.value.step}px`,
+  }
+})
+
 // Calculate stack width based on screen size and avatar count
 const stackWidthStyle = computed(() => {
-  if (!avatars.value || avatars.value.length === 0) return { width: '100px' }
+  if (!avatars.value || avatars.value.length === 0) return { width: `${metrics.value.size}px` }
 
-  const avatarCount = avatars.value.length
-  // Desktop: 100px avatars spaced 60px apart (overlap)
-  // Mobile: 70px avatars spaced 40px apart (overlap)
-  if (width.value <= 600) {
-    // Mobile calculation: calculate the full width needed to contain all avatars
-    // The leftmost avatar extends to the left by half its width (35px) from the center
-    // The rightmost avatar extends by: (avatarCount - 1) * 40px + 35px to the right
-    // Total width: left extension + right extension = 35px + (avatarCount - 1) * 40px + 35px
-    const mobileWidth = (avatarCount - 1) * 40 + 70
-    return { width: `${mobileWidth}px` }
-  }
-  else {
-    // Desktop calculation
-    return { width: `${(avatarCount - 1) * 60 + 100}px` }
-  }
+  // Full width needed to contain the overlapping row: the leftmost avatar
+  // extends half its width to the left of the centre, the rightmost one
+  // (count - 1) steps plus half a width to the right.
+  const { size, step } = metrics.value
+  return { width: `${(avatars.value.length - 1) * step + size}px` }
 })
 
 // Animated height for info section
@@ -191,7 +212,9 @@ watch(hoveredIndex, async (val) => {
 
 .avatar-stack {
   position: relative;
-  height: 100px;
+  /* --avatar-size / --avatar-step are only set in compact mode; the fallbacks
+     below are the original sizes, so default callers are unaffected. */
+  height: var(--avatar-size, 100px);
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -211,7 +234,7 @@ watch(hoveredIndex, async (val) => {
 /* Generate dynamic positioning for avatars */
 .v-avatar {
   &[class*="avatar-"] {
-    left: calc(var(--avatar-index) * 60px);
+    left: calc(var(--avatar-index) * var(--avatar-step, 60px));
   }
 }
 
@@ -244,11 +267,11 @@ watch(hoveredIndex, async (val) => {
   .v-avatar[class*="avatar-"] {
     /* Position relative to center, then offset by index */
     left: 50%;
-    transform: translateX(calc(-50% + (var(--avatar-index) - ((var(--total-avatars) - 1) / 2)) * 40px));
+    transform: translateX(calc(-50% + (var(--avatar-index) - ((var(--total-avatars) - 1) / 2)) * var(--avatar-step, 40px)));
   }
 
   .v-avatar:hover {
-    transform: translateX(calc(-50% + (var(--avatar-index) - ((var(--total-avatars) - 1) / 2)) * 40px)) translateY(-5px);
+    transform: translateX(calc(-50% + (var(--avatar-index) - ((var(--total-avatars) - 1) / 2)) * var(--avatar-step, 40px))) translateY(-5px);
   }
 }
 
@@ -314,21 +337,21 @@ watch(hoveredIndex, async (val) => {
 }
 
 .avatar-min-height-lazy {
-  min-height: 100px!important;
+  min-height: var(--avatar-size, 100px)!important;
 }
 
 .avatar-size-responsive {
-  width: 100px!important;
-  height: 100px!important;
+  width: var(--avatar-size, 100px)!important;
+  height: var(--avatar-size, 100px)!important;
 }
 
 @media screen and (max-width: 960px) {
   .avatar-min-height-lazy {
-    min-height: 70px!important;
+    min-height: var(--avatar-size, 70px)!important;
   }
   .avatar-size-responsive {
-    width: 70px!important;
-    height: 70px!important;
+    width: var(--avatar-size, 70px)!important;
+    height: var(--avatar-size, 70px)!important;
   }
 }
 </style>

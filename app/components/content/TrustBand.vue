@@ -2,6 +2,7 @@
   <section
     v-if="displayItems.length"
     class="trust"
+    :class="{ 'trust--plain': !bordered }"
     aria-label="Garanties et réassurance"
   >
     <div class="trust__inner max-container-width">
@@ -40,6 +41,12 @@ const props = defineProps({
   items: {
     type: Array,
     default: () => [],
+  },
+  // Dividers between items + bottom rule. Kept on by default (homepage hero);
+  // pages that sit the band inside plain content can switch them off.
+  bordered: {
+    type: Boolean,
+    default: true,
   },
 })
 
@@ -114,6 +121,16 @@ const iconFor = key => icons[key] || IconCircleCheck
 
 .trust__item:last-child {
   margin-right: auto;
+}
+
+/* Borderless variant: no bottom rule, no dividers between items. */
+.trust--plain {
+  background: transparent;
+  border-bottom: none;
+}
+
+.trust--plain .trust__item {
+  border-left: none;
 }
 
 .trust__icon {
