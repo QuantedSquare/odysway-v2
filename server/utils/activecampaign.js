@@ -297,6 +297,15 @@ const getDealCustomFields = async (dealId) => {
   return handleCustomFields(response.dealCustomFieldData, customFieldsMapDeal)
 }
 
+// Raw (unmapped) custom field rows. getDealCustomFields() silently drops every
+// field missing from customFieldsMapDeal (they collapse onto an `undefined`
+// key), which is fine for business logic but useless for the backoffice deal
+// inspector, which must show everything AC actually stores on the deal.
+const getDealRawCustomFieldData = async (dealId) => {
+  const response = await apiRequest(`/deals/${dealId}/dealCustomFieldData?limit=100`)
+  return response.dealCustomFieldData || []
+}
+
 // =================== LIST (backfill helpers) ===================
 const listContacts = ({ limit = 100, offset = 0, include = '' } = {}) => {
   const qs = new URLSearchParams({ limit: String(limit), offset: String(offset) })
@@ -661,6 +670,8 @@ export default {
   // --- Deals ---
   getDealById, // OK
   getDealCustomFields, // OK
+  getDealRawCustomFieldData,
+  dealCustomFieldsMap: customFieldsMapDeal,
   getAllDeal, // OK
   retrieveOwner,
   createDeal, // OK

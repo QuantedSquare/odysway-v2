@@ -55,6 +55,9 @@ export const bookingApi = {
   duplicateDeal: (dealId, payload) =>
     apiRequest(`/ac/deals/${encodeURIComponent(dealId)}/duplicate`, 'post', payload),
 
+  // Read-only dump of every field of an AC deal (booking-management inspector)
+  inspectDeal: dealId => apiRequest(`/ac/deals/${encodeURIComponent(dealId)}/inspect`),
+
   // Notes
   getNotes: (slug, dateId) =>
     apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/notes`),
