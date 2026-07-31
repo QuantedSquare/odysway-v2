@@ -174,6 +174,16 @@
                   <span class="text-medium-emphasis">+ Base × pax</span>
                   <span>{{ formatEur((breakdown.base_margin_per_pax || 0) * breakdown.real_pax) }}</span>
                 </div>
+                <div
+                  v-if="breakdown.child_pax > 0"
+                  class="d-flex justify-space-between py-1"
+                >
+                  <span class="text-medium-emphasis">
+                    + &Eacute;cart enfant
+                    <span class="text-caption">({{ breakdown.child_pax }} enfant{{ breakdown.child_pax > 1 ? 's' : '' }} × {{ formatEur(breakdown.child_margin_delta || 0) }})</span>
+                  </span>
+                  <span>{{ formatEur(breakdown.child_margin_total || 0) }}</span>
+                </div>
                 <div class="d-flex justify-space-between py-1">
                   <span class="text-medium-emphasis">+ Marges add. (vol + assurance + extra)</span>
                   <span>{{ formatEur(breakdown.additional_margins) }}</span>
@@ -235,6 +245,20 @@
           <p class="text-body-2 text-medium-emphasis mb-3">
             Ces valeurs prennent la priorité sur le tableau de marge du voyage. Laissez vide pour utiliser les valeurs par défaut.
           </p>
+          <v-alert
+            type="info"
+            density="compact"
+            variant="tonal"
+            class="mb-3 text-body-2"
+          >
+            L'override fixe <strong>un seul tarif par voyageur</strong> pour cette date, identique qu'il y ait 1 ou 10 pax. Pour un tarif qui varie selon la p&eacute;riode <em>et</em> le nombre de pax, configure plut&ocirc;t des saisons dans le
+            <NuxtLink
+              :to="`/booking-management/margins/${slug}`"
+              class="text-primary"
+            >
+              tableau du voyage
+            </NuxtLink>.
+          </v-alert>
           <v-text-field
             v-model.number="overrideForm.margin_override_per_traveler"
             label="Marge par voyageur (€) — override"
@@ -316,12 +340,16 @@ const realMarginExplanation = computed(() => {
 })
 
 const baseMarginSourceLabel = computed(() => {
-  if (!breakdown.value) return ''
-  if (breakdown.value.base_margin_source === 'override') return 'override date'
-  if (breakdown.value.base_margin_source === 'pax') {
-    return breakdown.value.base_margin_source_year
-      ? `tableau pax — saison ${breakdown.value.base_margin_source_year}`
-      : 'tableau pax'
+  const b = breakdown.value
+  if (!b) return ''
+  if (b.base_margin_source === 'override') return 'override date'
+  if (b.base_margin_source === 'pax' || b.base_margin_source === 'pax_season') {
+    // 'pax_season' means a value entered for the matched season; 'pax' means the
+    // season was left blank (or there is none) and the "Défaut" column applied.
+    const parts = ['tableau pax']
+    if (b.season_label) parts.push(b.base_margin_source === 'pax_season' ? b.season_label : `${b.season_label} → défaut`)
+    if (b.base_margin_source_year) parts.push(`saison ${b.base_margin_source_year}`)
+    return parts.join(' — ')
   }
   return ''
 })

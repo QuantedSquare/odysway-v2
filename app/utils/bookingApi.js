@@ -86,17 +86,39 @@ export const bookingApi = {
   bookingExists: bookedId =>
     apiRequest(`/booking/booking-exists${encodeQuery({ booked_id: bookedId })}`),
 
-  // Margins — voyage-level PAX table (Pattern A)
-  getMarginsStatus: () => apiRequest('/booking/margins'),
+  // Margins — voyage-level PAX table (Pattern A), declined per year and per season
+  // Status is year-scoped: pass the departure year being configured.
+  getMarginsStatus: (year = null) =>
+    apiRequest(`/booking/margins${encodeQuery(year ? { year } : {})}`),
   getMarginsDashboard: (params = {}) => apiRequest(`/booking/margins/dashboard${encodeQuery(params)}`),
   getMarginsDashboardVoyage: (slug, params = {}) =>
     apiRequest(`/booking/margins/dashboard/${encodeURIComponent(slug)}${encodeQuery(params)}`),
+  // Returns { rows, seasons, settings } — everything the editor needs in one call.
   getVoyageMargin: (slug, year = null) =>
     apiRequest(`/booking/margins/${encodeURIComponent(slug)}${encodeQuery(year ? { year } : {})}`),
-  updateVoyageMargin: (slug, year, rows) =>
-    apiRequest(`/booking/margins/${encodeURIComponent(slug)}${encodeQuery({ year })}`, 'put', rows),
+  // seasonId null targets the "toutes saisons" default rows.
+  updateVoyageMargin: (slug, year, rows, seasonId = null) =>
+    apiRequest(
+      `/booking/margins/${encodeURIComponent(slug)}${encodeQuery(seasonId ? { year, season_id: seasonId } : { year })}`,
+      'put',
+      rows,
+    ),
+  // Removes the whole pax tier for the year — every season plus the default row.
   deleteVoyageMarginRow: (slug, pax, year) =>
     apiRequest(`/booking/margins/${encodeURIComponent(slug)}${encodeQuery({ pax, year })}`, 'delete'),
+  // Removes a single cell. seasonId null targets the "toutes saisons" default row.
+  deleteVoyageMarginCell: (slug, pax, year, seasonId = null) =>
+    apiRequest(
+      `/booking/margins/${encodeURIComponent(slug)}${encodeQuery(
+        seasonId ? { pax, year, scope: 'cell', season_id: seasonId } : { pax, year, scope: 'cell' },
+      )}`,
+      'delete',
+    ),
+  // Recurring DD/MM seasons — replace-all, the payload is the complete list.
+  updateVoyageMarginSeasons: (slug, seasons) =>
+    apiRequest(`/booking/margins/${encodeURIComponent(slug)}/seasons`, 'put', seasons),
+  updateVoyageMarginSettings: (slug, payload) =>
+    apiRequest(`/booking/margins/${encodeURIComponent(slug)}/settings`, 'put', payload),
 
   // Margins — per-date computation + override (Pattern B)
   getDateMargin: (slug, dateId) =>

@@ -24,14 +24,22 @@ export default defineEventHandler(async (event) => {
     .from('travel_dates')
     .select('id, travel_slug, departure_date, return_date, margin_override_per_traveler, real_traveler_count_override, max_travelers, booked_seat')
     .eq('travel_slug', slug)
-    .not('deleted', 'is', true)
-    .not('is_test', 'is', true)
+    .eq('deleted', false)
+    .eq('is_test', false)
     .gte('departure_date', dateFrom)
     .lte('departure_date', dateTo)
     .order('departure_date', { ascending: true })
 
   if (tdError) throw createError({ statusCode: 500, statusMessage: tdError.message })
-  if (!travelDates?.length) return { dates: [], totals: { estimated: 0, real: null, variance: null, finished_count: 0, total_count: 0, real_dates_count: 0 } }
+  if (!travelDates?.length) {
+    return {
+      dates: [],
+      config_mode: 'pax_table',
+      child_margin_delta: null,
+      seasons: [],
+      totals: { estimated: 0, real: null, variance: null, finished_count: 0, total_count: 0, real_dates_count: 0 },
+    }
+  }
 
   // 2) Bookings (paying seats) for those dates — small list, no chunking needed.
   const dateIds = travelDates.map(d => d.id)
@@ -39,6 +47,7 @@ export default defineEventHandler(async (event) => {
     .from('booked_dates')
     .select('travel_date_id, deal_id, booked_places')
     .in('travel_date_id', dateIds)
+    .eq('deleted', false)
     .gt('booked_places', 0)
   if (bookingsError) throw createError({ statusCode: 500, statusMessage: bookingsError.message })
 
@@ -48,7 +57,7 @@ export default defineEventHandler(async (event) => {
   if (dealIds.length) {
     const { data, error } = await supabase
       .from('activecampaign_deals')
-      .select('id, pipeline_id, total_margin, flight_margin, insurance_commission, extra_margin_per_traveler, applied_promo_per_traveler, nb_traveler')
+      .select('id, pipeline_id, total_margin, flight_margin, insurance_commission, extra_margin_per_traveler, applied_promo_per_traveler, nb_traveler, nb_children')
       .in('id', dealIds)
       .eq('pipeline_id', 2)
     if (error) throw createError({ statusCode: 500, statusMessage: error.message })
@@ -56,25 +65,27 @@ export default defineEventHandler(async (event) => {
   }
   const dealsById = new Map(deals.map(d => [Number(d.id), d]))
 
-  // 4) PAX margin table for this voyage — all years; we resolve per-date below.
-  const { data: paxRows } = await supabase
-    .from('voyage_margins')
-    .select('pax, margin_per_traveler, year')
-    .eq('voyage_slug', slug)
+  // 4) Margin config for this voyage — PAX rows (all years, all seasons), the
+  //    recurring seasons, and the settings (child delta). Fetched once, then
+  //    resolved per date in memory via margins.resolveBaseFromRows so the lookup
+  //    order (season → default, each with the nearest-year fallback) lives in
+  //    exactly one place, shared with the single-date path.
+  const [{ data: paxRows }, seasons, settings] = await Promise.all([
+    supabase
+      .from('voyage_margins')
+      .select('pax, margin_per_traveler, year, season_id')
+      .eq('voyage_slug', slug),
+    margins.getSeasonsForVoyage(slug),
+    margins.getSettingsForVoyage(slug),
+  ])
 
-  // Build a Map<pax, Array<{year, margin_per_traveler}>> for in-memory fallback lookup.
-  // We delegate the actual nearest-year selection to margins.pickNearestYearCandidate
-  // so the rule (conservative tie-breaker) stays in one place.
-  const paxYearMap = new Map()
+  const childDelta = Number(settings.child_margin_delta || 0)
+
+  const rowsByPax = new Map()
   for (const r of paxRows || []) {
-    if (r.margin_per_traveler == null) continue
-    if (!paxYearMap.has(r.pax)) paxYearMap.set(r.pax, [])
-    paxYearMap.get(r.pax).push({ year: r.year, margin_per_traveler: Number(r.margin_per_traveler) })
-  }
-
-  function resolvePaxMargin(pax, departureYear) {
-    const best = margins.pickNearestYearCandidate(paxYearMap.get(pax) || [], departureYear)
-    return best ? { value: best.margin_per_traveler, year: best.year } : null
+    if (r.margin_per_traveler === null) continue
+    if (!rowsByPax.has(r.pax)) rowsByPax.set(r.pax, [])
+    rowsByPax.get(r.pax).push(r)
   }
 
   // 5) Group bookings by date
@@ -84,7 +95,7 @@ export default defineEventHandler(async (event) => {
     bookingsByDate.get(b.travel_date_id).push(b)
   }
 
-  // 6) Compute breakdown per date — v2 formula
+  // 6) Compute breakdown per date — v3 formula
   const today = dayjs()
   let totalEst = 0
   let totalReal = 0
@@ -104,24 +115,26 @@ export default defineEventHandler(async (event) => {
       : computedRealPax
 
     const totals = margins.aggregateDealTotals(paidDealsForDate)
+    const childPax = margins.clampChildPax(totals.child_pax, realPax)
 
     let baseMargin = null
     let source = null
     let sourceYear = null
+    let seasonLabel = null
     if (td.margin_override_per_traveler != null) {
       baseMargin = Number(td.margin_override_per_traveler)
       source = 'override'
     }
     else if (realPax > 0) {
-      const departureYear = td.departure_date
-        ? new Date(td.departure_date).getFullYear()
-        : new Date().getFullYear()
-      const resolved = resolvePaxMargin(realPax, departureYear)
-      if (resolved) {
-        baseMargin = resolved.value
-        source = 'pax'
-        sourceYear = resolved.year
-      }
+      const resolved = margins.resolveBaseFromRows({
+        rows: rowsByPax.get(realPax) || [],
+        seasons,
+        departureDate: td.departure_date,
+      })
+      baseMargin = resolved.value
+      source = resolved.source
+      sourceYear = resolved.source_year
+      seasonLabel = resolved.season_label
     }
 
     const real = margins.computeRealMargin({
@@ -129,6 +142,8 @@ export default defineEventHandler(async (event) => {
       realPax,
       additionalMargins: totals.additional_margins,
       promoDeductions: totals.promo_deductions,
+      childDelta,
+      childPax,
     })
     const isFinished = td.return_date && dayjs(td.return_date).isBefore(today)
 
@@ -144,6 +159,7 @@ export default defineEventHandler(async (event) => {
       departure_date: td.departure_date,
       return_date: td.return_date,
       real_pax: realPax,
+      child_pax: childPax,
       booked_seat: td.booked_seat,
       max_travelers: td.max_travelers,
       estimated: totals.estimated,
@@ -153,11 +169,15 @@ export default defineEventHandler(async (event) => {
       has_config: baseMargin != null,
       source,
       source_year: sourceYear,
+      season_label: seasonLabel,
     }
   })
 
   return {
     dates,
+    config_mode: settings.config_mode,
+    child_margin_delta: settings.child_margin_delta ?? null,
+    seasons: seasons.map(s => s.label),
     totals: {
       estimated: totalEst,
       real: totalRealCount > 0 ? totalReal : null,

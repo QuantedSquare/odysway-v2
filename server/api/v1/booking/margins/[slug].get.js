@@ -13,9 +13,16 @@ export default defineEventHandler(async (event) => {
   const { year } = getQuery(event)
   const yearNum = year ? Number(year) : null
 
+  // The editor needs all three to render a year: the pax rows, the recurring
+  // seasons that become columns, and the voyage settings (mode + child delta).
+  // Returned together so the page loads in a single request.
   try {
-    const rows = await margins.getMarginForVoyage(slug, yearNum)
-    return rows
+    const [rows, seasons, settings] = await Promise.all([
+      margins.getMarginForVoyage(slug, yearNum),
+      margins.getSeasonsForVoyage(slug),
+      margins.getSettingsForVoyage(slug),
+    ])
+    return { rows, seasons, settings }
   }
   catch (err) {
     throw createError({ statusCode: 500, statusMessage: err.message })

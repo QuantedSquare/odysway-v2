@@ -13,20 +13,7 @@ const chunk = (arr, size) => {
   return out
 }
 
-// PostgREST caps responses at 1000 rows by default — loop with .range() until short page.
-const fetchAllPaginated = async (buildQuery, pageSize = 1000) => {
-  const out = []
-  for (let page = 0; ; page++) {
-    const from = page * pageSize
-    const to = from + pageSize - 1
-    const { data, error } = await buildQuery().range(from, to)
-    if (error) throw error
-    if (!data?.length) break
-    out.push(...data)
-    if (data.length < pageSize) break
-  }
-  return out
-}
+// `fetchAllPaginated` is auto-imported from server/utils/supabase.js.
 
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
@@ -37,13 +24,14 @@ export default defineEventHandler(async (event) => {
   const dateFrom = from || dayjs().subtract(12, 'month').format('YYYY-MM-DD')
   const dateTo = to || dayjs().add(18, 'month').format('YYYY-MM-DD')
 
-  // 1) Travel dates in window — treat NULL deleted/is_test as false (default).
+  // 1) Travel dates in window — deleted/is_test sont NOT NULL depuis la migration
+  //    soft delete, donc .eq(false) est exact (et matche les index partiels).
   const travelDates = await fetchAllPaginated(() =>
     supabase
       .from('travel_dates')
       .select('id, travel_slug, departure_date, return_date, margin_override_per_traveler')
-      .not('deleted', 'is', true)
-      .not('is_test', 'is', true)
+      .eq('deleted', false)
+      .eq('is_test', false)
       .gte('departure_date', dateFrom)
       .lte('departure_date', dateTo),
   )
@@ -61,6 +49,7 @@ export default defineEventHandler(async (event) => {
           .from('booked_dates')
           .select('travel_date_id, deal_id, booked_places')
           .in('travel_date_id', ids)
+          .eq('deleted', false)
           .gt('booked_places', 0),
       ),
     ),
@@ -77,11 +66,15 @@ export default defineEventHandler(async (event) => {
   )
   const dealsById = new Map(allPaidDeals.map(d => [Number(d.id), d]))
 
-  // 4) Voyage margins config — just need to know which slugs have at least one PAX row.
-  const { data: voyageMarginRows } = await supabase
-    .from('voyage_margins')
-    .select('voyage_slug')
+  // 4) Voyage margin config — which slugs have at least one PAX row, plus the
+  //    declared config mode. A voyage in 'per_date' mode is driven entirely by
+  //    per-date overrides, so an empty PAX table is expected, not a gap.
+  const [{ data: voyageMarginRows }, { data: settingsRows }] = await Promise.all([
+    supabase.from('voyage_margins').select('voyage_slug').eq('deleted', false),
+    supabase.from('voyage_margin_settings').select('voyage_slug, config_mode'),
+  ])
   const slugsWithConfig = new Set((voyageMarginRows || []).map(r => r.voyage_slug))
+  const modeBySlug = new Map((settingsRows || []).map(r => [r.voyage_slug, r.config_mode]))
 
   // 5) Index bookings by travel_date_id
   const bookingsByDate = new Map()
@@ -106,7 +99,14 @@ export default defineEventHandler(async (event) => {
     }
 
     const isFinished = td.return_date && dayjs(td.return_date).isBefore(today)
-    const hasConfig = td.margin_override_per_traveler != null || slugsWithConfig.has(td.travel_slug)
+
+    // In 'per_date' mode the PAX table is deliberately empty — only the date's own
+    // override counts. In 'pax_table' mode either source works.
+    const mode = modeBySlug.get(td.travel_slug) || 'pax_table'
+    const hasConfig = mode === 'excluded'
+      ? false
+      : td.margin_override_per_traveler !== null
+        || (mode === 'pax_table' && slugsWithConfig.has(td.travel_slug))
 
     if (!voyagesMap.has(td.travel_slug)) {
       voyagesMap.set(td.travel_slug, {
@@ -131,6 +131,7 @@ export default defineEventHandler(async (event) => {
   const voyages = Array.from(voyagesMap.values()).map(v => ({
     voyage_slug: v.voyage_slug,
     has_pax_config: slugsWithConfig.has(v.voyage_slug),
+    config_mode: modeBySlug.get(v.voyage_slug) || 'pax_table',
     totals: {
       estimated: v.estimated,
       finished_count: v.finished_count,

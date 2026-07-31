@@ -1,13 +1,56 @@
 <template>
   <div>
     <p class="text-body-2 text-medium-emphasis mb-4">
-      Configurez la marge par voyageur selon le nombre de pax pour chaque voyage (Pattern A). Une marge fixe peut ensuite être surchargée date par date depuis la fiche départ.
+      Les marges se configurent par ann&eacute;e de d&eacute;part. S&eacute;lectionne l'ann&eacute;e pour voir ce qu'il reste &agrave; param&eacute;trer : un voyage pr&ecirc;t pour {{ currentYear }} peut ne rien avoir pour {{ currentYear + 1 }}.
     </p>
+
+    <!-- Year selector -->
+    <div class="d-flex align-center ga-3 mb-4 flex-wrap">
+      <v-btn-toggle
+        v-model="activeYear"
+        color="primary"
+        density="compact"
+        mandatory
+        variant="outlined"
+      >
+        <v-btn
+          v-for="y in availableYears"
+          :key="y"
+          :value="y"
+        >
+          {{ y }}
+        </v-btn>
+      </v-btn-toggle>
+      <v-progress-circular
+        v-if="loading"
+        indeterminate
+        size="20"
+        color="primary"
+      />
+    </div>
 
     <!-- Stats -->
     <v-row class="mb-4">
       <v-col
-        cols="4"
+        cols="6"
+        md="3"
+      >
+        <v-card
+          rounded="lg"
+          class="bo-card bo-stat-card pa-4"
+          elevation="0"
+          style="border-left-color: rgb(var(--v-theme-error));"
+        >
+          <div class="text-h5 font-weight-bold text-error">
+            {{ counts.unconfigured }}
+          </div>
+          <div class="text-caption text-medium-emphasis">
+            Non configur&eacute;s en {{ activeYear }}
+          </div>
+        </v-card>
+      </v-col>
+      <v-col
+        cols="6"
         md="3"
       >
         <v-card
@@ -17,15 +60,15 @@
           style="border-left-color: rgb(var(--v-theme-warning));"
         >
           <div class="text-h5 font-weight-bold text-warning">
-            {{ unconfiguredCount }}
+            {{ counts.partial }}
           </div>
           <div class="text-caption text-medium-emphasis">
-            Non configurés
+            Incomplets
           </div>
         </v-card>
       </v-col>
       <v-col
-        cols="4"
+        cols="6"
         md="3"
       >
         <v-card
@@ -35,15 +78,15 @@
           style="border-left-color: rgb(var(--v-theme-success));"
         >
           <div class="text-h5 font-weight-bold text-success">
-            {{ configuredCount }}
+            {{ counts.configured }}
           </div>
           <div class="text-caption text-medium-emphasis">
-            Configurés
+            Configur&eacute;s
           </div>
         </v-card>
       </v-col>
       <v-col
-        cols="4"
+        cols="6"
         md="3"
       >
         <v-card
@@ -53,10 +96,11 @@
           style="border-left-color: rgb(var(--v-theme-primary));"
         >
           <div class="text-h5 font-weight-bold">
-            {{ voyages.length }}
+            {{ visibleVoyages.length }}
           </div>
           <div class="text-caption text-medium-emphasis">
-            Total voyages
+            Voyages list&eacute;s
+            <span v-if="hideWithoutDates && withoutDatesCount"> · {{ withoutDatesCount }} masqu&eacute;s</span>
           </div>
         </v-card>
       </v-col>
@@ -89,21 +133,43 @@
           label
           size="small"
         >
-          Non configurés
+          Non configur&eacute;s
+        </v-chip>
+        <v-chip
+          value="partial"
+          label
+          size="small"
+        >
+          Incomplets
         </v-chip>
         <v-chip
           value="configured"
           label
           size="small"
         >
-          Configurés
+          Configur&eacute;s
+        </v-chip>
+        <v-chip
+          value="excluded"
+          label
+          size="small"
+        >
+          Exclus
         </v-chip>
       </v-chip-group>
+      <v-spacer />
+      <v-switch
+        v-model="hideWithoutDates"
+        :label="`Masquer les voyages sans départ en ${activeYear}`"
+        color="primary"
+        density="compact"
+        hide-details
+      />
     </div>
 
     <!-- List -->
     <div
-      v-if="loading"
+      v-if="loading && !marginStatus.length"
       class="d-flex justify-center py-12"
     >
       <v-progress-circular
@@ -121,61 +187,89 @@
         class="bo-card mb-2"
         elevation="0"
       >
-        <NuxtLink
-          :to="`/booking-management/margins/${voyage.slug}`"
-          class="d-flex align-center ga-3 pa-3 text-decoration-none"
-          style="color: inherit;"
-        >
-          <v-avatar
-            size="40"
-            rounded="lg"
-            color="grey-lighten-3"
+        <div class="d-flex align-center ga-3 pa-3">
+          <NuxtLink
+            :to="`/booking-management/margins/${voyage.slug}?year=${activeYear}`"
+            class="d-flex align-center ga-3 flex-grow-1 text-decoration-none"
+            style="color: inherit; min-width: 0;"
           >
-            <v-img
-              v-if="voyage.image"
-              :src="voyage.image"
-              cover
-            />
-            <v-icon
-              v-else
-              size="24"
-              color="grey"
+            <v-avatar
+              size="40"
+              rounded="lg"
+              color="grey-lighten-3"
             >
-              {{ mdiImageOff }}
+              <v-img
+                v-if="voyage.image"
+                :src="voyage.image"
+                cover
+              />
+              <v-icon
+                v-else
+                size="24"
+                color="grey"
+              >
+                {{ mdiImageOff }}
+              </v-icon>
+            </v-avatar>
+            <div class="flex-grow-1 text-truncate">
+              <div class="text-body-1 font-weight-bold text-truncate">
+                {{ voyage.title || voyage.slug }}
+              </div>
+              <div class="text-caption text-medium-emphasis">
+                {{ voyage.slug }} · {{ voyage.dates_total }} d&eacute;part{{ voyage.dates_total > 1 ? 's' : '' }} en {{ activeYear }}
+              </div>
+            </div>
+          </NuxtLink>
+
+          <!-- Status -->
+          <v-chip
+            :color="STATUS_META[voyage.status].color"
+            label
+            size="small"
+            variant="tonal"
+            :prepend-icon="STATUS_META[voyage.status].icon"
+          >
+            {{ voyage.status_detail || STATUS_META[voyage.status].label }}
+          </v-chip>
+
+          <!-- Config mode, editable in place -->
+          <v-menu>
+            <template #activator="{ props: menuProps }">
+              <v-chip
+                v-bind="menuProps"
+                label
+                size="small"
+                variant="outlined"
+                :append-icon="mdiMenuDown"
+              >
+                {{ modeLabel(voyage) }}
+              </v-chip>
+            </template>
+            <v-list density="compact">
+              <v-list-item
+                v-for="item in CONFIG_MODE_ITEMS"
+                :key="item.value"
+                :active="voyage.config_mode === item.value"
+                @click="setMode(voyage, item.value)"
+              >
+                <v-list-item-title>{{ item.title }}</v-list-item-title>
+                <v-list-item-subtitle class="text-caption">
+                  {{ item.hint }}
+                </v-list-item-subtitle>
+              </v-list-item>
+            </v-list>
+          </v-menu>
+
+          <NuxtLink
+            :to="`/booking-management/margins/${voyage.slug}?year=${activeYear}`"
+            class="d-flex align-center"
+            style="color: inherit;"
+          >
+            <v-icon size="16">
+              {{ mdiArrowRight }}
             </v-icon>
-          </v-avatar>
-          <div class="flex-grow-1">
-            <div class="text-body-1 font-weight-bold">
-              {{ voyage.title || voyage.slug }}
-            </div>
-            <div class="text-caption text-medium-emphasis">
-              {{ voyage.slug }}
-            </div>
-          </div>
-          <v-chip
-            v-if="voyage.configuredPaxCount > 0"
-            color="success"
-            label
-            size="small"
-            :prepend-icon="mdiCheckCircle"
-          >
-            {{ voyage.configuredPaxCount }} pax configurés
-          </v-chip>
-          <v-chip
-            v-else
-            color="warning"
-            label
-            size="small"
-          >
-            Non configuré
-          </v-chip>
-          <v-icon
-            size="16"
-            class="ml-2"
-          >
-            {{ mdiArrowRight }}
-          </v-icon>
-        </NuxtLink>
+          </NuxtLink>
+        </div>
       </v-card>
 
       <div
@@ -185,68 +279,144 @@
         Aucun voyage correspondant.
       </div>
     </template>
+
+    <v-alert
+      v-if="error"
+      type="error"
+      density="compact"
+      variant="tonal"
+      class="mt-3"
+    >
+      {{ error }}
+    </v-alert>
   </div>
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
-import { mdiMagnify, mdiArrowRight, mdiCheckCircle, mdiImageOff } from '@mdi/js'
+import { ref, computed, watch, onMounted } from 'vue'
+import { mdiMagnify, mdiArrowRight, mdiCheckCircle, mdiImageOff, mdiAlertCircleOutline, mdiAlertOutline, mdiMinusCircleOutline, mdiMenuDown } from '@mdi/js'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 
 const props = defineProps({
   voyagesList: { type: Array, default: () => [] },
 })
 
+const STATUS_META = {
+  configured: { label: 'Configuré', color: 'success', icon: mdiCheckCircle },
+  partial: { label: 'Incomplet', color: 'warning', icon: mdiAlertOutline },
+  unconfigured: { label: 'Non configuré', color: 'error', icon: mdiAlertCircleOutline },
+  excluded: { label: 'Exclu', color: 'grey', icon: mdiMinusCircleOutline },
+}
+
+const CONFIG_MODE_ITEMS = [
+  { value: 'pax_table', title: 'Tableau PAX', hint: 'Marge par palier de voyageurs' },
+  { value: 'per_date', title: 'Marge fixe / date', hint: 'Override saisi départ par départ' },
+  { value: 'excluded', title: 'Exclu du suivi', hint: 'Jamais compté comme non configuré' },
+]
+
+const currentYear = new Date().getFullYear()
+
 const loading = ref(false)
+const error = ref('')
 const marginStatus = ref([])
+const availableYears = ref([currentYear, currentYear + 1])
+const activeYear = ref(currentYear)
 const search = ref('')
 const filter = ref('all')
+const hideWithoutDates = ref(true)
 
 const fetchAll = async () => {
   loading.value = true
+  error.value = ''
   try {
-    marginStatus.value = await bookingApi.getMarginsStatus()
+    const payload = await bookingApi.getMarginsStatus(activeYear.value)
+    marginStatus.value = payload.voyages || []
+    if (payload.available_years?.length) availableYears.value = payload.available_years
   }
   catch (err) {
-    console.error(getApiErrorMessage(err, 'Erreur chargement des marges'))
+    error.value = getApiErrorMessage(err, 'Erreur chargement des marges')
   }
   finally {
     loading.value = false
   }
 }
 
+// Voyages come from Sanity (the authoritative catalogue); the API only adds the
+// per-year config status. A voyage the API knows nothing about is simply
+// unconfigured with no departure that year.
 const voyages = computed(() => {
-  const statusBySlug = new Map((marginStatus.value || []).map(s => [s.voyage_slug, s]))
+  const statusBySlug = new Map(marginStatus.value.map(s => [s.voyage_slug, s]))
   return (props.voyagesList || [])
     .filter(v => v?.slug)
-    .map(v => ({
-      slug: v.slug,
-      title: v.title,
-      image: v.image?.asset?.url || null,
-      configuredPaxCount: statusBySlug.get(v.slug)?.configured_pax_count || 0,
-    }))
+    .map((v) => {
+      const status = statusBySlug.get(v.slug)
+      return {
+        slug: v.slug,
+        title: v.title,
+        image: v.image?.asset?.url || null,
+        config_mode: status?.config_mode || 'pax_table',
+        season_count: status?.season_count || 0,
+        season_labels: status?.season_labels || [],
+        dates_total: status?.dates_total || 0,
+        dates_with_override: status?.dates_with_override || 0,
+        configured_pax_count: status?.configured_pax_count || 0,
+        status: status?.status || 'unconfigured',
+        status_detail: status?.status_detail || null,
+      }
+    })
 })
 
-const configuredCount = computed(() => voyages.value.filter(v => v.configuredPaxCount > 0).length)
-const unconfiguredCount = computed(() => voyages.value.filter(v => v.configuredPaxCount === 0).length)
+// Voyages without a departure that year are noise when planning the next season,
+// so they are hidden by default but still counted.
+const visibleVoyages = computed(() =>
+  voyages.value.filter(v => !hideWithoutDates.value || v.dates_total > 0),
+)
+
+const withoutDatesCount = computed(() => voyages.value.filter(v => v.dates_total === 0).length)
+
+const counts = computed(() => ({
+  configured: visibleVoyages.value.filter(v => v.status === 'configured').length,
+  partial: visibleVoyages.value.filter(v => v.status === 'partial').length,
+  unconfigured: visibleVoyages.value.filter(v => v.status === 'unconfigured').length,
+  excluded: visibleVoyages.value.filter(v => v.status === 'excluded').length,
+}))
+
+const STATUS_ORDER = { unconfigured: 0, partial: 1, configured: 2, excluded: 3 }
 
 const filteredVoyages = computed(() => {
   const query = search.value?.toLowerCase() || ''
-  return voyages.value
+  return visibleVoyages.value
     .filter((v) => {
       if (query && !v.slug.toLowerCase().includes(query) && !v.title?.toLowerCase().includes(query)) {
         return false
       }
-      if (filter.value === 'unconfigured') return v.configuredPaxCount === 0
-      if (filter.value === 'configured') return v.configuredPaxCount > 0
+      if (filter.value && filter.value !== 'all') return v.status === filter.value
       return true
     })
     .sort((a, b) => {
-      if (a.configuredPaxCount === 0 && b.configuredPaxCount > 0) return -1
-      if (a.configuredPaxCount > 0 && b.configuredPaxCount === 0) return 1
+      const order = STATUS_ORDER[a.status] - STATUS_ORDER[b.status]
+      if (order !== 0) return order
       return (a.title || a.slug).localeCompare(b.title || b.slug, 'fr')
     })
 })
 
+function modeLabel(voyage) {
+  if (voyage.config_mode === 'per_date') return 'Marge fixe / date'
+  if (voyage.config_mode === 'excluded') return 'Exclu du suivi'
+  return voyage.season_count > 0 ? `PAX × ${voyage.season_count} saisons` : 'Tableau PAX'
+}
+
+async function setMode(voyage, mode) {
+  if (voyage.config_mode === mode) return
+  try {
+    await bookingApi.updateVoyageMarginSettings(voyage.slug, { config_mode: mode })
+    await fetchAll()
+  }
+  catch (err) {
+    error.value = getApiErrorMessage(err, 'Erreur lors du changement de mode.')
+  }
+}
+
+watch(activeYear, fetchAll)
 onMounted(fetchAll)
 </script>

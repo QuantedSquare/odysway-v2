@@ -13,4 +13,22 @@ const supabase = createClient(supabaseUrl, supabaseKey, {
   auth: { persistSession: false },
 })
 
+// PostgREST caps responses at 1000 rows by default — loop with .range() until a
+// short page comes back. Pass a thunk so each page builds a fresh query object.
+//
+//   const rows = await fetchAllPaginated(() => supabase.from('travel_dates').select('id'))
+export const fetchAllPaginated = async (buildQuery, pageSize = 1000) => {
+  const out = []
+  for (let page = 0; ; page++) {
+    const from = page * pageSize
+    const to = from + pageSize - 1
+    const { data, error } = await buildQuery().range(from, to)
+    if (error) throw error
+    if (!data?.length) break
+    out.push(...data)
+    if (data.length < pageSize) break
+  }
+  return out
+}
+
 export default supabase

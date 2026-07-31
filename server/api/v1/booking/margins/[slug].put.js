@@ -16,13 +16,17 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, statusMessage: 'Body doit être un tableau de { pax, margin_per_traveler }' })
   }
 
-  const year = Number(getQuery(event).year)
+  const query = getQuery(event)
+  const year = Number(query.year)
   if (!year || Number.isNaN(year)) {
     throw createError({ statusCode: 400, statusMessage: 'year requis (query ?year=2026)' })
   }
 
+  // No season_id targets the "toutes saisons" default rows.
+  const seasonId = query.season_id || null
+
   try {
-    const data = await margins.upsertMarginForVoyage(slug, rows, bookingUser?.email, year)
+    const data = await margins.upsertMarginForVoyage(slug, rows, bookingUser?.email, year, seasonId)
     return data
   }
   catch (err) {
