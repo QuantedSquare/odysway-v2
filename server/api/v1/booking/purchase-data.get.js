@@ -122,6 +122,7 @@ export default defineEventHandler(async (event) => {
     // Find the most recent payment note (starts with "Paiement")
     let transactionId = bookedDate.deal_id
     let paymentType = 'CB'
+    let paymentNotesCount = 0
 
     if (notesResponse?.notes) {
       // Sort notes by date (most recent first)
@@ -129,8 +130,11 @@ export default defineEventHandler(async (event) => {
         return new Date(b.cdate) - new Date(a.cdate)
       })
 
+      const paymentNotes = sortedNotes.filter(note => note.note?.startsWith('Paiement'))
+      paymentNotesCount = paymentNotes.length
+
       // Find first payment note
-      const paymentNote = sortedNotes.find(note => note.note?.startsWith('Paiement'))
+      const paymentNote = paymentNotes[0]
 
       if (paymentNote) {
         // Parse payment note: "Paiement CB - pi_xxx - Name - email - amount"
@@ -144,9 +148,16 @@ export default defineEventHandler(async (event) => {
       }
     }
 
-    // Only track purchase if this is the first payment (alreadyPaid is 0 or null)
-    const alreadyPaid = parseFloat(deal.alreadyPaid) || 0
-    const shouldTrack = alreadyPaid === 0
+    // Only track purchase on the first payment.
+    //
+    // This used to test `alreadyPaid === 0`, but the Stripe/Alma webhook writes
+    // alreadyPaid on the deal before the confirmation page gets here — the
+    // webhook almost always won the race, so shouldTrack was false and the
+    // purchase event never fired. The payment notes are appended one per
+    // payment, so counting them tells us which payment this is regardless of
+    // webhook timing (0 = note not written yet, still the first payment).
+    // Re-fires on refresh are already prevented client-side via sessionStorage.
+    const shouldTrack = paymentNotesCount <= 1
 
     // Build response with all necessary data for GTM tracking
     return {

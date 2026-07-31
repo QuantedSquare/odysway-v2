@@ -142,6 +142,22 @@ onMounted(() => {
     return
   }
 
+  // Funnel pages load GTM immediately: add_payment_info fires milliseconds
+  // before window.location.href sends the user to Stripe/Alma, and purchase
+  // fires on a page users often leave in a few seconds. Waiting for the
+  // interaction/15s fallback there loses the event entirely. These pages are
+  // not SEO landing pages, so the Lighthouse budget doesn't apply.
+  const isFunnelPage = path => path.startsWith('/checkout') || path.startsWith('/confirmation')
+
+  if (isFunnelPage(route.path)) {
+    loadGtm()
+    return
+  }
+
+  watch(() => route.path, (path) => {
+    if (isFunnelPage(path)) loadGtm()
+  })
+
   // GTM/SST is ~440KB transferred + ~2.9s of script eval. Loading via
   // requestIdleCallback still landed inside the Lighthouse measurement
   // window on slow 4G. Defer until first user interaction OR a long idle

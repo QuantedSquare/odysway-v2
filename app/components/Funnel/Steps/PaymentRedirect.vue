@@ -466,8 +466,13 @@ const stripePay = async () => {
         user_phone: model.value.phone,
         user_country: getCountryFromPhone(model.value.phone) || 'Unknown',
       }
-      trackAddPaymentInfo(voyage, model.value, 'stripe', userData)
-      window.location.href = checkoutLink
+      // Redirect from the tracking callback: pushing and navigating in the
+      // same tick unloads the page before the tags fire, which is what made
+      // the Meta CB-click event disappear. The callback is guaranteed to run
+      // (timeout fallback), so the payment flow never waits on analytics.
+      trackAddPaymentInfo(voyage, model.value, 'stripe', userData, () => {
+        window.location.href = checkoutLink
+      })
     }
     else {
       redirectingToStripe.value = false
@@ -531,8 +536,9 @@ const almaPay = async () => {
         user_phone: model.value.phone,
         user_country: getCountryFromPhone(model.value.phone) || 'Unknown',
       }
-      trackAddPaymentInfo(voyage, model.value, 'alma', userData)
-      window.location.href = checkoutLink.url
+      trackAddPaymentInfo(voyage, model.value, 'alma', userData, () => {
+        window.location.href = checkoutLink.url
+      })
     }
     else {
       redirectingToAlma.value = false
