@@ -132,7 +132,7 @@
               Voyages avec config marge
             </div>
             <div class="text-h5 font-weight-bold">
-              {{ voyages.filter(v => v.has_pax_config).length }} / {{ voyages.length }}
+              {{ trackedVoyages.filter(v => v.has_pax_config).length }} / {{ trackedVoyages.length }}
             </div>
             <div class="text-caption text-medium-emphasis mt-1">
               Marge réelle calculable sur ces voyages
@@ -232,7 +232,25 @@
                 </td>
                 <td class="text-right">
                   <v-chip
-                    v-if="voyage.has_pax_config"
+                    v-if="voyage.config_mode === 'excluded'"
+                    color="grey"
+                    label
+                    size="x-small"
+                    variant="tonal"
+                  >
+                    Exclu
+                  </v-chip>
+                  <v-chip
+                    v-else-if="voyage.config_mode === 'per_date'"
+                    :color="voyage.totals.configured_dates_count === voyage.totals.total_count ? 'success' : 'warning'"
+                    label
+                    size="x-small"
+                    variant="tonal"
+                  >
+                    {{ voyage.totals.configured_dates_count }} / {{ voyage.totals.total_count }} dates
+                  </v-chip>
+                  <v-chip
+                    v-else-if="voyage.has_pax_config"
                     color="success"
                     label
                     size="x-small"
@@ -391,6 +409,15 @@
                           >
                             override
                           </v-chip>
+                          <v-chip
+                            v-else-if="date.season_label"
+                            :color="date.source === 'pax_season' ? 'primary' : 'grey'"
+                            size="x-small"
+                            label
+                            variant="tonal"
+                          >
+                            {{ date.season_label }}
+                          </v-chip>
                         </td>
                       </tr>
                     </tbody>
@@ -530,6 +557,10 @@ const voyages = computed(() => {
 const orphanCount = computed(() =>
   (data.value.voyages || []).filter(v => !titleBySlug.value.has(v.voyage_slug)).length,
 )
+
+// Voyages explicitly excluded from margin tracking shouldn't drag the
+// "avec config marge" ratio down — they were opted out on purpose.
+const trackedVoyages = computed(() => voyages.value.filter(v => v.config_mode !== 'excluded'))
 
 const filteredSortedVoyages = computed(() => {
   const query = search.value?.toLowerCase() || ''
