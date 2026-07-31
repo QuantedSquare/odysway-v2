@@ -40,12 +40,54 @@ export const useGtmTracking = () => {
 
     const optOut = useCookie('odysway_employee_optout')
     if (optOut.value === '1') {
-      return
+      return false
     }
     if (environment === 'production' && typeof window !== 'undefined' && window.dataLayer) {
       const cleanedData = cleanStegaData(data)
       window.dataLayer.push(cleanedData)
       // console.log('📊 GTM Event:', cleanedData.event || 'data', cleanedData)
+      return true
+    }
+    return false
+  }
+
+  /**
+   * Push an event, then run `onComplete` once GTM has fired its tags.
+   * Use this before a hard navigation (Stripe/Alma redirect): a plain push
+   * followed by `window.location.href` unloads the page before the tags —
+   * and therefore the Meta/GA requests — ever leave the browser.
+   *
+   * `onComplete` runs exactly once: via GTM's eventCallback when the tags
+   * fired, or via the local timeout when GTM is slow, absent, or the push
+   * was skipped (non-production / employee opt-out). The redirect must never
+   * depend on analytics succeeding.
+   *
+   * @param {Object} data - Data object to push to dataLayer
+   * @param {Function} onComplete - Called once, after tags fired or on timeout
+   * @param {number} timeout - Max wait in ms before continuing anyway
+   */
+  const pushToDataLayerAndWait = (data, onComplete, timeout = 1500) => {
+    let completed = false
+    const complete = () => {
+      if (completed) return
+      completed = true
+      onComplete()
+    }
+
+    const timer = setTimeout(complete, timeout)
+
+    const pushed = pushToDataLayer({
+      ...data,
+      eventTimeout: timeout,
+      eventCallback: () => {
+        clearTimeout(timer)
+        complete()
+      },
+    })
+
+    if (!pushed) {
+      clearTimeout(timer)
+      complete()
     }
   }
 
@@ -504,8 +546,12 @@ export const useGtmTracking = () => {
   /**
    * Track add_payment_info - Payment method selected
    * CSV line 446
+   *
+   * @param {Function} [onComplete] - When provided, called once the tags have
+   *   fired (or after a short timeout). Pass it when the caller redirects to
+   *   the payment provider right after, so the event isn't killed by unload.
    */
-  const trackAddPaymentInfo = (voyage, dynamicDealValues, paymentType, userData = {}) => {
+  const trackAddPaymentInfo = (voyage, dynamicDealValues, paymentType, userData = {}, onComplete = null) => {
     pushToDataLayer({
       ecommerce: null,
     })
@@ -515,7 +561,7 @@ export const useGtmTracking = () => {
     const items = buildCheckoutItems(voyage, dynamicDealValues)
     const totalValue = calculateTotalValue(items)
 
-    pushToDataLayer({
+    const dataLayerEvent = {
       event: 'add_payment_info',
       ecommerce: {
         payment_type: paymentType,
@@ -536,7 +582,14 @@ export const useGtmTracking = () => {
         })),
       },
       user_data: userData,
-    })
+    }
+
+    if (onComplete) {
+      pushToDataLayerAndWait(dataLayerEvent, onComplete)
+    }
+    else {
+      pushToDataLayer(dataLayerEvent)
+    }
   }
 
   /**
