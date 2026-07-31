@@ -203,7 +203,9 @@ const { zones } = useDestinationsMenu()
 /* Dim the page behind the open mega menu, but keep the topbar bright so the
    solid header and the white panel still read as one continuous surface. */
 .v-overlay:has(> .dest-mega-menu) > .v-overlay__scrim {
-  top: 91px !important;
+  /* Header height, offset by the visible part of the site banner when one is
+     displayed above the topbar (see SiteBanner.vue). */
+  top: calc(91px + var(--site-banner-offset, 0px)) !important;
   background: white !important;
 }
 </style>

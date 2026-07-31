@@ -1,69 +1,103 @@
 <template>
-  <Teleport to="body">
-    <Transition name="banner">
-      <!-- <div
-        v-if="visible"
-        class="site-banner-wrap"
+  <aside
+    v-if="visible"
+    ref="root"
+    class="site-banner"
+    :class="[`site-banner--${banner.variant || 'primary'}`, { 'site-banner--open': expanded }]"
+    role="region"
+    aria-label="Information Odysway"
+  >
+    <div
+      class="site-banner__inner"
+      @click="onBarClick"
+    >
+      <span
+        v-if="banner.tag"
+        class="site-banner__tag"
       >
-        <aside
-          class="site-banner"
-          :class="`site-banner--${banner.variant || 'primary'}`"
-          aria-label="Annonce"
-        >
-          <span
-            class="site-banner__shine"
-            aria-hidden="true"
+        {{ banner.tag }}
+      </span>
+
+      <div
+        id="site-banner-body"
+        class="site-banner__body"
+      >
+        <div class="site-banner__text">
+          <PortableText
+            :value="banner.content"
+            :components="ptComponents"
           />
+        </div>
 
-          <div class="site-banner__text">
-            <PortableText
-              :value="banner.content"
-              :components="ptComponents"
-            />
-          </div>
+        <NuxtLink
+          v-if="banner.ctaLabel && banner.ctaHref"
+          :to="banner.ctaHref"
+          :target="isExternalCta ? '_blank' : undefined"
+          :rel="isExternalCta ? 'noopener' : undefined"
+          class="site-banner__cta"
+          @click.stop
+        >
+          {{ banner.ctaLabel }}
+          <v-icon size="14">
+            {{ mdiArrowRight }}
+          </v-icon>
+        </NuxtLink>
+      </div>
 
-          <div class="site-banner__actions">
-            <v-btn
-              v-if="banner.ctaLabel && banner.ctaHref"
-              v-bind="ctaLinkProps"
-              class="site-banner__cta"
-              size="small"
-              variant="flat"
-              rounded="pill"
-            >
-              {{ banner.ctaLabel }}
-            </v-btn>
+      <!-- Compact viewports only: the message is truncated to one line and this
+           chevron reveals the full text + the CTA (see the max-width media
+           query). Rendered unconditionally so SSR never depends on breakpoint. -->
+      <button
+        type="button"
+        class="site-banner__toggle"
+        :aria-expanded="expanded"
+        aria-controls="site-banner-body"
+        :aria-label="expanded ? 'Réduire le message' : 'Lire le message complet'"
+        @click.stop="toggle"
+      >
+        <v-icon size="20">
+          {{ mdiChevronDown }}
+        </v-icon>
+      </button>
 
-            <button
-              type="button"
-              class="site-banner__close"
-              aria-label="Fermer l'annonce"
-              @click="dismiss"
-            >
-              <v-icon size="20">
-                {{ mdiClose }}
-              </v-icon>
-            </button>
-          </div>
-        </aside>
-      </div> -->
-    </Transition>
-  </Teleport>
+      <button
+        v-if="banner.dismissible !== false"
+        type="button"
+        class="site-banner__close"
+        aria-label="Fermer le bandeau"
+        @click.stop="dismiss"
+      >
+        <v-icon size="18">
+          {{ mdiClose }}
+        </v-icon>
+      </button>
+    </div>
+  </aside>
 </template>
 
 <script setup>
-import { mdiClose } from '@mdi/js'
+import { mdiArrowRight, mdiChevronDown, mdiClose } from '@mdi/js'
+import { useEventListener, useMediaQuery } from '@vueuse/core'
 import { h, resolveComponent } from 'vue'
 import { PortableText } from '@portabletext/vue'
 
 const DISMISS_KEY = 'odysway-banner-dismissed'
+// Set pre-hydration by the inline script below, and read by the stylesheet, so a
+// visitor who already closed the banner never sees it flash back in.
+const DISMISSED_CLASS = 'odysway-banner-dismissed'
+// Must stay in sync with the `max-width` media query in the stylesheet.
+const COMPACT_QUERY = '(max-width: 959.98px)'
 
 const bannerQuery = groq`*[_type == "siteBanner"][0]{
   _rev,
   enabled,
   variant,
+  tag,
   ctaLabel,
   ctaHref,
+  dismissible,
+  startDate,
+  endDate,
   content[]{
     ...,
     _type == "image" => { ..., "url": asset->url }
@@ -71,33 +105,129 @@ const bannerQuery = groq`*[_type == "siteBanner"][0]{
 }`
 const { data: banner } = await useSanityQuery(bannerQuery)
 
-// Resolve dismissal client-side only: keeps SSR output empty (no hydration
-// mismatch) and lets the enter animation play on mount.
+const root = ref(null)
+const expanded = ref(false)
 const dismissed = ref(false)
-const mounted = ref(false)
+const isCompact = useMediaQuery(COMPACT_QUERY)
 
-onMounted(() => {
-  mounted.value = true
-  dismissed.value = window.localStorage.getItem(DISMISS_KEY) === banner.value?._rev
+// Pages are served through ISR (1 to 5 days), so the server-rendered "now" can
+// be days old. Re-reading the clock on mount is what actually enforces the
+// display window on a cached page.
+const now = ref(Date.now())
+
+const withinWindow = computed(() => {
+  const start = banner.value?.startDate
+  const end = banner.value?.endDate
+  if (start && now.value < Date.parse(start)) return false
+  if (end && now.value > Date.parse(end)) return false
+  return true
 })
 
-const visible = computed(
-  () => mounted.value && Boolean(banner.value?.enabled) && !dismissed.value,
-)
+// Rendered server-side (the banner is part of the first paint, so it costs no
+// layout shift). `dismissed` intentionally stays false until mounted: flipping
+// it during setup would desync SSR and client markup.
+const visible = computed(() => Boolean(banner.value?.enabled)
+  && Boolean(banner.value?.content?.length)
+  && withinWindow.value
+  && !dismissed.value)
 
-// External links (http/https) open in a new tab, internal paths use the router.
-const ctaLinkProps = computed(() => {
-  const href = banner.value?.ctaHref || ''
-  return href.startsWith('http')
-    ? { href, target: '_blank', rel: 'noopener' }
-    : { to: href }
-})
+const isExternalCta = computed(() => (banner.value?.ctaHref || '').startsWith('http'))
+
+if (banner.value?.enabled) {
+  // Runs before the banner markup is parsed: hides it via CSS when this exact
+  // revision was already dismissed, which avoids both a flash and the upward
+  // layout shift that removing the node on mount would cause.
+  useHead({
+    script: [{
+      key: 'site-banner-dismissed',
+      tagPosition: 'head',
+      innerHTML: `try{if(localStorage.getItem('${DISMISS_KEY}')===${JSON.stringify(banner.value._rev || '')})document.documentElement.classList.add('${DISMISSED_CLASS}')}catch(e){}`,
+    }],
+  })
+}
+
+// The banner sits in the normal flow above <TopBar>, but both headers are
+// `position: fixed`, so they need to be pushed down by whatever part of the
+// banner is still on screen. `--site-banner-offset` carries that value; the
+// stylesheet ships a static fallback for the pre-hydration paint.
+let bannerHeight = 0
+let lastOffset = -1
+
+function writeOffset(px) {
+  if (px === lastOffset) return
+  lastOffset = px
+  document.body.style.setProperty('--site-banner-offset', `${px}px`)
+}
+
+function clearOffset() {
+  lastOffset = -1
+  document.body.style.removeProperty('--site-banner-offset')
+}
+
+function syncOffset() {
+  writeOffset(Math.max(0, bannerHeight - window.scrollY))
+}
+
+function measure() {
+  if (!root.value) return
+  bannerHeight = root.value.offsetHeight
+  syncOffset()
+}
+
+function toggle() {
+  expanded.value = !expanded.value
+}
+
+// Tapping the collapsed bar expands it — the truncated line is a teaser, so the
+// whole strip is the target rather than the chevron alone.
+function onBarClick() {
+  if (!isCompact.value || expanded.value) return
+  expanded.value = true
+}
 
 function dismiss() {
   dismissed.value = true
-  // Keyed on the document revision so editing the banner re-shows it.
-  window.localStorage.setItem(DISMISS_KEY, banner.value?._rev || '')
+  expanded.value = false
+  clearOffset()
+  document.documentElement.classList.add(DISMISSED_CLASS)
+  try {
+    // Keyed on the document revision so editing the banner re-shows it.
+    window.localStorage.setItem(DISMISS_KEY, banner.value?._rev || '')
+  }
+  catch {
+    // Private mode / storage disabled: the banner simply comes back next visit.
+  }
 }
+
+// Registered at setup level so @vueuse can dispose them with the component
+// (both are no-ops during SSR).
+useEventListener('scroll', () => {
+  // Cheap: the height is cached, and writeOffset() skips identical values, so
+  // scrolling below the banner costs nothing.
+  syncOffset()
+  // Scrolling away closes the expanded compact panel.
+  if (lastOffset === 0 && expanded.value) expanded.value = false
+}, { passive: true })
+useEventListener('resize', measure, { passive: true })
+
+// Expanding grows the banner, which has to push the fixed headers down too.
+watch([expanded, isCompact], () => {
+  if (!isCompact.value) expanded.value = false
+  nextTick(measure)
+})
+
+onMounted(() => {
+  now.value = Date.now()
+  try {
+    dismissed.value = window.localStorage.getItem(DISMISS_KEY) === banner.value?._rev
+  }
+  catch {
+    dismissed.value = false
+  }
+  if (visible.value) nextTick(measure)
+})
+
+onBeforeUnmount(clearOffset)
 
 // Compact portable-text renderer tuned for a single inline banner line.
 const ptComponents = {
@@ -131,61 +261,116 @@ const ptComponents = {
 }
 </script>
 
-<style scoped>
-.site-banner-wrap {
-  position: fixed;
-  top: 104px;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  padding: 0 12px;
-  z-index: 1500;
-  pointer-events: none;
+<style>
+/* Global on purpose: the fixed headers live in another component, and this is
+   the value they read. It also has to be correct on the very first paint,
+   before hydration can measure the real height — `:has()` keeps it scoped to
+   pages that actually render a banner. */
+body:has(.site-banner) {
+  /* Static bar height, for full-screen blocks that need to fit under the
+     banner (hero). Never scroll-linked, so it can't resize content. */
+  --site-banner-h: 40px;
+  --site-banner-offset: 40px;
 }
 
+@media (max-width: 959.98px) {
+  body:has(.site-banner) {
+    --site-banner-h: 44px;
+    --site-banner-offset: 44px;
+  }
+}
+
+/* Dismissed in a previous visit: hidden before the browser paints it. */
+html.odysway-banner-dismissed .site-banner {
+  display: none;
+}
+
+html.odysway-banner-dismissed body {
+  --site-banner-h: 0px;
+  --site-banner-offset: 0px;
+}
+</style>
+
+<style scoped>
 .site-banner {
   position: relative;
-  pointer-events: auto;
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  max-width: min(760px, calc(100vw - 24px));
-  padding: 13px 10px 8px 26px;
-  border-radius: 28px;
-  overflow: hidden;
-  box-shadow:
-    0 12px 30px -10px rgba(43, 76, 82, 0.4),
-    0 2px 6px rgba(0, 0, 0, 0.08);
-  animation: banner-float 6s ease-in-out infinite;
-  will-change: transform;
+  flex: none;
+  /* Above both headers (1999) so the expanded panel can overlap them while
+     they catch up with their own `top` transition. */
+  z-index: 2000;
+  background: var(--sb-bg);
+  color: var(--sb-fg);
 }
 
 /* Variants ---------------------------------------------------------------- */
 .site-banner--primary {
-  background: linear-gradient(135deg, #2b4c52 0%, #237c8c 100%);
-  color: #fff;
+  --sb-bg: #2b4c52;
+  --sb-fg: #fff;
+  --sb-tag-bg: #de5e2c;
+  --sb-tag-fg: #fff;
+  --sb-cta-bg: #fff;
+  --sb-cta-fg: #2b4c52;
+  --sb-hover: rgba(255, 255, 255, 0.16);
 }
 
 .site-banner--secondary {
-  background: linear-gradient(135deg, #db6644 0%, #f0b348 100%);
-  color: #fff;
+  --sb-bg: #db6644;
+  --sb-fg: #fff;
+  --sb-tag-bg: #2b4c52;
+  --sb-tag-fg: #fff;
+  --sb-cta-bg: #fff;
+  --sb-cta-fg: #db6644;
+  --sb-hover: rgba(255, 255, 255, 0.18);
 }
 
 .site-banner--soft-blush {
-  background: linear-gradient(135deg, #fbf0ec 0%, #fdf6f2 100%);
-  color: #2b4c52;
-  border: 1px solid rgba(43, 76, 82, 0.12);
+  --sb-bg: #fbf0ec;
+  --sb-fg: #2b4c52;
+  --sb-tag-bg: #de5e2c;
+  --sb-tag-fg: #fff;
+  --sb-cta-bg: #2b4c52;
+  --sb-cta-fg: #fff;
+  --sb-hover: rgba(43, 76, 82, 0.08);
+
+  border-bottom: 1px solid rgba(43, 76, 82, 0.12);
 }
 
-/* Text (rich content, centered, grows) ------------------------------------ */
+/* Row --------------------------------------------------------------------- */
+.site-banner__inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 40px;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding: 6px 56px;
+  font-size: 13.5px;
+  line-height: 1.35;
+}
+
+/* Desktop keeps tag / text / CTA on one centered line. */
+.site-banner__body {
+  display: contents;
+}
+
+.site-banner__tag {
+  flex: none;
+  padding: 3px 10px;
+  border-radius: 30px;
+  background: var(--sb-tag-bg);
+  color: var(--sb-tag-fg);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
 .site-banner__text {
-  flex: 1 1 auto;
   min-width: 0;
-  text-align: center;
-  font-size: 0.9rem;
   font-weight: 500;
-  line-height: 1.4;
 }
 
 /* Links and images come from PortableText render functions, so they don't
@@ -207,173 +392,161 @@ const ptComponents = {
 }
 
 .site-banner__text :deep(.site-banner__link:hover) {
-  opacity: 0.8;
+  opacity: 0.75;
 }
 
 .site-banner__text :deep(.site-banner__img) {
-  max-height: 300px;
-  max-width: 300px;
-  vertical-align: middle;
-  /* display: inline-block; */
-  margin: 0 4px;
-  border-radius: 8px;
-  object-fit: cover;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
-}
-
-/* Actions (CTA + close), pinned right -------------------------------------- */
-.site-banner__actions {
-  flex: none;
-  display: flex;
-  align-items: center;
-  gap: 4px;
+  display: inline-block;
+  max-height: 20px;
+  width: auto;
+  margin: 0 2px;
+  vertical-align: -4px;
+  border-radius: 4px;
 }
 
 .site-banner__cta {
-  background: #fff !important;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  color: inherit;
   font-weight: 600;
-  text-transform: none;
-  letter-spacing: 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s ease;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
 }
 
 .site-banner__cta:hover {
-  transform: translateY(-1px) scale(1.03);
+  opacity: 0.75;
 }
 
-.site-banner--primary .site-banner__cta {
-  color: #2b4c52 !important;
-}
-
-.site-banner--secondary .site-banner__cta {
-  color: #db6644 !important;
-}
-
-.site-banner--soft-blush .site-banner__cta {
-  background: #2b4c52 !important;
-  color: #fff !important;
-}
-
+/* Controls ---------------------------------------------------------------- */
+.site-banner__toggle,
 .site-banner__close {
-  flex: none;
+  position: absolute;
+  top: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   color: inherit;
-  opacity: 0.7;
-  transition: opacity 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+  opacity: 0.75;
+  transform: translateY(-50%);
+  transition: opacity 0.2s ease, background-color 0.2s ease, transform 0.25s ease;
 }
 
+.site-banner__toggle:hover,
 .site-banner__close:hover {
   opacity: 1;
-  background-color: rgba(255, 255, 255, 0.18);
-  transform: rotate(90deg);
+  background-color: var(--sb-hover);
 }
 
-.site-banner--soft-blush .site-banner__close:hover {
-  background-color: rgba(43, 76, 82, 0.1);
+.site-banner__close {
+  right: 12px;
 }
 
-/* Internal shine sweep ---------------------------------------------------- */
-.site-banner__shine {
-  position: absolute;
-  top: 0;
-  left: -60%;
-  width: 40%;
-  height: 100%;
-  background: linear-gradient(
-    100deg,
-    transparent,
-    rgba(255, 255, 255, 0.35),
-    transparent
-  );
-  transform: skewX(-20deg);
-  animation: banner-shine 5.5s ease-in-out infinite;
-  pointer-events: none;
+/* Chevron is a compact-viewport affordance only. */
+.site-banner__toggle {
+  display: none;
+  right: 46px;
 }
 
-@keyframes banner-shine {
-  0%,
-  55% {
-    left: -60%;
-  }
-  100% {
-    left: 150%;
-  }
-}
-
-@keyframes banner-float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-3px);
-  }
-}
-
-/* Enter / leave ----------------------------------------------------------- */
-.banner-enter-active {
-  transition:
-    opacity 0.45s ease,
-    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.banner-leave-active {
-  transition:
-    opacity 0.3s ease,
-    transform 0.35s ease;
-}
-
-.banner-enter-from {
-  opacity: 0;
-  transform: translateY(-18px) scale(0.96);
-}
-
-.banner-leave-to {
-  opacity: 0;
-  transform: translateY(-12px) scale(0.98);
-}
-
-/* Responsive -------------------------------------------------------------- */
-@media (max-width: 960px) {
-  .site-banner-wrap {
-    top: 72px;
+/* Compact viewports ------------------------------------------------------ */
+/* One truncated line by default (44px, no wasted height), tap to expand the
+   full message plus the CTA as a real button. */
+@media (max-width: 959.98px) {
+  .site-banner__inner {
+    justify-content: flex-start;
+    gap: 8px;
+    min-height: 44px;
+    padding: 0 84px 0 14px;
+    font-size: 12.5px;
+    cursor: pointer;
   }
 
-  .site-banner {
-    gap: 12px;
-    padding: 7px 8px 7px 18px;
+  .site-banner__body {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    min-width: 0;
   }
 
   .site-banner__text {
-    font-size: 0.82rem;
+    max-width: 100%;
   }
 
-  .site-banner__text :deep(.site-banner__img) {
-    height: 26px;
-    width: 26px;
+  .site-banner__text :deep(p) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* Collapsed: the line is a teaser, so every tap expands instead of
+     following a half-visible inline link. */
+  .site-banner:not(.site-banner--open) .site-banner__text :deep(a) {
+    pointer-events: none;
+  }
+
+  .site-banner__cta {
+    display: none;
+  }
+
+  .site-banner__toggle {
+    display: flex;
+  }
+
+  .site-banner__toggle,
+  .site-banner__close {
+    top: 7px;
+    transform: none;
+  }
+
+  .site-banner--open .site-banner__inner {
+    align-items: flex-start;
+    padding-top: 11px;
+    padding-bottom: 14px;
+    cursor: default;
+  }
+
+  .site-banner--open .site-banner__tag {
+    margin-top: 1px;
+  }
+
+  .site-banner--open .site-banner__text :deep(p) {
+    overflow: visible;
+    white-space: normal;
+  }
+
+  .site-banner--open .site-banner__cta {
+    display: inline-flex;
+    padding: 8px 16px;
+    border-radius: 30px;
+    background: var(--sb-cta-bg);
+    color: var(--sb-cta-fg);
+    text-decoration: none;
+  }
+
+  .site-banner--open .site-banner__toggle {
+    transform: rotate(180deg);
+  }
+}
+
+@media (max-width: 599.98px) {
+  .site-banner__tag {
+    padding: 2px 8px;
+    font-size: 10px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .site-banner,
-  .site-banner__shine {
-    animation: none;
-  }
-
-  .banner-enter-active,
-  .banner-leave-active {
-    transition: opacity 0.2s ease;
-  }
-
-  .banner-enter-from,
-  .banner-leave-to {
-    transform: none;
+  .site-banner__toggle,
+  .site-banner__close {
+    transition: opacity 0.2s ease, background-color 0.2s ease;
   }
 }
 </style>

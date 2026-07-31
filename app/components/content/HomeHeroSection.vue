@@ -314,7 +314,9 @@ useHead(() => {
 .hero-block {
   display: flex;
   flex-direction: column;
-  min-height: 100svh;
+  /* Minus the site banner when there is one, so the trust band still lands on
+     the first screen (see SiteBanner.vue). 0px when no banner is displayed. */
+  min-height: calc(100svh - var(--site-banner-h, 0px));
   width: 100vw;
 }
 

@@ -232,7 +232,9 @@ const isTransparent = computed(() => !isScrolled.value && route.path === '/' && 
 
 .custom-app-bar {
   position: fixed !important;
-  top: 0;
+  /* Pushed down by whatever part of SiteBanner is still on screen (the banner
+     sits in the flow above this fixed header). 0 when there is no banner. */
+  top: var(--site-banner-offset, 0px);
   left: 0;
   margin-left: 16px;
   margin-right: 16px;
@@ -253,6 +255,11 @@ const isTransparent = computed(() => !isScrolled.value && route.path === '/' && 
 }
 .height-app-bar-desktop {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+/* Same as .custom-app-bar above, but Vuetify's layout system writes `top` as an
+   inline style on the app-bar, so the override needs !important. */
+.d-header-desktop {
+  top: var(--site-banner-offset, 0px) !important;
 }
 .transparent-app-bar {
   backdrop-filter: blur(3px) !important;
