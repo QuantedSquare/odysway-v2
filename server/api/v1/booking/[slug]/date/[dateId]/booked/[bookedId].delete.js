@@ -7,35 +7,34 @@ export default defineEventHandler(async (event) => {
 
   const { bookedId } = event.context.params
 
-  // Fetch the row to get travel_date_id
+  // Fetch the row to get travel_date_id (contrat null | row)
   const bookedRow = await booking.retrieveBookedDateById(bookedId)
-  if (bookedRow.error || !bookedRow.deal_id) {
+  if (!bookedRow?.deal_id) {
     throw createError({ statusCode: 404, statusMessage: 'Impossible de trouver la réservation à supprimer.' })
   }
 
-  console.log('BMS: bookedRow =', bookedRow)
   const travel_date_id = bookedRow.travel_date_id
-  console.log(`BMS: Deleting booked reservation ${bookedId} for travel_date ${travel_date_id}`)
+  console.log(`BMS: soft delete de la réservation ${bookedId} sur la date ${travel_date_id}`)
 
-  const deletedBookedId = await booking.deleteBookedDateById(bookedId)
-  if (deletedBookedId.error) {
-    throw createError({ statusCode: 500, statusMessage: deletedBookedId.error })
+  const removed = await booking.softDeleteBookedDateById(bookedId, {
+    user: bookingUser,
+    reason: softDelete.REASONS.MANUAL,
+  })
+  if (removed.error) {
+    throw createError({ statusCode: 500, statusMessage: removed.error })
   }
 
   // Update travel_dates.booked_seat
-  const allBooked = await booking.retrieveBookedPlacesByTravelDateId(travel_date_id)
-  if (allBooked.error) {
-    throw createError({ statusCode: 500, statusMessage: allBooked.error })
+  const recompute = await booking.recomputeBookedSeatAndStatus(travel_date_id)
+  if (recompute?.error) {
+    throw createError({ statusCode: 500, statusMessage: recompute.error })
   }
-
-  const totalBooked = (allBooked || []).reduce((acc, row) => acc + (row.booked_places || 0), 0)
-  await booking.updateTravelDate(travel_date_id, totalBooked)
 
   // Remove departure record deal if no paying clients remain
   await departures.cleanupDepartureDealIfEmpty(travel_date_id)
 
   await logDateActivity(travel_date_id, bookingUser, 'deal_removed', { deal_id: bookedRow.deal_id, booked_id: bookedId })
 
-  console.log(`BMS: Successfully deleted booked reservation ${bookedId}, updated total booked seats to ${totalBooked}`)
-  return { success: true }
+  console.log(`BMS: réservation ${bookedId} masquée, booked_seat recalculé à ${recompute.booked_seat}`)
+  return { success: true, booked_id: bookedId, booked_seat: recompute.booked_seat, status: recompute.status }
 })

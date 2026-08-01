@@ -10,6 +10,7 @@ export default defineEventHandler(async (event) => {
   const { data, error } = await supabase
     .from('travel_dates')
     .select('id, travel_slug, departure_date, return_date, departure_id, booked_seat, max_travelers, published, status, displayed_status')
+    .eq('deleted', false)
     .gte('booked_seat', 1)
     .gte('departure_date', now)
     .order('departure_date', { ascending: true })

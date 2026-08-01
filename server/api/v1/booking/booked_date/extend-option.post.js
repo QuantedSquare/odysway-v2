@@ -18,6 +18,7 @@ export default defineEventHandler(async (event) => {
     .from('booked_dates')
     .select('is_option, expiracy_date')
     .eq('id', body.id)
+    .eq('deleted', false)
     .single()
   if (bookedDateError || !bookedDate) {
     throw createError({ statusCode: 404, statusMessage: bookedDateError?.message || 'Réservation introuvable' })

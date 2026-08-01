@@ -37,15 +37,7 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, statusMessage: 'Fichier trop volumineux (max 10 Mo)' })
   }
 
-  const { data: travelDate, error: travelDateError } = await supabase
-    .from('travel_dates')
-    .select('id')
-    .eq('id', dateId)
-    .eq('travel_slug', slug)
-    .single()
-  if (travelDateError || !travelDate) {
-    throw createError({ statusCode: 404, statusMessage: 'Date introuvable' })
-  }
+  await booking.requireActiveTravelDate(dateId, slug)
 
   const sanitizedName = fileName.replace(/[^a-zA-Z0-9._-]/g, '_')
   const storagePath = `${dateId}/${crypto.randomUUID()}-${sanitizedName}`

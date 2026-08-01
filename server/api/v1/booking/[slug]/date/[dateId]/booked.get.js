@@ -1,4 +1,11 @@
-import { defineEventHandler, createError } from 'h3'
+import { defineEventHandler, createError, getQuery } from 'h3'
+
+// ⚠️ Cet endpoint SUPPRIMAIT en dur les réservations dont le deal AC ne
+// renvoyait pas d'email — y compris quand ActiveCampaign était simplement
+// injoignable, puisque le catch fabriquait `{ name: '', email: '' }`. Charger la
+// page BMS d'une date pendant une panne AC détruisait donc des réservations et
+// réécrivait booked_seat. Un GET ne mute plus rien : les lignes sans email sont
+// renvoyées avec `orphan: true` et l'opérateur décide.
 
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
@@ -10,20 +17,19 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, statusMessage: 'slug et dateId requis' })
   }
   // Ensure the date exists and matches slug (avoid returning wrong travelers list)
-  const { data: travelDate, error: travelDateError } = await supabase
-    .from('travel_dates')
-    .select('id')
-    .eq('id', dateId)
-    .eq('travel_slug', slug)
-    .single()
-  if (travelDateError || !travelDate) {
-    throw createError({ statusCode: 404, statusMessage: 'Date introuvable' })
-  }
+  await booking.requireActiveTravelDate(dateId, slug, { includeDeleted: true })
 
-  const { data, error } = await supabase
+  // ?includeDeleted=true : section « Voyageurs supprimés » du BMS.
+  const { includeDeleted } = getQuery(event)
+  const withDeleted = includeDeleted === 'true' || includeDeleted === '1'
+
+  let query = supabase
     .from('booked_dates')
     .select('*')
     .eq('travel_date_id', dateId)
+  if (!withDeleted) query = query.eq('deleted', false)
+
+  const { data, error } = await query
 
   if (error) {
     throw createError({ statusCode: 500, statusMessage: error.message })
@@ -33,6 +39,7 @@ export default defineEventHandler(async (event) => {
   const travelers = await Promise.all((data || []).map(async (row) => {
     let contact = {}
     let customFields = {}
+    let acLookupFailed = false
     try {
       const deal = await activecampaign.getDealById(row.deal_id)
       customFields = await activecampaign.getDealCustomFields(row.deal_id)
@@ -55,12 +62,20 @@ export default defineEventHandler(async (event) => {
         }
       }
     }
-    catch {
+    catch (err) {
+      // On distingue « AC injoignable » de « deal réellement sans email » :
+      // c'est précisément cette confusion qui faisait perdre des réservations.
+      acLookupFailed = true
       contact = { name: '', email: '' }
+      console.error(`[booked.get] lookup AC échoué dealId=${row.deal_id}:`, err.message)
     }
     return {
       ...row,
       ...contact,
+      // Orpheline = le deal existe côté AC mais n'a pas d'email. Si le lookup a
+      // échoué, on ne sait rien : ce n'est pas une orpheline.
+      orphan: !acLookupFailed && !contact.email?.trim(),
+      acLookupFailed,
       nbTravelers: customFields.nbTravelers,
       alreadyPaid: customFields.alreadyPaid,
       restToPay: customFields.restToPay,
@@ -68,34 +83,5 @@ export default defineEventHandler(async (event) => {
     }
   }))
 
-  // Filter out travelers without email and delete their booked_dates entries
-  const validTravelers = []
-  const travelersToDelete = []
-
-  for (const traveler of travelers) {
-    if (traveler.email && traveler.email.trim() !== '') {
-      validTravelers.push(traveler)
-    }
-    else {
-      travelersToDelete.push(traveler.id)
-    }
-  }
-
-  // Delete booked_dates entries for travelers without email
-  if (travelersToDelete.length > 0) {
-    const { error: deleteError } = await supabase
-      .from('booked_dates')
-      .delete()
-      .in('id', travelersToDelete)
-
-    if (deleteError) {
-      console.error('Error deleting booked_dates entries:', deleteError)
-    }
-    else {
-      console.log(`Deleted ${travelersToDelete.length} booked_dates entries without valid email`)
-    }
-
-    await booking.recomputeBookedSeatAndStatus(dateId)
-  }
-  return validTravelers
+  return travelers
 })

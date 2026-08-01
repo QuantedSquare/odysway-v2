@@ -49,6 +49,7 @@ export default defineEventHandler(async (event) => {
     .select(allowed.join(','))
     .eq('id', dateId)
     .eq('travel_slug', slug)
+    .eq('deleted', false)
     .single()
 
   // Convert badges from string to array if needed
@@ -57,6 +58,7 @@ export default defineEventHandler(async (event) => {
     .update(updateFields)
     .eq('id', dateId)
     .eq('travel_slug', slug)
+    .eq('deleted', false)
     .select('*')
     .single()
 

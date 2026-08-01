@@ -7,6 +7,7 @@ export default defineEventHandler(async (event) => {
     .from('booked_dates')
     .select('deal_id')
     .eq('id', bookedId)
+    .eq('deleted', false)
     .single()
   if (error) {
     throw funnelReporter.funnelCreateError({

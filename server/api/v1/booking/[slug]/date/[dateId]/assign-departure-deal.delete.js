@@ -10,15 +10,7 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, statusMessage: 'slug et dateId requis' })
   }
 
-  const { data: travelDate, error: travelDateError } = await supabase
-    .from('travel_dates')
-    .select('id, travel_slug, departure_id')
-    .eq('id', dateId)
-    .eq('travel_slug', slug)
-    .single()
-  if (travelDateError || !travelDate) {
-    throw createError({ statusCode: 404, statusMessage: 'Date introuvable' })
-  }
+  const travelDate = await booking.requireActiveTravelDate(dateId, slug)
 
   const { error: updateError } = await supabase
     .from('travel_dates')

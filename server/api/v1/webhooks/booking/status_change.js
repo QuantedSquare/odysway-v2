@@ -46,6 +46,7 @@ export default defineEventHandler(async (event) => {
     const { data: rows, error: fetchError } = await supabase
       .from('travel_dates')
       .select('id, booked_seat, min_travelers, max_travelers, status')
+      .eq('deleted', false)
       .range(from, from + PAGE_SIZE - 1)
 
     if (fetchError) {

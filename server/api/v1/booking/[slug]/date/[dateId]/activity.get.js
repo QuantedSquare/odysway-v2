@@ -12,15 +12,7 @@ export default defineEventHandler(async (event) => {
 
   const { limit = 20, offset = 0 } = getQuery(event)
 
-  const { data: travelDate, error: travelDateError } = await supabase
-    .from('travel_dates')
-    .select('id')
-    .eq('id', dateId)
-    .eq('travel_slug', slug)
-    .single()
-  if (travelDateError || !travelDate) {
-    throw createError({ statusCode: 404, statusMessage: 'Date introuvable' })
-  }
+  await booking.requireActiveTravelDate(dateId, slug, { includeDeleted: true })
 
   const { data, error } = await supabase
     .from('date_activity_log')

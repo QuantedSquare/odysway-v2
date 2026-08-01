@@ -417,33 +417,57 @@ const handlePaymentSession = async (session, paymentType) => {
   }
 
   // BOOKING MANAGEMENT SUPABASE
-  const { data: bookedDate, error } = await supabase
-    .from('booked_dates')
-    .update({
-      is_option: false,
-      expiracy_date: null,
-      booked_places: deal.nbTravelers,
-      transaction_id: session.payment_intent || session.id,
-      payment_type: paymentType,
+  //
+  // Le paiement fait foi : si la réservation a été soft-deleted entre-temps
+  // (deal marqué « Perdu », date supprimée…), on la RESSUSCITE et on alerte.
+  // allowMove: false — le paiement ne déplace pas la réservation, il la
+  // réactive là où elle était. resetOnRevive: false — on ne perd pas
+  // l'historique de la ligne, le patch ci-dessous suffit.
+  const res = await booking.upsertBookedDateForDeal(order.dealId, null, {
+    is_option: false,
+    expiracy_date: null,
+    booked_places: deal.nbTravelers,
+    transaction_id: session.payment_intent || session.id,
+    payment_type: paymentType,
+  }, { user: { email: 'stripe-webhook' }, allowMove: false, resetOnRevive: false })
+
+  const bookedDate = res.row
+  if (!bookedDate) {
+    // Auparavant un simple console.error : un paiement pouvait aboutir sans
+    // aucune trace Supabase et sans que personne ne soit prévenu.
+    console.error('Error updating booked_dates', res.error)
+    await slack.alertOrphanPayment({
+      dealId: order.dealId,
+      provider: 'stripe',
+      paymentType,
+      transactionId: session.payment_intent || session.id,
     })
-    .eq('deal_id', order.dealId)
-    .select('*')
-    .single()
-  if (error) {
-    console.error('Error updating booked_dates', error)
   }
   else {
     console.log('booked_dates updated', bookedDate)
 
-    const { data: allBooked, error: sumAllBookedError } = await supabase
-      .from('booked_dates')
-      .select('booked_places')
-      .eq('travel_date_id', bookedDate.travel_date_id)
-    if (sumAllBookedError) return { error: sumAllBookedError.message }
+    if (res.revived) {
+      await slack.alertPaymentOnDeletedBooking({
+        dealId: order.dealId,
+        bookedId: bookedDate.id,
+        travelDateId: bookedDate.travel_date_id,
+        travelSlug: deal.slug,
+        deletedAt: res.previous?.deleted_at,
+        deletedBy: res.previous?.deleted_by,
+        deletedReason: res.previous?.deleted_reason,
+        paymentType,
+        provider: 'stripe',
+      })
+      await logDateActivity(bookedDate.travel_date_id, { email: 'stripe-webhook' }, 'deal_restored', {
+        deal_id: order.dealId,
+        booked_id: bookedDate.id,
+        cause: 'late_payment',
+        previous_reason: res.previous?.deleted_reason || null,
+      })
+    }
 
-    const totalBooked = (allBooked || []).reduce((acc, row) => acc + (row.booked_places || 0), 0)
     // Update the travel_dates.booked_seat + derived status
-    const recompute = await booking.updateTravelDate(bookedDate.travel_date_id, totalBooked)
+    const recompute = await booking.recomputeBookedSeatAndStatus(bookedDate.travel_date_id)
     if (recompute?.error) return { error: recompute.error }
 
     // Departure record deal management (pipeline 4 "Gestions Départs")

@@ -23,15 +23,7 @@ export default defineEventHandler(async (event) => {
   }
 
   // Sanity-check the date belongs to this slug.
-  const { data: travelDate, error: travelDateError } = await supabase
-    .from('travel_dates')
-    .select('id')
-    .eq('id', dateId)
-    .eq('travel_slug', slug)
-    .single()
-  if (travelDateError || !travelDate) {
-    throw createError({ statusCode: 404, statusMessage: 'Date introuvable' })
-  }
+  await booking.requireActiveTravelDate(dateId, slug)
 
   const { data: invoice, error: insertError } = await supabase
     .from('date_invoices')

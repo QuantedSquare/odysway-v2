@@ -9,6 +9,7 @@ export default defineEventHandler(async (event) => {
     .from('booked_dates')
     .select('deal_id')
     .eq('id', booked_id)
+    .eq('deleted', false)
     .single()
 
   if (supabaseError || !bookedDate) {

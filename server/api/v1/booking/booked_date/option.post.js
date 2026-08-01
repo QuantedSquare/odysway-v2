@@ -14,6 +14,7 @@ export default defineEventHandler(async (event) => {
     .from('booked_dates')
     .select('is_option, travel_date_id')
     .eq('id', body.id)
+    .eq('deleted', false)
     .single()
   if (bookedDateError || !bookedDate) {
     throw funnelReporter.funnelCreateError({ statusCode: 404, code: 'OPTION_BOOKED_DATE_NOT_FOUND', step: 'option_booking', origin: { field: 'id', received: body.id }, message: bookedDateError?.message || 'Réservation introuvable' })
@@ -34,14 +35,9 @@ export default defineEventHandler(async (event) => {
       .select('*')
       .single()
 
-    // Update travel_dates.booked_seat
-    const { data: allBooked, error: sumError } = await supabase
-      .from('booked_dates')
-      .select('booked_places')
-      .eq('travel_date_id', bookedDate.travel_date_id)
-    if (sumError) throw createError({ statusCode: 500, statusMessage: sumError.message })
-    const totalBooked = (allBooked || []).reduce((acc, row) => acc + (row.booked_places || 0), 0)
-    const recomputeRes = await booking.updateTravelDate(bookedDate.travel_date_id, totalBooked)
+    // Update travel_dates.booked_seat — via le helper, seul endroit qui filtre
+    // les réservations supprimées.
+    const recomputeRes = await booking.recomputeBookedSeatAndStatus(bookedDate.travel_date_id)
     if (recomputeRes?.error) throw createError({ statusCode: 500, statusMessage: recomputeRes.error })
 
     if (error) throw createError({ statusCode: 500, statusMessage: error.message })

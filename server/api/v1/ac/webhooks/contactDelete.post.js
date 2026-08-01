@@ -14,14 +14,16 @@ export default defineEventHandler(async (event) => {
       throw createError({ statusCode: 400, message: 'Missing contact id' })
     }
 
-    const { error } = await supabase
-      .from('activecampaign_clients')
-      .delete()
-      .eq('contact', contactId)
+    // Soft delete : les vues du dashboard joignent activecampaign_clients pour
+    // afficher le nom du client sur des réservations historiques. Effacer la
+    // ligne blanchissait rétroactivement ces lignes.
+    const removed = await softDelete.remove('activecampaign_clients', q => q.eq('contact', contactId), {
+      user: { email: 'activecampaign' },
+      reason: softDelete.REASONS.AC_CONTACT_DELETED,
+    })
 
-    if (error) {
-      console.error('Supabase delete error:', error)
-      throw createError({ statusCode: 500, message: 'Failed to delete contact' })
+    if (removed.error) {
+      throw createError({ statusCode: 500, message: 'Failed to soft delete contact' })
     }
 
     return { success: true, deletedContactId: contactId }

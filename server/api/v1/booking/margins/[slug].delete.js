@@ -3,7 +3,7 @@ import { defineEventHandler, getQuery, createError } from 'h3'
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
   const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
-  if (isProdEnv) requireBookingUser(event)
+  const bookingUser = isProdEnv ? requireBookingUser(event) : getBookingUserOrNull(event)
 
   const { slug } = event.context.params
   if (!slug) {
@@ -22,22 +22,23 @@ export default defineEventHandler(async (event) => {
   // default row when season_id is omitted. The default scope removes the whole
   // pax tier for the year (every season + the default), which is what the
   // editor's row trash icon means by "supprimer le palier".
-  let query = supabase
-    .from('voyage_margins')
-    .delete()
-    .eq('voyage_slug', slug)
-    .eq('pax', Number(pax))
-    .eq('year', Number(year))
+  // Soft delete : la ligne reste, mais margins.upsertMarginForVoyage lève la
+  // pierre tombale (...softDelete.clear()) dès qu'une valeur est ressaisie, donc
+  // retaper une marge « remarche » sans étape de restauration explicite.
+  const removed = await softDelete.remove('voyage_margins', (query) => {
+    let q = query
+      .eq('voyage_slug', slug)
+      .eq('pax', Number(pax))
+      .eq('year', Number(year))
+    if (scope === 'cell') {
+      q = seasonId ? q.eq('season_id', seasonId) : q.is('season_id', null)
+    }
+    return q
+  }, { user: bookingUser, reason: softDelete.REASONS.MANUAL })
 
-  if (scope === 'cell') {
-    query = seasonId ? query.eq('season_id', seasonId) : query.is('season_id', null)
+  if (removed.error) {
+    throw createError({ statusCode: 500, statusMessage: removed.error })
   }
 
-  const { error } = await query
-
-  if (error) {
-    throw createError({ statusCode: 500, statusMessage: error.message })
-  }
-
-  return { success: true }
+  return { success: true, softDeleted: removed.count }
 })

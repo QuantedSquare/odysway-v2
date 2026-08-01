@@ -32,6 +32,7 @@ export default defineEventHandler(async (event) => {
       .from('booked_dates')
       .select('deal_id, is_option')
       .eq('id', booked_id)
+      .eq('deleted', false)
       .single()
     console.log('bookedDate', bookedDate)
     if (bookedError || !bookedDate) {

@@ -24,6 +24,7 @@ export default defineEventHandler(async (event) => {
     .select('id, travel_slug')
     .eq('id', dateId)
     .eq('travel_slug', slug)
+    .eq('deleted', false)
     .single()
   if (travelDateError || !travelDate) {
     throw funnelReporter.funnelCreateError({ statusCode: 404, code: 'KICKSTART_DATE_NOT_FOUND', step: 'details', origin: { field: 'dateId', received: dateId }, message: 'Date introuvable pour ce slug' })
@@ -41,16 +42,22 @@ export default defineEventHandler(async (event) => {
     throw funnelReporter.funnelCreateError({ statusCode: 500, code: 'KICKSTART_CREATE_DEAL_FAILED', step: 'details', origin: { endpoint: 'activecampaign.createMinimalDeal' }, message: 'Erreur lors de la création du deal' })
   }
 
-  // 3. Insert into booked_dates (booked_places=0 — not counted as reserved until payment)
-  const { data: bookedDate, error: bookedError } = await supabase
-    .from('booked_dates')
-    .insert([{ travel_date_id: dateId, deal_id: dealId, booked_places: 0 }])
-    .select('*')
-    .single()
-  if (bookedError) {
-    console.error('[kickstart] Supabase insert failed', bookedError.message)
-    throw funnelReporter.funnelCreateError({ statusCode: 500, code: 'KICKSTART_SUPABASE_INSERT_FAILED', step: 'details', origin: { endpoint: 'booked_dates.insert' }, message: bookedError.message })
+  // 3. Upsert into booked_dates (booked_places=0 — not counted as reserved until payment)
+  // Le deal vient d'être créé, donc une collision sur UNIQUE(deal_id) est
+  // théoriquement impossible ; passer par le helper rend quand même l'appel
+  // immunisé à un retry d'id côté AC et à la course avec le `enrich`
+  // fire-and-forget — et ressuscite une éventuelle réservation supprimée au
+  // lieu d'échouer sur une contrainte d'unicité, ce que faisait l'INSERT nu.
+  const res = await booking.upsertBookedDateForDeal(dealId, dateId, { booked_places: 0 }, {
+    user: null,
+    allowMove: true,
+    resetOnRevive: true,
+  })
+  if (res.error || !res.row) {
+    console.error('[kickstart] Supabase upsert failed', res.error)
+    throw funnelReporter.funnelCreateError({ statusCode: 500, code: 'KICKSTART_SUPABASE_INSERT_FAILED', step: 'details', origin: { endpoint: 'booked_dates.upsert' }, message: res.error || 'Upsert booked_dates sans résultat' })
   }
+  const bookedDate = res.row
   lap(`booked_dates inserted bookedId=${bookedDate.id}`)
 
   // 4. Fire-and-forget enrichment — use the request origin so this works in dev and prod

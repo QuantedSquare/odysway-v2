@@ -15,15 +15,7 @@ export default defineEventHandler(async (event) => {
   }
 
   // Ensure the date exists and matches slug
-  const { data: travelDate, error: travelDateError } = await supabase
-    .from('travel_dates')
-    .select('id, travel_slug, departure_id')
-    .eq('id', dateId)
-    .eq('travel_slug', slug)
-    .single()
-  if (travelDateError || !travelDate) {
-    throw createError({ statusCode: 404, statusMessage: 'Date introuvable' })
-  }
+  await booking.requireActiveTravelDate(dateId, slug)
 
   // Update departure_id on the travel_dates row
   const { error: updateError } = await supabase

@@ -173,33 +173,49 @@ const handlePaymentSession = async (session) => {
   console.log('contact', contact)
 
   // BOOKING MANAGEMENT SUPABASE
-  const { data: bookedDate, error } = await supabase
-    .from('booked_dates')
-    .update({
-      is_option: false,
-      expiracy_date: null,
-      booked_places: order.nbTravelers,
-      transaction_id: session.id,
-      payment_type: 'alma',
-    })
-    .eq('deal_id', order.id)
-    .select('*')
-    .single()
+  // Même politique que stripe.js : le paiement ressuscite une réservation
+  // soft-deleted et alerte Slack.
+  const res = await booking.upsertBookedDateForDeal(order.id, null, {
+    is_option: false,
+    expiracy_date: null,
+    booked_places: order.nbTravelers,
+    transaction_id: session.id,
+    payment_type: 'alma',
+  }, { user: { email: 'alma-webhook' }, allowMove: false, resetOnRevive: false })
 
-  if (error) {
-    console.error('Error updating booked_dates', error)
+  const bookedDate = res.row
+  if (!bookedDate) {
+    console.error('Error updating booked_dates', res.error)
+    await slack.alertOrphanPayment({
+      dealId: order.id,
+      provider: 'alma',
+      paymentType: 'alma',
+      transactionId: session.id,
+    })
   }
   else {
-    const { data: allBooked, error: sumAllBookedError } = await supabase
-      .from('booked_dates')
-      .select('booked_places')
-      .eq('travel_date_id', bookedDate.travel_date_id)
-    if (sumAllBookedError) return { error: sumAllBookedError.message }
+    if (res.revived) {
+      await slack.alertPaymentOnDeletedBooking({
+        dealId: order.id,
+        bookedId: bookedDate.id,
+        travelDateId: bookedDate.travel_date_id,
+        travelSlug: deal.slug,
+        deletedAt: res.previous?.deleted_at,
+        deletedBy: res.previous?.deleted_by,
+        deletedReason: res.previous?.deleted_reason,
+        paymentType: 'alma',
+        provider: 'alma',
+      })
+      await logDateActivity(bookedDate.travel_date_id, { email: 'alma-webhook' }, 'deal_restored', {
+        deal_id: order.id,
+        booked_id: bookedDate.id,
+        cause: 'late_payment',
+        previous_reason: res.previous?.deleted_reason || null,
+      })
+    }
 
-    const totalBooked = (allBooked || []).reduce((acc, row) => acc + (row.booked_places || 0), 0)
-    console.log('totalBooked', totalBooked)
     // Update the travel_dates.booked_seat + derived status
-    const recompute = await booking.updateTravelDate(bookedDate.travel_date_id, totalBooked)
+    const recompute = await booking.recomputeBookedSeatAndStatus(bookedDate.travel_date_id)
     if (recompute?.error) return { error: recompute.error }
 
     // Departure record deal management (pipeline 4 "Gestions Départs")

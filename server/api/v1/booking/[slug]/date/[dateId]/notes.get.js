@@ -1,4 +1,4 @@
-import { defineEventHandler, createError } from 'h3'
+import { defineEventHandler, createError, getQuery } from 'h3'
 
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
@@ -10,21 +10,20 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, statusMessage: 'slug et dateId requis' })
   }
 
-  const { data: travelDate, error: travelDateError } = await supabase
-    .from('travel_dates')
-    .select('id')
-    .eq('id', dateId)
-    .eq('travel_slug', slug)
-    .single()
-  if (travelDateError || !travelDate) {
-    throw createError({ statusCode: 404, statusMessage: 'Date introuvable' })
-  }
+  // ?includeDeleted=true alimente la Corbeille du BMS.
+  const { includeDeleted } = getQuery(event)
+  const withDeleted = includeDeleted === 'true' || includeDeleted === '1'
 
-  const { data, error } = await supabase
+  await booking.requireActiveTravelDate(dateId, slug, { includeDeleted: true })
+
+  let query = supabase
     .from('date_notes')
     .select('*')
     .eq('travel_date_id', dateId)
     .order('created_at', { ascending: true })
+  if (!withDeleted) query = query.eq('deleted', false)
+
+  const { data, error } = await query
 
   if (error) {
     throw createError({ statusCode: 500, statusMessage: error.message })
