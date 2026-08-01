@@ -193,7 +193,7 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import { useDisplay, useTheme } from 'vuetify'
-import { mdiHome, mdiLogout, mdiViewDashboardOutline, mdiAirplaneTakeoff, mdiCompassOutline, mdiMenu, mdiChevronLeft, mdiChevronRight, mdiCurrencyEur, mdiCardSearchOutline } from '@mdi/js'
+import { mdiHome, mdiLogout, mdiViewDashboardOutline, mdiAirplaneTakeoff, mdiCompassOutline, mdiMenu, mdiChevronLeft, mdiChevronRight, mdiCurrencyEur, mdiCardSearchOutline, mdiDeleteRestore } from '@mdi/js'
 import { useImage } from '#imports'
 
 // Register the `backoffice` theme on demand. Keeping it out of the global
@@ -241,6 +241,7 @@ const navItems = [
   { title: 'Marges', icon: mdiCurrencyEur, to: '/booking-management/margins', exact: false },
   { title: 'Sur-mesure', icon: mdiCompassOutline, to: '/booking-management/custom-travels', exact: false },
   { title: 'Deal AC', icon: mdiCardSearchOutline, to: '/booking-management/deal-inspector', exact: false },
+  { title: 'Corbeille', icon: mdiDeleteRestore, to: '/booking-management/trash', exact: false },
 ]
 
 const bookingUser = useState('bookingUser', () => null)

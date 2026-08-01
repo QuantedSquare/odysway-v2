@@ -13,6 +13,15 @@
       </v-icon>
       Factures fournisseurs
       <v-spacer />
+      <v-switch
+        v-model="showDeleted"
+        label="Supprimées"
+        color="error"
+        density="compact"
+        hide-details
+        class="flex-grow-0 mr-3 text-caption"
+        @update:model-value="fetchInvoices"
+      />
       <span class="text-body-2 font-weight-bold">
         {{ formatEur(totalAmount) }}
       </span>
@@ -41,7 +50,7 @@
           v-for="(invoice, idx) in invoices"
           :key="invoice.id"
           class="d-flex align-center py-2 px-2 rounded"
-          :class="idx % 2 === 0 ? 'bg-surface-variant' : ''"
+          :class="[idx % 2 === 0 ? 'bg-surface-variant' : '', invoice.deleted ? 'opacity-60' : '']"
         >
           <v-icon
             size="20"
@@ -59,6 +68,14 @@
               <span v-if="invoice.file_size">{{ formatFileSize(invoice.file_size) }} · </span>
               <span v-else-if="!invoice.file_name">Sans pièce jointe · </span>
               {{ dayjs(invoice.created_at).format('DD/MM/YYYY') }}
+              <span
+                v-if="invoice.deleted"
+                class="text-error"
+              >
+                · supprimée le
+                {{ invoice.deleted_at ? dayjs(invoice.deleted_at).format('DD/MM/YYYY') : '?' }}
+                par {{ invoice.deleted_by || '?' }}
+              </span>
             </div>
           </div>
           <v-text-field
@@ -84,6 +101,17 @@
             <v-icon>{{ mdiDownload }}</v-icon>
           </v-btn>
           <v-btn
+            v-if="invoice.deleted"
+            icon
+            size="x-small"
+            color="primary"
+            variant="text"
+            @click="restoreInvoice(invoice)"
+          >
+            <v-icon>{{ mdiRestore }}</v-icon>
+          </v-btn>
+          <v-btn
+            v-else
             icon
             size="x-small"
             color="error"
@@ -219,7 +247,7 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import { mdiDelete, mdiDownload, mdiPaperclip, mdiReceiptText, mdiReceiptTextOutline } from '@mdi/js'
+import { mdiDelete, mdiDownload, mdiPaperclip, mdiReceiptText, mdiReceiptTextOutline, mdiRestore } from '@mdi/js'
 import dayjs from 'dayjs'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 import { formatEur } from '~/utils/formatNumber'
@@ -235,6 +263,7 @@ const emit = defineEmits(['invoices-changed'])
 const invoices = ref([])
 const loading = ref(true)
 const addTab = ref('with-file')
+const showDeleted = ref(false)
 
 // With file
 const selectedFile = ref(null)
@@ -257,8 +286,10 @@ const canCreateNoFile = computed(() =>
   noFileAmount.value !== null && noFileAmount.value !== '' && noFileLabel.value && noFileLabel.value.trim(),
 )
 
+// Les factures supprimées restent affichées quand le filtre est ouvert, mais ne
+// comptent jamais dans le total : ce montant alimente le calcul de marge.
 const totalAmount = computed(() =>
-  invoices.value.reduce((acc, inv) => acc + Number(inv.amount || 0), 0),
+  invoices.value.reduce((acc, inv) => acc + (inv.deleted ? 0 : Number(inv.amount || 0)), 0),
 )
 
 // Invoices without an attached file fall back to the receipt-outline icon.
@@ -267,13 +298,29 @@ const iconColorFor = invoice => mimeIconColor(invoice.mime_type, 'grey')
 
 async function fetchInvoices() {
   try {
-    invoices.value = await bookingApi.getInvoices(props.slug, props.dateId)
+    invoices.value = await bookingApi.getInvoices(
+      props.slug,
+      props.dateId,
+      showDeleted.value ? { includeDeleted: true } : {},
+    )
   }
   catch (err) {
     console.error('Error fetching invoices:', err)
   }
   finally {
     loading.value = false
+  }
+}
+
+async function restoreInvoice(invoice) {
+  if (!confirm('Restaurer cette facture ?')) return
+  try {
+    await bookingApi.restoreChild(props.slug, props.dateId, 'invoice', invoice.id)
+    await fetchInvoices()
+    emit('invoices-changed')
+  }
+  catch (err) {
+    alert(getApiErrorMessage(err, 'Erreur lors de la restauration'))
   }
 }
 
