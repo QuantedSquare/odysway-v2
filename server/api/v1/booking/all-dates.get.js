@@ -1,10 +1,6 @@
 import { defineEventHandler } from 'h3'
 
-export default defineEventHandler(async (event) => {
-  const config = useRuntimeConfig()
-  const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
-  if (isProdEnv) requireBookingUser(event)
-
+export default defineEventHandler(async () => {
   const now = new Date().toISOString()
 
   const { data, error } = await supabase

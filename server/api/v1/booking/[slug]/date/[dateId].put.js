@@ -10,9 +10,7 @@ export default defineEventHandler(async (event) => {
   }
   const body = await readBody(event)
 
-  const config = useRuntimeConfig()
-  const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
-  const bookingUser = isProdEnv ? requireBookingUser(event) : getBookingUserOrNull(event)
+  const bookingUser = event.context.bookingUser
 
   // Only allow editable fields
   const updateFields = {}

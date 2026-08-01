@@ -1,23 +1,28 @@
 import { defineEventHandler, getCookie, setCookie } from 'h3'
 import jwt from 'jsonwebtoken'
 
+// Under `nuxt dev` the BMS is served without auth (see isBookingAuthBypassed),
+// so tell the client not to bounce to /booking-login. No user is returned: the
+// layout renders as anonymous, exactly as it did before.
+const unauthenticated = () =>
+  isBookingAuthBypassed()
+    ? { success: true, bypassed: true, user: null }
+    : { statusCode: 401, message: 'Non authentifié.' }
+
 export default defineEventHandler((event) => {
   const token = getCookie(event, 'booking_token')
   const jwtSecret = process.env.BOOKING_JWT_SECRET
 
   if (!token || !jwtSecret) {
-    return { statusCode: 401, message: 'Non authentifié.' }
+    return unauthenticated()
   }
 
   try {
-    const config = useRuntimeConfig()
-    const isDev = config.public.environment !== 'production'
-
     const payload = jwt.verify(token, jwtSecret)
     const email = payload?.email
 
     if (!isAllowedEmail(email)) {
-      return { statusCode: 401, message: 'Non authentifié.' }
+      return unauthenticated()
     }
 
     const superadmins = getSuperadmins()
@@ -37,7 +42,7 @@ export default defineEventHandler((event) => {
       sameSite: 'lax',
       path: '/',
       maxAge: 60 * 60 * 24 * 7,
-      secure: !isDev,
+      secure: useSecureCookies(),
     })
 
     return {
@@ -47,6 +52,6 @@ export default defineEventHandler((event) => {
     }
   }
   catch {
-    return { statusCode: 401, message: 'Non authentifié.' }
+    return unauthenticated()
   }
 })

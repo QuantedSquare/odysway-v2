@@ -2,8 +2,6 @@ import { defineEventHandler, readBody, setCookie } from 'h3'
 import jwt from 'jsonwebtoken'
 
 export default defineEventHandler(async (event) => {
-  const config = useRuntimeConfig()
-  const isDev = config.public.environment !== 'production'
   const body = await readBody(event)
   const { id, password } = body || {}
 
@@ -18,7 +16,7 @@ export default defineEventHandler(async (event) => {
       sameSite: 'lax',
       path: '/',
       maxAge: 60 * 60 * 24 * 7, // 7 days
-      secure: !isDev,
+      secure: useSecureCookies(),
     })
     return { success: true }
   }

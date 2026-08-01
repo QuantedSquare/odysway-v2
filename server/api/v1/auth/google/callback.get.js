@@ -6,13 +6,11 @@ const GOOGLE_TOKEN_URL = 'https://oauth2.googleapis.com/token'
 const GOOGLE_JWKS = createRemoteJWKSet(new URL('https://www.googleapis.com/oauth2/v3/certs'))
 
 export default defineEventHandler(async (event) => {
-  const config = useRuntimeConfig()
-  const isDev = config.public.environment !== 'production'
-
   const query = getQuery(event)
   const clientId = process.env.GOOGLE_CLIENT_ID
   const clientSecret = process.env.GOOGLE_CLIENT_SECRET
-  const redirectUri = process.env.GOOGLE_REDIRECT_URI
+  // Must be byte-identical to the URI the authorize step sent (see login.get.js).
+  const redirectUri = getGoogleRedirectUri()
   const jwtSecret = process.env.BOOKING_JWT_SECRET
 
   const redirectWithError = code => sendRedirect(event, `/booking-login?error=${code}`)
@@ -30,7 +28,7 @@ export default defineEventHandler(async (event) => {
     sameSite: 'lax',
     path: '/',
     maxAge: 0,
-    secure: !isDev,
+    secure: useSecureCookies(),
   })
 
   if (!stateFromCookie || stateFromCookie !== stateFromQuery) {
@@ -97,7 +95,7 @@ export default defineEventHandler(async (event) => {
       sameSite: 'lax',
       path: '/',
       maxAge: 60 * 60 * 24 * 7,
-      secure: !isDev,
+      secure: useSecureCookies(),
     })
 
     return sendRedirect(event, '/booking-management')

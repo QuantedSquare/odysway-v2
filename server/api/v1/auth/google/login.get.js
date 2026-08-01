@@ -4,11 +4,10 @@ import { defineEventHandler, sendRedirect, setCookie } from 'h3'
 const GOOGLE_AUTH_URL = 'https://accounts.google.com/o/oauth2/v2/auth'
 
 export default defineEventHandler((event) => {
-  const config = useRuntimeConfig()
-  const isDev = config.public.environment !== 'production'
-
   const clientId = process.env.GOOGLE_CLIENT_ID
-  const redirectUri = config.public.environment !== 'production' ? 'http://localhost:3000/api/v1/auth/google/callback' : process.env.GOOGLE_REDIRECT_URI
+  // Previously keyed on VERCEL_ENV, which sent preprod through the localhost
+  // callback and made Google login impossible there.
+  const redirectUri = getGoogleRedirectUri()
 
   if (!clientId || !redirectUri) {
     return {
@@ -23,7 +22,10 @@ export default defineEventHandler((event) => {
     sameSite: 'lax',
     path: '/',
     maxAge: 60 * 10, // 10 minutes
-    secure: isDev,
+    // Was `secure: isDev` — inverted, so the state cookie was dropped by the
+    // browser on http://localhost (login could never complete locally) and sent
+    // without the Secure attribute in production.
+    secure: useSecureCookies(),
   })
 
   const params = new URLSearchParams({

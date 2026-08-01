@@ -13,7 +13,7 @@ export default defineEventHandler(async (event) => {
   if (!dateId || !slug) {
     throw funnelReporter.funnelCreateError({ statusCode: 400, code: 'ASSIGN_NO_PARAMS', step: 'details', origin: { field: 'slug|dateId', received: { slug, dateId } }, message: 'slug et dateId requis' })
   }
-  const { dealId, booked_places, is_option, expiracy_date, nbTravelers: bodyNbTravelers, alreadyPaid: bodyAlreadyPaid } = await readBody(event)
+  const { dealId, booked_places, is_option, expiracy_date, nbTravelers: bodyNbTravelers, alreadyPaid: bodyAlreadyPaid, paymentType } = await readBody(event)
   if (!dealId) {
     throw funnelReporter.funnelCreateError({ statusCode: 400, code: 'ASSIGN_NO_DEALID', step: 'details', origin: { field: 'dealId', received: null }, message: 'dealId requis' })
   }
@@ -133,11 +133,16 @@ export default defineEventHandler(async (event) => {
   if (is_option) {
     Object.assign(data_to_update, { stage: '27', currentStep: 'A posé une option' })
   }
-  Object.assign(data_to_update, { paiementLink: `${origin}/checkout?type=balance&booked_id=${bookedDate.id}` })
+  // Lien signé sur le deal (server/utils/paymentLink.js) : contrairement à
+  // `booked_id`, il survit à la suppression de la ligne booked_dates.
+  const paiementLink = paymentLink.buildCheckoutUrl(origin, dealId, paymentType || 'balance')
+  Object.assign(data_to_update, { paiementLink })
   await activecampaign.updateDeal(dealId, data_to_update)
 
   await logDateActivity(dateId, bookingUser, 'deal_assigned', { deal_id: dealId, booked_places: bookedPlaceCount })
 
   console.log(`[assign-deal] DONE dealId=${dealId} bookedId=${bookedDate.id} totalTime=${Date.now() - startTime}ms`)
-  return bookedDate
+  // `paiementLink` est renvoyé pour que le funnel réutilise le lien signé au
+  // lieu d'en reconstruire un à partir du booked_id (useStepperDeal).
+  return { ...bookedDate, paiementLink }
 })

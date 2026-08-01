@@ -8,10 +8,6 @@ import dayjs from 'dayjs'
 // rather than re-querying the DB per row like the single-date util does.
 
 export default defineEventHandler(async (event) => {
-  const config = useRuntimeConfig()
-  const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
-  if (isProdEnv) requireBookingUser(event)
-
   const { slug } = event.context.params
   if (!slug) throw createError({ statusCode: 400, statusMessage: 'slug requis' })
 
