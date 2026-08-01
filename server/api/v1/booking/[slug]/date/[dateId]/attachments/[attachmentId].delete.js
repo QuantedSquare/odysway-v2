@@ -15,6 +15,7 @@ console.log('bookingUser', bookingUser)
     .select('*')
     .eq('id', attachmentId)
     .eq('travel_date_id', dateId)
+    .eq('deleted', false)
     .single()
 
   if (fetchError || !attachment) {
@@ -25,22 +26,16 @@ console.log('bookingUser', bookingUser)
     throw createError({ statusCode: 403, statusMessage: 'Non autorisé à supprimer ce fichier' })
   }
 
-  const { error: storageError } = await supabase
-    .storage
-    .from('date-attachments')
-    .remove([attachment.storage_path])
+  // L'objet Storage n'est PAS supprimé : une pièce jointe restaurée doit
+  // retrouver son fichier, pas un 404. Le nettoyage du bucket relève du futur
+  // job de purge, qui devra vider le Storage avant de supprimer les lignes.
+  const removed = await softDelete.remove('date_attachments', q => q.eq('id', attachmentId), {
+    user: bookingUser,
+    reason: softDelete.REASONS.MANUAL,
+  })
 
-  if (storageError) {
-    console.error('Error deleting file from storage:', storageError)
-  }
-
-  const { error: deleteError } = await supabase
-    .from('date_attachments')
-    .delete()
-    .eq('id', attachmentId)
-
-  if (deleteError) {
-    throw createError({ statusCode: 500, statusMessage: deleteError.message })
+  if (removed.error) {
+    throw createError({ statusCode: 500, statusMessage: removed.error })
   }
 
   return { success: true }

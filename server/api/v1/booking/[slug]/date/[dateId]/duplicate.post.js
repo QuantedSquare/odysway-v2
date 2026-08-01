@@ -15,6 +15,7 @@ export default defineEventHandler(async (event) => {
     .select('*')
     .eq('id', dateId)
     .eq('travel_slug', slug)
+    .eq('deleted', false)
     .single()
   if (error || !original) {
     throw createError({ statusCode: 404, statusMessage: 'Date introuvable' })
@@ -29,7 +30,15 @@ export default defineEventHandler(async (event) => {
   delete rest.status
   // Never carry over the departure deal — it belongs to the original date only
   delete rest.departure_id
-  const newDate = { ...rest, booked_seat: 0, status: 'soon_confirmed' }
+  // Ne jamais recopier la pierre tombale : `select('*')` ramène désormais les
+  // colonnes de soft delete, et dupliquer une date supprimée produirait une
+  // date invisible sans la moindre erreur.
+  delete rest.deleted
+  delete rest.deleted_at
+  delete rest.deleted_by
+  delete rest.deleted_reason
+  delete rest.deleted_batch
+  const newDate = { ...rest, booked_seat: 0, status: 'soon_confirmed', deleted: false }
 
   // Insert new row
   const { data: inserted, error: insertError } = await supabase

@@ -62,12 +62,7 @@ export default defineEventHandler(async (event) => {
 
   // 4. Aggregate seat count and update travel_dates status
   try {
-    const { data: allBooked } = await supabase
-      .from('booked_dates')
-      .select('booked_places')
-      .eq('travel_date_id', dateId)
-    const totalBooked = (allBooked || []).reduce((acc, row) => acc + (row.booked_places || 0), 0)
-    await booking.updateTravelDate(dateId, totalBooked)
+    await booking.recomputeBookedSeatAndStatus(dateId)
     lap('updateTravelDate')
   }
   catch (err) {

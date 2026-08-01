@@ -12,6 +12,16 @@
         {{ mdiFormatListBulleted }}
       </v-icon>
       Notes & discussion
+      <v-spacer />
+      <v-switch
+        v-model="showDeleted"
+        label="Supprimées"
+        color="error"
+        density="compact"
+        hide-details
+        class="flex-grow-0 text-caption"
+        @update:model-value="fetchNotes"
+      />
     </v-card-title>
     <v-card-text>
       <div
@@ -65,8 +75,26 @@
               <span class="text-caption text-medium-emphasis">
                 {{ dayjs(note.created_at).format('DD/MM/YYYY HH:mm') }}
               </span>
+              <span
+                v-if="note.deleted"
+                class="text-caption text-error"
+              >
+                supprimée par {{ note.deleted_by || '?' }}
+              </span>
               <v-btn
-                v-if="canDelete(note)"
+                v-if="note.deleted"
+                icon
+                size="x-small"
+                color="primary"
+                variant="text"
+                @click="restoreNote(note)"
+              >
+                <v-icon size="14">
+                  {{ mdiRestore }}
+                </v-icon>
+              </v-btn>
+              <v-btn
+                v-else-if="canDelete(note)"
                 icon
                 size="x-small"
                 color="error"
@@ -188,9 +216,9 @@ import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { useEditor, EditorContent } from '@tiptap/vue-3'
 import StarterKit from '@tiptap/starter-kit'
 import Link from '@tiptap/extension-link'
-import { mdiDelete, mdiFormatListBulleted, mdiLinkVariant } from '@mdi/js'
+import { mdiDelete, mdiFormatListBulleted, mdiLinkVariant, mdiRestore } from '@mdi/js'
 import dayjs from 'dayjs'
-import { bookingApi } from '~/utils/bookingApi'
+import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 
 const props = defineProps({
   slug: { type: String, required: true },
@@ -203,6 +231,7 @@ const loading = ref(true)
 const submitting = ref(false)
 const linkDialog = ref(false)
 const linkUrl = ref('')
+const showDeleted = ref(false)
 
 const editor = useEditor({
   extensions: [
@@ -248,13 +277,28 @@ function applyLink() {
 
 async function fetchNotes() {
   try {
-    notes.value = await bookingApi.getNotes(props.slug, props.dateId)
+    notes.value = await bookingApi.getNotes(
+      props.slug,
+      props.dateId,
+      showDeleted.value ? { includeDeleted: true } : {},
+    )
   }
   catch (err) {
     console.error('Error fetching notes:', err)
   }
   finally {
     loading.value = false
+  }
+}
+
+async function restoreNote(note) {
+  if (!confirm('Restaurer cette note ?')) return
+  try {
+    await bookingApi.restoreChild(props.slug, props.dateId, 'note', note.id)
+    await fetchNotes()
+  }
+  catch (err) {
+    alert(getApiErrorMessage(err, 'Erreur lors de la restauration'))
   }
 }
 

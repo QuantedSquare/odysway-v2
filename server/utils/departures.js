@@ -52,6 +52,7 @@ const computeDepartureEnrichment = async (travelDateId, travelDate) => {
     .from('booked_dates')
     .select('deal_id, booked_places')
     .eq('travel_date_id', travelDateId)
+    .eq('deleted', false)
     .gt('booked_places', 0)
 
   let totalValue = 0
@@ -239,10 +240,16 @@ const cleanupDepartureDealIfEmpty = async (travelDateId) => {
 
     if (fetchError || !travelDate || !travelDate.departure_id) return
 
+    // ⚠️ Le .eq('deleted', false) est indispensable : cette sonde supposait que la
+    // ligne était PHYSIQUEMENT absente. Une réservation soft-deleted garde
+    // booked_places > 0 (la restauration doit être exacte), donc sans ce filtre la
+    // sonde conclut « il reste des clients payants » et le deal de départ
+    // pipeline 4 n'est plus jamais nettoyé.
     const { data: remainingPaid } = await supabase
       .from('booked_dates')
       .select('id')
       .eq('travel_date_id', travelDateId)
+      .eq('deleted', false)
       .gt('booked_places', 0)
       .limit(1)
 

@@ -16,6 +16,7 @@ export default defineEventHandler(async (event) => {
     .select('id, margin_override_per_traveler, real_traveler_count_override')
     .eq('id', dateId)
     .eq('travel_slug', slug)
+    .eq('deleted', false)
     .single()
 
   if (existingError || !existing) {

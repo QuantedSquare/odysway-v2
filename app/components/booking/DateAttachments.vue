@@ -12,6 +12,16 @@
         {{ mdiPaperclip }}
       </v-icon>
       Fichiers joints
+      <v-spacer />
+      <v-switch
+        v-model="showDeleted"
+        label="Supprimés"
+        color="error"
+        density="compact"
+        hide-details
+        class="flex-grow-0 text-caption"
+        @update:model-value="fetchAttachments"
+      />
     </v-card-title>
     <v-card-text>
       <div
@@ -37,7 +47,7 @@
           v-for="(attachment, idx) in attachments"
           :key="attachment.id"
           class="d-flex align-center py-2 px-2 rounded"
-          :class="idx % 2 === 0 ? 'bg-surface-variant' : ''"
+          :class="[idx % 2 === 0 ? 'bg-surface-variant' : '', attachment.deleted ? 'opacity-60' : '']"
         >
           <v-icon
             size="20"
@@ -52,6 +62,12 @@
             </div>
             <div class="text-caption text-medium-emphasis">
               {{ formatFileSize(attachment.file_size) }} — {{ dayjs(attachment.created_at).format('DD/MM/YYYY HH:mm') }}
+              <span
+                v-if="attachment.deleted"
+                class="text-error"
+              >
+                · supprimé par {{ attachment.deleted_by || '?' }}
+              </span>
             </div>
           </div>
           <v-btn
@@ -65,6 +81,17 @@
             <v-icon>{{ mdiDownload }}</v-icon>
           </v-btn>
           <v-btn
+            v-if="attachment.deleted"
+            icon
+            size="x-small"
+            color="primary"
+            variant="text"
+            @click="restoreFile(attachment)"
+          >
+            <v-icon>{{ mdiRestore }}</v-icon>
+          </v-btn>
+          <v-btn
+            v-else
             icon
             size="x-small"
             color="error"
@@ -115,7 +142,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { mdiDelete, mdiDownload, mdiPaperclip } from '@mdi/js'
+import { mdiDelete, mdiDownload, mdiPaperclip, mdiRestore } from '@mdi/js'
 import dayjs from 'dayjs'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 import { formatFileSize, maxFileSizeRule, mimeIcon, mimeIconColor } from '~/utils/fileDisplay'
@@ -131,10 +158,26 @@ const selectedFile = ref(null)
 const uploading = ref(false)
 const uploadError = ref('')
 const downloadingId = ref(null)
+const showDeleted = ref(false)
+
+async function restoreFile(attachment) {
+  if (!confirm('Restaurer ce fichier ?')) return
+  try {
+    await bookingApi.restoreChild(props.slug, props.dateId, 'attachment', attachment.id)
+    await fetchAttachments()
+  }
+  catch (err) {
+    alert(getApiErrorMessage(err, 'Erreur lors de la restauration'))
+  }
+}
 
 async function fetchAttachments() {
   try {
-    attachments.value = await bookingApi.getAttachments(props.slug, props.dateId)
+    attachments.value = await bookingApi.getAttachments(
+      props.slug,
+      props.dateId,
+      showDeleted.value ? { includeDeleted: true } : {},
+    )
   }
   catch (err) {
     console.error('Error fetching attachments:', err)

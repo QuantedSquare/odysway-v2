@@ -3,10 +3,14 @@ export default defineNuxtRouteMiddleware(async () => {
   let query = buildQuery(route)
 
   // Try to find an existing booked date
+  // NB : ce filtre est une correction de justesse, pas un contrôle de sécurité —
+  // la requête part du navigateur avec la clé anon. L'exposition de lecture sur
+  // booked_dates est préexistante et relève d'un ticket RLS à part.
   const { data: existingBookedDate, error: bookedDateError } = await supabase
     .from('booked_dates')
     .select('*')
     .eq('deal_id', route.query.orderId)
+    .eq('deleted', false)
 
   console.log('===========existingBookedDate in oldPayementLinkRedirection.js===========', existingBookedDate)
   if (bookedDateError) {
@@ -33,6 +37,7 @@ export default defineNuxtRouteMiddleware(async () => {
     .select('*')
     .eq('departure_date', deal.departureDate)
     .eq('travel_slug', deal.slug)
+    .eq('deleted', false)
 
   console.log('===========existingTravelDate in oldPayementLinkRedirection.js===========', existingTravelDate)
   if (travelDateError) {

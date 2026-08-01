@@ -31,16 +31,19 @@ export const bookingApi = {
 
   // Backoffice (booking-management)
   getAllDates: () => apiRequest('/booking/all-dates'),
-  getDatesBySlug: slug => apiRequest(`/booking/${encodeURIComponent(slug)}/dates`),
-  getDateById: dateId => apiRequest(`/booking/date/${encodeURIComponent(dateId)}`),
+  // params accepte { includeDeleted: true } pour alimenter la Corbeille.
+  getDatesBySlug: (slug, params = {}) =>
+    apiRequest(`/booking/${encodeURIComponent(slug)}/dates${encodeQuery(params)}`),
+  getDateById: (dateId, params = {}) =>
+    apiRequest(`/booking/date/${encodeURIComponent(dateId)}${encodeQuery(params)}`),
   updateDate: (slug, dateId, payload) =>
     apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}`, 'put', payload),
   deleteDate: (slug, dateId) =>
     apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}`, 'delete'),
   duplicateDate: (slug, dateId) =>
     apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/duplicate`, 'post'),
-  getBooked: (slug, dateId) =>
-    apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/booked`),
+  getBooked: (slug, dateId, params = {}) =>
+    apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/booked${encodeQuery(params)}`),
   deleteBooked: (slug, dateId, bookedId) =>
     apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/booked/${encodeURIComponent(bookedId)}`, 'delete'),
   assignDeal: (slug, dateId, payload) =>
@@ -51,6 +54,20 @@ export const bookingApi = {
     apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/assign-departure-deal`, 'delete'),
   addDate: payload => apiRequest('/booking/add-date', 'post', payload),
 
+  // Restauration (soft delete) — voir supabase/migrations/20260801090000_soft_delete.sql
+  restoreDate: (slug, dateId) =>
+    apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/restore`, 'post'),
+  restoreBooked: (slug, dateId, bookedId) =>
+    apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/booked/${encodeURIComponent(bookedId)}/restore`, 'post'),
+  // resource: 'note' | 'attachment' | 'invoice'
+  restoreChild: (slug, dateId, resource, id) =>
+    apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/restore-child`, 'post', { resource, id }),
+
+  // Corbeille globale — type: 'all' | 'travel_dates' | 'booked_dates' | 'deals'
+  getTrash: (params = {}) => apiRequest(`/booking/trash${encodeQuery(params)}`),
+  restoreDeal: dealId =>
+    apiRequest(`/booking/trash/deal/${encodeURIComponent(dealId)}/restore`, 'post'),
+
   // Duplicate an AC deal onto a test email (booking-management testing tool)
   duplicateDeal: (dealId, payload) =>
     apiRequest(`/ac/deals/${encodeURIComponent(dealId)}/duplicate`, 'post', payload),
@@ -59,8 +76,8 @@ export const bookingApi = {
   inspectDeal: dealId => apiRequest(`/ac/deals/${encodeURIComponent(dealId)}/inspect`),
 
   // Notes
-  getNotes: (slug, dateId) =>
-    apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/notes`),
+  getNotes: (slug, dateId, params = {}) =>
+    apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/notes${encodeQuery(params)}`),
   addNote: (slug, dateId, payload) =>
     apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/notes`, 'post', payload),
   deleteNote: (slug, dateId, noteId) =>
@@ -71,8 +88,8 @@ export const bookingApi = {
     apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/activity${encodeQuery(params)}`),
 
   // Attachments
-  getAttachments: (slug, dateId) =>
-    apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/attachments`),
+  getAttachments: (slug, dateId, params = {}) =>
+    apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/attachments${encodeQuery(params)}`),
   getUploadUrl: (slug, dateId, payload) =>
     apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/attachments/upload-url`, 'post', payload),
   deleteAttachment: (slug, dateId, attachmentId) =>
@@ -127,8 +144,8 @@ export const bookingApi = {
     apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/margin-override`, 'put', payload),
 
   // Invoices (supplier purchase invoices per date)
-  getInvoices: (slug, dateId) =>
-    apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/invoices`),
+  getInvoices: (slug, dateId, params = {}) =>
+    apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/invoices${encodeQuery(params)}`),
   getInvoiceUploadUrl: (slug, dateId, payload) =>
     apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/invoices/upload-url`, 'post', payload),
   createInvoiceWithoutFile: (slug, dateId, payload) =>

@@ -164,3 +164,39 @@ ALTER TABLE "public"."activecampaign_deals"   REPLICA IDENTITY FULL;
 ALTER TABLE "public"."activecampaign_clients" REPLICA IDENTITY FULL;
 ALTER TABLE "public"."travel_dates"           REPLICA IDENTITY FULL;
 ALTER TABLE "public"."booked_dates"           REPLICA IDENTITY FULL;
+
+-- ============================================================================
+-- Soft delete — colonnes miroir (cf. supabase/migrations/20260801090000_soft_delete.sql)
+-- ============================================================================
+-- ⚠️ CE BLOC DOIT ÊTRE JOUÉ SUR LE PROJET DASHBOARD **AVANT** LA MIGRATION PROD.
+--
+-- mirror-sync (supabase/functions/mirror-sync/index.ts) fait `upsert(record)` avec
+-- la ligne prod BRUTE. Dès que prod gagne une colonne que le miroir n'a pas,
+-- PostgREST répond PGRST204 et TOUT changement sur les 4 tables mirrorées cesse
+-- d'arriver — silencieusement, avec seulement un 500 dans les logs de l'edge function.
+--
+-- Pas de CHECK ici volontairement : le miroir doit accepter tel quel ce que prod
+-- envoie, y compris un état transitoire. Les invariants sont tenus côté prod.
+--
+-- Vérifier aussi dans Supabase prod (Database > Webhooks) que chaque trigger
+-- mirror_sync_* se déclenche sur UPDATE et pas seulement INSERT/DELETE :
+-- un soft delete est un UPDATE. Sinon les suppressions n'atteignent jamais le
+-- miroir et les vues continuent de compter des réservations supprimées.
+DO $$
+DECLARE t text;
+BEGIN
+  FOREACH t IN ARRAY ARRAY[
+    'activecampaign_clients', 'activecampaign_deals', 'travel_dates', 'booked_dates'
+  ] LOOP
+    EXECUTE format('ALTER TABLE public.%I
+        ADD COLUMN IF NOT EXISTS deleted        boolean DEFAULT false,
+        ADD COLUMN IF NOT EXISTS deleted_at     timestamptz,
+        ADD COLUMN IF NOT EXISTS deleted_by     text,
+        ADD COLUMN IF NOT EXISTS deleted_reason text,
+        ADD COLUMN IF NOT EXISTS deleted_batch  uuid', t);
+    EXECUTE format('UPDATE public.%I SET deleted = false WHERE deleted IS NULL', t);
+  END LOOP;
+END $$;
+
+-- Les vues de 03_views.sql filtrent déjà `deleted = false AND is_test = false` :
+-- côté analytique, rien d'autre à faire une fois ces colonnes en place.

@@ -108,6 +108,15 @@
         hide-details
         style="max-width: 180px;"
       />
+      <v-switch
+        v-model="showDeleted"
+        label="Dates supprimées"
+        color="error"
+        density="compact"
+        hide-details
+        class="flex-grow-0"
+        @update:model-value="fetchDates"
+      />
     </div>
 
     <v-card
@@ -128,10 +137,29 @@
         <template #item="{ item }">
           <tr
             class="cursor-pointer"
+            :class="{ 'row-deleted': item.deleted }"
             @click="goToDate(item.id)"
           >
             <td>
+              <v-tooltip
+                v-if="item.deleted"
+                location="top"
+              >
+                <template #activator="{ props: tipProps }">
+                  <v-chip
+                    v-bind="tipProps"
+                    color="error"
+                    label
+                    size="x-small"
+                    variant="tonal"
+                  >
+                    Supprimee
+                  </v-chip>
+                </template>
+                {{ deletedTooltip(item) }}
+              </v-tooltip>
               <v-chip
+                v-else
                 :color="item.is_indiv_travel ? 'info' : item.published ? 'success' : 'warning'"
                 label
                 size="x-small"
@@ -189,6 +217,14 @@
                     Dupliquer
                   </v-list-item>
                   <v-list-item
+                    v-if="item.deleted"
+                    :prepend-icon="mdiRestore"
+                    @click="restoreDate(item)"
+                  >
+                    Restaurer
+                  </v-list-item>
+                  <v-list-item
+                    v-else
                     :prepend-icon="mdiDelete"
                     class="text-error"
                     @click="deleteDate(item)"
@@ -216,7 +252,7 @@ import { useRoute, useRouter } from 'vue-router'
 import dayjs from 'dayjs'
 import isSameOrAfter from 'dayjs/plugin/isSameOrAfter'
 import isSameOrBefore from 'dayjs/plugin/isSameOrBefore'
-import { mdiContentCopy, mdiDotsVertical, mdiDelete, mdiEye, mdiArrowRight, mdiPlus } from '@mdi/js'
+import { mdiContentCopy, mdiDotsVertical, mdiDelete, mdiEye, mdiArrowRight, mdiPlus, mdiRestore } from '@mdi/js'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 
 const loading = ref(false)
@@ -233,6 +269,7 @@ const voyage = ref(null)
 const timeframe = ref('upcoming')
 const publicationFilter = ref('all')
 const sortBy = ref('departure_asc')
+const showDeleted = ref(false)
 
 const headers = [
   { title: 'Publication', key: 'published', sortable: true },
@@ -265,7 +302,7 @@ const fetchDates = async () => {
   loading.value = true
   try {
     voyage.value = voyageSanity.value
-    dates.value = await bookingApi.getDatesBySlug(slug)
+    dates.value = await bookingApi.getDatesBySlug(slug, showDeleted.value ? { includeDeleted: true } : {})
   }
   catch (err) {
     console.error(getApiErrorMessage(err, 'Erreur chargement dates'))
@@ -325,13 +362,53 @@ const duplicateDate = async (date) => {
 }
 
 const deleteDate = async (date) => {
-  if (!confirm('Supprimer cette date ? Attention, toutes les réservations associées à cette date seront également supprimées.')) return
+  if (!confirm('Supprimer cette date ? Les réservations, notes et factures associées seront masquées elles aussi. Tout reste restaurable.')) return
   try {
-    await bookingApi.deleteDate(slug, date.id)
+    const res = await bookingApi.deleteDate(slug, date.id)
+    const c = res?.softDeleted || {}
+    const parts = [
+      c.booked_dates ? `${c.booked_dates} réservation(s)` : null,
+      c.date_notes ? `${c.date_notes} note(s)` : null,
+      c.date_invoices ? `${c.date_invoices} facture(s)` : null,
+      c.date_attachments ? `${c.date_attachments} pièce(s) jointe(s)` : null,
+    ].filter(Boolean)
+    if (parts.length) {
+      alert(`Date masquée — ${parts.join(', ')}. Restaurable via « Dates supprimées ».`)
+    }
     await fetchDates()
   }
   catch (err) {
     alert(getApiErrorMessage(err, 'Erreur lors de la suppression'))
+  }
+}
+
+const deletedTooltip = (item) => {
+  const when = item.deleted_at ? dayjs(item.deleted_at).format('DD/MM/YYYY HH:mm') : 'date inconnue'
+  const who = item.deleted_by || 'auteur inconnu'
+  return `Supprimee le ${when} par ${who} (${item.deleted_reason || 'raison inconnue'})`
+}
+
+const restoreDate = async (date) => {
+  if (!confirm('Restaurer cette date et les éléments supprimés avec elle ?')) return
+  try {
+    const res = await bookingApi.restoreDate(slug, date.id)
+    const messages = []
+    for (const c of res?.conflicts || []) {
+      if (c.type === 'booking_reassigned') {
+        messages.push(`Le deal ${c.deal_id} a été ré-assigné à une autre date depuis : il n'a pas été restauré ici.`)
+      }
+      if (c.type === 'duplicate_active_date') {
+        messages.push('Une date active existe déjà pour ce voyage au même départ — vérifiez les doublons.')
+      }
+    }
+    if (res?.departureDealNeedsRecreation) {
+      messages.push('Le dossier de départ avait été supprimé dans ActiveCampaign et n\'est pas récupérable : recréez-le depuis la fiche de la date.')
+    }
+    if (messages.length) alert(messages.join('\n\n'))
+    await fetchDates()
+  }
+  catch (err) {
+    alert(getApiErrorMessage(err, 'Erreur lors de la restauration'))
   }
 }
 
@@ -378,5 +455,15 @@ onMounted(fetchDates)
 
 .ongoing-pulse {
   animation: pulseGlow 1.8s ease-out infinite;
+}
+
+/* Date soft-deleted : visible mais clairement inactive. */
+.row-deleted {
+  opacity: 0.55;
+}
+
+.row-deleted td {
+  text-decoration: line-through;
+  text-decoration-color: rgba(var(--v-theme-error), 0.5);
 }
 </style>

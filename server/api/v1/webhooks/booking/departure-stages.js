@@ -20,6 +20,7 @@ export default defineEventHandler(async (event) => {
   const { data: rows, error: fetchError } = await supabase
     .from('travel_dates')
     .select('id, departure_date, return_date, booked_seat, min_travelers, departure_id')
+    .eq('deleted', false)
     .not('departure_id', 'is', null)
 
   if (fetchError) {

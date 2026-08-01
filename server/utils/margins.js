@@ -239,6 +239,7 @@ const getMarginForVoyage = async (voyageSlug, year = null) => {
     .from('voyage_margins')
     .select('pax, margin_per_traveler, year, season_id, updated_at, updated_by')
     .eq('voyage_slug', voyageSlug)
+    .eq('deleted', false)
     .order('year', { ascending: false })
     .order('pax', { ascending: true })
 
@@ -265,6 +266,11 @@ const upsertMarginForVoyage = async (voyageSlug, rows, editorEmail, year, season
       margin_per_traveler: r.margin_per_traveler !== null && r.margin_per_traveler !== '' ? Number(r.margin_per_traveler) : null,
       updated_at: new Date().toISOString(),
       updated_by: editorEmail || null,
+      // Sans ça, ON CONFLICT DO UPDATE écrirait droit dans une ligne supprimée
+      // sans lever le drapeau : l'opérateur saisit une marge, voit
+      // « enregistré », et la valeur reste invisible pour toujours tout en
+      // faussant silencieusement tous les calculs de marge du voyage.
+      ...softDelete.clear(),
     }))
 
   if (!payload.length) return []
@@ -353,6 +359,7 @@ const getTotalInvoicesForDate = async (travelDateId) => {
     .from('date_invoices')
     .select('amount')
     .eq('travel_date_id', travelDateId)
+    .eq('deleted', false)
 
   if (error) throw error
   return (data || []).reduce((acc, r) => acc + Number(r.amount || 0), 0)
@@ -429,6 +436,7 @@ const resolveBaseMarginPerPax = async (travelDate, realPax) => {
       .from('voyage_margins')
       .select('margin_per_traveler, year, season_id')
       .eq('voyage_slug', travelDate.travel_slug)
+      .eq('deleted', false)
       .eq('pax', realPax)
       .not('margin_per_traveler', 'is', null),
   ])

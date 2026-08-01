@@ -17,6 +17,50 @@
     </v-row>
 
     <template v-else>
+      <!-- Date supprimée : bandeau + restauration -->
+      <v-alert
+        v-if="form.deleted"
+        type="error"
+        variant="tonal"
+        class="mb-4"
+        :icon="mdiDelete"
+      >
+        <div class="d-flex align-center justify-space-between flex-wrap ga-3">
+          <div>
+            <strong>Cette date est supprimée.</strong>
+            <div class="text-body-2">
+              Supprimée le
+              {{ form.deleted_at ? dayjs(form.deleted_at).format('DD/MM/YYYY à HH:mm') : '?' }}
+              par {{ form.deleted_by || '?' }}. Elle n'apparaît plus sur le site ni dans les
+              compteurs. Les modifications sont désactivées tant qu'elle n'est pas restaurée.
+            </div>
+          </div>
+          <v-btn
+            color="error"
+            variant="flat"
+            size="small"
+            :prepend-icon="mdiRestore"
+            @click="restoreDate"
+          >
+            Restaurer la date
+          </v-btn>
+        </div>
+      </v-alert>
+
+      <!-- Réservations orphelines (deal AC sans email) -->
+      <v-alert
+        v-if="orphanTravelers.length"
+        type="warning"
+        variant="tonal"
+        class="mb-4"
+      >
+        <strong>{{ orphanTravelers.length }} réservation(s) sans email côté ActiveCampaign.</strong>
+        <div class="text-body-2">
+          Elles ne sont plus supprimées automatiquement. Vérifiez le deal, puis supprimez-les
+          manuellement depuis la liste si elles sont bien obsolètes.
+        </div>
+      </v-alert>
+
       <!-- Header -->
       <v-row class="align-center mb-4">
         <v-col
@@ -664,6 +708,52 @@
                 </v-card-text>
               </v-card>
 
+              <!-- Réservations supprimées (Corbeille) -->
+              <v-card
+                v-if="deletedTravelers.length"
+                class="mt-4 bo-card"
+                rounded="lg"
+                elevation="0"
+              >
+                <v-card-text class="pa-4">
+                  <v-expansion-panels variant="accordion">
+                    <v-expansion-panel>
+                      <v-expansion-panel-title>
+                        <span class="bo-section-title mb-0">
+                          Voyageurs supprimés ({{ deletedTravelers.length }})
+                        </span>
+                      </v-expansion-panel-title>
+                      <v-expansion-panel-text>
+                        <div
+                          v-for="traveler in deletedTravelers"
+                          :key="traveler.id"
+                          class="d-flex align-center justify-space-between py-2"
+                        >
+                          <div>
+                            <div class="text-body-2 font-weight-medium">
+                              {{ traveler.name || traveler.email || `Deal ${traveler.deal_id}` }}
+                            </div>
+                            <div class="text-caption text-medium-emphasis">
+                              {{ deletedTravelerTooltip(traveler) }}
+                              · {{ traveler.booked_places }} place(s)
+                            </div>
+                          </div>
+                          <v-btn
+                            size="x-small"
+                            variant="text"
+                            color="primary"
+                            :prepend-icon="mdiRestore"
+                            @click="restoreTraveler(traveler.id)"
+                          >
+                            Restaurer
+                          </v-btn>
+                        </div>
+                      </v-expansion-panel-text>
+                    </v-expansion-panel>
+                  </v-expansion-panels>
+                </v-card-text>
+              </v-card>
+
               <!-- Notes -->
               <DateNotes
                 :slug="slug"
@@ -980,7 +1070,7 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { mdiArrowRight, mdiDelete, mdiLinkEdit, mdiInformationOutline, mdiAirplaneTakeoff, mdiCalendarOutline, mdiContentCopy, mdiCalculator, mdiFileDocument, mdiContentDuplicate, mdiLinkVariant, mdiEmailOutline, mdiClockPlusOutline } from '@mdi/js'
+import { mdiArrowRight, mdiDelete, mdiLinkEdit, mdiInformationOutline, mdiAirplaneTakeoff, mdiCalendarOutline, mdiContentCopy, mdiCalculator, mdiFileDocument, mdiContentDuplicate, mdiLinkVariant, mdiEmailOutline, mdiClockPlusOutline, mdiRestore } from '@mdi/js'
 import dayjs from 'dayjs'
 import DateFormCard from '~/components/booking/DateFormCard.vue'
 import DateAttachments from '~/components/booking/DateAttachments.vue'
@@ -1002,6 +1092,10 @@ const config = useRuntimeConfig()
 const form = ref({})
 const bookedTravelers = ref([])
 const prospectTravelers = ref([])
+const deletedTravelers = ref([])
+// Réservations dont le deal AC existe mais n'a pas d'email. booked.get.js les
+// supprimait en dur pendant un simple GET ; elles sont désormais signalées ici.
+const orphanTravelers = ref([])
 const loading = ref(true)
 const sanity = useSanity()
 const snackbar = ref(false)
@@ -1088,17 +1182,62 @@ const previewDate = computed(() => ({
 
 const fetchDetails = async () => {
   try {
+    // includeDeleted : la fiche doit pouvoir s'ouvrir sur une date supprimée
+    // (bandeau + bouton Restaurer) et lister les voyageurs supprimés.
     const [date, travelers] = await Promise.all([
-      bookingApi.getDateById(dateId),
-      bookingApi.getBooked(slug, dateId),
+      bookingApi.getDateById(dateId, { includeDeleted: true }),
+      bookingApi.getBooked(slug, dateId, { includeDeleted: true }),
     ])
     form.value = { ...date, index: 0, badges: date.badges || date.displayed_badges }
-    bookedTravelers.value = (travelers || []).filter(traveler => traveler.booked_places > 0)
-    prospectTravelers.value = (travelers || []).filter(traveler => traveler.booked_places === 0)
+    const active = (travelers || []).filter(t => !t.deleted)
+    bookedTravelers.value = active.filter(traveler => traveler.booked_places > 0)
+    prospectTravelers.value = active.filter(traveler => traveler.booked_places === 0)
+    deletedTravelers.value = (travelers || []).filter(t => t.deleted)
+    orphanTravelers.value = active.filter(t => t.orphan)
   }
   finally {
     loading.value = false
   }
+}
+
+const restoreDate = async () => {
+  if (!confirm('Restaurer cette date et les éléments supprimés avec elle ?')) return
+  try {
+    const res = await bookingApi.restoreDate(slug, dateId)
+    const messages = []
+    for (const c of res?.conflicts || []) {
+      if (c.type === 'booking_reassigned') {
+        messages.push(`Le deal ${c.deal_id} a été ré-assigné à une autre date depuis : il n'a pas été restauré ici.`)
+      }
+      if (c.type === 'duplicate_active_date') {
+        messages.push('Une date active existe déjà pour ce voyage au même départ — vérifiez les doublons.')
+      }
+    }
+    if (res?.departureDealNeedsRecreation) {
+      messages.push('Le dossier de départ avait été supprimé dans ActiveCampaign et n\'est pas récupérable : recréez-le ci-dessous.')
+    }
+    if (messages.length) alert(messages.join('\n\n'))
+    await fetchDetails()
+  }
+  catch (err) {
+    alert(getApiErrorMessage(err, 'Erreur lors de la restauration'))
+  }
+}
+
+const restoreTraveler = async (id) => {
+  if (!confirm('Restaurer cette réservation ?')) return
+  try {
+    await bookingApi.restoreBooked(slug, dateId, id)
+    await fetchDetails()
+  }
+  catch (err) {
+    alert(getApiErrorMessage(err, 'Erreur lors de la restauration'))
+  }
+}
+
+const deletedTravelerTooltip = (t) => {
+  const when = t.deleted_at ? dayjs(t.deleted_at).format('DD/MM/YYYY HH:mm') : 'date inconnue'
+  return `Supprimee le ${when} par ${t.deleted_by || 'auteur inconnu'} (${t.deleted_reason || 'raison inconnue'})`
 }
 
 const onSave = async () => {
@@ -1240,8 +1379,15 @@ const onDuplicateDeal = async () => {
 }
 
 const deleteTraveler = async (id) => {
-  if (!confirm('Supprimer ce voyageur ?')) return
-  await bookingApi.deleteBooked(slug, dateId, id)
+  if (!confirm('Supprimer ce voyageur ? La réservation sera masquée et restera restaurable.')) return
+  // Sans ce try/catch, toute erreur serveur remontait en rejet non géré : la
+  // liste n'était pas rafraîchie et l'utilisateur voyait un no-op silencieux.
+  try {
+    await bookingApi.deleteBooked(slug, dateId, id)
+  }
+  catch (err) {
+    alert(getApiErrorMessage(err, 'Erreur lors de la suppression du voyageur'))
+  }
   await fetchDetails()
 }
 

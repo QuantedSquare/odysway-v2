@@ -28,7 +28,7 @@ export default defineEventHandler(async (event) => {
 
   const [marginRows, seasonRows, settingsRows, travelDates] = await Promise.all([
     fetchAllPaginated(() =>
-      supabase.from('voyage_margins').select('voyage_slug, pax, year, season_id, margin_per_traveler'),
+      supabase.from('voyage_margins').select('voyage_slug, pax, year, season_id, margin_per_traveler').eq('deleted', false),
     ),
     fetchAllPaginated(() =>
       supabase.from('voyage_margin_seasons').select('id, voyage_slug, label, sort_order'),

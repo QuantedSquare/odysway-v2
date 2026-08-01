@@ -74,7 +74,8 @@ export default defineEventHandler(async (event) => {
     supabase
       .from('voyage_margins')
       .select('pax, margin_per_traveler, year, season_id')
-      .eq('voyage_slug', slug),
+      .eq('voyage_slug', slug)
+      .eq('deleted', false),
     margins.getSeasonsForVoyage(slug),
     margins.getSettingsForVoyage(slug),
   ])

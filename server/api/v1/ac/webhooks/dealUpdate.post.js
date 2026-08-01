@@ -21,6 +21,10 @@ const toBool = (val) => {
   return val === 'Oui' || val === true || val === 'true' || val === '1'
 }
 
+// Auteur des suppressions/restaurations déclenchées par ce webhook, dans la
+// piste d'audit (deleted_by, date_activity_log).
+const AC_USER = { email: 'activecampaign' }
+
 export default defineEventHandler(async (event) => {
   const { token } = getQuery(event)
   if (!token || token !== process.env.ACTIVECAMPAIGN_WEBHOOK_TOKEN) {
@@ -127,26 +131,35 @@ export default defineEventHandler(async (event) => {
         // Continue with Supabase cleanup even if ActiveCampaign deletion fails
         }
 
-        console.log('Attempting to delete deal from Supabase with dealId:', dealId)
+        console.log('Attempting to soft delete deal from Supabase with dealId:', dealId)
         try {
-          await booking.deleteBookedDateByDealId(dealId)
-          console.log('Deal deleted from Supabase successfully')
+          await booking.softDeleteBookedDateByDealId(dealId, {
+            user: AC_USER,
+            reason: softDelete.REASONS.AC_DEAL_TRASHED,
+          })
+          console.log('Deal soft deleted from Supabase successfully')
 
-          // Update travel_dates.booked_seat
-          console.log('Attempting to update travel_dates.booked_seat with travel_date_id:', travel_date_id)
-          const allBooked = await booking.retrieveBookedPlacesByTravelDateId(travel_date_id)
-          const totalBooked = allBooked.reduce((acc, row) => acc + (row.booked_places || 0), 0)
-          await booking.updateTravelDate(travel_date_id, totalBooked)
+          await booking.recomputeBookedSeatAndStatus(travel_date_id)
           console.log('Booked places updated successfully, travel_date_id:', travel_date_id)
 
           // Remove departure record deal if no paying clients remain
           await departures.cleanupDepartureDealIfEmpty(travel_date_id)
+
+          await logDateActivity(travel_date_id, AC_USER, 'deal_removed', {
+            deal_id: dealId, booked_id: bookedRow.id, source: 'ac_deal_trashed',
+          })
         }
         catch (bookingError) {
           console.error('Error in booking operations:', bookingError)
           // Continue with the process even if booking operations fail
         }
       }
+      // La ligne miroir suivait le deal vers la corbeille sans être marquée —
+      // incohérence avec dealDelete, qui lui la supprimait.
+      await softDelete.remove('activecampaign_deals', q => q.eq('id', dealId), {
+        user: AC_USER,
+        reason: softDelete.REASONS.AC_DEAL_TRASHED,
+      })
       return { success: true }
     }
     else if (['Perdu', 'Supprimé'].includes(mapDealStatus(fetchedDeal.status))) {
@@ -160,26 +173,65 @@ export default defineEventHandler(async (event) => {
       else {
         const travel_date_id = bookedRow.travel_date_id
 
-        console.log('Attempting to delete deal from Supabase with dealId:', dealId)
+        console.log('Attempting to soft delete deal from Supabase with dealId:', dealId)
         try {
-          await booking.deleteBookedDateByDealId(dealId)
-          console.log('Deal deleted from Supabase successfully')
+          await booking.softDeleteBookedDateByDealId(dealId, {
+            user: AC_USER,
+            reason: softDelete.REASONS.AC_DEAL_LOST,
+          })
+          console.log('Deal soft deleted from Supabase successfully')
 
-          // Update travel_dates.booked_seat
-          console.log('Attempting to update travel_dates.booked_seat with travel_date_id:', travel_date_id)
-          const allBooked = await booking.retrieveBookedPlacesByTravelDateId(travel_date_id)
-          const totalBooked = allBooked.reduce((acc, row) => acc + (row.booked_places || 0), 0)
-          await booking.updateTravelDate(travel_date_id, totalBooked)
+          await booking.recomputeBookedSeatAndStatus(travel_date_id)
           console.log('Booked places updated successfully, travel_date_id:', travel_date_id)
 
           // Remove departure record deal if no paying clients remain
           await departures.cleanupDepartureDealIfEmpty(travel_date_id)
+
+          await logDateActivity(travel_date_id, AC_USER, 'deal_removed', {
+            deal_id: dealId, booked_id: bookedRow.id, source: 'ac_deal_lost',
+          })
         }
         catch (bookingError) {
           console.error('Error in booking operations:', bookingError)
           // Continue with the process even if booking operations fail
         }
       }
+    }
+    else {
+      // Branche inverse : le deal revient à un état vivant (Ouvert / Gagné, hors
+      // corbeille). Si sa réservation porte une pierre tombale posée par l'un
+      // des deux cas ci-dessus, on la ressuscite.
+      //
+      // Sans ça, marquer un deal « Perdu » par erreur serait une porte à sens
+      // unique — précisément le mode de défaillance que le soft delete existe
+      // pour éliminer.
+      const tombstone = await booking.retrieveBookedDateByDealId(dealId, { includeDeleted: true })
+      const revivable = [softDelete.REASONS.AC_DEAL_LOST, softDelete.REASONS.AC_DEAL_TRASHED]
+      if (tombstone?.deleted && revivable.includes(tombstone.deleted_reason)) {
+        try {
+          const res = await booking.upsertBookedDateForDeal(dealId, null, {}, {
+            user: AC_USER,
+            allowMove: false,
+            resetOnRevive: false,
+          })
+          if (res.row) {
+            await booking.recomputeBookedSeatAndStatus(res.row.travel_date_id)
+            await logDateActivity(res.row.travel_date_id, AC_USER, 'deal_restored', {
+              deal_id: dealId,
+              booked_id: res.row.id,
+              cause: 'ac_status_reopened',
+              previous_reason: tombstone.deleted_reason,
+              status: fetchedDeal.status,
+            })
+            console.log(`[dealUpdate] réservation ressuscitée dealId=${dealId} bookedId=${res.row.id}`)
+          }
+        }
+        catch (reviveError) {
+          console.error('Error reviving booking after deal reopened:', reviveError)
+        }
+      }
+      // La ligne miroir suit le même chemin de retour.
+      await softDelete.restore('activecampaign_deals', q => q.eq('id', dealId))
     }
 
     // Build a clean "seller" display label from the body's owner names

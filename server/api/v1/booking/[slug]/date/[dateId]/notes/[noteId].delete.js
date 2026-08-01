@@ -15,6 +15,7 @@ export default defineEventHandler(async (event) => {
     .select('*')
     .eq('id', noteId)
     .eq('travel_date_id', dateId)
+    .eq('deleted', false)
     .single()
 
   if (noteError || !note) {
@@ -25,13 +26,13 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 403, statusMessage: 'Non autorisé à supprimer cette note' })
   }
 
-  const { error } = await supabase
-    .from('date_notes')
-    .delete()
-    .eq('id', noteId)
+  const removed = await softDelete.remove('date_notes', q => q.eq('id', noteId), {
+    user: bookingUser,
+    reason: softDelete.REASONS.MANUAL,
+  })
 
-  if (error) {
-    throw createError({ statusCode: 500, statusMessage: error.message })
+  if (removed.error) {
+    throw createError({ statusCode: 500, statusMessage: removed.error })
   }
 
   return { success: true }

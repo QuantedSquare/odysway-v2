@@ -20,6 +20,7 @@ export default defineEventHandler(async (event) => {
     .from('travel_dates')
     .select('id, travel_slug')
     .in('travel_slug', slugList)
+    .eq('deleted', false)
 
   if (tdError) {
     console.error('travelers-count travel_dates error', tdError)

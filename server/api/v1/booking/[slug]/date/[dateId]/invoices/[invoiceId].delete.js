@@ -15,6 +15,7 @@ export default defineEventHandler(async (event) => {
     .select('*')
     .eq('id', invoiceId)
     .eq('travel_date_id', dateId)
+    .eq('deleted', false)
     .single()
 
   if (fetchError || !invoice) {
@@ -25,26 +26,15 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 403, statusMessage: 'Non autorisé à supprimer cette facture' })
   }
 
-  // Only attempt storage removal for invoices that have an attached file —
-  // exception-case rows (no file) have no storage_path.
-  if (invoice.storage_path) {
-    const { error: storageError } = await supabase
-      .storage
-      .from('date-invoices')
-      .remove([invoice.storage_path])
+  // Le PDF reste dans le bucket : une facture restaurée porte des montants
+  // comptables et doit retrouver sa pièce justificative.
+  const removed = await softDelete.remove('date_invoices', q => q.eq('id', invoiceId), {
+    user: bookingUser,
+    reason: softDelete.REASONS.MANUAL,
+  })
 
-    if (storageError) {
-      console.error('Error deleting invoice from storage:', storageError)
-    }
-  }
-
-  const { error: deleteError } = await supabase
-    .from('date_invoices')
-    .delete()
-    .eq('id', invoiceId)
-
-  if (deleteError) {
-    throw createError({ statusCode: 500, statusMessage: deleteError.message })
+  if (removed.error) {
+    throw createError({ statusCode: 500, statusMessage: removed.error })
   }
 
   return { success: true }

@@ -7,6 +7,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TypeDeal> => {
     .from('booked_dates')
     .select('deal_id')
     .eq('id', bookedId)
+    .eq('deleted', false)
     .single()
 
   if (error) {

@@ -14,6 +14,7 @@ export default defineEventHandler(async (event) => {
   const { data, error } = await supabase
     .from('booked_dates')
     .select('*')
+    .eq('deleted', false)
     .eq('is_option', true)
     .lt('expiracy_date', today.toISOString())
 

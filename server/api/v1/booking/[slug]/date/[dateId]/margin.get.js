@@ -11,16 +11,7 @@ export default defineEventHandler(async (event) => {
   }
 
   // Sanity-check the date belongs to this slug.
-  const { data: travelDate, error: tdError } = await supabase
-    .from('travel_dates')
-    .select('id')
-    .eq('id', dateId)
-    .eq('travel_slug', slug)
-    .single()
-
-  if (tdError || !travelDate) {
-    throw createError({ statusCode: 404, statusMessage: 'Date introuvable' })
-  }
+  await booking.requireActiveTravelDate(dateId, slug, { includeDeleted: true })
 
   try {
     const breakdown = await margins.computeMarginForDate(dateId)
