@@ -101,6 +101,7 @@ const getSeasonsForVoyage = async (voyageSlug) => {
     .from('voyage_margin_seasons')
     .select('id, label, start_month, start_day, end_month, end_day, sort_order')
     .eq('voyage_slug', voyageSlug)
+    .eq('deleted', false)
     .order('sort_order', { ascending: true })
 
   if (error) throw error
@@ -108,9 +109,15 @@ const getSeasonsForVoyage = async (voyageSlug) => {
 }
 
 // Replace-all semantics: the editor sends the full season list for the voyage.
-// Seasons dropped from the payload are deleted, which cascades to their
-// voyage_margins rows (ON DELETE CASCADE) — the amounts of a removed season
-// have no meaning left.
+// Seasons dropped from the payload are soft-deleted, and their voyage_margins rows
+// go with them under reason `cascade_margin_season` — the amounts of a removed
+// period have no meaning left, but they stay restorable.
+//
+// La cascade est faite ICI, à la main, et surtout pas laissée à la FK
+// voyage_margins.season_id ON DELETE CASCADE : un DELETE physique sur la saison
+// emporterait les lignes voyage_margins pour de bon, drapeau `deleted` compris.
+// C'est exactement ce que faisait cette fonction avant le passage au soft delete —
+// la seule voie par laquelle des marges pouvaient encore être détruites.
 const replaceSeasonsForVoyage = async (voyageSlug, seasons, editorEmail) => {
   if (!Array.isArray(seasons)) throw new Error('seasons must be an array')
 
@@ -131,11 +138,42 @@ const replaceSeasonsForVoyage = async (voyageSlug, seasons, editorEmail) => {
     throw err
   }
 
+  const user = editorEmail ? { email: editorEmail } : null
+  const batch = softDelete.newBatch()
   const keptIds = normalized.map(s => s.id).filter(Boolean)
-  let deleteQuery = supabase.from('voyage_margin_seasons').delete().eq('voyage_slug', voyageSlug)
-  if (keptIds.length) deleteQuery = deleteQuery.not('id', 'in', `(${keptIds.join(',')})`)
-  const { error: deleteError } = await deleteQuery
-  if (deleteError) throw deleteError
+
+  // L'état réel en base, tombstones compris — il faut les deux moitiés : ce qui
+  // disparaît du payload (à supprimer) et ce qui y revient alors qu'il était
+  // supprimé (à ressusciter, montants compris).
+  const { data: existing, error: existingError } = await supabase
+    .from('voyage_margin_seasons')
+    .select('id, deleted')
+    .eq('voyage_slug', voyageSlug)
+  if (existingError) throw existingError
+
+  const droppedIds = (existing || []).filter(s => !s.deleted && !keptIds.includes(s.id)).map(s => s.id)
+  const revivedIds = (existing || []).filter(s => s.deleted && keptIds.includes(s.id)).map(s => s.id)
+
+  if (droppedIds.length) {
+    // Enfants d'abord, parent ensuite — même raison que la cascade des dates
+    // (index.delete.js) : la séquence n'est pas transactionnelle, et une
+    // exécution partielle doit ressembler à « montants masqués sous une saison
+    // vivante » (visible et réparable) plutôt qu'à « montants vivants sous une
+    // saison morte » (invisible et faux).
+    const removedMargins = await softDelete.remove(
+      'voyage_margins',
+      q => q.in('season_id', droppedIds),
+      { user, reason: softDelete.REASONS.CASCADE_MARGIN_SEASON, batch },
+    )
+    if (removedMargins.error) throw new Error(removedMargins.error)
+
+    const removedSeasons = await softDelete.remove(
+      'voyage_margin_seasons',
+      q => q.in('id', droppedIds),
+      { user, reason: softDelete.REASONS.MANUAL, batch },
+    )
+    if (removedSeasons.error) throw new Error(removedSeasons.error)
+  }
 
   if (!normalized.length) return []
 
@@ -149,6 +187,11 @@ const replaceSeasonsForVoyage = async (voyageSlug, seasons, editorEmail) => {
     voyage_slug: voyageSlug,
     updated_at: new Date().toISOString(),
     updated_by: editorEmail || null,
+    // Même piège que dans upsertMarginForVoyage : sans ça, un ON CONFLICT DO
+    // UPDATE sur une saison supprimée (onglet resté ouvert, édition
+    // concurrente) écrirait dans la pierre tombale sans la lever — la saison
+    // reviendrait « enregistrée » et resterait invisible.
+    ...softDelete.clear(),
   })
 
   const RETURNING = 'id, label, start_month, start_day, end_month, end_day, sort_order'
@@ -178,6 +221,18 @@ const replaceSeasonsForVoyage = async (voyageSlug, seasons, editorEmail) => {
       .select(RETURNING)
     if (error) throw error
     saved.push(...(data || []))
+  }
+
+  // Symétrique exact de la cascade ci-dessus : une saison qui remonte ramène les
+  // montants partis AVEC elle, et seulement ceux-là. Une cellule que l'opérateur
+  // avait supprimée à la main garde sa raison 'manual' et reste masquée — même
+  // règle que la restauration d'une date de départ.
+  if (revivedIds.length) {
+    const restored = await softDelete.restore(
+      'voyage_margins',
+      q => q.in('season_id', revivedIds).eq('deleted_reason', softDelete.REASONS.CASCADE_MARGIN_SEASON),
+    )
+    if (restored.error) throw new Error(restored.error)
   }
 
   return saved.sort((a, b) => a.sort_order - b.sort_order)

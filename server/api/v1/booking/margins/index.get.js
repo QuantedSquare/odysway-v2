@@ -31,7 +31,7 @@ export default defineEventHandler(async (event) => {
       supabase.from('voyage_margins').select('voyage_slug, pax, year, season_id, margin_per_traveler').eq('deleted', false),
     ),
     fetchAllPaginated(() =>
-      supabase.from('voyage_margin_seasons').select('id, voyage_slug, label, sort_order'),
+      supabase.from('voyage_margin_seasons').select('id, voyage_slug, label, sort_order').eq('deleted', false),
     ),
     fetchAllPaginated(() =>
       supabase.from('voyage_margin_settings').select('voyage_slug, config_mode, child_margin_delta'),
