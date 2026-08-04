@@ -33,10 +33,10 @@ export function useStepperDeal() {
 
   const wait = ms => new Promise(resolve => setTimeout(resolve, ms))
 
-  const assignDealWithRetry = async ({ slug, dateId, dealIdToAssign, booked_places = 0, is_option, expiracy_date, nbTravelers, alreadyPaid }, { maxAttempts = 3, baseDelayMs = 700 } = {}) => {
+  const assignDealWithRetry = async ({ slug, dateId, dealIdToAssign, booked_places = 0, is_option, expiracy_date, nbTravelers, alreadyPaid, paymentType }, { maxAttempts = 3, baseDelayMs = 700 } = {}) => {
     assignStatus.value = 'assigning'
     assignError.value = null
-    pendingAssignPayload.value = { slug, dateId, dealIdToAssign, booked_places, is_option, expiracy_date, nbTravelers, alreadyPaid }
+    pendingAssignPayload.value = { slug, dateId, dealIdToAssign, booked_places, is_option, expiracy_date, nbTravelers, alreadyPaid, paymentType }
 
     let lastError = null
     for (let attempt = 1; attempt <= maxAttempts; attempt++) {
@@ -48,6 +48,7 @@ export function useStepperDeal() {
           expiracy_date,
           nbTravelers,
           alreadyPaid,
+          paymentType,
         })
 
         dealId.value = addedBookedDate.deal_id
@@ -104,19 +105,21 @@ export function useStepperDeal() {
         booked_places: 0,
         nbTravelers: body.nbTravelers,
         alreadyPaid: 0,
+        paymentType: route.query.type,
       })
 
       if (!addedBookedDate) return false
 
-      const paiementLink = `https://odysway.com/checkout?type=${route.query.type}&booked_id=${addedBookedDate.id}&step=1`
-      const bodyWithPaymentLink = {
-        dealId: addedBookedDate.deal_id,
-        paiementLink,
+      // Le lien signé est déjà écrit dans AC par assign-deal. On le repousse
+      // seulement s'il est présent, pour ne jamais écraser le champ avec undefined.
+      if (addedBookedDate.paiementLink) {
+        updateDeal({
+          dealId: addedBookedDate.deal_id,
+          paiementLink: addedBookedDate.paiementLink,
+        }, addedBookedDate.id).catch((error) => {
+          console.error('Error updating deal with payment link:', error)
+        })
       }
-
-      updateDeal(bodyWithPaymentLink, addedBookedDate.id).catch((error) => {
-        console.error('Error updating deal with payment link:', error)
-      })
 
       return true
     }

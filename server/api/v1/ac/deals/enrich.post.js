@@ -76,7 +76,9 @@ export default defineEventHandler(async (event) => {
 
   // 5. Update deal with generated links
   try {
-    const paiementLink = `${origin}/checkout?type=balance&booked_id=${bookedId}`
+    // Lien signé sur le deal (server/utils/paymentLink.js) : il reste valide même
+    // si la ligne booked_dates disparaît plus tard.
+    const paiementLink = paymentLink.buildCheckoutUrl(origin, dealId, 'balance')
     const linkBms = `${origin}/booking-management/${slug}/${dateId}`
     await activecampaign.updateDeal(dealId, { linkBms, paiementLink })
     lap('updateDeal (links)')

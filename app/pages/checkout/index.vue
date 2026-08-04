@@ -94,6 +94,9 @@ const checkoutStepperRef = useTemplateRef('checkoutStepperRef')
 // 🧠 Extract query parameters
 const dateId = route.query.date_id
 const bookedId = route.query.booked_id
+// Lien de paiement signé (?d=<dealId>.<signature>). Contrairement à booked_id,
+// il vise le deal et survit à la suppression de la ligne booked_dates.
+const paymentToken = route.query.d
 const voyageSlug = route.query.voyage
 const dealValues = ref(null)
 // 🎯 Local state
@@ -139,19 +142,34 @@ const initCheckout = async () => {
   setContext({ bookedId, dateId, voyageSlug })
   try {
     loading.value = true
-    if (bookedId) {
+    if (bookedId || paymentToken) {
       // ActiveCampaign deal checkout
-      const deal = await apiRequest(`/ac/deals/deal-from-bms?bookedId=${bookedId}`)
+      const query = paymentToken
+        ? `token=${encodeURIComponent(paymentToken)}`
+        : `bookedId=${encodeURIComponent(bookedId)}`
+      const deal = await apiRequest(`/ac/deals/deal-from-bms?${query}`)
       if (!deal) {
         report({
           code: 'AC_DEAL_FROM_BMS_EMPTY',
           step: 'init',
           severity: 'fatal',
-          origin: { field: 'deal', endpoint: '/ac/deals/deal-from-bms', received: bookedId },
-          message: `Aucun deal trouvé pour bookedId ${bookedId}`,
+          origin: { field: 'deal', endpoint: '/ac/deals/deal-from-bms', received: paymentToken || bookedId },
+          message: `Aucun deal trouvé pour ${paymentToken ? `le token ${paymentToken}` : `bookedId ${bookedId}`}`,
         })
-        throw new Error(`No deal found with bookedId ${bookedId}`)
+        throw new Error(`No deal found with ${paymentToken ? `token ${paymentToken}` : `bookedId ${bookedId}`}`)
       }
+
+      // Le reste du funnel (Stripe, Alma, options, tracking de confirmation)
+      // travaille sur booked_id : on normalise l'URL avant de rendre le stepper,
+      // que le client soit arrivé par token ou par un lien réparé.
+      if (deal.bookedId && deal.bookedId !== bookedId) {
+        const { d: _token, ...restQuery } = route.query
+        return await navigateTo(
+          { path: '/checkout', query: { ...restQuery, booked_id: deal.bookedId } },
+          { replace: true },
+        )
+      }
+
       setContext({ dealId: deal?.id, voyageSlug: deal?.slug })
       dealValues.value = buildDynamicDealValues(deal)
       voyage.value = buildVoyageFromAC(deal, imgSrc.value)

@@ -521,7 +521,9 @@ const handlePaymentSession = async (session, paymentType) => {
     Object.assign(dealData, { paiementLink: 'Paiement OK' })
   }
   else {
-    Object.assign(dealData, { paiementLink: `https://odysway.com/checkout?type=balance&booked_id=${order.booked_id}` })
+    // Lien signé sur le deal : il survit à la suppression de la ligne
+    // booked_dates (Corbeille, Perdu, purge BMS). Voir server/utils/paymentLink.js.
+    Object.assign(dealData, { paiementLink: paymentLink.buildCheckoutUrl('https://odysway.com', order.dealId, 'balance') })
   }
 
   console.log('dealData', dealData)

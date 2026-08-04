@@ -58,6 +58,10 @@ export const bookingApi = {
   // Read-only dump of every field of an AC deal (booking-management inspector)
   inspectDeal: dealId => apiRequest(`/ac/deals/${encodeURIComponent(dealId)}/inspect`),
 
+  // Liens de paiement morts : deals sans ligne booked_dates, et leur réparation
+  getBrokenLinks: (params = {}) => apiRequest(`/booking/broken-links${encodeQuery(params)}`),
+  repairBrokenLink: payload => apiRequest('/booking/broken-links/repair', 'post', payload),
+
   // Notes
   getNotes: (slug, dateId) =>
     apiRequest(`/booking/${encodeURIComponent(slug)}/date/${encodeURIComponent(dateId)}/notes`),
