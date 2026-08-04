@@ -3,14 +3,11 @@
     v-if="visible"
     ref="root"
     class="site-banner"
-    :class="[`site-banner--${banner.variant || 'primary'}`, { 'site-banner--open': expanded }]"
+    :class="`site-banner--${banner.variant || 'primary'}`"
     role="region"
     aria-label="Information Odysway"
   >
-    <div
-      class="site-banner__inner"
-      @click="onBarClick"
-    >
+    <div class="site-banner__inner">
       <span
         v-if="banner.tag"
         class="site-banner__tag"
@@ -18,75 +15,51 @@
         {{ banner.tag }}
       </span>
 
-      <div
-        id="site-banner-body"
-        class="site-banner__body"
-      >
-        <div class="site-banner__text">
-          <PortableText
-            :value="banner.content"
-            :components="ptComponents"
-          />
-        </div>
-
-        <NuxtLink
-          v-if="banner.ctaLabel && banner.ctaHref"
-          :to="banner.ctaHref"
-          :target="isExternalCta ? '_blank' : undefined"
-          :rel="isExternalCta ? 'noopener' : undefined"
-          class="site-banner__cta"
-          @click.stop
-        >
-          {{ banner.ctaLabel }}
-          <v-icon size="14">
-            {{ mdiArrowRight }}
-          </v-icon>
-        </NuxtLink>
+      <div class="site-banner__text">
+        <PortableText
+          :value="content"
+          :components="ptComponents"
+        />
       </div>
 
-      <!-- Compact viewports only: the message is truncated to one line and this
-           chevron reveals the full text + the CTA (see the max-width media
-           query). Rendered unconditionally so SSR never depends on breakpoint. -->
-      <button
-        type="button"
-        class="site-banner__toggle"
-        :aria-expanded="expanded"
-        aria-controls="site-banner-body"
-        :aria-label="expanded ? 'Réduire le message' : 'Lire le message complet'"
-        @click.stop="toggle"
+      <NuxtLink
+        v-if="banner.ctaLabel && banner.ctaHref"
+        :to="banner.ctaHref"
+        :target="isExternalCta ? '_blank' : undefined"
+        :rel="isExternalCta ? 'noopener' : undefined"
+        class="site-banner__cta"
       >
-        <v-icon size="20">
-          {{ mdiChevronDown }}
-        </v-icon>
-      </button>
-
-      <button
-        v-if="banner.dismissible !== false"
-        type="button"
-        class="site-banner__close"
-        aria-label="Fermer le bandeau"
-        @click.stop="dismiss"
-      >
-        <v-icon size="18">
-          {{ mdiClose }}
-        </v-icon>
-      </button>
+        {{ banner.ctaLabel }}
+      </NuxtLink>
     </div>
+
+    <!-- Positioned against the full-width bar (not the centered row) so it stays
+         pinned to the viewport edge on wide screens. -->
+    <button
+      v-if="banner.dismissible !== false"
+      type="button"
+      class="site-banner__close"
+      aria-label="Fermer le bandeau"
+      @click="dismiss"
+    >
+      <v-icon size="16">
+        {{ mdiClose }}
+      </v-icon>
+    </button>
   </aside>
 </template>
 
 <script setup>
-import { mdiArrowRight, mdiChevronDown, mdiClose } from '@mdi/js'
-import { useEventListener, useMediaQuery } from '@vueuse/core'
+import { mdiClose } from '@mdi/js'
+import { useEventListener } from '@vueuse/core'
 import { h, resolveComponent } from 'vue'
 import { PortableText } from '@portabletext/vue'
+import { stegaClean } from '@sanity/client/stega'
 
 const DISMISS_KEY = 'odysway-banner-dismissed'
 // Set pre-hydration by the inline script below, and read by the stylesheet, so a
 // visitor who already closed the banner never sees it flash back in.
 const DISMISSED_CLASS = 'odysway-banner-dismissed'
-// Must stay in sync with the `max-width` media query in the stylesheet.
-const COMPACT_QUERY = '(max-width: 959.98px)'
 
 const bannerQuery = groq`*[_type == "siteBanner"][0]{
   _rev,
@@ -105,10 +78,16 @@ const bannerQuery = groq`*[_type == "siteBanner"][0]{
 }`
 const { data: banner } = await useSanityQuery(bannerQuery)
 
+// Visual editing is on for every non-production deploy (see `sanity.stega` in
+// nuxt.config), and it hides its click-to-edit metadata inside each string as a
+// few thousand zero-width characters. U+200B is a legal line-break opportunity,
+// so on a one-line strip the invisible payload wraps into dozens of empty lines
+// and the bar grows from 43px to several hundred. The banner therefore opts out
+// of click-to-edit and renders clean text.
+if (banner.value) banner.value = stegaClean(banner.value)
+
 const root = ref(null)
-const expanded = ref(false)
 const dismissed = ref(false)
-const isCompact = useMediaQuery(COMPACT_QUERY)
 
 // Pages are served through ISR (1 to 5 days), so the server-rendered "now" can
 // be days old. Re-reading the clock on mount is what actually enforces the
@@ -132,6 +111,21 @@ const visible = computed(() => Boolean(banner.value?.enabled)
   && !dismissed.value)
 
 const isExternalCta = computed(() => (banner.value?.ctaHref || '').startsWith('http'))
+
+// The Sanity editor keeps hard line breaks, and PortableText turns each one into
+// a <br>. The bar is a one-line strip, so a message typed on several lines has
+// to be flattened — otherwise a stray Entrée in the CMS doubles its height.
+// Only line breaks are touched: `\s` would also match invisible characters and
+// turn them into visible spaces.
+const content = computed(() => (banner.value?.content || []).map((block) => {
+  if (block._type !== 'block' || !block.children) return block
+  return {
+    ...block,
+    children: block.children.map(child => (
+      typeof child.text === 'string' ? { ...child, text: child.text.replace(/[\r\n]+/g, ' ') } : child
+    )),
+  }
+}))
 
 if (banner.value?.enabled) {
   // Runs before the banner markup is parsed: hides it via CSS when this exact
@@ -172,22 +166,13 @@ function measure() {
   if (!root.value) return
   bannerHeight = root.value.offsetHeight
   syncOffset()
-}
-
-function toggle() {
-  expanded.value = !expanded.value
-}
-
-// Tapping the collapsed bar expands it — the truncated line is a teaser, so the
-// whole strip is the target rather than the chevron alone.
-function onBarClick() {
-  if (!isCompact.value || expanded.value) return
-  expanded.value = true
+  // A long message wraps on narrow screens, so the real bar can be taller than
+  // the static fallback; publish the measured height too.
+  document.body.style.setProperty('--site-banner-h', `${bannerHeight}px`)
 }
 
 function dismiss() {
   dismissed.value = true
-  expanded.value = false
   clearOffset()
   document.documentElement.classList.add(DISMISSED_CLASS)
   try {
@@ -205,16 +190,8 @@ useEventListener('scroll', () => {
   // Cheap: the height is cached, and writeOffset() skips identical values, so
   // scrolling below the banner costs nothing.
   syncOffset()
-  // Scrolling away closes the expanded compact panel.
-  if (lastOffset === 0 && expanded.value) expanded.value = false
 }, { passive: true })
 useEventListener('resize', measure, { passive: true })
-
-// Expanding grows the banner, which has to push the fixed headers down too.
-watch([expanded, isCompact], () => {
-  if (!isCompact.value) expanded.value = false
-  nextTick(measure)
-})
 
 onMounted(() => {
   now.value = Date.now()
@@ -267,17 +244,12 @@ const ptComponents = {
    before hydration can measure the real height — `:has()` keeps it scoped to
    pages that actually render a banner. */
 body:has(.site-banner) {
-  /* Static bar height, for full-screen blocks that need to fit under the
-     banner (hero). Never scroll-linked, so it can't resize content. */
-  --site-banner-h: 40px;
-  --site-banner-offset: 40px;
-}
-
-@media (max-width: 959.98px) {
-  body:has(.site-banner) {
-    --site-banner-h: 44px;
-    --site-banner-offset: 44px;
-  }
+  /* Bar height, for full-screen blocks that need to fit under the banner
+     (hero). Never scroll-linked, so it can't resize content. This is the
+     one-line height with an étiquette; mount-time measurement overwrites it
+     with the real value, which is taller when a long message wraps. */
+  --site-banner-h: 43px;
+  --site-banner-offset: 43px;
 }
 
 /* Dismissed in a previous visit: hidden before the browser paints it. */
@@ -295,8 +267,7 @@ html.odysway-banner-dismissed body {
 .site-banner {
   position: relative;
   flex: none;
-  /* Above both headers (1999) so the expanded panel can overlap them while
-     they catch up with their own `top` transition. */
+  /* Above both headers (1999). */
   z-index: 2000;
   background: var(--sb-bg);
   color: var(--sb-fg);
@@ -308,9 +279,6 @@ html.odysway-banner-dismissed body {
   --sb-fg: #fff;
   --sb-tag-bg: #de5e2c;
   --sb-tag-fg: #fff;
-  --sb-cta-bg: #fff;
-  --sb-cta-fg: #2b4c52;
-  --sb-hover: rgba(255, 255, 255, 0.16);
 }
 
 .site-banner--secondary {
@@ -318,9 +286,6 @@ html.odysway-banner-dismissed body {
   --sb-fg: #fff;
   --sb-tag-bg: #2b4c52;
   --sb-tag-fg: #fff;
-  --sb-cta-bg: #fff;
-  --sb-cta-fg: #db6644;
-  --sb-hover: rgba(255, 255, 255, 0.18);
 }
 
 .site-banner--soft-blush {
@@ -328,35 +293,26 @@ html.odysway-banner-dismissed body {
   --sb-fg: #2b4c52;
   --sb-tag-bg: #de5e2c;
   --sb-tag-fg: #fff;
-  --sb-cta-bg: #2b4c52;
-  --sb-cta-fg: #fff;
-  --sb-hover: rgba(43, 76, 82, 0.08);
 
   border-bottom: 1px solid rgba(43, 76, 82, 0.12);
 }
 
 /* Row --------------------------------------------------------------------- */
+/* Desktop keeps tag / text / link on one centered line. */
 .site-banner__inner {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  min-height: 40px;
-  max-width: 1440px;
+  max-width: 1180px;
   margin-inline: auto;
-  padding: 6px 56px;
+  padding: 11px 52px;
   font-size: 13.5px;
-  line-height: 1.35;
-}
-
-/* Desktop keeps tag / text / CTA on one centered line. */
-.site-banner__body {
-  display: contents;
+  line-height: 1.4;
 }
 
 .site-banner__tag {
-  flex: none;
+  flex: 0 0 auto;
   padding: 3px 10px;
   border-radius: 30px;
   background: var(--sb-tag-bg);
@@ -369,8 +325,8 @@ html.odysway-banner-dismissed body {
 }
 
 .site-banner__text {
+  flex: 0 1 auto;
   min-width: 0;
-  font-weight: 500;
 }
 
 /* Links and images come from PortableText render functions, so they don't
@@ -383,18 +339,6 @@ html.odysway-banner-dismissed body {
   font-weight: 700;
 }
 
-.site-banner__text :deep(.site-banner__link) {
-  color: inherit;
-  font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  transition: opacity 0.2s ease;
-}
-
-.site-banner__text :deep(.site-banner__link:hover) {
-  opacity: 0.75;
-}
-
 .site-banner__text :deep(.site-banner__img) {
   display: inline-block;
   max-height: 20px;
@@ -404,149 +348,82 @@ html.odysway-banner-dismissed body {
   border-radius: 4px;
 }
 
+.site-banner__text :deep(.site-banner__link),
 .site-banner__cta {
-  flex: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 3px;
   color: inherit;
   font-weight: 600;
   text-decoration: underline;
-  text-underline-offset: 2px;
   white-space: nowrap;
   transition: opacity 0.2s ease;
 }
 
+.site-banner__text :deep(.site-banner__link:hover),
 .site-banner__cta:hover {
-  opacity: 0.75;
+  opacity: 0.8;
 }
 
-/* Controls ---------------------------------------------------------------- */
-.site-banner__toggle,
+.site-banner__cta {
+  flex: 0 0 auto;
+}
+
+/* Close ------------------------------------------------------------------- */
+/* 28px box for a usable tap target, offset so the glyph still lands where the
+   design puts it (26px from the right edge). */
 .site-banner__close {
   position: absolute;
   top: 50%;
+  right: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
+  width: 28px;
+  height: 28px;
   color: inherit;
-  opacity: 0.75;
+  opacity: 0.8;
   transform: translateY(-50%);
-  transition: opacity 0.2s ease, background-color 0.2s ease, transform 0.25s ease;
+  transition: opacity 0.2s ease;
 }
 
-.site-banner__toggle:hover,
 .site-banner__close:hover {
   opacity: 1;
-  background-color: var(--sb-hover);
 }
 
-.site-banner__close {
-  right: 12px;
+.site-banner__close:focus-visible {
+  border-radius: 50%;
+  opacity: 1;
+  outline: 2px solid currentcolor;
+  outline-offset: -2px;
 }
 
-/* Chevron is a compact-viewport affordance only. */
-.site-banner__toggle {
-  display: none;
-  right: 46px;
-}
-
-/* Compact viewports ------------------------------------------------------ */
-/* One truncated line by default (44px, no wasted height), tap to expand the
-   full message plus the CTA as a real button. */
-@media (max-width: 959.98px) {
+/* Mobile ------------------------------------------------------------------ */
+/* Pastille on the left, text + link flowing after it, close pinned top-right. */
+@media (max-width: 768px) {
   .site-banner__inner {
+    flex-wrap: wrap;
+    align-items: flex-start;
     justify-content: flex-start;
-    gap: 8px;
-    min-height: 44px;
-    padding: 0 84px 0 14px;
+    gap: 6px 8px;
+    padding: 10px 40px 10px 18px;
     font-size: 12.5px;
-    cursor: pointer;
   }
 
-  .site-banner__body {
-    display: flex;
-    flex: 1 1 auto;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    min-width: 0;
-  }
-
-  .site-banner__text {
-    max-width: 100%;
-  }
-
-  .site-banner__text :deep(p) {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  /* Collapsed: the line is a teaser, so every tap expands instead of
-     following a half-visible inline link. */
-  .site-banner:not(.site-banner--open) .site-banner__text :deep(a) {
-    pointer-events: none;
-  }
-
-  .site-banner__cta {
-    display: none;
-  }
-
-  .site-banner__toggle {
-    display: flex;
-  }
-
-  .site-banner__toggle,
-  .site-banner__close {
-    top: 7px;
-    transform: none;
-  }
-
-  .site-banner--open .site-banner__inner {
-    align-items: flex-start;
-    padding-top: 11px;
-    padding-bottom: 14px;
-    cursor: default;
-  }
-
-  .site-banner--open .site-banner__tag {
+  .site-banner__tag {
     margin-top: 1px;
   }
 
-  .site-banner--open .site-banner__text :deep(p) {
-    overflow: visible;
+  .site-banner__text {
+    flex: 1 1 auto;
+  }
+
+  .site-banner__text :deep(.site-banner__link),
+  .site-banner__cta {
     white-space: normal;
   }
 
-  .site-banner--open .site-banner__cta {
-    display: inline-flex;
-    padding: 8px 16px;
-    border-radius: 30px;
-    background: var(--sb-cta-bg);
-    color: var(--sb-cta-fg);
-    text-decoration: none;
-  }
-
-  .site-banner--open .site-banner__toggle {
-    transform: rotate(180deg);
-  }
-}
-
-@media (max-width: 599.98px) {
-  .site-banner__tag {
-    padding: 2px 8px;
-    font-size: 10px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .site-banner__toggle,
   .site-banner__close {
-    transition: opacity 0.2s ease, background-color 0.2s ease;
+    top: 6px;
+    right: 10px;
+    transform: none;
   }
 }
 </style>
