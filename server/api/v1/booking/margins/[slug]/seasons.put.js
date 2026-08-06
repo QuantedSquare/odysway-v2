@@ -1,8 +1,10 @@
 import { defineEventHandler, readBody, createError } from 'h3'
 
 // Replace-all: the editor sends the voyage's complete season list.
-// Seasons dropped from the payload are deleted, cascading to their voyage_margins
-// rows — amounts attached to a removed period have no meaning left.
+// Seasons dropped from the payload are soft-deleted, and their voyage_margins rows
+// with them (reason 'cascade_margin_season') — amounts attached to a removed period
+// have no meaning left, mais rien n'est détruit : re-soumettre la saison avec son id
+// remonte la saison ET ses montants.
 //
 // Overlap and DD/MM validity are enforced in margins.replaceSeasonsForVoyage,
 // which tags those errors with statusCode 400.

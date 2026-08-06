@@ -17,6 +17,12 @@ export const DELETE_REASONS = {
   // rend la restauration correcte : restaurer une date ne restaure que ses
   // enfants en cascade, jamais ceux supprimés un par un avant.
   CASCADE_TRAVEL_DATE: 'cascade_travel_date',
+  // Palier de marge supprimé PARCE QUE la saison qui le porte a été retirée de
+  // la liste de l'éditeur. Distinct de CASCADE_TRAVEL_DATE à dessein : les deux
+  // restaurations ne passent pas par le même chemin (re-création de la saison
+  // d'un côté, restore.post.js de l'autre), et les confondre ferait remonter des
+  // montants de saison en restaurant une date.
+  CASCADE_MARGIN_SEASON: 'cascade_margin_season',
   AC_DEAL_DELETED: 'ac_deal_deleted',
   AC_DEAL_TRASHED: 'ac_deal_trashed',
   AC_DEAL_LOST: 'ac_deal_lost',
