@@ -42,10 +42,13 @@
   --bo-accent-wash: #2b4c520f;
 
   // --- sémantiques (état, jamais décoratives) ---
-  --bo-ok: #2e6f52; // confirmé, payé, publié
-  --bo-warn: #96661b; // à surveiller, brouillon, acompte
-  --bo-crit: #a93b2e; // bloquant, supprimé, orphelin
-  --bo-info: #2f6076; // neutre qualifié (individuel, option)
+  // Saturées pour ressortir sur les surfaces neutres. Chaque valeur est la plus
+  // vive qui tienne encore 4,5:1 sur --bo-field (la plus sombre des surfaces
+  // claires) : le texte des tags fait 10px bold, il n'a pas de marge d'erreur.
+  --bo-ok: #0b7a4b; // confirmé, payé, publié          — 4,77:1
+  --bo-warn: #c2410c; // à surveiller, brouillon, acompte — 4,59:1
+  --bo-crit: #c0261f; // bloquant, supprimé, orphelin     — 5,26:1
+  --bo-info: #0b6bcb; // neutre qualifié (individuel, option) — 4,68:1
 
   // --- rail de navigation (constant, indépendant du fond de page) ---
   --bo-rail: #12222a;
@@ -105,10 +108,12 @@
   --bo-accent-ink: #0d171b;
   --bo-accent-wash: #78adb31a;
 
-  --bo-ok: #5fa983;
-  --bo-warn: #c9974a;
-  --bo-crit: #d9736a;
-  --bo-info: #6ba0bc;
+  // Mêmes teintes qu'en clair, remontées pour le fond sombre (toutes ≥ 5,8:1
+  // sur --bo-surface).
+  --bo-ok: #34d399;
+  --bo-warn: #ffa726;
+  --bo-crit: #f87171;
+  --bo-info: #60a5fa;
 
   --bo-shadow-pop: 0 8px 28px -12px #00000099, 0 1px 2px #0000004d;
 
