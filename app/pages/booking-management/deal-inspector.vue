@@ -1,48 +1,27 @@
 <template>
-  <v-container
-    fluid
-    class="py-6"
-  >
-    <v-row class="align-center mb-2">
-      <v-col cols="12">
-        <h1 class="text-h5 font-weight-bold mb-1">
-          Deal ActiveCampaign
-        </h1>
-        <p class="text-body-2 text-medium-emphasis mb-0">
-          Collez l'URL d'un deal ActiveCampaign (ou son identifiant) pour lire tous ses champs.
-        </p>
-      </v-col>
-    </v-row>
+  <div>
+    <BoPageHeader
+      title="Deal ActiveCampaign"
+      subtitle="Collez l'URL d'un deal ActiveCampaign (ou son identifiant) pour lire tous ses champs."
+      :crumbs="[{ title: 'Backoffice', to: '/booking-management' }, { title: 'Deal AC' }]"
+    />
 
-    <!-- Recherche -->
-    <v-card
-      rounded="lg"
-      class="mb-4 bo-card"
-      elevation="0"
-    >
-      <v-card-text class="pa-3">
-        <v-row align="start">
-          <v-col
-            cols="12"
-            md="8"
-          >
+    <div class="bo-well">
+      <!-- Recherche -->
+      <section class="bo-card">
+        <div class="bo-card__body">
+          <div class="bo-row">
             <v-text-field
               v-model="input"
               label="URL du deal ou identifiant"
               placeholder="https://odysway90522.activehosted.com/app/deals/16447"
               :prepend-inner-icon="mdiMagnify"
-              density="compact"
               clearable
-              hide-details="auto"
               :error-messages="inputError"
+              class="flex-grow-1"
+              style="min-width: 260px;"
               @keyup.enter="loadDeal()"
             />
-          </v-col>
-          <v-col
-            cols="12"
-            md="4"
-            class="d-flex ga-2"
-          >
             <v-btn
               color="primary"
               variant="flat"
@@ -54,240 +33,196 @@
             </v-btn>
             <v-btn
               v-if="data"
-              variant="outlined"
               :prepend-icon="mdiRefresh"
               :loading="loading"
               @click="loadDeal(data.dealId)"
             >
               Rafraîchir
             </v-btn>
-          </v-col>
-        </v-row>
-      </v-card-text>
-    </v-card>
+          </div>
+        </div>
+      </section>
 
-    <v-alert
-      v-if="errorMessage"
-      type="error"
-      variant="tonal"
-      density="compact"
-      class="mb-4"
-      :icon="mdiAlertCircleOutline"
-    >
-      {{ errorMessage }}
-    </v-alert>
-
-    <v-skeleton-loader
-      v-if="loading && !data"
-      type="card, table"
-    />
-
-    <template v-if="data">
-      <!-- Résumé -->
-      <v-card
-        rounded="lg"
-        class="mb-4 bo-card"
-        elevation="0"
+      <div
+        v-if="errorMessage"
+        class="bo-notice bo-notice--crit"
       >
-        <v-card-text class="pa-4">
-          <div class="d-flex align-center flex-wrap ga-2 mb-3">
-            <h2 class="text-h6 font-weight-bold mb-0 mr-2">
+        <v-icon :icon="mdiAlertCircleOutline" />
+        <div class="bo-notice__body">
+          {{ errorMessage }}
+        </div>
+      </div>
+
+      <v-skeleton-loader
+        v-if="loading && !data"
+        type="card, table"
+      />
+
+      <template v-if="data">
+        <!-- Résumé -->
+        <section class="bo-card">
+          <div class="bo-card__head">
+            <h2 class="bo-card__title">
               {{ data.deal.title || 'Deal sans titre' }}
             </h2>
-            <v-chip
-              size="small"
-              variant="tonal"
-            >
-              #{{ data.dealId }}
-            </v-chip>
-            <v-chip
-              size="small"
-              :color="statusColor"
-              variant="tonal"
-            >
-              {{ statusLabel }}
-            </v-chip>
+            <span class="bo-tag bo-num">#{{ data.dealId }}</span>
+            <span
+              class="bo-tag"
+              :class="statusTone"
+            >{{ statusLabel }}</span>
             <v-spacer />
             <v-btn
               :href="data.acUrl"
               target="_blank"
               rel="noopener"
-              size="small"
               variant="text"
               :append-icon="mdiOpenInNew"
             >
               Ouvrir dans ActiveCampaign
             </v-btn>
           </div>
-
-          <v-row dense>
-            <v-col
-              v-for="item in summaryItems"
-              :key="item.label"
-              cols="6"
-              md="3"
-            >
-              <div class="text-caption text-medium-emphasis">
-                {{ item.label }}
-              </div>
-              <div class="text-body-2 font-weight-medium text-truncate">
-                {{ item.value ?? '—' }}
-              </div>
-            </v-col>
-          </v-row>
-        </v-card-text>
-      </v-card>
-
-      <!-- Champs -->
-      <v-card
-        rounded="lg"
-        class="bo-card"
-        elevation="0"
-      >
-        <v-card-text class="pa-3">
-          <v-row align="center">
-            <v-col
-              cols="12"
-              md="5"
-            >
-              <v-text-field
-                v-model="fieldSearch"
-                label="Filtrer les champs"
-                :prepend-inner-icon="mdiMagnify"
-                density="compact"
-                clearable
-                hide-details
-              />
-            </v-col>
-            <v-col
-              cols="12"
-              md="4"
-            >
-              <v-switch
-                v-model="hideEmpty"
-                label="Masquer les champs vides"
-                color="primary"
-                density="compact"
-                hide-details
-              />
-            </v-col>
-            <v-spacer />
-            <v-col
-              cols="12"
-              md="3"
-              class="d-flex justify-end"
-            >
-              <v-btn
-                size="small"
-                variant="outlined"
-                :prepend-icon="mdiContentCopy"
-                @click="copyJson"
+          <div class="bo-card__body">
+            <div class="bo-summary">
+              <div
+                v-for="item in summaryItems"
+                :key="item.label"
               >
-                {{ copied ? 'Copié !' : 'Copier le JSON' }}
-              </v-btn>
-            </v-col>
-          </v-row>
-        </v-card-text>
-
-        <v-tabs
-          v-model="tab"
-          color="primary"
-          class="px-3"
-        >
-          <v-tab value="custom">
-            Champs personnalisés ({{ filteredCustomFields.length }})
-          </v-tab>
-          <v-tab value="native">
-            Champs natifs ({{ filteredNativeFields.length }})
-          </v-tab>
-          <v-tab value="json">
-            JSON brut
-          </v-tab>
-        </v-tabs>
-        <v-divider />
-
-        <v-window v-model="tab">
-          <v-window-item value="custom">
-            <v-data-table
-              :headers="customHeaders"
-              :items="filteredCustomFields"
-              :items-per-page="-1"
-              density="compact"
-              hide-default-footer
-            >
-              <template #[`item.label`]="{ item }">
-                <span class="font-weight-medium">{{ item.label }}</span>
-              </template>
-              <template #[`item.internalKey`]="{ item }">
-                <code
-                  v-if="item.internalKey"
-                  class="bo-code"
-                >{{ item.internalKey }}</code>
-                <span
-                  v-else
-                  class="text-disabled"
-                >—</span>
-              </template>
-              <template #[`item.value`]="{ item }">
-                <span
-                  v-if="item.isEmpty"
-                  class="text-disabled"
-                >vide</span>
-                <span
-                  v-else
-                  class="bo-value"
-                >{{ item.value }}</span>
-              </template>
-              <template #no-data>
-                <div class="pa-6 text-center text-medium-emphasis">
-                  Aucun champ ne correspond au filtre.
+                <div class="bo-stat__k">
+                  {{ item.label }}
                 </div>
-              </template>
-            </v-data-table>
-          </v-window-item>
-
-          <v-window-item value="native">
-            <v-data-table
-              :headers="nativeHeaders"
-              :items="filteredNativeFields"
-              :items-per-page="-1"
-              density="compact"
-              hide-default-footer
-            >
-              <template #[`item.key`]="{ item }">
-                <code class="bo-code">{{ item.key }}</code>
-              </template>
-              <template #[`item.value`]="{ item }">
-                <span
-                  v-if="item.isEmpty"
-                  class="text-disabled"
-                >vide</span>
-                <span
-                  v-else
-                  class="bo-value"
-                >{{ item.value }}</span>
-              </template>
-              <template #no-data>
-                <div class="pa-6 text-center text-medium-emphasis">
-                  Aucun champ ne correspond au filtre.
+                <div class="bo-summary__v">
+                  {{ item.value ?? '—' }}
                 </div>
-              </template>
-            </v-data-table>
-          </v-window-item>
+              </div>
+            </div>
+          </div>
+        </section>
 
-          <v-window-item value="json">
-            <pre class="bo-json">{{ prettyJson }}</pre>
-          </v-window-item>
-        </v-window>
-      </v-card>
-    </template>
-  </v-container>
+        <!-- Champs -->
+        <section class="bo-card">
+          <div class="bo-card__head">
+            <v-text-field
+              v-model="fieldSearch"
+              :prepend-inner-icon="mdiMagnify"
+              placeholder="Filtrer les champs…"
+              aria-label="Filtrer les champs"
+              clearable
+              style="max-width: 280px;"
+            />
+            <v-switch
+              v-model="hideEmpty"
+              label="Masquer les champs vides"
+              hide-details
+            />
+            <v-spacer />
+            <v-btn
+              :prepend-icon="mdiContentCopy"
+              @click="copyJson"
+            >
+              {{ copied ? 'Copié !' : 'Copier le JSON' }}
+            </v-btn>
+          </div>
+
+          <v-tabs
+            v-model="tab"
+            class="px-3"
+          >
+            <v-tab value="custom">
+              Champs personnalisés <span class="bo-seg__n">{{ filteredCustomFields.length }}</span>
+            </v-tab>
+            <v-tab value="native">
+              Champs natifs <span class="bo-seg__n">{{ filteredNativeFields.length }}</span>
+            </v-tab>
+            <v-tab value="json">
+              JSON brut
+            </v-tab>
+          </v-tabs>
+          <v-divider />
+
+          <v-window v-model="tab">
+            <v-window-item value="custom">
+              <v-data-table
+                :headers="customHeaders"
+                :items="filteredCustomFields"
+                :items-per-page="-1"
+                class="bo-table"
+                hide-default-footer
+              >
+                <template #[`item.label`]="{ item }">
+                  <span class="font-weight-medium">{{ item.label }}</span>
+                </template>
+                <template #[`item.internalKey`]="{ item }">
+                  <code
+                    v-if="item.internalKey"
+                    class="bo-code"
+                  >{{ item.internalKey }}</code>
+                  <span
+                    v-else
+                    class="text-disabled"
+                  >—</span>
+                </template>
+                <template #[`item.value`]="{ item }">
+                  <span
+                    v-if="item.isEmpty"
+                    class="text-disabled"
+                  >vide</span>
+                  <span
+                    v-else
+                    class="bo-value"
+                  >{{ item.value }}</span>
+                </template>
+                <template #no-data>
+                  <div class="bo-empty">
+                    Aucun champ ne correspond au filtre.
+                  </div>
+                </template>
+              </v-data-table>
+            </v-window-item>
+
+            <v-window-item value="native">
+              <v-data-table
+                :headers="nativeHeaders"
+                :items="filteredNativeFields"
+                :items-per-page="-1"
+                class="bo-table"
+                hide-default-footer
+              >
+                <template #[`item.key`]="{ item }">
+                  <code class="bo-code">{{ item.key }}</code>
+                </template>
+                <template #[`item.value`]="{ item }">
+                  <span
+                    v-if="item.isEmpty"
+                    class="text-disabled"
+                  >vide</span>
+                  <span
+                    v-else
+                    class="bo-value"
+                  >{{ item.value }}</span>
+                </template>
+                <template #no-data>
+                  <div class="bo-empty">
+                    Aucun champ ne correspond au filtre.
+                  </div>
+                </template>
+              </v-data-table>
+            </v-window-item>
+
+            <v-window-item value="json">
+              <pre class="bo-json">{{ prettyJson }}</pre>
+            </v-window-item>
+          </v-window>
+        </section>
+      </template>
+    </div>
+  </div>
 </template>
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { mdiMagnify, mdiOpenInNew, mdiContentCopy, mdiRefresh, mdiAlertCircleOutline } from '@mdi/js'
+import BoPageHeader from '~/components/booking/BoPageHeader.vue'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 
 definePageMeta({
@@ -357,14 +292,14 @@ const statusLabels = {
   2: 'Perdu',
   3: 'Supprimé',
 }
-const statusColors = {
-  0: 'info',
-  1: 'success',
-  2: 'error',
-  3: 'grey',
+const statusTones = {
+  0: 'bo-tag--info',
+  1: 'bo-tag--ok',
+  2: 'bo-tag--crit',
+  3: '',
 }
 const statusLabel = computed(() => statusLabels[Number(data.value?.deal?.status)] || 'Inconnu')
-const statusColor = computed(() => statusColors[Number(data.value?.deal?.status)] || 'grey')
+const statusTone = computed(() => statusTones[Number(data.value?.deal?.status)] ?? '')
 
 // AC stores deal values in cents.
 const formatCents = (cents) => {
@@ -471,11 +406,28 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.bo-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 14px;
+}
+
+.bo-summary__v {
+  margin-top: 2px;
+  font-size: 12.5px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .bo-code {
-  font-size: 0.78rem;
-  background: rgba(var(--v-theme-on-surface), 0.06);
-  padding: 1px 6px;
-  border-radius: 4px;
+  font-family: var(--bo-ff-data);
+  font-size: 11px;
+  background: var(--bo-surface-2);
+  box-shadow: inset 0 0 0 1px var(--bo-line-soft);
+  padding: 1px 5px;
+  border-radius: var(--bo-radius-s);
 }
 
 .bo-value {
@@ -487,8 +439,9 @@ onMounted(() => {
   padding: 16px;
   max-height: 70vh;
   overflow: auto;
-  font-size: 0.78rem;
-  line-height: 1.5;
-  background: rgba(var(--v-theme-on-surface), 0.04);
+  font-family: var(--bo-ff-data);
+  font-size: 11.5px;
+  line-height: 1.6;
+  background: var(--bo-surface-2);
 }
 </style>

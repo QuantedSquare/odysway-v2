@@ -1,161 +1,84 @@
 <template>
-  <div>
-    <!-- Collapsed: show latest entry only -->
+  <!--
+    `inline` : résumé d'une ligne, posé dans la barre de commande.
+    `panel`  : liste complète en `.bo-log`, sans chrome — la carte qui l'entoure
+               est fournie par la page (colonne latérale de la fiche date).
+  -->
+  <span
+    v-if="variant === 'inline'"
+    class="bo-activity-inline"
+  >
+    <template v-if="latestEntry">
+      {{ actionLabel(latestEntry.action) }} le
+      {{ dayjs(latestEntry.created_at).format('DD/MM/YYYY à HH:mm') }}
+      par {{ latestEntry.editor_name || latestEntry.editor_email }}
+    </template>
+    <template v-else-if="!loading && fallbackUpdatedAt">
+      Dernière mise à jour le {{ dayjs(fallbackUpdatedAt).format('DD/MM/YYYY à HH:mm') }}
+      <span v-if="fallbackLastEditor"> par {{ fallbackLastEditor }}</span>
+    </template>
+  </span>
+
+  <div
+    v-else
+    class="bo-log"
+  >
     <div
-      v-if="!expanded && latestEntry"
-      class="d-flex align-center ga-2"
+      v-if="loading"
+      class="d-flex justify-center py-4"
     >
-      <v-avatar
+      <v-progress-circular
+        indeterminate
         size="20"
         color="primary"
-        class="text-white"
-      >
-        <v-img
-          v-if="latestEntry.editor_picture"
-          :src="latestEntry.editor_picture"
-          alt="Avatar"
-        />
-        <span
-          v-else
-          style="font-size: 9px; font-weight: 600;"
-        >
-          {{ (latestEntry.editor_name || latestEntry.editor_email || '?').slice(0, 1).toUpperCase() }}
-        </span>
-      </v-avatar>
-      <span class="text-caption text-medium-emphasis">
-        {{ actionLabel(latestEntry.action) }} — {{ dayjs(latestEntry.created_at).format('DD/MM/YYYY HH:mm') }}
-        — {{ latestEntry.editor_name || latestEntry.editor_email }}
-      </span>
-      <v-btn
-        size="x-small"
-        variant="text"
-        color="primary"
-        @click="expanded = true"
-      >
-        Voir l'historique
-      </v-btn>
+      />
     </div>
 
-    <!-- Fallback: no activity entries, use form data -->
-    <p
-      v-if="!loading && !entries.length && fallbackUpdatedAt"
-      class="text-caption text-medium-emphasis mb-0"
+    <div
+      v-for="entry in entries"
+      :key="entry.id"
+      class="bo-log__i"
     >
-      Dernière mise à jour : {{ dayjs(fallbackUpdatedAt).format('DD/MM/YYYY HH:mm') }}
-      <span v-if="fallbackLastEditor"> — {{ fallbackLastEditor }}</span>
-    </p>
+      <div class="bo-log__t">
+        {{ dayjs(entry.created_at).format('DD/MM HH:mm') }}
+      </div>
+      <div class="bo-log__b">
+        <b>{{ entry.editor_name || entry.editor_email || 'Système' }}</b>
+        <span class="bo-log__d"> — {{ actionLabel(entry.action) }}</span>
 
-    <!-- Expanded: full history -->
-    <v-card
-      v-if="expanded"
-      variant="outlined"
-      rounded="lg"
-      class="bo-card mt-2"
-      elevation="0"
+        <div
+          v-if="entry.action === 'updated' && entry.changes"
+          class="d-flex flex-wrap ga-1 mt-1"
+        >
+          <span
+            v-for="field in Object.keys(entry.changes)"
+            :key="field"
+            class="bo-tag"
+          >
+            {{ fieldLabel(field) }}
+          </span>
+        </div>
+        <div
+          v-if="entry.action === 'deal_assigned' && entry.changes?.deal_id"
+          class="bo-log__d"
+        >
+          Deal #{{ entry.changes.deal_id }}
+          <span v-if="entry.changes.booked_places"> — {{ entry.changes.booked_places }} place(s)</span>
+        </div>
+      </div>
+    </div>
+
+    <div
+      v-if="!loading && !entries.length"
+      class="bo-empty"
     >
-      <v-card-title class="pb-0 d-flex align-center justify-space-between">
-        <div class="d-flex align-center ga-2">
-          <v-icon
-            size="18"
-            color="secondary"
-          >
-            {{ mdiHistory }}
-          </v-icon>
-          Historique des modifications
-        </div>
-        <v-btn
-          icon
-          size="x-small"
-          variant="text"
-          @click="expanded = false"
-        >
-          <v-icon>{{ mdiClose }}</v-icon>
-        </v-btn>
-      </v-card-title>
-      <v-card-text>
-        <div
-          v-if="loading"
-          class="d-flex justify-center py-4"
-        >
-          <v-progress-circular
-            indeterminate
-            size="24"
-            color="primary"
-          />
-        </div>
-
-        <div
-          v-for="entry in entries"
-          :key="entry.id"
-          class="d-flex align-start ga-3 py-2"
-        >
-          <v-avatar
-            size="28"
-            color="primary"
-            class="text-white mt-1"
-          >
-            <v-img
-              v-if="entry.editor_picture"
-              :src="entry.editor_picture"
-              alt="Avatar"
-            />
-            <span
-              v-else
-              style="font-size: 11px; font-weight: 600;"
-            >
-              {{ (entry.editor_name || entry.editor_email || '?').slice(0, 1).toUpperCase() }}
-            </span>
-          </v-avatar>
-          <div class="flex-grow-1">
-            <div class="d-flex align-center justify-space-between">
-              <span class="text-body-2 font-weight-medium">
-                {{ entry.editor_name || entry.editor_email }}
-              </span>
-              <span class="text-caption text-medium-emphasis">
-                {{ dayjs(entry.created_at).format('DD/MM/YYYY HH:mm') }}
-              </span>
-            </div>
-            <div class="text-caption text-medium-emphasis">
-              {{ actionLabel(entry.action) }}
-            </div>
-            <div
-              v-if="entry.action === 'updated' && entry.changes"
-              class="d-flex flex-wrap ga-1 mt-1"
-            >
-              <v-chip
-                v-for="field in Object.keys(entry.changes)"
-                :key="field"
-                size="x-small"
-                variant="tonal"
-                color="primary"
-              >
-                {{ fieldLabel(field) }}
-              </v-chip>
-            </div>
-            <div
-              v-if="entry.action === 'deal_assigned' && entry.changes?.deal_id"
-              class="text-caption mt-1"
-            >
-              Deal #{{ entry.changes.deal_id }}
-              <span v-if="entry.changes.booked_places"> — {{ entry.changes.booked_places }} place(s)</span>
-            </div>
-          </div>
-        </div>
-
-        <div
-          v-if="!loading && !entries.length"
-          class="text-body-2 text-medium-emphasis py-2"
-        >
-          Aucun historique disponible.
-        </div>
-      </v-card-text>
-    </v-card>
+      Aucun historique disponible.
+    </div>
   </div>
 </template>
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import { mdiHistory, mdiClose } from '@mdi/js'
 import dayjs from 'dayjs'
 import { bookingApi } from '~/utils/bookingApi'
 
@@ -164,11 +87,11 @@ const props = defineProps({
   dateId: { type: String, required: true },
   fallbackUpdatedAt: { type: String, default: null },
   fallbackLastEditor: { type: String, default: null },
+  variant: { type: String, default: 'inline' },
 })
 
 const entries = ref([])
 const loading = ref(true)
-const expanded = ref(false)
 
 const latestEntry = computed(() => entries.value[0] || null)
 
@@ -222,3 +145,9 @@ async function fetchActivity() {
 
 onMounted(fetchActivity)
 </script>
+
+<style scoped>
+.bo-activity-inline {
+  color: var(--bo-ink-3);
+}
+</style>

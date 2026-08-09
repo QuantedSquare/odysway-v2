@@ -75,79 +75,48 @@
       </div>
 
       <!-- KPI cards -->
-      <v-row class="mb-4">
-        <v-col
-          cols="6"
-          md="4"
-        >
-          <v-card
-            rounded="lg"
-            class="bo-card bo-stat-card pa-4"
-            elevation="0"
-            style="border-left-color: rgb(var(--v-theme-primary));"
-          >
-            <div class="text-caption text-medium-emphasis">
-              Marge estimée totale
-            </div>
-            <div class="text-h5 font-weight-bold">
-              {{ formatEur(globals.total_estimated) }}
-            </div>
-            <div class="text-caption text-medium-emphasis mt-1">
-              {{ globals.total_dates_count }} départs
-            </div>
-          </v-card>
-        </v-col>
-        <v-col
-          cols="6"
-          md="4"
-        >
-          <v-card
-            rounded="lg"
-            class="bo-card bo-stat-card pa-4"
-            elevation="0"
-            style="border-left-color: rgb(var(--v-theme-info));"
-          >
-            <div class="text-caption text-medium-emphasis">
-              Voyages terminés
-            </div>
-            <div class="text-h5 font-weight-bold">
-              {{ globals.finished_count }} / {{ globals.total_dates_count }}
-            </div>
-            <div class="text-caption text-medium-emphasis mt-1">
-              {{ formatPct(globals.total_dates_count ? globals.finished_count / globals.total_dates_count : 0) }} retours faits
-            </div>
-          </v-card>
-        </v-col>
-        <v-col
-          cols="12"
-          md="4"
-        >
-          <v-card
-            rounded="lg"
-            class="bo-card bo-stat-card pa-4"
-            elevation="0"
-            style="border-left-color: rgb(var(--v-theme-success));"
-          >
-            <div class="text-caption text-medium-emphasis">
-              Voyages avec config marge
-            </div>
-            <div class="text-h5 font-weight-bold">
-              {{ trackedVoyages.filter(v => v.has_pax_config).length }} / {{ trackedVoyages.length }}
-            </div>
-            <div class="text-caption text-medium-emphasis mt-1">
-              Marge réelle calculable sur ces voyages
-            </div>
-          </v-card>
-        </v-col>
-      </v-row>
+      <section
+        class="bo-stats mb-4"
+        style="--bo-stats-cols: 3;"
+      >
+        <div class="bo-stat">
+          <div class="bo-stat__k">
+            Marge estimée totale
+          </div>
+          <div class="bo-stat__v">
+            {{ formatEur(globals.total_estimated) }}
+          </div>
+          <div class="bo-stat__n">
+            {{ globals.total_dates_count }} départs
+          </div>
+        </div>
+        <div class="bo-stat">
+          <div class="bo-stat__k">
+            Voyages terminés
+          </div>
+          <div class="bo-stat__v">
+            {{ globals.finished_count }} / {{ globals.total_dates_count }}
+          </div>
+          <div class="bo-stat__n">
+            {{ formatPct(globals.total_dates_count ? globals.finished_count / globals.total_dates_count : 0) }} retours faits
+          </div>
+        </div>
+        <div class="bo-stat">
+          <div class="bo-stat__k">
+            Voyages avec config marge
+          </div>
+          <div class="bo-stat__v">
+            {{ trackedVoyages.filter(v => v.has_pax_config).length }} / {{ trackedVoyages.length }}
+          </div>
+          <div class="bo-stat__n">
+            Marge réelle calculable sur ces voyages
+          </div>
+        </div>
+      </section>
 
       <!-- Voyages table with expandable date rows (lazy loaded) -->
-      <v-card
-        rounded="lg"
-        class="bo-card"
-        elevation="0"
-      >
-        <v-table density="compact">
+      <section class="bo-card">
+        <v-table class="bo-table">
           <thead>
             <tr>
               <th
@@ -439,11 +408,11 @@
 
         <div
           v-if="!filteredSortedVoyages.length"
-          class="text-center py-8 text-medium-emphasis"
+          class="bo-empty"
         >
           Aucun voyage correspondant.
         </div>
-      </v-card>
+      </section>
 
       <div
         v-if="orphanCount > 0"
