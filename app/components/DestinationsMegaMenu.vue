@@ -10,10 +10,12 @@
     content-class="dest-mega-menu"
   >
     <template #activator="{ props: menuProps }">
-      <button
+      <v-btn
         type="button"
-        class="dest-trigger"
-        :class="{ 'dest-trigger--transparent': isTransparent, 'dest-trigger--open': open }"
+        height="45"
+        color="primary"
+        class="dest-trigger text-caption text-md-body-1"
+        :class="{ 'dest-trigger--transparent filter': isTransparent, 'dest-trigger--open': open }"
         :aria-expanded="open"
         v-bind="menuProps"
       >
@@ -24,7 +26,7 @@
         >
           {{ mdiChevronDown }}
         </v-icon>
-      </button>
+      </v-btn>
     </template>
 
     <v-card
@@ -104,10 +106,10 @@ const { zones } = useDestinationsMenu()
   background: none;
   border: none;
   padding: 0 8px;
-  font-family: inherit;
-  font-size: 18px;
+  /* font-family: inherit; */
+  /* font-size: 18px; */
   font-weight: 500;
-  color: rgb(43, 76, 82);
+  color: rgb(var(--v-theme-primary));
   cursor: pointer;
   white-space: nowrap;
 }
@@ -186,6 +188,10 @@ const { zones } = useDestinationsMenu()
 }
 .dest-mega__cta {
   margin-left: auto;
+}
+.filter {
+  color: #FBF0EC!important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, .2) !important;
 }
 </style>
 

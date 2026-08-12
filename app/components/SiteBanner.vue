@@ -306,8 +306,8 @@ html.odysway-banner-dismissed body {
   gap: 12px;
   max-width: 1180px;
   margin-inline: auto;
-  padding: 11px 52px;
-  font-size: 13.5px;
+  padding: 15px 52px;
+  font-size: 15px;
   line-height: 1.4;
 }
 
