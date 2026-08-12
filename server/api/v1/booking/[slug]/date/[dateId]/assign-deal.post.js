@@ -125,7 +125,8 @@ export default defineEventHandler(async (event) => {
   const recomputeErr = recomputeResults.find(r => r?.error)
   if (recomputeErr) throw createError({ statusCode: 500, statusMessage: recomputeErr.error })
 
-  // Si la ligne a quitté une autre date, celle-ci peut ne plus avoir de payant.
+  // Si la ligne a quitté une autre date, celle-ci peut ne plus avoir de payant :
+  // son deal de départ passe en veille, sans être supprimé.
   if (res.moved && res.previous?.travel_date_id) {
     await departures.cleanupDepartureDealIfEmpty(res.previous.travel_date_id)
   }

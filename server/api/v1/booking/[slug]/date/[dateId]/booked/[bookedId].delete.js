@@ -30,7 +30,8 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 500, statusMessage: recompute.error })
   }
 
-  // Remove departure record deal if no paying clients remain
+  // Met le deal de départ en veille s'il ne reste aucun payant. Il n'est PAS
+  // supprimé : une réaffectation du même pax doit retrouver son suivi AC.
   await departures.cleanupDepartureDealIfEmpty(travel_date_id)
 
   await logDateActivity(travel_date_id, bookingUser, 'deal_removed', { deal_id: bookedRow.deal_id, booked_id: bookedId })
