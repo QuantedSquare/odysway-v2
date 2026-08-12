@@ -39,10 +39,9 @@ export default defineNuxtConfig({
         { rel: 'preconnect', href: 'https://cdn.sanity.io', crossorigin: 'anonymous' },
         { rel: 'preconnect', href: 'https://nu6yntji.apicdn.sanity.io', crossorigin: 'anonymous' },
         { rel: 'preconnect', href: 'https://nu6yntji.api.sanity.io', crossorigin: 'anonymous' },
-        // SST/GTM is loaded on first user interaction (see app.vue), so we
-        // only need DNS resolution warm — preconnect would waste the slot
-        // since we don't open a TLS connection until the user interacts.
-        { rel: 'dns-prefetch', href: 'https://load.sst.odysway.com' },
+        // SST/GTM is loaded on mount (see app.vue), so the TLS handshake to
+        // load.sst.odysway.com happens on every page — warm it up front.
+        { rel: 'preconnect', href: 'https://load.sst.odysway.com', crossorigin: 'anonymous' },
         { rel: 'dns-prefetch', href: 'https://sst.odysway.com' },
       ],
       htmlAttrs: {
