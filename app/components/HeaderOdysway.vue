@@ -115,7 +115,7 @@
           {{ header.button1.text }}
         </v-btn>
         <div
-          class="d-flex align-center ga-2"
+          class="d-flex align-center ga-5"
           :class="isTransparent ? '' : 'ml-3'"
         >
           <SearchDialogTrigger

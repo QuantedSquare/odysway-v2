@@ -1,6 +1,6 @@
 <template>
   <v-btn
-    :size="36"
+    :size="45"
     icon
     variant="outlined"
     class="search-trigger-btn"
