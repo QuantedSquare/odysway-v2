@@ -224,9 +224,24 @@ const handlePaymentForDeparture = async (bookedDate, travelTitle, contactId) => 
 }
 
 /**
- * After a booked_date is deleted, checks whether any paying clients remain
- * on the same travel date. If none do and a departure record deal exists,
- * deletes it from ActiveCampaign and clears travel_dates.departure_id.
+ * Après la suppression d'une réservation, vérifie s'il reste des clients payants
+ * sur la même date. S'il n'en reste aucun, le deal de départ (pipeline 4) est
+ * MIS EN VEILLE — il n'est jamais supprimé.
+ *
+ * Cette fonction appelait activecampaign.deleteDeal() et remettait
+ * travel_dates.departure_id à null. Une désaffectation suivie d'une
+ * ré-affectation — rare, mais c'est le quotidien des dossiers sur-mesure à un
+ * seul payant, où retirer le pax vide la date — détruisait donc le deal AC avec
+ * ses notes, tâches, rappels et propriétaire, puis en recréait un vierge. L'OPS
+ * repartait de zéro sur le suivi.
+ *
+ * On garde désormais le deal et son departure_id : à la ré-affectation,
+ * getOrCreateDepartureDeal retombe sur le même deal et handlePaymentForDeparture
+ * le rallume au bon stage avec les bons totaux. Aucun doublon, aucun ménage.
+ *
+ * Contrepartie assumée : une date qui ne se remplit jamais garde un deal à 0 pax
+ * en « Départ à confirmer ». La note horodatée le rend identifiable pour un
+ * nettoyage manuel dans AC.
  *
  * Must be called AFTER the booked_date row has already been removed.
  */
@@ -244,7 +259,7 @@ const cleanupDepartureDealIfEmpty = async (travelDateId) => {
     // ligne était PHYSIQUEMENT absente. Une réservation soft-deleted garde
     // booked_places > 0 (la restauration doit être exacte), donc sans ce filtre la
     // sonde conclut « il reste des clients payants » et le deal de départ
-    // pipeline 4 n'est plus jamais nettoyé.
+    // pipeline 4 n'est jamais mis en veille.
     const { data: remainingPaid } = await supabase
       .from('booked_dates')
       .select('id')
@@ -255,23 +270,57 @@ const cleanupDepartureDealIfEmpty = async (travelDateId) => {
 
     if (remainingPaid && remainingPaid.length > 0) return
 
-    // No paying clients left — remove the departure record deal
-    console.log(`cleanupDepartureDealIfEmpty: no paid bookings left for travel_date ${travelDateId}, deleting departure deal ${travelDate.departure_id}`)
+    const idleStage = String(STAGES.DEPART_A_CONFIRMER)
 
+    // État courant du deal : sert à la fois de sonde d'existence et de garde
+    // d'idempotence. Les webhooks AC (dealDelete, dealUpdate) peuvent tirer
+    // plusieurs fois sur la même date ; sans ce garde on empilerait une note à
+    // chaque passage.
+    let currentStage = null
+    let currentValue = 0
     try {
-      await activecampaign.deleteDeal(travelDate.departure_id)
+      const { deal } = await activecampaign.getDealById(travelDate.departure_id)
+      currentStage = deal?.stage ? String(deal.stage) : null
+      currentValue = Number(deal?.value || 0)
     }
     catch (err) {
-      console.error('cleanupDepartureDealIfEmpty: failed to delete AC departure deal:', err.message)
+      if (err.response?.status === 404) {
+        // Deal supprimé à la main dans AC : il n'y a plus d'historique à
+        // protéger, et garder le pointeur ferait échouer toutes les mises à
+        // jour futures. On libère le lien pour qu'un prochain paiement recrée
+        // un deal propre.
+        console.warn(`cleanupDepartureDealIfEmpty: deal de départ ${travelDate.departure_id} absent d'AC, departure_id libéré`)
+        const { error: clearError } = await supabase
+          .from('travel_dates')
+          .update({ departure_id: null })
+          .eq('id', travelDateId)
+        if (clearError) {
+          console.error('cleanupDepartureDealIfEmpty: departure_id non remis à null:', clearError)
+        }
+        return
+      }
+      console.error('cleanupDepartureDealIfEmpty: lecture du deal de départ échouée:', err.message)
+      return
     }
 
-    const { error: clearError } = await supabase
-      .from('travel_dates')
-      .update({ departure_id: null })
-      .eq('id', travelDateId)
+    if (currentStage === idleStage && currentValue === 0) return
 
-    if (clearError) {
-      console.error('cleanupDepartureDealIfEmpty: failed to clear departure_id:', clearError)
+    console.log(`cleanupDepartureDealIfEmpty: plus aucune réservation payante sur la date ${travelDateId}, mise en veille du deal de départ ${travelDate.departure_id}`)
+
+    try {
+      await activecampaign.updateDeal(travelDate.departure_id, {
+        stage: idleStage,
+        value: 0,
+        nbTravelers: 0,
+      })
+      await activecampaign.addNote(travelDate.departure_id, {
+        note: {
+          note: `[BMS] ${dayjs().format('DD/MM/YYYY HH:mm')} — plus aucun voyageur payant sur cette date. Deal conservé (suivi, notes et tâches intacts) : il sera réutilisé si un voyageur est réaffecté.`,
+        },
+      })
+    }
+    catch (err) {
+      console.error('cleanupDepartureDealIfEmpty: mise en veille du deal de départ échouée:', err.message)
     }
   }
   catch (err) {

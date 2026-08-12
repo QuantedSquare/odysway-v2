@@ -142,7 +142,7 @@ export default defineEventHandler(async (event) => {
           await booking.recomputeBookedSeatAndStatus(travel_date_id)
           console.log('Booked places updated successfully, travel_date_id:', travel_date_id)
 
-          // Remove departure record deal if no paying clients remain
+          // Deal de départ mis en veille s'il ne reste aucun payant (jamais supprimé)
           await departures.cleanupDepartureDealIfEmpty(travel_date_id)
 
           await logDateActivity(travel_date_id, AC_USER, 'deal_removed', {
@@ -184,7 +184,7 @@ export default defineEventHandler(async (event) => {
           await booking.recomputeBookedSeatAndStatus(travel_date_id)
           console.log('Booked places updated successfully, travel_date_id:', travel_date_id)
 
-          // Remove departure record deal if no paying clients remain
+          // Deal de départ mis en veille s'il ne reste aucun payant (jamais supprimé)
           await departures.cleanupDepartureDealIfEmpty(travel_date_id)
 
           await logDateActivity(travel_date_id, AC_USER, 'deal_removed', {
