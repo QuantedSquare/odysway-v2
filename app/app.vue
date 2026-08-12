@@ -119,59 +119,32 @@ onMounted(() => {
   setTimeout(loadHotjar, 30000)
 })
 
+// GTM/SST is loaded as soon as the app mounts.
+//
+// It used to be deferred to the first user interaction (15s safety net) to keep
+// its ~440KB / ~2.9s of script eval out of the Lighthouse measurement window.
+// That cost us the tracking itself: nothing Google-related was present on
+// initial load, so Tag Assistant / GA4 & Ads "vérifier l'installation" / GTM
+// Preview reported no tag at all, and every visitor who bounced without
+// interacting in under 15s was never counted. Detection and short sessions are
+// worth more than the synthetic perf score.
 onMounted(() => {
-  let gtmLoaded = false
-
-  const loadGtm = () => {
-    if (gtmLoaded || (typeof window !== 'undefined' && window.google_tag_manager)) return
-    gtmLoaded = true
-
-    window.dataLayer = window.dataLayer || []
-    window.dataLayer.push({
-      'gtm.start': new Date().getTime(),
-      'event': 'gtm.js',
-    })
-
-    const script = document.createElement('script')
-    script.async = true
-    script.src = 'https://load.sst.odysway.com/28bwtluuzax.js?5qth5h1=EQVHMiEhWTkoV0kvJ1lSAUVTVERTCBpKFwUDBgINDVkbDhc%3D'
-    document.head.appendChild(script)
-  }
-
   if (config.public.environment !== 'production') {
     return
   }
 
-  // Funnel pages load GTM immediately: add_payment_info fires milliseconds
-  // before window.location.href sends the user to Stripe/Alma, and purchase
-  // fires on a page users often leave in a few seconds. Waiting for the
-  // interaction/15s fallback there loses the event entirely. These pages are
-  // not SEO landing pages, so the Lighthouse budget doesn't apply.
-  const isFunnelPage = path => path.startsWith('/checkout') || path.startsWith('/confirmation')
+  if (window.google_tag_manager) return
 
-  if (isFunnelPage(route.path)) {
-    loadGtm()
-    return
-  }
-
-  watch(() => route.path, (path) => {
-    if (isFunnelPage(path)) loadGtm()
+  window.dataLayer = window.dataLayer || []
+  window.dataLayer.push({
+    'gtm.start': new Date().getTime(),
+    'event': 'gtm.js',
   })
 
-  // GTM/SST is ~440KB transferred + ~2.9s of script eval. Loading via
-  // requestIdleCallback still landed inside the Lighthouse measurement
-  // window on slow 4G. Defer until first user interaction OR a long idle
-  // (15s safety net) so the metrics window stays clean. dataLayer events
-  // queued before this point fire correctly once GTM boots.
-  const gtmEvents = ['mousedown', 'touchstart', 'keydown', 'scroll']
-  const loadGtmOnInteraction = () => {
-    loadGtm()
-    gtmEvents.forEach(event => document.removeEventListener(event, loadGtmOnInteraction))
-  }
-  gtmEvents.forEach((event) => {
-    document.addEventListener(event, loadGtmOnInteraction, { once: true, passive: true })
-  })
-  setTimeout(loadGtm, 15000)
+  const script = document.createElement('script')
+  script.async = true
+  script.src = 'https://load.sst.odysway.com/28bwtluuzax.js?5qth5h1=EQVHMiEhWTkoV0kvJ1lSAUVTVERTCBpKFwUDBgINDVkbDhc%3D'
+  document.head.appendChild(script)
 })
 
 onMounted(() => {
