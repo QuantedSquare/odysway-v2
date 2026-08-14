@@ -2,7 +2,7 @@
   <v-menu
     v-model="open"
     location="bottom"
-    offset="31"
+    offset="20"
     scrim
     :close-on-content-click="true"
     transition="fade-transition"
