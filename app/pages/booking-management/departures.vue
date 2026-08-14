@@ -16,10 +16,7 @@
     </BoPageHeader>
 
     <div class="bo-well">
-      <section
-        class="bo-stats"
-        style="--bo-stats-cols: 3;"
-      >
+      <section class="bo-stats">
         <div class="bo-stat">
           <div class="bo-stat__k">
             Sans dossier

@@ -176,6 +176,7 @@ import {
   mdiDeleteRestore,
   mdiWeatherNight,
   mdiWeatherSunny,
+  mdiBullseyeArrow,
 } from '@mdi/js'
 import BoDialogHost from '~/components/booking/BoDialogHost.vue'
 import '@/assets/scss/backoffice.scss'
@@ -192,21 +193,21 @@ if (!theme.themes.value.backoffice) {
   theme.themes.value.backoffice = {
     dark: false,
     colors: {
-      'primary': '#2B4C52',
-      'secondary': '#5B7075',
-      'background': '#F1F4F4',
+      'primary': '#5B5BD6',
+      'secondary': '#4B5563',
+      'background': '#F5F6F8',
       'surface': '#FFFFFF',
-      'surface-variant': '#F7F9F9',
-      'on-background': '#16262B',
-      'on-surface': '#16262B',
-      'success': '#0B7A4B',
-      'warning': '#C2410C',
-      'error': '#C0261F',
-      'info': '#0B6BCB',
+      'surface-variant': '#FAFBFC',
+      'on-background': '#1B1D23',
+      'on-surface': '#1B1D23',
+      'success': '#12A150',
+      'warning': '#E5920A',
+      'error': '#E5484D',
+      'info': '#0E7FE1',
     },
     variables: {
       'medium-emphasis-opacity': 0.75,
-      'border-color': '#DDE4E4',
+      'border-color': '#ECEEF2',
       'border-opacity': 1,
     },
   }
@@ -215,21 +216,21 @@ if (!theme.themes.value['backoffice-dark']) {
   theme.themes.value['backoffice-dark'] = {
     dark: true,
     colors: {
-      'primary': '#78ADB3',
-      'secondary': '#94AAAF',
-      'background': '#0D171B',
-      'surface': '#142329',
-      'surface-variant': '#1A2C33',
-      'on-background': '#E2EAEA',
-      'on-surface': '#E2EAEA',
+      'primary': '#8B8BE8',
+      'secondary': '#A8B0BF',
+      'background': '#0F1116',
+      'surface': '#171A21',
+      'surface-variant': '#1C2029',
+      'on-background': '#E7E9EF',
+      'on-surface': '#E7E9EF',
       'success': '#34D399',
-      'warning': '#FFA726',
+      'warning': '#FBBF24',
       'error': '#F87171',
       'info': '#60A5FA',
     },
     variables: {
       'medium-emphasis-opacity': 0.75,
-      'border-color': '#24393F',
+      'border-color': '#272C36',
       'border-opacity': 1,
     },
   }
@@ -308,6 +309,14 @@ const drawer = ref(true)
 const railMode = ref(false)
 
 const navGroups = [
+  {
+    // Le poste de pilotage vient en premier : c'est l'écran depuis lequel on
+    // décide quoi faire de sa journée, les autres servent à exécuter.
+    label: 'Pilotage',
+    items: [
+      { title: 'Sales', icon: mdiBullseyeArrow, to: '/booking-management/sales', exact: false },
+    ],
+  },
   {
     label: 'Exploitation',
     items: [
