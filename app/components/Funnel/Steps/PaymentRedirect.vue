@@ -345,7 +345,7 @@
 import { mdiCalendarOutline, mdiChevronDown, mdiArrowDownBold } from '@mdi/js'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 
-const { trackAddPaymentInfo, trackReservationPoseOption } = useGtmTracking()
+const { trackAddPaymentInfo, trackReservationPoseOption, getCountryFromPhone } = useGtmTracking()
 
 const { page, voyage } = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
 const route = useRoute()
@@ -358,6 +358,34 @@ const emit = defineEmits(['previous'])
 const model = defineModel()
 const { updateDeal, bookedId: composableBookedId, kickstartLoading } = useStepperDeal()
 const { reportApiError, setContext } = useFunnelReporter()
+
+/**
+ * user_data block shared by every funnel event fired from this step.
+ */
+const buildUserData = () => ({
+  user_id: model.value.email,
+  user_mail: model.value.email,
+  user_phone: model.value.phone,
+  user_country: getCountryFromPhone(model.value.phone) || 'Unknown',
+})
+
+/**
+ * Fire add_payment_info as soon as the user clicks a payment method.
+ *
+ * It used to be pushed only *after* /api/v1/stripe (or /alma) had returned a
+ * checkout link, so every failed or slow session creation silently swallowed
+ * the event — which is why the payment-method clicks stopped showing up.
+ * The push now happens on the click itself, and the returned promise lets the
+ * redirect wait for GTM's eventCallback so the tags still leave the browser
+ * before `window.location.href` unloads the page.
+ *
+ * @returns {Promise<void>} resolves once the tags fired (or on timeout)
+ */
+const trackPaymentMethodClick = (paymentType) => {
+  return new Promise((resolve) => {
+    trackAddPaymentInfo(voyage, model.value, paymentType, buildUserData(), resolve)
+  })
+}
 const { addSingleParam } = useParams()
 
 const isSurMesure = computed(() => voyage.availabilityTypes?.includes('custom'))
@@ -431,6 +459,7 @@ const stripePay = async () => {
   paymentError.value = null
   loadingSession.value = true
   redirectingToStripe.value = true
+  const tagsFired = trackPaymentMethodClick('stripe')
   try {
     const bookedId = route.query.booked_id || composableBookedId.value
     const contact = {
@@ -459,20 +488,13 @@ const stripePay = async () => {
       body: JSON.stringify(dataForStripeSession),
     })
     if (checkoutLink) {
-      const { getCountryFromPhone } = useGtmTracking()
-      const userData = {
-        user_id: model.value.email,
-        user_mail: model.value.email,
-        user_phone: model.value.phone,
-        user_country: getCountryFromPhone(model.value.phone) || 'Unknown',
-      }
-      // Redirect from the tracking callback: pushing and navigating in the
-      // same tick unloads the page before the tags fire, which is what made
-      // the Meta CB-click event disappear. The callback is guaranteed to run
-      // (timeout fallback), so the payment flow never waits on analytics.
-      trackAddPaymentInfo(voyage, model.value, 'stripe', userData, () => {
-        window.location.href = checkoutLink
-      })
+      // Wait for the click-time push to have fired its tags: pushing and
+      // navigating in the same tick unloads the page before the tags leave the
+      // browser, which is what made the Meta CB-click event disappear. The
+      // promise always settles (timeout fallback), so the payment flow never
+      // waits on analytics.
+      await tagsFired
+      window.location.href = checkoutLink
     }
     else {
       redirectingToStripe.value = false
@@ -503,6 +525,7 @@ const almaPay = async () => {
   paymentError.value = null
   loadingSession.value = true
   redirectingToAlma.value = true
+  const tagsFired = trackPaymentMethodClick('alma')
   try {
     const dataForAlmaSession = {
       paymentType: route.query.type,
@@ -529,16 +552,8 @@ const almaPay = async () => {
       body: JSON.stringify(dataForAlmaSession),
     })
     if (checkoutLink.url) {
-      const { getCountryFromPhone } = useGtmTracking()
-      const userData = {
-        user_id: model.value.email,
-        user_mail: model.value.email,
-        user_phone: model.value.phone,
-        user_country: getCountryFromPhone(model.value.phone) || 'Unknown',
-      }
-      trackAddPaymentInfo(voyage, model.value, 'alma', userData, () => {
-        window.location.href = checkoutLink.url
-      })
+      await tagsFired
+      window.location.href = checkoutLink.url
     }
     else {
       redirectingToAlma.value = false
@@ -586,6 +601,12 @@ const book = async () => {
       userMessage: 'Impossible de poser l\'option pour le moment. Veuillez réessayer.',
     })
   }
+  // Push reservation_pose_option before the CRM/Slack side effects. It used to
+  // sit after an awaited, unguarded $fetch to /api/v1/slack/notification that
+  // only runs in production — so a single Slack hiccup rejected book() and the
+  // dataLayer event (and the redirect) never happened.
+  trackReservationPoseOption(voyage, model.value, buildUserData())
+
   const dealData = {
     stage: '27',
     currentStep: 'A posé une option',
@@ -596,20 +617,12 @@ const book = async () => {
   }
   updateDeal(dealData)
   if (config.public.environment === 'production') {
-    await $fetch('/api/v1/slack/notification', {
+    $fetch('/api/v1/slack/notification', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ ...dealData, bookedId: route.query.booked_id }),
-    })
+    }).catch(err => console.error('[PaymentRedirect] slack notification failed', err))
   }
-  const { getCountryFromPhone } = useGtmTracking()
-  const userData = {
-    user_id: model.value.email,
-    user_mail: model.value.email,
-    user_phone: model.value.phone,
-    user_country: getCountryFromPhone(model.value.phone) || 'Unknown',
-  }
-  trackReservationPoseOption(voyage, model.value, userData)
   await navigateTo(`/confirmation?voyage=${voyage.slug}&isoption=true`)
 }
 </script>
