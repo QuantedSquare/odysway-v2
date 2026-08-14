@@ -75,10 +75,7 @@
       </div>
 
       <!-- KPI cards -->
-      <section
-        class="bo-stats mb-4"
-        style="--bo-stats-cols: 3;"
-      >
+      <section class="bo-stats mb-4">
         <div class="bo-stat">
           <div class="bo-stat__k">
             Marge estimée totale

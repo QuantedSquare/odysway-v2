@@ -5,61 +5,93 @@
 // partir dans le bundle du site public. Les visiteurs de odysway.com n'ont
 // aucune raison de télécharger le CSS d'un outil interne.
 //
-// Tout dérive du teal de marque (#2B4C52) : les neutres sont teintés teal
-// (jamais de gris neutre), il n'y a qu'un seul accent, et les couleurs
-// sémantiques sont désaturées au même niveau de chroma que l'accent pour qu'un
-// état se lise sans crier.
+// Palette et formes reprises de la maquette « Poste de pilotage · GIR Engine »
+// (12 août 2026) : neutres froids, accent indigo, surfaces blanches légèrement
+// ombrées, rayons généreux, pastilles arrondies.
 //
-// Règle de couleur, valable partout dans le backoffice :
-//   - l'accent ne signifie rien  -> c'est l'action
-//   - les sémantiques ne décorent rien -> c'est l'état
+// Règles de couleur, valables partout dans le backoffice :
+//   - l'indigo ne signifie rien -> c'est l'action, et l'identité de l'outil
+//   - les sémantiques ne décorent rien -> c'est l'état, ou la catégorie
+//     opérationnelle d'un départ (vert à garantir / indigo à maximiser /
+//     bleu à décider / gris exhaustif)
+//   - le rouge est réservé aux vraies alertes : une échéance dépassée, une
+//     suppression, un blocage. Jamais « peu rempli », jamais « à surveiller ».
+//
+// Chaque famille sémantique existe en trois valeurs :
+//   --bo-x        aplat vif        -> barres, bandes, filets, points
+//   --bo-x-soft   fond de pastille -> jamais du texte
+//   --bo-x-ink    texte sur -soft  -> la seule valeur autorisée pour du texte
+// L'aplat vif ne passe pas 4,5:1 sur blanc : ne jamais l'utiliser comme
+// couleur de texte, prendre --bo-x-ink.
 // =============================================================================
 
 :root {
-  // --- neutres teintés teal ---
-  --bo-paper: #f1f4f4; // fond de page
+  // --- neutres froids ---
+  --bo-paper: #f5f6f8; // fond de page
   --bo-surface: #ffffff; // cartes, tables
-  --bo-surface-2: #f7f9f9; // lignes survolées, champs en lecture seule
-  --bo-line: #dde4e4; // filets 1px
-  --bo-line-soft: #e9eeee; // séparateurs internes
-  --bo-ink: #16262b; // texte principal
-  --bo-ink-2: #5b7075; // texte secondaire
-  --bo-ink-3: #8ca0a4; // libellés, texte tertiaire
+  --bo-surface-2: #fafbfc; // lignes survolées, en-têtes de table
+  --bo-line: #eceef2; // filets 1px
+  --bo-line-soft: #f0f2f5; // séparateurs internes
+  --bo-ink: #1b1d23; // texte principal
+  --bo-ink-2: #4b5563; // texte secondaire
+  --bo-ink-3: #6b7280; // libellés, texte tertiaire
 
   // --- surfaces de contrôle ---
-  // Règle unique, valable dans les deux thèmes : **un champ s'enfonce sous la
-  // surface qui le porte, un bouton ressort au-dessus**. C'est ce qui rend une
-  // zone de saisie identifiable sans avoir à lire son filet.
-  // (Le prototype peignait les champs en blanc ; sur une carte blanche ils ne
-  // se détachaient que par leur bordure — d'où ce gris.)
-  --bo-field: #eef2f2; // fond d'un champ de saisie
-  --bo-field-line: #dde4e4; // filet d'un champ / d'un bouton secondaire
+  // En clair la maquette pose champs et boutons secondaires sur du blanc : ils
+  // se lisent par leur filet et leur ombre, pas par un aplat gris. En sombre
+  // cette égalité ne tient pas — le thème sombre plus bas creuse le champ sous
+  // la carte et remonte le bouton au-dessus.
+  --bo-field: #ffffff; // fond d'un champ de saisie
+  --bo-field-line: #eceef2; // filet d'un champ / d'un bouton secondaire
   --bo-control: #ffffff; // fond d'un bouton secondaire, d'un segment
+  --bo-control-2: #e7e9ee; // bouton secondaire appuyé (« Appliquer »)
 
   // --- accent unique ---
-  --bo-accent: #2b4c52;
+  --bo-accent: #5b5bd6;
   --bo-accent-ink: #ffffff;
-  --bo-accent-wash: #2b4c520f;
+  --bo-accent-soft: #eeeefb; // fond de pastille indigo
+  --bo-accent-soft-ink: #4b3fc0; // texte sur --bo-accent-soft — 6,3:1
+  --bo-accent-line: #dcdcf7;
+  --bo-accent-wash: #5b5bd60f;
+  --bo-accent-grad: linear-gradient(120deg, #4b4bc8, #6d5be0);
 
-  // --- sémantiques (état, jamais décoratives) ---
-  // Saturées pour ressortir sur les surfaces neutres. Chaque valeur est la plus
-  // vive qui tienne encore 4,5:1 sur --bo-field (la plus sombre des surfaces
-  // claires) : le texte des tags fait 10px bold, il n'a pas de marge d'erreur.
-  --bo-ok: #0b7a4b; // confirmé, payé, publié          — 4,77:1
-  --bo-warn: #c2410c; // à surveiller, brouillon, acompte — 4,59:1
-  --bo-crit: #c0261f; // bloquant, supprimé, orphelin     — 5,26:1
-  --bo-info: #0b6bcb; // neutre qualifié (individuel, option) — 4,68:1
+  // --- sémantiques ---
+  --bo-ok: #12a150;
+  --bo-ok-soft: #e6f6ed;
+  --bo-ok-ink: #1b7a43; // 4,55:1 sur --bo-ok-soft
+
+  --bo-warn: #e5920a;
+  --bo-warn-soft: #fbf0dc;
+  --bo-warn-ink: #9a6300; // 4,84:1 sur --bo-warn-soft
+
+  --bo-crit: #e5484d;
+  --bo-crit-soft: #fbe7e8;
+  --bo-crit-ink: #b42318; // 5,52:1 sur --bo-crit-soft
+
+  --bo-info: #0e7fe1;
+  --bo-info-soft: #e3f0fc;
+  --bo-info-ink: #0a63b0; // 4,97:1 sur --bo-info-soft
+
+  // Départs garantis par un partenaire (co-remplissage) : ni un état sain ni
+  // une alerte — une catégorie à part, d'où sa propre teinte.
+  --bo-part: #7c3aed;
+  --bo-part-soft: #ede9fe;
+  --bo-part-ink: #6d28d9;
+
+  // Neutre qualifié : « non suivi », « sans traction ».
+  --bo-neutral-soft: #eef0f3;
 
   // --- rail de navigation (constant, indépendant du fond de page) ---
-  --bo-rail: #12222a;
-  --bo-rail-2: #1b2f38;
-  --bo-rail-ink: #a9bec2;
-  --bo-rail-ink-2: #6c868d;
-  --bo-rail-accent: #78adb3; // l'accent lisible sur fond sombre
+  --bo-rail: #0c1922;
+  --bo-rail-2: #16242e;
+  --bo-rail-ink: #aeb9c1;
+  --bo-rail-ink-2: #5c6b75;
+  --bo-rail-accent: #12a150; // le vert de marque, seul repère coloré du rail
 
   // --- formes ---
-  --bo-radius: 5px;
-  --bo-radius-s: 3px;
+  --bo-radius: 12px; // cartes, tables, panneaux
+  --bo-radius-s: 8px; // boutons, champs, chips
+  --bo-radius-pill: 999px; // pastilles d'état, onglets, filtres
 
   // --- typographie ---
   // L'interface reprend Gordita (déjà chargée) ; tout chiffre passe en
@@ -69,7 +101,8 @@
   // --- rythme ---
   --bo-gap: 20px; // entre sections
   --bo-gap-s: 12px; // dans une carte
-  --bo-shadow-pop: 0 8px 28px -12px #0b191e4d, 0 1px 2px #0b191e14;
+  --bo-shadow: 0 1px 2px #10182806, 0 4px 16px #1018280f;
+  --bo-shadow-pop: 0 8px 28px -12px #10182859, 0 1px 2px #10182814;
 }
 
 // =============================================================================
@@ -84,37 +117,66 @@
 // Ce n'est pas une inversion mécanique du thème clair : les sémantiques sont
 // ré-éclaircies pour rester lisibles sur fond sombre, et le rail garde sa
 // teinte pour rester le point d'ancrage constant de l'interface.
+//
+// La maquette ne couvre que le clair ; ce thème en est la dérivation. Deux
+// écarts assumés, notés sur place : les champs se creusent sous la carte
+// (règle inverse du clair), et les fonds de pastille -soft sont recalculés en
+// mélangeant 16 % de l'aplat vif dans la surface, l'aplat lui-même servant
+// alors de couleur de texte.
 // =============================================================================
 
 :root[data-bo-theme='dark'] {
-  --bo-paper: #0d171b;
-  --bo-surface: #142329;
-  --bo-surface-2: #1a2c33;
-  --bo-line: #24393f;
-  --bo-line-soft: #1d3037;
-  --bo-ink: #e2eaea;
-  --bo-ink-2: #94aaaf;
-  --bo-ink-3: #6b8288;
+  --bo-paper: #0f1116;
+  --bo-surface: #171a21;
+  --bo-surface-2: #1c2029;
+  --bo-line: #272c36;
+  --bo-line-soft: #21262f;
+  --bo-ink: #e7e9ef;
+  --bo-ink-2: #a8b0bf;
+  --bo-ink-3: #7c8494;
 
   // Le champ passe *sous* la carte (plus sombre qu'elle) et son filet gagne en
   // contraste : à surface égale, un champ était invisible sur une carte.
-  --bo-field: #0e1b20;
-  --bo-field-line: #324a51;
+  --bo-field: #10131a;
+  --bo-field-line: #333a47;
 
   // Le bouton secondaire passe *au-dessus* de la carte.
-  --bo-control: #1b2e35;
+  --bo-control: #1e222b;
+  --bo-control-2: #272c36;
 
-  --bo-accent: #78adb3;
-  --bo-accent-ink: #0d171b;
-  --bo-accent-wash: #78adb31a;
+  --bo-accent: #8b8be8;
+  --bo-accent-ink: #0f1116;
+  --bo-accent-soft: #2a2c41;
+  --bo-accent-soft-ink: #b9b9f5;
+  --bo-accent-line: #3a3d5c;
+  --bo-accent-wash: #8b8be81a;
+  --bo-accent-grad: linear-gradient(120deg, #3b3b9e, #5a4bb8);
 
-  // Mêmes teintes qu'en clair, remontées pour le fond sombre (toutes ≥ 5,8:1
-  // sur --bo-surface).
+  // Aplats remontés pour le fond sombre ; sur -soft ils tiennent tous ≥ 5,5:1,
+  // ce qui permet de les réutiliser tels quels comme couleur de texte.
   --bo-ok: #34d399;
-  --bo-warn: #ffa726;
-  --bo-crit: #f87171;
-  --bo-info: #60a5fa;
+  --bo-ok-soft: #1c3834;
+  --bo-ok-ink: #34d399;
 
+  --bo-warn: #fbbf24;
+  --bo-warn-soft: #3c3421;
+  --bo-warn-ink: #fbbf24;
+
+  --bo-crit: #f87171;
+  --bo-crit-soft: #3b282e;
+  --bo-crit-ink: #f87171;
+
+  --bo-info: #60a5fa;
+  --bo-info-soft: #233044;
+  --bo-info-ink: #60a5fa;
+
+  --bo-part: #a78bfa;
+  --bo-part-soft: #2e2c44;
+  --bo-part-ink: #a78bfa;
+
+  --bo-neutral-soft: #242932;
+
+  --bo-shadow: 0 1px 2px #00000059, 0 4px 16px #0000003d;
   --bo-shadow-pop: 0 8px 28px -12px #00000099, 0 1px 2px #0000004d;
 
   // Indispensable : sans ça les contrôles natifs (sélecteurs de date, listes
@@ -133,7 +195,7 @@
 .bo {
   background: var(--bo-paper);
   color: var(--bo-ink);
-  font-size: 13px;
+  font-size: 13.5px;
   line-height: 1.45;
 
   .v-main {
@@ -212,6 +274,10 @@
     padding: 14px 16px 16px;
   }
 
+  // Marque : contour vert plutôt qu'aplat indigo. Le rail est la seule zone de
+  // l'interface qui ne change pas d'un écran à l'autre ; son unique point
+  // coloré reste le vert Odysway, pour ne pas entrer en concurrence avec
+  // l'indigo qui, lui, désigne l'action dans la page.
   &__mark {
     width: 26px;
     height: 26px;
@@ -219,10 +285,10 @@
     display: grid;
     place-items: center;
     border-radius: var(--bo-radius-s);
-    background: var(--bo-accent);
-    color: #fff;
-    font-weight: 700;
-    font-size: 13px;
+    border: 2px solid var(--bo-rail-accent);
+    color: var(--bo-rail-accent);
+    font-weight: 800;
+    font-size: 12px;
   }
 
   &__name {
@@ -523,7 +589,11 @@
   background: var(--bo-surface) !important;
   border: 1px solid var(--bo-line) !important;
   border-radius: var(--bo-radius) !important;
-  box-shadow: none !important;
+
+  // La maquette pose une ombre très basse sur toutes les surfaces : c'est elle
+  // qui détache la carte du fond, le filet seul ne suffit plus à ce niveau de
+  // contraste (#FFF sur #F5F6F8).
+  box-shadow: var(--bo-shadow) !important;
 
   &__head {
     display: flex;
@@ -547,29 +617,37 @@
 }
 
 // =============================================================================
-// Tag d'état — carré, discret, jamais une pastille marketing
+// Pastille d'état
+//
+// Aplat doux + texte foncé de la même famille, sans filet : c'est la forme de
+// la maquette. Pas de capitales — à 10,5 px elles coûtent en lisibilité ce
+// qu'elles apportent en autorité, et la pastille n'a pas besoin de crier.
+//
+// Le fond vient de --bo-x-soft et le texte de --bo-x-ink : ce sont les seules
+// paires vérifiées en contraste. Ne jamais y mettre --bo-x tel quel.
 // =============================================================================
 
 .bo-tag {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  padding: 2.5px 6px;
-  border-radius: var(--bo-radius-s);
-  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: var(--bo-radius-pill);
+  font-size: 10.5px;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
+  letter-spacing: 0;
   white-space: nowrap;
-  color: var(--bo-ink-2);
-  background: color-mix(in srgb, currentcolor 9%, transparent);
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, currentcolor 22%, transparent);
+  color: var(--bo-ink-3);
+  background: var(--bo-neutral-soft);
 
-  &--ok { color: var(--bo-ok); }
-  &--warn { color: var(--bo-warn); }
-  &--crit { color: var(--bo-crit); }
-  &--info { color: var(--bo-info); }
-  &--accent { color: var(--bo-accent); }
+  &--ok { color: var(--bo-ok-ink); background: var(--bo-ok-soft); }
+  &--warn { color: var(--bo-warn-ink); background: var(--bo-warn-soft); }
+  &--crit { color: var(--bo-crit-ink); background: var(--bo-crit-soft); }
+  &--info { color: var(--bo-info-ink); background: var(--bo-info-soft); }
+  &--accent { color: var(--bo-accent-soft-ink); background: var(--bo-accent-soft); }
+
+  // Départ garanti par un partenaire : ni sain ni alerte, sa propre teinte.
+  &--part { color: var(--bo-part-ink); background: var(--bo-part-soft); }
 }
 
 .bo-dot {
@@ -645,22 +723,26 @@
 }
 
 // =============================================================================
-// Bandeau de statistiques — tuiles compactes, pas des cartes géantes
+// Bandeau de statistiques
+//
+// Tuiles autonomes espacées, pas une grille soudée : la maquette les traite en
+// cartes indépendantes qui se réorganisent seules (auto-fit). Le chiffre peut
+// porter la couleur de sa catégorie — c'est le seul endroit du backoffice où
+// une sémantique colore autre chose qu'un état.
 // =============================================================================
 
 .bo-stats {
   display: grid;
-  grid-template-columns: repeat(var(--bo-stats-cols, 4), 1fr);
-  gap: 1px;
-  background: var(--bo-line);
-  border: 1px solid var(--bo-line);
-  border-radius: var(--bo-radius);
-  overflow: hidden;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: var(--bo-gap-s);
 }
 
 .bo-stat {
   background: var(--bo-surface);
-  padding: 12px 14px;
+  border: 1px solid var(--bo-line);
+  border-radius: var(--bo-radius);
+  box-shadow: var(--bo-shadow);
+  padding: 13px 16px;
 
   &__k {
     font-size: 10.5px;
@@ -678,6 +760,7 @@
     font-weight: 600;
     letter-spacing: -0.02em;
     line-height: 1.15;
+    color: var(--bo-stat-c, inherit);
   }
 
   &__unit {
@@ -690,6 +773,14 @@
     font-size: 11px;
     color: var(--bo-ink-2);
   }
+
+  // Teinte de catégorie sur le chiffre. On prend la valeur -ink : le chiffre
+  // est du texte, il est posé sur la surface blanche, pas sur un aplat doux.
+  &--ok { --bo-stat-c: var(--bo-ok-ink); }
+  &--warn { --bo-stat-c: var(--bo-warn-ink); }
+  &--crit { --bo-stat-c: var(--bo-crit-ink); }
+  &--info { --bo-stat-c: var(--bo-info-ink); }
+  &--accent { --bo-stat-c: var(--bo-accent-soft-ink); }
 }
 
 // =============================================================================
@@ -732,6 +823,14 @@
     > tbody > tr > td:last-child {
       padding-right: 16px !important;
     }
+  }
+
+  // Table dense (8 colonnes et plus) : en-dessous de cette largeur les colonnes
+  // s'écrasent et tout se met à passer à la ligne — codes voyage, pastilles
+  // d'état, montants. Mieux vaut un ascenseur horizontal, que le conteneur de
+  // Vuetify fournit déjà.
+  &--wide .v-table__wrapper > table {
+    min-width: 1080px;
   }
 
   .v-data-table__td--select-row,
@@ -970,8 +1069,9 @@
     font-weight: 600;
     letter-spacing: -0.02em;
 
-    &--ok { color: var(--bo-ok); }
-    &--warn { color: var(--bo-warn); }
+    // Valeurs de texte : jamais l'aplat vif, qui ne passe pas 4,5:1 sur blanc.
+    &--ok { color: var(--bo-ok-ink); }
+    &--warn { color: var(--bo-warn-ink); }
   }
 }
 
@@ -1096,7 +1196,7 @@
     .bo-due {
       display: block;
       font-size: 10.5px;
-      color: var(--bo-warn);
+      color: var(--bo-warn-ink);
     }
   }
 }
@@ -1163,16 +1263,21 @@
   // rayon du thème vitrine (jusqu'à 10 px sur les champs). Neutraliser par
   // props ne suffit pas : les defaults du plugin global fusionnent avec ceux du
   // <v-defaults-provider>. On reprend donc la main ici, une fois pour toutes.
-  .v-field,
-  .v-btn,
-  .v-chip,
   .v-card,
   .v-sheet {
     border-radius: var(--bo-radius) !important;
   }
 
-  .v-chip {
+  // Un contrôle est moins arrondi que la surface qui le porte, sinon il paraît
+  // plus gros qu'elle.
+  .v-field,
+  .v-btn {
     border-radius: var(--bo-radius-s) !important;
+  }
+
+  // Un chip du backoffice ne sert qu'à porter un état : même forme que .bo-tag.
+  .v-chip {
+    border-radius: var(--bo-radius-pill) !important;
   }
 
   // --- Champs ---
@@ -1308,10 +1413,10 @@
 
   // --- Chips : seulement pour de l'état, toujours carrés ---
   .v-chip {
-    padding: 0 7px !important;
+    padding: 0 8px !important;
     font-size: 10.5px;
     font-weight: 600;
-    letter-spacing: 0.04em;
+    letter-spacing: 0;
   }
 
   // --- Contrôle segmenté (v-btn-toggle) : un seul choix parmi n, dense ---
@@ -1321,14 +1426,14 @@
     gap: 2px;
     background: var(--bo-control);
     border: 1px solid var(--bo-field-line);
-    border-radius: var(--bo-radius);
+    border-radius: var(--bo-radius-pill);
 
     .v-btn {
       height: 26px !important;
       min-width: 0;
       padding: 0 12px;
       border: 0 !important;
-      border-radius: var(--bo-radius-s) !important;
+      border-radius: var(--bo-radius-pill) !important;
       color: var(--bo-ink-2);
       font-size: 12px;
 
@@ -1436,6 +1541,349 @@
 }
 
 // =============================================================================
+// Poste de pilotage
+//
+// Ce qui suit n'existe que pour l'écran Sales, mais vit ici plutôt qu'en
+// <style scoped> : ce sont des règles de système (catégories opérationnelles,
+// lecture d'un remplissage, hiérarchie d'un libellé de voyage) qui ont vocation
+// à resservir dès qu'un autre écran affichera des départs.
+//
+// Les quatre catégories opérationnelles et leur couleur, dans l'ordre de
+// priorité — sécuriser, puis optimiser, puis arbitrer, puis tout voir :
+//   à garantir  vert    le départ se confirme à la prochaine vente
+//   à maximiser indigo  déjà garanti, il reste de la marge à prendre
+//   à décider   bleu    l'échéance J‑30 arrive, il faut trancher
+//   tous        gris    tableau exhaustif, aucune priorité
+// =============================================================================
+
+// --- Bandeau de tête : le chiffre qui justifie l'écran ---------------------
+.bo-hero {
+  background: var(--bo-accent-grad);
+  color: #fff;
+  border-radius: var(--bo-radius);
+  padding: 16px 20px;
+  box-shadow: var(--bo-shadow);
+
+  &__n {
+    font-family: var(--bo-ff-data);
+    font-variant-numeric: tabular-nums;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+
+  &__l {
+    margin-top: 5px;
+    font-size: 12.5px;
+    opacity: 0.92;
+
+    b {
+      opacity: 1;
+      font-weight: 600;
+    }
+  }
+}
+
+// --- Encart de règle métier -----------------------------------------------
+// Une note, pas une alerte : elle explique comment lire l'écran et reste à
+// l'écran en permanence. D'où l'indigo (l'outil) plutôt qu'une sémantique.
+.bo-note {
+  padding: 9px 14px;
+  border: 1px solid var(--bo-accent-line);
+  border-radius: var(--bo-radius-s);
+  background: var(--bo-accent-soft);
+  color: var(--bo-accent-soft-ink);
+  font-size: 12px;
+}
+
+// --- Sélecteur de plage ----------------------------------------------------
+// Le libellé vit au-dessus de la valeur, dans le champ : la date est le
+// contenu, pas une saisie de formulaire parmi d'autres.
+.bo-daterange {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.bo-datefield {
+  border: 1px solid var(--bo-line);
+  background: var(--bo-field);
+  border-radius: var(--bo-radius-s);
+  padding: 6px 13px 7px;
+  box-shadow: var(--bo-shadow);
+
+  label {
+    display: block;
+    font-size: 9.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--bo-ink-3);
+  }
+
+  input {
+    border: 0;
+    outline: none;
+    background: transparent;
+    padding: 0;
+    font-family: var(--bo-ff-data);
+    font-variant-numeric: tabular-nums;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--bo-ink);
+  }
+
+  &:focus-within {
+    border-color: var(--bo-accent);
+  }
+}
+
+// --- Onglets de catégorie --------------------------------------------------
+// Collants : on change d'onglet en permanence, et la table sous-jacente est
+// longue. L'onglet actif prend la couleur pleine de sa catégorie — c'est le
+// seul repère qui dit dans quelle intention on lit le tableau.
+.bo-tabs {
+  position: sticky;
+  top: 0;
+  z-index: 6;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 0;
+  margin-bottom: 4px;
+  background: color-mix(in srgb, var(--bo-paper) 95%, transparent);
+  backdrop-filter: blur(4px);
+  border-bottom: 1px solid var(--bo-line);
+
+  &__t {
+    font-family: inherit;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--bo-ink);
+    background: var(--bo-surface);
+    border: 1px solid var(--bo-line);
+    border-radius: var(--bo-radius-pill);
+    padding: 7px 13px;
+    cursor: pointer;
+
+    &:hover {
+      border-color: var(--bo-ink-2);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--bo-accent);
+      outline-offset: 2px;
+    }
+
+    &[aria-selected='true'] {
+      background: var(--bo-tab-c, var(--bo-ink-2));
+      border-color: var(--bo-tab-c, var(--bo-ink-2));
+      color: #fff;
+    }
+
+    &--ok { --bo-tab-c: var(--bo-ok); }
+    &--accent { --bo-tab-c: var(--bo-accent); }
+    &--info { --bo-tab-c: var(--bo-info); }
+    &--neutral { --bo-tab-c: var(--bo-ink-2); }
+  }
+
+  &__n {
+    margin-left: 6px;
+    font-family: var(--bo-ff-data);
+    font-size: 11px;
+    opacity: 0.75;
+  }
+}
+
+// --- Filtres secondaires ---------------------------------------------------
+.bo-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  align-items: center;
+}
+
+.bo-chip {
+  border: 1px solid var(--bo-line);
+  background: var(--bo-surface);
+  border-radius: var(--bo-radius-pill);
+  padding: 6px 12px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--bo-ink-3);
+  cursor: pointer;
+
+  &:hover {
+    color: var(--bo-ink);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--bo-accent);
+    outline-offset: 2px;
+  }
+
+  &[aria-pressed='true'] {
+    background: var(--bo-ink-2);
+    border-color: var(--bo-ink-2);
+    color: #fff;
+  }
+
+  // Filtre de moteur (GIR / co-remplissage) : indigo, pour se distinguer des
+  // filtres de catégorie posés juste à côté.
+  &--accent {
+    font-weight: 600;
+
+    &[aria-pressed='true'] {
+      background: var(--bo-accent);
+      border-color: var(--bo-accent);
+    }
+  }
+}
+
+// --- Libellé de voyage -----------------------------------------------------
+// Le code BMS « Pays - CODE » est l'identifiant de travail : c'est lui qu'on
+// cherche du regard, le titre commercial ne sert qu'à lever un doute.
+.bo-voyage {
+  &__code {
+    font-weight: 600;
+    letter-spacing: -0.01em;
+
+    // Un code coupé en deux (« Tanzanie - AF- / TZA-01 ») cesse d'être un
+    // identifiant : il ne se reconnaît plus d'un coup d'œil et ne se dicte
+    // plus. La table déborde en scroll horizontal plutôt que de le casser.
+    white-space: nowrap;
+  }
+
+  &__title {
+    display: block;
+    margin-top: 1px;
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--bo-ink-3);
+  }
+}
+
+// --- Barre de sièges -------------------------------------------------------
+// Variante de .bo-fill pour un départ : elle se lit en places vendues sur la
+// capacité, et porte les repères de sièges pairs. La marge marginale d'un
+// siège pair vaut environ le double d'un impair (effet chambre double) : ces
+// repères indiquent où pousser la prochaine vente.
+.bo-seats {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+
+  &__bar {
+    position: relative;
+    flex: none;
+    width: 56px;
+    height: 6px;
+    border-radius: var(--bo-radius-pill);
+    background: var(--bo-neutral-soft);
+    overflow: hidden;
+  }
+
+  &__in {
+    display: block;
+    height: 100%;
+    background: var(--bo-accent);
+
+    // Seuil de garantie atteint : la jauge passe au vert, sans autre signal.
+    &--guaranteed { background: var(--bo-ok); }
+  }
+
+  &__tick {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #0000001f;
+
+    &--even {
+      width: 2px;
+      background: color-mix(in srgb, var(--bo-accent) 65%, transparent);
+    }
+  }
+
+  &__n {
+    font-family: var(--bo-ff-data);
+    font-variant-numeric: tabular-nums;
+    font-size: 11.5px;
+    color: var(--bo-ink-2);
+
+    b {
+      color: var(--bo-ink);
+      font-weight: 600;
+    }
+  }
+}
+
+:root[data-bo-theme='dark'] .bo-seats__tick {
+  background: #ffffff29;
+}
+
+// --- Pastille de moteur de remplissage -------------------------------------
+// GIR = nos propres inscrits, marge Odysway. Co-remp = places garanties par un
+// partenaire, marge fixe : hors des départs à optimiser.
+.bo-motor {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 7px;
+  border-radius: var(--bo-radius-s);
+  white-space: nowrap;
+
+  &--gir { background: var(--bo-accent-soft); color: var(--bo-accent-soft-ink); }
+  &--co { background: var(--bo-info-soft); color: var(--bo-info-ink); }
+}
+
+// --- Palier de marge -------------------------------------------------------
+.bo-step {
+  white-space: nowrap;
+  font-size: 12px;
+
+  b {
+    color: var(--bo-accent-soft-ink);
+  }
+}
+
+// --- Montant --------------------------------------------------------------
+.bo-eur {
+  font-family: var(--bo-ff-data);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+// --- En-tête de bloc -------------------------------------------------------
+.bo-blkhead {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+
+  h2 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &__c {
+    color: var(--bo-ink-3);
+    font-size: 12.5px;
+  }
+}
+
+// Bande de catégorie sur la première cellule d'une ligne de départ.
+.bo-tr {
+  &--seg-ok { --bo-st: var(--bo-ok); }
+  &--seg-accent { --bo-st: var(--bo-accent); }
+  &--seg-info { --bo-st: var(--bo-info); }
+}
+
+// =============================================================================
 // Adaptatif
 // =============================================================================
 
@@ -1446,10 +1894,7 @@
 }
 
 @media (max-width: 959px) {
-  .bo-stats {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
+  // .bo-stats se réorganise seul (auto-fit / minmax) : rien à forcer ici.
   .bo-grid-2,
   .bo-grid-3 {
     grid-template-columns: 1fr;
