@@ -14,31 +14,28 @@
       fluid
       class="py-0 my-0 px-2 px-md-9"
     >
-     <v-container
-    class="rounded-lg py-md-8 px-0  px-md-8 mt-4 mt-md-8 max-container-width">
-    <LazyHomeFaqSection
-      :hydrate-on-visible="{ rootMargin: '400px' }"
-    />
-</v-container>
-     <!-- Texte SEO bas de page (homepage uniquement), juste au-dessus du footer -->
-    <LazySeoTextBlock
-      :data="homeSeoText?.seoText"
-      :hydrate-on-visible="{ rootMargin: '400px' }"
-    />
+      <v-container
+        class="rounded-lg py-md-8 px-0  px-md-8 mt-4 mt-md-8 max-container-width"
+      >
+        <LazyHomeFaqSection
+          :hydrate-on-visible="{ rootMargin: '400px' }"
+        />
+      </v-container>
+      <!-- Texte SEO bas de page (homepage uniquement), juste au-dessus du footer -->
+      <LazySeoTextBlock
+        :data="homeSeoText?.seoText"
+        :hydrate-on-visible="{ rootMargin: '400px' }"
+      />
       <div class="mx-1">
-      
         <LazyTopTravelsTabs :hydrate-on-visible="{ rootMargin: '400px' }" />
       </div>
     </v-container>
 
-   
     <LazyFooterOdysway :hydrate-on-visible="{ rootMargin: '400px' }" />
   </v-app>
 </template>
 
 <script setup>
-const route = useRoute()
-
 const partenairesQuery = groq`*[_type == "ctas"][0]{
   layoutInfoContainer,
   partenairesSection

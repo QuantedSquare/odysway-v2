@@ -108,7 +108,7 @@ const { zones } = useDestinationsMenu()
   padding: 0 8px;
   /* font-family: inherit; */
   /* font-size: 18px; */
-  font-weight: 500;
+  font-weight: 400;
   color: rgb(var(--v-theme-primary));
   cursor: pointer;
   white-space: nowrap;

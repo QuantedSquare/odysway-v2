@@ -108,7 +108,7 @@
           height="45"
           color="primary"
           rounded="default"
-          class="text-caption text-md-body-1 font-weight-regular d-none d-md-inline"
+          class="text-caption text-md-body-1 font-weight-medium d-none d-md-inline"
           :class="isTransparent ? 'filter' : ''"
           @click="handleButton1Click"
         >
@@ -130,7 +130,7 @@
             rounded="pill"
             :variant="isTransparent ? 'text' : 'outlined'"
             :class="isTransparent ? 'filter' : ''"
-            class="text-caption text-md-body-1 font-weight-regular d-none d-md-flex"
+            class="text-caption text-md-body-1 font-weight-medium d-none d-md-flex"
             @click="handleButton4Click"
           >
             <span class="align-center">{{ header.button4.text }}</span>
@@ -141,7 +141,7 @@
             rounded="pill"
             :variant="isTransparent ? 'text' : 'tonal'"
             :class="isTransparent ? 'text-soft-blush text-shadow' : 'bg-primary text-white '"
-            class="text-caption text-md-body-1 font-weight-regular d-none d-md-inline "
+            class="text-caption text-md-body-1 font-weight-medium d-none d-md-inline "
             @click="handleButton5Click"
           >
             {{ header.button5.text }}

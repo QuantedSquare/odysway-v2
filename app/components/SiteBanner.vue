@@ -56,7 +56,7 @@ import { h, resolveComponent } from 'vue'
 import { PortableText } from '@portabletext/vue'
 import { stegaClean } from '@sanity/client/stega'
 
-const DISMISS_KEY = 'odysway-banner-dismissed'
+const DISMISS_KEY = 'odysway-banner-dismssed'
 // Set pre-hydration by the inline script below, and read by the stylesheet, so a
 // visitor who already closed the banner never sees it flash back in.
 const DISMISSED_CLASS = 'odysway-banner-dismissed'
@@ -174,14 +174,14 @@ function measure() {
 function dismiss() {
   dismissed.value = true
   clearOffset()
-  document.documentElement.classList.add(DISMISSED_CLASS)
-  try {
-    // Keyed on the document revision so editing the banner re-shows it.
-    window.localStorage.setItem(DISMISS_KEY, banner.value?._rev || '')
-  }
-  catch {
-    // Private mode / storage disabled: the banner simply comes back next visit.
-  }
+  // document.documentElement.classList.add(DISMISSED_CLASS)
+  // try {
+  //   // Keyed on the document revision so editing the banner re-shows it.
+  //   window.localStorage.setItem(DISMISS_KEY, banner.value?._rev || '')
+  // }
+  // catch {
+  //   // Private mode / storage disabled: the banner simply comes back next visit.
+  // }
 }
 
 // Registered at setup level so @vueuse can dispose them with the component
