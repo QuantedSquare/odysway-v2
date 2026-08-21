@@ -1,351 +1,292 @@
 <template>
-  <v-container
-    fluid
-    class="py-6"
-  >
-    <v-row class="align-center mb-4">
-      <v-col
-        cols="12"
-        md="8"
-      >
-        <h1 class="text-h5 font-weight-bold mb-1">
-          Dossiers de depart
-        </h1>
-        <p class="text-body-2 text-medium-emphasis mb-0">
-          Assignez un deal ActiveCampaign (pipeline Gestions Departs) a chaque date de voyage.
-        </p>
-      </v-col>
-      <v-col
-        cols="12"
-        md="4"
-        class="d-flex justify-end ga-2"
-      >
+  <div>
+    <BoPageHeader
+      title="Dossiers de départ"
+      subtitle="Assignez un deal ActiveCampaign (pipeline Gestions Départs) à chaque date de voyage."
+      :crumbs="[{ title: 'Backoffice', to: '/booking-management' }, { title: 'Gestion départs' }]"
+    >
+      <template #actions>
         <v-btn
-          variant="tonal"
-          size="small"
           :loading="loading"
           @click="fetchDates"
         >
-          Rafraichir
+          Rafraîchir
         </v-btn>
-      </v-col>
-    </v-row>
+      </template>
+    </BoPageHeader>
 
-    <!-- Stats -->
-    <v-row class="mb-4">
-      <v-col
-        cols="4"
-        md="3"
-      >
-        <v-card
-          rounded="lg"
-          class="bo-card bo-stat-card pa-4"
-          elevation="0"
-          style="border-left-color: rgb(var(--v-theme-warning));"
-        >
-          <div class="text-h5 font-weight-bold text-warning">
-            {{ missingCount }}
-          </div>
-          <div class="text-caption text-medium-emphasis">
+    <div class="bo-well">
+      <section class="bo-stats">
+        <div class="bo-stat">
+          <div class="bo-stat__k">
             Sans dossier
           </div>
-        </v-card>
-      </v-col>
-      <v-col
-        cols="4"
-        md="3"
-      >
-        <v-card
-          rounded="lg"
-          class="bo-card bo-stat-card pa-4"
-          elevation="0"
-          style="border-left-color: rgb(var(--v-theme-success));"
-        >
-          <div class="text-h5 font-weight-bold text-success">
-            {{ assignedCount }}
+          <div
+            class="bo-stat__v"
+            :style="missingCount ? 'color: var(--bo-warn);' : ''"
+          >
+            {{ missingCount }}
           </div>
-          <div class="text-caption text-medium-emphasis">
+          <div class="bo-stat__n">
+            dates à traiter
+          </div>
+        </div>
+        <div class="bo-stat">
+          <div class="bo-stat__k">
             Avec dossier
           </div>
-        </v-card>
-      </v-col>
-      <v-col
-        cols="4"
-        md="3"
-      >
-        <v-card
-          rounded="lg"
-          class="bo-card bo-stat-card pa-4"
-          elevation="0"
-          style="border-left-color: rgb(var(--v-theme-primary));"
-        >
-          <div class="text-h5 font-weight-bold">
-            {{ dates.length }}
+          <div class="bo-stat__v">
+            {{ assignedCount }}
           </div>
-          <div class="text-caption text-medium-emphasis">
+          <div class="bo-stat__n">
+            dossiers liés
+          </div>
+        </div>
+        <div class="bo-stat">
+          <div class="bo-stat__k">
             Total dates
           </div>
-        </v-card>
-      </v-col>
-    </v-row>
+          <div class="bo-stat__v">
+            {{ dates.length }}
+          </div>
+          <div class="bo-stat__n">
+            départs à venir
+          </div>
+        </div>
+      </section>
 
-    <!-- Filters -->
-    <div class="d-flex align-center ga-3 mb-4 flex-wrap">
-      <v-text-field
-        v-model="search"
-        label="Rechercher par titre ou slug"
-        :prepend-inner-icon="mdiMagnify"
-        clearable
-        hide-details
-        density="compact"
-        style="max-width: 320px;"
-      />
-      <v-chip-group
-        v-model="filter"
-        selected-class="bg-primary text-white"
-      >
-        <v-chip
-          value="all"
-          label
-          size="small"
+      <div class="bo-row">
+        <v-text-field
+          v-model="search"
+          :prepend-inner-icon="mdiMagnify"
+          placeholder="Rechercher un titre ou un slug…"
+          aria-label="Rechercher un voyage"
+          clearable
+          style="max-width: 320px;"
+        />
+        <v-btn-toggle
+          v-model="filter"
+          mandatory
+          class="bo-seg"
+          density="compact"
         >
-          Toutes
-        </v-chip>
-        <v-chip
-          value="missing"
-          label
-          size="small"
-        >
-          Sans dossier
-        </v-chip>
-        <v-chip
-          value="assigned"
-          label
-          size="small"
-        >
-          Avec dossier
-        </v-chip>
-      </v-chip-group>
-    </div>
-
-    <!-- List -->
-    <div
-      v-if="loading"
-      class="d-flex justify-center py-12"
-    >
-      <v-progress-circular
-        indeterminate
-        color="primary"
-        size="48"
-      />
-    </div>
-
-    <template v-else>
-      <v-expansion-panels
-        v-model="openPanels"
-        multiple
-        variant="accordion"
-      >
-        <v-expansion-panel
-          v-for="group in filteredGroups"
-          :key="group.slug"
-          rounded="lg"
-          class="mb-3 bo-card"
-          elevation="0"
-        >
-          <v-expansion-panel-title class="py-3">
-            <div class="d-flex align-center ga-3 w-100">
-              <v-avatar
-                size="40"
-                rounded="lg"
-                color="grey-lighten-3"
-              >
-                <v-img
-                  v-if="group.image"
-                  :src="group.image"
-                  cover
-                />
-                <v-icon
-                  v-else
-                  size="24"
-                  color="grey"
-                >
-                  {{ mdiImageOff }}
-                </v-icon>
-              </v-avatar>
-              <div class="flex-grow-1">
-                <div class="text-body-1 font-weight-bold">
-                  {{ group.title || group.slug }}
-                </div>
-                <div class="text-caption text-medium-emphasis">
-                  {{ group.slug }}
-                </div>
-              </div>
-              <div class="d-flex align-center ga-2 mr-4">
-                <v-chip
-                  v-if="group.missingCount > 0"
-                  color="warning"
-                  label
-                  size="small"
-                >
-                  {{ group.missingCount }} sans dossier
-                </v-chip>
-                <v-chip
-                  v-if="group.assignedCount > 0"
-                  color="success"
-                  label
-                  size="small"
-                >
-                  {{ group.assignedCount }} assigné{{ group.assignedCount > 1 ? 's' : '' }}
-                </v-chip>
-              </div>
-            </div>
-          </v-expansion-panel-title>
-
-          <v-expansion-panel-text class="pa-0">
-            <v-divider />
-            <div
-              v-for="date in group.dates"
-              :key="date.id"
-              class="date-row px-4 py-3"
-              :class="{ 'border-warning': !date.departure_id }"
-            >
-              <v-row align="center">
-                <!-- Date + seats -->
-                <v-col
-                  cols="12"
-                  md="3"
-                >
-                  <NuxtLink
-                    :to="`/booking-management/${date.travel_slug}/${date.id}`"
-                    class="text-body-2 font-weight-bold d-flex align-center ga-1"
-                  >
-                    {{ dayjs(date.departure_date).format('DD MMM YYYY') }}
-                    <v-icon size="12">
-                      {{ mdiArrowRight }}
-                    </v-icon>
-                  </NuxtLink>
-                  <div class="text-caption text-medium-emphasis">
-                    <span v-if="date.return_date">retour {{ dayjs(date.return_date).format('DD MMM YYYY') }} · </span>
-                    {{ date.booked_seat || 0 }} / {{ date.max_travelers || '?' }} voyageurs
-                  </div>
-                </v-col>
-
-                <!-- Publication -->
-                <v-col
-                  cols="12"
-                  md="1"
-                >
-                  <v-chip
-                    :color="date.published ? 'green-light' : 'grey'"
-                    label
-                    size="x-small"
-                  >
-                    {{ date.published ? 'Publiée' : 'Brouillon' }}
-                  </v-chip>
-                </v-col>
-
-                <!-- Departure deal -->
-                <v-col
-                  cols="12"
-                  md="8"
-                >
-                  <div
-                    v-if="date.departure_id"
-                    class="d-flex align-center ga-2"
-                  >
-                    <v-chip
-                      color="success"
-                      label
-                      size="small"
-                      :prepend-icon="mdiCheckCircle"
-                    >
-                      Dossier #{{ date.departure_id }}
-                    </v-chip>
-                    <v-btn
-                      :href="`https://odysway90522.activehosted.com/app/deals/${date.departure_id}`"
-                      target="_blank"
-                      size="x-small"
-                      variant="tonal"
-                      color="primary"
-                      :append-icon="mdiArrowRight"
-                    >
-                      Voir
-                    </v-btn>
-                    <v-btn
-                      icon
-                      size="x-small"
-                      color="error"
-                      variant="text"
-                      :loading="removingId === date.id"
-                      @click="onRemove(date)"
-                    >
-                      <v-icon size="16">
-                        {{ mdiDelete }}
-                      </v-icon>
-                    </v-btn>
-                  </div>
-
-                  <v-form
-                    v-else
-                    @submit.prevent="onAssign(date)"
-                  >
-                    <div class="d-flex align-center ga-2">
-                      <v-text-field
-                        v-model="dealUrls[date.id]"
-                        label="URL deal AC (dossier de départ)"
-                        placeholder="https://…activehosted.com/app/deals/123"
-                        density="compact"
-                        hide-details
-                        class="flex-grow-1"
-                      />
-                      <v-btn
-                        type="submit"
-                        color="primary"
-                        size="small"
-                        :loading="assigningId === date.id"
-                        :disabled="assigningId === date.id"
-                      >
-                        Assigner
-                      </v-btn>
-                    </div>
-                    <v-alert
-                      v-if="errors[date.id]"
-                      type="error"
-                      density="compact"
-                      class="mt-1"
-                      variant="tonal"
-                    >
-                      {{ errors[date.id] }}
-                    </v-alert>
-                  </v-form>
-                </v-col>
-              </v-row>
-            </div>
-          </v-expansion-panel-text>
-        </v-expansion-panel>
-      </v-expansion-panels>
+          <v-btn value="all">
+            Toutes
+          </v-btn>
+          <v-btn value="missing">
+            Sans dossier <span class="bo-seg__n">{{ missingCount }}</span>
+          </v-btn>
+          <v-btn value="assigned">
+            Avec dossier <span class="bo-seg__n">{{ assignedCount }}</span>
+          </v-btn>
+        </v-btn-toggle>
+      </div>
 
       <div
-        v-if="!filteredGroups.length"
-        class="text-center py-12 text-medium-emphasis"
+        v-if="loading"
+        class="d-flex justify-center py-12"
       >
-        Aucun voyage correspondant.
+        <v-progress-circular
+          indeterminate
+          color="primary"
+          size="40"
+        />
       </div>
-    </template>
-  </v-container>
+
+      <template v-else>
+        <v-expansion-panels
+          v-model="openPanels"
+          multiple
+          variant="accordion"
+        >
+          <v-expansion-panel
+            v-for="group in filteredGroups"
+            :key="group.slug"
+            rounded="lg"
+            class="mb-3 bo-card"
+            elevation="0"
+          >
+            <v-expansion-panel-title class="py-3">
+              <div class="d-flex align-center ga-3 w-100">
+                <v-avatar
+                  size="40"
+                  rounded="lg"
+                  color="grey-lighten-3"
+                >
+                  <v-img
+                    v-if="group.image"
+                    :src="group.image"
+                    cover
+                  />
+                  <v-icon
+                    v-else
+                    size="24"
+                    color="grey"
+                  >
+                    {{ mdiImageOff }}
+                  </v-icon>
+                </v-avatar>
+                <div class="flex-grow-1">
+                  <div class="text-body-1 font-weight-bold">
+                    {{ group.title || group.slug }}
+                  </div>
+                  <div class="text-caption text-medium-emphasis">
+                    {{ group.slug }}
+                  </div>
+                </div>
+                <div class="d-flex align-center ga-2 mr-4">
+                  <span
+                    v-if="group.missingCount > 0"
+                    class="bo-tag bo-tag--warn"
+                  >
+                    <span class="bo-dot" />{{ group.missingCount }} sans dossier
+                  </span>
+                  <span
+                    v-if="group.assignedCount > 0"
+                    class="bo-tag bo-tag--ok"
+                  >
+                    {{ group.assignedCount }} assigné{{ group.assignedCount > 1 ? 's' : '' }}
+                  </span>
+                </div>
+              </div>
+            </v-expansion-panel-title>
+
+            <v-expansion-panel-text class="pa-0">
+              <v-divider />
+              <div
+                v-for="date in group.dates"
+                :key="date.id"
+                class="date-row px-4 py-3"
+                :class="{ 'border-warning': !date.departure_id }"
+              >
+                <v-row align="center">
+                  <!-- Date + seats -->
+                  <v-col
+                    cols="12"
+                    md="3"
+                  >
+                    <NuxtLink
+                      :to="`/booking-management/${date.travel_slug}/${date.id}`"
+                      class="bo-num font-weight-bold d-flex align-center ga-1"
+                    >
+                      {{ dayjs(date.departure_date).format('DD MMM YYYY') }}
+                      <v-icon size="12">
+                        {{ mdiArrowRight }}
+                      </v-icon>
+                    </NuxtLink>
+                    <div class="text-caption text-medium-emphasis">
+                      <span v-if="date.return_date">retour {{ dayjs(date.return_date).format('DD MMM YYYY') }} · </span>
+                      {{ date.booked_seat || 0 }} / {{ date.max_travelers || '?' }} voyageurs
+                    </div>
+                  </v-col>
+
+                  <!-- Publication -->
+                  <v-col
+                    cols="12"
+                    md="1"
+                  >
+                    <span
+                      class="bo-tag"
+                      :class="date.published ? 'bo-tag--ok' : 'bo-tag--warn'"
+                    >
+                      <span class="bo-dot" />{{ date.published ? 'Publiée' : 'Brouillon' }}
+                    </span>
+                  </v-col>
+
+                  <!-- Departure deal -->
+                  <v-col
+                    cols="12"
+                    md="8"
+                  >
+                    <div
+                      v-if="date.departure_id"
+                      class="d-flex align-center ga-2"
+                    >
+                      <span class="bo-tag bo-tag--ok">
+                        <span class="bo-dot" />Dossier #{{ date.departure_id }}
+                      </span>
+                      <v-btn
+                        :href="`https://odysway90522.activehosted.com/app/deals/${date.departure_id}`"
+                        target="_blank"
+                        variant="text"
+                      >
+                        Ouvrir ↗
+                      </v-btn>
+                      <v-btn
+                        :icon="mdiDelete"
+                        variant="text"
+                        density="comfortable"
+                        color="error"
+                        aria-label="Détacher le dossier de départ"
+                        :loading="removingId === date.id"
+                        @click="onRemove(date)"
+                      />
+                    </div>
+
+                    <v-form
+                      v-else
+                      @submit.prevent="onAssign(date)"
+                    >
+                      <div class="d-flex align-center ga-2">
+                        <v-text-field
+                          v-model="dealUrls[date.id]"
+                          label="URL deal AC (dossier de départ)"
+                          placeholder="https://…activehosted.com/app/deals/123"
+                          density="compact"
+                          hide-details
+                          class="flex-grow-1"
+                        />
+                        <v-btn
+                          type="submit"
+                          color="primary"
+                          size="small"
+                          :loading="assigningId === date.id"
+                          :disabled="assigningId === date.id"
+                        >
+                          Assigner
+                        </v-btn>
+                      </div>
+                      <v-alert
+                        v-if="errors[date.id]"
+                        type="error"
+                        density="compact"
+                        class="mt-1"
+                        variant="tonal"
+                      >
+                        {{ errors[date.id] }}
+                      </v-alert>
+                    </v-form>
+                  </v-col>
+                </v-row>
+              </div>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+        </v-expansion-panels>
+
+        <div
+          v-if="!filteredGroups.length"
+          class="bo-card bo-empty"
+        >
+          Aucun voyage correspondant.
+        </div>
+      </template>
+    </div>
+  </div>
 </template>
 
 <script setup>
 import { ref, computed, reactive, onMounted } from 'vue'
 import dayjs from 'dayjs'
-import { mdiMagnify, mdiArrowRight, mdiDelete, mdiCheckCircle, mdiImageOff } from '@mdi/js'
+import { mdiMagnify, mdiArrowRight, mdiDelete, mdiImageOff } from '@mdi/js'
+import BoPageHeader from '~/components/booking/BoPageHeader.vue'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 
 definePageMeta({
   layout: 'booking',
   middleware: 'booking-management',
 })
+
+const { confirmAction, toast } = useBoDialogs()
 
 const sanity = useSanity()
 const voyagesQuery = groq`*[_type == "voyage"]{
@@ -461,14 +402,22 @@ const onAssign = async (date) => {
 }
 
 const onRemove = async (date) => {
-  if (!confirm('Retirer le dossier de départ de cette date ?')) return
+  const ok = await confirmAction({
+    title: 'Détacher le dossier de départ ?',
+    message: `Le deal AC #${date.departure_id} ne sera plus lié au départ du ${dayjs(date.departure_date).format('DD/MM/YYYY')}.`,
+    confirmLabel: 'Détacher',
+    tone: 'danger',
+  })
+  if (!ok) return
+
   removingId.value = date.id
   try {
     await bookingApi.removeDepartureDeal(date.travel_slug, date.id)
+    toast('Dossier de départ détaché.', 'ok')
     await fetchDates()
   }
   catch (err) {
-    console.error(getApiErrorMessage(err, 'Erreur lors de la suppression'))
+    toast(getApiErrorMessage(err, 'Erreur lors de la suppression'), 'crit')
   }
   finally {
     removingId.value = null
@@ -480,13 +429,15 @@ onMounted(fetchDates)
 
 <style scoped>
 .date-row {
-  border-bottom: 1px solid rgba(var(--v-theme-on-surface), 0.06);
+  border-bottom: 1px solid var(--bo-line-soft);
 }
+
 .date-row:last-child {
   border-bottom: none;
 }
+
+/* Une date sans dossier de départ est la seule chose à traiter ici. */
 .border-warning {
-  border-left: 3px solid rgb(var(--v-theme-warning));
-  background: rgba(var(--v-theme-warning), 0.03);
+  box-shadow: inset 3px 0 0 var(--bo-warn);
 }
 </style>

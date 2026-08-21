@@ -307,6 +307,8 @@ import { mdiCurrencyEur, mdiRefresh, mdiInformationOutline } from '@mdi/js'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 import { formatEur } from '~/utils/formatNumber'
 
+const { toast } = useBoDialogs()
+
 const props = defineProps({
   slug: { type: String, required: true },
   dateId: { type: String, required: true },
@@ -398,7 +400,7 @@ async function saveOverride() {
     await fetchMargin()
   }
   catch (err) {
-    alert(getApiErrorMessage(err, 'Erreur lors de l\'enregistrement.'))
+    toast(getApiErrorMessage(err, 'Erreur lors de l\'enregistrement.'), 'crit')
   }
   finally {
     overrideSaving.value = false
