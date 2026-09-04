@@ -181,10 +181,9 @@
 
 <script setup>
 import { IconArrowRight, IconUsers, IconCalendarCheck, IconFlame } from '@tabler/icons-vue'
-import { mdiArrowRight, mdiAccountMultiple, mdiCalendarCheck } from '@mdi/js'
+import { mdiAccountMultiple } from '@mdi/js'
 import dayjs from 'dayjs'
 import { useImage } from '#imports'
-import { getDateStatus } from '~/utils/getDateStatus'
 
 const props = defineProps({
   voyage: {
@@ -228,17 +227,25 @@ const { data: voyageCardContent } = await useSanityQuery(
   { dedupe: 'defer' },
 )
 const dateData = computed(() => {
-  return props.voyage.dates.find(date => date.departure_date === props.voyage.departureDate)
+  return props.voyage.dates?.find(date => date.departure_date === props.voyage.departureDate) || null
 })
+// Seat counts arrive display-resolved from the API (displayed_* overrides applied
+// server-side), so the badge only has to handle a missing cap.
+const toNumberOrNull = (value) => {
+  if (value === null || value === undefined || value === '') return null
+  const n = Number(value)
+  return Number.isFinite(n) ? n : null
+}
 const remainingSeats = computed(() => {
-  if (!dateData.value) return null
-  const { max_travelers, booked_seat } = dateData.value
-  if (typeof max_travelers !== 'number' || typeof booked_seat !== 'number') return null
-  return max_travelers - booked_seat
+  const date = dateData.value
+  if (!date) return null
+  const seatsLeft = toNumberOrNull(date.seats_left)
+  if (seatsLeft !== null) return seatsLeft
+  const max = toNumberOrNull(date.max_travelers)
+  // No cap set in the BMS: we have nothing honest to display.
+  if (max === null) return null
+  return max - (toNumberOrNull(date.booked_seat) ?? 0)
 })
-
-// Image-overlay badges (demo style): driven by `variant` + the date data.
-const isGuaranteed = computed(() => dateData.value && getDateStatus(dateData.value)?.status === 'confirmed')
 
 const daysUntilDeparture = computed(() => {
   if (!props.voyage.departureDate) return null

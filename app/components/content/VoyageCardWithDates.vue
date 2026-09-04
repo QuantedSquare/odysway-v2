@@ -69,17 +69,28 @@ const confirmedDeparture = computed(() => {
   }) || null
 })
 
-const selectedDeparture = computed(() => confirmedDeparture.value || earliestDeparture.value)
+// "Dernières places": the API pins the exact departure the carousel pushes
+// (seat counts already resolved against the displayed_* layer). It must win over
+// the earliest date of the slug, which can be another — often sold out — one.
+const pinnedDeparture = computed(() => props.voyage.lastMinuteDate || null)
+
+const selectedDeparture = computed(() =>
+  pinnedDeparture.value || confirmedDeparture.value || earliestDeparture.value,
+)
 
 const isGroupTravel = computed(() => props.voyage.availabilityTypes?.includes('groupe'))
 
-const shouldShowNextCard = computed(() => isGroupTravel.value && dates.value.length > 0)
+const shouldShowNextCard = computed(() =>
+  isGroupTravel.value && (dates.value.length > 0 || !!pinnedDeparture.value),
+)
 
 const cardVoyage = computed(() => {
   if (!shouldShowNextCard.value) return props.voyage
   return {
     ...props.voyage,
-    dates: dates.value,
+    // The pinned date comes first so NextDepartureCard resolves its seat/price
+    // data against it rather than a same-day row coming from /travel-dates.
+    dates: pinnedDeparture.value ? [pinnedDeparture.value, ...dates.value] : dates.value,
     departureDate: selectedDeparture.value?.departure_date,
   }
 })

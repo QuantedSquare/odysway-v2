@@ -421,11 +421,52 @@ export const homePageType = defineType({
         defineField({ name: 'eyebrow', title: 'Sur-titre (petit texte au-dessus du titre)', type: 'string' }),
         defineField({ name: 'title', title: 'Titre', type: 'string' }),
         defineField({ name: 'subtitle', title: 'Sous-titre', type: 'string' }),
+        // Le carousel est automatique : il remonte les départs de groupe encore
+        // réservables qui ont déjà des inscrits et peu de places restantes.
+        // Ces réglages pilotent la sélection (voir
+        // server/api/v1/booking/last-minute-voyages.get.js).
         defineField({
-          name: 'voyages',
-          title: 'Voyages (peut réutiliser ceux des autres carousels)',
+          name: 'minBookedSeats',
+          title: 'Minimum de voyageurs déjà inscrits',
+          description: 'Un départ n\'est poussé qu\'à partir de ce nombre d\'inscrits. Par défaut : 1.',
+          type: 'number',
+          validation: rule => rule.min(0).integer(),
+        }),
+        defineField({
+          name: 'maxRemainingSeats',
+          title: 'Maximum de places restantes',
+          description: 'Au-delà, le départ n\'est pas considéré comme une "dernière place". Par défaut : 5.',
+          type: 'number',
+          validation: rule => rule.min(1).integer(),
+        }),
+        defineField({
+          name: 'maxDaysUntilDeparture',
+          title: 'Horizon en jours (optionnel)',
+          description: 'N\'afficher que les départs dans les X prochains jours. Vide = aucune limite.',
+          type: 'number',
+          validation: rule => rule.min(1).integer(),
+        }),
+        defineField({
+          name: 'maxVoyages',
+          title: 'Nombre de voyages affichés',
+          description: 'Nombre maximum de cartes dans le carousel. Par défaut : 12.',
+          type: 'number',
+          validation: rule => rule.min(1).integer(),
+        }),
+        defineField({
+          name: 'excludedVoyages',
+          title: 'Voyages à ne jamais afficher ici',
+          description: 'Pour retirer manuellement un voyage du carousel, même s\'il remplit les critères.',
           type: 'array',
           of: [{ type: 'reference', to: [{ type: 'voyage' }] }],
+        }),
+        defineField({
+          name: 'voyages',
+          title: '⚠️ Obsolète — sélection manuelle (non utilisée)',
+          description: 'Le carousel est alimenté automatiquement depuis les dates de départ. Ce champ n\'est plus lu.',
+          type: 'array',
+          of: [{ type: 'reference', to: [{ type: 'voyage' }] }],
+          readOnly: true,
         }),
       ],
     }),

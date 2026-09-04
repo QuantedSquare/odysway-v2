@@ -54,7 +54,7 @@ export default defineEventHandler(async (event) => {
 
   const { data, error } = await supabase
     .from('travel_dates')
-    .select('travel_slug, booked_seat, displayed_booked_seat, departure_date, return_date, early_bird, last_minute, starting_price, max_travelers, min_travelers, status, displayed_status, displayed_badges')
+    .select('travel_slug, booked_seat, displayed_booked_seat, departure_date, return_date, early_bird, last_minute, starting_price, displayed_starting_price, max_travelers, displayed_max_travelers, min_travelers, displayed_min_travelers, custom_display, status, displayed_status, displayed_badges')
     .or(orFilters)
     .eq('deleted', false)
     .eq('published', true)
@@ -67,13 +67,23 @@ export default defineEventHandler(async (event) => {
     return []
   }
 
-  return data.map(date => ({
-    ...date,
-    voyage_id: metaBySlug[date.travel_slug]?.voyage_id,
-    closingDays: metaBySlug[date.travel_slug]?.closingDays ?? 30,
-    closing_date: dayjs(date.departure_date).subtract((metaBySlug[date.travel_slug]?.closingDays ?? 30), 'day').toDate(),
-    departure_date: new Date(date.departure_date),
-    early_bird: dayjs().isAfter(dayjs(date.departure_date).add(7, 'month')) ? date.early_bird : false,
-    last_minute: dayjs(date.departure_date).diff(dayjs(), 'day') <= 31 ? date.last_minute : false,
-  }))
+  // Seat counts and price are served display-resolved: this endpoint only feeds
+  // public cards, which must show what the BMS decided to display (displayed_*
+  // overrides when custom_display is on), never the raw booking-engine numbers.
+  return data.map((date) => {
+    const { max, booked, min } = resolveSeatCounts(date)
+    return {
+      ...date,
+      booked_seat: booked,
+      max_travelers: max,
+      min_travelers: min,
+      starting_price: resolveStartingPrice(date),
+      voyage_id: metaBySlug[date.travel_slug]?.voyage_id,
+      closingDays: metaBySlug[date.travel_slug]?.closingDays ?? 30,
+      closing_date: dayjs(date.departure_date).subtract((metaBySlug[date.travel_slug]?.closingDays ?? 30), 'day').toDate(),
+      departure_date: new Date(date.departure_date),
+      early_bird: dayjs().isAfter(dayjs(date.departure_date).add(7, 'month')) ? date.early_bird : false,
+      last_minute: dayjs(date.departure_date).diff(dayjs(), 'day') <= 31 ? date.last_minute : false,
+    }
+  })
 })
