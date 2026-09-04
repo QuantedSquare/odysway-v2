@@ -100,13 +100,13 @@
                 justify="center"
               >
                 <v-col
-                  cols="4"
+                  cols="5"
                   class="d-flex flex-column  align-center ga-1 justify-center "
                 >
                   <v-icon
                     class="text-primary custom-icon-size"
                   >{{ mdiAccountMultiple }}</v-icon>
-                  <div class="text-caption text-md-subtitle-2 line-height font-weight-bold text-primary text-center">{{ voyage.availabilityTypes?.includes('groupe')
+                  <div class="text-caption text-md-subtitle-2 text-center text-no-wrap text-md-left text-grey">{{ voyage.availabilityTypes?.includes('groupe')
                     ? (voyageCardContent?.groupType || 'Groupe') : (voyageCardContent?.soloType || 'Solo') }}</div>
                 </v-col>
                 <v-divider
@@ -115,7 +115,7 @@
                   vertical
                 />
                 <v-col
-                  cols="4"
+                  cols="3"
                   class="text-center"
                 >
                   <div class="text-h6 font-weight-bold text-primary">
@@ -147,7 +147,7 @@
                   cols="12"
                   class="py-0 py-md-1 px-4 d-flex align-center"
                 >
-                  <span class="line-height text-grey text-body-2 text-md-subtitle-1">
+                  <span class=" text-grey text-body-2 text-md-subtitle-1 text-custom-size">
                     {{ voyageCardContent?.indivDescription }}</span>
                 </v-col>
               </v-row>
@@ -305,6 +305,10 @@ const handleCardClick = () => {
 
 :deep(.v-btn--variant-text .v-btn__overlay) {
   background-color: v-bind(actionColor);
+}
+.text-custom-size{
+  font-size: 13px!important;
+  color: #7a8587;
 }
 .line-height {
   line-height: 20px !important;
