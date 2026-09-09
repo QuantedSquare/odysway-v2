@@ -30,81 +30,49 @@
     </div>
 
     <!-- Stats -->
-    <v-row class="mb-4">
-      <v-col
-        cols="6"
-        md="3"
-      >
-        <v-card
-          rounded="lg"
-          class="bo-card bo-stat-card pa-4"
-          elevation="0"
-          style="border-left-color: rgb(var(--v-theme-error));"
+    <section class="bo-stats mb-4">
+      <div class="bo-stat">
+        <div class="bo-stat__k">
+          Non configurés en {{ activeYear }}
+        </div>
+        <div
+          class="bo-stat__v"
+          :style="counts.unconfigured ? 'color: var(--bo-crit);' : ''"
         >
-          <div class="text-h5 font-weight-bold text-error">
-            {{ counts.unconfigured }}
-          </div>
-          <div class="text-caption text-medium-emphasis">
-            Non configur&eacute;s en {{ activeYear }}
-          </div>
-        </v-card>
-      </v-col>
-      <v-col
-        cols="6"
-        md="3"
-      >
-        <v-card
-          rounded="lg"
-          class="bo-card bo-stat-card pa-4"
-          elevation="0"
-          style="border-left-color: rgb(var(--v-theme-warning));"
+          {{ counts.unconfigured }}
+        </div>
+      </div>
+      <div class="bo-stat">
+        <div class="bo-stat__k">
+          Incomplets
+        </div>
+        <div
+          class="bo-stat__v"
+          :style="counts.partial ? 'color: var(--bo-warn);' : ''"
         >
-          <div class="text-h5 font-weight-bold text-warning">
-            {{ counts.partial }}
-          </div>
-          <div class="text-caption text-medium-emphasis">
-            Incomplets
-          </div>
-        </v-card>
-      </v-col>
-      <v-col
-        cols="6"
-        md="3"
-      >
-        <v-card
-          rounded="lg"
-          class="bo-card bo-stat-card pa-4"
-          elevation="0"
-          style="border-left-color: rgb(var(--v-theme-success));"
-        >
-          <div class="text-h5 font-weight-bold text-success">
-            {{ counts.configured }}
-          </div>
-          <div class="text-caption text-medium-emphasis">
-            Configur&eacute;s
-          </div>
-        </v-card>
-      </v-col>
-      <v-col
-        cols="6"
-        md="3"
-      >
-        <v-card
-          rounded="lg"
-          class="bo-card bo-stat-card pa-4"
-          elevation="0"
-          style="border-left-color: rgb(var(--v-theme-primary));"
-        >
-          <div class="text-h5 font-weight-bold">
-            {{ visibleVoyages.length }}
-          </div>
-          <div class="text-caption text-medium-emphasis">
-            Voyages list&eacute;s
-            <span v-if="hideWithoutDates && withoutDatesCount"> · {{ withoutDatesCount }} masqu&eacute;s</span>
-          </div>
-        </v-card>
-      </v-col>
-    </v-row>
+          {{ counts.partial }}
+        </div>
+      </div>
+      <div class="bo-stat">
+        <div class="bo-stat__k">
+          Configurés
+        </div>
+        <div class="bo-stat__v">
+          {{ counts.configured }}
+        </div>
+      </div>
+      <div class="bo-stat">
+        <div class="bo-stat__k">
+          Voyages listés
+        </div>
+        <div class="bo-stat__v">
+          {{ visibleVoyages.length }}
+        </div>
+        <div class="bo-stat__n">
+          <span v-if="hideWithoutDates && withoutDatesCount">{{ withoutDatesCount }} masqués</span>
+        </div>
+      </div>
+    </section>
 
     <!-- Filters -->
     <div class="d-flex align-center ga-3 mb-4 flex-wrap">

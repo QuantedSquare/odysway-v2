@@ -253,6 +253,8 @@ import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 import { formatEur } from '~/utils/formatNumber'
 import { formatFileSize, maxFileSizeRule, mimeIcon, mimeIconColor } from '~/utils/fileDisplay'
 
+const { confirmAction, toast } = useBoDialogs()
+
 const props = defineProps({
   slug: { type: String, required: true },
   dateId: { type: String, required: true },
@@ -313,14 +315,16 @@ async function fetchInvoices() {
 }
 
 async function restoreInvoice(invoice) {
-  if (!confirm('Restaurer cette facture ?')) return
+  const ok = await confirmAction({ title: 'Restaurer cette facture ?', confirmLabel: 'Restaurer' })
+  if (!ok) return
+
   try {
     await bookingApi.restoreChild(props.slug, props.dateId, 'invoice', invoice.id)
     await fetchInvoices()
     emit('invoices-changed')
   }
   catch (err) {
-    alert(getApiErrorMessage(err, 'Erreur lors de la restauration'))
+    toast(getApiErrorMessage(err, 'Erreur lors de la restauration'), 'crit')
   }
 }
 
@@ -391,7 +395,7 @@ async function onAmountBlur(invoice, event) {
     emit('invoices-changed')
   }
   catch (err) {
-    alert(getApiErrorMessage(err, 'Erreur lors de la mise à jour du montant.'))
+    toast(getApiErrorMessage(err, 'Erreur lors de la mise à jour du montant.'), 'crit')
     await fetchInvoices()
   }
 }
@@ -412,7 +416,15 @@ async function downloadFile(invoice) {
 
 async function deleteInvoice(invoice) {
   const name = invoice.file_name || invoice.label || 'cette ligne'
-  if (!confirm(`Supprimer "${name}" ?`)) return
+  const ok = await confirmAction({
+    title: 'Supprimer cette ligne ?',
+    message: name,
+    detail: 'Elle reste restaurable depuis le filtre « Supprimées ».',
+    confirmLabel: 'Supprimer',
+    tone: 'danger',
+  })
+  if (!ok) return
+
   try {
     await bookingApi.deleteInvoice(props.slug, props.dateId, invoice.id)
     await fetchInvoices()

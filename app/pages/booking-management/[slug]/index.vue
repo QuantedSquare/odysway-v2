@@ -1,249 +1,217 @@
 <template>
-  <v-container
-    fluid
-    class="py-6"
-  >
-    <v-row class="align-center mb-4">
-      <v-col
-        cols="12"
-        md="8"
-      >
-        <div class="d-flex align-center ga-2 mb-1">
-          <h1 class="text-h5 font-weight-bold">
-            {{ voyage?.title || slug }}
-          </h1>
-          <NuxtLink
-            :to="`/voyages/${slug}`"
-            target="_blank"
-            class="text-medium-emphasis"
-          >
-            <v-icon size="16">
-              {{ mdiArrowRight }}
-            </v-icon>
-          </NuxtLink>
-        </div>
-        <p class="text-body-2 text-medium-emphasis mb-0">
-          Gerer les departs, dupliquer, supprimer et acceder aux reservations.
-        </p>
-      </v-col>
-      <v-col
-        cols="12"
-        md="4"
-        class="d-flex justify-end ga-2"
-      >
+  <div>
+    <BoPageHeader
+      :title="voyage?.title || slug"
+      :crumbs="[
+        { title: 'Backoffice', to: '/booking-management' },
+        { title: 'Voyages', to: '/booking-management' },
+        { title: voyage?.title || slug },
+      ]"
+    >
+      <template #meta>
+        <span class="bo-num">{{ slug }}</span>
+        <span>·</span>
+        <span>{{ counts.upcoming }} date{{ counts.upcoming > 1 ? 's' : '' }} à venir</span>
+        <span
+          v-if="counts.draft"
+          class="bo-tag bo-tag--warn"
+        >
+          {{ counts.draft }} non publiée{{ counts.draft > 1 ? 's' : '' }}
+        </span>
+      </template>
+
+      <template #actions>
         <v-btn
-          variant="tonal"
-          size="small"
+          :href="`/voyages/${slug}`"
+          target="_blank"
+          variant="text"
+        >
+          Voir sur le site ↗
+        </v-btn>
+        <v-btn
           :loading="loading"
           @click="fetchDates"
         >
-          Rafraichir
+          Rafraîchir
         </v-btn>
         <v-btn
+          :prepend-icon="mdiPlus"
           color="primary"
           variant="flat"
-          size="small"
-          :prepend-icon="mdiPlus"
           @click="goToAddDate"
         >
           Ajouter une date
         </v-btn>
-      </v-col>
-    </v-row>
+      </template>
+    </BoPageHeader>
 
-    <!-- Filters bar -->
-    <div class="d-flex align-center ga-3 mb-4 flex-wrap">
-      <v-chip-group
-        v-model="timeframe"
-        selected-class="bg-primary text-white"
-      >
-        <v-chip
-          value="upcoming"
-          label
-          size="small"
+    <div class="bo-well">
+      <div class="bo-row">
+        <v-btn-toggle
+          v-model="timeframe"
+          mandatory
+          class="bo-seg"
+          density="compact"
         >
-          A venir
-        </v-chip>
-        <v-chip
-          value="ongoing"
-          label
-          size="small"
-          :class="hasOngoingDates ? 'ongoing-pulse' : ''"
+          <v-btn value="upcoming">
+            À venir <span class="bo-seg__n">{{ counts.upcoming }}</span>
+          </v-btn>
+          <v-btn value="ongoing">
+            <span
+              v-if="counts.ongoing"
+              class="bo-dot bo-dot--live mr-2"
+              style="color: var(--bo-accent);"
+            />
+            En cours <span class="bo-seg__n">{{ counts.ongoing }}</span>
+          </v-btn>
+          <v-btn value="past">
+            Passées <span class="bo-seg__n">{{ counts.past }}</span>
+          </v-btn>
+          <v-btn value="all">
+            Toutes
+          </v-btn>
+        </v-btn-toggle>
+
+        <v-select
+          v-model="publicationFilter"
+          :items="publicationOptions"
+          item-title="label"
+          item-value="value"
+          aria-label="Filtrer par publication"
+          style="max-width: 200px;"
+        />
+
+        <v-spacer />
+
+        <v-switch
+          v-model="showDeleted"
+          label="Afficher les dates supprimées"
+          class="flex-grow-0"
+          @update:model-value="fetchDates"
+        />
+      </div>
+
+      <section class="bo-card">
+        <v-data-table
+          :headers="headers"
+          :items="filteredDates"
+          :loading="loading"
+          :items-per-page="25"
+          item-key="id"
+          class="bo-table"
         >
-          En cours
-        </v-chip>
-        <v-chip
-          value="past"
-          label
-          size="small"
-        >
-          Passees
-        </v-chip>
-        <v-chip
-          value="all"
-          label
-          size="small"
-        >
-          Toutes
-        </v-chip>
-      </v-chip-group>
-      <v-spacer />
-      <v-select
-        v-model="publicationFilter"
-        :items="publicationOptions"
-        item-title="label"
-        item-value="value"
-        label="Publication"
-        density="compact"
-        hide-details
-        style="max-width: 180px;"
-      />
-      <v-select
-        v-model="sortBy"
-        :items="sortOptions"
-        item-title="label"
-        item-value="value"
-        label="Trier"
-        density="compact"
-        hide-details
-        style="max-width: 180px;"
-      />
-      <v-switch
-        v-model="showDeleted"
-        label="Dates supprimées"
-        color="error"
-        density="compact"
-        hide-details
-        class="flex-grow-0"
-        @update:model-value="fetchDates"
-      />
+          <template #item="{ item }">
+            <tr
+              class="bo-tr"
+              :class="rowState(item)"
+              @click="goToDate(item.id)"
+            >
+              <td class="bo-num font-weight-bold">
+                {{ dayjs(item.departure_date).format('DD/MM/YYYY') }}
+              </td>
+              <td class="bo-num bo-muted">
+                {{ dayjs(item.return_date).format('DD/MM/YYYY') }}
+              </td>
+              <td>
+                <span
+                  v-if="isOngoing(item)"
+                  class="bo-tag bo-tag--accent"
+                >
+                  <span class="bo-dot bo-dot--live" />
+                  En cours
+                </span>
+                <span v-else>{{ statusLabel(item) }}</span>
+              </td>
+              <td>
+                <BoFillBar
+                  :booked="item.booked_seat || 0"
+                  :total="item.max_travelers || 0"
+                />
+              </td>
+              <td class="text-right bo-num">
+                {{ formatEur(item.starting_price) }}
+              </td>
+              <td>
+                <v-tooltip
+                  v-if="item.deleted"
+                  location="top"
+                  :text="deletedTooltip(item)"
+                >
+                  <template #activator="{ props: tipProps }">
+                    <span
+                      v-bind="tipProps"
+                      class="bo-tag bo-tag--crit"
+                    >Supprimée</span>
+                  </template>
+                </v-tooltip>
+                <span
+                  v-else-if="item.is_indiv_travel"
+                  class="bo-tag bo-tag--info"
+                >Individuel</span>
+                <span
+                  v-else-if="item.published"
+                  class="bo-tag bo-tag--ok"
+                >
+                  <span class="bo-dot" />Publiée
+                </span>
+                <span
+                  v-else
+                  class="bo-tag bo-tag--warn"
+                >
+                  <span class="bo-dot" />Brouillon
+                </span>
+              </td>
+              <td class="text-right">
+                <v-menu>
+                  <template #activator="{ props }">
+                    <v-btn
+                      v-bind="props"
+                      :icon="mdiDotsVertical"
+                      variant="text"
+                      density="comfortable"
+                      aria-label="Actions sur cette date"
+                      @click.stop
+                    />
+                  </template>
+                  <v-list>
+                    <v-list-item
+                      :prepend-icon="mdiEye"
+                      title="Modifier"
+                      @click="goToDate(item.id)"
+                    />
+                    <v-list-item
+                      :prepend-icon="mdiContentCopy"
+                      title="Dupliquer"
+                      @click="duplicateDate(item)"
+                    />
+                    <v-list-item
+                      v-if="item.deleted"
+                      :prepend-icon="mdiRestore"
+                      title="Restaurer"
+                      @click="restoreDate(item)"
+                    />
+                    <v-list-item
+                      v-else
+                      :prepend-icon="mdiDelete"
+                      title="Supprimer"
+                      class="text-error"
+                      @click="deleteDate(item)"
+                    />
+                  </v-list>
+                </v-menu>
+              </td>
+            </tr>
+          </template>
+
+          <template #no-data>
+            <div class="bo-empty">
+              Aucune date sur cette période.
+            </div>
+          </template>
+        </v-data-table>
+      </section>
     </div>
-
-    <v-card
-      rounded="lg"
-      class="bo-card"
-      elevation="0"
-    >
-      <v-data-table
-        :headers="headers"
-        :items="filteredDates"
-        :loading="loading"
-        item-key="id"
-        hover
-        :items-per-page="12"
-        class="elevation-0"
-        density="compact"
-      >
-        <template #item="{ item }">
-          <tr
-            class="cursor-pointer"
-            :class="{ 'row-deleted': item.deleted }"
-            @click="goToDate(item.id)"
-          >
-            <td>
-              <v-tooltip
-                v-if="item.deleted"
-                location="top"
-              >
-                <template #activator="{ props: tipProps }">
-                  <v-chip
-                    v-bind="tipProps"
-                    color="error"
-                    label
-                    size="x-small"
-                    variant="tonal"
-                  >
-                    Supprimee
-                  </v-chip>
-                </template>
-                {{ deletedTooltip(item) }}
-              </v-tooltip>
-              <v-chip
-                v-else
-                :color="item.is_indiv_travel ? 'info' : item.published ? 'success' : 'warning'"
-                label
-                size="x-small"
-                variant="tonal"
-              >
-                {{ item.is_indiv_travel ? 'Individuel' : item.published ? 'Publiee' : 'Brouillon' }}
-              </v-chip>
-            </td>
-            <td class="text-body-2">
-              {{ dayjs(item.departure_date).format('DD/MM/YYYY') }}
-            </td>
-            <td class="text-body-2">
-              {{ dayjs(item.return_date).format('DD/MM/YYYY') }}
-            </td>
-            <td>
-              <span class="font-weight-medium text-body-2">
-                {{ getDateStatus(item)?.text || '-' }}
-              </span>
-              <v-chip
-                v-if="isOngoing(item)"
-                color="success"
-                size="x-small"
-                label
-                variant="tonal"
-                class="ml-2 ongoing-pulse"
-              >
-                En cours
-              </v-chip>
-            </td>
-            <td class="text-body-2">
-              {{ item.booked_seat || 0 }} / {{ item.max_travelers || '?' }}
-            </td>
-            <td class="text-right">
-              <v-menu>
-                <template #activator="{ props }">
-                  <v-btn
-                    :icon="mdiDotsVertical"
-                    size="x-small"
-                    variant="text"
-                    v-bind="props"
-                    @click.stop
-                  />
-                </template>
-                <v-list density="compact">
-                  <v-list-item
-                    :prepend-icon="mdiEye"
-                    @click="goToDate(item.id)"
-                  >
-                    Modifier
-                  </v-list-item>
-                  <v-list-item
-                    :prepend-icon="mdiContentCopy"
-                    @click="duplicateDate(item)"
-                  >
-                    Dupliquer
-                  </v-list-item>
-                  <v-list-item
-                    v-if="item.deleted"
-                    :prepend-icon="mdiRestore"
-                    @click="restoreDate(item)"
-                  >
-                    Restaurer
-                  </v-list-item>
-                  <v-list-item
-                    v-else
-                    :prepend-icon="mdiDelete"
-                    class="text-error"
-                    @click="deleteDate(item)"
-                  >
-                    Supprimer
-                  </v-list-item>
-                </v-list>
-              </v-menu>
-            </td>
-          </tr>
-        </template>
-        <template #no-data>
-          <div class="text-center py-8 text-medium-emphasis">
-            Aucune date pour le moment.
-          </div>
-        </template>
-      </v-data-table>
-    </v-card>
-  </v-container>
+  </div>
 </template>
 
 <script setup>
@@ -252,10 +220,14 @@ import { useRoute, useRouter } from 'vue-router'
 import dayjs from 'dayjs'
 import isSameOrAfter from 'dayjs/plugin/isSameOrAfter'
 import isSameOrBefore from 'dayjs/plugin/isSameOrBefore'
-import { mdiContentCopy, mdiDotsVertical, mdiDelete, mdiEye, mdiArrowRight, mdiPlus, mdiRestore } from '@mdi/js'
+import { mdiContentCopy, mdiDotsVertical, mdiDelete, mdiEye, mdiPlus, mdiRestore } from '@mdi/js'
+import BoPageHeader from '~/components/booking/BoPageHeader.vue'
+import BoFillBar from '~/components/booking/BoFillBar.vue'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
+// `travel_dates.starting_price` est déjà en euros (contrairement aux montants
+// des deals AC, qui sont en centimes et passent par `formatNumber`).
+import { formatEur } from '~/utils/formatNumber'
 
-const loading = ref(false)
 dayjs.extend(isSameOrAfter)
 dayjs.extend(isSameOrBefore)
 
@@ -263,32 +235,31 @@ definePageMeta({ layout: 'booking', middleware: 'booking-management' })
 
 const route = useRoute()
 const router = useRouter()
+const { confirmAction, toast } = useBoDialogs()
+
 const slug = route.params.slug
+const loading = ref(false)
 const dates = ref([])
 const voyage = ref(null)
 const timeframe = ref('upcoming')
 const publicationFilter = ref('all')
-const sortBy = ref('departure_asc')
 const showDeleted = ref(false)
 
 const headers = [
-  { title: 'Publication', key: 'published', sortable: true },
-  { title: 'Date de départ', key: 'departure_date', sortable: true },
-  { title: 'Date de retour', key: 'return_date', sortable: true },
-  { title: 'Statut affiché', key: 'displayed_status', sortable: true },
-  { title: 'Voyageurs', key: 'travelers', sortable: false },
+  { title: 'Départ', key: 'departure_date', sortable: false },
+  { title: 'Retour', key: 'return_date', sortable: false },
+  { title: 'Statut', key: 'displayed_status', sortable: false },
+  { title: 'Remplissage', key: 'travelers', sortable: false },
+  { title: 'Prix', key: 'starting_price', sortable: false, align: 'end' },
+  { title: 'Publication', key: 'published', sortable: false },
   { title: '', key: 'actions', sortable: false },
 ]
+
 const publicationOptions = [
-  { label: 'Tous', value: 'all' },
-  { label: 'Publiés', value: 'published' },
-  { label: 'Non publiés', value: 'draft' },
-  { label: 'Individuels', value: 'indiv' },
-]
-const sortOptions = [
-  { label: 'Départ (croissant)', value: 'departure_asc' },
-  { label: 'Départ (décroissant)', value: 'departure_desc' },
-  { label: 'Places réservées', value: 'booked_desc' },
+  { label: 'Publication : toutes', value: 'all' },
+  { label: 'Publiées', value: 'published' },
+  { label: 'Brouillons', value: 'draft' },
+  { label: 'Individuelles', value: 'indiv' },
 ]
 
 const sanity = useSanity()
@@ -298,6 +269,7 @@ const voyageQuery = groq`*[_type == "voyage" && slug.current == $slug][0]{
 const { data: voyageSanity } = await useAsyncData('voyage', () =>
   sanity.fetch(voyageQuery, { slug }),
 )
+
 const fetchDates = async () => {
   loading.value = true
   try {
@@ -306,6 +278,7 @@ const fetchDates = async () => {
   }
   catch (err) {
     console.error(getApiErrorMessage(err, 'Erreur chargement dates'))
+    toast(getApiErrorMessage(err, 'Erreur lors du chargement des dates'), 'crit')
     dates.value = []
   }
   finally {
@@ -313,34 +286,56 @@ const fetchDates = async () => {
   }
 }
 
+const isOngoing = (item) => {
+  const today = dayjs().startOf('day')
+  return today.isSameOrAfter(dayjs(item.departure_date)) && today.isSameOrBefore(dayjs(item.return_date))
+}
+
+const isPast = item => dayjs(item.return_date).isBefore(dayjs().startOf('day'))
+
+const counts = computed(() => ({
+  upcoming: dates.value.filter(d => dayjs(d.departure_date).isAfter(dayjs().startOf('day'))).length,
+  ongoing: dates.value.filter(isOngoing).length,
+  past: dates.value.filter(isPast).length,
+  draft: dates.value.filter(d => !d.published && !d.deleted).length,
+}))
+
 const filteredDates = computed(() => {
   const today = dayjs().startOf('day')
-  console.log('dates', dates.value)
   const base = dates.value.filter((item) => {
     if (publicationFilter.value === 'published' && !item.published) return false
     if (publicationFilter.value === 'draft' && item.published) return false
     if (publicationFilter.value === 'indiv' && !item.is_indiv_travel) return false
 
-    if (timeframe.value === 'upcoming') {
-      return dayjs(item.departure_date).isAfter(today)
-    }
-    if (timeframe.value === 'ongoing') {
-      return isOngoing(item)
-    }
-    if (timeframe.value === 'past') {
-      return isPast(item)
-    }
+    if (timeframe.value === 'upcoming') return dayjs(item.departure_date).isAfter(today)
+    if (timeframe.value === 'ongoing') return isOngoing(item)
+    if (timeframe.value === 'past') return isPast(item)
     return true
   })
 
-  if (sortBy.value === 'departure_desc') {
-    return base.sort((a, b) => dayjs(b.departure_date).valueOf() - dayjs(a.departure_date).valueOf())
-  }
-  if (sortBy.value === 'booked_desc') {
-    return base.sort((a, b) => (b.booked_seat || 0) - (a.booked_seat || 0))
-  }
-  return base.sort((a, b) => dayjs(a.departure_date).valueOf() - dayjs(b.departure_date).valueOf())
+  return [...base].sort((a, b) => dayjs(a.departure_date).valueOf() - dayjs(b.departure_date).valueOf())
 })
+
+// La bande de gauche ne signale que ce qui demande une action : une date
+// supprimée, un départ en cours, ou un départ proche sous son minimum.
+const rowState = (item) => {
+  if (item.deleted) return 'bo-tr--crit bo-tr--deleted'
+  if (isOngoing(item)) return 'bo-tr--live'
+  const daysToGo = dayjs(item.departure_date).diff(dayjs(), 'day')
+  if (daysToGo >= 0 && daysToGo < 60 && (item.booked_seat || 0) < (item.min_travelers || 0)) {
+    return 'bo-tr--warn'
+  }
+  return ''
+}
+
+const statusLabel = (item) => {
+  const labelMap = {
+    soon_confirmed: 'Inscriptions ouvertes',
+    confirmed: 'Confirmé',
+    guaranteed: 'Garanti (complet)',
+  }
+  return labelMap[item.displayed_status || item.status] || '—'
+}
 
 const goToDate = (id) => {
   router.push(`/booking-management/${slug}/${id}`)
@@ -351,18 +346,34 @@ const goToAddDate = () => {
 }
 
 const duplicateDate = async (date) => {
-  if (!confirm('Dupliquer cette date ?')) return
+  const ok = await confirmAction({
+    title: 'Dupliquer cette date ?',
+    message: `Une nouvelle date sera créée à partir du départ du ${dayjs(date.departure_date).format('DD/MM/YYYY')}.`,
+    detail: 'Les réservations ne sont pas copiées.',
+    confirmLabel: 'Dupliquer',
+  })
+  if (!ok) return
+
   try {
     await bookingApi.duplicateDate(slug, date.id)
+    toast('Date dupliquée.', 'ok')
     await fetchDates()
   }
   catch (err) {
-    alert(getApiErrorMessage(err, 'Erreur lors de la duplication'))
+    toast(getApiErrorMessage(err, 'Erreur lors de la duplication'), 'crit')
   }
 }
 
 const deleteDate = async (date) => {
-  if (!confirm('Supprimer cette date ? Les réservations, notes et factures associées seront masquées elles aussi. Tout reste restaurable.')) return
+  const ok = await confirmAction({
+    title: 'Supprimer cette date ?',
+    message: `Départ du ${dayjs(date.departure_date).format('DD/MM/YYYY')}. Les réservations, notes et factures associées seront masquées elles aussi.`,
+    detail: 'Tout reste restaurable depuis « Afficher les dates supprimées ».',
+    confirmLabel: 'Supprimer',
+    tone: 'danger',
+  })
+  if (!ok) return
+
   try {
     const res = await bookingApi.deleteDate(slug, date.id)
     const c = res?.softDeleted || {}
@@ -372,24 +383,28 @@ const deleteDate = async (date) => {
       c.date_invoices ? `${c.date_invoices} facture(s)` : null,
       c.date_attachments ? `${c.date_attachments} pièce(s) jointe(s)` : null,
     ].filter(Boolean)
-    if (parts.length) {
-      alert(`Date masquée — ${parts.join(', ')}. Restaurable via « Dates supprimées ».`)
-    }
+
+    toast(
+      parts.length
+        ? `Date masquée — ${parts.join(', ')}. Restaurable via « Afficher les dates supprimées ».`
+        : 'Date masquée. Restaurable via « Afficher les dates supprimées ».',
+      'ok',
+    )
     await fetchDates()
   }
   catch (err) {
-    alert(getApiErrorMessage(err, 'Erreur lors de la suppression'))
+    toast(getApiErrorMessage(err, 'Erreur lors de la suppression'), 'crit')
   }
 }
 
-const deletedTooltip = (item) => {
-  const when = item.deleted_at ? dayjs(item.deleted_at).format('DD/MM/YYYY HH:mm') : 'date inconnue'
-  const who = item.deleted_by || 'auteur inconnu'
-  return `Supprimee le ${when} par ${who} (${item.deleted_reason || 'raison inconnue'})`
-}
-
 const restoreDate = async (date) => {
-  if (!confirm('Restaurer cette date et les éléments supprimés avec elle ?')) return
+  const ok = await confirmAction({
+    title: 'Restaurer cette date ?',
+    message: `Départ du ${dayjs(date.departure_date).format('DD/MM/YYYY')}. Les éléments supprimés en même temps qu'elle seront restaurés aussi.`,
+    confirmLabel: 'Restaurer',
+  })
+  if (!ok) return
+
   try {
     const res = await bookingApi.restoreDate(slug, date.id)
     const messages = []
@@ -404,66 +419,20 @@ const restoreDate = async (date) => {
     if (res?.departureDealNeedsRecreation) {
       messages.push('Le dossier de départ avait été supprimé dans ActiveCampaign et n\'est pas récupérable : recréez-le depuis la fiche de la date.')
     }
-    if (messages.length) alert(messages.join('\n\n'))
+
+    toast(messages.length ? messages.join('\n\n') : 'Date restaurée.', messages.length ? 'warn' : 'ok', messages.length ? 12000 : 5000)
     await fetchDates()
   }
   catch (err) {
-    alert(getApiErrorMessage(err, 'Erreur lors de la restauration'))
+    toast(getApiErrorMessage(err, 'Erreur lors de la restauration'), 'crit')
   }
 }
 
-const isOngoing = (item) => {
-  const today = dayjs().startOf('day')
-  const dep = dayjs(item.departure_date)
-  const ret = dayjs(item.return_date)
-  return today.isSameOrAfter(dep) && today.isSameOrBefore(ret)
-}
-
-const isPast = (item) => {
-  const today = dayjs().startOf('day')
-  const ret = dayjs(item.return_date)
-  return ret.isBefore(today)
-}
-
-const hasOngoingDates = computed(() => dates.value.some(isOngoing))
-
-const getDateStatus = (item) => {
-  const labelMap = {
-    soon_confirmed: 'Inscriptions ouvertes',
-    confirmed: 'Confirmé',
-    guaranteed: 'Garanti (Complet)',
-  }
-  const key = item.displayed_status || item.status
-  return { text: labelMap[key] || '-' }
+const deletedTooltip = (item) => {
+  const when = item.deleted_at ? dayjs(item.deleted_at).format('DD/MM/YYYY HH:mm') : 'date inconnue'
+  const who = item.deleted_by || 'auteur inconnu'
+  return `Supprimée le ${when} par ${who} (${item.deleted_reason || 'raison inconnue'})`
 }
 
 onMounted(fetchDates)
 </script>
-
-<style scoped>
-@keyframes pulseGlow {
-  0% {
-    box-shadow: 0 0 0 0 rgba(0, 128, 0, 0.35);
-  }
-  70% {
-    box-shadow: 0 0 0 10px rgba(0, 128, 0, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(0, 128, 0, 0);
-  }
-}
-
-.ongoing-pulse {
-  animation: pulseGlow 1.8s ease-out infinite;
-}
-
-/* Date soft-deleted : visible mais clairement inactive. */
-.row-deleted {
-  opacity: 0.55;
-}
-
-.row-deleted td {
-  text-decoration: line-through;
-  text-decoration-color: rgba(var(--v-theme-error), 0.5);
-}
-</style>

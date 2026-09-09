@@ -1,41 +1,24 @@
 <template>
-  <v-container
-    fluid
-    class="py-6"
-  >
-    <v-row class="align-center mb-4">
-      <v-col
-        cols="12"
-        md="8"
-      >
-        <div class="d-flex align-center ga-3">
-          <div>
-            <h1 class="text-h5 font-weight-bold mb-1">
-              Nouvelle date de voyage
-            </h1>
-            <p class="text-body-2 text-medium-emphasis mb-0">
-              Selectionnez un voyage, ajustez les informations et publiez quand c’est pret.
-            </p>
-          </div>
-          <v-chip
-            v-if="selectedTravel?.availabilityTypes?.includes('custom')"
-            color="info"
-            label
-            size="small"
-            variant="tonal"
-          >
-            Sur-mesure
-          </v-chip>
-        </div>
-      </v-col>
-      <v-col
-        cols="12"
-        md="4"
-        class="d-flex justify-end ga-2"
-      >
+  <div>
+    <BoPageHeader
+      title="Nouvelle date de voyage"
+      subtitle="Sélectionnez un voyage, ajustez les informations et publiez quand c'est prêt."
+      :crumbs="[
+        { title: 'Backoffice', to: '/booking-management' },
+        { title: 'Voyages', to: '/booking-management' },
+        { title: 'Nouvelle date' },
+      ]"
+    >
+      <template #meta>
+        <span
+          v-if="selectedTravel?.availabilityTypes?.includes('custom')"
+          class="bo-tag bo-tag--info"
+        >Sur-mesure</span>
+      </template>
+
+      <template #actions>
         <v-btn
           variant="text"
-          size="small"
           @click="onCancel"
         >
           Retour
@@ -43,43 +26,34 @@
         <v-btn
           color="primary"
           variant="flat"
-          size="small"
           :disabled="!form.travel_slug || saving"
           :loading="saving"
           @click="onSave"
         >
           Enregistrer la date
         </v-btn>
-      </v-col>
-    </v-row>
+      </template>
+    </BoPageHeader>
 
-    <!-- Alerts -->
-    <v-alert
-      v-if="saveSuccess"
-      type="success"
-      border="start"
-      variant="tonal"
-      class="mb-4"
-      density="compact"
-    >
-      Date ajoutee, redirection en cours...
-    </v-alert>
-    <v-alert
-      v-if="saveError"
-      type="error"
-      border="start"
-      variant="tonal"
-      class="mb-4"
-      density="compact"
-    >
-      {{ saveError }}
-    </v-alert>
-
-    <v-row>
-      <!-- Left: Form -->
-      <v-col
-        cols="12"
+    <div class="bo-well">
+      <div
+        v-if="saveSuccess"
+        class="bo-notice bo-notice--ok"
       >
+        <div class="bo-notice__body">
+          Date ajoutée, redirection en cours…
+        </div>
+      </div>
+      <div
+        v-if="saveError"
+        class="bo-notice bo-notice--crit"
+      >
+        <div class="bo-notice__body">
+          {{ saveError }}
+        </div>
+      </div>
+
+      <div class="bo-split">
         <v-form @submit.prevent="onSave">
           <DateFormCard
             v-model="form"
@@ -99,87 +73,74 @@
                 item-value="slug"
                 label="Voyage"
                 clearable
-                hide-details
-                density="compact"
-                class="flex-1"
+                style="max-width: 360px;"
                 @update:model-value="onTravelSelect"
               />
-              <div
+              <v-text-field
                 v-else
-                class="w-100"
-              >
-                <v-text-field
-                  :model-value="travelesMap[form.travel_slug]?.title"
-                  label="Voyage selectionne"
-                  readonly
-                  density="compact"
-                />
-              </div>
+                :model-value="travelesMap[form.travel_slug]?.title"
+                label="Voyage sélectionné"
+                readonly
+                style="max-width: 360px;"
+              />
             </template>
 
             <template #actions>
               <v-btn
                 variant="text"
-                size="small"
                 @click="onCancel"
               >
                 Annuler
               </v-btn>
               <v-btn
                 color="primary"
+                variant="flat"
                 type="submit"
-                size="small"
                 :disabled="!form.travel_slug || saving"
                 :loading="saving"
               >
-                Creer la date
+                Créer la date
               </v-btn>
             </template>
           </DateFormCard>
         </v-form>
-      </v-col>
 
-      <!-- Right: Preview -->
-      <v-col
-        cols="12"
-        md="8"
-        class="d-flex flex-column ga-4"
-      >
-        <v-card
+        <!-- Prévisualisation -->
+        <section
           v-if="!isCustomTravel && form.travel_slug"
-          rounded="lg"
-          elevation="0"
-          class="pa-4 bo-card"
+          class="bo-card"
         >
-          <div class="d-flex justify-space-between align-center mb-3">
-            <div class="d-flex flex-column">
-              <span class="bo-section-title mb-0">
-                Previsualisation
-              </span>
-              <span class="text-caption text-medium-emphasis">Affichage site</span>
-            </div>
-            <v-chip
-              :color="form.published ? 'success' : 'warning'"
-              size="x-small"
-              label
-              variant="tonal"
+          <div class="bo-card__head">
+            <h2 class="bo-card__title">
+              Prévisualisation
+            </h2>
+            <v-spacer />
+            <span
+              class="bo-tag"
+              :class="form.published ? 'bo-tag--ok' : 'bo-tag--warn'"
             >
-              {{ form.published ? 'Publiee' : 'Non publiee' }}
-            </v-chip>
+              {{ form.published ? 'Publiée' : 'Non publiée' }}
+            </span>
           </div>
-          <v-theme-provider theme="odysway">
-            <DatesPricesItem :date="previewDate" />
-          </v-theme-provider>
-        </v-card>
-      </v-col>
-    </v-row>
-  </v-container>
+          <div class="bo-card__body">
+            <p class="bo-hint mb-3">
+              Rendu sur le site public, avec les valeurs affichées.
+            </p>
+            <v-theme-provider theme="odysway">
+              <DatesPricesItem :date="previewDate" />
+            </v-theme-provider>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup>
 import { ref, onMounted, watch, computed } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import dayjs from 'dayjs'
+import BoPageHeader from '~/components/booking/BoPageHeader.vue'
 import DateFormCard from '~/components/booking/DateFormCard.vue'
 import { BOOKING_STATUSES, DEFAULT_STATUS } from '~/utils/bookingStatuses'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'

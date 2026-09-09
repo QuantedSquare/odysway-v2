@@ -220,6 +220,8 @@ import { mdiDelete, mdiFormatListBulleted, mdiLinkVariant, mdiRestore } from '@m
 import dayjs from 'dayjs'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 
+const { confirmAction, toast } = useBoDialogs()
+
 const props = defineProps({
   slug: { type: String, required: true },
   dateId: { type: String, required: true },
@@ -292,13 +294,15 @@ async function fetchNotes() {
 }
 
 async function restoreNote(note) {
-  if (!confirm('Restaurer cette note ?')) return
+  const ok = await confirmAction({ title: 'Restaurer cette note ?', confirmLabel: 'Restaurer' })
+  if (!ok) return
+
   try {
     await bookingApi.restoreChild(props.slug, props.dateId, 'note', note.id)
     await fetchNotes()
   }
   catch (err) {
-    alert(getApiErrorMessage(err, 'Erreur lors de la restauration'))
+    toast(getApiErrorMessage(err, 'Erreur lors de la restauration'), 'crit')
   }
 }
 
@@ -322,7 +326,14 @@ async function submitNote() {
 }
 
 async function deleteNote(note) {
-  if (!confirm('Supprimer cette note ?')) return
+  const ok = await confirmAction({
+    title: 'Supprimer cette note ?',
+    detail: 'Elle reste restaurable depuis le filtre « Supprimées ».',
+    confirmLabel: 'Supprimer',
+    tone: 'danger',
+  })
+  if (!ok) return
+
   try {
     await bookingApi.deleteNote(props.slug, props.dateId, note.id)
     await fetchNotes()
@@ -340,13 +351,20 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
+/* C'est une zone de saisie : même traitement que les autres champs, sinon elle
+   flotte entre la carte et le formulaire. */
 .tiptap-editor {
-  border: 1px solid rgba(var(--v-theme-on-surface), 0.08);
-  border-radius: 8px;
+  border: 1px solid var(--bo-field-line);
+  border-radius: var(--bo-radius);
   padding: 8px 12px;
   min-height: 80px;
   cursor: text;
-  background: rgb(var(--v-theme-surface-variant));
+  background: var(--bo-field);
+}
+
+.tiptap-editor:focus-within {
+  border-color: var(--bo-accent);
+  box-shadow: 0 0 0 3px var(--bo-accent-wash);
 }
 
 .tiptap-editor :deep(.tiptap) {
@@ -360,12 +378,13 @@ onBeforeUnmount(() => {
 .tiptap-editor :deep(ul) {
   padding-left: 20px;
 }
-.note-content{
-  color:black;
+/* `color: black` en dur rendait les notes illisibles en thème sombre. */
+.note-content {
+  color: var(--bo-ink);
 }
 
 .note-content :deep(a) {
-  color: rgb(var(--v-theme-primary));
+  color: var(--bo-accent);
   text-decoration: underline;
 }
 

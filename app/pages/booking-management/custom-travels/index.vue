@@ -1,108 +1,82 @@
 <template>
-  <v-container
-    fluid
-    class="py-6"
-  >
-    <v-row class="align-center mb-4">
-      <v-col
-        cols="12"
-        md="8"
-      >
-        <h1 class="text-h5 font-weight-bold mb-1">
-          Voyages sur-mesure
-        </h1>
-        <p class="text-body-2 text-medium-emphasis mb-0">
-          Pour creer un voyage sur mesure, s'assurer de le creer dans Sanity et de cocher la case "Voyage sur-mesure".
-        </p>
-      </v-col>
-    </v-row>
+  <div>
+    <BoPageHeader
+      title="Voyages sur-mesure"
+      subtitle="Un voyage sur-mesure se crée dans Sanity, en cochant « Voyage sur-mesure »."
+      :crumbs="[{ title: 'Backoffice', to: '/booking-management' }, { title: 'Sur-mesure' }]"
+    />
 
-    <v-card
-      rounded="lg"
-      elevation="0"
-      class="bo-card mb-4"
-    >
-      <v-card-text class="pa-3">
-        <v-autocomplete
-          v-model="search"
-          :items="travelesList"
-          label="Rechercher un voyage"
-          item-title="title"
-          item-value="slug"
-          clearable
-          density="compact"
-          hide-details
-        />
-      </v-card-text>
-    </v-card>
+    <div class="bo-well">
+      <v-autocomplete
+        v-model="search"
+        :items="travelesList"
+        label="Rechercher un voyage"
+        item-title="title"
+        item-value="slug"
+        clearable
+        style="max-width: 360px;"
+      />
 
-    <v-row>
-      <v-col
+      <div
         v-if="loading"
-        cols="12"
-        md="4"
+        class="bo-cards-grid"
       >
-        <v-skeleton-loader type="card" />
-      </v-col>
-      <v-col
-        v-for="travel in filteredTravels"
-        v-else-if="filteredTravels.length > 0"
-        :key="travel.slug"
-        cols="12"
-        sm="6"
-        md="4"
+        <v-skeleton-loader
+          v-for="n in 6"
+          :key="n"
+          type="image, list-item"
+        />
+      </div>
+
+      <div
+        v-else-if="filteredTravels.length"
+        class="bo-cards-grid"
       >
-        <v-card
-          rounded="lg"
-          elevation="0"
-          class="bo-card"
-          hover
+        <button
+          v-for="travel in filteredTravels"
+          :key="travel.slug"
+          type="button"
+          class="bo-card bo-travel-card"
           @click="goToTravel(travel.slug)"
         >
-          <v-img
+          <img
             :src="travel.image || '/images/IMG_20250101_161727_049.jpg'"
-            height="140"
-            cover
-            class="rounded-t-lg"
+            :alt="''"
+            class="bo-travel-card__img"
           >
-            <div
-              style="position: absolute; bottom: 0; left: 0; right: 0; height: 60px; background: linear-gradient(transparent, rgba(0,0,0,0.4));"
-            />
-          </v-img>
-          <v-card-title class="text-subtitle-1 font-weight-bold py-3 text-center">
-            {{ travel.title || travel.slug }}
-          </v-card-title>
-        </v-card>
-      </v-col>
-      <v-col
+          <span class="bo-travel-card__body">
+            <span class="bo-cell__title">{{ travel.title || travel.slug }}</span>
+            <span class="bo-cell__slug">{{ travel.slug }}</span>
+          </span>
+        </button>
+      </div>
+
+      <div
         v-else
-        cols="12"
-        class="text-center py-12"
+        class="bo-card bo-empty"
       >
-        <v-icon
-          size="48"
-          color="secondary"
-          class="mb-3"
-        >
-          {{ mdiCompassOutline }}
-        </v-icon>
-        <div class="text-body-2 text-medium-emphasis">
-          Aucun voyage sur-mesure trouve.
-        </div>
-      </v-col>
-    </v-row>
-  </v-container>
+        Aucun voyage sur-mesure trouvé.
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
-import { mdiCompassOutline } from '@mdi/js'
+import BoPageHeader from '~/components/booking/BoPageHeader.vue'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
+
+definePageMeta({
+  layout: 'booking',
+  middleware: 'booking-management',
+})
 
 const search = ref(null)
 const loading = ref(false)
 const sanity = useSanity()
+const router = useRouter()
+
 const travelesListQuery = `*[_type == "voyage" && ('custom' in availabilityTypes)]{
   slug,
   title,
@@ -114,16 +88,7 @@ const travelesListQuery = `*[_type == "voyage" && ('custom' in availabilityTypes
 }`
 
 const travelesList = ref([])
-// const { data: travelesList } = await useAsyncData('travelesList-custom', () =>
-//   sanity.fetch(travelesListQuery),
-// )
-
-definePageMeta({
-  layout: 'booking',
-  middleware: 'booking-management',
-})
 const travels = ref([])
-const router = useRouter()
 
 const fetchTravels = async () => {
   loading.value = true
@@ -142,16 +107,7 @@ const fetchTravels = async () => {
 }
 
 const goToTravel = (slug) => {
-  console.log('goToTravel', slug)
   router.push(`/booking-management/${slug}`)
-}
-
-const _goToAddDate = () => {
-  router.push('/booking-management/add-date')
-}
-
-const _goToCustomTravels = () => {
-  router.push('/booking-management/custom-travels')
 }
 
 const filteredTravels = computed(() => {
@@ -167,9 +123,42 @@ const filteredTravels = computed(() => {
   }
   return enrichedTravelsDate
 })
+
 onMounted(fetchTravels)
 </script>
 
 <style scoped>
+.bo-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
 
+.bo-travel-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.12s;
+}
+
+.bo-travel-card:hover {
+  border-color: var(--bo-ink-3) !important;
+}
+
+.bo-travel-card__img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  display: block;
+}
+
+.bo-travel-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 12px;
+}
 </style>

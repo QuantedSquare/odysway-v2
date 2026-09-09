@@ -1,24 +1,19 @@
 <template>
-  <v-container
-    fluid
-    class="py-6"
-  >
-    <v-row class="align-center mb-4">
-      <v-col cols="12">
-        <NuxtLink
-          to="/booking-management/margins"
-          class="text-body-2 d-inline-flex align-center ga-1 mb-2"
-        >
-          <v-icon size="14">
-            {{ mdiArrowLeft }}
-          </v-icon>
-          Retour aux marges
-        </NuxtLink>
-        <h1 class="text-h5 font-weight-bold mb-1 d-flex align-center ga-3">
+  <div>
+    <BoPageHeader
+      subtitle="Marge par voyageur selon le nombre de pax, l'année de départ et éventuellement la saison. Une case vide hérite de la saison la plus proche configurée, puis de la colonne Défaut."
+      :crumbs="[
+        { title: 'Backoffice', to: '/booking-management' },
+        { title: 'Marges', to: '/booking-management/margins' },
+        { title: voyageTitle || slug },
+      ]"
+    >
+      <template #title>
+        <span class="d-inline-flex align-center ga-3">
           <v-avatar
             v-if="voyageImage"
-            size="36"
-            rounded="lg"
+            size="28"
+            rounded="sm"
           >
             <v-img
               :src="voyageImage"
@@ -26,440 +21,450 @@
             />
           </v-avatar>
           {{ voyageTitle || slug }}
-        </h1>
-        <p class="text-body-2 text-medium-emphasis mb-0">
-          Marge par voyageur selon le nombre de pax, l'ann&eacute;e de d&eacute;part et &eacute;ventuellement la saison. Une case vide h&eacute;rite de la saison la plus proche configur&eacute;e, puis de la colonne D&eacute;faut.
-        </p>
-      </v-col>
-    </v-row>
+        </span>
+      </template>
 
-    <!-- Réglages du voyage : mode de configuration + écart enfant -->
-    <v-card
-      rounded="lg"
-      class="bo-card mb-4"
-      elevation="0"
-    >
-      <v-card-text>
-        <div class="d-flex align-start ga-6 flex-wrap">
-          <div style="min-width: 280px;">
-            <div class="text-body-2 font-weight-bold mb-1">
-              Mode de configuration
-            </div>
-            <v-select
-              v-model="settingsForm.config_mode"
-              :items="CONFIG_MODE_ITEMS"
-              density="compact"
-              variant="outlined"
-              hide-details
-            />
-            <div class="text-caption text-medium-emphasis mt-1">
-              {{ configModeHint }}
-            </div>
-          </div>
-
-          <div style="min-width: 280px;">
-            <div class="text-body-2 font-weight-bold mb-1">
-              &Eacute;cart de marge enfant
-            </div>
-            <v-text-field
-              v-model.number="settingsForm.child_margin_delta"
-              type="number"
-              suffix="€ / enfant"
-              density="compact"
-              variant="outlined"
-              hide-details
-              clearable
-              placeholder="0"
-            />
-            <div class="text-caption text-medium-emphasis mt-1">
-              Montant <strong>ajout&eacute;</strong> &agrave; la marge adulte pour chaque enfant : l'achat enfant co&ucirc;te moins cher, la marge est donc sup&eacute;rieure. Vide = m&ecirc;me marge qu'un adulte.
-            </div>
-          </div>
-
-          <v-spacer />
-
-          <div class="d-flex align-center ga-2">
-            <span
-              v-if="settingsSaved"
-              class="text-caption text-success"
-            >Enregistr&eacute;</span>
-            <v-btn
-              size="small"
-              color="primary"
-              variant="tonal"
-              :loading="settingsSaving"
-              :disabled="!settingsDirty"
-              @click="saveSettings"
-            >
-              Enregistrer les r&eacute;glages
-            </v-btn>
-          </div>
-        </div>
-
-        <v-alert
-          v-if="settingsError"
-          type="error"
-          density="compact"
-          variant="tonal"
-          class="mt-3"
+      <template #actions>
+        <v-btn
+          to="/booking-management/margins"
+          :prepend-icon="mdiArrowLeft"
+          variant="text"
         >
-          {{ settingsError }}
-        </v-alert>
-      </v-card-text>
-    </v-card>
+          Retour aux marges
+        </v-btn>
+      </template>
+    </BoPageHeader>
 
-    <!-- Saisons récurrentes -->
-    <v-expansion-panels
-      v-model="seasonsPanel"
-      variant="accordion"
-      class="mb-4"
-    >
-      <v-expansion-panel rounded="lg">
-        <v-expansion-panel-title>
-          <div class="d-flex align-center ga-2">
-            <v-icon size="18">
-              {{ mdiCalendarRange }}
-            </v-icon>
-            <span class="text-body-2 font-weight-bold">Saisons</span>
-            <v-chip
-              v-if="seasons.length"
-              size="x-small"
-              label
-              color="primary"
-            >
-              {{ seasons.map(s => s.label).join(' · ') }}
-            </v-chip>
-            <span
-              v-else
-              class="text-caption text-medium-emphasis"
-            >Aucune — un seul tarif toute l'ann&eacute;e</span>
-          </div>
-        </v-expansion-panel-title>
-        <v-expansion-panel-text>
-          <p class="text-body-2 text-medium-emphasis mb-3">
-            Les p&eacute;riodes sont <strong>r&eacute;currentes</strong> : d&eacute;finies une fois en jour/mois, elles valent pour toutes les ann&eacute;es. Seuls les montants sont saisis ann&eacute;e par ann&eacute;e. Une saison peut enjamber le 31/12 (ex. 01/10 &rarr; 30/04). Les p&eacute;riodes ne doivent pas se chevaucher.
-          </p>
+    <div class="bo-well">
+      <!-- Réglages du voyage : mode de configuration + écart enfant -->
+      <v-card
+        rounded="lg"
+        class="bo-card mb-4"
+        elevation="0"
+      >
+        <v-card-text>
+          <div class="d-flex align-start ga-6 flex-wrap">
+            <div style="min-width: 280px;">
+              <div class="bo-eyebrow">
+                Mode de configuration
+              </div>
+              <v-select
+                v-model="settingsForm.config_mode"
+                :items="CONFIG_MODE_ITEMS"
+                density="compact"
+                variant="outlined"
+                hide-details
+              />
+              <div class="text-caption text-medium-emphasis mt-1">
+                {{ configModeHint }}
+              </div>
+            </div>
 
-          <div
-            v-for="(season, index) in seasonsForm"
-            :key="index"
-            class="d-flex align-center ga-2 mb-2 flex-wrap"
-          >
-            <v-text-field
-              v-model="season.label"
-              label="Nom"
-              density="compact"
-              variant="outlined"
-              hide-details
-              style="max-width: 200px;"
-            />
-            <span class="text-caption text-medium-emphasis">du</span>
-            <v-text-field
-              v-model.number="season.start_day"
-              type="number"
-              label="Jour"
-              density="compact"
-              variant="outlined"
-              hide-details
-              min="1"
-              max="31"
-              style="max-width: 90px;"
-            />
-            <v-select
-              v-model="season.start_month"
-              :items="MONTH_ITEMS"
-              label="Mois"
-              density="compact"
-              variant="outlined"
-              hide-details
-              style="max-width: 150px;"
-            />
-            <span class="text-caption text-medium-emphasis">au</span>
-            <v-text-field
-              v-model.number="season.end_day"
-              type="number"
-              label="Jour"
-              density="compact"
-              variant="outlined"
-              hide-details
-              min="1"
-              max="31"
-              style="max-width: 90px;"
-            />
-            <v-select
-              v-model="season.end_month"
-              :items="MONTH_ITEMS"
-              label="Mois"
-              density="compact"
-              variant="outlined"
-              hide-details
-              style="max-width: 150px;"
-            />
-            <v-btn
-              icon
-              size="x-small"
-              color="error"
-              variant="text"
-              @click="seasonsForm.splice(index, 1)"
-            >
-              <v-icon size="16">
-                {{ mdiDelete }}
-              </v-icon>
-            </v-btn>
-          </div>
+            <div style="min-width: 280px;">
+              <div class="bo-eyebrow">
+                &Eacute;cart de marge enfant
+              </div>
+              <v-text-field
+                v-model.number="settingsForm.child_margin_delta"
+                type="number"
+                suffix="€ / enfant"
+                density="compact"
+                variant="outlined"
+                hide-details
+                clearable
+                placeholder="0"
+              />
+              <div class="text-caption text-medium-emphasis mt-1">
+                Montant <strong>ajout&eacute;</strong> &agrave; la marge adulte pour chaque enfant : l'achat enfant co&ucirc;te moins cher, la marge est donc sup&eacute;rieure. Vide = m&ecirc;me marge qu'un adulte.
+              </div>
+            </div>
 
-          <div class="d-flex align-center ga-2 mt-3">
-            <v-btn
-              size="small"
-              variant="tonal"
-              :prepend-icon="mdiPlus"
-              @click="addSeason"
-            >
-              Ajouter une saison
-            </v-btn>
             <v-spacer />
-            <v-btn
-              size="small"
-              color="primary"
-              :loading="seasonsSaving"
-              :disabled="!seasonsDirty"
-              @click="saveSeasons"
-            >
-              Enregistrer les saisons
-            </v-btn>
+
+            <div class="d-flex align-center ga-2">
+              <span
+                v-if="settingsSaved"
+                class="text-caption text-success"
+              >Enregistr&eacute;</span>
+              <v-btn
+                size="small"
+                color="primary"
+                variant="tonal"
+                :loading="settingsSaving"
+                :disabled="!settingsDirty"
+                @click="saveSettings"
+              >
+                Enregistrer les r&eacute;glages
+              </v-btn>
+            </div>
           </div>
 
           <v-alert
-            v-if="seasonsError"
+            v-if="settingsError"
             type="error"
             density="compact"
             variant="tonal"
             class="mt-3"
           >
-            {{ seasonsError }}
+            {{ settingsError }}
           </v-alert>
-          <v-alert
-            v-if="seasonsForm.length"
-            type="info"
-            density="compact"
-            variant="tonal"
-            class="mt-3"
-          >
-            Supprimer une saison supprime aussi les montants saisis pour cette saison, toutes ann&eacute;es confondues.
-          </v-alert>
-        </v-expansion-panel-text>
-      </v-expansion-panel>
-    </v-expansion-panels>
+        </v-card-text>
+      </v-card>
 
-    <!-- Year tabs -->
-    <div class="d-flex align-center ga-2 mb-3 flex-wrap">
-      <v-btn-toggle
-        v-model="activeYear"
-        color="primary"
-        density="compact"
-        mandatory
-        variant="outlined"
+      <!-- Saisons récurrentes -->
+      <v-expansion-panels
+        v-model="seasonsPanel"
+        variant="accordion"
+        class="mb-4"
       >
-        <v-btn
-          v-for="y in availableYears"
-          :key="y"
-          :value="y"
-        >
-          Saison {{ y }}
-        </v-btn>
-      </v-btn-toggle>
-      <v-btn
-        size="small"
-        variant="text"
-        color="primary"
-        :prepend-icon="mdiPlus"
-        @click="addPreviousYearTab"
-      >
-        Saison {{ previousYearSuggestion }}
-      </v-btn>
-      <v-btn
-        size="small"
-        variant="text"
-        color="primary"
-        :prepend-icon="mdiPlus"
-        @click="addNextYearTab"
-      >
-        Saison {{ nextYearSuggestion }}
-      </v-btn>
-      <v-spacer />
-      <div class="text-caption text-medium-emphasis">
-        Saison = ann&eacute;e calendaire de la date de d&eacute;part
-      </div>
-    </div>
+        <v-expansion-panel rounded="lg">
+          <v-expansion-panel-title>
+            <div class="d-flex align-center ga-2">
+              <v-icon size="18">
+                {{ mdiCalendarRange }}
+              </v-icon>
+              <span class="bo-eyebrow mb-0">Saisons</span>
+              <v-chip
+                v-if="seasons.length"
+                size="x-small"
+                label
+                color="primary"
+              >
+                {{ seasons.map(s => s.label).join(' · ') }}
+              </v-chip>
+              <span
+                v-else
+                class="text-caption text-medium-emphasis"
+              >Aucune — un seul tarif toute l'ann&eacute;e</span>
+            </div>
+          </v-expansion-panel-title>
+          <v-expansion-panel-text>
+            <p class="bo-hint mb-3">
+              Les p&eacute;riodes sont <strong>r&eacute;currentes</strong> : d&eacute;finies une fois en jour/mois, elles valent pour toutes les ann&eacute;es. Seuls les montants sont saisis ann&eacute;e par ann&eacute;e. Une saison peut enjamber le 31/12 (ex. 01/10 &rarr; 30/04). Les p&eacute;riodes ne doivent pas se chevaucher.
+            </p>
 
-    <v-card
-      rounded="lg"
-      class="bo-card"
-      elevation="0"
-    >
-      <v-card-text>
-        <div
-          v-if="loading"
-          class="d-flex justify-center py-8"
-        >
-          <v-progress-circular
-            indeterminate
-            color="primary"
-          />
-        </div>
+            <div
+              v-for="(season, index) in seasonsForm"
+              :key="index"
+              class="d-flex align-center ga-2 mb-2 flex-wrap"
+            >
+              <v-text-field
+                v-model="season.label"
+                label="Nom"
+                density="compact"
+                variant="outlined"
+                hide-details
+                style="max-width: 200px;"
+              />
+              <span class="text-caption text-medium-emphasis">du</span>
+              <v-text-field
+                v-model.number="season.start_day"
+                type="number"
+                label="Jour"
+                density="compact"
+                variant="outlined"
+                hide-details
+                min="1"
+                max="31"
+                style="max-width: 90px;"
+              />
+              <v-select
+                v-model="season.start_month"
+                :items="MONTH_ITEMS"
+                label="Mois"
+                density="compact"
+                variant="outlined"
+                hide-details
+                style="max-width: 150px;"
+              />
+              <span class="text-caption text-medium-emphasis">au</span>
+              <v-text-field
+                v-model.number="season.end_day"
+                type="number"
+                label="Jour"
+                density="compact"
+                variant="outlined"
+                hide-details
+                min="1"
+                max="31"
+                style="max-width: 90px;"
+              />
+              <v-select
+                v-model="season.end_month"
+                :items="MONTH_ITEMS"
+                label="Mois"
+                density="compact"
+                variant="outlined"
+                hide-details
+                style="max-width: 150px;"
+              />
+              <v-btn
+                icon
+                size="x-small"
+                color="error"
+                variant="text"
+                @click="seasonsForm.splice(index, 1)"
+              >
+                <v-icon size="16">
+                  {{ mdiDelete }}
+                </v-icon>
+              </v-btn>
+            </div>
 
-        <template v-else>
-          <v-alert
-            v-if="settings.config_mode !== 'pax_table'"
-            type="info"
-            density="compact"
-            variant="tonal"
-            class="mb-3"
-          >
-            <template v-if="settings.config_mode === 'per_date'">
-              Ce voyage est en mode <strong>marge fixe par date</strong> : la marge se saisit d&eacute;part par d&eacute;part depuis la fiche date. Ce tableau reste utilisable comme filet si un d&eacute;part n'a pas d'override.
-            </template>
-            <template v-else>
-              Ce voyage est <strong>exclu du suivi des marges</strong> : il n'appara&icirc;t plus dans les voyages &agrave; configurer.
-            </template>
-          </v-alert>
+            <div class="d-flex align-center ga-2 mt-3">
+              <v-btn
+                size="small"
+                variant="tonal"
+                :prepend-icon="mdiPlus"
+                @click="addSeason"
+              >
+                Ajouter une saison
+              </v-btn>
+              <v-spacer />
+              <v-btn
+                size="small"
+                color="primary"
+                :loading="seasonsSaving"
+                :disabled="!seasonsDirty"
+                @click="saveSeasons"
+              >
+                Enregistrer les saisons
+              </v-btn>
+            </div>
 
-          <v-alert
-            v-if="hasFallbackCells"
-            type="info"
-            density="compact"
-            variant="tonal"
-            class="mb-3"
-          >
-            Les cases vides h&eacute;ritent automatiquement (saison la plus proche configur&eacute;e, puis colonne D&eacute;faut). Saisis une valeur pour surcharger.
-          </v-alert>
-
-          <div class="table-scroll">
-            <v-table density="comfortable">
-              <thead>
-                <tr>
-                  <th>PAX</th>
-                  <th
-                    v-for="col in columns"
-                    :key="col.key"
-                  >
-                    {{ col.label }}
-                    <div
-                      v-if="col.hint"
-                      class="text-caption text-medium-emphasis font-weight-regular"
-                    >
-                      {{ col.hint }}
-                    </div>
-                  </th>
-                  <th class="text-right">
-                    Actions
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr
-                  v-for="row in rows"
-                  :key="row.pax"
-                >
-                  <td class="font-weight-bold">
-                    {{ row.pax }}
-                  </td>
-                  <td
-                    v-for="col in columns"
-                    :key="col.key"
-                  >
-                    <v-text-field
-                      v-model.number="row.values[col.key]"
-                      type="number"
-                      density="compact"
-                      hide-details
-                      variant="outlined"
-                      :placeholder="cellPlaceholder(row.pax, col)"
-                      style="min-width: 170px;"
-                    />
-                  </td>
-                  <td class="text-right">
-                    <v-btn
-                      icon
-                      size="x-small"
-                      color="error"
-                      variant="text"
-                      :disabled="!hasAnyValue(row)"
-                      @click="removeRow(row.pax)"
-                    >
-                      <v-icon size="16">
-                        {{ mdiDelete }}
-                      </v-icon>
-                    </v-btn>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <v-text-field
-                      v-model.number="newPax"
-                      type="number"
-                      density="compact"
-                      hide-details
-                      variant="outlined"
-                      placeholder="Ex: 11"
-                      min="1"
-                      style="max-width: 100px;"
-                    />
-                  </td>
-                  <td :colspan="columns.length + 1">
-                    <v-btn
-                      size="small"
-                      color="primary"
-                      variant="tonal"
-                      :prepend-icon="mdiPlus"
-                      :disabled="!newPax || rows.some(r => r.pax === newPax)"
-                      @click="addRow"
-                    >
-                      Ajouter ce palier pax
-                    </v-btn>
-                  </td>
-                </tr>
-              </tbody>
-            </v-table>
-          </div>
-
-          <div class="d-flex align-center justify-end ga-2 mt-4">
             <v-alert
-              v-if="saveError"
+              v-if="seasonsError"
               type="error"
               density="compact"
               variant="tonal"
-              class="flex-grow-1"
+              class="mt-3"
             >
-              {{ saveError }}
+              {{ seasonsError }}
             </v-alert>
             <v-alert
-              v-else-if="saveSuccess"
-              type="success"
+              v-if="seasonsForm.length"
+              type="info"
               density="compact"
               variant="tonal"
-              class="flex-grow-1"
+              class="mt-3"
             >
-              Modifications enregistr&eacute;es pour la saison {{ activeYear }}.
+              Supprimer une saison supprime aussi les montants saisis pour cette saison, toutes ann&eacute;es confondues.
             </v-alert>
-            <v-btn
+          </v-expansion-panel-text>
+        </v-expansion-panel>
+      </v-expansion-panels>
+
+      <!-- Year tabs -->
+      <div class="d-flex align-center ga-2 mb-3 flex-wrap">
+        <v-btn-toggle
+          v-model="activeYear"
+          color="primary"
+          density="compact"
+          mandatory
+          variant="outlined"
+        >
+          <v-btn
+            v-for="y in availableYears"
+            :key="y"
+            :value="y"
+          >
+            Saison {{ y }}
+          </v-btn>
+        </v-btn-toggle>
+        <v-btn
+          size="small"
+          variant="text"
+          color="primary"
+          :prepend-icon="mdiPlus"
+          @click="addPreviousYearTab"
+        >
+          Saison {{ previousYearSuggestion }}
+        </v-btn>
+        <v-btn
+          size="small"
+          variant="text"
+          color="primary"
+          :prepend-icon="mdiPlus"
+          @click="addNextYearTab"
+        >
+          Saison {{ nextYearSuggestion }}
+        </v-btn>
+        <v-spacer />
+        <div class="text-caption text-medium-emphasis">
+          Saison = ann&eacute;e calendaire de la date de d&eacute;part
+        </div>
+      </div>
+
+      <v-card
+        rounded="lg"
+        class="bo-card"
+        elevation="0"
+      >
+        <v-card-text>
+          <div
+            v-if="loading"
+            class="d-flex justify-center py-8"
+          >
+            <v-progress-circular
+              indeterminate
               color="primary"
-              :loading="saving"
-              :disabled="!isDirty"
-              @click="save"
-            >
-              Enregistrer
-            </v-btn>
+            />
           </div>
-        </template>
-      </v-card-text>
-    </v-card>
-  </v-container>
+
+          <template v-else>
+            <v-alert
+              v-if="settings.config_mode !== 'pax_table'"
+              type="info"
+              density="compact"
+              variant="tonal"
+              class="mb-3"
+            >
+              <template v-if="settings.config_mode === 'per_date'">
+                Ce voyage est en mode <strong>marge fixe par date</strong> : la marge se saisit d&eacute;part par d&eacute;part depuis la fiche date. Ce tableau reste utilisable comme filet si un d&eacute;part n'a pas d'override.
+              </template>
+              <template v-else>
+                Ce voyage est <strong>exclu du suivi des marges</strong> : il n'appara&icirc;t plus dans les voyages &agrave; configurer.
+              </template>
+            </v-alert>
+
+            <v-alert
+              v-if="hasFallbackCells"
+              type="info"
+              density="compact"
+              variant="tonal"
+              class="mb-3"
+            >
+              Les cases vides h&eacute;ritent automatiquement (saison la plus proche configur&eacute;e, puis colonne D&eacute;faut). Saisis une valeur pour surcharger.
+            </v-alert>
+
+            <div class="table-scroll">
+              <v-table density="comfortable">
+                <thead>
+                  <tr>
+                    <th>PAX</th>
+                    <th
+                      v-for="col in columns"
+                      :key="col.key"
+                    >
+                      {{ col.label }}
+                      <div
+                        v-if="col.hint"
+                        class="text-caption text-medium-emphasis font-weight-regular"
+                      >
+                        {{ col.hint }}
+                      </div>
+                    </th>
+                    <th class="text-right">
+                      Actions
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    v-for="row in rows"
+                    :key="row.pax"
+                  >
+                    <td class="font-weight-bold">
+                      {{ row.pax }}
+                    </td>
+                    <td
+                      v-for="col in columns"
+                      :key="col.key"
+                    >
+                      <v-text-field
+                        v-model.number="row.values[col.key]"
+                        type="number"
+                        density="compact"
+                        hide-details
+                        variant="outlined"
+                        :placeholder="cellPlaceholder(row.pax, col)"
+                        style="min-width: 170px;"
+                      />
+                    </td>
+                    <td class="text-right">
+                      <v-btn
+                        icon
+                        size="x-small"
+                        color="error"
+                        variant="text"
+                        :disabled="!hasAnyValue(row)"
+                        @click="removeRow(row.pax)"
+                      >
+                        <v-icon size="16">
+                          {{ mdiDelete }}
+                        </v-icon>
+                      </v-btn>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <v-text-field
+                        v-model.number="newPax"
+                        type="number"
+                        density="compact"
+                        hide-details
+                        variant="outlined"
+                        placeholder="Ex: 11"
+                        min="1"
+                        style="max-width: 100px;"
+                      />
+                    </td>
+                    <td :colspan="columns.length + 1">
+                      <v-btn
+                        size="small"
+                        color="primary"
+                        variant="tonal"
+                        :prepend-icon="mdiPlus"
+                        :disabled="!newPax || rows.some(r => r.pax === newPax)"
+                        @click="addRow"
+                      >
+                        Ajouter ce palier pax
+                      </v-btn>
+                    </td>
+                  </tr>
+                </tbody>
+              </v-table>
+            </div>
+
+            <div class="d-flex align-center justify-end ga-2 mt-4">
+              <v-alert
+                v-if="saveError"
+                type="error"
+                density="compact"
+                variant="tonal"
+                class="flex-grow-1"
+              >
+                {{ saveError }}
+              </v-alert>
+              <v-alert
+                v-else-if="saveSuccess"
+                type="success"
+                density="compact"
+                variant="tonal"
+                class="flex-grow-1"
+              >
+                Modifications enregistr&eacute;es pour la saison {{ activeYear }}.
+              </v-alert>
+              <v-btn
+                color="primary"
+                :loading="saving"
+                :disabled="!isDirty"
+                @click="save"
+              >
+                Enregistrer
+              </v-btn>
+            </div>
+          </template>
+        </v-card-text>
+      </v-card>
+    </div>
+  </div>
 </template>
 
 <script setup>
 import { ref, reactive, computed, watch, onMounted } from 'vue'
 import { mdiArrowLeft, mdiDelete, mdiPlus, mdiCalendarRange } from '@mdi/js'
+import BoPageHeader from '~/components/booking/BoPageHeader.vue'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 import { formatEur } from '~/utils/formatNumber'
 
@@ -467,6 +472,8 @@ definePageMeta({
   layout: 'booking',
   middleware: 'booking-management',
 })
+
+const { confirmAction } = useBoDialogs()
 
 const route = useRoute()
 const router = useRouter()
@@ -756,7 +763,14 @@ const addRow = () => {
 }
 
 const removeRow = async (pax) => {
-  if (!confirm(`Supprimer le palier ${pax} pax pour la saison ${activeYear.value} (toutes les colonnes) ?`)) return
+  const ok = await confirmAction({
+    title: 'Supprimer ce palier ?',
+    message: `${pax} pax pour la saison ${activeYear.value}, toutes les colonnes.`,
+    confirmLabel: 'Supprimer',
+    tone: 'danger',
+  })
+  if (!ok) return
+
   try {
     await bookingApi.deleteVoyageMarginRow(slug, pax, activeYear.value)
     await fetchAll()
