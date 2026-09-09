@@ -102,8 +102,6 @@
               <v-chip
                 v-bind="props"
                 color="green-light"
-                class="overflow-hidden text-truncate"
-                style="max-width: 170px;"
               >
                 <span
                   class="d-flex align-center ga-1 mb-1"
@@ -113,8 +111,8 @@
                     {{ mdiCalendarHeart }}
                   </v-icon>
                   <strong
-                    class="text-truncate"
-                    style="max-width: 110px; display: inline-block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"
+
+                    style=" display: inline-block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"
                   >
                     {{ enrichedDate.badges }}
                   </strong>
