@@ -1,320 +1,169 @@
 import { defineEventHandler, readBody, getHeader, createError } from 'h3'
+import { resolveRevalidation, waitForSanityRevision } from '~~/server/utils/revalidationPaths'
+import { revalidatePaths } from '~~/server/utils/revalidationRunner'
+import { logRevalidationEvent } from '~~/server/utils/revalidationJobs'
+import { startSweep } from '~~/server/utils/revalidationSweep'
+import { updateAlgoliaIndex } from '~~/server/utils/algolia'
+import type { RevalidationDoc } from '~~/server/utils/revalidationRegistry'
+
+/**
+ * Sanity → ISR revalidation.
+ *
+ * Recommended webhook configuration in Sanity Manage (the handler tolerates less,
+ * but loses precision):
+ *   filter     : !(_id in path("drafts.**"))
+ *   projection : {_id, _type, "slug": slug.current, _rev}
+ *   headers    : x-sanity-webhook-secret: $SANITY_WEBHOOK_SECRET
+ *
+ * What this handler does NOT do any more is decide which paths a document affects:
+ * that lives in server/utils/revalidationRegistry.ts, where every document type is
+ * classified once by blast radius. A type missing from the registry now triggers a
+ * full sweep instead of revalidating nothing at all.
+ */
+
+type SanityWebhookBody = {
+  _id?: string
+  _type?: string
+  _rev?: string
+  slug?: string | { current?: string } | null
+  before?: SanityWebhookBody | null
+  after?: SanityWebhookBody | null
+}
+
+function readDoc(body: SanityWebhookBody): RevalidationDoc {
+  // Sanity delete events carry the document's last known state through before();
+  // accept both shapes so a deletion still revalidates the listing pages.
+  const source = body?.after || body || {}
+  const before = body?.before || {}
+  const slug = source.slug ?? before.slug
+  return {
+    _id: source._id || before._id || body._id,
+    _type: source._type || before._type,
+    _rev: source._rev || undefined,
+    slug: typeof slug === 'string' ? slug : slug?.current,
+  }
+}
 
 export default defineEventHandler(async (event) => {
-  // Verify webhook secret for security
   const secret = getHeader(event, 'x-sanity-webhook-secret')
   if (secret !== process.env.SANITY_WEBHOOK_SECRET) {
-    throw createError({
-      statusCode: 401,
-      message: 'Unauthorized',
-    })
+    throw createError({ statusCode: 401, message: 'Unauthorized' })
   }
 
   try {
     const body = await readBody(event)
-    console.log('✓ Sanity webhook received:', body)
+    const doc = readDoc(body)
+    console.log(`[revalidation] webhook: ${doc._type || 'unknown'} ${doc._id || ''} ${doc.slug || ''}`)
 
-    // Drafts never render on public pages; revalidating on a draft mutation would just re-cache stale published content.
-    if (body._id?.startsWith('drafts.')) {
-      return { success: true, skipped: 'draft', _id: body._id }
+    // Drafts never render on public pages; revalidating on a draft mutation would
+    // just re-cache the same published content.
+    if (doc._id?.startsWith('drafts.')) {
+      return { success: true, skipped: 'draft', _id: doc._id }
     }
-
-    // Extract document type and slug from the webhook payload
-    const documentType = body._type
-    const slug = body.slug?.current
-
-    const pathsToRevalidate: string[] = []
-
-    // === Pages with Dynamic Slugs ===
-    if (documentType === 'voyage' && slug) {
-      pathsToRevalidate.push(`/voyages/${slug}`)
-      // Also revalidate search and destination pages that might list this voyage
-      pathsToRevalidate.push('/voyages')
-      pathsToRevalidate.push('/prochains-departs')
-    }
-    else if (documentType === 'blog' && slug) {
-      pathsToRevalidate.push(`/blog/${slug}`) // Blog posts are at root level
-      pathsToRevalidate.push('/blog') // Blog index page
-    }
-    else if (documentType === 'destination' && slug) {
-      pathsToRevalidate.push(`/destinations/${slug}`)
-      pathsToRevalidate.push('/destinations') // Destinations index
-      pathsToRevalidate.push('/voyages') // Search page uses destinations
-    }
-    else if (documentType === 'category' && slug) {
-      pathsToRevalidate.push(`/thematiques/${slug}`)
-      pathsToRevalidate.push('/thematiques') // Categories index
-    }
-    else if (documentType === 'experience' && slug) {
-      pathsToRevalidate.push(`/experiences/${slug}`)
-      pathsToRevalidate.push('/experiences') // Experiences index
+    if (!doc._type) {
+      console.warn('[revalidation] payload has no _type — check the webhook projection', body)
+      await logRevalidationEvent({ doc_id: doc._id, mode: 'none', reason: 'payload without _type' })
+      return { success: true, skipped: 'no-type' }
     }
 
-    // === Singleton Pages (Fixed URLs) ===
-    else if (documentType === 'homePage') {
-      pathsToRevalidate.push('/')
-    }
-    else if (documentType === 'entreprise') {
-      pathsToRevalidate.push('/entreprise')
-    }
-    else if (documentType === 'surMesure') {
-      pathsToRevalidate.push('/sur-mesure')
-    }
-    else if (documentType === 'visionVoyageOdysway') {
-      pathsToRevalidate.push('/vision-voyage-odysway')
-    }
-    else if (documentType === 'privacyPolicy') {
-      pathsToRevalidate.push('/politique-de-confidentialite')
-    }
-    else if (documentType === 'legalMentions') {
-      pathsToRevalidate.push('/mentions-legales')
-    }
-    else if (documentType === 'chequesVacances') {
-      pathsToRevalidate.push('/cheques-vacances')
-    }
-    else if (documentType === 'conditionsGeneralesVente') {
-      pathsToRevalidate.push('/conditions-generales-de-vente')
-    }
-    else if (documentType === 'confirmation') {
-      pathsToRevalidate.push('/confirmation')
-    }
-    else if (documentType === 'offreCadeau') {
-      pathsToRevalidate.push('/offre-cadeau')
-    }
-    else if (documentType === 'recruitment') {
-      pathsToRevalidate.push('/nous-recrutons')
-    }
-    else if (documentType === 'faq') {
-      pathsToRevalidate.push('/faq')
-    }
-    else if (documentType === 'avisVoyageurs') {
-      pathsToRevalidate.push('/avis-voyageurs')
-    }
-    else if (documentType === 'page_contact') {
-      pathsToRevalidate.push('/contact')
-    }
-    else if (documentType === 'search') {
-      // /search is a 301 redirect to /voyages (see nuxt.config routeRules) — don't try to revalidate it.
-      pathsToRevalidate.push('/voyages')
-      pathsToRevalidate.push('/prochains-departs')
-    }
-    else if (documentType === 'checkout') {
-      pathsToRevalidate.push('/checkout')
-    }
-    else if (documentType === 'devis') {
-      pathsToRevalidate.push('/devis')
+    // Index updates are independent of ISR and must not be cut short by the
+    // response: waitUntil keeps the invocation alive until they settle.
+    if (['voyage', 'destination', 'region'].includes(doc._type)) {
+      event.waitUntil(
+        updateAlgoliaIndex()
+          .then(res => console.log(`[revalidation] Algolia updated: ${res.count} records`))
+          .catch(err => console.error('[revalidation] Algolia update failed', err)),
+      )
     }
 
-    // === Page Settings (used by multiple pages) ===
-    else if (documentType === 'page_voyage') {
-      // This affects all voyage detail pages
-      // Note: Can't revalidate wildcards with bypass token
-      // These pages will update via time-based ISR (60s)
-      console.log('⚠️  page_voyage updated - all voyage pages will update within 60s via ISR')
-    }
-    else if (documentType === 'page_thematiques') {
-      pathsToRevalidate.push('/thematiques')
-      console.log('ℹ️  page_thematiques updated - individual category pages update via ISR')
-    }
-    else if (documentType === 'page_experiences') {
-      pathsToRevalidate.push('/experiences')
-      console.log('ℹ️  page_experiences updated - individual experience pages update via ISR')
-    }
-    else if (documentType === 'page_blog') {
-      pathsToRevalidate.push('/blog')
+    // The single most important line of the whole flow: regenerating a page before
+    // Sanity serves the new revision re-caches the OLD content for a full day.
+    const revision = await waitForSanityRevision(doc._id, doc._rev)
+    if (!revision.confirmed && !revision.skipped && !revision.deleted) {
+      console.warn(`[revalidation] Sanity still serving an older revision after ${revision.waitedMs}ms — revalidating anyway`)
     }
 
-    // === Global Content (affects many/all pages) ===
-    else if (documentType === 'header') {
-      // Header affects all pages - revalidate critical ones
-      pathsToRevalidate.push('/')
-      pathsToRevalidate.push('/destinations')
-      pathsToRevalidate.push('/thematiques')
-      pathsToRevalidate.push('/experiences')
-      pathsToRevalidate.push('/blog')
-      console.log('⚠️  Header updated - revalidating main navigation pages')
-    }
-    else if (documentType === 'footer') {
-      // Footer affects all pages - revalidate critical ones
-      pathsToRevalidate.push('/')
-      pathsToRevalidate.push('/contact')
-      console.log('⚠️  Footer updated - revalidating main pages')
-    }
-    else if (documentType === 'newsletter') {
-      // Newsletter component used on multiple pages
-      pathsToRevalidate.push('/')
-      console.log('⚠️  Newsletter content updated')
-    }
-    else if (documentType === 'ctas') {
-      // CTAs used across the site
-      pathsToRevalidate.push('/')
-      console.log('⚠️  CTAs updated')
-    }
-    else if (documentType === 'voyage_card') {
-      // Voyage cards used in listings (/search is a 301 → /voyages, so use /voyages directly).
-      pathsToRevalidate.push('/voyages')
-      pathsToRevalidate.push('/destinations')
-      pathsToRevalidate.push('/thematiques')
-      pathsToRevalidate.push('/experiences')
-      console.log('⚠️  Voyage card content updated - revalidating listing pages')
-    }
+    const resolved = await resolveRevalidation(doc)
 
-    // === Content Without Direct Pages (logging only) ===
-    else if (['teamMember', 'review', 'partner', 'region', 'tops'].includes(documentType)) {
-      // These are referenced by other pages but don't have their own pages
-      console.log(`ℹ️  ${documentType} updated - referenced content, no direct page to revalidate, revalidating some`)
-      // Reviews might be on homepage or voyage pages
-      pathsToRevalidate.push('/')
-      pathsToRevalidate.push('/avis-voyageurs')
-      pathsToRevalidate.push('/vision-voyage-odysway')
-    }
-    else {
-      console.log(`⚠️  Unknown document type: ${documentType}`)
-    }
-
-    // === Update Algolia Index ===
-    if (['voyage', 'destination', 'region'].includes(documentType)) {
-      console.log('🔄 Triggering Algolia index update for type:', documentType)
-      // We don't await this to avoid timing out the webhook response
-      // But we log errors if possible
-      updateAlgoliaIndex()
-        .then(res => console.log(`✅ Algolia updated: ${res.count} records processed`))
-        .catch(err => console.error('❌ Algolia update failed:', err))
-    }
-
-    // Trigger on-demand revalidation using Vercel's bypass token
-    // Note: This is NOT the same as VERCEL_AUTOMATION_BYPASS_SECRET
-    // VERCEL_BYPASS_TOKEN is a custom secret you create for ISR revalidation
-    const bypassToken = process.env.VERCEL_BYPASS_TOKEN
-
-    if (bypassToken && pathsToRevalidate.length > 0) {
-      const config = useRuntimeConfig()
-      const baseUrls = new Set<string>()
-      const preprodUrl = process.env.PREPROD_SITE_URL || 'https://dev.odysway.com'
-
-      // Always hit production
-      if (config.public.siteURL) baseUrls.add(config.public.siteURL)
-      // Also hit preprod
-      baseUrls.add(preprodUrl)
-
-      // Sanity mutation → query visibility has a brief lag even without the CDN; wait a moment so ISR regen reads the new doc.
-      await new Promise(resolve => setTimeout(resolve, 2000))
-
-      // With experimental.payloadExtraction, each page also has a _payload.json cached as its own ISR entry.
-      // Client-side hydration fetches that payload and overwrites the fresh SSR HTML with stale data if we don't bust it too.
-      const pathsWithPayloads = pathsToRevalidate.flatMap((p) => {
-        const base = p === '/' ? '' : p
-        return [p, `${base}/_payload.json`]
+    if (resolved.mode === 'none') {
+      console.log(`[revalidation] nothing to do for ${doc._type} (${resolved.reason})`)
+      await logRevalidationEvent({
+        doc_type: doc._type,
+        doc_id: doc._id,
+        doc_rev: doc._rev,
+        scope: resolved.scopeKind,
+        mode: 'none',
+        known_type: resolved.knownType,
+        reason: resolved.reason,
+        revision_confirmed: revision.confirmed,
+        revision_wait_ms: revision.waitedMs,
       })
-      pathsToRevalidate.length = 0
-      pathsToRevalidate.push(...pathsWithPayloads)
+      return { success: true, documentType: doc._type, mode: 'none', reason: resolved.reason }
+    }
 
-      console.log(`Starting revalidation for ${pathsToRevalidate.length} paths across ${baseUrls.size} base URLs with bypass token: ${bypassToken ? 'SET' : 'NOT SET'}`)
-
-      const revalidationResults = []
-
-      for (const baseUrl of baseUrls) {
-        for (const path of pathsToRevalidate) {
-          try {
-            const url = `${baseUrl}${path}`
-
-            console.log(`Attempting revalidation for ${url} (token length: ${bypassToken?.length || 0})`)
-
-            const response = await fetch(url, {
-              method: 'GET',
-              headers: {
-                'x-prerender-revalidate': bypassToken,
-                'Cache-Control': 'no-cache, no-store, must-revalidate, max-age=0',
-              },
-              redirect: 'follow',
-            })
-
-            // Consume the response body to ensure request completes
-            await response.text().catch(() => { })
-
-            const cacheStatus = response.headers.get('x-vercel-cache') || 'UNKNOWN'
-            const vercelId = response.headers.get('x-vercel-id') || 'UNKNOWN'
-            const isSuccess = cacheStatus === 'BYPASS' || cacheStatus === 'MISS' || cacheStatus === 'STALE' || cacheStatus === 'REVALIDATED'
-
-            console.log(`Revalidation response for ${url}:`, {
-              status: response.status,
-              cacheStatus,
-              isSuccess,
-              vercelId,
-              bypassTokenLength: bypassToken?.length || 0,
-              headers: {
-                'x-vercel-cache': cacheStatus,
-                'x-vercel-id': vercelId,
-                'cache-control': response.headers.get('cache-control'),
-              },
-            })
-
-            if (cacheStatus === 'HIT') {
-              console.log(`⚠️  Cache HIT for ${url} - bypass token not recognized (Nuxt 3 ISR limitation)`)
-              revalidationResults.push({
-                baseUrl,
-                path,
-                status: 'warning',
-                cacheStatus,
-                note: 'HIT - will update via 60s ISR fallback',
-              })
-            }
-            else if (isSuccess || response.status === 200) {
-              revalidationResults.push({ baseUrl, path, status: 'success', cacheStatus, note: response.status === 200 ? 'Status 200' : undefined })
-            }
-            else {
-              revalidationResults.push({ baseUrl, path, status: 'warning', cacheStatus })
-            }
-
-            if (pathsToRevalidate.length > 1) {
-              await new Promise(resolve => setTimeout(resolve, 100))
-            }
-          }
-          catch (err) {
-            const errorMessage = err instanceof Error ? err.message : String(err)
-            console.error(`❌ Failed to revalidate ${path} on ${baseUrl}:`, err)
-            revalidationResults.push({ baseUrl, path, status: 'failed', error: errorMessage })
-          }
-        }
-      }
-
-      // Check if any revalidations got HIT (bypass token not working)
-      const hasHits = revalidationResults.some(r => r.cacheStatus === 'HIT')
-
+    if (resolved.mode === 'sweep') {
+      const { job, blocked, total } = await startSweep(event, {
+        kind: resolved.paths.length ? 'scoped' : 'global',
+        type: doc._type,
+        id: doc._id,
+        rev: doc._rev,
+        reason: resolved.reason,
+      }, resolved.paths)
+      await logRevalidationEvent({
+        doc_type: doc._type,
+        doc_id: doc._id,
+        doc_rev: doc._rev,
+        scope: resolved.scopeKind,
+        mode: 'sweep',
+        known_type: resolved.knownType,
+        reason: resolved.reason,
+        job_id: job?.id,
+        revision_confirmed: revision.confirmed,
+        revision_wait_ms: revision.waitedMs,
+      })
       return {
         success: true,
-        message: hasHits
-          ? 'Webhook processed. Pages will update within 60 seconds via ISR.'
-          : 'On-demand revalidation triggered. Changes are live!',
-        documentType,
-        slug,
-        revalidationResults,
-        note: hasHits
-          ? 'Bypass token not recognized - using 60s ISR fallback (normal for Nuxt 3)'
-          : 'Instant revalidation working',
+        documentType: doc._type,
+        mode: 'sweep',
+        jobId: job?.id,
+        queuedBehindRunningSweep: blocked,
+        paths: total,
+        reason: resolved.reason,
         timestamp: new Date().toISOString(),
       }
     }
 
-    // If no bypass token configured, rely on ISR timing
-    console.log('⚠️  No VERCEL_BYPASS_TOKEN configured. Relying on time-based ISR (60s)')
-    console.log('✓ Content updated, affected paths:', pathsToRevalidate)
+    const run = await revalidatePaths(resolved.paths)
+    await logRevalidationEvent({
+      doc_type: doc._type,
+      doc_id: doc._id,
+      doc_rev: doc._rev,
+      scope: resolved.scopeKind,
+      mode: 'paths',
+      known_type: resolved.knownType,
+      paths: resolved.paths,
+      ok: run.ok,
+      stale: run.stale,
+      failed: run.failed,
+      revision_confirmed: revision.confirmed,
+      revision_wait_ms: revision.waitedMs,
+      reason: run.enabled ? null : run.reason,
+    })
 
     return {
       success: true,
-      message: 'Webhook received. Content will update within 60 seconds via ISR.',
-      documentType,
-      slug,
-      pathsAffected: pathsToRevalidate,
-      note: 'For instant updates, configure VERCEL_BYPASS_TOKEN',
+      documentType: doc._type,
+      slug: doc.slug,
+      mode: 'paths',
+      revalidated: resolved.paths,
+      relatedTypes: [...new Set(resolved.relatedTypes || [])],
+      result: { ok: run.ok, stale: run.stale, failed: run.failed, problems: run.problems, skipped: run.enabled ? undefined : run.reason },
+      revisionConfirmed: revision.confirmed,
       timestamp: new Date().toISOString(),
     }
   }
   catch (error) {
-    console.error('❌ Webhook error:', error)
-    throw createError({
-      statusCode: 500,
-      message: 'Failed to process webhook',
-    })
+    console.error('[revalidation] webhook error', error)
+    throw createError({ statusCode: 500, message: 'Failed to process webhook' })
   }
 })
