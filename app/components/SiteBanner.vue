@@ -55,28 +55,16 @@ import { useEventListener } from '@vueuse/core'
 import { h, resolveComponent } from 'vue'
 import { PortableText } from '@portabletext/vue'
 import { stegaClean } from '@sanity/client/stega'
+import { SITE_BANNER_QUERY } from '#shared/utils/siteBanner'
 
 const DISMISS_KEY = 'odysway-banner-dismssed'
 // Set pre-hydration by the inline script below, and read by the stylesheet, so a
 // visitor who already closed the banner never sees it flash back in.
 const DISMISSED_CLASS = 'odysway-banner-dismissed'
 
-const bannerQuery = groq`*[_type == "siteBanner"][0]{
-  _rev,
-  enabled,
-  variant,
-  tag,
-  ctaLabel,
-  ctaHref,
-  dismissible,
-  startDate,
-  endDate,
-  content[]{
-    ...,
-    _type == "image" => { ..., "url": asset->url }
-  }
-}`
-const { data: banner } = await useSanityQuery(bannerQuery)
+// Shared with /api/v1/globals/banner: the SSR read and the post-hydration read
+// must project the same fields (see the reconciliation in onMounted).
+const { data: banner } = await useSanityQuery(SITE_BANNER_QUERY)
 
 // Visual editing is on for every non-production deploy (see `sanity.stega` in
 // nuxt.config), and it hides its click-to-edit metadata inside each string as a
@@ -156,6 +144,11 @@ function writeOffset(px) {
 function clearOffset() {
   lastOffset = -1
   document.body.style.removeProperty('--site-banner-offset')
+  // Also drop the measured height: HomeHeroSection reserves
+  // `calc(100svh - var(--site-banner-h, 0px))`, so leaving it behind would keep a
+  // 43px gap under a banner that is no longer there (dismissed, or switched off
+  // in the CMS and picked up by the reconciliation below).
+  document.body.style.removeProperty('--site-banner-h')
 }
 
 function syncOffset() {
@@ -193,15 +186,52 @@ useEventListener('scroll', () => {
 }, { passive: true })
 useEventListener('resize', measure, { passive: true })
 
-onMounted(() => {
-  now.value = Date.now()
+function readDismissed(rev) {
   try {
-    dismissed.value = window.localStorage.getItem(DISMISS_KEY) === banner.value?._rev
+    return window.localStorage.getItem(DISMISS_KEY) === rev
   }
   catch {
-    dismissed.value = false
+    return false
   }
+}
+
+// The banner is part of the HTML of every page, and those pages are served from
+// ISR for 1 to 5 days — so the copy rendered above is potentially that old, and a
+// revalidation sweep still needs about a minute to walk all ~480 of them.
+// /api/v1/globals/banner sits outside the page cache (60s at the edge) and is what
+// makes enabling — or cutting — a banner take effect now.
+//
+// The cached copy is rendered optimistically, so there is no layout shift in the
+// normal case where nothing changed; the bar only moves when the banner really did.
+// Outside production liveContent already streams changes, so this stays off.
+async function reconcileWithLiveBanner() {
+  if (useRuntimeConfig().public.environment !== 'production') return
+
+  let fresh
+  try {
+    fresh = await $fetch('/api/v1/globals/banner')
+  }
+  catch {
+    return // keep the cached copy on screen
+  }
+  if (!fresh?._rev || fresh._rev === banner.value?._rev) return
+
+  banner.value = fresh
+  // The pre-hydration script hid the bar for the revision the visitor dismissed;
+  // a new revision has to come back.
+  dismissed.value = readDismissed(fresh._rev)
+  if (!dismissed.value) document.documentElement.classList.remove(DISMISSED_CLASS)
+
+  await nextTick()
+  if (visible.value) measure()
+  else clearOffset()
+}
+
+onMounted(() => {
+  now.value = Date.now()
+  dismissed.value = readDismissed(banner.value?._rev)
   if (visible.value) nextTick(measure)
+  reconcileWithLiveBanner()
 })
 
 onBeforeUnmount(clearOffset)
