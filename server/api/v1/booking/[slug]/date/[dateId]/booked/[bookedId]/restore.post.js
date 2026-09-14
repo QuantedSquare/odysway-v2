@@ -5,7 +5,11 @@ import { defineEventHandler, createError } from 'h3'
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
   const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
-  const bookingUser = isProdEnv ? requireBookingUser(event) : getBookingUserOrNull(event)
+  // Ulysse s'annonce par un jeton de service ; sinon on retombe sur la session
+  // booking_token habituelle. Voir getUlysseServiceUser pour la liste des
+  // endpoints qui l'acceptent.
+  const bookingUser = getUlysseServiceUser(event)
+    ?? (isProdEnv ? requireBookingUser(event) : getBookingUserOrNull(event))
 
   const { dateId, slug, bookedId } = event.context.params
   if (!dateId || !slug || !bookedId) {

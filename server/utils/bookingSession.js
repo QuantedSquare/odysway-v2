@@ -38,7 +38,14 @@ export const getBookingUserOrNull = (event) => {
  * attribue l'action à une personne et non à « la machine ».
  *
  * Ce jeton n'ouvre QUE les endpoints qui l'acceptent explicitement — pas
- * l'ensemble du back-office.
+ * l'ensemble du back-office. Ce sont les écritures des écrans « Dates GIR »
+ * et « Corbeille » d'Ulysse :
+ *
+ *   - assign-departure-deal (POST, DELETE) — rattrapage du dossier de départ
+ *   - add-date (POST), [dateId] (PUT, DELETE) — création, publication, suppression
+ *   - [dateId]/restore, booked/[bookedId]/restore, trash/deal/[dealId]/restore
+ *
+ * Les lectures n'en ont pas besoin : Ulysse lit la même base Supabase.
  */
 export const getUlysseServiceUser = (event) => {
   const attendu = process.env.ULYSSE_SERVICE_TOKEN

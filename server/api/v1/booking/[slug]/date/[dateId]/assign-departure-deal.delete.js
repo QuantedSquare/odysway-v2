@@ -4,7 +4,8 @@ export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
   const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
   // Ulysse s'annonce par un jeton de service ; sinon on retombe sur la session
-  // booking_token habituelle. Seuls ces deux endpoints acceptent le jeton.
+  // booking_token habituelle. Voir getUlysseServiceUser pour la liste des
+  // endpoints qui l'acceptent.
   const bookingUser = getUlysseServiceUser(event)
     ?? (isProdEnv ? requireBookingUser(event) : getBookingUserOrNull(event))
 
@@ -14,6 +15,11 @@ export default defineEventHandler(async (event) => {
   }
 
   const travelDate = await booking.requireActiveTravelDate(dateId, slug)
+
+  // Détacher un dossier déjà absent ne journalise pas un détachement fictif.
+  if (!travelDate.departure_id) {
+    return { departure_id: null, unchanged: true }
+  }
 
   const { error: updateError } = await supabase
     .from('travel_dates')
