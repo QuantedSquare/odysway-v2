@@ -9,6 +9,12 @@ export default defineEventHandler(async (event) => {
   const origin = config.public.siteURL
 
   const { dealId, bookedId, dateId, ...fullPayload } = await readBody(event)
+  // stage / currentStep sont déjà posés par createMinimalDeal (kickstart) et le front
+  // peut les avoir fait avancer entre-temps (ex. pose d'option → stage 27). Cet
+  // enrich tourne en fire-and-forget : les réécrire ici écraserait cette avancée.
+  const enrichPayload = { ...fullPayload }
+  delete enrichPayload.stage
+  delete enrichPayload.currentStep
   const slug = fullPayload.slug
 
   if (!dealId || !bookedId) {
@@ -20,7 +26,7 @@ export default defineEventHandler(async (event) => {
 
   // 1. Update AC deal with all custom fields (also re-upserts contact + recalculates values)
   try {
-    await activecampaign.updateDeal(dealId, fullPayload)
+    await activecampaign.updateDeal(dealId, enrichPayload)
     lap('updateDeal (full fields + recalculate)')
   }
   catch (err) {

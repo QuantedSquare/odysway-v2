@@ -631,7 +631,7 @@ const addContactToDeal = async (dealId, contactId) => {
   }
 }
 
-const createMinimalDeal = async ({ email, firstname, lastname, phone, isoContact, title, stage, currency, owner }) => {
+const createMinimalDeal = async ({ email, firstname, lastname, phone, isoContact, title, stage, currency, owner, currentStep }) => {
   const t0 = Date.now()
   const contact = await upsertContact({
     contact: {
@@ -651,6 +651,9 @@ const createMinimalDeal = async ({ email, firstname, lastname, phone, isoContact
       stage,
       owner,
       value: '1',
+      // Posé dès la création (et pas par l'enrich en arrière-plan) pour que la
+      // colonne et l'étape AC ne puissent pas être écrasées après coup.
+      ...(currentStep && { fields: reverseCustomFieldsMap({ currentStep }, customFieldsMapDeal) }),
     },
   })
   console.log(`[createMinimalDeal] POST /deals done dealId=${res.deal.id} +${Date.now() - t0}ms`)

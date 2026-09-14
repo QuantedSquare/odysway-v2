@@ -10,7 +10,7 @@ export default defineEventHandler(async (event) => {
   }
 
   const body = await readBody(event)
-  const { email, firstname, lastname, phone, isoContact, title, stage, currency, owner } = body
+  const { email, firstname, lastname, phone, isoContact, title, stage, currency, owner, currentStep } = body
 
   if (!email || !title) {
     throw funnelReporter.funnelCreateError({ statusCode: 400, code: 'KICKSTART_MISSING_FIELDS', step: 'details', origin: { field: !email ? 'email' : 'title', received: !email ? email ?? null : title ?? null }, message: 'email et title requis' })
@@ -34,7 +34,7 @@ export default defineEventHandler(async (event) => {
   // 2. Upsert contact + create minimal AC deal
   let dealId
   try {
-    dealId = await activecampaign.createMinimalDeal({ email, firstname, lastname, phone, isoContact, title, stage, currency, owner })
+    dealId = await activecampaign.createMinimalDeal({ email, firstname, lastname, phone, isoContact, title, stage, currency, owner, currentStep })
     lap(`AC deal created dealId=${dealId}`)
   }
   catch (err) {

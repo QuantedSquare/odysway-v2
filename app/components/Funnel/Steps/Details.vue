@@ -492,7 +492,11 @@ const submitStepData = () => {
       const linkBms = `${origin}/booking-management/${voyage.slug}/${dateId}`
 
       // #TODO: Add a dev column/stage  in ActiveCampaign
-      const stage = (model.value.email === 'test@test.com' || model.value.email === 'ottmann.alex@gmail.com') || config.public.environment === 'development' ? '80' : '2'
+      const isTestDeal = (model.value.email === 'test@test.com' || model.value.email === 'ottmann.alex@gmail.com') || config.public.environment === 'development'
+      // En mode option, le deal naît directement dans « A posé une option » : l'enrich
+      // lancé en arrière-plan par kickstart peut atterrir APRÈS l'updateDeal(stage 27)
+      // du front et le ramènerait sinon dans « Nouveaux - À contacter ».
+      const stage = isTestDeal ? '80' : (isOptionMode.value ? '27' : '2')
       const utmSource = localStorage.getItem('utmSource')
       const flattenedDeal = {
         value: voyage.startingPrice, // Don't care about this value, we Calculate it in back
@@ -514,7 +518,7 @@ const submitStepData = () => {
         iso: voyage.iso,
         zoneChapka: voyage.zoneChapka,
         image: voyage.imgSrc || '/images/default/Odysway-couverture-mongolie.jpeg',
-        currentStep: 'Création du Deal',
+        currentStep: isOptionMode.value ? 'A posé une option' : 'Création du Deal',
         alreadyPaid: 0,
         restToPay: 0, // Don't care about this value, we Calculate it in back
         utm: utmSource || '',
