@@ -160,14 +160,13 @@ const props = defineProps({
   },
 })
 
-const { readScrollHeight } = useLayoutRead()
-
 const countListItems = (blocks) => {
   if (!blocks) return 0
   return blocks.filter(block => block.listItem).length
 }
 
 const useListTruncation = (getBlocks) => {
+  const { applyExpanded } = useExpandableHeight()
   const isExpanded = ref(false)
   const content = ref(null)
   const shouldTruncate = computed(() => countListItems(getBlocks()) > ITEM_LIMIT)
@@ -181,17 +180,8 @@ const useListTruncation = (getBlocks) => {
     isExpanded.value = !isExpanded.value
   }
 
-  watch(isExpanded, async (newVal) => {
-    if (import.meta.client && content.value) {
-      await nextTick()
-      if (newVal) {
-        const scrollHeight = await readScrollHeight(content.value)
-        contentStyle.value.maxHeight = scrollHeight + 'px'
-      }
-      else {
-        contentStyle.value.maxHeight = `${clampHeight}px`
-      }
-    }
+  watch(isExpanded, (newVal) => {
+    applyExpanded(content.value, contentStyle, newVal, clampHeight)
   })
 
   onMounted(() => {

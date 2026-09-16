@@ -50,6 +50,7 @@ const props = defineProps({
 })
 
 const { readScrollHeight } = useLayoutRead()
+const { applyExpanded } = useExpandableHeight()
 
 const isExpanded = ref(false)
 const textContent = ref(null)
@@ -76,16 +77,8 @@ onMounted(async () => {
   // scrollHeight === 0 means layout not ready; leave clamp in place as safe fallback
 })
 
-watch(isExpanded, async (newVal) => {
-  if (!textContent.value) return
-  await nextTick()
-  if (newVal) {
-    const scrollHeight = await readScrollHeight(textContent.value)
-    contentStyle.value = { maxHeight: scrollHeight + 'px', overflow: 'hidden', transition: 'max-height 0.5s ease' }
-  }
-  else {
-    contentStyle.value = { maxHeight: `${clampHeight}px`, overflow: 'hidden', transition: 'max-height 0.5s ease' }
-  }
+watch(isExpanded, (newVal) => {
+  applyExpanded(textContent.value, contentStyle, newVal, clampHeight)
 })
 
 const toggleExpansion = () => {
