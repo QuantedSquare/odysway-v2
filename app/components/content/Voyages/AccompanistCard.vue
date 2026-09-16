@@ -127,7 +127,7 @@ const accompanistImageSrcset = computed(() => {
   ].join(', ')
 })
 
-const { readScrollHeight } = useLayoutRead()
+const { applyExpanded } = useExpandableHeight()
 const isExpanded = ref(false)
 const descContent = ref(null)
 const clampHeight = 90 // 3 lignes × 30px
@@ -140,17 +140,8 @@ const contentStyle = ref({
   transition: 'max-height 0.5s ease',
 })
 
-watch(isExpanded, async (newVal) => {
-  if (import.meta.client && descContent.value) {
-    await nextTick()
-    if (newVal) {
-      const scrollHeight = await readScrollHeight(descContent.value)
-      contentStyle.value.maxHeight = scrollHeight + 'px'
-    }
-    else {
-      contentStyle.value.maxHeight = `${clampHeight}px`
-    }
-  }
+watch(isExpanded, (newVal) => {
+  applyExpanded(descContent.value, contentStyle, newVal, clampHeight)
 })
 
 onMounted(() => {

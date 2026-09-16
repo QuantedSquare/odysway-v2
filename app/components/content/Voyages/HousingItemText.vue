@@ -56,7 +56,7 @@ const props = defineProps({
   },
 })
 
-const { readScrollHeight } = useLayoutRead()
+const { applyExpanded } = useExpandableHeight()
 const isExpanded = ref(false)
 const content = ref(null)
 const clampHeight = 120 // 4 lignes × 30px
@@ -73,17 +73,8 @@ const contentStyle = ref({
   transition: 'max-height 0.5s ease',
 })
 
-watch(isExpanded, async (newVal) => {
-  if (import.meta.client && content.value) {
-    await nextTick()
-    if (newVal) {
-      const scrollHeight = await readScrollHeight(content.value)
-      contentStyle.value.maxHeight = scrollHeight + 'px'
-    }
-    else {
-      contentStyle.value.maxHeight = `${clampHeight}px`
-    }
-  }
+watch(isExpanded, (newVal) => {
+  applyExpanded(content.value, contentStyle, newVal, clampHeight)
 })
 
 onMounted(() => {

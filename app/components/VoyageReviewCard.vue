@@ -67,7 +67,7 @@ const props = defineProps({
 
 const voyageTitle = computed(() => props.review.voyage?.title || props.review.voyageTitle || null)
 
-const { readScrollHeight } = useLayoutRead()
+const { applyExpanded } = useExpandableHeight()
 const isExpanded = ref(false)
 const reviewContent = ref(null)
 const clampHeight = 60 // 3 lignes × 20px
@@ -80,17 +80,8 @@ const contentStyle = ref({
   transition: 'max-height 0.5s ease',
 })
 
-watch(isExpanded, async (newVal) => {
-  if (import.meta.client && reviewContent.value) {
-    await nextTick()
-    if (newVal) {
-      const scrollHeight = await readScrollHeight(reviewContent.value)
-      contentStyle.value.maxHeight = scrollHeight + 'px'
-    }
-    else {
-      contentStyle.value.maxHeight = `${clampHeight}px`
-    }
-  }
+watch(isExpanded, (newVal) => {
+  applyExpanded(reviewContent.value, contentStyle, newVal, clampHeight)
 })
 
 onMounted(() => {

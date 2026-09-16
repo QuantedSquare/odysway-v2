@@ -137,7 +137,7 @@ const contentStyle = ref({
   transition: 'max-height 0.5s ease',
 })
 
-const { readScrollHeight } = useLayoutRead()
+const { applyExpanded } = useExpandableHeight()
 
 // Toggle function for expansion
 const toggleExpanded = () => {
@@ -145,20 +145,8 @@ const toggleExpanded = () => {
 }
 
 // Watch for expansion changes and handle animations on client only
-watch(isExpanded, async (newVal) => {
-  // Only run on client side
-  if (import.meta.client && content.value) {
-    await nextTick()
-    if (newVal) {
-      // Expanding: animate to full height using batched layout read
-      const scrollHeight = await readScrollHeight(content.value)
-      contentStyle.value.maxHeight = scrollHeight + 'px'
-    }
-    else {
-      // Collapsing: animate to clamped height
-      contentStyle.value.maxHeight = `${lineHeight * clampLines}px`
-    }
-  }
+watch(isExpanded, (newVal) => {
+  applyExpanded(content.value, contentStyle, newVal, lineHeight * clampLines)
 })
 
 // Reset content style when component mounts on client
