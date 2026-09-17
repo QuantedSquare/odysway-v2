@@ -38,12 +38,16 @@ export const getBookingUserOrNull = (event) => {
  * attribue l'action à une personne et non à « la machine ».
  *
  * Ce jeton n'ouvre QUE les endpoints qui l'acceptent explicitement — pas
- * l'ensemble du back-office. Ce sont les écritures des écrans « Dates GIR »
- * et « Corbeille » d'Ulysse :
+ * l'ensemble du back-office. Ce sont les écritures des écrans « Dates GIR »,
+ * « Corbeille » et de la grille tarifaire d'Ulysse :
  *
  *   - assign-departure-deal (POST, DELETE) — rattrapage du dossier de départ
  *   - add-date (POST), [dateId] (PUT, DELETE) — création, publication, suppression
  *   - [dateId]/restore, booked/[bookedId]/restore, trash/deal/[dealId]/restore
+ *   - margins/[slug]/pricing (PUT), margins/[slug]/basis (PUT) — coût d'achat,
+ *     marge dérivée, bascule (server/utils/marginPricing.js)
+ *   - margins/[slug]/seasons (PUT), margins/[slug]/settings (PUT) — saisons et
+ *     mode de configuration, par les fonctions existantes de margins.js
  *
  * Les lectures n'en ont pas besoin : Ulysse lit la même base Supabase.
  */

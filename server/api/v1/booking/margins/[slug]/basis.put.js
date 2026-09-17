@@ -1,7 +1,10 @@
 import { defineEventHandler, readBody, createError } from 'h3'
 
-// Per-voyage margin settings: how the voyage is configured (pax table / per-date
-// override / excluded from tracking) and the child margin delta.
+// Bascule d'un voyage : sa marge devient dérivée du coût d'achat, ou redevient
+// saisie. Body : { margin_basis: 'purchase_cost' | 'entered' }.
+//
+// Ulysse ne l'appelle qu'après une réconciliation sans écart inexpliqué ;
+// marginPricing.setMarginBasis refuse en plus toute ligne restée sans coût.
 
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
@@ -20,7 +23,7 @@ export default defineEventHandler(async (event) => {
   const body = await readBody(event) || {}
 
   try {
-    return await margins.upsertSettingsForVoyage(slug, body, bookingUser?.email)
+    return await marginPricing.setMarginBasis(slug, body.margin_basis, bookingUser?.email)
   }
   catch (err) {
     throw createError({ statusCode: err.statusCode || 500, statusMessage: err.message })
