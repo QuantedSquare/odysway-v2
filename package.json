@@ -8,7 +8,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "check:revalidation": "node scripts/check-revalidation-coverage.mjs"
   },
   "resolutions": {
     "unimport": "5.6.0"
