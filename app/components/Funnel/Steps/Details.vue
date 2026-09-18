@@ -313,6 +313,27 @@ const { kickstartDeal, updateDeal, bookedId } = useStepperDeal()
 const { report, reportApiError, setContext } = useFunnelReporter()
 const isOptionMode = ref(false)
 const route = useRoute()
+const router = useRouter()
+
+// La prop dateId est lue une seule fois au montage du stepper. Si le checkout a
+// été monté via ?booked_id=… puis que le voyageur revient avec « Précédent » du
+// navigateur sur ?date_id=…, la page n'est pas remontée : la prop reste
+// undefined alors que l'URL porte la bonne date → on relit l'URL.
+const currentDateId = computed(() => dateId || route.query.date_id)
+
+// Réservation déjà créée pour cette date (kickstart pose { booked_id } dans le
+// localStorage sous la clé dateId). Sans ce garde-fou, revenir sur ?date_id=…
+// après un kickstart réussi recréait un second deal.
+const findExistingBookedId = () => {
+  if (route.query.booked_id) return route.query.booked_id
+  if (!currentDateId.value) return null
+  try {
+    return JSON.parse(localStorage.getItem(currentDateId.value) || 'null')?.booked_id || null
+  }
+  catch {
+    return null
+  }
+}
 
 // New: Local validation state
 
@@ -430,7 +451,7 @@ const submitStepData = () => {
   // Validate form
   if (!isValid.value) {
     // Report each missing/invalid field precisely (field name + bad value).
-    setContext({ email: model.value.email, voyageSlug: voyage?.slug, dateId })
+    setContext({ email: model.value.email, voyageSlug: voyage?.slug, dateId: currentDateId.value })
     const missing = collectMissingDetailsFields()
     missing.forEach(({ field, received, expected }) => {
       report({
@@ -444,16 +465,33 @@ const submitStepData = () => {
     return false
   }
   //  #todo soustraire la réduction s'il y en a une
+  const existingBookedId = findExistingBookedId()
+  if (existingBookedId && !route.query.booked_id) {
+    // Remet l'URL dans l'état post-kickstart pour que les étapes suivantes
+    // (et un rechargement) travaillent sur la réservation existante.
+    bookedId.value = existingBookedId
+    router.replace({ query: { ...route.query, booked_id: existingBookedId, date_id: undefined } })
+  }
+  if (!existingBookedId && !currentDateId.value) {
+    report({
+      code: 'DETAILS_NO_DATE_ID',
+      step: 'details',
+      origin: { field: 'date_id|booked_id', received: null, expected: 'date_id ou booked_id dans l\'URL' },
+      message: 'Ni date ni réservation connue à la soumission de l\'étape Détails',
+      userMessage: 'Une erreur est survenue, veuillez recharger la page.',
+    })
+    return false
+  }
   shouldAdvance.value = true
   // Only show the flight progress animation for the create-deal flow.
-  // The update-deal flow (when booked_id is in the URL) advances instantly.
-  if (!route.query.booked_id) {
+  // The update-deal flow (when a booking already exists) advances instantly.
+  if (!existingBookedId) {
     showProgress.value = true
     buttonLoading.value = true
   }
   try {
     // Submit form data
-    if (route.query.booked_id) {
+    if (existingBookedId) {
       // Update deal with this values only after creation.
       // So only when checkout type is deposit or full`
 
@@ -471,7 +509,7 @@ const submitStepData = () => {
           lastname: model.value.lastName,
           isoContact: model.value.isoContact,
           utm: utmSource || '',
-        })
+        }, existingBookedId)
       }
       else {
         updateDeal({
@@ -480,7 +518,7 @@ const submitStepData = () => {
           firstname: model.value.firstName,
           lastname: model.value.lastName,
           isoContact: model.value.isoContact,
-        })
+        }, existingBookedId)
       }
       emit('next')
       buttonLoading.value = false
@@ -489,7 +527,7 @@ const submitStepData = () => {
     // else we update basics and create a deal with it
     else {
       const origin = config.public.siteURL
-      const linkBms = `${origin}/booking-management/${voyage.slug}/${dateId}`
+      const linkBms = `${origin}/booking-management/${voyage.slug}/${currentDateId.value}`
 
       // #TODO: Add a dev column/stage  in ActiveCampaign
       const isTestDeal = (model.value.email === 'test@test.com' || model.value.email === 'ottmann.alex@gmail.com') || config.public.environment === 'development'
@@ -563,7 +601,7 @@ const submitStepData = () => {
 
       if (isOptionMode.value) {
         // Option mode: must wait for bookedId before placing the option
-        kickstartDeal(flattenedDeal, voyage.slug, dateId)
+        kickstartDeal(flattenedDeal, voyage.slug, currentDateId.value)
           .then(async () => {
             shouldAdvance.value = false
             if (bookedId.value) {
@@ -620,7 +658,7 @@ const submitStepData = () => {
       }
       else {
         // Normal mode: fire kickstart in background, navigate immediately via animation finish
-        kickstartDeal(flattenedDeal, voyage.slug, dateId).catch((err) => {
+        kickstartDeal(flattenedDeal, voyage.slug, currentDateId.value).catch((err) => {
           console.error('[Details] kickstartDeal failed', err)
         })
         // Setting buttonLoading=false triggers finishTween (600ms) → onProgressFinished → emit('next')
