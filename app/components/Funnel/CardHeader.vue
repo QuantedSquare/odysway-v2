@@ -159,6 +159,11 @@
             <span class="mobile-price-pill__label">À régler maintenant</span>
             <span class="mobile-price-pill__amount text-no-wrap">
               {{ formatNumber(drawerRef?.appliedPrice ?? 0, 'currency', '€') }}
+            </span><span
+              v-if="drawerRef?.totalValue && drawerRef.totalValue !== drawerRef.appliedPrice"
+              class="mobile-price-pill__total text-no-wrap"
+            >
+              Total <span class="font-weight-bold">{{ formatNumber(drawerRef.totalValue, 'currency', '€') }}</span>
             </span>
           </div>
         </div>
@@ -351,6 +356,11 @@ const drawerRef = useTemplateRef('drawerRef')
   font-size: 0.6rem;
   line-height: 1;
   letter-spacing: 0.02em;
+  color: rgba(0,0,0,0.55);
+}
+.mobile-price-pill__total {
+  font-size: 0.65rem;
+  line-height: 1.2;
   color: rgba(0,0,0,0.55);
 }
 .mobile-price-pill__amount {
