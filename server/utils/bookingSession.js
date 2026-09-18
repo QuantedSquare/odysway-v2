@@ -44,6 +44,9 @@ export const getBookingUserOrNull = (event) => {
  *   - assign-departure-deal (POST, DELETE) — rattrapage du dossier de départ
  *   - add-date (POST), [dateId] (PUT, DELETE) — création, publication, suppression
  *   - [dateId]/restore, booked/[bookedId]/restore, trash/deal/[dealId]/restore
+ *   - [dateId]/notes (POST), notes/[noteId] (DELETE) — notes de la fiche date
+ *   - [dateId]/invoices (POST), invoices/upload-url (POST), invoices/[invoiceId]
+ *     (DELETE) — factures fournisseur de la fiche date
  *   - margins/[slug]/pricing (PUT), margins/[slug]/basis (PUT) — coût d'achat,
  *     marge dérivée, bascule (server/utils/marginPricing.js)
  *   - margins/[slug]/seasons (PUT), margins/[slug]/settings (PUT) — saisons et
