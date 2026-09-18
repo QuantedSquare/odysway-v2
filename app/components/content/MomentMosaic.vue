@@ -78,7 +78,7 @@
               />
             </span>
           </div>
-          </div>
+        </div>
 
       </NuxtLink>
 
@@ -125,7 +125,7 @@
                 >{{ mini.price }}</span>
               </div>
               <span class="feature__cta ml-4">
-              
+
                 Découvrir le voyage
                 <IconArrowRight
                   :size="18"
@@ -137,15 +137,16 @@
         </NuxtLink>
       </div>
       <v-btn-secondary
-       class="d-flex d-sm-none rounded-xl"
-       variant="outlined"
-       height="50"
-      :to="merged.moreLink">
-          {{ merged.moreText || 'Voir tous les voyages' }}
-          <IconArrowRight
-            :size="18"
-            :stroke="1.8"
-          />
+        class="d-flex d-sm-none rounded-xl"
+        variant="outlined"
+        height="50"
+        :to="merged.moreLink"
+      >
+        {{ merged.moreText || 'Voir tous les voyages' }}
+        <IconArrowRight
+          :size="18"
+          :stroke="1.8"
+        />
       </v-btn-secondary>
     </div>
   </section>
@@ -204,9 +205,9 @@ const voyageLink = (voyage) => {
   return slug ? `/voyages/${slug}` : null
 }
 
-const linkFor = item => item?.link || voyageLink(item?.voyage) || '/voyages'
-
+const linkFor = item => item?.link.replace('https://odysway.com', '') || voyageLink(item?.voyage) || '/voyages'
 const featureLink = computed(() => linkFor(feature.value))
+console.log('feature test', featureLink.value)
 
 const bgStyle = (image, width) => {
   const ref = image?.asset?._ref
