@@ -108,6 +108,8 @@ export const bookingApi = {
   getMarginsStatus: (year = null) =>
     apiRequest(`/booking/margins${encodeQuery(year ? { year } : {})}`),
   getMarginsDashboard: (params = {}) => apiRequest(`/booking/margins/dashboard${encodeQuery(params)}`),
+  // Poste de pilotage : une ligne par départ, déjà segmentée et chiffrée.
+  getMarginsPilotage: (params = {}) => apiRequest(`/booking/margins/pilotage${encodeQuery(params)}`),
   getMarginsDashboardVoyage: (slug, params = {}) =>
     apiRequest(`/booking/margins/dashboard/${encodeURIComponent(slug)}${encodeQuery(params)}`),
   // Returns { rows, seasons, settings } — everything the editor needs in one call.

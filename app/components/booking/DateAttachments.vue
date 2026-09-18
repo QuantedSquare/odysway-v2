@@ -147,6 +147,8 @@ import dayjs from 'dayjs'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 import { formatFileSize, maxFileSizeRule, mimeIcon, mimeIconColor } from '~/utils/fileDisplay'
 
+const { confirmAction, toast } = useBoDialogs()
+
 const props = defineProps({
   slug: { type: String, required: true },
   dateId: { type: String, required: true },
@@ -161,13 +163,15 @@ const downloadingId = ref(null)
 const showDeleted = ref(false)
 
 async function restoreFile(attachment) {
-  if (!confirm('Restaurer ce fichier ?')) return
+  const ok = await confirmAction({ title: 'Restaurer ce fichier ?', confirmLabel: 'Restaurer' })
+  if (!ok) return
+
   try {
     await bookingApi.restoreChild(props.slug, props.dateId, 'attachment', attachment.id)
     await fetchAttachments()
   }
   catch (err) {
-    alert(getApiErrorMessage(err, 'Erreur lors de la restauration'))
+    toast(getApiErrorMessage(err, 'Erreur lors de la restauration'), 'crit')
   }
 }
 
@@ -235,7 +239,15 @@ async function downloadFile(attachment) {
 }
 
 async function deleteFile(attachment) {
-  if (!confirm(`Supprimer le fichier "${attachment.file_name}" ?`)) return
+  const ok = await confirmAction({
+    title: 'Supprimer ce fichier ?',
+    message: attachment.file_name,
+    detail: 'Le fichier reste restaurable depuis le filtre « Supprimées ».',
+    confirmLabel: 'Supprimer',
+    tone: 'danger',
+  })
+  if (!ok) return
+
   try {
     await bookingApi.deleteAttachment(props.slug, props.dateId, attachment.id)
     await fetchAttachments()
