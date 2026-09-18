@@ -148,7 +148,7 @@ const { voyage, initialDealValues } = defineProps({
 })
 
 const route = useRoute()
-const { reportApiError } = useFunnelReporter()
+const { report, reportApiError } = useFunnelReporter()
 
 const { step, date_id } = route.query
 
@@ -215,12 +215,36 @@ const fetchInsuranceQuote = async () => {
   if (!voyage || !dynamicDealValues.value) return
   const base = calculatePricePerPerson(dynamicDealValues.value, voyage)
 
-  const indivRoom = dynamicDealValues.value.indivRoom ? voyage.indivRoomPrice : 0
+  const indivRoom = dynamicDealValues.value.indivRoom ? (+voyage.indivRoomPrice || 0) : 0
+  const pricePerTraveler = (base + indivRoom) / 100
+  // Un prix NaN/Infinity part en `null` dans le JSON et Chapka le rejette (400).
+  // Inutile d'appeler l'API : on trace les entrées pour trouver le champ fautif.
+  if (!Number.isFinite(pricePerTraveler)) {
+    report({
+      code: 'INSURANCE_PRICE_INVALID',
+      step: 'insurances',
+      severity: 'warning',
+      origin: {
+        field: 'pricePerTraveler',
+        received: {
+          base,
+          indivRoom: dynamicDealValues.value.indivRoom,
+          indivRoomPrice: voyage.indivRoomPrice,
+          startingPrice: voyage.startingPrice,
+          nbAdults: dynamicDealValues.value.nbAdults,
+          nbChildren: dynamicDealValues.value.nbChildren,
+        },
+        expected: 'nombre fini',
+      },
+      message: 'Prix par voyageur non calculable, devis assurance non demandé',
+    })
+    return
+  }
   try {
     const res = await $fetch('/api/v1/chapka/quote', {
       method: 'POST',
       body: {
-        pricePerTraveler: (base + indivRoom) / 100,
+        pricePerTraveler,
         countries: voyage.iso,
         zoneChapka: +voyage.zoneChapka || 0,
         departureDate: voyage.departureDate,
@@ -237,7 +261,9 @@ const fetchInsuranceQuote = async () => {
     reportApiError(e, {
       code: 'INSURANCE_QUOTE_FAILED',
       step: 'insurances',
-      origin: { endpoint: '/api/v1/chapka/quote', field: 'iso', received: voyage.iso },
+      // Pas de `field` ici : il écraserait le champ précis renvoyé par le
+      // serveur (ex. pricePerTraveler) dans le rapport.
+      origin: { endpoint: '/api/v1/chapka/quote' },
       message: 'Échec de récupération du devis assurance Chapka',
     })
   }

@@ -39,6 +39,10 @@ export function useFunnelReporter() {
   })
 
   const send = async (payload) => {
+    // Le checkout rejoue son init côté client après le rendu serveur : un envoi
+    // pendant le SSR doublait chaque rapport (et ne venait souvent que de
+    // robots qui n'exécutent pas le JS). Seul le navigateur envoie.
+    if (import.meta.server) return
     try {
       await apiRequest('/monitoring/funnel-error', 'post', payload)
     }

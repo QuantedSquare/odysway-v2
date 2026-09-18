@@ -203,14 +203,10 @@ const initCheckout = async () => {
       }
     }
     else {
-      report({
-        code: 'MISSING_QUERY_PARAMS',
-        step: 'init',
-        severity: 'fatal',
-        origin: { field: 'date_id|booked_id', received: null, expected: 'date_id ou booked_id dans l\'URL' },
-        message: 'Paramètres de requête manquants sur /checkout',
-      })
-      throw new Error('Missing required query parameters')
+      // /checkout nu : robots ou lien tronqué, jamais un voyageur en cours de
+      // réservation. On renvoie à l'accueil sans alerter.
+      await navigateTo('/', { redirectCode: 302 })
+      return
     }
     loading.value = false
   }
