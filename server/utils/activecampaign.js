@@ -525,7 +525,9 @@ const recalculatTotalValues = async (dealId) => {
   const indivRoomPrice = customFields.indivRoom === 'Oui' ? (customFields.indivRoomPrice || 0) : 0
   const flightPrice = customFields.includeFlight === 'Oui' ? (customFields.flightPrice || 0) : 0
   const extensionPrice = customFields.extensionPrice || 0
-  const insurancePrice = (customFields.insurance && customFields.insurance !== 'Aucune Assurance') ? customFields.insuranceCommissionPrice : 0
+  // Assurance cochée sans prix saisi dans AC : le champ est absent (undefined)
+  // et rendait tout le total NaN → AC refusait le PUT (422) et le webhook 500.
+  const insurancePrice = (customFields.insurance && customFields.insurance !== 'Aucune Assurance') ? (+customFields.insuranceCommissionPrice || 0) : 0
   const alreadyPaid = customFields.alreadyPaid || 0
 
   const value = (basePrice * nbTravelers)
@@ -539,6 +541,13 @@ const recalculatTotalValues = async (dealId) => {
     - (promoLastMinute * nbTravelers)
   console.log('list values', basePrice, nbTravelers, indivRoomPrice, flightPrice, extensionPrice, insurancePrice, promoValue, promoChildren, promoEarlybird, promoLastMinute)
   console.log('======== totalValue:', value, '========')
+
+  if (!Number.isFinite(value)) {
+    // Un champ non numérique ne doit pas écraser la valeur du deal ni faire
+    // échouer le webhook : on garde la valeur actuelle et on le trace.
+    console.error('[recalculatTotalValues] valeur non numérique, deal non mis à jour', { dealId, basePrice, nbTravelers, nbChildren, indivRoomPrice, flightPrice, extensionPrice, insurancePrice })
+    return
+  }
 
   const restToPay = value - alreadyPaid
 

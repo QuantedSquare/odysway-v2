@@ -55,6 +55,20 @@ const truncate = (value, max = 800) => {
   return str.length > max ? `${str.slice(0, max)}…` : str
 }
 
+// Une erreur amont peut renvoyer une page HTML entière (ex. Cloudflare 522
+// devant Supabase) : on n'en garde que le <title>.
+const summarizeMessage = (message) => {
+  if (typeof message !== 'string') return message
+  if (/<!DOCTYPE|<html/i.test(message)) {
+    const title = message.match(/<title>([^<]*)<\/title>/i)?.[1]?.trim()
+    return title ? `Page HTML reçue : ${title}` : 'Page HTML reçue'
+  }
+  return message
+}
+
+// Slack refuse (400) un bloc section de plus de 3000 caractères.
+const SLACK_SECTION_MAX = 2900
+
 const stringifyReceived = (received) => {
   if (received === undefined) return undefined
   if (received === null) return 'null'
@@ -86,7 +100,7 @@ const formatBlockKit = (funnelError) => {
   if (origin.statusCode) originParts.push(`status \`${origin.statusCode}\``)
   lines.push(`*Origine:* ${originParts.length ? originParts.join(' · ') : '—'}`)
 
-  if (message) lines.push(`*Détail:* ${message}`)
+  if (message) lines.push(`*Détail:* ${truncate(summarizeMessage(message), 500)}`)
 
   // URL of origin + deal link are first-class lines (explicit user requirement).
   lines.push(`*URL:* ${context.url || '—'}`)
@@ -102,13 +116,13 @@ const formatBlockKit = (funnelError) => {
   if (ctxParts.length) lines.push(`*Contexte:* ${ctxParts.join(' · ')}`)
 
   const rawText = raw?.message || raw?.data
-  if (rawText) lines.push(`*Raw:* ${truncate(rawText)}`)
+  if (rawText) lines.push(`*Raw:* ${truncate(summarizeMessage(rawText))}`)
 
   return {
     blocks: [
       {
         type: 'section',
-        text: { type: 'mrkdwn', text: lines.join('\n') },
+        text: { type: 'mrkdwn', text: truncate(lines.join('\n'), SLACK_SECTION_MAX) },
       },
     ],
   }

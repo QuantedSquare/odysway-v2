@@ -121,7 +121,9 @@ export default defineEventHandler(async (event) => {
     })
 
     // Find the most recent payment note (starts with "Paiement")
-    let transactionId = bookedDate.deal_id
+    // Chaîne dès le départ : sans note « Paiement » dans AC, deal_id (bigint)
+    // restait un nombre et `.startsWith` plus bas faisait planter la route.
+    let transactionId = String(bookedDate.deal_id)
     let paymentType = 'CB'
     let paymentNotesCount = 0
 
