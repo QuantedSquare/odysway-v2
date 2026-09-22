@@ -135,6 +135,21 @@ export const voyageType = defineType({
       validation: (r) => r.required().min(1),
       group: ['requiredBMS', 'basic'],
     }),
+    defineField({
+      name: 'customPagePublished',
+      type: 'boolean',
+      title: 'Publier la page de vente sur-mesure',
+      description:
+        'Rend la page accessible sur odysway.com/sur-mesure/<slug>, uniquement via le lien : '
+        + 'elle n\'apparaît dans aucun listing, ni la recherche, ni le sitemap, et n\'est pas indexée par Google.',
+      initialValue: false,
+      // Only relevant for "sur-mesure only" voyages: groupe/privatisation voyages already have their public page.
+      hidden: ({ document }) => {
+        const types = (document as any)?.availabilityTypes
+        return !(Array.isArray(types) && types.length === 1 && types[0] === 'custom')
+      },
+      group: ['requiredTravelPage', 'basic'],
+    }),
     // LEGACY #
     defineField({
       name: 'groupeAvailable',
