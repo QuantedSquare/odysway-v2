@@ -57,7 +57,7 @@ export default defineEventHandler(async (event) => {
   if (dealIds.length) {
     const { data, error } = await supabase
       .from('activecampaign_deals')
-      .select('id, pipeline_id, total_margin, flight_margin, insurance_commission, extra_margin_per_traveler, applied_promo_per_traveler, nb_traveler, nb_children')
+      .select('id, pipeline_id, total_margin, flight_margin, insurance_commission_per_pax, extra_margin_per_traveler, applied_promo_per_traveler, nb_traveler, nb_children')
       .in('id', dealIds)
       .eq('pipeline_id', 2)
     if (error) throw createError({ statusCode: 500, statusMessage: error.message })

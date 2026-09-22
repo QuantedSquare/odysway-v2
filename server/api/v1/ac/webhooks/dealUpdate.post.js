@@ -1,25 +1,6 @@
 import { createError } from 'h3'
 
-// Helper functions
-const formatPrice = (price) => {
-  if (!price) return 0
-  return +price.replace('€', '').replace('.', '').replace(',', '.')
-}
-
-const mapDealStatus = (status) => {
-  const statusMap = {
-    0: 'Ouvert',
-    1: 'Gagné',
-    2: 'Perdu',
-    3: 'Supprimé',
-  }
-  return statusMap[status] ?? 'Inconnu'
-}
-
-const toBool = (val) => {
-  if (val === undefined || val === null || val === '') return null
-  return val === 'Oui' || val === true || val === 'true' || val === '1'
-}
+const { mapDealStatus } = dealMirror
 
 // Auteur des suppressions/restaurations déclenchées par ce webhook, dans la
 // piste d'audit (deleted_by, date_activity_log).
@@ -37,8 +18,6 @@ export default defineEventHandler(async (event) => {
 
     const dealId = body['deal[id]']
     const contactId = body['deal[contactid]'] || body['contact[id]']
-    const isoDate = body['deal[create_date_iso]']
-    const owner = body['deal[owner]']
     const eventTime = body.date_time || null
 
     // Idempotency guard — skip if (dealId, eventTime) tuple already processed.
@@ -74,12 +53,12 @@ export default defineEventHandler(async (event) => {
       })
     }
 
-    // Ignore all deals belonging to the "Gestions Départs" pipeline (ID 4)
-    // — those are internal departure record deals managed separately.
-    const pipelineId = body['deal[pipelineid]']
-    if (pipelineId === '4') {
-      return { success: true, skipped: true, reason: 'Gestions Départs pipeline' }
-    }
+    // Les dossiers de départ (pipeline 4, « Gestions Départs ») sont recopiés eux
+    // aussi : Ulysse vérifie leur valeur et leurs voyageurs contre les deals du
+    // pipeline 2. Aucune branche ci-dessous ne les abîme : ils n'ont pas de
+    // booked_dates (le lien passe par travel_dates.departure_id) et
+    // recalculatTotalValues les ignore. Ne JAMAIS les additionner aux pipelines
+    // 1 et 2 : chaque voyageur y a déjà son propre deal.
 
     // Fetch and process contact information
     const contactData = await activecampaign.upsertContactIntoSupabase(contactId)
@@ -234,98 +213,10 @@ export default defineEventHandler(async (event) => {
       await softDelete.restore('activecampaign_deals', q => q.eq('id', dealId))
     }
 
-    // Build a clean "seller" display label from the body's owner names
-    const ownerFirstname = body['deal[owner_firstname]'] || ''
-    const ownerLastname = body['deal[owner_lastname]'] || ''
-    const sellerLabel = `${ownerFirstname} ${ownerLastname}`.trim() || owner || null
-
-    // total_value: prefer body's value_raw (numeric, no formatting issues).
-    // Fallback to formatPrice on fetchedDeal.value when missing.
-    const valueRaw = body['deal[value_raw]']
-    const totalValue = valueRaw !== undefined && valueRaw !== null && valueRaw !== ''
-      ? +valueRaw
-      : formatPrice(fetchedDeal.value)
-
-    // mdate: canonical "last modified" from the AC REST API; fallback to
-    // webhook event time so the column is never null on real updates.
-    const mdate = fetchedDeal.mdate || eventTime || null
-
-    // Prepare upsert data with type safety and default values.
-    // Source legend (suffix on the right of each line):
-    //   [body]   only present in the flat webhook payload
-    //   [api]    from `reponse.deal` (AC REST API)
-    //   [mapped] from `customFields` via customFieldsMapDeal
-    const upsertData = {
-      id: dealId, // [body]
-      contact: contactId, // [body]
-      title: body['deal[title]'] || fetchedDeal.title, // [body] -> [api]
-      status: mapDealStatus(body['deal[status]'] ?? fetchedDeal.status), // [body] -> [api]
-      stage: body['deal[stage_title]'] || null, // [body] titre
-      stage_id: body['deal[stageid]'] || fetchedDeal.stage || null, // [body] -> [api]
-      pipeline_id: +(body['deal[pipelineid]'] || fetchedDeal.group) || null, // [body] -> [api]
-      pipeline_title: body['deal[pipeline_title]'] || null, // [body]
-      owner_id: owner || fetchedDeal.owner || null, // [body] -> [api]
-      seller: sellerLabel, // [body] composé
-      currency: body['deal[currency]'] || fetchedDeal.currency || null, // [body] -> [api]
-      win_probability: fetchedDeal.winProbability !== undefined && fetchedDeal.winProbability !== null ? +fetchedDeal.winProbability : null, // [api]
-      next_date: fetchedDeal.nextdate || null, // [api]
-      next_task_id: fetchedDeal.nexttaskid || null, // [api]
-      total_value: totalValue, // [body] -> [api]
-      price_per_traveler: +fetchedDeal.basePricePerTraveler / 100 || 0, // [mapped]
-      nb_traveler: +fetchedDeal.nbTravelers || 0,
-      nb_adults: +fetchedDeal.nbAdults || 0,
-      nb_children: +fetchedDeal.nbChildren || 0,
-      nb_under_age: +fetchedDeal.nbUnderAge || 0,
-      nb_teen: +fetchedDeal.nbTeen || 0,
-      travel_type: fetchedDeal.travelType || null,
-      indiv_room: toBool(fetchedDeal.indivRoom),
-      indiv_room_price: +fetchedDeal.indivRoomPrice / 100 || 0,
-      deposit_price: +fetchedDeal.depositPrice / 100 || 0,
-      extension_price: +fetchedDeal.extensionPrice / 100 || 0,
-      agent_cost: +fetchedDeal.agentCost / 100 || 0,
-      rest_to_pay: +fetchedDeal.restToPay / 100 || 0,
-      total_paid: +fetchedDeal.alreadyPaid / 100 || 0,
-      margin_per_traveler: +fetchedDeal.marginPerTraveler / 100 || 0,
-      extra_margin_per_traveler: +fetchedDeal.extraMarginPerTraveler / 100 || 0,
-      flight_margin: +fetchedDeal.flightMargin / 100 || 0,
-      total_margin: +fetchedDeal.totalMargin / 100 || 0,
-      insurance_commission: +fetchedDeal.insuranceCommissionPrice / 100 || 0,
-      insurance_choice: fetchedDeal.insurance || 'Aucune Assurance',
-      insurance_price_per_traveler: +fetchedDeal.insuranceCommissionPerTraveler / 100 || 0,
-      is_cap_exploraction: toBool(fetchedDeal.isCapExploraction),
-      promo_code: fetchedDeal.promoCode || null,
-      applied_promo_per_traveler: +fetchedDeal.promoValue / 100 || 0,
-      children_promo: +fetchedDeal.promoChildren / 100 || 80,
-      promo_earlybird: +fetchedDeal.promoEarlybird / 100 || 0,
-      got_earlybird: toBool(fetchedDeal.gotEarlybird),
-      promo_last_minute: +fetchedDeal.promoLastMinute / 100 || 0,
-      got_last_minute: toBool(fetchedDeal.gotLastMinute),
-      country: fetchedDeal.country || 'Non renseigné',
-      iso: fetchedDeal.iso || null,
-      zone_chapka: +fetchedDeal.zoneChapka || null,
-      is_couple: toBool(fetchedDeal.isCouple),
-      lost_reason: fetchedDeal.ReasonLost || fetchedDeal.otherReasonLost || null, // [mapped]
-      rest_to_pay_per_traveler: +fetchedDeal.restToPayPerTraveler / 100 || 0,
-      max_children_age: +fetchedDeal.maxChildrenAge || 12,
-      include_flight: toBool(fetchedDeal.includeFlight),
-      flight_ticket_bought: toBool(fetchedDeal.flightTicketBought),
-      flight_ticket_price_per_traveler: +fetchedDeal.flightPrice / 100 || 0,
-      departure_date: fetchedDeal.departureDate || null,
-      return_date: fetchedDeal.returnDate || null,
-      forecasted_closing_date: fetchedDeal.forecastedClosingDate || null,
-      conversion_date: fetchedDeal.conversionDate || null,
-      source: fetchedDeal.source || null,
-      acquisition_source: fetchedDeal.acquisitionSource || null,
-      other_acquisition_source: fetchedDeal.otherAcquisitionSource || null,
-      utm: fetchedDeal.utm || null,
-      slug: fetchedDeal.slug || null,
-      current_step: fetchedDeal.currentStep || null,
-      link_bms: fetchedDeal.linkBms || null,
-      paiement_method: fetchedDeal.paiementMethod || null,
-      created_at: fetchedDeal.oldCreationDate || isoDate, // [mapped] -> [body]
-      mdate, // [api] -> [body]
-      updated_at: mdate || new Date().toISOString(),
-    }
+    // Ligne miroir : une seule construction pour le webhook et la
+    // resynchronisation (server/utils/dealMirror.js). Un champ absent d'AC y
+    // devient `null`, plus un 0 ni une valeur par défaut inventée.
+    const upsertData = dealMirror.mapDealToMirrorRow({ dealId, contactId, fetchedDeal, body, eventTime })
 
     await activecampaign.recalculatTotalValues(dealId)
     console.log('[dealUpdate] before upsert gate', {

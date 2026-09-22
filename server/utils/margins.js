@@ -362,7 +362,7 @@ const getDealsByIds = async (dealIds) => {
   if (!dealIds.length) return []
   const { data, error } = await supabase
     .from('activecampaign_deals')
-    .select('id, pipeline_id, total_value, total_margin, flight_margin, insurance_commission, extra_margin_per_traveler, applied_promo_per_traveler, nb_traveler, nb_children')
+    .select('id, pipeline_id, total_value, total_margin, flight_margin, insurance_commission_per_pax, extra_margin_per_traveler, applied_promo_per_traveler, nb_traveler, nb_children')
     .in('id', dealIds)
     .eq('pipeline_id', 2)
 
@@ -381,9 +381,12 @@ const aggregateDealTotals = (deals) => {
     acc.estimated += Number(d.total_margin || 0)
     acc.ca += Number(d.total_value || 0)
     acc.child_pax += Number(d.nb_children || 0)
+    // Assurance : commission par voyageur (champ AC 47, 30 % du prix) × voyageurs
+    // du dossier. L'ancienne colonne `insurance_commission` contenait en réalité
+    // le PRIX par voyageur (champ 13) : elle surestimait la marge.
     acc.additional_margins
       += Number(d.flight_margin || 0)
-        + Number(d.insurance_commission || 0)
+        + Number(d.insurance_commission_per_pax || 0) * dealPax
         + Number(d.extra_margin_per_traveler || 0) * dealPax
     acc.promo_deductions += Number(d.applied_promo_per_traveler || 0) * dealPax
     return acc
@@ -509,7 +512,7 @@ const resolveBaseMarginPerPax = async (travelDate, realPax) => {
  * real_margin = (base_margin_per_pax × real_pax)
  *             + child_margin_delta × nb_children  (sum over deals, clamped to real_pax)
  *             + flight_margin                     (sum over deals)
- *             + insurance_commission              (sum over deals)
+ *             + insurance_commission_per_pax × nb_traveler (sum over deals)
  *             + extra_margin_per_traveler × nb_traveler   (sum over deals)
  *             − applied_promo_per_traveler × nb_traveler  (sum over deals)
  */
