@@ -6,16 +6,15 @@
 // ones absent from `customFieldsMapDeal`.
 //
 // SECURITY — this endpoint exposes raw CRM data (client identity, prices,
-// margins, agent costs). It is internal-only:
-//  - a valid `booking_token` session cookie is required (`requireBookingUser`),
-//    which enforces a signed JWT + an @odysway.com / superadmin email;
+// margins, agent costs). It is internal-only, via `requireCrmAccess`
+// (server/utils/bookingSession.js):
+//  - a valid `booking_token` session cookie (signed JWT + an @odysway.com /
+//    superadmin email) or Ulysse's `x-ulysse-service-token`;
 //  - the only bypass is a local dev server (NODE_ENV !== 'production'), which
 //    mirrors the `booking-management` route middleware. Vercel builds preview
 //    AND production with NODE_ENV=production, so deployed environments always
 //    require the session;
 //  - responses are marked `no-store` so no CDN/proxy retains CRM payloads.
-
-const isLocalDev = () => process.env.NODE_ENV !== 'production'
 
 // AC returns multi-select values either as an array or as a `||a||b||` string.
 const normalizeValue = (fieldValue) => {
@@ -32,9 +31,7 @@ const findById = (collection, key, id) =>
   (collection?.[key] || []).find(entry => String(entry.id) === String(id)) || null
 
 export default defineEventHandler(async (event) => {
-  if (!isLocalDev()) {
-    requireBookingUser(event)
-  }
+  requireCrmAccess(event)
 
   // CRM payload: never cached anywhere.
   setResponseHeaders(event, {
