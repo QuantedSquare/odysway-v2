@@ -95,6 +95,7 @@ export default defineNuxtConfig({
 
       // Dynamic content pages with slugs
       '/voyages/**': { isr: 60 * 60 * 24 }, // 1 day
+      '/sur-mesure/**': { isr: 60 * 60 * 24 }, // 1 day — unlisted sur-mesure sales pages
       '/destinations/**': { isr: 60 * 60 * 24 },
       '/thematiques/**': { isr: 60 * 60 * 24 }, // 1 day
       '/experiences/**': { isr: 60 * 60 * 24 }, // 1 day

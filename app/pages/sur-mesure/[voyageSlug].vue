@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="voyage && !customTravel">
+    <div v-if="isPublished">
       <LazyBottomAppBar
         :hydrate-on-idle="true"
         :date-sections="page.dateSections"
@@ -120,39 +120,6 @@
           </TrackableVoyageList>
         </v-container>
       </v-container>
-      <!-- Banner variant switcher (remove once a variant is chosen) -->
-      <!-- <div style="position:fixed;bottom:110px;right:16px;z-index:2000">
-        <v-btn-toggle
-          v-model="bannerVariant"
-          mandatory
-          density="compact"
-          rounded="lg"
-          color="primary"
-        >
-          <v-btn
-            value="A"
-            size="small"
-          >
-            A
-          </v-btn>
-          <v-btn
-            value="B"
-            size="small"
-          >
-            B
-          </v-btn>
-          <v-btn
-            value="C"
-            size="small"
-          >
-            C
-          </v-btn>
-        </v-btn-toggle>
-      </div>
-      <CallBannerDelayed
-        :voyage-title="voyage.title"
-        :variant="bannerVariant"
-      /> -->
     </div>
 
     <ColorContainer
@@ -192,10 +159,10 @@ import imageUrlBuilder from '@sanity/image-url'
 
 definePageMeta({
   layout: 'voyage',
-  middleware: ['old-voyages-link-redirection'],
 })
 
 const route = useRoute()
+const config = useRuntimeConfig()
 const { trackViewItem } = useGtmTracking()
 const { formatVoyageForGtm } = useGtmVoyageFormatter()
 
@@ -205,6 +172,18 @@ const [{ data: page }, { data: voyage }] = await Promise.all([
   useSanityQuery(VOYAGE_QUERY, { slug: voyageSlugRef }),
 ])
 
+// Only "sur-mesure only" voyages whose page was explicitly published in Sanity
+// are served here. Groupe/privatisation voyages keep their public /voyages page.
+const isPublished = computed(() => {
+  const types = voyage.value?.availabilityTypes
+  const isCustomOnly = Array.isArray(types) && types.length === 1 && types[0] === 'custom'
+  return isCustomOnly && voyage.value?.customPagePublished === true
+})
+
+if (!isPublished.value && import.meta.server) {
+  setResponseStatus(useRequestEvent(), 404)
+}
+
 const experienceTypeIdRef = computed(() => voyage.value?.experienceType?._id)
 const { data: voyagePropositions } = await useSanityQuery(
   VOYAGE_PROPOSITIONS_QUERY,
@@ -213,26 +192,11 @@ const { data: voyagePropositions } = await useSanityQuery(
 )
 onMounted(() => {
   // GTM: Track view_item event
-  if (voyage.value) {
+  if (isPublished.value) {
     const formattedVoyage = formatVoyageForGtm(voyage.value)
     trackViewItem(formattedVoyage, voyage.value.pricing?.startingPrice)
   }
 })
-
-// const bannerVariant = ref('A')
-
-const customTravel = computed(() => {
-  const types = voyage.value?.availabilityTypes
-  return Array.isArray(types) && types.length === 1 && types[0] === 'custom'
-})
-
-// Sur-mesure-only voyages are sold on their unlisted page when it is published.
-// 302, not 301: the voyage may later become groupe/privatisation and move back here.
-if (customTravel.value && voyage.value?.customPagePublished) {
-  await navigateTo(`/sur-mesure/${voyage.value.slug.current}`, { redirectCode: 302 })
-}
-
-const config = useRuntimeConfig()
 
 const builder = imageUrlBuilder({
   projectId: config.public.sanity.projectId,
@@ -251,41 +215,24 @@ const buildMainImageUrl = (image, width, height, quality = 90) => {
     .url()
 }
 
-// SEO composable — called once during setup (not inside watchEffect)
-if (voyage.value && !customTravel.value) {
+// Unlisted page: never indexed, whatever the voyage's SEO settings say.
+// No structured data / breadcrumbs either — nothing should advertise it.
+if (isPublished.value) {
   useSeo({
-    seoData: voyage.value.seo,
+    seoData: { ...voyage.value.seo, canonicalUrl: null, robotsIndex: false, robotsFollow: false },
     content: voyage.value,
     pageType: 'website',
     slug: voyage.value.slug?.current,
-    structuredData: [
-      createTouristTripSchema(
-        voyage.value,
-        `https://odysway.com/voyages/${voyage.value.slug.current}`,
-        config,
-      ),
-      createFAQPageSchema(
-        [
-          ...(voyage.value.faqBlock || []),
-          ...(page.value?.faqSection?.faqBlock || []),
-        ],
-        `https://odysway.com/voyages/${voyage.value.slug.current}`,
-      ),
-    ],
-    breadcrumbs: [
-      { name: 'Accueil', url: 'https://odysway.com' },
-      { name: 'Voyages', url: 'https://odysway.com/voyages' },
-      {
-        name: voyage.value.title,
-        url: `https://odysway.com/voyages/${voyage.value.slug.current}`,
-      },
-    ],
+    baseUrl: `/sur-mesure/${voyage.value.slug.current}`,
   })
+}
+if (import.meta.server) {
+  useResponseHeader('X-Robots-Tag').value = 'noindex, nofollow'
 }
 
 // Image preload — reactive to handle lazy data
 watchEffect(() => {
-  if (!voyage.value || customTravel.value) return
+  if (!isPublished.value) return
 
   const image = voyage.value.image
   const link = []
