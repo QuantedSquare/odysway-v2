@@ -15,11 +15,31 @@ export function useStepperDeal() {
   const { addMultipleParams } = useParams()
   const { report, reportApiError, setContext } = useFunnelReporter()
 
-  const fetchDeal = async (id = dealId.value) => {
+  // Le deal est relu par son `booked_id`, pas par son id AC : c'est le jeton
+  // que le client détient déjà dans son URL de checkout (un uuid, donc non
+  // énumérable), et /ac/deals/deal-from-bms résout le dealId côté serveur.
+  // /ac/deals/<dealId> ne rend plus qu'une projection publique à l'anonyme —
+  // voir server/utils/dealVisibility.js.
+  const fetchDeal = async (explicitBookedId) => {
+    const currentBookedId = explicitBookedId || route.query.booked_id || bookedId.value
+    if (!currentBookedId) {
+      report({
+        code: 'FETCH_DEAL_NO_BOOKED_ID',
+        step: 'unknown',
+        severity: 'warning',
+        origin: { field: 'bookedId', received: null },
+        message: 'fetchDeal appelé sans bookedId — relecture du deal impossible',
+      })
+      return null
+    }
     loadingDeal.value = true
-    const res = await apiRequest(`/ac/deals/${id}`)
-    deal.value = res
-    loadingDeal.value = false
+    try {
+      deal.value = await apiRequest(`/ac/deals/deal-from-bms?bookedId=${currentBookedId}`)
+      return deal.value
+    }
+    finally {
+      loadingDeal.value = false
+    }
   }
 
   const checkoutType = computed(() => {
