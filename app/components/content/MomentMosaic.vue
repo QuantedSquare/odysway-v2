@@ -205,9 +205,17 @@ const voyageLink = (voyage) => {
   return slug ? `/voyages/${slug}` : null
 }
 
-const linkFor = item => item?.link.replace('https://odysway.com', '') || voyageLink(item?.voyage) || '/voyages'
+// Les liens manuels saisis dans Sanity sont des URL absolues
+// (https://odysway.com/voyages/...). NuxtLink traite toute URL avec protocole
+// comme externe : <a> natif, rechargement complet de la page (et, hors prod,
+// sortie vers odysway.com). On les ramène donc à un chemin relatif.
+const toInternalPath = (link) => {
+  if (!link) return null
+  return link.replace(/^https?:\/\/(www\.)?odysway\.com(?=[/?#]|$)/, '') || '/'
+}
+
+const linkFor = item => toInternalPath(item?.link) || voyageLink(item?.voyage) || '/voyages'
 const featureLink = computed(() => linkFor(feature.value))
-console.log('feature test', featureLink.value)
 
 const bgStyle = (image, width) => {
   const ref = image?.asset?._ref
