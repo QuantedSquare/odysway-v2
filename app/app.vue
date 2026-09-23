@@ -17,14 +17,11 @@ import '../app/assets/scss/main.scss'
 const config = useRuntimeConfig()
 const route = useRoute()
 const { isOpen: isSearchDialogOpen } = useSearchDialog()
-const isLocalHost = import.meta.client
-  ? ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname)
-  : false
 
-if (config.public.environment !== 'production' && !isLocalHost) {
-  useSanityVisualEditing()
-  useSanityLiveMode()
-}
+// Sanity visual editing is switched on by @nuxtjs/sanity itself, and only for a
+// preview session opened from the Studio (see `sanity` in nuxt.config.ts).
+// Never call useSanityVisualEditing() unconditionally here: it would bypass
+// that check for every visitor.
 
 useHead({
   htmlAttrs: {

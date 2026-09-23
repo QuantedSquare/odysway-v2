@@ -199,7 +199,7 @@ export default defineEventHandler(async (event) => {
         dataset: config.public.sanity.dataset,
         apiVersion: config.public.sanity.apiVersion,
         useCdn: false,
-        token: config.public.sanity.token,
+        token: SANITY_WRITE_TOKEN,
       })
 
       const assetIds = Array.from(new Set(images.map(i => i.assetRef)))
