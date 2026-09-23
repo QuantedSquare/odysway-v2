@@ -1,4 +1,5 @@
 import { defineEventHandler, readBody, createError } from 'h3'
+import { createClient } from '@sanity/client'
 
 export default defineEventHandler(async (event) => {
   const { dateId, slug } = event.context.params
@@ -34,6 +35,34 @@ export default defineEventHandler(async (event) => {
     if (body[key] !== undefined) updateFields[key] = body[key]
   }
 
+  // Rattacher la date à un autre voyage (Ulysse, dates « orphelines » dont le
+  // slug ne correspond à aucun voyage Sanity). Le slug cible doit exister dans
+  // Sanity : une date rattachée à un slug inconnu redeviendrait orpheline.
+  // La référence et le préfixe mis en cache par departures.js appartiennent à
+  // l'ancien voyage : on les efface, ils seront relus au prochain calcul.
+  if (body.travel_slug !== undefined && body.travel_slug !== slug) {
+    const cible = typeof body.travel_slug === 'string' ? body.travel_slug.trim() : ''
+    if (!/^[A-Za-z0-9][A-Za-z0-9-]{0,199}$/.test(cible)) {
+      throw createError({ statusCode: 400, statusMessage: 'travel_slug invalide' })
+    }
+    const sanityClient = createClient({
+      projectId: config.public.sanity.projectId,
+      dataset: config.public.sanity.dataset,
+      apiVersion: config.public.sanity.apiVersion,
+      useCdn: false,
+    })
+    const voyage = await sanityClient.fetch(
+      '*[_type == "voyage" && slug.current == $slug && !(_id in path("drafts.**"))][0]{ _id }',
+      { slug: cible },
+    )
+    if (!voyage) {
+      throw createError({ statusCode: 400, statusMessage: `Aucun voyage publié dans Sanity ne porte le slug « ${cible} ».` })
+    }
+    updateFields.travel_slug = cible
+    updateFields.bms_reference = null
+    updateFields.travel_type_prefix = null
+  }
+
   if (!Object.keys(updateFields).length) {
     throw createError({
       statusCode: 400,
@@ -50,7 +79,7 @@ export default defineEventHandler(async (event) => {
   // Fetch current values for activity diff
   const { data: current } = await supabase
     .from('travel_dates')
-    .select(allowed.join(','))
+    .select([...allowed, 'travel_slug'].join(','))
     .eq('id', dateId)
     .eq('travel_slug', slug)
     .eq('deleted', false)
@@ -77,7 +106,7 @@ export default defineEventHandler(async (event) => {
   if (current) {
     const changes = {}
     for (const key of Object.keys(updateFields)) {
-      if (key === 'updated_at' || key === 'last_editor') continue
+      if (key === 'updated_at' || key === 'last_editor' || key === 'bms_reference' || key === 'travel_type_prefix') continue
       if (JSON.stringify(current[key]) !== JSON.stringify(updateFields[key])) {
         changes[key] = { old: current[key], new: updateFields[key] }
       }

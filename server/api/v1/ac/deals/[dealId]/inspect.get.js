@@ -32,7 +32,7 @@ const findById = (collection, key, id) =>
   (collection?.[key] || []).find(entry => String(entry.id) === String(id)) || null
 
 export default defineEventHandler(async (event) => {
-  if (!isLocalDev()) {
+  if (!isLocalDev() && !getUlysseServiceUser(event)) {
     requireBookingUser(event)
   }
 

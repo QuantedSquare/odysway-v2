@@ -51,6 +51,13 @@ export const getBookingUserOrNull = (event) => {
  *     marge dérivée, bascule (server/utils/marginPricing.js)
  *   - margins/[slug]/seasons (PUT), margins/[slug]/settings (PUT) — saisons et
  *     mode de configuration, par les fonctions existantes de margins.js
+ *   - reprise du BMS dans Ulysse : booked/[bookedId] (DELETE),
+ *     booked_date/extend-option (POST), attachments/upload-url (POST),
+ *     attachments/[id] (DELETE), attachments/[id]/download et
+ *     invoices/[id]/download (GET), invoices/[id] (PUT), margin-override (PUT),
+ *     restore-child (POST), ac/deals/[dealId]/inspect (GET)
+ *   - [dateId] (PUT) accepte aussi `travel_slug`, pour rattacher une date
+ *     orpheline à son voyage Sanity
  *
  * Les lectures n'en ont pas besoin : Ulysse lit la même base Supabase.
  */
