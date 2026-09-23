@@ -69,6 +69,9 @@ export default defineNuxtConfig({
     trailingSlash: false,
   },
   runtimeConfig: {
+    // Ulysse, le back-office qui remplace /booking-management (voir
+    // server/routes/booking-management/[...path].ts).
+    ulysseUrl: process.env.ULYSSE_URL || '',
     public: {
       supabaseUrl: process.env.NUXT_PUBLIC_SUPABASE_URL,
       supabaseAnonKey: process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY,

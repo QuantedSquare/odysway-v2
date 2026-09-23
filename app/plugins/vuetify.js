@@ -38,9 +38,6 @@ export default defineNuxtPlugin((app) => {
     ssr: true,
     theme: {
       defaultTheme: 'odysway',
-      // The `backoffice` theme is registered lazily by app/layouts/booking.vue
-      // via useTheme().themes.value.backoffice = ... — it ships ~15-25 KiB of
-      // CSS utility classes that public visitors don't need.
       themes: {
         odysway: {
           dark: false,

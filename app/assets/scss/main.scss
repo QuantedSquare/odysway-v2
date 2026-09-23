@@ -287,10 +287,6 @@ html {
   border-radius: 999px !important;
 }
 
-/* Les utilitaires du backoffice vivent dans app/assets/scss/backoffice.scss,
-   importé par le seul layout `booking` : les visiteurs du site public n'ont
-   aucune raison de télécharger le CSS d'un outil interne. */
-
 @media (max-width: 960px) {
   .whatsapp-button {
     position: fixed;
