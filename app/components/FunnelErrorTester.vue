@@ -76,7 +76,6 @@
 <script setup>
 import { mdiClose, mdiBugOutline } from '@mdi/js'
 
-const config = useRuntimeConfig()
 const route = useRoute()
 const { report, reportApiError, setContext } = useFunnelReporter()
 
@@ -89,9 +88,9 @@ const lastStatus = ref(null)
 const testDealId = ref('999999')
 
 // Gate: visible for logged-in @odysway.com admins (booking session cookie) or
-// in any non-production environment for local testing.
+// on a local `nuxt dev` server. Not on Vercel previews: they are public URLs.
 onMounted(async () => {
-  const isDev = config.public.environment !== 'production'
+  const isDev = import.meta.dev
   try {
     const res = await $fetch('/api/v1/auth/check')
     if (res?.success) {

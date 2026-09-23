@@ -100,7 +100,8 @@ watch([dealId, () => props.currentStep], async () => {
   model.value = true
   if (dealId.value) {
     insurances.value = await fetchInsuranceQuote()
-    await fetchDeal(dealId.value)
+    // Relecture par booked_id (voir useStepperDeal.fetchDeal), plus par dealId.
+    await fetchDeal()
 
     if (deal.value?.insurance) {
       const insuranceType = deal.value.insurance?.toLowerCase()

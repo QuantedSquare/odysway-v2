@@ -6,8 +6,8 @@ const GOOGLE_TOKEN_URL = 'https://oauth2.googleapis.com/token'
 const GOOGLE_JWKS = createRemoteJWKSet(new URL('https://www.googleapis.com/oauth2/v3/certs'))
 
 export default defineEventHandler(async (event) => {
-  const config = useRuntimeConfig()
-  const isDev = config.public.environment !== 'production'
+  // Cookies `Secure` partout sauf sur un serveur de dev local (http).
+  const isDev = isLocalDev()
 
   const query = getQuery(event)
   const clientId = process.env.GOOGLE_CLIENT_ID
@@ -100,7 +100,7 @@ export default defineEventHandler(async (event) => {
       secure: !isDev,
     })
 
-    return sendRedirect(event, '/booking-management')
+    return sendRedirect(event, '/')
   }
   catch (err) {
     console.error('Google OAuth error', err)

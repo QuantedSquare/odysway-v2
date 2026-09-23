@@ -1,6 +1,9 @@
 import type { H3Event } from 'h3'
 
 export default defineEventHandler(async (event: H3Event): Promise<TypeClientData> => {
+  // Back-office uniquement (voir server/middleware/backoffice-auth.js).
+  requireCrmAccess(event)
+
   if (event.method !== 'POST') {
     throw createError({
       statusCode: 405,

@@ -165,7 +165,7 @@ export default defineEventHandler(async (event) => {
   // Verify webhook secret for security
   const secret = getHeader(event, 'x-sanity-webhook-secret')
   const SANITY_WRITE_TOKEN = process.env.SANITY_WRITE_TOKEN
-  if (secret !== process.env.SANITY_WEBHOOK_SECRET) {
+  if (!process.env.SANITY_WEBHOOK_SECRET || secret !== process.env.SANITY_WEBHOOK_SECRET) {
     throw createError({
       statusCode: 401,
       message: 'Unauthorized',
@@ -199,7 +199,7 @@ export default defineEventHandler(async (event) => {
         dataset: config.public.sanity.dataset,
         apiVersion: config.public.sanity.apiVersion,
         useCdn: false,
-        token: config.public.sanity.token,
+        token: SANITY_WRITE_TOKEN,
       })
 
       const assetIds = Array.from(new Set(images.map(i => i.assetRef)))

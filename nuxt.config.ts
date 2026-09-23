@@ -69,6 +69,9 @@ export default defineNuxtConfig({
     trailingSlash: false,
   },
   runtimeConfig: {
+    // Ulysse, le back-office qui remplace /booking-management (voir
+    // server/routes/booking-management/[...path].ts).
+    ulysseUrl: process.env.ULYSSE_URL || '',
     public: {
       supabaseUrl: process.env.NUXT_PUBLIC_SUPABASE_URL,
       supabaseAnonKey: process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY,
@@ -268,18 +271,18 @@ export default defineNuxtConfig({
 
     // Visual editing (+ stega) pulls in React + ReactDOM + styled-components (~120KB).
     // Only enable on non-production deployments where editors actually preview.
+    //
+    // Without a token the default `raw` perspective only returns published
+    // documents, so a regular visitor sees exactly what production shows.
+    // Drafts are reserved to the Studio's Presentation tool: it hits
+    // /preview/enable with a secret it just created in the dataset (so only a
+    // logged-in Studio member can mint one), the module validates it and sets
+    // the httpOnly `sanity-preview-id` cookie. Only that cookie switches SSR to
+    // the drafts perspective and unlocks the /_sanity/visual-editing/fetch
+    // proxy. The viewer token stays in the PRIVATE runtime config — never set
+    // `token` or `liveContent.browserToken` here: both end up in the public
+    // payload, readable by anyone who opens the page.
     ...(process.env.VERCEL_ENV !== 'production' && {
-      stega: {
-        enabled: true,
-        studioUrl: process.env.SANITY_STUDIO_URL || 'http://localhost:3333',
-      },
-      token: process.env.SANITY_VIEWER_TOKEN,
-      perspective: 'drafts',
-      liveContent: {
-        serverToken: process.env.SANITY_VIEWER_TOKEN || '',
-        browserToken: process.env.SANITY_VIEWER_TOKEN || '',
-      },
-      // Visual editing only allow on preprod and via the sanity app
       visualEditing: {
         studioUrl: process.env.SANITY_STUDIO_URL || 'http://localhost:3333',
         token: process.env.SANITY_VIEWER_TOKEN || '',

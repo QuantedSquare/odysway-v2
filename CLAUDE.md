@@ -13,19 +13,19 @@ French travel agency booking platform specializing in immersive travel experienc
 - **Insurance**: Chapka API (CAP-EXPLORER / CAP-EXPLORACTION products)
 - **Search**: Algolia (voyage/destination/region indexing)
 - **Analytics**: GTM + GA4, Hotjar
-- **Auth**: JWT sessions + Google OAuth (booking management, @odysway.com or superadmins)
+- **Auth**: back-office API = Ulysse service token (`x-ulysse-service-token`) or Google OAuth JWT session (@odysway.com or superadmins)
 - **Hosting**: Vercel with ISR (1-5 day revalidation by route type)
 
 ## Project Structure
 
 ```
 app/
-  pages/              # ~30 route files (voyages, destinations, blog, checkout, devis, booking-management...)
+  pages/              # ~30 route files (voyages, destinations, blog, checkout, devis...)
   components/         # Vue 3 components (Funnel/, Devis/, content/Voyages/, booking/, OgImage/, tracking/)
   composables/        # ~18 composables (useGtmTracking, useSeo, useStepperDeal, useTravelDates...)
   utils/              # Helpers (bookingApi, voyageBuilders, structuredData, pricing, formatDate...)
-  layouts/            # default, homepage, funnel, booking, blank, voyage, simple-pages, no-faq
-  middleware/         # booking-management auth, old link redirections
+  layouts/            # default, homepage, funnel, blank, voyage, simple-pages, no-faq
+  middleware/         # old link redirections
   plugins/            # vuetify.js, analytics.client.ts, vue-dompurify-html.js
   assets/scss/        # main.scss (typography, utilities), _fonts.scss (Gordita)
 
@@ -52,7 +52,7 @@ server/
     brevo.js          # Brevo email client (contacts, lists, templates)
     algolia.ts        # Algolia indexing
     bookingAuth.js    # JWT auth + Google OAuth helpers
-    bookingSession.js # Session management
+    bookingSession.js # Back-office guard: requireCrmAccess (Ulysse token or session; relaxed on local `nuxt dev` only)
     types/            # Zod schemas (contact.ts, deal.ts, insurance.ts)
 
 cms/
@@ -77,7 +77,7 @@ cms/
 1. **Booking funnel**: Voyage page -> Select date -> Devis form (traveler info) -> Creates AC deal + booked_date in Supabase -> Checkout (Stripe or Alma) -> Confirmation
 2. **Payment types**: deposit (30% + insurance), full, balance (remaining), custom
 3. **Post-payment webhook cascade**: Stripe checkout.completed -> update Supabase booked_dates -> update AC deal value -> notify Chapka insurance -> send Slack alert
-4. **Booking management**: Internal dashboard at /booking-management (Google OAuth, @odysway.com only)
+4. **Back-office**: Ulysse (separate app) replaced /booking-management, which now redirects to `NUXT_ULYSSE_URL`. Ulysse writes through `/api/v1/booking/**` with its service token.
 5. **Content publishing**: Sanity update -> webhook -> Vercel ISR revalidation + Algolia index sync
 6. **Departure management**: AC pipeline 4 (Gestions Departs), auto-creates departure deals, links travelers
 
@@ -258,7 +258,16 @@ Archive/backup table — same schema as `activecampaign_deals`. Not used in acti
 npm run dev       # Start dev server (port 3000)
 npm run build     # Production build
 npm run lint      # ESLint check
+npm test          # node --test (auth guards, deal projection)
 ```
+
+## Security model (preview = production)
+
+Vercel previews (dev.odysway.com) are public URLs: never relax a guard with `VERCEL_ENV` / `config.public.environment`. The only exception is a local `nuxt dev` server (`isLocalDev()`, i.e. `NODE_ENV !== 'production'`, which Nitro freezes to `"production"` in every build).
+
+- `server/middleware/backoffice-auth.js` — deny-by-default on `/api/v1/booking/**` and `/api/v1/ac/**`. Routes the public site, funnel or webhooks call are listed in `PUBLIC_ROUTES`; everything else requires `requireCrmAccess`. Opening a route to the public is an explicit edit of that list.
+- Sanity drafts are only served to a Presentation-tool preview session (httpOnly `sanity-preview-id` cookie set by `/preview/enable` after the Studio's secret is validated). Never put a Sanity token in `sanity.token` or `liveContent.browserToken`: both are public runtime config.
+- Tests: `npm test` (node --test) covers the guard, its public allowlist and the preview redirect guard.
 
 ## Sensitive Files
 

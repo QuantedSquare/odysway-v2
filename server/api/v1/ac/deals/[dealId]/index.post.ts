@@ -1,5 +1,16 @@
 import type { H3Event } from 'h3'
 
+// Écriture arbitraire sur un deal ActiveCampaign, adressée par son id.
+//
+// SÉCURITÉ — réservée au back-office (session `booking_token`) et à Ulysse
+// (jeton de service). Les ids de deal étant séquentiels, cette route ouverte à
+// l'anonyme permettait de réécrire n'importe quel dossier du CRM : prix, marge,
+// montant déjà payé, lien de paiement, coordonnées du voyageur.
+//
+// Le tunnel de commande n'en dépend pas : ses écritures passent par
+// /ac/deals/update-with-bms?bookedId=<uuid>, porté par le `booked_id` que le
+// client détient déjà, qui résout lui-même le dealId depuis Supabase.
+
 export default defineEventHandler(async (event: H3Event): Promise<TypeDeal> => {
   if (event.method !== 'POST') {
     throw createError({
@@ -7,6 +18,8 @@ export default defineEventHandler(async (event: H3Event): Promise<TypeDeal> => {
       message: 'Method Not Allowed',
     })
   }
+
+  requireCrmAccess(event)
 
   const dealId = event.context.params?.dealId
   if (!dealId) {
@@ -22,7 +35,6 @@ export default defineEventHandler(async (event: H3Event): Promise<TypeDeal> => {
     })
   }
   const parsedBody = await readValidatedBody(event, body => UpdateDealSchema.safeParse(body))
-  console.log('===========Parsed body ============:', parsedBody)
   if (!parsedBody.success) {
     console.error('Validation failed:', parsedBody.error)
     throw createError({
@@ -31,7 +43,6 @@ export default defineEventHandler(async (event: H3Event): Promise<TypeDeal> => {
     })
   }
   try {
-    console.log('===========Updating deal after parsing ============:', dealId, parsedBody.data)
     const response = await activecampaign.updateDeal(dealId, parsedBody.data)
     return response
   }

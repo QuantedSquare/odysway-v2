@@ -5,7 +5,7 @@
   >
     <v-card width="400">
       <v-card-title class="text-center">
-        Back Office Login
+        Connexion équipe Odysway
       </v-card-title>
       <v-card-text>
         <v-btn

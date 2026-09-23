@@ -37,22 +37,12 @@ export const getBookingUserOrNull = (event) => {
  * transmet l'email de l'utilisateur réel pour que le journal d'activité
  * attribue l'action à une personne et non à « la machine ».
  *
- * Ce jeton n'ouvre QUE les endpoints qui l'acceptent explicitement — pas
- * l'ensemble du back-office. Ce sont les écritures des écrans « Dates GIR »,
- * « Corbeille » et de la grille tarifaire d'Ulysse :
- *
- *   - assign-departure-deal (POST, DELETE) — rattrapage du dossier de départ
- *   - add-date (POST), [dateId] (PUT, DELETE) — création, publication, suppression
- *   - [dateId]/restore, booked/[bookedId]/restore, trash/deal/[dealId]/restore
- *   - [dateId]/notes (POST), notes/[noteId] (DELETE) — notes de la fiche date
- *   - [dateId]/invoices (POST), invoices/upload-url (POST), invoices/[invoiceId]
- *     (DELETE) — factures fournisseur de la fiche date
- *   - margins/[slug]/pricing (PUT), margins/[slug]/basis (PUT) — coût d'achat,
- *     marge dérivée, bascule (server/utils/marginPricing.js)
- *   - margins/[slug]/seasons (PUT), margins/[slug]/settings (PUT) — saisons et
- *     mode de configuration, par les fonctions existantes de margins.js
- *
- * Les lectures n'en ont pas besoin : Ulysse lit la même base Supabase.
+ * Ce jeton ouvre l'ensemble du back-office : toute route derrière
+ * requireCrmAccess, et tout /api/v1/booking/** et /api/v1/ac/** hors de la liste
+ * publique de server/middleware/backoffice-auth.js. Le restreindre endpoint par
+ * endpoint protégerait peu : Ulysse détient déjà la clé service_role de la même
+ * base Supabase. Il passe par ces endpoints pour ses écritures parce que c'est
+ * ici que vivent le mapping AC, la cascade soft-delete et le journal.
  */
 export const getUlysseServiceUser = (event) => {
   const attendu = process.env.ULYSSE_SERVICE_TOKEN
@@ -71,10 +61,38 @@ export const getUlysseServiceUser = (event) => {
   return { sub: 'ulysse-service', email, name: `Ulysse · ${email}`, role: 'service' }
 }
 
-export const requireBookingUser = (event) => {
-  const user = getBookingUserOrNull(event)
-  if (!user) {
-    throw createError({ statusCode: 401, statusMessage: 'Non authentifié.' })
-  }
-  return user
+/**
+ * Garde du back-office : endpoints qui exposent ou modifient des données CRM ou
+ * opérationnelles (identité client, prix d'achat, marges, commissions, montants
+ * payés, dates, factures).
+ *
+ * Deux porteurs sont acceptés :
+ *  - la session `booking_token` (cookie signé + email @odysway.com/superadmin) ;
+ *  - le jeton de service `x-ulysse-service-token` émis par Ulysse.
+ *
+ * La seule dérogation est un serveur de dev local. Nitro fige
+ * `process.env.NODE_ENV` à "production" dans tout build : un déploiement Vercel
+ * — preview comme production — exige donc l'authentification. Ne jamais
+ * dériver cette dérogation de VERCEL_ENV : les previews sont des URL publiques.
+ */
+export const isLocalDev = () => process.env.NODE_ENV !== 'production'
+
+export const requireCrmAccess = (event) => {
+  const user = getUlysseServiceUser(event) ?? getBookingUserOrNull(event)
+  if (user) return user
+  if (isLocalDev()) return null
+  // `data.code` : un refus d'accès n'est pas un incident du tunnel de commande,
+  // server/plugins/funnelErrorHook.ts ne le remonte donc pas en alerte.
+  throw createError({ statusCode: 401, statusMessage: 'Non authentifié.', data: { code: 'BACKOFFICE_AUTH_REQUIRED' } })
+}
+
+/**
+ * Variante non bloquante : renvoie l'utilisateur CRM s'il y en a un, `null`
+ * sinon. Sert aux routes qui dégradent la réponse au lieu de la refuser
+ * (voir toPublicDeal dans server/utils/dealVisibility.js).
+ */
+export const getCrmAccessOrNull = (event) => {
+  const user = getUlysseServiceUser(event) ?? getBookingUserOrNull(event)
+  if (user) return user
+  return isLocalDev() ? { sub: 'local-dev', email: 'dev@localhost', role: 'dev' } : null
 }

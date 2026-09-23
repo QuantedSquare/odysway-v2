@@ -3,7 +3,7 @@ import { defineEventHandler, readBody, getHeader, createError } from 'h3'
 export default defineEventHandler(async (event) => {
   // Verify webhook secret for security
   const secret = getHeader(event, 'x-sanity-webhook-secret')
-  if (secret !== process.env.SANITY_WEBHOOK_SECRET) {
+  if (!process.env.SANITY_WEBHOOK_SECRET || secret !== process.env.SANITY_WEBHOOK_SECRET) {
     throw createError({
       statusCode: 401,
       message: 'Unauthorized',
