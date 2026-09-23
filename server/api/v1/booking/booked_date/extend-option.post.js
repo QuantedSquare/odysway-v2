@@ -4,6 +4,9 @@ const DAY_MS = 24 * 60 * 60 * 1000
 const MAX_DAYS = 90
 
 export default defineEventHandler(async (event) => {
+  // Back-office uniquement (voir server/middleware/backoffice-auth.js).
+  requireCrmAccess(event)
+
   const body = await readBody(event)
   if (!body?.id) {
     throw createError({ statusCode: 400, statusMessage: 'id requis' })

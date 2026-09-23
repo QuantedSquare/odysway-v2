@@ -30,9 +30,7 @@ const chunk = (arr, size) => {
 }
 
 export default defineEventHandler(async (event) => {
-  const config = useRuntimeConfig()
-  const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
-  if (isProdEnv) requireBookingUser(event)
+  requireCrmAccess(event)
 
   const { from, to } = getQuery(event)
   const dateFrom = from || dayjs().format('YYYY-MM-DD')

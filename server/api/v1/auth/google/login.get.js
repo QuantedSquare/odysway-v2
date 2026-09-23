@@ -4,11 +4,13 @@ import { defineEventHandler, sendRedirect, setCookie } from 'h3'
 const GOOGLE_AUTH_URL = 'https://accounts.google.com/o/oauth2/v2/auth'
 
 export default defineEventHandler((event) => {
-  const config = useRuntimeConfig()
-  const isDev = config.public.environment !== 'production'
+  // Cookies `Secure` partout sauf sur un serveur de dev local (http).
+  const isDev = isLocalDev()
 
   const clientId = process.env.GOOGLE_CLIENT_ID
-  const redirectUri = config.public.environment !== 'production' ? 'http://localhost:3000/api/v1/auth/google/callback' : process.env.GOOGLE_REDIRECT_URI
+  // Même URI que callback.get.js, qui la renvoie à Google lors de l'échange du
+  // code : une par environnement, déclarée dans la console Google.
+  const redirectUri = process.env.GOOGLE_REDIRECT_URI
 
   if (!clientId || !redirectUri) {
     return {
@@ -23,7 +25,7 @@ export default defineEventHandler((event) => {
     sameSite: 'lax',
     path: '/',
     maxAge: 60 * 10, // 10 minutes
-    secure: isDev,
+    secure: !isDev,
   })
 
   const params = new URLSearchParams({

@@ -133,8 +133,7 @@ describe('requireCrmAccess — serveur de dev local', () => {
 
   it('un déploiement de preview est bien traité comme la production', () => {
     // Vercel bâtit les previews avec NODE_ENV=production : la garde tient même
-    // si VERCEL_ENV vaut "preview" (contrairement au isProdEnv des routes
-    // /booking, qui lui se relâche hors production).
+    // si VERCEL_ENV vaut "preview".
     process.env.NODE_ENV = 'production'
     process.env.VERCEL_ENV = 'preview'
     attendre401(() => requireCrmAccess(fakeEvent()))

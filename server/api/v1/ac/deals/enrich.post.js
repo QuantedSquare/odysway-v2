@@ -22,6 +22,21 @@ export default defineEventHandler(async (event) => {
     return { ok: false }
   }
 
+  // kickstart appelle cette route sans session : elle est donc publique, et
+  // elle écrit dans AC. On n'accepte que le couple qu'une réservation lie
+  // réellement — le même contrat que update-with-bms, piloté par le booked_id
+  // (uuid) que seul le client détient. Sans ce contrôle, n'importe qui
+  // réécrivait n'importe quel deal en parcourant ses ids séquentiels.
+  const { data: booked } = await supabase
+    .from('booked_dates')
+    .select('deal_id')
+    .eq('id', bookedId)
+    .maybeSingle()
+  if (!booked || String(booked.deal_id) !== String(dealId)) {
+    console.error(`[enrich] bookedId=${bookedId} ne correspond pas au deal ${dealId}`)
+    return { ok: false }
+  }
+
   console.log(`[enrich] START dealId=${dealId} bookedId=${bookedId}`)
 
   // 1. Update AC deal with all custom fields (also re-upserts contact + recalculates values)

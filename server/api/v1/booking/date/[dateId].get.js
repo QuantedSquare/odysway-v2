@@ -2,10 +2,10 @@ import { defineEventHandler, createError, getQuery } from 'h3'
 
 export default defineEventHandler(async (event) => {
   const { dateId } = event.context.params
-  // ?includeDeleted=true : l'écran de restauration du BMS doit pouvoir charger
-  // une date supprimée. Le funnel public, lui, ne doit jamais la voir.
+  // ?includeDeleted=true : le back-office doit pouvoir charger une date
+  // supprimée pour la restaurer. Le funnel public, lui, ne doit jamais la voir.
   const { includeDeleted } = getQuery(event)
-  const withDeleted = includeDeleted === 'true' || includeDeleted === '1'
+  const withDeleted = (includeDeleted === 'true' || includeDeleted === '1') && !!getCrmAccessOrNull(event)
   if (!dateId) {
     throw funnelReporter.funnelCreateError({
       statusCode: 400,

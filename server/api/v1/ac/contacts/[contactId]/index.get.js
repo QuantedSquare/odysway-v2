@@ -1,4 +1,7 @@
 export default defineEventHandler(async (event) => {
+  // Back-office uniquement (voir server/middleware/backoffice-auth.js).
+  requireCrmAccess(event)
+
   const id = parseInt(event.context.params.contactId)
   if (!Number.isInteger(id)) {
     throw createError({
