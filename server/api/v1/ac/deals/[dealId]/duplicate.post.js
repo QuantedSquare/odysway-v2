@@ -31,6 +31,12 @@ const STRIPPED_FIELDS = new Set([
 ])
 
 export default defineEventHandler(async (event) => {
+  // Outil interne : cloner un deal, c'est recopier l'identité du voyageur et
+  // tous les montants du dossier source vers un contact choisi par l'appelant.
+  // Ouverte à l'anonyme, la route exfiltrait donc n'importe quel dossier du CRM
+  // vers une adresse arbitraire — et créait un deal par appel.
+  requireCrmAccess(event)
+
   const dealId = parseInt(event.context.params.dealId)
   if (!Number.isInteger(dealId)) {
     throw createError({ statusCode: 400, statusMessage: 'Deal ID should be an integer' })

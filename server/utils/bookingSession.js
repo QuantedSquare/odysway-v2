@@ -78,3 +78,38 @@ export const requireBookingUser = (event) => {
   }
   return user
 }
+
+/**
+ * Garde des endpoints qui exposent ou modifient des données CRM brutes
+ * (identité client, prix d'achat, marges, commissions, montants payés).
+ *
+ * Deux porteurs sont acceptés, comme ailleurs dans le back-office :
+ *  - la session `booking_token` (cookie signé + email @odysway.com/superadmin) ;
+ *  - le jeton de service `x-ulysse-service-token` émis par Ulysse.
+ *
+ * Contrairement au `isProdEnv` des routes /booking (qui vaut
+ * `VERCEL_ENV === 'production'`), la seule dérogation ici est un serveur de dev
+ * local : Vercel construit les *previews* comme la prod avec
+ * NODE_ENV=production, donc un déploiement de preview — URL publique — exige la
+ * session au même titre que la prod. Même choix que
+ * server/api/v1/ac/deals/[dealId]/inspect.get.js.
+ */
+const isLocalDev = () => process.env.NODE_ENV !== 'production'
+
+export const requireCrmAccess = (event) => {
+  const user = getUlysseServiceUser(event) ?? getBookingUserOrNull(event)
+  if (user) return user
+  if (isLocalDev()) return null
+  throw createError({ statusCode: 401, statusMessage: 'Non authentifié.' })
+}
+
+/**
+ * Variante non bloquante : renvoie l'utilisateur CRM s'il y en a un, `null`
+ * sinon. Sert aux routes qui dégradent la réponse au lieu de la refuser
+ * (voir toPublicDeal dans server/utils/dealVisibility.js).
+ */
+export const getCrmAccessOrNull = (event) => {
+  const user = getUlysseServiceUser(event) ?? getBookingUserOrNull(event)
+  if (user) return user
+  return isLocalDev() ? { sub: 'local-dev', email: 'dev@localhost', role: 'dev' } : null
+}
