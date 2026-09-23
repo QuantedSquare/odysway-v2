@@ -15,9 +15,7 @@ const STATUS = {
 }
 
 export default defineEventHandler(async (event) => {
-  const config = useRuntimeConfig()
-  const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
-  if (isProdEnv) requireBookingUser(event)
+  requireCrmAccess(event)
 
   const currentYear = new Date().getFullYear()
   const requestedYear = Number(getQuery(event).year)

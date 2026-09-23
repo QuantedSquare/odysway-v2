@@ -14,9 +14,7 @@ const MAX_ROWS = 200
 const AUDIT = 'deleted, deleted_at, deleted_by, deleted_reason, deleted_batch'
 
 export default defineEventHandler(async (event) => {
-  const config = useRuntimeConfig()
-  const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
-  if (isProdEnv) requireBookingUser(event)
+  requireCrmAccess(event)
 
   const { type = 'all', limit } = getQuery(event)
   const max = Math.min(Number(limit) || MAX_ROWS, MAX_ROWS)

@@ -8,9 +8,7 @@ import { defineEventHandler, createError, getQuery } from 'h3'
 // renvoyées avec `orphan: true` et l'opérateur décide.
 
 export default defineEventHandler(async (event) => {
-  const config = useRuntimeConfig()
-  const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
-  if (isProdEnv) requireBookingUser(event)
+  requireCrmAccess(event)
 
   const { dateId, slug } = event.context.params
   if (!dateId || !slug) {

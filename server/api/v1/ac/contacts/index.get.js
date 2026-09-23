@@ -1,4 +1,7 @@
 export default defineEventHandler(async (event) => {
+  // Back-office uniquement (voir server/middleware/backoffice-auth.js).
+  requireCrmAccess(event)
+
   // Only handle GET requests
   if (event.method !== 'GET') {
     throw createError({

@@ -11,13 +11,7 @@ export default defineEventHandler(async (event) => {
   }
   const body = await readBody(event)
 
-  const config = useRuntimeConfig()
-  const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
-  // Ulysse s'annonce par un jeton de service ; sinon on retombe sur la session
-  // booking_token habituelle. Voir getUlysseServiceUser pour la liste des
-  // endpoints qui l'acceptent.
-  const bookingUser = getUlysseServiceUser(event)
-    ?? (isProdEnv ? requireBookingUser(event) : getBookingUserOrNull(event))
+  const bookingUser = requireCrmAccess(event)
 
   // Only allow editable fields
   const updateFields = {}
@@ -45,6 +39,7 @@ export default defineEventHandler(async (event) => {
     if (!/^[A-Za-z0-9][A-Za-z0-9-]{0,199}$/.test(cible)) {
       throw createError({ statusCode: 400, statusMessage: 'travel_slug invalide' })
     }
+    const config = useRuntimeConfig()
     const sanityClient = createClient({
       projectId: config.public.sanity.projectId,
       dataset: config.public.sanity.dataset,

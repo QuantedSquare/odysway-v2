@@ -4,12 +4,8 @@ const DAY_MS = 24 * 60 * 60 * 1000
 const MAX_DAYS = 90
 
 export default defineEventHandler(async (event) => {
-  // Back-office uniquement : prolonger une option engage la date. Sans cette
-  // garde, n'importe qui pouvait prolonger n'importe quelle option.
-  const config = useRuntimeConfig()
-  const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
-  const bookingUser = getUlysseServiceUser(event)
-    ?? (isProdEnv ? requireBookingUser(event) : getBookingUserOrNull(event))
+  // Back-office uniquement (voir server/middleware/backoffice-auth.js).
+  const bookingUser = requireCrmAccess(event)
 
   const body = await readBody(event)
   if (!body?.id) {
