@@ -128,11 +128,21 @@
       >
         <ContactUsCard
           variant="section"
-          :avatars="contactSection?.teamMembers"
+          :avatars="stickyBlock?.ctaCall?.avatars"
           :rdv-link="`/rdv-projet-voyage?travelTitle=${props.voyage?.title}`"
           :show-privatisation="props.voyage?.availabilityTypes?.includes('groupe')"
-          :privatisation-text="indivSection?.privatisationText"
+          :privatisation-text="stickyBlock?.privatisationText"
           :privatisation-link="`/devis?slug=${props.voyage?.slug?.current}`"
+          :title="stickyBlock?.ctaCall?.text"
+          :subtitle="stickyBlock?.ctaCall?.subtitle"
+          :rdv-button-text="stickyBlock?.ctaCall?.rdvButtonText"
+          :contact-preference-text="stickyBlock?.contactPreferenceText"
+          :whatsapp-label="stickyBlock?.whatsappLabel"
+          :whatsapp-url="stickyBlock?.whatsappUrl"
+          :phone-number="stickyBlock?.phoneNumber"
+          :phone-href="stickyBlock?.phoneHref"
+          :business-hours="stickyBlock?.businessHours"
+          :private-group-text="stickyBlock?.privateGroupText"
         />
       </v-col>
     </v-row>
@@ -154,7 +164,7 @@ const props = defineProps({
     type: Object,
     required: true,
   },
-  contactSection: {
+  stickyBlock: {
     type: Object,
     default: null,
   },

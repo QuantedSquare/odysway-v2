@@ -69,7 +69,7 @@
 
           <LazyDatesPricesContainer
             :closing-days="voyage.closingDays"
-            :contact-section="page.contactSection"
+            :sticky-block="page.stickyBlock"
             :date-sections="page.dateSections"
             :is-groupe-available="voyage.availabilityTypes?.includes('groupe')"
             :is-privatisation-available="voyage.availabilityTypes?.includes('privatisation')"
