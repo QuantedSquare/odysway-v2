@@ -28,6 +28,9 @@ export default defineEventHandler(async (event) => {
     // === Pages with Dynamic Slugs ===
     if (documentType === 'voyage' && slug) {
       pathsToRevalidate.push(`/voyages/${slug}`)
+      // Variante B du test A/B rendez-vous : ?variante fait partie de la clé ISR
+      // (nuxt.config.ts), c'est donc une entrée de cache distincte.
+      pathsToRevalidate.push(`/voyages/${slug}?variante=b`)
       // Unlisted sales page of sur-mesure-only voyages (customPagePublished)
       pathsToRevalidate.push(`/sur-mesure/${slug}`)
       // Also revalidate search and destination pages that might list this voyage
@@ -205,6 +208,8 @@ export default defineEventHandler(async (event) => {
       // With experimental.payloadExtraction, each page also has a _payload.json cached as its own ISR entry.
       // Client-side hydration fetches that payload and overwrites the fresh SSR HTML with stale data if we don't bust it too.
       const pathsWithPayloads = pathsToRevalidate.flatMap((p) => {
+        // Une URL avec query (variante A/B) partage le _payload.json de son chemin.
+        if (p.includes('?')) return [p]
         const base = p === '/' ? '' : p
         return [p, `${base}/_payload.json`]
       })

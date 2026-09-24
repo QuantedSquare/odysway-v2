@@ -832,6 +832,38 @@ export const useGtmTracking = () => {
     })
   }
 
+  /**
+   * TEST A/B PAGE VOYAGE (« voyage_rdv »)
+   * Expose le test et la variante comme variables dataLayer persistantes, pour
+   * que tous les événements suivants de la page (clic_rdv, rdv_confirmation,
+   * add_to_wishlist…) puissent être segmentés par variante dans GTM/GA4.
+   * @param {object} context - { abTest, abVariant, leadSource, itemId }
+   */
+  const trackAbExposure = ({ abTest, abVariant, leadSource, itemId }) => {
+    pushToDataLayer({
+      ab_test: abTest,
+      ab_variant: abVariant,
+      lead_source: leadSource || '(none)',
+    })
+    pushToDataLayer({
+      event: 'ab_exposure',
+      ab_test: abTest,
+      ab_variant: abVariant,
+      lead_source: leadSource || '(none)',
+      item_id: itemId,
+    })
+  }
+
+  /**
+   * Événements propres au test A/B : cta_rdv_click, cta_dates_click,
+   * inscription_start, departs_view, rdv_scheduled.
+   * @param {string} event - Nom de l'événement
+   * @param {object} params - ex. { position: 'info_card' }
+   */
+  const trackAbEvent = (event, params = {}) => {
+    pushToDataLayer({ event, ...params })
+  }
+
   return {
     pushToDataLayer,
     getCountryFromPhone,
@@ -869,5 +901,8 @@ export const useGtmTracking = () => {
     trackDevisStep,
     // Purchase
     trackPurchase,
+    // Test A/B page voyage
+    trackAbExposure,
+    trackAbEvent,
   }
 }

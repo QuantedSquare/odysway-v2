@@ -25,6 +25,18 @@ export const VOYAGE_PAGE_QUERY = `
     },
     indivSection{
       ...
+    },
+    rdvVariant{
+      ...,
+      rdvSection{
+        ...,
+        specialist->{
+          _id,
+          name,
+          image,
+          position
+        }
+      }
     }
   }
 `
@@ -89,6 +101,15 @@ export const VOYAGE_QUERY = `
       ...,
       author->{
       ...
+      }
+    },
+    rdvBlock{
+      ...,
+      specialist->{
+        _id,
+        name,
+        image,
+        position
       }
     },
     difficultyLevel ->{
