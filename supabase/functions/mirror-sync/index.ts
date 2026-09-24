@@ -38,6 +38,36 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, {
   auth: { persistSession: false },
 })
 
+// Une erreur PostgREST est un objet : String(err) donnait « [object Object] »
+// et cachait la cause des échecs (colonne manquante) pendant des mois.
+const describe = (err: unknown): string => {
+  if (err && typeof err === 'object') {
+    const e = err as { message?: string, code?: string, details?: string, hint?: string }
+    return [e.code, e.message, e.details, e.hint].filter(Boolean).join(' · ') || JSON.stringify(err)
+  }
+  return String(err)
+}
+
+// PGRST204 : « Could not find the 'x' column of 't' in the schema cache ».
+const UNKNOWN_COLUMN = /Could not find the '([^']+)' column/
+
+// Upserte la ligne ; si une colonne prod n'existe pas encore ici, la retire et
+// recommence plutôt que de rejeter toute la ligne. Une colonne manquante a bloqué
+// la réplication des deals du 05/06 au 22/09/2026 : mieux vaut une ligne à jour
+// sans cette colonne, signalée bruyamment, qu'aucune ligne à jour.
+const upsertTolerant = async (table: string, record: Record<string, unknown>, onConflict: string) => {
+  const dropped: string[] = []
+  for (let attempt = 0; attempt < 10; attempt++) {
+    const row = Object.fromEntries(Object.entries(record).filter(([key]) => !dropped.includes(key)))
+    const { error } = await supabase.from(table).upsert(row, { onConflict })
+    if (!error) return dropped
+    const column = error.code === 'PGRST204' ? error.message.match(UNKNOWN_COLUMN)?.[1] : undefined
+    if (!column || !(column in row)) throw error
+    dropped.push(column)
+  }
+  throw new Error(`mirror-sync: trop de colonnes inconnues sur ${table} (${dropped.join(', ')})`)
+}
+
 serve(async (req) => {
   if (req.method !== 'POST') {
     return new Response('Method Not Allowed', { status: 405 })
@@ -67,10 +97,15 @@ serve(async (req) => {
   try {
     if (type === 'INSERT' || type === 'UPDATE') {
       if (!record) throw new Error('Missing record on ' + type)
-      const { error } = await supabase
-        .from(table)
-        .upsert(record, { onConflict: pk.join(',') })
-      if (error) throw error
+      const dropped = await upsertTolerant(table, record, pk.join(','))
+      if (dropped.length) {
+        // À corriger côté dashboard : ajouter ces colonnes (voir supabase/dashboard/06_*.sql).
+        console.warn('mirror-sync COLONNES INCONNUES ignorées', { table, type, dropped })
+        return new Response(
+          JSON.stringify({ ok: true, table, type, dropped }),
+          { status: 200, headers: { 'content-type': 'application/json' } },
+        )
+      }
     }
     else if (type === 'DELETE') {
       if (!old_record) throw new Error('Missing old_record on DELETE')
@@ -98,9 +133,9 @@ serve(async (req) => {
     )
   }
   catch (err) {
-    console.error('mirror-sync error', { table, type, err: String(err) })
+    console.error('mirror-sync error', { table, type, err: describe(err) })
     return new Response(
-      JSON.stringify({ error: String(err), table, type }),
+      JSON.stringify({ error: describe(err), table, type }),
       { status: 500, headers: { 'content-type': 'application/json' } },
     )
   }

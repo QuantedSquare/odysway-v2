@@ -24,7 +24,7 @@ const customFieldsMapDeal = {
   29: 'isCouple',
   11: 'specialRequest',
   12: 'insurance',
-  13: 'insuranceCommissionPrice', // Prix assurance par pax
+  13: 'insuranceCommissionPrice', // Prix assurance par pax — c'est un PRIX malgré le nom de la clé
   14: 'marginPerTraveler',
   15: 'totalMargin',
   70: 'flightMargin',
@@ -87,7 +87,20 @@ const customFieldsMapDeal = {
   95: 'promoLastMinute',
   96: 'gotLastMinute',
   93: 'linkBms',
+  // Voyageurs 9 à 15 et suivi de préparation / annulation, lus pour le miroir
+  // (Docteur d'Ulysse). Identifiants relevés dans /dealCustomFieldMeta le 22/09/2026.
+  97: 'traveler9',
+  98: 'traveler10',
+  99: 'traveler11',
+  100: 'traveler12',
+  101: 'traveler13',
+  102: 'traveler14',
+  103: 'traveler15',
+  109: 'flightPlanReceived', // Plan de vol reçu (checkbox)
+  110: 'passportReceived', // Passeport reçu (checkbox)
+  111: 'dietReceived', // Régime alimentaire reçu (checkbox)
   113: 'isCapExploraction',
+  114: 'cancellationFee', // Frais d'annulation (currency)
   117: 'extraMarginPerTraveler', // Marge supplémentaire par pax (extension, early check-in, etc.) — séparée de 14 marginPerTraveler qui est remplacé par le tableau BMS
 }
 const customFieldsMapContact = {
@@ -293,7 +306,9 @@ const getDealCustomFieldMeta = async () => {
 const getDealById = async id => await apiRequest(`/deals/${id}`)
 
 const getDealCustomFields = async (dealId) => {
-  const response = await apiRequest(`/deals/${dealId}/dealCustomFieldData`)
+  // `limit` explicite : AC pagine ses listes, et un deal très rempli ne doit pas
+  // perdre silencieusement ses derniers champs. 98 champs existent (09/2026).
+  const response = await apiRequest(`/deals/${dealId}/dealCustomFieldData?limit=100`)
   return handleCustomFields(response.dealCustomFieldData, customFieldsMapDeal)
 }
 

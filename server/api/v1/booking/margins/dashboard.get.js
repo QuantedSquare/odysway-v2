@@ -57,11 +57,11 @@ export default defineEventHandler(async (event) => {
   const bookings = bookingsChunks.flat()
 
   // 3) All paying deals (pipeline 2) — paginated, no .in() filter to avoid URL overflow.
-  //    Data per row is tiny (id + 3 numerics) so even ~10k rows is sub-MB.
+  //    Data per row is tiny (id + total_margin) so even ~10k rows is sub-MB.
   const allPaidDeals = await fetchAllPaginated(() =>
     supabase
       .from('activecampaign_deals')
-      .select('id, total_margin, flight_margin, insurance_commission')
+      .select('id, total_margin')
       .eq('pipeline_id', 2),
   )
   const dealsById = new Map(allPaidDeals.map(d => [Number(d.id), d]))

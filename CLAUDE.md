@@ -90,7 +90,7 @@ cms/
 | `1` | Prospects | Prospects pipeline. A deal here represents a traveler who has expressed interest (quote request, contact form, etc.) but has not yet paid. |
 | `2` | Voyageurs | Converted client pipeline. A deal moves here when the client makes their **first payment**. This is the authoritative signal for a conversion. |
 | `3` | Corbeille | Trash / archived. Exclude from all reports. |
-| `4` | Gestions Départs | Operational departure management. **these deals do not exist in supabase datatable.** |
+| `4` | Gestions Départs | Operational departure management — one deal per departure (« dossier de départ »). Mirrored since 09/2026 (Docteur d'Ulysse). **Never aggregate with pipelines 1/2: each traveller also has their own deal there.** |
 
 ## Supabase Tables
 
@@ -176,8 +176,10 @@ A row per CRM deal. Source of truth for revenue, margin, conversions, and acquis
 | `indiv_room_price` | numeric | Single-room supplement per traveler. |
 | `extension_price` | numeric | Optional extension per traveler. |
 | `flight_ticket_price_per_traveler` | numeric | Flight cost per traveler. |
-| `insurance_price_per_traveler` | numeric | Insurance cost per traveler. |
-| `insurance_commission` | numeric | Commission earned on insurance. |
+| `insurance_price_per_pax` | numeric | Insurance **price** per traveler (AC field 13). `null` = not set. |
+| `insurance_commission_per_pax` | numeric | Insurance **commission** per traveler (AC field 47, 30 %). Margin counts it × `nb_traveler`. |
+| `insurance_price_per_traveler` | numeric | **OBSOLETE, swapped**: actually holds the commission per traveler (field 47). Use `insurance_commission_per_pax`. |
+| `insurance_commission` | numeric | **OBSOLETE, swapped**: actually holds the insurance price per traveler (field 13). Use `insurance_price_per_pax`. |
 | `agent_cost` | numeric | Local agent purchase cost. Subtract from total to get true margin. |
 | `nb_traveler` | numeric | Total travelers on the deal. |
 | `nb_adults`, `nb_children`, `nb_teen`, `nb_under_age` | numeric | Demographic breakdown. |
@@ -201,6 +203,11 @@ A row per CRM deal. Source of truth for revenue, margin, conversions, and acquis
 | `is_cap_exploraction` | boolean | Premium insurance product chosen. |
 | `include_flight` | boolean | Flight included in the package. |
 | `flight_ticket_bought` | boolean | Operational: tickets purchased? |
+| `forced_indiv_room` | boolean | Single room imposed (AC field 81). |
+| `named_travelers`, `travelers_with_birthdate` | smallint | Filled « Voyageur 1–15 » fields, and those carrying a DD/MM/YYYY birthdate. |
+| `passport_received`, `flight_plan_received`, `diet_received` | boolean | Pre-departure documents (AC fields 110, 109, 111). |
+| `travel_book` | text | « Carnet de voyage » (AC field 25, free text). |
+| `cancellation_fee` | numeric | Cancellation fee kept, EUR (AC field 114). AC has no « refunded amount » field. |
 | `insurance_choice` | varchar | Free-form insurance label. |
 | `source` | varchar | Free-form source (legacy). |
 | `acquisition_source` | text | Structured acquisition source. Prefer this over `source`. |

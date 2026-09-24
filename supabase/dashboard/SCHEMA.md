@@ -35,7 +35,7 @@ A row per CRM deal (booking quote or sale). Source of truth for revenue, margin,
 | `status` | varchar | One of `'Ouvert'`, `'Gagné'`, `'Perdu'`, `'Supprimé'`. |
 | `stage` | varchar | Sales stage name (free-form). |
 | `stage_id` | text | AC stage numeric id. |
-| `pipeline_id` | smallint | `1` = main sales pipeline, `3` = trash. Pipeline `4` (Gestions Départs) is excluded from the mirror. |
+| `pipeline_id` | smallint | `1` = main sales pipeline, `3` = trash. Pipeline `4` (Gestions Départs, one deal per departure) is mirrored since 09/2026: never aggregate it with 1/2. |
 | `pipeline_title` | text | Human-readable pipeline name (e.g. "Voyages en cours"). |
 | `owner_id` | text | AC owner id (sales rep). |
 | `seller` | varchar | Display name of sales rep (e.g. "Jean Dupont"). |
@@ -47,8 +47,10 @@ A row per CRM deal (booking quote or sale). Source of truth for revenue, margin,
 | `indiv_room_price` | numeric | Single-room supplement per traveler. |
 | `extension_price` | numeric | Optional extension per traveler. |
 | `flight_ticket_price_per_traveler` | numeric | Flight cost per traveler. |
-| `insurance_price_per_traveler` | numeric | Insurance cost per traveler. |
-| `insurance_commission` | numeric | Commission earned on insurance. |
+| `insurance_price_per_pax` | numeric | Insurance **price** per traveler (AC field 13). `null` = not set. |
+| `insurance_commission_per_pax` | numeric | Insurance **commission** per traveler (AC field 47, 30 %). Margin counts it × `nb_traveler`. |
+| `insurance_price_per_traveler` | numeric | **OBSOLETE, swapped**: actually holds the commission per traveler (field 47). Use `insurance_commission_per_pax`. |
+| `insurance_commission` | numeric | **OBSOLETE, swapped**: actually holds the insurance price per traveler (field 13). Use `insurance_price_per_pax`. |
 | `agent_cost` | numeric | Local agent purchase cost. Subtract from total to get true margin. |
 | `nb_traveler` | numeric | Total travelers. |
 | `nb_adults`, `nb_children`, `nb_teen`, `nb_under_age` | numeric | Demographic breakdown. |
@@ -73,6 +75,11 @@ A row per CRM deal (booking quote or sale). Source of truth for revenue, margin,
 | `is_cap_exploraction` | boolean | Premium insurance product chosen. |
 | `include_flight` | boolean | Flight included in the package. |
 | `flight_ticket_bought` | boolean | Operational: tickets purchased? |
+| `forced_indiv_room` | boolean | Single room imposed (AC field 81). |
+| `named_travelers`, `travelers_with_birthdate` | smallint | Filled « Voyageur 1–15 » fields, and those carrying a DD/MM/YYYY birthdate. |
+| `passport_received`, `flight_plan_received`, `diet_received` | boolean | Pre-departure documents (AC fields 110, 109, 111). |
+| `travel_book` | text | « Carnet de voyage » (AC field 25, free text). |
+| `cancellation_fee` | numeric | Cancellation fee kept, EUR (AC field 114). AC has no « refunded amount » field. |
 | `max_children_age` | smallint | Eligibility threshold for child promo. |
 | `insurance_choice` | varchar | Free-form insurance label. |
 | `source` | varchar | Free-form source (legacy). |
@@ -129,7 +136,7 @@ Departure slots for each voyage. One row per (voyage, departure date).
 | `status` | text | Operational status (e.g. `'open'`, `'guaranteed'`, `'cancelled'`). |
 | `closing_days` | bigint | Days before departure when booking closes. |
 | `displayed_*` columns | mixed | Override values shown to users when `custom_display = true`. For reporting, use the non-displayed versions. |
-| `departure_id` | text | Links to the AC departure deal (in pipeline 4, not in this DB). |
+| `departure_id` | text | Links to the AC departure deal (pipeline 4, `activecampaign_deals.id`). |
 | `bms_reference`, `travel_type_prefix` | text | Operational metadata. |
 | `co_filling` | int | Co-filling seats. |
 | `deleted`, `is_test` | boolean | Filter these out in reports. |
@@ -395,7 +402,7 @@ ORDER BY tagged_revenue DESC;
 ## Tips for the AI agent
 
 - **Filter test/deleted data** when querying mirror tables: `WHERE deleted = false AND is_test = false` on `travel_dates` and `booked_dates`. Activecampaign tables have no such flag (test deals are pre-filtered at ingestion).
-- **Pipeline 4** (Gestions Départs) deals are not in this DB at all.
+- **Pipeline 4** (Gestions Départs) deals are one per departure: never add them to pipelines 1/2 (double count).
 - **Refresh staleness**: matviews refresh every 15 min. If sub-15-min freshness is needed, query the underlying tables directly.
 - **Status values are French** (`'Gagné'` not `'Won'`). Always compare to the French literal.
 - **Don't write to `public.*`** — changes will be overwritten by the next webhook event from prod.
