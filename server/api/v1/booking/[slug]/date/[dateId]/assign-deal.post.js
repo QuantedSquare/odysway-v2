@@ -6,8 +6,10 @@ import { defineEventHandler, readBody, createError } from 'h3'
 export default defineEventHandler(async (event) => {
   const startTime = Date.now()
   const config = useRuntimeConfig()
-  const bookingUser = getBookingUserOrNull(event)
-  console.log('=====BookingUser=====', bookingUser)
+  // Route publique (tunnel de réservation) : l'utilisateur n'est connu que
+  // quand l'appel vient du back-office — Ulysse par son jeton, qui nomme
+  // l'utilisateur, ou une session. Il sert au journal de la date.
+  const bookingUser = getUlysseServiceUser(event) ?? getBookingUserOrNull(event)
 
   const { dateId, slug } = event.context.params
   if (!dateId || !slug) {

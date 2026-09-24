@@ -3,7 +3,8 @@ import { defineEventHandler, readBody, createError } from 'h3'
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
   const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
-  const bookingUser = isProdEnv ? requireBookingUser(event) : getBookingUserOrNull(event)
+  const bookingUser = getUlysseServiceUser(event)
+    ?? (isProdEnv ? requireBookingUser(event) : getBookingUserOrNull(event))
 
   const { dateId, slug } = event.context.params
   if (!dateId || !slug) {

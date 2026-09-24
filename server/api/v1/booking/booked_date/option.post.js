@@ -41,6 +41,15 @@ export default defineEventHandler(async (event) => {
     if (recomputeRes?.error) throw createError({ statusCode: 500, statusMessage: recomputeRes.error })
 
     if (error) throw createError({ statusCode: 500, statusMessage: error.message })
+
+    // Route publique : une option posée depuis le back-office (Ulysse, par son
+    // jeton) est journalisée sur la date, avec son auteur.
+    const crmUser = getUlysseServiceUser(event) ?? getBookingUserOrNull(event)
+    if (crmUser) {
+      await logDateActivity(bookedDate.travel_date_id, crmUser, 'option_placed', {
+        booked_id: body.id, booked_places: body.booked_places, expiracy_date: data?.expiracy_date ?? null,
+      })
+    }
     return data
   }
 })

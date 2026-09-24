@@ -17,7 +17,8 @@ const MAX_FILE_SIZE = 10 * 1024 * 1024 // 10 MB
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
   const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
-  const bookingUser = isProdEnv ? requireBookingUser(event) : getBookingUserOrNull(event)
+  const bookingUser = getUlysseServiceUser(event)
+    ?? (isProdEnv ? requireBookingUser(event) : getBookingUserOrNull(event))
 
   const { dateId, slug } = event.context.params
   if (!dateId || !slug) {
