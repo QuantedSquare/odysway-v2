@@ -35,6 +35,8 @@ const paiementStripe = (pi) => {
     // Virement en attente : ce qui reste à recevoir sur le compte de virement.
     resteAVirer: virement ? euros(virement.amount_remaining) : null,
     le: pi.created ? new Date(pi.created * 1000).toISOString() : null,
+    // Qui a payé : le Docteur le compare au contact du deal (PRE-06).
+    payeur: charge?.billing_details?.email || pi.receipt_email || null,
   }
 }
 
@@ -56,6 +58,7 @@ const paiementAlma = (p) => {
     rembourse: euros(rembourse),
     resteAVirer: null,
     le: p.created ? new Date(p.created * 1000).toISOString() : null,
+    payeur: p.customer?.email || null,
     etat: { state: p.state ?? null, processing_status: p.processing_status ?? null },
   }
 }

@@ -9,7 +9,7 @@ const { resumerStripe, resumerAlma } = paiementsDeal
 const pi = (o = {}) => ({
   id: 'pi_1', status: 'succeeded', amount: 336000, amount_received: 336000, created: 1758700000,
   payment_method_types: ['customer_balance', 'card'],
-  latest_charge: { amount_refunded: 0, payment_method_details: { type: 'card' } },
+  latest_charge: { amount_refunded: 0, payment_method_details: { type: 'card' }, billing_details: { email: 'payeur@example.fr' } },
   ...o,
 })
 
@@ -17,6 +17,7 @@ test('Stripe : carte payée, encaissée en euros', () => {
   const r = resumerStripe([pi()])
   assert.equal(r.paiements[0].statut, 'paye')
   assert.equal(r.paiements[0].moyen, 'carte')
+  assert.equal(r.paiements[0].payeur, 'payeur@example.fr')
   assert.equal(r.encaisse, 3360)
   assert.equal(r.enAttente, 0)
 })
@@ -51,11 +52,12 @@ test('Stripe : un remboursement se déduit de l\'encaissé ; abandonné et annul
 
 test('Alma : capturé = encaissé d\'un coup, remboursement déduit ; non démarré = abandonné', () => {
   const r = resumerAlma([
-    { id: 'payment_1', state: 'in_progress', processing_status: 'captured', purchase_amount: 250000, installments_count: 3, created: 1758700000, refunds: [{ amount: 10000 }] },
+    { id: 'payment_1', state: 'in_progress', processing_status: 'captured', purchase_amount: 250000, installments_count: 3, created: 1758700000, refunds: [{ amount: 10000 }], customer: { email: 'alma@example.fr' } },
     { id: 'payment_2', state: 'not_started', processing_status: 'not_started', purchase_amount: 250000, installments_count: 3, created: 1758600000 },
   ])
   assert.deepEqual(r.paiements.map(p => [p.id, p.statut]), [['payment_2', 'abandonne'], ['payment_1', 'paye']])
   assert.equal(r.paiements[1].moyen, 'alma 3x')
+  assert.equal(r.paiements[1].payeur, 'alma@example.fr')
   assert.equal(r.encaisse, 2400)
 })
 
