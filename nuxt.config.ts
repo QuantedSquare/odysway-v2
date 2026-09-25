@@ -94,10 +94,7 @@ export default defineNuxtConfig({
       '/prochains-departs': { isr: 60 * 60 * 24 },
 
       // Dynamic content pages with slugs
-      // 1 day. ?from-meta-2 (test A/B rendez-vous, cf. app/utils/rdvVariant.js) est le seul
-      // paramètre gardé dans la clé de cache et transmis au rendu : une entrée en cache
-      // par variante, les autres paramètres (utm, from-meta…) restent lus côté client.
-      '/voyages/**': { isr: { expiration: 60 * 60 * 24, allowQuery: ['from-meta-2'], passQuery: true } },
+      '/voyages/**': { isr: 60 * 60 * 24 }, // 1 day — inclut les landings /voyages/<slug>/lp
       '/sur-mesure/**': { isr: 60 * 60 * 24 }, // 1 day — unlisted sur-mesure sales pages
       '/destinations/**': { isr: 60 * 60 * 24 },
       '/thematiques/**': { isr: 60 * 60 * 24 }, // 1 day

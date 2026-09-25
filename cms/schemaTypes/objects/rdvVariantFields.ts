@@ -1,6 +1,6 @@
 import {defineField} from 'sanity'
 
-// Test A/B « prise de rendez-vous » de la page voyage (variante B, ?from-meta-2).
+// Test A/B « prise de rendez-vous » de la page voyage (variante B, /voyages/<slug>/lp).
 //
 // Chaque champ est facultatif : un champ vide garde le texte par défaut codé dans
 // app/utils/rdvVariant.js (affiché ici en placeholder). Ordre de priorité :
@@ -66,7 +66,7 @@ export const rdvSectionContentFields = [
 export const rdvVariantField = defineField({
   name: 'rdvVariant',
   title: 'Test A/B : variante rendez-vous',
-  description: `Page servie quand l'URL contient ?from-meta-2. ${DEFAULT_HINT}`,
+  description: `Page servie sur /voyages/<slug>/lp (la page /voyages/<slug> reste inchangée). ${DEFAULT_HINT}`,
   type: 'object',
   group: 'rdv_ab_test',
   options: {collapsible: true, collapsed: false},
@@ -74,7 +74,7 @@ export const rdvVariantField = defineField({
     defineField({
       name: 'enabled',
       title: 'Variante active',
-      description: 'Décocher pour servir la page actuelle à tout le monde, même avec ?from-meta-2.',
+      description: 'Décocher pour servir la page actuelle à tout le monde, y compris sur /lp.',
       type: 'boolean',
       initialValue: true,
     }),
