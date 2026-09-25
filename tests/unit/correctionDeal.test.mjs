@@ -4,7 +4,7 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import correctionDeal from '../../server/utils/correctionDeal.js'
 
-const { valeurValide, versAc, depuisAc, ecartsAvant, dealAPlat, noteCorrection, noteEncaissement, dejaEncaisse } = correctionDeal
+const { valeurValide, versAc, depuisAc, ecartsAvant, dealAPlat, noteCorrection, noteEncaissement, noteRecalcul, dejaEncaisse } = correctionDeal
 
 // Deal AC fusionné avec ses champs mappés, comme le lit dealMirrorSync.lireDeal.
 const dealAc = {
@@ -72,4 +72,11 @@ test('encaissement : note lisible et marquée, retrouvée au rejeu', () => {
   assert.match(note, /^Encaissement hors ligne – Chèque vacances – 350 € – reçu le 24\/09\/2026 – réf\. ANCV 12 – saisi dans Ulysse par romain@odysway\.com \[encaissement 4f1c2d3e-/)
   assert.equal(dejaEncaisse([{ note: 'Paiement CB' }, { note }], id), true)
   assert.equal(dejaEncaisse([{ note: 'Paiement CB' }], id), false)
+})
+
+test('lien de paiement corrigeable (CHK-02), et note d\'un recalcul de la valeur', () => {
+  assert.equal(valeurValide('paiementLink', 'https://odysway.com/checkout?type=balance&booked_id=b1'), true)
+  assert.equal(noteRecalcul({ avant: { valeur: 1490, reste: 843 }, apres: { valeur: 1590, reste: 943 }, auteur: 'lucie@odysway.com', regle: 'ARG-01' }),
+    'Recalcul de la valeur depuis Ulysse (Docteur, ARG-01) par lucie@odysway.com : valeur 1\u202f490 € → 1\u202f590 €, reste à payer 843 € → 943 €')
+  assert.match(noteRecalcul({ avant: { valeur: null, reste: null }, apres: { valeur: 10, reste: 0 }, auteur: 'x', regle: null }), /valeur — → 10 €/)
 })
