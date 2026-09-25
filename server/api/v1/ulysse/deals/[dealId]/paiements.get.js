@@ -33,8 +33,10 @@ const lireAlma = async (dealId) => {
   const { data, error } = await supabase.from('alma_ids').select('id').eq('deal_id', dealId)
   if (error) throw new Error(error.message)
   const paiements = await Promise.all((data || []).map(r => alma.lirePaiement(r.id)))
-  // Les paiements d'avant le rattachement : combien restent à rattacher.
-  const { count } = await supabase.from('alma_ids').select('id', { count: 'exact', head: true }).is('deal_id', null)
+  // Les paiements d'avant le rattachement : combien restent à tenter. Ceux
+  // marqués introuvables ou sans deal ne se rattacheront jamais : ils ne
+  // suspendent pas le rapprochement.
+  const { count } = await supabase.from('alma_ids').select('id', { count: 'exact', head: true }).is('deal_id', null).is('rattachement', null)
   return { ...paiementsDeal.resumerAlma(paiements), nonRattaches: count ?? null }
 }
 

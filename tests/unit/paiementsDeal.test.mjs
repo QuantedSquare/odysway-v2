@@ -4,7 +4,7 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import paiementsDeal from '../../server/utils/paiementsDeal.js'
 
-const { resumerStripe, resumerAlma } = paiementsDeal
+const { resumerStripe, resumerAlma, dealDuPaiementAlma } = paiementsDeal
 
 const pi = (o = {}) => ({
   id: 'pi_1', status: 'succeeded', amount: 336000, amount_received: 336000, created: 1758700000,
@@ -64,4 +64,13 @@ test('Alma : capturé = encaissé d\'un coup, remboursement déduit ; non démar
 test('aucun paiement : zéro encaissé, rien en attente', () => {
   assert.deepEqual(resumerStripe([]), { paiements: [], encaisse: 0, enAttente: 0 })
   assert.deepEqual(resumerAlma(null), { paiements: [], encaisse: 0, enAttente: 0 })
+})
+
+test('deal d\'un paiement Alma : `id` du deal AC, ou les clés d\'anciens formats ; rien sinon', () => {
+  assert.equal(dealDuPaiementAlma({ custom_data: { id: '16198', slug: 'japon' } }), 16198)
+  assert.equal(dealDuPaiementAlma({ custom_data: { dealId: 15001 } }), 15001)
+  assert.equal(dealDuPaiementAlma({ custom_data: { deal_id: '14002' } }), 14002)
+  assert.equal(dealDuPaiementAlma({ custom_data: { email: 'x@example.fr' } }), null)
+  assert.equal(dealDuPaiementAlma({ custom_data: 'texte' }), null)
+  assert.equal(dealDuPaiementAlma({}), null)
 })
