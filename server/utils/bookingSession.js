@@ -58,6 +58,10 @@ export const getBookingUserOrNull = (event) => {
  *     restore-child (POST), ac/deals/[dealId]/inspect (GET)
  *   - [dateId] (PUT) accepte aussi `travel_slug`, pour rattacher une date
  *     orpheline à son voyage Sanity
+ *   - Docteur d'Ulysse, sous /api/v1/ulysse/ et par ce jeton SEUL
+ *     (`requireUlysseService`) : paiements Stripe et Alma d'un deal, correction
+ *     d'un deal (AC et miroir), encaissement hors ligne, recompte des places
+ *     d'une date, places d'une réservation, rattachement des paiements Alma
  *
  * Les lectures n'en ont pas besoin : Ulysse lit la même base Supabase.
  */
@@ -76,6 +80,17 @@ export const getUlysseServiceUser = (event) => {
 
   const email = getHeader(event, 'x-ulysse-user') || 'ulysse@odysway.com'
   return { sub: 'ulysse-service', email, name: `Ulysse · ${email}`, role: 'service' }
+}
+
+/**
+ * Endpoints propres à Ulysse (/api/v1/ulysse/) : son jeton, sans repli sur la
+ * session du BMS. Ils écrivent dans AC au nom d'un utilisateur d'Ulysse, dont
+ * l'email (`x-ulysse-user`) signe les notes et le journal.
+ */
+export const requireUlysseService = (event) => {
+  const user = getUlysseServiceUser(event)
+  if (!user) throw createError({ statusCode: 401, statusMessage: 'Jeton de service Ulysse requis.' })
+  return user
 }
 
 export const requireBookingUser = (event) => {

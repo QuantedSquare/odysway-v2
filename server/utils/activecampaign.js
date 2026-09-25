@@ -451,6 +451,17 @@ const getAllDeal = async id => await apiRequest(`/contacts/${id}/deals`)
 
 const addNote = async (dealId, data) => await apiRequest(`/deals/${dealId}/notes`, 'post', data)
 
+// Notes d'un deal, les plus récentes d'abord. Sert aux encaissements d'Ulysse,
+// qui y cherchent leur marqueur avant d'écrire (idempotence).
+const getDealNotes = async (dealId) => {
+  const response = await apiRequest(`/deals/${dealId}/notes?limit=100`)
+  return response?.notes || []
+}
+
+// Statut natif du deal (0 ouvert, 1 gagné, 2 perdu) : `updateDeal` ne le
+// transmet pas (transformDealForAPI ne garde que contact, groupe, étape…).
+const updateDealStatus = (dealId, status) => apiRequest(`/deals/${dealId}`, 'put', { deal: { status } })
+
 const retrieveOwner = async (dealId) => {
   try {
     const res = await apiRequest(`/deals/${dealId}/owner`)
@@ -704,7 +715,9 @@ export default {
   createDeal, // OK
   createMinimalDeal,
   updateDeal,
+  updateDealStatus,
   addNote,
+  getDealNotes,
   recalculatTotalValues,
   deleteDeal,
   // --- Gestions Départs ---

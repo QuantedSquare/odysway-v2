@@ -115,30 +115,42 @@ const createAlmaSession = async (order) => {
   return res.data
 }
 
-const insertAlmaId = async (paymentId) => {
-  const { data, error } = await supabase.from('alma_ids').select('id').eq('id', paymentId).maybeSingle()
+// Garde la trace du paiement et de son deal : le Docteur d'Ulysse y retrouve
+// les paiements Alma d'un deal (la note AC ne porte pas l'identifiant Alma).
+// Une notification reçue deux fois ne réécrit rien, sauf un deal manquant.
+const insertAlmaId = async (paymentId, dealId = null) => {
+  const { data, error } = await supabase.from('alma_ids').select('id, deal_id').eq('id', paymentId).maybeSingle()
   if (error) {
     console.error('Supabase error retrieving alma id:', error)
     throw new Error(`Error retrieving alma id: ${error.message}`)
   }
   if (data) {
     console.log('Payment already handled in supabase:', paymentId)
-    setResponseStatus(event, 200)
-  }
-  else {
-    const { data, error } = await supabase
-      .from('alma_ids')
-      .insert([{ id: paymentId }])
-      .select()
-    if (error) {
-      console.error('Error inserting alma ID:', error)
-      throw createError({
-        statusCode: 500,
-        statusMessage: 'Database error',
-      })
+    if (dealId && !data.deal_id) {
+      const { error: majErreur } = await supabase.from('alma_ids').update({ deal_id: dealId }).eq('id', paymentId)
+      if (majErreur) console.error('Error linking alma id to its deal:', majErreur)
     }
-    console.log('Alma Paiement, inserted id in supabase:', data)
+    return
   }
+  const { data: insere, error: insertErreur } = await supabase
+    .from('alma_ids')
+    .insert([{ id: paymentId, deal_id: dealId }])
+    .select()
+  if (insertErreur) {
+    console.error('Error inserting alma ID:', insertErreur)
+    throw createError({
+      statusCode: 500,
+      statusMessage: 'Database error',
+    })
+  }
+  console.log('Alma Paiement, inserted id in supabase:', insere)
+}
+
+// Un paiement Alma tel qu'Alma le décrit, quel que soit son état (capturé,
+// annulé, en cours). `retrievePayment`, lui, refuse tout ce qui n'est pas capturé.
+const lirePaiement = async (paymentId) => {
+  const res = await customAxios({ url: `payments/${paymentId}`, method: 'GET' })
+  return res.data
 }
 
 const retrievePayment = async (paymentId) => {
@@ -302,6 +314,7 @@ const handlePaymentSession = async (session) => {
 export default {
   createAlmaSession,
   retrievePayment,
+  lirePaiement,
   insertAlmaId,
   handlePaymentSession,
 }

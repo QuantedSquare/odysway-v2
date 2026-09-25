@@ -63,22 +63,6 @@ const idsVivants = async () => {
   return [...new Set(ids)].sort((a, b) => a - b)
 }
 
-// Libellés que le webhook reçoit dans sa charge mais que l'API REST ne donne
-// qu'en identifiants : étapes, pipelines, propriétaires.
-const lireLibelles = async () => {
-  const [etapes, pipelines, utilisateurs] = await Promise.all([
-    activecampaign.listStages(),
-    activecampaign.listPipelines(),
-    activecampaign.listUsers(),
-  ])
-  const parId = (lignes, libelle) => Object.fromEntries((lignes || []).map(l => [String(l.id), libelle(l)]))
-  return {
-    stages: parId(etapes?.dealStages, l => l.title),
-    pipelines: parId(pipelines?.dealGroups, l => l.title),
-    owners: parId(utilisateurs?.users, l => `${l.firstName || ''} ${l.lastName || ''}`.trim() || null),
-  }
-}
-
 export default defineEventHandler(async (event) => {
   const secret = process.env.CRON_SECRET
   if (!secret || getHeader(event, 'x-cron-secret') !== secret) {
@@ -103,7 +87,7 @@ export default defineEventHandler(async (event) => {
   }
   const page = tous.slice(offset, offset + limit)
 
-  const lookups = await lireLibelles()
+  const lookups = await dealMirrorSync.lireLibelles()
   const resultat = { scope, dryRun, total: tous.length, offset, limit, upserted: 0, ignores: [], erreurs: [], apercu: [] }
 
   for (const dealId of page) {

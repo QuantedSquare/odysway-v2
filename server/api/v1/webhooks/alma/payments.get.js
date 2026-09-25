@@ -9,7 +9,7 @@ export default defineEventHandler(async (event) => {
     // Retrieve and process payment
     const payment = await alma.retrievePayment(pid)
 
-    await alma.insertAlmaId(pid)
+    await alma.insertAlmaId(pid, payment.custom_data?.id ?? null)
 
     // Process payment session
     await alma.handlePaymentSession(payment)
