@@ -256,6 +256,7 @@ Files attached to travel dates.
 Tracks Alma payment IDs to prevent duplicate processing.
 - `id` text PK
 - `deal_id` bigint — AC deal paid by this Alma payment (set by the Alma webhook since 09/2026; older rows linked by `POST /api/v1/ulysse/alma/rattacher`). The AC note of an Alma payment does not carry the Alma id: this column is the only link.
+- `rattachement` text — `introuvable` (404 at Alma live: sandbox test payments stored in the same base) or `sans_deal` (no deal in `custom_data` nor `booked_dates`). Such rows never block Ulysse's Alma reconciliation.
 
 ### `stripe_processed_events`
 Idempotency guard for Stripe webhook events.

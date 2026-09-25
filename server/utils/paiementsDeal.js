@@ -79,7 +79,21 @@ const resumerAlma = (payments) => {
   return { paiements, ...totaliser(paiements) }
 }
 
+// Le deal d'un paiement Alma, d'après son `custom_data`. Le checkout actuel y
+// met le deal AC entier (`id`) ; des versions antérieures ont pu écrire
+// `dealId` ou `deal_id`. `null` si aucun n'est un entier positif.
+const dealDuPaiementAlma = (p) => {
+  const cd = p?.custom_data
+  if (!cd || typeof cd !== 'object') return null
+  for (const cle of ['id', 'dealId', 'deal_id']) {
+    const n = Number.parseInt(cd[cle], 10)
+    if (Number.isInteger(n) && n > 0) return n
+  }
+  return null
+}
+
 export default {
   resumerStripe,
   resumerAlma,
+  dealDuPaiementAlma,
 }
