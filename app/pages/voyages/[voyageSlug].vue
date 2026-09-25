@@ -251,6 +251,8 @@ import {
 definePageMeta({
   layout: 'voyage',
   middleware: ['old-voyages-link-redirection'],
+  // Variante B du test A/B rendez-vous : même page, servie sur /voyages/<slug>/lp.
+  alias: ['/voyages/:voyageSlug/lp'],
 })
 
 const route = useRoute()
@@ -269,14 +271,14 @@ const { data: voyagePropositions } = await useSanityQuery(
   { slug: voyageSlugRef, experienceTypeId: experienceTypeIdRef },
   { lazy: true },
 )
-// Test A/B « prise de rendez-vous » : ?from-meta-2 sert la variante B (cf. utils/rdvVariant).
+// Test A/B « prise de rendez-vous » : /voyages/<slug>/lp sert la variante B (cf. utils/rdvVariant).
 // Textes : défauts du code < page_voyage.rdvVariant < voyage.rdvBlock (bloc principal).
 const rdvContent = computed(() => {
   const content = withRdvDefaults(RDV_VARIANT_DEFAULTS, page.value?.rdvVariant)
   content.rdvSection = withRdvDefaults(content.rdvSection, voyage.value?.rdvBlock)
   return content
 })
-const abVariant = computed(() => rdvContent.value.enabled ? resolveVoyageVariant(route.query) : 'A')
+const abVariant = computed(() => rdvContent.value.enabled ? resolveVoyageVariant(route.path) : 'A')
 const isRdvVariant = computed(() => abVariant.value === 'B')
 
 // Les dates ne sont chargées ici que pour la variante B (carte + liste réduite) ;
@@ -352,7 +354,9 @@ const buildMainImageUrl = (image, width, height, quality = 90) => {
 // SEO composable — called once during setup (not inside watchEffect)
 if (voyage.value && !customTravel.value) {
   useSeo({
-    seoData: voyage.value.seo,
+    // La landing /lp duplique la page voyage : noindex, canonical vers /voyages/<slug>.
+    seoData: isRdvVariant.value ? { ...voyage.value.seo, robotsIndex: false } : voyage.value.seo,
+    ...(isRdvVariant.value && { baseUrl: `/voyages/${voyage.value.slug?.current}` }),
     content: voyage.value,
     pageType: 'website',
     slug: voyage.value.slug?.current,

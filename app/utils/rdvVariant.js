@@ -3,18 +3,19 @@
 // A (témoin)  : page voyage actuelle.
 // B (rdv)     : la prise de rendez-vous passe devant, les dates sont réduites.
 //
-// La variante B est servie quand l'URL contient ?from-meta-2 (lien de la campagne
-// Meta dédiée au test). Sans ce paramètre → A. C'est le seul paramètre gardé dans
-// la clé de cache ISR (cf. routeRules dans nuxt.config.ts).
+// La variante B est servie sur /voyages/<slug>/lp (alias de la page voyage, cf.
+// definePageMeta de pages/voyages/[voyageSlug].vue) ; /voyages/<slug> reste la
+// page A. Deux chemins distincts = deux entrées de cache ISR, sans réglage.
 
 import dayjs from 'dayjs'
 import { getDateStatus } from '~/utils/getDateStatus'
 
 export const AB_TEST_NAME = 'voyage_rdv'
-export const VARIANT_QUERY_KEY = 'from-meta-2'
+export const LANDING_SUFFIX = 'lp'
+const LANDING_PATH_RE = new RegExp(`^/voyages/[^/]+/${LANDING_SUFFIX}/?$`)
 
-export function resolveVoyageVariant(query = {}) {
-  return VARIANT_QUERY_KEY in query ? 'B' : 'A'
+export function resolveVoyageVariant(path = '') {
+  return LANDING_PATH_RE.test(path) ? 'B' : 'A'
 }
 
 // Textes par défaut de la variante B. Sanity (page_voyage.rdvVariant, puis
