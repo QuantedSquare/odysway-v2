@@ -48,11 +48,14 @@ const computeDepartureEnrichment = async (travelDateId, travelDate) => {
 
   const bmsLink = `${origin}/booking-management/${travelDate.travel_slug}/${travelDateId}`
 
+  // Réservations payées seulement : une option (prospect, non payée) gonflait la
+  // valeur et les voyageurs du dossier de départ (constat du Docteur d'Ulysse, RES-11).
   const { data: paidBookings } = await supabase
     .from('booked_dates')
     .select('deal_id, booked_places')
     .eq('travel_date_id', travelDateId)
     .eq('deleted', false)
+    .eq('is_option', false)
     .gt('booked_places', 0)
 
   let totalValue = 0
