@@ -1,5 +1,5 @@
-// Attribution des leads : UTM, plateforme publicitaire (?from-meta / ?from-g-ads)
-// et variante du test A/B de la page voyage.
+// Attribution des leads : UTM, plateforme publicitaire (?from-meta, ?from-meta-2,
+// ?from-g-ads) et variante du test A/B de la page voyage.
 //
 // Tout est rangé dans la clé localStorage historique `utmSource`, déjà lue par le
 // devis, le tunnel et la newsletter pour remplir le champ `utm` du deal AC :
@@ -7,17 +7,18 @@
 // La chaîne n'est réécrite que lorsqu'une nouvelle visite porte au moins un de ces
 // paramètres (dernier contact « marqué », comme avant).
 
-import { VARIANT_QUERY_KEY, resolveVoyageVariant } from '~/utils/rdvVariant'
+import { resolveVoyageVariant } from '~/utils/rdvVariant'
 
 const UTM_STORAGE_KEY = 'utmSource'
 
 const firstValue = value => (Array.isArray(value) ? value[0] : value) ?? ''
 
-// Les campagnes marquent leurs liens avec ?from-meta ou ?from-g-ads. Les click ids
+// Les campagnes marquent leurs liens avec ?from-meta (?from-meta-2 pour la campagne du
+// test A/B) ou ?from-g-ads. Les click ids
 // (fbclid, gclid…) ajoutés automatiquement par les régies servent de filet.
 export function detectAdPlatform(query = {}) {
   const from = String(firstValue(query.from)).toLowerCase()
-  if ('from-meta' in query || from === 'meta' || 'fbclid' in query) return 'meta'
+  if ('from-meta' in query || 'from-meta-2' in query || from === 'meta' || 'fbclid' in query) return 'meta'
   if ('from-g-ads' in query || from === 'g-ads' || 'gclid' in query || 'gbraid' in query || 'wbraid' in query) return 'g-ads'
   return null
 }
@@ -52,9 +53,8 @@ export function useLeadSource() {
     const platform = detectAdPlatform(query)
     if (platform) entries.push(`from=${platform}`)
 
-    if (VARIANT_QUERY_KEY in query) {
-      entries.push(`${VARIANT_QUERY_KEY}=${resolveVoyageVariant(query)}`)
-    }
+    // La variante B n'existe qu'avec ?from-meta-2 : on ne marque que ces visites.
+    if (resolveVoyageVariant(query) === 'B') entries.push('variante=B')
 
     if (entries.length) {
       writeStorage(UTM_STORAGE_KEY, entries.join('&'))

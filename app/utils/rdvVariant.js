@@ -3,22 +3,18 @@
 // A (témoin)  : page voyage actuelle.
 // B (rdv)     : la prise de rendez-vous passe devant, les dates sont réduites.
 //
-// La variante vient de ?variante=… (seul paramètre gardé dans la clé de cache ISR,
-// cf. routeRules dans nuxt.config.ts) :
-//   absent, "a" ou "ga"  → A
-//   toute autre valeur   → B
+// La variante B est servie quand l'URL contient ?from-meta-2 (lien de la campagne
+// Meta dédiée au test). Sans ce paramètre → A. C'est le seul paramètre gardé dans
+// la clé de cache ISR (cf. routeRules dans nuxt.config.ts).
 
 import dayjs from 'dayjs'
 import { getDateStatus } from '~/utils/getDateStatus'
 
 export const AB_TEST_NAME = 'voyage_rdv'
-export const VARIANT_QUERY_KEY = 'variante'
-const CONTROL_VALUES = ['', 'a', 'ga']
+export const VARIANT_QUERY_KEY = 'from-meta-2'
 
 export function resolveVoyageVariant(query = {}) {
-  const raw = query[VARIANT_QUERY_KEY]
-  const value = String((Array.isArray(raw) ? raw[0] : raw) ?? '').trim().toLowerCase()
-  return CONTROL_VALUES.includes(value) ? 'A' : 'B'
+  return VARIANT_QUERY_KEY in query ? 'B' : 'A'
 }
 
 // Textes par défaut de la variante B. Sanity (page_voyage.rdvVariant, puis
@@ -51,7 +47,7 @@ export const RDV_VARIANT_DEFAULTS = {
     // specialistName + initiale. specialistTitle prime sur le poste du membre.
     specialist: null,
     specialistName: 'Lucie',
-    specialistTitle: 'spécialiste Grand Nord',
+    specialistTitle: '',
     specialistSubtitle: 'Répond aussi sur WhatsApp, du lundi au vendredi, de 9 h à 19 h',
     slotsTitle: 'Prochains créneaux',
     slotsSubtitle: 'Téléphone ou visio, 20 minutes',

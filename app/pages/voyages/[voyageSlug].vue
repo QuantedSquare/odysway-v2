@@ -269,7 +269,7 @@ const { data: voyagePropositions } = await useSanityQuery(
   { slug: voyageSlugRef, experienceTypeId: experienceTypeIdRef },
   { lazy: true },
 )
-// Test A/B « prise de rendez-vous » : ?variante=… choisit la page (cf. utils/rdvVariant).
+// Test A/B « prise de rendez-vous » : ?from-meta-2 sert la variante B (cf. utils/rdvVariant).
 // Textes : défauts du code < page_voyage.rdvVariant < voyage.rdvBlock (bloc principal).
 const rdvContent = computed(() => {
   const content = withRdvDefaults(RDV_VARIANT_DEFAULTS, page.value?.rdvVariant)

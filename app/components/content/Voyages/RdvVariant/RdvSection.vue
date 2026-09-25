@@ -133,7 +133,7 @@ const displayMode = computed(() => stegaClean(props.section.displayMode) || 'bot
 const showText = computed(() => displayMode.value !== 'bullets')
 const showBullets = computed(() => displayMode.value !== 'text')
 
-// « Lucie, spécialiste Grand Nord » : la référence teamMember apporte photo et nom,
+// « Lucie, <titre> » : la référence teamMember apporte photo et nom,
 // sinon specialistName (défaut du code ou Sanity). Le titre du bloc prime sur le poste.
 const specialistName = computed(() => props.section.specialist?.name || props.section.specialistName)
 const specialistLabel = computed(() => {

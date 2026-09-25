@@ -28,9 +28,9 @@ export default defineEventHandler(async (event) => {
     // === Pages with Dynamic Slugs ===
     if (documentType === 'voyage' && slug) {
       pathsToRevalidate.push(`/voyages/${slug}`)
-      // Variante B du test A/B rendez-vous : ?variante fait partie de la clé ISR
+      // Variante B du test A/B rendez-vous : ?from-meta-2 fait partie de la clé ISR
       // (nuxt.config.ts), c'est donc une entrée de cache distincte.
-      pathsToRevalidate.push(`/voyages/${slug}?variante=b`)
+      pathsToRevalidate.push(`/voyages/${slug}?from-meta-2`)
       // Unlisted sales page of sur-mesure-only voyages (customPagePublished)
       pathsToRevalidate.push(`/sur-mesure/${slug}`)
       // Also revalidate search and destination pages that might list this voyage

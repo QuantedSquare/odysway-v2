@@ -147,7 +147,7 @@ onMounted(() => {
   document.head.appendChild(script)
 })
 
-// UTM + ?from-meta / ?from-g-ads + variante A/B → localStorage `utmSource`,
+// UTM + ?from-meta(-2) / ?from-g-ads + variante A/B → localStorage `utmSource`,
 // repris dans le champ `utm` des deals (devis, tunnel, newsletter).
 const { captureLeadSource } = useLeadSource()
 onMounted(() => {

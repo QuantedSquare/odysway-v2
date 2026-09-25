@@ -1,6 +1,6 @@
 import {defineField} from 'sanity'
 
-// Test A/B « prise de rendez-vous » de la page voyage (variante B, ?variante=b).
+// Test A/B « prise de rendez-vous » de la page voyage (variante B, ?from-meta-2).
 //
 // Chaque champ est facultatif : un champ vide garde le texte par défaut codé dans
 // app/utils/rdvVariant.js (affiché ici en placeholder). Ordre de priorité :
@@ -59,14 +59,14 @@ export const rdvSectionContentFields = [
     to: [{type: 'teamMember'}],
   }),
   text('specialistName', 'Nom du spécialiste (sans référence)', 'Lucie'),
-  text('specialistTitle', 'Titre du spécialiste', 'spécialiste Grand Nord'),
+  text('specialistTitle', 'Titre du spécialiste (optionnel)', 'ex. spécialiste Grand Nord'),
   text('specialistSubtitle', 'Sous-titre du spécialiste', 'Répond aussi sur WhatsApp, du lundi au vendredi, de 9 h à 19 h'),
 ]
 
 export const rdvVariantField = defineField({
   name: 'rdvVariant',
   title: 'Test A/B : variante rendez-vous',
-  description: `Page servie avec ?variante=b (toute valeur autre que « a » ou « ga »). ${DEFAULT_HINT}`,
+  description: `Page servie quand l'URL contient ?from-meta-2. ${DEFAULT_HINT}`,
   type: 'object',
   group: 'rdv_ab_test',
   options: {collapsible: true, collapsed: false},
@@ -74,7 +74,7 @@ export const rdvVariantField = defineField({
     defineField({
       name: 'enabled',
       title: 'Variante active',
-      description: 'Décocher pour servir la page actuelle à tout le monde, même avec ?variante=b.',
+      description: 'Décocher pour servir la page actuelle à tout le monde, même avec ?from-meta-2.',
       type: 'boolean',
       initialValue: true,
     }),
