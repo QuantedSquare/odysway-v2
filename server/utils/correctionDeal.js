@@ -25,6 +25,7 @@ const CHAMPS = {
   travelType: { type: 'texte', libelle: 'Type de voyage' },
   acquisitionSource: { type: 'texte', libelle: 'Source d\'acquisition' },
   promoCode: { type: 'texte', libelle: 'Code promo' },
+  paiementLink: { type: 'texte', libelle: 'Lien de paiement' },
   includeFlight: { type: 'booleen', libelle: 'Vol inclus' },
   gotEarlybird: { type: 'booleen', libelle: 'Early bird' },
   gotLastMinute: { type: 'booleen', libelle: 'Last minute' },
@@ -117,6 +118,7 @@ const dealAPlat = champs => Object.fromEntries(champs
   .map(c => [c.cle, versAc(c.cle, c.apres)]))
 
 const eurosTexte = v => `${v.toLocaleString('fr-FR', { maximumFractionDigits: 2 })} €`
+const eurosOuTiret = v => (v === null || v === undefined ? '—' : eurosTexte(v))
 
 const afficher = (cle, v) => {
   if (v === null || v === undefined) return '—'
@@ -155,6 +157,12 @@ const noteEncaissement = ({ id, montant, moyen, date, reference, auteur }) => [
   `saisi dans Ulysse par ${auteur}`,
 ].filter(Boolean).join(' – ') + ` ${marqueurEncaissement(id)}`
 
+/** Note AC d'un recalcul de la valeur demandé par le Docteur (ARG-01, ARG-02). */
+const noteRecalcul = ({ avant, apres, auteur, regle }) =>
+  `Recalcul de la valeur depuis Ulysse (Docteur${regle ? `, ${regle}` : ''}) par ${auteur} : `
+  + `valeur ${eurosOuTiret(avant.valeur)} → ${eurosOuTiret(apres.valeur)}, `
+  + `reste à payer ${eurosOuTiret(avant.reste)} → ${eurosOuTiret(apres.reste)}`
+
 const dejaEncaisse = (notes, id) => (notes || []).some(n => String(n?.note || '').includes(marqueurEncaissement(id)))
 
 export default {
@@ -168,5 +176,6 @@ export default {
   dealAPlat,
   noteCorrection,
   noteEncaissement,
+  noteRecalcul,
   dejaEncaisse,
 }

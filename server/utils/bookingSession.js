@@ -61,7 +61,9 @@ export const getBookingUserOrNull = (event) => {
  *   - Docteur d'Ulysse, sous /api/v1/ulysse/ et par ce jeton SEUL
  *     (`requireUlysseService`) : paiements Stripe et Alma d'un deal, correction
  *     d'un deal (AC et miroir), encaissement hors ligne, recompte des places
- *     d'une date, places d'une réservation, rattachement des paiements Alma
+ *     d'une date, places d'une réservation, rattachement des paiements Alma,
+ *     recalcul de la valeur, resynchronisation du miroir et d'un dossier de
+ *     départ, notes d'un deal
  *
  * Les lectures n'en ont pas besoin : Ulysse lit la même base Supabase.
  */

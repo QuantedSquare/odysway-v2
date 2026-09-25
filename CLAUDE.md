@@ -89,6 +89,10 @@ Ulysse (the back-office replacing /booking-management) calls these with `x-ulyss
 - `POST deals/:dealId/encaissement` — offline payment (chèque vacances, chèque…) added to `alreadyPaid`; idempotent through a marker in the AC note, 409 if `alreadyPaid` changed.
 - `POST dates/:dateId/recompter`, `POST booked/:bookedId/places` — seat recount, booked places aligned.
 - `POST alma/rattacher` — one-off backfill of `alma_ids.deal_id` (read-only at Alma).
+- `POST deals/:dealId/recalculer` — reruns `recalculatTotalValues`, signed AC note, mirror rewritten (ARG-01/02).
+- `POST deals/:dealId/resynchroniser` — rewrites the deal's mirror row from AC (CYC-11). Read-only at AC.
+- `POST dates/:dateId/dossier-depart` — resyncs the pipeline-4 departure deal (value, travellers, stage), same computation as each payment (`departures.resyncDepartureDeal`, RES-11).
+- `GET deals/:dealId/notes` — the deal's AC notes, for the Docteur's timeline.
 
 ## Pipeline logic — the most important concept
 
