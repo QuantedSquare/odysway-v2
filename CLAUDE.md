@@ -81,6 +81,15 @@ cms/
 5. **Content publishing**: Sanity update -> webhook -> Vercel ISR revalidation + Algolia index sync
 6. **Departure management**: AC pipeline 4 (Gestions Departs), auto-creates departure deals, links travelers
 
+## Ulysse endpoints (`/api/v1/ulysse/`)
+
+Ulysse (the back-office replacing /booking-management) calls these with `x-ulysse-service-token` and `x-ulysse-user` ONLY (`requireUlysseService`, no booking session fallback). They serve its « Docteur » (deal health):
+- `GET deals/:dealId/paiements` — Stripe PaymentIntents found by `metadata['dealId']` (bank transfers pending included) and Alma payments via `alma_ids.deal_id`. Read-only.
+- `POST deals/:dealId/corriger` — fix whitelisted fields (`server/utils/correctionDeal.js`), 409 if AC no longer holds the `avant` values, AC note signed by the Ulysse user, mirror row rewritten at once (`dealMirrorSync`).
+- `POST deals/:dealId/encaissement` — offline payment (chèque vacances, chèque…) added to `alreadyPaid`; idempotent through a marker in the AC note, 409 if `alreadyPaid` changed.
+- `POST dates/:dateId/recompter`, `POST booked/:bookedId/places` — seat recount, booked places aligned.
+- `POST alma/rattacher` — one-off backfill of `alma_ids.deal_id` (read-only at Alma).
+
 ## Pipeline logic — the most important concept
 
 `pipeline_id` is the primary segmentation axis for deals. Understand this before writing any dashboard.
@@ -246,6 +255,7 @@ Files attached to travel dates.
 ### `alma_ids`
 Tracks Alma payment IDs to prevent duplicate processing.
 - `id` text PK
+- `deal_id` bigint — AC deal paid by this Alma payment (set by the Alma webhook since 09/2026; older rows linked by `POST /api/v1/ulysse/alma/rattacher`). The AC note of an Alma payment does not carry the Alma id: this column is the only link.
 
 ### `stripe_processed_events`
 Idempotency guard for Stripe webhook events.
