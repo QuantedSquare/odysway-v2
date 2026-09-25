@@ -541,6 +541,11 @@ const handlePaymentSession = async (session, paymentType) => {
       ? 'Solde réglé'
       : 'Acompte réglé',
   }
+  // Premier paiement : la date de conversion, que rien ne posait (111 voyageurs
+  // sans elle au 22/09/2026, comptés vendus dans aucun mois — CYC-02 du Docteur).
+  if (!deal.conversionDate) {
+    Object.assign(dealData, { conversionDate: new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Paris' }) })
+  }
   if (totalPaid >= +deal.value) {
     Object.assign(dealData, { paiementLink: 'Paiement OK' })
   }

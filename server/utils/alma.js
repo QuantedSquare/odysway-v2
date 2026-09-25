@@ -279,6 +279,10 @@ const handlePaymentSession = async (session) => {
   // Track payment method for sales (AC field 82) — only on a real capture, not a cancel
   if (session.processing_status !== 'canceled') {
     Object.assign(dealData, { paiementMethod: method }) // 'Alma'
+    // Premier paiement : la date de conversion, que rien ne posait (CYC-02 du Docteur d'Ulysse).
+    if (!deal.conversionDate) {
+      Object.assign(dealData, { conversionDate: new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Paris' }) })
+    }
   }
   if (totalPaid >= +deal.value) {
     Object.assign(dealData, { paiementLink: 'Paiement OK' })
