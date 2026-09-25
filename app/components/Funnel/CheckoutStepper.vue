@@ -211,8 +211,14 @@ watch(() => route.query.step, (newVal) => {
 // 💰 Insurance fetching logic
 const { calculatePricePerPerson } = usePricePerTraveler(dynamicDealValues, voyage)
 
+// L'étape assurance ne s'affiche qu'au premier paiement (acompte, total ou
+// sur-mesure, rien encore payé) : voir showInsuranceStep. Le devis Chapka
+// n'est demandé que dans ce cas — un paiement de solde le demandait à chaque
+// ouverture, et un ISO vide le faisait échouer (deal 16198, Docteur d'Ulysse).
+const assuranceProposee = computed(() => ['custom', 'full', 'deposit'].includes(String(route.query.type)) && +voyage?.alreadyPaid === 0)
+
 const fetchInsuranceQuote = async () => {
-  if (!voyage || !dynamicDealValues.value) return
+  if (!voyage || !dynamicDealValues.value || !assuranceProposee.value) return
   const base = calculatePricePerPerson(dynamicDealValues.value, voyage)
 
   const indivRoom = dynamicDealValues.value.indivRoom ? (+voyage.indivRoomPrice || 0) : 0

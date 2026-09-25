@@ -84,6 +84,22 @@ export default defineEventHandler(async (event) => {
         console.error('Error recomputing travel_date', row.travel_date_id, recompute.error)
       }
 
+      // Le deal restait « A posé une option » (étape 27) alors que ses places
+      // étaient libérées (RES-05 du Docteur d'Ulysse) : il passe « A recontacter »
+      // (étape 22), avec une note. Un prospect seulement, et seulement s'il est
+      // encore à l'étape de l'option : un commercial a pu le déplacer entre-temps.
+      if (row.deal_id && deal?.group === '1' && String(deal?.stage) === '27') {
+        try {
+          await activecampaign.updateDeal(row.deal_id, { stage: '22', currentStep: 'Option expirée' })
+          await activecampaign.addNote(row.deal_id, {
+            note: { note: `Option expirée le ${String(row.expiracy_date).slice(0, 10).split('-').reverse().join('/')} : ${row.booked_places} place(s) libérée(s) sur la date. Prospect à recontacter.` },
+          })
+        }
+        catch (err) {
+          console.error('Error moving expired option deal to "A recontacter"', row.deal_id, err?.message)
+        }
+      }
+
       // Slack notification for expired option removal (best-effort)
       if (row.deal_id) {
         try {

@@ -1,6 +1,7 @@
 import axios from 'axios'
 import dayjs from 'dayjs'
 import supabase from './supabase'
+import acReessais from './acReessais'
 
 const config = useRuntimeConfig()
 const isDev = config.public.environment === 'development'
@@ -183,12 +184,15 @@ const transformDealForAPI = (flatDeal) => {
 // API Request Method
 const apiRequest = async (endpoint, method = 'get', data = null) => {
   try {
-    const response = await axios({
+    // Délai maximal, et nouvel essai d'un GET ou d'un PUT sur 502/503/504 ou
+    // délai dépassé ; de toute requête sur 429 (server/utils/acReessais.js).
+    const response = await acReessais.avecReessais(() => axios({
       url: `${baseUrl}${endpoint}`,
       method,
       headers,
       data,
-    })
+      timeout: acReessais.DELAI_AC_MS,
+    }), method)
     // console.log('===========AXIOS RESPONSE===========', response)
     return response.data
   }
@@ -577,7 +581,9 @@ const recalculatTotalValues = async (dealId) => {
 
   const restToPay = value - alreadyPaid
 
-  const shouldUpdate = restToPay !== customFields.restToPay || deal.value !== value
+  // AC rend ses montants en texte : comparer des nombres, sinon la comparaison
+  // est toujours vraie et chaque ouverture du checkout réécrivait le deal.
+  const shouldUpdate = Number(customFields.restToPay) !== restToPay || Number(deal.value) !== value
 
   console.log('recalculatTotalValues summary', {
     dealId,
