@@ -288,7 +288,10 @@ const createCheckoutSession = async (order) => {
 
   // Ensure URLs are properly encoded
   let forcedOrigin = isDev ? 'https://dev.odysway.com' : config.public.siteURL
-  const successUrl = encodeURI(`${forcedOrigin}/confirmation?voyage=${deal.slug}&purchase=true&booked_id=${order.booked_id}`)
+  // Le jeton autorise /confirmation à relire les données personnelles du deal.
+  // Il ne vit que dans cette URL de retour : ni e-mail, ni deal AC.
+  const purchaseToken = createPurchaseToken(order.booked_id)
+  const successUrl = encodeURI(`${forcedOrigin}/confirmation?voyage=${deal.slug}&purchase=true&booked_id=${order.booked_id}${purchaseToken ? `&t=${purchaseToken}` : ''}`)
   const cancelUrl = encodeURI(`${forcedOrigin}${order.currentUrl}`)
 
   console.log('Final URLs:', {
