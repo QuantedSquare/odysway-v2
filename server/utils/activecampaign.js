@@ -206,6 +206,13 @@ const apiRequest = async (endpoint, method = 'get', data = null) => {
       console.error('Response status:', error.response.status)
       console.error('Response data:', JSON.stringify(error.response.data, null, 2))
     }
+    // Les appelants loguent l'erreur entière : en-têtes et requête brute
+    // portent le token AC.
+    for (const c of [error.config, error.response?.config]) {
+      if (c?.headers) c.headers['Api-Token'] = '[masqué]'
+    }
+    delete error.request
+    if (error.response) delete error.response.request
     throw error
   }
 }
@@ -684,21 +691,39 @@ const createMinimalDeal = async ({ email, firstname, lastname, phone, isoContact
     },
   })
   console.log(`[createMinimalDeal] upsertContact done contactId=${contact.id} +${Date.now() - t0}ms`)
-  const res = await apiRequest('/deals', 'post', {
-    deal: {
-      contact: contact.id,
-      title,
-      currency,
-      stage,
-      owner,
-      value: '1',
-      // Posé dès la création (et pas par l'enrich en arrière-plan) pour que la
-      // colonne et l'étape AC ne puissent pas être écrasées après coup.
-      ...(currentStep && { fields: reverseCustomFieldsMap({ currentStep }, customFieldsMapDeal) }),
-    },
-  })
-  console.log(`[createMinimalDeal] POST /deals done dealId=${res.deal.id} +${Date.now() - t0}ms`)
-  return res.deal.id
+  const depuis = new Date()
+  try {
+    const res = await apiRequest('/deals', 'post', {
+      deal: {
+        contact: contact.id,
+        title,
+        currency,
+        stage,
+        owner,
+        value: '1',
+        // Posé dès la création (et pas par l'enrich en arrière-plan) pour que la
+        // colonne et l'étape AC ne puissent pas être écrasées après coup.
+        ...(currentStep && { fields: reverseCustomFieldsMap({ currentStep }, customFieldsMapDeal) }),
+      },
+    })
+    console.log(`[createMinimalDeal] POST /deals done dealId=${res.deal.id} +${Date.now() - t0}ms`)
+    return res.deal.id
+  }
+  catch (err) {
+    if (!acReessais.sansReponse(err)) throw err
+    // AC a pu créer le deal sans répondre à temps : on le reprend plutôt que
+    // d'échouer (le client recommencerait et laisserait un deal fantôme).
+    for (let essai = 0; essai < 3; essai++) {
+      await new Promise(r => setTimeout(r, 2000))
+      const { deals } = await apiRequest(`/contacts/${contact.id}/deals`).catch(() => ({}))
+      const deal = acReessais.dealCreeMalgreDelai(deals, { title, depuis })
+      if (deal) {
+        console.warn(`[createMinimalDeal] POST /deals sans réponse, deal repris dealId=${deal.id} +${Date.now() - t0}ms`)
+        return deal.id
+      }
+    }
+    throw err
+  }
 }
 
 export default {

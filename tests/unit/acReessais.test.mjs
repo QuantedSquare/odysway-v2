@@ -48,3 +48,20 @@ test('un 503 passager est absorbé ; un 404 remonte aussitôt ; au-delà des ess
   await assert.rejects(avecReessais(pannePost, 'post', pause))
   assert.equal(pannePost.n, 1)
 })
+
+test('POST /deals sans réponse : on reprend le deal du même titre créé depuis l\'appel', () => {
+  const { sansReponse, dealCreeMalgreDelai } = acReessais
+  assert.equal(sansReponse(erreur(null, 'ECONNABORTED')), true)
+  assert.equal(sansReponse(erreur(503)), false)
+
+  const depuis = new Date('2026-09-29T11:40:07Z')
+  const title = 'Nager avec les dauphins'
+  const deals = [
+    { id: '16997', title, cdate: '2026-09-29T03:42:19-05:00' }, // deal payé le matin
+    { id: '17007', title, cdate: '2026-09-29T06:40:09-05:00' }, // créé par ce POST
+    { id: '17008', title: 'Autre voyage', cdate: '2026-09-29T06:40:10-05:00' },
+  ]
+  assert.equal(dealCreeMalgreDelai(deals, { title, depuis })?.id, '17007')
+  assert.equal(dealCreeMalgreDelai(deals.slice(0, 1), { title, depuis }), null)
+  assert.equal(dealCreeMalgreDelai(undefined, { title, depuis }), null)
+})
