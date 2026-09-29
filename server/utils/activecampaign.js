@@ -206,6 +206,13 @@ const apiRequest = async (endpoint, method = 'get', data = null) => {
       console.error('Response status:', error.response.status)
       console.error('Response data:', JSON.stringify(error.response.data, null, 2))
     }
+    // Les appelants loguent l'erreur entière : en-têtes et requête brute
+    // portent le token AC.
+    for (const c of [error.config, error.response?.config]) {
+      if (c?.headers) c.headers['Api-Token'] = '[masqué]'
+    }
+    delete error.request
+    if (error.response) delete error.response.request
     throw error
   }
 }
