@@ -175,7 +175,7 @@ const destinationQuery = `
   }
 `
 const sanity = useSanity()
-const { data: destinationSanity } = await useAsyncData(
+const { data: destinationSanity, error: destinationError } = await useAsyncData(
   () => `destination-${slug.value}`,
   async () => {
     if (!isRegionDestination.value) {
@@ -187,6 +187,7 @@ const { data: destinationSanity } = await useAsyncData(
       const data = await sanity.fetch(destinationFromRegionQuery, {
         slug: slug.value,
       })
+      if (!data) return null
       const voyageFlatMap = flatMap(data.destinations.map(destination => destination.voyages))
       return {
         interjection: data.interjection,
@@ -200,6 +201,17 @@ const { data: destinationSanity } = await useAsyncData(
     }
   },
 )
+// Sanity en erreur : on laisse remonter la 500 (non mise en cache ISR).
+if (destinationError.value) {
+  throw destinationError.value
+}
+// Slug inconnu de Sanity (anciens liens, robots) : 404, pas une 500 au rendu
+if (!destinationSanity.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Page not found',
+  })
+}
 
 // Fetch all destinations for carousel and format for ContentLayout
 const destinationsListQuery = `
