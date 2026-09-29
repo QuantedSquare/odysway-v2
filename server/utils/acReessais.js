@@ -13,6 +13,9 @@
 //     rejouer créerait un doublon.
 //
 // PUR, hors l'appel lui-même (tests/unit/acReessais.test.mjs).
+//
+// Le POST /deals sans réponse est repris à part : createMinimalDeal cherche
+// le deal que AC a pu créer (dealCreeMalgreDelai).
 
 const DELAI_AC_MS = 15000
 const RECUPERABLES = new Set([502, 503, 504])
@@ -50,4 +53,23 @@ const avecReessais = async (appel, methode, pause = ms => new Promise(r => setTi
   }
 }
 
-export default { DELAI_AC_MS, reessaisPermis, attente, avecReessais }
+/** Délai dépassé ou connexion coupée, sans réponse d'AC : la requête a pu être traitée. */
+const sansReponse = erreur => !erreur?.response && RESEAU.has(erreur?.code)
+
+/**
+ * Constat du 29/09/2026 (kickstart, deals 17006 et 17007) : un POST /deals
+ * sans réponse sous 15 s avait bien créé le deal chez AC. Parmi les deals du
+ * contact, celui qu'a créé ce POST : même titre, créé depuis `depuis`
+ * (à 5 s près, les horloges d'AC et de Vercel), le plus récent. null sinon.
+ * @param {Array<{id: string, title: string, cdate: string}>} deals
+ * @param {{ title: string, depuis: Date }} attendu
+ */
+const dealCreeMalgreDelai = (deals, { title, depuis }) => {
+  const seuil = depuis.getTime() - 5000
+  const candidats = (deals || [])
+    .filter(d => d.title === title && new Date(d.cdate).getTime() >= seuil)
+    .sort((a, b) => new Date(b.cdate) - new Date(a.cdate))
+  return candidats[0] || null
+}
+
+export default { DELAI_AC_MS, reessaisPermis, attente, avecReessais, sansReponse, dealCreeMalgreDelai }

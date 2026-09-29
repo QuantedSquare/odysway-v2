@@ -691,21 +691,39 @@ const createMinimalDeal = async ({ email, firstname, lastname, phone, isoContact
     },
   })
   console.log(`[createMinimalDeal] upsertContact done contactId=${contact.id} +${Date.now() - t0}ms`)
-  const res = await apiRequest('/deals', 'post', {
-    deal: {
-      contact: contact.id,
-      title,
-      currency,
-      stage,
-      owner,
-      value: '1',
-      // Posé dès la création (et pas par l'enrich en arrière-plan) pour que la
-      // colonne et l'étape AC ne puissent pas être écrasées après coup.
-      ...(currentStep && { fields: reverseCustomFieldsMap({ currentStep }, customFieldsMapDeal) }),
-    },
-  })
-  console.log(`[createMinimalDeal] POST /deals done dealId=${res.deal.id} +${Date.now() - t0}ms`)
-  return res.deal.id
+  const depuis = new Date()
+  try {
+    const res = await apiRequest('/deals', 'post', {
+      deal: {
+        contact: contact.id,
+        title,
+        currency,
+        stage,
+        owner,
+        value: '1',
+        // Posé dès la création (et pas par l'enrich en arrière-plan) pour que la
+        // colonne et l'étape AC ne puissent pas être écrasées après coup.
+        ...(currentStep && { fields: reverseCustomFieldsMap({ currentStep }, customFieldsMapDeal) }),
+      },
+    })
+    console.log(`[createMinimalDeal] POST /deals done dealId=${res.deal.id} +${Date.now() - t0}ms`)
+    return res.deal.id
+  }
+  catch (err) {
+    if (!acReessais.sansReponse(err)) throw err
+    // AC a pu créer le deal sans répondre à temps : on le reprend plutôt que
+    // d'échouer (le client recommencerait et laisserait un deal fantôme).
+    for (let essai = 0; essai < 3; essai++) {
+      await new Promise(r => setTimeout(r, 2000))
+      const { deals } = await apiRequest(`/contacts/${contact.id}/deals`).catch(() => ({}))
+      const deal = acReessais.dealCreeMalgreDelai(deals, { title, depuis })
+      if (deal) {
+        console.warn(`[createMinimalDeal] POST /deals sans réponse, deal repris dealId=${deal.id} +${Date.now() - t0}ms`)
+        return deal.id
+      }
+    }
+    throw err
+  }
 }
 
 export default {
