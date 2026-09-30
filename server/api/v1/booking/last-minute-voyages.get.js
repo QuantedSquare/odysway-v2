@@ -23,8 +23,19 @@ const voyageProjection = `
 `
 
 // "Dernières places" carousel: instead of a hand-picked Sanity list, surface the
-// voyages whose next bookable departure is the closest in time and still has
-// seats left. Each voyage appears only once (its soonest qualifying date).
+// group voyages with an upcoming bookable departure that has fewer than
+// MAX_SEATS_LEFT seats left. Each voyage appears only once (its soonest
+// qualifying date), soonest departure first.
+const MAX_SEATS_LEFT = 4
+
+// Seats left as shown on the public voyage page (DatesPricesItem): the
+// back-office override displayed_booked_seat wins when set.
+const seatsLeft = (d) => {
+  if (d.max_travelers === null || d.max_travelers === undefined) return null
+  const booked = Number(d.displayed_booked_seat) > 0 ? Number(d.displayed_booked_seat) : Number(d.booked_seat || 0)
+  return Number(d.max_travelers) - booked
+}
+
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
   const { limit } = getQuery(event)
@@ -40,7 +51,7 @@ export default defineEventHandler(async (event) => {
   // 1. Pull all upcoming published departures, soonest first.
   const { data: rawDates, error } = await supabase
     .from('travel_dates')
-    .select('travel_slug, booked_seat, max_travelers, displayed_booked_seat, displayed_max_travelers, custom_display, displayed_status, status, departure_date')
+    .select('travel_slug, booked_seat, max_travelers, displayed_booked_seat, departure_date')
     .eq('published', true)
     .eq('is_custom_travel', false)
     .eq('deleted', false)
@@ -54,26 +65,22 @@ export default defineEventHandler(async (event) => {
   }
   if (!rawDates?.length) return []
 
-  // Seats left, honouring the displayed_* overrides when custom_display is on.
-  const hasSeatsLeft = (d) => {
-    const useDisplayed = d.custom_display
-    const max = useDisplayed ? d.displayed_max_travelers : d.max_travelers
-    const booked = useDisplayed ? d.displayed_booked_seat : d.booked_seat
-    // No known cap -> treat as bookable rather than hiding it.
-    if (max == null) return true
-    return Number(max) - Number(booked || 0) > 0
-  }
-
-  // Explicitly "Complet" dates are never last-minute candidates.
-  const isFull = d => d.displayed_status === 'full' || d.status === 'full'
-
-  const candidates = rawDates.filter(d => d.travel_slug && !isFull(d) && hasSeatsLeft(d))
+  // Only dates with between 1 and MAX_SEATS_LEFT - 1 seats left. The status is
+  // irrelevant: 'guaranteed' means min_travelers is reached, not that the date
+  // is full — a date is full only when no seat is left.
+  const candidates = rawDates.filter((d) => {
+    if (!d.travel_slug) return false
+    const left = seatsLeft(d)
+    return left !== null && left > 0 && left < MAX_SEATS_LEFT
+  })
   if (!candidates.length) return []
 
-  // 2. Resolve closingDays (and confirm existence) for the candidate voyages.
+  // 2. Resolve the candidate voyages. Only published group voyages have a
+  //    public voyage page: a « sur-mesure only » voyage (availabilityTypes =
+  //    ['custom']) shows « voyage indisponible » even if it still has dates.
   const candidateSlugs = [...new Set(candidates.map(d => d.travel_slug))]
   const sanityVoyages = await sanityClient.fetch(
-    `*[_type == "voyage" && slug.current in $slugs]{ ${voyageProjection} }`,
+    `*[_type == "voyage" && slug.current in $slugs && 'groupe' in availabilityTypes]{ ${voyageProjection} }`,
     { slugs: candidateSlugs },
   )
   if (!sanityVoyages?.length) return []
@@ -87,8 +94,8 @@ export default defineEventHandler(async (event) => {
   //    then dedupe to the soonest qualifying date per voyage. rawDates is already
   //    sorted ascending, so the first hit per slug is the closest one.
   const now = dayjs()
+  const picked = []
   const seen = new Set()
-  const orderedSlugs = []
 
   for (const d of candidates) {
     const voyage = voyageBySlug[d.travel_slug]
@@ -96,10 +103,12 @@ export default defineEventHandler(async (event) => {
     const closingDays = Number.isFinite(Number(voyage.closingDays)) ? Number(voyage.closingDays) : 30
     if (dayjs(d.departure_date).diff(now, 'day') < closingDays) continue
     seen.add(d.travel_slug)
-    orderedSlugs.push(d.travel_slug)
-    if (orderedSlugs.length >= maxVoyages) break
+    // The card must show this departure, not the voyage's earliest one (which
+    // may have plenty of seats left).
+    picked.push({ ...voyage, lastMinuteDepartureDate: d.departure_date })
+    if (picked.length >= maxVoyages) break
   }
 
-  // 4. Return the voyages in soonest-departure order.
-  return orderedSlugs.map(slug => voyageBySlug[slug]).filter(Boolean)
+  // 4. Voyages in soonest-departure order.
+  return picked
 })
