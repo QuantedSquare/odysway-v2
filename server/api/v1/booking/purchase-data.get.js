@@ -6,6 +6,11 @@
  *
  * Query params:
  * - booked_id: ID from booked_dates table
+ * - t: signed purchase token, bound to booked_id, minted when the Stripe/Alma
+ *      checkout session is created (see server/utils/purchaseToken.js).
+ *      Required: this response carries the customer's email and phone, and
+ *      booked_id alone is not a secret — it travels in every payment link we
+ *      email and is stored in clear on the AC deal.
  *
  * Returns:
  * - transactionId: Stripe/Alma transaction ID (parsed from AC deal notes)
@@ -17,12 +22,23 @@
  */
 
 export default defineEventHandler(async (event) => {
-  const { booked_id } = getQuery(event)
+  const { booked_id, t } = getQuery(event)
 
   if (!booked_id) {
     throw createError({
       statusCode: 400,
       statusMessage: 'booked_id is required',
+    })
+  }
+
+  // Deny by default, in every environment. Deliberately not conditioned on
+  // VERCEL_ENV / NODE_ENV: that default is exactly what leaves the back-office
+  // auth inert on Preview deployments, and personal data leaks the same way on
+  // a Preview URL as on production.
+  if (!verifyPurchaseToken(t, booked_id)) {
+    throw createError({
+      statusCode: 401,
+      statusMessage: 'Invalid or expired purchase token',
     })
   }
 
@@ -34,7 +50,7 @@ export default defineEventHandler(async (event) => {
       .eq('id', booked_id)
       .eq('deleted', false)
       .single()
-    console.log('bookedDate', bookedDate)
+
     if (bookedError || !bookedDate) {
       throw createError({
         statusCode: 404,
@@ -179,11 +195,9 @@ export default defineEventHandler(async (event) => {
       dynamicDealValues: {
         nbAdults: parseInt(deal.nbAdults) || 0,
         nbChildren: parseInt(deal.nbChildren) || 0,
-        nbTravelers: parseInt(deal.nbTravelers) || 0,
         insurance: deal.insurance && deal.insurance !== 'Aucune Assurance' ? deal.insurance : null,
         insuranceCommissionPrice: parseInt(deal.insuranceCommissionPrice) || 0,
         indivRoom: deal.indivRoom === 'Oui',
-        extensionPrice: parseInt(deal.extensionPrice) || 0,
       },
     }
   }
