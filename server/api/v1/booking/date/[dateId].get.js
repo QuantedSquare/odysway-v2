@@ -1,11 +1,18 @@
-import { defineEventHandler, createError, getQuery } from 'h3'
+import { defineEventHandler, getQuery, setResponseHeaders } from 'h3'
 
+// Deux réponses selon l'appelant (readsFullTravelDates) :
+//  - back-office : toutes les colonnes, la date supprimée sur ?includeDeleted ;
+//  - public en production (tunnel de commande) : PUBLIC_CHECKOUT_DATE_COLUMNS
+//    (server/utils/travelDateVisibility.js), dates de test exclues. Les dates
+//    non publiées restent lisibles : les départs privés et sur-mesure se
+//    réservent par /checkout?date_id=.
 export default defineEventHandler(async (event) => {
   const { dateId } = event.context.params
   // ?includeDeleted=true : l'écran de restauration du BMS doit pouvoir charger
   // une date supprimée. Le funnel public, lui, ne doit jamais la voir.
   const { includeDeleted } = getQuery(event)
-  const withDeleted = includeDeleted === 'true' || includeDeleted === '1'
+  const fullAccess = readsFullTravelDates(event)
+  const withDeleted = (includeDeleted === 'true' || includeDeleted === '1') && fullAccess
   if (!dateId) {
     throw funnelReporter.funnelCreateError({
       statusCode: 400,
@@ -15,11 +22,16 @@ export default defineEventHandler(async (event) => {
       message: 'dateId requis',
     })
   }
+  // La réponse dépend de l'appelant : la version complète ne doit jamais être
+  // retenue par un cache partagé puis resservie à un anonyme.
+  if (fullAccess) setResponseHeaders(event, { 'cache-control': 'private, no-store' })
+
   let query = supabase
     .from('travel_dates')
-    .select('*')
+    .select(fullAccess ? '*' : PUBLIC_CHECKOUT_DATE_COLUMNS.join(','))
     .eq('id', dateId)
   if (!withDeleted) query = query.eq('deleted', false)
+  if (!fullAccess) query = query.eq('is_test', false)
 
   const { data, error } = await query.maybeSingle()
 
