@@ -42,11 +42,16 @@ const createCheckoutSession = async (order) => {
 
   function calculatDepositeValue(data) {
     console.log('data for deposit', data)
+    // « Vol inclus : Oui » sans prix de vol : AC ne renvoie pas le champ vide,
+    // flightPrice vaut undefined et tout l'acompte tombait à NaN (deal 16730).
+    // Même repli à 0 que recalculatTotalValues.
+    const flightPrice = data.includeFlight === 'Oui' ? (+data.flightPrice || 0) : 0
+    const insurancePrice = +data.insuranceCommissionPrice || 0
     // WE take the total value of the deal, we substract the flight price and the insurance price
-    const baseToCalculateDepositValue = +data.value - ((data.includeFlight === 'Oui' ? data.flightPrice : 0) * data.nbTravelers) - ((data.insuranceCommissionPrice ?? 0) * data.nbTravelers)
+    const baseToCalculateDepositValue = +data.value - (flightPrice * data.nbTravelers) - (insurancePrice * data.nbTravelers)
     // We take 30% of the baseToCalculateDepositValue (which include options and reduction) and add the flight price if it's included
     // Insurance is added in another line item
-    return Math.floor((baseToCalculateDepositValue) * 0.3 + (data.includeFlight === 'Oui' ? data.flightPrice : 0) * data.nbTravelers)
+    return Math.floor((baseToCalculateDepositValue) * 0.3 + flightPrice * data.nbTravelers)
   }
   const gotEarlyBird = deal.gotEarlybird === 'Oui'
   const gotLastMinute = deal.gotLastMinute === 'Oui'
@@ -224,6 +229,20 @@ const createCheckoutSession = async (order) => {
     }
   }
   console.log('LineItems', lineItems)
+
+  // Stripe refuse un montant non entier (« Invalid integer: NaN ») : on bloque
+  // avant toute alerte Slack ou création de client, avec le champ fautif.
+  const invalidItem = lineItems.find(item =>
+    !Number.isInteger(item.price_data.unit_amount) || !Number.isInteger(item.quantity))
+  if (invalidItem || !Number.isFinite(paidAmount)) {
+    throw createError({
+      statusCode: 400,
+      statusMessage: `Montant invalide pour le deal ${order.dealId} (${order.paymentType}) : `
+        + (invalidItem
+          ? `« ${invalidItem.price_data.product_data.description || invalidItem.price_data.product_data.name} » unit_amount=${invalidItem.price_data.unit_amount}, quantity=${invalidItem.quantity}`
+          : `paidAmount=${paidAmount}`),
+    })
+  }
 
   if (!isDev) {
     axios({
