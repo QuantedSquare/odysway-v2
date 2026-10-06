@@ -60,7 +60,12 @@ export default defineEventHandler(async (event) => {
   const bookedDate = res.row
   lap(`booked_dates inserted bookedId=${bookedDate.id}`)
 
-  // 4. Fire-and-forget enrichment — use the request origin so this works in dev and prod
+  // 4. Le prospect vient de laisser son email : on fige d'où il vient (cookies
+  // d'attribution, voir server/utils/attribution.js). Ne lève jamais.
+  await attributionDeal.enregistrer(event, dealId, 'Tunnel')
+  lap('attribution enregistrée')
+
+  // 5. Fire-and-forget enrichment — use the request origin so this works in dev and prod
   const internalOrigin = getRequestURL(event).origin
   $fetch(`${internalOrigin}/api/v1/ac/deals/enrich`, {
     method: 'POST',
