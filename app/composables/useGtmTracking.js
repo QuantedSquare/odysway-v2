@@ -308,6 +308,21 @@ export const useGtmTracking = () => {
   }
 
   /**
+   * Track demande_partenariat event - Form sent from /partenariat
+   * @param {string} userMail - User email
+   * @param {string} besoin - What the partner wants to delegate (lead qualification)
+   */
+  const trackPartnershipRequest = (userMail, besoin) => {
+    pushToDataLayer({
+      event: 'demande_partenariat',
+      besoin,
+      user_data: {
+        user_mail: userMail,
+      },
+    })
+  }
+
+  /**
    * Track clic_faq event
    * @param {string} question - FAQ question text
    */
@@ -882,6 +897,7 @@ export const useGtmTracking = () => {
     trackCallClick,
     trackNewsletterSubscription,
     trackInscriptionAlerte,
+    trackPartnershipRequest,
     trackFaqClick,
     trackCtaClick,
     trackSocialMediaClick,

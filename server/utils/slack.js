@@ -82,4 +82,17 @@ const alertCascadeLeak = ({ dealId, bookedId, travelDateId }) =>
     + `• Date supprimée : \`${travelDateId}\`\n`
     + `La réservation a été déplacée vers la nouvelle date. Vérifier la cohérence de la date supprimée.`)
 
-export default { send, alertPaymentOnDeletedBooking, alertOrphanPayment, alertCascadeLeak }
+/**
+ * Nouvelle demande de partenariat depuis /partenariat. Webhook dédié
+ * SLACK_URL_PARTENARIAT, sinon le canal des devis.
+ */
+const alertPartnershipRequest = ({ email, contactId, concept, destination, communaute, participants, besoin }) =>
+  send(process.env.SLACK_URL_PARTENARIAT || process.env.SLACK_URL_DEVIS,
+    `:handshake: *Nouvelle demande de partenariat*\n`
+    + `• ${email}${contactId ? `  ·  contact AC \`${contactId}\`` : ''}\n`
+    + `• Participants : ${participants || '—'}  ·  Communauté : ${communaute || '—'}\n`
+    + `• Destination : ${destination || '—'}\n`
+    + `• À déléguer : ${besoin || '—'}\n`
+    + `> ${concept.replace(/[\r\n]+/g, ' ').slice(0, 600)}`)
+
+export default { send, alertPaymentOnDeletedBooking, alertOrphanPayment, alertCascadeLeak, alertPartnershipRequest }
