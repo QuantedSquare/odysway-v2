@@ -22,6 +22,7 @@ import {pageExperiencesType} from './pageExperiencesType'
 import {pageThematiquesType} from './pageThematiquesType'
 import {pageProchainsDeparts} from './pageProchainsDeparts'
 import {pageVoyageType} from './pageVoyageType'
+import {pagePartenariatType} from './pagePartenariatType'
 import {newsletterType} from './newsletterType'
 import {partnerType} from './partnerType'
 import {privacyPolicyType} from './privacyPolicyType'
@@ -94,6 +95,7 @@ export const schemaTypes = [
   pageProchainsDeparts,
   pageThematiquesType,
   pageVoyageType,
+  pagePartenariatType,
   partnerType,
   privacyPolicyType,
   recruitmentType,

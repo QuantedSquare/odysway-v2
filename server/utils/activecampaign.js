@@ -261,6 +261,22 @@ const getContactTags = async (contactId) => {
   }
 }
 
+// Pose un tag sur le contact, en créant le tag s'il n'existe pas encore chez AC.
+// POST /contactTags est idempotent : un tag déjà posé n'est pas dupliqué.
+const addTagToContact = async (contactId, tagName) => {
+  const { tags = [] } = await apiRequest(`/tags?search=${encodeURIComponent(tagName)}`)
+  let tagId = tags.find(t => t.tag === tagName)?.id
+  if (!tagId) {
+    const created = await apiRequest('/tags', 'post', { tag: { tag: tagName, tagType: 'contact', description: '' } })
+    tagId = created.tag.id
+  }
+  await apiRequest('/contactTags', 'post', { contactTag: { contact: contactId, tag: tagId } })
+  return tagId
+}
+
+const addContactNote = (contactId, note) =>
+  apiRequest('/notes', 'post', { note: { note, relid: contactId, reltype: 'Subscriber' } })
+
 const upsertContactIntoSupabase = async (contactId) => {
   try {
     const acContact = await getClientById(contactId)
@@ -736,6 +752,8 @@ export default {
   getClientByEmail, // OK
   upsertContact, // OK
   upsertContactIntoSupabase,
+  addTagToContact,
+  addContactNote,
   // --- Deals ---
   getDealById, // OK
   getDealCustomFields, // OK

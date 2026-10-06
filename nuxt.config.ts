@@ -103,6 +103,7 @@ export default defineNuxtConfig({
 
       // Singleton pages (static content)
       '/entreprise': { isr: 60 * 60 * 24 * 5 }, // 5 days - less frequently updated
+      '/partenariat': { isr: 60 * 60 * 24 * 5 },
       '/sur-mesure': { isr: 60 * 60 * 24 * 5 },
       '/vision-voyage-odysway': { isr: 60 * 60 * 24 * 5 },
       '/contact': { isr: 60 * 60 * 24 * 5 },
