@@ -29,7 +29,9 @@ export default defineNitroPlugin((nitroApp) => {
         step: 'unknown',
         source: 'server',
         severity: 'fatal',
-        origin: { endpoint: path, statusCode: error?.statusCode },
+        // Sans la query : les webhooks AC passent leur token en `?token=`, qui
+        // finissait en clair dans Slack et dans funnel_errors.
+        origin: { endpoint: path.split('?')[0], statusCode: error?.statusCode },
         message: error?.statusMessage || error?.message || 'Unhandled server error',
         raw: { name: error?.name, message: error?.message, stack: error?.stack },
       })
