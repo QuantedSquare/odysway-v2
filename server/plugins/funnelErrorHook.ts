@@ -23,6 +23,11 @@ export default defineNitroPlugin((nitroApp) => {
       if (!isFunnelRoute(path)) return
       // Already instrumented (funnelCreateError) → the client reports it.
       if (error?.data?.code) return
+      // Aucune route ne correspond (le rendu Nuxt répond « Page not found ») :
+      // un robot ou un lien tronqué, pas une erreur du tunnel. Constat du
+      // 07/10/2026 : des scanneurs de liens ont appelé
+      // /api/v1/ac/file/traiter' (apostrophe comprise), 16 alertes « fatal ».
+      if (error?.statusCode === 404 && /^Page not found/.test(error?.message || error?.statusMessage || '')) return
 
       await funnelReporter.reportFunnelError({
         code: 'UNHANDLED_SERVER_ERROR',
