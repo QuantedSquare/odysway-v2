@@ -8,9 +8,12 @@
 // Règles :
 //   - 429 (limite de 5 requêtes/s) : la requête n'a pas été traitée, on la
 //     rejoue quelle que soit la méthode ;
-//   - 502, 503, 504, délai dépassé, connexion coupée : on ne rejoue que GET et
-//     PUT, idempotents. Un POST (note, deal, contact) a pu être traité : le
-//     rejouer créerait un doublon.
+//   - 500, 502, 503, 504, 590, délai dépassé, connexion coupée : on ne rejoue
+//     que GET et PUT, idempotents. 590 est propre à AC (« ActiveCampaign
+//     internal error ») : rafale du 07/10/2026, des dizaines de webhooks
+//     dealUpdate en 500 sur des GET /deals, /contacts, /dealCustomFieldData.
+//     Un POST (note, deal, contact) a pu être traité : le rejouer créerait un
+//     doublon.
 //
 // PUR, hors l'appel lui-même (tests/unit/acReessais.test.mjs).
 //
@@ -18,7 +21,7 @@
 // le deal que AC a pu créer (dealCreeMalgreDelai).
 
 const DELAI_AC_MS = 15000
-const RECUPERABLES = new Set([502, 503, 504])
+const RECUPERABLES = new Set([500, 502, 503, 504, 590])
 const RESEAU = new Set(['ECONNABORTED', 'ECONNRESET', 'ETIMEDOUT', 'EAI_AGAIN'])
 
 /** Combien de fois rejouer après cette erreur, pour cette méthode. 0 : jamais. */
