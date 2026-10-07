@@ -11,12 +11,17 @@ export default defineEventHandler(async (event) => {
   if (!token || token !== process.env.ACTIVECAMPAIGN_WEBHOOK_TOKEN) {
     return { error: 'Unauthorized' }
   }
+  // Marqueur d'idempotence posé pour cet appel : retiré si le traitement
+  // échoue, sinon un nouvel envoi du même événement serait ignoré comme
+  // « doublon » et la ligne miroir ne serait jamais réécrite.
+  let eventIdPose = null
+  let dealId = null
   try {
     // Extract deal data from request body
     const body = await readBody(event)
     console.log('===========body', body, '========')
 
-    const dealId = body['deal[id]']
+    dealId = body['deal[id]']
     const contactId = body['deal[contactid]'] || body['contact[id]']
     const eventTime = body.date_time || null
 
@@ -36,6 +41,7 @@ export default defineEventHandler(async (event) => {
       }
       // Best-effort record (ignore conflict in parallel races)
       await supabase.from('ac_processed_events').upsert({ id: eventId })
+      eventIdPose = eventId
     }
 
     console.log('===========dealId', dealId, '========')
@@ -260,9 +266,22 @@ export default defineEventHandler(async (event) => {
   }
   catch (err) {
     console.error('DealUpdate webhook error:', err)
+    if (eventIdPose) {
+      const { error: delError } = await supabase.from('ac_processed_events').delete().eq('id', eventIdPose)
+      if (delError) console.error('[dealUpdate] marqueur d\'idempotence non retiré:', eventIdPose, delError.message)
+    }
+    // Erreur d'AC (590 « internal error », 5xx, délai) après les nouveaux
+    // essais : 503, et le message dit qui est en panne et pour quel deal.
+    const acStatus = err?.isAxiosError ? (err.response?.status || err.code) : null
+    if (acStatus) {
+      throw createError({
+        statusCode: 503,
+        message: `ActiveCampaign indisponible (${acStatus}) — deal ${dealId}`,
+      })
+    }
     throw createError({
       statusCode: 500,
-      message: 'Unexpected error in deal update process',
+      message: `Unexpected error in deal update process — deal ${dealId}: ${err?.message || err}`,
     })
   }
 })
