@@ -56,6 +56,17 @@ const avecReessais = async (appel, methode, pause = ms => new Promise(r => setTi
   }
 }
 
+/**
+ * Panne passagère d'AC, qui vaut d'être retentée plus tard : 429, 5xx (dont
+ * 590), délai dépassé, connexion coupée. Un 404 ou un 422 ne changera pas.
+ */
+const panneAc = (erreur) => {
+  if (!erreur?.isAxiosError) return false
+  const statut = erreur.response?.status
+  if (!statut) return RESEAU.has(erreur.code) || erreur.code === 'ERR_NETWORK'
+  return statut === 429 || statut >= 500
+}
+
 /** Délai dépassé ou connexion coupée, sans réponse d'AC : la requête a pu être traitée. */
 const sansReponse = erreur => !erreur?.response && RESEAU.has(erreur?.code)
 
@@ -75,4 +86,4 @@ const dealCreeMalgreDelai = (deals, { title, depuis }) => {
   return candidats[0] || null
 }
 
-export default { DELAI_AC_MS, reessaisPermis, attente, avecReessais, sansReponse, dealCreeMalgreDelai }
+export default { DELAI_AC_MS, reessaisPermis, attente, avecReessais, panneAc, sansReponse, dealCreeMalgreDelai }
