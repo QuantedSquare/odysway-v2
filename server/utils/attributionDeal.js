@@ -7,6 +7,8 @@
 // la source qu'il avait à sa naissance.
 //
 // Ne lève jamais : une attribution perdue ne doit pas faire échouer un devis.
+// Retourne la ligne calculée, même si l'écriture a échoué : l'événement lead
+// (conversionsDeal.lead) en a besoin dans tous les cas.
 
 import { parseCookies } from 'h3'
 import supabase from './supabase'
@@ -14,21 +16,22 @@ import attribution from './attribution'
 
 const enregistrer = async (event, dealId, formulaire) => {
   if (!dealId) return null
+  let ligne = null
   try {
-    const ligne = attribution.ligneAttribution({ dealId, formulaire, cookies: parseCookies(event) })
+    ligne = attribution.ligneAttribution({ dealId, formulaire, cookies: parseCookies(event) })
     const { error } = await supabase
       .from('deal_attribution')
       .upsert(ligne, { onConflict: 'deal_id', ignoreDuplicates: true })
     if (error) {
       console.error(`[attribution] deal ${dealId} : écriture refusée`, error.message || error)
-      return null
+      return ligne
     }
     console.log(`[attribution] deal ${dealId} : ${ligne.first_channel ?? 'inconnu'} → ${ligne.last_channel ?? 'inconnu'}`)
     return ligne
   }
   catch (err) {
     console.error(`[attribution] deal ${dealId} : échec`, err?.message || err)
-    return null
+    return ligne
   }
 }
 

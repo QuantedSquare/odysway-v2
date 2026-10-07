@@ -278,6 +278,7 @@ Lead attribution, frozen when the deal is created from the site (`POST /ac/deals
 - `gclid`, `gbraid`, `wbraid`, `fbclid`, `fbc`, `fbp`, `ga_client_id`: identifiers for server-side conversions (Stape).
 - `formulaire`: `Tunnel`, `Devis`, `Demande d'infos`, `Inscription alerte`. `variante`: A/B landing.
 - Deals created elsewhere (AC directly, Cal.com, phone) have no row.
+- `consent_ads`: cookie banner choice at lead time (`granted`/`denied`/null). Server-side conversions (`generate_lead` at deal creation, `purchase` at first Stripe/Alma payment, `server/utils/conversions.js` → Stape `STAPE_SERVER_URL`) are sent only when `granted`. Setup: `docs/tracking-acquisition.md`.
 
 ### `stripe_processed_events`
 Idempotency guard for Stripe webhook events.

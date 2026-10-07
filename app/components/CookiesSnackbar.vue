@@ -38,11 +38,19 @@
 <script setup>
 const show = ref(false)
 const optOut = ref(false)
+// Copie du choix dans un cookie, lisible par le serveur : les conversions envoyées
+// aux régies depuis le serveur (server/utils/conversions.js) n'en partent que si
+// le visiteur a accepté. 13 mois.
+const consentCookie = useCookie('ody_consent', { maxAge: 60 * 60 * 24 * 395, sameSite: 'lax', path: '/' })
 
 onMounted(() => {
   const cookie = useCookie('odysway_employee_optout')
   optOut.value = cookie.value === 1
   const consent = localStorage.getItem('consent')
+  // Visiteurs qui ont fait leur choix avant l'existence du cookie.
+  if ((consent === 'granted' || consent === 'denied') && consentCookie.value !== consent) {
+    consentCookie.value = consent
+  }
   if (consent !== 'granted') {
     show.value = true
   }
@@ -54,6 +62,7 @@ function acceptCookies() {
     // #TODO: add code to accept cookies
   }
   localStorage.setItem('consent', 'granted')
+  consentCookie.value = 'granted'
 }
 
 function refuseCookies() {
@@ -62,5 +71,6 @@ function refuseCookies() {
     // #TODO: add code to refuse cookies
   }
   localStorage.setItem('consent', 'denied')
+  consentCookie.value = 'denied'
 }
 </script>

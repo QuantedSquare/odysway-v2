@@ -46,6 +46,7 @@ create table if not exists public.deal_attribution (
   fbp              text,
   ga_client_id     text,
   variante         text,
+  consent_ads      text,
 
   touches          jsonb,
   created_at       timestamptz not null default now()

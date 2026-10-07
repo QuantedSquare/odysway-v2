@@ -288,6 +288,7 @@ import { countries } from '~/utils/countries'
 import { bookingApi, getApiErrorMessage } from '~/utils/bookingApi'
 
 const { trackReservationStep, trackCtaClick, trackReservationPoseOption } = useGtmTracking()
+const { newLeadEventId } = useLeadSource()
 
 const { voyage, page, checkoutType, dateId } = defineProps(['ownStep', 'voyage', 'page', 'initialDealValues', 'checkoutType', 'dateId'])
 
@@ -589,6 +590,7 @@ const submitStepData = () => {
       // GTM: Track reservation_step2 (contact details submitted)
       const { getCountryFromPhone } = useGtmTracking()
       const additionalData = {
+        event_id: newLeadEventId(),
         optin_newsletter: model.value.optinNewsletter,
         user_data: {
           user_id: model.value.email,

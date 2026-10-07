@@ -15,6 +15,8 @@
 
 const COOKIE_PREMIERE = 'ody_ft'
 const COOKIE_DERNIERE = 'ody_lt'
+// Choix de la bannière cookies (« granted » / « denied »), posé par CookiesSnackbar.
+const COOKIE_CONSENTEMENT = 'ody_consent'
 // 13 mois : durée maximale admise par la CNIL pour un cookie de mesure.
 const DUREE_COOKIE = 60 * 60 * 24 * 395
 
@@ -217,6 +219,9 @@ const ligneAttribution = ({ dealId, formulaire = null, cookies = {} }) => {
     fbp: texte(cookies._fbp),
     ga_client_id: clientIdGa(cookies._ga),
     variante: clic('variante'),
+    // Choix de la bannière au moment du lead : conditionne l'envoi des
+    // conversions aux régies (conversions.js), jamais l'attribution interne.
+    consent_ads: ['granted', 'denied'].includes(cookies[COOKIE_CONSENTEMENT]) ? cookies[COOKIE_CONSENTEMENT] : null,
     touches: premiere || derniere ? { first: premiere, last: derniere } : null,
   }
 }
@@ -224,6 +229,7 @@ const ligneAttribution = ({ dealId, formulaire = null, cookies = {} }) => {
 export default {
   COOKIE_PREMIERE,
   COOKIE_DERNIERE,
+  COOKIE_CONSENTEMENT,
   DUREE_COOKIE,
   nettoyerVisite,
   classerVisite,

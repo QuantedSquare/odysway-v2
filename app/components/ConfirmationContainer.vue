@@ -189,6 +189,7 @@ onMounted(async () => {
           // Track GTM purchase event
           trackPurchase({
             transactionId: purchaseData.transactionId,
+            eventId: purchaseData.eventId,
             paymentType: purchaseData.paymentType,
             totalValue: purchaseData.totalValue,
             optinNewsletter: purchaseData.optinNewsletter,
