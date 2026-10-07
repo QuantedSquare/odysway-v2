@@ -315,9 +315,12 @@ const upsertContactIntoSupabase = async (contactId) => {
   }
   catch (err) {
     console.error('Contact upsert error:', err)
+    // 503 quand AC est en panne passagère : la file des webhooks
+    // (fileDeals.js) rejoue alors plus tard au lieu d'abandonner.
     throw createError({
-      statusCode: 400,
+      statusCode: acReessais.panneAc(err) ? 503 : 400,
       message: 'Error upserting contact',
+      cause: err,
     })
   }
 }
