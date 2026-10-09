@@ -384,8 +384,10 @@ const aggregateDealTotals = (deals) => {
     // Assurance : commission par voyageur (champ AC 47, 30 % du prix) × voyageurs
     // du dossier. L'ancienne colonne `insurance_commission` contenait en réalité
     // le PRIX par voyageur (champ 13) : elle surestimait la marge.
+    // Vol : le champ AC 70 est la « Marge vol par voyageur » (Odysway, 09/10/2026).
+    // Compté une seule fois, il sous-estimait la marge des dossiers à plusieurs.
     acc.additional_margins
-      += Number(d.flight_margin || 0)
+      += Number(d.flight_margin || 0) * dealPax
         + Number(d.insurance_commission_per_pax || 0) * dealPax
         + Number(d.extra_margin_per_traveler || 0) * dealPax
     acc.promo_deductions += Number(d.applied_promo_per_traveler || 0) * dealPax
@@ -511,7 +513,7 @@ const resolveBaseMarginPerPax = async (travelDate, realPax) => {
  *
  * real_margin = (base_margin_per_pax × real_pax)
  *             + child_margin_delta × nb_children  (sum over deals, clamped to real_pax)
- *             + flight_margin                     (sum over deals)
+ *             + flight_margin × nb_traveler        (sum over deals)
  *             + insurance_commission_per_pax × nb_traveler (sum over deals)
  *             + extra_margin_per_traveler × nb_traveler   (sum over deals)
  *             − applied_promo_per_traveler × nb_traveler  (sum over deals)
