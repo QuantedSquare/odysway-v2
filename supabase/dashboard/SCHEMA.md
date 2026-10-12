@@ -62,7 +62,7 @@ A row per CRM deal (booking quote or sale). Source of truth for revenue, margin,
 | `rest_to_pay` | numeric | Outstanding balance. |
 | `rest_to_pay_per_traveler` | numeric | Per-pax outstanding. |
 | `margin_per_traveler` | numeric | Margin per traveler. |
-| `flight_margin` | numeric | Margin on the flight portion. |
+| `flight_margin` | numeric | Flight margin **per traveler** (AC 70 « Marge vol par voyageur »). Multiply by `nb_traveler`. |
 | `total_margin` | numeric | Total deal margin. |
 | `travel_type` | varchar | E.g. `'Voyage de Groupe'`, `'Voyage Individuel'`. |
 | `country` | varchar | Destination country (label). |
