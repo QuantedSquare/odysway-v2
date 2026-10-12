@@ -149,6 +149,7 @@ useSeo({
 })
 
 const { trackDevisStep, getCountryFromPhone } = useGtmTracking()
+const { newLeadEventId } = useLeadSource()
 const { formatVoyageForGtm } = useGtmVoyageFormatter()
 const { travelTitle } = useFunnelHeader()
 const route = useRoute()
@@ -313,8 +314,10 @@ const submit = async () => {
     }
     const formattedVoyage = formatVoyageForGtm(voyage.value)
     trackDevisStep('classic', 1, formattedVoyage)
+    const leadEventId = newLeadEventId()
     await apiRequest('/ac/deals', 'post', voyageBody)
     trackDevisStep('classic', 'confirmation', formattedVoyage, {
+      event_id: leadEventId,
       optin_newsletter: 'false',
       user_data: {
         user_id: formData.value.email,

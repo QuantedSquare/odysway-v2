@@ -270,6 +270,16 @@ Demandes reçues par le formulaire de `/partenariat` (`POST /api/v1/partenariat/
 - `source_url`, `utm` text
 - Le suivi (statut, responsable, note, archivage) vit dans Ulysse, `ulysse.demandes_partenariat` (onglet « Demandes entrantes » de la page Partenaires). odysway-v2 n'y écrit pas.
 
+### `deal_attribution`
+Lead attribution, frozen when the deal is created from the site (`POST /ac/deals`, `kickstart`). One row per deal, never rewritten. Join on `deal_attribution.deal_id = activecampaign_deals.id`.
+- Source: first-party cookies `ody_ft` (first visit, written once) and `ody_lt` (last non-direct visit), set server-side (13 months) by `POST /api/v1/tracking/touch`, called by `useLeadSource` on landing. Rules in `server/utils/attribution.js`.
+- `first_*` / `last_*`: `channel` (`Google Ads`, `Meta Ads`, `Autre payant`, `Email`, `Réseaux sociaux`, `Autre campagne`, `IA`, `SEO`, `Site référent`, `Direct`), `source`, `medium`, `campaign`, `content`, `term`, `landing`, `referrer`, `at`. **`null` channel = unknown (no cookie), not Direct.** Use `first_channel` for acquisition, `last_channel` for the converting touch.
+- `fbclid` alone means a Facebook/Instagram link, not an ad: Meta Ads needs `?from-meta` or a paid `utm_medium`.
+- `gclid`, `gbraid`, `wbraid`, `fbclid`, `fbc`, `fbp`, `ga_client_id`: identifiers for server-side conversions (Stape).
+- `formulaire`: `Tunnel`, `Devis`, `Demande d'infos`, `Inscription alerte`. `variante`: A/B landing.
+- Deals created elsewhere (AC directly, Cal.com, phone) have no row.
+- `consent_ads`: cookie banner choice at lead time (`granted`/`denied`/null). Server-side conversions (`generate_lead` at deal creation, `purchase` at first Stripe/Alma payment, `server/utils/conversions.js` → Stape `STAPE_SERVER_URL`) are sent only when `granted`. Setup: `docs/tracking-acquisition.md`.
+
 ### `stripe_processed_events`
 Idempotency guard for Stripe webhook events.
 - `id` text PK — Stripe event ID

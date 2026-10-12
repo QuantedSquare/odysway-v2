@@ -27,6 +27,9 @@ export default defineEventHandler(async (event: H3Event): Promise<TypeDeal> => {
     const t0 = Date.now()
     const response = await activecampaign.createDeal(parsedBody.data)
     console.log(`[create-deal] DONE dealId=${response} slug=${parsedBody.data.slug} in ${Date.now() - t0}ms`)
+    // Le prospect vient de laisser son email : on fige d'où il vient.
+    const ligneAttribution = await attributionDeal.enregistrer(event, response, parsedBody.data.source || 'Formulaire')
+    await conversionsDeal.lead(event, response, ligneAttribution, parsedBody.data)
     return response
   }
   catch (err) {
