@@ -1,4 +1,4 @@
-import { defineEventHandler, readBody, createError, getRequestURL } from 'h3'
+import { defineEventHandler, readBody, getRequestURL } from 'h3'
 
 export default defineEventHandler(async (event) => {
   const t0 = Date.now()

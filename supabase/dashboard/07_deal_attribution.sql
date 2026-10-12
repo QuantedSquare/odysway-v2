@@ -1,7 +1,7 @@
 -- ============================================================================
 -- 07 — Attribution des leads (deal_attribution)
 -- Run on: DASHBOARD project, AVANT la migration prod
---         supabase/migrations/20261006120000_deal_attribution.sql
+--         supabase/migrations/20261012120000_deal_attribution.sql
 -- ============================================================================
 --
 -- Même table qu'en prod : une ligne par deal, jointure sur
