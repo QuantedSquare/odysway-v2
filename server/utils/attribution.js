@@ -195,7 +195,8 @@ const colonnesVisite = (prefixe, visite) => {
  * Sans cookie d'attribution (navigateur qui n'a pas encore appelé /tracking/touch,
  * cookies bloqués…), les colonnes de visite restent null : « inconnu », pas « Direct ».
  */
-const ligneAttribution = ({ dealId, formulaire = null, cookies = {} }) => {
+const ligneAttribution = ({ dealId, formulaire = null, cookies = {}, requete = {} }) => {
+  const consentement = ['granted', 'denied'].includes(cookies[COOKIE_CONSENTEMENT]) ? cookies[COOKIE_CONSENTEMENT] : null
   const premiere = decoderCookie(cookies[COOKIE_PREMIERE])
   const derniere = decoderCookie(cookies[COOKIE_DERNIERE]) || premiere
 
@@ -221,7 +222,13 @@ const ligneAttribution = ({ dealId, formulaire = null, cookies = {} }) => {
     variante: clic('variante'),
     // Choix de la bannière au moment du lead : conditionne l'envoi des
     // conversions aux régies (conversions.js), jamais l'attribution interne.
-    consent_ads: ['granted', 'denied'].includes(cookies[COOKIE_CONSENTEMENT]) ? cookies[COOKIE_CONSENTEMENT] : null,
+    consent_ads: consentement,
+    // IP et navigateur du visiteur au moment du lead, renvoyés avec l'achat :
+    // celui-ci part du webhook de paiement, sans visiteur, et le Data Client
+    // prendrait sinon l'IP du serveur. Gardés seulement si le visiteur a
+    // accepté les cookies — sans consentement, aucune conversion ne part.
+    client_ip: consentement === 'granted' ? texte(requete.ip) : null,
+    client_user_agent: consentement === 'granted' ? texte(requete.userAgent) : null,
     touches: premiere || derniere ? { first: premiere, last: derniere } : null,
   }
 }

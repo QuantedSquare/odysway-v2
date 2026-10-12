@@ -9,6 +9,10 @@
 -- le webhook « mirror-deal_attribution » sur public.deal_attribution, même
 -- configuration que les 4 autres (05_webhooks_setup.sql), et redéployer
 -- mirror-sync (clé primaire deal_id ajoutée).
+--
+-- `client_ip` et `client_user_agent` (migration 20261013100000) sont
+-- volontairement absents d'ici : données personnelles, inutiles à l'analyse.
+-- mirror-sync les écarte et le signale dans ses logs (« colonnes inconnues »).
 
 create table if not exists public.deal_attribution (
   deal_id          bigint primary key,

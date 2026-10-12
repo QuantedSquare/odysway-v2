@@ -18,11 +18,13 @@ Les événements serveur ne partent que si le visiteur a cliqué « Accepter » 
 
 - `STAPE_SERVER_URL` : `https://sst.odysway.com`. Sans elle, aucun événement n'est envoyé (les logs disent « STAPE_SERVER_URL absente »).
 - `STAPE_DATA_PATH` : chemin du Data Client, `/data` par défaut.
+- `STAPE_SECRET` : longue chaîne aléatoire (`openssl rand -hex 32`), envoyée dans l'en-tête `x-ody-secret`. Les déclencheurs du container l'exigent : `/data` est public, seul odysway.com doit pouvoir y déclarer un lead ou un achat.
 
 ## Configuration du container server-side (Stape / GTM server)
 
 1. **Client** : ajouter le client « Data Client » (galerie de templates Stape), chemin accepté `/data`. Il transforme le JSON reçu en données d'événement.
-2. **Déclencheurs** : `Client Name = Data Client` ET `Event Name = generate_lead` (resp. `purchase`).
+2. **Déclencheurs** : `Client Name` = le Data Client, ET `Event Name` = `generate_lead` (resp. `purchase`), ET une variable **En-tête de requête** `x-ody-secret` égale à la valeur de `STAPE_SECRET` (une variable constante du container, jamais en clair dans une capture).
+   Le Data Client prend l'IP et le user agent de l'expéditeur quand l'événement n'en porte pas : le code envoie ceux du visiteur (`ip_override`, `user_agent`) pour le lead, et pour l'achat ceux gardés au lead (`deal_attribution.client_ip`, `client_user_agent`). Les mapper dans la balise Meta (User data : Client IP address, Client user agent).
 3. **Tags** :
    - **Meta Conversions API** (tag Stape) sur `generate_lead` → événement `Lead`, sur `purchase` → `Purchase`. Event ID : `{{Event Data - event_id}}`. Le tag lit `user_data.*`, `x-fb-ck-fbc`, `x-fb-ck-fbp`, `ip_override`, `user_agent`.
    - **Google Ads** (conversion ou « offline conversion » Stape) sur `purchase` : `gclid` / `gbraid` / `wbraid`, `transaction_id` comme Order ID, `value`, `currency`, `user_data` pour les conversions améliorées.
