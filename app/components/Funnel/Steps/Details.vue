@@ -3,6 +3,15 @@
     v-if="!loadingDeal"
     class="pa-0 pa-sm-4"
   >
+    <v-alert
+      v-if="inscriptionNeuve"
+      type="info"
+      variant="tonal"
+      density="compact"
+      class="mb-4"
+    >
+      Ce lien correspondait à l'inscription d'une autre personne : une nouvelle inscription a été ouverte à votre nom. Vérifiez vos informations puis continuez.
+    </v-alert>
     <v-form ref="form">
       <v-row>
         <v-col
@@ -224,7 +233,8 @@
                     key="option-btn"
                     block
                     height="50"
-                    :disabled="!isValid"
+                    :disabled="!isValid || verificationReprise"
+                    :loading="verificationReprise"
                     color="primary"
                     class="font-weight-bold text-decoration-none"
                     @click="submitStepData"
@@ -240,7 +250,8 @@
                   key="next-btn"
                   block
                   height="50"
-                  :disabled="!isValid"
+                  :disabled="!isValid || verificationReprise"
+                  :loading="verificationReprise"
                   color="secondary"
                   class="font-weight-bold text-decoration-none custom-btn-shadow"
                   @click="submitStepData"
@@ -427,9 +438,99 @@ const loadFromLocalStorage = () => {
     model.value.isoContact = storedData.isoContact
   }
 }
+
+// ================== Reprise d'une réservation existante ==================
+// Le tunnel reprend une réservation dès qu'il connaît son booked_id (lien
+// `?booked_id=…` ou localStorage de la date). Avant d'y écrire les coordonnées
+// saisies, il vérifie que la personne en est la titulaire : un lien partagé par
+// une accompagnatrice, ou le poste d'une commerciale qui inscrit plusieurs
+// clientes sur le même départ, ont fait passer des deals réglés au nom d'une
+// autre personne (16932 et 16997, 12/10/2026). Une autre personne repart sur
+// une inscription neuve à la même date.
+const CLE_INSCRIPTION_NEUVE = 'checkout:inscriptionNeuve'
+const inscriptionNeuve = ref(false)
+const verificationReprise = ref(false)
+const { notifyError } = useSnackbar()
+
+const verifierReprise = async (existingBookedId) => {
+  verificationReprise.value = true
+  try {
+    return await bookingApi.verifierReprise({
+      bookedId: existingBookedId,
+      email: model.value.email,
+      firstname: model.value.firstName,
+      lastname: model.value.lastName,
+    })
+  }
+  catch (err) {
+    // Contrôle indisponible : update-with-bms refait la même vérification
+    // avant d'écrire sur le deal.
+    reportApiError(err, {
+      code: 'REPRISE_VERIFICATION_ECHEC',
+      step: 'details',
+      severity: 'warning',
+      message: 'Vérification de la reprise impossible, contrôle laissé à update-with-bms',
+    })
+    return { reprenable: true }
+  }
+  finally {
+    verificationReprise.value = false
+  }
+}
+
+// La mémoire du navigateur ne doit plus rouvrir la réservation d'une autre personne.
+const oublierReservation = (travelDateId, existingBookedId) => {
+  if (!travelDateId) return
+  try {
+    if (JSON.parse(localStorage.getItem(travelDateId) || 'null')?.booked_id === existingBookedId) {
+      localStorage.removeItem(travelDateId)
+    }
+  }
+  catch {
+    // localStorage illisible : rien à oublier.
+  }
+}
+
+// La page a été construite sur le deal de la titulaire (prix, paiements,
+// voyageurs) : on la recharge sur la date de départ, avec ce qui vient d'être
+// saisi, plutôt que de réutiliser ces valeurs pour la nouvelle inscription.
+const ouvrirInscriptionNeuve = (travelDateId) => {
+  saveToLocalStorage()
+  try {
+    sessionStorage.setItem(CLE_INSCRIPTION_NEUVE, JSON.stringify({
+      nbAdults: model.value.nbAdults,
+      nbChildren: model.value.nbChildren,
+      optinNewsletter: !!model.value.optinNewsletter,
+    }))
+  }
+  catch {
+    // Sans sessionStorage, seuls le nombre de voyageurs et l'optin sont à ressaisir.
+  }
+  const slug = typeof voyage.slug === 'object' ? voyage.slug?.current : voyage.slug
+  const query = new URLSearchParams({ date_id: travelDateId, type: String(route.query.type || checkoutType), step: '1', voyage: slug || '' })
+  window.location.assign(`/checkout?${query}`)
+}
+
+const reprendreSaisie = () => {
+  let saisie = null
+  try {
+    saisie = JSON.parse(sessionStorage.getItem(CLE_INSCRIPTION_NEUVE) || 'null')
+    sessionStorage.removeItem(CLE_INSCRIPTION_NEUVE)
+  }
+  catch {
+    return
+  }
+  if (!saisie) return
+  if (+saisie.nbAdults > 0) model.value.nbAdults = +saisie.nbAdults
+  if (saisie.nbChildren !== undefined && saisie.nbChildren !== null) model.value.nbChildren = +saisie.nbChildren
+  model.value.optinNewsletter = !!saisie.optinNewsletter
+  inscriptionNeuve.value = true
+}
+
 onMounted(() => {
   if (!route.query.booked_id) {
     loadFromLocalStorage()
+    reprendreSaisie()
   }
 })
 
@@ -448,7 +549,17 @@ const rules = {
 
 const nbTravelers = computed(() => +model.value.nbAdults + +model.value.nbChildren)
 
-const submitStepData = () => {
+// Mise à jour lancée sans attendre : un refus du serveur (titulaire différente,
+// voir verifierReprise) ne doit pas finir en promesse rejetée sans trace.
+const signalerMiseAJourRefusee = (err) => {
+  reportApiError(err, {
+    code: 'DETAILS_UPDATE_DEAL_FAILED',
+    step: 'details',
+    message: 'Mise à jour du deal refusée ou échouée à l\'étape Détails',
+  })
+}
+
+const submitStepData = async () => {
   // Validate form
   if (!isValid.value) {
     // Report each missing/invalid field precisely (field name + bad value).
@@ -466,7 +577,33 @@ const submitStepData = () => {
     return false
   }
   //  #todo soustraire la réduction s'il y en a une
-  const existingBookedId = findExistingBookedId()
+  let existingBookedId = findExistingBookedId()
+  if (existingBookedId) {
+    const verdict = await verifierReprise(existingBookedId)
+    if (!verdict?.reprenable) {
+      const travelDateId = verdict?.travelDateId || currentDateId.value
+      oublierReservation(travelDateId, existingBookedId)
+      report({
+        code: 'RESERVATION_AUTRE_PERSONNE',
+        step: 'details',
+        severity: 'warning',
+        origin: { field: 'booked_id', received: existingBookedId, expected: verdict?.raison || 'titulaire' },
+        message: 'Réservation reprise par une autre personne : inscription neuve à la même date',
+      })
+      if (route.query.booked_id) {
+        if (travelDateId && (checkoutType === 'deposit' || checkoutType === 'full')) {
+          ouvrirInscriptionNeuve(travelDateId)
+        }
+        else {
+          notifyError('Ce lien correspond à l\'inscription d\'une autre personne. Contactez-nous pour réserver à votre nom.')
+        }
+        return false
+      }
+      // Reprise venue du localStorage : la page est déjà construite sur la
+      // date, l'inscription neuve se crée ici même.
+      existingBookedId = null
+    }
+  }
   if (existingBookedId && !route.query.booked_id) {
     // Remet l'URL dans l'état post-kickstart pour que les étapes suivantes
     // (et un rechargement) travaillent sur la réservation existante.
@@ -510,7 +647,7 @@ const submitStepData = () => {
           lastname: model.value.lastName,
           isoContact: model.value.isoContact,
           utm: utmSource || '',
-        }, existingBookedId)
+        }, existingBookedId).catch(signalerMiseAJourRefusee)
       }
       else {
         updateDeal({
@@ -519,7 +656,7 @@ const submitStepData = () => {
           firstname: model.value.firstName,
           lastname: model.value.lastName,
           isoContact: model.value.isoContact,
-        }, existingBookedId)
+        }, existingBookedId).catch(signalerMiseAJourRefusee)
       }
       emit('next')
       buttonLoading.value = false

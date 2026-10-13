@@ -75,6 +75,7 @@ cms/
 ## Key Business Flows
 
 1. **Booking funnel**: Voyage page -> Select date -> Devis form (traveler info) -> Creates AC deal + booked_date in Supabase -> Checkout (Stripe or Alma) -> Confirmation
+   - Resuming an existing booking (`?booked_id=` link, or the date's localStorage entry) is checked first (`POST /api/v1/booking/booked_date/reprise`, rule in `server/utils/repriseReservation.js`, enforced again in `update-with-bms`): someone else (other email AND other first or last name) never takes over a deal, they get a fresh booking; the contact of a paid deal never changes from the funnel. A paid booking is never resumed by the date buttons (`booking-exists`) nor turned into an option.
 2. **Payment types**: deposit (30% + insurance), full, balance (remaining), custom
 3. **Post-payment webhook cascade**: Stripe checkout.completed -> update Supabase booked_dates -> update AC deal value -> notify Chapka insurance -> send Slack alert
 4. **Booking management**: Internal dashboard at /booking-management (Google OAuth, @odysway.com only)
