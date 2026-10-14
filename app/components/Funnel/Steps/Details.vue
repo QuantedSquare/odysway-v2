@@ -325,7 +325,7 @@ const { kickstartDeal, updateDeal, bookedId } = useStepperDeal()
 const { report, reportApiError, setContext } = useFunnelReporter()
 const isOptionMode = ref(false)
 const route = useRoute()
-const router = useRouter()
+const { addMultipleParams } = useParams()
 
 // La prop dateId est lue une seule fois au montage du stepper. Si le checkout a
 // été monté via ?booked_id=… puis que le voyageur revient avec « Précédent » du
@@ -607,8 +607,10 @@ const submitStepData = async () => {
   if (existingBookedId && !route.query.booked_id) {
     // Remet l'URL dans l'état post-kickstart pour que les étapes suivantes
     // (et un rechargement) travaillent sur la réservation existante.
+    // Via useParams : le step=2 posé juste après part de cette URL-ci, sans
+    // quoi il effaçait le booked_id (voir useParams).
     bookedId.value = existingBookedId
-    router.replace({ query: { ...route.query, booked_id: existingBookedId, date_id: undefined } })
+    addMultipleParams({ booked_id: existingBookedId, date_id: undefined }, { replace: true })
   }
   if (!existingBookedId && !currentDateId.value) {
     report({
