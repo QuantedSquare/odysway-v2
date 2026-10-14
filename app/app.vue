@@ -1,9 +1,9 @@
 <template>
   <NuxtLayout>
     <NuxtPage />
-    <!-- <ClientOnly>
-      <CookiesSnackbar />
-    </ClientOnly> -->
+    <ClientOnly>
+      <LazyCookiesSnackbar />
+    </ClientOnly>
     <ClientOnly>
       <LazySearchDialog v-if="isSearchDialogOpen" />
     </ClientOnly>
@@ -17,6 +17,7 @@ import '../app/assets/scss/main.scss'
 const config = useRuntimeConfig()
 const route = useRoute()
 const { isOpen: isSearchDialogOpen } = useSearchDialog()
+const { choix: consentement, restaurer: restaurerConsentement } = useConsentement()
 const isLocalHost = import.meta.client
   ? ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname)
   : false
@@ -74,6 +75,9 @@ const isConstrainedConnection = () => {
   return false
 }
 
+// Choix de la bannière cookies : lu avant Hotjar, qui en dépend.
+onMounted(restaurerConsentement)
+
 // Load Hotjar after page is interactive
 onMounted(() => {
   // Wait for idle time or user interaction before loading Hotjar
@@ -113,10 +117,19 @@ onMounted(() => {
       document.removeEventListener(event, loadOnInteraction)
     })
   }
-  events.forEach((event) => {
-    document.addEventListener(event, loadOnInteraction, { once: true, passive: true })
-  })
-  setTimeout(loadHotjar, 30000)
+  // Hotjar enregistre les sessions : seulement après « Accepter », y compris
+  // quand le visiteur accepte en cours de visite.
+  let arme = false
+  watch(consentement, (valeur) => {
+    if (valeur !== 'granted' || arme) {
+      return
+    }
+    arme = true
+    events.forEach((event) => {
+      document.addEventListener(event, loadOnInteraction, { once: true, passive: true })
+    })
+    setTimeout(loadHotjar, 30000)
+  }, { immediate: true })
 })
 
 // GTM/SST is loaded as soon as the app mounts.

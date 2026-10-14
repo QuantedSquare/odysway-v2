@@ -189,17 +189,27 @@
           <v-spacer />
           <v-col
             cols="12"
-            md="5"
-            class="text-center text-md-right d-flex justify-space-between"
+            md="6"
+            class="text-center text-md-right d-flex flex-wrap align-center justify-center justify-md-space-between gc-4 gr-1"
           >
             <template
               v-for="policy in policies"
               :key="policy.name"
             >
-              <SmartLink :to="policy.link">
+              <SmartLink
+                :to="policy.link"
+                link-class="text-grey text-no-wrap"
+              >
                 {{ policy.name }}
               </SmartLink>
             </template>
+            <button
+              type="button"
+              class="text-grey text-no-wrap"
+              @click="ouvrirBandeauCookies"
+            >
+              Cookies
+            </button>
           </v-col>
           <v-spacer />
         </v-row>
@@ -257,6 +267,7 @@ const policies = ref([
 ])
 
 const { trackRdvClick, trackCtaClick } = useGtmTracking()
+const { ouvrirBandeau: ouvrirBandeauCookies } = useConsentement()
 
 const handleFooterContactClick = () => {
   const buttonText = footer.value?.contact?.buttonContact?.text || 'Contact'

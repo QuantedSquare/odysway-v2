@@ -12,7 +12,35 @@ Règles de classement : `server/utils/attribution.js`. Construction des événem
 
 ## Consentement
 
-Les événements serveur ne partent que si le visiteur a cliqué « Accepter » sur la bannière (cookie `ody_consent=granted`, figé dans `deal_attribution.consent_ads` au moment du lead). L'attribution interne (`deal_attribution`) est enregistrée dans tous les cas : elle ne quitte pas notre base.
+Bannière `CookiesSnackbar` (montée dans `app.vue`), logique dans `useConsentement`. Ne rien choisir vaut refus : la CNIL n'admet plus « en poursuivant votre navigation, vous acceptez ». Le lien « Cookies » du footer rouvre la bannière.
+
+- **Cookie `ody_consent`** (`granted` / `denied`, 13 mois) : seule source du choix. Le serveur le fige dans `deal_attribution.consent_ads` au moment du lead, et les événements serveur ne partent que s'il vaut `granted`. L'attribution interne (`deal_attribution`) est enregistrée dans tous les cas : elle ne quitte pas notre base.
+- **Événement dataLayer `ody_consent_update`** (`ody_consent: 'granted' | 'denied'`) : poussé au clic, il applique le choix dans GTM sans recharger la page. Le cookie, lui, est écrit au tick suivant par `useCookie` : au moment de l'événement, GTM doit lire la valeur du dataLayer, pas le cookie.
+- **Hotjar** (chargé par `app.vue`) ne se charge qu'après « Accepter ».
+- Le `localStorage.consent` de l'ancienne bannière (démontée d'avril à octobre 2026) n'est pas repris : on redemande.
+
+### Container web GTM-NP63ZR5 (Consent Mode v2)
+
+Variables :
+- `DLV - ody_consent` : variable de couche de données, nom `ody_consent`.
+- `Cookie - ody_consent` : cookie propriétaire, nom `ody_consent`.
+- `Consentement` : JavaScript personnalisé, `granted` seulement si le visiteur a accepté :
+  ```js
+  function () {
+    var choix = {{DLV - ody_consent}} || {{Cookie - ody_consent}};
+    return choix === 'granted' ? 'granted' : 'denied';
+  }
+  ```
+
+Balises (modèle « Consent Mode (Google + Microsoft tags) ») :
+- **GCM - Default**, déclencheur Consent Initialization - All Pages : commande `default` ; `ad_storage`, `ad_user_data`, `ad_personalization`, `analytics_storage`, `personalization_storage` = `{{Consentement}}` ; `functionality_storage`, `security_storage` = `granted` ; `wait_for_update` = 500 ; `ads_data_redaction` coché. Plus de balise de nettoyage.
+- **GCM - Update**, déclencheur Événement personnalisé `ody_consent_update` : commande `update`, mêmes champs.
+
+Les balises Google (GA4, Google Ads) appliquent Consent Mode d'elles-mêmes : sans consentement, elles envoient des pings sans cookies (mode avancé), que GA4 et Ads utilisent pour modéliser.
+
+### Container serveur sst.odysway.com
+
+Les hits GA4 du navigateur arrivent au container serveur avec l'état de consentement (`gcs` : `G111` tout accepté, `G100` tout refusé ; le 3ᵉ caractère est `ad_storage`). Les balises Meta déclenchées par le client GA4 doivent exiger `ad_storage` : réglage de consentement de la balise Stape, ou condition `x-ga-gcs` correspond à `^G11`. Les déclencheurs du Data Client (`generate_lead`, `purchase`) n'ont pas de `gcs` : le serveur ne les envoie déjà qu'avec `consent_ads = 'granted'`.
 
 ## Variables d'environnement (Vercel, Production uniquement)
 
