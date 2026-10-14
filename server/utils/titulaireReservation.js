@@ -4,6 +4,11 @@
 //
 // LECTURE SEULE.
 
+const sauf404 = (err) => {
+  if (err?.response?.status === 404) return null
+  throw err
+}
+
 /** Le deal d'une réservation est-il déjà réglé ? `deal` évite de relire un deal tout juste lu. */
 const reglee = async ({ dealId, transactionId, deal = null }) => {
   if (transactionId) return true
@@ -25,11 +30,17 @@ const lire = async (bookedId) => {
   if (error) throw new Error(`booked_dates illisible : ${error.message}`)
   if (!ligne?.deal_id) return null
 
-  const [{ deal }, champs] = await Promise.all([
+  // Deal supprimé dans AC (404) : la réservation n'a plus de titulaire, comme
+  // une ligne supprimée. Le tunnel repart alors sur une inscription neuve.
+  const lus = await Promise.all([
     activecampaign.getDealById(ligne.deal_id),
     activecampaign.getDealCustomFields(ligne.deal_id),
-  ])
-  const contact = deal?.contact ? (await activecampaign.getClientById(deal.contact))?.contact : null
+  ]).catch(sauf404)
+  if (!lus) return null
+  const [{ deal }, champs] = lus
+  const contact = deal?.contact
+    ? (await activecampaign.getClientById(deal.contact).catch(sauf404))?.contact
+    : null
   return {
     bookedId: ligne.id,
     dealId: ligne.deal_id,
