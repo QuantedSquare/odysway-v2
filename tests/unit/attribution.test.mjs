@@ -115,3 +115,17 @@ test('ligne deal_attribution : le cookie _fbc de Meta prime sur celui reconstrui
   assert.equal(ligne.fbc, 'fb.1.5.abc')
   assert.equal(ligne.last_channel, 'Réseaux sociaux')
 })
+
+test('contexte du visiteur : IP et navigateur gardés seulement avec le consentement', () => {
+  const requete = { ip: '203.0.113.7', userAgent: 'Mozilla/5.0 (iPhone)' }
+  const accepte = ligneAttribution({ dealId: 1, cookies: { ody_consent: 'granted' }, requete })
+  assert.equal(accepte.client_ip, '203.0.113.7')
+  assert.equal(accepte.client_user_agent, 'Mozilla/5.0 (iPhone)')
+
+  for (const cookies of [{ ody_consent: 'denied' }, {}]) {
+    const ligne = ligneAttribution({ dealId: 1, cookies, requete })
+    assert.equal(ligne.client_ip, null)
+    assert.equal(ligne.client_user_agent, null)
+  }
+  assert.equal(ligneAttribution({ dealId: 1, cookies: { ody_consent: 'granted' } }).client_ip, null)
+})

@@ -10,7 +10,7 @@
 // Retourne la ligne calculée, même si l'écriture a échoué : l'événement lead
 // (conversionsDeal.lead) en a besoin dans tous les cas.
 
-import { parseCookies } from 'h3'
+import { getHeader, getRequestIP, parseCookies } from 'h3'
 import supabase from './supabase'
 import attribution from './attribution'
 
@@ -18,10 +18,25 @@ const enregistrer = async (event, dealId, formulaire) => {
   if (!dealId) return null
   let ligne = null
   try {
-    ligne = attribution.ligneAttribution({ dealId, formulaire, cookies: parseCookies(event) })
-    const { error } = await supabase
+    ligne = attribution.ligneAttribution({
+      dealId,
+      formulaire,
+      cookies: parseCookies(event),
+      requete: { ip: getRequestIP(event, { xForwardedFor: true }), userAgent: getHeader(event, 'user-agent') },
+    })
+    const ecrire = l => supabase
       .from('deal_attribution')
-      .upsert(ligne, { onConflict: 'deal_id', ignoreDuplicates: true })
+      .upsert(l, { onConflict: 'deal_id', ignoreDuplicates: true })
+    let { error } = await ecrire(ligne)
+    // Code déployé avant la migration 20261013100000 : colonnes du visiteur
+    // encore inconnues (PGRST204). On garde l'attribution, sans elles.
+    if (error?.code === 'PGRST204') {
+      const sansVisiteur = Object.fromEntries(Object.entries(ligne)
+        .filter(([cle]) => cle !== 'client_ip' && cle !== 'client_user_agent'))
+      console.warn(`[attribution] deal ${dealId} : colonnes du visiteur absentes, migration 20261013100000 à appliquer`)
+      const reprise = await ecrire(sansVisiteur)
+      error = reprise.error
+    }
     if (error) {
       console.error(`[attribution] deal ${dealId} : écriture refusée`, error.message || error)
       return ligne

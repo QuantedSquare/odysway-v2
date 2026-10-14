@@ -16,7 +16,8 @@
 // déduplique l'achat par `transaction_id`, identique lui aussi.
 //
 // Envoi : POST JSON vers STAPE_SERVER_URL + STAPE_DATA_PATH (Data Client Stape,
-// « /data » par défaut). Sans STAPE_SERVER_URL, rien n'est envoyé : ne la définir
+// « /data » par défaut), avec l'en-tête `x-ody-secret` = STAPE_SECRET que les
+// déclencheurs du container exigent. Sans STAPE_SERVER_URL, rien n'est envoyé : ne la définir
 // que sur l'environnement Production de Vercel.
 //
 // Construction pure (testée par tests/unit/conversions.test.mjs) ; `envoyer`
@@ -124,6 +125,11 @@ const evenementAchat = ({ dealId, contactId, transactionId, valeurCentimes, attr
   items: voyage.slug
     ? [{ item_id: voyage.slug, item_name: voyage.titre, quantity: Number(voyage.nbVoyageurs) || 1 }]
     : null,
+  // Le navigateur du lead : sans eux, le Data Client prendrait l'IP et le
+  // user agent du webhook de paiement (un serveur Vercel), que Meta lirait
+  // comme ceux du client.
+  ip_override: attribution?.client_ip,
+  user_agent: attribution?.client_user_agent,
   user_data: donneesUtilisateur(contact),
   deal_id: String(dealId),
   ...donneesAttribution(attribution),
@@ -139,7 +145,12 @@ const envoyer = async (evenement) => {
     const url = new URL(process.env.STAPE_DATA_PATH || '/data', base)
     const reponse = await fetch(url, {
       method: 'POST',
-      headers: { 'content-type': 'application/json' },
+      headers: {
+        'content-type': 'application/json',
+        // Secret partagé avec les déclencheurs du container : /data est public,
+        // seul ce serveur doit pouvoir y déclarer un lead ou un achat.
+        ...(process.env.STAPE_SECRET && { 'x-ody-secret': process.env.STAPE_SECRET }),
+      },
       body: JSON.stringify(evenement),
       signal: AbortSignal.timeout(4000),
     })

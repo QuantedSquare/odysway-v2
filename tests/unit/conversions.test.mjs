@@ -135,3 +135,44 @@ test('envoi : sans STAPE_SERVER_URL rien ne part ; sinon POST JSON sur /data ; u
     else process.env.STAPE_SERVER_URL = urlOrigine
   }
 })
+
+test('achat : IP et navigateur du lead, pas ceux du webhook de paiement', () => {
+  const e = evenementAchat({
+    dealId: 1,
+    transactionId: 'pi_1',
+    valeurCentimes: 100,
+    attribution: { consent_ads: 'granted', client_ip: '203.0.113.7', client_user_agent: 'Mozilla/5.0 (iPhone)' },
+  })
+  assert.equal(e.ip_override, '203.0.113.7')
+  assert.equal(e.user_agent, 'Mozilla/5.0 (iPhone)')
+  // Inconnus : absents, et non vides — le Data Client sait alors qu'il n'en a pas.
+  const sans = evenementAchat({ dealId: 1, attribution: { consent_ads: 'granted' } })
+  assert.equal('ip_override' in sans, false)
+  assert.equal('user_agent' in sans, false)
+})
+
+test('envoi : l\'en-tête secret part quand STAPE_SECRET est définie', async () => {
+  const fetchOrigine = globalThis.fetch
+  const avant = { url: process.env.STAPE_SERVER_URL, secret: process.env.STAPE_SECRET }
+  const entetes = []
+  try {
+    process.env.STAPE_SERVER_URL = 'https://sst.odysway.com'
+    globalThis.fetch = (_url, options) => {
+      entetes.push(options.headers)
+      return Promise.resolve({ ok: true, status: 200 })
+    }
+    delete process.env.STAPE_SECRET
+    await envoyer({ event_name: 'purchase', deal_id: '1' })
+    process.env.STAPE_SECRET = 's3cret'
+    await envoyer({ event_name: 'purchase', deal_id: '1' })
+    assert.equal('x-ody-secret' in entetes[0], false)
+    assert.equal(entetes[1]['x-ody-secret'], 's3cret')
+  }
+  finally {
+    globalThis.fetch = fetchOrigine
+    for (const [cle, valeur] of [['STAPE_SERVER_URL', avant.url], ['STAPE_SECRET', avant.secret]]) {
+      if (valeur === undefined) delete process.env[cle]
+      else process.env[cle] = valeur
+    }
+  }
+})
