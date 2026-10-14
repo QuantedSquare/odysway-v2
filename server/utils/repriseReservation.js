@@ -25,7 +25,7 @@ const normaliserEmail = email => String(email ?? '').trim().toLowerCase()
 // « Jean-Pierre », « jean pierre » et « JEAN PIERRE » désignent la même personne.
 const normaliserNom = nom => String(nom ?? '')
   .normalize('NFD')
-  .replace(/[̀-ͯ]/g, '')
+  .replace(/[\u0300-\u036f]/g, '')
   .toLowerCase()
   .replace(/[^a-z]/g, '')
 
