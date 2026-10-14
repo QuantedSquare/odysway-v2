@@ -279,8 +279,8 @@ Lead attribution, frozen when the deal is created from the site (`POST /ac/deals
 - `gclid`, `gbraid`, `wbraid`, `fbclid`, `fbc`, `fbp`, `ga_client_id`: identifiers for server-side conversions (Stape).
 - `formulaire`: `Tunnel`, `Devis`, `Demande d'infos`, `Inscription alerte`. `variante`: A/B landing.
 - Deals created elsewhere (AC directly, Cal.com, phone) have no row.
-- `client_ip`, `client_user_agent`: visitor's IP and browser at lead time, kept **only when `consent_ads = 'granted'`**, re-sent with the server-side `purchase` (which leaves from the payment webhook, without a visitor). Personal data: never replicate them to the dashboard project.
-- `consent_ads`: cookie banner choice at lead time (`granted`/`denied`/null). Server-side conversions (`generate_lead` at deal creation, `purchase` at first Stripe/Alma payment, `server/utils/conversions.js` → Stape `STAPE_SERVER_URL`) are sent only when `granted`. Setup: `docs/tracking-acquisition.md`.
+- `client_ip`, `client_user_agent`: visitor's IP and browser at lead time, kept for every lead, re-sent with the server-side `purchase` (which leaves from the payment webhook, without a visitor). Personal data: never replicate them to the dashboard project.
+- `consent_ads`: no longer written since 10/2026 (null on new rows). There is no cookie banner: every visitor is treated as consenting, a decision taken on 14/10/2026 knowing the CNIL risk. Server-side conversions (`generate_lead` at deal creation, `purchase` at first Stripe/Alma payment, `server/utils/conversions.js` → Stape `STAPE_SERVER_URL`) are sent for every deal, including deals created outside the site (no row: no ad identifiers). Setup: `docs/tracking-acquisition.md`.
 
 ### `stripe_processed_events`
 Idempotency guard for Stripe webhook events.

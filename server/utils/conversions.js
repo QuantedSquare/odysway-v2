@@ -92,9 +92,6 @@ const donneesAttribution = (a = {}) => ({
 // propre au deal (la conversion compte, sans être rattachée à une session).
 const clientId = (attribution, dealId) => attribution?.ga_client_id || `ody.${dealId}`
 
-/** Seuls les visiteurs qui ont accepté les cookies partent vers les régies. */
-const consentementDonne = attribution => attribution?.consent_ads === 'granted'
-
 const evenementLead = ({ dealId, eventId, formulaire, attribution, contact, voyage = {}, requete = {} }) => compacter({
   event_name: 'generate_lead',
   event_id: eventId || `lead_${dealId}`,
@@ -109,7 +106,7 @@ const evenementLead = ({ dealId, eventId, formulaire, attribution, contact, voya
   user_data: donneesUtilisateur(contact),
   deal_id: String(dealId),
   formulaire,
-  ...donneesAttribution(attribution),
+  ...donneesAttribution(attribution || {}),
 })
 
 const evenementAchat = ({ dealId, contactId, transactionId, valeurCentimes, attribution, contact, voyage = {}, typePaiement }) => compacter({
@@ -132,7 +129,8 @@ const evenementAchat = ({ dealId, contactId, transactionId, valeurCentimes, attr
   user_agent: attribution?.client_user_agent,
   user_data: donneesUtilisateur(contact),
   deal_id: String(dealId),
-  ...donneesAttribution(attribution),
+  // Pas de ligne pour un deal créé hors du site (AC, téléphone) : null.
+  ...donneesAttribution(attribution || {}),
 })
 
 const envoyer = async (evenement) => {
@@ -170,7 +168,6 @@ const envoyer = async (evenement) => {
 export default {
   normaliserEmail,
   normaliserTelephone,
-  consentementDonne,
   evenementLead,
   evenementAchat,
   envoyer,

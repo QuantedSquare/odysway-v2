@@ -15,8 +15,6 @@
 
 const COOKIE_PREMIERE = 'ody_ft'
 const COOKIE_DERNIERE = 'ody_lt'
-// Choix de la bannière cookies (« granted » / « denied »), posé par CookiesSnackbar.
-const COOKIE_CONSENTEMENT = 'ody_consent'
 // 13 mois : durée maximale admise par la CNIL pour un cookie de mesure.
 const DUREE_COOKIE = 60 * 60 * 24 * 395
 
@@ -196,7 +194,6 @@ const colonnesVisite = (prefixe, visite) => {
  * cookies bloqués…), les colonnes de visite restent null : « inconnu », pas « Direct ».
  */
 const ligneAttribution = ({ dealId, formulaire = null, cookies = {}, requete = {} }) => {
-  const consentement = ['granted', 'denied'].includes(cookies[COOKIE_CONSENTEMENT]) ? cookies[COOKIE_CONSENTEMENT] : null
   const premiere = decoderCookie(cookies[COOKIE_PREMIERE])
   const derniere = decoderCookie(cookies[COOKIE_DERNIERE]) || premiere
 
@@ -220,15 +217,13 @@ const ligneAttribution = ({ dealId, formulaire = null, cookies = {}, requete = {
     fbp: texte(cookies._fbp),
     ga_client_id: clientIdGa(cookies._ga),
     variante: clic('variante'),
-    // Choix de la bannière au moment du lead : conditionne l'envoi des
-    // conversions aux régies (conversions.js), jamais l'attribution interne.
-    consent_ads: consentement,
     // IP et navigateur du visiteur au moment du lead, renvoyés avec l'achat :
     // celui-ci part du webhook de paiement, sans visiteur, et le Data Client
-    // prendrait sinon l'IP du serveur. Gardés seulement si le visiteur a
-    // accepté les cookies — sans consentement, aucune conversion ne part.
-    client_ip: consentement === 'granted' ? texte(requete.ip) : null,
-    client_user_agent: consentement === 'granted' ? texte(requete.userAgent) : null,
+    // prendrait sinon l'IP du serveur. `consent_ads` n'est plus écrit : il n'y a
+    // plus de bannière, tout visiteur est traité comme consentant
+    // (docs/tracking-acquisition.md).
+    client_ip: texte(requete.ip),
+    client_user_agent: texte(requete.userAgent),
     touches: premiere || derniere ? { first: premiere, last: derniere } : null,
   }
 }
@@ -236,7 +231,6 @@ const ligneAttribution = ({ dealId, formulaire = null, cookies = {}, requete = {
 export default {
   COOKIE_PREMIERE,
   COOKIE_DERNIERE,
-  COOKIE_CONSENTEMENT,
   DUREE_COOKIE,
   nettoyerVisite,
   classerVisite,
