@@ -39,7 +39,8 @@ export const useGtmTracking = () => {
     const environment = config.public.environment
 
     const optOut = useCookie('odysway_employee_optout')
-    if (optOut.value === '1') {
+    // useCookie décode la valeur avec JSON.parse : '1' arrive sous forme de nombre.
+    if (String(optOut.value) === '1') {
       return false
     }
     if (environment === 'production' && typeof window !== 'undefined' && window.dataLayer) {
