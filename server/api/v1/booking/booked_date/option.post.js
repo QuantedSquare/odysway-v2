@@ -12,7 +12,7 @@ export default defineEventHandler(async (event) => {
   // Check if the date is already booked
   const { data: bookedDate, error: bookedDateError } = await supabase
     .from('booked_dates')
-    .select('is_option, travel_date_id')
+    .select('is_option, travel_date_id, deal_id, transaction_id')
     .eq('id', body.id)
     .eq('deleted', false)
     .single()
@@ -23,6 +23,26 @@ export default defineEventHandler(async (event) => {
     // Expected business case (already-optioned) — tagged so the backstop hook
     // skips it; the client handles this message explicitly.
     throw createError({ statusCode: 409, statusMessage: 'La date est déjà réservée', data: { code: 'OPTION_ALREADY_PLACED' } })
+  }
+  // Une option sur une réservation déjà réglée la faisait passer pour un
+  // simple blocage de place, au nom de la personne qui la posait (deal 16997,
+  // 12/10/2026). Si AC ne répond pas, la reprise a déjà été contrôlée en amont
+  // (étape « Coordonnées ») : on ne bloque pas l'option pour autant.
+  let dejaReglee = !!bookedDate.transaction_id
+  if (!dejaReglee && bookedDate.deal_id) {
+    dejaReglee = await titulaireReservation.reglee({ dealId: bookedDate.deal_id }).catch((err) => {
+      console.error(`[option] règlement du deal ${bookedDate.deal_id} illisible:`, err?.message)
+      return false
+    })
+  }
+  if (dejaReglee) {
+    throw funnelReporter.funnelCreateError({
+      statusCode: 409,
+      code: 'OPTION_RESERVATION_REGLEE',
+      step: 'option_booking',
+      origin: { field: 'id', received: body.id },
+      message: 'Option refusée : cette réservation est déjà réglée',
+    })
   }
   else {
     // Convert badges from string to array if needed

@@ -167,6 +167,8 @@ export default defineEventHandler(async (event) => {
       isOption: false,
       shouldTrack,
       transactionId: (transactionId.startsWith('pi_') || transactionId.startsWith('al')) ? transactionId : bookedDate.deal_id,
+      // Même event_id que le `purchase` serveur (conversions.js) : Meta déduplique.
+      eventId: `purchase_${bookedDate.deal_id}`,
       paymentType,
       totalValue: (deal.totalTravelPrice || 0) / 100, // Convert from cents to euros
       optinNewsletter: hasNewsletterOptin,

@@ -6,12 +6,28 @@
 //   utm_source=facebook&utm_campaign=laponie&from=meta&variante=B
 // La chaîne n'est réécrite que lorsqu'une nouvelle visite porte au moins un de ces
 // paramètres (dernier contact « marqué », comme avant).
+//
+// En parallèle, la visite (UTM, click ids, référent, page d'arrivée) part vers
+// POST /api/v1/tracking/touch, qui la range dans des cookies first-party posés par
+// le serveur (13 mois, hors de portée du plafond de 7 jours de Safari). Le serveur
+// les relit quand le prospect laisse son email et fige l'attribution du deal
+// (première et dernière visite, canal) dans `deal_attribution` :
+// server/utils/attribution.js.
 
 import { resolveVoyageVariant } from '~/utils/rdvVariant'
 
 const UTM_STORAGE_KEY = 'utmSource'
 
 const firstValue = value => (Array.isArray(value) ? value[0] : value) ?? ''
+
+const CLICK_IDS = ['gclid', 'gbraid', 'wbraid', 'fbclid']
+const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']
+// Une visite sans marqueur n'est envoyée qu'une fois par session de navigation.
+const TOUCH_SESSION_KEY = 'odyTouchSent'
+// Id de l'événement de lead, partagé avec le `generate_lead` envoyé par le serveur
+// à la création du deal (Meta déduplique sur event_id). Cookie court : il ne sert
+// qu'à la requête de création qui suit.
+const LEAD_EVENT_COOKIE = 'ody_leid'
 
 // Les campagnes marquent leurs liens avec ?from-meta ou ?from-g-ads. Les click ids
 // (fbclid, gclid…) ajoutés automatiquement par les régies servent de filet.
@@ -25,6 +41,36 @@ export function detectAdPlatform(query = {}) {
 function readStorage(key) {
   try {
     return localStorage.getItem(key) || ''
+  }
+  catch {
+    return ''
+  }
+}
+
+function readSession(key) {
+  try {
+    return sessionStorage.getItem(key)
+  }
+  catch {
+    return null
+  }
+}
+
+function writeSession(key, value) {
+  try {
+    sessionStorage.setItem(key, value)
+  }
+  catch {
+    // Stockage bloqué : la visite sera simplement renvoyée à la page suivante.
+  }
+}
+
+// Référent extérieur uniquement : la navigation interne n'est pas une source.
+function externalReferrer() {
+  const referrer = document.referrer
+  if (!referrer) return ''
+  try {
+    return new URL(referrer).hostname === window.location.hostname ? '' : referrer
   }
   catch {
     return ''
@@ -59,6 +105,33 @@ export function useLeadSource() {
     if (entries.length) {
       writeStorage(UTM_STORAGE_KEY, entries.join('&'))
     }
+
+    recordTouch(query, path, platform)
+  }
+
+  // Envoie la visite au serveur (cookies d'attribution). Les règles de classement
+  // (canal, première / dernière visite) vivent côté serveur, pas ici.
+  function recordTouch(query, path, platform) {
+    if (/(?:^|; )odysway_employee_optout=1(?:;|$)/.test(document.cookie)) return
+
+    const touch = { landing: path, ts: Date.now() }
+    for (const key of [...UTM_KEYS, ...CLICK_IDS]) {
+      const value = firstValue(query[key])
+      if (value) touch[key] = String(value)
+    }
+    if (platform) touch.from = platform
+    if (resolveVoyageVariant(path) === 'B') touch.variante = 'B'
+    const referrer = externalReferrer()
+    if (referrer) touch.referrer = referrer
+
+    const marked = Object.keys(touch).some(key => !['landing', 'ts'].includes(key))
+    if (!marked && readSession(TOUCH_SESSION_KEY)) return
+
+    $fetch('/api/v1/tracking/touch', { method: 'POST', body: touch, keepalive: true })
+      .then(() => writeSession(TOUCH_SESSION_KEY, '1'))
+      .catch(() => {
+        // Attribution perdue pour cette visite, pas la page.
+      })
   }
 
   // Attribution courante, pour GTM et les métadonnées de réservation Cal.com.
@@ -69,5 +142,14 @@ export function useLeadSource() {
     return { platform: params.from || null, raw, params }
   }
 
-  return { captureLeadSource, getLeadSource }
+  // À appeler juste avant d'envoyer l'événement de lead ET la requête qui crée le
+  // deal : met l'id dans un cookie (lu par le serveur) et le retourne (pour GTM).
+  function newLeadEventId() {
+    if (!import.meta.client) return null
+    const id = `lead_${globalThis.crypto?.randomUUID?.() || `${Date.now()}_${Math.random().toString(36).slice(2)}`}`
+    document.cookie = `${LEAD_EVENT_COOKIE}=${id}; Max-Age=600; Path=/; SameSite=Lax`
+    return id
+  }
+
+  return { captureLeadSource, getLeadSource, newLeadEventId }
 }

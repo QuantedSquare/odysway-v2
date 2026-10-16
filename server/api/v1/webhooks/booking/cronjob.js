@@ -84,19 +84,22 @@ export default defineEventHandler(async (event) => {
         console.error('Error recomputing travel_date', row.travel_date_id, recompute.error)
       }
 
-      // Le deal restait « A posé une option » (étape 27) alors que ses places
-      // étaient libérées (RES-05 du Docteur d'Ulysse) : il passe « A recontacter »
-      // (étape 22), avec une note. Un prospect seulement, et seulement s'il est
-      // encore à l'étape de l'option : un commercial a pu le déplacer entre-temps.
+      // Choix d'Odysway (12/10/2026) : à l'expiration de l'option, le deal ne
+      // change PAS de colonne. Les commerciaux le déplacent eux-mêmes selon leur
+      // séquence de relance ; le passage automatique en « A recontacter »
+      // (étape 22, RES-05, 25/09/2026) les obligeait à le redéplacer à la main.
+      // Un déplacement vers l'étape 1 avait déjà été retiré le 10/11/2025.
+      // Seuls l'étape du tunnel (« Option expirée ») et une note signalent les
+      // places libérées, pour un prospect encore à « A posé une option » (27).
       if (row.deal_id && deal?.group === '1' && String(deal?.stage) === '27') {
         try {
-          await activecampaign.updateDeal(row.deal_id, { stage: '22', currentStep: 'Option expirée' })
+          await activecampaign.updateDeal(row.deal_id, { currentStep: 'Option expirée' })
           await activecampaign.addNote(row.deal_id, {
             note: { note: `Option expirée le ${String(row.expiracy_date).slice(0, 10).split('-').reverse().join('/')} : ${row.booked_places} place(s) libérée(s) sur la date. Prospect à recontacter.` },
           })
         }
         catch (err) {
-          console.error('Error moving expired option deal to "A recontacter"', row.deal_id, err?.message)
+          console.error('Error flagging expired option on deal', row.deal_id, err?.message)
         }
       }
 

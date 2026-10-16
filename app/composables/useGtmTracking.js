@@ -39,7 +39,8 @@ export const useGtmTracking = () => {
     const environment = config.public.environment
 
     const optOut = useCookie('odysway_employee_optout')
-    if (optOut.value === '1') {
+    // useCookie décode la valeur avec JSON.parse : '1' arrive sous forme de nombre.
+    if (String(optOut.value) === '1') {
       return false
     }
     if (environment === 'production' && typeof window !== 'undefined' && window.dataLayer) {
@@ -295,12 +296,14 @@ export const useGtmTracking = () => {
   /**
    * Track inscription_alerte event - User subscribes to alerts for a trip
    * @param {string} userMail - User email
+   * @param {string} [eventId] - Shared with the server-side generate_lead (Meta dedup)
    */
-  const trackInscriptionAlerte = (userMail) => {
+  const trackInscriptionAlerte = (userMail, eventId = null) => {
     if (!userMail) return
 
     pushToDataLayer({
       event: 'inscription_alerte',
+      ...(eventId && { event_id: eventId }),
       user_data: {
         user_mail: userMail,
       },
@@ -789,6 +792,10 @@ export const useGtmTracking = () => {
       dataLayerEvent.user_data = userData.user_data || userData
       dataLayerEvent.optin_newsletter = userData.optin_newsletter || userData.optin_newsletter
     }
+    // Shared with the server-side generate_lead (Meta dedup).
+    if (userData.event_id) {
+      dataLayerEvent.event_id = userData.event_id
+    }
 
     pushToDataLayer(dataLayerEvent)
   }
@@ -809,7 +816,7 @@ export const useGtmTracking = () => {
    * @param {Object} params.voyage - Voyage object (raw from Sanity)
    * @param {Object} params.dynamicDealValues - Deal values with travelers, options, insurance
    */
-  const trackPurchase = ({ transactionId, paymentType, totalValue, optinNewsletter, userData, voyage, dynamicDealValues }) => {
+  const trackPurchase = ({ transactionId, eventId, paymentType, totalValue, optinNewsletter, userData, voyage, dynamicDealValues }) => {
     const { buildCheckoutItems } = useGtmVoyageFormatter()
 
     const items = buildCheckoutItems(voyage, dynamicDealValues)
@@ -818,6 +825,8 @@ export const useGtmTracking = () => {
     })
     pushToDataLayer({
       event: 'purchase',
+      // Shared with the server-side purchase sent by the payment webhook (Meta dedup).
+      ...(eventId && { event_id: eventId }),
       optin_newsletter: optinNewsletter ? 'true' : 'false',
       user_data: {
         user_id: userData.userId,

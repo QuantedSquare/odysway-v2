@@ -181,8 +181,10 @@ const handlePaymentSession = async (session) => {
     activecampaign.getDealCustomFields(order.id),
   ])
   const deal = { ...fetchedDeal.deal, ...customFields }
-  const { contact } = await activecampaign.getClientById(deal.contact)
+  const { contact, fieldValues } = await activecampaign.getClientById(deal.contact)
   console.log('contact', contact)
+  // Lu avant la mise à jour AC de ce paiement : vrai seulement au premier paiement.
+  const premierPaiement = !deal.alreadyPaid || +deal.alreadyPaid === 0
 
   // BOOKING MANAGEMENT SUPABASE
   // Même politique que stripe.js : le paiement ressuscite une réservation
@@ -313,6 +315,20 @@ const handlePaymentSession = async (session) => {
     console.log('addedNote', addedNote)
   }
   sendSlackNotification(`:white_check_mark: <https://odysway90522.activehosted.com/app/deals/${order.id}|Confirmation paiement CB - ${method} - ${contact.firstName} ${contact.lastName} - ${order.id}>`)
+
+  // Conversion serveur (Stape) : premier paiement capturé uniquement. La note AC
+  // d'un paiement Alma ne porte pas son id : le `purchase` du navigateur prend le
+  // dealId comme transaction_id (purchase-data.get.js), on fait de même.
+  if (premierPaiement && session.processing_status === 'captured') {
+    await conversionsDeal.achat({
+      dealId: order.id,
+      transactionId: String(order.id),
+      typePaiement: method,
+      deal,
+      contact,
+      isoContact: fieldValues?.find(i => i.field === '22')?.value || null,
+    })
+  }
 }
 
 export default {

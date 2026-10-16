@@ -389,6 +389,8 @@ const handlePaymentSession = async (session, paymentType) => {
   const reponse = await activecampaign.getDealById(order.dealId)
   const customFields = await activecampaign.getDealCustomFields(order.dealId)
   const deal = { ...reponse.deal, ...customFields }
+  // Lu avant la mise à jour AC de ce paiement : vrai seulement au premier paiement.
+  const premierPaiement = !deal.alreadyPaid || +deal.alreadyPaid === 0
 
   const calculatePricePerPerson = (data) => {
     const {
@@ -581,6 +583,19 @@ const handlePaymentSession = async (session, paymentType) => {
     },
   })
   console.log('added note', note)
+
+  // Conversion serveur (Stape) : premier paiement uniquement, comme le `purchase`
+  // du navigateur, avec le même transaction_id (purchase-data.get.js).
+  if (premierPaiement) {
+    await conversionsDeal.achat({
+      dealId: order.dealId,
+      transactionId: session.payment_intent || session.id,
+      typePaiement: paymentType,
+      deal,
+      contact: client,
+      isoContact: fieldValues?.find(i => i.field === '22')?.value || null,
+    })
+  }
 }
 export default {
   createCheckoutSession,

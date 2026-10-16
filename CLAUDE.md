@@ -75,6 +75,7 @@ cms/
 ## Key Business Flows
 
 1. **Booking funnel**: Voyage page -> Select date -> Devis form (traveler info) -> Creates AC deal + booked_date in Supabase -> Checkout (Stripe or Alma) -> Confirmation
+   - Resuming an existing booking (`?booked_id=` link, or the date's localStorage entry) is checked first (`POST /api/v1/booking/booked_date/reprise`, rule in `server/utils/repriseReservation.js`, enforced again in `update-with-bms`): someone else (other email AND other first or last name) never takes over a deal, they get a fresh booking; the contact of a paid deal never changes from the funnel. A paid booking is never resumed by the date buttons (`booking-exists`) nor turned into an option.
 2. **Payment types**: deposit (30% + insurance), full, balance (remaining), custom
 3. **Post-payment webhook cascade**: Stripe checkout.completed -> update Supabase booked_dates -> update AC deal value -> notify Chapka insurance -> send Slack alert
 4. **Booking management**: Internal dashboard at /booking-management (Google OAuth, @odysway.com only)
@@ -204,7 +205,7 @@ A row per CRM deal. Source of truth for revenue, margin, conversions, and acquis
 | `rest_to_pay` | numeric | Outstanding balance. |
 | `rest_to_pay_per_traveler` | numeric | Per-pax outstanding. |
 | `margin_per_traveler` | numeric | Margin per traveler. |
-| `flight_margin` | numeric | Margin on the flight portion. |
+| `flight_margin` | numeric | Flight margin **per traveler** (AC 70 « Marge vol par voyageur »). Multiply by `nb_traveler`. |
 | `total_margin` | numeric | Total deal margin in EUR. |
 | `travel_type` | varchar | `'Voyage de Groupe'`, `'Voyage Individuel'`, etc. |
 | `country` | varchar | Destination country (label). |
@@ -275,6 +276,17 @@ Demandes reçues par le formulaire de `/partenariat` (`POST /api/v1/partenariat/
 - `concept`, `destination`, `communaute`, `participants`, `besoin` text — champs du formulaire ; `besoin` qualifie le lead (10 % / 15 %)
 - `source_url`, `utm` text
 - Le suivi (statut, responsable, note, archivage) vit dans Ulysse, `ulysse.demandes_partenariat` (onglet « Demandes entrantes » de la page Partenaires). odysway-v2 n'y écrit pas.
+
+### `deal_attribution`
+Lead attribution, frozen when the deal is created from the site (`POST /ac/deals`, `kickstart`). One row per deal, never rewritten. Join on `deal_attribution.deal_id = activecampaign_deals.id`.
+- Source: first-party cookies `ody_ft` (first visit, written once) and `ody_lt` (last non-direct visit), set server-side (13 months) by `POST /api/v1/tracking/touch`, called by `useLeadSource` on landing. Rules in `server/utils/attribution.js`.
+- `first_*` / `last_*`: `channel` (`Google Ads`, `Meta Ads`, `Autre payant`, `Email`, `Réseaux sociaux`, `Autre campagne`, `IA`, `SEO`, `Site référent`, `Direct`), `source`, `medium`, `campaign`, `content`, `term`, `landing`, `referrer`, `at`. **`null` channel = unknown (no cookie), not Direct.** Use `first_channel` for acquisition, `last_channel` for the converting touch.
+- `fbclid` alone means a Facebook/Instagram link, not an ad: Meta Ads needs `?from-meta` or a paid `utm_medium`.
+- `gclid`, `gbraid`, `wbraid`, `fbclid`, `fbc`, `fbp`, `ga_client_id`: identifiers for server-side conversions (Stape).
+- `formulaire`: `Tunnel`, `Devis`, `Demande d'infos`, `Inscription alerte`. `variante`: A/B landing.
+- Deals created elsewhere (AC directly, Cal.com, phone) have no row.
+- `client_ip`, `client_user_agent`: visitor's IP and browser at lead time, kept for every lead, re-sent with the server-side `purchase` (which leaves from the payment webhook, without a visitor). Personal data: never replicate them to the dashboard project.
+- `consent_ads`: no longer written since 10/2026 (null on new rows). There is no cookie banner: every visitor is treated as consenting, a decision taken on 14/10/2026 knowing the CNIL risk. Server-side conversions (`generate_lead` at deal creation, `purchase` at first Stripe/Alma payment, `server/utils/conversions.js` → Stape `STAPE_SERVER_URL`) are sent for every deal, including deals created outside the site (no row: no ad identifiers). Setup: `docs/tracking-acquisition.md`.
 
 ### `stripe_processed_events`
 Idempotency guard for Stripe webhook events.

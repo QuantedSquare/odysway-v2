@@ -1,4 +1,4 @@
-import { defineEventHandler, readBody, createError, getRequestURL } from 'h3'
+import { defineEventHandler, readBody, getRequestURL } from 'h3'
 
 export default defineEventHandler(async (event) => {
   const t0 = Date.now()
@@ -60,7 +60,14 @@ export default defineEventHandler(async (event) => {
   const bookedDate = res.row
   lap(`booked_dates inserted bookedId=${bookedDate.id}`)
 
-  // 4. Fire-and-forget enrichment — use the request origin so this works in dev and prod
+  // 4. Le prospect vient de laisser son email : on fige d'où il vient (cookies
+  // d'attribution, voir server/utils/attribution.js) et on envoie le lead au
+  // container server-side (conversions.js). Ne lève jamais.
+  const ligneAttribution = await attributionDeal.enregistrer(event, dealId, 'Tunnel')
+  await conversionsDeal.lead(event, dealId, ligneAttribution, { ...body, slug })
+  lap('attribution enregistrée, lead envoyé')
+
+  // 5. Fire-and-forget enrichment — use the request origin so this works in dev and prod
   const internalOrigin = getRequestURL(event).origin
   $fetch(`${internalOrigin}/api/v1/ac/deals/enrich`, {
     method: 'POST',
