@@ -222,6 +222,20 @@ const traiter = async ({ dealId, contactId, body = {}, eventTime = null }) => {
 
     // Log successful upsert
     console.log('Deal upserted successfully:', upsertedData)
+
+    // Voyageurs de l'Espace Voyageur, depuis les champs déjà lus : aucun appel
+    // AC de plus. Jamais bloquant — l'espace les relira lui-même au besoin.
+    if ([1, 2].includes(Number(upsertData.pipeline_id))) {
+      try {
+        await espaceDossiers.synchroniserVoyageurs(Number(dealId), {
+          fusion: fetchedDeal,
+          contact: { firstname: contactData.contact?.firstName, lastname: contactData.contact?.lastName },
+        })
+      }
+      catch (err) {
+        console.error('[dealUpdate] voyageurs de l\'espace non écrits', dealId, err?.message)
+      }
+    }
     return { resultat: 'miroir_ecrit' }
   }
   return { resultat: 'miroir_ignore' }

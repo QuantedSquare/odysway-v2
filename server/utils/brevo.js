@@ -143,6 +143,18 @@ const brevo = {
       console.error('Error sending email:', error.response?.data || error.message)
     }
   },
+  // Email transactionnel libre (Espace Voyageur : code de rattachement,
+  // invitation d'un voyageur). Lève en cas d'échec : l'appelant doit savoir
+  // que le client n'a rien reçu.
+  async envoyerEmail({ to, subject, html }) {
+    const response = await apiRequest('/smtp/email', 'post', {
+      sender: { name: 'Odysway', email: 'contact@odysway.com' },
+      to: [{ email: to }],
+      subject,
+      htmlContent: html,
+    })
+    return response.data
+  },
   async sendConfirmationEmail(res) {
     const data = {
       sender: { name: 'Odysway', email: 'contact@odysway.com' },
