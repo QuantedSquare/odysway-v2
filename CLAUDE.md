@@ -277,10 +277,17 @@ Lead attribution, frozen when the deal is created from the site (`POST /ac/deals
 - `first_*` / `last_*`: `channel` (`Google Ads`, `Meta Ads`, `Autre payant`, `Email`, `Réseaux sociaux`, `Autre campagne`, `IA`, `SEO`, `Site référent`, `Direct`), `source`, `medium`, `campaign`, `content`, `term`, `landing`, `referrer`, `at`. **`null` channel = unknown (no cookie), not Direct.** Use `first_channel` for acquisition, `last_channel` for the converting touch.
 - `fbclid` alone means a Facebook/Instagram link, not an ad: Meta Ads needs `?from-meta` or a paid `utm_medium`.
 - `gclid`, `gbraid`, `wbraid`, `fbclid`, `fbc`, `fbp`, `ga_client_id`: identifiers for server-side conversions (Stape).
-- `formulaire`: `Tunnel`, `Devis`, `Demande d'infos`, `Inscription alerte`. `variante`: A/B landing.
-- Deals created elsewhere (AC directly, Cal.com, phone) have no row.
+- `formulaire`: `Tunnel`, `Devis`, `Demande d'infos`, `Inscription alerte`, `RDV`. `variante`: A/B landing.
+- `RDV`: a Cal.com booking made on the site. Cal.com creates the deal in AC itself; the row is computed at booking time and written when the deal arrives (`rdv_attribution_attente`, below).
+- Deals created elsewhere (AC directly, phone, a Cal.com link outside the site) have no row.
 - `client_ip`, `client_user_agent`: visitor's IP and browser at lead time, kept for every lead, re-sent with the server-side `purchase` (which leaves from the payment webhook, without a visitor). Personal data: never replicate them to the dashboard project.
 - `consent_ads`: no longer written since 10/2026 (null on new rows). There is no cookie banner: every visitor is treated as consenting, a decision taken on 14/10/2026 knowing the CNIL risk. Server-side conversions (`generate_lead` at deal creation, `purchase` at first Stripe/Alma payment, `server/utils/conversions.js` → Stape `STAPE_SERVER_URL`) are sent for every deal, including deals created outside the site (no row: no ad identifiers). Setup: `docs/tracking-acquisition.md`.
+
+### `rdv_attribution_attente`
+Cal.com bookings waiting for their AC deal (`server/utils/attributionRdv.js`, rules in `rattachementRdv.js`). Written by `POST /api/v1/tracking/rdv`, called by `useCalEmbed` on `bookingSuccessful`.
+- `email` (lowercase), `booking_uid` unique, `ligne` jsonb — the `deal_attribution` row without `deal_id`, `capture_le`.
+- `deal_id`, `rattache_le`, `resultat` (`attribue` | `deja_attribue`): set when matched to the contact's deal in « RDV Calendly Pris » created between 2 h before and 24 h after the booking — at capture if the deal is already mirrored, else by the dealUpdate webhook.
+- Unmatched rows are deleted after 30 days. Personal data: never replicate to the dashboard project.
 
 ### `stripe_processed_events`
 Idempotency guard for Stripe webhook events.

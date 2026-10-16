@@ -14,6 +14,31 @@ import { getHeader, getRequestIP, parseCookies } from 'h3'
 import supabase from './supabase'
 import attribution from './attribution'
 
+/**
+ * Insère une ligne `deal_attribution`, sans écraser celle qu'un deal aurait
+ * déjà : la première écriture gagne. Rend les lignes insérées (vide si le deal
+ * était déjà attribué) et l'erreur éventuelle. Partagée avec les RDV Cal.com
+ * (attributionRdv.js).
+ */
+const ecrireLigne = async (ligne) => {
+  const ecrire = l => supabase
+    .from('deal_attribution')
+    .upsert(l, { onConflict: 'deal_id', ignoreDuplicates: true })
+    .select('deal_id')
+  let { data, error } = await ecrire(ligne)
+  // Code déployé avant la migration 20261013100000 : colonnes du visiteur
+  // encore inconnues (PGRST204). On garde l'attribution, sans elles.
+  if (error?.code === 'PGRST204') {
+    const sansVisiteur = Object.fromEntries(Object.entries(ligne)
+      .filter(([cle]) => cle !== 'client_ip' && cle !== 'client_user_agent'))
+    console.warn(`[attribution] deal ${ligne.deal_id} : colonnes du visiteur absentes, migration 20261013100000 à appliquer`)
+    const reprise = await ecrire(sansVisiteur)
+    data = reprise.data
+    error = reprise.error
+  }
+  return { inseres: data ?? [], error }
+}
+
 const enregistrer = async (event, dealId, formulaire) => {
   if (!dealId) return null
   let ligne = null
@@ -24,19 +49,7 @@ const enregistrer = async (event, dealId, formulaire) => {
       cookies: parseCookies(event),
       requete: { ip: getRequestIP(event, { xForwardedFor: true }), userAgent: getHeader(event, 'user-agent') },
     })
-    const ecrire = l => supabase
-      .from('deal_attribution')
-      .upsert(l, { onConflict: 'deal_id', ignoreDuplicates: true })
-    let { error } = await ecrire(ligne)
-    // Code déployé avant la migration 20261013100000 : colonnes du visiteur
-    // encore inconnues (PGRST204). On garde l'attribution, sans elles.
-    if (error?.code === 'PGRST204') {
-      const sansVisiteur = Object.fromEntries(Object.entries(ligne)
-        .filter(([cle]) => cle !== 'client_ip' && cle !== 'client_user_agent'))
-      console.warn(`[attribution] deal ${dealId} : colonnes du visiteur absentes, migration 20261013100000 à appliquer`)
-      const reprise = await ecrire(sansVisiteur)
-      error = reprise.error
-    }
+    const { error } = await ecrireLigne(ligne)
     if (error) {
       console.error(`[attribution] deal ${dealId} : écriture refusée`, error.message || error)
       return ligne
@@ -50,4 +63,4 @@ const enregistrer = async (event, dealId, formulaire) => {
   }
 }
 
-export default { enregistrer }
+export default { enregistrer, ecrireLigne }

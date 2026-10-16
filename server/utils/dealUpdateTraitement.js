@@ -222,6 +222,16 @@ const traiter = async ({ dealId, contactId, body = {}, eventTime = null }) => {
 
     // Log successful upsert
     console.log('Deal upserted successfully:', upsertedData)
+
+    // RDV pris sur odysway.com : Cal.com crée le deal sans passer par nous, son
+    // attribution l'attend peut-être (server/utils/attributionRdv.js). Ne lève pas.
+    await attributionRdv.rattacherDeal({
+      dealId,
+      email: contactData.contact.email,
+      creeLe: upsertData.created_at,
+      stage: upsertData.stage,
+      pipelineId: upsertData.pipeline_id,
+    })
     return { resultat: 'miroir_ecrit' }
   }
   return { resultat: 'miroir_ignore' }
