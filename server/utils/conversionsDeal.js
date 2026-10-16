@@ -20,10 +20,6 @@ const COOKIE_ID_LEAD = 'ody_leid'
 const lead = async (event, dealId, ligneAttribution, body = {}) => {
   try {
     if (!dealId || estUnTest(body.email)) return false
-    if (!conversions.consentementDonne(ligneAttribution)) {
-      console.log(`[conversions] generate_lead deal ${dealId} : pas de consentement, non envoyé`)
-      return false
-    }
     const evenement = conversions.evenementLead({
       dealId,
       eventId: getCookie(event, COOKIE_ID_LEAD),
@@ -59,11 +55,8 @@ const achat = async ({ dealId, transactionId, typePaiement, deal = {}, contact =
       .eq('deal_id', dealId)
       .maybeSingle()
     if (error) console.error(`[conversions] purchase deal ${dealId} : lecture de l'attribution`, error.message || error)
-    // Sans ligne (deal créé hors du site) : pas de consentement connu, rien n'est envoyé.
-    if (!conversions.consentementDonne(ligneAttribution)) {
-      console.log(`[conversions] purchase deal ${dealId} : pas de consentement connu, non envoyé`)
-      return false
-    }
+    // Sans ligne (deal créé hors du site), l'achat part quand même, sans
+    // identifiants publicitaires : les régies le rapprochent par email et téléphone.
     const evenement = conversions.evenementAchat({
       dealId,
       contactId: deal.contact,

@@ -5,11 +5,11 @@ import { createHash } from 'node:crypto'
 import conversions from '../../server/utils/conversions.js'
 import attribution from '../../server/utils/attribution.js'
 
-const { normaliserTelephone, consentementDonne, evenementLead, evenementAchat, envoyer } = conversions
+const { normaliserTelephone, evenementLead, evenementAchat, envoyer } = conversions
 
 const sha256 = v => createHash('sha256').update(v).digest('hex')
 
-// Ligne deal_attribution d'un prospect venu d'une pub Meta, consentement donné.
+// Ligne deal_attribution d'un prospect venu d'une pub Meta.
 const ligneMeta = () => attribution.ligneAttribution({
   dealId: 16730,
   formulaire: 'Tunnel',
@@ -17,7 +17,6 @@ const ligneMeta = () => attribution.ligneAttribution({
     ody_ft: attribution.encoderCookie(attribution.nettoyerVisite({ from: 'meta', fbclid: 'IwAR1', utm_campaign: 'laponie', ts: 1759000000000 })),
     _ga: 'GA1.1.123456789.1750000000',
     _fbp: 'fb.1.1750000000000.987',
-    ody_consent: 'granted',
   },
 })
 
@@ -30,13 +29,12 @@ test('téléphone en E.164 : numéro français sans indicatif, 00, +, illisible'
   assert.equal(normaliserTelephone(''), null)
 })
 
-test('consentement : seul « granted » laisse partir une conversion ; sans ligne, rien', () => {
-  assert.equal(consentementDonne(ligneMeta()), true)
-  assert.equal(consentementDonne({ consent_ads: 'denied' }), false)
-  assert.equal(consentementDonne({ consent_ads: null }), false)
-  assert.equal(consentementDonne(null), false)
-  const sansBanniere = attribution.ligneAttribution({ dealId: 1, cookies: { ody_consent: 'peut-être' } })
-  assert.equal(sansBanniere.consent_ads, null)
+test('achat d\'un deal créé hors du site : sans ligne d\'attribution, l\'événement part quand même', () => {
+  const e = evenementAchat({ dealId: 9, transactionId: 'pi_9', valeurCentimes: 50000, attribution: null, contact: { email: 'A@B.fr' } })
+  assert.equal(e.event_id, 'purchase_9')
+  assert.equal(e.client_id, 'ody.9')
+  assert.equal(e.user_data.email_address, 'a@b.fr')
+  assert.equal('gclid' in e, false)
 })
 
 test('lead : event_id du navigateur, identifiants Meta / GA4, coordonnées normalisées', () => {
@@ -71,7 +69,7 @@ test('lead : event_id du navigateur, identifiants Meta / GA4, coordonnées norma
 })
 
 test('lead sans id navigateur ni cookie GA : ids de repli stables, propres au deal', () => {
-  const e = evenementLead({ dealId: 42, attribution: { consent_ads: 'granted' }, contact: { email: 'a@b.fr' } })
+  const e = evenementLead({ dealId: 42, attribution: {}, contact: { email: 'a@b.fr' } })
   assert.equal(e.event_id, 'lead_42')
   assert.equal(e.client_id, 'ody.42')
   assert.equal(e.user_data.phone_number, undefined)
@@ -100,7 +98,7 @@ test('achat : même event_id et transaction_id que le navigateur, valeur en euro
 })
 
 test('achat Alma : le dealId sert de transaction_id, comme côté navigateur', () => {
-  const e = evenementAchat({ dealId: 777, transactionId: '777', valeurCentimes: 120050, attribution: { consent_ads: 'granted' } })
+  const e = evenementAchat({ dealId: 777, transactionId: '777', valeurCentimes: 120050, attribution: {} })
   assert.equal(e.transaction_id, '777')
   assert.equal(e.value, 1200.5)
 })
@@ -141,12 +139,12 @@ test('achat : IP et navigateur du lead, pas ceux du webhook de paiement', () => 
     dealId: 1,
     transactionId: 'pi_1',
     valeurCentimes: 100,
-    attribution: { consent_ads: 'granted', client_ip: '203.0.113.7', client_user_agent: 'Mozilla/5.0 (iPhone)' },
+    attribution: { client_ip: '203.0.113.7', client_user_agent: 'Mozilla/5.0 (iPhone)' },
   })
   assert.equal(e.ip_override, '203.0.113.7')
   assert.equal(e.user_agent, 'Mozilla/5.0 (iPhone)')
   // Inconnus : absents, et non vides — le Data Client sait alors qu'il n'en a pas.
-  const sans = evenementAchat({ dealId: 1, attribution: { consent_ads: 'granted' } })
+  const sans = evenementAchat({ dealId: 1, attribution: {} })
   assert.equal('ip_override' in sans, false)
   assert.equal('user_agent' in sans, false)
 })

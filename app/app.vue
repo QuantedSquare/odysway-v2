@@ -1,9 +1,6 @@
 <template>
   <NuxtLayout>
     <NuxtPage />
-    <!-- <ClientOnly>
-      <CookiesSnackbar />
-    </ClientOnly> -->
     <ClientOnly>
       <LazySearchDialog v-if="isSearchDialogOpen" />
     </ClientOnly>

@@ -5,14 +5,21 @@
 | Étape | Où | Ce qui se passe |
 |---|---|---|
 | Arrivée sur le site | `useLeadSource` → `POST /api/v1/tracking/touch` | UTM, gclid / fbclid, référent et page d'arrivée rangés dans les cookies first-party `ody_ft` (première visite) et `ody_lt` (dernière visite non directe), posés par le serveur pour 13 mois. |
-| Email laissé (création du deal) | `POST /ac/deals`, `kickstart` | Ligne `deal_attribution` (canal, source, campagne, click ids, `ga_client_id`, consentement). Puis événement `generate_lead` envoyé à Stape. |
+| Email laissé (création du deal) | `POST /ac/deals`, `kickstart` | Ligne `deal_attribution` (canal, source, campagne, click ids, `ga_client_id`, IP et navigateur). Puis événement `generate_lead` envoyé à Stape. |
 | Premier paiement | webhooks Stripe et Alma | Événement `purchase` envoyé à Stape (prix total du voyage, comme le `purchase` du navigateur). |
 
 Règles de classement : `server/utils/attribution.js`. Construction des événements : `server/utils/conversions.js`.
 
 ## Consentement
 
-Les événements serveur ne partent que si le visiteur a cliqué « Accepter » sur la bannière (cookie `ody_consent=granted`, figé dans `deal_attribution.consent_ads` au moment du lead). L'attribution interne (`deal_attribution`) est enregistrée dans tous les cas : elle ne quitte pas notre base.
+**Il n'y a pas de bannière cookies : tout visiteur est traité comme consentant.** Décision du 14/10/2026, prise en connaissance du risque. La CNIL (art. 82 de la loi Informatique et Libertés) exige un consentement préalable pour les traceurs publicitaires, GA4 et Hotjar. Les conditions de Google (politique de consentement UE) et de Meta l'exigent aussi.
+
+- **Serveur** : `generate_lead` et `purchase` partent pour chaque deal (sauf adresses de test), y compris les deals créés hors du site, qui n'ont pas de ligne `deal_attribution` et partent donc sans identifiants publicitaires. L'IP et le navigateur du visiteur sont gardés pour chaque lead.
+- **Container web GTM-NP63ZR5** : « GCM - Default » et « GCM - Update » déclarent tout à `granted` (version 38) ; les hits GA4 portent `gcs=G111`. Rien à changer.
+- **Container serveur** : les balises Meta alimentées par les hits GA4 tournent pour tout le monde.
+- `deal_attribution.consent_ads` n'est plus écrit.
+
+Pour revenir à un consentement réel, la PR #298 (commit `4a6bd2a2`) contient une bannière et la configuration Consent Mode correspondante.
 
 ## Variables d'environnement (Vercel, Production uniquement)
 
