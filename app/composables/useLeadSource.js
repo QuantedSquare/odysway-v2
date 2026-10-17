@@ -13,6 +13,10 @@
 // les relit quand le prospect laisse son email et fige l'attribution du deal
 // (première et dernière visite, canal) dans `deal_attribution` :
 // server/utils/attribution.js.
+//
+// Un rendez-vous Cal.com crée son deal chez ActiveCampaign sans passer par nous :
+// à la réservation, `recordRdv` envoie l'email du participant au serveur, qui met
+// l'attribution en attente du deal (server/utils/attributionRdv.js).
 
 import { resolveVoyageVariant } from '~/utils/rdvVariant'
 
@@ -77,6 +81,11 @@ function externalReferrer() {
   }
 }
 
+// Les salariés d'Odysway (cookie odysway_employee_optout) ne sont pas des leads.
+function estSalarie() {
+  return /(?:^|; )odysway_employee_optout=1(?:;|$)/.test(document.cookie)
+}
+
 function writeStorage(key, value) {
   try {
     localStorage.setItem(key, value)
@@ -112,7 +121,7 @@ export function useLeadSource() {
   // Envoie la visite au serveur (cookies d'attribution). Les règles de classement
   // (canal, première / dernière visite) vivent côté serveur, pas ici.
   function recordTouch(query, path, platform) {
-    if (/(?:^|; )odysway_employee_optout=1(?:;|$)/.test(document.cookie)) return
+    if (estSalarie()) return
 
     const touch = { landing: path, ts: Date.now() }
     for (const key of [...UTM_KEYS, ...CLICK_IDS]) {
@@ -134,6 +143,24 @@ export function useLeadSource() {
       })
   }
 
+  // Réservation Cal.com confirmée (`bookingSuccessful` de l'embed) : le serveur
+  // lit les cookies d'attribution de cette requête et les rattache au deal que
+  // Cal.com crée dans ActiveCampaign.
+  function recordRdv(data) {
+    if (!import.meta.client || estSalarie()) return
+    const booking = data?.booking || data || {}
+    const attendee = Array.isArray(booking.attendees) ? booking.attendees[0] : booking.attendees
+    const email = attendee?.email || booking.responses?.email
+    if (!email || typeof email !== 'string') return
+    $fetch('/api/v1/tracking/rdv', {
+      method: 'POST',
+      body: { email, bookingUid: booking.uid || data?.uid || null },
+      keepalive: true,
+    }).catch(() => {
+      // Attribution du RDV perdue, pas la réservation.
+    })
+  }
+
   // Attribution courante, pour GTM et les métadonnées de réservation Cal.com.
   function getLeadSource() {
     if (!import.meta.client) return { platform: null, raw: '', params: {} }
@@ -151,5 +178,5 @@ export function useLeadSource() {
     return id
   }
 
-  return { captureLeadSource, getLeadSource, newLeadEventId }
+  return { captureLeadSource, getLeadSource, newLeadEventId, recordRdv }
 }

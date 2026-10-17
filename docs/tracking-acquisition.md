@@ -6,6 +6,7 @@
 |---|---|---|
 | Arrivée sur le site | `useLeadSource` → `POST /api/v1/tracking/touch` | UTM, gclid / fbclid, référent et page d'arrivée rangés dans les cookies first-party `ody_ft` (première visite) et `ody_lt` (dernière visite non directe), posés par le serveur pour 13 mois. |
 | Email laissé (création du deal) | `POST /ac/deals`, `kickstart` | Ligne `deal_attribution` (canal, source, campagne, click ids, `ga_client_id`, IP et navigateur). Puis événement `generate_lead` envoyé à Stape. |
+| RDV Cal.com réservé | `useCalEmbed` → `POST /api/v1/tracking/rdv` | Le deal naît chez ActiveCampaign (intégration Cal.com), sans passer par nous : la ligne d'attribution est calculée à la réservation, mise en attente dans `rdv_attribution_attente`, puis écrite dans `deal_attribution` (formulaire `RDV`) quand le deal arrive. Pas d'événement serveur : le `generate_lead` du RDV reste celui du navigateur. |
 | Premier paiement | webhooks Stripe et Alma | Événement `purchase` envoyé à Stape (prix total du voyage, comme le `purchase` du navigateur). |
 
 Règles de classement : `server/utils/attribution.js`. Construction des événements : `server/utils/conversions.js`.
@@ -55,3 +56,12 @@ Google Ads déduplique l'achat par `transaction_id` (Stripe : `pi_…` ; Alma : 
 - Logs Vercel : `[attribution] deal …` puis `[conversions] generate_lead deal … envoyé`.
 - Stape : onglet Logs du container, ou GTM server en mode Preview.
 - Supabase : `select * from deal_attribution order by created_at desc limit 20;`
+- RDV : logs `[attribution-rdv] capture …` puis `[attribution-rdv] deal … : attribue` ; en base, `select email, capture_le, deal_id, resultat from rdv_attribution_attente order by capture_le desc limit 20;`. Une capture sans `deal_id` attend son deal (24 h au plus) ; effacée au bout de 30 jours.
+
+### Attribution des RDV : règles
+
+- Capture : email du participant (en minuscules) et `uid` de la réservation, une capture par réservation, cinq par email et par jour au plus. Les salariés (`odysway_employee_optout`) ne sont pas capturés.
+- Rattachement : le deal du contact dont l'email correspond, dans le stage « RDV Calendly Pris », pipelines 1, 2 ou 5, **né entre 2 h avant et 24 h après la réservation**. Un deal existant que Cal.com déplace en RDV garde son origine : il n'est pas une entrée par RDV.
+- Deux moments, l'ordre n'étant pas garanti : à la capture si le deal est déjà dans le miroir, sinon au webhook dealUpdate qui le recopie.
+- Première écriture gagnante : un deal déjà attribué (tunnel, devis) garde sa ligne ; la capture est marquée `deja_attribue`.
+- `deal_attribution.created_at` = l'heure de la réservation.

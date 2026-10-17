@@ -46,6 +46,7 @@ function loadCalScript() {
 
 export function useCalEmbed() {
   const isReady = ref(false)
+  const { recordRdv } = useLeadSource()
 
   async function init(namespace, calLink, elementSelector, config = {}) {
     if (!import.meta.client) return
@@ -90,6 +91,8 @@ export function useCalEmbed() {
   function onBookingSuccess(calNs, callback) {
     on(calNs, 'bookingSuccessful', (event) => {
       const data = event.detail?.data
+      // Le deal du RDV naît chez ActiveCampaign : son attribution part d'ici.
+      recordRdv(data)
       callback?.(data)
     })
   }
