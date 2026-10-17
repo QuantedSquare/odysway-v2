@@ -23,6 +23,19 @@
       >
     </NuxtLink>
     <v-btn
+      v-if="lienEspace"
+      to="/mon-espace"
+      icon
+      variant="text"
+      height="40"
+      width="40"
+      class="ml-auto espace-mobile-btn"
+      :class="isTransparent ? 'filter' : ''"
+      aria-label="Mon espace voyageur"
+    >
+      <v-icon>{{ mdiAccountCircleOutline }}</v-icon>
+    </v-btn>
+    <v-btn
       class="d-inline d-md-none mobile-menu-btn custom-border"
       :class="isTransparent ? 'filter' : ''"
       icon
@@ -146,6 +159,18 @@
           >
             {{ header.button5.text }}
           </v-btn>
+          <v-btn
+            v-if="lienEspace"
+            to="/mon-espace"
+            height="45"
+            rounded="pill"
+            variant="text"
+            :color="isTransparent ? 'white' : 'primary'"
+            :prepend-icon="mdiAccountCircleOutline"
+            class="text-caption text-md-body-1 font-weight-medium d-none d-md-flex"
+          >
+            Mon espace
+          </v-btn>
         </div>
         <v-btn
           class="d-inline d-md-none custom-border"
@@ -169,7 +194,7 @@
 </template>
 
 <script setup>
-import { mdiMenu } from '@mdi/js'
+import { mdiAccountCircleOutline, mdiMenu } from '@mdi/js'
 import { useWindowScroll } from '@vueuse/core'
 import { useImage } from '#imports'
 
@@ -177,6 +202,8 @@ const router = useRouter()
 const model = defineModel({ type: Boolean, default: false })
 const img = useImage()
 const route = useRoute()
+// Interrupteur unique de l'Espace Voyageur (NUXT_PUBLIC_ESPACE_LIEN_VISIBLE).
+const lienEspace = useRuntimeConfig().public.espace?.lienVisible === true
 
 const { y } = useWindowScroll()
 
@@ -341,6 +368,10 @@ const isTransparent = computed(() => !isScrolled.value && TRANSPARENT_ROUTES.inc
 .mobile-menu-btn {
   position: absolute;
   right: 12px;
+}
+/* Laisse la place au bouton menu, positionné en absolu à droite. */
+.espace-mobile-btn {
+  margin-right: 52px;
 }
 .custom-border{
   border-radius: 9999px!important;

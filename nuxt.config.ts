@@ -72,6 +72,16 @@ export default defineNuxtConfig({
     public: {
       supabaseUrl: process.env.NUXT_PUBLIC_SUPABASE_URL,
       supabaseAnonKey: process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY,
+      // Espace Voyageur : Supabase Auth de BackOffice-PROD (la même instance
+      // qu'Ulysse) — PAS le projet de supabaseUrl ci-dessus. Clé publiable :
+      // elle n'ouvre rien, toutes les tables ont la RLS sans policy.
+      espace: {
+        supabaseUrl: process.env.NUXT_PUBLIC_ESPACE_SUPABASE_URL || 'https://ufyskkwszklmrgcifanb.supabase.co',
+        supabaseKey: process.env.NUXT_PUBLIC_ESPACE_SUPABASE_KEY || '',
+        // Lien « Mon espace » du header. Les pages restent joignables sans lui :
+        // c'est le seul interrupteur à basculer pour ouvrir ou retirer l'espace.
+        lienVisible: process.env.NUXT_PUBLIC_ESPACE_LIEN_VISIBLE === 'true',
+      },
       environment: process.env.VERCEL_ENV || 'development',
       siteURL: process.env.BASE_URL || 'http://localhost:3000',
       algolia: {
@@ -125,6 +135,11 @@ export default defineNuxtConfig({
       '/cheques-vacances': { isr: 60 * 60 * 24 * 5 },
       '/confirmation': { isr: 60 * 60 * 24 * 5 },
     }),
+
+    // Espace Voyageur : rendu dans le navigateur seul (la session vit dans le
+    // navigateur), jamais en cache, jamais indexé.
+    '/mon-espace': { ssr: false, robots: false, headers: { 'cache-control': 'no-store, private' } },
+    '/mon-espace/**': { ssr: false, robots: false, headers: { 'cache-control': 'no-store, private' } },
 
     // Redirect legacy or non-existent index to listing page
     '/search': { redirect: { to: '/voyages', statusCode: 301 } },

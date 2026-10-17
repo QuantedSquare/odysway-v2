@@ -257,6 +257,12 @@ Files attached to travel dates.
 - `file_size` int
 - `uploaded_by` text
 
+### Espace Voyageur (`/mon-espace`)
+Comptes clients = Supabase Auth de ce projet (code à 6 chiffres ou Google), partagé avec Ulysse. Aucune migration de comptes : à chaque connexion, l'email retrouve les contacts AC et crée les liens. RLS sans policy + droits retirés à anon/authenticated : tout passe par `/api/v1/espace/**` (jeton en `Authorization: Bearer`, vérifié par `espaceAuth.js`).
+- `client_account_links` (`user_id`, `ac_contact`) — compte ↔ contact AC, N-N. L'email n'amorce que le premier lien ; ensuite `ac_contact` fait foi.
+- `deal_travelers` (`deal_id`, `slot` 1-15) — copie des champs AC « Voyageur N » + ce qu'AC ne porte pas : `email` d'invitation, `user_id` du compte invité, `visible_groupe` (consentement, faux par défaut), `removed_at`. AC reste la source du nom et de la date de naissance (Chapka les y lit).
+- `client_link_codes` — codes hachés pour rattacher une seconde adresse.
+
 ### `alma_ids`
 Tracks Alma payment IDs to prevent duplicate processing.
 - `id` text PK

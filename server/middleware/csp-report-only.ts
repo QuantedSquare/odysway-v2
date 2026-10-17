@@ -67,7 +67,8 @@ const CSP_DIRECTIVES = [
   // GA4/Ads/Meta send a large share of their hits as pixel <img> requests.
   `img-src 'self' data: blob: https://cdn.sanity.io https://*.sanity.io ${[...SST, ...GOOGLE_COLLECT].join(' ')} https://*.hotjar.com https://www.facebook.com https://*.facebook.com`,
   'font-src \'self\' data: https://*.hotjar.com',
-  `connect-src 'self' https://*.sanity.io https://*.algolia.net https://*.algolianet.com ${[...SST, ...GOOGLE_COLLECT].join(' ')} https://*.hotjar.com wss://*.hotjar.com https://app.cal.com https://tally.so`,
+  // Supabase Auth de BackOffice-PROD : connexion de l'Espace Voyageur (/mon-espace).
+  `connect-src 'self' https://ufyskkwszklmrgcifanb.supabase.co https://*.sanity.io https://*.algolia.net https://*.algolianet.com ${[...SST, ...GOOGLE_COLLECT].join(' ')} https://*.hotjar.com wss://*.hotjar.com https://app.cal.com https://tally.so`,
   // sst.odysway.com iframes itself for cross-domain cookie sync; doubleclick
   // and googletagmanager frame the Ads conversion pings.
   `frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://www.googletagmanager.com ${SST.join(' ')} https://*.doubleclick.net https://app.cal.com https://tally.so https://www.youtube.com https://www.youtube-nocookie.com`,
