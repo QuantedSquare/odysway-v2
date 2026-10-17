@@ -15,7 +15,7 @@ avoir créé de compte, tout ce qui concerne ses voyages :
 | Mes voyages | À venir / en cours / passés, fiche par dossier | fait |
 | Paiement | Prix, déjà réglé, reste, échéance, historique, « Payer le solde » | fait (historique = paiements en ligne Stripe/Alma) |
 | Voyageurs | Voyageurs du dossier, invitation par email, compagnons du départ (consentement) | fait |
-| Mon profil | Identité, passeport (+ scan), régime alimentaire, allergies, contact d'urgence, champ libre | fait (§4.3) ; lecture côté Ulysse à faire |
+| Mon profil | Identité, passeport (+ scan), régime alimentaire, allergies, contact d'urgence, champ libre | fait (§4.3), lu dans Ulysse (fiche départ) |
 | Mes documents | Fiche voyage, carnet de séjour, billets, assurance, CGV, factures | à faire (§4.4) ; liens provisoires sur la fiche dossier |
 | Relances | Les rappels de solde (J-90, J-75, J-65) renvoient vers l'espace, jamais vers un lien de paiement | à faire (§4.5) |
 | Avis | Étoiles et avis sur les voyages passés | hors périmètre pour l'instant |
@@ -196,8 +196,11 @@ liste toutes les places que le compte peut remplir sur ses voyages à venir.
 - Planifier la purge (ci-dessus).
 
 **Reste à faire sur le profil**
-- Lecture côté Ulysse (fiche du départ) : endpoint `/api/v1/ulysse/…` en lecture seule,
-  qui déchiffre le numéro pour l'équipe. Aujourd'hui, personne ne lit ces profils.
+- ~~Lecture côté Ulysse~~ — FAIT (odysway-v2 #305, Ulysse #90) : onglet « Voyageurs »
+  de la fiche départ, droit **restreint** `profils-voyageurs` (Alex seul par migration,
+  les autres depuis Admin › Droits). `GET /api/v1/ulysse/dates/:dateId/profils` déchiffre
+  les numéros ; chaque profil lu et chaque copie ouverte sont journalisés des deux côtés.
+  Numéros masqués par défaut, « Copier pour les billets » (TSV pour tableur).
 - Modifier nom / date de naissance d'un voyageur : réécrire le champ AC « Voyageur N »
   au même format (Chapka le lit), puis resynchroniser.
 

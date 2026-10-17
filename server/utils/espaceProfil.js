@@ -87,6 +87,31 @@ const vueProfil = (p, voyage) => ({
   completude: completude(p, voyage),
 })
 
+const libelleRegime = v => REGIMES.find(r => r.valeur === v)?.libelle || v
+
+/**
+ * Ce que l'ÉQUIPE reçoit (Ulysse) : le numéro de pièce en clair — il sert à
+ * émettre les billets —, les libellés des régimes, la complétude. `numero` est
+ * déchiffré par l'appelant ; `null` si absent ou illisible.
+ */
+const vueEquipe = (p, { numero = null, numeroIllisible = false, retour = null } = {}) => ({
+  pieceType: p?.piece_type || null,
+  pieceNumero: numero,
+  pieceNumeroFin: p?.piece_numero_fin || null,
+  pieceNumeroIllisible: numeroIllisible,
+  pieceExpiration: p?.piece_expiration ? String(p.piece_expiration).slice(0, 10) : null,
+  piecePays: p?.piece_pays || null,
+  scan: p?.scan_path ? { type: p.scan_type, deposeLe: p.scan_depose_le } : null,
+  regimes: (p?.regimes || []).map(libelleRegime),
+  allergies: p?.allergies || null,
+  urgence: p?.urgence_nom || p?.urgence_telephone
+    ? { nom: p.urgence_nom || null, lien: p.urgence_lien || null, telephone: p.urgence_telephone || null }
+    : null,
+  notes: p?.notes || null,
+  misAJourLe: p?.updated_at || null,
+  completude: completude(p, { retour }),
+})
+
 // Signatures des fichiers acceptés : le type annoncé par le navigateur ne
 // prouve rien, on lit les premiers octets.
 const detecterType = (octets) => {
@@ -120,6 +145,7 @@ export default {
   completude,
   peutModifier,
   vueProfil,
+  vueEquipe,
   detecterType,
   scanAPurger,
 }

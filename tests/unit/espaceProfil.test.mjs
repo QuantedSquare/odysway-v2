@@ -57,3 +57,15 @@ test('scanAPurger : 30 jours après le retour', () => {
   assert.equal(scanAPurger({ retour: '2026-09-01', aujourdhui: '2026-10-02' }), true)
   assert.equal(scanAPurger({ retour: null, aujourdhui: '2030-01-01' }), false)
 })
+
+test('vueEquipe : numéro fourni en clair, libellés des régimes, urgence regroupée', () => {
+  const { vueEquipe } = espaceProfil
+  const p = { piece_type: 'passeport', piece_numero_chiffre: 'v1.x', piece_numero_fin: '5678', piece_expiration: '2027-08-01', regimes: ['vegetarien', 'sans_gluten'], urgence_nom: 'Julien', urgence_telephone: '06' }
+  const v = vueEquipe(p, { numero: '20AB45678', retour: '2027-03-25' })
+  assert.equal(v.pieceNumero, '20AB45678')
+  assert.equal(JSON.stringify(v).includes('v1.x'), false)
+  assert.deepEqual(v.regimes, ['Végétarien', 'Sans gluten'])
+  assert.deepEqual(v.urgence, { nom: 'Julien', lien: null, telephone: '06' })
+  assert.equal(v.completude.expireTropTot, true)
+  assert.equal(vueEquipe(null).urgence, null)
+})
