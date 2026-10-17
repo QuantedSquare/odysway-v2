@@ -20,7 +20,7 @@ const echec = (error, contexte) => {
   throw createError({ statusCode: 500, statusMessage: 'Documents illisibles pour le moment.' })
 }
 
-const COLONNES = 'id, travel_date_id, deal_id, type, titre, description, nom_fichier, mime_type, taille, storage_path, reserve_titulaire, publie, publie_le, disponible_le, depose_par, created_at, updated_at, deleted_at'
+const COLONNES = 'id, travel_date_id, deal_id, type, titre, description, nom_fichier, mime_type, taille, storage_path, reserve_titulaire, publie, publie_le, disponible_le, notifier_clients, notifie_le, depose_par, created_at, updated_at, deleted_at'
 
 // ── Côté client ─────────────────────────────────────────────────────────────
 
@@ -97,6 +97,8 @@ const vueEquipe = doc => ({
   publie: doc.publie,
   publieLe: doc.publie_le,
   disponibleLe: doc.disponible_le,
+  notifierClients: doc.notifier_clients !== false,
+  notifieLe: doc.notifie_le || null,
   deposePar: doc.depose_par,
   creeLe: doc.created_at,
 })
@@ -169,6 +171,7 @@ const preparerDepot = async (dateId, corps, acteur) => {
     storage_path: chemin,
     reserve_titulaire: corps.reserveTitulaire ?? reserveDefaut,
     disponible_le: corps.disponibleLe || null,
+    notifier_clients: corps.notifier !== false,
     depose_par: acteur.email,
   }).select(COLONNES).single()
   echec(e2, 'création du document')
@@ -205,9 +208,132 @@ const modifierDocument = async (documentId, corps) => {
     maj.publie_le = doc.publie_le || new Date().toISOString()
   }
   if (corps.publie === false) maj.publie = false
+  if (corps.notifier !== undefined) maj.notifier_clients = corps.notifier
   const { data, error } = await supabase.from('trip_documents').update(maj).eq('id', documentId).select(COLONNES).single()
   echec(error, 'modification du document')
-  return vueEquipe(data)
+
+  // Prévenir les clients : tout de suite s'il est disponible, sinon la tâche
+  // planifiée le fera le jour de sa disponibilité.
+  let notification = null
+  if (espaceNotification.aNotifierMaintenant(data, espaceVoyageur.aujourdhuiParis())) {
+    notification = await notifierDocument(data)
+  }
+  else if (data.publie && data.notifier_clients && !data.notifie_le && data.disponible_le) {
+    notification = { programmee: String(data.disponible_le).slice(0, 10) }
+  }
+  return { ...vueEquipe(notification?.envoyes !== undefined ? { ...data, notifie_le: notification.complete ? new Date().toISOString() : null } : data), notification }
+}
+
+// ── Notifications email ─────────────────────────────────────────────────────
+
+const PAR_LOT = 5
+
+/** Destinataires d'un document : titulaires des dossiers visibles et, sauf facture, leurs invités. */
+const destinatairesDuDocument = async (doc) => {
+  let dealIds = doc.deal_id ? [Number(doc.deal_id)] : []
+  if (!doc.deal_id) {
+    const { data: resas, error } = await supabase.from('booked_dates').select('deal_id')
+      .eq('travel_date_id', doc.travel_date_id).eq('deleted', false).not('is_test', 'is', true)
+    echec(error, 'réservations du document')
+    dealIds = [...new Set((resas || []).map(r => Number(r.deal_id)).filter(Boolean))]
+  }
+  if (!dealIds.length) return { destinataires: [], titreParDeal: new Map() }
+
+  const { data: deals, error: e2 } = await supabase.from('activecampaign_deals')
+    .select('id, contact, title, status, pipeline_id, deleted').in('id', dealIds)
+  echec(e2, 'dossiers du document')
+  // Les dossiers perdus, supprimés ou à la corbeille ne sont pas prévenus.
+  const visibles = (deals || []).filter(d => espaceVoyageur.dealVisible(d, { aUneReservation: true }))
+  const contacts = [...new Set(visibles.map(d => d.contact).filter(Boolean))]
+  const [{ data: fiches }, { data: voyageurs }] = await Promise.all([
+    contacts.length
+      ? supabase.from('activecampaign_clients').select('contact, email, firstname, lastname').in('contact', contacts)
+      : Promise.resolve({ data: [] }),
+    visibles.length
+      ? supabase.from('deal_travelers').select('deal_id, email, firstname').in('deal_id', visibles.map(d => d.id)).is('removed_at', null).not('email', 'is', null)
+      : Promise.resolve({ data: [] }),
+  ])
+  const ficheParContact = new Map((fiches || []).map(f => [Number(f.contact), f]))
+  const titreParDeal = new Map(visibles.map(d => [Number(d.id), espaceVoyageur.titreVoyage(d.title, ficheParContact.get(Number(d.contact)))]))
+  return {
+    destinataires: espaceNotification.listeDestinataires({ deals: visibles, fiches: ficheParContact, voyageurs: voyageurs || [], reserveTitulaire: doc.reserve_titulaire }),
+    titreParDeal,
+  }
+}
+
+/**
+ * Envoie l'email « nouveau document » à chaque destinataire pas encore prévenu,
+ * selon ESPACE_NOTIFICATIONS (coupé par défaut). Un email par adresse et par
+ * document, jamais deux (trip_document_notifications). Le document est marqué
+ * notifié si rien n'a échoué ; sinon la tâche planifiée retentera les échecs.
+ */
+const notifierDocument = async (doc) => {
+  const { mode, adresse } = espaceNotification.modeNotifications(process.env.ESPACE_NOTIFICATIONS)
+  const { destinataires, titreParDeal } = await destinatairesDuDocument(doc)
+  const { data: deja } = await supabase.from('trip_document_notifications').select('email, statut').eq('document_id', doc.id)
+  const faits = new Set((deja || []).filter(r => r.statut !== 'echec').map(r => r.email))
+  const aFaire = destinataires.filter(d => !faits.has(d.email))
+  const lien = `${useRuntimeConfig().public.siteURL}/mon-espace/documents`
+  const compte = { mode, destinataires: destinataires.length, envoyes: 0, rediriges: 0, ignores: 0, echecs: 0 }
+
+  const traiter = async (d) => {
+    let statut = 'ignore'
+    let detail = mode === 'coupe' ? 'ESPACE_NOTIFICATIONS absent : rien envoyé' : null
+    if (mode !== 'coupe') {
+      const contenu = espaceEmails.nouveauDocument({ prenom: d.prenom, titreDocument: doc.titre, titreVoyage: titreParDeal.get(d.dealId), lien })
+      try {
+        if (mode === 'redirection') {
+          // Le sujet dit à qui l'email serait parti, pour la recette.
+          await brevo.envoyerEmail({ to: adresse, subject: `[Recette → ${d.email}] ${contenu.subject}`, html: contenu.html })
+          statut = 'redirige'
+          detail = `vers ${adresse}`
+        }
+        else {
+          await brevo.envoyerEmail({ to: d.email, ...contenu })
+          statut = 'envoye'
+        }
+      }
+      catch (err) {
+        statut = 'echec'
+        detail = String(err?.message || err).slice(0, 300)
+      }
+    }
+    await supabase.from('trip_document_notifications').upsert(
+      { document_id: doc.id, email: d.email, deal_id: d.dealId, statut, detail, created_at: new Date().toISOString() },
+      { onConflict: 'document_id,email' },
+    )
+    compte[{ envoye: 'envoyes', redirige: 'rediriges', ignore: 'ignores', echec: 'echecs' }[statut]]++
+  }
+
+  for (let i = 0; i < aFaire.length; i += PAR_LOT) await Promise.all(aFaire.slice(i, i + PAR_LOT).map(traiter))
+
+  compte.complete = compte.echecs === 0
+  if (compte.complete) {
+    await supabase.from('trip_documents').update({ notifie_le: new Date().toISOString() }).eq('id', doc.id)
+  }
+  console.log(`[espace/documents] notification ${doc.id} :`, JSON.stringify(compte))
+  return compte
+}
+
+/** Tâche planifiée : documents arrivés à leur date de disponibilité, et échecs à retenter. */
+const notifierDocumentsEnAttente = async () => {
+  const aujourdhui = espaceVoyageur.aujourdhuiParis()
+  const { data: docs, error } = await supabase.from('trip_documents').select(COLONNES)
+    .eq('publie', true).eq('notifier_clients', true).is('notifie_le', null).is('deleted_at', null)
+    .or(`disponible_le.is.null,disponible_le.lte.${aujourdhui}`)
+    .limit(50)
+  echec(error, 'documents à notifier')
+  const resultats = []
+  for (const doc of docs || []) {
+    try {
+      resultats.push({ document: doc.id, ...(await notifierDocument(doc)) })
+    }
+    catch (err) {
+      console.error('[espace/documents] notification impossible', doc.id, err?.message)
+      resultats.push({ document: doc.id, erreur: err?.message })
+    }
+  }
+  return { documents: resultats.length, resultats }
 }
 
 /** Retire le document des espaces et supprime son fichier ; la ligne reste pour la trace. */
@@ -240,4 +366,6 @@ export default {
   modifierDocument,
   supprimerDocument,
   lienDocumentEquipe,
+  notifierDocument,
+  notifierDocumentsEnAttente,
 }
