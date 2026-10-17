@@ -94,6 +94,8 @@ Ulysse (the back-office replacing /booking-management) calls these with `x-ulyss
 - `POST deals/:dealId/resynchroniser` — rewrites the deal's mirror row from AC (CYC-11). Read-only at AC.
 - `POST dates/:dateId/dossier-depart` — resyncs the pipeline-4 departure deal (value, travellers, stage), same computation as each payment (`departures.resyncDepartureDeal`, RES-11).
 - `GET deals/:dealId/notes` — the deal's AC notes, for the Docteur's timeline.
+- `GET dates/:dateId/profils` — Espace Voyageur profiles of every traveller booked on the departure, **passport/ID numbers decrypted** (they are needed to issue tickets). Each profile read is logged in `traveler_file_access` (`consultation`, actor = `x-ulysse-user`). Deals whose travellers were never read are synced from AC on the fly. Ulysse gates it behind its restricted right `profils-voyageurs`.
+- `GET dates/:dateId/profils/:placeId/piece` — 60 s signed URL to a traveller's ID copy (the place must belong to a booking of that departure), logged (`lecture`).
 
 ## Pipeline logic — the most important concept
 

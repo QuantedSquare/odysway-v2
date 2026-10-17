@@ -216,6 +216,151 @@ const majCasesAC = async (dossier) => {
   }
 }
 
+// ── Lecture par l'équipe (Ulysse, jeton de service) ─────────────────────────
+
+const dateIntrouvable = () => createError({ statusCode: 404, statusMessage: 'Date introuvable.' })
+
+const reservationsDeLaDate = async (dateId) => {
+  const { data: date, error } = await supabase.from('travel_dates')
+    .select('id, return_date, deleted, is_test').eq('id', dateId).maybeSingle()
+  echec(error, 'lecture de la date')
+  if (!date || date.deleted || date.is_test) throw dateIntrouvable()
+  const { data: resas, error: e2 } = await supabase.from('booked_dates')
+    .select('id, deal_id, booked_places, is_option')
+    .eq('travel_date_id', dateId).eq('deleted', false).not('is_test', 'is', true)
+  echec(e2, 'réservations de la date')
+  return { date, resas: (resas || []).filter(r => r.deal_id) }
+}
+
+/**
+ * Voyageurs et profils d'un départ, numéros de pièce DÉCHIFFRÉS : ils servent à
+ * émettre les billets. Chaque profil lu est journalisé (« consultation ») au
+ * nom de l'utilisateur d'Ulysse. Les dossiers dont les voyageurs n'ont jamais
+ * été lus dans AC le sont au passage.
+ * @param {string} dateId
+ * @param {{ email: string }} acteur utilisateur d'Ulysse (x-ulysse-user)
+ */
+const profilsDeLaDate = async (dateId, acteur) => {
+  const { date, resas } = await reservationsDeLaDate(dateId)
+  const dealIds = [...new Set(resas.map(r => Number(r.deal_id)))]
+  if (!dealIds.length) return { date: { id: date.id, retour: date.return_date }, reservations: [], synthese: { voyageurs: 0, complets: 0, expirentTropTot: 0, sansProfil: 0 } }
+
+  const { data: deals, error } = await supabase.from('activecampaign_deals')
+    .select('id, contact, nb_traveler').in('id', dealIds)
+  echec(error, 'dossiers de la date')
+  const contacts = [...new Set((deals || []).map(d => d.contact).filter(Boolean))]
+  const { data: fiches } = contacts.length
+    ? await supabase.from('activecampaign_clients').select('contact, firstname, lastname, email').in('contact', contacts)
+    : { data: [] }
+  const ficheParContact = new Map((fiches || []).map(f => [Number(f.contact), f]))
+  const dealParId = new Map((deals || []).map(d => [Number(d.id), d]))
+
+  const lirePlaces = async () => {
+    const { data, error: e } = await supabase.from('deal_travelers')
+      .select('id, deal_id, slot, firstname, lastname, birthdate, is_holder, user_id')
+      .in('deal_id', dealIds).is('removed_at', null).order('slot')
+    echec(e, 'voyageurs de la date')
+    return data || []
+  }
+  let places = await lirePlaces()
+
+  // Dossiers jamais lus par l'espace ni par le webhook depuis sa mise en place.
+  const sansPlaces = dealIds.filter(id => !places.some(p => Number(p.deal_id) === id))
+  if (sansPlaces.length) {
+    for (const id of sansPlaces) {
+      try {
+        await espaceDossiers.synchroniserVoyageurs(id, { contact: ficheParContact.get(Number(dealParId.get(id)?.contact)) })
+      }
+      catch (err) {
+        console.error('[ulysse/profils] voyageurs non lus', id, err?.message)
+      }
+    }
+    places = await lirePlaces()
+  }
+
+  const { data: profils, error: e3 } = places.length
+    ? await supabase.from('traveler_profiles').select('*').in('deal_traveler_id', places.map(p => p.id))
+    : { data: [], error: null }
+  echec(e3, 'profils de la date')
+  const profilParPlace = new Map((profils || []).map(p => [p.deal_traveler_id, p]))
+
+  const consultes = []
+  const vuePlace = (place) => {
+    const p = profilParPlace.get(place.id) || null
+    let numero = null
+    let numeroIllisible = false
+    if (p?.piece_numero_chiffre) {
+      try {
+        numero = espaceChiffrement.dechiffrer(p.piece_numero_chiffre)
+      }
+      catch (err) {
+        // Mauvaise clé ou valeur altérée : on le dit, sans bloquer la liste.
+        numeroIllisible = true
+        console.error('[ulysse/profils] numéro illisible', place.id, err?.message)
+      }
+    }
+    if (p) consultes.push(place.id)
+    return {
+      placeId: place.id,
+      slot: place.slot,
+      prenom: place.firstname,
+      nom: place.lastname,
+      dateNaissance: place.birthdate,
+      titulaire: place.is_holder,
+      compte: Boolean(place.user_id),
+      profil: p ? espaceProfil.vueEquipe(p, { numero, numeroIllisible, retour: date.return_date }) : null,
+    }
+  }
+
+  const reservations = resas.map((r) => {
+    const deal = dealParId.get(Number(r.deal_id))
+    const fiche = ficheParContact.get(Number(deal?.contact))
+    const voyageurs = places.filter(p => Number(p.deal_id) === Number(r.deal_id)).map(vuePlace)
+    return {
+      bookedId: r.id,
+      dealId: Number(r.deal_id),
+      option: Boolean(r.is_option),
+      places: Number(r.booked_places) || null,
+      nbVoyageurs: Number(deal?.nb_traveler) || null,
+      contact: fiche ? { prenom: fiche.firstname, nom: fiche.lastname, email: fiche.email } : null,
+      voyageurs,
+    }
+  })
+
+  if (consultes.length) {
+    const { error: e4 } = await supabase.from('traveler_file_access').insert(consultes.map(id => ({
+      deal_traveler_id: id, action: 'consultation', acteur: acteur.email, acteur_user_id: null,
+    })))
+    if (e4) console.error('[ulysse/profils] consultations non journalisées', e4.message)
+  }
+
+  const tous = reservations.flatMap(r => r.voyageurs)
+  return {
+    date: { id: date.id, retour: date.return_date },
+    reservations,
+    synthese: {
+      voyageurs: tous.length,
+      complets: tous.filter(v => v.profil?.completude.complet && !v.profil.completude.expireTropTot).length,
+      expirentTropTot: tous.filter(v => v.profil?.completude.expireTropTot).length,
+      sansProfil: tous.filter(v => !v.profil).length,
+    },
+  }
+}
+
+/** Lien de 60 s vers la copie de pièce d'une place de CE départ ; journalisé au nom de l'utilisateur d'Ulysse. */
+const lienScanEquipe = async (dateId, placeId, acteur) => {
+  const { resas } = await reservationsDeLaDate(dateId)
+  const { data: place } = await supabase.from('deal_travelers').select('id, deal_id').eq('id', placeId).maybeSingle()
+  // La place doit appartenir à une réservation du départ demandé.
+  if (!place || !resas.some(r => Number(r.deal_id) === Number(place.deal_id))) throw introuvable()
+  const profil = await lireProfil(place.id)
+  if (!profil?.scan_path) throw createError({ statusCode: 404, statusMessage: 'Aucune copie déposée.' })
+  const { data, error } = await supabase.storage.from(BUCKET).createSignedUrl(profil.scan_path, DUREE_LIEN_S)
+  echec(error, 'lien de la copie')
+  await journal(place.id, 'lecture', { id: null, email: acteur.email }, profil.scan_path)
+  return { url: data.signedUrl, expireDans: DUREE_LIEN_S }
+}
+
 export default {
   BUCKET,
   placeModifiable,
@@ -230,4 +375,6 @@ export default {
   completudesDuDossier,
   majCasesAC,
   journal,
+  profilsDeLaDate,
+  lienScanEquipe,
 }
