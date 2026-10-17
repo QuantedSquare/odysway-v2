@@ -38,4 +38,19 @@ const invitationVoyageur = ({ prenomInvite, prenomTitulaire, voyage, lien }) => 
 <p style="margin:28px 0"><a href="${echapper(lien)}" style="background:#DB6644;color:#ffffff;text-decoration:none;padding:12px 24px;border-radius:999px;font-weight:600">Ouvrir mon espace</a></p>`),
 })
 
-export default { echapper, codeRattachement, invitationVoyageur }
+/**
+ * Un document de voyage vient d'être publié. Le lien ouvre l'espace (avec
+ * connexion par code) : ni jeton ni adresse dans l'URL, un email transféré
+ * n'ouvre rien.
+ */
+const nouveauDocument = ({ prenom, titreDocument, titreVoyage, lien }) => ({
+  subject: `${titreDocument}${titreVoyage ? ` — ${titreVoyage}` : ''} : disponible dans votre espace`,
+  html: cadre(`<p>Bonjour${prenom ? ` ${echapper(prenom)}` : ''},</p>
+<p>Un nouveau document vous attend dans votre Espace Voyageur${titreVoyage ? `, pour votre voyage <b>${echapper(titreVoyage)}</b>` : ''} :</p>
+<p style="font-size:17px;font-weight:700;margin:20px 0">${echapper(titreDocument)}</p>
+<p>Connectez-vous avec l'adresse email de votre réservation : aucun mot de passe n'est nécessaire, un code vous sera envoyé.</p>
+<p style="margin:28px 0"><a href="${echapper(lien)}" style="background:#DB6644;color:#ffffff;text-decoration:none;padding:12px 24px;border-radius:999px;font-weight:600">Voir mes documents</a></p>
+<p style="font-size:13px;color:#5C7378">Tous vos documents de voyage sont réunis dans votre espace : nous ne les envoyons plus en pièce jointe.</p>`),
+})
+
+export default { echapper, codeRattachement, invitationVoyageur, nouveauDocument }

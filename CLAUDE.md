@@ -269,6 +269,7 @@ Comptes clients = Supabase Auth de ce projet (code à 6 chiffres ou Google), par
 - `traveler_file_access` — journal des dépôts / lectures / suppressions / purges des copies de pièces.
 - `trip_documents` — documents de voyage déposés par l'équipe (Ulysse) : portée **départ** (`travel_date_id` : fiche voyage, carnet) **ou dossier** (`deal_id` : billets, facture), jamais les deux. Naît non publié ; publié par Ulysse une fois le fichier reçu (bucket privé `trip-documents`) ; `disponible_le` l'affiche « Bientôt » jusqu'à cette date ; `reserve_titulaire` le cache aux voyageurs invités (facture par défaut). Suppression = `deleted_at` + fichier effacé.
 - `trip_document_views` (`document_id`, `user_id`) — documents ouverts par chaque compte (badge « Nouveau »).
+- `trip_document_notifications` (UNIQUE `document_id`, `email`) — emails « nouveau document » : `envoye`, `redirige`, `ignore`, `echec`. Envoi piloté par **`ESPACE_NOTIFICATIONS`** (absent = coupé, `redirection:<email>`, `actif`) — jamais déduit de `VERCEL_ENV` : dev partage la base de prod. `trip_documents.notifier_clients` / `notifie_le` ; tâche planifiée `POST /api/v1/webhooks/espace/notifier-documents` (x-cron-secret) pour les documents « disponible le » et les échecs.
 
 ### `alma_ids`
 Tracks Alma payment IDs to prevent duplicate processing.

@@ -218,11 +218,28 @@ liste toutes les places que le compte peut remplir sur ses voyages à venir.
   datés. Téléchargement par lien de 60 s, nom de fichier tiré du titre.
 - Liens permanents gardés : programme sur odysway.com, CGV, carnet en ligne (`travel_book`).
 
+**Notification email à la publication — FAIT (branche `claude/espace-notification-documents`)**
+- À la publication d'un document disponible, odysway écrit aux **titulaires des dossiers
+  actifs** du départ (ou du dossier) et, sauf document réservé au titulaire, aux
+  **voyageurs invités**. Un email par adresse et par document, jamais deux
+  (`trip_document_notifications`) ; lien vers `/mon-espace/documents`, sans jeton.
+- « Disponible le » futur : annoncé ce jour-là par la tâche planifiée
+  `POST /api/v1/webhooks/espace/notifier-documents` (`x-cron-secret`), qui retente
+  aussi les échecs Brevo. **À planifier chaque matin.**
+- L'équipe peut publier sans prévenir (case décochée dans Ulysse). Dépublier puis
+  republier ne renvoie rien.
+- **Garde-fou** : `ESPACE_NOTIFICATIONS`, jamais déduit de l'environnement (dev partage
+  la base de prod, donc les vrais clients) :
+  - absente → rien ne part, le document est marqué traité, tout est journalisé (`ignore`) ;
+  - `redirection:<email>` → tout part vers cette adresse, sujet préfixé
+    `[Recette → client@…]` ;
+  - `actif` → les clients sont prévenus. **À ne poser qu'en production.**
+
 **Reste à faire**
-- Prévenir le client par email à la publication (Brevo) — aujourd'hui il le voit en
-  se connectant.
 - Contrat d'assurance Chapka et factures clients : pas de génération automatique ;
   déposés à la main. Date d'acceptation des CGV : non stockée.
+- Regrouper plusieurs publications du même jour en un seul email (aujourd'hui : un
+  email par document).
 
 ### 4.5 Activation et relances
 
