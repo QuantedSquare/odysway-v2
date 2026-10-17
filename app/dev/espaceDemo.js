@@ -6,6 +6,8 @@
 // (gardé dans sessionStorage). « Continuer avec Google » ouvre une session
 // vieille de 2 heures, pour voir la reconfirmation par code avant le mot de passe.
 
+import espaceProfil from '../../server/utils/espaceProfil.js'
+
 const CODE = '123456'
 const CLE = 'odysway-espace-demo'
 
@@ -139,6 +141,20 @@ const voyageurs = () => lire('voyageurs', [
   { slot: 3, prenom: 'Inès', nom: 'Rousseau', titulaire: false, moi: false, visibleGroupe: false, peutChangerVisibilite: true, invitation: null, email: null, peutInviter: true },
 ])
 
+// Profils au format de la table traveler_profiles, pour réutiliser les vraies
+// règles (espaceProfil.js). Julien (place 2) a son propre compte : profil
+// complet, que Camille ne peut pas ouvrir.
+const RETOUR = '2027-03-25'
+const profils = () => lire('profils', {
+  2: { piece_type: 'passeport', piece_numero_chiffre: 'demo', piece_numero_fin: '7731', piece_expiration: '2031-05-02', regimes: ['tout'], urgence_nom: 'Camille Rousseau', urgence_telephone: '+33 6 24 55 18 03' },
+})
+const modifiable = slot => slot !== 2
+const avecProfils = liste => liste.map((v) => {
+  const c = espaceProfil.completude(profils()[v.slot] || null, { retour: RETOUR })
+  return { ...v, peutModifierProfil: modifiable(v.slot), profil: { complet: c.complet, manques: c.manques, expireTropTot: c.expireTropTot } }
+})
+const erreurDemo = (statusCode, statusMessage) => Object.assign(new Error(statusMessage), { statusCode, data: { statusMessage } })
+
 export const reponseDemo = async (chemin, options = {}, session) => {
   await new Promise(r => setTimeout(r, 250))
   const corps = options.body || {}
@@ -167,9 +183,83 @@ export const reponseDemo = async (chemin, options = {}, session) => {
       lienPaiement: base.paiement.reste > 0 ? '/checkout?type=balance&booked_id=demo&step=1' : null,
       carnet: null,
       paiements: { complet: true, paiements: [{ le: '2026-09-04T10:00:00Z', montant: 870, rembourse: 0, moyen: 'carte', statut: 'paye', via: 'Stripe' }] },
-      voyageurs: voyageurs(),
+      voyageurs: avecProfils(voyageurs()),
       compagnons: { visibles: ['Paul D.', 'Hélène M.'], autres: 4 },
     }
+  }
+
+  if (chemin === 'profils') {
+    return {
+      profils: voyageurs().filter(v => modifiable(v.slot)).map((v) => {
+        const c = espaceProfil.completude(profils()[v.slot] || null, { retour: RETOUR })
+        return { dossier: { id: 17037, slug: 'trek-pays-sherpas-nepal', titre: 'Trek au pays des Sherpas', depart: '2027-03-14' }, slot: v.slot, prenom: v.prenom, nom: v.nom, moi: v.moi, completude: c }
+      }),
+    }
+  }
+
+  const profil = /^dossiers\/\d+\/voyageurs\/(\d+)(?:\/(profil|piece))?$/.exec(chemin)
+  if (profil) {
+    const slot = +profil[1]
+    if (!modifiable(slot)) throw erreurDemo(404, 'Voyageur introuvable.')
+    const v = voyageurs().find(x => x.slot === slot)
+    const tous = profils()
+    const ligne = tous[slot] || null
+    const methode = (options.method || 'GET').toUpperCase()
+    const vue = l => espaceProfil.vueProfil(l, { retour: RETOUR })
+
+    if (!profil[2]) {
+      return {
+        voyageur: { slot, prenom: v.prenom, nom: v.nom, moi: v.moi },
+        dossier: { id: 17037, retour: RETOUR },
+        regimesDisponibles: espaceProfil.REGIMES,
+        validiteMois: espaceProfil.VALIDITE_MOIS_APRES_RETOUR,
+        conservationScanJours: espaceProfil.CONSERVATION_SCAN_JOURS,
+        profil: vue(ligne),
+        precedent: !ligne && v.moi ? { misAJourLe: '2025-05-02T10:00:00Z', pieceNumeroFin: '4521', pieceType: 'passeport' } : null,
+      }
+    }
+
+    if (profil[2] === 'profil') {
+      let nouvelle
+      if (corps.reprendre) {
+        nouvelle = { piece_type: 'passeport', piece_numero_chiffre: 'demo', piece_numero_fin: '4521', piece_expiration: '2029-11-30', piece_pays: 'FR', regimes: ['vegetarien', 'sans_gluten'], allergies: 'Arachides (allergie sévère)', urgence_nom: 'Julien Rousseau', urgence_lien: 'Conjoint', urgence_telephone: '+33 6 11 22 33 44' }
+      }
+      else {
+        nouvelle = {
+          ...ligne,
+          piece_type: corps.pieceType || null,
+          piece_expiration: corps.pieceExpiration || null,
+          piece_pays: corps.piecePays || null,
+          regimes: espaceProfil.normaliserRegimes(corps.regimes),
+          allergies: corps.allergies || null,
+          urgence_nom: corps.urgenceNom || null,
+          urgence_lien: corps.urgenceLien || null,
+          urgence_telephone: corps.urgenceTelephone || null,
+          notes: corps.notes || null,
+        }
+        if (corps.pieceNumero === null) Object.assign(nouvelle, { piece_numero_chiffre: null, piece_numero_fin: null })
+        else if (corps.pieceNumero !== undefined) {
+          const n = espaceProfil.normaliserNumero(corps.pieceNumero)
+          if (!espaceProfil.numeroValide(n)) throw erreurDemo(400, 'Numéro de pièce invalide : 5 à 20 lettres ou chiffres.')
+          Object.assign(nouvelle, { piece_numero_chiffre: 'demo', piece_numero_fin: n.slice(-4) })
+        }
+      }
+      nouvelle.updated_at = new Date().toISOString()
+      ecrire('profils', { ...tous, [slot]: nouvelle })
+      return { profil: vue(nouvelle) }
+    }
+
+    // Copie de la pièce : seules ses métadonnées sont gardées en démo.
+    if (methode === 'POST') {
+      const fichier = corps.get?.('fichier')
+      ecrire('profils', { ...tous, [slot]: { ...ligne, scan_path: 'demo', scan_type: fichier?.type || 'image/jpeg', scan_taille: fichier?.size || 0, scan_depose_le: new Date().toISOString() } })
+      return { scan: { type: fichier?.type, taille: fichier?.size } }
+    }
+    if (methode === 'DELETE') {
+      ecrire('profils', { ...tous, [slot]: { ...ligne, scan_path: null, scan_type: null, scan_taille: null, scan_depose_le: null } })
+      return { supprime: true }
+    }
+    return { url: 'data:text/html;charset=utf-8,' + encodeURIComponent('<p style="font-family:sans-serif;padding:2em">Démo : la copie de la pièce s\'ouvrirait ici, par un lien valable 60 secondes.</p>'), expireDans: 60 }
   }
 
   if (chemin === 'rattachement/code') return { envoye: true }
@@ -178,5 +268,5 @@ export const reponseDemo = async (chemin, options = {}, session) => {
     return { contacts: 1, dossiers: 2 }
   }
 
-  throw Object.assign(new Error('Démo'), { statusCode: 404, data: { statusMessage: 'Dossier introuvable.' } })
+  throw erreurDemo(404, 'Dossier introuvable.')
 }
