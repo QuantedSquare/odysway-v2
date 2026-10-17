@@ -204,7 +204,7 @@ definePageMeta({ layout: 'no-footer' })
 useSeoMeta({ title: 'Connexion — Espace Voyageur', robots: 'noindex, nofollow' })
 
 const route = useRoute()
-const { init, session, envoyerCode, verifierCode, connexionMotDePasse, connexionGoogle } = useEspace()
+const { init, session, envoyerCode, verifierCode, connexionMotDePasse, connexionGoogle, reprendreSuiteGoogle } = useEspace()
 
 // Dernier mode choisi sur cet appareil : confort seulement.
 const CLE_MODE = 'odysway-espace-mode'
@@ -233,10 +233,11 @@ const emailValide = v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(v || '').trim(
 
 // Seule une page de l'espace peut servir de destination : pas de redirection
 // ouverte vers un autre site.
-const suite = computed(() => {
-  const s = String(route.query.suite || '')
+const destinationSure = (valeur) => {
+  const s = String(valeur || '')
   return s.startsWith('/mon-espace') && !s.startsWith('//') ? s : '/mon-espace'
-})
+}
+const suite = ref(destinationSure(route.query.suite))
 
 watch(mode, (m) => {
   erreur.value = null
@@ -343,6 +344,9 @@ watch(session, (s) => {
 
 onMounted(async () => {
   mode.value = lireMode()
+  // Retour de Google : la destination n'est pas dans l'URL (voir useEspace).
+  const suiteGoogle = reprendreSuiteGoogle()
+  if (suiteGoogle && !route.query.suite) suite.value = destinationSure(suiteGoogle)
   await init()
   if (session.value) navigateTo(suite.value, { replace: true })
   if (route.query.error_description) erreur.value = 'La connexion n\'a pas abouti. Réessayez ou recevez un code par email.'

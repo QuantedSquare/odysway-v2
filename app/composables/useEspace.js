@@ -48,6 +48,8 @@ const authEspace = async () => {
 
 const normaliser = email => String(email || '').trim().toLowerCase()
 
+const CLE_SUITE_GOOGLE = 'odysway-espace-suite'
+
 export const useEspace = () => {
   const session = useState('espace-session', () => null)
   const pret = useState('espace-pret', () => false)
@@ -99,14 +101,33 @@ export const useEspace = () => {
     session.value = data.session
   }
 
+  // L'URL de retour doit être EXACTEMENT une URL autorisée dans Supabase Auth :
+  // le moindre paramètre en plus et Supabase renvoie vers son Site URL (Ulysse),
+  // avec le code. La destination attend donc dans l'onglet, pas dans l'URL.
   const connexionGoogle = async (suite = '/mon-espace') => {
-    const retour = new URL('/mon-espace/connexion', window.location.origin)
-    retour.searchParams.set('suite', suite)
+    try {
+      sessionStorage.setItem(CLE_SUITE_GOOGLE, suite)
+    }
+    catch {
+      // stockage indisponible : retour sur l'accueil de l'espace
+    }
     const { error } = await (await authEspace()).signInWithOAuth({
       provider: 'google',
-      options: { redirectTo: retour.toString() },
+      options: { redirectTo: new URL('/mon-espace/connexion', window.location.origin).toString() },
     })
     if (error) throw error
+  }
+
+  /** Destination mémorisée avant de partir chez Google ; lue une seule fois. */
+  const reprendreSuiteGoogle = () => {
+    try {
+      const suite = sessionStorage.getItem(CLE_SUITE_GOOGLE)
+      sessionStorage.removeItem(CLE_SUITE_GOOGLE)
+      return suite
+    }
+    catch {
+      return null
+    }
   }
 
   /** Définir la connexion doit-elle être reconfirmée par un code avant ? */
@@ -186,6 +207,7 @@ export const useEspace = () => {
     verifierCode,
     connexionMotDePasse,
     connexionGoogle,
+    reprendreSuiteGoogle,
     confirmationRequise,
     definirMotDePasse,
     moyensConnexion,
