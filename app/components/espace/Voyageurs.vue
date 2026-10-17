@@ -66,7 +66,21 @@
             </template>
           </div>
         </div>
-        <div class="d-flex align-center ga-3 actions">
+        <div class="d-flex flex-wrap align-center ga-3 actions">
+          <EspaceStatutProfil
+            v-if="v.profil"
+            :completude="v.profil"
+          />
+          <v-btn
+            v-if="v.peutModifierProfil"
+            :to="`/mon-espace/voyages/${detail.id}/voyageurs/${v.slot}`"
+            size="small"
+            :variant="v.profil?.complet ? 'text' : 'flat'"
+            :color="v.profil?.complet ? undefined : 'primary'"
+            rounded="pill"
+          >
+            {{ v.profil?.complet ? 'Voir le profil' : 'Compléter le profil' }}
+          </v-btn>
           <v-switch
             v-if="v.peutChangerVisibilite && detail.compagnons"
             :model-value="v.visibleGroupe"

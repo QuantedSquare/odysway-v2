@@ -36,3 +36,11 @@ test('messageErreurAuth traduit les codes de Supabase Auth', () => {
   assert.match(messageErreurAuth({ status: 429 }), /Trop de tentatives/)
   assert.match(messageErreurAuth({ code: 'reauthentication_needed' }), /confirmez/)
 })
+
+test('dePrenom : élision devant voyelle et h', async () => {
+  const { dePrenom } = await import('../../app/utils/espaceTexte.js')
+  assert.equal(dePrenom('Inès'), 'd\'Inès')
+  assert.equal(dePrenom('Hélène'), 'd\'Hélène')
+  assert.equal(dePrenom('Paul'), 'de Paul')
+  assert.equal(dePrenom(''), 'de ce voyageur')
+})

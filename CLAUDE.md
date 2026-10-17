@@ -262,6 +262,8 @@ Comptes clients = Supabase Auth de ce projet (code à 6 chiffres ou Google), par
 - `client_account_links` (`user_id`, `ac_contact`) — compte ↔ contact AC, N-N. L'email n'amorce que le premier lien ; ensuite `ac_contact` fait foi.
 - `deal_travelers` (`deal_id`, `slot` 1-15) — copie des champs AC « Voyageur N » + ce qu'AC ne porte pas : `email` d'invitation, `user_id` du compte invité, `visible_groupe` (consentement, faux par défaut), `removed_at`. AC reste la source du nom et de la date de naissance (Chapka les y lit).
 - `client_link_codes` — codes hachés pour rattacher une seconde adresse.
+- `traveler_profiles` (PK `deal_traveler_id`) — profil d'une place : pièce d'identité (numéro **chiffré** AES-256-GCM par l'application, clé `ESPACE_CHIFFREMENT_KEY`, seuls les 4 derniers caractères en clair), régimes, allergies, contact d'urgence, notes, référence de la copie dans le bucket privé `traveler-files` (purgée 30 jours après le retour).
+- `traveler_file_access` — journal des dépôts / lectures / suppressions / purges des copies de pièces.
 
 ### `alma_ids`
 Tracks Alma payment IDs to prevent duplicate processing.

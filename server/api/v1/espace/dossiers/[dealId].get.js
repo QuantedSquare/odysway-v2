@@ -31,11 +31,12 @@ export default defineEventHandler(async (event) => {
 
   if (titulaire) await espaceDossiers.voyageursAJour([deal])
 
-  const [{ data: fiche }, voyageurs, compagnons, paiements] = await Promise.all([
+  const [{ data: fiche }, voyageurs, compagnons, paiements, completudes] = await Promise.all([
     supabase.from('activecampaign_clients').select('firstname, lastname').eq('contact', deal.contact).maybeSingle(),
     espaceDossiers.voyageursDuDossier(deal.id),
     espaceDossiers.compagnonsDuDepart(dossier),
     titulaire ? paiementsLecture.lirePaiements(deal.id, 'espace') : Promise.resolve(null),
+    espaceProfils.completudesDuDossier(dossier),
   ])
 
   const aujourdhui = espaceVoyageur.aujourdhuiParis()
@@ -65,6 +66,12 @@ export default defineEventHandler(async (event) => {
         // Qui peut décider de la visibilité : la personne si elle a un compte,
         // sinon le titulaire pour elle (enfant, voyageur sans email).
         peutChangerVisibilite: moi || (titulaire && !v.user_id),
+        peutModifierProfil: espaceProfil.peutModifier({ place: v, clientId: client.id, role }),
+        // Le titulaire voit si chaque profil est complet, jamais son contenu ;
+        // un invité ne voit que le sien.
+        profil: titulaire || moi
+          ? (({ complet, manques, expireTropTot }) => ({ complet, manques, expireTropTot }))(completudes[v.id] || espaceProfil.completude(null))
+          : null,
         ...(titulaire
           ? {
               invitation: v.user_id ? 'rejoint' : v.email ? 'envoyee' : null,

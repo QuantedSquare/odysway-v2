@@ -261,6 +261,17 @@ const euros = n => formatNumber(n, 'currency', '€', 'euro')
 
 const alertes = computed(() => {
   const out = []
+  const expirent = (detail.value?.voyageurs || []).filter(v => v.peutModifierProfil && v.profil?.expireTropTot)
+  for (const v of expirent) {
+    out.push({
+      cle: `piece-${v.slot}`,
+      type: 'error',
+      titre: v.moi ? 'Votre pièce d\'identité expire trop tôt' : `La pièce d'identité ${dePrenom(v.prenom)} expire trop tôt`,
+      texte: 'Elle doit être valable 6 mois après le retour. Renouvelez-la, puis mettez le profil à jour.',
+      action: 'Mettre à jour',
+      lien: `/mon-espace/voyages/${prochain.value?.id}/voyageurs/${v.slot}#piece`,
+    })
+  }
   for (const d of actifs.value) {
     const p = d.paiement
     if (d.option) {
@@ -326,6 +337,20 @@ const checklist = computed(() => {
     lien: `/mon-espace/voyages/${d.id}#voyageurs`,
     action: 'Voir',
   })
+  // Profils que ce compte peut remplir (le sien, ceux des voyageurs sans compte).
+  const aRemplir = (detail.value.voyageurs || []).filter(v => v.peutModifierProfil && v.profil)
+  if (aRemplir.length) {
+    const premier = aRemplir.find(v => !v.profil.complet || v.profil.expireTropTot)
+    const complets = aRemplir.filter(v => v.profil.complet && !v.profil.expireTropTot).length
+    out.push({
+      cle: 'profils',
+      titre: aRemplir.length === 1 ? 'Profil voyageur (pièce, régime, contact d\'urgence)' : 'Profils voyageurs (pièce, régime, contact d\'urgence)',
+      detail: aRemplir.length > 1 ? `${complets} sur ${aRemplir.length}` : null,
+      fait: complets === aRemplir.length,
+      lien: premier ? `/mon-espace/voyages/${d.id}/voyageurs/${premier.slot}` : '/mon-espace/profil',
+      action: 'Compléter',
+    })
+  }
   return out
 })
 
