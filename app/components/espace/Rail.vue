@@ -89,7 +89,7 @@
 </template>
 
 <script setup>
-import { mdiAccountMultiplePlusOutline, mdiAccountOutline, mdiHomeOutline, mdiLogout, mdiMapOutline, mdiShieldLockOutline } from '@mdi/js'
+import { mdiAccountMultiplePlusOutline, mdiAccountOutline, mdiFileDocumentMultipleOutline, mdiHomeOutline, mdiLogout, mdiMapOutline, mdiShieldLockOutline } from '@mdi/js'
 
 const route = useRoute()
 const { moi, deconnexion } = useEspace()
@@ -110,6 +110,7 @@ const liens = computed(() => [
   { to: '/mon-espace', label: 'Tableau de bord', icon: mdiHomeOutline, exact: true },
   { to: '/mon-espace/voyages', label: 'Mes voyages', icon: mdiMapOutline, badge: aRegler.value || null },
   { to: '/mon-espace/profil', label: 'Mon profil', icon: mdiAccountOutline },
+  { to: '/mon-espace/documents', label: 'Mes documents', icon: mdiFileDocumentMultipleOutline },
   { to: '/mon-espace/rattacher', label: 'Retrouver un dossier', icon: mdiAccountMultiplePlusOutline },
   { to: '/mon-espace/securite', label: 'Connexion et sécurité', icon: mdiShieldLockOutline },
 ])

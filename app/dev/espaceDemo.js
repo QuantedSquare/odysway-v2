@@ -6,6 +6,7 @@
 // (gardé dans sessionStorage). « Continuer avec Google » ouvre une session
 // vieille de 2 heures, pour voir la reconfirmation par code avant le mot de passe.
 
+import espaceDocument from '../../server/utils/espaceDocument.js'
 import espaceProfil from '../../server/utils/espaceProfil.js'
 
 const CODE = '123456'
@@ -153,6 +154,19 @@ const avecProfils = liste => liste.map((v) => {
   const c = espaceProfil.completude(profils()[v.slot] || null, { retour: RETOUR })
   return { ...v, peutModifierProfil: modifiable(v.slot), profil: { complet: c.complet, manques: c.manques, expireTropTot: c.expireTropTot } }
 })
+// Documents au format de la table trip_documents, passés par les vraies règles.
+const DOCS = [
+  { id: 'doc-fiche', type: 'fiche_voyage', titre: 'Fiche voyage — Népal', description: 'Programme jour par jour, équipement, vaccins', mime_type: 'application/pdf', taille: 1468006, publie: true, publie_le: '2026-09-02T09:00:00Z' },
+  { id: 'doc-carnet', type: 'carnet', titre: 'Carnet de séjour', description: 'Hébergements, contacts sur place', mime_type: 'application/pdf', taille: 900000, publie: true, publie_le: '2026-09-02T09:00:00Z', disponible_le: '2027-02-12' },
+  { id: 'doc-assurance', type: 'assurance', titre: 'Contrat d\'assurance', description: 'Multirisque Odysway', mime_type: 'application/pdf', taille: 245760, publie: true, publie_le: '2026-09-04T09:00:00Z' },
+  { id: 'doc-facture', type: 'facture', titre: 'Facture d\'acompte — 870 €', mime_type: 'application/pdf', taille: 98304, publie: true, publie_le: '2026-09-04T08:00:00Z', reserve_titulaire: true },
+]
+const documentsDemo = () => {
+  const vus = lire('documentsVus', [])
+  const auj = new Date().toISOString().slice(0, 10)
+  return DOCS.map(d => espaceDocument.vueClient(d, { aujourdhui: auj, vu: vus.includes(d.id) })).sort(espaceDocument.trier)
+}
+
 const erreurDemo = (statusCode, statusMessage) => Object.assign(new Error(statusMessage), { statusCode, data: { statusMessage } })
 
 export const reponseDemo = async (chemin, options = {}, session) => {
@@ -184,6 +198,7 @@ export const reponseDemo = async (chemin, options = {}, session) => {
       carnet: null,
       paiements: { complet: true, paiements: [{ le: '2026-09-04T10:00:00Z', montant: 870, rembourse: 0, moyen: 'carte', statut: 'paye', via: 'Stripe' }] },
       voyageurs: avecProfils(voyageurs()),
+      documents: +dossier[1] === 15188 ? [] : documentsDemo(),
       compagnons: { visibles: ['Paul D.', 'Hélène M.'], autres: 4 },
     }
   }
@@ -260,6 +275,17 @@ export const reponseDemo = async (chemin, options = {}, session) => {
       return { supprime: true }
     }
     return { url: 'data:text/html;charset=utf-8,' + encodeURIComponent('<p style="font-family:sans-serif;padding:2em">Démo : la copie de la pièce s\'ouvrirait ici, par un lien valable 60 secondes.</p>'), expireDans: 60 }
+  }
+
+  if (chemin === 'documents') {
+    return { dossiers: [{ ...nepal(), documents: documentsDemo() }, { ...maroc(), documents: [] }] }
+  }
+  const lienDoc = /^documents\/([\w-]+)\/lien$/.exec(chemin)
+  if (lienDoc) {
+    ecrire('documentsVus', [...new Set([...lire('documentsVus', []), lienDoc[1]])])
+    // blob: plutôt que data: — les navigateurs refusent d'y naviguer.
+    const blob = new Blob(['Démo Odysway : le vrai document se téléchargerait ici, par un lien valable 60 secondes.'], { type: 'text/plain' })
+    return { url: URL.createObjectURL(blob), expireDans: 60 }
   }
 
   if (chemin === 'rattachement/code') return { envoye: true }

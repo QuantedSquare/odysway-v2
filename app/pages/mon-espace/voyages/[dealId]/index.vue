@@ -53,46 +53,52 @@
         <EspaceGroupe :detail="detail" />
       </v-card>
 
-      <v-card class="pa-5">
-        <h2 class="text-subtitle-1 font-weight-bold mb-3">
+      <v-card
+        id="documents"
+        class="pa-5"
+      >
+        <h2 class="text-subtitle-1 font-weight-bold mb-2">
           Documents
         </h2>
-        <v-list class="pa-0">
-          <v-list-item
+        <EspaceDocuments :documents="detail.documents || []" />
+        <v-divider class="my-3" />
+        <div class="d-flex flex-wrap ga-2">
+          <v-btn
             v-if="carnet"
             :href="carnet"
             target="_blank"
             rel="noopener"
-            :prepend-icon="mdiFileDocumentOutline"
-            title="Carnet de voyage"
-            subtitle="Hébergements, contacts sur place, informations pratiques"
-            class="px-0"
-          />
-          <v-list-item
+            variant="text"
+            size="small"
+            :prepend-icon="mdiBookOpenVariant"
+          >
+            Carnet de voyage en ligne
+          </v-btn>
+          <v-btn
             v-if="voyageSanity"
             :to="`/voyages/${detail.slug}`"
+            variant="text"
+            size="small"
             :prepend-icon="mdiMapOutline"
-            title="Fiche du voyage"
-            subtitle="Programme jour par jour sur odysway.com"
-            class="px-0"
-          />
-          <v-list-item
+          >
+            Programme sur odysway.com
+          </v-btn>
+          <v-btn
             to="/conditions-generales-de-vente"
+            variant="text"
+            size="small"
             :prepend-icon="mdiFileDocumentOutline"
-            title="Conditions générales de vente"
-            class="px-0"
-          />
-        </v-list>
-        <p class="text-caption text-primary-light-2 mt-2 mb-0">
-          Billets, contrat d'assurance et factures arriveront ici prochainement.
-        </p>
+          >
+            Conditions générales de vente
+          </v-btn>
+        </div>
       </v-card>
     </template>
   </div>
 </template>
 
 <script setup>
-import { mdiArrowLeft, mdiFileDocumentOutline, mdiMapOutline } from '@mdi/js'
+import { mdiArrowLeft, mdiBookOpenVariant, mdiFileDocumentOutline, mdiMapOutline } from '@mdi/js'
 
 definePageMeta({ layout: 'espace', middleware: 'espace' })
 useSeoMeta({ title: 'Mon dossier — Odysway', robots: 'noindex, nofollow' })
