@@ -10,7 +10,7 @@ avoir créé de compte, tout ce qui concerne ses voyages :
 
 | Bloc de la maquette | Contenu cible | État |
 |---|---|---|
-| Connexion | Code à 6 chiffres par email, Google, **puis mot de passe facultatif** | code + Google faits ; mot de passe à faire (§4.2) |
+| Connexion | Code à 6 chiffres par email, Google, **puis mot de passe facultatif** | fait (§4.2) |
 | Tableau de bord | Salutation, alertes (solde, option, document manquant), prochain départ, check-list « Avant le départ », documents récents | fait, sauf documents et passeport dans la check-list |
 | Mes voyages | À venir / en cours / passés, fiche par dossier | fait |
 | Paiement | Prix, déjà réglé, reste, échéance, historique, « Payer le solde » | fait (historique = paiements en ligne Stripe/Alma) |
@@ -119,37 +119,45 @@ production avant d'ouvrir l'espace**.
   quelques lectures AC en plus, sans conséquence.
 - Pas de référence de dossier type « ODY-26-0473 » : on affiche le n° de deal.
 
-### 4.2 Connexion par mot de passe (demandée le 16/10/2026)
+### 4.2 Connexion par mot de passe — FAIT (branche `claude/espace-mot-de-passe`)
 
-**But** : après une première connexion par code ou Google, le client peut définir un
-mot de passe dans son espace et s'en servir ensuite, sans passer par sa boîte mail.
-Le code reste toujours disponible (il sert aussi de « mot de passe oublié »).
+Après une première connexion par code ou Google, le client définit un mot de passe
+dans « Connexion et sécurité » (`/mon-espace/securite`) et choisit « Mot de passe »
+sur la page de connexion. Le code reste toujours disponible et sert de « mot de
+passe oublié » : on se connecte par code, puis on redéfinit son mot de passe.
 
-**Conception proposée**
+- **Appel direct à Supabase Auth** (`updateUser({ password })`), pas d'endpoint Nitro :
+  le navigateur détient le jeton et peut de toute façon appeler Supabase lui-même,
+  une garde serveur serait contournable. Les vrais contrôles sont donc :
+  - les réglages de Supabase Auth (longueur minimale, mots de passe ayant fuité,
+    « Secure password change ») — à régler, voir §3 ;
+  - **Ulysse n'accepte que les sessions Google** (`amr` du jeton, branche Ulysse
+    `claude/members-email-exact`) : un membre qui poserait un mot de passe depuis
+    son espace client n'ouvre pas Ulysse avec.
+- **Connexion récente exigée** : si la dernière authentification (`amr` du jeton,
+  qui survit aux rafraîchissements) date de plus de 10 minutes, l'espace redemande
+  un code avant d'afficher le formulaire. Confort et garde-fou face à un ordinateur
+  resté ouvert, pas une frontière de sécurité (voir ci-dessus).
+- Règles affichées et vérifiées avant envoi (`app/utils/espaceMotDePasse.js`, testé) :
+  12 caractères, 72 octets au plus (limite bcrypt), 5 caractères différents, pas
+  l'identifiant de l'email, pas d'espace en bordure. Erreurs Supabase traduites
+  (`weak_password` / `pwned`, `invalid_credentials`, limites de débit…).
+- `user_metadata.mot_de_passe = true`, posé dans le même appel, ne sert qu'à
+  l'affichage (« Définir » ou « Modifier ») : Supabase n'expose pas l'existence d'un
+  mot de passe.
+- Échec de connexion : un message unique, que l'email existe ou non.
+- Tableau de bord : suggestion « Connectez-vous plus vite », masquable, tant
+  qu'aucun mot de passe n'est défini.
 
-- *Définir / changer* : `POST /api/v1/espace/mot-de-passe { motDePasse }` plutôt qu'un
-  `updateUser` direct depuis le navigateur, pour imposer côté serveur :
-  - session **récente** (connexion de moins de 10 min, lue dans `iat` /
-    `last_sign_in_at`), sinon le front redemande un code (`reauthenticate`) — un
-    ordinateur resté ouvert ne doit pas permettre de poser un mot de passe ;
-  - **refus pour les membres d'Ulysse** (`ulysse.members`, actifs ou non) : leur compte
-    est un compte de travail Google, un mot de passe y ajouterait une porte d'entrée ;
-  - force minimale (12 caractères), et « Leaked password protection » activée dans
-    Supabase Auth (l'advisor la signale aujourd'hui désactivée) ;
-  - écriture par `supabase.auth.admin.updateUserById(id, { password, app_metadata: { mot_de_passe: true } })`.
-    `app_metadata.mot_de_passe` permet d'afficher « Modifier » plutôt que « Définir ».
-- *Connexion* : onglet « Mot de passe » sur `/mon-espace/connexion`
-  (`signInWithPassword`). Message d'échec unique (« email ou mot de passe incorrect »),
-  lien « Recevoir un code à la place ».
-- *Mot de passe oublié* : pas de flux de réinitialisation à part. Le client se connecte
-  par code, puis redéfinit son mot de passe (la session est alors récente).
-- *Supprimer le mot de passe* : facultatif, même endpoint avec `null` (Supabase ne
-  supprime pas un mot de passe : en poser un aléatoire et retirer le drapeau).
-- *Page* : nouvelle entrée « Sécurité » (ou bloc dans « Mon profil ») : définir,
-  modifier, et liste des moyens de connexion (code, Google si identité liée).
-- *Anti-force brute* : limites natives de Supabase sur `/token` ; ajouter Cloudflare
-  Turnstile (pris en charge par Supabase Auth) si des tentatives apparaissent.
-- *Tests* : règle de fraîcheur et refus des membres d'Ulysse en fonctions pures.
+**Réglages Supabase Auth à faire en plus de §3** : Password → longueur minimale 12,
+« Leaked password protection » activée (l'advisor la signale désactivée), « Secure
+password change » activé ; Rate Limits → garder la limite sur `/token`.
+
+**Mode démo local** : `NUXT_PUBLIC_ESPACE_DEMO=true` dans `.env` puis `npm run dev`.
+Données de la maquette, aucun appel à Supabase ni à l'API ; code `123456`.
+Uniquement sous `import.meta.dev` : le module `app/dev/espaceDemo.js` n'entre dans
+aucun build. « Continuer avec Google » y ouvre une session vieille de 2 h, pour voir
+la reconfirmation par code.
 
 ### 4.3 Mon profil voyageur
 

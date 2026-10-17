@@ -86,6 +86,30 @@
         </v-alert>
       </div>
 
+      <v-alert
+        v-if="suggererMotDePasse"
+        type="info"
+        variant="tonal"
+        closable
+        :icon="mdiLockOutline"
+        @click:close="masquerSuggestion"
+      >
+        <div class="d-flex flex-column flex-sm-row align-sm-center ga-3">
+          <div class="flex-grow-1 text-body-2">
+            <b>Connectez-vous plus vite.</b> Définissez un mot de passe pour ne plus attendre de code par email.
+          </div>
+          <v-btn
+            to="/mon-espace/securite"
+            variant="outlined"
+            rounded="pill"
+            size="small"
+            class="flex-shrink-0"
+          >
+            Définir un mot de passe
+          </v-btn>
+        </div>
+      </v-alert>
+
       <EspaceTripCard
         v-if="prochain"
         :dossier="prochain"
@@ -202,12 +226,26 @@
 </template>
 
 <script setup>
-import { mdiCheck, mdiExclamation } from '@mdi/js'
+import { mdiCheck, mdiExclamation, mdiLockOutline } from '@mdi/js'
 
 definePageMeta({ layout: 'espace', middleware: 'espace' })
 useSeoMeta({ title: 'Mon espace — Odysway', robots: 'noindex, nofollow' })
 
-const { moi, chargerMoi, api } = useEspace()
+const { moi, chargerMoi, api, moyensConnexion } = useEspace()
+
+// Suggestion du mot de passe, masquable sur cet appareil.
+const CLE_SUGGESTION = 'odysway-espace-suggestion-mdp'
+const suggestionMasquee = ref(true)
+const suggererMotDePasse = computed(() => !suggestionMasquee.value && !moyensConnexion.value.motDePasse)
+const masquerSuggestion = () => {
+  suggestionMasquee.value = true
+  try {
+    localStorage.setItem(CLE_SUGGESTION, '1')
+  }
+  catch {
+    // stockage indisponible : la suggestion reviendra au prochain chargement
+  }
+}
 const { charger, titre } = useEspaceVoyages()
 
 const chargement = ref(true)
@@ -292,6 +330,12 @@ const checklist = computed(() => {
 })
 
 onMounted(async () => {
+  try {
+    suggestionMasquee.value = localStorage.getItem(CLE_SUGGESTION) === '1'
+  }
+  catch {
+    suggestionMasquee.value = false
+  }
   try {
     await chargerMoi({ forcer: true })
     await charger(dossiers.value.map(d => d.slug))
