@@ -96,6 +96,7 @@ Ulysse (the back-office replacing /booking-management) calls these with `x-ulyss
 - `GET deals/:dealId/notes` — the deal's AC notes, for the Docteur's timeline.
 - `GET dates/:dateId/profils` — Espace Voyageur profiles of every traveller booked on the departure, **passport/ID numbers decrypted** (they are needed to issue tickets). Each profile read is logged in `traveler_file_access` (`consultation`, actor = `x-ulysse-user`). Deals whose travellers were never read are synced from AC on the fly. Ulysse gates it behind its restricted right `profils-voyageurs`.
 - `GET dates/:dateId/profils/:placeId/piece` — 60 s signed URL to a traveller's ID copy (the place must belong to a booking of that departure), logged (`lecture`).
+- `GET dates/:dateId/documents`, `POST dates/:dateId/documents` (creates an unpublished `trip_documents` row + signed upload URL; scope = whole departure, or `dealId` booked on it), `PUT documents/:documentId` (title, visibility, `disponibleLe`, `publie` — publishing checks the file was received, 409 otherwise), `DELETE documents/:documentId` (soft delete + file removed), `GET documents/:documentId/lien` (60 s URL for staff review).
 
 ## Pipeline logic — the most important concept
 
@@ -266,6 +267,8 @@ Comptes clients = Supabase Auth de ce projet (code à 6 chiffres ou Google), par
 - `client_link_codes` — codes hachés pour rattacher une seconde adresse.
 - `traveler_profiles` (PK `deal_traveler_id`) — profil d'une place : pièce d'identité (numéro **chiffré** AES-256-GCM par l'application, clé `ESPACE_CHIFFREMENT_KEY`, seuls les 4 derniers caractères en clair), régimes, allergies, contact d'urgence, notes, référence de la copie dans le bucket privé `traveler-files` (purgée 30 jours après le retour).
 - `traveler_file_access` — journal des dépôts / lectures / suppressions / purges des copies de pièces.
+- `trip_documents` — documents de voyage déposés par l'équipe (Ulysse) : portée **départ** (`travel_date_id` : fiche voyage, carnet) **ou dossier** (`deal_id` : billets, facture), jamais les deux. Naît non publié ; publié par Ulysse une fois le fichier reçu (bucket privé `trip-documents`) ; `disponible_le` l'affiche « Bientôt » jusqu'à cette date ; `reserve_titulaire` le cache aux voyageurs invités (facture par défaut). Suppression = `deleted_at` + fichier effacé.
+- `trip_document_views` (`document_id`, `user_id`) — documents ouverts par chaque compte (badge « Nouveau »).
 
 ### `alma_ids`
 Tracks Alma payment IDs to prevent duplicate processing.

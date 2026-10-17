@@ -192,6 +192,33 @@
           md="6"
         >
           <v-card class="pa-5 h-100">
+            <div class="d-flex align-center mb-1">
+              <h2 class="text-subtitle-1 font-weight-bold">
+                Mes documents de voyage
+              </h2>
+              <v-spacer />
+              <v-btn
+                :to="`/mon-espace/voyages/${prochain.id}#documents`"
+                variant="text"
+                color="secondary"
+                size="small"
+              >
+                Tout voir
+              </v-btn>
+            </div>
+            <v-skeleton-loader
+              v-if="!detail"
+              type="list-item-two-line@3"
+            />
+            <EspaceDocuments
+              v-else
+              :documents="detail.documents || []"
+              :limite="4"
+            />
+          </v-card>
+        </v-col>
+        <v-col cols="12">
+          <v-card class="pa-5">
             <h2 class="text-subtitle-1 font-weight-bold mb-3">
               Votre groupe
             </h2>

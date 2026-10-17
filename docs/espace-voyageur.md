@@ -16,7 +16,7 @@ avoir créé de compte, tout ce qui concerne ses voyages :
 | Paiement | Prix, déjà réglé, reste, échéance, historique, « Payer le solde » | fait (historique = paiements en ligne Stripe/Alma) |
 | Voyageurs | Voyageurs du dossier, invitation par email, compagnons du départ (consentement) | fait |
 | Mon profil | Identité, passeport (+ scan), régime alimentaire, allergies, contact d'urgence, champ libre | fait (§4.3), lu dans Ulysse (fiche départ) |
-| Mes documents | Fiche voyage, carnet de séjour, billets, assurance, CGV, factures | à faire (§4.4) ; liens provisoires sur la fiche dossier |
+| Mes documents | Fiche voyage, carnet de séjour, billets, assurance, CGV, factures | fait (§4.4), déposés depuis Ulysse |
 | Relances | Les rappels de solde (J-90, J-75, J-65) renvoient vers l'espace, jamais vers un lien de paiement | à faire (§4.5) |
 | Avis | Étoiles et avis sur les voyages passés | hors périmètre pour l'instant |
 
@@ -204,14 +204,25 @@ liste toutes les places que le compte peut remplir sur ses voyages à venir.
 - Modifier nom / date de naissance d'un voyageur : réécrire le champ AC « Voyageur N »
   au même format (Chapka le lit), puis resynchroniser.
 
-### 4.4 Documents
+### 4.4 Documents — FAIT (branche `claude/espace-documents`, Ulysse `claude/documents-voyage`)
 
-- Bucket privé `trip-documents` + table `trip_documents` (`travel_date_id` ou
-  `deal_id`, type, titre, `storage_path`, `visible_client`, `published_at`).
-  Dépôt depuis Ulysse ; badge « Nouveau » (suivi « vu » par compte) ; « Bientôt »
-  pour les documents datés (carnet à J-30).
-- Contrat d'assurance Chapka, billets (après réception du passeport), factures :
-  sources à décider. Date d'acceptation des CGV : non stockée aujourd'hui.
+- **Dépôt par l'équipe dans Ulysse** (fiche départ, onglet « Voyageurs ») : type
+  (fiche voyage, carnet, billets, assurance, facture, autre), titre, portée **tout le
+  départ** ou **un dossier**, « réservé au titulaire » (coché d'office pour une facture),
+  « disponible le » (affiché « Bientôt » avant). Le fichier part directement dans le
+  bucket privé `trip-documents` par URL signée ; le document reste **brouillon** jusqu'à
+  sa publication, qui vérifie que le fichier est bien arrivé.
+- **Côté client** : page « Mes documents », bloc de la fiche dossier, carte « Mes
+  documents de voyage » du tableau de bord (4 premiers). Badge « Nouveau » jusqu'à la
+  première ouverture (`trip_document_views`), « Bientôt » + date pour les documents
+  datés. Téléchargement par lien de 60 s, nom de fichier tiré du titre.
+- Liens permanents gardés : programme sur odysway.com, CGV, carnet en ligne (`travel_book`).
+
+**Reste à faire**
+- Prévenir le client par email à la publication (Brevo) — aujourd'hui il le voit en
+  se connectant.
+- Contrat d'assurance Chapka et factures clients : pas de génération automatique ;
+  déposés à la main. Date d'acceptation des CGV : non stockée.
 
 ### 4.5 Activation et relances
 

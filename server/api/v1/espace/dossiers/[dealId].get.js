@@ -31,12 +31,13 @@ export default defineEventHandler(async (event) => {
 
   if (titulaire) await espaceDossiers.voyageursAJour([deal])
 
-  const [{ data: fiche }, voyageurs, compagnons, paiements, completudes] = await Promise.all([
+  const [{ data: fiche }, voyageurs, compagnons, paiements, completudes, documents] = await Promise.all([
     supabase.from('activecampaign_clients').select('firstname, lastname').eq('contact', deal.contact).maybeSingle(),
     espaceDossiers.voyageursDuDossier(deal.id),
     espaceDossiers.compagnonsDuDepart(dossier),
     titulaire ? paiementsLecture.lirePaiements(deal.id, 'espace') : Promise.resolve(null),
     espaceProfils.completudesDuDossier(dossier),
+    espaceDocuments.documentsDesDossiers(client, [dossier]),
   ])
 
   const aujourdhui = espaceVoyageur.aujourdhuiParis()
@@ -51,6 +52,7 @@ export default defineEventHandler(async (event) => {
     ...resume,
     lienPaiement,
     carnet: deal.travel_book || null,
+    documents: documents.get(Number(deal.id)) || [],
     paiements: paiements ? historique(paiements) : null,
     voyageurs: voyageurs.map((v) => {
       // Le titulaire n'a pas d'invitation : sa place est celle qui porte son nom.
