@@ -78,7 +78,10 @@ const createAlmaSession = async (order) => {
     Object.assign(deal, { insuranceChoice: insuranceItem })
   }
 
-  const successUrl = encodeURI(`${BASE_URL}/confirmation?voyage=${deal.slug}&purchase=true&booked_id=${order.booked_id}`)
+  // Voir stripe.js : le jeton est ce qui autorise /confirmation à relire les
+  // données personnelles, et il n'existe que dans cette URL de retour.
+  const purchaseToken = createPurchaseToken(order.booked_id)
+  const successUrl = encodeURI(`${BASE_URL}/confirmation?voyage=${deal.slug}&purchase=true&booked_id=${order.booked_id}${purchaseToken ? `&t=${purchaseToken}` : ''}`)
   const cancelUrl = encodeURI(`${BASE_URL}${order.currentUrl}`)
 
   const installmentsCount = [3, 4].includes(+order.installments) ? +order.installments : 3
