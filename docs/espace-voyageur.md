@@ -10,12 +10,12 @@ avoir créé de compte, tout ce qui concerne ses voyages :
 
 | Bloc de la maquette | Contenu cible | État |
 |---|---|---|
-| Connexion | Code à 6 chiffres par email, Google, **puis mot de passe facultatif** | code + Google faits ; mot de passe à faire (§4.2) |
+| Connexion | Code à 6 chiffres par email, Google, **puis mot de passe facultatif** | fait (§4.2) |
 | Tableau de bord | Salutation, alertes (solde, option, document manquant), prochain départ, check-list « Avant le départ », documents récents | fait, sauf documents et passeport dans la check-list |
 | Mes voyages | À venir / en cours / passés, fiche par dossier | fait |
 | Paiement | Prix, déjà réglé, reste, échéance, historique, « Payer le solde » | fait (historique = paiements en ligne Stripe/Alma) |
 | Voyageurs | Voyageurs du dossier, invitation par email, compagnons du départ (consentement) | fait |
-| Mon profil | Identité, passeport (+ scan), régime alimentaire, allergies, contact d'urgence, champ libre | à faire (§4.3) |
+| Mon profil | Identité, passeport (+ scan), régime alimentaire, allergies, contact d'urgence, champ libre | fait (§4.3), lu dans Ulysse (fiche départ) |
 | Mes documents | Fiche voyage, carnet de séjour, billets, assurance, CGV, factures | à faire (§4.4) ; liens provisoires sur la fiche dossier |
 | Relances | Les rappels de solde (J-90, J-75, J-65) renvoient vers l'espace, jamais vers un lien de paiement | à faire (§4.5) |
 | Avis | Étoiles et avis sur les voyages passés | hors périmètre pour l'instant |
@@ -119,54 +119,90 @@ production avant d'ouvrir l'espace**.
   quelques lectures AC en plus, sans conséquence.
 - Pas de référence de dossier type « ODY-26-0473 » : on affiche le n° de deal.
 
-### 4.2 Connexion par mot de passe (demandée le 16/10/2026)
+### 4.2 Connexion par mot de passe — FAIT (branche `claude/espace-mot-de-passe`)
 
-**But** : après une première connexion par code ou Google, le client peut définir un
-mot de passe dans son espace et s'en servir ensuite, sans passer par sa boîte mail.
-Le code reste toujours disponible (il sert aussi de « mot de passe oublié »).
+Après une première connexion par code ou Google, le client définit un mot de passe
+dans « Connexion et sécurité » (`/mon-espace/securite`) et choisit « Mot de passe »
+sur la page de connexion. Le code reste toujours disponible et sert de « mot de
+passe oublié » : on se connecte par code, puis on redéfinit son mot de passe.
 
-**Conception proposée**
+- **Appel direct à Supabase Auth** (`updateUser({ password })`), pas d'endpoint Nitro :
+  le navigateur détient le jeton et peut de toute façon appeler Supabase lui-même,
+  une garde serveur serait contournable. Les vrais contrôles sont donc :
+  - les réglages de Supabase Auth (longueur minimale, mots de passe ayant fuité,
+    « Secure password change ») — à régler, voir §3 ;
+  - **Ulysse n'accepte que les sessions Google** (`amr` du jeton, branche Ulysse
+    `claude/members-email-exact`) : un membre qui poserait un mot de passe depuis
+    son espace client n'ouvre pas Ulysse avec.
+- **Connexion récente exigée** : si la dernière authentification (`amr` du jeton,
+  qui survit aux rafraîchissements) date de plus de 10 minutes, l'espace redemande
+  un code avant d'afficher le formulaire. Confort et garde-fou face à un ordinateur
+  resté ouvert, pas une frontière de sécurité (voir ci-dessus).
+- Règles affichées et vérifiées avant envoi (`app/utils/espaceMotDePasse.js`, testé) :
+  12 caractères, 72 octets au plus (limite bcrypt), 5 caractères différents, pas
+  l'identifiant de l'email, pas d'espace en bordure. Erreurs Supabase traduites
+  (`weak_password` / `pwned`, `invalid_credentials`, limites de débit…).
+- `user_metadata.mot_de_passe = true`, posé dans le même appel, ne sert qu'à
+  l'affichage (« Définir » ou « Modifier ») : Supabase n'expose pas l'existence d'un
+  mot de passe.
+- Échec de connexion : un message unique, que l'email existe ou non.
+- Tableau de bord : suggestion « Connectez-vous plus vite », masquable, tant
+  qu'aucun mot de passe n'est défini.
 
-- *Définir / changer* : `POST /api/v1/espace/mot-de-passe { motDePasse }` plutôt qu'un
-  `updateUser` direct depuis le navigateur, pour imposer côté serveur :
-  - session **récente** (connexion de moins de 10 min, lue dans `iat` /
-    `last_sign_in_at`), sinon le front redemande un code (`reauthenticate`) — un
-    ordinateur resté ouvert ne doit pas permettre de poser un mot de passe ;
-  - **refus pour les membres d'Ulysse** (`ulysse.members`, actifs ou non) : leur compte
-    est un compte de travail Google, un mot de passe y ajouterait une porte d'entrée ;
-  - force minimale (12 caractères), et « Leaked password protection » activée dans
-    Supabase Auth (l'advisor la signale aujourd'hui désactivée) ;
-  - écriture par `supabase.auth.admin.updateUserById(id, { password, app_metadata: { mot_de_passe: true } })`.
-    `app_metadata.mot_de_passe` permet d'afficher « Modifier » plutôt que « Définir ».
-- *Connexion* : onglet « Mot de passe » sur `/mon-espace/connexion`
-  (`signInWithPassword`). Message d'échec unique (« email ou mot de passe incorrect »),
-  lien « Recevoir un code à la place ».
-- *Mot de passe oublié* : pas de flux de réinitialisation à part. Le client se connecte
-  par code, puis redéfinit son mot de passe (la session est alors récente).
-- *Supprimer le mot de passe* : facultatif, même endpoint avec `null` (Supabase ne
-  supprime pas un mot de passe : en poser un aléatoire et retirer le drapeau).
-- *Page* : nouvelle entrée « Sécurité » (ou bloc dans « Mon profil ») : définir,
-  modifier, et liste des moyens de connexion (code, Google si identité liée).
-- *Anti-force brute* : limites natives de Supabase sur `/token` ; ajouter Cloudflare
-  Turnstile (pris en charge par Supabase Auth) si des tentatives apparaissent.
-- *Tests* : règle de fraîcheur et refus des membres d'Ulysse en fonctions pures.
+**Réglages Supabase Auth à faire en plus de §3** : Password → longueur minimale 12,
+« Leaked password protection » activée (l'advisor la signale désactivée), « Secure
+password change » activé ; Rate Limits → garder la limite sur `/token`.
 
-### 4.3 Mon profil voyageur
+**Mode démo local** : `NUXT_PUBLIC_ESPACE_DEMO=true` dans `.env` puis `npm run dev`.
+Données de la maquette, aucun appel à Supabase ni à l'API ; code `123456`.
+Uniquement sous `import.meta.dev` : le module `app/dev/espaceDemo.js` n'entre dans
+aucun build. « Continuer avec Google » y ouvre une session vieille de 2 h, pour voir
+la reconfirmation par code.
 
-- Table `traveler_profiles` liée à `deal_travelers.id`, pré-remplie depuis le profil
-  du voyage précédent de la même personne (`user_id`) : n° de passeport (**chiffré
-  côté application**, AES-GCM, clé `ESPACE_CHIFFREMENT_KEY`), expiration, nationalité,
-  régime (puces de la maquette), allergies, contact d'urgence, champ libre.
-- Qui édite : la personne si elle a un compte, sinon le titulaire pour elle.
-- Scan du passeport : bucket privé `traveler-files`, dépôt via Nitro uniquement
-  (type réel vérifié par les octets : PDF/JPEG/PNG/HEIC ; 10 Mo ; chemin
-  `{deal_traveler_id}/{uuid}`), lecture par URL signée de 60 s, journal des
-  téléchargements, suppression automatique N jours après le retour (cron).
-- Écrire `passport_received` / `diet_received` (champs AC 110 et 111) quand c'est
-  complet ; ajouter « Passeport » à la check-list et aux alertes du tableau de bord.
-- Lecture dans Ulysse (fiche du départ) : endpoint `/api/v1/ulysse/...` en lecture seule.
-- Modifier nom / date de naissance d'un voyageur : réécrire le champ AC
-  « Voyageur N » **au même format** (Chapka le lit), puis resynchroniser.
+### 4.3 Mon profil voyageur — FAIT (branche `claude/espace-profil-voyageur`)
+
+Une fiche par **place** de dossier (`traveler_profiles.deal_traveler_id`), page
+`/mon-espace/voyages/:dealId/voyageurs/:slot` ; « Mon profil » (`/mon-espace/profil`)
+liste toutes les places que le compte peut remplir sur ses voyages à venir.
+
+- **Qui** : la personne si elle a un compte ; sinon le titulaire pour elle (enfant,
+  proche non invité, et sa propre place). Un adulte invité garde ses données pour lui :
+  le titulaire ne voit que « complet / à compléter ». Tout autre cas → 404.
+- **Pièce d'identité** : passeport ou carte d'identité, numéro, expiration, pays.
+  - Numéro **chiffré par l'application** (AES-256-GCM, `server/utils/espaceChiffrement.js`,
+    clé `ESPACE_CHIFFREMENT_KEY`) ; seuls les 4 derniers caractères restent en clair.
+    **Le navigateur ne reçoit jamais le numéro** ; le modifier = le ressaisir.
+  - Avertissement si la pièce expire moins de 6 mois après le retour.
+  - Copie (page photo) : bucket privé `traveler-files`, type vérifié sur les octets
+    (PDF, JPEG, PNG, HEIC), 10 Mo, nom tiré au hasard ; lecture par lien de 60 s ;
+    dépôt / lecture / suppression / purge journalisés (`traveler_file_access`).
+  - **Purge** des copies 30 jours après le retour : `POST /api/v1/webhooks/espace/purge-pieces`
+    avec `x-cron-secret` (même secret que le cronjob des options). **À planifier**
+    (une fois par jour, là où le cronjob des options l'est déjà).
+- **Régime** (puces de la maquette, « Je mange de tout » exclusif), allergies,
+  **contact d'urgence** (nom, lien, téléphone), champ libre.
+- **Reprise** : si la personne a rempli un profil pour un voyage précédent, l'espace
+  propose de le reprendre (tout sauf la copie de la pièce).
+- **AC** : « Passeport reçu » (110) et « Régime alimentaire reçu » (111) passent à
+  `||Oui||` quand **tous** les voyageurs du dossier sont renseignés. Jamais décochés.
+- Tableau de bord : ligne « Profils voyageurs » dans la check-list, alerte si une
+  pièce expire trop tôt ; fiche dossier : statut et bouton par voyageur.
+
+**Avant la mise en ligne**
+- `ESPACE_CHIFFREMENT_KEY` (32 octets en base64, `openssl rand -base64 32`) sur
+  Vercel, **la même clé pour dev, preview et production** : la base est partagée,
+  un numéro chiffré depuis la recette doit rester lisible en prod. Garder une copie
+  de la clé dans le coffre de mots de passe : la perdre rend tous les numéros illisibles.
+- Planifier la purge (ci-dessus).
+
+**Reste à faire sur le profil**
+- ~~Lecture côté Ulysse~~ — FAIT (odysway-v2 #305, Ulysse #90) : onglet « Voyageurs »
+  de la fiche départ, droit **restreint** `profils-voyageurs` (Alex seul par migration,
+  les autres depuis Admin › Droits). `GET /api/v1/ulysse/dates/:dateId/profils` déchiffre
+  les numéros ; chaque profil lu et chaque copie ouverte sont journalisés des deux côtés.
+  Numéros masqués par défaut, « Copier pour les billets » (TSV pour tableur).
+- Modifier nom / date de naissance d'un voyageur : réécrire le champ AC « Voyageur N »
+  au même format (Chapka le lit), puis resynchroniser.
 
 ### 4.4 Documents
 

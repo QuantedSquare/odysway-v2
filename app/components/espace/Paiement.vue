@@ -130,57 +130,60 @@
       v-model="dialogue"
       max-width="440"
     >
-      <v-card class="pa-6">
-        <div class="d-flex align-start mb-4">
-          <div>
-            <h2 class="text-h6 font-weight-bold">
-              Régler le solde
-            </h2>
-            <div class="text-caption text-primary-light-2">
-              Dossier n° {{ detail.id }}
+      <!-- La modale est rendue hors de la page : la casse normale des boutons doit y être redonnée. -->
+      <v-defaults-provider :defaults="{ VBtn: { class: 'text-none' } }">
+        <v-card class="pa-6">
+          <div class="d-flex align-start mb-4">
+            <div>
+              <h2 class="text-h6 font-weight-bold">
+                Régler le solde
+              </h2>
+              <div class="text-caption text-primary-light-2">
+                Dossier n° {{ detail.id }}
+              </div>
             </div>
+            <v-spacer />
+            <v-btn
+              :icon="mdiClose"
+              variant="text"
+              size="small"
+              aria-label="Fermer"
+              @click="dialogue = false"
+            />
           </div>
-          <v-spacer />
+          <v-sheet
+            rounded="lg"
+            color="surface-panel"
+            class="pa-4 mb-4 text-body-2"
+          >
+            <div class="d-flex justify-space-between py-1">
+              <span>Prix du voyage</span><span>{{ euros(detail.paiement.total) }}</span>
+            </div>
+            <div class="d-flex justify-space-between py-1">
+              <span>Déjà réglé</span><span>− {{ euros(detail.paiement.paye || 0) }}</span>
+            </div>
+            <v-divider class="my-2" />
+            <div class="d-flex justify-space-between font-weight-bold text-body-1">
+              <span>Solde à régler</span><span>{{ euros(detail.paiement.reste) }}</span>
+            </div>
+          </v-sheet>
           <v-btn
-            :icon="mdiClose"
-            variant="text"
-            size="small"
-            aria-label="Fermer"
-            @click="dialogue = false"
-          />
-        </div>
-        <v-sheet
-          rounded="lg"
-          color="surface-panel"
-          class="pa-4 mb-4 text-body-2"
-        >
-          <div class="d-flex justify-space-between py-1">
-            <span>Prix du voyage</span><span>{{ euros(detail.paiement.total) }}</span>
+            :href="detail.lienPaiement"
+            color="secondary"
+            rounded="pill"
+            block
+            size="large"
+          >
+            Payer {{ euros(detail.paiement.reste) }}
+          </v-btn>
+          <div class="d-flex align-center justify-center ga-2 mt-3 text-caption text-primary-light-2">
+            <v-icon
+              :icon="mdiLock"
+              size="14"
+            />Paiement sécurisé par carte ou virement
           </div>
-          <div class="d-flex justify-space-between py-1">
-            <span>Déjà réglé</span><span>− {{ euros(detail.paiement.paye || 0) }}</span>
-          </div>
-          <v-divider class="my-2" />
-          <div class="d-flex justify-space-between font-weight-bold text-body-1">
-            <span>Solde à régler</span><span>{{ euros(detail.paiement.reste) }}</span>
-          </div>
-        </v-sheet>
-        <v-btn
-          :href="detail.lienPaiement"
-          color="secondary"
-          rounded="pill"
-          block
-          size="large"
-        >
-          Payer {{ euros(detail.paiement.reste) }}
-        </v-btn>
-        <div class="d-flex align-center justify-center ga-2 mt-3 text-caption text-primary-light-2">
-          <v-icon
-            :icon="mdiLock"
-            size="14"
-          />Paiement sécurisé par carte ou virement
-        </div>
-      </v-card>
+        </v-card>
+      </v-defaults-provider>
     </v-dialog>
   </v-card>
 </template>

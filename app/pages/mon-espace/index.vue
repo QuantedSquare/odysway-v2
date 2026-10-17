@@ -86,6 +86,30 @@
         </v-alert>
       </div>
 
+      <v-alert
+        v-if="suggererMotDePasse"
+        type="info"
+        variant="tonal"
+        closable
+        :icon="mdiLockOutline"
+        @click:close="masquerSuggestion"
+      >
+        <div class="d-flex flex-column flex-sm-row align-sm-center ga-3">
+          <div class="flex-grow-1 text-body-2">
+            <b>Connectez-vous plus vite.</b> Définissez un mot de passe pour ne plus attendre de code par email.
+          </div>
+          <v-btn
+            to="/mon-espace/securite"
+            variant="outlined"
+            rounded="pill"
+            size="small"
+            class="flex-shrink-0"
+          >
+            Définir un mot de passe
+          </v-btn>
+        </div>
+      </v-alert>
+
       <EspaceTripCard
         v-if="prochain"
         :dossier="prochain"
@@ -202,12 +226,26 @@
 </template>
 
 <script setup>
-import { mdiCheck, mdiExclamation } from '@mdi/js'
+import { mdiCheck, mdiExclamation, mdiLockOutline } from '@mdi/js'
 
 definePageMeta({ layout: 'espace', middleware: 'espace' })
 useSeoMeta({ title: 'Mon espace — Odysway', robots: 'noindex, nofollow' })
 
-const { moi, chargerMoi, api } = useEspace()
+const { moi, chargerMoi, api, moyensConnexion } = useEspace()
+
+// Suggestion du mot de passe, masquable sur cet appareil.
+const CLE_SUGGESTION = 'odysway-espace-suggestion-mdp'
+const suggestionMasquee = ref(true)
+const suggererMotDePasse = computed(() => !suggestionMasquee.value && !moyensConnexion.value.motDePasse)
+const masquerSuggestion = () => {
+  suggestionMasquee.value = true
+  try {
+    localStorage.setItem(CLE_SUGGESTION, '1')
+  }
+  catch {
+    // stockage indisponible : la suggestion reviendra au prochain chargement
+  }
+}
 const { charger, titre } = useEspaceVoyages()
 
 const chargement = ref(true)
@@ -223,6 +261,17 @@ const euros = n => formatNumber(n, 'currency', '€', 'euro')
 
 const alertes = computed(() => {
   const out = []
+  const expirent = (detail.value?.voyageurs || []).filter(v => v.peutModifierProfil && v.profil?.expireTropTot)
+  for (const v of expirent) {
+    out.push({
+      cle: `piece-${v.slot}`,
+      type: 'error',
+      titre: v.moi ? 'Votre pièce d\'identité expire trop tôt' : `La pièce d'identité ${dePrenom(v.prenom)} expire trop tôt`,
+      texte: 'Elle doit être valable 6 mois après le retour. Renouvelez-la, puis mettez le profil à jour.',
+      action: 'Mettre à jour',
+      lien: `/mon-espace/voyages/${prochain.value?.id}/voyageurs/${v.slot}#piece`,
+    })
+  }
   for (const d of actifs.value) {
     const p = d.paiement
     if (d.option) {
@@ -288,10 +337,30 @@ const checklist = computed(() => {
     lien: `/mon-espace/voyages/${d.id}#voyageurs`,
     action: 'Voir',
   })
+  // Profils que ce compte peut remplir (le sien, ceux des voyageurs sans compte).
+  const aRemplir = (detail.value.voyageurs || []).filter(v => v.peutModifierProfil && v.profil)
+  if (aRemplir.length) {
+    const premier = aRemplir.find(v => !v.profil.complet || v.profil.expireTropTot)
+    const complets = aRemplir.filter(v => v.profil.complet && !v.profil.expireTropTot).length
+    out.push({
+      cle: 'profils',
+      titre: aRemplir.length === 1 ? 'Profil voyageur (pièce, régime, contact d\'urgence)' : 'Profils voyageurs (pièce, régime, contact d\'urgence)',
+      detail: aRemplir.length > 1 ? `${complets} sur ${aRemplir.length}` : null,
+      fait: complets === aRemplir.length,
+      lien: premier ? `/mon-espace/voyages/${d.id}/voyageurs/${premier.slot}` : '/mon-espace/profil',
+      action: 'Compléter',
+    })
+  }
   return out
 })
 
 onMounted(async () => {
+  try {
+    suggestionMasquee.value = localStorage.getItem(CLE_SUGGESTION) === '1'
+  }
+  catch {
+    suggestionMasquee.value = false
+  }
   try {
     await chargerMoi({ forcer: true })
     await charger(dossiers.value.map(d => d.slug))

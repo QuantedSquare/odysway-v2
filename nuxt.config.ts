@@ -81,6 +81,9 @@ export default defineNuxtConfig({
         // Lien « Mon espace » du header. Les pages restent joignables sans lui :
         // c'est le seul interrupteur à basculer pour ouvrir ou retirer l'espace.
         lienVisible: process.env.NUXT_PUBLIC_ESPACE_LIEN_VISIBLE === 'true',
+        // Démo avec les données de la maquette, sans Supabase. Lu seulement par
+        // le serveur de dev (`import.meta.dev`) : sans effet dans un build.
+        demo: process.env.NUXT_PUBLIC_ESPACE_DEMO === 'true',
       },
       environment: process.env.VERCEL_ENV || 'development',
       siteURL: process.env.BASE_URL || 'http://localhost:3000',

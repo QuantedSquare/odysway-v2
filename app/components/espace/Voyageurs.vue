@@ -66,7 +66,21 @@
             </template>
           </div>
         </div>
-        <div class="d-flex align-center ga-3 actions">
+        <div class="d-flex flex-wrap align-center ga-3 actions">
+          <EspaceStatutProfil
+            v-if="v.profil"
+            :completude="v.profil"
+          />
+          <v-btn
+            v-if="v.peutModifierProfil"
+            :to="`/mon-espace/voyages/${detail.id}/voyageurs/${v.slot}`"
+            size="small"
+            :variant="v.profil?.complet ? 'text' : 'flat'"
+            :color="v.profil?.complet ? undefined : 'primary'"
+            rounded="pill"
+          >
+            {{ v.profil?.complet ? 'Voir le profil' : 'Compléter le profil' }}
+          </v-btn>
           <v-switch
             v-if="v.peutChangerVisibilite && detail.compagnons"
             :model-value="v.visibleGroupe"
@@ -103,44 +117,47 @@
       v-model="dialogue"
       max-width="440"
     >
-      <v-card class="pa-6">
-        <h2 class="text-h6 font-weight-bold mb-1">
-          Inviter {{ invite?.prenom || 'ce voyageur' }}
-        </h2>
-        <p class="text-body-2 text-primary-light-2 mb-4">
-          Nous lui envoyons un email. Il ou elle se connectera avec cette adresse, sans mot de passe.
-        </p>
-        <v-form @submit.prevent="inviter">
-          <v-text-field
-            v-model="emailInvite"
-            label="Adresse email"
-            type="email"
-            variant="outlined"
-            autofocus
-            :error-messages="erreurInvite"
-          />
-          <div class="d-flex ga-2 justify-end">
-            <v-btn
-              v-if="invite?.invitation === 'envoyee'"
-              variant="text"
-              color="secondary"
-              :loading="enCours === 'annuler'"
-              @click="annulerInvitation"
-            >
-              Annuler l'invitation
-            </v-btn>
-            <v-spacer />
-            <v-btn
-              type="submit"
-              color="secondary"
-              rounded="pill"
-              :loading="enCours === 'inviter'"
-            >
-              Envoyer
-            </v-btn>
-          </div>
-        </v-form>
-      </v-card>
+      <!-- La modale est rendue hors de la page : la casse normale des boutons doit y être redonnée. -->
+      <v-defaults-provider :defaults="{ VBtn: { class: 'text-none' } }">
+        <v-card class="pa-6">
+          <h2 class="text-h6 font-weight-bold mb-1">
+            Inviter {{ invite?.prenom || 'ce voyageur' }}
+          </h2>
+          <p class="text-body-2 text-primary-light-2 mb-4">
+            Nous lui envoyons un email. Il ou elle se connectera avec cette adresse, sans mot de passe.
+          </p>
+          <v-form @submit.prevent="inviter">
+            <v-text-field
+              v-model="emailInvite"
+              label="Adresse email"
+              type="email"
+              variant="outlined"
+              autofocus
+              :error-messages="erreurInvite"
+            />
+            <div class="d-flex ga-2 justify-end">
+              <v-btn
+                v-if="invite?.invitation === 'envoyee'"
+                variant="text"
+                color="secondary"
+                :loading="enCours === 'annuler'"
+                @click="annulerInvitation"
+              >
+                Annuler l'invitation
+              </v-btn>
+              <v-spacer />
+              <v-btn
+                type="submit"
+                color="secondary"
+                rounded="pill"
+                :loading="enCours === 'inviter'"
+              >
+                Envoyer
+              </v-btn>
+            </div>
+          </v-form>
+        </v-card>
+      </v-defaults-provider>
     </v-dialog>
   </v-card>
 </template>

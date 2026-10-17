@@ -94,6 +94,8 @@ Ulysse (the back-office replacing /booking-management) calls these with `x-ulyss
 - `POST deals/:dealId/resynchroniser` — rewrites the deal's mirror row from AC (CYC-11). Read-only at AC.
 - `POST dates/:dateId/dossier-depart` — resyncs the pipeline-4 departure deal (value, travellers, stage), same computation as each payment (`departures.resyncDepartureDeal`, RES-11).
 - `GET deals/:dealId/notes` — the deal's AC notes, for the Docteur's timeline.
+- `GET dates/:dateId/profils` — Espace Voyageur profiles of every traveller booked on the departure, **passport/ID numbers decrypted** (they are needed to issue tickets). Each profile read is logged in `traveler_file_access` (`consultation`, actor = `x-ulysse-user`). Deals whose travellers were never read are synced from AC on the fly. Ulysse gates it behind its restricted right `profils-voyageurs`.
+- `GET dates/:dateId/profils/:placeId/piece` — 60 s signed URL to a traveller's ID copy (the place must belong to a booking of that departure), logged (`lecture`).
 
 ## Pipeline logic — the most important concept
 
@@ -262,6 +264,8 @@ Comptes clients = Supabase Auth de ce projet (code à 6 chiffres ou Google), par
 - `client_account_links` (`user_id`, `ac_contact`) — compte ↔ contact AC, N-N. L'email n'amorce que le premier lien ; ensuite `ac_contact` fait foi.
 - `deal_travelers` (`deal_id`, `slot` 1-15) — copie des champs AC « Voyageur N » + ce qu'AC ne porte pas : `email` d'invitation, `user_id` du compte invité, `visible_groupe` (consentement, faux par défaut), `removed_at`. AC reste la source du nom et de la date de naissance (Chapka les y lit).
 - `client_link_codes` — codes hachés pour rattacher une seconde adresse.
+- `traveler_profiles` (PK `deal_traveler_id`) — profil d'une place : pièce d'identité (numéro **chiffré** AES-256-GCM par l'application, clé `ESPACE_CHIFFREMENT_KEY`, seuls les 4 derniers caractères en clair), régimes, allergies, contact d'urgence, notes, référence de la copie dans le bucket privé `traveler-files` (purgée 30 jours après le retour).
+- `traveler_file_access` — journal des dépôts / lectures / suppressions / purges des copies de pièces.
 
 ### `alma_ids`
 Tracks Alma payment IDs to prevent duplicate processing.
