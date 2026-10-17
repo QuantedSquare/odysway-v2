@@ -1,9 +1,7 @@
 import { defineEventHandler } from 'h3'
 
 export default defineEventHandler(async (event) => {
-  const config = useRuntimeConfig()
-  const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
-  if (isProdEnv) requireBookingUser(event)
+  requireCrmAccess(event)
 
   const now = new Date().toISOString()
 

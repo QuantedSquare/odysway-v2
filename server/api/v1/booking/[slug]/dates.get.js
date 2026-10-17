@@ -9,10 +9,10 @@ export default defineEventHandler(async (event) => {
     })
   }
 
-  // ?includeDeleted=true alimente la Corbeille du BMS. Par défaut on ne renvoie
-  // que les dates actives.
+  // ?includeDeleted=true sert la corbeille du back-office : la route est
+  // publique, les dates supprimées ne le sont pas.
   const { includeDeleted } = getQuery(event)
-  const withDeleted = includeDeleted === 'true' || includeDeleted === '1'
+  const withDeleted = (includeDeleted === 'true' || includeDeleted === '1') && !!getCrmAccessOrNull(event)
 
   let query = supabase
     .from('travel_dates')

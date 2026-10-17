@@ -1,10 +1,7 @@
 import { defineEventHandler, createError } from 'h3'
 
 export default defineEventHandler(async (event) => {
-  const config = useRuntimeConfig()
-  const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
-  const bookingUser = getUlysseServiceUser(event)
-    ?? (isProdEnv ? requireBookingUser(event) : getBookingUserOrNull(event))
+  const bookingUser = requireCrmAccess(event)
   const { dateId, slug, attachmentId } = event.context.params
   if (!dateId || !slug || !attachmentId) {
     throw createError({ statusCode: 400, statusMessage: 'slug, dateId et attachmentId requis' })

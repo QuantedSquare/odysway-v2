@@ -10,8 +10,8 @@ export default defineEventHandler((event) => {
   }
 
   try {
-    const config = useRuntimeConfig()
-    const isDev = config.public.environment !== 'production'
+    // Cookies `Secure` partout sauf sur un serveur de dev local (http).
+    const isDev = isLocalDev()
 
     const payload = jwt.verify(token, jwtSecret)
     const email = payload?.email

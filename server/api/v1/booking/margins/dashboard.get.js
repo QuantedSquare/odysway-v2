@@ -16,9 +16,7 @@ const chunk = (arr, size) => {
 // `fetchAllPaginated` is auto-imported from server/utils/supabase.js.
 
 export default defineEventHandler(async (event) => {
-  const config = useRuntimeConfig()
-  const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
-  if (isProdEnv) requireBookingUser(event)
+  requireCrmAccess(event)
 
   const { from, to } = getQuery(event)
   const dateFrom = from || dayjs().subtract(12, 'month').format('YYYY-MM-DD')

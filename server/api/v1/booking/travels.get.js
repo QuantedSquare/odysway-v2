@@ -1,9 +1,7 @@
 import { defineEventHandler, createError } from 'h3'
 
 export default defineEventHandler(async (event) => {
-  const config = useRuntimeConfig()
-  const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
-  if (isProdEnv) requireBookingUser(event)
+  requireCrmAccess(event)
 
   const { data, error } = await supabase
     .from('travel_dates')

@@ -12,13 +12,7 @@ import { defineEventHandler, readBody, createError } from 'h3'
 // reste celle d'un opérateur authentifié. Voir server/utils/marginPricing.js.
 
 export default defineEventHandler(async (event) => {
-  const config = useRuntimeConfig()
-  const isProdEnv = config.public.environment === 'production' && process.env.NODE_ENV === 'production'
-  // Ulysse s'annonce par un jeton de service ; sinon on retombe sur la session
-  // booking_token habituelle. Voir getUlysseServiceUser pour la liste des
-  // endpoints qui l'acceptent.
-  const bookingUser = getUlysseServiceUser(event)
-    ?? (isProdEnv ? requireBookingUser(event) : getBookingUserOrNull(event))
+  const bookingUser = requireCrmAccess(event)
 
   const { slug } = event.context.params
   if (!slug) {

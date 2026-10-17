@@ -1,8 +1,8 @@
 import { defineEventHandler, setCookie } from 'h3'
 
 export default defineEventHandler((event) => {
-  const config = useRuntimeConfig()
-  const isDev = config.public.environment !== 'production'
+  // Cookies `Secure` partout sauf sur un serveur de dev local (http).
+  const isDev = isLocalDev()
   setCookie(event, 'booking_token', '', {
     httpOnly: true,
     sameSite: 'lax',
