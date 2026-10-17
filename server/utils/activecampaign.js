@@ -1,6 +1,7 @@
 import axios from 'axios'
 import dayjs from 'dayjs'
 import supabase from './supabase'
+import acReessais from './acReessais'
 
 const config = useRuntimeConfig()
 const isDev = config.public.environment === 'development'
@@ -24,7 +25,7 @@ const customFieldsMapDeal = {
   29: 'isCouple',
   11: 'specialRequest',
   12: 'insurance',
-  13: 'insuranceCommissionPrice', // Prix assurance par pax
+  13: 'insuranceCommissionPrice', // Prix assurance par pax — c'est un PRIX malgré le nom de la clé
   14: 'marginPerTraveler',
   15: 'totalMargin',
   70: 'flightMargin',
@@ -87,7 +88,20 @@ const customFieldsMapDeal = {
   95: 'promoLastMinute',
   96: 'gotLastMinute',
   93: 'linkBms',
+  // Voyageurs 9 à 15 et suivi de préparation / annulation, lus pour le miroir
+  // (Docteur d'Ulysse). Identifiants relevés dans /dealCustomFieldMeta le 22/09/2026.
+  97: 'traveler9',
+  98: 'traveler10',
+  99: 'traveler11',
+  100: 'traveler12',
+  101: 'traveler13',
+  102: 'traveler14',
+  103: 'traveler15',
+  109: 'flightPlanReceived', // Plan de vol reçu (checkbox)
+  110: 'passportReceived', // Passeport reçu (checkbox)
+  111: 'dietReceived', // Régime alimentaire reçu (checkbox)
   113: 'isCapExploraction',
+  114: 'cancellationFee', // Frais d'annulation (currency)
   117: 'extraMarginPerTraveler', // Marge supplémentaire par pax (extension, early check-in, etc.) — séparée de 14 marginPerTraveler qui est remplacé par le tableau BMS
 }
 const customFieldsMapContact = {
@@ -170,12 +184,15 @@ const transformDealForAPI = (flatDeal) => {
 // API Request Method
 const apiRequest = async (endpoint, method = 'get', data = null) => {
   try {
-    const response = await axios({
+    // Délai maximal, et nouvel essai d'un GET ou d'un PUT sur 502/503/504 ou
+    // délai dépassé ; de toute requête sur 429 (server/utils/acReessais.js).
+    const response = await acReessais.avecReessais(() => axios({
       url: `${baseUrl}${endpoint}`,
       method,
       headers,
       data,
-    })
+      timeout: acReessais.DELAI_AC_MS,
+    }), method)
     // console.log('===========AXIOS RESPONSE===========', response)
     return response.data
   }
@@ -189,6 +206,13 @@ const apiRequest = async (endpoint, method = 'get', data = null) => {
       console.error('Response status:', error.response.status)
       console.error('Response data:', JSON.stringify(error.response.data, null, 2))
     }
+    // Les appelants loguent l'erreur entière : en-têtes et requête brute
+    // portent le token AC.
+    for (const c of [error.config, error.response?.config]) {
+      if (c?.headers) c.headers['Api-Token'] = '[masqué]'
+    }
+    delete error.request
+    if (error.response) delete error.response.request
     throw error
   }
 }
@@ -237,6 +261,22 @@ const getContactTags = async (contactId) => {
   }
 }
 
+// Pose un tag sur le contact, en créant le tag s'il n'existe pas encore chez AC.
+// POST /contactTags est idempotent : un tag déjà posé n'est pas dupliqué.
+const addTagToContact = async (contactId, tagName) => {
+  const { tags = [] } = await apiRequest(`/tags?search=${encodeURIComponent(tagName)}`)
+  let tagId = tags.find(t => t.tag === tagName)?.id
+  if (!tagId) {
+    const created = await apiRequest('/tags', 'post', { tag: { tag: tagName, tagType: 'contact', description: '' } })
+    tagId = created.tag.id
+  }
+  await apiRequest('/contactTags', 'post', { contactTag: { contact: contactId, tag: tagId } })
+  return tagId
+}
+
+const addContactNote = (contactId, note) =>
+  apiRequest('/notes', 'post', { note: { note, relid: contactId, reltype: 'Subscriber' } })
+
 const upsertContactIntoSupabase = async (contactId) => {
   try {
     const acContact = await getClientById(contactId)
@@ -275,9 +315,12 @@ const upsertContactIntoSupabase = async (contactId) => {
   }
   catch (err) {
     console.error('Contact upsert error:', err)
+    // 503 quand AC est en panne passagère : la file des webhooks
+    // (fileDeals.js) rejoue alors plus tard au lieu d'abandonner.
     throw createError({
-      statusCode: 400,
+      statusCode: acReessais.panneAc(err) ? 503 : 400,
       message: 'Error upserting contact',
+      cause: err,
     })
   }
 }
@@ -293,7 +336,9 @@ const getDealCustomFieldMeta = async () => {
 const getDealById = async id => await apiRequest(`/deals/${id}`)
 
 const getDealCustomFields = async (dealId) => {
-  const response = await apiRequest(`/deals/${dealId}/dealCustomFieldData`)
+  // `limit` explicite : AC pagine ses listes, et un deal très rempli ne doit pas
+  // perdre silencieusement ses derniers champs. 98 champs existent (09/2026).
+  const response = await apiRequest(`/deals/${dealId}/dealCustomFieldData?limit=100`)
   return handleCustomFields(response.dealCustomFieldData, customFieldsMapDeal)
 }
 
@@ -436,6 +481,17 @@ const getAllDeal = async id => await apiRequest(`/contacts/${id}/deals`)
 
 const addNote = async (dealId, data) => await apiRequest(`/deals/${dealId}/notes`, 'post', data)
 
+// Notes d'un deal, les plus récentes d'abord. Sert aux encaissements d'Ulysse,
+// qui y cherchent leur marqueur avant d'écrire (idempotence).
+const getDealNotes = async (dealId) => {
+  const response = await apiRequest(`/deals/${dealId}/notes?limit=100`)
+  return response?.notes || []
+}
+
+// Statut natif du deal (0 ouvert, 1 gagné, 2 perdu) : `updateDeal` ne le
+// transmet pas (transformDealForAPI ne garde que contact, groupe, étape…).
+const updateDealStatus = (dealId, status) => apiRequest(`/deals/${dealId}`, 'put', { deal: { status } })
+
 const retrieveOwner = async (dealId) => {
   try {
     const res = await apiRequest(`/deals/${dealId}/owner`)
@@ -551,7 +607,9 @@ const recalculatTotalValues = async (dealId) => {
 
   const restToPay = value - alreadyPaid
 
-  const shouldUpdate = restToPay !== customFields.restToPay || deal.value !== value
+  // AC rend ses montants en texte : comparer des nombres, sinon la comparaison
+  // est toujours vraie et chaque ouverture du checkout réécrivait le deal.
+  const shouldUpdate = Number(customFields.restToPay) !== restToPay || Number(deal.value) !== value
 
   console.log('recalculatTotalValues summary', {
     dealId,
@@ -652,21 +710,39 @@ const createMinimalDeal = async ({ email, firstname, lastname, phone, isoContact
     },
   })
   console.log(`[createMinimalDeal] upsertContact done contactId=${contact.id} +${Date.now() - t0}ms`)
-  const res = await apiRequest('/deals', 'post', {
-    deal: {
-      contact: contact.id,
-      title,
-      currency,
-      stage,
-      owner,
-      value: '1',
-      // Posé dès la création (et pas par l'enrich en arrière-plan) pour que la
-      // colonne et l'étape AC ne puissent pas être écrasées après coup.
-      ...(currentStep && { fields: reverseCustomFieldsMap({ currentStep }, customFieldsMapDeal) }),
-    },
-  })
-  console.log(`[createMinimalDeal] POST /deals done dealId=${res.deal.id} +${Date.now() - t0}ms`)
-  return res.deal.id
+  const depuis = new Date()
+  try {
+    const res = await apiRequest('/deals', 'post', {
+      deal: {
+        contact: contact.id,
+        title,
+        currency,
+        stage,
+        owner,
+        value: '1',
+        // Posé dès la création (et pas par l'enrich en arrière-plan) pour que la
+        // colonne et l'étape AC ne puissent pas être écrasées après coup.
+        ...(currentStep && { fields: reverseCustomFieldsMap({ currentStep }, customFieldsMapDeal) }),
+      },
+    })
+    console.log(`[createMinimalDeal] POST /deals done dealId=${res.deal.id} +${Date.now() - t0}ms`)
+    return res.deal.id
+  }
+  catch (err) {
+    if (!acReessais.sansReponse(err)) throw err
+    // AC a pu créer le deal sans répondre à temps : on le reprend plutôt que
+    // d'échouer (le client recommencerait et laisserait un deal fantôme).
+    for (let essai = 0; essai < 3; essai++) {
+      await new Promise(r => setTimeout(r, 2000))
+      const { deals } = await apiRequest(`/contacts/${contact.id}/deals`).catch(() => ({}))
+      const deal = acReessais.dealCreeMalgreDelai(deals, { title, depuis })
+      if (deal) {
+        console.warn(`[createMinimalDeal] POST /deals sans réponse, deal repris dealId=${deal.id} +${Date.now() - t0}ms`)
+        return deal.id
+      }
+    }
+    throw err
+  }
 }
 
 export default {
@@ -679,6 +755,8 @@ export default {
   getClientByEmail, // OK
   upsertContact, // OK
   upsertContactIntoSupabase,
+  addTagToContact,
+  addContactNote,
   // --- Deals ---
   getDealById, // OK
   getDealCustomFields, // OK
@@ -689,7 +767,9 @@ export default {
   createDeal, // OK
   createMinimalDeal,
   updateDeal,
+  updateDealStatus,
   addNote,
+  getDealNotes,
   recalculatTotalValues,
   deleteDeal,
   // --- Gestions Départs ---

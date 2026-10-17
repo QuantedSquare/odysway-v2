@@ -48,11 +48,14 @@ const computeDepartureEnrichment = async (travelDateId, travelDate) => {
 
   const bmsLink = `${origin}/booking-management/${travelDate.travel_slug}/${travelDateId}`
 
+  // Réservations payées seulement : une option (prospect, non payée) gonflait la
+  // valeur et les voyageurs du dossier de départ (constat du Docteur d'Ulysse, RES-11).
   const { data: paidBookings } = await supabase
     .from('booked_dates')
     .select('deal_id, booked_places')
     .eq('travel_date_id', travelDateId)
     .eq('deleted', false)
+    .eq('is_option', false)
     .gt('booked_places', 0)
 
   let totalValue = 0
@@ -328,7 +331,35 @@ const cleanupDepartureDealIfEmpty = async (travelDateId) => {
   }
 }
 
+/**
+ * Resynchronise le dossier de départ (pipeline 4) d'une date : valeur et
+ * voyageurs agrégés des réservations, étape selon les dates et le remplissage.
+ * Le même calcul qu'à chaque paiement (handlePaymentForDeparture), sans
+ * toucher aux contacts. Pour le Docteur d'Ulysse (RES-11).
+ * @returns {Promise<{ departureDealId: number, stage: number, value: number, nbTravelers: number } | null>} null sans dossier
+ */
+const resyncDepartureDeal = async (travelDateId) => {
+  const { data: travelDate, error } = await supabase
+    .from('travel_dates')
+    .select('id, travel_slug, departure_date, return_date, booked_seat, min_travelers, departure_id')
+    .eq('id', travelDateId)
+    .maybeSingle()
+  if (error) throw new Error(error.message)
+  if (!travelDate?.departure_id) return null
+
+  const enrichment = await computeDepartureEnrichment(travelDate.id, travelDate)
+  const stageId = computeDepartureStage(travelDate.departure_date, travelDate.return_date, travelDate.booked_seat, travelDate.min_travelers)
+  await activecampaign.updateDeal(travelDate.departure_id, {
+    stage: String(stageId),
+    value: enrichment.totalValue,
+    nbTravelers: enrichment.totalNbTravelers,
+    linkBms: enrichment.bmsLink,
+  })
+  return { departureDealId: Number(travelDate.departure_id), stage: stageId, value: enrichment.totalValue, nbTravelers: enrichment.totalNbTravelers }
+}
+
 export default {
+  resyncDepartureDeal,
   computeDepartureStage,
   getOrCreateDepartureDeal,
   assignContactToDepartureDeal,

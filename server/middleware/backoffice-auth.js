@@ -33,6 +33,8 @@ const PUBLIC_ROUTES = [
   [['GET'], /^\/api\/v1\/booking\/booking-exists$/],
   [['GET'], /^\/api\/v1\/booking\/purchase-data$/],
   [['POST'], /^\/api\/v1\/booking\/booked_date\/option$/],
+  // Reprise d'une réservation : ne renvoie qu'un verdict, jamais le titulaire
+  [['POST'], /^\/api\/v1\/booking\/booked_date\/reprise$/],
   [['POST'], /^\/api\/v1\/booking\/[^/]+\/date\/[^/]+\/kickstart$/],
   [['POST'], /^\/api\/v1\/booking\/[^/]+\/date\/[^/]+\/assign-deal$/],
   [['POST'], /^\/api\/v1\/ac\/deals$/],
@@ -47,6 +49,9 @@ const PUBLIC_ROUTES = [
   // Webhooks et outils à jeton propre (?token=ACTIVECAMPAIGN_WEBHOOK_TOKEN)
   [['POST'], /^\/api\/v1\/ac\/webhooks\/[^/]+$/],
   [['POST'], /^\/api\/v1\/ac\/backfill$/],
+  // Crons pg_cron, en-tête x-cron-secret vérifié par le handler
+  [['POST'], /^\/api\/v1\/ac\/file\/traiter$/],
+  [['POST'], /^\/api\/v1\/ac\/mirror\/resync$/],
 ]
 
 const isProtected = path => PROTECTED_PREFIXES.some(prefix => path.startsWith(prefix))

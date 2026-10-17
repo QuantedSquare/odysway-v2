@@ -2,7 +2,6 @@ import { defineEventHandler, createError } from 'h3'
 
 export default defineEventHandler(async (event) => {
   const bookingUser = requireCrmAccess(event)
-console.log('bookingUser', bookingUser)
   const { dateId, slug, attachmentId } = event.context.params
   if (!dateId || !slug || !attachmentId) {
     throw createError({ statusCode: 400, statusMessage: 'slug, dateId et attachmentId requis' })
@@ -20,7 +19,9 @@ console.log('bookingUser', bookingUser)
     throw createError({ statusCode: 404, statusMessage: 'Fichier introuvable' })
   }
 
-  if (bookingUser?.email !== attachment.uploaded_by && bookingUser?.role !== 'superadmin') {
+  // Ulysse (jeton de service) vérifie lui-même le droit d'archivage de sa page
+  // Dates GIR avant d'appeler : il n'est pas limité aux fichiers de l'appelant.
+  if (bookingUser?.email !== attachment.uploaded_by && bookingUser?.role !== 'superadmin' && bookingUser?.role !== 'service') {
     throw createError({ statusCode: 403, statusMessage: 'Non autorisé à supprimer ce fichier' })
   }
 

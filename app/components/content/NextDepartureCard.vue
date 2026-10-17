@@ -232,9 +232,12 @@ const dateData = computed(() => {
 })
 const remainingSeats = computed(() => {
   if (!dateData.value) return null
-  const { max_travelers, booked_seat } = dateData.value
-  if (typeof max_travelers !== 'number' || typeof booked_seat !== 'number') return null
-  return max_travelers - booked_seat
+  const { max_travelers, booked_seat, displayed_booked_seat } = dateData.value
+  // Same resolution as the voyage page (DatesPricesItem): the back-office
+  // override wins when set.
+  const booked = Number(displayed_booked_seat) > 0 ? Number(displayed_booked_seat) : booked_seat
+  if (typeof max_travelers !== 'number' || typeof booked !== 'number') return null
+  return max_travelers - booked
 })
 
 // Image-overlay badges (demo style): driven by `variant` + the date data.

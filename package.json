@@ -9,7 +9,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
-    "test": "node --test \"test/**/*.test.mjs\""
+    "test:unit": "node --test \"tests/unit/*.test.mjs\""
   },
   "resolutions": {
     "unimport": "5.6.0"

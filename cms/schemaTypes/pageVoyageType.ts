@@ -1,4 +1,5 @@
 import {defineField, defineType} from 'sanity'
+import {rdvVariantField} from './objects/rdvVariantFields'
 
 
 
@@ -59,6 +60,7 @@ export const pageVoyageType = defineType({
     {name: 'faq_section', title: 'Section FAQ'},
     {name: 'why_section', title: 'Section Pourquoi'},
     {name: 'other_sections', title: 'Autres Sections'},
+    {name: 'rdv_ab_test', title: 'Test A/B rendez-vous'},
     {name: 'seo', title: 'SEO'},
   ],
   preview: {
@@ -70,6 +72,9 @@ export const pageVoyageType = defineType({
     }
   },
   fields: [
+    // Test A/B « prise de rendez-vous » (variante B)
+    rdvVariantField,
+
     // Buttons
     // LEGACY #
     defineField({

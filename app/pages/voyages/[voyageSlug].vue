@@ -1,7 +1,15 @@
 <template>
   <div>
     <div v-if="voyage && !customTravel">
+      <RdvBottomBar
+        v-if="isRdvVariant"
+        :starting-price="voyage.pricing.startingPrice"
+        :dates-text="rdvContent.bottomBar.datesText"
+        :rdv-button-text="rdvContent.bottomBar.rdvButtonText"
+        @scroll-to-dates="scrollToDates"
+      />
       <LazyBottomAppBar
+        v-else
         :hydrate-on-idle="true"
         :date-sections="page.dateSections"
         :starting-price="voyage.pricing.startingPrice"
@@ -41,6 +49,12 @@
               :page="page.experiencesBlock"
             />
 
+            <RdvSection
+              v-if="isRdvVariant"
+              :section="rdvContent.rdvSection"
+              :cal-link="rdvContent.calLink"
+            />
+
             <LazyProgrammeContainer :programme-block="voyage.programmeBlock" />
 
             <LazyAccompanistsContainer
@@ -49,7 +63,16 @@
             />
           </template>
           <template #right-side>
+            <RdvInfoCard
+              v-if="isRdvVariant"
+              :sticky-block="page.stickyBlock"
+              :voyage="voyage"
+              :content="rdvContent"
+              :upcoming-dates="upcomingDates"
+              @scroll-to-dates="scrollToDates"
+            />
             <InfoCard
+              v-else
               :sticky-block="page.stickyBlock"
               :voyage="voyage"
             />
@@ -67,9 +90,23 @@
             :housing-mood-title="page.housingMoodTitle"
           />
 
+          <template v-if="isRdvVariant">
+            <RdvBand
+              :text="rdvContent.band.text"
+              :button-text="rdvContent.band.buttonText"
+            />
+            <RdvDatesCompact
+              :content="rdvContent.dates"
+              :upcoming-dates="upcomingDates"
+              :is-loading="areDatesLoading"
+              :voyage="voyage"
+              :rdv-button-text="rdvContent.infoCard.rdvButtonText"
+            />
+          </template>
           <LazyDatesPricesContainer
+            v-else
             :closing-days="voyage.closingDays"
-            :contact-section="page.contactSection"
+            :sticky-block="page.stickyBlock"
             :date-sections="page.dateSections"
             :is-groupe-available="voyage.availabilityTypes?.includes('groupe')"
             :is-privatisation-available="voyage.availabilityTypes?.includes('privatisation')"
@@ -89,6 +126,13 @@
             :background-image="voyage.image"
             :faq-block="voyage.faqBlock"
             :static-faq="page.faqSection.faqBlock"
+          />
+
+          <RdvNudge
+            v-if="isRdvVariant"
+            :title="rdvContent.nudge.title"
+            :subtitle="rdvContent.nudge.subtitle"
+            :button-text="rdvContent.nudge.buttonText"
           />
 
           <!-- <LazyWhySection :why-section="page.whySection" /> -->
@@ -120,6 +164,11 @@
           </TrackableVoyageList>
         </v-container>
       </v-container>
+      <RdvCalDialog
+        v-if="isRdvVariant"
+        :cal-link="rdvContent.calLink"
+        :voyage="voyage"
+      />
       <!-- Banner variant switcher (remove once a variant is chosen) -->
       <!-- <div style="position:fixed;bottom:110px;right:16px;z-index:2000">
         <v-btn-toggle
@@ -189,10 +238,21 @@
 
 <script setup>
 import imageUrlBuilder from '@sanity/image-url'
+import { useGoTo } from 'vuetify'
+import { detectAdPlatform } from '~/composables/useLeadSource'
+import {
+  AB_TEST_NAME,
+  RDV_VARIANT_DEFAULTS,
+  resolveVoyageVariant,
+  toUpcomingDates,
+  withRdvDefaults,
+} from '~/utils/rdvVariant'
 
 definePageMeta({
   layout: 'voyage',
   middleware: ['old-voyages-link-redirection'],
+  // Variante B du test A/B rendez-vous : même page, servie sur /voyages/<slug>/lp.
+  alias: ['/voyages/:voyageSlug/lp'],
 })
 
 const route = useRoute()
@@ -211,12 +271,52 @@ const { data: voyagePropositions } = await useSanityQuery(
   { slug: voyageSlugRef, experienceTypeId: experienceTypeIdRef },
   { lazy: true },
 )
+// Test A/B « prise de rendez-vous » : /voyages/<slug>/lp sert la variante B (cf. utils/rdvVariant).
+// Textes : défauts du code < page_voyage.rdvVariant < voyage.rdvBlock (bloc principal).
+const rdvContent = computed(() => {
+  const content = withRdvDefaults(RDV_VARIANT_DEFAULTS, page.value?.rdvVariant)
+  content.rdvSection = withRdvDefaults(content.rdvSection, voyage.value?.rdvBlock)
+  return content
+})
+const abVariant = computed(() => rdvContent.value.enabled ? resolveVoyageVariant(route.path) : 'A')
+const isRdvVariant = computed(() => abVariant.value === 'B')
+
+// Les dates ne sont chargées ici que pour la variante B (carte + liste réduite) ;
+// en A, InfoCard et DatesPricesContainer gardent leur propre chargement.
+const { dates: rdvDates, isLoading: areDatesLoading } = isRdvVariant.value
+  ? useDates()
+  : { dates: ref([]), isLoading: ref(false) }
+const upcomingDates = computed(() => toUpcomingDates(rdvDates.value, {
+  closingDays: voyage.value?.closingDays,
+  lastMinutePrice: voyage.value?.pricing?.lastMinuteReduction,
+  earlyBirdPrice: voyage.value?.pricing?.earlyBirdReduction,
+}))
+
+const goTo = useGoTo()
+const { trackAbExposure, trackAbEvent } = useGtmTracking()
+const { getLeadSource } = useLeadSource()
+
+function scrollToDates(position) {
+  trackAbEvent('cta_dates_click', { ab_test: AB_TEST_NAME, position })
+  goTo('#dates-container', { offset: -100 })
+}
+
 onMounted(() => {
+  if (!voyage.value) return
+  // Exposition au test avant view_item, pour que ab_variant / lead_source soient déjà
+  // dans le dataLayer quand les balises de la page se déclenchent. app.vue n'enregistre
+  // la query d'arrivée qu'après ce hook (parent monté en dernier), d'où la détection
+  // directe sur la query courante.
+  trackAbExposure({
+    abTest: AB_TEST_NAME,
+    abVariant: abVariant.value,
+    leadSource: detectAdPlatform(route.query) || getLeadSource().platform,
+    itemId: voyage.value.slug?.current,
+  })
+
   // GTM: Track view_item event
-  if (voyage.value) {
-    const formattedVoyage = formatVoyageForGtm(voyage.value)
-    trackViewItem(formattedVoyage, voyage.value.pricing?.startingPrice)
-  }
+  const formattedVoyage = formatVoyageForGtm(voyage.value)
+  trackViewItem(formattedVoyage, voyage.value.pricing?.startingPrice)
 })
 
 // const bannerVariant = ref('A')
@@ -254,7 +354,9 @@ const buildMainImageUrl = (image, width, height, quality = 90) => {
 // SEO composable — called once during setup (not inside watchEffect)
 if (voyage.value && !customTravel.value) {
   useSeo({
-    seoData: voyage.value.seo,
+    // La landing /lp duplique la page voyage : noindex, canonical vers /voyages/<slug>.
+    seoData: isRdvVariant.value ? { ...voyage.value.seo, robotsIndex: false } : voyage.value.seo,
+    ...(isRdvVariant.value && { baseUrl: `/voyages/${voyage.value.slug?.current}` }),
     content: voyage.value,
     pageType: 'website',
     slug: voyage.value.slug?.current,

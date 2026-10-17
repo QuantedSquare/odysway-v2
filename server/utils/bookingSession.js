@@ -43,6 +43,9 @@ export const getBookingUserOrNull = (event) => {
  * endpoint protégerait peu : Ulysse détient déjà la clé service_role de la même
  * base Supabase. Il passe par ces endpoints pour ses écritures parce que c'est
  * ici que vivent le mapping AC, la cascade soft-delete et le journal.
+ *
+ * Les endpoints du Docteur d'Ulysse (/api/v1/ulysse/) n'acceptent que ce jeton
+ * (`requireUlysseService`), sans repli sur la session du BMS.
  */
 export const getUlysseServiceUser = (event) => {
   const attendu = process.env.ULYSSE_SERVICE_TOKEN
@@ -59,6 +62,17 @@ export const getUlysseServiceUser = (event) => {
 
   const email = getHeader(event, 'x-ulysse-user') || 'ulysse@odysway.com'
   return { sub: 'ulysse-service', email, name: `Ulysse · ${email}`, role: 'service' }
+}
+
+/**
+ * Endpoints propres à Ulysse (/api/v1/ulysse/) : son jeton, sans repli sur la
+ * session du BMS. Ils écrivent dans AC au nom d'un utilisateur d'Ulysse, dont
+ * l'email (`x-ulysse-user`) signe les notes et le journal.
+ */
+export const requireUlysseService = (event) => {
+  const user = getUlysseServiceUser(event)
+  if (!user) throw createError({ statusCode: 401, statusMessage: 'Jeton de service Ulysse requis.' })
+  return user
 }
 
 /**

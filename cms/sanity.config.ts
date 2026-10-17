@@ -245,6 +245,7 @@ export default defineConfig({
                     S.documentTypeListItem('surMesure').title('Sur Mesure'),
                     S.documentTypeListItem('visionVoyageOdysway').title('Vision Voyage Odysway'),
                     S.documentTypeListItem('entreprise').title('Entreprise'),
+                    S.documentTypeListItem('page_partenariat').title('Partenariat'),
                     S.documentTypeListItem('legalMentions').title('Mentions légales'),
                     S.documentTypeListItem('privacyPolicy').title(
                       'Politique de confidentialité',

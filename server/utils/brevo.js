@@ -20,7 +20,8 @@ const apiRequest = async (path, method = 'get', data = null) => {
       headers: brevoHeaders,
       data,
     }
-    console.log('========options=======', options)
+    // Jamais `options` entier : il porte la clé API dans ses en-têtes
+    console.log(`[brevo] ${method.toUpperCase()} ${path}`)
     const response = await axios.request(options).then((res) => {
       // console.log('========Brevo response=======', res)
       return res
@@ -29,6 +30,11 @@ const apiRequest = async (path, method = 'get', data = null) => {
   }
   catch (error) {
     console.error(`API Error in ${path}:`, error.message)
+    for (const c of [error.config, error.response?.config]) {
+      if (c?.headers) c.headers['api-key'] = '[masqué]'
+    }
+    delete error.request
+    if (error.response) delete error.response.request
     throw error
   }
 }
@@ -105,12 +111,12 @@ const brevo = {
       return response.data
     }
     catch (err) {
-      console.log('========err=======', err)
+      console.log('========err=======', err.response?.data || err.message)
       apiRequest(`/contacts/${email}`, 'put', {
         email,
         listIds: [listId],
       }).catch((error) => {
-        console.log('put error sendinblu', error.response)
+        console.log('put error sendinblu', error.response?.data || error.message)
       })
     }
   },
@@ -130,7 +136,7 @@ const brevo = {
       const response = await apiRequest('/smtp/email', 'post', data, {
         headers: brevoHeaders,
       })
-      console.log('Email sent:', response)
+      console.log('Email sent:', response.data)
       return response
     }
     catch (error) {

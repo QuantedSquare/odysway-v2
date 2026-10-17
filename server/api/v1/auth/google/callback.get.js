@@ -100,7 +100,7 @@ export default defineEventHandler(async (event) => {
       secure: !isDev,
     })
 
-    return sendRedirect(event, '/')
+    return sendRedirect(event, '/booking-management')
   }
   catch (err) {
     console.error('Google OAuth error', err)

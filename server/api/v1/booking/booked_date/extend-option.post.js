@@ -5,7 +5,7 @@ const MAX_DAYS = 90
 
 export default defineEventHandler(async (event) => {
   // Back-office uniquement (voir server/middleware/backoffice-auth.js).
-  requireCrmAccess(event)
+  const bookingUser = requireCrmAccess(event)
 
   const body = await readBody(event)
   if (!body?.id) {
@@ -19,7 +19,7 @@ export default defineEventHandler(async (event) => {
   // The booked_date must currently be an option to be extended.
   const { data: bookedDate, error: bookedDateError } = await supabase
     .from('booked_dates')
-    .select('is_option, expiracy_date')
+    .select('is_option, expiracy_date, travel_date_id')
     .eq('id', body.id)
     .eq('deleted', false)
     .single()
@@ -45,5 +45,8 @@ export default defineEventHandler(async (event) => {
     .single()
   if (error) throw createError({ statusCode: 500, statusMessage: error.message })
 
+  await logDateActivity(bookedDate.travel_date_id, bookingUser, 'option_extended', {
+    booked_id: body.id, days, old: bookedDate.expiracy_date, new: newExpiracy.toISOString(),
+  })
   return data
 })

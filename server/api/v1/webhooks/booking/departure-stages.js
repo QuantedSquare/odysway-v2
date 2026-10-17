@@ -59,9 +59,51 @@ export default defineEventHandler(async (event) => {
     }
   }
 
+  const voyageurs = await avancerVoyageurs()
+
   return {
     success: true,
     scanned: rows.length,
     updated,
+    voyageurs,
   }
 })
+
+/**
+ * Voyageurs (pipeline 2) : « Voyage en cours » au départ, « Retour Client »
+ * après le retour (server/utils/cycleVoyageur.js : les voyageurs soldés
+ * seulement). Candidats lus dans le miroir, étape vérifiée dans AC avant
+ * d'écrire : un commercial a pu la changer depuis la dernière synchronisation.
+ */
+async function avancerVoyageurs() {
+  const aujourdhui = new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Paris' })
+  const { data: candidats, error } = await supabase
+    .from('activecampaign_deals')
+    .select('id, stage_id, departure_date, return_date')
+    .eq('pipeline_id', 2)
+    .eq('status', 'Ouvert')
+    .eq('deleted', false)
+    .in('stage_id', [cycleVoyageur.ETAPES_P2.EN_ATTENTE_DEPART, cycleVoyageur.ETAPES_P2.VOYAGE_EN_COURS])
+    .lte('departure_date', aujourdhui)
+  if (error) {
+    console.error('Voyageurs : lecture du miroir impossible', error.message)
+    return { scanned: 0, updated: 0, erreur: error.message }
+  }
+
+  let updated = 0
+  for (const c of candidats || []) {
+    const attendue = cycleVoyageur.etapeVoyageurAttendue({ stage: c.stage_id, departureDate: c.departure_date, returnDate: c.return_date, aujourdhui })
+    if (!attendue) continue
+    try {
+      const { deal } = await activecampaign.getDealById(c.id)
+      if (String(deal?.stage) !== String(c.stage_id) || String(deal?.group) !== '2' || String(deal?.status) !== '0') continue
+      await activecampaign.updateDeal(c.id, { stage: attendue })
+      updated++
+      console.log(`Voyageur ${c.id} : étape ${c.stage_id} → ${attendue}`)
+    }
+    catch (err) {
+      console.error(`Voyageur ${c.id} : étape non avancée`, err?.message)
+    }
+  }
+  return { scanned: (candidats || []).length, updated }
+}

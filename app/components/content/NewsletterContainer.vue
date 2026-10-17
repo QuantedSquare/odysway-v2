@@ -141,6 +141,7 @@ const { data: newsletterContent } = await useSanityQuery(groq`*[_type == "newsle
 }`)
 
 const { trackNewsletterSubscription, trackInscriptionAlerte } = useGtmTracking()
+const { newLeadEventId } = useLeadSource()
 
 const { width, mdAndUp } = useDisplay()
 const email = ref('')
@@ -165,7 +166,8 @@ const subscribeToNewsletter = async () => {
 
   // Track GTM event: inscription_alerte on voyage pages, newsletter otherwise
   if (props.isOnVoyage) {
-    trackInscriptionAlerte(email.value)
+    // Un deal n'est créé que sur une page voyage : sinon, pas de lead serveur à dédupliquer.
+    trackInscriptionAlerte(email.value, props.voyage ? newLeadEventId() : null)
 
     // Create ActiveCampaign deal for voyage alert subscription
     if (props.voyage) {

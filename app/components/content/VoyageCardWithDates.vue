@@ -15,6 +15,7 @@
 </template>
 
 <script setup>
+import dayjs from 'dayjs'
 import { getDateStatus } from '~/utils/getDateStatus'
 
 const props = defineProps({
@@ -69,7 +70,15 @@ const confirmedDeparture = computed(() => {
   }) || null
 })
 
-const selectedDeparture = computed(() => confirmedDeparture.value || earliestDeparture.value)
+// "Dernières places" voyages come with the departure that qualified them
+// (few seats left), which is not necessarily the earliest one.
+const lastMinuteDeparture = computed(() => {
+  const target = props.voyage.lastMinuteDepartureDate
+  if (!target) return null
+  return dates.value.find(d => dayjs(d.departure_date).isSame(target, 'day')) || null
+})
+
+const selectedDeparture = computed(() => lastMinuteDeparture.value || confirmedDeparture.value || earliestDeparture.value)
 
 const isGroupTravel = computed(() => props.voyage.availabilityTypes?.includes('groupe'))
 

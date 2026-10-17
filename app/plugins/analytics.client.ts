@@ -9,7 +9,8 @@ export default defineNuxtPlugin((nuxtApp) => {
   const config = useRuntimeConfig()
   const environment = config.public.environment
   const cookie = useCookie('odysway_employee_optout')
-  const isEmployee = cookie.value === '1'
+  // useCookie décode la valeur avec JSON.parse : '1' arrive sous forme de nombre.
+  const isEmployee = String(cookie.value) === '1'
 
   if (isEmployee) {
     return // stop initializing GA/Algolia/other trackers

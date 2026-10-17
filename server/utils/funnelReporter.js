@@ -146,7 +146,35 @@ const slackTransport = async (funnelError) => {
   })
 }
 
-const transports = [consoleTransport, slackTransport]
+// Garde l'incident en base, rattaché au deal : le Docteur d'Ulysse y lit les
+// incidents récents du checkout d'un deal (règle CHK-05). Slack reste le canal
+// d'alerte ; cette table est la mémoire. Ni email ni contexte complet : seulement
+// de quoi relier l'incident à un deal et le comprendre.
+const RAW_MAX = 4000
+
+const supabaseTransport = async (funnelError) => {
+  const { context = {}, raw } = funnelError
+  const dealId = Number.parseInt(context.dealId, 10)
+  const absent = v => v === undefined || v === null
+  const rawTexte = absent(raw) ? null : JSON.stringify(raw)
+  const { error } = await supabase.from('funnel_errors').insert({
+    occurred_at: funnelError.occurredAt,
+    code: funnelError.code,
+    step: funnelError.step || null,
+    severity: funnelError.severity || null,
+    source: funnelError.source || null,
+    message: truncate(summarizeMessage(funnelError.message), 1000) || null,
+    deal_id: Number.isInteger(dealId) && dealId > 0 ? dealId : null,
+    booked_id: absent(context.bookedId) ? null : String(context.bookedId),
+    voyage_slug: context.voyageSlug || null,
+    url: context.url || null,
+    origin: funnelError.origin || null,
+    raw: rawTexte === null ? null : rawTexte.length > RAW_MAX ? { tronque: true, extrait: rawTexte.slice(0, RAW_MAX) } : raw,
+  })
+  if (error) throw new Error(error.message)
+}
+
+const transports = [consoleTransport, slackTransport, supabaseTransport]
 
 // ---- Public API ------------------------------------------------------------
 

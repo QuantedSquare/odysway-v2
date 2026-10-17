@@ -64,6 +64,8 @@ function deriveSuggestedTags(doc: any): string[] {
         return null
       case 'entreprise':
         return 'page entreprise'
+      case 'page_partenariat':
+        return 'page partenariat'
       case 'experience':
         // handled as [slug, 'experience'] below
         return null

@@ -12,6 +12,9 @@ export default defineNuxtRouteMiddleware(async (to) => {
     })
 
     const pathSegments = decodeURIComponent(to.path).split('/')
+    // Landing du test A/B (/voyages/<slug>/lp) : le slug est l'avant-dernier segment.
+    const isLanding = pathSegments.length > 3 && pathSegments[pathSegments.length - 1] === 'lp'
+    if (isLanding) pathSegments.pop()
     const voyageSlug = pathSegments[pathSegments.length - 1]
     const cleanVoyageSlug = replaceFrenchAccents(voyageSlug)
 
@@ -22,7 +25,7 @@ export default defineNuxtRouteMiddleware(async (to) => {
     const voyage = await sanityClient.fetch(voyageQuery, { slug: cleanVoyageSlug })
 
     if (voyage) {
-      const targetPath = `/voyages/${voyage.slug}`
+      const targetPath = `/voyages/${voyage.slug}${isLanding ? '/lp' : ''}`
       // Only redirect if not already on the correct path
       if (to.path !== targetPath) {
         return navigateTo(targetPath)

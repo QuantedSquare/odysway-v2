@@ -39,7 +39,8 @@ export const useGtmTracking = () => {
     const environment = config.public.environment
 
     const optOut = useCookie('odysway_employee_optout')
-    if (optOut.value === '1') {
+    // useCookie décode la valeur avec JSON.parse : '1' arrive sous forme de nombre.
+    if (String(optOut.value) === '1') {
       return false
     }
     if (environment === 'production' && typeof window !== 'undefined' && window.dataLayer) {
@@ -295,12 +296,29 @@ export const useGtmTracking = () => {
   /**
    * Track inscription_alerte event - User subscribes to alerts for a trip
    * @param {string} userMail - User email
+   * @param {string} [eventId] - Shared with the server-side generate_lead (Meta dedup)
    */
-  const trackInscriptionAlerte = (userMail) => {
+  const trackInscriptionAlerte = (userMail, eventId = null) => {
     if (!userMail) return
 
     pushToDataLayer({
       event: 'inscription_alerte',
+      ...(eventId && { event_id: eventId }),
+      user_data: {
+        user_mail: userMail,
+      },
+    })
+  }
+
+  /**
+   * Track demande_partenariat event - Form sent from /partenariat
+   * @param {string} userMail - User email
+   * @param {string} besoin - What the partner wants to delegate (lead qualification)
+   */
+  const trackPartnershipRequest = (userMail, besoin) => {
+    pushToDataLayer({
+      event: 'demande_partenariat',
+      besoin,
       user_data: {
         user_mail: userMail,
       },
@@ -774,6 +792,10 @@ export const useGtmTracking = () => {
       dataLayerEvent.user_data = userData.user_data || userData
       dataLayerEvent.optin_newsletter = userData.optin_newsletter || userData.optin_newsletter
     }
+    // Shared with the server-side generate_lead (Meta dedup).
+    if (userData.event_id) {
+      dataLayerEvent.event_id = userData.event_id
+    }
 
     pushToDataLayer(dataLayerEvent)
   }
@@ -794,7 +816,7 @@ export const useGtmTracking = () => {
    * @param {Object} params.voyage - Voyage object (raw from Sanity)
    * @param {Object} params.dynamicDealValues - Deal values with travelers, options, insurance
    */
-  const trackPurchase = ({ transactionId, paymentType, totalValue, optinNewsletter, userData, voyage, dynamicDealValues }) => {
+  const trackPurchase = ({ transactionId, eventId, paymentType, totalValue, optinNewsletter, userData, voyage, dynamicDealValues }) => {
     const { buildCheckoutItems } = useGtmVoyageFormatter()
 
     const items = buildCheckoutItems(voyage, dynamicDealValues)
@@ -803,6 +825,8 @@ export const useGtmTracking = () => {
     })
     pushToDataLayer({
       event: 'purchase',
+      // Shared with the server-side purchase sent by the payment webhook (Meta dedup).
+      ...(eventId && { event_id: eventId }),
       optin_newsletter: optinNewsletter ? 'true' : 'false',
       user_data: {
         user_id: userData.userId,
@@ -832,6 +856,38 @@ export const useGtmTracking = () => {
     })
   }
 
+  /**
+   * TEST A/B PAGE VOYAGE (« voyage_rdv »)
+   * Expose le test et la variante comme variables dataLayer persistantes, pour
+   * que tous les événements suivants de la page (clic_rdv, rdv_confirmation,
+   * add_to_wishlist…) puissent être segmentés par variante dans GTM/GA4.
+   * @param {object} context - { abTest, abVariant, leadSource, itemId }
+   */
+  const trackAbExposure = ({ abTest, abVariant, leadSource, itemId }) => {
+    pushToDataLayer({
+      ab_test: abTest,
+      ab_variant: abVariant,
+      lead_source: leadSource || '(none)',
+    })
+    pushToDataLayer({
+      event: 'ab_exposure',
+      ab_test: abTest,
+      ab_variant: abVariant,
+      lead_source: leadSource || '(none)',
+      item_id: itemId,
+    })
+  }
+
+  /**
+   * Événements propres au test A/B : cta_rdv_click, cta_dates_click,
+   * inscription_start, departs_view, rdv_scheduled.
+   * @param {string} event - Nom de l'événement
+   * @param {object} params - ex. { position: 'info_card' }
+   */
+  const trackAbEvent = (event, params = {}) => {
+    pushToDataLayer({ event, ...params })
+  }
+
   return {
     pushToDataLayer,
     getCountryFromPhone,
@@ -850,6 +906,7 @@ export const useGtmTracking = () => {
     trackCallClick,
     trackNewsletterSubscription,
     trackInscriptionAlerte,
+    trackPartnershipRequest,
     trackFaqClick,
     trackCtaClick,
     trackSocialMediaClick,
@@ -869,5 +926,8 @@ export const useGtmTracking = () => {
     trackDevisStep,
     // Purchase
     trackPurchase,
+    // Test A/B page voyage
+    trackAbExposure,
+    trackAbEvent,
   }
 }

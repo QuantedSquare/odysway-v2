@@ -1,9 +1,6 @@
 <template>
   <NuxtLayout>
     <NuxtPage />
-    <!-- <ClientOnly>
-      <CookiesSnackbar />
-    </ClientOnly> -->
     <ClientOnly>
       <LazySearchDialog v-if="isSearchDialogOpen" />
     </ClientOnly>
@@ -144,19 +141,11 @@ onMounted(() => {
   document.head.appendChild(script)
 })
 
+// UTM + ?from-meta / ?from-g-ads + variante A/B (/voyages/<slug>/lp) → localStorage `utmSource`,
+// repris dans le champ `utm` des deals (devis, tunnel, newsletter).
+const { captureLeadSource } = useLeadSource()
 onMounted(() => {
-  const userUTMs = []
-
-  Object.keys(route.query).forEach((queryParam) => {
-    if (queryParam.toLowerCase().includes('utm')) {
-      userUTMs.push(queryParam + '=' + route.query[queryParam])
-    }
-  })
-
-  if (userUTMs.length) {
-    // console.log('userUTMs', userUTMs)
-    localStorage.setItem('utmSource', userUTMs.join('&'))
-  }
+  captureLeadSource(route.query, route.path)
 })
 </script>
 

@@ -42,11 +42,16 @@ const createCheckoutSession = async (order) => {
 
   function calculatDepositeValue(data) {
     console.log('data for deposit', data)
+    // « Vol inclus : Oui » sans prix de vol : AC ne renvoie pas le champ vide,
+    // flightPrice vaut undefined et tout l'acompte tombait à NaN (deal 16730).
+    // Même repli à 0 que recalculatTotalValues.
+    const flightPrice = data.includeFlight === 'Oui' ? (+data.flightPrice || 0) : 0
+    const insurancePrice = +data.insuranceCommissionPrice || 0
     // WE take the total value of the deal, we substract the flight price and the insurance price
-    const baseToCalculateDepositValue = +data.value - ((data.includeFlight === 'Oui' ? data.flightPrice : 0) * data.nbTravelers) - ((data.insuranceCommissionPrice ?? 0) * data.nbTravelers)
+    const baseToCalculateDepositValue = +data.value - (flightPrice * data.nbTravelers) - (insurancePrice * data.nbTravelers)
     // We take 30% of the baseToCalculateDepositValue (which include options and reduction) and add the flight price if it's included
     // Insurance is added in another line item
-    return Math.floor((baseToCalculateDepositValue) * 0.3 + (data.includeFlight === 'Oui' ? data.flightPrice : 0) * data.nbTravelers)
+    return Math.floor((baseToCalculateDepositValue) * 0.3 + flightPrice * data.nbTravelers)
   }
   const gotEarlyBird = deal.gotEarlybird === 'Oui'
   const gotLastMinute = deal.gotLastMinute === 'Oui'
@@ -225,6 +230,20 @@ const createCheckoutSession = async (order) => {
   }
   console.log('LineItems', lineItems)
 
+  // Stripe refuse un montant non entier (« Invalid integer: NaN ») : on bloque
+  // avant toute alerte Slack ou création de client, avec le champ fautif.
+  const invalidItem = lineItems.find(item =>
+    !Number.isInteger(item.price_data.unit_amount) || !Number.isInteger(item.quantity))
+  if (invalidItem || !Number.isFinite(paidAmount)) {
+    throw createError({
+      statusCode: 400,
+      statusMessage: `Montant invalide pour le deal ${order.dealId} (${order.paymentType}) : `
+        + (invalidItem
+          ? `« ${invalidItem.price_data.product_data.description || invalidItem.price_data.product_data.name} » unit_amount=${invalidItem.price_data.unit_amount}, quantity=${invalidItem.quantity}`
+          : `paidAmount=${paidAmount}`),
+    })
+  }
+
   if (!isDev) {
     axios({
       url: process.env.SLACK_URL_PAIEMENTS,
@@ -370,6 +389,8 @@ const handlePaymentSession = async (session, paymentType) => {
   const reponse = await activecampaign.getDealById(order.dealId)
   const customFields = await activecampaign.getDealCustomFields(order.dealId)
   const deal = { ...reponse.deal, ...customFields }
+  // Lu avant la mise à jour AC de ce paiement : vrai seulement au premier paiement.
+  const premierPaiement = !deal.alreadyPaid || +deal.alreadyPaid === 0
 
   const calculatePricePerPerson = (data) => {
     const {
@@ -541,6 +562,11 @@ const handlePaymentSession = async (session, paymentType) => {
       ? 'Solde réglé'
       : 'Acompte réglé',
   }
+  // Premier paiement : la date de conversion, que rien ne posait (111 voyageurs
+  // sans elle au 22/09/2026, comptés vendus dans aucun mois — CYC-02 du Docteur).
+  if (!deal.conversionDate) {
+    Object.assign(dealData, { conversionDate: new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Paris' }) })
+  }
   if (totalPaid >= +deal.value) {
     Object.assign(dealData, { paiementLink: 'Paiement OK' })
   }
@@ -557,6 +583,19 @@ const handlePaymentSession = async (session, paymentType) => {
     },
   })
   console.log('added note', note)
+
+  // Conversion serveur (Stape) : premier paiement uniquement, comme le `purchase`
+  // du navigateur, avec le même transaction_id (purchase-data.get.js).
+  if (premierPaiement) {
+    await conversionsDeal.achat({
+      dealId: order.dealId,
+      transactionId: session.payment_intent || session.id,
+      typePaiement: paymentType,
+      deal,
+      contact: client,
+      isoContact: fieldValues?.find(i => i.field === '22')?.value || null,
+    })
+  }
 }
 export default {
   createCheckoutSession,

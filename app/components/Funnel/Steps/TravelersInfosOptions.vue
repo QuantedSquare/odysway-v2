@@ -122,6 +122,7 @@
         >
           <v-btn
             :disabled="!isBookingLoaded"
+            :loading="kickstartLoading"
             color="secondary"
             class="font-weight-bold"
             block
@@ -170,7 +171,7 @@ import { mdiRadioboxBlank, mdiRadioboxMarked, mdiArrowLeft, mdiArrowRight } from
 const { trackReservationStep } = useGtmTracking()
 
 const { voyage, currentStep, ownStep, page } = defineProps(['voyage', 'currentStep', 'ownStep', 'page'])
-const { updateDeal } = useStepperDeal()
+const { updateDeal, kickstartLoading } = useStepperDeal()
 const route = useRoute()
 const model = defineModel()
 

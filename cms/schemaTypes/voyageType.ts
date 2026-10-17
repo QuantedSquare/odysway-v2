@@ -1,5 +1,7 @@
 import { defineField, defineType } from 'sanity'
 import {orderRankField, orderRankOrdering} from '@sanity/orderable-document-list'
+import BmsLink from './components/BmsLink'
+import { rdvBlockField } from './objects/rdvVariantFields'
 
 const richTextBlock = {
   type: 'block',
@@ -62,10 +64,24 @@ export const voyageType = defineType({
     { name: 'programme', title: 'Programme' },
     { name: 'housing', title: 'Hébergement' },
     { name: 'faq', title: 'FAQ' },
+    { name: 'rdv_ab_test', title: 'Test A/B rendez-vous' },
     { name: 'seo', title: 'SEO' },
   ],
   fields: [
     orderRankField({type: 'voyage'}),
+    // LEGACY #
+    defineField({
+      name: 'bmsLink',
+      type: 'url',
+      hidden: ({ document }) => {
+        const doc = document as any
+        return !doc?._id || doc._id.startsWith('drafts.') || !doc?.slug?.current
+      },
+      readOnly: true,
+      components: { input: BmsLink } as any,
+      group: ['requiredBMS', 'basic'],
+      title: 'Lien BMS',
+    }),
     defineField({
       name: 'title',
       type: 'string',
@@ -314,6 +330,7 @@ export const voyageType = defineType({
         { name: 'affixeAuthor', type: 'string' },
       ],
     }),
+    rdvBlockField,
     defineField({
       name: 'experiencesBlock',
       type: 'array',

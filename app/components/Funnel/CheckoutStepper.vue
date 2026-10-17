@@ -208,11 +208,39 @@ watch(() => route.query.step, (newVal) => {
   }
 })
 
+// Au-delà de l'étape 1, tout repose sur la réservation créée par le kickstart
+// (booked_id). Sans elle et sans kickstart en cours — échec du kickstart, ou
+// page rechargée sur ?date_id=…&step=2 pendant qu'il tournait —, « Continuer »
+// restait grisé sans explication (immersion-armoni, 29/09/2026). Retour à
+// l'étape 1 : sa validation reprend la réservation déjà créée (localStorage)
+// au lieu d'en créer une seconde.
+const { bookedId: kickstartBookedId, kickstartLoading } = useStepperDeal()
+watch([currentStep, kickstartLoading, () => route.query.booked_id], () => {
+  if (currentStep.value <= 1 || kickstartLoading.value) return
+  if (route.query.booked_id || kickstartBookedId.value) return
+  report({
+    code: 'STEP_WITHOUT_BOOKING',
+    step: 'details',
+    severity: 'warning',
+    origin: { field: 'booked_id', received: null, expected: 'booked_id après le kickstart' },
+    message: `Étape ${currentStep.value} sans réservation, retour à l'étape 1`,
+    userMessage: 'Votre réservation n\'a pas pu être enregistrée. Merci de valider à nouveau vos informations.',
+  })
+  currentStep.value = 1
+  addSingleParam('step', '1')
+}, { immediate: true })
+
 // 💰 Insurance fetching logic
 const { calculatePricePerPerson } = usePricePerTraveler(dynamicDealValues, voyage)
 
+// L'étape assurance ne s'affiche qu'au premier paiement (acompte, total ou
+// sur-mesure, rien encore payé) : voir showInsuranceStep. Le devis Chapka
+// n'est demandé que dans ce cas — un paiement de solde le demandait à chaque
+// ouverture, et un ISO vide le faisait échouer (deal 16198, Docteur d'Ulysse).
+const assuranceProposee = computed(() => ['custom', 'full', 'deposit'].includes(String(route.query.type)) && +voyage?.alreadyPaid === 0)
+
 const fetchInsuranceQuote = async () => {
-  if (!voyage || !dynamicDealValues.value) return
+  if (!voyage || !dynamicDealValues.value || !assuranceProposee.value) return
   const base = calculatePricePerPerson(dynamicDealValues.value, voyage)
 
   const indivRoom = dynamicDealValues.value.indivRoom ? (+voyage.indivRoomPrice || 0) : 0

@@ -227,6 +227,9 @@ function buildDealRow(d) {
     insurance_commission: parseEuroAmount(d['Prix Assurance par pax']) ?? 0,
     insurance_choice: d['Assurances prise (Choix)'] || 'Aucune Assurance',
     insurance_price_per_traveler: parseEuroAmount(d['Commission assurance par pax (30%)']) ?? 0,
+    // Colonnes sans ambiguïté (les deux précédentes sont obsolètes et inversées).
+    insurance_price_per_pax: parseEuroAmount(d['Prix Assurance par pax']),
+    insurance_commission_per_pax: parseEuroAmount(d['Commission assurance par pax (30%)']),
     is_cap_exploraction: toBool(d['CAP-EXPLORACTION']),
     promo_code: d['Code promo'] || null,
     applied_promo_per_traveler: parseEuroAmount(d['Réduction Appliquée € par pax']) ?? 0,

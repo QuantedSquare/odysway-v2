@@ -13,19 +13,19 @@ French travel agency booking platform specializing in immersive travel experienc
 - **Insurance**: Chapka API (CAP-EXPLORER / CAP-EXPLORACTION products)
 - **Search**: Algolia (voyage/destination/region indexing)
 - **Analytics**: GTM + GA4, Hotjar
-- **Auth**: back-office API = Ulysse service token (`x-ulysse-service-token`) or Google OAuth JWT session (@odysway.com or superadmins)
+- **Auth**: JWT sessions + Google OAuth (booking management, @odysway.com or superadmins)
 - **Hosting**: Vercel with ISR (1-5 day revalidation by route type)
 
 ## Project Structure
 
 ```
 app/
-  pages/              # ~30 route files (voyages, destinations, blog, checkout, devis...)
+  pages/              # ~30 route files (voyages, destinations, blog, checkout, devis, booking-management...)
   components/         # Vue 3 components (Funnel/, Devis/, content/Voyages/, booking/, OgImage/, tracking/)
   composables/        # ~18 composables (useGtmTracking, useSeo, useStepperDeal, useTravelDates...)
   utils/              # Helpers (bookingApi, voyageBuilders, structuredData, pricing, formatDate...)
-  layouts/            # default, homepage, funnel, blank, voyage, simple-pages, no-faq
-  middleware/         # old link redirections
+  layouts/            # default, homepage, funnel, booking, blank, voyage, simple-pages, no-faq
+  middleware/         # booking-management auth, old link redirections
   plugins/            # vuetify.js, analytics.client.ts, vue-dompurify-html.js
   assets/scss/        # main.scss (typography, utilities), _fonts.scss (Gordita)
 
@@ -52,7 +52,7 @@ server/
     brevo.js          # Brevo email client (contacts, lists, templates)
     algolia.ts        # Algolia indexing
     bookingAuth.js    # JWT auth + Google OAuth helpers
-    bookingSession.js # Back-office guard: requireCrmAccess (Ulysse token or session; relaxed on local `nuxt dev` only)
+    bookingSession.js # Session management
     types/            # Zod schemas (contact.ts, deal.ts, insurance.ts)
 
 cms/
@@ -75,11 +75,25 @@ cms/
 ## Key Business Flows
 
 1. **Booking funnel**: Voyage page -> Select date -> Devis form (traveler info) -> Creates AC deal + booked_date in Supabase -> Checkout (Stripe or Alma) -> Confirmation
+   - Resuming an existing booking (`?booked_id=` link, or the date's localStorage entry) is checked first (`POST /api/v1/booking/booked_date/reprise`, rule in `server/utils/repriseReservation.js`, enforced again in `update-with-bms`): someone else (other email AND other first or last name) never takes over a deal, they get a fresh booking; the contact of a paid deal never changes from the funnel. A paid booking is never resumed by the date buttons (`booking-exists`) nor turned into an option.
 2. **Payment types**: deposit (30% + insurance), full, balance (remaining), custom
 3. **Post-payment webhook cascade**: Stripe checkout.completed -> update Supabase booked_dates -> update AC deal value -> notify Chapka insurance -> send Slack alert
-4. **Back-office**: Ulysse (separate app) replaced /booking-management, which now redirects to `NUXT_ULYSSE_URL`. Ulysse writes through `/api/v1/booking/**` with its service token.
+4. **Booking management**: Internal dashboard at /booking-management (Google OAuth, @odysway.com only)
 5. **Content publishing**: Sanity update -> webhook -> Vercel ISR revalidation + Algolia index sync
 6. **Departure management**: AC pipeline 4 (Gestions Departs), auto-creates departure deals, links travelers
+
+## Ulysse endpoints (`/api/v1/ulysse/`)
+
+Ulysse (the back-office replacing /booking-management) calls these with `x-ulysse-service-token` and `x-ulysse-user` ONLY (`requireUlysseService`, no booking session fallback). They serve its « Docteur » (deal health):
+- `GET deals/:dealId/paiements` — Stripe PaymentIntents found by `metadata['dealId']` (bank transfers pending included) and Alma payments via `alma_ids.deal_id`. Read-only.
+- `POST deals/:dealId/corriger` — fix whitelisted fields (`server/utils/correctionDeal.js`), 409 if AC no longer holds the `avant` values, AC note signed by the Ulysse user, mirror row rewritten at once (`dealMirrorSync`).
+- `POST deals/:dealId/encaissement` — offline payment (chèque vacances, chèque…) added to `alreadyPaid`; idempotent through a marker in the AC note, 409 if `alreadyPaid` changed.
+- `POST dates/:dateId/recompter`, `POST booked/:bookedId/places` — seat recount, booked places aligned.
+- `POST alma/rattacher` — one-off backfill of `alma_ids.deal_id` (read-only at Alma).
+- `POST deals/:dealId/recalculer` — reruns `recalculatTotalValues`, signed AC note, mirror rewritten (ARG-01/02).
+- `POST deals/:dealId/resynchroniser` — rewrites the deal's mirror row from AC (CYC-11). Read-only at AC.
+- `POST dates/:dateId/dossier-depart` — resyncs the pipeline-4 departure deal (value, travellers, stage), same computation as each payment (`departures.resyncDepartureDeal`, RES-11).
+- `GET deals/:dealId/notes` — the deal's AC notes, for the Docteur's timeline.
 
 ## Pipeline logic — the most important concept
 
@@ -90,7 +104,7 @@ cms/
 | `1` | Prospects | Prospects pipeline. A deal here represents a traveler who has expressed interest (quote request, contact form, etc.) but has not yet paid. |
 | `2` | Voyageurs | Converted client pipeline. A deal moves here when the client makes their **first payment**. This is the authoritative signal for a conversion. |
 | `3` | Corbeille | Trash / archived. Exclude from all reports. |
-| `4` | Gestions Départs | Operational departure management. **these deals do not exist in supabase datatable.** |
+| `4` | Gestions Départs | Operational departure management — one deal per departure (« dossier de départ »). Mirrored since 09/2026 (Docteur d'Ulysse). **Never aggregate with pipelines 1/2: each traveller also has their own deal there.** |
 
 ## Supabase Tables
 
@@ -176,8 +190,10 @@ A row per CRM deal. Source of truth for revenue, margin, conversions, and acquis
 | `indiv_room_price` | numeric | Single-room supplement per traveler. |
 | `extension_price` | numeric | Optional extension per traveler. |
 | `flight_ticket_price_per_traveler` | numeric | Flight cost per traveler. |
-| `insurance_price_per_traveler` | numeric | Insurance cost per traveler. |
-| `insurance_commission` | numeric | Commission earned on insurance. |
+| `insurance_price_per_pax` | numeric | Insurance **price** per traveler (AC field 13). `null` = not set. |
+| `insurance_commission_per_pax` | numeric | Insurance **commission** per traveler (AC field 47, 30 %). Margin counts it × `nb_traveler`. |
+| `insurance_price_per_traveler` | numeric | **OBSOLETE, swapped**: actually holds the commission per traveler (field 47). Use `insurance_commission_per_pax`. |
+| `insurance_commission` | numeric | **OBSOLETE, swapped**: actually holds the insurance price per traveler (field 13). Use `insurance_price_per_pax`. |
 | `agent_cost` | numeric | Local agent purchase cost. Subtract from total to get true margin. |
 | `nb_traveler` | numeric | Total travelers on the deal. |
 | `nb_adults`, `nb_children`, `nb_teen`, `nb_under_age` | numeric | Demographic breakdown. |
@@ -189,7 +205,7 @@ A row per CRM deal. Source of truth for revenue, margin, conversions, and acquis
 | `rest_to_pay` | numeric | Outstanding balance. |
 | `rest_to_pay_per_traveler` | numeric | Per-pax outstanding. |
 | `margin_per_traveler` | numeric | Margin per traveler. |
-| `flight_margin` | numeric | Margin on the flight portion. |
+| `flight_margin` | numeric | Flight margin **per traveler** (AC 70 « Marge vol par voyageur »). Multiply by `nb_traveler`. |
 | `total_margin` | numeric | Total deal margin in EUR. |
 | `travel_type` | varchar | `'Voyage de Groupe'`, `'Voyage Individuel'`, etc. |
 | `country` | varchar | Destination country (label). |
@@ -201,6 +217,11 @@ A row per CRM deal. Source of truth for revenue, margin, conversions, and acquis
 | `is_cap_exploraction` | boolean | Premium insurance product chosen. |
 | `include_flight` | boolean | Flight included in the package. |
 | `flight_ticket_bought` | boolean | Operational: tickets purchased? |
+| `forced_indiv_room` | boolean | Single room imposed (AC field 81). |
+| `named_travelers`, `travelers_with_birthdate` | smallint | Filled « Voyageur 1–15 » fields, and those carrying a DD/MM/YYYY birthdate. |
+| `passport_received`, `flight_plan_received`, `diet_received` | boolean | Pre-departure documents (AC fields 110, 109, 111). |
+| `travel_book` | text | « Carnet de voyage » (AC field 25, free text). |
+| `cancellation_fee` | numeric | Cancellation fee kept, EUR (AC field 114). AC has no « refunded amount » field. |
 | `insurance_choice` | varchar | Free-form insurance label. |
 | `source` | varchar | Free-form source (legacy). |
 | `acquisition_source` | text | Structured acquisition source. Prefer this over `source`. |
@@ -239,6 +260,27 @@ Files attached to travel dates.
 ### `alma_ids`
 Tracks Alma payment IDs to prevent duplicate processing.
 - `id` text PK
+- `deal_id` bigint — AC deal paid by this Alma payment (set by the Alma webhook since 09/2026; older rows linked by `POST /api/v1/ulysse/alma/rattacher`). The AC note of an Alma payment does not carry the Alma id: this column is the only link.
+- `rattachement` text — `introuvable` (404 at Alma live: sandbox test payments stored in the same base) or `sans_deal` (no deal in `custom_data` nor `booked_dates`). Such rows never block Ulysse's Alma reconciliation.
+
+### `partnership_requests`
+Demandes reçues par le formulaire de `/partenariat` (`POST /api/v1/partenariat/demande`). Une ligne par envoi, écrite AVANT les appels AC : le lead est gardé même si AC tombe.
+- `id` uuid PK, `created_at` timestamptz
+- `email` text, `ac_contact` bigint — contact AC (tag `partenaire-inbound`, note avec le projet), `null` si AC a échoué
+- `concept`, `destination`, `communaute`, `participants`, `besoin` text — champs du formulaire ; `besoin` qualifie le lead (10 % / 15 %)
+- `source_url`, `utm` text
+- Le suivi (statut, responsable, note, archivage) vit dans Ulysse, `ulysse.demandes_partenariat` (onglet « Demandes entrantes » de la page Partenaires). odysway-v2 n'y écrit pas.
+
+### `deal_attribution`
+Lead attribution, frozen when the deal is created from the site (`POST /ac/deals`, `kickstart`). One row per deal, never rewritten. Join on `deal_attribution.deal_id = activecampaign_deals.id`.
+- Source: first-party cookies `ody_ft` (first visit, written once) and `ody_lt` (last non-direct visit), set server-side (13 months) by `POST /api/v1/tracking/touch`, called by `useLeadSource` on landing. Rules in `server/utils/attribution.js`.
+- `first_*` / `last_*`: `channel` (`Google Ads`, `Meta Ads`, `Autre payant`, `Email`, `Réseaux sociaux`, `Autre campagne`, `IA`, `SEO`, `Site référent`, `Direct`), `source`, `medium`, `campaign`, `content`, `term`, `landing`, `referrer`, `at`. **`null` channel = unknown (no cookie), not Direct.** Use `first_channel` for acquisition, `last_channel` for the converting touch.
+- `fbclid` alone means a Facebook/Instagram link, not an ad: Meta Ads needs `?from-meta` or a paid `utm_medium`.
+- `gclid`, `gbraid`, `wbraid`, `fbclid`, `fbc`, `fbp`, `ga_client_id`: identifiers for server-side conversions (Stape).
+- `formulaire`: `Tunnel`, `Devis`, `Demande d'infos`, `Inscription alerte`. `variante`: A/B landing.
+- Deals created elsewhere (AC directly, Cal.com, phone) have no row.
+- `client_ip`, `client_user_agent`: visitor's IP and browser at lead time, kept for every lead, re-sent with the server-side `purchase` (which leaves from the payment webhook, without a visitor). Personal data: never replicate them to the dashboard project.
+- `consent_ads`: no longer written since 10/2026 (null on new rows). There is no cookie banner: every visitor is treated as consenting, a decision taken on 14/10/2026 knowing the CNIL risk. Server-side conversions (`generate_lead` at deal creation, `purchase` at first Stripe/Alma payment, `server/utils/conversions.js` → Stape `STAPE_SERVER_URL`) are sent for every deal, including deals created outside the site (no row: no ad identifiers). Setup: `docs/tracking-acquisition.md`.
 
 ### `stripe_processed_events`
 Idempotency guard for Stripe webhook events.
@@ -258,16 +300,7 @@ Archive/backup table — same schema as `activecampaign_deals`. Not used in acti
 npm run dev       # Start dev server (port 3000)
 npm run build     # Production build
 npm run lint      # ESLint check
-npm test          # node --test (auth guards, deal projection)
 ```
-
-## Security model (preview = production)
-
-Vercel previews (dev.odysway.com) are public URLs: never relax a guard with `VERCEL_ENV` / `config.public.environment`. The only exception is a local `nuxt dev` server (`isLocalDev()`, i.e. `NODE_ENV !== 'production'`, which Nitro freezes to `"production"` in every build).
-
-- `server/middleware/backoffice-auth.js` — deny-by-default on `/api/v1/booking/**` and `/api/v1/ac/**`. Routes the public site, funnel or webhooks call are listed in `PUBLIC_ROUTES`; everything else requires `requireCrmAccess`. Opening a route to the public is an explicit edit of that list.
-- Sanity drafts are only served to a Presentation-tool preview session (httpOnly `sanity-preview-id` cookie set by `/preview/enable` after the Studio's secret is validated). Never put a Sanity token in `sanity.token` or `liveContent.browserToken`: both are public runtime config.
-- Tests: `npm test` (node --test) covers the guard, its public allowlist and the preview redirect guard.
 
 ## Sensitive Files
 

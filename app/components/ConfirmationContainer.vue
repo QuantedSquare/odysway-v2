@@ -172,9 +172,7 @@ const { mdAndUp } = useDisplay()
 
 onMounted(async () => {
   // Track purchase event for GTM
-  console.log('isOption', isOption.value)
   if (route.query.purchase === 'true' && route.query.booked_id && !isOption.value) {
-    console.log('tic')
     const sessionKey = `gtm_tracked_${route.query.booked_id}`
     const alreadyTracked = sessionStorage.getItem(sessionKey)
 
@@ -189,6 +187,7 @@ onMounted(async () => {
           // Track GTM purchase event
           trackPurchase({
             transactionId: purchaseData.transactionId,
+            eventId: purchaseData.eventId,
             paymentType: purchaseData.paymentType,
             totalValue: purchaseData.totalValue,
             optinNewsletter: purchaseData.optinNewsletter,
@@ -201,14 +200,6 @@ onMounted(async () => {
       catch (error) {
         console.error('Error tracking purchase:', error)
       }
-    }
-  }
-
-  if (!route.query.isoption && localStorage.getItem('consent') === 'granted') {
-    if (route.query.purchase === 'true') {
-      setTimeout(() => {
-        // #TODO: add code to track GTM event
-      }, 100)
     }
   }
 })

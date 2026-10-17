@@ -69,9 +69,6 @@ export default defineNuxtConfig({
     trailingSlash: false,
   },
   runtimeConfig: {
-    // Ulysse, le back-office qui remplace /booking-management (voir
-    // server/routes/booking-management/[...path].ts).
-    ulysseUrl: process.env.ULYSSE_URL || '',
     public: {
       supabaseUrl: process.env.NUXT_PUBLIC_SUPABASE_URL,
       supabaseAnonKey: process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY,
@@ -97,7 +94,7 @@ export default defineNuxtConfig({
       '/prochains-departs': { isr: 60 * 60 * 24 },
 
       // Dynamic content pages with slugs
-      '/voyages/**': { isr: 60 * 60 * 24 }, // 1 day
+      '/voyages/**': { isr: 60 * 60 * 24 }, // 1 day — inclut les landings /voyages/<slug>/lp
       '/sur-mesure/**': { isr: 60 * 60 * 24 }, // 1 day — unlisted sur-mesure sales pages
       '/destinations/**': { isr: 60 * 60 * 24 },
       '/thematiques/**': { isr: 60 * 60 * 24 }, // 1 day
@@ -106,6 +103,7 @@ export default defineNuxtConfig({
 
       // Singleton pages (static content)
       '/entreprise': { isr: 60 * 60 * 24 * 5 }, // 5 days - less frequently updated
+      '/partenariat': { isr: 60 * 60 * 24 * 5 },
       '/sur-mesure': { isr: 60 * 60 * 24 * 5 },
       '/vision-voyage-odysway': { isr: 60 * 60 * 24 * 5 },
       '/contact': { isr: 60 * 60 * 24 * 5 },

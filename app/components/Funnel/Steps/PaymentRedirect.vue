@@ -591,6 +591,20 @@ const book = async () => {
       loadingSession.value = false
       return
     }
+    // Réservation déjà réglée : poser l'option ne doit rien déclencher d'autre
+    // (étape « A posé une option », Slack, confirmation).
+    if ((err?.data?.data?.code || err?.data?.code) === 'OPTION_RESERVATION_REGLEE') {
+      reportApiError(err, {
+        code: 'OPTION_RESERVATION_REGLEE',
+        step: 'option_booking',
+        severity: 'warning',
+        origin: { endpoint: '/booking/booked_date/option' },
+        message: 'Option refusée sur une réservation déjà réglée (étape paiement)',
+        userMessage: 'Cette réservation est déjà réglée : il n\'y a pas d\'option à poser.',
+      })
+      loadingSession.value = false
+      return
+    }
     console.error(getApiErrorMessage(err, 'Erreur option'))
     setContext({ bookedId: route.query.booked_id, voyageSlug: voyage.slug })
     reportApiError(err, {

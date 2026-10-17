@@ -28,6 +28,8 @@ export default defineEventHandler(async (event) => {
     // === Pages with Dynamic Slugs ===
     if (documentType === 'voyage' && slug) {
       pathsToRevalidate.push(`/voyages/${slug}`)
+      // Landing de la variante B du test A/B rendez-vous (alias de la page voyage)
+      pathsToRevalidate.push(`/voyages/${slug}/lp`)
       // Unlisted sales page of sur-mesure-only voyages (customPagePublished)
       pathsToRevalidate.push(`/sur-mesure/${slug}`)
       // Also revalidate search and destination pages that might list this voyage
@@ -58,6 +60,9 @@ export default defineEventHandler(async (event) => {
     }
     else if (documentType === 'entreprise') {
       pathsToRevalidate.push('/entreprise')
+    }
+    else if (documentType === 'page_partenariat') {
+      pathsToRevalidate.push('/partenariat')
     }
     else if (documentType === 'surMesure') {
       pathsToRevalidate.push('/sur-mesure')
