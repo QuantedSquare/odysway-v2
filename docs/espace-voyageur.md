@@ -93,6 +93,7 @@ production avant d'ouvrir l'espace**.
      (sinon le client reçoit un lien, pas un code). Longueur du code : 6.
    - SMTP personnalisé : Brevo (expéditeur Odysway), sinon plafond de quelques emails/heure.
    - URL Configuration → Redirect URLs : ajouter `https://odysway.com/mon-espace/connexion`,
+     `https://dev.odysway.com/mon-espace/connexion` (branche `dev`),
      `https://odysway-v2-*-odysway.vercel.app/mon-espace/connexion` (previews, nom
      d'hôte haché) et `http://localhost:3000/mon-espace/connexion`. **Indispensable
      pour Google** : le Site URL est celui d'Ulysse, et toute URL de retour refusée
