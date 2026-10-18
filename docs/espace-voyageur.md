@@ -92,13 +92,21 @@ production avant d'ouvrir l'espace**.
    - Email Templates « Magic Link » **et** « Confirm signup » : afficher `{{ .Token }}`
      (sinon le client reçoit un lien, pas un code). Longueur du code : 6.
    - SMTP personnalisé : Brevo (expéditeur Odysway), sinon plafond de quelques emails/heure.
-   - URL Configuration : ajouter `https://odysway.com/mon-espace/connexion`,
-     l'URL de preview et `http://localhost:3000/mon-espace/connexion`.
+   - URL Configuration → Redirect URLs : ajouter `https://odysway.com/mon-espace/connexion`,
+     `https://odysway-v2-*-odysway.vercel.app/mon-espace/connexion` (previews, nom
+     d'hôte haché) et `http://localhost:3000/mon-espace/connexion`. **Indispensable
+     pour Google** : le Site URL est celui d'Ulysse, et toute URL de retour refusée
+     renvoie silencieusement le client sur Ulysse avec son code. L'URL de retour ne
+     porte aucun paramètre (la destination attend en `sessionStorage`), car une
+     entrée exacte refuse la même URL suivie d'un `?…`.
    - Google : déjà actif pour Ulysse. L'écran de consentement affiche le domaine
      `ufyskkwszklmrgcifanb.supabase.co` ; un domaine personnalisé Supabase
      (`auth.odysway.com`, option payante) le remplacerait par Odysway.
-3. **Vercel** : `NUXT_PUBLIC_ESPACE_SUPABASE_KEY` (clé publiable `sb_publishable_…`),
-   `NUXT_PUBLIC_ESPACE_SUPABASE_URL` (facultatif, défaut BackOffice-PROD),
+3. **Vercel** : `NUXT_PUBLIC_ESPACE_SUPABASE_KEY` (clé publiable `sb_publishable_…`)
+   en Preview **et** Production (et dans le `.env` local) — sans elle le client
+   Supabase ne se crée pas et toute connexion (code, mot de passe, Google) affiche
+   « Une erreur est survenue » sans rien envoyer ; variable publique, donc nouveau
+   build requis. `NUXT_PUBLIC_ESPACE_SUPABASE_URL` (facultatif, défaut BackOffice-PROD),
    puis `NUXT_PUBLIC_ESPACE_LIEN_VISIBLE=true` le jour de l'ouverture (seul interrupteur).
 4. **Recette de bout en bout sur la preview** (jamais faite : aucun compte de test n'a
    été créé en production) : code, Google, client à plusieurs dossiers, email inconnu,
