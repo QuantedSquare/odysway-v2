@@ -583,7 +583,7 @@ watch(checkedOption, (value) => {
 const book = async () => {
   loadingSession.value = true
   try {
-    await bookingApi.placeOption({ id: route.query.booked_id, booked_places: +model.value.nbAdults + +model.value.nbChildren })
+    await bookingApi.placeOption({ id: route.query.booked_id, booked_places: +model.value.nbAdults + +model.value.nbChildren, origine: 'fin_funnel' })
   }
   catch (err) {
     if (getApiErrorMessage(err) === 'La date est déjà réservée') {
@@ -619,7 +619,7 @@ const book = async () => {
   // sit after an awaited, unguarded $fetch to /api/v1/slack/notification that
   // only runs in production — so a single Slack hiccup rejected book() and the
   // dataLayer event (and the redirect) never happened.
-  trackReservationPoseOption(voyage, model.value, buildUserData())
+  trackReservationPoseOption(voyage, model.value, buildUserData(), 'fin_funnel')
 
   const dealData = {
     stage: '27',

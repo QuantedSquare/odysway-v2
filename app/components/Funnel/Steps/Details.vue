@@ -747,7 +747,7 @@ const submitStepData = async () => {
             shouldAdvance.value = false
             if (bookedId.value) {
               try {
-                await bookingApi.placeOption({ id: bookedId.value, booked_places: +model.value.nbAdults + +model.value.nbChildren })
+                await bookingApi.placeOption({ id: bookedId.value, booked_places: +model.value.nbAdults + +model.value.nbChildren, origine: 'debut_funnel' })
               }
               catch (err) {
                 console.error('[Details] placeOption error', getApiErrorMessage(err))
@@ -786,7 +786,7 @@ const submitStepData = async () => {
               user_phone: model.value.phone,
               user_country: getCountryFromPhone(model.value.phone) || 'Unknown',
             }
-            trackReservationPoseOption(voyage, model.value, userData)
+            trackReservationPoseOption(voyage, model.value, userData, 'debut_funnel')
             await navigateTo(`/confirmation?voyage=${voyage.slug}&isoption=true`)
           })
           .catch((err) => {

@@ -614,7 +614,11 @@ export const useGtmTracking = () => {
    * Track reservation_pose_option - Option placement
    * CSV line 487
    */
-  const trackReservationPoseOption = (voyage, dynamicDealValues, userData = {}) => {
+  // positionOption : 'debut_funnel' (étape Coordonnées) ou 'fin_funnel' (étape
+  // Paiement, voyageurs et assurance déjà remplis). Le lead est déjà compté par
+  // reservation_step1 dans les deux cas : cet événement ne doit pas servir de
+  // conversion « Lead » principale dans les régies.
+  const trackReservationPoseOption = (voyage, dynamicDealValues, userData = {}, positionOption = null) => {
     pushToDataLayer({
       ecommerce: null,
     })
@@ -625,6 +629,7 @@ export const useGtmTracking = () => {
 
     const dataLayerEvent = {
       event: 'reservation_pose_option',
+      position_option: positionOption,
       ecommerce: {
         value: totalValue,
         currency: 'EUR',

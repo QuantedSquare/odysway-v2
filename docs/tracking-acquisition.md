@@ -51,6 +51,8 @@ Meta déduplique quand le navigateur et le serveur envoient le même `event_name
 
 Google Ads déduplique l'achat par `transaction_id` (Stripe : `pi_…` ; Alma : le dealId), identique des deux côtés.
 
+**Pose d'option.** `reservation_pose_option` part toujours APRÈS `reservation_step1` : le lead est déjà compté, que l'option soit posée à l'étape Coordonnées (`position_option: 'debut_funnel'`) ou à l'étape Paiement (`'fin_funnel'`). Le mapper sur la conversion « Lead » principale compte deux leads pour un. À brancher en conversion secondaire (Google Ads : action « secondaire », Meta : événement personnalisé). En base, `booked_dates.option_origine` porte la même information.
+
 ## Vérifier
 
 - Logs Vercel : `[attribution] deal …` puis `[conversions] generate_lead deal … envoyé`.
