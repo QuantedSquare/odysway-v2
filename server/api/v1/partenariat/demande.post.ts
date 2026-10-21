@@ -1,6 +1,6 @@
 import type { H3Event } from 'h3'
 
-// Formulaire de la page /partenariat.
+// Formulaire de la page /portage.
 //
 // 1. La demande est d'abord écrite dans `partnership_requests` : le lead n'est
 //    jamais perdu, même si AC est indisponible.
@@ -14,7 +14,7 @@ import type { H3Event } from 'h3'
 const TAG = 'partenaire-inbound'
 
 const buildNote = (d: TypePartnershipRequest) => [
-  'Demande de partenariat (page /partenariat)',
+  'Demande de portage (page /portage)',
   '',
   `Concept : ${d.concept}`,
   `Destination : ${d.destination || '—'}`,

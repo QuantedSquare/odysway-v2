@@ -33,11 +33,12 @@ export default defineEventHandler(async (event) => {
     console.log('updateDeal', deal_id)
     const obj = { currentStep: 'CB - Sur Stripe Checkout' }
     if (body.paymentType === 'deposit' || body.paymentType === 'full') {
-      // L'étape 17 (« Paiement CB non achevé ») est une étape des Prospects :
-      // la poser sur un voyageur le renvoyait en pipeline 1 (CYC-01 du Docteur
-      // d'Ulysse). On ne la pose donc que sur un prospect.
+      // « Paiement CB non achevé » de la pipeline du deal (prospect ou portage).
+      // L'étape 17 des Prospects posée sur un voyageur le renvoyait en pipeline 1
+      // (CYC-01 du Docteur d'Ulysse) : rien pour un voyageur.
       const { deal } = await activecampaign.getDealById(deal_id).catch(() => ({ deal: null }))
-      if (deal?.group === '1') Object.assign(obj, { stage: '17' })
+      const stage = pipelines.etapePaiementNonAcheve(deal?.group)
+      if (stage) Object.assign(obj, { stage })
     }
     activecampaign.updateDeal(deal_id, obj)
 

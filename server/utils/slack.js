@@ -83,7 +83,7 @@ const alertCascadeLeak = ({ dealId, bookedId, travelDateId }) =>
     + `La réservation a été déplacée vers la nouvelle date. Vérifier la cohérence de la date supprimée.`)
 
 /**
- * Nouvelle demande de partenariat depuis /partenariat. Webhook dédié
+ * Nouvelle demande de partenariat depuis /portage. Webhook dédié
  * SLACK_URL_PARTENARIAT, sinon le canal des devis.
  */
 const alertPartnershipRequest = ({ email, contactId, concept, destination, communaute, participants, besoin }) =>

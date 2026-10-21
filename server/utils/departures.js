@@ -145,6 +145,8 @@ const travelTypePrefixMap = {
   groupe: 'GIR',
   privatisation: 'PRIVAT',
   custom: 'SUR-MESURE',
+  // Voyage « sur-mesure » marqué portage dans Sanity (accompagnateur externe).
+  portage: 'PORTAGE',
 }
 
 const handlePaymentForDeparture = async (bookedDate, travelTitle, contactId) => {
@@ -175,12 +177,12 @@ const handlePaymentForDeparture = async (bookedDate, travelTitle, contactId) => 
       })
 
       const voyageFromSanity = await sanityClient.fetch(
-        `*[_type == "voyage" && slug.current == $slug][0]{ bmsReference, availabilityTypes }`,
+        `*[_type == "voyage" && slug.current == $slug][0]{ bmsReference, availabilityTypes, portage }`,
         { slug: travelDate.travel_slug },
       )
 
       bmsReference = voyageFromSanity?.bmsReference || travelTitle
-      const availabilityType = voyageFromSanity?.availabilityTypes?.[0]
+      const availabilityType = voyageFromSanity?.portage ? 'portage' : voyageFromSanity?.availabilityTypes?.[0]
       travelTypePrefix = availabilityType ? (travelTypePrefixMap[availabilityType] ?? null) : null
 
       // Cache for future payments on this date

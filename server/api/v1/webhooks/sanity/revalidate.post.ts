@@ -32,6 +32,8 @@ export default defineEventHandler(async (event) => {
       pathsToRevalidate.push(`/voyages/${slug}/lp`)
       // Unlisted sales page of sur-mesure-only voyages (customPagePublished)
       pathsToRevalidate.push(`/sur-mesure/${slug}`)
+      // Page d'un voyage en portage (même mécanique, lien seul)
+      pathsToRevalidate.push(`/portage/${slug}`)
       // Also revalidate search and destination pages that might list this voyage
       pathsToRevalidate.push('/voyages')
       pathsToRevalidate.push('/prochains-departs')

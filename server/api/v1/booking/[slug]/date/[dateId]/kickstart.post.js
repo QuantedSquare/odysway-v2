@@ -10,13 +10,16 @@ export default defineEventHandler(async (event) => {
   }
 
   const body = await readBody(event)
-  const { email, firstname, lastname, phone, isoContact, title, stage, currency, owner, currentStep } = body
+  const { email, firstname, lastname, phone, isoContact, title, currency, owner, currentStep } = body
+  let { stage } = body
 
   if (!email || !title) {
     throw funnelReporter.funnelCreateError({ statusCode: 400, code: 'KICKSTART_MISSING_FIELDS', step: 'details', origin: { field: !email ? 'email' : 'title', received: !email ? email ?? null : title ?? null }, message: 'email et title requis' })
   }
 
   console.log(`[kickstart] START slug=${slug} dateId=${dateId} email=${email}`)
+  // Lu en parallèle de la date : la réponse décide la pipeline du deal.
+  const enPortage = portage.estVoyagePortage(slug)
 
   // 1. Validate travel_date
   const { data: travelDate, error: travelDateError } = await supabase
@@ -30,6 +33,10 @@ export default defineEventHandler(async (event) => {
     throw funnelReporter.funnelCreateError({ statusCode: 404, code: 'KICKSTART_DATE_NOT_FOUND', step: 'details', origin: { field: 'dateId', received: dateId }, message: 'Date introuvable pour ce slug' })
   }
   lap('travel_date validated')
+
+  // Voyage en portage : le deal naît dans la pipeline 7 (l'étape décide la pipeline).
+  const portageCreation = pipelines.creationPortage(stage, await enPortage)
+  if (portageCreation) stage = portageCreation.stage
 
   // 2. Upsert contact + create minimal AC deal
   let dealId

@@ -216,7 +216,7 @@ function handleButton5Click() {
 const destMenuOpen = ref(false)
 const isScrolled = computed(() => y.value > 200)
 // Pages dont le hero photo passe sous le header.
-const TRANSPARENT_ROUTES = ['/', '/partenariat']
+const TRANSPARENT_ROUTES = ['/', '/portage']
 const isTransparent = computed(() => !isScrolled.value && TRANSPARENT_ROUTES.includes(route.path) && !model.value && !destMenuOpen.value)
 </script>
 

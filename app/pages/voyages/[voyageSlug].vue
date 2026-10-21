@@ -329,7 +329,8 @@ const customTravel = computed(() => {
 // Sur-mesure-only voyages are sold on their unlisted page when it is published.
 // 302, not 301: the voyage may later become groupe/privatisation and move back here.
 if (customTravel.value && voyage.value?.customPagePublished) {
-  await navigateTo(`/sur-mesure/${voyage.value.slug.current}`, { redirectCode: 302 })
+  const base = estVoyagePortage(voyage.value) ? 'portage' : 'sur-mesure'
+  await navigateTo(`/${base}/${voyage.value.slug.current}`, { redirectCode: 302 })
 }
 
 const config = useRuntimeConfig()
