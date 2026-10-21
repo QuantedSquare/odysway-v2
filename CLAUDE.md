@@ -95,6 +95,11 @@ Ulysse (the back-office replacing /booking-management) calls these with `x-ulyss
 - `POST deals/:dealId/resynchroniser` — rewrites the deal's mirror row from AC (CYC-11). Read-only at AC.
 - `POST dates/:dateId/dossier-depart` — resyncs the pipeline-4 departure deal (value, travellers, stage), same computation as each payment (`departures.resyncDepartureDeal`, RES-11).
 - `GET deals/:dealId/notes` — the deal's AC notes, for the Docteur's timeline.
+- `POST porteurs/:porteurId/invitation` `{ nom, email, envoyer? }` — Espace porteur magic link (`porteurLien.js`, 30 days), Brevo email unless `envoyer: false`; returns `{ lien, envoye }`. `POST porteurs/:porteurId/revocation`, `GET porteurs/:porteurId/espace` (invitation + pages).
+
+## Espace porteur (`/espace-porteur`)
+
+A porteur (`ulysse.porteurs`) invited from Ulysse writes their portage page without Studio access. Magic link `?t=<porteurId>.<exp>.<hmac>` exchanged for an httpOnly cookie (`server/utils/espacePorteur.js`). Draft in `portage_pages`, autosaved; images go to Sanity assets; the preview (`/espace-porteur/apercu/:id`, iframe) renders `PortagePageContent`, the same component as `/portage/<slug>`. Submission writes `drafts.voyage-portage-<pageId>` (`shared/portagePage.js` maps only the porteur's fields; slug, BMS reference, destinations, prices stay Odysway's) + Slack alert. Odysway completes and publishes in the Studio; status becomes `publie` when the published doc exists with no draft.
 
 ## Pipeline logic — the most important concept
 
@@ -264,6 +269,9 @@ Tracks Alma payment IDs to prevent duplicate processing.
 - `id` text PK
 - `deal_id` bigint — AC deal paid by this Alma payment (set by the Alma webhook since 09/2026; older rows linked by `POST /api/v1/ulysse/alma/rattacher`). The AC note of an Alma payment does not carry the Alma id: this column is the only link.
 - `rattachement` text — `introuvable` (404 at Alma live: sandbox test payments stored in the same base) or `sans_deal` (no deal in `custom_data` nor `booked_dates`). Such rows never block Ulysse's Alma reconciliation.
+
+### `portage_porteurs` / `portage_pages`
+Espace porteur (see above). `portage_porteurs`: `porteur_id` (= `ulysse.porteurs.id`), `nom`, `email` sent by Ulysse with the invitation, `invite_le`, `invite_par`, `revoque_le` (access cut). `portage_pages`: `porteur_id`, `statut` (`brouillon` | `soumis` | `publie`), `payload` jsonb (form draft), `revision` (optimistic lock, 409), `sanity_id` (published id, no `drafts.`), `slug`, `soumis_le`, `publie_le`. RLS on, no policy: server only.
 
 ### `partnership_requests`
 Demandes reçues par le formulaire de `/portage` (`POST /api/v1/partenariat/demande`, ex-`/partenariat`, redirigée en 301). Une ligne par envoi, écrite AVANT les appels AC : le lead est gardé même si AC tombe.

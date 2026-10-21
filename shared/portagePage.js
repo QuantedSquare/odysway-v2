@@ -301,6 +301,8 @@ const versVoyageApercu = (payload, { slug } = {}) => {
     ...champs,
   })
   if (voyage.image) voyage.image = deplier(voyage.image)
+  // DayCard exige une description : un jour sans texte en reçoit une vide.
+  for (const jour of voyage.programmeBlock || []) jour.description ??= []
   return voyage
 }
 

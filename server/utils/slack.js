@@ -95,4 +95,16 @@ const alertPartnershipRequest = ({ email, contactId, concept, destination, commu
     + `• À déléguer : ${besoin || '—'}\n`
     + `> ${concept.replace(/[\r\n]+/g, ' ').slice(0, 600)}`)
 
-export default { send, alertPaymentOnDeletedBooking, alertOrphanPayment, alertCascadeLeak, alertPartnershipRequest }
+/**
+ * Un porteur a soumis la page de son séjour depuis l'Espace porteur : un
+ * brouillon attend dans le Studio. Même canal que les demandes de partenariat.
+ */
+const alertPortagePage = ({ porteur, email, titre, miseAJour, lienStudio }) =>
+  send(process.env.SLACK_URL_PARTENARIAT || process.env.SLACK_URL_DEVIS,
+    `:memo: *${miseAJour ? 'Page de portage modifiée' : 'Nouvelle page de portage'} à relire*\n`
+    + `• ${porteur}${email ? `  ·  ${email}` : ''}\n`
+    + `• ${titre}\n`
+    + `${miseAJour ? '' : 'À compléter avant publication : référence BMS, destination(s), puis « Publier la page ».\n'}`
+    + `<${lienStudio}|Relire et publier dans le Studio>`)
+
+export default { send, alertPaymentOnDeletedBooking, alertOrphanPayment, alertCascadeLeak, alertPartnershipRequest, alertPortagePage }
