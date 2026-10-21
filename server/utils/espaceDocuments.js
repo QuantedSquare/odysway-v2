@@ -212,16 +212,9 @@ const modifierDocument = async (documentId, corps) => {
   const { data, error } = await supabase.from('trip_documents').update(maj).eq('id', documentId).select(COLONNES).single()
   echec(error, 'modification du document')
 
-  // Prévenir les clients : tout de suite s'il est disponible, sinon la tâche
-  // planifiée le fera le jour de sa disponibilité.
-  let notification = null
-  if (espaceNotification.aNotifierMaintenant(data, espaceVoyageur.aujourdhuiParis())) {
-    notification = await notifierDocument(data)
-  }
-  else if (data.publie && data.notifier_clients && !data.notifie_le && data.disponible_le) {
-    notification = { programmee: String(data.disponible_le).slice(0, 10) }
-  }
-  return { ...vueEquipe(notification?.envoyes !== undefined ? { ...data, notifie_le: notification.complete ? new Date().toISOString() : null } : data), notification }
+  // Publier n'envoie AUCUN email : l'équipe prévient les clients par un
+  // bouton explicite, après aperçu des destinataires (à venir).
+  return vueEquipe(data)
 }
 
 // ── Notifications email ─────────────────────────────────────────────────────
