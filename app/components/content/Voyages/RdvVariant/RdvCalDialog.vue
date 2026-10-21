@@ -53,7 +53,7 @@ const props = defineProps({
 
 const { smAndDown } = useDisplay()
 const { dialog, closeRdv } = useRdvBooking()
-const { init, onBookingSuccess, onNavigatedToBooker } = useCalEmbed()
+const { init, preload, onLinkReady, onLinkFailed, onBookingSuccess, onNavigatedToBooker } = useCalEmbed()
 const { trackAbEvent, trackRdvStep, getCountryFromPhone } = useGtmTracking()
 const { getLeadSource } = useLeadSource()
 
@@ -92,14 +92,70 @@ function buildCalConfig(slot) {
   return config
 }
 
+// Au-delà, l'ouverture est comptée en échec (rdv_calendar_failed) ; le calendrier
+// peut encore s'afficher ensuite, rdv_calendar_ready part alors avec sa durée.
+const CALENDAR_TIMEOUT_MS = 8000
+
+// Ouverture en cours, suivie jusqu'à la fermeture de la fenêtre. step : dernière
+// étape atteinte (chargement → calendrier → confirme), envoyée avec rdv_modal_close.
+// Cal.com n'émet pas d'événement public au choix d'un créneau.
+let current = null
+
+const elapsed = opening => Math.round(performance.now() - opening.startedAt)
+
+function trackCalendarFailed(opening, reason, code = null) {
+  if (opening.hasFailed) return
+  opening.hasFailed = true
+  trackAbEvent('rdv_calendar_failed', {
+    ab_test: AB_TEST_NAME,
+    position: opening.position,
+    reason,
+    ...(code && { error_code: code }),
+    duration_ms: elapsed(opening),
+  })
+}
+
+function endOpening() {
+  if (!current) return
+  clearTimeout(current.timeoutId)
+  trackAbEvent('rdv_modal_close', {
+    ab_test: AB_TEST_NAME,
+    position: current.position,
+    last_step: current.step,
+    duration_ms: elapsed(current),
+  })
+  current = null
+}
+
 watch(() => dialog.value.open, async (open) => {
-  if (!open) return
+  if (!open) {
+    endOpening()
+    return
+  }
   openCount += 1
   elementId.value = `rdv-cal-embed-${openCount}`
-  await nextTick()
 
   const position = dialog.value.position
+  const opening = { position, startedAt: performance.now(), step: 'chargement', hasFailed: false }
+  current = opening
+  opening.timeoutId = setTimeout(() => {
+    if (opening.step === 'chargement') trackCalendarFailed(opening, 'timeout')
+  }, CALENDAR_TIMEOUT_MS)
+
+  await nextTick()
   const calNs = await init(`rdv-voyage-${openCount}`, props.calLink, `#${elementId.value}`, buildCalConfig(dialog.value.slot))
+
+  onLinkReady(calNs, () => {
+    if (opening.step !== 'chargement') return
+    opening.step = 'calendrier'
+    clearTimeout(opening.timeoutId)
+    trackAbEvent('rdv_calendar_ready', { ab_test: AB_TEST_NAME, position, duration_ms: elapsed(opening) })
+  })
+
+  onLinkFailed(calNs, (data) => {
+    clearTimeout(opening.timeoutId)
+    trackCalendarFailed(opening, 'link_failed', data?.code)
+  })
 
   let hasTrackedBooker = false
   onNavigatedToBooker(calNs, () => {
@@ -117,12 +173,42 @@ watch(() => dialog.value.open, async (open) => {
       user_name: attendee?.name || booking?.responses?.name || '',
     }
     userData.user_country = getCountryFromPhone(userData.user_phone)
+    opening.step = 'confirme'
 
     // La conversion du test : le rendez-vous pris, pas le clic sur le bouton.
     trackAbEvent('rdv_scheduled', { ab_test: AB_TEST_NAME, position })
     // Conversion RDV historique, pour que les balises Meta / GA4 existantes suivent.
     trackRdvStep('confirmation', userData)
   })
+})
+
+// Préchargement de Cal.com au premier geste du visiteur (scroll, toucher), puis
+// quand le navigateur est au repos : rien n'est téléchargé pour qui repart sans
+// interagir, et le chargement de la page n'est pas concurrencé.
+const INTERACTION_EVENTS = ['scroll', 'pointerdown', 'keydown']
+let idleHandle = null
+
+function schedulePreload() {
+  removeInteractionListeners()
+  const run = () => preload(stegaClean(props.calLink))
+  idleHandle = 'requestIdleCallback' in window
+    ? { idle: window.requestIdleCallback(run, { timeout: 3000 }) }
+    : { timer: setTimeout(run, 1000) }
+}
+
+function removeInteractionListeners() {
+  for (const event of INTERACTION_EVENTS) window.removeEventListener(event, schedulePreload)
+}
+
+onMounted(() => {
+  for (const event of INTERACTION_EVENTS) window.addEventListener(event, schedulePreload, { once: true, passive: true })
+})
+
+onBeforeUnmount(() => {
+  removeInteractionListeners()
+  if (idleHandle?.idle) window.cancelIdleCallback(idleHandle.idle)
+  if (idleHandle?.timer) clearTimeout(idleHandle.timer)
+  endOpening()
 })
 </script>
 
