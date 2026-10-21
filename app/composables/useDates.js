@@ -1,13 +1,22 @@
 export function useDates() {
   const route = useRoute()
   const dates = ref([])
-  const isLoading = ref(false)
+  // Vrai jusqu'à la réponse : le HTML rendu côté serveur montre un squelette, pas
+  // « aucun départ » (les dates ne sont chargées qu'au montage).
+  const isLoading = ref(true)
 
   const getDates = async () => {
     isLoading.value = true
-    const res = await apiRequest(`/booking/${route.params.voyageSlug}/dates`)
-    dates.value = res?.filter(date => date.published) || []
-    isLoading.value = false
+    try {
+      const res = await apiRequest(`/booking/${route.params.voyageSlug}/dates`)
+      dates.value = res?.filter(date => date.published) || []
+    }
+    catch {
+      dates.value = []
+    }
+    finally {
+      isLoading.value = false
+    }
   }
 
   // watch(route, () => {
@@ -16,6 +25,9 @@ export function useDates() {
   onMounted(() => {
     if (route.params.voyageSlug) {
       getDates()
+    }
+    else {
+      isLoading.value = false
     }
     return dates.value
   })

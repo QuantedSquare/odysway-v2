@@ -7,7 +7,11 @@
       <slot />
     </v-main>
 
-    <div class="whatsapp-button mb-16">
+    <!-- Masqué pendant la prise de RDV Cal.com : il recouvrirait le formulaire. -->
+    <div
+      v-show="!rdvDialog.open"
+      class="whatsapp-button mb-16"
+    >
       <WhatsAppBtn />
     </div>
 
@@ -27,6 +31,7 @@
 import { useDisplay } from 'vuetify'
 
 const { width } = useDisplay()
+const { dialog: rdvDialog } = useRdvBooking()
 </script>
 
 <style scoped>

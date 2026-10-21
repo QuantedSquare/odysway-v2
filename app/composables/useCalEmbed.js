@@ -44,9 +44,23 @@ function loadCalScript() {
   })
 }
 
+// Pages Cal.com déjà préchargées, une fois par session de navigation.
+const preloadedLinks = new Set()
+
 export function useCalEmbed() {
   const isReady = ref(false)
   const { recordRdv } = useLeadSource()
+
+  // Met en cache les ressources de la page Cal.com (iframe cachée posée par
+  // l'embed) : à l'ouverture, le calendrier n'a plus son script à télécharger.
+  async function preload(calLink) {
+    if (!import.meta.client || !calLink || preloadedLinks.has(calLink)) return
+    preloadedLinks.add(calLink)
+
+    const Cal = await loadCalScript()
+    Cal('init', { origin: 'https://app.cal.com' })
+    Cal('preload', { calLink })
+  }
 
   async function init(namespace, calLink, elementSelector, config = {}) {
     if (!import.meta.client) return
@@ -88,6 +102,12 @@ export function useCalEmbed() {
     })
   }
 
+  function onLinkFailed(calNs, callback) {
+    on(calNs, 'linkFailed', (event) => {
+      callback?.(event.detail?.data)
+    })
+  }
+
   function onBookingSuccess(calNs, callback) {
     on(calNs, 'bookingSuccessful', (event) => {
       const data = event.detail?.data
@@ -105,8 +125,10 @@ export function useCalEmbed() {
 
   return {
     init,
+    preload,
     on,
     onLinkReady,
+    onLinkFailed,
     onBookingSuccess,
     onNavigatedToBooker,
     isReady,
