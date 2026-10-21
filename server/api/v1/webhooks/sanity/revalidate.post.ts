@@ -62,7 +62,7 @@ export default defineEventHandler(async (event) => {
       pathsToRevalidate.push('/entreprise')
     }
     else if (documentType === 'page_partenariat') {
-      pathsToRevalidate.push('/partenariat')
+      pathsToRevalidate.push('/portage')
     }
     else if (documentType === 'surMesure') {
       pathsToRevalidate.push('/sur-mesure')

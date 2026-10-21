@@ -264,7 +264,7 @@ Tracks Alma payment IDs to prevent duplicate processing.
 - `rattachement` text — `introuvable` (404 at Alma live: sandbox test payments stored in the same base) or `sans_deal` (no deal in `custom_data` nor `booked_dates`). Such rows never block Ulysse's Alma reconciliation.
 
 ### `partnership_requests`
-Demandes reçues par le formulaire de `/partenariat` (`POST /api/v1/partenariat/demande`). Une ligne par envoi, écrite AVANT les appels AC : le lead est gardé même si AC tombe.
+Demandes reçues par le formulaire de `/portage` (`POST /api/v1/partenariat/demande`). Une ligne par envoi, écrite AVANT les appels AC : le lead est gardé même si AC tombe.
 - `id` uuid PK, `created_at` timestamptz
 - `email` text, `ac_contact` bigint — contact AC (tag `partenaire-inbound`, note avec le projet), `null` si AC a échoué
 - `concept`, `destination`, `communaute`, `participants`, `besoin` text — champs du formulaire ; `besoin` qualifie le lead (10 % / 15 %)
