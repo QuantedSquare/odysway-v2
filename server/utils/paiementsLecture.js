@@ -50,4 +50,25 @@ const lirePaiements = async (dealId, contexte = 'paiements') => {
   return { stripe, alma: almaPaiements }
 }
 
-export default { lirePaiements }
+/**
+ * Journal des encaissements hors ligne d'Ulysse (`ulysse.encaissements`) :
+ * chèques vacances, chèques, virements directs saisis par l'équipe. Pour
+ * l'Espace Voyageur seulement (le Docteur lit son journal lui-même).
+ * `{ disponible, lignes }` — lignes brutes, triées par espaceVoyageur.ligneEncaissement.
+ */
+const lireEncaissements = async (dealId, contexte = 'paiements') => {
+  try {
+    const { data, error } = await supabase.schema('ulysse').from('encaissements')
+      .select('montant, moyen, origine, statut, recu_le, ac_le, archived')
+      .eq('deal_id', dealId)
+      .eq('archived', false)
+    if (error) throw new Error(error.message)
+    return { disponible: true, lignes: data || [] }
+  }
+  catch (err) {
+    console.error(`[${contexte}/encaissements]`, err?.message)
+    return { disponible: false, lignes: [] }
+  }
+}
+
+export default { lirePaiements, lireEncaissements }

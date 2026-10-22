@@ -8,18 +8,13 @@ import { defineEventHandler, setResponseHeaders } from 'h3'
 // existe. Le titulaire voit les montants, l'historique et le lien de paiement ;
 // un voyageur invité ne voit que le voyage et les noms.
 
-const historique = ({ stripe, alma }) => {
-  const lignes = [
-    ...(stripe.paiements || []).map(p => ({ ...p, via: 'Stripe' })),
-    ...(alma.paiements || []).map(p => ({ ...p, via: 'Alma' })),
-  ]
-  return {
-    complet: stripe.disponible && alma.disponible,
-    paiements: lignes
-      .filter(p => p.statut === 'paye' || p.statut === 'en_attente')
-      .map(p => ({ le: p.le, montant: p.montant, rembourse: p.rembourse || 0, moyen: p.moyen || null, statut: p.statut, via: p.via }))
-      .sort((a, b) => String(a.le).localeCompare(String(b.le))),
-  }
+// Stripe, Alma et journal hors ligne d'Ulysse, lus ensemble.
+const lireHistorique = async (dealId) => {
+  const [{ stripe, alma }, journal] = await Promise.all([
+    paiementsLecture.lirePaiements(dealId, 'espace'),
+    paiementsLecture.lireEncaissements(dealId, 'espace'),
+  ])
+  return { stripe, alma, journal }
 }
 
 export default defineEventHandler(async (event) => {
@@ -35,7 +30,7 @@ export default defineEventHandler(async (event) => {
     supabase.from('activecampaign_clients').select('firstname, lastname').eq('contact', deal.contact).maybeSingle(),
     espaceDossiers.voyageursDuDossier(deal.id),
     espaceDossiers.compagnonsDuDepart(dossier),
-    titulaire ? paiementsLecture.lirePaiements(deal.id, 'espace') : Promise.resolve(null),
+    titulaire ? lireHistorique(deal.id) : Promise.resolve(null),
     espaceProfils.completudesDuDossier(dossier),
     espaceDocuments.documentsDesDossiers(client, [dossier]),
   ])
@@ -53,7 +48,7 @@ export default defineEventHandler(async (event) => {
     lienPaiement,
     carnet: deal.travel_book || null,
     documents: documents.get(Number(deal.id)) || [],
-    paiements: paiements ? historique(paiements) : null,
+    paiements: paiements ? espaceVoyageur.historiquePaiements(paiements, resume.paiement?.paye ?? null) : null,
     voyageurs: voyageurs.map((v) => {
       // Le titulaire n'a pas d'invitation : sa place est celle qui porte son nom.
       const moi = v.user_id === client.id || (titulaire && v.is_holder)

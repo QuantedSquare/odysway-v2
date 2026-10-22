@@ -119,11 +119,14 @@
       v-else
       class="text-body-2 text-primary-light-2"
     >
-      Aucun paiement en ligne enregistré pour ce dossier.
+      Aucun paiement détaillé pour ce dossier.
     </p>
-    <p class="text-caption text-primary-light-2 mt-3 mb-0">
-      Un virement ou un chèque-vacances réglé hors ligne apparaît dans « Déjà réglé » sans figurer dans cette liste.
-      <span v-if="detail.paiements && !detail.paiements.complet">L'historique n'a pas pu être lu entièrement, réessayez plus tard.</span>
+    <p
+      v-if="detail.paiements?.horsListe || (detail.paiements && !detail.paiements.complet)"
+      class="text-caption text-primary-light-2 mt-3 mb-0"
+    >
+      <span v-if="detail.paiements.horsListe">« Déjà réglé » comprend aussi {{ euros(detail.paiements.horsListe) }} réglés hors ligne, pas encore détaillés ici.</span>
+      <span v-if="!detail.paiements.complet">L'historique n'a pas pu être lu entièrement, réessayez plus tard.</span>
     </p>
 
     <v-dialog
@@ -203,7 +206,12 @@ const montants = computed(() => [
   { label: 'Déjà réglé', valeur: props.detail.paiement.paye },
   { label: 'Reste à payer', valeur: props.detail.paiement.reste, du: aRegler.value },
 ])
-const moyen = p => [p.moyen === 'carte' ? 'Carte' : p.moyen === 'virement' ? 'Virement' : null, p.via === 'Alma' ? 'Alma (3x)' : null].filter(Boolean).join(' · ') || p.via
+// Règlements saisis dans Ulysse (journal d'encaissements).
+const HORS_LIGNE = { cheque_vacances: 'Chèque vacances', cheque: 'Chèque', virement: 'Virement direct', especes: 'Espèces', autre: 'Règlement hors ligne' }
+const moyen = (p) => {
+  if (p.via === 'Hors ligne') return HORS_LIGNE[p.moyen] || 'Règlement hors ligne'
+  return [p.moyen === 'carte' ? 'Carte' : p.moyen === 'virement' ? 'Virement' : null, p.via === 'Alma' ? 'Alma (3x)' : null].filter(Boolean).join(' · ') || p.via
+}
 </script>
 
 <style scoped>

@@ -110,3 +110,64 @@ test('resumeDossier : un voyageur invité ne reçoit aucun montant ni option', (
   assert.equal(invite.paiement, null)
   assert.equal(invite.option, null)
 })
+
+// Historique des paiements : Stripe, Alma et journal hors ligne d'Ulysse.
+const { ligneEncaissement, historiquePaiements } = espaceVoyageur
+const saisie = (x = {}) => ({ montant: 300, moyen: 'cheque_vacances', origine: 'saisie', statut: 'confirme', recu_le: '2026-10-02', ac_le: '2026-10-02T14:10:00Z', archived: false, ...x })
+const reprise = (x = {}) => ({ montant: 500, moyen: 'inconnu', origine: 'reprise', statut: 'a_confirmer', recu_le: null, ac_le: null, archived: false, ...x })
+const sources = (x = {}) => ({
+  stripe: { disponible: true, paiements: [{ le: '2026-09-04T10:00:00Z', montant: 870, rembourse: 0, moyen: 'carte', statut: 'paye' }] },
+  alma: { disponible: true, paiements: [] },
+  journal: { disponible: true, lignes: [] },
+  ...x,
+})
+
+test('ligneEncaissement : saisie reportée dans AC → ligne hors ligne datée du jour de réception', () => {
+  assert.deepEqual(ligneEncaissement(saisie({ montant: '300.50' })), { le: '2026-10-02', montant: 300.5, rembourse: 0, moyen: 'cheque_vacances', statut: 'paye', via: 'Hors ligne' })
+})
+
+test('ligneEncaissement : archivée, pas encore dans AC ou reprise à confirmer → pas de ligne', () => {
+  assert.equal(ligneEncaissement(saisie({ archived: true })), null)
+  assert.equal(ligneEncaissement(saisie({ ac_le: null })), null)
+  assert.equal(ligneEncaissement(reprise()), null)
+  assert.equal(ligneEncaissement(reprise({ statut: 'confirme', moyen: 'inconnu' })), null)
+  assert.equal(ligneEncaissement(null), null)
+})
+
+test('ligneEncaissement : reprise confirmée (moyen connu) → ligne, même sans date', () => {
+  assert.deepEqual(ligneEncaissement(reprise({ statut: 'confirme', moyen: 'cheque' })), { le: null, montant: 500, rembourse: 0, moyen: 'cheque', statut: 'paye', via: 'Hors ligne' })
+})
+
+test('historiquePaiements : Stripe + chèque vacances, par date, égal à « Déjà réglé »', () => {
+  const h = historiquePaiements(sources({ journal: { disponible: true, lignes: [saisie(), saisie({ montant: 150, ac_le: null })] } }), 1170)
+  assert.equal(h.complet, true)
+  assert.deepEqual(h.paiements.map(p => [p.via, p.montant]), [['Stripe', 870], ['Hors ligne', 300]])
+  assert.equal(h.horsListe, null)
+})
+
+test('historiquePaiements : une reprise à confirmer est annoncée, jamais listée', () => {
+  const h = historiquePaiements(sources({ journal: { disponible: true, lignes: [reprise()] } }), 1370)
+  assert.equal(h.paiements.length, 1)
+  assert.equal(h.horsListe, 500)
+})
+
+test('historiquePaiements : remboursé et paiement en attente ne comptent pas dans le reçu', () => {
+  const h = historiquePaiements(sources({
+    stripe: { disponible: true, paiements: [
+      { le: '2026-09-04', montant: 870, rembourse: 100, moyen: 'carte', statut: 'paye' },
+      { le: '2026-09-10', montant: 400, rembourse: 0, moyen: 'virement', statut: 'en_attente' },
+      { le: '2026-09-11', montant: 400, rembourse: 0, moyen: 'carte', statut: 'abandonne' },
+    ] },
+  }), 870)
+  assert.deepEqual(h.paiements.map(p => p.statut), ['paye', 'en_attente'])
+  assert.equal(h.horsListe, 100)
+})
+
+test('historiquePaiements : une source illisible → incomplet, aucun écart annoncé', () => {
+  const h = historiquePaiements(sources({ journal: { disponible: false, lignes: [] } }), 5000)
+  assert.equal(h.complet, false)
+  assert.equal(h.horsListe, null)
+  assert.equal(historiquePaiements(sources(), null).horsListe, null)
+  // Plus reçu que « Déjà réglé » (webhook AC en retard) : rien à annoncer.
+  assert.equal(historiquePaiements(sources(), 500).horsListe, null)
+})

@@ -138,6 +138,53 @@ const situationPaiement = ({ totalValue, totalPaid, restToPay, departureDate, au
   }
 }
 
+/**
+ * Ligne du journal d'encaissements d'Ulysse (`ulysse.encaissements`, montants
+ * en euros) → ligne de l'historique, ou `null` si elle n'y a pas sa place :
+ *   - archivée ;
+ *   - saisie pas encore reportée dans AC (`ac_le` vide) : absente de « Déjà
+ *     réglé », elle le contredirait ;
+ *   - reprise à confirmer : l'écart relevé entre Total payé et Stripe + Alma,
+ *     moyen et date inconnus — compté dans `horsListe`, jamais montré comme
+ *     un paiement.
+ * Le journal ne contient que l'argent passé hors de Stripe et d'Alma (une
+ * reprise EST Total payé − Stripe − Alma) : aucun doublon possible avec eux.
+ */
+const ligneEncaissement = (e) => {
+  if (!e || e.archived) return null
+  const reporte = e.origine === 'saisie' && !!e.ac_le
+  const confirmee = e.origine === 'reprise' && e.statut === 'confirme' && e.moyen !== 'inconnu'
+  if (!reporte && !confirmee) return null
+  return { le: e.recu_le || null, montant: Number(e.montant) || 0, rembourse: 0, moyen: e.moyen, statut: 'paye', via: 'Hors ligne' }
+}
+
+const arrondi = n => Math.round(n * 100) / 100
+
+/**
+ * Historique des paiements du titulaire : Stripe, Alma et journal hors ligne
+ * d'Ulysse, payés ou en attente, par date. `horsListe` : ce que « Déjà réglé »
+ * (Total payé d'AC, `paye`) compte au-delà des lignes reçues — la même égalité
+ * que le Docteur d'Ulysse (ARG-04). `null` si une source manque ou s'il n'y a
+ * rien d'autre.
+ * @param {{ stripe: object, alma: object, journal: object }} sources chacune `{ disponible, paiements | lignes }`
+ * @param {number|null} paye
+ */
+const historiquePaiements = ({ stripe, alma, journal }, paye) => {
+  const lignes = [
+    ...(stripe?.paiements || []).map(p => ({ ...p, via: 'Stripe' })),
+    ...(alma?.paiements || []).map(p => ({ ...p, via: 'Alma' })),
+  ]
+    .filter(p => p.statut === 'paye' || p.statut === 'en_attente')
+    .map(p => ({ le: p.le, montant: p.montant, rembourse: p.rembourse || 0, moyen: p.moyen || null, statut: p.statut, via: p.via }))
+  lignes.push(...(journal?.lignes || []).map(ligneEncaissement).filter(Boolean))
+  lignes.sort((a, b) => String(a.le).localeCompare(String(b.le)))
+
+  const complet = !!(stripe?.disponible && alma?.disponible && journal?.disponible)
+  const recu = lignes.filter(p => p.statut === 'paye').reduce((t, p) => t + p.montant - p.rembourse, 0)
+  const ecart = complet && paye !== null && paye !== undefined ? arrondi(Number(paye) - recu) : 0
+  return { complet, paiements: lignes, horsListe: ecart > 0.009 ? ecart : null }
+}
+
 const STATUTS_EXCLUS = ['Perdu', 'Supprimé']
 
 /**
@@ -220,6 +267,8 @@ export default {
   nomPublic,
   etatVoyage,
   situationPaiement,
+  ligneEncaissement,
+  historiquePaiements,
   dealVisible,
   ecartJours,
 }
