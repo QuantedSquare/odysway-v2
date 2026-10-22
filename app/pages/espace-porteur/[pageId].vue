@@ -129,8 +129,13 @@
           auto-grow
           maxlength="400"
           counter
+          hint="Reprise dans l'aperçu du lien quand vous le partagez (WhatsApp, réseaux…)"
+          persistent-hint
         />
-        <v-row dense>
+        <v-row
+          dense
+          class="mt-2"
+        >
           <v-col
             cols="12"
             sm="6"
@@ -161,15 +166,96 @@
             />
           </v-col>
         </v-row>
+        <v-select
+          v-model="payload.niveau"
+          :items="choixNiveaux"
+          label="Niveau de difficulté"
+          variant="outlined"
+          clearable
+          class="mt-4"
+          hint="Affiché en pastille sous le titre"
+          persistent-hint
+          data-test="niveau"
+        />
+
+        <p class="text-subtitle-2 font-weight-bold mt-6 mb-1">
+          Badges
+        </p>
+        <p class="text-body-2 text-grey-darken-1 mb-3">
+          Les pastilles sous le titre, à côté du niveau : durée, taille du groupe, hébergement, période…
+        </p>
+        <div
+          v-for="(b, i) in payload.badges"
+          :key="b.cle"
+          class="d-flex align-start ga-2 mb-3"
+          data-test="badge"
+        >
+          <div class="flex-grow-1">
+            <v-select
+              v-model="b.badge"
+              :items="choixBadges"
+              :item-props="itemBadge"
+              label="Badge"
+              variant="outlined"
+              density="comfortable"
+              hide-details
+            />
+            <v-row
+              v-if="variablesBadge(b.badge).length"
+              dense
+              class="mt-1"
+            >
+              <v-col
+                v-for="v in variablesBadge(b.badge)"
+                :key="v.cle"
+                cols="12"
+                :sm="variablesBadge(b.badge).length > 1 ? 6 : 12"
+              >
+                <v-text-field
+                  v-model="b[v.cle]"
+                  :label="v.libelle"
+                  :placeholder="v.exemple"
+                  persistent-placeholder
+                  variant="outlined"
+                  density="compact"
+                  maxlength="60"
+                  hide-details
+                />
+              </v-col>
+            </v-row>
+            <p
+              v-if="b.badge"
+              class="text-caption text-grey-darken-1 mt-1 mb-0"
+            >
+              Affiché : « {{ texteBadge(b) }} »
+            </p>
+          </div>
+          <EspacePorteurOrdreBoutons
+            :index="i"
+            :total="payload.badges.length"
+            @deplacer="sens => deplacer(payload.badges, i, sens)"
+            @supprimer="payload.badges.splice(i, 1)"
+          />
+        </div>
+        <v-btn
+          v-if="payload.badges.length < 8"
+          variant="tonal"
+          color="primary"
+          :prepend-icon="mdiPlus"
+          data-test="ajouter-badge"
+          @click="payload.badges.push({ cle: nouvelleCle(), badge: null, var1: '', var2: '' })"
+        >
+          Ajouter un badge
+        </v-btn>
 
         <v-divider class="my-8" />
 
-        <!-- Photos -->
+        <!-- Photos et vidéos -->
         <h2 class="text-h5 font-weight-bold text-primary mb-2">
-          Photos
+          Photos et vidéos
         </h2>
         <p class="text-body-2 text-grey-darken-1 mb-4">
-          Une grande photo horizontale pour l'en-tête de la page, puis une galerie.
+          Une grande photo horizontale pour l'en-tête de la page, une seconde à ses côtés (sur ordinateur), puis une galerie.
         </p>
         <p class="text-subtitle-2 font-weight-bold mb-2">
           Image principale *
@@ -177,6 +263,14 @@
         <EspacePorteurChampImage
           v-model="payload.image"
           label="Choisir l'image principale"
+          avec-alt
+        />
+        <p class="text-subtitle-2 font-weight-bold mt-6 mb-2">
+          Image secondaire
+        </p>
+        <EspacePorteurChampImage
+          v-model="payload.imageSecondaire"
+          label="Choisir l'image secondaire"
           avec-alt
         />
         <p class="text-subtitle-2 font-weight-bold mt-6 mb-2">
@@ -200,12 +294,24 @@
           avec-alt
           @update:model-value="v => v && payload.galerie.push({ ...v, cle: nouvelleCle() })"
         />
+        <v-textarea
+          v-model="videosTexte"
+          label="Vidéos YouTube ou Vimeo (un lien par ligne)"
+          variant="outlined"
+          rows="2"
+          auto-grow
+          class="mt-6"
+          :error-messages="videosRefusees.length ? `Lien non reconnu : ${videosRefusees.join(', ')}` : []"
+          hint="Un bouton « Vidéo » s'ajoute sur la photo d'en-tête"
+          persistent-hint
+          data-test="videos"
+        />
 
         <v-divider class="my-8" />
 
-        <!-- Vous -->
+        <!-- Les accompagnateurs -->
         <h2 class="text-h5 font-weight-bold text-primary mb-4">
-          Vous, l'accompagnateur
+          Vous et votre équipe
         </h2>
         <v-row dense>
           <v-col
@@ -240,16 +346,131 @@
           variant="outlined"
           rows="3"
           auto-grow
+          :hint="AIDE_TEXTE"
         />
         <v-textarea
+          v-model="payload.equipeIntro"
+          label="Quelques mots sur l'équipe (facultatif)"
+          variant="outlined"
+          rows="2"
+          auto-grow
+          hint="Affiché en tête de la section « Les accompagnateurs »"
+          persistent-hint
+          class="mb-4"
+        />
+        <v-card
+          v-for="(a, i) in payload.equipe"
+          :key="a.cle"
+          variant="outlined"
+          rounded="lg"
+          class="mb-4 pa-4"
+        >
+          <div class="d-flex align-center mb-3">
+            <span class="text-subtitle-1 font-weight-bold">Accompagnateur {{ i + 2 }}</span>
+            <v-spacer />
+            <EspacePorteurOrdreBoutons
+              :index="i"
+              :total="payload.equipe.length"
+              @deplacer="sens => deplacer(payload.equipe, i, sens)"
+              @supprimer="payload.equipe.splice(i, 1)"
+            />
+          </div>
+          <v-row dense>
+            <v-col
+              cols="12"
+              sm="6"
+            >
+              <v-text-field
+                v-model="a.nom"
+                label="Nom"
+                variant="outlined"
+                density="comfortable"
+              />
+            </v-col>
+            <v-col
+              cols="12"
+              sm="6"
+            >
+              <v-text-field
+                v-model="a.role"
+                label="Rôle (ex. Guide de montagne)"
+                variant="outlined"
+                density="comfortable"
+              />
+            </v-col>
+          </v-row>
+          <EspacePorteurChampImage
+            v-model="a.photo"
+            label="Photo"
+            compact
+            class="mb-4"
+          />
+          <v-textarea
+            v-model="a.presentation"
+            label="Présentation"
+            variant="outlined"
+            rows="2"
+            auto-grow
+          />
+        </v-card>
+        <v-btn
+          variant="tonal"
+          color="primary"
+          :prepend-icon="mdiPlus"
+          data-test="ajouter-accompagnateur"
+          @click="payload.equipe.push({ cle: nouvelleCle(), nom: '', role: '', presentation: '', photo: null })"
+        >
+          Ajouter un accompagnateur
+        </v-btn>
+
+        <v-divider class="my-8" />
+
+        <!-- Le mot (note de l'auteur) -->
+        <h2 class="text-h5 font-weight-bold text-primary mb-2">
+          Votre mot sur le séjour *
+        </h2>
+        <p class="text-body-2 text-grey-darken-1 mb-4">
+          La note de l'auteur, en haut de la page (« {{ titresPage.mot }} »). Elle est signée de votre nom, de votre rôle et de votre photo.
+        </p>
+        <v-textarea
           v-model="payload.mot"
-          label="Votre mot sur le séjour *"
+          label="Votre mot *"
           variant="outlined"
           rows="5"
           auto-grow
           :hint="AIDE_TEXTE"
           persistent-hint
           data-test="mot"
+        />
+        <v-text-field
+          v-model="payload.motSignature"
+          label="Complément de signature (facultatif)"
+          variant="outlined"
+          maxlength="160"
+          class="mt-4"
+          hint="Après votre rôle, ex. « fondatrice de l'école Shanti »"
+          persistent-hint
+          data-test="mot-signature"
+        />
+
+        <v-divider class="my-8" />
+
+        <!-- Points forts -->
+        <h2 class="text-h5 font-weight-bold text-primary mb-2">
+          {{ titresPage.pointsForts }}
+        </h2>
+        <p class="text-body-2 text-grey-darken-1 mb-4">
+          Les temps forts du séjour, présentés en liste cochée sous votre mot.
+        </p>
+        <v-textarea
+          v-model="pointsFortsTexte"
+          label="Un point fort par ligne"
+          variant="outlined"
+          rows="4"
+          auto-grow
+          hint="Ex. « Deux cours de yoga par jour face à la mer ». **gras** et *italique* possibles."
+          persistent-hint
+          data-test="points-forts"
         />
 
         <v-divider class="my-8" />
@@ -275,12 +496,34 @@
               @supprimer="payload.programme.splice(i, 1)"
             />
           </div>
-          <v-text-field
-            v-model="jour.titre"
-            label="Titre de la journée"
-            variant="outlined"
-            density="comfortable"
-          />
+          <v-row dense>
+            <v-col
+              cols="12"
+              sm="4"
+            >
+              <v-text-field
+                v-model="jour.etiquette"
+                :placeholder="`JOUR ${i + 1}`"
+                persistent-placeholder
+                label="Étiquette"
+                variant="outlined"
+                density="comfortable"
+                maxlength="40"
+                hint="Ex. JOURS 3 À 5"
+              />
+            </v-col>
+            <v-col
+              cols="12"
+              sm="8"
+            >
+              <v-text-field
+                v-model="jour.titre"
+                label="Titre de la journée"
+                variant="outlined"
+                density="comfortable"
+              />
+            </v-col>
+          </v-row>
           <v-textarea
             v-model="jour.texte"
             label="Déroulé de la journée"
@@ -289,12 +532,41 @@
             auto-grow
             :hint="AIDE_TEXTE"
           />
-          <v-text-field
-            v-model="jour.nuit"
-            label="Nuit (ex. à l'hôtel, en refuge…)"
-            variant="outlined"
-            density="comfortable"
-          />
+          <v-row dense>
+            <v-col
+              cols="12"
+              sm="4"
+            >
+              <v-text-field
+                v-model="jour.denivele"
+                label="Dénivelé (ex. +600 m)"
+                variant="outlined"
+                density="comfortable"
+              />
+            </v-col>
+            <v-col
+              cols="12"
+              sm="4"
+            >
+              <v-text-field
+                v-model="jour.trajet"
+                label="Trajet (ex. 2 h de route)"
+                variant="outlined"
+                density="comfortable"
+              />
+            </v-col>
+            <v-col
+              cols="12"
+              sm="4"
+            >
+              <v-text-field
+                v-model="jour.nuit"
+                label="Nuit (ex. en refuge)"
+                variant="outlined"
+                density="comfortable"
+              />
+            </v-col>
+          </v-row>
           <EspacePorteurChampImage
             v-model="jour.photo"
             label="Photo de la journée"
@@ -306,7 +578,7 @@
           color="primary"
           :prepend-icon="mdiPlus"
           data-test="ajouter-jour"
-          @click="payload.programme.push({ cle: nouvelleCle(), titre: '', texte: '', nuit: '', photo: null })"
+          @click="payload.programme.push({ cle: nouvelleCle(), etiquette: '', titre: '', texte: '', denivele: '', trajet: '', nuit: '', photo: null })"
         >
           Ajouter un jour
         </v-btn>
@@ -364,6 +636,7 @@
             variant="outlined"
             rows="3"
             auto-grow
+            :hint="AIDE_TEXTE"
           />
           <div
             v-for="(photo, j) in h.photos"
@@ -462,6 +735,7 @@
             variant="outlined"
             rows="2"
             auto-grow
+            :hint="AIDE_TEXTE"
           />
         </v-card>
         <v-btn
@@ -566,12 +840,13 @@
 
 <script setup>
 import { mdiArrowLeft, mdiCellphone, mdiClose, mdiMonitor, mdiPlus } from '@mdi/js'
+import { stegaClean } from '@sanity/client/stega'
 import portagePage from '#shared/portagePage.js'
 
 definePageMeta({ layout: 'blank' })
 useHead({ title: 'Ma page de séjour', meta: [{ name: 'robots', content: 'noindex, nofollow' }] })
 
-const AIDE_TEXTE = 'Une ligne = un paragraphe. Commencez une ligne par « - » pour une liste à puces.'
+const AIDE_TEXTE = 'Une ligne = un paragraphe. « - » en début de ligne pour une puce, **gras**, *italique*.'
 const STATUTS = {
   brouillon: { libelle: 'Brouillon', couleur: 'grey' },
   soumis: { libelle: 'En relecture chez Odysway', couleur: 'primary' },
@@ -583,7 +858,63 @@ const LARGEUR_MOBILE = 390
 
 const route = useRoute()
 const pageId = route.params.pageId
-const { api, nouvelleCle } = useEspacePorteur()
+const { api, nouvelleCle, urlImage } = useEspacePorteur()
+
+// Titres des sections tels que la page les affiche (Sanity, page_voyage), et
+// les niveaux de difficulté au choix.
+const [{ data: pageVoyage }, { data: niveaux }, { data: badgesDispo }] = await Promise.all([
+  useSanityQuery(VOYAGE_PAGE_QUERY),
+  useSanityQuery(NIVEAUX_DIFFICULTE_QUERY),
+  useSanityQuery(BADGES_QUERY),
+])
+const titresPage = computed(() => ({
+  mot: stegaClean(pageVoyage.value?.authorNote?.title) || 'L\'esprit du voyage',
+  pointsForts: stegaClean(pageVoyage.value?.experiencesBlock?.title) || 'Ce que vous allez vivre',
+}))
+const choixNiveaux = computed(() => (niveaux.value || [])
+  .map(n => ({ value: n._id, title: `Niveau ${n.level} · ${stegaClean(n.title)}` })))
+
+// Badges : la liste d'Odysway. Un texte réduit à « {var1} » (durée, logement…)
+// est nommé d'après le titre du badge ; les variables sont remplies ici.
+const badgesParId = computed(() => new Map((badgesDispo.value || []).map(b => [b._id, {
+  ...b,
+  title: stegaClean(b.title),
+  text: stegaClean(b.text || '').trim(),
+}])))
+// Badge à variables : nommé d'après son titre, le texte en sous-titre.
+const libelleBadge = b => (b.text.includes('{var') ? b.title.replace(/^badge\s+/i, '') : b.text)
+const choixBadges = computed(() => [...badgesParId.value.values()].map(b => ({
+  value: b._id,
+  title: libelleBadge(b),
+  modele: b.text.includes('{var') && !/^\{var1\}$/.test(b.text) ? b.text.replace(/\{var[12]\}/g, '…') : '',
+  picto: b.picto,
+})))
+const itemBadge = item => ({
+  title: item.title,
+  value: item.value,
+  subtitle: item.modele || undefined,
+  prependAvatar: item.picto?.asset?._ref ? urlImage(item.picto.asset._ref, 64) : undefined,
+})
+const EXEMPLES_BADGE = { 'Logement': 'Chez l\'habitant', 'Durée': '8 jours', 'Âge': 'Dès 12 ans', 'Période': 'Avril', 'Période Saison': 'Printemps' }
+const variablesBadge = (id) => {
+  const b = badgesParId.value.get(id)
+  if (!b) return []
+  const seul = /^\{var1\}$/.test(b.text)
+  const libelle = (brut, defaut) => (brut && !/^\d+$/.test(stegaClean(brut)) ? stegaClean(brut) : defaut)
+  return [
+    b.text.includes('{var1}') && {
+      cle: 'var1',
+      libelle: seul ? 'Texte du badge' : libelle(b.variable1Label, 'Première valeur'),
+      exemple: seul ? EXEMPLES_BADGE[libelleBadge(b)] || '' : '',
+    },
+    b.text.includes('{var2}') && { cle: 'var2', libelle: libelle(b.variable2Label, 'Seconde valeur'), exemple: '' },
+  ].filter(Boolean)
+}
+const texteBadge = (choix) => {
+  const b = badgesParId.value.get(choix.badge)
+  if (!b) return ''
+  return b.text.replace(/\{var1\}/g, choix.var1 || '…').replace(/\{var2\}/g, choix.var2 || '…')
+}
 
 const page = ref(null)
 const payload = ref(portagePage.vide())
@@ -598,6 +929,8 @@ const format = ref('ordinateur')
 
 const inclusTexte = ref('')
 const nonInclusTexte = ref('')
+const pointsFortsTexte = ref('')
+const videosTexte = ref('')
 // Le texte reste tel que tapé (lignes vides comprises) ; le brouillon ne garde
 // que les lignes remplies.
 const lignes = t => t.split('\n').map(l => l.trim()).filter(Boolean)
@@ -606,6 +939,15 @@ watch(inclusTexte, (t) => {
 })
 watch(nonInclusTexte, (t) => {
   payload.value.nonInclus = lignes(t)
+})
+watch(pointsFortsTexte, (t) => {
+  payload.value.pointsForts = lignes(t)
+})
+// Les liens sont gardés sous leur forme d'intégration ; ceux qui ne sont ni
+// YouTube ni Vimeo sont signalés, pas enregistrés.
+const videosRefusees = computed(() => lignes(videosTexte.value).filter(l => !portagePage.lienVideo(l)))
+watch(videosTexte, (t) => {
+  payload.value.videos = lignes(t).map(portagePage.lienVideo).filter(Boolean)
 })
 
 const deplacer = (liste, i, sens) => {
@@ -622,6 +964,8 @@ const appliquer = (vue) => {
   payload.value = vue.payload
   inclusTexte.value = vue.payload.inclus.join('\n')
   nonInclusTexte.value = vue.payload.nonInclus.join('\n')
+  pointsFortsTexte.value = vue.payload.pointsForts.join('\n')
+  videosTexte.value = vue.payload.videos.join('\n')
   nextTick(() => {
     chargeEnCours = false
   })

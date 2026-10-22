@@ -224,7 +224,19 @@ const soumettre = async (porteur, pageId) => {
   const [brouillon, publie] = await Promise.all([client.getDocument(`drafts.${sanityId}`), client.getDocument(sanityId)])
   const base = brouillon || publie || null
   const slug = base?.slug?.current || await slugLibre(client, portagePage.slugifier(page.payload.titre), sanityId)
-  const doc = portagePage.versDocumentSanity(page.payload, { sanityId, slug, base })
+  // Une référence vers un niveau ou un badge inexistant ferait échouer
+  // l'écriture : ils sont vérifiés, sinon ignorés (ceux d'Odysway restent).
+  const propre = portagePage.nettoyer(page.payload)
+  const ids = [propre.niveau, ...propre.badges.map(b => b.badge)].filter(Boolean)
+  const connus = new Set(ids.length
+    ? await client.fetch('*[_type in ["difficultyLevel", "badge"] && _id in $ids]._id', { ids })
+    : [])
+  const payload = {
+    ...propre,
+    niveau: connus.has(propre.niveau) ? propre.niveau : null,
+    badges: propre.badges.filter(b => connus.has(b.badge)),
+  }
+  const doc = portagePage.versDocumentSanity(payload, { sanityId, slug, base })
 
   try {
     await client.createOrReplace(doc)

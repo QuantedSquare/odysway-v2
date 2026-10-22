@@ -152,3 +152,101 @@ test('versVoyageApercu : la forme de VOYAGE_QUERY, asset de l\'image principale 
   assert.equal(versVoyageApercu({}).pricing.startingPrice, null)
   assert.equal(versVoyageApercu({}, { slug: 'mon-slug' }).slug.current, 'mon-slug')
 })
+
+test('lienVideo : YouTube et Vimeo ramenés à l\'adresse d\'intégration, le reste refusé', () => {
+  const { lienVideo } = portagePage
+  assert.equal(lienVideo('https://www.youtube.com/watch?v=3aH6CsMkLGA&t=12s'), 'https://www.youtube.com/embed/3aH6CsMkLGA')
+  assert.equal(lienVideo('https://youtu.be/3aH6CsMkLGA?si=x'), 'https://www.youtube.com/embed/3aH6CsMkLGA')
+  assert.equal(lienVideo('https://youtube.com/shorts/3aH6CsMkLGA'), 'https://www.youtube.com/embed/3aH6CsMkLGA')
+  assert.equal(lienVideo('https://www.youtube.com/embed/3aH6CsMkLGA'), 'https://www.youtube.com/embed/3aH6CsMkLGA')
+  assert.equal(lienVideo('https://vimeo.com/123456789'), 'https://player.vimeo.com/video/123456789')
+  assert.equal(lienVideo('https://exemple.com/video.mp4'), null)
+  assert.equal(lienVideo('javascript:alert(1)'), null)
+})
+
+test('texteEnBlocs : **gras** et *italique* en marques', () => {
+  const [b] = texteEnBlocs('Un séjour **unique** et *doux*', 'k')
+  assert.deepEqual(b.children.map(s => [s.text, s.marks]), [
+    ['Un séjour ', []], ['unique', ['strong']], [' et ', []], ['doux', ['em']],
+  ])
+  assert.equal(new Set(b.children.map(s => s._key)).size, 4)
+  assert.deepEqual(texteEnBlocs('* une puce', 'k')[0].children.map(s => s.text), ['une puce'])
+})
+
+test('champs de la page voyage : niveau, image secondaire, vidéos, points forts, équipe, signature, détails du jour', () => {
+  const complet = {
+    ...payload,
+    niveau: 'fbd1deb6-4d20-450a-b49f-960231cea5db',
+    imageSecondaire: { ref: ref(6), alt: 'Salle de yoga' },
+    videos: ['https://youtu.be/3aH6CsMkLGA', 'https://www.youtube.com/embed/3aH6CsMkLGA', 'pas une vidéo'],
+    pointsForts: ['Yoga **face à la mer**', ''],
+    equipeIntro: 'Nous serons deux.',
+    equipe: [{ cle: 'a1', nom: 'Nikos', role: 'Guide', presentation: 'Crétois.' }, { cle: 'a2', nom: '' }],
+    motSignature: 'fondatrice de Shanti',
+    programme: [{ cle: 'jA', etiquette: 'JOURS 1 À 2', titre: 'Arrivée', denivele: '+300 m', trajet: '1 h de route', nuit: 'à l\'hôtel' }],
+  }
+  const doc = versDocumentSanity(complet, { sanityId: 'v', slug: 's' })
+  assert.deepEqual(doc.difficultyLevel, { _type: 'reference', _ref: 'fbd1deb6-4d20-450a-b49f-960231cea5db' })
+  assert.equal(doc.imageSecondary.asset._ref, ref(6))
+  assert.equal(doc.imageSecondary.alt, 'Salle de yoga')
+  assert.deepEqual(doc.videoLinks, ['https://www.youtube.com/embed/3aH6CsMkLGA'])
+  assert.deepEqual(doc.experiencesBlock.map(b => [b.listItem, b.children.map(s => s.text).join('')]), [['bullet', 'Yoga face à la mer']])
+  assert.equal(doc.accompanistsDescription[0].children[0].text, 'Nous serons deux.')
+  assert.deepEqual(doc.accompanistsList.map(a => [a._key, a.name]), [['porteur', 'Léa Martin'], ['a1', 'Nikos']])
+  assert.equal(doc.authorNote.affixeAuthor, 'fondatrice de Shanti')
+  assert.deepEqual(doc.programmeBlock[0], {
+    _key: 'jA', title: 'Arrivée', badgeText: 'JOURS 1 À 2', denivellation: '+300 m', road: '1 h de route', night: 'à l\'hôtel',
+  })
+  assert.equal(nettoyer({ niveau: 'x y' }).niveau, null)
+
+  // L'aperçu déplie le niveau depuis la liste lue dans Sanity.
+  const niveaux = [{ _id: 'fbd1deb6-4d20-450a-b49f-960231cea5db', title: 'Premiers pas', level: 1, description: [] }]
+  assert.deepEqual(versVoyageApercu(complet, { niveaux }).difficultyLevel, { title: 'Premiers pas', level: 1, description: [] })
+  assert.equal(versVoyageApercu(complet).difficultyLevel, undefined)
+})
+
+test('versDocumentSanity : niveau, image secondaire, vidéos et affixe d\'Odysway gardés si le porteur n\'en donne pas', () => {
+  const base = {
+    difficultyLevel: { _type: 'reference', _ref: 'niveau-odysway' },
+    imageSecondary: { _type: 'image', asset: { _ref: ref(7), _type: 'reference' } },
+    videoLinks: ['https://www.youtube.com/embed/JKpO_UqYveA'],
+    authorNote: { affixeAuthor: 'Fondateur' },
+  }
+  const doc = versDocumentSanity(payload, { sanityId: 'v', slug: 's', base })
+  assert.deepEqual(doc.difficultyLevel, base.difficultyLevel)
+  assert.deepEqual(doc.imageSecondary, base.imageSecondary)
+  assert.deepEqual(doc.videoLinks, base.videoLinks)
+  assert.equal(doc.authorNote.affixeAuthor, 'Fondateur')
+  const remplace = versDocumentSanity({ ...payload, motSignature: 'autre' }, { sanityId: 'v', slug: 's', base })
+  assert.equal(remplace.authorNote.affixeAuthor, 'autre')
+})
+
+test('badges : références Sanity avec variables, repli sur ceux d\'Odysway, dépliés dans l\'aperçu', () => {
+  const choix = {
+    ...payload,
+    badges: [
+      { cle: 'b1', badge: '41b65048-36df-402d-8329-1efa979999f0', var1: '6', var2: '12' },
+      { cle: 'b2', badge: 'cc32cb3d-1f71-4110-a40b-56df53d9f10d', var1: '8 jours' },
+      { cle: 'b3', badge: 'pas un id !' },
+      { cle: 'b4', badge: null },
+    ],
+  }
+  assert.equal(nettoyer(choix).badges.length, 2)
+  const doc = versDocumentSanity(choix, { sanityId: 'v', slug: 's' })
+  assert.deepEqual(doc.badges, [
+    { _key: 'b1', badge: { _type: 'reference', _ref: '41b65048-36df-402d-8329-1efa979999f0' }, variable1Value: '6', variable2Value: '12' },
+    { _key: 'b2', badge: { _type: 'reference', _ref: 'cc32cb3d-1f71-4110-a40b-56df53d9f10d' }, variable1Value: '8 jours' },
+  ])
+  const odysway = [{ _key: 'o', badge: { _type: 'reference', _ref: 'badge-odysway' } }]
+  assert.deepEqual(versDocumentSanity(payload, { sanityId: 'v', slug: 's', base: { badges: odysway } }).badges, odysway)
+
+  const badges = [{ _id: '41b65048-36df-402d-8329-1efa979999f0', title: 'Badge Groupe', text: 'Groupe de {var1} à {var2} personnes', picto: null }]
+  const apercu = versVoyageApercu(choix, { badges })
+  assert.deepEqual(apercu.badges.map(b => [b.badge.text, b.variable1Value, b.variable2Value]), [['Groupe de {var1} à {var2} personnes', '6', '12']])
+  assert.deepEqual(versVoyageApercu(payload).badges, [])
+})
+
+test('niveau et badges : jamais une référence vers un brouillon Sanity', () => {
+  assert.equal(nettoyer({ niveau: 'drafts.fbd1deb6' }).niveau, null)
+  assert.deepEqual(nettoyer({ badges: [{ cle: 'b', badge: 'drafts.41b65048' }] }).badges, [])
+})

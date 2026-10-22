@@ -35,11 +35,17 @@ useHead({ title: 'Aperçu', meta: [{ name: 'robots', content: 'noindex, nofollow
 
 const route = useRoute()
 const { api } = useEspacePorteur()
-const { data: page } = await useSanityQuery(VOYAGE_PAGE_QUERY)
+const [{ data: page }, { data: niveaux }, { data: badgesDispo }] = await Promise.all([
+  useSanityQuery(VOYAGE_PAGE_QUERY),
+  useSanityQuery(NIVEAUX_DIFFICULTE_QUERY),
+  useSanityQuery(BADGES_QUERY),
+])
 
 const payload = ref(null)
 const slug = ref(null)
-const voyage = computed(() => (payload.value ? portagePage.versVoyageApercu(payload.value, { slug: slug.value }) : null))
+const voyage = computed(() => (payload.value
+  ? portagePage.versVoyageApercu(payload.value, { slug: slug.value, niveaux: niveaux.value || [], badges: badgesDispo.value || [] })
+  : null))
 
 // Certains composants lisent leurs props une seule fois (AccompanistsContainer
 // les réarrange au montage) : le contenu est remonté quand la structure change,
@@ -47,8 +53,10 @@ const voyage = computed(() => (payload.value ? portagePage.versVoyageApercu(payl
 const cleRendu = computed(() => {
   const p = payload.value
   if (!p) return ''
+  const acc = p.accompagnateur
   return [p.image?.ref, p.galerie.length, p.programme.length, p.hebergements.length, p.faq.length,
-    Boolean(p.accompagnateur.nom || p.accompagnateur.presentation || p.accompagnateur.photo)].join('|')
+    Boolean(acc.nom || acc.presentation || acc.photo), Boolean(acc.presentation), Boolean(p.equipeIntro),
+    p.equipe.length].join('|')
 })
 
 const surMessage = (e) => {
