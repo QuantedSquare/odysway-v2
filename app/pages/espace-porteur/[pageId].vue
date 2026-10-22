@@ -1272,27 +1272,6 @@ const surMessage = (e) => {
   background: linear-gradient(135deg, #2B4C52 0%, #237C8C 70%, #3D7B8A 100%);
   box-shadow: 0 18px 40px -22px rgba(43, 76, 82, 0.7);
 }
-.editeur-bandeau::before,
-.editeur-bandeau::after {
-  content: '';
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-}
-.editeur-bandeau::before {
-  width: 220px;
-  height: 220px;
-  right: -60px;
-  top: -80px;
-  background: radial-gradient(circle, rgba(240, 179, 72, 0.55), transparent 70%);
-}
-.editeur-bandeau::after {
-  width: 260px;
-  height: 260px;
-  right: 40px;
-  bottom: -170px;
-  background: radial-gradient(circle, rgba(219, 102, 68, 0.5), transparent 70%);
-}
 .editeur-bandeau-contenu {
   position: relative;
   z-index: 1;
