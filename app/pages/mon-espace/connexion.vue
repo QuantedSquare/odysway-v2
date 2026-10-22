@@ -1,196 +1,216 @@
 <template>
-  <!-- Un seul élément racine : un v-defaults-provider seul n'en rend pas, ce qui casse les transitions de page. -->
   <div>
+    <!-- Un seul élément racine : un v-defaults-provider seul n'en rend pas, ce qui casse les transitions de page.
+         Ce commentaire reste DANS la div : avant elle, il compterait comme second nœud racine en dev. -->
     <v-defaults-provider :defaults="{ VBtn: { class: 'text-none' } }">
       <v-container class="py-10 py-md-16 connexion">
         <v-card class="pa-6 pa-md-8 mx-auto">
           <div class="text-overline text-secondary font-weight-bold">
             Espace Voyageur
           </div>
-          <h1 class="text-h5 font-weight-bold mb-2">
-            {{ etape === 'code' ? 'Saisissez votre code' : 'Accédez à vos voyages' }}
-          </h1>
-          <p class="text-body-2 text-primary-light-2 mb-5">
-            <template v-if="etape === 'code'">
-              Nous venons d'envoyer un code à 6 chiffres à <b>{{ email }}</b>. Il est valable quelques minutes.
-            </template>
-            <template v-else-if="mode === 'motDePasse'">
-              Connectez-vous avec le mot de passe défini dans votre espace.
-            </template>
-            <template v-else>
-              Pas de compte à créer : utilisez l'adresse email de votre réservation, nous vous envoyons un code.
-            </template>
-          </p>
-
-          <v-btn-toggle
-            v-if="etape === 'email'"
-            v-model="mode"
-            mandatory
-            divided
-            density="comfortable"
-            variant="outlined"
-            color="primary"
-            rounded="pill"
-            class="mb-5 w-100 mode"
-          >
+          <template v-if="indisponible">
+            <h1 class="text-h5 font-weight-bold mb-2">
+              Espace voyageur momentanément indisponible
+            </h1>
+            <p class="text-body-2 text-primary-light-2 mb-5">
+              Nous ne pouvons pas vous connecter pour le moment. Réessayez un peu plus tard ; pour toute question sur votre voyage, notre équipe reste joignable.
+            </p>
             <v-btn
-              value="code"
-              class="flex-grow-1"
-            >
-              Recevoir un code
-            </v-btn>
-            <v-btn
-              value="motDePasse"
-              class="flex-grow-1"
-            >
-              Mot de passe
-            </v-btn>
-          </v-btn-toggle>
-
-          <v-alert
-            v-if="erreur"
-            type="error"
-            variant="tonal"
-            density="compact"
-            class="mb-4"
-          >
-            {{ erreur }}
-          </v-alert>
-
-          <v-form
-            v-if="etape === 'email' && mode === 'code'"
-            @submit.prevent="demanderCode"
-          >
-            <v-text-field
-              v-model="email"
-              label="Adresse email"
-              type="email"
-              autocomplete="email"
-              variant="outlined"
-              :rules="[v => emailValide(v) || 'Adresse email invalide']"
-              autofocus
-            />
-            <v-btn
-              type="submit"
+              to="/contact"
               color="secondary"
               rounded="pill"
               block
               size="large"
-              :loading="envoi"
-              :disabled="!emailValide(email)"
             >
-              Recevoir mon code
-            </v-btn>
-          </v-form>
-
-          <v-form
-            v-else-if="etape === 'email'"
-            @submit.prevent="seConnecterMotDePasse"
-          >
-            <v-text-field
-              v-model="email"
-              label="Adresse email"
-              type="email"
-              autocomplete="username"
-              variant="outlined"
-              :rules="[v => emailValide(v) || 'Adresse email invalide']"
-              autofocus
-            />
-            <v-text-field
-              v-model="motDePasse"
-              label="Mot de passe"
-              :type="voirMotDePasse ? 'text' : 'password'"
-              autocomplete="current-password"
-              variant="outlined"
-              :append-inner-icon="voirMotDePasse ? mdiEyeOff : mdiEye"
-              @click:append-inner="voirMotDePasse = !voirMotDePasse"
-            />
-            <v-btn
-              type="submit"
-              color="secondary"
-              rounded="pill"
-              block
-              size="large"
-              :loading="envoi"
-              :disabled="!emailValide(email) || !motDePasse"
-            >
-              Me connecter
-            </v-btn>
-            <div class="text-center mt-3">
-              <v-btn
-                variant="text"
-                size="small"
-                @click="motDePasseOublie"
-              >
-                Mot de passe oublié ? Recevoir un code
-              </v-btn>
-            </div>
-          </v-form>
-
-          <v-form
-            v-else
-            @submit.prevent="verifier"
-          >
-            <v-otp-input
-              v-model="code"
-              length="6"
-              type="number"
-              variant="outlined"
-              autofocus
-              :disabled="envoi"
-              @finish="verifier"
-            />
-            <v-btn
-              type="submit"
-              color="secondary"
-              rounded="pill"
-              block
-              size="large"
-              class="mt-4"
-              :loading="envoi"
-              :disabled="code.length !== 6"
-            >
-              Me connecter
-            </v-btn>
-            <div class="d-flex justify-space-between mt-4">
-              <v-btn
-                variant="text"
-                size="small"
-                @click="changerEmail"
-              >
-                Changer d'adresse
-              </v-btn>
-              <v-btn
-                variant="text"
-                size="small"
-                :disabled="attente > 0 || envoi"
-                @click="demanderCode"
-              >
-                {{ attente > 0 ? `Renvoyer (${attente} s)` : 'Renvoyer le code' }}
-              </v-btn>
-            </div>
-          </v-form>
-
-          <template v-if="etape === 'email'">
-            <div class="d-flex align-center ga-3 my-5 text-caption text-primary-light-2">
-              <v-divider />ou<v-divider />
-            </div>
-            <v-btn
-              variant="outlined"
-              rounded="pill"
-              block
-              size="large"
-              :prepend-icon="mdiGoogle"
-              :loading="envoiGoogle"
-              @click="google"
-            >
-              Continuer avec Google
+              Nous contacter
             </v-btn>
           </template>
+          <template v-else>
+            <h1 class="text-h5 font-weight-bold mb-2">
+              {{ etape === 'code' ? 'Saisissez votre code' : 'Accédez à vos voyages' }}
+            </h1>
+            <p class="text-body-2 text-primary-light-2 mb-5">
+              <template v-if="etape === 'code'">
+                Nous venons d'envoyer un code à 6 chiffres à <b>{{ email }}</b>. Il est valable quelques minutes.
+              </template>
+              <template v-else-if="mode === 'motDePasse'">
+                Connectez-vous avec le mot de passe défini dans votre espace.
+              </template>
+              <template v-else>
+                Pas de compte à créer : utilisez l'adresse email de votre réservation, nous vous envoyons un code.
+              </template>
+            </p>
 
-          <p class="text-caption text-primary-light-2 mt-6 mb-0">
-            Vous avez réservé avec plusieurs adresses ? Connectez-vous avec l'une d'elles, vous pourrez rattacher les autres depuis votre espace.
-          </p>
+            <v-btn-toggle
+              v-if="etape === 'email'"
+              v-model="mode"
+              mandatory
+              divided
+              density="comfortable"
+              variant="outlined"
+              color="primary"
+              rounded="pill"
+              class="mb-5 w-100 mode"
+            >
+              <v-btn
+                value="code"
+                class="flex-grow-1"
+              >
+                Recevoir un code
+              </v-btn>
+              <v-btn
+                value="motDePasse"
+                class="flex-grow-1"
+              >
+                Mot de passe
+              </v-btn>
+            </v-btn-toggle>
+
+            <v-alert
+              v-if="erreur"
+              type="error"
+              variant="tonal"
+              density="compact"
+              class="mb-4"
+            >
+              {{ erreur }}
+            </v-alert>
+
+            <v-form
+              v-if="etape === 'email' && mode === 'code'"
+              @submit.prevent="demanderCode"
+            >
+              <v-text-field
+                v-model="email"
+                label="Adresse email"
+                type="email"
+                autocomplete="email"
+                variant="outlined"
+                :rules="[v => emailValide(v) || 'Adresse email invalide']"
+                autofocus
+              />
+              <v-btn
+                type="submit"
+                color="secondary"
+                rounded="pill"
+                block
+                size="large"
+                :loading="envoi"
+                :disabled="!emailValide(email)"
+              >
+                Recevoir mon code
+              </v-btn>
+            </v-form>
+
+            <v-form
+              v-else-if="etape === 'email'"
+              @submit.prevent="seConnecterMotDePasse"
+            >
+              <v-text-field
+                v-model="email"
+                label="Adresse email"
+                type="email"
+                autocomplete="username"
+                variant="outlined"
+                :rules="[v => emailValide(v) || 'Adresse email invalide']"
+                autofocus
+              />
+              <v-text-field
+                v-model="motDePasse"
+                label="Mot de passe"
+                :type="voirMotDePasse ? 'text' : 'password'"
+                autocomplete="current-password"
+                variant="outlined"
+                :append-inner-icon="voirMotDePasse ? mdiEyeOff : mdiEye"
+                @click:append-inner="voirMotDePasse = !voirMotDePasse"
+              />
+              <v-btn
+                type="submit"
+                color="secondary"
+                rounded="pill"
+                block
+                size="large"
+                :loading="envoi"
+                :disabled="!emailValide(email) || !motDePasse"
+              >
+                Me connecter
+              </v-btn>
+              <div class="text-center mt-3">
+                <v-btn
+                  variant="text"
+                  size="small"
+                  @click="motDePasseOublie"
+                >
+                  Mot de passe oublié ? Recevoir un code
+                </v-btn>
+              </div>
+            </v-form>
+
+            <v-form
+              v-else
+              @submit.prevent="verifier"
+            >
+              <v-otp-input
+                v-model="code"
+                length="6"
+                type="number"
+                variant="outlined"
+                autofocus
+                :disabled="envoi"
+                @finish="verifier"
+              />
+              <v-btn
+                type="submit"
+                color="secondary"
+                rounded="pill"
+                block
+                size="large"
+                class="mt-4"
+                :loading="envoi"
+                :disabled="code.length !== 6"
+              >
+                Me connecter
+              </v-btn>
+              <div class="d-flex justify-space-between mt-4">
+                <v-btn
+                  variant="text"
+                  size="small"
+                  @click="changerEmail"
+                >
+                  Changer d'adresse
+                </v-btn>
+                <v-btn
+                  variant="text"
+                  size="small"
+                  :disabled="attente > 0 || envoi"
+                  @click="demanderCode"
+                >
+                  {{ attente > 0 ? `Renvoyer (${attente} s)` : 'Renvoyer le code' }}
+                </v-btn>
+              </div>
+            </v-form>
+
+            <template v-if="etape === 'email'">
+              <div class="d-flex align-center ga-3 my-5 text-caption text-primary-light-2">
+                <v-divider />ou<v-divider />
+              </div>
+              <v-btn
+                variant="outlined"
+                rounded="pill"
+                block
+                size="large"
+                :prepend-icon="mdiGoogle"
+                :loading="envoiGoogle"
+                @click="google"
+              >
+                Continuer avec Google
+              </v-btn>
+            </template>
+
+            <p class="text-caption text-primary-light-2 mt-6 mb-0">
+              Vous avez réservé avec plusieurs adresses ? Connectez-vous avec l'une d'elles, vous pourrez rattacher les autres depuis votre espace.
+            </p>
+          </template>
         </v-card>
       </v-container>
     </v-defaults-provider>
@@ -204,7 +224,7 @@ definePageMeta({ layout: 'no-footer' })
 useSeoMeta({ title: 'Connexion — Espace Voyageur', robots: 'noindex, nofollow' })
 
 const route = useRoute()
-const { init, session, envoyerCode, verifierCode, connexionMotDePasse, connexionGoogle, reprendreSuiteGoogle } = useEspace()
+const { init, session, indisponible, envoyerCode, verifierCode, connexionMotDePasse, connexionGoogle, reprendreSuiteGoogle } = useEspace()
 
 // Dernier mode choisi sur cet appareil : confort seulement.
 const CLE_MODE = 'odysway-espace-mode'
