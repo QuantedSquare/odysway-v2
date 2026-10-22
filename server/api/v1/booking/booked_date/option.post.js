@@ -1,5 +1,13 @@
 import { defineEventHandler, readBody, createError } from 'h3'
 
+// Où l'option a été posée. Le funnel la propose à deux endroits : l'étape
+// « Coordonnées » (avant les voyageurs) et l'étape « Paiement » (tout rempli).
+// Mesuré pour décider s'il faut garder l'option en fin de tunnel (19/10/2026).
+const ORIGINES_FUNNEL = {
+  debut_funnel: 'Option posée en début de tunnel (étape Coordonnées, avant les voyageurs).',
+  fin_funnel: 'Option posée en fin de tunnel (étape Paiement, voyageurs et assurance remplis).',
+}
+
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)
   if (!body?.id) {
@@ -62,9 +70,21 @@ export default defineEventHandler(async (event) => {
 
     if (error) throw createError({ statusCode: 500, statusMessage: error.message })
 
+    const crmUser = getUlysseServiceUser(event) ?? getBookingUserOrNull(event)
+    const origine = crmUser ? 'back_office' : (Object.hasOwn(ORIGINES_FUNNEL, body.origine) ? body.origine : null)
+    // Écriture à part : une colonne absente (migration pas encore jouée) ou un
+    // échec ne doit pas faire échouer une option déjà posée.
+    if (origine) {
+      const { error: origineError } = await supabase.from('booked_dates').update({ option_origine: origine }).eq('id', body.id)
+      if (origineError) console.error(`[option] origine non enregistrée pour ${body.id}:`, origineError.message)
+    }
+    if (ORIGINES_FUNNEL[origine] && bookedDate.deal_id) {
+      await activecampaign.addNote(bookedDate.deal_id, { note: { note: ORIGINES_FUNNEL[origine] } })
+        .catch(err => console.error(`[option] note AC non ajoutée au deal ${bookedDate.deal_id}:`, err?.message))
+    }
+
     // Route publique : une option posée depuis le back-office (Ulysse, par son
     // jeton) est journalisée sur la date, avec son auteur.
-    const crmUser = getUlysseServiceUser(event) ?? getBookingUserOrNull(event)
     if (crmUser) {
       await logDateActivity(bookedDate.travel_date_id, crmUser, 'option_placed', {
         booked_id: body.id, booked_places: body.booked_places, expiracy_date: data?.expiracy_date ?? null,

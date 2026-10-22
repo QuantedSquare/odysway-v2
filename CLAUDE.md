@@ -151,8 +151,16 @@ Booking records — one row per booking linked to an AC deal and a travel date.
 | `transaction_id` | text | Stripe or Alma transaction id. |
 | `is_option` | boolean | Reservation option (not yet paid). |
 | `expiracy_date` | date | Option expiry date. |
+| `option_origine` | text | Where the option was placed (`POST /booking/booked_date/option`): `debut_funnel` (« Coordonnées » step), `fin_funnel` (« Paiement » step), `back_office`. `null` before 19/10/2026. Kept after payment or expiry. |
 | `deleted`, `is_test` | boolean | **Always filter these out.** |
 | `created_at` | timestamptz | Booking creation time. |
+
+### `deal_historique`
+History of deal movements since 19/10/2026, written by the trigger `deal_historique_trg` on `activecampaign_deals` (every mirror writer is covered, no app code). One row per mirror write that changes `pipeline_id`, `stage_id`, `status`, `current_step`, `owner_id`, `total_paid` or `deleted`; an identical rewrite writes nothing. The trigger never blocks the mirror (errors become a Postgres WARNING).
+- `deal_id`, `contact`, `survenu_le` (mirror time), `ac_mdate`, `evenement` (`creation` = first write in the mirror, `mouvement`), `changements` text[].
+- State after the change: `pipeline_id`, `pipeline_title`, `stage_id`, `stage`, `status`, `current_step`, `owner_id`, `seller`, `total_paid`, `deleted`. `avant` jsonb: previous values of the changed fields.
+- Limit: webhook bursts are merged (`ac_deal_sync_queue`), two funnel steps a few seconds apart may leave one row. Nothing before 19/10/2026.
+- Replicated to the dashboard project (`supabase/dashboard/08_deal_historique.sql`).
 
 ---
 

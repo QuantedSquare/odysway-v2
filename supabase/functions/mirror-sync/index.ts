@@ -33,6 +33,7 @@ const PK: Record<string, string[]> = {
   travel_dates: ['id'],
   booked_dates: ['id', 'deal_id'],
   deal_attribution: ['deal_id'],
+  deal_historique: ['id'],
 }
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, {

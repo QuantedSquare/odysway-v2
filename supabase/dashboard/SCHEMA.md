@@ -155,8 +155,26 @@ One row per booking (deal ↔ travel_date).
 | `transaction_id` | text | Stripe or Alma transaction id. |
 | `is_option` | boolean | Reservation option (not yet paid). |
 | `expiracy_date` | date | Option expiry. |
+| `option_origine` | text | Where the option was placed: `'debut_funnel'` (contact step), `'fin_funnel'` (payment step, travellers and insurance filled), `'back_office'`. `null` before 19/10/2026. Kept after payment or expiry. |
 | `deleted`, `is_test` | boolean | Filter out in reports. |
 | `created_at` | timestamptz | Booking creation time. |
+
+### `public.deal_historique`
+History of deal movements since 19/10/2026 (written by a trigger on prod `activecampaign_deals`). One row each time the mirror row changes one of: `pipeline_id`, `stage_id`, `status`, `current_step`, `owner_id`, `total_paid`, `deleted`. `activecampaign_deals` only holds the current state: use this table to know whether a deal **went through** a stage or step.
+
+| Column | Type | Description |
+|---|---|---|
+| `id` | bigint | PK. |
+| `deal_id` | bigint | Joins to `activecampaign_deals.id`. |
+| `contact` | bigint | AC contact id. |
+| `survenu_le` | timestamptz | When the mirror recorded the change. |
+| `ac_mdate` | timestamptz | AC modification date of the recorded state. |
+| `evenement` | text | `'creation'` (first write of the deal in the mirror) or `'mouvement'`. |
+| `changements` | text[] | Tracked fields that changed (empty for `'creation'`). |
+| `pipeline_id`, `pipeline_title`, `stage_id`, `stage`, `status`, `current_step`, `owner_id`, `seller`, `total_paid`, `deleted` | | State **after** the change. |
+| `avant` | jsonb | Previous values of the changed fields only (`null` for `'creation'`). |
+
+Limit: webhook bursts are merged, so two funnel steps crossed within seconds may leave a single row. Same pipeline rules as `activecampaign_deals` (exclude 3, never mix 4 with 1/2).
 
 ---
 
