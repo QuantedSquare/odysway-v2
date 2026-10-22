@@ -31,13 +31,12 @@ const props = defineProps(['voyage', 'insurancesPrice', 'showInsurance', 'curren
 const model = defineModel()
 const emit = defineEmits(['next', 'previous'])
 
-const { trackReservationStep } = useGtmTracking()
-
 const subStep = ref('travelers')
 const subStepIndex = computed(() => subStep.value === 'travelers' ? 0 : 1)
 
+// reservation_step2 part de TravelersInfosOptions (validation des voyageurs) :
+// le repousser ici le comptait deux fois (add_to_cart dans GTM).
 const emitNext = () => {
-  trackReservationStep(2, props.voyage, model.value)
   emit('next')
 }
 
