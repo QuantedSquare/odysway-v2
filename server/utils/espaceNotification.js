@@ -20,10 +20,17 @@ const modeNotifications = (valeur) => {
   return { mode: 'coupe', adresse: null }
 }
 
-/** Un document publié, disponible, à annoncer et pas encore annoncé. */
+/** Un document publié, disponible et pas encore annoncé aux clients. */
 const aNotifierMaintenant = (doc, aujourdhui) => !!doc
-  && doc.publie && !doc.deleted_at && doc.notifier_clients !== false && !doc.notifie_le
+  && doc.publie && !doc.deleted_at && !doc.notifie_le
   && (!doc.disponible_le || String(doc.disponible_le).slice(0, 10) <= aujourdhui)
+
+/**
+ * Le couple (document, adresse) est-il déjà traité dans ce mode ? Un envoi de
+ * recette (`redirige`) ne vaut pas pour la production : la base est partagée,
+ * le client réel doit encore être prévenu. Un échec est toujours retenté.
+ */
+const dejaTraite = (statut, mode) => statut === 'envoye' || (mode === 'redirection' && statut === 'redirige')
 
 /**
  * Qui prévenir : le titulaire de chaque dossier (email du contact AC) et,
@@ -51,4 +58,33 @@ const listeDestinataires = ({ deals, fiches, voyageurs = [], reserveTitulaire })
   return [...vus.values()]
 }
 
-export default { modeNotifications, aNotifierMaintenant, listeDestinataires }
+/**
+ * Aperçu de l'annonce d'un départ : les documents à annoncer et, pour chaque
+ * adresse, les documents qu'elle n'a pas encore reçus — UN email par adresse.
+ * Les couples déjà traités (journal) sont retirés ; un document sans personne
+ * à prévenir reste dans la liste avec `destinataires: 0`.
+ * @param {{ documents: {id:string, titre:string, type?:string}[],
+ *           destinatairesParDocument: Map<string, {email:string, prenom:string|null, dealId:number}[]>,
+ *           journal?: {document_id:string, email:string, statut:string}[], mode: string }} p
+ * @returns {{ documents: {id:string, titre:string, type?:string, destinataires:number}[],
+ *             destinataires: {email:string, prenom:string|null, dealId:number, documentIds:string[]}[] }}
+ */
+const regrouperAnnonce = ({ documents, destinatairesParDocument, journal = [], mode }) => {
+  const traites = new Set(journal.filter(r => dejaTraite(r.statut, mode)).map(r => `${r.document_id}|${r.email}`))
+  const parEmail = new Map()
+  const resume = documents.map((doc) => {
+    let n = 0
+    for (const d of destinatairesParDocument.get(doc.id) || []) {
+      if (traites.has(`${doc.id}|${d.email}`)) continue
+      n++
+      if (!parEmail.has(d.email)) parEmail.set(d.email, { email: d.email, prenom: d.prenom, dealId: d.dealId, documentIds: [] })
+      const dest = parEmail.get(d.email)
+      if (!dest.prenom && d.prenom) dest.prenom = d.prenom
+      dest.documentIds.push(doc.id)
+    }
+    return { id: doc.id, titre: doc.titre, type: doc.type, destinataires: n }
+  })
+  return { documents: resume, destinataires: [...parEmail.values()] }
+}
+
+export default { modeNotifications, aNotifierMaintenant, dejaTraite, listeDestinataires, regrouperAnnonce }

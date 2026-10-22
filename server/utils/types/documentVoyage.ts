@@ -14,8 +14,6 @@ export const depotDocumentSchema = z.object({
   dealId: z.number().int().positive().nullable().optional(),
   reserveTitulaire: z.boolean().optional(),
   disponibleLe: jour.nullable().optional(),
-  // Prévenir les clients par email à la publication (oui par défaut).
-  notifier: z.boolean().optional(),
   nomFichier: z.string().trim().min(1).max(255),
   taille: z.number().int().positive().max(20 * 1024 * 1024, 'Fichier trop volumineux (20 Mo au plus).'),
   mimeType: z.enum(['application/pdf', 'image/jpeg', 'image/png'], { message: 'Format refusé : PDF, JPEG ou PNG.' }),
@@ -28,7 +26,11 @@ export const modificationDocumentSchema = z.object({
   reserveTitulaire: z.boolean().optional(),
   disponibleLe: jour.nullable().optional(),
   publie: z.boolean().optional(),
-  notifier: z.boolean().optional(),
+})
+
+/** Annonce aux clients : les documents vus dans l'aperçu, et eux seuls. */
+export const annonceDocumentsSchema = z.object({
+  documentIds: z.array(z.string().uuid()).min(1, 'Aucun document à annoncer.').max(50),
 })
 
 export type TypeDepotDocument = z.infer<typeof depotDocumentSchema>

@@ -218,28 +218,37 @@ liste toutes les places que le compte peut remplir sur ses voyages à venir.
   datés. Téléchargement par lien de 60 s, nom de fichier tiré du titre.
 - Liens permanents gardés : programme sur odysway.com, CGV, carnet en ligne (`travel_book`).
 
-**Notification email à la publication — FAIT (branche `claude/espace-notification-documents`)**
-- À la publication d'un document disponible, odysway écrit aux **titulaires des dossiers
-  actifs** du départ (ou du dossier) et, sauf document réservé au titulaire, aux
-  **voyageurs invités**. Un email par adresse et par document, jamais deux
-  (`trip_document_notifications`) ; lien vers `/mon-espace/documents`, sans jeton.
-- « Disponible le » futur : annoncé ce jour-là par la tâche planifiée
-  `POST /api/v1/webhooks/espace/notifier-documents` (`x-cron-secret`), qui retente
-  aussi les échecs Brevo. **À planifier chaque matin.**
-- L'équipe peut publier sans prévenir (case décochée dans Ulysse). Dépublier puis
-  republier ne renvoie rien.
+**Annonce aux clients — FAIT (branche `claude/espace-notification-documents`, Ulysse `claude/documents-voyage`)**
+- **Publier n'envoie rien** (décision d'Alex). Sur la fiche départ d'Ulysse, les documents
+  publiés, disponibles et pas encore annoncés portent la mention « à annoncer ». Le bouton
+  « 📧 Prévenir les clients… » ouvre un aperçu : documents concernés, destinataires et ce
+  que chacun recevra, mode d'envoi. Après confirmation, **un seul email récapitulatif
+  par client** (`nouveauxDocuments`), lien vers `/mon-espace/documents`, sans jeton.
+- Destinataires : **titulaires des dossiers actifs** du départ (ou du seul dossier visé)
+  et, sauf document réservé au titulaire, les **voyageurs invités** ; une adresse une fois.
+- `GET /api/v1/ulysse/dates/:dateId/annonce` (aperçu, n'écrit rien) ;
+  `POST …/annonce` `{ documentIds }` : n'envoie que les documents vus dans l'aperçu
+  (un document publié entre-temps attend le clic suivant). Journal par couple
+  (document, adresse) dans `trip_document_notifications` : rejouer l'appel n'envoie rien
+  de plus, un échec Brevo est reproposé. `notifie_le` posé quand plus aucune adresse du
+  document n'est en échec. Logique pure : `espaceNotification.regrouperAnnonce`.
+- « Disponible le » futur : le document n'est proposé qu'à partir de cette date. Plus de
+  tâche planifiée ni d'envoi automatique.
 - **Garde-fou** : `ESPACE_NOTIFICATIONS`, jamais déduit de l'environnement (dev partage
   la base de prod, donc les vrais clients) :
-  - absente → rien ne part, le document est marqué traité, tout est journalisé (`ignore`) ;
+  - absente → l'aperçu s'affiche, l'envoi répond 409, rien n'est écrit ;
   - `redirection:<email>` → tout part vers cette adresse, sujet préfixé
-    `[Recette → client@…]` ;
+    `[Recette → client@…]` ; journalisé `redirige`, ce qui **ne compte pas** en
+    production (le document reste à annoncer, `notifie_le` n'est pas posé) ;
   - `actif` → les clients sont prévenus. **À ne poser qu'en production.**
+- Migration `…_espace_annonce_sans_notifier_clients.sql` : supprime
+  `trip_documents.notifier_clients` (plus utilisée). À appliquer après déploiement.
 
 **Reste à faire**
 - Contrat d'assurance Chapka et factures clients : pas de génération automatique ;
   déposés à la main. Date d'acceptation des CGV : non stockée.
-- Regrouper plusieurs publications du même jour en un seul email (aujourd'hui : un
-  email par document).
+- Écarter un document de l'annonce pour de bon (correction d'un document déjà connu) :
+  aujourd'hui il reste « à annoncer » tant qu'on ne l'envoie pas.
 
 ### 4.5 Activation et relances
 
