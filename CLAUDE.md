@@ -101,6 +101,8 @@ Ulysse (the back-office replacing /booking-management) calls these with `x-ulyss
 
 A porteur (`ulysse.porteurs`) invited from Ulysse writes their portage page without Studio access. Magic link `?t=<porteurId>.<exp>.<hmac>` exchanged for an httpOnly cookie (`server/utils/espacePorteur.js`). Draft in `portage_pages`, autosaved; images go to Sanity assets; the preview (`/espace-porteur/apercu/:id`, iframe) renders `PortagePageContent`, the same component as `/portage/<slug>`. Submission writes `drafts.voyage-portage-<pageId>` (`shared/portagePage.js` maps only the porteur's fields; slug, BMS reference, destinations, prices stay Odysway's) + Slack alert. Odysway completes and publishes in the Studio; status becomes `publie` when the published doc exists with no draft.
 
+Dates (`/espace-porteur/dates/:pageId`, `server/utils/datesPorteur.js`, rules in `shared/portageDates.js`): the porteur proposes dates (`portage_propositions_dates`) and sees each departure's fill rate (counts only, never who signed up). Odysway accepts in Ulysse › Portage › Dates proposées, which creates the `travel_dates` row through the pont (never `is_custom_travel`: `/portage/<slug>` only lists dates with `is_custom_travel = false`), then calls `POST /api/v1/ulysse/portage/propositions/:id/decision` (Brevo email to the porteur).
+
 ## Pipeline logic — the most important concept
 
 `pipeline_id` is the primary segmentation axis for deals. Understand this before writing any dashboard.
@@ -280,6 +282,9 @@ Tracks Alma payment IDs to prevent duplicate processing.
 
 ### `portage_porteurs` / `portage_pages`
 Espace porteur (see above). `portage_porteurs`: `porteur_id` (= `ulysse.porteurs.id`), `nom`, `email` sent by Ulysse with the invitation, `invite_le`, `invite_par`, `revoque_le` (access cut). `portage_pages`: `porteur_id`, `statut` (`brouillon` | `soumis` | `publie`), `payload` jsonb (form draft), `revision` (optimistic lock, 409), `sanity_id` (published id, no `drafts.`), `slug`, `soumis_le`, `publie_le`. RLS on, no policy: server only.
+
+### `portage_propositions_dates`
+Dates proposed by a porteur from the Espace porteur. `page_id` (portage_pages), `porteur_id`, `depart`, `retour`, `participants_min`, `participants_max`, `prix_souhaite` (euro cents), `note`, `statut` (`proposee` | `acceptee` | `refusee` | `retiree`), `reponse` (Odysway's message), `travel_date_id` (date created on acceptance), `traite_par`, `traite_le`. RLS on, no policy: server only (Ulysse reads it with its service key).
 
 ### `partnership_requests`
 Demandes reçues par le formulaire de `/portage` (`POST /api/v1/partenariat/demande`, ex-`/partenariat`, redirigée en 301). Une ligne par envoi, écrite AVANT les appels AC : le lead est gardé même si AC tombe.

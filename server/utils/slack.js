@@ -111,4 +111,16 @@ const alertPortagePage = ({ porteur, email, titre, miseAJour, lienStudio }) =>
     + `${miseAJour ? '' : 'À compléter avant publication : référence BMS, destination(s), puis « Publier la page ».\n'}`
     + `<${lienStudio}|Relire et publier dans le Studio>`)
 
-export default { send, urlPortage, alertPaymentOnDeletedBooking, alertOrphanPayment, alertCascadeLeak, alertPartnershipRequest, alertPortagePage }
+/**
+ * Un porteur propose une date pour son séjour depuis l'Espace porteur : à
+ * accepter (la date se crée) ou refuser dans Ulysse › Portage. Canal portage.
+ */
+const alertPortageDate = ({ porteur, titre, depart, retour, participants, prix, note }) =>
+  send(urlPortage(),
+    `:calendar: *Date proposée par un porteur*\n`
+    + `• ${porteur}  ·  ${titre}\n`
+    + `• Du ${depart} au ${retour}${participants ? `  ·  ${participants}` : ''}${prix ? `  ·  ${prix} / pers. souhaité` : ''}\n`
+    + `${note ? `> ${note.replace(/[\r\n]+/g, ' ').slice(0, 400)}\n` : ''}`
+    + 'À accepter ou refuser dans Ulysse › Portage › Dates proposées.')
+
+export default { send, urlPortage, alertPaymentOnDeletedBooking, alertOrphanPayment, alertCascadeLeak, alertPartnershipRequest, alertPortagePage, alertPortageDate }
