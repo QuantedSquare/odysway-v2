@@ -16,7 +16,9 @@ const LIMITES = {
   texteCourt: 160,
   texteLong: 6000,
   galerie: 24,
+  videos: 6,
   programme: 30,
+  equipe: 6,
   hebergements: 10,
   photosHebergement: 8,
   listeItems: 40,
@@ -25,6 +27,7 @@ const LIMITES = {
 
 const REF_IMAGE = /^image-[a-f0-9]{40}-\d{1,5}x\d{1,5}-[a-z0-9]{2,5}$/
 const CLE = /^[A-Za-z0-9]{1,24}$/
+const ID_SANITY = /^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$/
 
 const texte = (valeur, max) => (typeof valeur === 'string' ? valeur.replace(/\r\n?/g, '\n').trim().slice(0, max) : '')
 
@@ -38,6 +41,25 @@ const image = (brute, { alt = false } = {}) => {
   const ref = typeof brute?.ref === 'string' ? brute.ref : ''
   if (!REF_IMAGE.test(ref)) return null
   return alt ? { ref, alt: texte(brute.alt, LIMITES.texteCourt) } : { ref }
+}
+
+// VideoDialog charge le lien tel quel dans une iframe : seuls YouTube et Vimeo,
+// ramenés à leur adresse d'intégration (celle que le Studio contient déjà).
+const VIDEOS = [
+  [/^https?:\/\/(?:www\.|m\.)?youtube(?:-nocookie)?\.com\/(?:watch\?(?:[^#]*&)?v=|embed\/|shorts\/|live\/)([\w-]{11})/, id => `https://www.youtube.com/embed/${id}`],
+  [/^https?:\/\/youtu\.be\/([\w-]{11})/, id => `https://www.youtube.com/embed/${id}`],
+  [/^https?:\/\/(?:www\.)?vimeo\.com\/(?:video\/)?(\d{6,12})/, id => `https://player.vimeo.com/video/${id}`],
+  [/^https?:\/\/player\.vimeo\.com\/video\/(\d{6,12})/, id => `https://player.vimeo.com/video/${id}`],
+]
+
+/** Lien YouTube ou Vimeo → adresse d'intégration ; `null` si non reconnu. */
+const lienVideo = (brut) => {
+  const url = texte(brut, 300)
+  for (const [motif, integrer] of VIDEOS) {
+    const m = motif.exec(url)
+    if (m) return integrer(m[1])
+  }
+  return null
 }
 
 const liste = (brute, max) => (Array.isArray(brute) ? brute.slice(0, max) : [])
@@ -61,10 +83,17 @@ const vide = () => ({
   accroche: '',
   dureeJours: null,
   prixIndicatif: null,
+  niveau: null,
   image: null,
+  imageSecondaire: null,
   galerie: [],
+  videos: [],
   accompagnateur: { nom: '', role: '', presentation: '', photo: null },
+  equipeIntro: '',
+  equipe: [],
   mot: '',
+  motSignature: '',
+  pointsForts: [],
   programme: [],
   hebergements: [],
   inclus: [],
@@ -77,26 +106,37 @@ const nettoyer = (brut) => {
   const p = brut && typeof brut === 'object' ? brut : {}
   const acc = p.accompagnateur && typeof p.accompagnateur === 'object' ? p.accompagnateur : {}
   const lignes = (valeur, max) => liste(valeur, max).map(l => texte(l, LIMITES.texteCourt * 2)).filter(Boolean)
+  const personne = brute => ({
+    nom: texte(brute?.nom, LIMITES.texteCourt),
+    role: texte(brute?.role, LIMITES.texteCourt),
+    presentation: texte(brute?.presentation, LIMITES.texteLong),
+    photo: image(brute?.photo),
+  })
 
   return {
     titre: texte(p.titre, LIMITES.titre),
     accroche: texte(p.accroche, LIMITES.accroche),
     dureeJours: nombre(p.dureeJours, { min: 1, max: 90 }),
     prixIndicatif: nombre(p.prixIndicatif, { min: 1, max: 100000 }),
+    niveau: typeof p.niveau === 'string' && ID_SANITY.test(p.niveau) ? p.niveau : null,
     image: image(p.image, { alt: true }),
+    imageSecondaire: image(p.imageSecondaire, { alt: true }),
     galerie: avecCles(liste(p.galerie, LIMITES.galerie).map(i => ({ cle: i?.cle, ...image(i, { alt: true }) })), 'g')
       .filter(i => i.ref),
-    accompagnateur: {
-      nom: texte(acc.nom, LIMITES.texteCourt),
-      role: texte(acc.role, LIMITES.texteCourt),
-      presentation: texte(acc.presentation, LIMITES.texteLong),
-      photo: image(acc.photo),
-    },
+    videos: [...new Set(liste(p.videos, LIMITES.videos).map(lienVideo).filter(Boolean))],
+    accompagnateur: personne(acc),
+    equipeIntro: texte(p.equipeIntro, LIMITES.texteLong),
+    equipe: avecCles(liste(p.equipe, LIMITES.equipe).map(a => ({ cle: a?.cle, ...personne(a) })), 'a'),
     mot: texte(p.mot, LIMITES.texteLong),
+    motSignature: texte(p.motSignature, LIMITES.texteCourt),
+    pointsForts: lignes(p.pointsForts, LIMITES.listeItems),
     programme: avecCles(liste(p.programme, LIMITES.programme).map(j => ({
       cle: j?.cle,
+      etiquette: texte(j?.etiquette, 40),
       titre: texte(j?.titre, LIMITES.texteCourt),
       texte: texte(j?.texte, LIMITES.texteLong),
+      denivele: texte(j?.denivele, LIMITES.texteCourt),
+      trajet: texte(j?.trajet, LIMITES.texteCourt),
       nuit: texte(j?.nuit, LIMITES.texteCourt),
       photo: image(j?.photo),
     })), 'j'),
@@ -143,14 +183,28 @@ const slugifier = titre => String(titre || '')
 // --- Texte libre → Portable Text ----------------------------------------------
 //
 // Le porteur écrit du texte simple : une ligne = un paragraphe, une ligne qui
-// commence par « - », « • » ou « * » = un élément de liste à puces.
+// commence par « - », « • » ou « * » = un élément de liste à puces ;
+// « **gras** » et « *italique* » deviennent les marques du Studio.
 
 const PUCE = /^\s*[-•*]\s+/
+const MARQUES = /\*\*(.+?)\*\*|\*(.+?)\*/g
+
+const segments = (cle, contenu) => {
+  const morceaux = []
+  let fin = 0
+  for (const m of contenu.matchAll(MARQUES)) {
+    if (m.index > fin) morceaux.push({ text: contenu.slice(fin, m.index), marks: [] })
+    morceaux.push({ text: m[1] ?? m[2], marks: [m[1] === undefined ? 'em' : 'strong'] })
+    fin = m.index + m[0].length
+  }
+  if (fin < contenu.length || !morceaux.length) morceaux.push({ text: contenu.slice(fin), marks: [] })
+  return morceaux.map((s, i) => ({ _key: i ? `${cle}s${i}` : `${cle}s`, _type: 'span', marks: s.marks, text: s.text }))
+}
 
 const bloc = (cle, contenu, puce) => ({
   _key: cle,
   _type: 'block',
-  children: [{ _key: `${cle}s`, _type: 'span', marks: [], text: contenu }],
+  children: segments(cle, contenu),
   markDefs: [],
   style: 'normal',
   ...(puce ? { level: 1, listItem: 'bullet' } : {}),
@@ -182,34 +236,48 @@ const imageSanity = (img, { cle, alt = false } = {}) => (img?.ref
 // Tout le reste du document (référence BMS, destinations, badges, SEO, prix
 // réels, dates…) appartient à Odysway et n'est jamais touché par une soumission.
 
+// Le porteur est le premier accompagnateur (`_key: 'porteur'`) : son nom, son
+// rôle et sa photo signent aussi le mot (PortagePageContent).
+const CLE_PORTEUR = 'porteur'
+
+const accompagnant = (a, cle) => (a.nom || a.presentation || a.photo
+  ? {
+      _key: cle,
+      name: a.nom || undefined,
+      role: a.role || undefined,
+      description: a.presentation ? texteEnBlocs(a.presentation, `${cle}d`) : undefined,
+      image: imageSanity(a.photo),
+    }
+  : null)
+
 const champsPorteur = (payload) => {
   const p = nettoyer(payload)
-  const acc = p.accompagnateur
-  const accompagnant = acc.nom || acc.presentation || acc.photo
-    ? [{
-        _key: 'porteur',
-        name: acc.nom || undefined,
-        role: acc.role || undefined,
-        description: acc.presentation ? texteEnBlocs(acc.presentation, 'acc') : undefined,
-        image: imageSanity(acc.photo),
-      }]
-    : undefined
+  const accompagnants = [accompagnant(p.accompagnateur, CLE_PORTEUR), ...p.equipe.map(a => accompagnant(a, a.cle))].filter(Boolean)
 
   return {
     title: p.titre,
     description: p.accroche || undefined,
     duration: p.dureeJours ?? (p.programme.length || undefined),
+    difficultyLevel: p.niveau ? { _type: 'reference', _ref: p.niveau } : undefined,
     image: imageSanity(p.image, { alt: true }),
+    imageSecondary: imageSanity(p.imageSecondaire, { alt: true }),
     photosList: p.galerie.length ? p.galerie.map(i => imageSanity(i, { cle: i.cle, alt: true })) : undefined,
-    authorNote: p.mot ? { text: texteEnBlocs(p.mot, 'mot') } : undefined,
-    accompanistsList: accompagnant,
+    videoLinks: p.videos.length ? p.videos : undefined,
+    authorNote: p.mot || p.motSignature
+      ? { text: p.mot ? texteEnBlocs(p.mot, 'mot') : undefined, affixeAuthor: p.motSignature || undefined }
+      : undefined,
+    experiencesBlock: p.pointsForts.length ? listeEnBlocs(p.pointsForts, 'pf') : undefined,
+    accompanistsDescription: p.equipeIntro ? texteEnBlocs(p.equipeIntro, 'eq') : undefined,
+    accompanistsList: accompagnants.length ? accompagnants : undefined,
     programmeBlock: p.programme.length
       ? p.programme.map((j, i) => ({
           _key: j.cle,
           title: j.titre || undefined,
-          badgeText: `JOUR ${i + 1}`,
+          badgeText: j.etiquette || `JOUR ${i + 1}`,
           description: j.texte ? texteEnBlocs(j.texte, j.cle) : undefined,
           photo: imageSanity(j.photo),
+          denivellation: j.denivele || undefined,
+          road: j.trajet || undefined,
           night: j.nuit || undefined,
         }))
       : undefined,
@@ -256,11 +324,13 @@ const SYSTEME = ['_id', '_rev', '_createdAt', '_updatedAt']
 const versDocumentSanity = (payload, { sanityId, slug, base = null }) => {
   const b = { ...(base || {}) }
   for (const champ of SYSTEME) delete b[champ]
-  const { startingPrice, duration, authorNote, ...champs } = champsPorteur(payload)
-  // L'auteur et son affixe, s'il y en a, sont posés par Odysway : seul le texte
-  // est au porteur.
+  const { startingPrice, duration, authorNote, difficultyLevel, imageSecondary, videoLinks, ...champs } = champsPorteur(payload)
+  // Le texte du mot est au porteur. L'auteur (membre de l'équipe) est posé par
+  // Odysway ; l'affixe aussi, tant que le porteur n'écrit pas le sien.
   const note = { ...(b.authorNote || {}) }
   delete note.text
+  if (authorNote?.text) note.text = authorNote.text
+  if (authorNote?.affixeAuthor) note.affixeAuthor = authorNote.affixeAuthor
 
   const doc = {
     ...b,
@@ -270,10 +340,14 @@ const versDocumentSanity = (payload, { sanityId, slug, base = null }) => {
     availabilityTypes: ['custom'],
     portage: true,
     customPagePublished: b.customPagePublished === true,
-    // Prix et durée indicatifs : sans valeur du porteur, on garde celle d'Odysway.
+    // Prix, durée, niveau, image secondaire et vidéos : sans valeur du porteur,
+    // on garde celle qu'Odysway a pu poser dans le Studio.
     pricing: { ...(b.pricing || {}), startingPrice: startingPrice ?? b.pricing?.startingPrice },
     duration: duration ?? b.duration,
-    authorNote: authorNote || Object.keys(note).length ? { ...note, ...authorNote } : undefined,
+    difficultyLevel: difficultyLevel ?? b.difficultyLevel,
+    imageSecondary: imageSecondary ?? b.imageSecondary,
+    videoLinks: videoLinks ?? b.videoLinks,
+    authorNote: Object.keys(note).length ? note : undefined,
   }
   // Un champ vidé par le porteur disparaît aussi du document.
   for (const [champ, valeur] of Object.entries(champs)) doc[champ] = valeur
@@ -285,8 +359,8 @@ const versDocumentSanity = (payload, { sanityId, slug, base = null }) => {
  * depuis le brouillon : même forme que VOYAGE_QUERY (app/utils/voyagePageQueries.js),
  * asset d'image déplié comme le fait la requête.
  */
-const versVoyageApercu = (payload, { slug } = {}) => {
-  const { startingPrice, ...champs } = champsPorteur(payload)
+const versVoyageApercu = (payload, { slug, niveaux = [] } = {}) => {
+  const { startingPrice, difficultyLevel, ...champs } = champsPorteur(payload)
   const deplier = img => (img?.asset?._ref ? { ...img, asset: { _ref: img.asset._ref, _id: img.asset._ref, _type: 'sanity.imageAsset' } } : img)
   const voyage = sansIndefinis({
     _id: 'apercu-portage',
@@ -300,6 +374,9 @@ const versVoyageApercu = (payload, { slug } = {}) => {
     badges: [],
     ...champs,
   })
+  // VOYAGE_QUERY déréférence le niveau : `niveaux` est la liste lue dans Sanity.
+  const niveau = difficultyLevel && niveaux.find(n => n._id === difficultyLevel._ref)
+  if (niveau) voyage.difficultyLevel = { title: niveau.title, level: niveau.level, description: niveau.description }
   if (voyage.image) voyage.image = deplier(voyage.image)
   // DayCard exige une description : un jour sans texte en reçoit une vide.
   for (const jour of voyage.programmeBlock || []) jour.description ??= []
@@ -308,8 +385,10 @@ const versVoyageApercu = (payload, { slug } = {}) => {
 
 export default {
   LIMITES,
+  CLE_PORTEUR,
   vide,
   nettoyer,
+  lienVideo,
   manques,
   slugifier,
   texteEnBlocs,

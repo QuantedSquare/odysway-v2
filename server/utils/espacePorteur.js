@@ -224,7 +224,12 @@ const soumettre = async (porteur, pageId) => {
   const [brouillon, publie] = await Promise.all([client.getDocument(`drafts.${sanityId}`), client.getDocument(sanityId)])
   const base = brouillon || publie || null
   const slug = base?.slug?.current || await slugLibre(client, portagePage.slugifier(page.payload.titre), sanityId)
-  const doc = portagePage.versDocumentSanity(page.payload, { sanityId, slug, base })
+  // Une référence vers un niveau inexistant ferait échouer l'écriture : le
+  // niveau est vérifié, sinon ignoré (celui d'Odysway reste).
+  const niveauConnu = page.payload.niveau
+    && await client.fetch('count(*[_type == "difficultyLevel" && _id == $id])', { id: page.payload.niveau })
+  const payload = niveauConnu ? page.payload : { ...page.payload, niveau: null }
+  const doc = portagePage.versDocumentSanity(payload, { sanityId, slug, base })
 
   try {
     await client.createOrReplace(doc)

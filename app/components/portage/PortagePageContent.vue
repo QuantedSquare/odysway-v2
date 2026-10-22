@@ -31,7 +31,7 @@
       <StickyContainer>
         <template #left-side>
           <LazyAuthorNote
-            :author-note="voyage.authorNote"
+            :author-note="authorNote"
             :page="page"
           />
 
@@ -98,7 +98,9 @@
 // Corps de la page d'un séjour en portage (/portage/<slug>). Partagé avec
 // l'aperçu de l'Espace porteur (/espace-porteur/apercu/<id>), qui le nourrit du
 // brouillon du porteur : les deux affichent exactement les mêmes composants.
-defineProps({
+import portagePage from '#shared/portagePage.js'
+
+const props = defineProps({
   voyage: {
     type: Object,
     required: true,
@@ -107,5 +109,15 @@ defineProps({
     type: Object,
     required: true,
   },
+})
+
+// Le mot est celui du porteur : sans membre de l'équipe Odysway choisi comme
+// auteur dans le Studio, il est signé du nom, du rôle et de la photo du porteur
+// (sa fiche accompagnateur, la première de la liste).
+const authorNote = computed(() => {
+  const note = props.voyage.authorNote
+  const porteur = props.voyage.accompanistsList?.[0]
+  if (!note?.text || note.author || porteur?._key !== portagePage.CLE_PORTEUR || !porteur.name) return note
+  return { ...note, author: { name: porteur.name, position: porteur.role, image: porteur.image } }
 })
 </script>

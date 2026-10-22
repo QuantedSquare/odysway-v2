@@ -120,6 +120,16 @@ export const VOYAGE_QUERY = `
   }
 `
 
+// Niveaux de difficulté, pour le choix du porteur dans l'Espace porteur.
+export const NIVEAUX_DIFFICULTE_QUERY = `
+  *[_type == "difficultyLevel"] | order(level asc){
+    _id,
+    title,
+    level,
+    description
+  }
+`
+
 export const VOYAGE_PROPOSITIONS_QUERY = `
   *[_type == "voyage" && (
         !('custom' in availabilityTypes) ||
