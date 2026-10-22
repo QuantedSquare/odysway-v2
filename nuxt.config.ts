@@ -127,6 +127,12 @@ export default defineNuxtConfig({
       '/confirmation': { isr: 60 * 60 * 24 * 5 },
     }),
 
+    // Espace porteur : rendu dans le navigateur seul, jamais en cache, jamais
+    // indexé. Le lien magique porte le jeton en query : la page le retire de
+    // l'adresse dès l'échange contre le cookie, et aucun Referer ne le transmet.
+    '/espace-porteur': { ssr: false, robots: false, headers: { 'cache-control': 'no-store, private', 'referrer-policy': 'no-referrer' } },
+    '/espace-porteur/**': { ssr: false, robots: false, headers: { 'cache-control': 'no-store, private', 'referrer-policy': 'no-referrer' } },
+
     // Redirect legacy or non-existent index to listing page
     '/search': { redirect: { to: '/voyages', statusCode: 301 } },
     '/calendly': { redirect: { to: '/rdv-projet-voyage', statusCode: 301 } },
