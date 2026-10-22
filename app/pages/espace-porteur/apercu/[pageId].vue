@@ -35,15 +35,16 @@ useHead({ title: 'Aperçu', meta: [{ name: 'robots', content: 'noindex, nofollow
 
 const route = useRoute()
 const { api } = useEspacePorteur()
-const [{ data: page }, { data: niveaux }] = await Promise.all([
+const [{ data: page }, { data: niveaux }, { data: badgesDispo }] = await Promise.all([
   useSanityQuery(VOYAGE_PAGE_QUERY),
   useSanityQuery(NIVEAUX_DIFFICULTE_QUERY),
+  useSanityQuery(BADGES_QUERY),
 ])
 
 const payload = ref(null)
 const slug = ref(null)
 const voyage = computed(() => (payload.value
-  ? portagePage.versVoyageApercu(payload.value, { slug: slug.value, niveaux: niveaux.value || [] })
+  ? portagePage.versVoyageApercu(payload.value, { slug: slug.value, niveaux: niveaux.value || [], badges: badgesDispo.value || [] })
   : null))
 
 // Certains composants lisent leurs props une seule fois (AccompanistsContainer

@@ -19,6 +19,7 @@ const LIMITES = {
   videos: 6,
   programme: 30,
   equipe: 6,
+  badges: 8,
   hebergements: 10,
   photosHebergement: 8,
   listeItems: 40,
@@ -28,6 +29,8 @@ const LIMITES = {
 const REF_IMAGE = /^image-[a-f0-9]{40}-\d{1,5}x\d{1,5}-[a-z0-9]{2,5}$/
 const CLE = /^[A-Za-z0-9]{1,24}$/
 const ID_SANITY = /^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$/
+// Une référence vise toujours un document publié, jamais son brouillon.
+const idPublie = id => typeof id === 'string' && ID_SANITY.test(id) && !id.startsWith('drafts.')
 
 const texte = (valeur, max) => (typeof valeur === 'string' ? valeur.replace(/\r\n?/g, '\n').trim().slice(0, max) : '')
 
@@ -84,6 +87,7 @@ const vide = () => ({
   dureeJours: null,
   prixIndicatif: null,
   niveau: null,
+  badges: [],
   image: null,
   imageSecondaire: null,
   galerie: [],
@@ -118,7 +122,11 @@ const nettoyer = (brut) => {
     accroche: texte(p.accroche, LIMITES.accroche),
     dureeJours: nombre(p.dureeJours, { min: 1, max: 90 }),
     prixIndicatif: nombre(p.prixIndicatif, { min: 1, max: 100000 }),
-    niveau: typeof p.niveau === 'string' && ID_SANITY.test(p.niveau) ? p.niveau : null,
+    niveau: idPublie(p.niveau) ? p.niveau : null,
+    // Badges choisis dans la liste d'Odysway ({var1}/{var2} remplis par le porteur).
+    badges: avecCles(liste(p.badges, LIMITES.badges)
+      .filter(b => idPublie(b?.badge))
+      .map(b => ({ cle: b.cle, badge: b.badge, var1: texte(b.var1, 60), var2: texte(b.var2, 60) })), 'b'),
     image: image(p.image, { alt: true }),
     imageSecondaire: image(p.imageSecondaire, { alt: true }),
     galerie: avecCles(liste(p.galerie, LIMITES.galerie).map(i => ({ cle: i?.cle, ...image(i, { alt: true }) })), 'g')
@@ -259,6 +267,14 @@ const champsPorteur = (payload) => {
     description: p.accroche || undefined,
     duration: p.dureeJours ?? (p.programme.length || undefined),
     difficultyLevel: p.niveau ? { _type: 'reference', _ref: p.niveau } : undefined,
+    badges: p.badges.length
+      ? p.badges.map(b => ({
+          _key: b.cle,
+          badge: { _type: 'reference', _ref: b.badge },
+          variable1Value: b.var1 || undefined,
+          variable2Value: b.var2 || undefined,
+        }))
+      : undefined,
     image: imageSanity(p.image, { alt: true }),
     imageSecondary: imageSanity(p.imageSecondaire, { alt: true }),
     photosList: p.galerie.length ? p.galerie.map(i => imageSanity(i, { cle: i.cle, alt: true })) : undefined,
@@ -324,7 +340,7 @@ const SYSTEME = ['_id', '_rev', '_createdAt', '_updatedAt']
 const versDocumentSanity = (payload, { sanityId, slug, base = null }) => {
   const b = { ...(base || {}) }
   for (const champ of SYSTEME) delete b[champ]
-  const { startingPrice, duration, authorNote, difficultyLevel, imageSecondary, videoLinks, ...champs } = champsPorteur(payload)
+  const { startingPrice, duration, authorNote, difficultyLevel, badges, imageSecondary, videoLinks, ...champs } = champsPorteur(payload)
   // Le texte du mot est au porteur. L'auteur (membre de l'équipe) est posé par
   // Odysway ; l'affixe aussi, tant que le porteur n'écrit pas le sien.
   const note = { ...(b.authorNote || {}) }
@@ -340,11 +356,12 @@ const versDocumentSanity = (payload, { sanityId, slug, base = null }) => {
     availabilityTypes: ['custom'],
     portage: true,
     customPagePublished: b.customPagePublished === true,
-    // Prix, durée, niveau, image secondaire et vidéos : sans valeur du porteur,
-    // on garde celle qu'Odysway a pu poser dans le Studio.
+    // Prix, durée, niveau, badges, image secondaire et vidéos : sans valeur du
+    // porteur, on garde celle qu'Odysway a pu poser dans le Studio.
     pricing: { ...(b.pricing || {}), startingPrice: startingPrice ?? b.pricing?.startingPrice },
     duration: duration ?? b.duration,
     difficultyLevel: difficultyLevel ?? b.difficultyLevel,
+    badges: badges ?? b.badges,
     imageSecondary: imageSecondary ?? b.imageSecondary,
     videoLinks: videoLinks ?? b.videoLinks,
     authorNote: Object.keys(note).length ? note : undefined,
@@ -359,8 +376,8 @@ const versDocumentSanity = (payload, { sanityId, slug, base = null }) => {
  * depuis le brouillon : même forme que VOYAGE_QUERY (app/utils/voyagePageQueries.js),
  * asset d'image déplié comme le fait la requête.
  */
-const versVoyageApercu = (payload, { slug, niveaux = [] } = {}) => {
-  const { startingPrice, difficultyLevel, ...champs } = champsPorteur(payload)
+const versVoyageApercu = (payload, { slug, niveaux = [], badges: badgesDispo = [] } = {}) => {
+  const { startingPrice, difficultyLevel, badges, ...champs } = champsPorteur(payload)
   const deplier = img => (img?.asset?._ref ? { ...img, asset: { _ref: img.asset._ref, _id: img.asset._ref, _type: 'sanity.imageAsset' } } : img)
   const voyage = sansIndefinis({
     _id: 'apercu-portage',
@@ -371,8 +388,12 @@ const versVoyageApercu = (payload, { slug, niveaux = [] } = {}) => {
     customPagePublished: true,
     closingDays: 30,
     pricing: { startingPrice: startingPrice ?? null },
-    badges: [],
     ...champs,
+    // VOYAGE_QUERY déréférence les badges : `badgesDispo` est la liste lue dans Sanity.
+    badges: (badges || []).flatMap((b) => {
+      const badge = badgesDispo.find(d => d._id === b.badge._ref)
+      return badge ? [{ ...b, badge: { _id: badge._id, title: badge.title, text: badge.text, picto: badge.picto } }] : []
+    }),
   })
   // VOYAGE_QUERY déréférence le niveau : `niveaux` est la liste lue dans Sanity.
   const niveau = difficultyLevel && niveaux.find(n => n._id === difficultyLevel._ref)

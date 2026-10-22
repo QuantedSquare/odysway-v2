@@ -220,3 +220,33 @@ test('versDocumentSanity : niveau, image secondaire, vidéos et affixe d\'Odyswa
   const remplace = versDocumentSanity({ ...payload, motSignature: 'autre' }, { sanityId: 'v', slug: 's', base })
   assert.equal(remplace.authorNote.affixeAuthor, 'autre')
 })
+
+test('badges : références Sanity avec variables, repli sur ceux d\'Odysway, dépliés dans l\'aperçu', () => {
+  const choix = {
+    ...payload,
+    badges: [
+      { cle: 'b1', badge: '41b65048-36df-402d-8329-1efa979999f0', var1: '6', var2: '12' },
+      { cle: 'b2', badge: 'cc32cb3d-1f71-4110-a40b-56df53d9f10d', var1: '8 jours' },
+      { cle: 'b3', badge: 'pas un id !' },
+      { cle: 'b4', badge: null },
+    ],
+  }
+  assert.equal(nettoyer(choix).badges.length, 2)
+  const doc = versDocumentSanity(choix, { sanityId: 'v', slug: 's' })
+  assert.deepEqual(doc.badges, [
+    { _key: 'b1', badge: { _type: 'reference', _ref: '41b65048-36df-402d-8329-1efa979999f0' }, variable1Value: '6', variable2Value: '12' },
+    { _key: 'b2', badge: { _type: 'reference', _ref: 'cc32cb3d-1f71-4110-a40b-56df53d9f10d' }, variable1Value: '8 jours' },
+  ])
+  const odysway = [{ _key: 'o', badge: { _type: 'reference', _ref: 'badge-odysway' } }]
+  assert.deepEqual(versDocumentSanity(payload, { sanityId: 'v', slug: 's', base: { badges: odysway } }).badges, odysway)
+
+  const badges = [{ _id: '41b65048-36df-402d-8329-1efa979999f0', title: 'Badge Groupe', text: 'Groupe de {var1} à {var2} personnes', picto: null }]
+  const apercu = versVoyageApercu(choix, { badges })
+  assert.deepEqual(apercu.badges.map(b => [b.badge.text, b.variable1Value, b.variable2Value]), [['Groupe de {var1} à {var2} personnes', '6', '12']])
+  assert.deepEqual(versVoyageApercu(payload).badges, [])
+})
+
+test('niveau et badges : jamais une référence vers un brouillon Sanity', () => {
+  assert.equal(nettoyer({ niveau: 'drafts.fbd1deb6' }).niveau, null)
+  assert.deepEqual(nettoyer({ badges: [{ cle: 'b', badge: 'drafts.41b65048' }] }).badges, [])
+})

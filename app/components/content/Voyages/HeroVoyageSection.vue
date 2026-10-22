@@ -76,7 +76,7 @@
     <v-row class="align-start">
       <v-col
         cols="12"
-        :md="voyage.imageSecondary?.asset?._ref ? 9 : 12"
+        :md="avecColonneDroite ? 9 : 12"
         class="px-0 px-sm-4"
       >
         <NuxtImg
@@ -93,7 +93,7 @@
         />
       </v-col>
       <v-col
-        v-if="mdAndUp"
+        v-if="mdAndUp && avecColonneDroite"
         cols="3"
         class="d-none d-md-flex flex-column ga-7"
       >
@@ -176,6 +176,10 @@ const builder = imageUrlBuilder({
 })
 const route = useRoute()
 const snackbar = ref(false)
+// Colonne de droite (image secondaire, première photo de la galerie) : seulement
+// si elle a quelque chose à montrer. Vide, elle passait à la ligne sous l'image
+// principale et débordait du conteneur de 460 px, sur le titre et les pastilles.
+const avecColonneDroite = computed(() => Boolean(props.voyage.imageSecondary?.asset?._ref || props.voyage.photosList?.[0]?.asset?._ref))
 // Build optimized Sanity URLs for main image with hotspot support
 // The hotspot is automatically applied when passing the full image object to .image()
 // and using .fit('crop') - Sanity will use the hotspot to determine the crop area

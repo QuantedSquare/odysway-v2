@@ -1,10 +1,12 @@
 <template>
-  <div class="my-md-8 mt-md-12 mb-md-5 ">
+  <div
+    v-if="experiencesBlock && experiencesBlock.length > 0"
+    class="my-md-8 mt-md-12 mb-md-5 "
+  >
     <ColorContainer
       color="yellow-light-2"
     >
       <v-container
-        v-if="experiencesBlock && experiencesBlock.length > 0"
         class="py-0"
       >
         <v-row>

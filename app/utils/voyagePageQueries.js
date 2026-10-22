@@ -122,12 +122,25 @@ export const VOYAGE_QUERY = `
 
 // Niveaux de difficulté, pour le choix du porteur dans l'Espace porteur.
 export const NIVEAUX_DIFFICULTE_QUERY = `
-  *[_type == "difficultyLevel"] | order(level asc){
+  *[_type == "difficultyLevel" && !(_id in path("drafts.**"))] | order(level asc){
     _id,
     title,
     level,
     description
   }
+`
+
+// Badges, pour le choix du porteur dans l'Espace porteur (les plus utilisés d'abord).
+export const BADGES_QUERY = `
+  *[_type == "badge" && !(_id in path("drafts.**")) && defined(text)]{
+    _id,
+    title,
+    text,
+    variable1Label,
+    variable2Label,
+    picto,
+    "usages": count(*[_type == "voyage" && references(^._id)])
+  } | order(usages desc, title asc)
 `
 
 export const VOYAGE_PROPOSITIONS_QUERY = `

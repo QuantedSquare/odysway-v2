@@ -178,6 +178,76 @@
           data-test="niveau"
         />
 
+        <p class="text-subtitle-2 font-weight-bold mt-6 mb-1">
+          Badges
+        </p>
+        <p class="text-body-2 text-grey-darken-1 mb-3">
+          Les pastilles sous le titre, à côté du niveau : durée, taille du groupe, hébergement, période…
+        </p>
+        <div
+          v-for="(b, i) in payload.badges"
+          :key="b.cle"
+          class="d-flex align-start ga-2 mb-3"
+          data-test="badge"
+        >
+          <div class="flex-grow-1">
+            <v-select
+              v-model="b.badge"
+              :items="choixBadges"
+              :item-props="itemBadge"
+              label="Badge"
+              variant="outlined"
+              density="comfortable"
+              hide-details
+            />
+            <v-row
+              v-if="variablesBadge(b.badge).length"
+              dense
+              class="mt-1"
+            >
+              <v-col
+                v-for="v in variablesBadge(b.badge)"
+                :key="v.cle"
+                cols="12"
+                :sm="variablesBadge(b.badge).length > 1 ? 6 : 12"
+              >
+                <v-text-field
+                  v-model="b[v.cle]"
+                  :label="v.libelle"
+                  :placeholder="v.exemple"
+                  persistent-placeholder
+                  variant="outlined"
+                  density="compact"
+                  maxlength="60"
+                  hide-details
+                />
+              </v-col>
+            </v-row>
+            <p
+              v-if="b.badge"
+              class="text-caption text-grey-darken-1 mt-1 mb-0"
+            >
+              Affiché : « {{ texteBadge(b) }} »
+            </p>
+          </div>
+          <EspacePorteurOrdreBoutons
+            :index="i"
+            :total="payload.badges.length"
+            @deplacer="sens => deplacer(payload.badges, i, sens)"
+            @supprimer="payload.badges.splice(i, 1)"
+          />
+        </div>
+        <v-btn
+          v-if="payload.badges.length < 8"
+          variant="tonal"
+          color="primary"
+          :prepend-icon="mdiPlus"
+          data-test="ajouter-badge"
+          @click="payload.badges.push({ cle: nouvelleCle(), badge: null, var1: '', var2: '' })"
+        >
+          Ajouter un badge
+        </v-btn>
+
         <v-divider class="my-8" />
 
         <!-- Photos et vidéos -->
@@ -788,13 +858,14 @@ const LARGEUR_MOBILE = 390
 
 const route = useRoute()
 const pageId = route.params.pageId
-const { api, nouvelleCle } = useEspacePorteur()
+const { api, nouvelleCle, urlImage } = useEspacePorteur()
 
 // Titres des sections tels que la page les affiche (Sanity, page_voyage), et
 // les niveaux de difficulté au choix.
-const [{ data: pageVoyage }, { data: niveaux }] = await Promise.all([
+const [{ data: pageVoyage }, { data: niveaux }, { data: badgesDispo }] = await Promise.all([
   useSanityQuery(VOYAGE_PAGE_QUERY),
   useSanityQuery(NIVEAUX_DIFFICULTE_QUERY),
+  useSanityQuery(BADGES_QUERY),
 ])
 const titresPage = computed(() => ({
   mot: stegaClean(pageVoyage.value?.authorNote?.title) || 'L\'esprit du voyage',
@@ -802,6 +873,48 @@ const titresPage = computed(() => ({
 }))
 const choixNiveaux = computed(() => (niveaux.value || [])
   .map(n => ({ value: n._id, title: `Niveau ${n.level} · ${stegaClean(n.title)}` })))
+
+// Badges : la liste d'Odysway. Un texte réduit à « {var1} » (durée, logement…)
+// est nommé d'après le titre du badge ; les variables sont remplies ici.
+const badgesParId = computed(() => new Map((badgesDispo.value || []).map(b => [b._id, {
+  ...b,
+  title: stegaClean(b.title),
+  text: stegaClean(b.text || '').trim(),
+}])))
+// Badge à variables : nommé d'après son titre, le texte en sous-titre.
+const libelleBadge = b => (b.text.includes('{var') ? b.title.replace(/^badge\s+/i, '') : b.text)
+const choixBadges = computed(() => [...badgesParId.value.values()].map(b => ({
+  value: b._id,
+  title: libelleBadge(b),
+  modele: b.text.includes('{var') && !/^\{var1\}$/.test(b.text) ? b.text.replace(/\{var[12]\}/g, '…') : '',
+  picto: b.picto,
+})))
+const itemBadge = item => ({
+  title: item.title,
+  value: item.value,
+  subtitle: item.modele || undefined,
+  prependAvatar: item.picto?.asset?._ref ? urlImage(item.picto.asset._ref, 64) : undefined,
+})
+const EXEMPLES_BADGE = { 'Logement': 'Chez l\'habitant', 'Durée': '8 jours', 'Âge': 'Dès 12 ans', 'Période': 'Avril', 'Période Saison': 'Printemps' }
+const variablesBadge = (id) => {
+  const b = badgesParId.value.get(id)
+  if (!b) return []
+  const seul = /^\{var1\}$/.test(b.text)
+  const libelle = (brut, defaut) => (brut && !/^\d+$/.test(stegaClean(brut)) ? stegaClean(brut) : defaut)
+  return [
+    b.text.includes('{var1}') && {
+      cle: 'var1',
+      libelle: seul ? 'Texte du badge' : libelle(b.variable1Label, 'Première valeur'),
+      exemple: seul ? EXEMPLES_BADGE[libelleBadge(b)] || '' : '',
+    },
+    b.text.includes('{var2}') && { cle: 'var2', libelle: libelle(b.variable2Label, 'Seconde valeur'), exemple: '' },
+  ].filter(Boolean)
+}
+const texteBadge = (choix) => {
+  const b = badgesParId.value.get(choix.badge)
+  if (!b) return ''
+  return b.text.replace(/\{var1\}/g, choix.var1 || '…').replace(/\{var2\}/g, choix.var2 || '…')
+}
 
 const page = ref(null)
 const payload = ref(portagePage.vide())
