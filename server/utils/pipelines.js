@@ -18,6 +18,7 @@ const PIPELINE = {
 
 const ETAPE = {
   // Prospects
+  prospectOption: '27',
   prospectPaiementNonAcheve: '17',
   dev: '80',
   // Voyageurs
@@ -62,4 +63,26 @@ const etapePaiementNonAcheve = (pipelineActuelle) => {
   return null
 }
 
-export default { PIPELINE, ETAPE, creationPortage, apresPaiement, etapePaiementNonAcheve }
+/**
+ * Étape « A posé une option » de la pipeline du deal. `null` pour un deal en
+ * portage (7) : 27 est une étape des Prospects, la poser l'en ferait sortir
+ * (relances et automations des prospects comprises). Il garde alors son étape
+ * (87 ou 88) ; l'étape du tunnel « A posé une option » dit l'option.
+ */
+const etapeOption = pipelineActuelle =>
+  (String(pipelineActuelle) === PIPELINE.portage ? null : ETAPE.prospectOption)
+
+/**
+ * Deal dont l'option expirée se signale (étape du tunnel « Option expirée » et
+ * note) : un prospect encore à « A posé une option », ou un inscrit en portage
+ * pas encore payé.
+ */
+const optionASignaler = (deal) => {
+  const pipeline = String(deal?.group)
+  const etape = String(deal?.stage)
+  if (pipeline === PIPELINE.prospects) return etape === ETAPE.prospectOption
+  if (pipeline === PIPELINE.portage) return etape === ETAPE.portageInscription || etape === ETAPE.portagePaiementNonAcheve
+  return false
+}
+
+export default { PIPELINE, ETAPE, creationPortage, apresPaiement, etapePaiementNonAcheve, etapeOption, optionASignaler }

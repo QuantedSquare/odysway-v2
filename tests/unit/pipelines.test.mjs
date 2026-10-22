@@ -3,7 +3,7 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import pipelines from '../../server/utils/pipelines.js'
 
-const { creationPortage, apresPaiement, etapePaiementNonAcheve } = pipelines
+const { creationPortage, apresPaiement, etapePaiementNonAcheve, etapeOption, optionASignaler } = pipelines
 
 test('création : un voyage en portage naît en pipeline 7, étape « Inscription commencée »', () => {
   assert.deepEqual(creationPortage('2', true), { group: '7', stage: '87' })
@@ -27,4 +27,21 @@ test('paiement CB non achevé : l\'étape de la pipeline du deal, rien pour un v
   assert.equal(etapePaiementNonAcheve('7'), '88')
   assert.equal(etapePaiementNonAcheve('2'), null)
   assert.equal(etapePaiementNonAcheve(undefined), null)
+})
+
+test('option : un deal en portage garde son étape (27 le renverrait en Prospects)', () => {
+  assert.equal(etapeOption('1'), '27')
+  assert.equal(etapeOption(7), null)
+  assert.equal(etapeOption('7'), null)
+  assert.equal(etapeOption(undefined), '27')
+})
+
+test('option expirée : signalée pour un prospect à 27 ou un inscrit en portage non payé', () => {
+  assert.equal(optionASignaler({ group: '1', stage: '27' }), true)
+  assert.equal(optionASignaler({ group: '1', stage: '2' }), false)
+  assert.equal(optionASignaler({ group: '7', stage: '87' }), true)
+  assert.equal(optionASignaler({ group: '7', stage: '88' }), true)
+  assert.equal(optionASignaler({ group: '7', stage: '84' }), false)
+  assert.equal(optionASignaler({ group: '2', stage: '6' }), false)
+  assert.equal(optionASignaler(null), false)
 })
