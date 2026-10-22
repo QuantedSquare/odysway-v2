@@ -270,8 +270,8 @@ const handlePaymentSession = async (session) => {
   console.log('====CUSTOM FIELDS=====', customFields)
 
   const dealData = {
-    group: '2', // '2'= pipeline id of "Voyageurs"
-    stage: +restToPay > 0 ? '6' : '33', // '33' = "Gestion résa (sales)" (paid) || '6' = "en attente de départ" (in progress)
+    // Voyageurs (2), ou Partenaires (7) pour un voyage en portage.
+    ...pipelines.apresPaiement(deal.group, restToPay),
     alreadyPaid: totalPaid,
     restToPay: restToPay,
     currentStep: totalPaid >= +deal.value

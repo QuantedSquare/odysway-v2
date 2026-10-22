@@ -580,8 +580,8 @@ useSeo({
     image: page.value.hero?.image,
   },
   pageType: 'website',
-  slug: 'partenariat',
-  baseUrl: '/partenariat',
+  slug: 'portage',
+  baseUrl: '/portage',
 })
 
 const { trackCtaClick, trackFaqClick } = useGtmTracking()
@@ -696,7 +696,7 @@ onMounted(() => {
     if (el) observer.observe(el)
   }
 
-  // Arrivée directe sur /partenariat#contact : on recale sous la sous-nav.
+  // Arrivée directe sur /portage#contact : on recale sous la sous-nav.
   const hash = window.location.hash.slice(1)
   if (hash && document.getElementById(hash)) nextTick(() => goTo(hash))
 })

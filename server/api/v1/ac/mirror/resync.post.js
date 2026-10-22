@@ -19,9 +19,10 @@ import dayjs from 'dayjs'
 //   body    { scope: 'vivants' | 'ids', ids?: number[], offset?: 0, limit?: 20, dryRun?: false }
 // Rappeler avec `offset = nextOffset` jusqu'à ce qu'il vaille null.
 //
-// « vivants » : prospects ouverts, voyageurs non perdus rentrés depuis moins de
-// 90 jours (ou sans date), annulations ouvertes, et les dossiers de départ des
-// dates non supprimées rentrées depuis moins de 90 jours.
+// « vivants » : prospects ouverts, voyageurs et inscrits portage (pipeline 7) non
+// perdus rentrés depuis moins de 90 jours (ou sans date), annulations ouvertes,
+// et les dossiers de départ des dates non supprimées rentrées depuis moins de
+// 90 jours.
 
 const PAUSE_MS = 250 // ~4 requêtes/s, sous la limite de 5/s d'AC
 const LIMITE_MAX = 40
@@ -42,11 +43,15 @@ const toutesLesPages = async (construire) => {
 
 const idsVivants = async () => {
   const depuis = dayjs().subtract(RETOUR_JOURS, 'day').format('YYYY-MM-DD')
-  const [prospects, voyageurs, annulations, dates] = await Promise.all([
+  const [prospects, voyageurs, portage, annulations, dates] = await Promise.all([
     toutesLesPages(() => supabase.from('activecampaign_deals').select('id')
       .eq('pipeline_id', 1).eq('status', 'Ouvert').eq('deleted', false).order('id')),
     toutesLesPages(() => supabase.from('activecampaign_deals').select('id')
       .eq('pipeline_id', 2).neq('status', 'Perdu').eq('deleted', false)
+      .or(`return_date.is.null,return_date.gte.${depuis}`).order('id')),
+    // Inscrits des voyages en portage (pipeline 7), même fenêtre que les voyageurs.
+    toutesLesPages(() => supabase.from('activecampaign_deals').select('id')
+      .eq('pipeline_id', 7).neq('status', 'Perdu').eq('deleted', false)
       .or(`return_date.is.null,return_date.gte.${depuis}`).order('id')),
     toutesLesPages(() => supabase.from('activecampaign_deals').select('id')
       .eq('pipeline_id', 5).eq('status', 'Ouvert').eq('deleted', false).order('id')),
@@ -57,6 +62,7 @@ const idsVivants = async () => {
   const ids = [
     ...prospects.map(r => Number(r.id)),
     ...voyageurs.map(r => Number(r.id)),
+    ...portage.map(r => Number(r.id)),
     ...annulations.map(r => Number(r.id)),
     ...dates.map(r => Number(r.departure_id)),
   ].filter(id => Number.isInteger(id) && id > 0)

@@ -23,6 +23,10 @@ export default defineEventHandler(async (event: H3Event): Promise<TypeDeal> => {
     })
   }
 
+  // Voyage en portage : le deal naît dans la pipeline 7, quel que soit le formulaire.
+  const portageCreation = pipelines.creationPortage(parsedBody.data.stage, await portage.estVoyagePortage(parsedBody.data.slug))
+  if (portageCreation) Object.assign(parsedBody.data, portageCreation)
+
   try {
     const t0 = Date.now()
     const response = await activecampaign.createDeal(parsedBody.data)

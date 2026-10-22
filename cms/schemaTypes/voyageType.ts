@@ -137,13 +137,32 @@ export const voyageType = defineType({
       validation: (r) => r.required().min(1),
       group: ['requiredBMS', 'basic'],
     }),
+    // Portage : un accompagnateur externe (prof de yoga, photographe…) vend son
+    // séjour à sa communauté, Odysway le porte. Le voyage reste « sur-mesure »
+    // seul, ce qui le tient déjà hors des listings, de la recherche et du sitemap.
+    // Le drapeau change la page (/portage/<slug>, dates réservables) et la
+    // pipeline AC des inscrits (7 « Partenaires »).
+    defineField({
+      name: 'portage',
+      type: 'boolean',
+      title: 'Voyage en portage',
+      description:
+        'Séjour d\'un accompagnateur externe porté par Odysway. Sa page vit sur odysway.com/portage/<slug> '
+        + '(dates réservables en ligne) et ses inscrits arrivent dans la pipeline AC « Partenaires ».',
+      initialValue: false,
+      hidden: ({ document }) => {
+        const types = (document as any)?.availabilityTypes
+        return !(Array.isArray(types) && types.length === 1 && types[0] === 'custom')
+      },
+      group: ['requiredTravelPage', 'basic'],
+    }),
     defineField({
       name: 'customPagePublished',
       type: 'boolean',
       title: 'Publier la page de vente sur-mesure',
       description:
-        'Rend la page accessible sur odysway.com/sur-mesure/<slug>, uniquement via le lien : '
-        + 'elle n\'apparaît dans aucun listing, ni la recherche, ni le sitemap, et n\'est pas indexée par Google.',
+        'Rend la page accessible sur odysway.com/sur-mesure/<slug> (odysway.com/portage/<slug> pour un voyage en portage), '
+        + 'uniquement via le lien : elle n\'apparaît dans aucun listing, ni la recherche, ni le sitemap, et n\'est pas indexée par Google.',
       initialValue: false,
       // Only relevant for "sur-mesure only" voyages: groupe/privatisation voyages already have their public page.
       hidden: ({ document }) => {

@@ -96,6 +96,7 @@ export default defineNuxtConfig({
       // Dynamic content pages with slugs
       '/voyages/**': { isr: 60 * 60 * 24 }, // 1 day — inclut les landings /voyages/<slug>/lp
       '/sur-mesure/**': { isr: 60 * 60 * 24 }, // 1 day — unlisted sur-mesure sales pages
+      '/portage/**': { isr: 60 * 60 * 24 }, // 1 day — unlisted portage pages
       '/destinations/**': { isr: 60 * 60 * 24 },
       '/thematiques/**': { isr: 60 * 60 * 24 }, // 1 day
       '/experiences/**': { isr: 60 * 60 * 24 }, // 1 day
@@ -130,6 +131,7 @@ export default defineNuxtConfig({
     '/search': { redirect: { to: '/voyages', statusCode: 301 } },
     '/calendly': { redirect: { to: '/rdv-projet-voyage', statusCode: 301 } },
     '/concept': { redirect: { to: '/vision-voyage-odysway', statusCode: 301 } },
+    '/partenariat': { redirect: { to: '/portage', statusCode: 301 } },
 
     // Legacy blog redirects
     '/blog/le-top-10-des-pays-a-visiter-en-2020': { redirect: { to: '/blog/le-top-10-des-pays-a-visiter', statusCode: 301 } },

@@ -553,8 +553,8 @@ const handlePaymentSession = async (session, paymentType) => {
 
   console.log('totalPaid', totalPaid, restToPay)
   const dealData = {
-    group: '2',
-    stage: +restToPay > 0 ? '6' : '33',
+    // Voyageurs (2), ou Partenaires (7) pour un voyage en portage.
+    ...pipelines.apresPaiement(deal.group, restToPay),
     alreadyPaid: totalPaid,
     restToPay: restToPay,
     paiementMethod: paymentType, // 'CB' or 'Virement' — tracked for sales (AC field 82)

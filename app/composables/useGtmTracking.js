@@ -311,7 +311,7 @@ export const useGtmTracking = () => {
   }
 
   /**
-   * Track demande_partenariat event - Form sent from /partenariat
+   * Track demande_partenariat event - Form sent from /portage
    * @param {string} userMail - User email
    * @param {string} besoin - What the partner wants to delegate (lead qualification)
    */

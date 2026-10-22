@@ -80,7 +80,8 @@ cms/
 3. **Post-payment webhook cascade**: Stripe checkout.completed -> update Supabase booked_dates -> update AC deal value -> notify Chapka insurance -> send Slack alert
 4. **Booking management**: Internal dashboard at /booking-management (Google OAuth, @odysway.com only)
 5. **Content publishing**: Sanity update -> webhook -> Vercel ISR revalidation + Algolia index sync
-6. **Departure management**: AC pipeline 4 (Gestions Departs), auto-creates departure deals, links travelers
+6. **Portage**: a Sanity voyage « sur-mesure » only + `portage: true` is served on `/portage/<slug>` (link only, bookable dates). The funnel (`kickstart`, `POST /ac/deals`) creates its deals in pipeline 7 (`server/utils/portage.js` reads the flag); payments keep them there. Requests from the `/portage` landing form: `partnership_requests`, followed in Ulysse (page Portage).
+7. **Departure management**: AC pipeline 4 (Gestions Departs), auto-creates departure deals, links travelers
 
 ## Ulysse endpoints (`/api/v1/ulysse/`)
 
@@ -105,6 +106,7 @@ Ulysse (the back-office replacing /booking-management) calls these with `x-ulyss
 | `2` | Voyageurs | Converted client pipeline. A deal moves here when the client makes their **first payment**. This is the authoritative signal for a conversion. |
 | `3` | Corbeille | Trash / archived. Exclude from all reports. |
 | `4` | Gestions Départs | Operational departure management — one deal per departure (« dossier de départ »). Mirrored since 09/2026 (Docteur d'Ulysse). **Never aggregate with pipelines 1/2: each traveller also has their own deal there.** |
+| `7` | Partenaires | Travellers of **portage** voyages (an external guide — yoga teacher, photographer… — sells their own stay, Odysway carries it). Deal born in 87 « Inscription commencée (non payé) », 88 « Paiement CB non achevé », then 84 Acompte réglé / 85 Solde réglé, 86 Solde en retard. Stays in 7 after payment (`server/utils/pipelines.js`). **Revenue tracked apart: not a pipeline-2 conversion.** |
 
 ## Supabase Tables
 
@@ -264,12 +266,12 @@ Tracks Alma payment IDs to prevent duplicate processing.
 - `rattachement` text — `introuvable` (404 at Alma live: sandbox test payments stored in the same base) or `sans_deal` (no deal in `custom_data` nor `booked_dates`). Such rows never block Ulysse's Alma reconciliation.
 
 ### `partnership_requests`
-Demandes reçues par le formulaire de `/portage` (`POST /api/v1/partenariat/demande`). Une ligne par envoi, écrite AVANT les appels AC : le lead est gardé même si AC tombe.
+Demandes reçues par le formulaire de `/portage` (`POST /api/v1/partenariat/demande`, ex-`/partenariat`, redirigée en 301). Une ligne par envoi, écrite AVANT les appels AC : le lead est gardé même si AC tombe.
 - `id` uuid PK, `created_at` timestamptz
 - `email` text, `ac_contact` bigint — contact AC (tag `partenaire-inbound`, note avec le projet), `null` si AC a échoué
 - `concept`, `destination`, `communaute`, `participants`, `besoin` text — champs du formulaire ; `besoin` qualifie le lead (10 % / 15 %)
 - `source_url`, `utm` text
-- Le suivi (statut, responsable, note, archivage) vit dans Ulysse, `ulysse.demandes_partenariat` (onglet « Demandes entrantes » de la page Partenaires). odysway-v2 n'y écrit pas.
+- Le suivi (statut, responsable, note, archivage) vit dans Ulysse, `ulysse.demandes_partenariat` (onglet « Demandes entrantes » de la page Portage) ; une demande signée y devient une fiche `ulysse.porteurs`. odysway-v2 n'y écrit pas.
 
 ### `deal_attribution`
 Lead attribution, frozen when the deal is created from the site (`POST /ac/deals`, `kickstart`). One row per deal, never rewritten. Join on `deal_attribution.deal_id = activecampaign_deals.id`.

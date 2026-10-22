@@ -174,11 +174,14 @@ const [{ data: page }, { data: voyage }] = await Promise.all([
 
 // Only "sur-mesure only" voyages whose page was explicitly published in Sanity
 // are served here. Groupe/privatisation voyages keep their public /voyages page.
+// Portage voyages have their own page, with bookable dates.
 const isPublished = computed(() => {
-  const types = voyage.value?.availabilityTypes
-  const isCustomOnly = Array.isArray(types) && types.length === 1 && types[0] === 'custom'
-  return isCustomOnly && voyage.value?.customPagePublished === true
+  return estSurMesureSeul(voyage.value) && !estVoyagePortage(voyage.value) && voyage.value?.customPagePublished === true
 })
+
+if (estPagePortage(voyage.value)) {
+  await navigateTo(`/portage/${voyage.value.slug.current}`, { redirectCode: 302 })
+}
 
 if (!isPublished.value && import.meta.server) {
   setResponseStatus(useRequestEvent(), 404)
