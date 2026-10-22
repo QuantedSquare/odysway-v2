@@ -439,7 +439,17 @@ const createDeal = async (data) => {
   return response.deal.id
 }
 
-const updateDeal = async (dealId, data) => {
+const updateDeal = async (dealId, donnees) => {
+  let data = donnees
+  // « A posé une option » (27) est une étape des Prospects : posée sur un deal
+  // en portage, elle le sortirait de la pipeline 7. Il garde alors son étape.
+  if (String(data.stage) === pipelines.ETAPE.prospectOption) {
+    const actuel = await getDealById(dealId).catch(() => null)
+    if (!pipelines.etapeOption(actuel?.deal?.group)) {
+      data = { ...data }
+      delete data.stage
+    }
+  }
   console.log('==========DATA IN UPDATE DEAL===========', data)
   // #TODO Checker si sendinblue encore nécessaire
   //  sendinBlue.updateContact(data.email, this.handleCustomFields(data.deal.fields))
