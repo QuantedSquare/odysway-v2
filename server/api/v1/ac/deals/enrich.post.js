@@ -14,9 +14,12 @@ export default defineEventHandler(async (event) => {
   // stage / currentStep sont déjà posés par createMinimalDeal (kickstart) et le front
   // peut les avoir fait avancer entre-temps (ex. pose d'option → stage 27). Cet
   // enrich tourne en fire-and-forget : les réécrire ici écraserait cette avancée.
+  // La pipeline non plus : AC l'a déduite de l'étape à la création, et le
+  // `group: '1'` du tunnel enverrait un inscrit en portage (pipeline 7) en Prospects.
   const enrichPayload = { ...fullPayload }
   delete enrichPayload.stage
   delete enrichPayload.currentStep
+  delete enrichPayload.group
   const slug = fullPayload.slug
 
   if (!dealId || !bookedId) {
