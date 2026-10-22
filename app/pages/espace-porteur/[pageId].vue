@@ -34,6 +34,26 @@
       >{{ etatSauvegarde }}</span>
       <v-spacer />
       <v-btn
+        :to="`/espace-porteur/dates/${pageId}`"
+        variant="text"
+        size="small"
+        color="primary"
+        class="d-none d-sm-flex"
+        :prepend-icon="mdiCalendarMonthOutline"
+        data-test="lien-dates"
+      >
+        Dates et inscriptions
+      </v-btn>
+      <v-btn
+        :to="`/espace-porteur/dates/${pageId}`"
+        variant="text"
+        size="small"
+        color="primary"
+        class="d-sm-none"
+        :icon="mdiCalendarMonthOutline"
+        aria-label="Dates et inscriptions"
+      />
+      <v-btn
         class="d-md-none"
         variant="tonal"
         size="small"
@@ -888,7 +908,7 @@
 
 <script setup>
 import {
-  mdiAccountGroupOutline, mdiArrowLeft, mdiCellphone, mdiChatQuestionOutline, mdiCheckCircle, mdiCheckDecagramOutline,
+  mdiAccountGroupOutline, mdiArrowLeft, mdiCalendarMonthOutline, mdiCellphone, mdiChatQuestionOutline, mdiCheckCircle, mdiCheckDecagramOutline,
   mdiClose, mdiCompassOutline, mdiFeather, mdiHeartOutline, mdiHomeVariantOutline, mdiImageMultipleOutline,
   mdiMapMarkerPath, mdiMonitor, mdiPlus, mdiSend,
 } from '@mdi/js'

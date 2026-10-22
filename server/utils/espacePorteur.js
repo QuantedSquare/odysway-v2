@@ -361,6 +361,8 @@ const etatPorteur = async (porteurId) => {
 }
 
 export default {
+  echapper,
+  envoyerEmail,
   ouvrirSession,
   fermerSession,
   requirePorteur,

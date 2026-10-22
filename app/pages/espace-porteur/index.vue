@@ -43,7 +43,7 @@
         Bonjour {{ moi.porteur.nom }}
       </h1>
       <p class="text-body-1 mb-8 text-grey-darken-2">
-        Rédigez ici la page de votre séjour. Tout est enregistré au fil de l'eau ; quand elle vous convient, soumettez-la à Odysway, qui la relit puis la met en ligne. Les dates et les prix définitifs sont fixés avec l'équipe.
+        Rédigez ici la page de votre séjour. Tout est enregistré au fil de l'eau ; quand elle vous convient, soumettez-la à Odysway, qui la relit puis la met en ligne. Proposez aussi vos dates et suivez les inscriptions de chaque départ.
       </p>
 
       <v-card
@@ -52,7 +52,6 @@
         class="mb-4"
         rounded="lg"
         variant="outlined"
-        :to="`/espace-porteur/${p.id}`"
       >
         <v-card-item>
           <v-card-title class="text-wrap">
@@ -71,6 +70,26 @@
             </v-chip>
           </template>
         </v-card-item>
+        <v-card-actions class="px-4 pb-3 pt-0">
+          <v-btn
+            :to="`/espace-porteur/${p.id}`"
+            variant="tonal"
+            color="primary"
+            size="small"
+            :prepend-icon="mdiPencilOutline"
+          >
+            Ma page
+          </v-btn>
+          <v-btn
+            :to="`/espace-porteur/dates/${p.id}`"
+            variant="text"
+            color="primary"
+            size="small"
+            :prepend-icon="mdiCalendarMonthOutline"
+          >
+            Dates et inscriptions
+          </v-btn>
+        </v-card-actions>
       </v-card>
 
       <v-btn
@@ -88,7 +107,7 @@
 </template>
 
 <script setup>
-import { mdiPlus } from '@mdi/js'
+import { mdiCalendarMonthOutline, mdiPencilOutline, mdiPlus } from '@mdi/js'
 
 definePageMeta({ layout: 'blank' })
 useHead({ title: 'Espace porteur', meta: [{ name: 'robots', content: 'noindex, nofollow' }] })
