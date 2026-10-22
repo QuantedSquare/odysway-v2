@@ -8,7 +8,9 @@ export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
   const origin = config.public.siteURL
 
-  const { dealId, bookedId, dateId, ...fullPayload } = await readBody(event)
+  // `portage` : le kickstart a créé le deal en pipeline 7, l'alerte Slack va
+  // au canal portage.
+  const { dealId, bookedId, dateId, portage: enPortage, ...fullPayload } = await readBody(event)
   // stage / currentStep sont déjà posés par createMinimalDeal (kickstart) et le front
   // peut les avoir fait avancer entre-temps (ex. pose d'option → stage 27). Cet
   // enrich tourne en fire-and-forget : les réécrire ici écraserait cette avancée.
@@ -52,6 +54,7 @@ export default defineEventHandler(async (event) => {
   // 3. Slack notification (fire-and-forget internally)
   try {
     const formatedDeal = activecampaign.transformDealForAPI(fullPayload)
+    if (enPortage) formatedDeal.deal.group = pipelines.PIPELINE.portage
     const slackData = {
       ...formatedDeal,
       firstname: fullPayload.firstname,

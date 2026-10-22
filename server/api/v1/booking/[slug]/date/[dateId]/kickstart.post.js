@@ -78,7 +78,7 @@ export default defineEventHandler(async (event) => {
   const internalOrigin = getRequestURL(event).origin
   $fetch(`${internalOrigin}/api/v1/ac/deals/enrich`, {
     method: 'POST',
-    body: { dealId, bookedId: bookedDate.id, dateId, ...body },
+    body: { dealId, bookedId: bookedDate.id, dateId, ...body, portage: !!portageCreation },
   }).catch(err => console.error('[kickstart] enrich fire-and-forget failed', err))
 
   lap('DONE — returning to client')
