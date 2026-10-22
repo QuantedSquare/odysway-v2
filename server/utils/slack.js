@@ -37,6 +37,11 @@ const send = async (webhookUrl, text) => {
   }
 }
 
+// Canal #portage-odysway : demandes de /portage, pages de l'Espace porteur,
+// inscriptions aux voyages en portage. Le canal des devis tant que le webhook
+// n'est pas configuré, pour ne perdre aucune alerte.
+const urlPortage = () => process.env.SLACK_URL_PORTAGE || process.env.SLACK_URL_DEVIS
+
 const siteUrl = () => (process.env.NUXT_PUBLIC_SITE_URL || 'https://odysway.com').replace(/\/$/, '')
 
 /**
@@ -83,11 +88,10 @@ const alertCascadeLeak = ({ dealId, bookedId, travelDateId }) =>
     + `La réservation a été déplacée vers la nouvelle date. Vérifier la cohérence de la date supprimée.`)
 
 /**
- * Nouvelle demande de partenariat depuis /portage. Webhook dédié
- * SLACK_URL_PARTENARIAT, sinon le canal des devis.
+ * Nouvelle demande de partenariat depuis /portage. Canal portage.
  */
 const alertPartnershipRequest = ({ email, contactId, concept, destination, communaute, participants, besoin }) =>
-  send(process.env.SLACK_URL_PARTENARIAT || process.env.SLACK_URL_DEVIS,
+  send(urlPortage(),
     `:handshake: *Nouvelle demande de partenariat*\n`
     + `• ${email}${contactId ? `  ·  contact AC \`${contactId}\`` : ''}\n`
     + `• Participants : ${participants || '—'}  ·  Communauté : ${communaute || '—'}\n`
@@ -97,14 +101,14 @@ const alertPartnershipRequest = ({ email, contactId, concept, destination, commu
 
 /**
  * Un porteur a soumis la page de son séjour depuis l'Espace porteur : un
- * brouillon attend dans le Studio. Même canal que les demandes de partenariat.
+ * brouillon attend dans le Studio. Canal portage.
  */
 const alertPortagePage = ({ porteur, email, titre, miseAJour, lienStudio }) =>
-  send(process.env.SLACK_URL_PARTENARIAT || process.env.SLACK_URL_DEVIS,
+  send(urlPortage(),
     `:memo: *${miseAJour ? 'Page de portage modifiée' : 'Nouvelle page de portage'} à relire*\n`
     + `• ${porteur}${email ? `  ·  ${email}` : ''}\n`
     + `• ${titre}\n`
     + `${miseAJour ? '' : 'À compléter avant publication : référence BMS, destination(s), puis « Publier la page ».\n'}`
     + `<${lienStudio}|Relire et publier dans le Studio>`)
 
-export default { send, alertPaymentOnDeletedBooking, alertOrphanPayment, alertCascadeLeak, alertPartnershipRequest, alertPortagePage }
+export default { send, urlPortage, alertPaymentOnDeletedBooking, alertOrphanPayment, alertCascadeLeak, alertPartnershipRequest, alertPortagePage }

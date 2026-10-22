@@ -515,8 +515,10 @@ const sendSlackNotification = (id, data) => {
     const displayedUser = data.firstname || data.lastname ? `${data.firstname} ${data.lastname}` : data.email
     const displayedTravelers = nbTravelers ? `- pax ${nbTravelers} -` : ''
 
+    // Inscription à un voyage en portage (pipeline 7) : canal portage.
+    const enPortage = String(dealData.group) === pipelines.PIPELINE.portage
     axios({
-      url: process.env.SLACK_URL_DEVIS,
+      url: enPortage ? slack.urlPortage() : process.env.SLACK_URL_DEVIS,
       method: 'post',
       data:
       {
