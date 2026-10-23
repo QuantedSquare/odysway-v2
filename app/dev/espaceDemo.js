@@ -5,7 +5,13 @@
 // Code de connexion : 123456. Mot de passe : celui défini dans la page Sécurité
 // (gardé dans sessionStorage). « Continuer avec Google » ouvre une session
 // vieille de 2 heures, pour voir la reconfirmation par code avant le mot de passe.
+//
+// Camille figure dans AC sous son nom d'usage (« Rousseau-Martin ») : l'espace
+// ne la reconnaît pas parmi ses voyageurs, pour montrer « C'est moi ». « Corriger »
+// passe par les vraies règles (espaceCorrection.js) ; le voyage au Maroc, passé,
+// montre le verrou « contactez-nous ».
 
+import espaceCorrection from '../../server/utils/espaceCorrection.js'
 import espaceDocument from '../../server/utils/espaceDocument.js'
 import espaceProfil from '../../server/utils/espaceProfil.js'
 
@@ -137,10 +143,22 @@ const maroc = () => ({
 })
 
 const voyageurs = () => lire('voyageurs', [
-  { slot: 1, prenom: 'Camille', nom: 'Rousseau', titulaire: true, moi: true, visibleGroupe: false, peutChangerVisibilite: true, invitation: null, email: null, peutInviter: false },
-  { slot: 2, prenom: 'Julien', nom: 'Rousseau', titulaire: false, moi: false, visibleGroupe: true, peutChangerVisibilite: false, invitation: 'rejoint', email: 'julien.rousseau@email.fr', peutInviter: false },
-  { slot: 3, prenom: 'Inès', nom: 'Rousseau', titulaire: false, moi: false, visibleGroupe: false, peutChangerVisibilite: true, invitation: null, email: null, peutInviter: true },
+  { slot: 1, prenom: 'Camille', nom: 'Rousseau-Martin', dateNaissance: '1979-06-12', titulaire: false, titulaireChoisi: false, peutSeDesigner: true, moi: false, visibleGroupe: false, peutChangerVisibilite: true, invitation: null, email: null, peutInviter: true },
+  { slot: 2, prenom: 'Julien', nom: 'Rousseau', dateNaissance: '1977-02-03', titulaire: false, titulaireChoisi: false, peutSeDesigner: false, moi: false, visibleGroupe: true, peutChangerVisibilite: false, invitation: 'rejoint', email: 'julien.rousseau@email.fr', peutInviter: false },
+  { slot: 3, prenom: 'Inès', nom: 'Rousseau', dateNaissance: '2015-04-03', titulaire: false, titulaireChoisi: false, peutSeDesigner: true, moi: false, visibleGroupe: false, peutChangerVisibilite: true, invitation: null, email: null, peutInviter: true },
 ])
+
+// « C'est moi » sur `slot`, ou null : le contact AC (Camille Rousseau) ne
+// correspond à aucune place par le nom.
+const designer = slot => ecrire('voyageurs', voyageurs().map((v) => {
+  const moi = v.slot === slot
+  return { ...v, moi, titulaire: moi, titulaireChoisi: moi, peutInviter: !moi && v.invitation !== 'rejoint' }
+}))
+
+const correction = (dossier) => {
+  const verrou = espaceCorrection.verrouCorrection({ billetsAchetes: false, depart: dossier.depart, aujourdhui: auj() })
+  return { possible: !verrou, verrou, message: verrou ? espaceCorrection.MESSAGES_VERROU[verrou] : null }
+}
 
 // Profils au format de la table traveler_profiles, pour réutiliser les vraies
 // règles (espaceProfil.js). Julien (place 2) a son propre compte : profil
@@ -167,7 +185,7 @@ const documentsDemo = () => {
   return DOCS.map(d => espaceDocument.vueClient(d, { aujourdhui: auj, vu: vus.includes(d.id) })).sort(espaceDocument.trier)
 }
 
-const erreurDemo = (statusCode, statusMessage) => Object.assign(new Error(statusMessage), { statusCode, data: { statusMessage } })
+const erreurDemo = (statusCode, statusMessage, data) => Object.assign(new Error(statusMessage), { statusCode, data: { statusMessage, data } })
 
 export const reponseDemo = async (chemin, options = {}, session) => {
   await new Promise(r => setTimeout(r, 250))
@@ -189,12 +207,37 @@ export const reponseDemo = async (chemin, options = {}, session) => {
     return { slot: +invitation[1], invitation: corps.email ? 'envoyee' : null, email: corps.email }
   }
 
+  const titulaire = /^dossiers\/\d+\/titulaire$/.exec(chemin)
+  if (titulaire) {
+    designer(corps.slot)
+    return { slot: corps.slot }
+  }
+
+  const identite = /^dossiers\/(\d+)\/voyageurs\/(\d+)\/identite$/.exec(chemin)
+  if (identite) {
+    const base = +identite[1] === 15188 ? maroc() : nepal()
+    const c = correction(base)
+    if (!c.possible) throw erreurDemo(409, c.message, { code: 'verrouille', verrou: c.verrou })
+    const { identite: nouvelle, erreurs } = espaceCorrection.validerIdentite(corps.apres, { aujourdhui: auj() })
+    if (!nouvelle) throw erreurDemo(400, 'Formulaire invalide.', { erreurs })
+    const v = voyageurs().find(x => x.slot === +identite[2])
+    const actuel = { prenom: v.prenom, nom: v.nom, dateNaissance: v.dateNaissance }
+    if (!espaceCorrection.memeIdentite(actuel, corps.avant)) throw erreurDemo(409, 'Ce voyageur a été modifié entre-temps : rechargez la page pour voir la version à jour.', { code: 'modifie' })
+    if (espaceCorrection.memeIdentite(actuel, nouvelle)) return { resultat: 'inchange', voyageur: { slot: v.slot, ...actuel } }
+    if (espaceCorrection.ageEnJeu({ avant: actuel, apres: nouvelle, depart: base.depart, aujourdhui: auj() })) {
+      throw erreurDemo(409, 'La date de naissance d\'un voyageur mineur peut changer le tarif : contactez-nous pour la corriger.', { code: 'age' })
+    }
+    ecrire('voyageurs', voyageurs().map(x => (x.slot === v.slot ? { ...x, ...nouvelle } : x)))
+    return { resultat: 'corrige', voyageur: { slot: v.slot, ...nouvelle }, note: true }
+  }
+
   const dossier = /^dossiers\/(\d+)$/.exec(chemin)
   if (dossier) {
     const base = +dossier[1] === 15188 ? maroc() : nepal()
     return {
       ...base,
       lienPaiement: base.paiement.reste > 0 ? '/checkout?type=balance&booked_id=demo&step=1' : null,
+      correction: correction(base),
       carnet: null,
       paiements: { complet: true, paiements: [{ le: '2026-09-04T10:00:00Z', montant: 870, rembourse: 0, moyen: 'carte', statut: 'paye', via: 'Stripe' }] },
       voyageurs: avecProfils(voyageurs()),

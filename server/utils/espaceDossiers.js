@@ -10,9 +10,9 @@ import { createError } from 'h3'
 // Tout le reste est refusé. Chaque lecture part du compte, jamais d'un
 // identifiant fourni par le navigateur seul.
 
-const { motifEmailExact, voyageursDuDeal, slotTitulaire, dealVisible } = espaceVoyageur
+const { motifEmailExact, voyageursDuDeal, slotTitulaireChoisi, dealVisible } = espaceVoyageur
 
-const COLONNES_DEAL = 'id, contact, title, status, stage, pipeline_id, seller, total_value, total_paid, rest_to_pay, nb_traveler, travel_type, country, iso, slug, departure_date, return_date, travel_book, deleted'
+const COLONNES_DEAL = 'id, contact, title, status, stage, pipeline_id, seller, total_value, total_paid, rest_to_pay, nb_traveler, travel_type, country, iso, slug, departure_date, return_date, travel_book, flight_ticket_bought, deleted'
 
 // Les voyageurs d'un deal sont relus dans AC au plus toutes les 6 heures par
 // l'espace ; le webhook dealUpdate les tient à jour entre-temps.
@@ -65,7 +65,8 @@ const contactsDuCompte = async (userId) => {
 /**
  * Réécrit les voyageurs d'un deal depuis ses champs AC « Voyageur 1..15 ».
  * Ne touche jamais à ce qu'AC ne porte pas (email d'invitation, compte,
- * consentement) : l'upsert n'envoie que les colonnes d'identité.
+ * consentement, place désignée par le titulaire) : l'upsert n'envoie que les
+ * colonnes d'identité.
  * @param {number} dealId
  * @param {{ fusion?: object, contact?: { firstname?: string, lastname?: string } }} [p]
  *   fusion : deal AC déjà lu avec ses champs mappés ; contact : le payeur
@@ -73,7 +74,11 @@ const contactsDuCompte = async (userId) => {
 const synchroniserVoyageurs = async (dealId, { fusion, contact } = {}) => {
   const champs = fusion || await activecampaign.getDealCustomFields(dealId)
   const voyageurs = voyageursDuDeal(champs)
-  const titulaire = slotTitulaire(voyageurs, contact)
+  // « C'est moi » : la place désignée par le titulaire l'emporte sur le nom.
+  const { data: choisie, error: e0 } = await supabase.from('deal_travelers')
+    .select('slot').eq('deal_id', dealId).eq('holder_manuel', true).maybeSingle()
+  echec(e0, 'place du titulaire')
+  const titulaire = slotTitulaireChoisi(voyageurs, contact, choisie?.slot)
   const maintenant = new Date().toISOString()
 
   if (voyageurs.length) {
@@ -197,7 +202,7 @@ const dossierDuCompte = async (client, dealId) => {
 
 const voyageursDuDossier = async (dealId) => {
   const { data, error } = await supabase.from('deal_travelers')
-    .select('id, slot, firstname, lastname, birthdate, is_holder, email, user_id, invited_at, joined_at, visible_groupe')
+    .select('id, slot, firstname, lastname, birthdate, is_holder, holder_manuel, email, user_id, invited_at, joined_at, visible_groupe')
     .eq('deal_id', dealId).is('removed_at', null).order('slot')
   echec(error, 'voyageurs du dossier')
   return data || []

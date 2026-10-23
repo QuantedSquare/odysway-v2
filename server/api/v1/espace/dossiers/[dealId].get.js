@@ -48,8 +48,16 @@ export default defineEventHandler(async (event) => {
     ? `/checkout?type=balance&booked_id=${reservation.id}&step=1`
     : null
 
+  // Corriger un voyageur : fermé si les billets sont émis ou le départ proche.
+  const verrou = titulaire
+    ? espaceCorrection.verrouCorrection({ billetsAchetes: deal.flight_ticket_bought, depart: resume.depart, aujourdhui })
+    : null
+
   return {
     ...resume,
+    correction: titulaire
+      ? { possible: !verrou, verrou, message: verrou ? espaceCorrection.MESSAGES_VERROU[verrou] : null }
+      : null,
     lienPaiement,
     carnet: deal.travel_book || null,
     documents: documents.get(Number(deal.id)) || [],
@@ -79,6 +87,10 @@ export default defineEventHandler(async (event) => {
               invitation: v.user_id ? 'rejoint' : v.email ? 'envoyee' : null,
               email: v.email,
               peutInviter: !v.user_id && !v.is_holder,
+              dateNaissance: v.birthdate,
+              // « C'est moi » : place désignée à la main, ou désignable.
+              titulaireChoisi: v.holder_manuel,
+              peutSeDesigner: espaceVoyageur.peutSeDesigner({ place: v, clientId: client.id, clientEmail: client.email }),
             }
           : {}),
       }
