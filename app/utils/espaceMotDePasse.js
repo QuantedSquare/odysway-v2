@@ -60,6 +60,8 @@ export const messageErreurAuth = (err) => {
   if (code === 'weak_password') {
     const raisons = err?.reasons || err?.weakPassword?.reasons || []
     if (raisons.includes('pwned')) return 'Ce mot de passe figure dans des fuites de données connues. Choisissez-en un autre.'
+    // « Password requirements » du tableau de bord Supabase, s'il impose des familles de caractères.
+    if (raisons.includes('characters')) return 'Mot de passe trop simple : mêlez minuscules, majuscules, chiffres et symboles.'
     return `Mot de passe trop faible : au moins ${LONGUEUR_MIN} caractères.`
   }
   if (code === 'same_password') return 'C\'est déjà votre mot de passe actuel.'

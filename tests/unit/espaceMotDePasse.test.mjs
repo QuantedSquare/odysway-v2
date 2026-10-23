@@ -32,6 +32,7 @@ test('connexionRecente : âge de la dernière authentification, pas du jeton', (
 test('messageErreurAuth traduit les codes de Supabase Auth', () => {
   assert.match(messageErreurAuth({ code: 'weak_password', reasons: ['pwned'] }), /fuites/)
   assert.match(messageErreurAuth({ code: 'weak_password', reasons: ['length'] }), /12 caractères/)
+  assert.match(messageErreurAuth({ code: 'weak_password', reasons: ['characters'] }), /minuscules, majuscules, chiffres et symboles/)
   assert.equal(messageErreurAuth({ code: 'invalid_credentials' }), 'Email ou mot de passe incorrect.')
   assert.match(messageErreurAuth({ status: 429 }), /Trop de tentatives/)
   assert.match(messageErreurAuth({ code: 'reauthentication_needed' }), /confirmez/)

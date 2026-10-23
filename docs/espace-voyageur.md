@@ -88,11 +88,24 @@ production avant d'ouvrir l'espace**.
 ## 3. Avant d'ouvrir l'espace aux clients
 
 1. **Ulysse** : pousser et déployer `claude/members-email-exact`.
-2. **Supabase Auth (BackOffice-PROD)**, tableau de bord :
-   - Email Templates « Magic Link » **et** « Confirm signup » : afficher `{{ .Token }}`
-     (sinon le client reçoit un lien, pas un code). Longueur du code : 6.
-   - SMTP personnalisé : Brevo (expéditeur Odysway), sinon plafond de quelques emails/heure.
-   - URL Configuration → Redirect URLs : ajouter `https://odysway.com/mon-espace/connexion`,
+2. **Supabase Auth (BackOffice-PROD)**, tableau de bord — **FAIT le 23/10/2026** (relu
+   dans le tableau de bord ; réglages non lisibles par l'API) :
+   - [x] Templates « Magic link or OTP » et « Confirm sign up » en français, code
+     `{{ .Token }}` seul (plus de lien). « Confirm email » est actif : un nouveau compte
+     reçoit « Confirm sign up », d'où les deux modèles. Longueur du code : 6, expiration 600 s.
+   - [x] SMTP personnalisé Brevo (`smtp-relay.brevo.com:587`, expéditeur contact@odysway.com
+     « Odysway »). Avant : service intégré, **2 emails/heure pour tout le projet**.
+     Rate Limits : 150 emails/h, 60 s entre deux emails au même compte. L'envoi réel
+     reste à confirmer par la recette (identifiant SMTP non vérifiable).
+   - [x] Mots de passe : longueur minimale 12, « Prevent use of leaked passwords » activé
+     (l'advisor ne le signale plus), « Secure password change » activé, « Require current
+     password » laissé **désactivé** (sinon un client connecté par code ne peut pas définir
+     son mot de passe). « Password requirements » impose minuscules, majuscules, chiffres
+     et symboles : l'espace traduit ce refus (`weak_password` / `characters`) mais ne
+     l'annonce pas dans ses règles ; repasser sur « No required characters » pour s'en
+     tenir aux règles de §4.2.
+   - [x] Captcha désactivé (l'espace n'envoie pas de jeton captcha : ne pas l'activer seul).
+   - [x] URL Configuration → Redirect URLs (vérifié le 22/10 puis le 23/10 par `auth.flow_state`) : `https://odysway.com/mon-espace/connexion`,
      `https://odysway-v2-*-odysway.vercel.app/mon-espace/connexion` (previews, nom
      d'hôte haché) et `http://localhost:3000/mon-espace/connexion`. **Indispensable
      pour Google** : le Site URL est celui d'Ulysse, et toute URL de retour refusée
@@ -102,14 +115,16 @@ production avant d'ouvrir l'espace**.
    - Google : déjà actif pour Ulysse. L'écran de consentement affiche le domaine
      `ufyskkwszklmrgcifanb.supabase.co` ; un domaine personnalisé Supabase
      (`auth.odysway.com`, option payante) le remplacerait par Odysway.
-3. **Vercel** : `NUXT_PUBLIC_ESPACE_SUPABASE_KEY` (clé publiable `sb_publishable_…`)
-   en Preview **et** Production (et dans le `.env` local) — sans elle le client
+3. **Vercel** — [x] clé ajoutée en Preview et Production le 23/10/2026 (preprod vérifiée :
+   « Mon espace » ouvre la connexion, retour Google accepté).
+   `NUXT_PUBLIC_ESPACE_SUPABASE_KEY` (clé publiable `sb_publishable_…`) en Preview **et** Production (et dans le `.env` local) — sans elle le client
    Supabase ne se crée pas : « Mon espace » mène à la page de connexion, qui affiche
    « Espace voyageur momentanément indisponible » (erreur `[espace]` dans la console
    du navigateur), et le build avertit `[espace] … configuration incomplète` si le
    lien est visible. Variable publique, donc nouveau build requis. (Avant le
    22/10/2026, `createClient` levait dans le middleware : le bouton paraissait mort.)
-   `NUXT_PUBLIC_ESPACE_SUPABASE_URL` (facultatif, défaut BackOffice-PROD), puis `NUXT_PUBLIC_ESPACE_LIEN_VISIBLE=true` le jour de l'ouverture (seul interrupteur).
+   `NUXT_PUBLIC_ESPACE_SUPABASE_URL` (facultatif, défaut BackOffice-PROD), puis
+   `NUXT_PUBLIC_ESPACE_LIEN_VISIBLE=true` en Production le jour de l'ouverture (seul interrupteur).
 4. **Recette de bout en bout sur la preview** (jamais faite : aucun compte de test n'a
    été créé en production) : code, Google, client à plusieurs dossiers, email inconnu,
    rattachement d'une 2e adresse, invitation puis connexion de l'invité, consentement
