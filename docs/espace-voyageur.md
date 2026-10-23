@@ -93,12 +93,27 @@ production avant d'ouvrir l'espace**.
      (sinon le client reçoit un lien, pas un code). Longueur du code : 6.
    - SMTP personnalisé : Brevo (expéditeur Odysway), sinon plafond de quelques emails/heure.
    - URL Configuration → Redirect URLs : ajouter `https://odysway.com/mon-espace/connexion`,
+     `https://dev.odysway.com/mon-espace/connexion` (absente au 23/10/2026 : Google
+     y renvoyait sur Ulysse),
      `https://odysway-v2-*-odysway.vercel.app/mon-espace/connexion` (previews, nom
      d'hôte haché) et `http://localhost:3000/mon-espace/connexion`. **Indispensable
      pour Google** : le Site URL est celui d'Ulysse, et toute URL de retour refusée
      renvoie silencieusement le client sur Ulysse avec son code. L'URL de retour ne
      porte aucun paramètre (la destination attend en `sessionStorage`), car une
      entrée exacte refuse la même URL suivie d'un `?…`.
+     **Même liste dans `ORIGINES_RETOUR` (`app/utils/espaceConfig.js`)** : sur une
+     origine absente du code, le bouton Google n'est pas proposé (le code par email
+     reste). Ajouter une origine au code seulement APRÈS l'avoir ajoutée à Supabase.
+     Pour tester une entrée sans se connecter : `GET /auth/v1/authorize?provider=google&redirect_to=…&code_challenge=…&code_challenge_method=s256`,
+     puis lire `auth.flow_state.referrer` (id = `state`) : le Site URL d'Ulysse = refusée.
+   - Site URL : le passer à `https://odysway.com/mon-espace/connexion` (Ulysse envoie
+     toujours son propre `redirectTo`, il n'en dépend pas). Une URL oubliée mène
+     alors le client sur l'espace, avec un message d'échec, jamais sur Ulysse.
+   - Déconnexions : l'espace ferme sa seule session (`signOut({ scope: 'local' })`).
+     La portée par défaut, `global`, révoque toutes les sessions du compte : un
+     membre de l'équipe qui testait l'espace avec son compte Google perdait Ulysse,
+     et inversement (Ulysse appelle encore `signOut()` global à la déconnexion et
+     au refus d'un non-membre).
    - Google : déjà actif pour Ulysse. L'écran de consentement affiche le domaine
      `ufyskkwszklmrgcifanb.supabase.co` ; un domaine personnalisé Supabase
      (`auth.odysway.com`, option payante) le remplacerait par Odysway.

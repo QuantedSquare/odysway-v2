@@ -63,6 +63,7 @@ export const useEspace = () => {
   // Le client Supabase n'a pas pu démarrer (configuration absente…) : la page
   // de connexion l'annonce au lieu de laisser des boutons sans effet.
   const indisponible = useState('espace-indisponible', () => false)
+  const router = useRouter()
 
   /** Ne lève jamais : en cas d'échec, `indisponible` passe à vrai. */
   const init = async () => {
@@ -96,7 +97,9 @@ export const useEspace = () => {
         // Un email inconnu reçoit aussi un compte (état vide + rattachement) :
         // refuser révélerait quelles adresses sont clientes.
         shouldCreateUser: creer,
-        emailRedirectTo: new URL('/mon-espace/connexion', window.location.origin).toString(),
+        // Origine inconnue de Supabase : le lien mène à la production plutôt
+        // qu'au Site URL (Ulysse). Le code à 6 chiffres, lui, marche partout.
+        emailRedirectTo: urlRetourEspace(window.location.origin) || `https://odysway.com${CHEMIN_RETOUR}`,
       },
     })
     if (error) throw error
@@ -118,10 +121,18 @@ export const useEspace = () => {
     session.value = data.session
   }
 
+  /** Google ramènerait-il le client ici ? Sinon le bouton n'est pas proposé. */
+  const googleDisponible = () => (import.meta.dev && demoActive()) || !!urlRetourEspace(window.location.origin)
+
   // L'URL de retour doit être EXACTEMENT une URL autorisée dans Supabase Auth :
   // le moindre paramètre en plus et Supabase renvoie vers son Site URL (Ulysse),
   // avec le code. La destination attend donc dans l'onglet, pas dans l'URL.
   const connexionGoogle = async (suite = '/mon-espace') => {
+    const retour = urlRetourEspace(window.location.origin)
+    if (!retour && !(import.meta.dev && demoActive())) {
+      console.error(`[espace] ${window.location.origin} n'est pas une URL de retour connue (espaceConfig.js) : Google renverrait sur Ulysse.`)
+      throw Object.assign(new Error('URL de retour non autorisée'), { code: RETOUR_NON_AUTORISE })
+    }
     try {
       sessionStorage.setItem(CLE_SUITE_GOOGLE, suite)
     }
@@ -130,7 +141,7 @@ export const useEspace = () => {
     }
     const { error } = await (await authEspace()).signInWithOAuth({
       provider: 'google',
-      options: { redirectTo: new URL('/mon-espace/connexion', window.location.origin).toString() },
+      options: { redirectTo: retour || new URL(CHEMIN_RETOUR, window.location.origin).toString() },
     })
     if (error) throw error
   }
@@ -172,14 +183,24 @@ export const useEspace = () => {
     }
   })
 
+  // `local` : ferme la session de CET onglet seulement. La portée par défaut
+  // (`global`) révoque toutes les sessions du compte — Ulysse compris pour un
+  // membre de l'équipe, et les autres appareils du client.
   const deconnexion = async () => {
-    await (await authEspace()).signOut()
+    await (await authEspace()).signOut({ scope: 'local' })
     session.value = null
     moi.value = null
     await navigateTo('/mon-espace/connexion')
   }
 
-  /** Appel authentifié vers /api/v1/espace/<chemin>. Une 401 renvoie à la connexion. */
+  // Retour à la connexion, puis à la page en cours une fois reconnecté.
+  const versConnexion = () => navigateTo({ path: '/mon-espace/connexion', query: { suite: router.currentRoute.value.fullPath } })
+
+  /**
+   * Appel authentifié vers /api/v1/espace/<chemin>. Une 401 est retentée une
+   * fois avec un jeton rafraîchi (jeton expiré entre-temps) ; si la session
+   * est révoquée, retour à la connexion.
+   */
   const api = async (chemin, options = {}) => {
     await init()
     if (indisponible.value) {
@@ -188,28 +209,36 @@ export const useEspace = () => {
     }
     const a = await authEspace()
     const { data } = await a.getSession()
-    const jeton = data.session?.access_token
-    if (!jeton) {
-      await navigateTo('/mon-espace/connexion')
+    if (!data.session?.access_token) {
+      await versConnexion()
       throw new Error('Connexion requise')
     }
     if (import.meta.dev && demoActive()) {
       const { reponseDemo } = await import('~/dev/espaceDemo.js')
       return reponseDemo(chemin, options, data.session)
     }
+    const appel = jeton => $fetch(`/api/v1/espace/${chemin}`, {
+      ...options,
+      headers: { ...(options.headers || {}), Authorization: `Bearer ${jeton}` },
+    })
     try {
-      return await $fetch(`/api/v1/espace/${chemin}`, {
-        ...options,
-        headers: { ...(options.headers || {}), Authorization: `Bearer ${jeton}` },
-      })
+      return await appel(data.session.access_token)
     }
     catch (err) {
-      if (err?.statusCode === 401) {
-        await a.signOut()
-        await navigateTo('/mon-espace/connexion')
-      }
-      throw err
+      if (err?.statusCode !== 401) throw err
     }
+    const { data: neuf } = await a.refreshSession()
+    if (neuf?.session?.access_token) {
+      try {
+        return await appel(neuf.session.access_token)
+      }
+      catch (err) {
+        if (err?.statusCode !== 401) throw err
+      }
+    }
+    await a.signOut({ scope: 'local' })
+    await versConnexion()
+    throw new Error('Connexion requise')
   }
 
   /** Compte et dossiers ; mémorisé pour la navigation entre pages. */
@@ -228,6 +257,7 @@ export const useEspace = () => {
     envoyerCode,
     verifierCode,
     connexionMotDePasse,
+    googleDisponible,
     connexionGoogle,
     reprendreSuiteGoogle,
     confirmationRequise,
