@@ -122,12 +122,43 @@ production avant d'ouvrir l'espace**.
 - Le titulaire est reconnu dans les voyageurs par **nom + prénom** du contact AC ;
   s'ils diffèrent (nom d'usage, faute), il n'a pas de ligne « (vous) » et choisit sa
   visibilité via la place sans compte. Accepter, ou ajouter un choix manuel.
-- L'historique de paiement ne montre que Stripe et Alma ; les règlements hors ligne
-  (chèque, virement saisi dans Ulysse) n'apparaissent que dans « Déjà réglé ».
-  Les lire depuis `ulysse.encaissements` compléterait la liste.
-- Cache « voyageurs relus » en stockage mémoire Nitro : par instance Vercel, donc
-  quelques lectures AC en plus, sans conséquence.
-- Pas de référence de dossier type « ODY-26-0473 » : on affiche le n° de deal.
+- **Règlements hors ligne dans l'historique — FAIT** (branche `claude/confident-driscoll-28437d`).
+  `paiementsLecture.lireEncaissements` lit `ulysse.encaissements` (service_role,
+  montants en **euros** `numeric(10,2)`, pas en centimes) ; la règle pure
+  `espaceVoyageur.historiquePaiements` fusionne Stripe, Alma et le journal, testée.
+  Une ligne du journal n'est listée que si elle est déjà dans « Déjà réglé » :
+  saisie reportée dans AC (`ac_le` rempli), ou reprise **confirmée** avec un moyen
+  connu (date = `recu_le`, « — » si absente). Ni archivée, ni saisie en échec de
+  report, ni reprise « à confirmer » (écart Total payé − Stripe − Alma, moyen et
+  date inconnus : ce n'est pas un paiement vérifié). Pas de doublon possible : le
+  journal ne contient que l'argent passé hors de Stripe et d'Alma, et une reprise
+  est par définition ce qu'ils n'expliquent pas. Cohérence : `horsListe` = « Déjà
+  réglé » − Σ(reçu − remboursé) des lignes payées, la même égalité que l'ARG-04 du
+  Docteur ; s'il est positif, la fiche affiche « « Déjà réglé » comprend aussi X €
+  réglés hors ligne, pas encore détaillés ici » (cas des 75 reprises à confirmer
+  en production au 22/10/2026, 164 k€ ; aucune saisie encore). Négatif (webhook AC
+  en retard) ou source illisible : rien n'est annoncé. Le Docteur d'Ulysse n'est
+  pas touché (`lirePaiements` inchangé). Démo : Népal = carte + chèque vacances
+  (+ une saisie non reportée, cachée), Maroc = Alma + reprise à confirmer.
+- **Référence de dossier lisible — rien à afficher, format à valider avec Alex.**
+  Aucune référence de **dossier** n'existe dans les données : `travel_dates.bms_reference`
+  est le code catalogue du **voyage** (`AS-NEP-1`, partagé par toutes les dates et
+  tous les voyageurs, rempli sur 225 dates sur 1 267, parfois un libellé libre
+  « Ecosse ») ; Sanity `bmsReference` est le même code ; Ulysse n'a pas de
+  numéro de dossier (seule `ulysse.chapka_dossiers.reference`, propre à
+  l'assurance). On garde donc « Dossier n° {deal} ». Pistes à trancher : afficher
+  le code voyage à côté du n° (« AS-NEP-1 · 17037 », sans rien inventer), ou créer
+  une vraie séquence « ODY-26-0473 » (colonne + numérotation à décider).
+- **Cache « voyageurs relus » — constaté, aucune action.** `voyageursAJour`
+  (`espaceDossiers.js`) garde l'heure de la dernière relecture AC sous
+  `espace:voyageurs:{dealId}` dans `useStorage('cache')`, sans montage configuré
+  (`nuxt.config.ts`) : mémoire de l'instance Nitro en production. Chaque instance
+  Vercel froide relit donc une fois les dossiers du titulaire qui ouvre une fiche
+  (en série, ≤ 1 appel AC par dossier), et la marque posée par le webhook
+  `dealUpdate` ne sert qu'à son instance. Coût : quelques lectures AC, données
+  toujours justes (AC fait foi). Si un jour il fallait le partager, la colonne
+  `deal_travelers.synced_at` existe déjà — sauf pour un deal sans aucun voyageur,
+  qui n'a pas de ligne.
 
 ### 4.2 Connexion par mot de passe — FAIT (branche `claude/espace-mot-de-passe`)
 

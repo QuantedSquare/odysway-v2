@@ -8,6 +8,7 @@
 
 import espaceDocument from '../../server/utils/espaceDocument.js'
 import espaceProfil from '../../server/utils/espaceProfil.js'
+import espaceVoyageur from '../../server/utils/espaceVoyageur.js'
 
 const CODE = '123456'
 const CLE = 'odysway-espace-demo'
@@ -115,7 +116,7 @@ const nepal = () => ({
   groupe: true,
   conseiller: 'Léa',
   option: null,
-  paiement: { total: 2890, paye: 870, reste: 2020, echeance: '2027-01-13', delaiJours: 60, joursAvantEcheance: joursAvant('2027-01-13'), statut: 'a_regler' },
+  paiement: { total: 2890, paye: 1170, reste: 1720, echeance: '2027-01-13', delaiJours: 60, joursAvantEcheance: joursAvant('2027-01-13'), statut: 'a_regler' },
 })
 
 const maroc = () => ({
@@ -167,6 +168,29 @@ const documentsDemo = () => {
   return DOCS.map(d => espaceDocument.vueClient(d, { aujourdhui: auj, vu: vus.includes(d.id) })).sort(espaceDocument.trier)
 }
 
+// Paiements aux formats lus (paiementsDeal.js, ulysse.encaissements), passés par
+// la vraie règle. Népal : carte + chèque vacances saisi dans Ulysse, plus une
+// saisie pas encore reportée dans AC (non listée). Maroc : Alma + une reprise
+// à confirmer, que la liste annonce sans la détailler.
+const PAIEMENTS = {
+  17037: {
+    stripe: { disponible: true, paiements: [{ le: '2026-09-04T10:00:00Z', montant: 870, rembourse: 0, moyen: 'carte', statut: 'paye' }] },
+    alma: { disponible: true, paiements: [] },
+    journal: {
+      disponible: true,
+      lignes: [
+        { montant: 300, moyen: 'cheque_vacances', origine: 'saisie', statut: 'confirme', recu_le: '2026-10-02', ac_le: '2026-10-02T14:10:00Z', archived: false },
+        { montant: 150, moyen: 'cheque', origine: 'saisie', statut: 'confirme', recu_le: '2026-10-20', ac_le: null, archived: false },
+      ],
+    },
+  },
+  15188: {
+    stripe: { disponible: true, paiements: [] },
+    alma: { disponible: true, paiements: [{ le: '2025-01-18T09:30:00Z', montant: 1480, rembourse: 0, moyen: 'alma 3x', statut: 'paye' }] },
+    journal: { disponible: true, lignes: [{ montant: 500, moyen: 'inconnu', origine: 'reprise', statut: 'a_confirmer', recu_le: null, ac_le: null, archived: false }] },
+  },
+}
+
 const erreurDemo = (statusCode, statusMessage) => Object.assign(new Error(statusMessage), { statusCode, data: { statusMessage } })
 
 export const reponseDemo = async (chemin, options = {}, session) => {
@@ -196,7 +220,7 @@ export const reponseDemo = async (chemin, options = {}, session) => {
       ...base,
       lienPaiement: base.paiement.reste > 0 ? '/checkout?type=balance&booked_id=demo&step=1' : null,
       carnet: null,
-      paiements: { complet: true, paiements: [{ le: '2026-09-04T10:00:00Z', montant: 870, rembourse: 0, moyen: 'carte', statut: 'paye', via: 'Stripe' }] },
+      paiements: espaceVoyageur.historiquePaiements(PAIEMENTS[base.id], base.paiement.paye),
       voyageurs: avecProfils(voyageurs()),
       documents: +dossier[1] === 15188 ? [] : documentsDemo(),
       compagnons: { visibles: ['Paul D.', 'Hélène M.'], autres: 4 },
