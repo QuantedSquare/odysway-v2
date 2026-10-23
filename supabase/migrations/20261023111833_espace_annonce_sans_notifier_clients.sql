@@ -3,11 +3,10 @@
 -- Publier n'envoie plus rien : la case « prévenir les clients » disparaît.
 --
 -- DESTRUCTIVE mais sans perte : trip_documents.notifier_clients n'est plus lue
--- ni écrite par odysway depuis l'annonce manuelle. À appliquer APRÈS le
--- déploiement de ce code (dev partage la base de prod). notifie_le et
+-- ni écrite par odysway depuis l'annonce manuelle (ni par dev, ni par main,
+-- ni par Ulysse au moment de l'application). notifie_le et
 -- trip_document_notifications restent : ils disent ce qui a été annoncé.
 --
--- Version provisoire : le fichier prend la version enregistrée en prod une
--- fois la migration appliquée.
+-- Appliquée en prod le 23/10/2026 (version 20261023111833).
 
 ALTER TABLE public.trip_documents DROP COLUMN IF EXISTS notifier_clients;

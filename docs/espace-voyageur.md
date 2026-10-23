@@ -241,8 +241,8 @@ liste toutes les places que le compte peut remplir sur ses voyages à venir.
     `[Recette → client@…]` ; journalisé `redirige`, ce qui **ne compte pas** en
     production (le document reste à annoncer, `notifie_le` n'est pas posé) ;
   - `actif` → les clients sont prévenus. **À ne poser qu'en production.**
-- Migration `…_espace_annonce_sans_notifier_clients.sql` : supprime
-  `trip_documents.notifier_clients` (plus utilisée). À appliquer après déploiement.
+- Migration `20261023111833_espace_annonce_sans_notifier_clients.sql` : supprime
+  `trip_documents.notifier_clients` (plus utilisée). **Appliquée en prod le 23/10/2026.**
 
 **Reste à faire**
 - Contrat d'assurance Chapka et factures clients : pas de génération automatique ;
