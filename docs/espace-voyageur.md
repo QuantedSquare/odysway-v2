@@ -241,11 +241,57 @@ liste toutes les places que le compte peut remplir sur ses voyages à venir.
 - Campagne Brevo d'ouverture : voyageurs à départ futur d'abord (~250), puis les
   autres. Le lien ne porte ni jeton ni adresse (un email transféré n'ouvre rien).
 
-### 4.6 Compte
+### 4.6 Compte — FAIT (branche `claude/espace-compte`)
 
-- Suppression du compte (RGPD) : `auth.admin.deleteUser` → liens et codes partent en
-  cascade, places de voyageur gardées sans `user_id`.
-- Changement d'email du compte (Supabase `updateUser({ email })`, double confirmation).
+Bloc « Mon compte » de `/mon-espace/securite`. Les deux actions exigent une connexion
+de moins de 10 minutes (même reconfirmation par code que le mot de passe, §4.2). Un
+compte de l'équipe (`ulysse.members`, par `user_id` ou email exact) ne les voit pas :
+`GET moi` renvoie `compte.equipe`.
+
+**Suppression du compte (RGPD)** — `DELETE /api/v1/espace/moi`
+`{ conservationComprise: true, confirmation: 'SUPPRIMER' }` (`moi.delete.js`,
+`espaceComptes.js`, règles pures dans `espaceCompte.js`).
+- Le serveur revérifie : connexion récente (`amr` du jeton, sinon 403
+  `raison: connexion_ancienne`), double confirmation (case + mot, sinon 400), puis
+  **refuse tout membre d'Ulysse** (403 ; une erreur de lecture de `ulysse.members` vaut refus).
+- Effacé AVANT le compte (après, plus rien ne relie un profil à la personne ; tout
+  est rejouable si `deleteUser` échoue) — décidé avec Alex le 22/10/2026 :
+  - les profils remplis **pour soi** (`traveler_profiles.user_id` = le compte), voyages
+    à venir compris, et leurs copies dans `traveler-files` ; une ligne `suppression`
+    par profil dans `traveler_file_access` (`scan_path` renseigné si une copie l'était) ;
+  - le consentement `visible_groupe` des places du compte, remis à faux.
+- Puis `auth.admin.deleteUser` (définitif). Clés étrangères vérifiées en base :
+  `client_account_links`, `client_link_codes`, `trip_document_views` en CASCADE ;
+  `deal_travelers.user_id` / `invited_by`, `traveler_profiles.user_id` / `updated_by`,
+  `traveler_file_access.acteur_user_id`, et les tables `ulysse.*` en SET NULL.
+- **Restent** : deals AC, réservations, paiements, factures (obligation comptable, dit
+  au client avant et après) ; les profils remplis par le titulaire pour ses proches ;
+  l'email d'invitation posé sur une place. Les cases AC « Passeport reçu » restent
+  cochées : pour un départ à venir, le conseiller redemande le passeport.
+- Revenir avec la même adresse recrée un compte vide qui retrouve les réservations
+  (rattachement par email) : c'est dit au client. Ses autres droits renvoient à
+  `/politique-de-confidentialite`.
+
+**Changement d'email du compte** — appel direct à Supabase Auth, comme le mot de passe :
+`updateUser({ email })` puis `verifyOtp({ type: 'email_change' })` pour **chaque**
+adresse (le premier code ne renvoie qu'un message, le second la session). L'email AC
+n'est jamais touché ; les liens (`ac_contact`) survivent. Comme `GET moi` rejoue le
+rattachement par email, les dossiers réservés avec la **nouvelle** adresse (vérifiée)
+s'ajoutent — choix d'Alex ; pour toute autre adresse, « Retrouver un dossier ». Le
+client est prévenu que nos emails de réservation partent toujours à l'ancienne adresse.
+
+**Réglages Supabase Auth à faire** : « Secure email change » activé ; modèle
+« Change Email Address » affichant `{{ .Token }}` (codes, pas liens). Sans le premier,
+seule la nouvelle adresse confirme (l'interface le gère). Limite connue : un membre de
+l'équipe peut appeler `updateUser` lui-même ; seule l'interface le lui cache.
+
+**Démo** : changement d'email avec `123456` aux deux adresses (`pris@email.fr` = adresse
+déjà prise) ; suppression effaçant session, mot de passe et profil de la place 1 ;
+une adresse en `@odysway.com` joue un membre de l'équipe.
+
+Piège : un fichier de `server/utils` ne peut pas importer `app/utils` (Nitro calcule le
+chemin depuis `.nuxt/dev` → 500 sur tout le site). L'inverse marche (Vite) :
+`app/utils/espaceReglesCompte.js` importe `server/utils/espaceCompte.js`.
 
 ## 5. Vérifier son travail
 

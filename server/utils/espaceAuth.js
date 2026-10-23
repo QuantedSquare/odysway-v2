@@ -41,4 +41,4 @@ const requireClient = async (event) => {
   return client
 }
 
-export default { getClientOrNull, requireClient }
+export default { getClientOrNull, requireClient, lireJeton }
