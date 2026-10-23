@@ -234,10 +234,47 @@ liste toutes les places que le compte peut remplir sur ses voyages à venir.
 
 ### 4.5 Activation et relances
 
-- Lien « Mon espace » dans les emails transactionnels (confirmation, relances).
-- Relances de solde J-90 / J-75 / J-65 pointant vers `/mon-espace/voyages/:dealId#paiement`.
-- Campagne Brevo d'ouverture : voyageurs à départ futur d'abord (~250), puis les
-  autres. Le lien ne porte ni jeton ni adresse (un email transféré n'ouvre rien).
+**Échéance du solde : J-30, Pérou J-45** (décision du 22/10/2026, remplace
+l'hypothèse J-60 du §1). C'est la règle que les relances AC écrivent aux clients
+depuis 2024 et que l'annulation applique ; l'espace affichait « en retard » des
+clients encore dans les temps. `ECHEANCE_SOLDE_JOURS` = 30 et
+`ECHEANCE_SOLDE_JOURS_PEROU` = 45 dans `server/utils/espaceVoyageur.js` ; le Pérou
+est reconnu par l'iso du deal (`PE` / `PER`), à défaut par le pays.
+
+**Les relances de solde existent déjà, dans AC : on les garde.** Pas de cron, pas de
+table d'idempotence, pas de job pg_cron côté odysway-v2 : les SMS, appels et la tâche
+« Annuler voyage » d'AC sont enchaînés aux mêmes emails, un second circuit aurait
+doublé les envois.
+
+| Automatisation AC | Emails clients (campagne) | Lien actuel |
+|---|---|---|
+| 3 « Solde en retard » | J-40 sans assurance (14), J-40 assurance prise (26), J-31 « plus qu'un jour » (16) ; puis SMS J-35, appel J-32, annulation | `%DEAL_LIEN_DE_PAIEMENT%` |
+| 75 « Solde Pérou J-45 » | J-55 assurance prise (75), J-55 sans assurance (77), J-46 (79) | `%DEAL_LIEN_DE_PAIEMENT%` |
+| 5 « Confirmation Réservations » | « Réservation Confirmée Vdef » (18) | aucun |
+| 21 « Pose d'Option » | Pose d'option (98), fin d'option (100) | — |
+
+Inventaire du 22/10/2026 (90 derniers jours) : aucun email de réservation ni de
+relance ne part du code. Côté Brevo, seul le modèle 250 (formulaire de contact,
+prospects) est encore envoyé ; les modèles « Relance Solde J-40 / J-31 »,
+« Réservation confirmée », « Solde payé » sont des restes d'avant AC. Côté code :
+`espaceEmails.js` (code de rattachement ; invitation, qui pointe déjà vers
+`/mon-espace/connexion`) et, avec la PR #308, l'annonce d'un nouveau document.
+
+**À faire dans AC, le jour de l'ouverture de l'espace (§3), pas avant** :
+- relances 14, 26, 16, 75, 77, 79 : le bouton « Régler mon solde » vise
+  `https://odysway.com/mon-espace` au lieu de `%DEAL_LIEN_DE_PAIEMENT%`, avec une
+  ligne sur la connexion par code (texte validé par Alex dans la PR) ;
+- confirmation 18 : bloc « Votre Espace Voyageur » + bouton vers `https://odysway.com/mon-espace`.
+
+Le lien ne porte ni jeton ni adresse : un email transféré n'ouvre rien. Le tableau de
+bord de l'espace affiche l'alerte de solde, qui mène à `/mon-espace/voyages/:dealId#paiement`
+(la connexion garde la destination, ancre comprise). Pour un lien direct vers le
+dossier depuis AC, il faudrait un champ de deal « Lien espace voyageur » rempli par
+le code (`https://odysway.com/mon-espace/voyages/<dealId>#paiement`) : à créer dans
+AC puis à ajouter à `customFieldsMapDeal`, si le clic de plus gêne.
+
+**Reste** : campagne d'ouverture (voyageurs à départ futur d'abord, ~250, puis les
+autres), même lien sans jeton.
 
 ### 4.6 Compte
 

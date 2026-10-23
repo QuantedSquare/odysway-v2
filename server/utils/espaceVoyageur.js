@@ -3,9 +3,12 @@
 // PUR : aucun import automatique de Nitro, testé par
 // tests/unit/espaceVoyageur.test.mjs (`npm run test:unit`).
 
-// Le solde est dû 60 jours avant le départ (maquette validée : « soit 60 jours
-// avant le départ »). Aucune règle n'existait dans le code avant l'espace.
-const ECHEANCE_SOLDE_JOURS = 60
+// Le solde est dû 30 jours avant le départ, 45 pour le Pérou : la règle que
+// les relances AC écrivent aux clients (automatisations « Solde en retard » et
+// « Solde Pérou J-45 ») et que l'annulation applique. Choix d'Odysway du
+// 22/10/2026, à la place de l'hypothèse J-60 de la maquette.
+const ECHEANCE_SOLDE_JOURS = 30
+const ECHEANCE_SOLDE_JOURS_PEROU = 45
 
 const CHAMPS_VOYAGEURS = Array.from({ length: 15 }, (_, i) => `traveler${i + 1}`)
 
@@ -24,6 +27,15 @@ const motifEmailExact = email => String(email).trim().replace(/[\\%_]/g, c => `\
 
 const sansAccents = s => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '')
 const cleNom = s => sansAccents(s).toLowerCase().replace(/[^a-z]/g, '')
+
+// Miroir AC : iso 'PE' ou 'PER', parfois seulement le pays.
+const versPerou = ({ iso, pays } = {}) => {
+  const i = String(iso || '').trim().toUpperCase()
+  if (i) return i === 'PE' || i === 'PER'
+  return cleNom(pays) === 'perou'
+}
+
+const delaiSolde = destination => (versPerou(destination) ? ECHEANCE_SOLDE_JOURS_PEROU : ECHEANCE_SOLDE_JOURS)
 
 const DATE_FR = /^(\d{2})\/(\d{2})\/(\d{4})$/
 const DATE_ISO = /^(\d{4})-(\d{2})-(\d{2})$/
@@ -112,14 +124,16 @@ const ajouterJours = (iso, n) => {
 /**
  * Ce qui reste à payer et pour quand. Montants en EUROS (le miroir AC les
  * stocke ainsi). `statut` : 'solde' | 'a_regler' | 'en_retard' | 'inconnu'.
+ * `iso` / `pays` : la destination, qui fixe le délai (voir delaiSolde).
  */
-const situationPaiement = ({ totalValue, totalPaid, restToPay, departureDate, aujourdhui }) => {
+const situationPaiement = ({ totalValue, totalPaid, restToPay, departureDate, aujourdhui, iso, pays }) => {
   const total = Number.isFinite(Number(totalValue)) && totalValue !== null ? Number(totalValue) : null
   const paye = Number.isFinite(Number(totalPaid)) && totalPaid !== null ? Number(totalPaid) : null
   let reste = Number.isFinite(Number(restToPay)) && restToPay !== null ? Number(restToPay) : null
   if (reste === null && total !== null && paye !== null) reste = Math.max(0, total - paye)
   const depart = jour(departureDate)
-  const echeance = depart ? ajouterJours(depart, -ECHEANCE_SOLDE_JOURS) : null
+  const delai = delaiSolde({ iso, pays })
+  const echeance = depart ? ajouterJours(depart, -delai) : null
 
   let statut = 'inconnu'
   if (reste !== null) {
@@ -132,7 +146,7 @@ const situationPaiement = ({ totalValue, totalPaid, restToPay, departureDate, au
     paye,
     reste: reste === null ? null : Math.round(reste * 100) / 100,
     echeance,
-    delaiJours: ECHEANCE_SOLDE_JOURS,
+    delaiJours: delai,
     joursAvantEcheance: echeance ? ecartJours(aujourdhui, echeance) : null,
     statut,
   }
@@ -200,6 +214,8 @@ const resumeDossier = ({ deal, role, reservation, date }, aujourdhui, { contact 
           restToPay: deal.rest_to_pay,
           departureDate,
           aujourdhui,
+          iso: deal.iso,
+          pays: deal.country,
         })
       : null,
   }
@@ -207,6 +223,8 @@ const resumeDossier = ({ deal, role, reservation, date }, aujourdhui, { contact 
 
 export default {
   ECHEANCE_SOLDE_JOURS,
+  ECHEANCE_SOLDE_JOURS_PEROU,
+  delaiSolde,
   aujourdhuiParis,
   titreVoyage,
   resumeDossier,
