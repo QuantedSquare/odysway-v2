@@ -21,6 +21,12 @@ const demoActive = () => useRuntimeConfig().public.espace?.demo === true
 const supabaseEspace = () => {
   if (client) return client
   const { public: { espace } } = useRuntimeConfig()
+  // Variable Vercel oubliée : une erreur nommée plutôt que celle de supabase-js,
+  // que init() transforme en « espace indisponible ».
+  const manquants = reglagesEspaceManquants(espace)
+  if (manquants.length) {
+    throw Object.assign(new Error(`Configuration de l'Espace Voyageur incomplète : ${manquants.join(', ')}`), { code: ESPACE_INDISPONIBLE })
+  }
   client = createClient(espace.supabaseUrl, espace.supabaseKey, {
     auth: {
       // Clé dédiée : rien à partager avec une autre session Supabase du domaine.
@@ -54,17 +60,28 @@ export const useEspace = () => {
   const session = useState('espace-session', () => null)
   const pret = useState('espace-pret', () => false)
   const moi = useState('espace-moi', () => null)
+  // Le client Supabase n'a pas pu démarrer (configuration absente…) : la page
+  // de connexion l'annonce au lieu de laisser des boutons sans effet.
+  const indisponible = useState('espace-indisponible', () => false)
 
+  /** Ne lève jamais : en cas d'échec, `indisponible` passe à vrai. */
   const init = async () => {
-    if (import.meta.server || pret.value) return
-    const a = await authEspace()
-    const { data } = await a.getSession()
-    session.value = data.session
-    a.onAuthStateChange((_evt, s) => {
-      session.value = s
-      if (!s) moi.value = null
-    })
-    pret.value = true
+    if (import.meta.server || pret.value || indisponible.value) return
+    try {
+      const a = await authEspace()
+      const { data } = await a.getSession()
+      session.value = data.session
+      a.onAuthStateChange((_evt, s) => {
+        session.value = s
+        if (!s) moi.value = null
+      })
+      pret.value = true
+    }
+    catch (err) {
+      console.error('[espace] initialisation impossible :', err)
+      session.value = null
+      indisponible.value = true
+    }
   }
 
   /**
@@ -214,6 +231,10 @@ export const useEspace = () => {
   /** Appel authentifié vers /api/v1/espace/<chemin>. Une 401 renvoie à la connexion. */
   const api = async (chemin, options = {}) => {
     await init()
+    if (indisponible.value) {
+      await navigateTo('/mon-espace/connexion')
+      throw Object.assign(new Error('Espace voyageur indisponible'), { code: ESPACE_INDISPONIBLE })
+    }
     const a = await authEspace()
     const { data } = await a.getSession()
     const jeton = data.session?.access_token
@@ -251,6 +272,7 @@ export const useEspace = () => {
     session,
     pret,
     moi,
+    indisponible,
     init,
     envoyerCode,
     verifierCode,
