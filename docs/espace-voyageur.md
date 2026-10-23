@@ -117,9 +117,19 @@ production avant d'ouvrir l'espace**.
 
 ### 4.1 Points d'attention du socle
 
-- Le titulaire est reconnu dans les voyageurs par **nom + prénom** du contact AC ;
-  s'ils diffèrent (nom d'usage, faute), il n'a pas de ligne « (vous) » et choisit sa
-  visibilité via la place sans compte. Accepter, ou ajouter un choix manuel.
+- Le titulaire est reconnu dans les voyageurs par **nom + prénom** du contact AC.
+  S'ils diffèrent (nom d'usage, faute), il choisit **« C'est moi »** sur sa place —
+  FAIT (branche `claude/espace-corriger-voyageurs`) :
+  - `POST dossiers/:dealId/titulaire` `{ slot }` (ou `{ slot: null }` : retour à la
+    reconnaissance par le nom, lien « Ce n'est pas vous ? ») ; titulaire seulement ;
+    refusé sur la place d'un autre compte ou invitée à une autre adresse.
+  - Gardé dans `deal_travelers.holder_manuel` (migration
+    `20261022185505_espace_titulaire_choisi`, appliquée en prod le 22/10/2026 ;
+    index unique partiel : une place choisie par deal). La synchro AC
+    (`synchroniserVoyageurs`) tient la place choisie pour celle du titulaire tant
+    qu'elle existe dans AC, sinon revient au nom.
+  - Corriger sa propre place pose ce choix d'office : changer son nom ne fait pas
+    perdre la ligne « (vous) ».
 - L'historique de paiement ne montre que Stripe et Alma ; les règlements hors ligne
   (chèque, virement saisi dans Ulysse) n'apparaissent que dans « Déjà réglé ».
   Les lire depuis `ulysse.encaissements` compléterait la liste.
@@ -209,8 +219,32 @@ liste toutes les places que le compte peut remplir sur ses voyages à venir.
   les autres depuis Admin › Droits). `GET /api/v1/ulysse/dates/:dateId/profils` déchiffre
   les numéros ; chaque profil lu et chaque copie ouverte sont journalisés des deux côtés.
   Numéros masqués par défaut, « Copier pour les billets » (TSV pour tableur).
-- Modifier nom / date de naissance d'un voyageur : réécrire le champ AC « Voyageur N »
-  au même format (Chapka le lit), puis resynchroniser.
+- ~~Modifier nom / date de naissance d'un voyageur~~ — FAIT (branche
+  `claude/espace-corriger-voyageurs`) : bouton « Corriger » par voyageur (titulaire
+  seulement), `POST dossiers/:dealId/voyageurs/:slot/identite`
+  `{ avant, apres: { prenom, nom, dateNaissance } }`. Règles pures dans
+  `server/utils/espaceCorrection.js`, parcours dans `espaceCorrections.js`.
+  - Champ AC réécrit au format du tunnel `Prénom_Nom_JJ/MM/AAAA_ISO`, ce qui suit la
+    date recopié tel quel (ISO) ; puis note AC « Correction depuis l'Espace Voyageur
+    par <email> : Voyageur N « avant » → « après » », `deal_travelers` resynchronisé,
+    alerte Slack.
+  - Garde-fous validés par Alex (22/10/2026) :
+    - **verrou** si « Billets achetés » (AC 43, relu dans AC au moment d'écrire) ou à
+      **moins de 30 jours** du départ (`DELAI_CORRECTION_JOURS`), voyage commencé
+      compris : la modale affiche « contactez-nous » et un lien vers `/contact` ;
+    - **409** si AC ne porte plus ce que la page affichait (la place est relue) ;
+    - prénom ≤ 50, nom ≤ 80 caractères, lettres / espaces / tirets / apostrophes,
+      **jamais `_`** (séparateur que Chapka découpe) ; date réelle, passée, ≤ 120 ans ;
+    - **date de naissance d'un mineur** au départ (avant ou après) : refusée, le tarif
+      enfant peut en dépendre — l'équipe la corrige. Son nom reste corrigeable.
+  - Tout reste modifiable, y compris remplacer la personne : Slack le signale
+    (« probablement une autre personne ») quand prénom ET nom changent, et rappelle
+    de prévenir Chapka si une assurance est souscrite sur un deal déjà payé
+    (pipeline 2) — Chapka ne lit les voyageurs qu'au premier paiement.
+  - Slack : `SLACK_URL_ESPACE`, sinon `SLACK_URL_PAIEMENTS`. **À créer sur Vercel**
+    si l'équipe veut un canal dédié.
+  - Démo : Camille est inscrite sous « Rousseau-Martin » (pas de « (vous) », bouton
+    « C'est moi ») ; le Maroc, passé, montre le verrou.
 
 ### 4.4 Documents — FAIT (branche `claude/espace-documents`, Ulysse `claude/documents-voyage`)
 

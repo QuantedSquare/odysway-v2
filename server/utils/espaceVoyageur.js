@@ -77,6 +77,25 @@ const slotTitulaire = (voyageurs, contact) => {
   return trouve ? trouve.slot : null
 }
 
+/**
+ * La place du titulaire : celle qu'il a désignée (« C'est moi »,
+ * deal_travelers.holder_manuel) si elle est toujours dans AC, sinon celle qui
+ * porte son nom.
+ */
+const slotTitulaireChoisi = (voyageurs, contact, slotChoisi) => {
+  const choisi = Number(slotChoisi)
+  if (Number.isInteger(choisi) && voyageurs.some(v => v.slot === choisi)) return choisi
+  return slotTitulaire(voyageurs, contact)
+}
+
+/**
+ * Le titulaire peut-il dire « C'est moi » sur cette place ? Pas sur celle d'un
+ * autre compte, ni sur une place invitée à une autre adresse.
+ */
+const peutSeDesigner = ({ place, clientId, clientEmail }) => Boolean(place)
+  && (!place.user_id || place.user_id === clientId)
+  && (!place.email || place.email === normaliserEmail(clientEmail))
+
 /** "Camille R." — seul nom montré aux autres voyageurs du départ. */
 const nomPublic = (firstname, lastname) => {
   const p = String(firstname || '').trim()
@@ -217,6 +236,9 @@ export default {
   lireVoyageur,
   voyageursDuDeal,
   slotTitulaire,
+  slotTitulaireChoisi,
+  peutSeDesigner,
+  cleNom,
   nomPublic,
   etatVoyage,
   situationPaiement,

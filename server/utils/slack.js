@@ -95,4 +95,19 @@ const alertPartnershipRequest = ({ email, contactId, concept, destination, commu
     + `• À déléguer : ${besoin || '—'}\n`
     + `> ${concept.replace(/[\r\n]+/g, ' ').slice(0, 600)}`)
 
-export default { send, alertPaymentOnDeletedBooking, alertOrphanPayment, alertCascadeLeak, alertPartnershipRequest }
+/**
+ * Le titulaire a corrigé un voyageur depuis l'Espace Voyageur. Webhook dédié
+ * SLACK_URL_ESPACE, sinon le canal des paiements (lu par les opérations).
+ * Signale ce qui demande une action : une personne remplacée (cession de
+ * place), une assurance déjà transmise à Chapka sous l'ancien nom.
+ */
+const alertCorrectionVoyageur = ({ dealId, slot, avant, apres, auteur, personneChangee, assurance }) =>
+  send(process.env.SLACK_URL_ESPACE || process.env.SLACK_URL_PAIEMENTS,
+    `:pencil2: *Voyageur corrigé depuis l'Espace Voyageur*\n`
+    + `• Deal : \`${dealId}\`  ·  Voyageur ${slot}  ·  par ${auteur}\n`
+    + `• Avant : ${avant || '—'}\n`
+    + `• Après : ${apres}`
+    + (personneChangee ? `\n:warning: Prénom et nom changent tous les deux : probablement une autre personne (cession de place).` : '')
+    + (assurance ? `\n:shield: Assurance souscrite : Chapka a reçu l'ancien nom au premier paiement, lui transmettre le nouveau.` : ''))
+
+export default { send, alertPaymentOnDeletedBooking, alertOrphanPayment, alertCascadeLeak, alertPartnershipRequest, alertCorrectionVoyageur }
