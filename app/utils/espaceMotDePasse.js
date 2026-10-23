@@ -12,6 +12,11 @@ export const OCTETS_MAX = 72
 // Définir un mot de passe exige une connexion récente : sur un ordinateur
 // resté ouvert, un tiers ne doit pas pouvoir en poser un.
 export const FRAICHEUR_MINUTES = 10
+// « Password requirements » de Supabase Auth (BackOffice-PROD) : une minuscule,
+// une majuscule, un chiffre et un symbole, avec SES jeux de caractères — une
+// lettre accentuée ou une espace ne compte dans aucune famille.
+export const REGLE_FAMILLES = 'Une minuscule, une majuscule, un chiffre et un symbole'
+const FAMILLES = [/[a-z]/, /[A-Z]/, /[0-9]/, /[!@#$%^&*()_+\-=[\]{};'\\:"|<>?,./`~]/]
 
 /** Règles non respectées, dans l'ordre d'affichage. Tableau vide = valide. */
 export const reglesNonRespectees = (motDePasse, email = '') => {
@@ -21,6 +26,7 @@ export const reglesNonRespectees = (motDePasse, email = '') => {
   if (new TextEncoder().encode(mdp).length > OCTETS_MAX) manques.push('Pas plus de 72 caractères')
   if (mdp && mdp.trim() !== mdp) manques.push('Pas d\'espace au début ni à la fin')
   if (mdp && new Set(mdp).size < 5) manques.push('Au moins 5 caractères différents')
+  if (!FAMILLES.every(f => f.test(mdp))) manques.push(REGLE_FAMILLES)
   const identifiant = String(email || '').split('@')[0].toLowerCase()
   if (identifiant.length >= 4 && mdp.toLowerCase().includes(identifiant)) manques.push('Ne pas reprendre votre adresse email')
   return manques

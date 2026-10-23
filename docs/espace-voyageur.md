@@ -100,10 +100,10 @@ production avant d'ouvrir l'espace**.
    - [x] Mots de passe : longueur minimale 12, « Prevent use of leaked passwords » activé
      (l'advisor ne le signale plus), « Secure password change » activé, « Require current
      password » laissé **désactivé** (sinon un client connecté par code ne peut pas définir
-     son mot de passe). « Password requirements » impose minuscules, majuscules, chiffres
-     et symboles : l'espace traduit ce refus (`weak_password` / `characters`) mais ne
-     l'annonce pas dans ses règles ; repasser sur « No required characters » pour s'en
-     tenir aux règles de §4.2.
+     son mot de passe). « Password requirements » : minuscule, majuscule, chiffre et symbole
+     (choix d'Odysway du 23/10) — règle affichée par la page Sécurité (`REGLE_FAMILLES`,
+     mêmes jeux de caractères que Supabase : ni lettre accentuée ni espace ne comptent),
+     refus `weak_password` / `characters` traduit. Changer ce réglage = changer la règle.
    - [x] Captcha désactivé (l'espace n'envoie pas de jeton captcha : ne pas l'activer seul).
    - URL Configuration → Redirect URLs : `https://odysway.com/mon-espace/connexion` et les
      previews vérifiées le 22/10 et le 23/10 par `auth.flow_state` ; ajouter

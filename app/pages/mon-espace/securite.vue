@@ -266,6 +266,7 @@ const succes = ref(null)
 const REGLES = [
   `Au moins ${LONGUEUR_MIN} caractères`,
   'Au moins 5 caractères différents',
+  REGLE_FAMILLES,
   'Ne pas reprendre votre adresse email',
 ]
 const regles = computed(() => {
