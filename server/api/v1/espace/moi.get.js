@@ -33,9 +33,12 @@ export default defineEventHandler(async (event) => {
     nom = nom || place?.lastname || null
   }
 
+  // Un compte de l'équipe ne se supprime ni ne change d'email depuis l'espace.
+  const equipe = await espaceComptes.estMembreEquipe(client)
+
   const aujourdhui = espaceVoyageur.aujourdhuiParis()
   return {
-    compte: { email: client.email, prenom, nom },
+    compte: { email: client.email, prenom, nom, equipe },
     aujourdhui,
     dossiers: dossiers
       .map(d => espaceVoyageur.resumeDossier(d, aujourdhui, { contact: parContact.get(Number(d.deal.contact)) }))

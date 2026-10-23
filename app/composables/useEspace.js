@@ -144,6 +144,55 @@ export const useEspace = () => {
     if (session.value && data?.user) session.value = { ...session.value, user: data.user }
   }
 
+  /**
+   * Demande le changement d'email du COMPTE (Supabase Auth). Avec « Secure
+   * email change », un code part à l'ancienne ET à la nouvelle adresse ; rien
+   * ne change avant les deux. L'email du contact AC n'est jamais touché, et les
+   * dossiers déjà rattachés le restent (lien sur le contact AC, pas l'email).
+   */
+  const demanderChangementEmail = async (nouveau) => {
+    const { error } = await (await authEspace()).updateUser(
+      { email: normaliser(nouveau) },
+      { emailRedirectTo: new URL('/mon-espace/securite', window.location.origin).toString() },
+    )
+    if (error) throw error
+  }
+
+  /**
+   * Valide le code reçu à `email` (l'ancienne ou la nouvelle adresse). Renvoie
+   * le compte à jour quand le changement est fait, sinon null (l'autre code
+   * reste attendu : Supabase ne renvoie alors qu'un message, pas de session).
+   */
+  const confirmerChangementEmail = async (email, code) => {
+    const { data, error } = await (await authEspace()).verifyOtp({
+      email: normaliser(email),
+      token: String(code).trim(),
+      type: 'email_change',
+    })
+    if (error) throw error
+    if (!data?.session) return null
+    session.value = data.session
+    moi.value = null
+    return data.session.user
+  }
+
+  /**
+   * Supprime le compte (DELETE /api/v1/espace/moi), puis oublie la session
+   * locale : le compte n'existe plus, inutile de prévenir Supabase.
+   */
+  const supprimerCompte = async (confirmation) => {
+    const resultat = await api('moi', { method: 'DELETE', body: confirmation })
+    try {
+      await (await authEspace()).signOut({ scope: 'local' })
+    }
+    catch {
+      // session déjà invalide côté Supabase
+    }
+    session.value = null
+    moi.value = null
+    return resultat
+  }
+
   /** Moyens de connexion du compte, pour la page Sécurité. */
   const moyensConnexion = computed(() => {
     const user = session.value?.user
@@ -210,6 +259,9 @@ export const useEspace = () => {
     reprendreSuiteGoogle,
     confirmationRequise,
     definirMotDePasse,
+    demanderChangementEmail,
+    confirmerChangementEmail,
+    supprimerCompte,
     moyensConnexion,
     deconnexion,
     api,

@@ -5,9 +5,14 @@
 // Code de connexion : 123456. Mot de passe : celui défini dans la page Sécurité
 // (gardé dans sessionStorage). « Continuer avec Google » ouvre une session
 // vieille de 2 heures, pour voir la reconfirmation par code avant le mot de passe.
+// Changement d'email : 123456 aux deux adresses. Suppression du compte : efface
+// la session, le mot de passe et le profil de Camille (place 1). Une adresse
+// en @odysway.com joue un membre de l'équipe (actions refusées).
 
 import espaceDocument from '../../server/utils/espaceDocument.js'
 import espaceProfil from '../../server/utils/espaceProfil.js'
+import { connexionRecente } from '../utils/espaceMotDePasse.js'
+import { MOT_SUPPRESSION, suppressionConfirmee } from '../utils/espaceReglesCompte.js'
 
 const CODE = '123456'
 const CLE = 'odysway-espace-demo'
@@ -62,8 +67,27 @@ export const creerAuthDemo = () => {
       ecrire('emailCode', email)
       return { error: null }
     }),
-    verifyOtp: ({ email, token }) => Promise.resolve().then(() => {
+    verifyOtp: ({ email, token, type }) => Promise.resolve().then(() => {
       if (token !== CODE) return { data: {}, error: erreur('otp_expired', 'Token has expired or is invalid') }
+      if (type === 'email_change') {
+        // « Secure email change » : un code par adresse, le compte change au second.
+        const attente = lire('changementEmail', null)
+        const s = lire('session', null)
+        if (!attente || !s || ![attente.ancienne, attente.nouvelle].includes(email)) {
+          return { data: {}, error: erreur('otp_expired', 'Token has expired or is invalid') }
+        }
+        const confirmees = [...new Set([...attente.confirmees, email])]
+        if (confirmees.length < 2) {
+          ecrire('changementEmail', { ...attente, confirmees })
+          return { data: { user: { msg: 'Confirmation link accepted' }, session: null }, error: null }
+        }
+        ecrire('changementEmail', null)
+        const mdp = lire('motDePasse', null)
+        if (mdp) ecrire('motDePasse', { ...mdp, email: attente.nouvelle })
+        const ns = { ...s, user: { ...s.user, email: attente.nouvelle } }
+        changer(ns)
+        return { data: { session: ns, user: ns.user }, error: null }
+      }
       const s = nouvelleSession(email, 'otp')
       changer(s)
       return { data: { session: s }, error: null }
@@ -82,9 +106,14 @@ export const creerAuthDemo = () => {
       window.location.assign(options.redirectTo)
       return { error: null }
     }),
-    updateUser: ({ password }) => Promise.resolve().then(() => {
+    updateUser: ({ password, email }) => Promise.resolve().then(() => {
       const s = lire('session', null)
       if (!s) return { data: {}, error: erreur('session_not_found', 'No session') }
+      if (email) {
+        if (email === 'pris@email.fr') return { data: {}, error: erreur('email_exists', 'A user with this email address has already been registered') }
+        ecrire('changementEmail', { ancienne: s.user.email, nouvelle: email, confirmees: [] })
+        return { data: { user: { ...s.user, new_email: email } }, error: null }
+      }
       ecrire('motDePasse', { email: s.user.email, valeur: password })
       const user = { ...s.user, user_metadata: { ...s.user.user_metadata, mot_de_passe: true } }
       ecrire('session', { ...s, user })
@@ -173,8 +202,21 @@ export const reponseDemo = async (chemin, options = {}, session) => {
   await new Promise(r => setTimeout(r, 250))
   const corps = options.body || {}
 
+  const equipe = /@odysway\.com$/.test(session.user.email)
+  if (chemin === 'moi' && (options.method || 'GET').toUpperCase() === 'DELETE') {
+    if (!connexionRecente(session.access_token)) {
+      throw Object.assign(new Error('Connexion'), { statusCode: 403, data: { statusMessage: 'Pour votre sécurité, confirmez d\'abord votre identité avec un code.', data: { raison: 'connexion_ancienne' } } })
+    }
+    if (!suppressionConfirmee(corps)) throw erreurDemo(400, `Confirmez la suppression en cochant la case et en saisissant ${MOT_SUPPRESSION}.`)
+    if (equipe) throw erreurDemo(403, 'Ce compte est celui d\'un membre de l\'équipe Odysway : il ne se supprime pas depuis l\'espace client.')
+    const { 1: profilMoi, ...autres } = profils()
+    ecrire('profils', autres)
+    ecrire('voyageurs', voyageurs().map(v => (v.moi ? { ...v, visibleGroupe: false } : v)))
+    ecrire('motDePasse', null)
+    return { supprime: true, profilsEffaces: profilMoi ? 1 : 0, copiesEffacees: profilMoi?.scan_path ? 1 : 0 }
+  }
   if (chemin === 'moi') {
-    return { compte: { email: session.user.email, prenom: 'Camille', nom: 'Rousseau' }, aujourdhui: auj(), dossiers: [nepal(), maroc()] }
+    return { compte: { email: session.user.email, prenom: 'Camille', nom: 'Rousseau', equipe }, aujourdhui: auj(), dossiers: [nepal(), maroc()] }
   }
 
   const visibilite = /^dossiers\/\d+\/voyageurs\/(\d+)\/visibilite$/.exec(chemin)

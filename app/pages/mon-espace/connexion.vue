@@ -48,6 +48,16 @@
           </v-btn-toggle>
 
           <v-alert
+            v-if="compteSupprime"
+            type="success"
+            variant="tonal"
+            density="compact"
+            class="mb-4"
+          >
+            Votre compte est supprimé, ainsi que votre profil voyageur. Vos réservations, paiements et factures restent chez Odysway, comme la loi nous y oblige.
+          </v-alert>
+
+          <v-alert
             v-if="erreur"
             type="error"
             variant="tonal"
@@ -238,6 +248,8 @@ const destinationSure = (valeur) => {
   return s.startsWith('/mon-espace') && !s.startsWith('//') ? s : '/mon-espace'
 }
 const suite = ref(destinationSure(route.query.suite))
+// Retour de la page Sécurité après la suppression du compte.
+const compteSupprime = route.query.compte === 'supprime'
 
 watch(mode, (m) => {
   erreur.value = null
