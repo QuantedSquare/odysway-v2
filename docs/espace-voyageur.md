@@ -104,10 +104,12 @@ production avant d'ouvrir l'espace**.
      (`auth.odysway.com`, option payante) le remplacerait par Odysway.
 3. **Vercel** : `NUXT_PUBLIC_ESPACE_SUPABASE_KEY` (clé publiable `sb_publishable_…`)
    en Preview **et** Production (et dans le `.env` local) — sans elle le client
-   Supabase ne se crée pas et toute connexion (code, mot de passe, Google) affiche
-   « Une erreur est survenue » sans rien envoyer ; variable publique, donc nouveau
-   build requis. `NUXT_PUBLIC_ESPACE_SUPABASE_URL` (facultatif, défaut BackOffice-PROD),
-   puis `NUXT_PUBLIC_ESPACE_LIEN_VISIBLE=true` le jour de l'ouverture (seul interrupteur).
+   Supabase ne se crée pas : « Mon espace » mène à la page de connexion, qui affiche
+   « Espace voyageur momentanément indisponible » (erreur `[espace]` dans la console
+   du navigateur), et le build avertit `[espace] … configuration incomplète` si le
+   lien est visible. Variable publique, donc nouveau build requis. (Avant le
+   22/10/2026, `createClient` levait dans le middleware : le bouton paraissait mort.)
+   `NUXT_PUBLIC_ESPACE_SUPABASE_URL` (facultatif, défaut BackOffice-PROD), puis `NUXT_PUBLIC_ESPACE_LIEN_VISIBLE=true` le jour de l'ouverture (seul interrupteur).
 4. **Recette de bout en bout sur la preview** (jamais faite : aucun compte de test n'a
    été créé en production) : code, Google, client à plusieurs dossiers, email inconnu,
    rattachement d'une 2e adresse, invitation puis connexion de l'invité, consentement

@@ -4,6 +4,8 @@
 // contrôles (longueur minimale, mots de passe ayant fuité) : ceux-ci servent à
 // expliquer AVANT l'envoi, en français.
 
+import { ESPACE_INDISPONIBLE } from './espaceConfig.js'
+
 export const LONGUEUR_MIN = 12
 // bcrypt, utilisé par Supabase, ignore tout ce qui dépasse 72 octets.
 export const OCTETS_MAX = 72
@@ -54,6 +56,7 @@ export const connexionRecente = (jeton, maintenantMs = Date.now(), minutes = FRA
 export const messageErreurAuth = (err) => {
   const code = err?.code || ''
   const m = String(err?.message || '').toLowerCase()
+  if (code === ESPACE_INDISPONIBLE) return 'Espace voyageur momentanément indisponible. Réessayez un peu plus tard.'
   if (code === 'weak_password') {
     const raisons = err?.reasons || err?.weakPassword?.reasons || []
     if (raisons.includes('pwned')) return 'Ce mot de passe figure dans des fuites de données connues. Choisissez-en un autre.'

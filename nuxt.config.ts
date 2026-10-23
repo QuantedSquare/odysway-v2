@@ -2,6 +2,7 @@
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 
 import { defineOrganization } from 'nuxt-schema-org/schema'
+import { reglagesEspaceManquants } from './app/utils/espaceConfig.js'
 
 export default defineNuxtConfig({
   modules: [
@@ -236,6 +237,15 @@ export default defineNuxtConfig({
     },
   },
   hooks: {
+    // Lien « Mon espace » affiché sans clé publiable : le client tomberait sur
+    // « Espace voyageur momentanément indisponible ». Visible dans les logs de build Vercel.
+    'ready': (nuxt) => {
+      const espace = nuxt.options.runtimeConfig.public.espace
+      const manquants = reglagesEspaceManquants(espace)
+      if (espace?.lienVisible && manquants.length) {
+        console.warn(`[espace] NUXT_PUBLIC_ESPACE_LIEN_VISIBLE=true mais configuration incomplète (${manquants.join(', ')}) : ajoutez NUXT_PUBLIC_ESPACE_SUPABASE_KEY à cet environnement et redéployez.`)
+      }
+    },
     'build:manifest': (manifest) => {
       // find the app entry, css list
       const css = manifest['node_modules/nuxt/dist/app/entry.js']?.css
