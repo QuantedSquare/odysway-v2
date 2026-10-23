@@ -20,7 +20,7 @@ const echec = (error, contexte) => {
   throw createError({ statusCode: 500, statusMessage: 'Documents illisibles pour le moment.' })
 }
 
-const COLONNES = 'id, travel_date_id, deal_id, type, titre, description, nom_fichier, mime_type, taille, storage_path, reserve_titulaire, publie, publie_le, disponible_le, depose_par, created_at, updated_at, deleted_at'
+const COLONNES = 'id, travel_date_id, deal_id, type, titre, description, nom_fichier, mime_type, taille, storage_path, reserve_titulaire, publie, publie_le, disponible_le, notifie_le, depose_par, created_at, updated_at, deleted_at'
 
 // ── Côté client ─────────────────────────────────────────────────────────────
 
@@ -97,6 +97,9 @@ const vueEquipe = doc => ({
   publie: doc.publie,
   publieLe: doc.publie_le,
   disponibleLe: doc.disponible_le,
+  notifieLe: doc.notifie_le || null,
+  // Publié, disponible et pas encore annoncé : le bouton « Prévenir les clients » le propose.
+  aAnnoncer: espaceNotification.aNotifierMaintenant(doc, espaceVoyageur.aujourdhuiParis()),
   deposePar: doc.depose_par,
   creeLe: doc.created_at,
 })
@@ -207,7 +210,161 @@ const modifierDocument = async (documentId, corps) => {
   if (corps.publie === false) maj.publie = false
   const { data, error } = await supabase.from('trip_documents').update(maj).eq('id', documentId).select(COLONNES).single()
   echec(error, 'modification du document')
+  // Publier n'envoie AUCUN email : voir « Annonce aux clients » plus bas.
   return vueEquipe(data)
+}
+
+// ── Annonce aux clients ─────────────────────────────────────────────────────
+//
+// Publier n'envoie rien. Depuis la fiche départ d'Ulysse, l'équipe voit qui
+// serait prévenu de quels documents, confirme, et chaque client reçoit UN
+// email récapitulatif. Journal par couple (document, adresse) dans
+// trip_document_notifications : un client n'est jamais prévenu deux fois du
+// même document ; un échec Brevo est reproposé au clic suivant.
+
+const PAR_LOT = 5
+
+/**
+ * Destinataires de chaque document : titulaires des dossiers visibles concernés
+ * (tous ceux du départ, ou le seul dossier visé) et, sauf document réservé au
+ * titulaire, leurs invités. Rend aussi le titre du voyage de chaque dossier.
+ */
+const destinatairesDesDocuments = async (docs, dealIds) => {
+  const parDocument = new Map(docs.map(d => [d.id, []]))
+  if (!docs.length || !dealIds.length) return { parDocument, titreParDeal: new Map() }
+  const { data: deals, error } = await supabase.from('activecampaign_deals')
+    .select('id, contact, title, status, pipeline_id, deleted').in('id', dealIds)
+  echec(error, 'dossiers du départ')
+  // Les dossiers perdus, supprimés ou à la corbeille ne sont pas prévenus.
+  const visibles = (deals || []).filter(d => espaceVoyageur.dealVisible(d, { aUneReservation: true }))
+  const contacts = [...new Set(visibles.map(d => d.contact).filter(Boolean))]
+  const [{ data: fiches, error: e2 }, { data: voyageurs, error: e3 }] = await Promise.all([
+    contacts.length
+      ? supabase.from('activecampaign_clients').select('contact, email, firstname, lastname').in('contact', contacts)
+      : Promise.resolve({ data: [] }),
+    visibles.length
+      ? supabase.from('deal_travelers').select('deal_id, email, firstname').in('deal_id', visibles.map(d => d.id)).is('removed_at', null).not('email', 'is', null)
+      : Promise.resolve({ data: [] }),
+  ])
+  echec(e2 || e3, 'destinataires du départ')
+  const ficheParContact = new Map((fiches || []).map(f => [Number(f.contact), f]))
+  for (const doc of docs) {
+    const concernes = doc.deal_id ? visibles.filter(d => Number(d.id) === Number(doc.deal_id)) : visibles
+    parDocument.set(doc.id, espaceNotification.listeDestinataires({
+      deals: concernes, fiches: ficheParContact, voyageurs: voyageurs || [], reserveTitulaire: doc.reserve_titulaire,
+    }))
+  }
+  const titreParDeal = new Map(visibles.map(d => [Number(d.id), espaceVoyageur.titreVoyage(d.title, ficheParContact.get(Number(d.contact)))]))
+  return { parDocument, titreParDeal }
+}
+
+/** Documents à annoncer d'un départ, destinataires regroupés par adresse, mode d'envoi. */
+const preparerAnnonce = async (dateId) => {
+  const { dealIds } = await dateEtDossiers(dateId)
+  const filtres = [`travel_date_id.eq.${dateId}`]
+  if (dealIds.length) filtres.push(`deal_id.in.(${dealIds.join(',')})`)
+  const { data, error } = await supabase.from('trip_documents').select(COLONNES)
+    .or(filtres.join(',')).eq('publie', true).is('deleted_at', null).is('notifie_le', null)
+    .order('created_at', { ascending: true })
+  echec(error, 'documents à annoncer')
+  const aujourdhui = espaceVoyageur.aujourdhuiParis()
+  const docs = (data || []).filter(d => espaceNotification.aNotifierMaintenant(d, aujourdhui))
+
+  const { mode, adresse } = espaceNotification.modeNotifications(process.env.ESPACE_NOTIFICATIONS)
+  const { parDocument, titreParDeal } = await destinatairesDesDocuments(docs, dealIds)
+  const { data: journal, error: e2 } = docs.length
+    ? await supabase.from('trip_document_notifications').select('document_id, email, statut').in('document_id', docs.map(d => d.id))
+    : { data: [] }
+  echec(e2, 'journal des annonces')
+  const groupes = espaceNotification.regrouperAnnonce({ documents: docs, destinatairesParDocument: parDocument, journal: journal || [], mode })
+  return { mode, adresse, docs, titreParDeal, ...groupes }
+}
+
+/** Aperçu pour Ulysse : rien n'est envoyé ni écrit. */
+const apercuAnnonce = async (dateId) => {
+  const a = await preparerAnnonce(dateId)
+  const parId = new Map(a.docs.map(d => [d.id, d]))
+  return {
+    mode: a.mode,
+    redirection: a.adresse,
+    documents: a.documents.map(d => ({ ...vueEquipe(parId.get(d.id)), destinataires: d.destinataires })),
+    destinataires: a.destinataires,
+  }
+}
+
+/**
+ * Envoie l'annonce des documents choisis (ceux que l'équipe a vus dans
+ * l'aperçu) : un email récapitulatif par adresse, avec ceux de ces documents
+ * qu'elle n'a pas encore reçus. Rejouer l'appel n'envoie rien de plus. En
+ * production, un document est marqué annoncé (`notifie_le`) quand plus
+ * aucune de ses adresses n'est en échec.
+ */
+const envoyerAnnonce = async (dateId, documentIds, acteur) => {
+  const a = await preparerAnnonce(dateId)
+  if (a.mode === 'coupe') {
+    throw createError({ statusCode: 409, statusMessage: 'Envoi coupé sur cet environnement (ESPACE_NOTIFICATIONS absent) : rien n\'est parti.' })
+  }
+  const choisis = new Set(documentIds)
+  const parId = new Map(a.docs.filter(d => choisis.has(d.id)).map(d => [d.id, d]))
+  const plan = a.destinataires
+    .map(d => ({ ...d, documentIds: d.documentIds.filter(id => parId.has(id)) }))
+    .filter(d => d.documentIds.length)
+  const lien = `${useRuntimeConfig().public.siteURL}/mon-espace/documents`
+  const compte = { mode: a.mode, destinataires: plan.length, envoyes: 0, rediriges: 0, echecs: 0, documentsAnnonces: [], erreurs: [] }
+  const enEchec = new Set()
+
+  const traiter = async (d) => {
+    const docsDuClient = d.documentIds.map(id => parId.get(id))
+    const contenu = espaceEmails.nouveauxDocuments({
+      prenom: d.prenom,
+      titreVoyage: a.titreParDeal.get(d.dealId),
+      documents: docsDuClient.map(doc => ({ titre: doc.titre, libelleType: espaceDocument.libelleType(doc.type) })),
+      lien,
+    })
+    let statut
+    let detail
+    try {
+      if (a.mode === 'redirection') {
+        // Le sujet dit à qui l'email serait parti, pour la recette.
+        await brevo.envoyerEmail({ to: a.adresse, subject: `[Recette → ${d.email}] ${contenu.subject}`, html: contenu.html })
+        statut = 'redirige'
+        detail = `vers ${a.adresse}, par ${acteur.email}`
+      }
+      else {
+        await brevo.envoyerEmail({ to: d.email, ...contenu })
+        statut = 'envoye'
+        detail = `par ${acteur.email}`
+      }
+    }
+    catch (err) {
+      statut = 'echec'
+      detail = String(err?.message || err).slice(0, 300)
+      d.documentIds.forEach(id => enEchec.add(id))
+      compte.erreurs.push({ email: d.email, detail })
+    }
+    const maintenant = new Date().toISOString()
+    const { error } = await supabase.from('trip_document_notifications').upsert(
+      docsDuClient.map(doc => ({ document_id: doc.id, email: d.email, deal_id: d.dealId, statut, detail, created_at: maintenant })),
+      { onConflict: 'document_id,email' },
+    )
+    // L'email est parti mais rien ne le dit : un nouveau clic le renverrait.
+    if (error) console.error('[espace/documents] journal d\'annonce non écrit', d.email, d.documentIds, error.message)
+    compte[{ envoye: 'envoyes', redirige: 'rediriges', echec: 'echecs' }[statut]]++
+  }
+
+  for (let i = 0; i < plan.length; i += PAR_LOT) await Promise.all(plan.slice(i, i + PAR_LOT).map(traiter))
+
+  // Un envoi de recette ne clôt rien : la base est partagée, la production doit encore prévenir.
+  if (a.mode === 'actif') {
+    compte.documentsAnnonces = [...parId.keys()].filter(id => !enEchec.has(id))
+    if (compte.documentsAnnonces.length) {
+      const { error } = await supabase.from('trip_documents').update({ notifie_le: new Date().toISOString() })
+        .in('id', compte.documentsAnnonces).is('notifie_le', null)
+      if (error) console.error('[espace/documents] notifie_le non écrit', compte.documentsAnnonces, error.message)
+    }
+  }
+  console.log(`[espace/documents] annonce ${dateId} par ${acteur.email} :`, JSON.stringify({ ...compte, erreurs: compte.erreurs.length }))
+  return compte
 }
 
 /** Retire le document des espaces et supprime son fichier ; la ligne reste pour la trace. */
@@ -240,4 +397,6 @@ export default {
   modifierDocument,
   supprimerDocument,
   lienDocumentEquipe,
+  apercuAnnonce,
+  envoyerAnnonce,
 }

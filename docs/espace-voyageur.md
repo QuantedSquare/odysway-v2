@@ -243,11 +243,37 @@ liste toutes les places que le compte peut remplir sur ses voyages à venir.
   datés. Téléchargement par lien de 60 s, nom de fichier tiré du titre.
 - Liens permanents gardés : programme sur odysway.com, CGV, carnet en ligne (`travel_book`).
 
+**Annonce aux clients — FAIT (branche `claude/espace-notification-documents`, Ulysse `claude/documents-voyage`)**
+- **Publier n'envoie rien** (décision d'Alex). Sur la fiche départ d'Ulysse, les documents
+  publiés, disponibles et pas encore annoncés portent la mention « à annoncer ». Le bouton
+  « 📧 Prévenir les clients… » ouvre un aperçu : documents concernés, destinataires et ce
+  que chacun recevra, mode d'envoi. Après confirmation, **un seul email récapitulatif
+  par client** (`nouveauxDocuments`), lien vers `/mon-espace/documents`, sans jeton.
+- Destinataires : **titulaires des dossiers actifs** du départ (ou du seul dossier visé)
+  et, sauf document réservé au titulaire, les **voyageurs invités** ; une adresse une fois.
+- `GET /api/v1/ulysse/dates/:dateId/annonce` (aperçu, n'écrit rien) ;
+  `POST …/annonce` `{ documentIds }` : n'envoie que les documents vus dans l'aperçu
+  (un document publié entre-temps attend le clic suivant). Journal par couple
+  (document, adresse) dans `trip_document_notifications` : rejouer l'appel n'envoie rien
+  de plus, un échec Brevo est reproposé. `notifie_le` posé quand plus aucune adresse du
+  document n'est en échec. Logique pure : `espaceNotification.regrouperAnnonce`.
+- « Disponible le » futur : le document n'est proposé qu'à partir de cette date. Plus de
+  tâche planifiée ni d'envoi automatique.
+- **Garde-fou** : `ESPACE_NOTIFICATIONS`, jamais déduit de l'environnement (dev partage
+  la base de prod, donc les vrais clients) :
+  - absente → l'aperçu s'affiche, l'envoi répond 409, rien n'est écrit ;
+  - `redirection:<email>` → tout part vers cette adresse, sujet préfixé
+    `[Recette → client@…]` ; journalisé `redirige`, ce qui **ne compte pas** en
+    production (le document reste à annoncer, `notifie_le` n'est pas posé) ;
+  - `actif` → les clients sont prévenus. **À ne poser qu'en production.**
+- Migration `20261023111833_espace_annonce_sans_notifier_clients.sql` : supprime
+  `trip_documents.notifier_clients` (plus utilisée). **Appliquée en prod le 23/10/2026.**
+
 **Reste à faire**
-- Prévenir le client par email à la publication (Brevo) — aujourd'hui il le voit en
-  se connectant.
 - Contrat d'assurance Chapka et factures clients : pas de génération automatique ;
   déposés à la main. Date d'acceptation des CGV : non stockée.
+- Écarter un document de l'annonce pour de bon (correction d'un document déjà connu) :
+  aujourd'hui il reste « à annoncer » tant qu'on ne l'envoie pas.
 
 ### 4.5 Activation et relances
 

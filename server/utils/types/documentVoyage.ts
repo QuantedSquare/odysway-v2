@@ -28,5 +28,10 @@ export const modificationDocumentSchema = z.object({
   publie: z.boolean().optional(),
 })
 
+/** Annonce aux clients : les documents vus dans l'aperçu, et eux seuls. */
+export const annonceDocumentsSchema = z.object({
+  documentIds: z.array(z.string().uuid()).min(1, 'Aucun document à annoncer.').max(50),
+})
+
 export type TypeDepotDocument = z.infer<typeof depotDocumentSchema>
 export type TypeModificationDocument = z.infer<typeof modificationDocumentSchema>

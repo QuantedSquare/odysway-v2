@@ -38,4 +38,28 @@ const invitationVoyageur = ({ prenomInvite, prenomTitulaire, voyage, lien }) => 
 <p style="margin:28px 0"><a href="${echapper(lien)}" style="background:#DB6644;color:#ffffff;text-decoration:none;padding:12px 24px;border-radius:999px;font-weight:600">Ouvrir mon espace</a></p>`),
 })
 
-export default { echapper, codeRattachement, invitationVoyageur }
+/**
+ * Récapitulatif des documents de voyage annoncés par l'équipe : UN email par
+ * client, quel que soit le nombre de documents. Le lien ouvre l'espace (avec
+ * connexion par code) : ni jeton ni adresse dans l'URL, un email transféré
+ * n'ouvre rien.
+ * @param {{ prenom?: string|null, titreVoyage?: string|null, documents: {titre: string, libelleType?: string}[], lien: string }} p
+ */
+const nouveauxDocuments = ({ prenom, titreVoyage, documents, lien }) => {
+  const seul = documents.length === 1
+  const voyage = titreVoyage ? ` — ${titreVoyage}` : ''
+  const liste = documents.map(d => `<li style="margin:6px 0"><b>${echapper(d.titre)}</b>${d.libelleType ? ` <span style="color:#5C7378">· ${echapper(d.libelleType)}</span>` : ''}</li>`).join('')
+  return {
+    subject: seul
+      ? `${documents[0].titre}${voyage} : disponible dans votre espace`
+      : `${documents.length} nouveaux documents${voyage} : disponibles dans votre espace`,
+    html: cadre(`<p>Bonjour${prenom ? ` ${echapper(prenom)}` : ''},</p>
+<p>${seul ? 'Un nouveau document vous attend' : 'De nouveaux documents vous attendent'} dans votre Espace Voyageur${titreVoyage ? `, pour votre voyage <b>${echapper(titreVoyage)}</b>` : ''} :</p>
+<ul style="padding-left:20px;margin:20px 0">${liste}</ul>
+<p>Connectez-vous avec l'adresse email de votre réservation : aucun mot de passe n'est nécessaire, un code vous sera envoyé.</p>
+<p style="margin:28px 0"><a href="${echapper(lien)}" style="background:#DB6644;color:#ffffff;text-decoration:none;padding:12px 24px;border-radius:999px;font-weight:600">Voir mes documents</a></p>
+<p style="font-size:13px;color:#5C7378">Tous vos documents de voyage sont réunis dans votre espace : nous ne les envoyons plus en pièce jointe.</p>`),
+  }
+}
+
+export default { echapper, codeRattachement, invitationVoyageur, nouveauxDocuments }
