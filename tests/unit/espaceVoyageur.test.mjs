@@ -51,14 +51,28 @@ test('etatVoyage', () => {
   assert.equal(etatVoyage({ departureDate: null, aujourdhui: '2027-03-26' }), 'sans_date')
 })
 
-test('situationPaiement : échéance J-60, retard, soldé', () => {
-  const base = { totalValue: 2890, totalPaid: 870, restToPay: 2020, departureDate: '2027-03-14' }
+test('situationPaiement : échéance J-30, retard, soldé', () => {
+  const base = { totalValue: 2890, totalPaid: 870, restToPay: 2020, departureDate: '2027-03-14', iso: 'NP' }
   const a = situationPaiement({ ...base, aujourdhui: '2026-10-07' })
   assert.equal(a.statut, 'a_regler')
-  assert.equal(a.echeance, '2027-01-13')
+  assert.equal(a.echeance, '2027-02-12')
+  assert.equal(a.delaiJours, 30)
   assert.equal(a.reste, 2020)
-  assert.equal(situationPaiement({ ...base, aujourdhui: '2027-01-14' }).statut, 'en_retard')
-  assert.equal(situationPaiement({ ...base, restToPay: 0, aujourdhui: '2027-01-14' }).statut, 'solde')
+  assert.equal(situationPaiement({ ...base, aujourdhui: '2027-02-12' }).statut, 'a_regler')
+  assert.equal(situationPaiement({ ...base, aujourdhui: '2027-02-13' }).statut, 'en_retard')
+  assert.equal(situationPaiement({ ...base, restToPay: 0, aujourdhui: '2027-02-13' }).statut, 'solde')
+})
+
+test('situationPaiement : Pérou à J-45, reconnu par l\'iso ou à défaut par le pays', () => {
+  const base = { totalValue: 2890, totalPaid: 870, restToPay: 2020, departureDate: '2027-03-14', aujourdhui: '2026-10-07' }
+  for (const destination of [{ iso: 'PE' }, { iso: ' per ' }, { iso: null, pays: 'Pérou' }, { pays: 'PEROU' }]) {
+    const p = situationPaiement({ ...base, ...destination })
+    assert.equal(p.delaiJours, 45, JSON.stringify(destination))
+    assert.equal(p.echeance, '2027-01-28')
+  }
+  // L'iso prime sur le pays ; sans destination, la règle générale.
+  assert.equal(situationPaiement({ ...base, iso: 'NP', pays: 'Pérou' }).delaiJours, 30)
+  assert.equal(situationPaiement(base).delaiJours, 30)
 })
 
 test('situationPaiement : reste déduit du total et du payé, ou inconnu', () => {

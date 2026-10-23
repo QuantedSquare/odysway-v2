@@ -115,7 +115,7 @@ const nepal = () => ({
   groupe: true,
   conseiller: 'Léa',
   option: null,
-  paiement: { total: 2890, paye: 870, reste: 2020, echeance: '2027-01-13', delaiJours: 60, joursAvantEcheance: joursAvant('2027-01-13'), statut: 'a_regler' },
+  paiement: { total: 2890, paye: 870, reste: 2020, echeance: '2027-02-12', delaiJours: 30, joursAvantEcheance: joursAvant('2027-02-12'), statut: 'a_regler' },
 })
 
 const maroc = () => ({
@@ -133,7 +133,7 @@ const maroc = () => ({
   groupe: true,
   conseiller: 'Léa',
   option: null,
-  paiement: { total: 1980, paye: 1980, reste: 0, echeance: '2025-03-13', delaiJours: 60, joursAvantEcheance: joursAvant('2025-03-13'), statut: 'solde' },
+  paiement: { total: 1980, paye: 1980, reste: 0, echeance: '2025-04-12', delaiJours: 30, joursAvantEcheance: joursAvant('2025-04-12'), statut: 'solde' },
 })
 
 const voyageurs = () => lire('voyageurs', [
