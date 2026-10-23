@@ -1,7 +1,7 @@
 // Règles du mot de passe de l'Espace Voyageur (app/utils/espaceMotDePasse.js).
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { chargeJeton, connexionRecente, messageErreurAuth, reglesNonRespectees } from '../../app/utils/espaceMotDePasse.js'
+import { REGLE_FAMILLES, chargeJeton, connexionRecente, messageErreurAuth, reglesNonRespectees } from '../../app/utils/espaceMotDePasse.js'
 
 const jeton = charge => `x.${Buffer.from(JSON.stringify(charge)).toString('base64url')}.y`
 
@@ -12,6 +12,15 @@ test('reglesNonRespectees : longueur, variété, email, espaces', () => {
   assert.ok(reglesNonRespectees('camille.rousseau-2027!', 'camille.rousseau@email.fr').includes('Ne pas reprendre votre adresse email'))
   assert.ok(reglesNonRespectees(' Montagne-Lukla-2027', '').includes('Pas d\'espace au début ni à la fin'))
   assert.ok(reglesNonRespectees('é'.repeat(40), '').includes('Pas plus de 72 caractères'))
+})
+
+test('reglesNonRespectees : les 4 familles de Supabase, avec ses jeux de caractères', () => {
+  const famille = mdp => reglesNonRespectees(mdp, '').includes(REGLE_FAMILLES)
+  assert.equal(famille('Montagne-Lukla-2027'), false)
+  assert.equal(famille('montagne lukla deux mille'), true)
+  assert.equal(famille('Montagne Lukla 2027'), true, 'une espace n\'est pas un symbole')
+  assert.equal(famille('MONTAGNÉ-LUKLA-2027'), true, 'une lettre accentuée n\'est pas une minuscule')
+  for (const symbole of '!@#$%^&*()_+-=[]{};\':"|<>?,./`~\\') assert.equal(famille(`Montagne${symbole}Lukla2027`), false, symbole)
 })
 
 test('chargeJeton lit un JWT, y compris des caractères accentués', () => {
