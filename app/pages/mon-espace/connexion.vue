@@ -190,7 +190,7 @@
               </div>
             </v-form>
 
-            <template v-if="etape === 'email'">
+            <template v-if="etape === 'email' && avecGoogle">
               <div class="d-flex align-center ga-3 my-5 text-caption text-primary-light-2">
                 <v-divider />ou<v-divider />
               </div>
@@ -224,7 +224,7 @@ definePageMeta({ layout: 'no-footer' })
 useSeoMeta({ title: 'Connexion — Espace Voyageur', robots: 'noindex, nofollow' })
 
 const route = useRoute()
-const { init, session, indisponible, envoyerCode, verifierCode, connexionMotDePasse, connexionGoogle, reprendreSuiteGoogle } = useEspace()
+const { init, session, indisponible, envoyerCode, verifierCode, connexionMotDePasse, googleDisponible, connexionGoogle, reprendreSuiteGoogle } = useEspace()
 
 // Dernier mode choisi sur cet appareil : confort seulement.
 const CLE_MODE = 'odysway-espace-mode'
@@ -246,6 +246,9 @@ const code = ref('')
 const erreur = ref(null)
 const envoi = ref(false)
 const envoiGoogle = ref(false)
+// Calculé au montage (window) : sur une adresse que Supabase ne connaît pas,
+// Google renverrait sur Ulysse, le bouton n'est donc pas proposé.
+const avecGoogle = ref(false)
 const attente = ref(0)
 let minuteur = null
 
@@ -364,12 +367,19 @@ watch(session, (s) => {
 
 onMounted(async () => {
   mode.value = lireMode()
+  avecGoogle.value = googleDisponible()
   // Retour de Google : la destination n'est pas dans l'URL (voir useEspace).
   const suiteGoogle = reprendreSuiteGoogle()
   if (suiteGoogle && !route.query.suite) suite.value = destinationSure(suiteGoogle)
   await init()
-  if (session.value) navigateTo(suite.value, { replace: true })
-  if (route.query.error_description) erreur.value = 'La connexion n\'a pas abouti. Réessayez ou recevez un code par email.'
+  if (session.value) return navigateTo(suite.value, { replace: true })
+  // Refus de Google (`error_description`) ou code impossible à échanger (lien
+  // ouvert dans un autre navigateur, retour déjà consommé) : on le dit, au
+  // lieu de réafficher le formulaire comme si de rien n'était.
+  if (route.query.error_description || route.query.code) {
+    erreur.value = 'La connexion n\'a pas abouti. Réessayez ou recevez un code par email.'
+    navigateTo({ query: { suite: route.query.suite } }, { replace: true })
+  }
 })
 
 onBeforeUnmount(() => clearInterval(minuteur))
