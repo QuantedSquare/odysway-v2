@@ -178,8 +178,12 @@ onMounted(async () => {
 
     if (!alreadyTracked) {
       try {
-        // Fetch purchase data from API
-        const purchaseData = await $fetch(`/api/v1/booking/purchase-data?booked_id=${route.query.booked_id}`)
+        // Fetch purchase data from API.
+        // `t` is the signed token Stripe/Alma put on the return URL — without it
+        // the endpoint refuses to hand back the customer's email and phone.
+        const purchaseData = await $fetch('/api/v1/booking/purchase-data', {
+          query: { booked_id: route.query.booked_id, t: route.query.t },
+        })
 
         if (!purchaseData.isOption && purchaseData.shouldTrack && voyage.value) {
           // Mark as tracked in sessionStorage to prevent re-fire on page refresh
