@@ -1,4 +1,5 @@
 import supabase from './supabase'
+import margePrixDate from './margePrixDate'
 
 // =========================================================================
 // Dates
@@ -248,7 +249,7 @@ const CONFIG_MODES = ['pax_table', 'per_date', 'excluded']
 const getSettingsForVoyage = async (voyageSlug) => {
   const { data, error } = await supabase
     .from('voyage_margin_settings')
-    .select('voyage_slug, config_mode, child_margin_delta, updated_at, updated_by')
+    .select('voyage_slug, config_mode, child_margin_delta, grid_model, bank_fees_pct, updated_at, updated_by')
     .eq('voyage_slug', voyageSlug)
     .maybeSingle()
 
@@ -449,10 +450,16 @@ const pickNearestYearCandidate = (candidates, targetYear) => {
  * Within each level, the year fallback applies (nearest configured year).
  * The default rows therefore act as a safety net for any season left blank.
  *
+ * The value follows the date's own sale price (`datePrice`, travel_dates.starting_price)
+ * when the chosen row stores its purchase cost and sale price — see margePrixDate.js.
+ * `price` then says what was adjusted ; a row with an entered margin stays as is.
+ *
  * @param {Array} rows    voyage_margins rows for this voyage, already filtered to the target pax
  * @param {Array} seasons voyage_margin_seasons rows for this voyage
+ * @param {number|null} [datePrice] travel_dates.starting_price
+ * @param {object} [settings] voyage_margin_settings (grid_model, bank_fees_pct)
  */
-const resolveBaseFromRows = ({ rows, seasons, departureDate }) => {
+const resolveBaseFromRows = ({ rows, seasons, departureDate, datePrice = null, settings = null }) => {
   const season = matchSeasonForDate(seasons, departureDate)
   const departureYear = getDepartureYear(departureDate)
   const usable = (rows || []).filter(r => r.margin_per_traveler !== null && r.margin_per_traveler !== undefined)
@@ -462,26 +469,26 @@ const resolveBaseFromRows = ({ rows, seasons, departureDate }) => {
   if (season) {
     const best = pickNearestYearCandidate(usable.filter(r => r.season_id === season.id), departureYear)
     if (best) {
-      return { value: Number(best.margin_per_traveler), source: 'pax_season', source_year: best.year, ...seasonInfo }
+      return { ...margePrixDate.margeAuPrixDate(best.margin_per_traveler, best, datePrice, settings), source: 'pax_season', source_year: best.year, ...seasonInfo }
     }
   }
 
   const fallback = pickNearestYearCandidate(usable.filter(r => !r.season_id), departureYear)
   if (fallback) {
-    return { value: Number(fallback.margin_per_traveler), source: 'pax', source_year: fallback.year, ...seasonInfo }
+    return { ...margePrixDate.margeAuPrixDate(fallback.margin_per_traveler, fallback, datePrice, settings), source: 'pax', source_year: fallback.year, ...seasonInfo }
   }
 
-  return { value: null, source: null, source_year: null, ...seasonInfo }
+  return { value: null, source: null, source_year: null, price: null, ...seasonInfo }
 }
 
 /**
  * Resolves the base "margin per traveler" for a date:
  * 1. travel_dates.margin_override_per_traveler (Pattern B) — wins if set
  * 2. voyage_margins for the matched season / then the season-less default rows,
- *    each with the nearest-year fallback (see resolveBaseFromRows)
+ *    each with the nearest-year fallback, at the date's own price (see resolveBaseFromRows)
  * 3. null — no config available
  */
-const resolveBaseMarginPerPax = async (travelDate, realPax) => {
+const resolveBaseMarginPerPax = async (travelDate, realPax, settings = null) => {
   if (travelDate.margin_override_per_traveler !== null && travelDate.margin_override_per_traveler !== undefined) {
     return { value: Number(travelDate.margin_override_per_traveler), source: 'override', season_id: null, season_label: null }
   }
@@ -494,7 +501,7 @@ const resolveBaseMarginPerPax = async (travelDate, realPax) => {
     getSeasonsForVoyage(travelDate.travel_slug),
     supabase
       .from('voyage_margins')
-      .select('margin_per_traveler, year, season_id')
+      .select('margin_per_traveler, year, season_id, sale_price_per_traveler, purchase_cost_per_traveler')
       .eq('voyage_slug', travelDate.travel_slug)
       .eq('deleted', false)
       .eq('pax', realPax)
@@ -505,6 +512,8 @@ const resolveBaseMarginPerPax = async (travelDate, realPax) => {
     rows: candidates || [],
     seasons,
     departureDate: travelDate.departure_date,
+    datePrice: travelDate.starting_price,
+    settings,
   })
 }
 
@@ -521,7 +530,7 @@ const resolveBaseMarginPerPax = async (travelDate, realPax) => {
 const computeMarginForDate = async (travelDateId) => {
   const { data: travelDate, error: tdError } = await supabase
     .from('travel_dates')
-    .select('id, travel_slug, departure_date, return_date, margin_override_per_traveler, real_traveler_count_override')
+    .select('id, travel_slug, departure_date, return_date, starting_price, margin_override_per_traveler, real_traveler_count_override')
     .eq('id', travelDateId)
     .single()
 
@@ -542,11 +551,13 @@ const computeMarginForDate = async (travelDateId) => {
   const totals = aggregateDealTotals(deals)
   const childPax = clampChildPax(totals.child_pax, realPax)
 
-  // Independent of each other and of `totals` — parallelize.
-  const [totalInvoices, baseMargin, settings] = await Promise.all([
+  // Independent of `totals` — parallelize. The base needs the settings (grid
+  // model and bank fees, for the date's own price).
+  const settingsLus = getSettingsForVoyage(travelDate.travel_slug)
+  const [totalInvoices, settings, baseMargin] = await Promise.all([
     getTotalInvoicesForDate(travelDateId),
-    resolveBaseMarginPerPax(travelDate, realPax),
-    getSettingsForVoyage(travelDate.travel_slug),
+    settingsLus,
+    settingsLus.then(st => resolveBaseMarginPerPax(travelDate, realPax, st)),
   ])
 
   const childDelta = Number(settings.child_margin_delta || 0)
@@ -570,6 +581,8 @@ const computeMarginForDate = async (travelDateId) => {
     base_margin_per_pax: baseMargin.value,
     base_margin_source: baseMargin.source,
     base_margin_source_year: baseMargin.source_year ?? null,
+    // Marge au prix de la date : l'écart avec le prix de la grille, s'il y en a un.
+    base_margin_price: baseMargin.price ?? null,
     season_id: baseMargin.season_id ?? null,
     season_label: baseMargin.season_label ?? null,
     child_pax: childPax,
