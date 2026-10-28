@@ -37,10 +37,10 @@ const ecartPrixDate = (ligne, prixDate, reglages = {}) => {
 
 /** Marge par voyageur au prix de la date, arrondie à l'euro comme la grille. */
 const margeAuPrixDate = (marge, ligne, prixDate, reglages) => {
-  if (marge === null || marge === undefined) return { value: null, prix: null }
+  if (marge === null || marge === undefined) return { value: null, price: null }
   const e = ecartPrixDate(ligne, prixDate, reglages)
-  if (!e || e.ecart === 0) return { value: Number(marge), prix: e }
-  return { value: Math.round(Number(marge) + e.ecart), prix: e }
+  if (!e || e.ecart === 0) return { value: Number(marge), price: e }
+  return { value: Math.round(Number(marge) + e.ecart), price: e }
 }
 
 export default {

@@ -27,7 +27,7 @@ test('sans coût d\'achat (marge saisie) ni prix de date, la marge de la grille 
   assert.equal(ecartPrixDate(ligne, null, gir), null)
   assert.equal(ecartPrixDate(ligne, 0, gir), null)
   assert.equal(margeAuPrixDate(-149, { margin_per_traveler: -149 }, 2570, gir).value, -149)
-  assert.deepEqual(margeAuPrixDate(null, ligne, 2570, gir), { value: null, prix: null })
+  assert.deepEqual(margeAuPrixDate(null, ligne, 2570, gir), { value: null, price: null })
 })
 
 test('dit d\'où vient l\'écart', () => {
