@@ -502,6 +502,10 @@ const getDealNotes = async (dealId) => {
 // transmet pas (transformDealForAPI ne garde que contact, groupe, étape…).
 const updateDealStatus = (dealId, status) => apiRequest(`/deals/${dealId}`, 'put', { deal: { status } })
 
+// Propriétaire du deal (le commercial) : `updateDeal` le transmettrait, mais
+// relancerait aussi la formule et réécrirait le contact pour rien.
+const updateDealOwner = (dealId, owner) => apiRequest(`/deals/${dealId}`, 'put', { deal: { owner: String(owner) } })
+
 const retrieveOwner = async (dealId) => {
   try {
     const res = await apiRequest(`/deals/${dealId}/owner`)
@@ -780,6 +784,7 @@ export default {
   createMinimalDeal,
   updateDeal,
   updateDealStatus,
+  updateDealOwner,
   addNote,
   getDealNotes,
   recalculatTotalValues,
