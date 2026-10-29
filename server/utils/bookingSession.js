@@ -63,7 +63,8 @@ export const getBookingUserOrNull = (event) => {
  *     d'un deal (AC et miroir), encaissement hors ligne, recompte des places
  *     d'une date, places d'une réservation, rattachement des paiements Alma,
  *     recalcul de la valeur, resynchronisation du miroir et d'un dossier de
- *     départ, notes d'un deal
+ *     départ, notes d'un deal ; commercial d'une vente et liste des commerciaux
+ *     (Mois en cours)
  *
  * Les lectures n'en ont pas besoin : Ulysse lit la même base Supabase.
  */
