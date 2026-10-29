@@ -91,6 +91,19 @@
           </template>
         </FunnelStepsSummaryLine>
 
+        <!-- Supplément « +1 » (shared/plusUn.js) : pour le groupe -->
+        <FunnelStepsSummaryLine v-if="supplementPlusUn > 0">
+          <template #left>
+            <span data-testid="supplement-plus-un">Supplément dernière place</span>
+            <div class="text-caption font-italic">
+              Déduit du solde si d'autres voyageurs rejoignent le groupe
+            </div>
+          </template>
+          <template #right>
+            {{ formatNumber(supplementPlusUn, 'currency', 'EUR') }}
+          </template>
+        </FunnelStepsSummaryLine>
+
         <v-divider class="my-4" />
 
         <!-- Travelers Details Header -->
@@ -364,6 +377,8 @@ const underAgePricePerTraveler = computed(() => {
 const nbTravelers = computed(() => {
   return model.value.nbAdults + model.value.nbChildren || 0
 })
+// Choisi à l'étape Voyageurs, ou porté par la réservation reprise (AC).
+const supplementPlusUn = computed(() => +(model.value?.supplementPlusUn ?? voyage?.supplementPlusUn ?? 0) || 0)
 // Calculate total value dynamically
 const totalValue = computed(() => {
   if (!model.value || !voyage) return 0
@@ -392,6 +407,7 @@ const totalValue = computed(() => {
   if (voyage.promoValue) {
     total -= voyage.promoValue * nbTravelers
   }
+  total += supplementPlusUn.value
   return total
 })
 

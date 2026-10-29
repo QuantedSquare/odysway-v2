@@ -41,6 +41,8 @@ export default defineEventHandler(async (event) => {
     return {
       ...fetchedDeal.deal,
       ...customFields,
+      // Supplément « +1 » encore dû (centimes), compris dans la valeur du deal.
+      supplementPlusUn: (await plusUn.supplementDuDeal(data.deal_id)) || 0,
       contact: {
         email: contact.email,
         firstName: contact.firstName,

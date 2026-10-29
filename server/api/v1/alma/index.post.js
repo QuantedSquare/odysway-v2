@@ -38,6 +38,10 @@ export default defineEventHandler(async (event) => {
     })
   }
 
+  // « +1 qui fait baisser la marge » : refus (409) ou supplément ajouté au deal
+  // avant que la session ne lise son montant (server/utils/plusUn.js).
+  await plusUn.appliquerAuPaiement({ bookedId, dealId: body.dealId })
+
   try {
     const almaSession = await alma.createAlmaSession(body)
     console.log('========ALMA SESSION=======', almaSession)
