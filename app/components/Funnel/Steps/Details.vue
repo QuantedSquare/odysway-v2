@@ -65,6 +65,20 @@
             :item-props="childrenItemPropsFn"
           />
         </v-col>
+        <v-col
+          v-if="plusUn.message"
+          cols="12"
+          class="pt-0"
+        >
+          <v-alert
+            :type="plusUn.action === 'refus' ? 'warning' : 'info'"
+            variant="tonal"
+            density="compact"
+            data-testid="plus-un"
+          >
+            {{ plusUn.message }}
+          </v-alert>
+        </v-col>
       </v-row>
 
       <v-divider
@@ -267,7 +281,7 @@
                 type="transition"
               >
                 <span
-                  v-if="!isValid"
+                  v-if="!champsValides"
                   class="text-secondary"
                 >
                   {{ page?.details?.error_message || 'Veuillez remplir tous les champs obligatoires pour continuer.' }}
@@ -395,7 +409,31 @@ const childrenLabel = computed(() => {
 })
 const isPhoneValid = ref(false)
 // New: Form validation logic
-const isValid = computed(() => {
+// « +1 qui fait baisser la marge » (shared/plusUn.js) : le serveur dit si ce
+// nombre de voyageurs se réserve tel quel, à N minimum (« par deux »), ou avec
+// un supplément, que le récapitulatif ajoute au prix. Le paiement revérifie :
+// une lecture en panne ne bloque rien ici.
+const plusUn = ref({ action: 'libre', minimum: null, supplement: 0, message: null })
+const lirePlusUn = async () => {
+  const id = currentDateId.value
+  const places = nbTravelers.value
+  if (!id || !(places > 0) || route.query.type === 'balance' || route.query.type === 'custom') return
+  const params = new URLSearchParams({ places: String(places) })
+  const existant = findExistingBookedId()
+  if (existant) params.set('booked_id', existant)
+  try {
+    const decision = await apiRequest(`/booking/date/${id}/plus-un?${params}`)
+    // Une réponse arrivée après un autre choix de voyageurs ne compte plus.
+    if (places !== nbTravelers.value || !decision) return
+    plusUn.value = decision
+    model.value.supplementPlusUn = decision.action === 'supplement' ? decision.supplement : 0
+  }
+  catch (err) {
+    console.error('[plus-un] décision illisible', err)
+  }
+}
+
+const champsValides = computed(() => {
   const hasValidName = model.value.firstName && model.value.lastName
   const hasValidEmail = rules.email(model.value.email) === true
   const hasValidTravelers = model.value.nbAdults > 0 && model.value.nbAdults + model.value.nbChildren > 0
@@ -403,6 +441,7 @@ const isValid = computed(() => {
 
   return hasValidName && hasValidEmail && hasValidTravelers && isPhoneValid.value && hasValidCountry
 })
+const isValid = computed(() => champsValides.value && plusUn.value.action !== 'refus')
 
 // Name every field that fails validation, with its current (bad) value, so the
 // report pinpoints exactly what's missing/invalid — e.g. iso (isoContact) empty.
@@ -548,6 +587,11 @@ const rules = {
 }
 
 const nbTravelers = computed(() => +model.value.nbAdults + +model.value.nbChildren)
+// Après le montage : la réservation existante se lit dans le localStorage.
+onMounted(() => {
+  lirePlusUn()
+  watch([nbTravelers, currentDateId], lirePlusUn)
+})
 
 // Mise à jour lancée sans attendre : un refus du serveur (titulaire différente,
 // voir verifierReprise) ne doit pas finir en promesse rejetée sans trace.

@@ -79,6 +79,8 @@ export function buildVoyageFromAC(deal, imgSrc = null) {
     promoValue: deal.promoValue || 0,
     alreadyPaid: deal.alreadyPaid || 0,
     totalTravelPrice: deal.value,
+    // Supplément « +1 » de la réservation (centimes), déjà compris dans deal.value.
+    supplementPlusUn: +deal.supplementPlusUn || 0,
     isCapExploraction: deal.isCapExploraction === 'Oui' || deal.iso?.includes('NEP') || deal.iso?.includes('NP') || deal.iso?.includes('PE') || false,
     // Capacity not reliably available from AC deal
     maxTravelers: null,

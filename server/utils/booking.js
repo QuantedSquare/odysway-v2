@@ -169,7 +169,15 @@ const recomputeBookedSeatAndStatus = async (travel_date_id) => {
   const allBooked = await retrieveBookedPlacesByTravelDateId(travel_date_id)
   if (allBooked?.error) return { error: allBooked.error }
   const totalBooked = (allBooked || []).reduce((acc, row) => acc + (row.booked_places || 0), 0)
-  return await updateTravelDate(travel_date_id, totalBooked)
+  const res = await updateTravelDate(travel_date_id, totalBooked)
+  // Chaque changement de places passe ici : un supplément « +1 » dont le seuil
+  // est atteint est levé (server/utils/plusUn.js). Un échec n'empêche jamais
+  // le recomptage.
+  if (!res?.error) {
+    await plusUn.leverSupplements(travel_date_id)
+      .catch(err => console.error(`[booking] suppléments « +1 » de ${travel_date_id} non vérifiés:`, err?.message))
+  }
+  return res
 }
 
 const recomputeStatusOnly = async (travel_date_id) => {

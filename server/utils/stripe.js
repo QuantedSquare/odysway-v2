@@ -218,6 +218,22 @@ const createCheckoutSession = async (order) => {
         quantity: +deal.nbTravelers,
       })
     }
+    // Supplément « +1 » : pour le groupe, déjà compris dans la valeur du deal.
+    const supplementPlusUn = await plusUn.supplementDuDeal(order.dealId)
+    if (supplementPlusUn > 0) {
+      lineItems.push({
+        price_data: {
+          currency: 'eur',
+          product_data: {
+            name: 'Supplément dernière place',
+            description: 'Déduit du solde si d\'autres voyageurs rejoignent le groupe',
+            images: ['https://odysway.com/logos/logo_noir.png'],
+          },
+          unit_amount: supplementPlusUn,
+        },
+        quantity: 1,
+      })
+    }
     if (+deal.alreadyPaid > 0) {
       coupon = await stripeCLI.coupons.create({
         amount_off: deal.alreadyPaid, // in cents

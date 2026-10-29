@@ -1,4 +1,5 @@
 import { defineEventHandler, readBody, createError } from 'h3'
+import plusUnRegles from '#shared/plusUn.js'
 
 // Où l'option a été posée. Le funnel la propose à deux endroits : l'étape
 // « Coordonnées » (avant les voyageurs) et l'étape « Paiement » (tout rempli).
@@ -53,6 +54,17 @@ export default defineEventHandler(async (event) => {
     })
   }
   else {
+    // « Par deux » : une option qui ferait baisser la marge du groupe est refusée
+    // comme le paiement le serait (server/utils/plusUn.js). Le back-office passe
+    // outre : l'équipe sait ce qu'elle bloque.
+    if (!(getUlysseServiceUser(event) ?? getBookingUserOrNull(event))) {
+      const decisionPlusUn = await plusUn.decisionPour({ travelDateId: bookedDate.travel_date_id, ajout: Number(body.booked_places), bookedId: body.id })
+      if (decisionPlusUn.action === 'refus') {
+        const message = plusUnRegles.messageTunnel(decisionPlusUn)
+        throw createError({ statusCode: 409, statusMessage: message, data: { code: 'PLUS_UN_PAR_DEUX', minimum: decisionPlusUn.minimum, userMessage: message } })
+      }
+    }
+
     // Convert badges from string to array if needed
 
     // put an option 7 days after now

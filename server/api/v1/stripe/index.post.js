@@ -29,6 +29,11 @@ export default defineEventHandler(async (event) => {
   console.log('stripe checkout body:', body)
   console.log('dealId:', deal_id)
   Object.assign(body, { dealId: deal_id })
+  // « +1 qui fait baisser la marge » : refus (409, affiché par le tunnel) ou
+  // supplément ajouté au deal AVANT que la session ne lise ses montants.
+  if (body.paymentType === 'deposit' || body.paymentType === 'full') {
+    await plusUn.appliquerAuPaiement({ bookedId, dealId: deal_id })
+  }
   try {
     console.log('updateDeal', deal_id)
     const obj = { currentStep: 'CB - Sur Stripe Checkout' }

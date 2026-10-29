@@ -1,5 +1,6 @@
 import { defineEventHandler, readBody, createError } from 'h3'
 import { createClient } from '@sanity/client'
+import plusUnRegles from '#shared/plusUn.js'
 
 export default defineEventHandler(async (event) => {
   const { dateId, slug } = event.context.params
@@ -33,6 +34,14 @@ export default defineEventHandler(async (event) => {
   ]
   for (const key of allowed) {
     if (body[key] !== undefined) updateFields[key] = body[key]
+  }
+
+  // « +1 qui fait baisser la marge » (shared/plusUn.js) : règle de vente des
+  // places qui font baisser la marge du groupe, et supplément forcé (euros).
+  if (body.plus_un_regle !== undefined || body.plus_un_supplement !== undefined) {
+    const { valeur, erreur } = plusUnRegles.nettoyerReglage({ regle: body.plus_un_regle, supplement: body.plus_un_supplement })
+    if (erreur) throw createError({ statusCode: 400, statusMessage: erreur })
+    Object.assign(updateFields, valeur)
   }
 
   // Rattacher la date à un autre voyage (Ulysse, dates « orphelines » dont le
@@ -79,7 +88,9 @@ export default defineEventHandler(async (event) => {
   // Fetch current values for activity diff
   const { data: current } = await supabase
     .from('travel_dates')
-    .select([...allowed, 'travel_slug'].join(','))
+    // Les colonnes « +1 » ne sont lues que si on les écrit : une date sans la
+    // migration garde son journal.
+    .select([...allowed, ...Object.keys(updateFields).filter(k => k.startsWith('plus_un_')), 'travel_slug'].join(','))
     .eq('id', dateId)
     .eq('travel_slug', slug)
     .eq('deleted', false)

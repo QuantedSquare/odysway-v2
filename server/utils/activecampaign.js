@@ -597,6 +597,14 @@ const recalculatTotalValues = async (dealId) => {
   // et rendait tout le total NaN → AC refusait le PUT (422) et le webhook 500.
   const insurancePrice = (customFields.insurance && customFields.insurance !== 'Aucune Assurance') ? (+customFields.insuranceCommissionPrice || 0) : 0
   const alreadyPaid = customFields.alreadyPaid || 0
+  // Supplément « +1 » de la réservation (server/utils/plusUn.js), pour le
+  // groupe et non par voyageur. Illisible : on ne réécrit rien, sans quoi la
+  // valeur perdrait un supplément encore dû.
+  const supplementPlusUn = await plusUn.supplementDuDeal(dealId)
+  if (supplementPlusUn === null) {
+    console.error('[recalculatTotalValues] supplément « +1 » illisible, deal non mis à jour', { dealId })
+    return
+  }
 
   const value = (basePrice * nbTravelers)
     + indivRoomPrice * nbTravelers
@@ -607,6 +615,7 @@ const recalculatTotalValues = async (dealId) => {
     - (promoChildren * nbChildren)
     - (promoEarlybird * nbTravelers)
     - (promoLastMinute * nbTravelers)
+    + supplementPlusUn
   console.log('list values', basePrice, nbTravelers, indivRoomPrice, flightPrice, extensionPrice, insurancePrice, promoValue, promoChildren, promoEarlybird, promoLastMinute)
   console.log('======== totalValue:', value, '========')
 
@@ -644,6 +653,7 @@ const recalculatTotalValues = async (dealId) => {
     promoChildren,
     promoEarlybird,
     promoLastMinute,
+    supplementPlusUn,
     shouldUpdate,
   })
 
