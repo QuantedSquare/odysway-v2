@@ -116,6 +116,72 @@ Dates (`/espace-porteur/dates/:pageId`, `server/utils/datesPorteur.js`, rules in
 | `4` | Gestions Départs | Operational departure management — one deal per departure (« dossier de départ »). Mirrored since 09/2026 (Docteur d'Ulysse). **Never aggregate with pipelines 1/2: each traveller also has their own deal there.** |
 | `7` | Partenaires | Travellers of **portage** voyages (an external guide — yoga teacher, photographer… — sells their own stay, Odysway carries it). Deal born in 87 « Inscription commencée (non payé) », 88 « Paiement CB non achevé », then 84 Acompte réglé / 85 Solde réglé, 86 Solde en retard. Stays in 7 after payment (`server/utils/pipelines.js`). **Revenue tracked apart: not a pipeline-2 conversion.** |
 
+## ISR revalidation (Sanity -> deployed site)
+
+Production serves every public page through Vercel ISR with 1 to 5 day TTLs
+(`nuxt.config.ts` routeRules), so a Sanity change is only visible once the affected
+paths are revalidated. The pipeline is path-based, never live-content: `liveContent`
+stays off in production on purpose.
+
+**Blast radius decides everything.** `server/utils/revalidationRegistry.js` classifies
+each of the 45 document types once:
+
+| scope | meaning | example |
+|---|---|---|
+| `page` | owns fixed paths (`refs: true` also expands the reference graph) | `voyage`, `blog`, `homePage` |
+| `collection` | settings document affecting a whole route family | `page_voyage` -> all `/voyages/*` |
+| `refs` | no page of its own, resolved through references (both directions) | `badge`, `blogCategory` |
+| `global` | rendered by a layout / header / footer, so present on every page | `siteBanner`, `header`, `review`, `tops` |
+| `none` | nothing cached depends on it | `checkout` (rendered per request) |
+
+An unknown type falls back to `global` (a full sweep) instead of silently doing
+nothing — the bug that kept `siteBanner` stale for a day after each edit.
+`npm run test:unit` (tests/unit/revalidationRegistry.test.mjs) fails when a document
+type is not classified, when the registry still names a type the Studio dropped, or
+when a registry path matches no ISR routeRule.
+
+**A voyage owns two to three cached pages**, and `voyagePaths()` is the single place
+that says which (same rule as `app/utils/portage.js`): `/voyages/<slug>` and its A/B
+landing `/voyages/<slug>/lp` always, plus — for a « sur-mesure seul » voyage with
+`customPagePublished` — `/portage/<slug>` when it is carried for an outside guide,
+`/sur-mesure/<slug>` otherwise. An unlisted voyage skips the listing paths, since it
+appears in none of them. The three flags are not in the webhook payload, so
+`enrichDoc()` reads them before resolving.
+
+**Flow**
+
+1. `POST /api/v1/webhooks/sanity/revalidate` — drafts skipped, then
+   `waitForSanityRevision()` blocks until the client a page render uses (the API CDN
+   in production) actually serves the new `_rev`. Skipping this re-caches the OLD
+   content for a full day.
+2. `page` / `collection` / `refs` -> the resolved paths are revalidated inline
+   (concurrency 8, capped at 60 paths).
+3. `global` -> a **sweep** job walks all ~600 ISR paths in chunks of 40, one Vercel
+   invocation per chunk, chained by `POST .../sanity/sweep`. A Supabase lock
+   (`revalidation_jobs`, partial unique index on `status = 'running'`) allows a single
+   sweep at a time; a burst of edits asks the running sweep for another pass instead
+   of starting a second one. A resolution over 60 paths (`page_voyage` -> ~220 voyage
+   paths) runs through the same job machinery but **scoped** to those paths.
+4. `GET .../sanity/nightly-revalidation` (cron, `x-cron-secret` or
+   `Authorization: Bearer $CRON_SECRET`) re-sweeps daily — the hard floor that makes
+   a lost webhook cost at most one day.
+5. `GET .../sanity/revalidation-status` (same secrets) shows recent jobs and events.
+   Read it in this order: `known_type: false`, `mode: 'none'`, `revision_confirmed: false`,
+   `stale > 0` (bypass token not honoured, page served from cache).
+
+Revalidation only ever targets production (preprod has no ISR at all) and never
+appends `/_payload.json` (`payloadExtraction` is false in production).
+
+**Site banner** is the one piece of global content that also reconciles client-side:
+the ISR HTML renders the cached copy, then `SiteBanner.vue` re-reads
+`/api/v1/globals/banner` (edge-cached 60s, outside the page cache) after hydration so
+enabling or cutting a banner is immediate instead of waiting for the sweep. The GROQ
+projection is shared by both reads in `shared/utils/siteBanner.ts` — keep them equal.
+
+Env: `SANITY_WEBHOOK_SECRET`, `VERCEL_BYPASS_TOKEN`, `CRON_SECRET`, optional
+`REVALIDATION_CHUNK_SIZE`, `REVALIDATION_CONCURRENCY`, `REVALIDATION_TARGET_URL`,
+`REVALIDATION_FORCE=1` (revalidate from a non-production deployment).
+
 ## Supabase Tables
 
 ### `travel_dates`
@@ -322,6 +388,24 @@ Raw webhook payload log.
 - `id` bigint PK
 - `json` json
 
+### `revalidation_jobs`
+Full-sweep bookkeeping for ISR revalidation (see the section above). One running job
+at a time, enforced by a partial unique index on `status = 'running'`.
+- `id` uuid PK, `kind` text (`global` | `scoped` | `nightly` | `manual`), `status` text (`running` | `done` | `failed` | `stale`)
+- `trigger_type`, `trigger_id`, `trigger_rev`, `trigger_reason` text — the Sanity document behind it
+- `paths` jsonb — frozen path list, so the cursor stays stable across invocations
+- `total`, `cursor`, `pass` int, `rerun_requested` bool
+- `ok`, `stale`, `failed` int, `problems` jsonb
+- `started_at`, `heartbeat_at` (a job silent for 3 min releases the lock), `finished_at` timestamptz
+
+### `revalidation_events`
+One row per revalidation webhook — the audit trail for "why is this page still stale?".
+- `id` bigserial PK, `doc_type`, `doc_id`, `doc_rev` text
+- `scope` text (registry scope), `mode` text (`paths` | `sweep` | `none`), `known_type` bool
+- `paths` jsonb, `ok`, `stale`, `failed` int
+- `revision_confirmed` bool, `revision_wait_ms` int — false means the render may have read stale Sanity data
+- `job_id` uuid FK -> `revalidation_jobs`, `reason` text, `created_at` timestamptz
+
 ### `deals_duplicate`
 Archive/backup table — same schema as `activecampaign_deals`. Not used in active flows.
 
@@ -331,6 +415,7 @@ Archive/backup table — same schema as `activecampaign_deals`. Not used in acti
 npm run dev       # Start dev server (port 3000)
 npm run build     # Production build
 npm run lint      # ESLint check
+npm run test:unit # Unit tests (node --test, tests/unit/*.test.mjs)
 ```
 
 ## Sensitive Files
