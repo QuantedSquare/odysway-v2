@@ -22,7 +22,7 @@ export default defineEventHandler(async (event) => {
   // 1) Dates for this voyage in window
   const { data: travelDates, error: tdError } = await supabase
     .from('travel_dates')
-    .select('id, travel_slug, departure_date, return_date, margin_override_per_traveler, real_traveler_count_override, max_travelers, booked_seat')
+    .select('id, travel_slug, departure_date, return_date, starting_price, margin_override_per_traveler, real_traveler_count_override, max_travelers, booked_seat')
     .eq('travel_slug', slug)
     .eq('deleted', false)
     .eq('is_test', false)
@@ -73,7 +73,7 @@ export default defineEventHandler(async (event) => {
   const [{ data: paxRows }, seasons, settings] = await Promise.all([
     supabase
       .from('voyage_margins')
-      .select('pax, margin_per_traveler, year, season_id')
+      .select('pax, margin_per_traveler, year, season_id, sale_price_per_traveler, purchase_cost_per_traveler')
       .eq('voyage_slug', slug)
       .eq('deleted', false),
     margins.getSeasonsForVoyage(slug),
@@ -131,6 +131,8 @@ export default defineEventHandler(async (event) => {
         rows: rowsByPax.get(realPax) || [],
         seasons,
         departureDate: td.departure_date,
+        datePrice: td.starting_price,
+        settings,
       })
       baseMargin = resolved.value
       source = resolved.source
